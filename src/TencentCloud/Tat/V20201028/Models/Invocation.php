@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getInvocationStatus() 获取执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
+
  * @method void setInvocationStatus(string $InvocationStatus) 设置执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
+
  * @method array getInvocationTaskBasicInfoSet() 获取执行任务信息列表。
  * @method void setInvocationTaskBasicInfoSet(array $InvocationTaskBasicInfoSet) 设置执行任务信息列表。
  * @method string getDescription() 获取执行活动描述。
@@ -80,7 +82,8 @@ class Invocation extends AbstractModel
     /**
      * @var string 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
+
      */
     public $InvocationStatus;
 
@@ -174,7 +177,8 @@ class Invocation extends AbstractModel
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
+
      * @param array $InvocationTaskBasicInfoSet 执行任务信息列表。
      * @param string $Description 执行活动描述。
      * @param string $StartTime 执行活动开始时间。

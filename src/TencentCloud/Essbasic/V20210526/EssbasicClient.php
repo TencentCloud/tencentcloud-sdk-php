@@ -30,9 +30,13 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 - **可撤回合同状态**：未全部签署完成
 - **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
 
+批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E4%B9%9D-%E6%89%B9%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](https://qian.tencent.com/developers/partnerApis/operateFlows/DescribeCancelFlowsTask)主动查询。
+
+
 注:
 - 有对应合同撤销权限的人:  <font color='red'>**合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人**</font>
 - 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
+- <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
  * @method Models\ChannelCancelFlowResponse ChannelCancelFlow(Models\ChannelCancelFlowRequest $req) 撤销签署流程接口
 
 适用场景：如果某个合同流程当前至少还有一方没有签署，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
@@ -43,6 +47,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注:
 - 有对应合同撤销权限的人:  <font color='red'>**合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人**</font>
 - 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
+- <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
  * @method Models\ChannelCancelMultiFlowSignQRCodeResponse ChannelCancelMultiFlowSignQRCode(Models\ChannelCancelMultiFlowSignQRCodeRequest $req) 此接口（CancelMultiFlowSignQRCode）用于废除取消一码多签签署码。
 该接口所需的二维码ID，源自[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)生成的。
 如果该签署码尚处于有效期内，可通过本接口将其设置为失效状态。
@@ -54,8 +59,11 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 - **可撤回合同状态**：未全部签署完成
 - **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
 
+批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E4%B9%9D-%E6%89%B9%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](https://qian.tencent.com/developers/partnerApis/operateFlows/DescribeCancelFlowsTask)主动查询。
+
 注:
 - 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
+- <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
  * @method Models\ChannelCreateBatchQuickSignUrlResponse ChannelCreateBatchQuickSignUrl(Models\ChannelCreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署。
 **注意**：
 1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=PERSON)。
@@ -176,7 +184,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
 
-`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）`
+`3. 合同发起后就会扣减合同的额度, 只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。（过期，拒签，签署完成，解除完成等状态不会返还额度）`
 
 `4. 静默（自动）签署不支持合同签署方存在填写功能`
  * @method Models\ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFiles(Models\ChannelCreateFlowGroupByFilesRequest $req) 接口（ChannelCreateFlowGroupByFiles）用于使用 PDF 文件创建合同组签署流程。
@@ -242,7 +250,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
 
-`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
+`3. 合同发起后就会扣减合同的额度, 只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
 
 `4. 静默（自动）签署不支持合同签署方存在填写功能`
  * @method Models\ChannelCreateFlowGroupByTemplatesResponse ChannelCreateFlowGroupByTemplates(Models\ChannelCreateFlowGroupByTemplatesRequest $req) 接口（ChannelCreateFlowGroupByTemplates）用于通过多模板创建合同组签署流程。
@@ -305,7 +313,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
 
-`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
+`3. 合同发起后就会扣减合同的额度, 只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
 
 `4. 静默（自动）签署不支持合同签署方存在填写功能`
  * @method Models\ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(Models\ChannelCreateFlowRemindsRequest $req) 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
@@ -732,7 +740,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明
 
-3. <font color="red">调用接口发起合同成功就会扣减合同的额度</font>, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）
+3. <font color="red">调用接口发起合同成功就会扣减合同的额度</font>, 只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。（过期，拒签，签署完成，解除完成等状态不会返还额度）
 
 4. <font color="red">静默（自动）签署不支持合同签署方存在填写</font>
 

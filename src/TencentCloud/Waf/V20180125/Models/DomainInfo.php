@@ -56,7 +56,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -85,7 +85,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -262,6 +262,10 @@ public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgID(string $SgID) 设置安全组ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccessStatus() 获取clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -314,7 +318,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -523,6 +527,12 @@ public：公有云域名
     public $SgID;
 
     /**
+     * @var integer clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
@@ -551,7 +561,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -643,6 +653,8 @@ public：公有云域名
      * @param array $UpstreamDomainList SAASWAF源站域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgID 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccessStatus clbwaf接入状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -802,6 +814,10 @@ public：公有云域名
 
         if (array_key_exists("SgID",$param) and $param["SgID"] !== null) {
             $this->SgID = $param["SgID"];
+        }
+
+        if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
+            $this->AccessStatus = $param["AccessStatus"];
         }
     }
 }

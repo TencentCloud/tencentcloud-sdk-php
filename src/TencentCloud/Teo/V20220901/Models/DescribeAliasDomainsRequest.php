@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取分页查询限制数目。默认值：20，最大值：1000。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值：20，最大值：1000。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
  */
 class DescribeAliasDomainsRequest extends AbstractModel
 {
@@ -50,7 +52,8 @@ class DescribeAliasDomainsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
      */
     public $Filters;
 
@@ -59,7 +62,8 @@ class DescribeAliasDomainsRequest extends AbstractModel
      * @param integer $Offset 分页查询偏移量。默认值：0。
      * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
      */
     function __construct()
     {

@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidStatus(integer $ValidStatus) 设置生效状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleId() 获取55000001
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleId(integer $RuleId) 设置55000001
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpList() 获取IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpList(array $IpList) 设置IP列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpAccessControlItem extends AbstractModel
 {
@@ -89,6 +97,18 @@ class IpAccessControlItem extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var integer 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleId;
+
+    /**
+     * @var array IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpList;
+
+    /**
      * @param string $Id mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 动作
@@ -99,6 +119,10 @@ class IpAccessControlItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidTs 有效截止时间戳
      * @param integer $ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleId 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IpList IP列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +168,14 @@ class IpAccessControlItem extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
+            $this->IpList = $param["IpList"];
         }
     }
 }

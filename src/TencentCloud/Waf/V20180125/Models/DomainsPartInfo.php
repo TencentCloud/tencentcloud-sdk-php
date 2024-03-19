@@ -220,6 +220,10 @@ https：使用https协议回源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置防护规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -488,6 +492,12 @@ https：使用https协议回源
     public $Level;
 
     /**
+     * @var integer 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyBuffer;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -587,6 +597,8 @@ https：使用https协议回源
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -769,6 +781,10 @@ https：使用https协议回源
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
+            $this->ProxyBuffer = $param["ProxyBuffer"];
         }
     }
 }

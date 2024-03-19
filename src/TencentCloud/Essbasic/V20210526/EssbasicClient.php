@@ -781,6 +781,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
 
 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+ * @method Models\DescribeCancelFlowsTaskResponse DescribeCancelFlowsTask(Models\DescribeCancelFlowsTaskRequest $req) 通过接口[批量撤销合同流程](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelBatchCancelFlows)或者[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
  * @method Models\DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(Models\DescribeChannelFlowEvidenceReportRequest $req) 获取出证报告任务执行结果，返回报告 URL。
 
 注意：

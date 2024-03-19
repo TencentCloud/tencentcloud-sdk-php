@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeakCount(integer $LeakCount) 设置信息泄露总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApiRiskEventCircleCount() 获取API风险事件周环比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiRiskEventCircleCount(integer $ApiRiskEventCircleCount) 设置API风险事件周环比
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -108,6 +112,12 @@ class DescribeAttackOverviewResponse extends AbstractModel
     public $LeakCount;
 
     /**
+     * @var integer API风险事件周环比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiRiskEventCircleCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -126,6 +136,8 @@ class DescribeAttackOverviewResponse extends AbstractModel
      * @param integer $TamperCount 防篡改总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LeakCount 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApiRiskEventCircleCount API风险事件周环比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -180,6 +192,10 @@ class DescribeAttackOverviewResponse extends AbstractModel
 
         if (array_key_exists("LeakCount",$param) and $param["LeakCount"] !== null) {
             $this->LeakCount = $param["LeakCount"];
+        }
+
+        if (array_key_exists("ApiRiskEventCircleCount",$param) and $param["ApiRiskEventCircleCount"] !== null) {
+            $this->ApiRiskEventCircleCount = $param["ApiRiskEventCircleCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

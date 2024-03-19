@@ -60,6 +60,26 @@ use TencentCloud\Common\AbstractModel;
 0：轮询
 1：IP hash
 2：加权轮询
+ * @method array getPorts() 获取服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+ * @method void setPorts(array $Ports) 设置服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+ * @method string getIsKeepAlive() 获取必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+ * @method void setIsKeepAlive(string $IsKeepAlive) 设置必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+ * @method string getInstanceID() 获取必填项，域名所属实例id
+ * @method void setInstanceID(string $InstanceID) 设置必填项，域名所属实例id
  * @method string getCert() 获取CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method void setCert(string $Cert) 设置CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method string getPrivateKey() 获取CertType为1时，需要填充此参数，表示自有证书的私钥
@@ -98,18 +118,6 @@ https：使用https协议回源
  * @method void setIsHttp2(integer $IsHttp2) 设置必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
- * @method array getPorts() 获取服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
- * @method void setPorts(array $Ports) 设置服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
  * @method string getEdition() 获取待废弃，可不填。WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
@@ -118,14 +126,6 @@ cdn-waf：CDN上的Web防护能力
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method string getIsKeepAlive() 获取必填项，是否开启长连接。
-0： 短连接
-1： 长连接
- * @method void setIsKeepAlive(string $IsKeepAlive) 设置必填项，是否开启长连接。
-0： 短连接
-1： 长连接
- * @method string getInstanceID() 获取必填项，域名所属实例id
- * @method void setInstanceID(string $InstanceID) 设置必填项，域名所属实例id
  * @method integer getAnycast() 获取待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method void setAnycast(integer $Anycast) 设置待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
@@ -176,6 +176,8 @@ cdn-waf：CDN上的Web防护能力
  * @method void setNote(string $Note) 设置域名备注信息
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+ * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -222,6 +224,28 @@ class AddSpartaProtectionRequest extends AbstractModel
 2：加权轮询
      */
     public $LoadBalance;
+
+    /**
+     * @var array 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+     */
+    public $Ports;
+
+    /**
+     * @var string 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+     */
+    public $IsKeepAlive;
+
+    /**
+     * @var string 必填项，域名所属实例id
+     */
+    public $InstanceID;
 
     /**
      * @var string CertType为1时，需要填充此参数，表示自有证书的证书链
@@ -295,34 +319,12 @@ https：使用https协议回源
     public $IsHttp2;
 
     /**
-     * @var array 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-     */
-    public $Ports;
-
-    /**
      * @var string 待废弃，可不填。WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
      */
     public $Edition;
-
-    /**
-     * @var string 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     */
-    public $IsKeepAlive;
-
-    /**
-     * @var string 必填项，域名所属实例id
-     */
-    public $InstanceID;
 
     /**
      * @var integer 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
@@ -402,6 +404,11 @@ cdn-waf：CDN上的Web防护能力
     public $UpstreamHost;
 
     /**
+     * @var integer 是否开启缓存 0-关闭 1-开启
+     */
+    public $ProxyBuffer;
+
+    /**
      * @param string $Domain 需要防护的域名
      * @param integer $CertType 证书类型。
 0：仅配置HTTP监听端口，没有证书
@@ -422,6 +429,16 @@ cdn-waf：CDN上的Web防护能力
 0：轮询
 1：IP hash
 2：加权轮询
+     * @param array $Ports 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+     * @param string $IsKeepAlive 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+     * @param string $InstanceID 必填项，域名所属实例id
      * @param string $Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
@@ -441,20 +458,10 @@ https：使用https协议回源
      * @param integer $IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
-     * @param array $Ports 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
      * @param string $Edition 待废弃，可不填。WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
-     * @param string $IsKeepAlive 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     * @param string $InstanceID 必填项，域名所属实例id
      * @param integer $Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
      * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
@@ -480,6 +487,7 @@ cdn-waf：CDN上的Web防护能力
 1：开启
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
      */
     function __construct()
     {
@@ -516,6 +524,23 @@ cdn-waf：CDN上的Web防护能力
 
         if (array_key_exists("LoadBalance",$param) and $param["LoadBalance"] !== null) {
             $this->LoadBalance = $param["LoadBalance"];
+        }
+
+        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
+            $this->Ports = [];
+            foreach ($param["Ports"] as $key => $value){
+                $obj = new PortItem();
+                $obj->deserialize($value);
+                array_push($this->Ports, $obj);
+            }
+        }
+
+        if (array_key_exists("IsKeepAlive",$param) and $param["IsKeepAlive"] !== null) {
+            $this->IsKeepAlive = $param["IsKeepAlive"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
@@ -570,25 +595,8 @@ cdn-waf：CDN上的Web防护能力
             $this->IsHttp2 = $param["IsHttp2"];
         }
 
-        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
-            $this->Ports = [];
-            foreach ($param["Ports"] as $key => $value){
-                $obj = new PortItem();
-                $obj->deserialize($value);
-                array_push($this->Ports, $obj);
-            }
-        }
-
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
-        }
-
-        if (array_key_exists("IsKeepAlive",$param) and $param["IsKeepAlive"] !== null) {
-            $this->IsKeepAlive = $param["IsKeepAlive"];
-        }
-
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("Anycast",$param) and $param["Anycast"] !== null) {
@@ -641,6 +649,10 @@ cdn-waf：CDN上的Web防护能力
 
         if (array_key_exists("UpstreamHost",$param) and $param["UpstreamHost"] !== null) {
             $this->UpstreamHost = $param["UpstreamHost"];
+        }
+
+        if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
+            $this->ProxyBuffer = $param["ProxyBuffer"];
         }
     }
 }

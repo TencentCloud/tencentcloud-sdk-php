@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getDomainId() 获取必填项。域名唯一ID
  * @method void setDomainId(string $DomainId) 设置必填项。域名唯一ID
+ * @method string getInstanceID() 获取必填项。域名所属实例id
+ * @method void setInstanceID(string $InstanceID) 设置必填项。域名所属实例id
  * @method integer getCertType() 获取必填项。证书类型。
 0：仅配置HTTP监听端口，没有证书
 1：证书来源为自有证书
@@ -104,8 +106,6 @@ https：使用https协议回源
  * @method void setIsKeepAlive(string $IsKeepAlive) 设置必填项。是否开启长连接。
 0： 短连接
 1： 长连接
- * @method string getInstanceID() 获取必填项。域名所属实例id
- * @method void setInstanceID(string $InstanceID) 设置必填项。域名所属实例id
  * @method integer getAnycast() 获取必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method void setAnycast(integer $Anycast) 设置必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
@@ -158,6 +158,8 @@ https：使用https协议回源
  * @method void setNote(string $Note) 设置域名备注信息
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+ * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -170,6 +172,11 @@ class ModifySpartaProtectionRequest extends AbstractModel
      * @var string 必填项。域名唯一ID
      */
     public $DomainId;
+
+    /**
+     * @var string 必填项。域名所属实例id
+     */
+    public $InstanceID;
 
     /**
      * @var integer 必填项。证书类型。
@@ -284,11 +291,6 @@ https：使用https协议回源
     public $IsKeepAlive;
 
     /**
-     * @var string 必填项。域名所属实例id
-     */
-    public $InstanceID;
-
-    /**
      * @var integer 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public $Anycast;
@@ -371,8 +373,14 @@ https：使用https协议回源
     public $UpstreamHost;
 
     /**
+     * @var integer 是否开启缓存 0-关闭 1-开启
+     */
+    public $ProxyBuffer;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 必填项。域名唯一ID
+     * @param string $InstanceID 必填项。域名所属实例id
      * @param integer $CertType 必填项。证书类型。
 0：仅配置HTTP监听端口，没有证书
 1：证书来源为自有证书
@@ -413,7 +421,6 @@ https：使用https协议回源
      * @param string $IsKeepAlive 必填项。是否开启长连接。
 0： 短连接
 1： 长连接
-     * @param string $InstanceID 必填项。域名所属实例id
      * @param integer $Anycast 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
      * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
@@ -440,6 +447,7 @@ https：使用https协议回源
 1：开启
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
      */
     function __construct()
     {
@@ -460,6 +468,10 @@ https：使用https协议回源
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
@@ -539,10 +551,6 @@ https：使用https协议回源
             $this->IsKeepAlive = $param["IsKeepAlive"];
         }
 
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
-        }
-
         if (array_key_exists("Anycast",$param) and $param["Anycast"] !== null) {
             $this->Anycast = $param["Anycast"];
         }
@@ -597,6 +605,10 @@ https：使用https协议回源
 
         if (array_key_exists("UpstreamHost",$param) and $param["UpstreamHost"] !== null) {
             $this->UpstreamHost = $param["UpstreamHost"];
+        }
+
+        if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
+            $this->ProxyBuffer = $param["ProxyBuffer"];
         }
     }
 }

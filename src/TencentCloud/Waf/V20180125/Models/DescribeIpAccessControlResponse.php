@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(IpAccessControlData $Data) 设置输出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsedTotal() 获取已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedTotal(integer $UsedTotal) 设置已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +40,20 @@ class DescribeIpAccessControlResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var integer 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedTotal;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param IpAccessControlData $Data 输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UsedTotal 已经使用的IP黑白名单的IP总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,6 +73,10 @@ class DescribeIpAccessControlResponse extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new IpAccessControlData();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("UsedTotal",$param) and $param["UsedTotal"] !== null) {
+            $this->UsedTotal = $param["UsedTotal"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

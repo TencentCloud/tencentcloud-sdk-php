@@ -88,6 +88,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 查询通知模板列表
  * @method Models\DescribeAlarmPoliciesResponse DescribeAlarmPolicies(Models\DescribeAlarmPoliciesRequest $req) 查询告警策略列表
  * @method Models\DescribeAlarmPolicyResponse DescribeAlarmPolicy(Models\DescribeAlarmPolicyRequest $req) 获取单个告警策略详情
+ * @method Models\DescribeAlarmSmsQuotaResponse DescribeAlarmSmsQuota(Models\DescribeAlarmSmsQuotaRequest $req) 获取告警短信配额
  * @method Models\DescribeAlertRulesResponse DescribeAlertRules(Models\DescribeAlertRulesRequest $req) Prometheus 报警规则查询接口
  * @method Models\DescribeAllNamespacesResponse DescribeAllNamespaces(Models\DescribeAllNamespacesRequest $req) 查询所有名字空间
  * @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) 获取基础指标属性
@@ -105,7 +106,9 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannels(Models\DescribeGrafanaNotificationChannelsRequest $req) 列出 Grafana 告警通道
  * @method Models\DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteList(Models\DescribeGrafanaWhiteListRequest $req) 列出 Grafana 白名单
  * @method Models\DescribeInstalledPluginsResponse DescribeInstalledPlugins(Models\DescribeInstalledPluginsRequest $req) 列出实例已安装的插件
+ * @method Models\DescribeMonitorResourceInfoResponse DescribeMonitorResourceInfo(Models\DescribeMonitorResourceInfoRequest $req) 获取资源消耗页概览
  * @method Models\DescribeMonitorTypesResponse DescribeMonitorTypes(Models\DescribeMonitorTypesRequest $req) 腾讯云可观测平台支持多种类型的监控，此接口列出支持的所有类型
+ * @method Models\DescribePhoneAlarmFlowTotalCountResponse DescribePhoneAlarmFlowTotalCount(Models\DescribePhoneAlarmFlowTotalCountRequest $req) 查询周期内电话流水总数
  * @method Models\DescribePluginOverviewsResponse DescribePluginOverviews(Models\DescribePluginOverviewsRequest $req) 列出可安装的所有 Grafana 插件
  * @method Models\DescribePolicyConditionListResponse DescribePolicyConditionList(Models\DescribePolicyConditionListRequest $req) 获取基础告警策略条件
  * @method Models\DescribePolicyGroupInfoResponse DescribePolicyGroupInfo(Models\DescribePolicyGroupInfoRequest $req) 获取基础策略组详情

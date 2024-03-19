@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTKEDirectENI(integer $TKEDirectENI) 设置TKE独立网卡模式可支持的Pod数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTKESubENI() 获取TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTKESubENI(integer $TKESubENI) 设置TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodLimitsByType extends AbstractModel
 {
@@ -54,11 +58,19 @@ class PodLimitsByType extends AbstractModel
     public $TKEDirectENI;
 
     /**
+     * @var integer TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TKESubENI;
+
+    /**
      * @param integer $TKERouteENINonStaticIP TKE共享网卡非固定IP模式可支持的Pod数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TKERouteENIStaticIP TKE共享网卡固定IP模式可支持的Pod数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TKEDirectENI TKE独立网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TKESubENI TKE中继网卡模式可支持的Pod数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class PodLimitsByType extends AbstractModel
 
         if (array_key_exists("TKEDirectENI",$param) and $param["TKEDirectENI"] !== null) {
             $this->TKEDirectENI = $param["TKEDirectENI"];
+        }
+
+        if (array_key_exists("TKESubENI",$param) and $param["TKESubENI"] !== null) {
+            $this->TKESubENI = $param["TKESubENI"];
         }
     }
 }

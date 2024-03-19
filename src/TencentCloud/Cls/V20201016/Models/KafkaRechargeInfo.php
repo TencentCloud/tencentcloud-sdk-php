@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka导入配置信息
  *
- * @method string getId() 获取主键ID
+ * @method string getId() 获取Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置主键ID
+ * @method void setId(string $Id) 设置Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,7 +82,7 @@ use TencentCloud\Common\AbstractModel;
 class KafkaRechargeInfo extends AbstractModel
 {
     /**
-     * @var string 主键ID
+     * @var string Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
@@ -171,7 +171,7 @@ class KafkaRechargeInfo extends AbstractModel
     public $LogRechargeRule;
 
     /**
-     * @param string $Id 主键ID
+     * @param string $Id Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。

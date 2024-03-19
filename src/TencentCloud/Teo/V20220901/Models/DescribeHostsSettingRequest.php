@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取分页查询限制数目。默认值： 100，最大值：1000。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值： 100，最大值：1000。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
+<li>host：按照域名进行过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
+<li>host：按照域名进行过滤。</li>
  */
 class DescribeHostsSettingRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeHostsSettingRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
+<li>host：按照域名进行过滤。</li>
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeHostsSettingRequest extends AbstractModel
      * @param integer $Offset 分页查询偏移量。默认值： 0，最小值：0。
      * @param integer $Limit 分页查询限制数目。默认值： 100，最大值：1000。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
+<li>host：按照域名进行过滤。</li>
      */
     function __construct()
     {

@@ -42,14 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置来源
  * @method string getSort() 获取排序参数
  * @method void setSort(string $Sort) 设置排序参数
- * @method string getIp() 获取ip
- * @method void setIp(string $Ip) 设置ip
+ * @method string getIp() 获取IP
+ * @method void setIp(string $Ip) 设置IP
  * @method integer getValidStatus() 获取生效状态
  * @method void setValidStatus(integer $ValidStatus) 设置生效状态
  * @method string getValidTimeStampMin() 获取最小有效时间的时间戳
  * @method void setValidTimeStampMin(string $ValidTimeStampMin) 设置最小有效时间的时间戳
  * @method string getValidTimeStampMax() 获取最大有效时间的时间戳
  * @method void setValidTimeStampMax(string $ValidTimeStampMax) 设置最大有效时间的时间戳
+ * @method integer getRuleId() 获取规则ID
+ * @method void setRuleId(integer $RuleId) 设置规则ID
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -111,7 +113,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string ip
+     * @var string IP
      */
     public $Ip;
 
@@ -131,6 +133,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $ValidTimeStampMax;
 
     /**
+     * @var integer 规则ID
+     */
+    public $RuleId;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
@@ -142,10 +149,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param integer $Limit 每页返回的数量
      * @param string $Source 来源
      * @param string $Sort 排序参数
-     * @param string $Ip ip
+     * @param string $Ip IP
      * @param integer $ValidStatus 生效状态
      * @param string $ValidTimeStampMin 最小有效时间的时间戳
      * @param string $ValidTimeStampMax 最大有效时间的时间戳
+     * @param integer $RuleId 规则ID
      */
     function __construct()
     {
@@ -218,6 +226,10 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("ValidTimeStampMax",$param) and $param["ValidTimeStampMax"] !== null) {
             $this->ValidTimeStampMax = $param["ValidTimeStampMax"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

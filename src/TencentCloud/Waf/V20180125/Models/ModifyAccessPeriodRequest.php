@@ -34,6 +34,7 @@ class ModifyAccessPeriodRequest extends AbstractModel
 
     /**
      * @var string 日志主题，新版本不需要再传
+     * @deprecated
      */
     public $TopicId;
 

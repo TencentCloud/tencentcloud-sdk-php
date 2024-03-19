@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 多域名黑白名单列表Ip
+ * 批量多域名黑白名单列表Ip
  *
  * @method string getId() 获取mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidTs(integer $ValidTs) 设置超时时间
  * @method array getHosts() 获取域名列表
  * @method void setHosts(array $Hosts) 设置域名列表
+ * @method integer getRuleId() 获取55101145
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleId(integer $RuleId) 设置55101145
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpList() 获取IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpList(array $IpList) 设置IP列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchIpAccessControlItem extends AbstractModel
 {
@@ -83,6 +91,18 @@ class BatchIpAccessControlItem extends AbstractModel
     public $Hosts;
 
     /**
+     * @var integer 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleId;
+
+    /**
+     * @var array IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpList;
+
+    /**
      * @param string $Id mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 黑名单42或白名单40
@@ -92,6 +112,10 @@ class BatchIpAccessControlItem extends AbstractModel
      * @param integer $TsVersion 修改时间
      * @param integer $ValidTs 超时时间
      * @param array $Hosts 域名列表
+     * @param integer $RuleId 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -136,6 +160,14 @@ class BatchIpAccessControlItem extends AbstractModel
 
         if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
             $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
+            $this->IpList = $param["IpList"];
         }
     }
 }

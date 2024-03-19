@@ -65,8 +65,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 描述WAF自动封禁IP详情,对齐自动封堵状态
- * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 多域名ip黑白名单查询
- * @method Models\DescribeCCAutoStatusResponse DescribeCCAutoStatus(Models\DescribeCCAutoStatusRequest $req) Waf 斯巴达版本查询cc自动封堵状态
+ * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 批量防护IP黑白名单查询
+ * @method Models\DescribeCCAutoStatusResponse DescribeCCAutoStatus(Models\DescribeCCAutoStatusRequest $req) 获取SAAS型接入的紧急CC防护状态
  * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) Waf  CC V2 Query接口
  * @method Models\DescribeCCRuleListResponse DescribeCCRuleList(Models\DescribeCCRuleListRequest $req) 根据多条件查询CC规则
  * @method Models\DescribeCertificateVerifyResultResponse DescribeCertificateVerifyResult(Models\DescribeCertificateVerifyResultRequest $req) 获取证书的检查结果
@@ -145,7 +145,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) 修改实例的自动续费开关
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
- * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) waf斯巴达-waf开关
+ * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 获取基础安全防护（WAF开关）状态
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 编辑SaaS型WAF域名配置
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) 设置waf防护状态
  * @method Models\ModifyUserLevelResponse ModifyUserLevel(Models\ModifyUserLevelRequest $req) 修改用户防护规则等级
@@ -159,7 +159,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\SearchAttackLogResponse SearchAttackLog(Models\SearchAttackLogRequest $req) 新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
  * @method Models\SwitchDomainRulesResponse SwitchDomainRules(Models\SwitchDomainRulesRequest $req) 切换域名的规则开关
  * @method Models\SwitchElasticModeResponse SwitchElasticMode(Models\SwitchElasticModeRequest $req) 切换弹性的开关
- * @method Models\UpsertCCAutoStatusResponse UpsertCCAutoStatus(Models\UpsertCCAutoStatusRequest $req) Waf 斯巴达版本更新cc自动封堵状态
+ * @method Models\UpsertCCAutoStatusResponse UpsertCCAutoStatus(Models\UpsertCCAutoStatusRequest $req) 编辑SAAS型接入的紧急CC防护状态
  * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) Waf  CC V2 Upsert接口
  * @method Models\UpsertIpAccessControlResponse UpsertIpAccessControl(Models\UpsertIpAccessControlRequest $req) Waf IP黑白名单Upsert接口
  * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) Waf  会话定义 Upsert接口

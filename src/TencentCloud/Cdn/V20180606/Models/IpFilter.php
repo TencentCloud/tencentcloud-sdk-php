@@ -35,12 +35,12 @@ whitelist：白名单
 blacklist：黑名单
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilters() 获取IP 黑白名单列表
-支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-最多可填充 50 个白名单或 50 个黑名单
+支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
+最多可填充 200 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(array $Filters) 设置IP 黑白名单列表
-支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-最多可填充 50 个白名单或 50 个黑名单
+支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
+最多可填充 200 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilterRules() 获取IP 黑白名单分路径配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,8 +70,8 @@ blacklist：黑名单
 
     /**
      * @var array IP 黑白名单列表
-支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-最多可填充 50 个白名单或 50 个黑名单
+支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
+最多可填充 200 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
@@ -97,8 +97,8 @@ whitelist：白名单
 blacklist：黑名单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Filters IP 黑白名单列表
-支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-最多可填充 50 个白名单或 50 个黑名单
+支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
+最多可填充 200 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterRules IP 黑白名单分路径配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。

@@ -112,14 +112,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -258,14 +256,13 @@ class RoomItem extends AbstractModel
     public $RecordBackground;
 
     /**
-     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordScene;
 
     /**
      * @var string 录制自定义语言，仅recordlayout=9的时候此参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordLang;
 
@@ -316,10 +313,9 @@ class RoomItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

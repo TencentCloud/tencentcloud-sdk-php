@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
  * @method string getTerminalType() 获取本接口不需要传递此参数。
  * @method void setTerminalType(string $TerminalType) 设置本接口不需要传递此参数。
- * @method string getIdCard() 获取身份标识（未使用OCR服务时，必须传入）。
+ * @method string getIdCard() 获取身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
 规则：a-z，A-Z，0-9组合。最长长度32位。
- * @method void setIdCard(string $IdCard) 设置身份标识（未使用OCR服务时，必须传入）。
+ * @method void setIdCard(string $IdCard) 设置身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
 规则：a-z，A-Z，0-9组合。最长长度32位。
- * @method string getName() 获取姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
- * @method void setName(string $Name) 设置姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
+ * @method string getName() 获取姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
+最长长度32位。中文请使用UTF-8编码。
+ * @method void setName(string $Name) 设置姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
+最长长度32位。中文请使用UTF-8编码。
  * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址。最长长度1024位。
  * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址。最长长度1024位。
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。
@@ -62,13 +64,14 @@ class DetectAuthRequest extends AbstractModel
     public $TerminalType;
 
     /**
-     * @var string 身份标识（未使用OCR服务时，必须传入）。
+     * @var string 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
 规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public $IdCard;
 
     /**
-     * @var string 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
+     * @var string 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
+最长长度32位。中文请使用UTF-8编码。
      */
     public $Name;
 
@@ -116,9 +119,10 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     /**
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      * @param string $TerminalType 本接口不需要传递此参数。
-     * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
+     * @param string $IdCard 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
 规则：a-z，A-Z，0-9组合。最长长度32位。
-     * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
+     * @param string $Name 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
+最长长度32位。中文请使用UTF-8编码。
      * @param string $RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      * @param string $Extra 透传字段，在获取验证结果时返回。
      * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；

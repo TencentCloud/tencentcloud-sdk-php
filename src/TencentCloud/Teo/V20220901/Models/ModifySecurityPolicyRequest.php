@@ -24,10 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点Id。
  * @method SecurityConfig getSecurityConfig() 获取安全配置。
  * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置安全配置。
- * @method string getEntity() 获取子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
- * @method void setEntity(string $Entity) 设置子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
- * @method string getTemplateId() 获取模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
- * @method void setTemplateId(string $TemplateId) 设置模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+ * @method string getEntity() 获取子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+ * @method string getTemplateId() 获取指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+ * @method void setTemplateId(string $TemplateId) 设置指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
  */
 class ModifySecurityPolicyRequest extends AbstractModel
 {
@@ -42,20 +54,32 @@ class ModifySecurityPolicyRequest extends AbstractModel
     public $SecurityConfig;
 
     /**
-     * @var string 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @var string 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
      */
     public $Entity;
 
     /**
-     * @var string 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * @var string 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
      */
     public $TemplateId;
 
     /**
      * @param string $ZoneId 站点Id。
      * @param SecurityConfig $SecurityConfig 安全配置。
-     * @param string $Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
-     * @param string $TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * @param string $Entity 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+     * @param string $TemplateId 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
      */
     function __construct()
     {

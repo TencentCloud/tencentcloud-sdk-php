@@ -134,6 +134,10 @@ FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoginServices(array $LoginServices) 设置实例包含的登录服务详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOSType() 获取应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOSType(string $OSType) 设置应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -279,6 +283,12 @@ FAILED：表示操作失败
     public $LoginServices;
 
     /**
+     * @var string 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OSType;
+
+    /**
      * @param string $InstanceId 实例id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
@@ -335,6 +345,8 @@ FAILED：表示操作失败
      * @param string $ConfigurationEnvironment 应用配置环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoginServices 实例包含的登录服务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OSType 应用服务的操作系统类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -438,6 +450,10 @@ FAILED：表示操作失败
                 $obj->deserialize($value);
                 array_push($this->LoginServices, $obj);
             }
+        }
+
+        if (array_key_exists("OSType",$param) and $param["OSType"] !== null) {
+            $this->OSType = $param["OSType"];
         }
     }
 }

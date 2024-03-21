@@ -62,9 +62,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBanStatus() 获取阻断状态：1-阻断成功；非1-阻断失败
+ * @method integer getBanStatus() 获取0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBanStatus(integer $BanStatus) 设置阻断状态：1-阻断成功；非1-阻断失败
+ * @method void setBanStatus(integer $BanStatus) 设置0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventType() 获取事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -117,6 +137,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDataFrom() 获取事件来源：0--阻断规则，1--威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataFrom(integer $DataFrom) 设置事件来源：0--阻断规则，1--威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAttackStatusDesc() 获取破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackStatusDesc(string $AttackStatusDesc) 设置破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBanExpiredTime() 获取阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBanExpiredTime(string $BanExpiredTime) 设置阻断过期时间（仅阻断中事件有效）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BruteAttackInfo extends AbstractModel
@@ -187,7 +215,17 @@ class BruteAttackInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 阻断状态：1-阻断成功；非1-阻断失败
+     * @var integer 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
@@ -271,6 +309,18 @@ class BruteAttackInfo extends AbstractModel
     public $DataFrom;
 
     /**
+     * @var string 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackStatusDesc;
+
+    /**
+     * @var string 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BanExpiredTime;
+
+    /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -292,7 +342,17 @@ class BruteAttackInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BanStatus 阻断状态：1-阻断成功；非1-阻断失败
+     * @param integer $BanStatus 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,6 +379,10 @@ class BruteAttackInfo extends AbstractModel
      * @param integer $RiskLevel 威胁等级：0低危，1中危，2高危
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataFrom 事件来源：0--阻断规则，1--威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AttackStatusDesc 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BanExpiredTime 阻断过期时间（仅阻断中事件有效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -433,6 +497,14 @@ class BruteAttackInfo extends AbstractModel
 
         if (array_key_exists("DataFrom",$param) and $param["DataFrom"] !== null) {
             $this->DataFrom = $param["DataFrom"];
+        }
+
+        if (array_key_exists("AttackStatusDesc",$param) and $param["AttackStatusDesc"] !== null) {
+            $this->AttackStatusDesc = $param["AttackStatusDesc"];
+        }
+
+        if (array_key_exists("BanExpiredTime",$param) and $param["BanExpiredTime"] !== null) {
+            $this->BanExpiredTime = $param["BanExpiredTime"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  2 -- 基础阻断(只阻断情报库黑ip)
  * @method boolean getShowTips() 获取是否弹窗提示信息 false: 关闭，true: 开启
  * @method void setShowTips(boolean $ShowTips) 设置是否弹窗提示信息 false: 关闭，true: 开启
+ * @method boolean getOpenSmartMode() 获取是否开启智能过白模式
+ * @method void setOpenSmartMode(boolean $OpenSmartMode) 设置是否开启智能过白模式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +51,11 @@ class DescribeBanStatusResponse extends AbstractModel
     public $ShowTips;
 
     /**
+     * @var boolean 是否开启智能过白模式
+     */
+    public $OpenSmartMode;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +66,7 @@ class DescribeBanStatusResponse extends AbstractModel
  1 -- 高级阻断
  2 -- 基础阻断(只阻断情报库黑ip)
      * @param boolean $ShowTips 是否弹窗提示信息 false: 关闭，true: 开启
+     * @param boolean $OpenSmartMode 是否开启智能过白模式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,10 @@ class DescribeBanStatusResponse extends AbstractModel
 
         if (array_key_exists("ShowTips",$param) and $param["ShowTips"] !== null) {
             $this->ShowTips = $param["ShowTips"];
+        }
+
+        if (array_key_exists("OpenSmartMode",$param) and $param["OpenSmartMode"] !== null) {
+            $this->OpenSmartMode = $param["OpenSmartMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

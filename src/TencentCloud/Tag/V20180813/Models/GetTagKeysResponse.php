@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTagKeys返回参数结构体
  *
- * @method string getPaginationToken() 获取获取的下一页的Token值
- * @method void setPaginationToken(string $PaginationToken) 设置获取的下一页的Token值
+ * @method string getPaginationToken() 获取获取的下一页的Token值，如果当前是最后一页，返回为空
+ * @method void setPaginationToken(string $PaginationToken) 设置获取的下一页的Token值，如果当前是最后一页，返回为空
  * @method array getTagKeys() 获取标签键信息。
  * @method void setTagKeys(array $TagKeys) 设置标签键信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetTagKeysResponse extends AbstractModel
 {
     /**
-     * @var string 获取的下一页的Token值
+     * @var string 获取的下一页的Token值，如果当前是最后一页，返回为空
      */
     public $PaginationToken;
 
@@ -45,7 +45,7 @@ class GetTagKeysResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PaginationToken 获取的下一页的Token值
+     * @param string $PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
      * @param array $TagKeys 标签键信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

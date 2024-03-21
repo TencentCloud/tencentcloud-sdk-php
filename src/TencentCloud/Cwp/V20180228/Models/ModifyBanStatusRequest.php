@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBanStatus请求参数结构体
  *
- * @method integer getStatus() 获取阻断状态 0:关闭 1:开启
- * @method void setStatus(integer $Status) 设置阻断状态 0:关闭 1:开启
+ * @method integer getStatus() 获取阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+ * @method void setStatus(integer $Status) 设置阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+ * @method boolean getOpenSmartMode() 获取是否开启智能过白模式
+ * @method void setOpenSmartMode(boolean $OpenSmartMode) 设置是否开启智能过白模式
  */
 class ModifyBanStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 阻断状态 0:关闭 1:开启
+     * @var integer 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public $Status;
 
     /**
-     * @param integer $Status 阻断状态 0:关闭 1:开启
+     * @var boolean 是否开启智能过白模式
+     */
+    public $OpenSmartMode;
+
+    /**
+     * @param integer $Status 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+     * @param boolean $OpenSmartMode 是否开启智能过白模式
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ModifyBanStatusRequest extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OpenSmartMode",$param) and $param["OpenSmartMode"] !== null) {
+            $this->OpenSmartMode = $param["OpenSmartMode"];
         }
     }
 }

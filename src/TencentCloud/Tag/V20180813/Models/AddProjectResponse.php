@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() 获取项目Id
  * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method integer getIsNew() 获取是否为新项目
- * @method void setIsNew(integer $IsNew) 设置是否为新项目
+ * @method integer getIsNew() 获取是否为新项目，1是新项目，0不是新项目
+ * @method void setIsNew(integer $IsNew) 设置是否为新项目，1是新项目，0不是新项目
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class AddProjectResponse extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 是否为新项目
+     * @var integer 是否为新项目，1是新项目，0不是新项目
      */
     public $IsNew;
 
@@ -46,7 +46,7 @@ class AddProjectResponse extends AbstractModel
 
     /**
      * @param integer $ProjectId 项目Id
-     * @param integer $IsNew 是否为新项目
+     * @param integer $IsNew 是否为新项目，1是新项目，0不是新项目
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

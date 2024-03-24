@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **false** : ( 默认)可以转他人处理</li>
 <li> **true** :不可以转他人处理</li></ul>
+ * @method boolean getCanEditApprover() 获取允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+ * @method void setCanEditApprover(boolean $CanEditApprover) 设置允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
@@ -80,6 +82,11 @@ class ApproverOption extends AbstractModel
     public $NoTransfer;
 
     /**
+     * @var boolean 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+     */
+    public $CanEditApprover;
+
+    /**
      * @var integer 签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
@@ -108,6 +115,7 @@ class ApproverOption extends AbstractModel
 
 <ul><li> **false** : ( 默认)可以转他人处理</li>
 <li> **true** :不可以转他人处理</li></ul>
+     * @param boolean $CanEditApprover 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
@@ -140,6 +148,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("NoTransfer",$param) and $param["NoTransfer"] !== null) {
             $this->NoTransfer = $param["NoTransfer"];
+        }
+
+        if (array_key_exists("CanEditApprover",$param) and $param["CanEditApprover"] !== null) {
+            $this->CanEditApprover = $param["CanEditApprover"];
         }
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {

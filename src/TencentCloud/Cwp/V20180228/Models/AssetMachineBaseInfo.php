@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCpuLoadNum() 获取cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuLoadNum(string $CpuLoadNum) 设置cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineBaseInfo extends AbstractModel
 {
@@ -173,6 +177,12 @@ class AssetMachineBaseInfo extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuLoadNum;
+
+    /**
      * @param string $Quuid 服务器Quuid
      * @param string $Uuid 服务器uuid
      * @param string $MachineIp 服务器内网IP
@@ -195,6 +205,8 @@ class AssetMachineBaseInfo extends AbstractModel
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param string $FirstTime 首次采集时间
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CpuLoadNum cpu负载读数（仅linux系统有效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -294,6 +306,10 @@ class AssetMachineBaseInfo extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("CpuLoadNum",$param) and $param["CpuLoadNum"] !== null) {
+            $this->CpuLoadNum = $param["CpuLoadNum"];
         }
     }
 }

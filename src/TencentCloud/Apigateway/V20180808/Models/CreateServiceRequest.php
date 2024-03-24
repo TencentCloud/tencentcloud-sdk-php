@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceDesc(string $ServiceDesc) 设置用户自定义的服务描述。
  * @method array getNetTypes() 获取网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
  * @method void setNetTypes(array $NetTypes) 设置网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
- * @method string getIpVersion() 获取IP版本号，支持IPv4和IPv6，默认为IPv4。
- * @method void setIpVersion(string $IpVersion) 设置IP版本号，支持IPv4和IPv6，默认为IPv4。
+ * @method string getIpVersion() 获取IP版本号，仅支持IPv4。
+ * @method void setIpVersion(string $IpVersion) 设置IP版本号，仅支持IPv4。
  * @method string getSetServerName() 获取集群名称。保留字段，tsf serverless类型使用。
  * @method void setSetServerName(string $SetServerName) 设置集群名称。保留字段，tsf serverless类型使用。
  * @method string getAppIdType() 获取用户类型。保留类型，serverless用户使用。
@@ -64,7 +64,7 @@ class CreateServiceRequest extends AbstractModel
     public $NetTypes;
 
     /**
-     * @var string IP版本号，支持IPv4和IPv6，默认为IPv4。
+     * @var string IP版本号，仅支持IPv4。
      */
     public $IpVersion;
 
@@ -98,7 +98,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
      * @param array $NetTypes 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
-     * @param string $IpVersion IP版本号，支持IPv4和IPv6，默认为IPv4。
+     * @param string $IpVersion IP版本号，仅支持IPv4。
      * @param string $SetServerName 集群名称。保留字段，tsf serverless类型使用。
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
      * @param array $Tags 标签。

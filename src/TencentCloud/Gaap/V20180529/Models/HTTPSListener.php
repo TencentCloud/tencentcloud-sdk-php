@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTLSSupportVersion() 获取支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTLSSupportVersion(array $TLSSupportVersion) 设置支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTLSCiphers() 获取支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTLSCiphers(string $TLSCiphers) 设置支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HTTPSListener extends AbstractModel
 {
@@ -190,6 +198,18 @@ class HTTPSListener extends AbstractModel
     public $GroupId;
 
     /**
+     * @var array 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TLSSupportVersion;
+
+    /**
+     * @var string 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TLSCiphers;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -223,6 +243,10 @@ class HTTPSListener extends AbstractModel
      * @param string $ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TLSSupportVersion 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TLSCiphers 支持的TLS密码套件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -305,6 +329,14 @@ class HTTPSListener extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("TLSSupportVersion",$param) and $param["TLSSupportVersion"] !== null) {
+            $this->TLSSupportVersion = $param["TLSSupportVersion"];
+        }
+
+        if (array_key_exists("TLSCiphers",$param) and $param["TLSCiphers"] !== null) {
+            $this->TLSCiphers = $param["TLSCiphers"];
         }
     }
 }

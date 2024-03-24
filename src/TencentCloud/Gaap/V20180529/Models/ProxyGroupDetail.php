@@ -114,6 +114,14 @@ use TencentCloud\Common\AbstractModel;
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportTLSChoice() 获取是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportTLSChoice(integer $IsSupportTLSChoice) 设置是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -245,6 +253,14 @@ class ProxyGroupDetail extends AbstractModel
     public $FeatureBitmap;
 
     /**
+     * @var integer 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportTLSChoice;
+
+    /**
      * @param integer $CreateTime 创建时间
      * @param integer $ProjectId 项目ID
      * @param integer $ProxyNum 通道组中通道数量
@@ -291,6 +307,10 @@ class ProxyGroupDetail extends AbstractModel
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportTLSChoice 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -390,6 +410,10 @@ class ProxyGroupDetail extends AbstractModel
 
         if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
             $this->FeatureBitmap = $param["FeatureBitmap"];
+        }
+
+        if (array_key_exists("IsSupportTLSChoice",$param) and $param["IsSupportTLSChoice"] !== null) {
+            $this->IsSupportTLSChoice = $param["IsSupportTLSChoice"];
         }
     }
 }

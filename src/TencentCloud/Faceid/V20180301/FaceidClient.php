@@ -41,7 +41,9 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\GetEidResultResponse GetEidResult(Models\GetEidResultRequest $req) 完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetEidTokenResponse GetEidToken(Models\GetEidTokenRequest $req) 每次调用E证通服务前，需先调用本接口获取EidToken，用来串联E证通流程，在验证完成后，用于获取E证通结果信息。
  * @method Models\GetFaceIdResultResponse GetFaceIdResult(Models\GetFaceIdResultRequest $req) 完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+ * @method Models\GetFaceIdRiskInfoResponse GetFaceIdRiskInfo(Models\GetFaceIdRiskInfoRequest $req) 完成验证后，用FaceIdToken调用本接口获取设备风险相关信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetFaceIdTokenResponse GetFaceIdToken(Models\GetFaceIdTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
+ * @method Models\GetFaceidRiskInfoTokenResponse GetFaceidRiskInfoToken(Models\GetFaceidRiskInfoTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取风险结果信息，该Token仅能核身一次。
  * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。
  * @method Models\GetWeChatBillDetailsResponse GetWeChatBillDetails(Models\GetWeChatBillDetailsRequest $req) 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
  * @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。

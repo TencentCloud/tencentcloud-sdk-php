@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFolderName() 获取新建文件夹名
  * @method void setFolderName(string $FolderName) 设置新建文件夹名
- * @method string getParentId() 获取新建文件夹的父目录ID
- * @method void setParentId(string $ParentId) 设置新建文件夹的父目录ID
+ * @method string getParentId() 获取新建文件夹的父目录ID（根目录为"root"）
+ * @method void setParentId(string $ParentId) 设置新建文件夹的父目录ID（根目录为"root"）
  * @method integer getFolderType() 获取文件夹类型，0是任务文件夹，1是依赖文件夹
  * @method void setFolderType(integer $FolderType) 设置文件夹类型，0是任务文件夹，1是依赖文件夹
  * @method string getWorkSpaceId() 获取工作空间 SerialId
@@ -37,7 +37,7 @@ class CreateFolderRequest extends AbstractModel
     public $FolderName;
 
     /**
-     * @var string 新建文件夹的父目录ID
+     * @var string 新建文件夹的父目录ID（根目录为"root"）
      */
     public $ParentId;
 
@@ -53,7 +53,7 @@ class CreateFolderRequest extends AbstractModel
 
     /**
      * @param string $FolderName 新建文件夹名
-     * @param string $ParentId 新建文件夹的父目录ID
+     * @param string $ParentId 新建文件夹的父目录ID（根目录为"root"）
      * @param integer $FolderType 文件夹类型，0是任务文件夹，1是依赖文件夹
      * @param string $WorkSpaceId 工作空间 SerialId
      */

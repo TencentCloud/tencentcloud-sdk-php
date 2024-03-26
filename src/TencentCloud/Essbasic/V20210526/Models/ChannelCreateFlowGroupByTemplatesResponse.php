@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
  * @method void setTaskInfos(array $TaskInfos) 设置复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+ * @method array getApprovers() 获取合同组签署方信息
+ * @method void setApprovers(array $Approvers) 设置合同组签署方信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -62,6 +64,11 @@ class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel
     public $TaskInfos;
 
     /**
+     * @var array 合同组签署方信息
+     */
+    public $Approvers;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -75,6 +82,7 @@ class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel
 `此数组的顺序和入参中的FlowInfos顺序一致`
      * @param array $TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * @param array $Approvers 合同组签署方信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,15 @@ class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel
                 $obj = new TaskInfo();
                 $obj->deserialize($value);
                 array_push($this->TaskInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
+            $this->Approvers = [];
+            foreach ($param["Approvers"] as $key => $value){
+                $obj = new FlowGroupApprovers();
+                $obj->deserialize($value);
+                array_push($this->Approvers, $obj);
             }
         }
 

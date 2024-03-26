@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncRequestId() 获取异步任务的请求 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
+ * @method array getTaskAttachInfo() 获取任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskAttachInfo(array $TaskAttachInfo) 设置任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
@@ -160,6 +164,12 @@ class TaskDetail extends AbstractModel
     public $AsyncRequestId;
 
     /**
+     * @var array 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskAttachInfo;
+
+    /**
      * @param integer $Code 错误码。
      * @param string $Message 错误信息。
      * @param integer $JobId 实例任务 ID。
@@ -192,6 +202,8 @@ class TaskDetail extends AbstractModel
      * @param array $InstanceIds 任务关联的实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncRequestId 异步任务的请求 ID。
+     * @param array $TaskAttachInfo 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +256,15 @@ class TaskDetail extends AbstractModel
 
         if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
             $this->AsyncRequestId = $param["AsyncRequestId"];
+        }
+
+        if (array_key_exists("TaskAttachInfo",$param) and $param["TaskAttachInfo"] !== null) {
+            $this->TaskAttachInfo = [];
+            foreach ($param["TaskAttachInfo"] as $key => $value){
+                $obj = new TaskAttachInfo();
+                $obj->deserialize($value);
+                array_push($this->TaskAttachInfo, $obj);
+            }
         }
     }
 }

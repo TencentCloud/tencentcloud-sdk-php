@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCageId(string $CageId) 设置金融围拢 ID 。
  * @method integer getProjectId() 获取项目ID，默认项目ID0
  * @method void setProjectId(integer $ProjectId) 设置项目ID，默认项目ID0
+ * @method string getPayType() 获取付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+ * @method void setPayType(string $PayType) 设置付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+ * @method integer getPeriod() 获取实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method void setPeriod(integer $Period) 设置实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+     */
+    public $PayType;
+
+    /**
+     * @var integer 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     */
+    public $Period;
+
+    /**
      * @param string $InstanceId 克隆源实例Id。
      * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
      * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
@@ -192,6 +206,8 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
      * @param string $CageId 金融围拢 ID 。
      * @param integer $ProjectId 项目ID，默认项目ID0
+     * @param string $PayType 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+     * @param integer $Period 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
     function __construct()
     {
@@ -293,6 +309,14 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
+            $this->PayType = $param["PayType"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

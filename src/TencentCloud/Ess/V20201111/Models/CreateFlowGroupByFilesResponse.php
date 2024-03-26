@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowIds(array $FlowIds) 设置合同(流程)组中子合同列表.
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApprovers() 获取合同组签署方信息。
+ * @method void setApprovers(array $Approvers) 设置合同组签署方信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +48,11 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
     public $FlowIds;
 
     /**
+     * @var array 合同组签署方信息。
+     */
+    public $Approvers;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FlowIds 合同(流程)组中子合同列表.
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Approvers 合同组签署方信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -76,6 +84,15 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
 
         if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
             $this->FlowIds = $param["FlowIds"];
+        }
+
+        if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
+            $this->Approvers = [];
+            foreach ($param["Approvers"] as $key => $value){
+                $obj = new FlowGroupApprovers();
+                $obj->deserialize($value);
+                array_push($this->Approvers, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

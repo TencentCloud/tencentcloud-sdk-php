@@ -95,7 +95,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) 根据位点查询消息列表
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) Ckafka实例购买/续费询价
  * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) 按量实例缩容
- * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
+ * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
  * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑Datahub连接源
  * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改Datahub任务
  * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) 修改Datahub主题属性

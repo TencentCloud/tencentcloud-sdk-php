@@ -78,6 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置是否支持工作流依赖 yes / no 默认 no
  * @method array getDependencyConfigDTOs() 获取依赖配置
  * @method void setDependencyConfigDTOs(array $DependencyConfigDTOs) 设置依赖配置
+ * @method integer getExecutionTTL() 获取执行耗时
+ * @method void setExecutionTTL(integer $ExecutionTTL) 设置执行耗时
+ * @method boolean getScriptChange() 获取脚本是否改变
+ * @method void setScriptChange(boolean $ScriptChange) 设置脚本是否改变
+ * @method array getInChargeIds() 获取责任人id
+ * @method void setInChargeIds(array $InChargeIds) 设置责任人id
  */
 class ModifyTaskInfoRequest extends AbstractModel
 {
@@ -193,6 +199,7 @@ class ModifyTaskInfoRequest extends AbstractModel
 
     /**
      * @var string 责任人
+     * @deprecated
      */
     public $InCharge;
 
@@ -227,6 +234,21 @@ class ModifyTaskInfoRequest extends AbstractModel
     public $DependencyConfigDTOs;
 
     /**
+     * @var integer 执行耗时
+     */
+    public $ExecutionTTL;
+
+    /**
+     * @var boolean 脚本是否改变
+     */
+    public $ScriptChange;
+
+    /**
+     * @var array 责任人id
+     */
+    public $InChargeIds;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $TaskId 任务ID
      * @param integer $DelayTime 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
@@ -256,6 +278,9 @@ class ModifyTaskInfoRequest extends AbstractModel
      * @param string $TargetServer 目标数据源
      * @param string $DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
      * @param array $DependencyConfigDTOs 依赖配置
+     * @param integer $ExecutionTTL 执行耗时
+     * @param boolean $ScriptChange 脚本是否改变
+     * @param array $InChargeIds 责任人id
      */
     function __construct()
     {
@@ -399,6 +424,18 @@ class ModifyTaskInfoRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DependencyConfigDTOs, $obj);
             }
+        }
+
+        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
+            $this->ExecutionTTL = $param["ExecutionTTL"];
+        }
+
+        if (array_key_exists("ScriptChange",$param) and $param["ScriptChange"] !== null) {
+            $this->ScriptChange = $param["ScriptChange"];
+        }
+
+        if (array_key_exists("InChargeIds",$param) and $param["InChargeIds"] !== null) {
+            $this->InChargeIds = $param["InChargeIds"];
         }
     }
 }

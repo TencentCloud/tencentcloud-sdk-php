@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 
 注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+ * @method string getFlowId() 获取合同流程ID，补充合同组子合同动态签署人时必传。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，补充合同组子合同动态签署人时必传。
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -128,6 +130,11 @@ class FillApproverInfo extends AbstractModel
     public $ApproverIdCardNumber;
 
     /**
+     * @var string 合同流程ID，补充合同组子合同动态签署人时必传。
+     */
+    public $FlowId;
+
+    /**
      * @param string $RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 
      * @param string $OpenId 指定企业经办签署人OpenId
@@ -150,6 +157,7 @@ class FillApproverInfo extends AbstractModel
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 
 注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * @param string $FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class FillApproverInfo extends AbstractModel
 
         if (array_key_exists("ApproverIdCardNumber",$param) and $param["ApproverIdCardNumber"] !== null) {
             $this->ApproverIdCardNumber = $param["ApproverIdCardNumber"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

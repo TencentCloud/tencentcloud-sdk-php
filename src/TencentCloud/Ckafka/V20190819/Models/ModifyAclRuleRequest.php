@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getRuleName() 获取ACL策略名
  * @method void setRuleName(string $RuleName) 设置ACL策略名
- * @method integer getIsApplied() 获取是否应用到新增的Topic
- * @method void setIsApplied(integer $IsApplied) 设置是否应用到新增的Topic
+ * @method integer getIsApplied() 获取修改预设规则时传入,是否应用到新增的Topic
+ * @method void setIsApplied(integer $IsApplied) 设置修改预设规则时传入,是否应用到新增的Topic
  */
 class ModifyAclRuleRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAclRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var integer 是否应用到新增的Topic
+     * @var integer 修改预设规则时传入,是否应用到新增的Topic
      */
     public $IsApplied;
 
     /**
      * @param string $InstanceId 实例Id
      * @param string $RuleName ACL策略名
-     * @param integer $IsApplied 是否应用到新增的Topic
+     * @param integer $IsApplied 修改预设规则时传入,是否应用到新增的Topic
      */
     function __construct()
     {

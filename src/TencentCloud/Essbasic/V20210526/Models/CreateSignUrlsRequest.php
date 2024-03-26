@@ -154,6 +154,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecipientIds(array $RecipientIds) 设置参与方角色ID，用于生成动态签署人链接完成领取。
 
 注：`使用此参数需要与flow_ids数量一致并且一一对应, 表示在对应同序号的流程中的参与角色ID`，
+ * @method FlowGroupUrlInfo getFlowGroupUrlInfo() 获取合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+ * @method void setFlowGroupUrlInfo(FlowGroupUrlInfo $FlowGroupUrlInfo) 设置合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -294,6 +296,11 @@ class CreateSignUrlsRequest extends AbstractModel
     public $RecipientIds;
 
     /**
+     * @var FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     */
+    public $FlowGroupUrlInfo;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -361,6 +368,7 @@ class CreateSignUrlsRequest extends AbstractModel
      * @param array $RecipientIds 参与方角色ID，用于生成动态签署人链接完成领取。
 
 注：`使用此参数需要与flow_ids数量一致并且一一对应, 表示在对应同序号的流程中的参与角色ID`，
+     * @param FlowGroupUrlInfo $FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
      */
     function __construct()
     {
@@ -443,6 +451,11 @@ class CreateSignUrlsRequest extends AbstractModel
 
         if (array_key_exists("RecipientIds",$param) and $param["RecipientIds"] !== null) {
             $this->RecipientIds = $param["RecipientIds"];
+        }
+
+        if (array_key_exists("FlowGroupUrlInfo",$param) and $param["FlowGroupUrlInfo"] !== null) {
+            $this->FlowGroupUrlInfo = new FlowGroupUrlInfo();
+            $this->FlowGroupUrlInfo->deserialize($param["FlowGroupUrlInfo"]);
         }
     }
 }

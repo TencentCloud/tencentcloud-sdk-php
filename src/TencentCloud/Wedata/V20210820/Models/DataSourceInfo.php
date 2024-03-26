@@ -144,6 +144,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShowType(string $ShowType) 设置数据源页面展示类型，与Type对应
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductId() 获取当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(integer $ProductId) 设置当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDevelopmentId() 获取当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDevelopmentId(integer $DevelopmentId) 设置当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDevelopmentParams() 获取同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDevelopmentParams(string $DevelopmentParams) 设置同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -334,6 +346,24 @@ class DataSourceInfo extends AbstractModel
     public $ShowType;
 
     /**
+     * @var integer 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
+     * @var integer 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DevelopmentId;
+
+    /**
+     * @var string 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DevelopmentParams;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -395,6 +425,12 @@ class DataSourceInfo extends AbstractModel
      * @param integer $ModifiedTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShowType 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductId 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DevelopmentId 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DevelopmentParams 同params 内容为开发数据源的数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -532,6 +568,18 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
             $this->ShowType = $param["ShowType"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("DevelopmentId",$param) and $param["DevelopmentId"] !== null) {
+            $this->DevelopmentId = $param["DevelopmentId"];
+        }
+
+        if (array_key_exists("DevelopmentParams",$param) and $param["DevelopmentParams"] !== null) {
+            $this->DevelopmentParams = $param["DevelopmentParams"];
         }
     }
 }

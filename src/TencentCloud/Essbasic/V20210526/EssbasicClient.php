@@ -421,7 +421,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>原合同个人类型参与人必须是解除协议的参与人，<code>不能更换其他第三方个人</code>参与解除协议。</li>
 <li>如果原合同企业参与人无法参与解除协议，可以指定同企业具有同等权限的<code>企业员工代为处理</code>。</li>
 <li>发起解除协议同发起其他企业合同一样，也会参与合同<code>扣费</code>，扣费标准同其他类型合同。</li>
-<li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li></ul>
+<li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li>
+<li>非原合同企业参与人发起解除协议时，需要有<code>解除合同的权限</code>。</li>
+</ul>
  * @method Models\ChannelCreateRoleResponse ChannelCreateRole(Models\ChannelCreateRoleRequest $req) 此接口（ChannelCreateRole）用来创建企业自定义角色。
 
 适用场景1：创建当前企业的自定义角色，并且创建时不进行权限的设置（PermissionGroups 参数不传），角色中的权限内容可通过接口 ChannelModifyRole 完成更新。

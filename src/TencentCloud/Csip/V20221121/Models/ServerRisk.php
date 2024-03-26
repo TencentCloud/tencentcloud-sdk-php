@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名
  * @method string getInstanceType() 获取资产类型
  * @method void setInstanceType(string $InstanceType) 设置资产类型
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级 low:低危 high:高危 middle:中危 info:提示 extreme:严重
+ * @method void setLevel(string $Level) 设置风险等级 low:低危 high:高危 middle:中危 info:提示 extreme:严重
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getComponent() 获取组件
@@ -125,7 +125,7 @@ class ServerRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级 low:低危 high:高危 middle:中危 info:提示 extreme:严重
      */
     public $Level;
 
@@ -236,7 +236,7 @@ class ServerRisk extends AbstractModel
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
      * @param string $InstanceType 资产类型
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级 low:低危 high:高危 middle:中危 info:提示 extreme:严重
      * @param string $Protocol 协议
      * @param string $Component 组件
      * @param string $Service 服务

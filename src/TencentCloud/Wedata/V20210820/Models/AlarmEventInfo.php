@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSendSuccess(integer $IsSendSuccess) 设置0：部分成功，1：全部成功，2：全部失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInQuitePeriods() 获取是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInQuitePeriods(integer $InQuitePeriods) 设置是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecordId() 获取告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordId(integer $RecordId) 设置告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessageId() 获取消息ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageId(string $MessageId) 设置消息ID
@@ -183,6 +191,18 @@ class AlarmEventInfo extends AbstractModel
     public $IsSendSuccess;
 
     /**
+     * @var integer 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InQuitePeriods;
+
+    /**
+     * @var integer 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordId;
+
+    /**
      * @var string 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -257,6 +277,10 @@ class AlarmEventInfo extends AbstractModel
      * @param string $TaskName 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSendSuccess 0：部分成功，1：全部成功，2：全部失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InQuitePeriods 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RecordId 告警记录id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MessageId 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -348,6 +372,14 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("IsSendSuccess",$param) and $param["IsSendSuccess"] !== null) {
             $this->IsSendSuccess = $param["IsSendSuccess"];
+        }
+
+        if (array_key_exists("InQuitePeriods",$param) and $param["InQuitePeriods"] !== null) {
+            $this->InQuitePeriods = $param["InQuitePeriods"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
 
         if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {

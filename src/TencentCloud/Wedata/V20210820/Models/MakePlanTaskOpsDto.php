@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskBaseInfo(TaskOpsDto $TaskBaseInfo) 设置任务基本信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceCount() 获取补录计划该任务实例数
+ * @method integer getInstanceCount() 获取补录该任务当前已生成的实例数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceCount(integer $InstanceCount) 设置补录计划该任务实例数
+ * @method void setInstanceCount(integer $InstanceCount) 设置补录该任务当前已生成的实例数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompletePercent() 获取补录任务实例完成百分数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -35,6 +35,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSuccessPercent() 获取补录任务实例成功百分数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessPercent(integer $SuccessPercent) 设置补录任务实例成功百分数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceTotalCount() 获取预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceTotalCount(integer $InstanceTotalCount) 设置预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanTaskOpsDto extends AbstractModel
@@ -46,7 +50,7 @@ class MakePlanTaskOpsDto extends AbstractModel
     public $TaskBaseInfo;
 
     /**
-     * @var integer 补录计划该任务实例数
+     * @var integer 补录该任务当前已生成的实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
@@ -64,13 +68,21 @@ class MakePlanTaskOpsDto extends AbstractModel
     public $SuccessPercent;
 
     /**
+     * @var integer 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceTotalCount;
+
+    /**
      * @param TaskOpsDto $TaskBaseInfo 任务基本信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceCount 补录计划该任务实例数
+     * @param integer $InstanceCount 补录该任务当前已生成的实例数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompletePercent 补录任务实例完成百分数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccessPercent 补录任务实例成功百分数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -101,6 +113,10 @@ class MakePlanTaskOpsDto extends AbstractModel
 
         if (array_key_exists("SuccessPercent",$param) and $param["SuccessPercent"] !== null) {
             $this->SuccessPercent = $param["SuccessPercent"];
+        }
+
+        if (array_key_exists("InstanceTotalCount",$param) and $param["InstanceTotalCount"] !== null) {
+            $this->InstanceTotalCount = $param["InstanceTotalCount"];
         }
     }
 }

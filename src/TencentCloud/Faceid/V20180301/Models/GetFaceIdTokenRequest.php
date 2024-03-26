@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getRuleId() 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+ * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
  */
 class GetFaceIdTokenRequest extends AbstractModel
 {
@@ -86,6 +90,12 @@ class GetFaceIdTokenRequest extends AbstractModel
     public $Encryption;
 
     /**
+     * @var string 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+     */
+    public $RuleId;
+
+    /**
      * @param string $CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      * @param string $IdCard CompareLib为商业库时必传。
      * @param string $Name CompareLib为商业库时必传。
@@ -96,6 +106,8 @@ class GetFaceIdTokenRequest extends AbstractModel
      * @param boolean $UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
      */
     function __construct()
     {
@@ -141,6 +153,10 @@ class GetFaceIdTokenRequest extends AbstractModel
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = new Encryption();
             $this->Encryption->deserialize($param["Encryption"]);
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

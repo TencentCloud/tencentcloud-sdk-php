@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) 设置kafka配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKafkaVersion() 获取订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKafkaVersion(string $KafkaVersion) 设置订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessType() 获取源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessType(string $AccessType) 设置源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
@@ -240,6 +244,12 @@ class DescribeSubscribeDetailResponse extends AbstractModel
     public $KafkaConfig;
 
     /**
+     * @var string 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KafkaVersion;
+
+    /**
      * @var string 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -316,6 +326,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
      * @param array $SubscribeObjects 订阅的数据库表信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscribeKafkaConfig $KafkaConfig kafka配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KafkaVersion 订阅内置kafka的版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
 注意：此字段可能返回 null，表示取不到有效值。
@@ -434,6 +446,10 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
         if (array_key_exists("KafkaConfig",$param) and $param["KafkaConfig"] !== null) {
             $this->KafkaConfig = new SubscribeKafkaConfig();
             $this->KafkaConfig->deserialize($param["KafkaConfig"]);
+        }
+
+        if (array_key_exists("KafkaVersion",$param) and $param["KafkaVersion"] !== null) {
+            $this->KafkaVersion = $param["KafkaVersion"];
         }
 
         if (array_key_exists("AccessType",$param) and $param["AccessType"] !== null) {

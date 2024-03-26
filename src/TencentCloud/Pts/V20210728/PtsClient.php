@@ -29,11 +29,13 @@ use TencentCloud\Pts\V20210728\Models as Models;
  * @method Models\CopyScenarioResponse CopyScenario(Models\CopyScenarioRequest $req) 复制场景
  * @method Models\CreateAlertChannelResponse CreateAlertChannel(Models\CreateAlertChannelRequest $req) 创建告警通知接收组
  * @method Models\CreateCronJobResponse CreateCronJob(Models\CreateCronJobRequest $req) 创建定时任务
+ * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 创建文件
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目
  * @method Models\CreateScenarioResponse CreateScenario(Models\CreateScenarioRequest $req) 创建场景
  * @method Models\DeleteAlertChannelResponse DeleteAlertChannel(Models\DeleteAlertChannelRequest $req) 删除告警通知接收组
  * @method Models\DeleteCronJobsResponse DeleteCronJobs(Models\DeleteCronJobsRequest $req) 删除定时任务
+ * @method Models\DeleteEnvironmentsResponse DeleteEnvironments(Models\DeleteEnvironmentsRequest $req) 删除环境
  * @method Models\DeleteFilesResponse DeleteFiles(Models\DeleteFilesRequest $req) 删除文件
  * @method Models\DeleteJobsResponse DeleteJobs(Models\DeleteJobsRequest $req) 删除任务
  * @method Models\DeleteProjectsResponse DeleteProjects(Models\DeleteProjectsRequest $req) 删除项目
@@ -43,6 +45,7 @@ use TencentCloud\Pts\V20210728\Models as Models;
  * @method Models\DescribeAvailableMetricsResponse DescribeAvailableMetrics(Models\DescribeAvailableMetricsRequest $req) 查询系统支持的指标
  * @method Models\DescribeCheckSummaryResponse DescribeCheckSummary(Models\DescribeCheckSummaryRequest $req) 查询检查点汇总信息
  * @method Models\DescribeCronJobsResponse DescribeCronJobs(Models\DescribeCronJobsRequest $req) 列出定时任务，非必填数组为空就默认全选
+ * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 查看环境列表
  * @method Models\DescribeErrorSummaryResponse DescribeErrorSummary(Models\DescribeErrorSummaryRequest $req) 查询错误详情汇总信息
  * @method Models\DescribeFilesResponse DescribeFiles(Models\DescribeFilesRequest $req) 查询文件列表
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询任务列表
@@ -63,6 +66,7 @@ use TencentCloud\Pts\V20210728\Models as Models;
  * @method Models\RestartCronJobsResponse RestartCronJobs(Models\RestartCronJobsRequest $req) 重启状态为已中止的定时任务
  * @method Models\StartJobResponse StartJob(Models\StartJobRequest $req) 创建并启动任务
  * @method Models\UpdateCronJobResponse UpdateCronJob(Models\UpdateCronJobRequest $req) 更新定时任务
+ * @method Models\UpdateEnvironmentResponse UpdateEnvironment(Models\UpdateEnvironmentRequest $req) 更新环境
  * @method Models\UpdateFileScenarioRelationResponse UpdateFileScenarioRelation(Models\UpdateFileScenarioRelationRequest $req) 更新关联文件场景
  * @method Models\UpdateJobResponse UpdateJob(Models\UpdateJobRequest $req) 更新任务
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 更新项目

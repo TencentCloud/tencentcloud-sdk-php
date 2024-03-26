@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页记录数
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getMessageId() 获取消息ID
- * @method void setMessageId(string $MessageId) 设置消息ID
  * @method integer getTaskType() 获取类型
  * @method void setTaskType(integer $TaskType) 设置类型
  * @method string getAlarmRecipient() 获取告警接收人ID(逗号分隔)
@@ -38,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmRecipientName(string $AlarmRecipientName) 设置告警接收人姓名(逗号分隔)
  * @method string getAlarmTime() 获取告警时间
  * @method void setAlarmTime(string $AlarmTime) 设置告警时间
+ * @method string getMessageId() 获取消息ID
+ * @method void setMessageId(string $MessageId) 设置消息ID
+ * @method integer getRecordId() 获取告警记录id
+ * @method void setRecordId(integer $RecordId) 设置告警记录id
  * @method integer getMonitorType() 获取监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
  * @method void setMonitorType(integer $MonitorType) 设置监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
  */
@@ -64,11 +66,6 @@ class DescribeAlarmReceiverRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 消息ID
-     */
-    public $MessageId;
-
-    /**
      * @var integer 类型
      */
     public $TaskType;
@@ -89,6 +86,16 @@ class DescribeAlarmReceiverRequest extends AbstractModel
     public $AlarmTime;
 
     /**
+     * @var string 消息ID
+     */
+    public $MessageId;
+
+    /**
+     * @var integer 告警记录id
+     */
+    public $RecordId;
+
+    /**
      * @var integer 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
     public $MonitorType;
@@ -98,11 +105,12 @@ class DescribeAlarmReceiverRequest extends AbstractModel
      * @param integer $PageNumber 当前页
      * @param integer $PageSize 每页记录数
      * @param string $ProjectId 项目ID
-     * @param string $MessageId 消息ID
      * @param integer $TaskType 类型
      * @param string $AlarmRecipient 告警接收人ID(逗号分隔)
      * @param string $AlarmRecipientName 告警接收人姓名(逗号分隔)
      * @param string $AlarmTime 告警时间
+     * @param string $MessageId 消息ID
+     * @param integer $RecordId 告警记录id
      * @param integer $MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
     function __construct()
@@ -134,10 +142,6 @@ class DescribeAlarmReceiverRequest extends AbstractModel
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {
-            $this->MessageId = $param["MessageId"];
-        }
-
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
         }
@@ -152,6 +156,14 @@ class DescribeAlarmReceiverRequest extends AbstractModel
 
         if (array_key_exists("AlarmTime",$param) and $param["AlarmTime"] !== null) {
             $this->AlarmTime = $param["AlarmTime"];
+        }
+
+        if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {
+            $this->MessageId = $param["MessageId"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
 
         if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {

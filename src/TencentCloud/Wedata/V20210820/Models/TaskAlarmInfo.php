@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmRecipientType(integer $AlarmRecipientType) 设置告警接收人类型，0指定人员；1任务责任人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQuietPeriods() 获取免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuietPeriods(array $QuietPeriods) 设置免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWeComHook() 获取企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeComHook(string $WeComHook) 设置企业微信群Hook地址，多个hook地址使用,隔开
@@ -250,6 +254,12 @@ class TaskAlarmInfo extends AbstractModel
     public $AlarmRecipientType;
 
     /**
+     * @var array 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuietPeriods;
+
+    /**
      * @var string 企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -343,6 +353,8 @@ class TaskAlarmInfo extends AbstractModel
      * @param array $AlarmIndicatorInfos 指标列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmRecipientType 告警接收人类型，0指定人员；1任务责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $QuietPeriods 免打扰时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WeComHook 企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
@@ -465,6 +477,15 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("AlarmRecipientType",$param) and $param["AlarmRecipientType"] !== null) {
             $this->AlarmRecipientType = $param["AlarmRecipientType"];
+        }
+
+        if (array_key_exists("QuietPeriods",$param) and $param["QuietPeriods"] !== null) {
+            $this->QuietPeriods = [];
+            foreach ($param["QuietPeriods"] as $key => $value){
+                $obj = new QuietPeriod();
+                $obj->deserialize($value);
+                array_push($this->QuietPeriods, $obj);
+            }
         }
 
         if (array_key_exists("WeComHook",$param) and $param["WeComHook"] !== null) {

@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置实际执行引擎
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRuleExecResultVOList() 获取规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleExecResultVOList(array $RuleExecResultVOList) 设置规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecResult extends AbstractModel
 {
@@ -174,6 +178,12 @@ class RuleGroupExecResult extends AbstractModel
     public $EngineType;
 
     /**
+     * @var array 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleExecResultVOList;
+
+    /**
      * @param integer $RuleGroupExecId 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -203,6 +213,8 @@ class RuleGroupExecResult extends AbstractModel
      * @param string $ExecDetail 执行详情，调度计划或者关联生产任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RuleExecResultVOList 规则执行结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,15 @@ class RuleGroupExecResult extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("RuleExecResultVOList",$param) and $param["RuleExecResultVOList"] !== null) {
+            $this->RuleExecResultVOList = [];
+            foreach ($param["RuleExecResultVOList"] as $key => $value){
+                $obj = new RuleExecResult();
+                $obj->deserialize($value);
+                array_push($this->RuleExecResultVOList, $obj);
+            }
         }
     }
 }

@@ -62,8 +62,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputObjectPath() 获取转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+ * @method string getOutputObjectPath() 获取转码后主文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置转码后主文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+
  * @method string getSegmentObjectName() 获取转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
  * @method void setSegmentObjectName(string $SegmentObjectName) 设置转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
  * @method NumberFormat getObjectNumberFormat() 获取转码后输出路径中的`{number}`变量的规则。
@@ -131,7 +147,15 @@ class TranscodeTaskInput extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+     * @var string 转码后主文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+
      */
     public $OutputObjectPath;
 
@@ -174,7 +198,15 @@ class TranscodeTaskInput extends AbstractModel
 <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
      * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+     * @param string $OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+
      * @param string $SegmentObjectName 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
      * @param NumberFormat $ObjectNumberFormat 转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。

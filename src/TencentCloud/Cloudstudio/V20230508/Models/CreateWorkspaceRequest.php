@@ -20,32 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWorkspace请求参数结构体
  *
- * @method string getName() 获取工作空间名称
- * @method void setName(string $Name) 设置工作空间名称
- * @method string getDescription() 获取工作空间描述
- * @method void setDescription(string $Description) 设置工作空间描述
+ * @method string getName() 获取工作空间名称, 长度限制 2~64
+ * @method void setName(string $Name) 设置工作空间名称, 长度限制 2~64
+ * @method string getDescription() 获取工作空间描述, 长度限制 0~255
+ * @method void setDescription(string $Description) 设置工作空间描述, 长度限制 0~255
  * @method string getSpecs() 获取工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
  * @method void setSpecs(string $Specs) 设置工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
- * @method string getImage() 获取工作空间基础镜像名称, 默认会使用 All In One 镜像
- * @method void setImage(string $Image) 设置工作空间基础镜像名称, 默认会使用 All In One 镜像
+ * @method string getImage() 获取工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+ * @method void setImage(string $Image) 设置工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
  * @method GitRepository getRepository() 获取Git 仓库. 工作空间启动时会自动克隆该仓库
  * @method void setRepository(GitRepository $Repository) 设置Git 仓库. 工作空间启动时会自动克隆该仓库
  * @method array getEnvs() 获取环境变量. 会被注入到工作空间中
  * @method void setEnvs(array $Envs) 设置环境变量. 会被注入到工作空间中
- * @method array getExtensions() 获取预装插件. 工作空间启动时, 会自动安装这些插件 
- * @method void setExtensions(array $Extensions) 设置预装插件. 工作空间启动时, 会自动安装这些插件 
+ * @method array getExtensions() 获取预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+ * @method void setExtensions(array $Extensions) 设置预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
  * @method LifeCycle getLifecycle() 获取工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
  * @method void setLifecycle(LifeCycle $Lifecycle) 设置工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+ * @method integer getAppId() 获取应用名称
+ * @method void setAppId(integer $AppId) 设置应用名称
+ * @method string getUin() 获取用户UIN
+ * @method void setUin(string $Uin) 设置用户UIN
+ * @method string getUniqVpcId() 获取VPCID
+ * @method void setUniqVpcId(string $UniqVpcId) 设置VPCID
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  */
 class CreateWorkspaceRequest extends AbstractModel
 {
     /**
-     * @var string 工作空间名称
+     * @var string 工作空间名称, 长度限制 2~64
      */
     public $Name;
 
     /**
-     * @var string 工作空间描述
+     * @var string 工作空间描述, 长度限制 0~255
      */
     public $Description;
 
@@ -55,7 +63,7 @@ class CreateWorkspaceRequest extends AbstractModel
     public $Specs;
 
     /**
-     * @var string 工作空间基础镜像名称, 默认会使用 All In One 镜像
+     * @var string 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
      */
     public $Image;
 
@@ -70,7 +78,7 @@ class CreateWorkspaceRequest extends AbstractModel
     public $Envs;
 
     /**
-     * @var array 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * @var array 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
      */
     public $Extensions;
 
@@ -80,14 +88,38 @@ class CreateWorkspaceRequest extends AbstractModel
     public $Lifecycle;
 
     /**
-     * @param string $Name 工作空间名称
-     * @param string $Description 工作空间描述
+     * @var integer 应用名称
+     */
+    public $AppId;
+
+    /**
+     * @var string 用户UIN
+     */
+    public $Uin;
+
+    /**
+     * @var string VPCID
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
+     * @param string $Name 工作空间名称, 长度限制 2~64
+     * @param string $Description 工作空间描述, 长度限制 0~255
      * @param string $Specs 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
-     * @param string $Image 工作空间基础镜像名称, 默认会使用 All In One 镜像
+     * @param string $Image 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
      * @param GitRepository $Repository Git 仓库. 工作空间启动时会自动克隆该仓库
      * @param array $Envs 环境变量. 会被注入到工作空间中
-     * @param array $Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * @param array $Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
      * @param LifeCycle $Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * @param integer $AppId 应用名称
+     * @param string $Uin 用户UIN
+     * @param string $UniqVpcId VPCID
+     * @param string $SubnetId 子网ID
      */
     function __construct()
     {
@@ -139,6 +171,22 @@ class CreateWorkspaceRequest extends AbstractModel
         if (array_key_exists("Lifecycle",$param) and $param["Lifecycle"] !== null) {
             $this->Lifecycle = new LifeCycle();
             $this->Lifecycle->deserialize($param["Lifecycle"]);
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

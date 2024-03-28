@@ -55,7 +55,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateVulFixResponse CreateVulFix(Models\CreateVulFixRequest $req) 提交漏洞修护
  * @method Models\CreateWhiteListOrderResponse CreateWhiteListOrder(Models\CreateWhiteListOrderRequest $req) 该接口可以创建白名单订单
  * @method Models\DeleteAllJavaMemShellsResponse DeleteAllJavaMemShells(Models\DeleteAllJavaMemShellsRequest $req) 删除全部java内存马事件
- * @method Models\DeleteAttackLogsResponse DeleteAttackLogs(Models\DeleteAttackLogsRequest $req) 删除网络攻击日志
+ * @method Models\DeleteAttackLogsResponse DeleteAttackLogs(Models\DeleteAttackLogsRequest $req) ModifyEventAttackStatus 接口替代
+
+删除网络攻击日志
  * @method Models\DeleteBanWhiteListResponse DeleteBanWhiteList(Models\DeleteBanWhiteListRequest $req) 删除阻断白名单列表
  * @method Models\DeleteBaselinePolicyResponse DeleteBaselinePolicy(Models\DeleteBaselinePolicyRequest $req) 删除基线策略配置
  * @method Models\DeleteBaselineRuleResponse DeleteBaselineRule(Models\DeleteBaselineRuleRequest $req) 删除基线规则
@@ -414,7 +416,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportAssetWebLocationListResponse ExportAssetWebLocationList(Models\ExportAssetWebLocationListRequest $req) 导出Web站点列表
  * @method Models\ExportAssetWebServiceInfoListResponse ExportAssetWebServiceInfoList(Models\ExportAssetWebServiceInfoListRequest $req) 导出资产管理Web服务列表
  * @method Models\ExportAttackEventsResponse ExportAttackEvents(Models\ExportAttackEventsRequest $req) 导出网络攻击事件
- * @method Models\ExportAttackLogsResponse ExportAttackLogs(Models\ExportAttackLogsRequest $req) 导出网络攻击日志
+ * @method Models\ExportAttackLogsResponse ExportAttackLogs(Models\ExportAttackLogsRequest $req) ExportAttackEvents接口替代
+
+导出网络攻击日志
  * @method Models\ExportBaselineEffectHostListResponse ExportBaselineEffectHostList(Models\ExportBaselineEffectHostListRequest $req) 导出基线影响主机列表
  * @method Models\ExportBaselineFixListResponse ExportBaselineFixList(Models\ExportBaselineFixListRequest $req) 导出修复列表
  * @method Models\ExportBaselineHostDetectListResponse ExportBaselineHostDetectList(Models\ExportBaselineHostDetectListRequest $req) 导出基线主机检测

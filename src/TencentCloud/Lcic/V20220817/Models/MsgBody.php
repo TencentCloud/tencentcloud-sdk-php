@@ -24,16 +24,20 @@ use TencentCloud\Common\AbstractModel;
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
  * @method void setMsgType(string $MsgType) 设置TIM 消息对象类型，目前支持的消息对象包括：
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
  * @method TextMsgContent getTextMsgContent() 获取文本消息，当MsgType 为TIMTextElem（文本消息）必选。
  * @method void setTextMsgContent(TextMsgContent $TextMsgContent) 设置文本消息，当MsgType 为TIMTextElem（文本消息）必选。
  * @method FaceMsgContent getFaceMsgContent() 获取表情消息，当MsgType 为TIMFaceElem（表情消息）必选。
  * @method void setFaceMsgContent(FaceMsgContent $FaceMsgContent) 设置表情消息，当MsgType 为TIMFaceElem（表情消息）必选。
  * @method ImageMsgContent getImageMsgContent() 获取图像消息，当MsgType为TIMImageElem（图像消息）必选。
  * @method void setImageMsgContent(ImageMsgContent $ImageMsgContent) 设置图像消息，当MsgType为TIMImageElem（图像消息）必选。
+ * @method CustomMsgContent getCustomMsgContent() 获取自定义消息，TIMCustomElem（自定义消息）必选。
+ * @method void setCustomMsgContent(CustomMsgContent $CustomMsgContent) 设置自定义消息，TIMCustomElem（自定义消息）必选。
  */
 class MsgBody extends AbstractModel
 {
@@ -42,6 +46,7 @@ class MsgBody extends AbstractModel
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
      */
     public $MsgType;
 
@@ -61,13 +66,20 @@ TIMImageElem（图像消息）
     public $ImageMsgContent;
 
     /**
+     * @var CustomMsgContent 自定义消息，TIMCustomElem（自定义消息）必选。
+     */
+    public $CustomMsgContent;
+
+    /**
      * @param string $MsgType TIM 消息对象类型，目前支持的消息对象包括：
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
      * @param TextMsgContent $TextMsgContent 文本消息，当MsgType 为TIMTextElem（文本消息）必选。
      * @param FaceMsgContent $FaceMsgContent 表情消息，当MsgType 为TIMFaceElem（表情消息）必选。
      * @param ImageMsgContent $ImageMsgContent 图像消息，当MsgType为TIMImageElem（图像消息）必选。
+     * @param CustomMsgContent $CustomMsgContent 自定义消息，TIMCustomElem（自定义消息）必选。
      */
     function __construct()
     {
@@ -99,6 +111,11 @@ TIMImageElem（图像消息）
         if (array_key_exists("ImageMsgContent",$param) and $param["ImageMsgContent"] !== null) {
             $this->ImageMsgContent = new ImageMsgContent();
             $this->ImageMsgContent->deserialize($param["ImageMsgContent"]);
+        }
+
+        if (array_key_exists("CustomMsgContent",$param) and $param["CustomMsgContent"] !== null) {
+            $this->CustomMsgContent = new CustomMsgContent();
+            $this->CustomMsgContent->deserialize($param["CustomMsgContent"]);
         }
     }
 }

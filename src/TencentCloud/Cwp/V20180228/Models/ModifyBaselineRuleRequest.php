@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectAll(integer $SelectAll) 设置是否过滤全选
  * @method array getFilters() 获取<li>ItemName - string - 是否必填：否 - 项名称</li>
  * @method void setFilters(array $Filters) 设置<li>ItemName - string - 是否必填：否 - 项名称</li>
+ * @method integer getIdType() 获取0:检测项，1:检测项分类
+ * @method void setIdType(integer $IdType) 设置0:检测项，1:检测项分类
+ * @method array getExcludeIds() 获取需要排除的检测项id
+ * @method void setExcludeIds(array $ExcludeIds) 设置需要排除的检测项id
+ * @method array getCategoryIds() 获取勾选的检测项分类
+ * @method void setCategoryIds(array $CategoryIds) 设置勾选的检测项分类
  */
 class ModifyBaselineRuleRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class ModifyBaselineRuleRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var integer 0:检测项，1:检测项分类
+     */
+    public $IdType;
+
+    /**
+     * @var array 需要排除的检测项id
+     */
+    public $ExcludeIds;
+
+    /**
+     * @var array 勾选的检测项分类
+     */
+    public $CategoryIds;
+
+    /**
      * @param BaselineRule $Data 无
      * @param integer $SelectAll 是否过滤全选
      * @param array $Filters <li>ItemName - string - 是否必填：否 - 项名称</li>
+     * @param integer $IdType 0:检测项，1:检测项分类
+     * @param array $ExcludeIds 需要排除的检测项id
+     * @param array $CategoryIds 勾选的检测项分类
      */
     function __construct()
     {
@@ -78,6 +102,18 @@ class ModifyBaselineRuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IdType",$param) and $param["IdType"] !== null) {
+            $this->IdType = $param["IdType"];
+        }
+
+        if (array_key_exists("ExcludeIds",$param) and $param["ExcludeIds"] !== null) {
+            $this->ExcludeIds = $param["ExcludeIds"];
+        }
+
+        if (array_key_exists("CategoryIds",$param) and $param["CategoryIds"] !== null) {
+            $this->CategoryIds = $param["CategoryIds"];
         }
     }
 }

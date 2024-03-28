@@ -21,11 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 日志推送目标。
  *
  * @method string getCLSRegion() 获取日志集所属地区：
-ap-guangzhou：广州； 
-ap-singapore：新加坡。
+<li>ap-guangzhou：广州；</li>
+<li>ap-beijing：北京；</li>
+<li>ap-chengdu：成都；</li>
+<li>ap-chongqing：重庆；</li>
+<li>ap-nanjing：南京；</li>
+<li>ap-shanghai：上海；</li>
+<li>ap-singapore：新加坡。</li>
  * @method void setCLSRegion(string $CLSRegion) 设置日志集所属地区：
-ap-guangzhou：广州； 
-ap-singapore：新加坡。
+<li>ap-guangzhou：广州；</li>
+<li>ap-beijing：北京；</li>
+<li>ap-chengdu：成都；</li>
+<li>ap-chongqing：重庆；</li>
+<li>ap-nanjing：南京；</li>
+<li>ap-shanghai：上海；</li>
+<li>ap-singapore：新加坡。</li>
  * @method string getTopicId() 获取投递的目标主题 ID。
  * @method void setTopicId(string $TopicId) 设置投递的目标主题 ID。
  * @method string getLogsetId() 获取投递的目标集 ID。
@@ -41,8 +51,13 @@ class AreaCLSTargetInfo extends AbstractModel
 {
     /**
      * @var string 日志集所属地区：
-ap-guangzhou：广州； 
-ap-singapore：新加坡。
+<li>ap-guangzhou：广州；</li>
+<li>ap-beijing：北京；</li>
+<li>ap-chengdu：成都；</li>
+<li>ap-chongqing：重庆；</li>
+<li>ap-nanjing：南京；</li>
+<li>ap-shanghai：上海；</li>
+<li>ap-singapore：新加坡。</li>
      */
     public $CLSRegion;
 
@@ -65,8 +80,13 @@ ap-singapore：新加坡。
 
     /**
      * @param string $CLSRegion 日志集所属地区：
-ap-guangzhou：广州； 
-ap-singapore：新加坡。
+<li>ap-guangzhou：广州；</li>
+<li>ap-beijing：北京；</li>
+<li>ap-chengdu：成都；</li>
+<li>ap-chongqing：重庆；</li>
+<li>ap-nanjing：南京；</li>
+<li>ap-shanghai：上海；</li>
+<li>ap-singapore：新加坡。</li>
      * @param string $TopicId 投递的目标主题 ID。
      * @param string $LogsetId 投递的目标集 ID。
      * @param string $Switch 日志投递状态。

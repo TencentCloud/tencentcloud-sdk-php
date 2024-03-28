@@ -28,8 +28,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputObjectPath() 获取转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}.{format}`。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}.{format}`。
+ * @method string getOutputObjectPath() 获取转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
  * @method string getSubStreamObjectName() 获取转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
  * @method void setSubStreamObjectName(string $SubStreamObjectName) 设置转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
  * @method string getSegmentObjectName() 获取转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
@@ -62,7 +76,14 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}.{format}`。
+     * @var string 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
      */
     public $OutputObjectPath;
 
@@ -93,7 +114,14 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputObjectPath 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}.{format}`。
+     * @param string $OutputObjectPath 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
      * @param string $SubStreamObjectName 转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
      * @param string $SegmentObjectName 转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
      * @param array $AddOnSubtitles 要插入的字幕文件。

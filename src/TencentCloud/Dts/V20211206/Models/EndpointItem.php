@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChildInstanceId() 获取数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChildInstanceId(string $ChildInstanceId) 设置数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChildInstanceType() 获取数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChildInstanceType(string $ChildInstanceType) 设置数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndpointItem extends AbstractModel
 {
@@ -184,6 +192,18 @@ class EndpointItem extends AbstractModel
     public $ExtraAttr;
 
     /**
+     * @var string 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChildInstanceId;
+
+    /**
+     * @var string 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChildInstanceType;
+
+    /**
      * @param string $DatabaseRegion 源库所在地域。如果 AccessType 为 ccn，请填vpc所在地域，因为此时不知道源库在哪个地域。其他接入方式，请填订阅任务所在地域，因为确保订阅任务与源库在同一地域是最优的网络方案。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 用户名
@@ -215,6 +235,10 @@ class EndpointItem extends AbstractModel
      * @param string $CcnOwnerUin 云联网网关所属的主账号uin、跨账号云联网需要。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +321,14 @@ class EndpointItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("ChildInstanceId",$param) and $param["ChildInstanceId"] !== null) {
+            $this->ChildInstanceId = $param["ChildInstanceId"];
+        }
+
+        if (array_key_exists("ChildInstanceType",$param) and $param["ChildInstanceType"] !== null) {
+            $this->ChildInstanceType = $param["ChildInstanceType"];
         }
     }
 }

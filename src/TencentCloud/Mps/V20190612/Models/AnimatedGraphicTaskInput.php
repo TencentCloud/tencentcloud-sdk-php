@@ -30,8 +30,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputObjectPath() 获取转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+ * @method string getOutputObjectPath() 获取转动图后文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置转动图后文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -57,7 +71,14 @@ class AnimatedGraphicTaskInput extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * @var string 转动图后文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      */
     public $OutputObjectPath;
 
@@ -67,7 +88,14 @@ class AnimatedGraphicTaskInput extends AbstractModel
      * @param float $EndTimeOffset 动图在视频中的结束时间，单位为秒。
      * @param TaskOutputStorage $OutputStorage 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * @param string $OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      */
     function __construct()
     {

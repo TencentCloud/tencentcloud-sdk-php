@@ -56,6 +56,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilePath(string $FilePath) 设置文件相对路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExpire() 获取是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpire(integer $Expire) 设置是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceName(string $DatasourceName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbTableName() 获取库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbTableName(string $DbTableName) 设置库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleName() 获取规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleName(string $RuleName) 设置规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleExecId() 获取规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleExecId(integer $RuleExecId) 设置规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExportTaskInfo extends AbstractModel
 {
@@ -114,6 +134,36 @@ class ExportTaskInfo extends AbstractModel
     public $FilePath;
 
     /**
+     * @var integer 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Expire;
+
+    /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceName;
+
+    /**
+     * @var string 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbTableName;
+
+    /**
+     * @var string 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleName;
+
+    /**
+     * @var integer 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleExecId;
+
+    /**
      * @param integer $ExportTaskId 导出任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskType 导出任务类型(1.全部,2.触发行,3.通过行)
@@ -131,6 +181,16 @@ class ExportTaskInfo extends AbstractModel
      * @param string $SchedulerCurRunDate 调度时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilePath 文件相对路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Expire 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbTableName 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleExecId 规则执行id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +240,26 @@ class ExportTaskInfo extends AbstractModel
 
         if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
             $this->FilePath = $param["FilePath"];
+        }
+
+        if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
+            $this->Expire = $param["Expire"];
+        }
+
+        if (array_key_exists("DatasourceName",$param) and $param["DatasourceName"] !== null) {
+            $this->DatasourceName = $param["DatasourceName"];
+        }
+
+        if (array_key_exists("DbTableName",$param) and $param["DbTableName"] !== null) {
+            $this->DbTableName = $param["DbTableName"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("RuleExecId",$param) and $param["RuleExecId"] !== null) {
+            $this->RuleExecId = $param["RuleExecId"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryName(string $CategoryName) 设置分类名称
  * @method integer getParentCategoryId() 获取父分类ID,如果为0则没有父分类
  * @method void setParentCategoryId(integer $ParentCategoryId) 设置父分类ID,如果为0则没有父分类
+ * @method integer getItemCount() 获取子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItemCount(integer $ItemCount) 设置子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineCategory extends AbstractModel
 {
@@ -45,9 +49,17 @@ class BaselineCategory extends AbstractModel
     public $ParentCategoryId;
 
     /**
+     * @var integer 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ItemCount;
+
+    /**
      * @param integer $CategoryId 分类Id
      * @param string $CategoryName 分类名称
      * @param integer $ParentCategoryId 父分类ID,如果为0则没有父分类
+     * @param integer $ItemCount 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class BaselineCategory extends AbstractModel
 
         if (array_key_exists("ParentCategoryId",$param) and $param["ParentCategoryId"] !== null) {
             $this->ParentCategoryId = $param["ParentCategoryId"];
+        }
+
+        if (array_key_exists("ItemCount",$param) and $param["ItemCount"] !== null) {
+            $this->ItemCount = $param["ItemCount"];
         }
     }
 }

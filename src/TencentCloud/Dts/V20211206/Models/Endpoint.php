@@ -128,6 +128,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnOwnerUin(string $CcnOwnerUin) 设置数据库为跨账号云联网下的实例时、表示云联网所属主账号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChildInstanceId() 获取数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChildInstanceId(string $ChildInstanceId) 设置数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChildInstanceType() 获取数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChildInstanceType(string $ChildInstanceType) 设置数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
@@ -294,6 +302,18 @@ class Endpoint extends AbstractModel
     public $CcnOwnerUin;
 
     /**
+     * @var string 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChildInstanceId;
+
+    /**
+     * @var string 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChildInstanceType;
+
+    /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role 节点类型，proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填
@@ -347,6 +367,10 @@ class Endpoint extends AbstractModel
      * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CcnOwnerUin 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -468,6 +492,14 @@ class Endpoint extends AbstractModel
 
         if (array_key_exists("CcnOwnerUin",$param) and $param["CcnOwnerUin"] !== null) {
             $this->CcnOwnerUin = $param["CcnOwnerUin"];
+        }
+
+        if (array_key_exists("ChildInstanceId",$param) and $param["ChildInstanceId"] !== null) {
+            $this->ChildInstanceId = $param["ChildInstanceId"];
+        }
+
+        if (array_key_exists("ChildInstanceType",$param) and $param["ChildInstanceType"] !== null) {
+            $this->ChildInstanceType = $param["ChildInstanceType"];
         }
     }
 }

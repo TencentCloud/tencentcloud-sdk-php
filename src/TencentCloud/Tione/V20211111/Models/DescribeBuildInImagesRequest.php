@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBuildInImages请求参数结构体
  *
-
+ * @method array getImageFilters() 获取镜像过滤器
+ * @method void setImageFilters(array $ImageFilters) 设置镜像过滤器
  */
 class DescribeBuildInImagesRequest extends AbstractModel
 {
-
+    /**
+     * @var array 镜像过滤器
+     */
+    public $ImageFilters;
 
     /**
-
+     * @param array $ImageFilters 镜像过滤器
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DescribeBuildInImagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ImageFilters",$param) and $param["ImageFilters"] !== null) {
+            $this->ImageFilters = [];
+            foreach ($param["ImageFilters"] as $key => $value){
+                $obj = new ImageFIlter();
+                $obj->deserialize($value);
+                array_push($this->ImageFilters, $obj);
+            }
+        }
     }
 }

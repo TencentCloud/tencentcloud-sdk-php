@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setLimit(integer $Limit) 设置数量，最大值为1000
 
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+ * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+ * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
  * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
 
  * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
@@ -84,8 +84,8 @@ desc - 降序
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型编码，用作筛选
  * @method array getTag() 获取标签，用作筛选
  * @method void setTag(array $Tag) 设置标签，用作筛选
- * @method string getSearchKey() 获取模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
- * @method void setSearchKey(string $SearchKey) 设置模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+ * @method string getSearchKey() 获取模糊搜索：支持标签、资源id、资源别名
+ * @method void setSearchKey(string $SearchKey) 设置模糊搜索：支持标签、资源id、资源别名
  * @method array getProjectIds() 获取项目ID，用作筛选
  * @method void setProjectIds(array $ProjectIds) 设置项目ID，用作筛选
  * @method array getAllocationType() 获取费用归集类型，枚举值如下：
@@ -106,7 +106,7 @@ class DescribeAllocationSummaryByResourceRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      */
     public $Offset;
 
@@ -204,7 +204,7 @@ desc - 降序
     public $Tag;
 
     /**
-     * @var string 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+     * @var string 模糊搜索：支持标签、资源id、资源别名
      */
     public $SearchKey;
 
@@ -224,7 +224,7 @@ desc - 降序
     /**
      * @param integer $Limit 数量，最大值为1000
 
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      * @param string $Month 账单月份，格式为2024-02，不传默认当前月
 
      * @param string $PeriodType 统计周期，枚举值如下
@@ -254,7 +254,7 @@ desc - 降序
      * @param array $ZoneIds 可用区ID，用作筛选
      * @param array $InstanceTypes 实例类型编码，用作筛选
      * @param array $Tag 标签，用作筛选
-     * @param string $SearchKey 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+     * @param string $SearchKey 模糊搜索：支持标签、资源id、资源别名
      * @param array $ProjectIds 项目ID，用作筛选
      * @param array $AllocationType 费用归集类型，枚举值如下：
 0 - 分摊 

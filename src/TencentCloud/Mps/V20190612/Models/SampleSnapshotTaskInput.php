@@ -28,8 +28,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputObjectPath() 获取采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+ * @method string getOutputObjectPath() 获取采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+
  * @method NumberFormat getObjectNumberFormat() 获取采样截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置采样截图后输出路径中的`{number}`变量的规则。
@@ -54,7 +70,15 @@ class SampleSnapshotTaskInput extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+     * @var string 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+
      */
     public $OutputObjectPath;
 
@@ -69,7 +93,15 @@ class SampleSnapshotTaskInput extends AbstractModel
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputObjectPath 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+     * @param string $OutputObjectPath 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+
      * @param NumberFormat $ObjectNumberFormat 采样截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */

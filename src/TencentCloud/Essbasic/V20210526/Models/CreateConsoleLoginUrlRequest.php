@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyOperatorName(string $ProxyOperatorName) 设置子客企业员工的姓名，最大长度50个字符,  员工的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
 注：`该姓名需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该姓名会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人名字传入将不会生效`
+ * @method string getProxyOperatorMobile() 获取子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+ * @method void setProxyOperatorMobile(string $ProxyOperatorMobile) 设置子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
  * @method string getModule() 获取Web控制台登录后进入的功能模块,  支持的模块包括：
 <ul>
 <li> **空值** :(默认)企业中心模块</li>
@@ -186,6 +188,11 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $ProxyOperatorName;
 
     /**
+     * @var string 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+     */
+    public $ProxyOperatorMobile;
+
+    /**
      * @var string Web控制台登录后进入的功能模块,  支持的模块包括：
 <ul>
 <li> **空值** :(默认)企业中心模块</li>
@@ -286,6 +293,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $ProxyOperatorName 子客企业员工的姓名，最大长度50个字符,  员工的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
 注：`该姓名需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该姓名会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人名字传入将不会生效`
+     * @param string $ProxyOperatorMobile 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
      * @param string $Module Web控制台登录后进入的功能模块,  支持的模块包括：
 <ul>
 <li> **空值** :(默认)企业中心模块</li>
@@ -358,6 +366,10 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("ProxyOperatorName",$param) and $param["ProxyOperatorName"] !== null) {
             $this->ProxyOperatorName = $param["ProxyOperatorName"];
+        }
+
+        if (array_key_exists("ProxyOperatorMobile",$param) and $param["ProxyOperatorMobile"] !== null) {
+            $this->ProxyOperatorMobile = $param["ProxyOperatorMobile"];
         }
 
         if (array_key_exists("Module",$param) and $param["Module"] !== null) {

@@ -192,6 +192,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorStatus(integer $MonitorStatus) 设置监控是否开启.0false,1true
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerCondition() 获取触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerCondition(string $TriggerCondition) 设置触发条件
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -454,6 +458,12 @@ class Rule extends AbstractModel
     public $MonitorStatus;
 
     /**
+     * @var string 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerCondition;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -539,6 +549,8 @@ class Rule extends AbstractModel
      * @param string $DatabaseId 数据库 id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorStatus 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerCondition 触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -728,6 +740,10 @@ class Rule extends AbstractModel
 
         if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
             $this->MonitorStatus = $param["MonitorStatus"];
+        }
+
+        if (array_key_exists("TriggerCondition",$param) and $param["TriggerCondition"] !== null) {
+            $this->TriggerCondition = $param["TriggerCondition"];
         }
     }
 }

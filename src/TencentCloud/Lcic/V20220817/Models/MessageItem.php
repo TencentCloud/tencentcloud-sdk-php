@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageMessage(string $ImageMessage) 设置图片消息URL。 message type为1时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CustomMsgContent getCustomMessage() 获取自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomMessage(CustomMsgContent $CustomMessage) 设置自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MessageItem extends AbstractModel
 {
@@ -54,11 +58,19 @@ class MessageItem extends AbstractModel
     public $ImageMessage;
 
     /**
+     * @var CustomMsgContent 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomMessage;
+
+    /**
      * @param integer $MessageType 消息类型。0表示文本消息，1表示图片消息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TextMessage 文本消息内容。message type为0时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageMessage 图片消息URL。 message type为1时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomMsgContent $CustomMessage 自定义消息内容。message type为2时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,11 @@ class MessageItem extends AbstractModel
 
         if (array_key_exists("ImageMessage",$param) and $param["ImageMessage"] !== null) {
             $this->ImageMessage = $param["ImageMessage"];
+        }
+
+        if (array_key_exists("CustomMessage",$param) and $param["CustomMessage"] !== null) {
+            $this->CustomMessage = new CustomMsgContent();
+            $this->CustomMessage->deserialize($param["CustomMessage"]);
         }
     }
 }

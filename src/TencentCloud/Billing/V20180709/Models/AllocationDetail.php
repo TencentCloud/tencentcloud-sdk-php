@@ -84,13 +84,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceId() 获取资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+ * @method string getResourceId() 获取资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+ * @method void setResourceId(string $ResourceId) 设置资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceName() 获取实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+ * @method string getResourceName() 获取实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceName(string $ResourceName) 设置实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+ * @method void setResourceName(string $ResourceName) 设置实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例类型编码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -394,13 +394,13 @@ class AllocationDetail extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var string 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @var string 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
-     * @var string 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * @var string 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
@@ -420,12 +420,14 @@ class AllocationDetail extends AbstractModel
     /**
      * @var string 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $SplitItemId;
 
     /**
      * @var string 分拆项名称：涉及分拆产品的分拆后的分拆项
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $SplitItemName;
 
@@ -731,9 +733,9 @@ class AllocationDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区：资源所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceId 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @param string $ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * @param string $ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型编码
 注意：此字段可能返回 null，表示取不到有效值。

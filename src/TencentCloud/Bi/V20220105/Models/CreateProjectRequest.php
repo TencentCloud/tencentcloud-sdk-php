@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsApply(boolean $IsApply) 设置是否允许用户申请
  * @method integer getDefaultPanelType() 获取默认看板
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
+ * @method string getManagePlatform() 获取管理平台
+ * @method void setManagePlatform(string $ManagePlatform) 设置管理平台
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateProjectRequest extends AbstractModel
     public $DefaultPanelType;
 
     /**
+     * @var string 管理平台
+     */
+    public $ManagePlatform;
+
+    /**
      * @param string $Name 项目名称
      * @param string $ColorCode logo底色
      * @param string $Logo 项目Logo
      * @param string $Mark 备注
      * @param boolean $IsApply 是否允许用户申请
      * @param integer $DefaultPanelType 默认看板
+     * @param string $ManagePlatform 管理平台
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateProjectRequest extends AbstractModel
 
         if (array_key_exists("DefaultPanelType",$param) and $param["DefaultPanelType"] !== null) {
             $this->DefaultPanelType = $param["DefaultPanelType"];
+        }
+
+        if (array_key_exists("ManagePlatform",$param) and $param["ManagePlatform"] !== null) {
+            $this->ManagePlatform = $param["ManagePlatform"];
         }
     }
 }

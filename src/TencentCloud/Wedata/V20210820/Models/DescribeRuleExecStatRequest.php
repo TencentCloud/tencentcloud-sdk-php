@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRuleExecStat请求参数结构体
  *
- * @method string getProjectId() 获取ProjectId 值
- * @method void setProjectId(string $ProjectId) 设置ProjectId 值
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getBeginDate() 获取开始时间，时间戳到秒
  * @method void setBeginDate(string $BeginDate) 设置开始时间，时间戳到秒
  * @method string getEndDate() 获取结束时间，时间戳到秒
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRuleExecStatRequest extends AbstractModel
 {
     /**
-     * @var string ProjectId 值
+     * @var string 项目id
      */
     public $ProjectId;
 
@@ -45,7 +45,7 @@ class DescribeRuleExecStatRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @param string $ProjectId ProjectId 值
+     * @param string $ProjectId 项目id
      * @param string $BeginDate 开始时间，时间戳到秒
      * @param string $EndDate 结束时间，时间戳到秒
      */

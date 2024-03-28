@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(string $Vport) 设置私有网络端口
  * @method string getVpcId() 获取腾讯云私有网络标识
  * @method void setVpcId(string $VpcId) 设置腾讯云私有网络标识
+ * @method array getOperationAuthLimit() 获取操作权限限制
+ * @method void setOperationAuthLimit(array $OperationAuthLimit) 设置操作权限限制
  */
 class CreateDatasourceRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateDatasourceRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var array 操作权限限制
+     */
+    public $OperationAuthLimit;
+
+    /**
      * @param string $DbHost HOST
      * @param integer $DbPort 端口
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
@@ -176,6 +183,7 @@ class CreateDatasourceRequest extends AbstractModel
      * @param string $Vip 私有网络ip
      * @param string $Vport 私有网络端口
      * @param string $VpcId 腾讯云私有网络标识
+     * @param array $OperationAuthLimit 操作权限限制
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class CreateDatasourceRequest extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("OperationAuthLimit",$param) and $param["OperationAuthLimit"] !== null) {
+            $this->OperationAuthLimit = $param["OperationAuthLimit"];
         }
     }
 }

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionName() 获取地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionName(string $RegionName) 设置地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionBusinessSummaryDataItem extends AbstractModel
 {
@@ -92,6 +96,12 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
     public $TransferPayAmount;
 
     /**
+     * @var string 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionName;
+
+    /**
      * @param string $BusinessCode 产品名称代码
      * @param string $BusinessCodeName 产品名称
      * @param string $RealTotalCost 折后总价
@@ -103,6 +113,8 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
      * @param string $VoucherPayAmount 代金券
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferPayAmount 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionName 地域名称（仅在地域汇总总展示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +161,10 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
 
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

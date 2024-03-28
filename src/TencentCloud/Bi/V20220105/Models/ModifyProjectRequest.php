@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
  * @method string getPanelScope() 获取2
  * @method void setPanelScope(string $PanelScope) 设置2
+ * @method string getManagePlatform() 获取项目管理平台
+ * @method void setManagePlatform(string $ManagePlatform) 设置项目管理平台
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyProjectRequest extends AbstractModel
     public $PanelScope;
 
     /**
+     * @var string 项目管理平台
+     */
+    public $ManagePlatform;
+
+    /**
      * @param integer $Id 项目Id
      * @param string $Name 名字
      * @param string $ColorCode 颜色值
@@ -96,6 +103,7 @@ class ModifyProjectRequest extends AbstractModel
      * @param string $Seed 种子
      * @param integer $DefaultPanelType 默认看板
      * @param string $PanelScope 2
+     * @param string $ManagePlatform 项目管理平台
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyProjectRequest extends AbstractModel
 
         if (array_key_exists("PanelScope",$param) and $param["PanelScope"] !== null) {
             $this->PanelScope = $param["PanelScope"];
+        }
+
+        if (array_key_exists("ManagePlatform",$param) and $param["ManagePlatform"] !== null) {
+            $this->ManagePlatform = $param["ManagePlatform"];
         }
     }
 }

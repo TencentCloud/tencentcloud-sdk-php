@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemId(integer $ItemId) 设置Id
  * @method string getItemName() 获取名称
  * @method void setItemName(string $ItemName) 设置名称
+ * @method array getCustomItemValues() 获取自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomItemValues(array $CustomItemValues) 设置自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Item extends AbstractModel
 {
@@ -38,8 +42,16 @@ class Item extends AbstractModel
     public $ItemName;
 
     /**
+     * @var array 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomItemValues;
+
+    /**
      * @param integer $ItemId Id
      * @param string $ItemName 名称
+     * @param array $CustomItemValues 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class Item extends AbstractModel
 
         if (array_key_exists("ItemName",$param) and $param["ItemName"] !== null) {
             $this->ItemName = $param["ItemName"];
+        }
+
+        if (array_key_exists("CustomItemValues",$param) and $param["CustomItemValues"] !== null) {
+            $this->CustomItemValues = $param["CustomItemValues"];
         }
     }
 }

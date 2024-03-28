@@ -160,14 +160,14 @@ use TencentCloud\Common\AbstractModel;
 如果用户使用轮询方式获取识别结果，则无需提交该参数
  * @method integer getSpeakerDiarization() 获取是否开启说话人分离
 0：不开启；
-1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_dialect_large，且ChannelNum=1时可用）；
+1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；
 默认值为 0
 
 注意：
 8k双声道电话音频请按 **ChannelNum 识别声道数** 的参数描述使用默认值
  * @method void setSpeakerDiarization(integer $SpeakerDiarization) 设置是否开启说话人分离
 0：不开启；
-1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_dialect_large，且ChannelNum=1时可用）；
+1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；
 默认值为 0
 
 注意：
@@ -397,7 +397,7 @@ class CreateRecTaskRequest extends AbstractModel
     /**
      * @var integer 是否开启说话人分离
 0：不开启；
-1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_dialect_large，且ChannelNum=1时可用）；
+1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；
 默认值为 0
 
 注意：
@@ -584,7 +584,7 @@ class CreateRecTaskRequest extends AbstractModel
 如果用户使用轮询方式获取识别结果，则无需提交该参数
      * @param integer $SpeakerDiarization 是否开启说话人分离
 0：不开启；
-1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_dialect_large，且ChannelNum=1时可用）；
+1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；
 默认值为 0
 
 注意：

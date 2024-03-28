@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getPageNumber() 获取页数
- * @method void setPageNumber(integer $PageNumber) 设置页数
- * @method integer getPageSize() 获取分页大小
- * @method void setPageSize(integer $PageSize) 设置分页大小
+ * @method integer getPageNumber() 获取页数:默认1
+ * @method void setPageNumber(integer $PageNumber) 设置页数:默认1
+ * @method integer getPageSize() 获取分页大小,默认最小10
+ * @method void setPageSize(integer $PageSize) 设置分页大小,默认最小10
  * @method array getFilters() 获取过滤条件
  * @method void setFilters(array $Filters) 设置过滤条件
  */
@@ -37,12 +37,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 页数
+     * @var integer 页数:默认1
      */
     public $PageNumber;
 
     /**
-     * @var integer 分页大小
+     * @var integer 分页大小,默认最小10
      */
     public $PageSize;
 
@@ -53,8 +53,8 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @param string $ProjectId 项目id
-     * @param integer $PageNumber 页数
-     * @param integer $PageSize 分页大小
+     * @param integer $PageNumber 页数:默认1
+     * @param integer $PageSize 分页大小,默认最小10
      * @param array $Filters 过滤条件
      */
     function __construct()

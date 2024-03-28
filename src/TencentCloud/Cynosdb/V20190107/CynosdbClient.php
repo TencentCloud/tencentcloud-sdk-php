@@ -145,6 +145,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ResumeServerlessResponse ResumeServerless(Models\ResumeServerlessRequest $req) 恢复serverless集群
  * @method Models\RevokeAccountPrivilegesResponse RevokeAccountPrivileges(Models\RevokeAccountPrivilegesRequest $req) 批量回收账号权限
  * @method Models\RollBackClusterResponse RollBackCluster(Models\RollBackClusterRequest $req) 本接口（RollBackCluster）用于集群回档
+ * @method Models\RollbackToNewClusterResponse RollbackToNewCluster(Models\RollbackToNewClusterRequest $req) 回档到新集群
  * @method Models\SearchClusterDatabasesResponse SearchClusterDatabases(Models\SearchClusterDatabasesRequest $req) 本接口(SearchClusterDatabases)搜索集群数据库列表
  * @method Models\SearchClusterTablesResponse SearchClusterTables(Models\SearchClusterTablesRequest $req) 本接口(SearchClusterTables)搜索集群数据表列表
  * @method Models\SetRenewFlagResponse SetRenewFlag(Models\SetRenewFlagRequest $req) SetRenewFlag设置实例的自动续费功能

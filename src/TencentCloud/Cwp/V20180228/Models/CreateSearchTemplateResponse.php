@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取0：成功，非0：失败
  * @method void setStatus(integer $Status) 设置0：成功，非0：失败
+ * @method string getMessage() 获取失败原因
+ * @method void setMessage(string $Message) 设置失败原因
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreateSearchTemplateResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 失败原因
+     */
+    public $Message;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Status 0：成功，非0：失败
+     * @param string $Message 失败原因
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateSearchTemplateResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAffectAsset() 获取影响资产
  * @method void setAffectAsset(string $AffectAsset) 设置影响资产
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getRecentTime() 获取最近识别时间
  * @method void setRecentTime(string $RecentTime) 设置最近识别时间
  * @method string getFirstTime() 获取首次识别时间
@@ -71,7 +71,7 @@ class WebsiteRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $Level;
 
@@ -164,7 +164,7 @@ class WebsiteRisk extends AbstractModel
 
     /**
      * @param string $AffectAsset 影响资产
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Status 状态，0未处理、1已处置、2已忽略

@@ -175,16 +175,26 @@ RecipientId参数获取：
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
  * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
  * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
- * @method array getComponentLimitType() 获取签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
- * @method void setComponentLimitType(array $ComponentLimitType) 设置签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+ * @method array getComponentLimitType() 获取当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+ * @method void setComponentLimitType(array $ComponentLimitType) 设置当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
  * @method integer getPreReadTime() 获取签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
 
 若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
@@ -435,11 +445,16 @@ class FlowApproverInfo extends AbstractModel
     public $SignComponents;
 
     /**
-     * @var array 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @var array 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
      */
     public $ComponentLimitType;
 
@@ -617,11 +632,16 @@ class FlowApproverInfo extends AbstractModel
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
-     * @param array $ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @param array $ComponentLimitType 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
      * @param integer $PreReadTime 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
 
 若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：

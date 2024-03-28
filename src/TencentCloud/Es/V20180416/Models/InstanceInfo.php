@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcUid(string $VpcUid) 设置实例所属VPC的UID
  * @method string getSubnetUid() 获取实例所属子网的UID
  * @method void setSubnetUid(string $SubnetUid) 设置实例所属子网的UID
- * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
- * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+ * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+ * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
  * @method string getRenewFlag() 获取自动续费标识。取值范围：
 RENEW_FLAG_AUTO：自动续费  
 RENEW_FLAG_MANUAL：不自动续费
@@ -144,9 +144,9 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployMode(integer $DeployMode) 设置部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicAccess() 获取ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method string getPublicAccess() 获取ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicAccess(string $PublicAccess) 设置ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method void setPublicAccess(string $PublicAccess) 设置ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method EsAcl getEsPublicAcl() 获取ES公网访问控制配置
  * @method void setEsPublicAcl(EsAcl $EsPublicAcl) 设置ES公网访问控制配置
@@ -154,13 +154,13 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置Kibana内网地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPublicAccess() 获取Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method string getKibanaPublicAccess() 获取Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -278,9 +278,9 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessPercent(float $ProcessPercent) 设置流程进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaAlteringPublicAccess() 获取Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method string getKibanaAlteringPublicAccess() 获取Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasKernelUpgrade() 获取本月是否有内核可以更新：false-无，true-有
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,6 +297,14 @@ RENEW_FLAG_DEFAULT：不自动续费
  * @method string getCustomKibanaPrivateUrl() 获取自定义kibana内网url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomKibanaPrivateUrl(string $CustomKibanaPrivateUrl) 设置自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOutboundPublicAcls() 获取节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutboundPublicAcls(array $OutboundPublicAcls) 设置节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetConnectScheme() 获取网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetConnectScheme(string $NetConnectScheme) 设置网络连接方案
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -342,7 +350,7 @@ class InstanceInfo extends AbstractModel
     public $SubnetUid;
 
     /**
-     * @var integer 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+     * @var integer 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
      */
     public $Status;
 
@@ -548,7 +556,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $DeployMode;
 
     /**
-     * @var string ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @var string ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccess;
@@ -565,13 +573,13 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $KibanaPrivateUrl;
 
     /**
-     * @var string Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @var string Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @var string Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPrivateAccess;
@@ -751,7 +759,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $ProcessPercent;
 
     /**
-     * @var string Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @var string Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaAlteringPublicAccess;
@@ -781,6 +789,18 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $CustomKibanaPrivateUrl;
 
     /**
+     * @var array 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutboundPublicAcls;
+
+    /**
+     * @var string 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetConnectScheme;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -789,7 +809,7 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $Uin 用户UIN
      * @param string $VpcUid 实例所属VPC的UID
      * @param string $SubnetUid 实例所属子网的UID
-     * @param integer $Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+     * @param integer $Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
      * @param string $RenewFlag 自动续费标识。取值范围：
 RENEW_FLAG_AUTO：自动续费  
 RENEW_FLAG_MANUAL：不自动续费
@@ -843,14 +863,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param string $PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EsAcl $EsPublicAcl ES公网访问控制配置
      * @param string $KibanaPrivateUrl Kibana内网地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param string $KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param string $KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -910,7 +930,7 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ProcessPercent 流程进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param string $KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
 注意：此字段可能返回 null，表示取不到有效值。
@@ -919,6 +939,10 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $KibanaPrivateVip kibana内网vip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomKibanaPrivateUrl 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OutboundPublicAcls 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetConnectScheme 网络连接方案
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1305,6 +1329,19 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("CustomKibanaPrivateUrl",$param) and $param["CustomKibanaPrivateUrl"] !== null) {
             $this->CustomKibanaPrivateUrl = $param["CustomKibanaPrivateUrl"];
+        }
+
+        if (array_key_exists("OutboundPublicAcls",$param) and $param["OutboundPublicAcls"] !== null) {
+            $this->OutboundPublicAcls = [];
+            foreach ($param["OutboundPublicAcls"] as $key => $value){
+                $obj = new OutboundPublicAcl();
+                $obj->deserialize($value);
+                array_push($this->OutboundPublicAcls, $obj);
+            }
+        }
+
+        if (array_key_exists("NetConnectScheme",$param) and $param["NetConnectScheme"] !== null) {
+            $this->NetConnectScheme = $param["NetConnectScheme"];
         }
     }
 }

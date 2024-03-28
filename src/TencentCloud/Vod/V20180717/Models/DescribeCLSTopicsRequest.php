@@ -20,12 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCLSTopics请求参数结构体
  *
- * @method string getCLSRegion() 获取日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
- * @method void setCLSRegion(string $CLSRegion) 设置日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+ * @method string getCLSRegion() 获取日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
+ * @method void setCLSRegion(string $CLSRegion) 设置日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
  * @method string getLogsetId() 获取日志主题所属日志集 ID。
  * @method void setLogsetId(string $LogsetId) 设置日志主题所属日志集 ID。
  * @method array getTopicIds() 获取日志主题 ID 列表。如果不填，表示查询所有的日志主题。
@@ -38,9 +34,7 @@ ap-singapore：新加坡。
 class DescribeCLSTopicsRequest extends AbstractModel
 {
     /**
-     * @var string 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+     * @var string 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
      */
     public $CLSRegion;
 
@@ -65,9 +59,7 @@ ap-singapore：新加坡。
     public $Limit;
 
     /**
-     * @param string $CLSRegion 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+     * @param string $CLSRegion 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
      * @param string $LogsetId 日志主题所属日志集 ID。
      * @param array $TopicIds 日志主题 ID 列表。如果不填，表示查询所有的日志主题。
      * @param integer $Offset 分页偏移量，默认值：0。

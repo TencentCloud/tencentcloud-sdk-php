@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHidden(boolean $Hidden) 设置是否为隐藏可用区
  * @method boolean getIsCoordinationNode() 获取是否充当协调节点的角色
  * @method void setIsCoordinationNode(boolean $IsCoordinationNode) 设置是否充当协调节点的角色
+ * @method string getCVMStatus() 获取CVM运行状态
+ * @method void setCVMStatus(string $CVMStatus) 设置CVM运行状态
  */
 class NodeView extends AbstractModel
 {
@@ -150,6 +152,11 @@ class NodeView extends AbstractModel
     public $IsCoordinationNode;
 
     /**
+     * @var string CVM运行状态
+     */
+    public $CVMStatus;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $NodeIp 节点IP
      * @param float $Visible 节点是否可见
@@ -168,6 +175,7 @@ class NodeView extends AbstractModel
      * @param array $DiskIds 节点上磁盘ID列表
      * @param boolean $Hidden 是否为隐藏可用区
      * @param boolean $IsCoordinationNode 是否充当协调节点的角色
+     * @param string $CVMStatus CVM运行状态
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class NodeView extends AbstractModel
 
         if (array_key_exists("IsCoordinationNode",$param) and $param["IsCoordinationNode"] !== null) {
             $this->IsCoordinationNode = $param["IsCoordinationNode"];
+        }
+
+        if (array_key_exists("CVMStatus",$param) and $param["CVMStatus"] !== null) {
+            $this->CVMStatus = $param["CVMStatus"];
         }
     }
 }

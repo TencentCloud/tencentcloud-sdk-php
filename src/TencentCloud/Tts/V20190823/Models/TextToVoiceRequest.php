@@ -53,9 +53,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSegmentRate() 获取断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
  * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
  * @method string getEmotionCategory() 获取控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
  * @method void setEmotionCategory(string $EmotionCategory) 设置控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
  * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
  * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+ * @method string getFastVoiceType() 获取一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+ * @method void setFastVoiceType(string $FastVoiceType) 设置一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -125,6 +129,7 @@ class TextToVoiceRequest extends AbstractModel
 
     /**
      * @var string 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
      */
     public $EmotionCategory;
 
@@ -132,6 +137,11 @@ class TextToVoiceRequest extends AbstractModel
      * @var integer 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
      */
     public $EmotionIntensity;
+
+    /**
+     * @var string 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+     */
+    public $FastVoiceType;
 
     /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
@@ -151,7 +161,9 @@ class TextToVoiceRequest extends AbstractModel
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param integer $SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
      * @param string $EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
      * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+     * @param string $FastVoiceType 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
      */
     function __construct()
     {
@@ -220,6 +232,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("EmotionIntensity",$param) and $param["EmotionIntensity"] !== null) {
             $this->EmotionIntensity = $param["EmotionIntensity"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
     }
 }

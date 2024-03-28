@@ -194,16 +194,26 @@ use TencentCloud\Common\AbstractModel;
 <li>动态表格等填写控件</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
- * @method array getComponentLimitType() 获取签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
- * @method void setComponentLimitType(array $ComponentLimitType) 设置签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+ * @method array getComponentLimitType() 获取当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+ * @method void setComponentLimitType(array $ComponentLimitType) 设置当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
  * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
@@ -454,11 +464,16 @@ class FlowCreateApprover extends AbstractModel
     public $Components;
 
     /**
-     * @var array 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @var array 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
      */
     public $ComponentLimitType;
 
@@ -605,11 +620,16 @@ class FlowCreateApprover extends AbstractModel
 <li>动态表格等填写控件</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
-     * @param array $ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
-	HANDWRITE – 手写签名
-	OCR_ESIGN -- AI智能识别手写签名
-	ESIGN -- 个人印章类型
-	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @param array $ComponentLimitType 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
+
+<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
+<li> <b>ESIGN</b> :个人印章类型。</li>
+<li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
+<li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul>
+
+各种签名的样式可以参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
      * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）

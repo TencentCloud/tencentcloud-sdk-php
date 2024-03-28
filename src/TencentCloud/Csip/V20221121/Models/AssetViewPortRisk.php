@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置端口
  * @method string getAffectAsset() 获取影响资产
  * @method void setAffectAsset(string $AffectAsset) 设置影响资产
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getInstanceType() 获取资产类型
  * @method void setInstanceType(string $InstanceType) 设置资产类型
  * @method string getProtocol() 获取协议
@@ -76,7 +76,7 @@ class AssetViewPortRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $Level;
 
@@ -165,7 +165,7 @@ class AssetViewPortRisk extends AbstractModel
     /**
      * @param integer $Port 端口
      * @param string $AffectAsset 影响资产
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $InstanceType 资产类型
      * @param string $Protocol 协议
      * @param string $Component 组件

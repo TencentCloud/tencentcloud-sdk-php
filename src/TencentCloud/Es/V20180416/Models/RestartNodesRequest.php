@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestartMode(string $RestartMode) 设置可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
  * @method boolean getIsOffline() 获取节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
  * @method void setIsOffline(boolean $IsOffline) 设置节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+ * @method integer getCvmDelayOnlineTime() 获取cvm延迟上架时间
+ * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) 设置cvm延迟上架时间
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class RestartNodesRequest extends AbstractModel
     public $IsOffline;
 
     /**
+     * @var integer cvm延迟上架时间
+     */
+    public $CvmDelayOnlineTime;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $NodeNames 节点名称列表
      * @param boolean $ForceRestart 是否强制重启
      * @param string $RestartMode 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
      * @param boolean $IsOffline 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+     * @param integer $CvmDelayOnlineTime cvm延迟上架时间
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("IsOffline",$param) and $param["IsOffline"] !== null) {
             $this->IsOffline = $param["IsOffline"];
+        }
+
+        if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
+            $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置实例类型
  * @method string getAffectAsset() 获取影响资产
  * @method void setAffectAsset(string $AffectAsset) 设置影响资产
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getFirstTime() 获取首次识别时间
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method string getRecentTime() 获取最近识别时间
@@ -103,7 +103,7 @@ class AssetViewCFGRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $Level;
 
@@ -177,7 +177,7 @@ class AssetViewCFGRisk extends AbstractModel
      * @param string $InstanceName 实例名
      * @param string $InstanceType 实例类型
      * @param string $AffectAsset 影响资产
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $FirstTime 首次识别时间
      * @param string $RecentTime 最近识别时间
      * @param string $From 来源

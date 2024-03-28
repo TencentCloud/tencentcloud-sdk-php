@@ -88,13 +88,13 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同弹窗的描述信息，描述信息最长500字符
 
- * @method string getForbidAddApprover() 获取  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+ * @method boolean getForbidAddApprover() 获取  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
- * @method void setForbidAddApprover(string $ForbidAddApprover) 设置  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+ * @method void setForbidAddApprover(boolean $ForbidAddApprover) 设置  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
- * @method string getForbidEditFlowProperties() 获取  禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+ * @method boolean getForbidEditFlowProperties() 获取  禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
- * @method void setForbidEditFlowProperties(string $ForbidEditFlowProperties) 设置  禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+ * @method void setForbidEditFlowProperties(boolean $ForbidEditFlowProperties) 设置  禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
  * @method array getHideComponentTypes() 获取在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
@@ -280,13 +280,13 @@ class CreateFlowOption extends AbstractModel
     public $CustomCreateFlowDescription;
 
     /**
-     * @var string   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * @var boolean   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
      */
     public $ForbidAddApprover;
 
     /**
-     * @var string   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * @var boolean   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      */
     public $ForbidEditFlowProperties;
@@ -393,9 +393,9 @@ class CreateFlowOption extends AbstractModel
 <br/>
      * @param string $CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
-     * @param string $ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+     * @param boolean $ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
-     * @param string $ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * @param boolean $ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      * @param array $HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>

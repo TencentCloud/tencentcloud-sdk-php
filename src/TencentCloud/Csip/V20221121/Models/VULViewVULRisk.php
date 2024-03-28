@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(string $Port) 设置端口
  * @method integer getNoHandleCount() 获取影响资产
  * @method void setNoHandleCount(integer $NoHandleCount) 设置影响资产
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getComponent() 获取组件
  * @method void setComponent(string $Component) 设置组件
  * @method string getRecentTime() 获取最近识别时间
@@ -90,7 +90,7 @@ class VULViewVULRisk extends AbstractModel
     public $NoHandleCount;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $Level;
 
@@ -206,7 +206,7 @@ class VULViewVULRisk extends AbstractModel
     /**
      * @param string $Port 端口
      * @param integer $NoHandleCount 影响资产
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $Component 组件
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间

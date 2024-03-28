@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getNoHandleCount() 获取影响资产
  * @method void setNoHandleCount(integer $NoHandleCount) 设置影响资产
- * @method string getLevel() 获取风险等级
- * @method void setLevel(string $Level) 设置风险等级
+ * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getComponent() 获取组件
@@ -65,7 +65,7 @@ class PortViewPortRisk extends AbstractModel
     public $NoHandleCount;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $Level;
 
@@ -143,7 +143,7 @@ class PortViewPortRisk extends AbstractModel
 
     /**
      * @param integer $NoHandleCount 影响资产
-     * @param string $Level 风险等级
+     * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $Protocol 协议
      * @param string $Component 组件
      * @param integer $Port 端口

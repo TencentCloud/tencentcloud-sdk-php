@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageName(string $ImageName) 设置镜像名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportDataPipeline() 获取是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportDataPipeline(boolean $SupportDataPipeline) 设置是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInfo extends AbstractModel
 {
@@ -78,6 +82,12 @@ class ImageInfo extends AbstractModel
     public $ImageName;
 
     /**
+     * @var boolean 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportDataPipeline;
+
+    /**
      * @param string $ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
      * @param string $ImageUrl 镜像地址
      * @param string $RegistryRegion TCR镜像对应的地域
@@ -87,6 +97,8 @@ class ImageInfo extends AbstractModel
      * @param boolean $AllowSaveAllContent 是否允许导出全部内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageName 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportDataPipeline 是否支持数据构建
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,10 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
             $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("SupportDataPipeline",$param) and $param["SupportDataPipeline"] !== null) {
+            $this->SupportDataPipeline = $param["SupportDataPipeline"];
         }
     }
 }

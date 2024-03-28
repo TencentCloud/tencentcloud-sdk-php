@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskId(string $RiskId) 设置风险ID
  * @method string getVULName() 获取漏洞名称
  * @method void setVULName(string $VULName) 设置漏洞名称
- * @method string getRiskLevel() 获取风险等级
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级
+ * @method string getRiskLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+ * @method void setRiskLevel(string $RiskLevel) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getCheckFrom() 获取识别来源
  * @method void setCheckFrom(string $CheckFrom) 设置识别来源
  * @method integer getEnable() 获取是否启用，1-启用，0-禁用
@@ -100,7 +100,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $VULName;
 
     /**
-     * @var string 风险等级
+     * @var string 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public $RiskLevel;
 
@@ -205,7 +205,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     /**
      * @param string $RiskId 风险ID
      * @param string $VULName 漏洞名称
-     * @param string $RiskLevel 风险等级
+     * @param string $RiskLevel 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $CheckFrom 识别来源
      * @param integer $Enable 是否启用，1-启用，0-禁用
 注意：此字段可能返回 null，表示取不到有效值。

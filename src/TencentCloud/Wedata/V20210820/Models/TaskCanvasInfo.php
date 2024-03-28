@@ -258,6 +258,62 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTenantId(string $TenantId) 设置TenantId
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSelfDepend() 获取自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfDepend(integer $SelfDepend) 设置自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupId(string $ExecutorGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupName() 获取资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunPriority() 获取优先级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunPriority(string $RunPriority) 设置优先级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTryLimit() 获取可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTryLimit(string $TryLimit) 设置可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetryAble() 获取可充实
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryAble(string $RetryAble) 设置可充实
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetryWait() 获取重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryWait(string $RetryWait) 设置重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastSchedulerCommitTime() 获取最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastSchedulerCommitTime(string $LastSchedulerCommitTime) 设置最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNotes() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotes(string $Notes) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreator() 获取创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateUser() 获取创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateUser(string $UpdateUser) 设置创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateUserId() 获取更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateUserId(string $UpdateUserId) 设置更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getYarnQueue() 获取yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setYarnQueue(string $YarnQueue) 设置yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExecutionTTL() 获取可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionTTL(integer $ExecutionTTL) 设置可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskCanvasInfo extends AbstractModel
 {
@@ -517,6 +573,90 @@ class TaskCanvasInfo extends AbstractModel
     public $TenantId;
 
     /**
+     * @var integer 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfDepend;
+
+    /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupId;
+
+    /**
+     * @var string 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupName;
+
+    /**
+     * @var string 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunPriority;
+
+    /**
+     * @var string 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TryLimit;
+
+    /**
+     * @var string 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryAble;
+
+    /**
+     * @var string 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryWait;
+
+    /**
+     * @var string 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastSchedulerCommitTime;
+
+    /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Notes;
+
+    /**
+     * @var string 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Creator;
+
+    /**
+     * @var string 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateUser;
+
+    /**
+     * @var string 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateUserId;
+
+    /**
+     * @var string yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $YarnQueue;
+
+    /**
+     * @var integer 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionTTL;
+
+    /**
      * @param string $TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -635,6 +775,34 @@ class TaskCanvasInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantId TenantId
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SelfDepend 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunPriority 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TryLimit 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetryAble 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetryWait 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastSchedulerCommitTime 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Notes 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUser 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUserId 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $YarnQueue yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecutionTTL 可执行的timeToLive
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -784,6 +952,62 @@ class TaskCanvasInfo extends AbstractModel
 
         if (array_key_exists("TenantId",$param) and $param["TenantId"] !== null) {
             $this->TenantId = $param["TenantId"];
+        }
+
+        if (array_key_exists("SelfDepend",$param) and $param["SelfDepend"] !== null) {
+            $this->SelfDepend = $param["SelfDepend"];
+        }
+
+        if (array_key_exists("ExecutorGroupId",$param) and $param["ExecutorGroupId"] !== null) {
+            $this->ExecutorGroupId = $param["ExecutorGroupId"];
+        }
+
+        if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
+            $this->ExecutorGroupName = $param["ExecutorGroupName"];
+        }
+
+        if (array_key_exists("RunPriority",$param) and $param["RunPriority"] !== null) {
+            $this->RunPriority = $param["RunPriority"];
+        }
+
+        if (array_key_exists("TryLimit",$param) and $param["TryLimit"] !== null) {
+            $this->TryLimit = $param["TryLimit"];
+        }
+
+        if (array_key_exists("RetryAble",$param) and $param["RetryAble"] !== null) {
+            $this->RetryAble = $param["RetryAble"];
+        }
+
+        if (array_key_exists("RetryWait",$param) and $param["RetryWait"] !== null) {
+            $this->RetryWait = $param["RetryWait"];
+        }
+
+        if (array_key_exists("LastSchedulerCommitTime",$param) and $param["LastSchedulerCommitTime"] !== null) {
+            $this->LastSchedulerCommitTime = $param["LastSchedulerCommitTime"];
+        }
+
+        if (array_key_exists("Notes",$param) and $param["Notes"] !== null) {
+            $this->Notes = $param["Notes"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("UpdateUser",$param) and $param["UpdateUser"] !== null) {
+            $this->UpdateUser = $param["UpdateUser"];
+        }
+
+        if (array_key_exists("UpdateUserId",$param) and $param["UpdateUserId"] !== null) {
+            $this->UpdateUserId = $param["UpdateUserId"];
+        }
+
+        if (array_key_exists("YarnQueue",$param) and $param["YarnQueue"] !== null) {
+            $this->YarnQueue = $param["YarnQueue"];
+        }
+
+        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
+            $this->ExecutionTTL = $param["ExecutionTTL"];
         }
     }
 }

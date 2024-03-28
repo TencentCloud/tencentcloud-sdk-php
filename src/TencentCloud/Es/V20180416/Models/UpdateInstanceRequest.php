@@ -126,6 +126,18 @@ CLOSE 关闭
  * @method void setCerebroPrivateDomain(string $CerebroPrivateDomain) 设置cerebro内网自定义域名
  * @method string getProtocol() 获取变更为https集群，默认是http
  * @method void setProtocol(string $Protocol) 设置变更为https集群，默认是http
+ * @method array getOutboundPublicAcls() 获取节点出站访问详细信息
+
+ * @method void setOutboundPublicAcls(array $OutboundPublicAcls) 设置节点出站访问详细信息
+
+ * @method string getOutboundPublicAccess() 获取节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+ * @method void setOutboundPublicAccess(string $OutboundPublicAccess) 设置节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+ * @method integer getCvmDelayOnlineTime() 获取cvm延迟上架参数
+ * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) 设置cvm延迟上架参数
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -323,6 +335,24 @@ CLOSE 关闭
     public $Protocol;
 
     /**
+     * @var array 节点出站访问详细信息
+
+     */
+    public $OutboundPublicAcls;
+
+    /**
+     * @var string 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+     */
+    public $OutboundPublicAccess;
+
+    /**
+     * @var integer cvm延迟上架参数
+     */
+    public $CvmDelayOnlineTime;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -376,6 +406,12 @@ CLOSE 关闭
      * @param string $KibanaPrivateDomain kibana内网自定义域名
      * @param string $CerebroPrivateDomain cerebro内网自定义域名
      * @param string $Protocol 变更为https集群，默认是http
+     * @param array $OutboundPublicAcls 节点出站访问详细信息
+
+     * @param string $OutboundPublicAccess 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+     * @param integer $CvmDelayOnlineTime cvm延迟上架参数
      */
     function __construct()
     {
@@ -544,6 +580,23 @@ CLOSE 关闭
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("OutboundPublicAcls",$param) and $param["OutboundPublicAcls"] !== null) {
+            $this->OutboundPublicAcls = [];
+            foreach ($param["OutboundPublicAcls"] as $key => $value){
+                $obj = new OutboundPublicAcl();
+                $obj->deserialize($value);
+                array_push($this->OutboundPublicAcls, $obj);
+            }
+        }
+
+        if (array_key_exists("OutboundPublicAccess",$param) and $param["OutboundPublicAccess"] !== null) {
+            $this->OutboundPublicAccess = $param["OutboundPublicAccess"];
+        }
+
+        if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
+            $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
         }
     }
 }

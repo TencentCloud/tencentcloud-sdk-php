@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取（过滤条件）按照实例 ID 过滤。
  * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例 ID 过滤。
- * @method array getGroupList() 获取Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
- * @method void setGroupList(array $GroupList) 设置Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+ * @method array getGroupList() 获取Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+ * @method void setGroupList(array $GroupList) 设置Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeGroupInfoRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+     * @var array Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
      */
     public $GroupList;
 
     /**
      * @param string $InstanceId （过滤条件）按照实例 ID 过滤。
-     * @param array $GroupList Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+     * @param array $GroupList Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
      */
     function __construct()
     {

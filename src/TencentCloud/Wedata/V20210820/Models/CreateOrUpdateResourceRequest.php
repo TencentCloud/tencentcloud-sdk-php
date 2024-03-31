@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewFile(boolean $NewFile) 设置是否为新文件，新增为 true，更新为 false
  * @method array getFilesSize() 获取必填项，文件大小，与 Files 字段对应
  * @method void setFilesSize(array $FilesSize) 设置必填项，文件大小，与 Files 字段对应
+ * @method string getFileMd5() 获取必填项，资源的Md5值（COS中的ETag）
+ * @method void setFileMd5(string $FileMd5) 设置必填项，资源的Md5值（COS中的ETag）
  */
 class CreateOrUpdateResourceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateOrUpdateResourceRequest extends AbstractModel
     public $FilesSize;
 
     /**
+     * @var string 必填项，资源的Md5值（COS中的ETag）
+     */
+    public $FileMd5;
+
+    /**
      * @param string $ProjectId 项目ID，必填项
      * @param array $Files 文件名，必填项
      * @param string $FilePath 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
@@ -80,6 +87,7 @@ class CreateOrUpdateResourceRequest extends AbstractModel
      * @param string $CosRegion cos所属地域
      * @param boolean $NewFile 是否为新文件，新增为 true，更新为 false
      * @param array $FilesSize 必填项，文件大小，与 Files 字段对应
+     * @param string $FileMd5 必填项，资源的Md5值（COS中的ETag）
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateOrUpdateResourceRequest extends AbstractModel
 
         if (array_key_exists("FilesSize",$param) and $param["FilesSize"] !== null) {
             $this->FilesSize = $param["FilesSize"];
+        }
+
+        if (array_key_exists("FileMd5",$param) and $param["FileMd5"] !== null) {
+            $this->FileMd5 = $param["FileMd5"];
         }
     }
 }

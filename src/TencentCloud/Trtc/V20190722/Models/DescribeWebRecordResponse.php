@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeWebRecord返回参数结构体
  *
  * @method integer getStatus() 获取1: 正在录制中
-2: 任务不存在
  * @method void setStatus(integer $Status) 设置1: 正在录制中
-2: 任务不存在
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,7 +29,6 @@ class DescribeWebRecordResponse extends AbstractModel
 {
     /**
      * @var integer 1: 正在录制中
-2: 任务不存在
      */
     public $Status;
 
@@ -42,7 +39,6 @@ class DescribeWebRecordResponse extends AbstractModel
 
     /**
      * @param integer $Status 1: 正在录制中
-2: 任务不存在
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

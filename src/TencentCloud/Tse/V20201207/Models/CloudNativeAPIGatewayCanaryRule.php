@@ -44,6 +44,40 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置归属服务名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleType() 获取灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleType(string $RuleType) 设置灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchType() 获取全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMatchType(string $MatchType) 设置全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaneId() 获取泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaneId(string $LaneId) 设置泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaneName() 获取泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaneName(string $LaneName) 设置泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchMode() 获取泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMatchMode(string $MatchMode) 设置泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaneTag() 获取泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaneTag(string $LaneTag) 设置泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayCanaryRule extends AbstractModel
 {
@@ -84,6 +118,55 @@ class CloudNativeAPIGatewayCanaryRule extends AbstractModel
     public $ServiceName;
 
     /**
+     * @var string 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleType;
+
+    /**
+     * @var string 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MatchType;
+
+    /**
+     * @var string 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
+
+    /**
+     * @var string 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaneId;
+
+    /**
+     * @var string 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaneName;
+
+    /**
+     * @var string 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MatchMode;
+
+    /**
+     * @var string 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaneTag;
+
+    /**
      * @param integer $Priority 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 是否启用规则
@@ -95,6 +178,23 @@ class CloudNativeAPIGatewayCanaryRule extends AbstractModel
      * @param string $ServiceId 归属服务 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 归属服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaneId 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaneName 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaneTag 泳道标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -142,6 +242,38 @@ class CloudNativeAPIGatewayCanaryRule extends AbstractModel
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("MatchType",$param) and $param["MatchType"] !== null) {
+            $this->MatchType = $param["MatchType"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
+            $this->LaneId = $param["LaneId"];
+        }
+
+        if (array_key_exists("LaneName",$param) and $param["LaneName"] !== null) {
+            $this->LaneName = $param["LaneName"];
+        }
+
+        if (array_key_exists("MatchMode",$param) and $param["MatchMode"] !== null) {
+            $this->MatchMode = $param["MatchMode"];
+        }
+
+        if (array_key_exists("LaneTag",$param) and $param["LaneTag"] !== null) {
+            $this->LaneTag = $param["LaneTag"];
         }
     }
 }

@@ -35,9 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method NodeSpec getDataSpec() 获取数据节点
+SpecName从DescribeSpec接口中返回的DataSpec.Name获取
  * @method void setDataSpec(NodeSpec $DataSpec) 设置数据节点
- * @method Tag getTags() 获取标签列表
- * @method void setTags(Tag $Tags) 设置标签列表
+SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+ * @method Tag getTags() 获取标签列表（废弃）
+ * @method void setTags(Tag $Tags) 设置标签列表（废弃）
  * @method string getClsLogSetId() 获取日志主题ID
  * @method void setClsLogSetId(string $ClsLogSetId) 设置日志主题ID
  * @method string getCosBucketName() 获取COS桶名称
@@ -47,7 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getHAZk() 获取是否是ZK高可用
  * @method void setHAZk(boolean $HAZk) 设置是否是ZK高可用
  * @method NodeSpec getCommonSpec() 获取ZK节点
+SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
  * @method void setCommonSpec(NodeSpec $CommonSpec) 设置ZK节点
+SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+ * @method array getTagItems() 获取标签列表
+ * @method void setTagItems(array $TagItems) 设置标签列表
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -88,11 +94,13 @@ class CreateInstanceNewRequest extends AbstractModel
 
     /**
      * @var NodeSpec 数据节点
+SpecName从DescribeSpec接口中返回的DataSpec.Name获取
      */
     public $DataSpec;
 
     /**
-     * @var Tag 标签列表
+     * @var Tag 标签列表（废弃）
+     * @deprecated
      */
     public $Tags;
 
@@ -118,8 +126,14 @@ class CreateInstanceNewRequest extends AbstractModel
 
     /**
      * @var NodeSpec ZK节点
+SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
      */
     public $CommonSpec;
+
+    /**
+     * @var array 标签列表
+     */
+    public $TagItems;
 
     /**
      * @param string $Zone 可用区
@@ -130,12 +144,15 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param Charge $ChargeProperties 计费方式
      * @param string $InstanceName 实例名称
      * @param NodeSpec $DataSpec 数据节点
-     * @param Tag $Tags 标签列表
+SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+     * @param Tag $Tags 标签列表（废弃）
      * @param string $ClsLogSetId 日志主题ID
      * @param string $CosBucketName COS桶名称
      * @param integer $MountDiskType 是否是裸盘挂载
      * @param boolean $HAZk 是否是ZK高可用
      * @param NodeSpec $CommonSpec ZK节点
+SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+     * @param array $TagItems 标签列表
      */
     function __construct()
     {
@@ -208,6 +225,15 @@ class CreateInstanceNewRequest extends AbstractModel
         if (array_key_exists("CommonSpec",$param) and $param["CommonSpec"] !== null) {
             $this->CommonSpec = new NodeSpec();
             $this->CommonSpec->deserialize($param["CommonSpec"]);
+        }
+
+        if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {
+            $this->TagItems = [];
+            foreach ($param["TagItems"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagItems, $obj);
+            }
         }
     }
 }

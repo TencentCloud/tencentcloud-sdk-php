@@ -24,24 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) 设置插件启用状态
  * @method array getQpsThresholds() 获取qps阈值
  * @method void setQpsThresholds(array $QpsThresholds) 设置qps阈值
- * @method string getLimitBy() 获取限流依据
-ip service consumer credential path header
- * @method void setLimitBy(string $LimitBy) 设置限流依据
-ip service consumer credential path header
- * @method string getResponseType() 获取响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
- * @method void setResponseType(string $ResponseType) 设置响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
- * @method boolean getHideClientHeaders() 获取是否隐藏限流客户端响应头
- * @method void setHideClientHeaders(boolean $HideClientHeaders) 设置是否隐藏限流客户端响应头
- * @method boolean getIsDelay() 获取是否开启请求排队
- * @method void setIsDelay(boolean $IsDelay) 设置是否开启请求排队
  * @method string getPath() 获取需要进行流量控制的请求路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置需要进行流量控制的请求路径
@@ -50,6 +32,10 @@ default 直接返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeader(string $Header) 设置需要进行流量控制的请求头Key
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLimitBy() 获取限流依据
+ip service consumer credential path header
+ * @method void setLimitBy(string $LimitBy) 设置限流依据
+ip service consumer credential path header
  * @method ExternalRedis getExternalRedis() 获取外部redis配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalRedis(ExternalRedis $ExternalRedis) 设置外部redis配置
@@ -76,8 +62,30 @@ external_redis 外部redis
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitResponseUrl(string $RateLimitResponseUrl) 设置请求转发地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResponseType() 获取响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+ * @method void setResponseType(string $ResponseType) 设置响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+ * @method boolean getHideClientHeaders() 获取是否隐藏限流客户端响应头
+ * @method void setHideClientHeaders(boolean $HideClientHeaders) 设置是否隐藏限流客户端响应头
  * @method integer getLineUpTime() 获取排队时间
  * @method void setLineUpTime(integer $LineUpTime) 设置排队时间
+ * @method boolean getIsDelay() 获取是否开启请求排队
+ * @method void setIsDelay(boolean $IsDelay) 设置是否开启请求排队
+ * @method array getBasicLimitQpsThresholds() 获取基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBasicLimitQpsThresholds(array $BasicLimitQpsThresholds) 设置基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLimitRules() 获取参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimitRules(array $LimitRules) 设置参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel
 {
@@ -92,31 +100,6 @@ class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel
     public $QpsThresholds;
 
     /**
-     * @var string 限流依据
-ip service consumer credential path header
-     */
-    public $LimitBy;
-
-    /**
-     * @var string 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-     */
-    public $ResponseType;
-
-    /**
-     * @var boolean 是否隐藏限流客户端响应头
-     */
-    public $HideClientHeaders;
-
-    /**
-     * @var boolean 是否开启请求排队
-     */
-    public $IsDelay;
-
-    /**
      * @var string 需要进行流量控制的请求路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -127,6 +110,12 @@ default 直接返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Header;
+
+    /**
+     * @var string 限流依据
+ip service consumer credential path header
+     */
+    public $LimitBy;
 
     /**
      * @var ExternalRedis 外部redis配置
@@ -158,26 +147,50 @@ external_redis 外部redis
     public $RateLimitResponseUrl;
 
     /**
+     * @var string 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+     */
+    public $ResponseType;
+
+    /**
+     * @var boolean 是否隐藏限流客户端响应头
+     */
+    public $HideClientHeaders;
+
+    /**
      * @var integer 排队时间
      */
     public $LineUpTime;
 
     /**
+     * @var boolean 是否开启请求排队
+     */
+    public $IsDelay;
+
+    /**
+     * @var array 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BasicLimitQpsThresholds;
+
+    /**
+     * @var array 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LimitRules;
+
+    /**
      * @param boolean $Enabled 插件启用状态
      * @param array $QpsThresholds qps阈值
-     * @param string $LimitBy 限流依据
-ip service consumer credential path header
-     * @param string $ResponseType 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-     * @param boolean $HideClientHeaders 是否隐藏限流客户端响应头
-     * @param boolean $IsDelay 是否开启请求排队
      * @param string $Path 需要进行流量控制的请求路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Header 需要进行流量控制的请求头Key
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LimitBy 限流依据
+ip service consumer credential path header
      * @param ExternalRedis $ExternalRedis 外部redis配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Policy 计数器策略 
@@ -191,7 +204,18 @@ external_redis 外部redis
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RateLimitResponseUrl 请求转发地址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResponseType 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+     * @param boolean $HideClientHeaders 是否隐藏限流客户端响应头
      * @param integer $LineUpTime 排队时间
+     * @param boolean $IsDelay 是否开启请求排队
+     * @param array $BasicLimitQpsThresholds 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LimitRules 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -219,28 +243,16 @@ external_redis 外部redis
             }
         }
 
-        if (array_key_exists("LimitBy",$param) and $param["LimitBy"] !== null) {
-            $this->LimitBy = $param["LimitBy"];
-        }
-
-        if (array_key_exists("ResponseType",$param) and $param["ResponseType"] !== null) {
-            $this->ResponseType = $param["ResponseType"];
-        }
-
-        if (array_key_exists("HideClientHeaders",$param) and $param["HideClientHeaders"] !== null) {
-            $this->HideClientHeaders = $param["HideClientHeaders"];
-        }
-
-        if (array_key_exists("IsDelay",$param) and $param["IsDelay"] !== null) {
-            $this->IsDelay = $param["IsDelay"];
-        }
-
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
         }
 
         if (array_key_exists("Header",$param) and $param["Header"] !== null) {
             $this->Header = $param["Header"];
+        }
+
+        if (array_key_exists("LimitBy",$param) and $param["LimitBy"] !== null) {
+            $this->LimitBy = $param["LimitBy"];
         }
 
         if (array_key_exists("ExternalRedis",$param) and $param["ExternalRedis"] !== null) {
@@ -261,8 +273,38 @@ external_redis 外部redis
             $this->RateLimitResponseUrl = $param["RateLimitResponseUrl"];
         }
 
+        if (array_key_exists("ResponseType",$param) and $param["ResponseType"] !== null) {
+            $this->ResponseType = $param["ResponseType"];
+        }
+
+        if (array_key_exists("HideClientHeaders",$param) and $param["HideClientHeaders"] !== null) {
+            $this->HideClientHeaders = $param["HideClientHeaders"];
+        }
+
         if (array_key_exists("LineUpTime",$param) and $param["LineUpTime"] !== null) {
             $this->LineUpTime = $param["LineUpTime"];
+        }
+
+        if (array_key_exists("IsDelay",$param) and $param["IsDelay"] !== null) {
+            $this->IsDelay = $param["IsDelay"];
+        }
+
+        if (array_key_exists("BasicLimitQpsThresholds",$param) and $param["BasicLimitQpsThresholds"] !== null) {
+            $this->BasicLimitQpsThresholds = [];
+            foreach ($param["BasicLimitQpsThresholds"] as $key => $value){
+                $obj = new QpsThreshold();
+                $obj->deserialize($value);
+                array_push($this->BasicLimitQpsThresholds, $obj);
+            }
+        }
+
+        if (array_key_exists("LimitRules",$param) and $param["LimitRules"] !== null) {
+            $this->LimitRules = [];
+            foreach ($param["LimitRules"] as $key => $value){
+                $obj = new LimitRule();
+                $obj->deserialize($value);
+                array_push($this->LimitRules, $obj);
+            }
         }
     }
 }

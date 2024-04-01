@@ -206,6 +206,14 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindSGs(array $BindSGs) 设置已绑定的安全组信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableMultiZones() 获取是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableMultiZones(boolean $EnableMultiZones) 设置是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserNetworkInfos() 获取用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserNetworkInfos(string $UserNetworkInfos) 设置用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -476,6 +484,18 @@ Modify 集群变更中；
     public $BindSGs;
 
     /**
+     * @var boolean 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableMultiZones;
+
+    /**
+     * @var string 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserNetworkInfos;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -568,6 +588,10 @@ Modify 集群变更中；
      * @param boolean $IsWhiteSGs 用户是否可以绑定安全组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindSGs 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableMultiZones 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserNetworkInfos 用户可用区和子网信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -760,6 +784,14 @@ Modify 集群变更中；
 
         if (array_key_exists("BindSGs",$param) and $param["BindSGs"] !== null) {
             $this->BindSGs = $param["BindSGs"];
+        }
+
+        if (array_key_exists("EnableMultiZones",$param) and $param["EnableMultiZones"] !== null) {
+            $this->EnableMultiZones = $param["EnableMultiZones"];
+        }
+
+        if (array_key_exists("UserNetworkInfos",$param) and $param["UserNetworkInfos"] !== null) {
+            $this->UserNetworkInfos = $param["UserNetworkInfos"];
         }
     }
 }

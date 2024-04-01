@@ -28,6 +28,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置节点状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeName() 获取节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeName(string $NodeName) 设置节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComponentName() 获取组件名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComponentName(string $ComponentName) 设置组件名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeRole() 获取节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeRole(string $NodeRole) 设置节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastRestartTime() 获取节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastRestartTime(string $LastRestartTime) 设置节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfo extends AbstractModel
 {
@@ -44,9 +64,49 @@ class NodeInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeName;
+
+    /**
+     * @var string 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComponentName;
+
+    /**
+     * @var string 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeRole;
+
+    /**
+     * @var string 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastRestartTime;
+
+    /**
+     * @var string 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param string $Ip 用户IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeName 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ComponentName 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeRole 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastRestartTime 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 节点所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +128,26 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
+            $this->ComponentName = $param["ComponentName"];
+        }
+
+        if (array_key_exists("NodeRole",$param) and $param["NodeRole"] !== null) {
+            $this->NodeRole = $param["NodeRole"];
+        }
+
+        if (array_key_exists("LastRestartTime",$param) and $param["LastRestartTime"] !== null) {
+            $this->LastRestartTime = $param["LastRestartTime"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

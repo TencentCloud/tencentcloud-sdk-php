@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusStr(string $StatusStr) 设置任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVoiceType() 获取音色id
+ * @method integer getVoiceType() 获取音色id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVoiceType(integer $VoiceType) 设置音色id
+ * @method void setVoiceType(integer $VoiceType) 设置音色id。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取失败原因说明。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ class DescribeVRSTaskStatusRespData extends AbstractModel
     public $StatusStr;
 
     /**
-     * @var integer 音色id
+     * @var integer 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceType;
@@ -80,7 +80,7 @@ class DescribeVRSTaskStatusRespData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VoiceType 音色id
+     * @param integer $VoiceType 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 失败原因说明。
 注意：此字段可能返回 null，表示取不到有效值。

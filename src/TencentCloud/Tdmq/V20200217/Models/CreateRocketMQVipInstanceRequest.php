@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcInfo(VpcInfo $VpcInfo) 设置VPC信息
  * @method integer getTimeSpan() 获取购买时长，月为单位
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长，月为单位
+ * @method boolean getSupportsMigrateToCloud() 获取是否用于迁移上云，默认为false
+ * @method void setSupportsMigrateToCloud(boolean $SupportsMigrateToCloud) 设置是否用于迁移上云，默认为false
+ * @method boolean getEnablePublic() 获取是否开启公网
+ * @method void setEnablePublic(boolean $EnablePublic) 设置是否开启公网
+ * @method integer getBandwidth() 获取公网带宽，在开启公网情况下为必传字段
+ * @method void setBandwidth(integer $Bandwidth) 设置公网带宽，在开启公网情况下为必传字段
+ * @method array getIpRules() 获取公网白名单
+ * @method void setIpRules(array $IpRules) 设置公网白名单
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateRocketMQVipInstanceRequest extends AbstractModel
 {
@@ -85,6 +95,31 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
+     * @var boolean 是否用于迁移上云，默认为false
+     */
+    public $SupportsMigrateToCloud;
+
+    /**
+     * @var boolean 是否开启公网
+     */
+    public $EnablePublic;
+
+    /**
+     * @var integer 公网带宽，在开启公网情况下为必传字段
+     */
+    public $Bandwidth;
+
+    /**
+     * @var array 公网白名单
+     */
+    public $IpRules;
+
+    /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 实例名称
      * @param string $Spec 实例规格：
 基础型，rocket-vip-basic-1
@@ -96,6 +131,11 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
      * @param array $ZoneIds 节点部署的区域ID列表，如广州一区，则是100001，具体可查询腾讯云官网
      * @param VpcInfo $VpcInfo VPC信息
      * @param integer $TimeSpan 购买时长，月为单位
+     * @param boolean $SupportsMigrateToCloud 是否用于迁移上云，默认为false
+     * @param boolean $EnablePublic 是否开启公网
+     * @param integer $Bandwidth 公网带宽，在开启公网情况下为必传字段
+     * @param array $IpRules 公网白名单
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -137,6 +177,36 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("SupportsMigrateToCloud",$param) and $param["SupportsMigrateToCloud"] !== null) {
+            $this->SupportsMigrateToCloud = $param["SupportsMigrateToCloud"];
+        }
+
+        if (array_key_exists("EnablePublic",$param) and $param["EnablePublic"] !== null) {
+            $this->EnablePublic = $param["EnablePublic"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("IpRules",$param) and $param["IpRules"] !== null) {
+            $this->IpRules = [];
+            foreach ($param["IpRules"] as $key => $value){
+                $obj = new PublicAccessRule();
+                $obj->deserialize($value);
+                array_push($this->IpRules, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

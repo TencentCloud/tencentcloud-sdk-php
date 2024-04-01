@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
  * @method integer getCaseSensitive() 获取表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
  * @method void setCaseSensitive(integer $CaseSensitive) 设置表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+ * @method boolean getEnableMultiZones() 获取是否开启多可用区
+ * @method void setEnableMultiZones(boolean $EnableMultiZones) 设置是否开启多可用区
+ * @method NetworkInfo getUserMultiZoneInfos() 获取开启多可用区后，用户的所有可用区和子网信息
+ * @method void setUserMultiZoneInfos(NetworkInfo $UserMultiZoneInfos) 设置开启多可用区后，用户的所有可用区和子网信息
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -124,6 +128,16 @@ class CreateInstanceNewRequest extends AbstractModel
     public $CaseSensitive;
 
     /**
+     * @var boolean 是否开启多可用区
+     */
+    public $EnableMultiZones;
+
+    /**
+     * @var NetworkInfo 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public $UserMultiZoneInfos;
+
+    /**
      * @param string $Zone 可用区
      * @param CreateInstanceSpec $FeSpec FE规格
      * @param CreateInstanceSpec $BeSpec BE规格
@@ -140,6 +154,8 @@ class CreateInstanceNewRequest extends AbstractModel
 1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
 2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
      * @param integer $CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * @param boolean $EnableMultiZones 是否开启多可用区
+     * @param NetworkInfo $UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
      */
     function __construct()
     {
@@ -212,6 +228,15 @@ class CreateInstanceNewRequest extends AbstractModel
 
         if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {
             $this->CaseSensitive = $param["CaseSensitive"];
+        }
+
+        if (array_key_exists("EnableMultiZones",$param) and $param["EnableMultiZones"] !== null) {
+            $this->EnableMultiZones = $param["EnableMultiZones"];
+        }
+
+        if (array_key_exists("UserMultiZoneInfos",$param) and $param["UserMultiZoneInfos"] !== null) {
+            $this->UserMultiZoneInfos = new NetworkInfo();
+            $this->UserMultiZoneInfos->deserialize($param["UserMultiZoneInfos"]);
         }
     }
 }

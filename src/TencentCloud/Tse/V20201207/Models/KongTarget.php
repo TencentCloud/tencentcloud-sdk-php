@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvmInstanceName(string $CvmInstanceName) 设置CVM实例名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取target标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置target标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongTarget extends AbstractModel
 {
@@ -104,6 +108,12 @@ class KongTarget extends AbstractModel
     public $CvmInstanceName;
 
     /**
+     * @var array target标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $Host Host
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
@@ -119,6 +129,8 @@ class KongTarget extends AbstractModel
      * @param string $CvmInstanceId CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CvmInstanceName CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags target标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class KongTarget extends AbstractModel
 
         if (array_key_exists("CvmInstanceName",$param) and $param["CvmInstanceName"] !== null) {
             $this->CvmInstanceName = $param["CvmInstanceName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

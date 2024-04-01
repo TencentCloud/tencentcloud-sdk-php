@@ -24,12 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置唯一请求 ID
  * @method string getVoiceName() 获取音色名称
  * @method void setVoiceName(string $VoiceName) 设置音色名称
- * @method integer getSampleRate() 获取音频采样率：
-
-16000：16k
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
-
-16000：16k
  * @method integer getVoiceGender() 获取音色性别:
 
 1-male
@@ -46,22 +40,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceLanguage(integer $VoiceLanguage) 设置语言类型：
 
 1-中文
- * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
- * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
  * @method array getAudioIdList() 获取音频ID集合
  * @method void setAudioIdList(array $AudioIdList) 设置音频ID集合
+ * @method integer getSampleRate() 获取音频采样率：
+
+16000：16k
+ * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
+
+16000：16k
+ * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
+ * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。
 回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。
 回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
  * @method integer getModelType() 获取模型类型 1:在线 2:离线  默认为1
  * @method void setModelType(integer $ModelType) 设置模型类型 1:在线 2:离线  默认为1
- * @method integer getTaskType() 获取任务类型 0:轻量版复刻
-默认为0
- * @method void setTaskType(integer $TaskType) 设置任务类型 0:轻量版复刻
-默认为0
- * @method string getVPRAudioId() 获取校验音频ID
- * @method void setVPRAudioId(string $VPRAudioId) 设置校验音频ID
+ * @method integer getTaskType() 获取复刻类型。 0 - 轻量版声音复刻（默认）。
+ * @method void setTaskType(integer $TaskType) 设置复刻类型。 0 - 轻量版声音复刻（默认）。
+ * @method string getVPRAudioId() 获取校验音频ID。
+ * @method void setVPRAudioId(string $VPRAudioId) 设置校验音频ID。
  */
 class CreateVRSTaskRequest extends AbstractModel
 {
@@ -74,13 +72,6 @@ class CreateVRSTaskRequest extends AbstractModel
      * @var string 音色名称
      */
     public $VoiceName;
-
-    /**
-     * @var integer 音频采样率：
-
-16000：16k
-     */
-    public $SampleRate;
 
     /**
      * @var integer 音色性别:
@@ -99,14 +90,21 @@ class CreateVRSTaskRequest extends AbstractModel
     public $VoiceLanguage;
 
     /**
-     * @var string 音频格式，音频类型(wav,mp3,aac,m4a)
-     */
-    public $Codec;
-
-    /**
      * @var array 音频ID集合
      */
     public $AudioIdList;
+
+    /**
+     * @var integer 音频采样率：
+
+16000：16k
+     */
+    public $SampleRate;
+
+    /**
+     * @var string 音频格式，音频类型(wav,mp3,aac,m4a)
+     */
+    public $Codec;
 
     /**
      * @var string 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -120,22 +118,18 @@ class CreateVRSTaskRequest extends AbstractModel
     public $ModelType;
 
     /**
-     * @var integer 任务类型 0:轻量版复刻
-默认为0
+     * @var integer 复刻类型。 0 - 轻量版声音复刻（默认）。
      */
     public $TaskType;
 
     /**
-     * @var string 校验音频ID
+     * @var string 校验音频ID。
      */
     public $VPRAudioId;
 
     /**
      * @param string $SessionId 唯一请求 ID
      * @param string $VoiceName 音色名称
-     * @param integer $SampleRate 音频采样率：
-
-16000：16k
      * @param integer $VoiceGender 音色性别:
 
 1-male
@@ -144,14 +138,16 @@ class CreateVRSTaskRequest extends AbstractModel
      * @param integer $VoiceLanguage 语言类型：
 
 1-中文
-     * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
      * @param array $AudioIdList 音频ID集合
+     * @param integer $SampleRate 音频采样率：
+
+16000：16k
+     * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。
 回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
      * @param integer $ModelType 模型类型 1:在线 2:离线  默认为1
-     * @param integer $TaskType 任务类型 0:轻量版复刻
-默认为0
-     * @param string $VPRAudioId 校验音频ID
+     * @param integer $TaskType 复刻类型。 0 - 轻量版声音复刻（默认）。
+     * @param string $VPRAudioId 校验音频ID。
      */
     function __construct()
     {
@@ -174,10 +170,6 @@ class CreateVRSTaskRequest extends AbstractModel
             $this->VoiceName = $param["VoiceName"];
         }
 
-        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
-            $this->SampleRate = $param["SampleRate"];
-        }
-
         if (array_key_exists("VoiceGender",$param) and $param["VoiceGender"] !== null) {
             $this->VoiceGender = $param["VoiceGender"];
         }
@@ -186,12 +178,16 @@ class CreateVRSTaskRequest extends AbstractModel
             $this->VoiceLanguage = $param["VoiceLanguage"];
         }
 
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
-        }
-
         if (array_key_exists("AudioIdList",$param) and $param["AudioIdList"] !== null) {
             $this->AudioIdList = $param["AudioIdList"];
+        }
+
+        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
+            $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
+            $this->Codec = $param["Codec"];
         }
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {

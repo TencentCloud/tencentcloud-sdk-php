@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置网关ID
  * @method string getServiceId() 获取服务 ID
  * @method void setServiceId(string $ServiceId) 设置服务 ID
+ * @method string getRuleType() 获取灰度规则类别 Standard｜Lane
+ * @method void setRuleType(string $RuleType) 设置灰度规则类别 Standard｜Lane
  * @method integer getLimit() 获取列表数量
  * @method void setLimit(integer $Limit) 设置列表数量
  * @method integer getOffset() 获取列表offset
@@ -42,6 +44,11 @@ class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel
     public $ServiceId;
 
     /**
+     * @var string 灰度规则类别 Standard｜Lane
+     */
+    public $RuleType;
+
+    /**
      * @var integer 列表数量
      */
     public $Limit;
@@ -54,6 +61,7 @@ class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel
     /**
      * @param string $GatewayId 网关ID
      * @param string $ServiceId 服务 ID
+     * @param string $RuleType 灰度规则类别 Standard｜Lane
      * @param integer $Limit 列表数量
      * @param integer $Offset 列表offset
      */
@@ -76,6 +84,10 @@ class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel
 
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

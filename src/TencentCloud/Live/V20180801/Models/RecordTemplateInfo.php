@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCosStore() 获取是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosStore(integer $CosStore) 设置是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
  * @method FlvSpecialParam getFlvSpecialParam() 获取FLV 录制定制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) 设置FLV 录制定制参数。
@@ -111,6 +115,12 @@ class RecordTemplateInfo extends AbstractModel
     public $RemoveWatermark;
 
     /**
+     * @var integer 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosStore;
+
+    /**
      * @var FlvSpecialParam FLV 录制定制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,6 +139,8 @@ class RecordTemplateInfo extends AbstractModel
      * @param HlsSpecialParam $HlsSpecialParam HLS 录制定制参数。
      * @param RecordParam $Mp3Param MP3 录制参数。
      * @param boolean $RemoveWatermark 是否去除水印。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CosStore 是否存储至cos
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FlvSpecialParam $FlvSpecialParam FLV 录制定制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,6 +206,10 @@ class RecordTemplateInfo extends AbstractModel
 
         if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
             $this->RemoveWatermark = $param["RemoveWatermark"];
+        }
+
+        if (array_key_exists("CosStore",$param) and $param["CosStore"] !== null) {
+            $this->CosStore = $param["CosStore"];
         }
 
         if (array_key_exists("FlvSpecialParam",$param) and $param["FlvSpecialParam"] !== null) {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueNum(integer $QueueNum) 设置队列数量
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
+ * @method integer getMsgTTL() 获取消息保留时长
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyTopicRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer 消息保留时长
+     */
+    public $MsgTTL;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Topic 主题
      * @param integer $QueueNum 队列数量
      * @param string $Remark 备注信息
+     * @param integer $MsgTTL 消息保留时长
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
     }
 }

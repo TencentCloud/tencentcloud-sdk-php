@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置经办人的证件号
  * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+ * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+ * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
  */
 class RegistrationOrganizationInfo extends AbstractModel
 {
@@ -177,6 +179,11 @@ class RegistrationOrganizationInfo extends AbstractModel
     public $BusinessLicense;
 
     /**
+     * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+     */
+    public $PowerOfAttorneys;
+
+    /**
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
@@ -212,6 +219,7 @@ class RegistrationOrganizationInfo extends AbstractModel
 
      * @param string $AdminIdCardNumber 经办人的证件号
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
      */
     function __construct()
     {
@@ -272,6 +280,10 @@ class RegistrationOrganizationInfo extends AbstractModel
 
         if (array_key_exists("BusinessLicense",$param) and $param["BusinessLicense"] !== null) {
             $this->BusinessLicense = $param["BusinessLicense"];
+        }
+
+        if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
+            $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
         }
     }
 }

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS专属录制参数。
  * @method RecordParam getMp3Param() 获取Mp3录制参数，开启Mp3录制时设置。
  * @method void setMp3Param(RecordParam $Mp3Param) 设置Mp3录制参数，开启Mp3录制时设置。
+ * @method integer getCosStore() 获取是否存储至 cos，值为 1 时表示存储至 cos。
+ * @method void setCosStore(integer $CosStore) 设置是否存储至 cos，值为 1 时表示存储至 cos。
  * @method boolean getRemoveWatermark() 获取是否去除水印，类型为慢直播时此参数无效。
 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
  * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印，类型为慢直播时此参数无效。
@@ -99,6 +101,11 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
+     * @var integer 是否存储至 cos，值为 1 时表示存储至 cos。
+     */
+    public $CosStore;
+
+    /**
      * @var boolean 是否去除水印，类型为慢直播时此参数无效。
 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      */
@@ -121,6 +128,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
 1：慢直播。
      * @param HlsSpecialParam $HlsSpecialParam HLS专属录制参数。
      * @param RecordParam $Mp3Param Mp3录制参数，开启Mp3录制时设置。
+     * @param integer $CosStore 是否存储至 cos，值为 1 时表示存储至 cos。
      * @param boolean $RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      * @param FlvSpecialParam $FlvSpecialParam FLV 录制特殊参数。
@@ -178,6 +186,10 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
         if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
             $this->Mp3Param = new RecordParam();
             $this->Mp3Param->deserialize($param["Mp3Param"]);
+        }
+
+        if (array_key_exists("CosStore",$param) and $param["CosStore"] !== null) {
+            $this->CosStore = $param["CosStore"];
         }
 
         if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置元素层级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInsetImageName() 获取入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInsetImageName(string $InsetImageName) 设置入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getElements() 获取嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElements(array $Elements) 设置嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
@@ -87,6 +91,12 @@ class DocumentElement extends AbstractModel
     public $Level;
 
     /**
+     * @var string 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InsetImageName;
+
+    /**
      * @var array 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,6 +115,8 @@ class DocumentElement extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 元素层级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InsetImageName 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Elements 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,6 +153,10 @@ class DocumentElement extends AbstractModel
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("InsetImageName",$param) and $param["InsetImageName"] !== null) {
+            $this->InsetImageName = $param["InsetImageName"];
         }
 
         if (array_key_exists("Elements",$param) and $param["Elements"] !== null) {

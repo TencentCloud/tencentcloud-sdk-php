@@ -18,7 +18,7 @@ namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据分页信息
+ * 页码
  *
  * @method integer getPageSize() 获取每页条数(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。

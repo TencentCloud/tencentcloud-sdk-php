@@ -25,12 +25,14 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
 /**
  * @method Models\AddAlarmProcessRecordResponse AddAlarmProcessRecord(Models\AddAlarmProcessRecordRequest $req) 添加告警处理记录
  * @method Models\BatchCreateDeviceResponse BatchCreateDevice(Models\BatchCreateDeviceRequest $req) 单个/批量新增设备
+ * @method Models\BatchDeleteDeviceResponse BatchDeleteDevice(Models\BatchDeleteDeviceRequest $req) 批量删除设备
  * @method Models\BatchKillAlarmResponse BatchKillAlarm(Models\BatchKillAlarmRequest $req) 批量消警
  * @method Models\BatchReportAppMessageResponse BatchReportAppMessage(Models\BatchReportAppMessageRequest $req) 批量上报应用消息
  * @method Models\ChangeAlarmStatusResponse ChangeAlarmStatus(Models\ChangeAlarmStatusRequest $req) 变更告警状态
  * @method Models\ControlCameraPTZResponse ControlCameraPTZ(Models\ControlCameraPTZRequest $req) 云台控制
  * @method Models\ControlDeviceResponse ControlDevice(Models\ControlDeviceRequest $req) 设备控制（单个、批量控制）
  * @method Models\CreateApplicationTokenResponse CreateApplicationToken(Models\CreateApplicationTokenRequest $req) 调用方应用，创建调用租户API的授权令牌。
+ * @method Models\DeleteDeviceGroupResponse DeleteDeviceGroup(Models\DeleteDeviceGroupRequest $req) 删除设备分组
  * @method Models\DescribeActionListResponse DescribeActionList(Models\DescribeActionListRequest $req) 动作列表查询
  * @method Models\DescribeAdministrationByTagResponse DescribeAdministrationByTag(Models\DescribeAdministrationByTagRequest $req) 根据标签获取行政区划列表
  * @method Models\DescribeAlarmLevelListResponse DescribeAlarmLevelList(Models\DescribeAlarmLevelListRequest $req) 告警级别枚举获取
@@ -43,6 +45,7 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
  * @method Models\DescribeBuildingProfileResponse DescribeBuildingProfile(Models\DescribeBuildingProfileRequest $req) 查询建筑信息
  * @method Models\DescribeCameraExtendInfoResponse DescribeCameraExtendInfo(Models\DescribeCameraExtendInfoRequest $req) 获取视频扩展信息
  * @method Models\DescribeCityWorkspaceListResponse DescribeCityWorkspaceList(Models\DescribeCityWorkspaceListRequest $req) 通过城市id查询工作空间列表
+ * @method Models\DescribeDeviceGroupListResponse DescribeDeviceGroupList(Models\DescribeDeviceGroupListRequest $req) 设备分组列表
  * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 设备列表查询/单个查询（支持通过筛选条件查询，设备类型、标签、PID、空间）
  * @method Models\DescribeDeviceShadowListResponse DescribeDeviceShadowList(Models\DescribeDeviceShadowListRequest $req) 获取设备影子数据
  * @method Models\DescribeDeviceStatusListResponse DescribeDeviceStatusList(Models\DescribeDeviceStatusListRequest $req) 设备状态获取
@@ -76,8 +79,12 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
  * @method Models\DescribeWorkSpaceBuildingCountAndAreaResponse DescribeWorkSpaceBuildingCountAndArea(Models\DescribeWorkSpaceBuildingCountAndAreaRequest $req) 查询项目空间楼栋数量与建筑面积
  * @method Models\DescribeWorkspaceListResponse DescribeWorkspaceList(Models\DescribeWorkspaceListRequest $req) 获取租户下的空间列表
  * @method Models\DescribeWorkspaceUserListResponse DescribeWorkspaceUserList(Models\DescribeWorkspaceUserListRequest $req) 查询项目空间人员列表
+ * @method Models\ModifyDeviceFieldResponse ModifyDeviceField(Models\ModifyDeviceFieldRequest $req) 批量修改设备自定义字段值
+ * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 批量修改设备组
  * @method Models\ModifyDeviceNameResponse ModifyDeviceName(Models\ModifyDeviceNameRequest $req) 批量修改设备名字
+ * @method Models\ModifyDeviceTagResponse ModifyDeviceTag(Models\ModifyDeviceTagRequest $req) 批量修改设备标签
  * @method Models\ReportAppMessageResponse ReportAppMessage(Models\ReportAppMessageRequest $req) 上报应用消息
+ * @method Models\SaveDeviceGroupResponse SaveDeviceGroup(Models\SaveDeviceGroupRequest $req) 设备分组新增/修改
  * @method Models\StopVideoStreamingResponse StopVideoStreaming(Models\StopVideoStreamingRequest $req) 断流接口
  * @method Models\UpdateWorkspaceParkAttributesResponse UpdateWorkspaceParkAttributes(Models\UpdateWorkspaceParkAttributesRequest $req) 修改工作空间园区属性
  */

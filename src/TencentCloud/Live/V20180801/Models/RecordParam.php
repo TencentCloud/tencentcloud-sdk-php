@@ -92,6 +92,18 @@ cold：低频存储。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassId(integer $ClassId) 设置点播应用分类
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosBucketName() 获取存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosBucketName(string $CosBucketName) 设置存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosBucketRegion() 获取存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosBucketRegion(string $CosBucketRegion) 设置存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosBucketPath() 获取存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosBucketPath(string $CosBucketPath) 设置存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordParam extends AbstractModel
 {
@@ -164,6 +176,24 @@ cold：低频存储。
     public $ClassId;
 
     /**
+     * @var string 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosBucketName;
+
+    /**
+     * @var string 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosBucketRegion;
+
+    /**
+     * @var string 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosBucketPath;
+
+    /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认：1800。
 取值范围：30-7200。
@@ -199,6 +229,12 @@ normal：标准存储。
 cold：低频存储。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClassId 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosBucketName 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosBucketRegion 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosBucketPath 存储至 cos 的 bucket 路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +280,18 @@ cold：低频存储。
 
         if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
             $this->ClassId = $param["ClassId"];
+        }
+
+        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
+            $this->CosBucketName = $param["CosBucketName"];
+        }
+
+        if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
+            $this->CosBucketRegion = $param["CosBucketRegion"];
+        }
+
+        if (array_key_exists("CosBucketPath",$param) and $param["CosBucketPath"] !== null) {
+            $this->CosBucketPath = $param["CosBucketPath"];
         }
     }
 }

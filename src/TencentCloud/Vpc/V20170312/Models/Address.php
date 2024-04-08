@@ -103,6 +103,11 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setRenewFlag(string $RenewFlag) 设置当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
 <li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+ * @method string getBandwidthPackageId() 获取当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -245,6 +250,12 @@ class Address extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var string 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BandwidthPackageId;
+
+    /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -286,6 +297,9 @@ class Address extends AbstractModel
      * @param string $AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
      * @param string $RenewFlag 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
 <li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+     * @param string $BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -400,6 +414,10 @@ class Address extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
     }
 }

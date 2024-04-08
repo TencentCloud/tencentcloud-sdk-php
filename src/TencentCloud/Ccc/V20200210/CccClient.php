@@ -54,6 +54,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeExtensionsResponse DescribeExtensions(Models\DescribeExtensionsRequest $req) 查询话机列表信息
  * @method Models\DescribeIMCdrListResponse DescribeIMCdrList(Models\DescribeIMCdrListRequest $req) 获取包括全媒体和文本会话两种类型的服务记录。
  * @method Models\DescribeIMCdrsResponse DescribeIMCdrs(Models\DescribeIMCdrsRequest $req) 获取包括全媒体和文本会话两种类型的服务记录。
+ * @method Models\DescribeIvrAudioListResponse DescribeIvrAudioList(Models\DescribeIvrAudioListRequest $req) 查询IVR音频文件列表信息
  * @method Models\DescribeNumbersResponse DescribeNumbers(Models\DescribeNumbersRequest $req) 查询号码列表
  * @method Models\DescribePSTNActiveSessionListResponse DescribePSTNActiveSessionList(Models\DescribePSTNActiveSessionListRequest $req) 获取当前正在通话的会话列表
  * @method Models\DescribePredictiveDialingCampaignResponse DescribePredictiveDialingCampaign(Models\DescribePredictiveDialingCampaignRequest $req) 查询预测式外呼任务
@@ -79,6 +80,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupList(Models\UnbindStaffSkillGroupListRequest $req) 解绑坐席所属技能组
  * @method Models\UpdateCCCSkillGroupResponse UpdateCCCSkillGroup(Models\UpdateCCCSkillGroupRequest $req) 更新技能组
  * @method Models\UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaign(Models\UpdatePredictiveDialingCampaignRequest $req) 任务未启动前，更新预测式外呼任务。
+ * @method Models\UploadIvrAudioResponse UploadIvrAudio(Models\UploadIvrAudioRequest $req) 上传IVR中使用的音频文件，每日上传文件限制50个。（参数中音频文件Url建议使用腾讯云Cos存储的临时链接）
  */
 
 class CccClient extends AbstractClient

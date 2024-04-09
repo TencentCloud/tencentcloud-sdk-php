@@ -61,7 +61,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsGradingRequiredPostClass() 获取开启课后评分。 0：不开启(默认)  1：开启
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
  * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播
@@ -181,6 +183,7 @@ class RoomInfo extends AbstractModel
 
     /**
      * @var integer 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      */
     public $RoomType;
 
@@ -242,6 +245,7 @@ class RoomInfo extends AbstractModel
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播
      * @param string $RecordLiveUrl 伪直播回放链接

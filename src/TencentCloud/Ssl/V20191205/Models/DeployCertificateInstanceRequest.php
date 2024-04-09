@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 -1：域名未关联证书。
 1： 域名https已开启。
 0： 域名https已关闭。
+ * @method integer getIsCache() 获取是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+ * @method void setIsCache(integer $IsCache) 设置是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  */
 class DeployCertificateInstanceRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class DeployCertificateInstanceRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+     */
+    public $IsCache;
+
+    /**
      * @param string $CertificateId 待部署的证书ID
      * @param array $InstanceIdList 需要部署实例列表
      * @param string $ResourceType 部署的云资源类型
@@ -72,6 +79,7 @@ class DeployCertificateInstanceRequest extends AbstractModel
 -1：域名未关联证书。
 1： 域名https已开启。
 0： 域名https已关闭。
+     * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class DeployCertificateInstanceRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsCache",$param) and $param["IsCache"] !== null) {
+            $this->IsCache = $param["IsCache"];
         }
     }
 }

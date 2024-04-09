@@ -97,7 +97,9 @@ video 纯视频
  * @method integer getIsGradingRequiredPostClass() 获取该房间是否开启了课后评分功能。0：未开启  1：开启
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置该房间是否开启了课后评分功能。0：未开启  1：开启
  * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
  * @method integer getVideoDuration() 获取录制时长
  * @method void setVideoDuration(integer $VideoDuration) 设置录制时长
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
@@ -241,6 +243,7 @@ video 纯视频
 
     /**
      * @var integer 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      */
     public $RoomType;
 
@@ -334,6 +337,7 @@ video 纯视频
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 该房间是否开启了课后评分功能。0：未开启  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      * @param integer $VideoDuration 录制时长
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播

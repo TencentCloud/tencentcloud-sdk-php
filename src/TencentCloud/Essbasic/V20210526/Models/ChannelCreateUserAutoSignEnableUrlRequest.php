@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyAddress(string $NotifyAddress) 设置如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
  * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
  * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
  */
 class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
@@ -98,6 +100,11 @@ class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel
     public $ExpiredTime;
 
     /**
+     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
+     */
+    public $UserData;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
 <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
@@ -112,6 +119,7 @@ class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel
 <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
      * @param string $NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

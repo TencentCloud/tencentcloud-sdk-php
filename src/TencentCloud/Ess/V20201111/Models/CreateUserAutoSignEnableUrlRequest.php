@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
  */
 class CreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
+     */
+    public $UserData;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
@@ -116,6 +123,7 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
      * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。 
      */
     function __construct()
     {
@@ -163,6 +171,10 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationIdentity请求参数结构体
  *
- * @method integer getIdentityId() 获取身份ID
- * @method void setIdentityId(integer $IdentityId) 设置身份ID
+ * @method integer getIdentityId() 获取身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityId(integer $IdentityId) 设置身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
  */
 class DeleteOrganizationIdentityRequest extends AbstractModel
 {
     /**
-     * @var integer 身份ID
+     * @var integer 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityId;
 
     /**
-     * @param integer $IdentityId 身份ID
+     * @param integer $IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     function __construct()
     {

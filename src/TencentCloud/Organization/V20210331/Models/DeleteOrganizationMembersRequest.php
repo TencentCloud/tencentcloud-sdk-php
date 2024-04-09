@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationMembers请求参数结构体
  *
- * @method array getMemberUin() 获取被删除成员的UIN列表。
- * @method void setMemberUin(array $MemberUin) 设置被删除成员的UIN列表。
+ * @method array getMemberUin() 获取被删除成员的Uin列表。
+ * @method void setMemberUin(array $MemberUin) 设置被删除成员的Uin列表。
  */
 class DeleteOrganizationMembersRequest extends AbstractModel
 {
     /**
-     * @var array 被删除成员的UIN列表。
+     * @var array 被删除成员的Uin列表。
      */
     public $MemberUin;
 
     /**
-     * @param array $MemberUin 被删除成员的UIN列表。
+     * @param array $MemberUin 被删除成员的Uin列表。
      */
     function __construct()
     {

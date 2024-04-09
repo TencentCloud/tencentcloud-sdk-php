@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。
  * @method string getSearchKey() 获取搜索关键字。支持产品资源ID搜索。
  * @method void setSearchKey(string $SearchKey) 设置搜索关键字。支持产品资源ID搜索。
- * @method string getType() 获取共享资源类型。
- * @method void setType(string $Type) 设置共享资源类型。
+ * @method string getType() 获取共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
+ * @method void setType(string $Type) 设置共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
  */
 class DescribeShareUnitResourcesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeShareUnitResourcesRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @var string 共享资源类型。
+     * @var string 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public $Type;
 
@@ -71,7 +71,7 @@ class DescribeShareUnitResourcesRequest extends AbstractModel
      * @param integer $Offset 偏移量。取值是limit的整数倍，默认值 : 0
      * @param integer $Limit 限制数目。取值范围：1~50。
      * @param string $SearchKey 搜索关键字。支持产品资源ID搜索。
-     * @param string $Type 共享资源类型。
+     * @param string $Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     function __construct()
     {

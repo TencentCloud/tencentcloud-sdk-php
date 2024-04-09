@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取共享单元名称。仅支持大小写字母、数字、-、以及_的组合，3-128个字符。
  * @method void setName(string $Name) 设置共享单元名称。仅支持大小写字母、数字、-、以及_的组合，3-128个字符。
- * @method string getArea() 获取共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
- * @method void setArea(string $Area) 设置共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+ * @method string getArea() 获取共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+ * @method void setArea(string $Area) 设置共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
  * @method string getDescription() 获取共享单元描述。最大128个字符。
  * @method void setDescription(string $Description) 设置共享单元描述。最大128个字符。
  */
@@ -35,7 +35,7 @@ class AddShareUnitRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * @var string 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public $Area;
 
@@ -46,7 +46,7 @@ class AddShareUnitRequest extends AbstractModel
 
     /**
      * @param string $Name 共享单元名称。仅支持大小写字母、数字、-、以及_的组合，3-128个字符。
-     * @param string $Area 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * @param string $Area 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      * @param string $Description 共享单元描述。最大128个字符。
      */
     function __construct()

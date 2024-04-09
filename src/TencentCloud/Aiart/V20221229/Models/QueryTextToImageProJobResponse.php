@@ -21,11 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * QueryTextToImageProJob返回参数结构体
  *
  * @method string getJobStatusCode() 获取当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
  * @method void setJobStatusCode(string $JobStatusCode) 设置当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
  * @method string getJobStatusMsg() 获取当前任务状态：排队中、处理中、处理失败或者处理完成。
 
  * @method void setJobStatusMsg(string $JobStatusMsg) 设置当前任务状态：排队中、处理中、处理失败或者处理完成。
@@ -53,8 +51,7 @@ class QueryTextToImageProJobResponse extends AbstractModel
 {
     /**
      * @var string 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
      */
     public $JobStatusCode;
 
@@ -95,8 +92,7 @@ class QueryTextToImageProJobResponse extends AbstractModel
 
     /**
      * @param string $JobStatusCode 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
      * @param string $JobStatusMsg 当前任务状态：排队中、处理中、处理失败或者处理完成。
 
      * @param string $JobErrorCode 任务处理失败错误码。

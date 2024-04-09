@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrganizationMemberAuthIdentity请求参数结构体
  *
- * @method array getMemberUins() 获取成员uin列表。最多10个
- * @method void setMemberUins(array $MemberUins) 设置成员uin列表。最多10个
- * @method array getIdentityIds() 获取身份Id列表。最多5个
- * @method void setIdentityIds(array $IdentityIds) 设置身份Id列表。最多5个
+ * @method array getMemberUins() 获取成员Uin列表。最多10个
+ * @method void setMemberUins(array $MemberUins) 设置成员Uin列表。最多10个
+ * @method array getIdentityIds() 获取身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityIds(array $IdentityIds) 设置身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
  */
 class CreateOrganizationMemberAuthIdentityRequest extends AbstractModel
 {
     /**
-     * @var array 成员uin列表。最多10个
+     * @var array 成员Uin列表。最多10个
      */
     public $MemberUins;
 
     /**
-     * @var array 身份Id列表。最多5个
+     * @var array 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityIds;
 
     /**
-     * @param array $MemberUins 成员uin列表。最多10个
-     * @param array $IdentityIds 身份Id列表。最多5个
+     * @param array $MemberUins 成员Uin列表。最多10个
+     * @param array $IdentityIds 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     function __construct()
     {

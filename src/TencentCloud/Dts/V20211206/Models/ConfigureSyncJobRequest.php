@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunMode(string $RunMode) 设置运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
  * @method string getExpectRunTime() 获取期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
  * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
+ * @method string getSrcConnectType() 获取源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+ * @method void setSrcConnectType(string $SrcConnectType) 设置源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
  * @method Endpoint getSrcInfo() 获取源端信息，单节点数据库使用，且SrcNodeType传single
  * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用，且SrcNodeType传single
  * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，多节点数据库使用，且SrcNodeType传cluster
@@ -96,6 +98,11 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $ExpectRunTime;
 
     /**
+     * @var string 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     */
+    public $SrcConnectType;
+
+    /**
      * @var Endpoint 源端信息，单节点数据库使用，且SrcNodeType传single
      */
     public $SrcInfo;
@@ -144,6 +151,7 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param string $JobMode 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
      * @param string $RunMode 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
      * @param string $ExpectRunTime 期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
+     * @param string $SrcConnectType 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
      * @param Endpoint $SrcInfo 源端信息，单节点数据库使用，且SrcNodeType传single
      * @param SyncDBEndpointInfos $SrcInfos 源端信息，多节点数据库使用，且SrcNodeType传cluster
      * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
@@ -197,6 +205,10 @@ class ConfigureSyncJobRequest extends AbstractModel
 
         if (array_key_exists("ExpectRunTime",$param) and $param["ExpectRunTime"] !== null) {
             $this->ExpectRunTime = $param["ExpectRunTime"];
+        }
+
+        if (array_key_exists("SrcConnectType",$param) and $param["SrcConnectType"] !== null) {
+            $this->SrcConnectType = $param["SrcConnectType"];
         }
 
         if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {

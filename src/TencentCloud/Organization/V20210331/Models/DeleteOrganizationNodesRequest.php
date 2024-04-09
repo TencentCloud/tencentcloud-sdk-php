@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationNodes请求参数结构体
  *
- * @method array getNodeId() 获取节点ID列表。
- * @method void setNodeId(array $NodeId) 设置节点ID列表。
+ * @method array getNodeId() 获取节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+ * @method void setNodeId(array $NodeId) 设置节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
  */
 class DeleteOrganizationNodesRequest extends AbstractModel
 {
     /**
-     * @var array 节点ID列表。
+     * @var array 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public $NodeId;
 
     /**
-     * @param array $NodeId 节点ID列表。
+     * @param array $NodeId 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     function __construct()
     {

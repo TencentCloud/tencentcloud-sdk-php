@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberUins(array $MemberUins) 设置成员Uin列表。最多10个
  * @method string getPolicyName() 获取策略名。长度1～128个字符，支持英文字母、数字、符号+=,.@_-
  * @method void setPolicyName(string $PolicyName) 设置策略名。长度1～128个字符，支持英文字母、数字、符号+=,.@_-
- * @method integer getIdentityId() 获取成员访问身份ID。
- * @method void setIdentityId(integer $IdentityId) 设置成员访问身份ID。
+ * @method integer getIdentityId() 获取成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityId(integer $IdentityId) 设置成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
  * @method string getDescription() 获取策略描述。最大长度为128个字符
  * @method void setDescription(string $Description) 设置策略描述。最大长度为128个字符
  */
@@ -42,7 +42,7 @@ class CreateOrganizationMembersPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var integer 成员访问身份ID。
+     * @var integer 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityId;
 
@@ -54,7 +54,7 @@ class CreateOrganizationMembersPolicyRequest extends AbstractModel
     /**
      * @param array $MemberUins 成员Uin列表。最多10个
      * @param string $PolicyName 策略名。长度1～128个字符，支持英文字母、数字、符号+=,.@_-
-     * @param integer $IdentityId 成员访问身份ID。
+     * @param integer $IdentityId 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      * @param string $Description 策略描述。最大长度为128个字符
      */
     function __construct()

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationAuthNode请求参数结构体
  *
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取限制数目。最大50
- * @method void setLimit(integer $Limit) 设置限制数目。最大50
+ * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method integer getLimit() 获取限制数目。取值范围：1~50。默认值：10。
+ * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。默认值：10。
  * @method string getAuthName() 获取互信主体名称。
  * @method void setAuthName(string $AuthName) 设置互信主体名称。
  */
 class DescribeOrganizationAuthNodeRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目。最大50
+     * @var integer 限制数目。取值范围：1~50。默认值：10。
      */
     public $Limit;
 
@@ -45,8 +45,8 @@ class DescribeOrganizationAuthNodeRequest extends AbstractModel
     public $AuthName;
 
     /**
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 限制数目。最大50
+     * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param integer $Limit 限制数目。取值范围：1~50。默认值：10。
      * @param string $AuthName 互信主体名称。
      */
     function __construct()

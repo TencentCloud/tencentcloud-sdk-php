@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() 获取限制数目。最大50
  * @method void setLimit(integer $Limit) 设置限制数目。最大50
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
  */
 class DescribeOrganizationNodesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeOrganizationNodesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public $Offset;
 
     /**
      * @param integer $Limit 限制数目。最大50
-     * @param integer $Offset 偏移量。
+     * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     function __construct()
     {

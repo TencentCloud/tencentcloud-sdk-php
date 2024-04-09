@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateOrganizationMemberEmailBind请求参数结构体
  *
- * @method integer getMemberUin() 获取成员Uin
- * @method void setMemberUin(integer $MemberUin) 设置成员Uin
- * @method integer getBindId() 获取绑定ID
- * @method void setBindId(integer $BindId) 设置绑定ID
- * @method string getEmail() 获取邮箱
- * @method void setEmail(string $Email) 设置邮箱
- * @method string getCountryCode() 获取国际区号
- * @method void setCountryCode(string $CountryCode) 设置国际区号
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
+ * @method integer getMemberUin() 获取成员Uin。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
+ * @method integer getBindId() 获取绑定ID。可以通过[DescribeOrganizationMemberEmailBind](https://cloud.tencent.com/document/product/850/93332)获取
+ * @method void setBindId(integer $BindId) 设置绑定ID。可以通过[DescribeOrganizationMemberEmailBind](https://cloud.tencent.com/document/product/850/93332)获取
+ * @method string getEmail() 获取邮箱地址。
+ * @method void setEmail(string $Email) 设置邮箱地址。
+ * @method string getCountryCode() 获取国际区号。
+ * @method void setCountryCode(string $CountryCode) 设置国际区号。
+ * @method string getPhone() 获取手机号。
+ * @method void setPhone(string $Phone) 设置手机号。
  */
 class UpdateOrganizationMemberEmailBindRequest extends AbstractModel
 {
     /**
-     * @var integer 成员Uin
+     * @var integer 成员Uin。
      */
     public $MemberUin;
 
     /**
-     * @var integer 绑定ID
+     * @var integer 绑定ID。可以通过[DescribeOrganizationMemberEmailBind](https://cloud.tencent.com/document/product/850/93332)获取
      */
     public $BindId;
 
     /**
-     * @var string 邮箱
+     * @var string 邮箱地址。
      */
     public $Email;
 
     /**
-     * @var string 国际区号
+     * @var string 国际区号。
      */
     public $CountryCode;
 
     /**
-     * @var string 手机号
+     * @var string 手机号。
      */
     public $Phone;
 
     /**
-     * @param integer $MemberUin 成员Uin
-     * @param integer $BindId 绑定ID
-     * @param string $Email 邮箱
-     * @param string $CountryCode 国际区号
-     * @param string $Phone 手机号
+     * @param integer $MemberUin 成员Uin。
+     * @param integer $BindId 绑定ID。可以通过[DescribeOrganizationMemberEmailBind](https://cloud.tencent.com/document/product/850/93332)获取
+     * @param string $Email 邮箱地址。
+     * @param string $CountryCode 国际区号。
+     * @param string $Phone 手机号。
      */
     function __construct()
     {

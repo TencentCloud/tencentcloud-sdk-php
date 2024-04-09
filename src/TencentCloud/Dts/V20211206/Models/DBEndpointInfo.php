@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConnectType() 获取tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectType(string $ConnectType) 设置tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -107,6 +111,12 @@ class DBEndpointInfo extends AbstractModel
     public $DatabaseNetEnv;
 
     /**
+     * @var string tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectType;
+
+    /**
      * @param string $Region 实例所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessType 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
@@ -123,6 +133,8 @@ class DBEndpointInfo extends AbstractModel
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -178,6 +190,10 @@ class DBEndpointInfo extends AbstractModel
 
         if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
             $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
+        }
+
+        if (array_key_exists("ConnectType",$param) and $param["ConnectType"] !== null) {
+            $this->ConnectType = $param["ConnectType"];
         }
     }
 }

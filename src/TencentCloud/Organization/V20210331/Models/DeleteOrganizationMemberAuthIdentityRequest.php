@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationMemberAuthIdentity请求参数结构体
  *
- * @method integer getMemberUin() 获取成员uin。
- * @method void setMemberUin(integer $MemberUin) 设置成员uin。
- * @method integer getIdentityId() 获取身份Id。
- * @method void setIdentityId(integer $IdentityId) 设置身份Id。
+ * @method integer getMemberUin() 获取成员Uin。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
+ * @method integer getIdentityId() 获取身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityId(integer $IdentityId) 设置身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
  */
 class DeleteOrganizationMemberAuthIdentityRequest extends AbstractModel
 {
     /**
-     * @var integer 成员uin。
+     * @var integer 成员Uin。
      */
     public $MemberUin;
 
     /**
-     * @var integer 身份Id。
+     * @var integer 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityId;
 
     /**
-     * @param integer $MemberUin 成员uin。
-     * @param integer $IdentityId 身份Id。
+     * @param integer $MemberUin 成员Uin。
+     * @param integer $IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     function __construct()
     {

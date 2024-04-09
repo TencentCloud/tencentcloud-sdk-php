@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getMemberUin() 获取成员Uin。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
- * @method integer getPolicyId() 获取策略ID。可以调用DescribeOrganizationMemberPolicies获取
- * @method void setPolicyId(integer $PolicyId) 设置策略ID。可以调用DescribeOrganizationMemberPolicies获取
+ * @method integer getPolicyId() 获取策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
  * @method array getOrgSubAccountUins() 获取组织管理员子账号Uin列表。最大5个
  * @method void setOrgSubAccountUins(array $OrgSubAccountUins) 设置组织管理员子账号Uin列表。最大5个
  */
@@ -35,7 +35,7 @@ class BindOrganizationMemberAuthAccountRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @var integer 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+     * @var integer 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public $PolicyId;
 
@@ -46,7 +46,7 @@ class BindOrganizationMemberAuthAccountRequest extends AbstractModel
 
     /**
      * @param integer $MemberUin 成员Uin。
-     * @param integer $PolicyId 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+     * @param integer $PolicyId 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      * @param array $OrgSubAccountUins 组织管理员子账号Uin列表。最大5个
      */
     function __construct()

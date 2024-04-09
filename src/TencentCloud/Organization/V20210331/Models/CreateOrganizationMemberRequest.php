@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyType(string $PolicyType) 设置关系策略。取值：Financial
  * @method array getPermissionIds() 获取成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
  * @method void setPermissionIds(array $PermissionIds) 设置成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
- * @method integer getNodeId() 获取成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
- * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+ * @method integer getNodeId() 获取成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+ * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
  * @method string getAccountName() 获取账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
  * @method void setAccountName(string $AccountName) 设置账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
  * @method string getRemark() 获取备注。
@@ -59,7 +59,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $PermissionIds;
 
     /**
-     * @var integer 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+     * @var integer 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public $NodeId;
 
@@ -97,7 +97,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
      * @param string $Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      * @param string $PolicyType 关系策略。取值：Financial
      * @param array $PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
-     * @param integer $NodeId 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+     * @param integer $NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      * @param string $AccountName 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      * @param string $Remark 备注。
      * @param integer $RecordId 成员创建记录ID。创建异常重试时需要

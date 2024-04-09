@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getCallbackUrl() 获取任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
  * @method void setCallbackUrl(string $CallbackUrl) 设置任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+ * @method string getStartCmdBase64() 获取以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+ * @method void setStartCmdBase64(string $StartCmdBase64) 设置以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
  */
 class CreateBatchTaskRequest extends AbstractModel
 {
@@ -125,6 +127,7 @@ class CreateBatchTaskRequest extends AbstractModel
 
     /**
      * @var string 启动命令
+     * @deprecated
      */
     public $StartCmd;
 
@@ -159,6 +162,11 @@ class CreateBatchTaskRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
+     * @var string 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+     */
+    public $StartCmdBase64;
+
+    /**
      * @param string $BatchTaskName 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
@@ -178,6 +186,7 @@ class CreateBatchTaskRequest extends AbstractModel
      * @param string $SubnetId 子网Id
      * @param string $Remark 备注
      * @param string $CallbackUrl 任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     * @param string $StartCmdBase64 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
      */
     function __construct()
     {
@@ -287,6 +296,10 @@ class CreateBatchTaskRequest extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("StartCmdBase64",$param) and $param["StartCmdBase64"] !== null) {
+            $this->StartCmdBase64 = $param["StartCmdBase64"];
         }
     }
 }

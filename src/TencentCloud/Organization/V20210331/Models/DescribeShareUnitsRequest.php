@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShareUnits请求参数结构体
  *
- * @method string getArea() 获取共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
- * @method void setArea(string $Area) 设置共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+ * @method string getArea() 获取共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+ * @method void setArea(string $Area) 设置共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
  * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
  * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
  * @method integer getLimit() 获取限制数目。取值范围：1~50。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeShareUnitsRequest extends AbstractModel
 {
     /**
-     * @var string 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * @var string 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public $Area;
 
@@ -52,7 +52,7 @@ class DescribeShareUnitsRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param string $Area 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * @param string $Area 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      * @param integer $Limit 限制数目。取值范围：1~50。
      * @param string $SearchKey 搜索关键字。支持UnitId和Name搜索。

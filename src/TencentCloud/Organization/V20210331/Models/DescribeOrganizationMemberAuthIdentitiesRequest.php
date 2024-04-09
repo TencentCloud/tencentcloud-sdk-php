@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50，默认值：10
  * @method integer getMemberUin() 获取组织成员Uin。入参MemberUin与IdentityId至少填写一个
  * @method void setMemberUin(integer $MemberUin) 设置组织成员Uin。入参MemberUin与IdentityId至少填写一个
- * @method integer getIdentityId() 获取身份ID。入参MemberUin与IdentityId至少填写一个
- * @method void setIdentityId(integer $IdentityId) 设置身份ID。入参MemberUin与IdentityId至少填写一个
+ * @method integer getIdentityId() 获取身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityId(integer $IdentityId) 设置身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
  */
 class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @var integer 身份ID。入参MemberUin与IdentityId至少填写一个
+     * @var integer 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityId;
 
@@ -55,7 +55,7 @@ class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
      * @param integer $Offset 偏移量。取值是limit的整数倍，默认值 : 0
      * @param integer $Limit 限制数目。取值范围：1~50，默认值：10
      * @param integer $MemberUin 组织成员Uin。入参MemberUin与IdentityId至少填写一个
-     * @param integer $IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个
+     * @param integer $IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     function __construct()
     {

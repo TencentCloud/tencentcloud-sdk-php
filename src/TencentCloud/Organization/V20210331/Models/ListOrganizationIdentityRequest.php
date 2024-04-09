@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。默认值：10。
  * @method string getSearchKey() 获取名称搜索关键字。
  * @method void setSearchKey(string $SearchKey) 设置名称搜索关键字。
- * @method integer getIdentityId() 获取身份ID搜索。
- * @method void setIdentityId(integer $IdentityId) 设置身份ID搜索。
+ * @method integer getIdentityId() 获取身份ID。可以通过身份ID搜索
+ * @method void setIdentityId(integer $IdentityId) 设置身份ID。可以通过身份ID搜索
  * @method integer getIdentityType() 获取身份类型。取值范围 1-预设, 2-自定义
  * @method void setIdentityType(integer $IdentityType) 设置身份类型。取值范围 1-预设, 2-自定义
  */
@@ -49,7 +49,7 @@ class ListOrganizationIdentityRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @var integer 身份ID搜索。
+     * @var integer 身份ID。可以通过身份ID搜索
      */
     public $IdentityId;
 
@@ -62,7 +62,7 @@ class ListOrganizationIdentityRequest extends AbstractModel
      * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      * @param integer $Limit 限制数目。取值范围：1~50。默认值：10。
      * @param string $SearchKey 名称搜索关键字。
-     * @param integer $IdentityId 身份ID搜索。
+     * @param integer $IdentityId 身份ID。可以通过身份ID搜索
      * @param integer $IdentityType 身份类型。取值范围 1-预设, 2-自定义
      */
     function __construct()

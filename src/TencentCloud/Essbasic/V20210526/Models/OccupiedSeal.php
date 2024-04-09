@@ -38,8 +38,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取印章图片url，5分钟内有效
  * @method void setUrl(string $Url) 设置印章图片url，5分钟内有效
- * @method string getSealType() 获取印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
- * @method void setSealType(string $SealType) 设置印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
+ * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
+</ul>
+ * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
+</ul>
  * @method boolean getIsAllTime() 获取用印申请是否为永久授权
  * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权
  * @method array getAuthorizedUsers() 获取授权人列表
@@ -89,7 +101,13 @@ class OccupiedSeal extends AbstractModel
     public $Url;
 
     /**
-     * @var string 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
+     * @var string 电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
+</ul>
      */
     public $SealType;
 
@@ -113,7 +131,13 @@ class OccupiedSeal extends AbstractModel
      * @param string $FailReason 审核失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 印章图片url，5分钟内有效
-     * @param string $SealType 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
+     * @param string $SealType 电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
+</ul>
      * @param boolean $IsAllTime 用印申请是否为永久授权
      * @param array $AuthorizedUsers 授权人列表
      */

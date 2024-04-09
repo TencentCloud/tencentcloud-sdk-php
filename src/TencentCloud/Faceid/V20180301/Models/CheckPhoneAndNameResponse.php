@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
 0: 验证结果一致
@@ -36,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
  * @method string getDescription() 获取业务结果描述
  * @method void setDescription(string $Description) 设置业务结果描述
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,6 +56,8 @@ class CheckPhoneAndNameResponse extends AbstractModel
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
      */
     public $Result;
 
@@ -74,6 +80,8 @@ class CheckPhoneAndNameResponse extends AbstractModel
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
      * @param string $Description 业务结果描述
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

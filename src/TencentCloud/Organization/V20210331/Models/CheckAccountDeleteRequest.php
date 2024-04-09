@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckAccountDelete请求参数结构体
  *
- * @method integer getMemberUin() 获取成员uin。
- * @method void setMemberUin(integer $MemberUin) 设置成员uin。
+ * @method integer getMemberUin() 获取成员Uin。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
  */
 class CheckAccountDeleteRequest extends AbstractModel
 {
     /**
-     * @var integer 成员uin。
+     * @var integer 成员Uin。
      */
     public $MemberUin;
 
     /**
-     * @param integer $MemberUin 成员uin。
+     * @param integer $MemberUin 成员Uin。
      */
     function __construct()
     {

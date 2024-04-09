@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberEmailBind请求参数结构体
  *
- * @method integer getMemberUin() 获取成员Uin
- * @method void setMemberUin(integer $MemberUin) 设置成员Uin
+ * @method integer getMemberUin() 获取成员Uin。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
  */
 class DescribeOrganizationMemberEmailBindRequest extends AbstractModel
 {
     /**
-     * @var integer 成员Uin
+     * @var integer 成员Uin。
      */
     public $MemberUin;
 
     /**
-     * @param integer $MemberUin 成员Uin
+     * @param integer $MemberUin 成员Uin。
      */
     function __construct()
     {

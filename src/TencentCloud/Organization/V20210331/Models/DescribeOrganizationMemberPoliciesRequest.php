@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberPolicies请求参数结构体
  *
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取限制数目。最大50
- * @method void setLimit(integer $Limit) 设置限制数目。最大50
+ * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method integer getLimit() 获取限制数目。取值范围：1~50。默认值：10。
+ * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。默认值：10。
  * @method integer getMemberUin() 获取成员Uin。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
  * @method string getSearchKey() 获取搜索关键字。可用于策略名或描述搜索
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationMemberPoliciesRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目。最大50
+     * @var integer 限制数目。取值范围：1~50。默认值：10。
      */
     public $Limit;
 
@@ -52,8 +52,8 @@ class DescribeOrganizationMemberPoliciesRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 限制数目。最大50
+     * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param integer $Limit 限制数目。取值范围：1~50。默认值：10。
      * @param integer $MemberUin 成员Uin。
      * @param string $SearchKey 搜索关键字。可用于策略名或描述搜索
      */

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationMembersPolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取访问策略ID。
- * @method void setPolicyId(integer $PolicyId) 设置访问策略ID。
+ * @method integer getPolicyId() 获取访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
+ * @method void setPolicyId(integer $PolicyId) 设置访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
  */
 class DeleteOrganizationMembersPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 访问策略ID。
+     * @var integer 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public $PolicyId;
 
     /**
-     * @param integer $PolicyId 访问策略ID。
+     * @param integer $PolicyId 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     function __construct()
     {

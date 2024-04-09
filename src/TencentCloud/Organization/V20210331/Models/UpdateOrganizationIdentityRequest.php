@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateOrganizationIdentity请求参数结构体
  *
- * @method integer getIdentityId() 获取身份ID
- * @method void setIdentityId(integer $IdentityId) 设置身份ID
- * @method string getDescription() 获取身份描述
- * @method void setDescription(string $Description) 设置身份描述
- * @method array getIdentityPolicy() 获取身份策略
- * @method void setIdentityPolicy(array $IdentityPolicy) 设置身份策略
+ * @method integer getIdentityId() 获取身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method void setIdentityId(integer $IdentityId) 设置身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+ * @method string getDescription() 获取身份描述。
+ * @method void setDescription(string $Description) 设置身份描述。
+ * @method array getIdentityPolicy() 获取身份策略。
+ * @method void setIdentityPolicy(array $IdentityPolicy) 设置身份策略。
  */
 class UpdateOrganizationIdentityRequest extends AbstractModel
 {
     /**
-     * @var integer 身份ID
+     * @var integer 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public $IdentityId;
 
     /**
-     * @var string 身份描述
+     * @var string 身份描述。
      */
     public $Description;
 
     /**
-     * @var array 身份策略
+     * @var array 身份策略。
      */
     public $IdentityPolicy;
 
     /**
-     * @param integer $IdentityId 身份ID
-     * @param string $Description 身份描述
-     * @param array $IdentityPolicy 身份策略
+     * @param integer $IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param string $Description 身份描述。
+     * @param array $IdentityPolicy 身份策略。
      */
     function __construct()
     {

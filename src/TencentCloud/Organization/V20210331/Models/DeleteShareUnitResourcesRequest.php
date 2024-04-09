@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnitId(string $UnitId) 设置共享单元ID。
  * @method string getArea() 获取共享单元地域。
  * @method void setArea(string $Area) 设置共享单元地域。
- * @method string getType() 获取资源类型。支持共享的资源类型。
- * @method void setType(string $Type) 设置资源类型。支持共享的资源类型。
+ * @method string getType() 获取共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
+ * @method void setType(string $Type) 设置共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
  * @method array getResources() 获取共享资源列表。最大10个。
  * @method void setResources(array $Resources) 设置共享资源列表。最大10个。
  */
@@ -42,7 +42,7 @@ class DeleteShareUnitResourcesRequest extends AbstractModel
     public $Area;
 
     /**
-     * @var string 资源类型。支持共享的资源类型。
+     * @var string 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public $Type;
 
@@ -54,7 +54,7 @@ class DeleteShareUnitResourcesRequest extends AbstractModel
     /**
      * @param string $UnitId 共享单元ID。
      * @param string $Area 共享单元地域。
-     * @param string $Type 资源类型。支持共享的资源类型。
+     * @param string $Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      * @param array $Resources 共享资源列表。最大10个。
      */
     function __construct()

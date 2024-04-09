@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MoveOrganizationNodeMembers请求参数结构体
  *
- * @method integer getNodeId() 获取组织节点ID。
- * @method void setNodeId(integer $NodeId) 设置组织节点ID。
- * @method array getMemberUin() 获取成员UIN列表。
- * @method void setMemberUin(array $MemberUin) 设置成员UIN列表。
+ * @method integer getNodeId() 获取组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+ * @method void setNodeId(integer $NodeId) 设置组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+ * @method array getMemberUin() 获取成员Uin列表。
+ * @method void setMemberUin(array $MemberUin) 设置成员Uin列表。
  */
 class MoveOrganizationNodeMembersRequest extends AbstractModel
 {
     /**
-     * @var integer 组织节点ID。
+     * @var integer 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public $NodeId;
 
     /**
-     * @var array 成员UIN列表。
+     * @var array 成员Uin列表。
      */
     public $MemberUin;
 
     /**
-     * @param integer $NodeId 组织节点ID。
-     * @param array $MemberUin 成员UIN列表。
+     * @param integer $NodeId 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param array $MemberUin 成员Uin列表。
      */
     function __construct()
     {

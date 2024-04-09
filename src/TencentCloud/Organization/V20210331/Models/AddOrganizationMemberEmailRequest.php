@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOrganizationMemberEmail请求参数结构体
  *
- * @method integer getMemberUin() 获取成员Uin
- * @method void setMemberUin(integer $MemberUin) 设置成员Uin
- * @method string getEmail() 获取邮箱地址
- * @method void setEmail(string $Email) 设置邮箱地址
- * @method string getCountryCode() 获取国际区号
- * @method void setCountryCode(string $CountryCode) 设置国际区号
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
+ * @method integer getMemberUin() 获取成员Uin。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
+ * @method string getEmail() 获取邮箱地址。
+ * @method void setEmail(string $Email) 设置邮箱地址。
+ * @method string getCountryCode() 获取国际区号。
+ * @method void setCountryCode(string $CountryCode) 设置国际区号。
+ * @method string getPhone() 获取手机号。
+ * @method void setPhone(string $Phone) 设置手机号。
  */
 class AddOrganizationMemberEmailRequest extends AbstractModel
 {
     /**
-     * @var integer 成员Uin
+     * @var integer 成员Uin。
      */
     public $MemberUin;
 
     /**
-     * @var string 邮箱地址
+     * @var string 邮箱地址。
      */
     public $Email;
 
     /**
-     * @var string 国际区号
+     * @var string 国际区号。
      */
     public $CountryCode;
 
     /**
-     * @var string 手机号
+     * @var string 手机号。
      */
     public $Phone;
 
     /**
-     * @param integer $MemberUin 成员Uin
-     * @param string $Email 邮箱地址
-     * @param string $CountryCode 国际区号
-     * @param string $Phone 手机号
+     * @param integer $MemberUin 成员Uin。
+     * @param string $Email 邮箱地址。
+     * @param string $CountryCode 国际区号。
+     * @param string $Phone 手机号。
      */
     function __construct()
     {

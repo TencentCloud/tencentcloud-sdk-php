@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOrganizationNode请求参数结构体
  *
- * @method integer getParentNodeId() 获取父节点ID。可以调用DescribeOrganizationNodes获取
- * @method void setParentNodeId(integer $ParentNodeId) 设置父节点ID。可以调用DescribeOrganizationNodes获取
+ * @method integer getParentNodeId() 获取父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+ * @method void setParentNodeId(integer $ParentNodeId) 设置父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
  * @method string getName() 获取节点名称。最大长度为40个字符，支持英文字母、数字、汉字、符号+@、&._[]-
  * @method void setName(string $Name) 设置节点名称。最大长度为40个字符，支持英文字母、数字、汉字、符号+@、&._[]-
  * @method string getRemark() 获取备注。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AddOrganizationNodeRequest extends AbstractModel
 {
     /**
-     * @var integer 父节点ID。可以调用DescribeOrganizationNodes获取
+     * @var integer 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public $ParentNodeId;
 
@@ -45,7 +45,7 @@ class AddOrganizationNodeRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param integer $ParentNodeId 父节点ID。可以调用DescribeOrganizationNodes获取
+     * @param integer $ParentNodeId 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      * @param string $Name 节点名称。最大长度为40个字符，支持英文字母、数字、汉字、符号+@、&._[]-
      * @param string $Remark 备注。
      */

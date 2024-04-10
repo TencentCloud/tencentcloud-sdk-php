@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setRecordUrl(string $RecordUrl) 设置需要录制的网页URL
 
- * @method integer getMaxDurationLimit() 获取录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+ * @method integer getMaxDurationLimit() 获取录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
- * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+ * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
  * @method StorageParams getStorageParams() 获取云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
  * @method void setStorageParams(StorageParams $StorageParams) 设置云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
@@ -50,7 +50,7 @@ class StartWebRecordRequest extends AbstractModel
     public $RecordUrl;
 
     /**
-     * @var integer 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * @var integer 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
      */
     public $MaxDurationLimit;
@@ -84,7 +84,7 @@ class StartWebRecordRequest extends AbstractModel
     /**
      * @param string $RecordUrl 需要录制的网页URL
 
-     * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
      * @param StorageParams $StorageParams 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
      * @param WebRecordVideoParams $WebRecordVideoParams 页面录制视频参数

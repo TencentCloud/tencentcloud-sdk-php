@@ -126,6 +126,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(string $Manufacturer) 设置设备厂商
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAudioSwitch() 获取音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioSwitch(integer $AudioSwitch) 设置音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscribeSwitch() 获取订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscribeSwitch(integer $SubscribeSwitch) 设置订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceData extends AbstractModel
 {
@@ -287,6 +295,18 @@ class DescribeDeviceData extends AbstractModel
     public $Manufacturer;
 
     /**
+     * @var integer 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioSwitch;
+
+    /**
+     * @var integer 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscribeSwitch;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
@@ -339,6 +359,10 @@ class DescribeDeviceData extends AbstractModel
      * @param string $Region 设备地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 设备厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -456,6 +480,14 @@ class DescribeDeviceData extends AbstractModel
 
         if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
             $this->Manufacturer = $param["Manufacturer"];
+        }
+
+        if (array_key_exists("AudioSwitch",$param) and $param["AudioSwitch"] !== null) {
+            $this->AudioSwitch = $param["AudioSwitch"];
+        }
+
+        if (array_key_exists("SubscribeSwitch",$param) and $param["SubscribeSwitch"] !== null) {
+            $this->SubscribeSwitch = $param["SubscribeSwitch"];
         }
     }
 }

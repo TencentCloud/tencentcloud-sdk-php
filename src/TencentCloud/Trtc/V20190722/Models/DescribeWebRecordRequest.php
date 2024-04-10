@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取开始页面录制时返回的任务id
  * @method void setTaskId(string $TaskId) 设置开始页面录制时返回的任务id
+ * @method integer getSdkAppId() 获取发起页面录制时传递的SdkAppId
+ * @method void setSdkAppId(integer $SdkAppId) 设置发起页面录制时传递的SdkAppId
+ * @method string getRecordId() 获取发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+ * @method void setRecordId(string $RecordId) 设置发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
  */
 class DescribeWebRecordRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeWebRecordRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 发起页面录制时传递的SdkAppId
+     */
+    public $SdkAppId;
+
+    /**
+     * @var string 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+     */
+    public $RecordId;
+
+    /**
      * @param string $TaskId 开始页面录制时返回的任务id
+     * @param integer $SdkAppId 发起页面录制时传递的SdkAppId
+     * @param string $RecordId 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeWebRecordRequest extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
     }
 }

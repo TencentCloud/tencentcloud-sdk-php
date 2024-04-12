@@ -18,28 +18,28 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通用记录字段
+ * 通用记录字段，与服务端约定传入合法的键值对
  *
- * @method string getName() 获取字段名称
- * @method void setName(string $Name) 设置字段名称
- * @method string getValue() 获取字段值
- * @method void setValue(string $Value) 设置字段值
+ * @method string getName() 获取字段名称，拓展字段名称
+ * @method void setName(string $Name) 设置字段名称，拓展字段名称
+ * @method string getValue() 获取字段值，拓展字段值
+ * @method void setValue(string $Value) 设置字段值，拓展字段值
  */
 class RecordField extends AbstractModel
 {
     /**
-     * @var string 字段名称
+     * @var string 字段名称，拓展字段名称
      */
     public $Name;
 
     /**
-     * @var string 字段值
+     * @var string 字段值，拓展字段值
      */
     public $Value;
 
     /**
-     * @param string $Name 字段名称
-     * @param string $Value 字段值
+     * @param string $Name 字段名称，拓展字段名称
+     * @param string $Value 字段值，拓展字段值
      */
     function __construct()
     {

@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(integer $BeginTime) 设置开始查找时间
  * @method integer getEndTime() 获取截止时间
  * @method void setEndTime(integer $EndTime) 设置截止时间
- * @method integer getType() 获取流量种类（1：上行流量，2：下行流量）
- * @method void setType(integer $Type) 设置流量种类（1：上行流量，2：下行流量）
+ * @method integer getType() 获取流量种类（1：上行流量，2：下行流量，3：上下行总和）
+ * @method void setType(integer $Type) 设置流量种类（1：上行流量，2：下行流量，3：上下行总和）
  * @method integer getTimeGranularity() 获取时间粒度（1：按小时统计，2：按天统计）
  * @method void setTimeGranularity(integer $TimeGranularity) 设置时间粒度（1：按小时统计，2：按天统计）
  * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
  * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
  * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
  * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method array getDeviceList() 获取设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+ * @method void setDeviceList(array $DeviceList) 设置设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
  */
 class GetFlowStatisticRequest extends AbstractModel
 {
@@ -53,7 +55,7 @@ class GetFlowStatisticRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 流量种类（1：上行流量，2：下行流量）
+     * @var integer 流量种类（1：上行流量，2：下行流量，3：上下行总和）
      */
     public $Type;
 
@@ -73,13 +75,19 @@ class GetFlowStatisticRequest extends AbstractModel
     public $GatewayType;
 
     /**
+     * @var array 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     */
+    public $DeviceList;
+
+    /**
      * @param string $DeviceId 设备ID
      * @param integer $BeginTime 开始查找时间
      * @param integer $EndTime 截止时间
-     * @param integer $Type 流量种类（1：上行流量，2：下行流量）
+     * @param integer $Type 流量种类（1：上行流量，2：下行流量，3：上下行总和）
      * @param integer $TimeGranularity 时间粒度（1：按小时统计，2：按天统计）
      * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
      * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @param array $DeviceList 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class GetFlowStatisticRequest extends AbstractModel
 
         if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
             $this->GatewayType = $param["GatewayType"];
+        }
+
+        if (array_key_exists("DeviceList",$param) and $param["DeviceList"] !== null) {
+            $this->DeviceList = $param["DeviceList"];
         }
     }
 }

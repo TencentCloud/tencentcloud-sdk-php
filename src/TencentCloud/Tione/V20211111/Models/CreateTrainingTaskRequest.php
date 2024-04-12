@@ -42,8 +42,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
  * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
  * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置COS代码包路径
- * @method StartCmdInfo getStartCmdInfo() 获取启动命令信息，默认为sh start.sh
- * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息，默认为sh start.sh
+ * @method StartCmdInfo getStartCmdInfo() 获取任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
+ * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
  * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method array getDataConfigs() 获取数据配置，依赖DataSource字段，数量不超过10个
@@ -68,6 +68,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  * @method PreTrainModel getPreTrainModel() 获取太极预训练模型ID
  * @method void setPreTrainModel(PreTrainModel $PreTrainModel) 设置太极预训练模型ID
+ * @method EncodedStartCmdInfo getEncodedStartCmdInfo() 获取编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+ * @method void setEncodedStartCmdInfo(EncodedStartCmdInfo $EncodedStartCmdInfo) 设置编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -123,7 +125,7 @@ POSTPAID_BY_HOUR 按量计费
     public $CodePackagePath;
 
     /**
-     * @var StartCmdInfo 启动命令信息，默认为sh start.sh
+     * @var StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
      */
     public $StartCmdInfo;
 
@@ -188,6 +190,11 @@ POSTPAID_BY_HOUR 按量计费
     public $PreTrainModel;
 
     /**
+     * @var EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     */
+    public $EncodedStartCmdInfo;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
 POSTPAID_BY_HOUR 按量计费
@@ -199,7 +206,7 @@ POSTPAID_BY_HOUR 按量计费
      * @param array $Tags 标签配置
      * @param ImageInfo $ImageInfo 自定义镜像信息
      * @param CosPathInfo $CodePackagePath COS代码包路径
-     * @param StartCmdInfo $StartCmdInfo 启动命令信息，默认为sh start.sh
+     * @param StartCmdInfo $StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
      * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
      * @param array $DataConfigs 数据配置，依赖DataSource字段，数量不超过10个
      * @param string $VpcId VPC Id
@@ -212,6 +219,7 @@ POSTPAID_BY_HOUR 按量计费
      * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
      * @param PreTrainModel $PreTrainModel 太极预训练模型ID
+     * @param EncodedStartCmdInfo $EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
      */
     function __construct()
     {
@@ -337,6 +345,11 @@ POSTPAID_BY_HOUR 按量计费
         if (array_key_exists("PreTrainModel",$param) and $param["PreTrainModel"] !== null) {
             $this->PreTrainModel = new PreTrainModel();
             $this->PreTrainModel->deserialize($param["PreTrainModel"]);
+        }
+
+        if (array_key_exists("EncodedStartCmdInfo",$param) and $param["EncodedStartCmdInfo"] !== null) {
+            $this->EncodedStartCmdInfo = new EncodedStartCmdInfo();
+            $this->EncodedStartCmdInfo->deserialize($param["EncodedStartCmdInfo"]);
         }
     }
 }

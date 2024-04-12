@@ -48,10 +48,12 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 50G：最多绑定2个设备
 100G：最多绑定3个设备
 500G：最多绑定5个设备
- * @method boolean getAutoRenewFlag() 获取是否自动续费
- * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置是否自动续费
+ * @method boolean getAutoRenewFlag() 获取是否自动续费，该选项和流量截断冲突，只能开启一个
+ * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置是否自动续费，该选项和流量截断冲突，只能开启一个
  * @method integer getPackageRegion() 获取区域标识，0：国内，1：国外
  * @method void setPackageRegion(integer $PackageRegion) 设置区域标识，0：国内，1：国外
+ * @method boolean getFlowTruncFlag() 获取是否开启流量截断功能，该选项和自动续费冲突
+ * @method void setFlowTruncFlag(boolean $FlowTruncFlag) 设置是否开启流量截断功能，该选项和自动续费冲突
  * @method boolean getAutoVoucher() 获取是否自动选择代金券，默认false。
 有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动选择代金券，默认false。
@@ -86,7 +88,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     public $DeviceList;
 
     /**
-     * @var boolean 是否自动续费
+     * @var boolean 是否自动续费，该选项和流量截断冲突，只能开启一个
      */
     public $AutoRenewFlag;
 
@@ -94,6 +96,11 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
      * @var integer 区域标识，0：国内，1：国外
      */
     public $PackageRegion;
+
+    /**
+     * @var boolean 是否开启流量截断功能，该选项和自动续费冲突
+     */
+    public $FlowTruncFlag;
 
     /**
      * @var boolean 是否自动选择代金券，默认false。
@@ -122,8 +129,9 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 50G：最多绑定2个设备
 100G：最多绑定3个设备
 500G：最多绑定5个设备
-     * @param boolean $AutoRenewFlag 是否自动续费
+     * @param boolean $AutoRenewFlag 是否自动续费，该选项和流量截断冲突，只能开启一个
      * @param integer $PackageRegion 区域标识，0：国内，1：国外
+     * @param boolean $FlowTruncFlag 是否开启流量截断功能，该选项和自动续费冲突
      * @param boolean $AutoVoucher 是否自动选择代金券，默认false。
 有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
      * @param array $VoucherIds 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
@@ -156,6 +164,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
         if (array_key_exists("PackageRegion",$param) and $param["PackageRegion"] !== null) {
             $this->PackageRegion = $param["PackageRegion"];
+        }
+
+        if (array_key_exists("FlowTruncFlag",$param) and $param["FlowTruncFlag"] !== null) {
+            $this->FlowTruncFlag = $param["FlowTruncFlag"];
         }
 
         if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {

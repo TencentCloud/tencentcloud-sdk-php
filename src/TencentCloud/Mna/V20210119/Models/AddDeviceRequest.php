@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
 公有云网关：即该设备只能接入公有云网关（就近接入）
 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+ * @method integer getLicensePayMode() 获取license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+ * @method void setLicensePayMode(integer $LicensePayMode) 设置license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+ * @method string getGroupName() 获取设备分组名称，非必选，预留参数，需要分组时传入GroupId
+ * @method void setGroupName(string $GroupName) 设置设备分组名称，非必选，预留参数，需要分组时传入GroupId
+ * @method string getGroupId() 获取设备分组ID，非必选，如果不填写则默认设备无分组
+ * @method void setGroupId(string $GroupId) 设置设备分组ID，非必选，如果不填写则默认设备无分组
  */
 class AddDeviceRequest extends AbstractModel
 {
@@ -71,6 +83,24 @@ class AddDeviceRequest extends AbstractModel
     public $AccessScope;
 
     /**
+     * @var integer license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+     */
+    public $LicensePayMode;
+
+    /**
+     * @var string 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+     */
+    public $GroupName;
+
+    /**
+     * @var string 设备分组ID，非必选，如果不填写则默认设备无分组
+     */
+    public $GroupId;
+
+    /**
      * @param string $DeviceName 新建设备的名称
      * @param string $Remark 新建设备的备注
      * @param string $DataKey 新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
@@ -80,6 +110,12 @@ class AddDeviceRequest extends AbstractModel
 公有云网关：即该设备只能接入公有云网关（就近接入）
 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * @param integer $LicensePayMode license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+     * @param string $GroupName 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+     * @param string $GroupId 设备分组ID，非必选，如果不填写则默认设备无分组
      */
     function __construct()
     {
@@ -112,6 +148,18 @@ class AddDeviceRequest extends AbstractModel
 
         if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
             $this->AccessScope = $param["AccessScope"];
+        }
+
+        if (array_key_exists("LicensePayMode",$param) and $param["LicensePayMode"] !== null) {
+            $this->LicensePayMode = $param["LicensePayMode"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

@@ -25,14 +25,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSN(string $SN) 设置硬件序列号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseChargingMode() 获取license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseChargingMode(integer $LicenseChargingMode) 设置license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取设备描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,9 +53,9 @@ class Hardware extends AbstractModel
 
     /**
      * @var integer license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseChargingMode;
@@ -76,9 +76,9 @@ class Hardware extends AbstractModel
      * @param string $SN 硬件序列号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseChargingMode license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 设备描述
 注意：此字段可能返回 null，表示取不到有效值。

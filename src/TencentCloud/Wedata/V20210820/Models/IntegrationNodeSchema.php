@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集成节点schema
  *
- * @method string getId() 获取schema id
- * @method void setId(string $Id) 设置schema id
+ * @method string getId() 获取schema id 随机唯一
+ * @method void setId(string $Id) 设置schema id 随机唯一
  * @method string getName() 获取schema名称
  * @method void setName(string $Name) 设置schema名称
  * @method string getType() 获取schema类型
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class IntegrationNodeSchema extends AbstractModel
 {
     /**
-     * @var string schema id
+     * @var string schema id 随机唯一
      */
     public $Id;
 
@@ -85,7 +85,7 @@ class IntegrationNodeSchema extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $Id schema id
+     * @param string $Id schema id 随机唯一
      * @param string $Name schema名称
      * @param string $Type schema类型
      * @param string $Value schema值

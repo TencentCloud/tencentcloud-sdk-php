@@ -188,9 +188,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCurrentRedisVersion() 获取实例当前Cache小版本。
+ * @method string getCurrentRedisVersion() 获取实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置实例当前Cache小版本。
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeProxyVersion() 获取实例可升级Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -500,7 +500,7 @@ class InstanceSet extends AbstractModel
     public $CurrentProxyVersion;
 
     /**
-     * @var string 实例当前Cache小版本。
+     * @var string 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentRedisVersion;
@@ -602,7 +602,7 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentProxyVersion 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CurrentRedisVersion 实例当前Cache小版本。
+     * @param string $CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。

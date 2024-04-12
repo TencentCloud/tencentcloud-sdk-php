@@ -62,6 +62,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
  * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费标识。true代表自动续费，false代表不自动续费
  * @method integer getModifyStatus() 获取资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
  * @method void setModifyStatus(integer $ModifyStatus) 设置资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+ * @method boolean getTruncFlag() 获取流量截断标识。true代表开启流量截断，false代表不开启流量截断
+ * @method void setTruncFlag(boolean $TruncFlag) 设置流量截断标识。true代表开启流量截断，false代表不开启流量截断
+ * @method integer getCapacityRemainPrecise() 获取流量包精确余量，单位：MB
+ * @method void setCapacityRemainPrecise(integer $CapacityRemainPrecise) 设置流量包精确余量，单位：MB
  */
 class FlowPackageInfo extends AbstractModel
 {
@@ -135,6 +139,16 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     public $ModifyStatus;
 
     /**
+     * @var boolean 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+     */
+    public $TruncFlag;
+
+    /**
+     * @var integer 流量包精确余量，单位：MB
+     */
+    public $CapacityRemainPrecise;
+
+    /**
      * @param string $ResourceId 流量包的唯一资源ID
      * @param integer $AppId 流量包所属的用户AppId
      * @param string $PackageType 流量包规格类型。可取值如下：
@@ -156,6 +170,8 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
      * @param integer $CapacityRemain 流量包余量，单位：MB
      * @param boolean $RenewFlag 自动续费标识。true代表自动续费，false代表不自动续费
      * @param integer $ModifyStatus 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+     * @param boolean $TruncFlag 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+     * @param integer $CapacityRemainPrecise 流量包精确余量，单位：MB
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
         if (array_key_exists("ModifyStatus",$param) and $param["ModifyStatus"] !== null) {
             $this->ModifyStatus = $param["ModifyStatus"];
+        }
+
+        if (array_key_exists("TruncFlag",$param) and $param["TruncFlag"] !== null) {
+            $this->TruncFlag = $param["TruncFlag"];
+        }
+
+        if (array_key_exists("CapacityRemainPrecise",$param) and $param["CapacityRemainPrecise"] !== null) {
+            $this->CapacityRemainPrecise = $param["CapacityRemainPrecise"];
         }
     }
 }

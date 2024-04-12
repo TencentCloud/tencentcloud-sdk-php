@@ -49,12 +49,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceId(string $DeviceId) 设置设备id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseChargingMode() 获取license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseChargingMode(integer $LicenseChargingMode) 设置license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastOnlineTime() 获取最后在线时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastOnlineTime(string $LastOnlineTime) 设置最后在线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLicensePayMode() 获取license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayer() 获取付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayer(integer $Payer) 设置付费方
+0：客户付费
+1：厂商付费
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VendorHardware extends AbstractModel
@@ -103,6 +123,7 @@ class VendorHardware extends AbstractModel
 
     /**
      * @var integer license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseChargingMode;
@@ -112,6 +133,23 @@ class VendorHardware extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastOnlineTime;
+
+    /**
+     * @var integer license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LicensePayMode;
+
+    /**
+     * @var integer 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Payer;
 
     /**
      * @param string $HardwareId 硬件id
@@ -129,8 +167,18 @@ class VendorHardware extends AbstractModel
      * @param string $DeviceId 设备id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastOnlineTime 最后在线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LicensePayMode license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Payer 付费方
+0：客户付费
+1：厂商付费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +228,14 @@ class VendorHardware extends AbstractModel
 
         if (array_key_exists("LastOnlineTime",$param) and $param["LastOnlineTime"] !== null) {
             $this->LastOnlineTime = $param["LastOnlineTime"];
+        }
+
+        if (array_key_exists("LicensePayMode",$param) and $param["LicensePayMode"] !== null) {
+            $this->LicensePayMode = $param["LicensePayMode"];
+        }
+
+        if (array_key_exists("Payer",$param) and $param["Payer"] !== null) {
+            $this->Payer = $param["Payer"];
         }
     }
 }

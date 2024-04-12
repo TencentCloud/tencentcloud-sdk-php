@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTries(string $Tries) 设置重试次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastUpdate() 获取最后更新事件
+ * @method string getLastUpdate() 获取最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUpdate(string $LastUpdate) 设置最后更新事件
+ * @method void setLastUpdate(string $LastUpdate) 设置最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBrokerIp() 获取节点ip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ class InstanceLogList extends AbstractModel
     public $Tries;
 
     /**
-     * @var string 最后更新事件
+     * @var string 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdate;
@@ -140,7 +140,7 @@ class InstanceLogList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tries 重试次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastUpdate 最后更新事件
+     * @param string $LastUpdate 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrokerIp 节点ip
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateServerlessInstance请求参数结构体
  *
+ * @method string getIndexName() 获取索引名，需以-AppId结尾
+ * @method void setIndexName(string $IndexName) 设置索引名，需以-AppId结尾
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getIndexName() 获取索引名，需以-AppId结尾
- * @method void setIndexName(string $IndexName) 设置索引名，需以-AppId结尾
  * @method string getIndexMetaJson() 获取创建的索引元数据JSON，如mappings、settings
  * @method void setIndexMetaJson(string $IndexMetaJson) 设置创建的索引元数据JSON，如mappings、settings
  * @method string getSpaceId() 获取创建索引的空间ID
@@ -48,6 +48,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateServerlessInstanceRequest extends AbstractModel
 {
     /**
+     * @var string 索引名，需以-AppId结尾
+     */
+    public $IndexName;
+
+    /**
      * @var string 可用区
      */
     public $Zone;
@@ -61,11 +66,6 @@ class CreateServerlessInstanceRequest extends AbstractModel
      * @var string 子网ID
      */
     public $SubnetId;
-
-    /**
-     * @var string 索引名，需以-AppId结尾
-     */
-    public $IndexName;
 
     /**
      * @var string 创建的索引元数据JSON，如mappings、settings
@@ -108,10 +108,10 @@ class CreateServerlessInstanceRequest extends AbstractModel
     public $KibanaWhiteIpList;
 
     /**
+     * @param string $IndexName 索引名，需以-AppId结尾
      * @param string $Zone 可用区
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
-     * @param string $IndexName 索引名，需以-AppId结尾
      * @param string $IndexMetaJson 创建的索引元数据JSON，如mappings、settings
      * @param string $SpaceId 创建索引的空间ID
      * @param string $Username 创建索引的用户名
@@ -134,6 +134,10 @@ class CreateServerlessInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
         }
@@ -144,10 +148,6 @@ class CreateServerlessInstanceRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
-        }
-
-        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
-            $this->IndexName = $param["IndexName"];
         }
 
         if (array_key_exists("IndexMetaJson",$param) and $param["IndexMetaJson"] !== null) {

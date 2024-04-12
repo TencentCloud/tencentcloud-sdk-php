@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的回复, 支持多个
  *
- * @method string getFinishReason() 获取流式结束标志位，为 stop 则表示尾包。
- * @method void setFinishReason(string $FinishReason) 设置流式结束标志位，为 stop 则表示尾包。
- * @method Delta getDelta() 获取返回值。
- * @method void setDelta(Delta $Delta) 设置返回值。
+ * @method string getFinishReason() 获取结束标志位，为 stop 则表示尾包。
+ * @method void setFinishReason(string $FinishReason) 设置结束标志位，为 stop 则表示尾包。
+ * @method Delta getDelta() 获取增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelta(Delta $Delta) 设置增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Message getMessage() 获取返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(Message $Message) 设置返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Choice extends AbstractModel
 {
     /**
-     * @var string 流式结束标志位，为 stop 则表示尾包。
+     * @var string 结束标志位，为 stop 则表示尾包。
      */
     public $FinishReason;
 
     /**
-     * @var Delta 返回值。
+     * @var Delta 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Delta;
 
     /**
-     * @param string $FinishReason 流式结束标志位，为 stop 则表示尾包。
-     * @param Delta $Delta 返回值。
+     * @var Message 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
+     * @param string $FinishReason 结束标志位，为 stop 则表示尾包。
+     * @param Delta $Delta 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message $Message 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +77,11 @@ class Choice extends AbstractModel
         if (array_key_exists("Delta",$param) and $param["Delta"] !== null) {
             $this->Delta = new Delta();
             $this->Delta->deserialize($param["Delta"]);
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = new Message();
+            $this->Message->deserialize($param["Message"]);
         }
     }
 }

@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmWay(string $AlarmWay) 设置告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
  * @method integer getTaskType() 获取任务类型(201表示实时，202表示离线)
  * @method void setTaskType(integer $TaskType) 设置任务类型(201表示实时，202表示离线)
- * @method string getId() 获取主键ID
+ * @method string getId() 获取ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置主键ID
+ * @method void setId(string $Id) 设置ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegularId() 获取规则ID
  * @method void setRegularId(string $RegularId) 设置规则ID
@@ -166,7 +166,7 @@ class TaskAlarmInfo extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 主键ID
+     * @var string ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
@@ -326,7 +326,7 @@ class TaskAlarmInfo extends AbstractModel
      * @param integer $AlarmLevel 告警级别(0表示普通，1表示重要，2表示紧急)
      * @param string $AlarmWay 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
      * @param integer $TaskType 任务类型(201表示实时，202表示离线)
-     * @param string $Id 主键ID
+     * @param string $Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegularId 规则ID
      * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停

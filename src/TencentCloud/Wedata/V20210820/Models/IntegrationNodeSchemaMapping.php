@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集成节点schema映射
  *
- * @method string getSourceSchemaId() 获取源schema id
- * @method void setSourceSchemaId(string $SourceSchemaId) 设置源schema id
- * @method string getSinkSchemaId() 获取目标schema id
- * @method void setSinkSchemaId(string $SinkSchemaId) 设置目标schema id
+ * @method string getSourceSchemaId() 获取任务节点的源schema id
+ * @method void setSourceSchemaId(string $SourceSchemaId) 设置任务节点的源schema id
+ * @method string getSinkSchemaId() 获取任务节点目标schema id
+ * @method void setSinkSchemaId(string $SinkSchemaId) 设置任务节点目标schema id
  */
 class IntegrationNodeSchemaMapping extends AbstractModel
 {
     /**
-     * @var string 源schema id
+     * @var string 任务节点的源schema id
      */
     public $SourceSchemaId;
 
     /**
-     * @var string 目标schema id
+     * @var string 任务节点目标schema id
      */
     public $SinkSchemaId;
 
     /**
-     * @param string $SourceSchemaId 源schema id
-     * @param string $SinkSchemaId 目标schema id
+     * @param string $SourceSchemaId 任务节点的源schema id
+     * @param string $SinkSchemaId 任务节点目标schema id
      */
     function __construct()
     {

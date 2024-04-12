@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTaskId() 获取任务调度id(oceanus or us等作业id)
+ * @method string getScheduleTaskId() 获取任务调度id(oceanus or us等作业id)，非填项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTaskId(string $ScheduleTaskId) 设置任务调度id(oceanus or us等作业id)
+ * @method void setScheduleTaskId(string $ScheduleTaskId) 设置任务调度id(oceanus or us等作业id)，非填项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskGroupId() 获取任务组id
+ * @method string getTaskGroupId() 获取inlong任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskGroupId(string $TaskGroupId) 设置任务组id
+ * @method void setTaskGroupId(string $TaskGroupId) 设置inlong任务id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置应用id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取任务状态1.初始化,2.操作中,3.运行中,4.暂停,5.任务停止中,6.停止,7.执行失败,8.已删除,9.已锁定,10.配置过期,11.提交中,12.提交成功,13.提交失败
+ * @method integer getStatus() 获取1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置任务状态1.初始化,2.操作中,3.运行中,4.暂停,5.任务停止中,6.停止,7.执行失败,8.已删除,9.已锁定,10.配置过期,11.提交中,12.提交成功,13.提交失败
+ * @method void setStatus(integer $Status) 设置1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodes() 获取节点列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,9 +94,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMappings(array $Mappings) 设置节点映射
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskMode() 获取任务模式：1.画布模式，2.flink jar
+ * @method string getTaskMode() 获取任务配置模式，0:画布 1:表单 3:脚本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskMode(string $TaskMode) 设置任务模式：1.画布模式，2.flink jar
+ * @method void setTaskMode(string $TaskMode) 设置任务配置模式，0:画布 1:表单 3:脚本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncharge() 获取责任人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,9 +110,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置group name
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInLongManagerUrl() 获取url
+ * @method string getInLongManagerUrl() 获取inlong manager url
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInLongManagerUrl(string $InLongManagerUrl) 设置url
+ * @method void setInLongManagerUrl(string $InLongManagerUrl) 设置inlong manager url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInLongStreamId() 获取stream id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,21 +122,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInLongManagerVersion(string $InLongManagerVersion) 设置version
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataProxyUrl() 获取dataproxy url
+ * @method array getDataProxyUrl() 获取inlong dataproxy url
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataProxyUrl(array $DataProxyUrl) 设置dataproxy url
+ * @method void setDataProxyUrl(array $DataProxyUrl) 设置inlong dataproxy url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSubmit() 获取任务版本是否已提交运维
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交运维
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputDatasourceType() 获取MYSQL
+ * @method string getInputDatasourceType() 获取数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputDatasourceType(string $InputDatasourceType) 设置MYSQL
+ * @method void setInputDatasourceType(string $InputDatasourceType) 设置数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputDatasourceType() 获取DLC
+ * @method string getOutputDatasourceType() 获取数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputDatasourceType(string $OutputDatasourceType) 设置DLC
+ * @method void setOutputDatasourceType(string $OutputDatasourceType) 设置数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumRecordsIn() 获取读取条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,17 +190,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskAlarmRegularList(array $TaskAlarmRegularList) 设置该任务关联的告警规则
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSwitchResource() 获取资源分层情况： 0：进行中,1：成功 ,2：失败
+ * @method integer getSwitchResource() 获取实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitchResource(integer $SwitchResource) 设置资源分层情况： 0：进行中,1：成功 ,2：失败
+ * @method void setSwitchResource(integer $SwitchResource) 设置实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReadPhase() 获取读取阶段：0：全部全量,1：部分全量,2：全部增量
+ * @method integer getReadPhase() 获取实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadPhase(integer $ReadPhase) 设置读取阶段：0：全部全量,1：部分全量,2：全部增量
+ * @method void setReadPhase(integer $ReadPhase) 设置实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceVersion() 获取版本号
+ * @method integer getInstanceVersion() 获取实时任务版本号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceVersion(integer $InstanceVersion) 设置版本号
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置实时任务版本号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArrangeSpaceTaskId() 获取离线任务导入到编排空间的任务id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,13 +247,13 @@ class IntegrationTaskInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 任务调度id(oceanus or us等作业id)
+     * @var string 任务调度id(oceanus or us等作业id)，非填项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTaskId;
 
     /**
-     * @var string 任务组id
+     * @var string inlong任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupId;
@@ -289,7 +289,7 @@ class IntegrationTaskInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer 任务状态1.初始化,2.操作中,3.运行中,4.暂停,5.任务停止中,6.停止,7.执行失败,8.已删除,9.已锁定,10.配置过期,11.提交中,12.提交成功,13.提交失败
+     * @var integer 1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -331,7 +331,7 @@ class IntegrationTaskInfo extends AbstractModel
     public $Mappings;
 
     /**
-     * @var string 任务模式：1.画布模式，2.flink jar
+     * @var string 任务配置模式，0:画布 1:表单 3:脚本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskMode;
@@ -355,7 +355,7 @@ class IntegrationTaskInfo extends AbstractModel
     public $ExecutorGroupName;
 
     /**
-     * @var string url
+     * @var string inlong manager url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InLongManagerUrl;
@@ -373,7 +373,7 @@ class IntegrationTaskInfo extends AbstractModel
     public $InLongManagerVersion;
 
     /**
-     * @var array dataproxy url
+     * @var array inlong dataproxy url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataProxyUrl;
@@ -385,13 +385,13 @@ class IntegrationTaskInfo extends AbstractModel
     public $Submit;
 
     /**
-     * @var string MYSQL
+     * @var string 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputDatasourceType;
 
     /**
-     * @var string DLC
+     * @var string 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputDatasourceType;
@@ -475,19 +475,19 @@ class IntegrationTaskInfo extends AbstractModel
     public $TaskAlarmRegularList;
 
     /**
-     * @var integer 资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @var integer 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchResource;
 
     /**
-     * @var integer 读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @var integer 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadPhase;
 
     /**
-     * @var integer 版本号
+     * @var integer 实时任务版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceVersion;
@@ -514,9 +514,9 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTaskId 任务调度id(oceanus or us等作业id)
+     * @param string $ScheduleTaskId 任务调度id(oceanus or us等作业id)，非填项
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskGroupId 任务组id
+     * @param string $TaskGroupId inlong任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -528,7 +528,7 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 应用id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 任务状态1.初始化,2.操作中,3.运行中,4.暂停,5.任务停止中,6.停止,7.执行失败,8.已删除,9.已锁定,10.配置过期,11.提交中,12.提交成功,13.提交失败
+     * @param integer $Status 1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Nodes 节点列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -542,7 +542,7 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Mappings 节点映射
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskMode 任务模式：1.画布模式，2.flink jar
+     * @param string $TaskMode 任务配置模式，0:画布 1:表单 3:脚本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Incharge 责任人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -550,19 +550,19 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupName group name
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InLongManagerUrl url
+     * @param string $InLongManagerUrl inlong manager url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InLongStreamId stream id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InLongManagerVersion version
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataProxyUrl dataproxy url
+     * @param array $DataProxyUrl inlong dataproxy url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Submit 任务版本是否已提交运维
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputDatasourceType MYSQL
+     * @param string $InputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputDatasourceType DLC
+     * @param string $OutputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumRecordsIn 读取条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -590,11 +590,11 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskAlarmRegularList 该任务关联的告警规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SwitchResource 资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @param integer $SwitchResource 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReadPhase 读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @param integer $ReadPhase 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceVersion 版本号
+     * @param integer $InstanceVersion 实时任务版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
 注意：此字段可能返回 null，表示取不到有效值。

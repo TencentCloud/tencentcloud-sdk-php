@@ -68,7 +68,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 创建文件夹
  * @method Models\CreateHiveTableResponse CreateHiveTable(Models\CreateHiveTableRequest $req) 建hive表
  * @method Models\CreateHiveTableByDDLResponse CreateHiveTableByDDL(Models\CreateHiveTableByDDLRequest $req) 创建hive表，返回表名称
- * @method Models\CreateInLongAgentResponse CreateInLongAgent(Models\CreateInLongAgentRequest $req) 注册采集器
  * @method Models\CreateIntegrationNodeResponse CreateIntegrationNode(Models\CreateIntegrationNodeRequest $req) 创建集成节点
  * @method Models\CreateIntegrationTaskResponse CreateIntegrationTask(Models\CreateIntegrationTaskRequest $req) 创建集成任务
  * @method Models\CreateOfflineTaskResponse CreateOfflineTask(Models\CreateOfflineTaskRequest $req) 创建离线任务
@@ -93,7 +92,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DeleteFilePathResponse DeleteFilePath(Models\DeleteFilePathRequest $req) 开发空间-批量删除目录和文件
  * @method Models\DeleteFolderResponse DeleteFolder(Models\DeleteFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除文件夹
- * @method Models\DeleteInLongAgentResponse DeleteInLongAgent(Models\DeleteInLongAgentRequest $req) 删除采集器
  * @method Models\DeleteIntegrationNodeResponse DeleteIntegrationNode(Models\DeleteIntegrationNodeRequest $req) 删除集成节点
  * @method Models\DeleteIntegrationTaskResponse DeleteIntegrationTask(Models\DeleteIntegrationTaskRequest $req) 删除集成任务
  * @method Models\DeleteOfflineTaskResponse DeleteOfflineTask(Models\DeleteOfflineTaskRequest $req) 删除任务
@@ -124,7 +122,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeBaselinesResponse DescribeBaselines(Models\DescribeBaselinesRequest $req) 基线列表
  * @method Models\DescribeBatchOperateTaskResponse DescribeBatchOperateTask(Models\DescribeBatchOperateTaskRequest $req) 批量操作任务列表
  * @method Models\DescribeBelongToResponse DescribeBelongTo(Models\DescribeBelongToRequest $req) 智能运维-事件列表-所属任务/基线过滤列表
- * @method Models\DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(Models\DescribeClusterNamespaceListRequest $req) 获取集群命名空间列表
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
  * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
  * @method Models\DescribeDataBasesResponse DescribeDataBases(Models\DescribeDataBasesRequest $req) 查询数据来源列表
@@ -168,10 +165,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 拉取文件夹下的工作流
  * @method Models\DescribeFunctionKindsResponse DescribeFunctionKinds(Models\DescribeFunctionKindsRequest $req) 查询函数分类
  * @method Models\DescribeFunctionTypesResponse DescribeFunctionTypes(Models\DescribeFunctionTypesRequest $req) 查询函数类型
- * @method Models\DescribeInLongAgentListResponse DescribeInLongAgentList(Models\DescribeInLongAgentListRequest $req) 获取采集器列表
- * @method Models\DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskList(Models\DescribeInLongAgentTaskListRequest $req) 查询采集器关联的任务列表
- * @method Models\DescribeInLongAgentVpcListResponse DescribeInLongAgentVpcList(Models\DescribeInLongAgentVpcListRequest $req) 获取采集器所在集群的VPC列表
- * @method Models\DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterList(Models\DescribeInLongTkeClusterListRequest $req) 获取TKE集群列表
  * @method Models\DescribeInstanceByCycleResponse DescribeInstanceByCycle(Models\DescribeInstanceByCycleRequest $req) 根据周期类型查询所有实例
  * @method Models\DescribeInstanceByCycleReportResponse DescribeInstanceByCycleReport(Models\DescribeInstanceByCycleReportRequest $req) 实例状态周期增长趋势
  * @method Models\DescribeInstanceLastLogResponse DescribeInstanceLastLog(Models\DescribeInstanceLastLogRequest $req) 日志获取详情页面
@@ -186,7 +179,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeInstancesInfoWithTaskInfoResponse DescribeInstancesInfoWithTaskInfo(Models\DescribeInstancesInfoWithTaskInfoRequest $req) 拉取实例列表，join task表一些信息
  * @method Models\DescribeIntegrationNodeResponse DescribeIntegrationNode(Models\DescribeIntegrationNodeRequest $req) 查询集成节点
  * @method Models\DescribeIntegrationStatisticsResponse DescribeIntegrationStatistics(Models\DescribeIntegrationStatisticsRequest $req) 数据集成大屏概览
- * @method Models\DescribeIntegrationStatisticsAgentStatusResponse DescribeIntegrationStatisticsAgentStatus(Models\DescribeIntegrationStatisticsAgentStatusRequest $req) 数据集成大屏采集器状态分布统计
  * @method Models\DescribeIntegrationStatisticsInstanceTrendResponse DescribeIntegrationStatisticsInstanceTrend(Models\DescribeIntegrationStatisticsInstanceTrendRequest $req) 数据集成大屏实例状态统计趋势
  * @method Models\DescribeIntegrationStatisticsRecordsTrendResponse DescribeIntegrationStatisticsRecordsTrend(Models\DescribeIntegrationStatisticsRecordsTrendRequest $req) 数据集成大屏同步条数统计趋势
  * @method Models\DescribeIntegrationStatisticsTaskStatusResponse DescribeIntegrationStatisticsTaskStatus(Models\DescribeIntegrationStatisticsTaskStatusRequest $req) 数据集成大屏任务状态分布统计
@@ -248,7 +240,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeSchedulerTaskCntByStatusResponse DescribeSchedulerTaskCntByStatus(Models\DescribeSchedulerTaskCntByStatusRequest $req) 任务状态统计
  * @method Models\DescribeSchedulerTaskTypeCntResponse DescribeSchedulerTaskTypeCnt(Models\DescribeSchedulerTaskTypeCntRequest $req) 运维大屏-任务状态分布
  * @method Models\DescribeSonInstancesResponse DescribeSonInstances(Models\DescribeSonInstancesRequest $req) 获取关联子实例
- * @method Models\DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoList(Models\DescribeStandardRuleDetailInfoListRequest $req) 获取数据标准规则详情
  * @method Models\DescribeStatisticInstanceStatusTrendOpsResponse DescribeStatisticInstanceStatusTrendOps(Models\DescribeStatisticInstanceStatusTrendOpsRequest $req) 任务状态趋势
  * @method Models\DescribeStreamTaskLogListResponse DescribeStreamTaskLogList(Models\DescribeStreamTaskLogListRequest $req) 查询实时任务日志列表
  * @method Models\DescribeSuccessorOpsTaskInfosResponse DescribeSuccessorOpsTaskInfos(Models\DescribeSuccessorOpsTaskInfosRequest $req) 获取下游任务信息
@@ -358,7 +349,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 实例批量重跑
  * @method Models\RerunOpsMakePlanInstancesResponse RerunOpsMakePlanInstances(Models\RerunOpsMakePlanInstancesRequest $req) 按补录计划批量重跑/选择补录计划→补录任务→补录实例，点击重跑
  * @method Models\RerunScheduleInstancesResponse RerunScheduleInstances(Models\RerunScheduleInstancesRequest $req) 实例批量重跑
- * @method Models\RestartInLongAgentResponse RestartInLongAgent(Models\RestartInLongAgentRequest $req) 重启采集器
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
  * @method Models\RunForceSucScheduleInstancesResponse RunForceSucScheduleInstances(Models\RunForceSucScheduleInstancesRequest $req) 实例强制成功
@@ -386,7 +376,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 触发事件
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
- * @method Models\UpdateInLongAgentResponse UpdateInLongAgent(Models\UpdateInLongAgentRequest $req) 更新采集器
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
  */

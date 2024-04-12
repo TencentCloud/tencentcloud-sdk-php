@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 离线实例
  *
- * @method string getCreateUin() 获取创建账号
+ * @method string getCreateUin() 获取创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUin(string $CreateUin) 设置创建账号
+ * @method void setCreateUin(string $CreateUin) 设置创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperatorUin() 获取操作账号
+ * @method string getOperatorUin() 获取操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorUin(string $OperatorUin) 设置操作账号
+ * @method void setOperatorUin(string $OperatorUin) 设置操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwnerUin() 获取主账号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,18 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurRunDate(string $CurRunDate) 设置数据时间
  * @method string getIssueId() 获取下发时间
  * @method void setIssueId(string $IssueId) 设置下发时间
- * @method string getInlongTaskId() 获取资源组id
+ * @method string getInlongTaskId() 获取下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInlongTaskId(string $InlongTaskId) 设置资源组id
+ * @method void setInlongTaskId(string $InlongTaskId) 设置下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroup() 获取资源组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroup(string $ResourceGroup) 设置资源组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskRunType() 获取实例类型
- * @method void setTaskRunType(integer $TaskRunType) 设置实例类型
- * @method string getState() 获取实例状态
- * @method void setState(string $State) 设置实例状态
+ * @method integer getTaskRunType() 获取任务类型(1 调试运行,2 调度执行)
+ * @method void setTaskRunType(integer $TaskRunType) 设置任务类型(1 调试运行,2 调度执行)
+ * @method string getState() 获取实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
+ * @method void setState(string $State) 设置实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
  * @method string getStartTime() 获取开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间
@@ -80,13 +80,13 @@ use TencentCloud\Common\AbstractModel;
 class OfflineInstance extends AbstractModel
 {
     /**
-     * @var string 创建账号
+     * @var string 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUin;
 
     /**
-     * @var string 操作账号
+     * @var string 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorUin;
@@ -125,7 +125,7 @@ class OfflineInstance extends AbstractModel
     public $IssueId;
 
     /**
-     * @var string 资源组id
+     * @var string 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InlongTaskId;
@@ -137,12 +137,12 @@ class OfflineInstance extends AbstractModel
     public $ResourceGroup;
 
     /**
-     * @var integer 实例类型
+     * @var integer 任务类型(1 调试运行,2 调度执行)
      */
     public $TaskRunType;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
      */
     public $State;
 
@@ -176,9 +176,9 @@ class OfflineInstance extends AbstractModel
     public $InstanceKey;
 
     /**
-     * @param string $CreateUin 创建账号
+     * @param string $CreateUin 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperatorUin 操作账号
+     * @param string $OperatorUin 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin 主账号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -189,12 +189,12 @@ class OfflineInstance extends AbstractModel
      * @param string $TaskId 任务Id
      * @param string $CurRunDate 数据时间
      * @param string $IssueId 下发时间
-     * @param string $InlongTaskId 资源组id
+     * @param string $InlongTaskId 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroup 资源组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskRunType 实例类型
-     * @param string $State 实例状态
+     * @param integer $TaskRunType 任务类型(1 调试运行,2 调度执行)
+     * @param string $State 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
      * @param string $StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间

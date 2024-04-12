@@ -18,7 +18,7 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集成节点
+ * 集成任务节点
  *
  * @method string getId() 获取集成节点id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置集成节点所属任务id
  * @method string getName() 获取集成节点名称
  * @method void setName(string $Name) 设置集成节点名称
- * @method string getNodeType() 获取集成节点类型
- * @method void setNodeType(string $NodeType) 设置集成节点类型
- * @method string getDataSourceType() 获取节点数据源类型
- * @method void setDataSourceType(string $DataSourceType) 设置节点数据源类型
+ * @method string getNodeType() 获取集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
+ * @method void setNodeType(string $NodeType) 设置集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
+ * @method string getDataSourceType() 获取节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+ * @method void setDataSourceType(string $DataSourceType) 设置节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
  * @method string getDescription() 获取节点描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置节点描述
@@ -56,20 +56,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeMapping(IntegrationNodeMapping $NodeMapping) 设置节点映射
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppId() 获取应用id
- * @method void setAppId(string $AppId) 设置应用id
+ * @method string getAppId() 获取归属用户AppId,展示字段 非传入
+ * @method void setAppId(string $AppId) 设置归属用户AppId,展示字段 非传入
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method string getCreatorUin() 获取创建人uin
+ * @method string getCreatorUin() 获取创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorUin(string $CreatorUin) 设置创建人uin
+ * @method void setCreatorUin(string $CreatorUin) 设置创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperatorUin() 获取操作人uin
+ * @method string getOperatorUin() 获取操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorUin(string $OperatorUin) 设置操作人uin
+ * @method void setOperatorUin(string $OperatorUin) 设置操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerUin() 获取owner uin
- * @method void setOwnerUin(string $OwnerUin) 设置owner uin
+ * @method string getOwnerUin() 获取owner uin 展示字段 非传入
+ * @method void setOwnerUin(string $OwnerUin) 设置owner uin 展示字段 非传入
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
@@ -98,12 +98,12 @@ class IntegrationNodeInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string 集成节点类型
+     * @var string 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
      */
     public $NodeType;
 
     /**
-     * @var string 节点数据源类型
+     * @var string 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
      */
     public $DataSourceType;
 
@@ -144,7 +144,7 @@ class IntegrationNodeInfo extends AbstractModel
     public $NodeMapping;
 
     /**
-     * @var string 应用id
+     * @var string 归属用户AppId,展示字段 非传入
      */
     public $AppId;
 
@@ -154,19 +154,19 @@ class IntegrationNodeInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 创建人uin
+     * @var string 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorUin;
 
     /**
-     * @var string 操作人uin
+     * @var string 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorUin;
 
     /**
-     * @var string owner uin
+     * @var string owner uin 展示字段 非传入
      */
     public $OwnerUin;
 
@@ -187,8 +187,8 @@ class IntegrationNodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 集成节点所属任务id
      * @param string $Name 集成节点名称
-     * @param string $NodeType 集成节点类型
-     * @param string $DataSourceType 节点数据源类型
+     * @param string $NodeType 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
+     * @param string $DataSourceType 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
      * @param string $Description 节点描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源id
@@ -201,13 +201,13 @@ class IntegrationNodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntegrationNodeMapping $NodeMapping 节点映射
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppId 应用id
+     * @param string $AppId 归属用户AppId,展示字段 非传入
      * @param string $ProjectId 项目id
-     * @param string $CreatorUin 创建人uin
+     * @param string $CreatorUin 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperatorUin 操作人uin
+     * @param string $OperatorUin 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerUin owner uin
+     * @param string $OwnerUin owner uin 展示字段 非传入
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间

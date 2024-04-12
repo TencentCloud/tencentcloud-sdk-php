@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatStd返回参数结构体
  *
- * @method integer getCreated() 获取unix 时间戳，单位为秒。
- * @method void setCreated(integer $Created) 设置unix 时间戳，单位为秒。
- * @method Usage getUsage() 获取token统计信息。
-按照总token数量计费。
- * @method void setUsage(Usage $Usage) 设置token统计信息。
-按照总token数量计费。
+ * @method integer getCreated() 获取Unix 时间戳，单位为秒。
+ * @method void setCreated(integer $Created) 设置Unix 时间戳，单位为秒。
+ * @method Usage getUsage() 获取Token 统计信息。
+按照总 Token 数量计费。
+ * @method void setUsage(Usage $Usage) 设置Token 统计信息。
+按照总 Token 数量计费。
  * @method string getNote() 获取免责声明。
  * @method void setNote(string $Note) 设置免责声明。
- * @method string getId() 获取本轮对话的id。
- * @method void setId(string $Id) 设置本轮对话的id。
+ * @method string getId() 获取本轮对话的 ID。
+ * @method void setId(string $Id) 设置本轮对话的 ID。
  * @method array getChoices() 获取回复内容。
  * @method void setChoices(array $Choices) 设置回复内容。
  * @method ErrorMsg getErrorMsg() 获取错误信息。
@@ -44,13 +44,13 @@ use TencentCloud\Common\AbstractModel;
 class ChatStdResponse extends AbstractModel
 {
     /**
-     * @var integer unix 时间戳，单位为秒。
+     * @var integer Unix 时间戳，单位为秒。
      */
     public $Created;
 
     /**
-     * @var Usage token统计信息。
-按照总token数量计费。
+     * @var Usage Token 统计信息。
+按照总 Token 数量计费。
      */
     public $Usage;
 
@@ -60,7 +60,7 @@ class ChatStdResponse extends AbstractModel
     public $Note;
 
     /**
-     * @var string 本轮对话的id。
+     * @var string 本轮对话的 ID。
      */
     public $Id;
 
@@ -82,11 +82,11 @@ class ChatStdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Created unix 时间戳，单位为秒。
-     * @param Usage $Usage token统计信息。
-按照总token数量计费。
+     * @param integer $Created Unix 时间戳，单位为秒。
+     * @param Usage $Usage Token 统计信息。
+按照总 Token 数量计费。
      * @param string $Note 免责声明。
-     * @param string $Id 本轮对话的id。
+     * @param string $Id 本轮对话的 ID。
      * @param array $Choices 回复内容。
      * @param ErrorMsg $ErrorMsg 错误信息。
 如果流式返回中服务处理异常，返回该错误信息。

@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始启动时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getState() 获取实例状态
+ * @method string getState() 获取实例状态  EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(string $State) 设置实例状态
+ * @method void setState(string $State) 设置实例状态  EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取任务ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ class InstanceList extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态  EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
@@ -160,7 +160,7 @@ class InstanceList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始启动时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $State 实例状态
+     * @param string $State 实例状态  EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。

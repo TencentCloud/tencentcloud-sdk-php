@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(integer $BeginTime) 设置1659514436
  * @method integer getEndTime() 获取1659515000
  * @method void setEndTime(integer $EndTime) 设置1659515000
- * @method integer getType() 获取统计流量类型（1：上行流量，2：下行流量）
- * @method void setType(integer $Type) 设置统计流量类型（1：上行流量，2：下行流量）
+ * @method integer getType() 获取统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
+ * @method void setType(integer $Type) 设置统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
  * @method integer getTimeGranularity() 获取统计时间粒度（1：按小时统计，2：按天统计）
  * @method void setTimeGranularity(integer $TimeGranularity) 设置统计时间粒度（1：按小时统计，2：按天统计）
  * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
@@ -53,7 +53,7 @@ class GetMultiFlowStatisticRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 统计流量类型（1：上行流量，2：下行流量）
+     * @var integer 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
      */
     public $Type;
 
@@ -76,7 +76,7 @@ class GetMultiFlowStatisticRequest extends AbstractModel
      * @param array $DeviceIds 设备id列表，单次最多请求10个设备
      * @param integer $BeginTime 1659514436
      * @param integer $EndTime 1659515000
-     * @param integer $Type 统计流量类型（1：上行流量，2：下行流量）
+     * @param integer $Type 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
      * @param integer $TimeGranularity 统计时间粒度（1：按小时统计，2：按天统计）
      * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
      * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。

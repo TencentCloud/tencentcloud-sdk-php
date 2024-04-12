@@ -45,8 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVendorDescription(string $VendorDescription) 设置厂商备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseChargingMode() 获取license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseChargingMode(integer $LicenseChargingMode) 设置license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,6 +57,30 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSN() 获取硬件序列号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSN(string $SN) 设置硬件序列号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLicensePayMode() 获取license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayer() 获取付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayer(integer $Payer) 设置付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置设备分组名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class HardwareInfo extends AbstractModel
@@ -97,6 +123,7 @@ class HardwareInfo extends AbstractModel
 
     /**
      * @var integer license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseChargingMode;
@@ -114,6 +141,34 @@ class HardwareInfo extends AbstractModel
     public $SN;
 
     /**
+     * @var integer license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LicensePayMode;
+
+    /**
+     * @var integer 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Payer;
+
+    /**
+     * @var string 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
@@ -127,10 +182,23 @@ class HardwareInfo extends AbstractModel
      * @param string $VendorDescription 厂商备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 硬件序列号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LicensePayMode license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Payer 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName 设备分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +248,22 @@ class HardwareInfo extends AbstractModel
 
         if (array_key_exists("SN",$param) and $param["SN"] !== null) {
             $this->SN = $param["SN"];
+        }
+
+        if (array_key_exists("LicensePayMode",$param) and $param["LicensePayMode"] !== null) {
+            $this->LicensePayMode = $param["LicensePayMode"];
+        }
+
+        if (array_key_exists("Payer",$param) and $param["Payer"] !== null) {
+            $this->Payer = $param["Payer"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
     }
 }

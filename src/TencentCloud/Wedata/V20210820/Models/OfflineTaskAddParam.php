@@ -22,21 +22,21 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWorkflowName() 获取名称
  * @method void setWorkflowName(string $WorkflowName) 设置名称
- * @method string getDependencyWorkflow() 获取依赖
- * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置依赖
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getCycleType() 获取周期
- * @method void setCycleType(integer $CycleType) 设置周期
- * @method integer getCycleStep() 获取周期间隔
- * @method void setCycleStep(integer $CycleStep) 设置周期间隔
- * @method integer getDelayTime() 获取延迟时间
- * @method void setDelayTime(integer $DelayTime) 设置延迟时间
- * @method string getCrontabExpression() 获取crontab
+ * @method string getDependencyWorkflow() 获取依赖：yes、no
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置依赖：yes、no
+ * @method string getStartTime() 获取任务开始数据时间。非空。默认当前时间
+ * @method void setStartTime(string $StartTime) 设置任务开始数据时间。非空。默认当前时间
+ * @method string getEndTime() 获取任务结束数据时间。非空。默认当前时间
+ * @method void setEndTime(string $EndTime) 设置任务结束数据时间。非空。默认当前时间
+ * @method integer getCycleType() 获取周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
+ * @method void setCycleType(integer $CycleType) 设置周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
+ * @method integer getCycleStep() 获取间隔，可选，默认1。非空。默认 1
+ * @method void setCycleStep(integer $CycleStep) 设置间隔，可选，默认1。非空。默认 1
+ * @method integer getDelayTime() 获取延时执行时间，单位分钟
+ * @method void setDelayTime(integer $DelayTime) 设置延时执行时间，单位分钟
+ * @method string getCrontabExpression() 获取任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置crontab
+ * @method void setCrontabExpression(string $CrontabExpression) 设置任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetryWait() 获取重试等待
  * @method void setRetryWait(integer $RetryWait) 设置重试等待
@@ -54,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelfDepend(integer $SelfDepend) 设置1 有序串行 一次一个，排队 orderly 
 2 无序串行 一次一个，不排队 serial  
 3 并行 一次多个 parallel
- * @method string getTaskAction() 获取周任务：1是周天，2是周1，7是周6 。
+ * @method string getTaskAction() 获取时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAction(string $TaskAction) 设置周任务：1是周天，2是周1，7是周6 。
+ * @method void setTaskAction(string $TaskAction) 设置时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionEndTime() 获取调度执行结束时间
@@ -72,9 +72,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskAutoSubmit(boolean $TaskAutoSubmit) 设置是否自动提交
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceInitStrategy() 获取实例初始化策略
+ * @method string getInstanceInitStrategy() 获取实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置实例初始化策略
+ * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OfflineTaskAddParam extends AbstractModel
@@ -85,37 +85,37 @@ class OfflineTaskAddParam extends AbstractModel
     public $WorkflowName;
 
     /**
-     * @var string 依赖
+     * @var string 依赖：yes、no
      */
     public $DependencyWorkflow;
 
     /**
-     * @var string 开始时间
+     * @var string 任务开始数据时间。非空。默认当前时间
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 任务结束数据时间。非空。默认当前时间
      */
     public $EndTime;
 
     /**
-     * @var integer 周期
+     * @var integer 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
      */
     public $CycleType;
 
     /**
-     * @var integer 周期间隔
+     * @var integer 间隔，可选，默认1。非空。默认 1
      */
     public $CycleStep;
 
     /**
-     * @var integer 延迟时间
+     * @var integer 延时执行时间，单位分钟
      */
     public $DelayTime;
 
     /**
-     * @var string crontab
+     * @var string 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
@@ -153,7 +153,7 @@ class OfflineTaskAddParam extends AbstractModel
     public $SelfDepend;
 
     /**
-     * @var string 周任务：1是周天，2是周1，7是周6 。
+     * @var string 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -178,20 +178,20 @@ class OfflineTaskAddParam extends AbstractModel
     public $TaskAutoSubmit;
 
     /**
-     * @var string 实例初始化策略
+     * @var string 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceInitStrategy;
 
     /**
      * @param string $WorkflowName 名称
-     * @param string $DependencyWorkflow 依赖
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $CycleType 周期
-     * @param integer $CycleStep 周期间隔
-     * @param integer $DelayTime 延迟时间
-     * @param string $CrontabExpression crontab
+     * @param string $DependencyWorkflow 依赖：yes、no
+     * @param string $StartTime 任务开始数据时间。非空。默认当前时间
+     * @param string $EndTime 任务结束数据时间。非空。默认当前时间
+     * @param integer $CycleType 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
+     * @param integer $CycleStep 间隔，可选，默认1。非空。默认 1
+     * @param integer $DelayTime 延时执行时间，单位分钟
+     * @param string $CrontabExpression 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetryWait 重试等待
      * @param integer $Retriable 是否可以重试
@@ -201,7 +201,7 @@ class OfflineTaskAddParam extends AbstractModel
      * @param integer $SelfDepend 1 有序串行 一次一个，排队 orderly 
 2 无序串行 一次一个，不排队 serial  
 3 并行 一次多个 parallel
-     * @param string $TaskAction 周任务：1是周天，2是周1，7是周6 。
+     * @param string $TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionEndTime 调度执行结束时间
@@ -210,7 +210,7 @@ class OfflineTaskAddParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TaskAutoSubmit 是否自动提交
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceInitStrategy 实例初始化策略
+     * @param string $InstanceInitStrategy 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

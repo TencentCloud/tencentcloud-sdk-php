@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomainList() 获取域名,每次最多支持500条域名查询
  * @method void setDomainList(array $DomainList) 设置域名,每次最多支持500条域名查询
- * @method integer getReservedStatus() 获取状态，用于筛选，可不填写(1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成)
- * @method void setReservedStatus(integer $ReservedStatus) 设置状态，用于筛选，可不填写(1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成)
+ * @method integer getReservedStatus() 获取状态，用于筛选，可不填写(1. 成功 2. 失败（失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成 5. 预约 6. 竞价)
+ * @method void setReservedStatus(integer $ReservedStatus) 设置状态，用于筛选，可不填写(1. 成功 2. 失败（失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成 5. 预约 6. 竞价)
  * @method string getReservedTimeSort() 获取根据预约时间排序，仅支持："desc","asc"。
  * @method void setReservedTimeSort(string $ReservedTimeSort) 设置根据预约时间排序，仅支持："desc","asc"。
  * @method integer getLimit() 获取条数
@@ -39,7 +39,7 @@ class DescribeReservedPreDomainInfoRequest extends AbstractModel
     public $DomainList;
 
     /**
-     * @var integer 状态，用于筛选，可不填写(1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成)
+     * @var integer 状态，用于筛选，可不填写(1. 成功 2. 失败（失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成 5. 预约 6. 竞价)
      */
     public $ReservedStatus;
 
@@ -60,7 +60,7 @@ class DescribeReservedPreDomainInfoRequest extends AbstractModel
 
     /**
      * @param array $DomainList 域名,每次最多支持500条域名查询
-     * @param integer $ReservedStatus 状态，用于筛选，可不填写(1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成)
+     * @param integer $ReservedStatus 状态，用于筛选，可不填写(1. 成功 2. 失败（失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成 5. 预约 6. 竞价)
      * @param string $ReservedTimeSort 根据预约时间排序，仅支持："desc","asc"。
      * @param integer $Limit 条数
      * @param integer $Offset 偏移量

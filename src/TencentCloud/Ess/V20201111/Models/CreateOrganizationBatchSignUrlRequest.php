@@ -56,6 +56,12 @@ UserId必须是传入合同（FlowId）中的签署人。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
  * @method void setMobile(string $Mobile) 设置员工手机号，必须与姓名一起使用。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+ * @method array getRecipientIds() 获取为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+ * @method void setRecipientIds(array $RecipientIds) 设置为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
  */
 class CreateOrganizationBatchSignUrlRequest extends AbstractModel
 {
@@ -102,6 +108,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     public $Mobile;
 
     /**
+     * @var array 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     */
+    public $RecipientIds;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -120,6 +133,9 @@ UserId必须是传入合同（FlowId）中的签署人。
 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      * @param string $Mobile 员工手机号，必须与姓名一起使用。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * @param array $RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
      */
     function __construct()
     {
@@ -158,6 +174,10 @@ UserId必须是传入合同（FlowId）中的签署人。
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("RecipientIds",$param) and $param["RecipientIds"] !== null) {
+            $this->RecipientIds = $param["RecipientIds"];
         }
     }
 }

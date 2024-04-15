@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID，用于删除资源信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBusinessId() 获取业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessId(string $BusinessId) 设置业务ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReservedPreDomainInfo extends AbstractModel
 {
@@ -88,6 +92,12 @@ class ReservedPreDomainInfo extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string 业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessId;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ReservedStatus 1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成
      * @param string $FailReason 域名预定失败原因
@@ -99,6 +109,8 @@ class ReservedPreDomainInfo extends AbstractModel
      * @param string $ExpireTime 到期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID，用于删除资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BusinessId 业务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,10 @@ class ReservedPreDomainInfo extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
+            $this->BusinessId = $param["BusinessId"];
         }
     }
 }

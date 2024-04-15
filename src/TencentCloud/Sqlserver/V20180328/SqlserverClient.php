@@ -105,6 +105,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口 (DescribeRegions) 用于查询售卖地域信息。
  * @method Models\DescribeRegularBackupPlanResponse DescribeRegularBackupPlan(Models\DescribeRegularBackupPlanRequest $req) 本接口（DescribeRegularBackupPlan）用于查询实例定期备份保留计划
  * @method Models\DescribeRestoreTaskResponse DescribeRestoreTask(Models\DescribeRestoreTaskRequest $req) 本接口（DescribeRestoreTask）用于查询回档任务列表。
+ * @method Models\DescribeRestoreTimeRangeResponse DescribeRestoreTimeRange(Models\DescribeRestoreTimeRangeRequest $req) 本接口(DescribeRestoreTimeRange)用于查询按照时间点可回档的时间范围。
  * @method Models\DescribeRollbackTimeResponse DescribeRollbackTime(Models\DescribeRollbackTimeRequest $req) 本接口（DescribeRollbackTime）用于查询实例可回档时间范围
  * @method Models\DescribeSlowlogsResponse DescribeSlowlogs(Models\DescribeSlowlogsRequest $req) 本接口（DescribeSlowlogs）用于获取慢查询日志文件信息
  * @method Models\DescribeSpecSellStatusResponse DescribeSpecSellStatus(Models\DescribeSpecSellStatusRequest $req) 本接口（DescribeSpecSellStatus）用于查询售卖规格状态信息，其中包括售卖状态，参考价格等(实际价格以询价接口为准)。

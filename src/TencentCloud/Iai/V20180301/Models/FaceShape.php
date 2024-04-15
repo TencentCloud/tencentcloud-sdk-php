@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 五官定位（人脸关键点）具体信息。
+![image](https://iai-face-demo-default-1254418846.cos.ap-guangzhou.myqcloud.com/130pts.jpg)
  *
  * @method array getFaceProfile() 获取描述脸型轮廓的 21 点。
  * @method void setFaceProfile(array $FaceProfile) 设置描述脸型轮廓的 21 点。

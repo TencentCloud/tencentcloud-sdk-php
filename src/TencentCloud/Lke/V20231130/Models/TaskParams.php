@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务参数
  *
- * @method string getCosPath() 获取下载地址,需要通过cos桶临时秘钥去下载
+ * @method string getCosPath() 获取下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosPath(string $CosPath) 设置下载地址,需要通过cos桶临时秘钥去下载
+ * @method void setCosPath(string $CosPath) 设置下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskParams extends AbstractModel
 {
     /**
-     * @var string 下载地址,需要通过cos桶临时秘钥去下载
+     * @var string 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPath;
 
     /**
-     * @param string $CosPath 下载地址,需要通过cos桶临时秘钥去下载
+     * @param string $CosPath 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

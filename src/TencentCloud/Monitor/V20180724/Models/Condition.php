@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AlarmHierarchicalValue getHierarchicalValue() 获取告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
@@ -127,6 +131,12 @@ class Condition extends AbstractModel
     public $ProductId;
 
     /**
+     * @var AlarmHierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HierarchicalValue;
+
+    /**
      * @param integer $AlarmNotifyPeriod 告警通知频率
      * @param integer $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
      * @param string $CalcType 检测方式
@@ -143,6 +153,8 @@ class Condition extends AbstractModel
      * @param integer $IsAdvanced 是否为高级指标，0：否；1：是
      * @param integer $IsOpen 是否开通高级指标，0：否；1：是
      * @param string $ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmHierarchicalValue $HierarchicalValue 告警分级阈值配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,11 @@ class Condition extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("HierarchicalValue",$param) and $param["HierarchicalValue"] !== null) {
+            $this->HierarchicalValue = new AlarmHierarchicalValue();
+            $this->HierarchicalValue->deserialize($param["HierarchicalValue"]);
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventDisplayName(string $EventDisplayName) 设置事件展示名称（对外）
  * @method string getRuleID() 获取规则ID
  * @method void setRuleID(string $RuleID) 设置规则ID
+ * @method string getMetricName() 获取指标名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricName(string $MetricName) 设置指标名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventCondition extends AbstractModel
 {
@@ -65,6 +69,12 @@ class EventCondition extends AbstractModel
     public $RuleID;
 
     /**
+     * @var string 指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricName;
+
+    /**
      * @param string $AlarmNotifyPeriod 告警通知频率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
@@ -72,6 +82,8 @@ class EventCondition extends AbstractModel
      * @param string $EventID 事件ID
      * @param string $EventDisplayName 事件展示名称（对外）
      * @param string $RuleID 规则ID
+     * @param string $MetricName 指标名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ class EventCondition extends AbstractModel
 
         if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
             $this->RuleID = $param["RuleID"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
     }
 }

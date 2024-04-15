@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds返回参数结构体
  *
- * @method array getSubAppIdInfoSet() 获取子应用信息集合。
- * @method void setSubAppIdInfoSet(array $SubAppIdInfoSet) 设置子应用信息集合。
- * @method integer getTotalCount() 获取子应用总数量。
- * @method void setTotalCount(integer $TotalCount) 设置子应用总数量。
+ * @method array getSubAppIdInfoSet() 获取应用信息集合。
+ * @method void setSubAppIdInfoSet(array $SubAppIdInfoSet) 设置应用信息集合。
+ * @method integer getTotalCount() 获取应用总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置应用总数量。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSubAppIdsResponse extends AbstractModel
 {
     /**
-     * @var array 子应用信息集合。
+     * @var array 应用信息集合。
      */
     public $SubAppIdInfoSet;
 
     /**
-     * @var integer 子应用总数量。
+     * @var integer 应用总数量。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeSubAppIdsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SubAppIdInfoSet 子应用信息集合。
-     * @param integer $TotalCount 子应用总数量。
+     * @param array $SubAppIdInfoSet 应用信息集合。
+     * @param integer $TotalCount 应用总数量。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

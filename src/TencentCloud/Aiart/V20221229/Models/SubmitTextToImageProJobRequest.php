@@ -54,6 +54,14 @@ engine2
 取值：  
 engine1  
 engine2
+ * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+ * @method void setRevise(integer $Revise) 设置prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
  */
 class SubmitTextToImageProJobRequest extends AbstractModel
 {
@@ -95,6 +103,14 @@ engine2
     public $Engine;
 
     /**
+     * @var integer prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     */
+    public $Revise;
+
+    /**
      * @param string $Prompt 文本描述。 
 算法将根据输入的文本智能生成与之相关的图像。 
 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
@@ -112,6 +128,10 @@ engine2
 取值：  
 engine1  
 engine2
+     * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
      */
     function __construct()
     {
@@ -144,6 +164,10 @@ engine2
 
         if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
             $this->Engine = $param["Engine"];
+        }
+
+        if (array_key_exists("Revise",$param) and $param["Revise"] !== null) {
+            $this->Revise = $param["Revise"];
         }
     }
 }

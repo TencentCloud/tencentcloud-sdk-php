@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThaiName(string $ThaiName) 设置泰文姓名
  * @method string getEnFirstName() 获取英文姓名
  * @method void setEnFirstName(string $EnFirstName) 设置英文姓名
- * @method string getAddress() 获取地址
- * @method void setAddress(string $Address) 设置地址
- * @method string getBirthday() 获取出生日期
- * @method void setBirthday(string $Birthday) 设置出生日期
- * @method string getIssueDate() 获取签发日期
- * @method void setIssueDate(string $IssueDate) 设置签发日期
- * @method string getExpirationDate() 获取到期日期
- * @method void setExpirationDate(string $ExpirationDate) 设置到期日期
  * @method string getEnLastName() 获取英文姓名
  * @method void setEnLastName(string $EnLastName) 设置英文姓名
+ * @method string getIssueDate() 获取泰文签发日期
+ * @method void setIssueDate(string $IssueDate) 设置泰文签发日期
+ * @method string getExpirationDate() 获取泰文到期日期
+ * @method void setExpirationDate(string $ExpirationDate) 设置泰文到期日期
+ * @method string getBirthday() 获取泰文出生日期
+ * @method void setBirthday(string $Birthday) 设置泰文出生日期
+ * @method string getAddress() 获取地址
+ * @method void setAddress(string $Address) 设置地址
  * @method string getPortraitImage() 获取证件人像照片抠取
  * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,29 +59,29 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $EnFirstName;
 
     /**
-     * @var string 地址
+     * @var string 英文姓名
      */
-    public $Address;
+    public $EnLastName;
 
     /**
-     * @var string 出生日期
-     */
-    public $Birthday;
-
-    /**
-     * @var string 签发日期
+     * @var string 泰文签发日期
      */
     public $IssueDate;
 
     /**
-     * @var string 到期日期
+     * @var string 泰文到期日期
      */
     public $ExpirationDate;
 
     /**
-     * @var string 英文姓名
+     * @var string 泰文出生日期
      */
-    public $EnLastName;
+    public $Birthday;
+
+    /**
+     * @var string 地址
+     */
+    public $Address;
 
     /**
      * @var string 证件人像照片抠取
@@ -97,11 +97,11 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $ID 身份证号码
      * @param string $ThaiName 泰文姓名
      * @param string $EnFirstName 英文姓名
-     * @param string $Address 地址
-     * @param string $Birthday 出生日期
-     * @param string $IssueDate 签发日期
-     * @param string $ExpirationDate 到期日期
      * @param string $EnLastName 英文姓名
+     * @param string $IssueDate 泰文签发日期
+     * @param string $ExpirationDate 泰文到期日期
+     * @param string $Birthday 泰文出生日期
+     * @param string $Address 地址
      * @param string $PortraitImage 证件人像照片抠取
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -130,12 +130,8 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
             $this->EnFirstName = $param["EnFirstName"];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
-        }
-
-        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
-            $this->Birthday = $param["Birthday"];
+        if (array_key_exists("EnLastName",$param) and $param["EnLastName"] !== null) {
+            $this->EnLastName = $param["EnLastName"];
         }
 
         if (array_key_exists("IssueDate",$param) and $param["IssueDate"] !== null) {
@@ -146,8 +142,12 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
             $this->ExpirationDate = $param["ExpirationDate"];
         }
 
-        if (array_key_exists("EnLastName",$param) and $param["EnLastName"] !== null) {
-            $this->EnLastName = $param["EnLastName"];
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
         }
 
         if (array_key_exists("PortraitImage",$param) and $param["PortraitImage"] !== null) {

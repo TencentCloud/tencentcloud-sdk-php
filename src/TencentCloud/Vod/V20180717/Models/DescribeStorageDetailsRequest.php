@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method string getEndTime() 获取结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method void setEndTime(string $EndTime) 设置结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
- * @method integer getSubAppId() 获取<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getInterval() 获取统计时间粒度，有效值：
 <li>Minute：以5分钟为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -44,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -60,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -90,8 +88,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
 
@@ -112,7 +109,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -134,8 +131,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
     /**
      * @param string $StartTime 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param string $EndTime 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-     * @param integer $SubAppId <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $Interval 统计时间粒度，有效值：
 <li>Minute：以5分钟为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -148,7 +144,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
 2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
+ * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+ * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -117,6 +119,11 @@ class CreateDocumentRequest extends AbstractModel
     public $AutoHandleUnsupportedElement;
 
     /**
+     * @var string 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public $MinScaleResolution;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param string $DocumentUrl 文档地址。
      * @param string $DocumentName 文档名称。
@@ -136,6 +143,7 @@ class CreateDocumentRequest extends AbstractModel
 1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
 2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
+     * @param string $MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class CreateDocumentRequest extends AbstractModel
 
         if (array_key_exists("AutoHandleUnsupportedElement",$param) and $param["AutoHandleUnsupportedElement"] !== null) {
             $this->AutoHandleUnsupportedElement = $param["AutoHandleUnsupportedElement"];
+        }
+
+        if (array_key_exists("MinScaleResolution",$param) and $param["MinScaleResolution"] !== null) {
+            $this->MinScaleResolution = $param["MinScaleResolution"];
         }
     }
 }

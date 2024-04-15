@@ -32,10 +32,14 @@ AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
 设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
- * @method string getMobilePhone() 获取MD5手机号,AccountType是10004时，此处无需重复填写。
- * @method void setMobilePhone(string $MobilePhone) 设置MD5手机号,AccountType是10004时，此处无需重复填写。
- * @method string getDeviceId() 获取用户设备号，AccountType是8时，此处无需重复填写。
- * @method void setDeviceId(string $DeviceId) 设置用户设备号，AccountType是8时，此处无需重复填写。
+ * @method string getMobilePhone() 获取账号绑定的MD5手机号。
+注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+ * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5手机号。
+注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+ * @method string getDeviceId() 获取用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
  */
 class OtherAccountInfo extends AbstractModel
 {
@@ -50,12 +54,14 @@ MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后
     public $AccountId;
 
     /**
-     * @var string MD5手机号,AccountType是10004时，此处无需重复填写。
+     * @var string 账号绑定的MD5手机号。
+注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
      */
     public $MobilePhone;
 
     /**
-     * @var string 用户设备号，AccountType是8时，此处无需重复填写。
+     * @var string 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     public $DeviceId;
 
@@ -66,8 +72,10 @@ AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
 设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
-     * @param string $MobilePhone MD5手机号,AccountType是10004时，此处无需重复填写。
-     * @param string $DeviceId 用户设备号，AccountType是8时，此处无需重复填写。
+     * @param string $MobilePhone 账号绑定的MD5手机号。
+注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * @param string $DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     function __construct()
     {

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterRouteTable请求参数结构体
  *
- * @method string getRouteTableName() 获取路由表名称
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
+ * @method string getRouteTableName() 获取路由表名称，一般为集群ID
+ * @method void setRouteTableName(string $RouteTableName) 设置路由表名称，一般为集群ID
  * @method string getRouteTableCidrBlock() 获取路由表CIDR
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR
  * @method string getVpcId() 获取路由表绑定的VPC
  * @method void setVpcId(string $VpcId) 设置路由表绑定的VPC
- * @method integer getIgnoreClusterCidrConflict() 获取是否忽略CIDR冲突
- * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) 设置是否忽略CIDR冲突
+ * @method integer getIgnoreClusterCidrConflict() 获取是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
+ * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) 设置是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
  */
 class CreateClusterRouteTableRequest extends AbstractModel
 {
     /**
-     * @var string 路由表名称
+     * @var string 路由表名称，一般为集群ID
      */
     public $RouteTableName;
 
@@ -47,15 +47,15 @@ class CreateClusterRouteTableRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer 是否忽略CIDR冲突
+     * @var integer 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
      */
     public $IgnoreClusterCidrConflict;
 
     /**
-     * @param string $RouteTableName 路由表名称
+     * @param string $RouteTableName 路由表名称，一般为集群ID
      * @param string $RouteTableCidrBlock 路由表CIDR
      * @param string $VpcId 路由表绑定的VPC
-     * @param integer $IgnoreClusterCidrConflict 是否忽略CIDR冲突
+     * @param integer $IgnoreClusterCidrConflict 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
      */
     function __construct()
     {

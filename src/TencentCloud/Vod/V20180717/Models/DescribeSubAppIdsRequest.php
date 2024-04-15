@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds请求参数结构体
  *
- * @method string getName() 获取子应用名称。
- * @method void setName(string $Name) 设置子应用名称。
- * @method array getTags() 获取标签信息，查询指定标签的子应用列表。
- * @method void setTags(array $Tags) 设置标签信息，查询指定标签的子应用列表。
+ * @method string getName() 获取应用名称。
+ * @method void setName(string $Name) 设置应用名称。
+ * @method array getTags() 获取标签信息，查询指定标签的应用列表。
+ * @method void setTags(array $Tags) 设置标签信息，查询指定标签的应用列表。
  * @method integer getOffset() 获取分页拉取的起始偏移量。默认值：0。
  * @method void setOffset(integer $Offset) 设置分页拉取的起始偏移量。默认值：0。
  * @method integer getLimit() 获取分页拉取的最大返回结果数。默认值：200；最大值：200。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
-     * @var string 子应用名称。
+     * @var string 应用名称。
      */
     public $Name;
 
     /**
-     * @var array 标签信息，查询指定标签的子应用列表。
+     * @var array 标签信息，查询指定标签的应用列表。
      */
     public $Tags;
 
@@ -52,8 +52,8 @@ class DescribeSubAppIdsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Name 子应用名称。
-     * @param array $Tags 标签信息，查询指定标签的子应用列表。
+     * @param string $Name 应用名称。
+     * @param array $Tags 标签信息，查询指定标签的应用列表。
      * @param integer $Offset 分页拉取的起始偏移量。默认值：0。
      * @param integer $Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
      */

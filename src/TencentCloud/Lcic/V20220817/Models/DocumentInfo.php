@@ -96,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreview(string $Preview) 设置课件预览地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResolution() 获取文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResolution(string $Resolution) 设置文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DocumentInfo extends AbstractModel
 {
@@ -214,6 +222,18 @@ class DocumentInfo extends AbstractModel
     public $Preview;
 
     /**
+     * @var string 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Resolution;
+
+    /**
+     * @var string 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinScaleResolution;
+
+    /**
      * @param string $DocumentId 文档Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentUrl 文档原址url
@@ -251,6 +271,10 @@ class DocumentInfo extends AbstractModel
      * @param string $Cover 封面，仅转码的课件会生成封面
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Preview 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Resolution 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +364,14 @@ class DocumentInfo extends AbstractModel
 
         if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
             $this->Preview = $param["Preview"];
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("MinScaleResolution",$param) and $param["MinScaleResolution"] !== null) {
+            $this->MinScaleResolution = $param["MinScaleResolution"];
         }
     }
 }

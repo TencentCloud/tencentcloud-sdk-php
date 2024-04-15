@@ -51,6 +51,7 @@ use TencentCloud\Common\AbstractModel;
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -82,6 +83,7 @@ use TencentCloud\Common\AbstractModel;
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
  * @method integer getChannelNum() 获取识别声道数
 1：单声道（16k音频仅支持单声道，**请勿**设置为双声道）；
 2：双声道（仅支持8k电话音频，且双声道应分别为通话双方）
@@ -325,6 +327,7 @@ class CreateRecTaskRequest extends AbstractModel
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
      */
     public $EngineModelType;
 
@@ -545,6 +548,7 @@ class CreateRecTaskRequest extends AbstractModel
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
      * @param integer $ChannelNum 识别声道数
 1：单声道（16k音频仅支持单声道，**请勿**设置为双声道）；
 2：双声道（仅支持8k电话音频，且双声道应分别为通话双方）

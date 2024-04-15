@@ -33,6 +33,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
+• 16k_de：法语；
  * @method void setEngineType(string $EngineType) 设置引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
@@ -46,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
+• 16k_de：法语；
  * @method string getUrl() 获取语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
  * @method void setUrl(string $Url) 设置语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
  * @method string getCallbackUrl() 获取支持HTTP和HTTPS协议，用于接收识别结果，您需要自行搭建公网可调用的服务。回调格式&内容详见：[语音流异步识别回调说明](https://cloud.tencent.com/document/product/1093/52633)
@@ -83,6 +85,7 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
+• 16k_de：法语；
      */
     public $EngineType;
 
@@ -150,6 +153,7 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
+• 16k_de：法语；
      * @param string $Url 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
      * @param string $CallbackUrl 支持HTTP和HTTPS协议，用于接收识别结果，您需要自行搭建公网可调用的服务。回调格式&内容详见：[语音流异步识别回调说明](https://cloud.tencent.com/document/product/1093/52633)
      * @param string $SignToken 用于生成回调通知中的签名

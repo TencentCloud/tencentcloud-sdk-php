@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableName() 获取路由表名称。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
- * @method string getDestinationCidrBlock() 获取目的端CIDR。
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端CIDR。
- * @method string getGatewayIp() 获取下一跳地址。
- * @method void setGatewayIp(string $GatewayIp) 设置下一跳地址。
+ * @method string getDestinationCidrBlock() 获取目的节点的 PodCIDR
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的节点的 PodCIDR
+ * @method string getGatewayIp() 获取下一跳地址，即目的节点的内网 IP 地址
+ * @method void setGatewayIp(string $GatewayIp) 设置下一跳地址，即目的节点的内网 IP 地址
  */
 class CreateClusterRouteRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CreateClusterRouteRequest extends AbstractModel
     public $RouteTableName;
 
     /**
-     * @var string 目的端CIDR。
+     * @var string 目的节点的 PodCIDR
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var string 下一跳地址。
+     * @var string 下一跳地址，即目的节点的内网 IP 地址
      */
     public $GatewayIp;
 
     /**
      * @param string $RouteTableName 路由表名称。
-     * @param string $DestinationCidrBlock 目的端CIDR。
-     * @param string $GatewayIp 下一跳地址。
+     * @param string $DestinationCidrBlock 目的节点的 PodCIDR
+     * @param string $GatewayIp 下一跳地址，即目的节点的内网 IP 地址
      */
     function __construct()
     {

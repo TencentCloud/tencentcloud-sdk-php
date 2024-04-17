@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getAggregationUnit() 获取无
- * @method void setAggregationUnit(string $AggregationUnit) 设置无
- * @method string getCycleUnit() 获取无
- * @method void setCycleUnit(string $CycleUnit) 设置无
- * @method string getStatus() 获取无
- * @method void setStatus(string $Status) 设置无
- * @method string getInCharge() 获取无
- * @method void setInCharge(string $InCharge) 设置无
+ * @method string getAggregationUnit() 获取聚合单元，H小时
+ * @method void setAggregationUnit(string $AggregationUnit) 设置聚合单元，H小时
+ * @method string getCycleUnit() 获取周期
+ * @method void setCycleUnit(string $CycleUnit) 设置周期
+ * @method string getStatus() 获取状态
+ * @method void setStatus(string $Status) 设置状态
+ * @method string getInCharge() 获取责任人
+ * @method void setInCharge(string $InCharge) 设置责任人
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  */
@@ -76,22 +76,22 @@ class DescribeTaskByStatusReportRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 无
+     * @var string 聚合单元，H小时
      */
     public $AggregationUnit;
 
     /**
-     * @var string 无
+     * @var string 周期
      */
     public $CycleUnit;
 
     /**
-     * @var string 无
+     * @var string 状态
      */
     public $Status;
 
     /**
-     * @var string 无
+     * @var string 责任人
      */
     public $InCharge;
 
@@ -107,10 +107,10 @@ class DescribeTaskByStatusReportRequest extends AbstractModel
      * @param string $TypeName 类型名称
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param string $AggregationUnit 无
-     * @param string $CycleUnit 无
-     * @param string $Status 无
-     * @param string $InCharge 无
+     * @param string $AggregationUnit 聚合单元，H小时
+     * @param string $CycleUnit 周期
+     * @param string $Status 状态
+     * @param string $InCharge 责任人
      * @param string $WorkflowId 工作流ID
      */
     function __construct()

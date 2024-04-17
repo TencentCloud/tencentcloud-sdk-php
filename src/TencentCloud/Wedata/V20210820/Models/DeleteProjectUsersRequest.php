@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteProjectUsers请求参数结构体
  *
-
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method array getUserIds() 获取用户ID列表
+ * @method void setUserIds(array $UserIds) 设置用户ID列表
  */
 class DeleteProjectUsersRequest extends AbstractModel
 {
-
+    /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
 
     /**
+     * @var array 用户ID列表
+     */
+    public $UserIds;
 
+    /**
+     * @param string $ProjectId 项目ID
+     * @param array $UserIds 用户ID列表
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteProjectUsersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
 
+        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
+            $this->UserIds = $param["UserIds"];
+        }
     }
 }

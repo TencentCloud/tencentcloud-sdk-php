@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+ * @method boolean getIsDefaultServer() 获取是否作为默认域名，默认为“否”
+ * @method void setIsDefaultServer(boolean $IsDefaultServer) 设置是否作为默认域名，默认为“否”
  */
 class ModifyDomainRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ class ModifyDomainRequest extends AbstractModel
     public $PolyClientCertificateIds;
 
     /**
+     * @var boolean 是否作为默认域名，默认为“否”
+     */
+    public $IsDefaultServer;
+
+    /**
      * @param string $ListenerId 7层监听器ID
      * @param string $OldDomain 修改前的域名信息
      * @param string $NewDomain 修改后的域名信息
@@ -108,6 +115,7 @@ class ModifyDomainRequest extends AbstractModel
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @param boolean $IsDefaultServer 是否作为默认域名，默认为“否”
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyDomainRequest extends AbstractModel
 
         if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
             $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        }
+
+        if (array_key_exists("IsDefaultServer",$param) and $param["IsDefaultServer"] !== null) {
+            $this->IsDefaultServer = $param["IsDefaultServer"];
         }
     }
 }

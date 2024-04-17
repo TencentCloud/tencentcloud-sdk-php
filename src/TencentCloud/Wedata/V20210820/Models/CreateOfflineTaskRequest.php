@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOfflineTask请求参数结构体
  *
- * @method string getProjectId() 获取项目/工作
- * @method void setProjectId(string $ProjectId) 设置项目/工作
- * @method integer getCycleStep() 获取1
- * @method void setCycleStep(integer $CycleStep) 设置1
- * @method integer getDelayTime() 获取0
- * @method void setDelayTime(integer $DelayTime) 设置0
- * @method string getEndTime() 获取2099-12-31 00:00:00
- * @method void setEndTime(string $EndTime) 设置2099-12-31 00:00:00
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method integer getCycleStep() 获取间隔，可选，默认1。非空。默认 1
+ * @method void setCycleStep(integer $CycleStep) 设置间隔，可选，默认1。非空。默认 1
+ * @method integer getDelayTime() 获取延时执行时间，单位分钟
+ * @method void setDelayTime(integer $DelayTime) 设置延时执行时间，单位分钟
+ * @method string getEndTime() 获取任务结束数据时间。非空。默认当前时间
+ * @method void setEndTime(string $EndTime) 设置任务结束数据时间。非空。默认当前时间
  * @method string getNotes() 获取备注
  * @method void setNotes(string $Notes) 设置备注
  * @method string getStartTime() 获取当前日期
@@ -36,30 +36,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getTypeId() 获取跟之前调用调度接口保持一致27
  * @method void setTypeId(integer $TypeId) 设置跟之前调用调度接口保持一致27
- * @method string getTaskAction() 获取默认 ""
- * @method void setTaskAction(string $TaskAction) 设置默认 ""
+ * @method string getTaskAction() 获取时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
+ * @method void setTaskAction(string $TaskAction) 设置时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
  * @method string getTaskMode() 获取区分画布和表单
  * @method void setTaskMode(string $TaskMode) 设置区分画布和表单
  */
 class CreateOfflineTaskRequest extends AbstractModel
 {
     /**
-     * @var string 项目/工作
+     * @var string 项目ID
      */
     public $ProjectId;
 
     /**
-     * @var integer 1
+     * @var integer 间隔，可选，默认1。非空。默认 1
      */
     public $CycleStep;
 
     /**
-     * @var integer 0
+     * @var integer 延时执行时间，单位分钟
      */
     public $DelayTime;
 
     /**
-     * @var string 2099-12-31 00:00:00
+     * @var string 任务结束数据时间。非空。默认当前时间
      */
     public $EndTime;
 
@@ -84,7 +84,7 @@ class CreateOfflineTaskRequest extends AbstractModel
     public $TypeId;
 
     /**
-     * @var string 默认 ""
+     * @var string 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
      */
     public $TaskAction;
 
@@ -94,15 +94,15 @@ class CreateOfflineTaskRequest extends AbstractModel
     public $TaskMode;
 
     /**
-     * @param string $ProjectId 项目/工作
-     * @param integer $CycleStep 1
-     * @param integer $DelayTime 0
-     * @param string $EndTime 2099-12-31 00:00:00
+     * @param string $ProjectId 项目ID
+     * @param integer $CycleStep 间隔，可选，默认1。非空。默认 1
+     * @param integer $DelayTime 延时执行时间，单位分钟
+     * @param string $EndTime 任务结束数据时间。非空。默认当前时间
      * @param string $Notes 备注
      * @param string $StartTime 当前日期
      * @param string $TaskName 任务名称
      * @param integer $TypeId 跟之前调用调度接口保持一致27
-     * @param string $TaskAction 默认 ""
+     * @param string $TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
      * @param string $TaskMode 区分画布和表单
      */
     function __construct()

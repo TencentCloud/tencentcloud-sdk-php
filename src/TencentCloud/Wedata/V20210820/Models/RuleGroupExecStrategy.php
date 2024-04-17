@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTriggerTypes() 获取触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerTypes(array $TriggerTypes) 设置触发类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
@@ -184,6 +188,12 @@ class RuleGroupExecStrategy extends AbstractModel
     public $RuleName;
 
     /**
+     * @var array 触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerTypes;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
@@ -215,6 +225,8 @@ class RuleGroupExecStrategy extends AbstractModel
      * @param integer $RuleId 规则id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TriggerTypes 触发类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +309,10 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("TriggerTypes",$param) and $param["TriggerTypes"] !== null) {
+            $this->TriggerTypes = $param["TriggerTypes"];
         }
     }
 }

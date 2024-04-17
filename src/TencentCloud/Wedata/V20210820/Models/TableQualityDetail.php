@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastPeriodRatio(float $LastPeriodRatio) 设置表环比
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDsEnvType() 获取0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDsEnvType(integer $DsEnvType) 设置0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableQualityDetail extends AbstractModel
 {
@@ -114,6 +118,12 @@ class TableQualityDetail extends AbstractModel
     public $LastPeriodRatio;
 
     /**
+     * @var integer 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DsEnvType;
+
+    /**
      * @param string $DatabaseId 数据库id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称
@@ -131,6 +141,8 @@ class TableQualityDetail extends AbstractModel
      * @param float $TableScore 表得分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $LastPeriodRatio 表环比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class TableQualityDetail extends AbstractModel
 
         if (array_key_exists("LastPeriodRatio",$param) and $param["LastPeriodRatio"] !== null) {
             $this->LastPeriodRatio = $param["LastPeriodRatio"];
+        }
+
+        if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
+            $this->DsEnvType = $param["DsEnvType"];
         }
     }
 }

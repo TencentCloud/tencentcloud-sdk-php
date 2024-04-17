@@ -25,7 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getResourceIds() 获取资源ID
  * @method void setResourceIds(array $ResourceIds) 设置资源ID
  * @method string getUseStatus() 获取使用状态
+- true
+- false
  * @method void setUseStatus(string $UseStatus) 设置使用状态
+- true
+- false
  * @method array getFilePaths() 获取文件路径
  * @method void setFilePaths(array $FilePaths) 设置文件路径
  */
@@ -43,6 +47,8 @@ class DeleteFilePathRequest extends AbstractModel
 
     /**
      * @var string 使用状态
+- true
+- false
      */
     public $UseStatus;
 
@@ -55,6 +61,8 @@ class DeleteFilePathRequest extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param array $ResourceIds 资源ID
      * @param string $UseStatus 使用状态
+- true
+- false
      * @param array $FilePaths 文件路径
      */
     function __construct()

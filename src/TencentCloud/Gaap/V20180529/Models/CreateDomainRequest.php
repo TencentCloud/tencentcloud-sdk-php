@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 0，表示不开启Http3；
 1，表示开启Http3。
 默认不开启Http3。可以通过SetDomainHttp3开启。
+ * @method boolean getIsDefaultServer() 获取是否作为默认域名，默认为“否”
+ * @method void setIsDefaultServer(boolean $IsDefaultServer) 设置是否作为默认域名，默认为“否”
  */
 class CreateDomainRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ class CreateDomainRequest extends AbstractModel
     public $Http3Supported;
 
     /**
+     * @var boolean 是否作为默认域名，默认为“否”
+     */
+    public $IsDefaultServer;
+
+    /**
      * @param string $ListenerId 监听器ID。
      * @param string $Domain 需要创建的域名，一个监听器下最大支持100个域名。
      * @param string $CertificateId 服务器证书，用于客户端与GAAP的HTTPS的交互。
@@ -92,6 +99,7 @@ class CreateDomainRequest extends AbstractModel
 0，表示不开启Http3；
 1，表示开启Http3。
 默认不开启Http3。可以通过SetDomainHttp3开启。
+     * @param boolean $IsDefaultServer 是否作为默认域名，默认为“否”
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class CreateDomainRequest extends AbstractModel
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("IsDefaultServer",$param) and $param["IsDefaultServer"] !== null) {
+            $this->IsDefaultServer = $param["IsDefaultServer"];
         }
     }
 }

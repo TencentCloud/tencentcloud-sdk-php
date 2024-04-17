@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsType(string $MsType) 设置元数据类型(MYSQL、ORACLE)
  * @method string getDatasourceId() 获取数据源id
  * @method void setDatasourceId(string $DatasourceId) 设置数据源id
- * @method string getSourceDatabase() 获取来源库
- * @method void setSourceDatabase(string $SourceDatabase) 设置来源库
- * @method string getTableName() 获取来源表
- * @method void setTableName(string $TableName) 设置来源表
+ * @method string getSourceDatabase() 获取来源库名
+ * @method void setSourceDatabase(string $SourceDatabase) 设置来源库名
+ * @method string getTableName() 获取来源表名
+ * @method void setTableName(string $TableName) 设置来源表名
  * @method string getSinkType() 获取目标表元数据类型(HIVE、GBASE)
  * @method void setSinkType(string $SinkType) 设置目标表元数据类型(HIVE、GBASE)
- * @method string getSchemaName() 获取schema名称
- * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method string getSchemaName() 获取源端schema名称
+ * @method void setSchemaName(string $SchemaName) 设置源端schema名称
  * @method array getSourceFieldInfoList() 获取上游节点的字段信息
  * @method void setSourceFieldInfoList(array $SourceFieldInfoList) 设置上游节点的字段信息
  * @method array getPartitions() 获取分区字段
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpsertKeys(array $UpsertKeys) 设置dlc upsert主键
  * @method TableBaseInfo getTableBaseInfo() 获取dlc表治理信息
  * @method void setTableBaseInfo(TableBaseInfo $TableBaseInfo) 设置dlc表治理信息
+ * @method string getSinkSchemaName() 获取目标端schema名称
+ * @method void setSinkSchemaName(string $SinkSchemaName) 设置目标端schema名称
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -95,12 +97,12 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $DatasourceId;
 
     /**
-     * @var string 来源库
+     * @var string 来源库名
      */
     public $SourceDatabase;
 
     /**
-     * @var string 来源表
+     * @var string 来源表名
      */
     public $TableName;
 
@@ -110,7 +112,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $SinkType;
 
     /**
-     * @var string schema名称
+     * @var string 源端schema名称
      */
     public $SchemaName;
 
@@ -185,15 +187,20 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $TableBaseInfo;
 
     /**
+     * @var string 目标端schema名称
+     */
+    public $SinkSchemaName;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
      * @param string $MsType 元数据类型(MYSQL、ORACLE)
      * @param string $DatasourceId 数据源id
-     * @param string $SourceDatabase 来源库
-     * @param string $TableName 来源表
+     * @param string $SourceDatabase 来源库名
+     * @param string $TableName 来源表名
      * @param string $SinkType 目标表元数据类型(HIVE、GBASE)
-     * @param string $SchemaName schema名称
+     * @param string $SchemaName 源端schema名称
      * @param array $SourceFieldInfoList 上游节点的字段信息
      * @param array $Partitions 分区字段
      * @param array $Properties 建表属性
@@ -208,6 +215,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param string $TargetDatasourceId 下游节点数据源ID
      * @param array $UpsertKeys dlc upsert主键
      * @param TableBaseInfo $TableBaseInfo dlc表治理信息
+     * @param string $SinkSchemaName 目标端schema名称
      */
     function __construct()
     {
@@ -328,6 +336,10 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
         if (array_key_exists("TableBaseInfo",$param) and $param["TableBaseInfo"] !== null) {
             $this->TableBaseInfo = new TableBaseInfo();
             $this->TableBaseInfo->deserialize($param["TableBaseInfo"]);
+        }
+
+        if (array_key_exists("SinkSchemaName",$param) and $param["SinkSchemaName"] !== null) {
+            $this->SinkSchemaName = $param["SinkSchemaName"];
         }
     }
 }

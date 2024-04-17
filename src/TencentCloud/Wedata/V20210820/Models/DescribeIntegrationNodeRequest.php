@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置节点id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
+ * @method integer getTaskType() 获取任务类型，201为实时任务，202为离线任务
+ * @method void setTaskType(integer $TaskType) 设置任务类型，201为实时任务，202为离线任务
  */
 class DescribeIntegrationNodeRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeIntegrationNodeRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 任务类型
+     * @var integer 任务类型，201为实时任务，202为离线任务
      */
     public $TaskType;
 
     /**
      * @param string $Id 节点id
      * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型
+     * @param integer $TaskType 任务类型，201为实时任务，202为离线任务
      */
     function __construct()
     {

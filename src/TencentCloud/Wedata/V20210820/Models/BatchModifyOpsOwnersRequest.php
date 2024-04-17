@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTaskIdList() 获取需要更新责任人的TaskId数组
  * @method void setTaskIdList(array $TaskIdList) 设置需要更新责任人的TaskId数组
- * @method string getOwners() 获取需要更新的责任人
- * @method void setOwners(string $Owners) 设置需要更新的责任人
+ * @method string getOwners() 获取需要更新的责任人userId信息，多个责任人用;连接
+ * @method void setOwners(string $Owners) 设置需要更新的责任人userId信息，多个责任人用;连接
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
  */
@@ -35,7 +35,7 @@ class BatchModifyOpsOwnersRequest extends AbstractModel
     public $TaskIdList;
 
     /**
-     * @var string 需要更新的责任人
+     * @var string 需要更新的责任人userId信息，多个责任人用;连接
      */
     public $Owners;
 
@@ -46,7 +46,7 @@ class BatchModifyOpsOwnersRequest extends AbstractModel
 
     /**
      * @param array $TaskIdList 需要更新责任人的TaskId数组
-     * @param string $Owners 需要更新的责任人
+     * @param string $Owners 需要更新的责任人userId信息，多个责任人用;连接
      * @param string $ProjectId 项目Id
      */
     function __construct()

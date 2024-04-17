@@ -35,6 +35,7 @@ class CreateDSPADbMetaResourcesResponse extends AbstractModel
 {
     /**
      * @var string 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
     public $UpdateId;
 
@@ -50,6 +51,7 @@ class CreateDSPADbMetaResourcesResponse extends AbstractModel
 
     /**
      * @var string 资源所处地域。
+     * @deprecated
      */
     public $ResourceRegion;
 

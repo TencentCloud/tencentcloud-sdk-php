@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmWays(string $AlarmWays) 设置告警方式:email-邮件;sms-短信;wecom-企业微信
  * @method string getAlarmRecipientTypes() 获取告警对象:1-项目管理员，2-任务责任人
  * @method void setAlarmRecipientTypes(string $AlarmRecipientTypes) 设置告警对象:1-项目管理员，2-任务责任人
+ * @method boolean getEnableCheckTaskCycleLink() 获取是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+ * @method void setEnableCheckTaskCycleLink(boolean $EnableCheckTaskCycleLink) 设置是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
  */
 class CreateTaskVersionDsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateTaskVersionDsRequest extends AbstractModel
     public $AlarmRecipientTypes;
 
     /**
+     * @var boolean 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     */
+    public $EnableCheckTaskCycleLink;
+
+    /**
      * @param BatchCreateTaskVersionDTO $Task 任务id
      * @param boolean $NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
      * @param boolean $AutoRun 是否自动运行
@@ -80,6 +87,7 @@ class CreateTaskVersionDsRequest extends AbstractModel
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param string $AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
      * @param string $AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
+     * @param boolean $EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class CreateTaskVersionDsRequest extends AbstractModel
 
         if (array_key_exists("AlarmRecipientTypes",$param) and $param["AlarmRecipientTypes"] !== null) {
             $this->AlarmRecipientTypes = $param["AlarmRecipientTypes"];
+        }
+
+        if (array_key_exists("EnableCheckTaskCycleLink",$param) and $param["EnableCheckTaskCycleLink"] !== null) {
+            $this->EnableCheckTaskCycleLink = $param["EnableCheckTaskCycleLink"];
         }
     }
 }

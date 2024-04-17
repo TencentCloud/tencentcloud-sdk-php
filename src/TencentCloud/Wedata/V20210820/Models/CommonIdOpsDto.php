@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回命令id
  *
- * @method string getId() 获取返回命令id
+ * @method string getId() 获取返回补录计划id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置返回命令id
+ * @method void setId(string $Id) 设置返回补录计划id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonIdOpsDto extends AbstractModel
 {
     /**
-     * @var string 返回命令id
+     * @var string 返回补录计划id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @param string $Id 返回命令id
+     * @param string $Id 返回补录计划id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

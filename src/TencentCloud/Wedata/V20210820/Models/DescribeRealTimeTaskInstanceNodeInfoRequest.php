@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取实时任务id
  * @method void setTaskId(string $TaskId) 设置实时任务id
- * @method string getProjectId() 获取工程id
- * @method void setProjectId(string $ProjectId) 设置工程id
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  */
 class DescribeRealTimeTaskInstanceNodeInfoRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeRealTimeTaskInstanceNodeInfoRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 工程id
+     * @var string 项目id
      */
     public $ProjectId;
 
     /**
      * @param string $TaskId 实时任务id
-     * @param string $ProjectId 工程id
+     * @param string $ProjectId 项目id
      */
     function __construct()
     {

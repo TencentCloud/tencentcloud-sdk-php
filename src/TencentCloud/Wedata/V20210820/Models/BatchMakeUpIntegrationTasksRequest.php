@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTaskIds() 获取任务id
  * @method void setTaskIds(array $TaskIds) 设置任务id
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
+ * @method integer getTaskType() 获取任务类型，201为实时任务，202为离线任务
+ * @method void setTaskType(integer $TaskType) 设置任务类型，201为实时任务，202为离线任务
  * @method string getStartTime() 获取补数据开始时间
  * @method void setStartTime(string $StartTime) 设置补数据开始时间
  * @method string getEndTime() 获取补数据结束时间
@@ -39,7 +39,7 @@ class BatchMakeUpIntegrationTasksRequest extends AbstractModel
     public $TaskIds;
 
     /**
-     * @var integer 任务类型
+     * @var integer 任务类型，201为实时任务，202为离线任务
      */
     public $TaskType;
 
@@ -60,7 +60,7 @@ class BatchMakeUpIntegrationTasksRequest extends AbstractModel
 
     /**
      * @param array $TaskIds 任务id
-     * @param integer $TaskType 任务类型
+     * @param integer $TaskType 任务类型，201为实时任务，202为离线任务
      * @param string $StartTime 补数据开始时间
      * @param string $EndTime 补数据结束时间
      * @param string $ProjectId 项目id

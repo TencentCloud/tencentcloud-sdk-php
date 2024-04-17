@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 搜索条件
  *
- * @method string getExecutionSpace() 获取执行空间 "DRY_RUN"
- * @method void setExecutionSpace(string $ExecutionSpace) 设置执行空间 "DRY_RUN"
- * @method string getProductName() 获取产品名称，可选
- * @method void setProductName(string $ProductName) 设置产品名称，可选
- * @method string getResourceGroup() 获取资源组
- * @method void setResourceGroup(string $ResourceGroup) 设置资源组
+ * @method string getExecutionSpace() 获取执行空间，可选 
+ "DRY_RUN"
+ * @method void setExecutionSpace(string $ExecutionSpace) 设置执行空间，可选 
+ "DRY_RUN"
+ * @method string getProductName() 获取业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
+ * @method void setProductName(string $ProductName) 设置业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
+ * @method string getResourceGroup() 获取资源组信息，可选
+ * @method void setResourceGroup(string $ResourceGroup) 设置资源组信息，可选
  */
 class SearchConditionInstanceNew extends AbstractModel
 {
     /**
-     * @var string 执行空间 "DRY_RUN"
+     * @var string 执行空间，可选 
+ "DRY_RUN"
      */
     public $ExecutionSpace;
 
     /**
-     * @var string 产品名称，可选
+     * @var string 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
      */
     public $ProductName;
 
     /**
-     * @var string 资源组
+     * @var string 资源组信息，可选
      */
     public $ResourceGroup;
 
     /**
-     * @param string $ExecutionSpace 执行空间 "DRY_RUN"
-     * @param string $ProductName 产品名称，可选
-     * @param string $ResourceGroup 资源组
+     * @param string $ExecutionSpace 执行空间，可选 
+ "DRY_RUN"
+     * @param string $ProductName 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
+     * @param string $ResourceGroup 资源组信息，可选
      */
     function __construct()
     {

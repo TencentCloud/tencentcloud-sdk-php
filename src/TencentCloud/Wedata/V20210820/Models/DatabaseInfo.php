@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginSchemaName(string $OriginSchemaName) 设置schema名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDsEnvType() 获取0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDsEnvType(integer $DsEnvType) 设置0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class DatabaseInfo extends AbstractModel
     public $OriginSchemaName;
 
     /**
+     * @var integer 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DsEnvType;
+
+    /**
      * @param string $DatasourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -119,6 +129,8 @@ class DatabaseInfo extends AbstractModel
      * @param string $OriginDatabaseName 数据库原始名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginSchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DsEnvType 0或者未返回.未定义，1.生产 2.开发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class DatabaseInfo extends AbstractModel
 
         if (array_key_exists("OriginSchemaName",$param) and $param["OriginSchemaName"] !== null) {
             $this->OriginSchemaName = $param["OriginSchemaName"];
+        }
+
+        if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
+            $this->DsEnvType = $param["DsEnvType"];
         }
     }
 }

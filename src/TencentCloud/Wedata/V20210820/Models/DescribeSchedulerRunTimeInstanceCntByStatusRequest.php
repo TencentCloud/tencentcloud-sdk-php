@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始日期：2023-03-02
  * @method string getEndTime() 获取结束日前：2023-03-20
  * @method void setEndTime(string $EndTime) 设置结束日前：2023-03-20
- * @method integer getTaskType() 获取1
- * @method void setTaskType(integer $TaskType) 设置1
- * @method string getInCharge() 获取1
- * @method void setInCharge(string $InCharge) 设置1
+ * @method integer getTaskType() 获取任务类型
+ * @method void setTaskType(integer $TaskType) 设置任务类型
+ * @method string getInCharge() 获取责任人
+ * @method void setInCharge(string $InCharge) 设置责任人
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  * @method string getSortItem() 获取排序字段
@@ -69,12 +69,12 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 1
+     * @var integer 任务类型
      */
     public $TaskType;
 
     /**
-     * @var string 1
+     * @var string 责任人
      */
     public $InCharge;
 
@@ -99,8 +99,8 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
      * @param string $TimeUnit 时间单元 eg: 12h
      * @param string $StartTime 开始日期：2023-03-02
      * @param string $EndTime 结束日前：2023-03-20
-     * @param integer $TaskType 1
-     * @param string $InCharge 1
+     * @param integer $TaskType 任务类型
+     * @param string $InCharge 责任人
      * @param string $WorkflowId 工作流ID
      * @param string $SortItem 排序字段
      * @param string $SortType 升序降序

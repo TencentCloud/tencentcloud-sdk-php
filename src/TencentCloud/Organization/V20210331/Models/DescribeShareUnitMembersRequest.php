@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍，默认值 : 0
  * @method integer getLimit() 获取限制数目。取值范围：1~50。
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。
- * @method string getSearchKey() 获取搜索关键字。支持成员uin搜索。
- * @method void setSearchKey(string $SearchKey) 设置搜索关键字。支持成员uin搜索。
+ * @method string getSearchKey() 获取搜索关键字。支持成员Uin搜索。
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键字。支持成员Uin搜索。
  */
 class DescribeShareUnitMembersRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeShareUnitMembersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索关键字。支持成员uin搜索。
+     * @var string 搜索关键字。支持成员Uin搜索。
      */
     public $SearchKey;
 
@@ -63,7 +63,7 @@ class DescribeShareUnitMembersRequest extends AbstractModel
      * @param string $Area 共享单元地域。
      * @param integer $Offset 偏移量。取值是limit的整数倍，默认值 : 0
      * @param integer $Limit 限制数目。取值范围：1~50。
-     * @param string $SearchKey 搜索关键字。支持成员uin搜索。
+     * @param string $SearchKey 搜索关键字。支持成员Uin搜索。
      */
     function __construct()
     {

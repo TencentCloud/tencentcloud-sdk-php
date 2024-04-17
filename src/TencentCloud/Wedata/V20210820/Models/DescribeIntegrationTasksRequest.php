@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getTaskType() 获取201. stream, 202. offline 默认实时
- * @method void setTaskType(integer $TaskType) 设置201. stream, 202. offline 默认实时
+ * @method integer getTaskType() 获取201. 实时同步, 202. 离线同步 默认实时
+ * @method void setTaskType(integer $TaskType) 设置201. 实时同步, 202. 离线同步 默认实时
  */
 class DescribeIntegrationTasksRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeIntegrationTasksRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 201. stream, 202. offline 默认实时
+     * @var integer 201. 实时同步, 202. 离线同步 默认实时
      */
     public $TaskType;
 
@@ -87,7 +87,7 @@ class DescribeIntegrationTasksRequest extends AbstractModel
      * @param array $OrderFields 排序字段信息
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param integer $TaskType 201. stream, 202. offline 默认实时
+     * @param integer $TaskType 201. 实时同步, 202. 离线同步 默认实时
      */
     function __construct()
     {

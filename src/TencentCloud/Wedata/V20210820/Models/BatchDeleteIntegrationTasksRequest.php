@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTaskIds() 获取任务id
  * @method void setTaskIds(array $TaskIds) 设置任务id
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
+ * @method integer getTaskType() 获取任务类型，201为实时任务，202为离线任务
+ * @method void setTaskType(integer $TaskType) 设置任务类型，201为实时任务，202为离线任务
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getDeleteKFFlag() 获取是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
@@ -41,7 +41,7 @@ class BatchDeleteIntegrationTasksRequest extends AbstractModel
     public $TaskIds;
 
     /**
-     * @var integer 任务类型
+     * @var integer 任务类型，201为实时任务，202为离线任务
      */
     public $TaskType;
 
@@ -67,7 +67,7 @@ class BatchDeleteIntegrationTasksRequest extends AbstractModel
 
     /**
      * @param array $TaskIds 任务id
-     * @param integer $TaskType 任务类型
+     * @param integer $TaskType 任务类型，201为实时任务，202为离线任务
      * @param string $ProjectId 项目id
      * @param integer $DeleteKFFlag 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
      * @param string $Name 操作名称

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置工作流id
  * @method string getTaskName() 获取任务名
  * @method void setTaskName(string $TaskName) 设置任务名
- * @method integer getTaskType() 获取26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
- * @method void setTaskType(integer $TaskType) 设置26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+ * @method integer getTaskType() 获取26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40TCHouse-P，92MapReduce
+ * @method void setTaskType(integer $TaskType) 设置26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40TCHouse-P，92MapReduce
  * @method array getTaskExt() 获取扩展属性
  * @method void setTaskExt(array $TaskExt) 设置扩展属性
  */
@@ -49,7 +49,7 @@ class CreateTaskRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var integer 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+     * @var integer 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40TCHouse-P，92MapReduce
      */
     public $TaskType;
 
@@ -62,7 +62,7 @@ class CreateTaskRequest extends AbstractModel
      * @param string $ProjectId 项目Id
      * @param string $WorkflowId 工作流id
      * @param string $TaskName 任务名
-     * @param integer $TaskType 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+     * @param integer $TaskType 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40TCHouse-P，92MapReduce
      * @param array $TaskExt 扩展属性
      */
     function __construct()

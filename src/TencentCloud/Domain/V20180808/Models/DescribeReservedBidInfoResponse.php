@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBidList(array $BidList) 设置竞价详细数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBidEndTime() 获取竞价结束时间
+ * @method void setBidEndTime(string $BidEndTime) 设置竞价结束时间
+ * @method boolean getIsUp() 获取是否领先
+ * @method void setIsUp(boolean $IsUp) 设置是否领先
+ * @method integer getNextPrice() 获取下次出价金额
+ * @method void setNextPrice(integer $NextPrice) 设置下次出价金额
+ * @method integer getStatus() 获取状态：1. 等待竞价 2.竞价中 3.竞价结束
+ * @method void setStatus(integer $Status) 设置状态：1. 等待竞价 2.竞价中 3.竞价结束
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +65,26 @@ class DescribeReservedBidInfoResponse extends AbstractModel
     public $BidList;
 
     /**
+     * @var string 竞价结束时间
+     */
+    public $BidEndTime;
+
+    /**
+     * @var boolean 是否领先
+     */
+    public $IsUp;
+
+    /**
+     * @var integer 下次出价金额
+     */
+    public $NextPrice;
+
+    /**
+     * @var integer 状态：1. 等待竞价 2.竞价中 3.竞价结束
+     */
+    public $Status;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +95,10 @@ class DescribeReservedBidInfoResponse extends AbstractModel
      * @param string $UpUser 领先用户
      * @param array $BidList 竞价详细数据
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BidEndTime 竞价结束时间
+     * @param boolean $IsUp 是否领先
+     * @param integer $NextPrice 下次出价金额
+     * @param integer $Status 状态：1. 等待竞价 2.竞价中 3.竞价结束
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -101,6 +133,22 @@ class DescribeReservedBidInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BidList, $obj);
             }
+        }
+
+        if (array_key_exists("BidEndTime",$param) and $param["BidEndTime"] !== null) {
+            $this->BidEndTime = $param["BidEndTime"];
+        }
+
+        if (array_key_exists("IsUp",$param) and $param["IsUp"] !== null) {
+            $this->IsUp = $param["IsUp"];
+        }
+
+        if (array_key_exists("NextPrice",$param) and $param["NextPrice"] !== null) {
+            $this->NextPrice = $param["NextPrice"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

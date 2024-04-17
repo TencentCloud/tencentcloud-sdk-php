@@ -64,14 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSameSelfDependType(boolean $SameSelfDependType) 设置是否使用任务原有自依赖配置，默认为true
  * @method string getSourceTaskCycle() 获取补录实例原始周期类型
  * @method void setSourceTaskCycle(string $SourceTaskCycle) 设置补录实例原始周期类型
- * @method string getSchedulerResourceGroup() 获取重新指定的调度资源组ID
- * @method void setSchedulerResourceGroup(string $SchedulerResourceGroup) 设置重新指定的调度资源组ID
- * @method string getIntegrationResourceGroup() 获取重新指定的集成资源组ID
- * @method void setIntegrationResourceGroup(string $IntegrationResourceGroup) 设置重新指定的集成资源组ID
- * @method string getSchedulerResourceGroupName() 获取重新指定的调度资源组名称
- * @method void setSchedulerResourceGroupName(string $SchedulerResourceGroupName) 设置重新指定的调度资源组名称
- * @method string getIntegrationResourceGroupName() 获取重新指定的集成资源组名称
- * @method void setIntegrationResourceGroupName(string $IntegrationResourceGroupName) 设置重新指定的集成资源组名称
+ * @method string getSchedulerResourceGroup() 获取补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
+ * @method void setSchedulerResourceGroup(string $SchedulerResourceGroup) 设置补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
+ * @method string getIntegrationResourceGroup() 获取补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
+ * @method void setIntegrationResourceGroup(string $IntegrationResourceGroup) 设置补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
+ * @method string getSchedulerResourceGroupName() 获取补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
+ * @method void setSchedulerResourceGroupName(string $SchedulerResourceGroupName) 设置补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
+ * @method string getIntegrationResourceGroupName() 获取补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
+ * @method void setIntegrationResourceGroupName(string $IntegrationResourceGroupName) 设置补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
  */
 class CreateOpsMakePlanRequest extends AbstractModel
 {
@@ -174,22 +174,22 @@ class CreateOpsMakePlanRequest extends AbstractModel
     public $SourceTaskCycle;
 
     /**
-     * @var string 重新指定的调度资源组ID
+     * @var string 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
      */
     public $SchedulerResourceGroup;
 
     /**
-     * @var string 重新指定的集成资源组ID
+     * @var string 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
      */
     public $IntegrationResourceGroup;
 
     /**
-     * @var string 重新指定的调度资源组名称
+     * @var string 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
      */
     public $SchedulerResourceGroupName;
 
     /**
-     * @var string 重新指定的集成资源组名称
+     * @var string 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
      */
     public $IntegrationResourceGroupName;
 
@@ -216,10 +216,10 @@ class CreateOpsMakePlanRequest extends AbstractModel
      * @param string $Remark 补录计划说明
      * @param boolean $SameSelfDependType 是否使用任务原有自依赖配置，默认为true
      * @param string $SourceTaskCycle 补录实例原始周期类型
-     * @param string $SchedulerResourceGroup 重新指定的调度资源组ID
-     * @param string $IntegrationResourceGroup 重新指定的集成资源组ID
-     * @param string $SchedulerResourceGroupName 重新指定的调度资源组名称
-     * @param string $IntegrationResourceGroupName 重新指定的集成资源组名称
+     * @param string $SchedulerResourceGroup 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
+     * @param string $IntegrationResourceGroup 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
+     * @param string $SchedulerResourceGroupName 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
+     * @param string $IntegrationResourceGroupName 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
      */
     function __construct()
     {

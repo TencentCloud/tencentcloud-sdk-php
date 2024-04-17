@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeInfo(IntegrationNodeInfo $NodeInfo) 设置集成节点信息
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
- * @method integer getTaskMode() 获取区分画布模式和表单模式
- * @method void setTaskMode(integer $TaskMode) 设置区分画布模式和表单模式
+ * @method integer getTaskType() 获取任务类型 "201. stream, 202. offline"
+ * @method void setTaskType(integer $TaskType) 设置任务类型 "201. stream, 202. offline"
+ * @method integer getTaskMode() 获取区分画布模式和表单 "1. 画布, 2. 表单"模式
+ * @method void setTaskMode(integer $TaskMode) 设置区分画布模式和表单 "1. 画布, 2. 表单"模式
  */
 class ModifyIntegrationNodeRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ModifyIntegrationNodeRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 任务类型
+     * @var integer 任务类型 "201. stream, 202. offline"
      */
     public $TaskType;
 
     /**
-     * @var integer 区分画布模式和表单模式
+     * @var integer 区分画布模式和表单 "1. 画布, 2. 表单"模式
      */
     public $TaskMode;
 
     /**
      * @param IntegrationNodeInfo $NodeInfo 集成节点信息
      * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型
-     * @param integer $TaskMode 区分画布模式和表单模式
+     * @param integer $TaskType 任务类型 "201. stream, 202. offline"
+     * @param integer $TaskMode 区分画布模式和表单 "1. 画布, 2. 表单"模式
      */
     function __construct()
     {

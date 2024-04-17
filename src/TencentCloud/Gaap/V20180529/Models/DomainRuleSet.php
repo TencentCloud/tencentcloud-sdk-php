@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 0表示关闭；
 1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDefaultServer() 获取是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDefaultServer(boolean $IsDefaultServer) 设置是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -261,6 +265,12 @@ class DomainRuleSet extends AbstractModel
     public $Http3Supported;
 
     /**
+     * @var boolean 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDefaultServer;
+
+    /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
@@ -311,6 +321,8 @@ class DomainRuleSet extends AbstractModel
      * @param integer $Http3Supported Http3特性标识，其中：
 0表示关闭；
 1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDefaultServer 是否为默认域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -423,6 +435,10 @@ class DomainRuleSet extends AbstractModel
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("IsDefaultServer",$param) and $param["IsDefaultServer"] !== null) {
+            $this->IsDefaultServer = $param["IsDefaultServer"];
         }
     }
 }

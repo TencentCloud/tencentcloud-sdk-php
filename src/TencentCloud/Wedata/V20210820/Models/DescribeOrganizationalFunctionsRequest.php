@@ -28,6 +28,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置函数名称
  * @method string getDisplayName() 获取展示名称
  * @method void setDisplayName(string $DisplayName) 设置展示名称
+ * @method string getEnvType() 获取标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+ * @method void setEnvType(string $EnvType) 设置标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
  */
 class DescribeOrganizationalFunctionsRequest extends AbstractModel
 {
@@ -52,10 +59,21 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
     public $DisplayName;
 
     /**
+     * @var string 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+     */
+    public $EnvType;
+
+    /**
      * @param string $Type 场景类型：开发、使用
      * @param string $ProjectId 项目 ID
      * @param string $Name 函数名称
      * @param string $DisplayName 展示名称
+     * @param string $EnvType 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
      */
     function __construct()
     {
@@ -84,6 +102,10 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
 
         if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
             $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
         }
     }
 }

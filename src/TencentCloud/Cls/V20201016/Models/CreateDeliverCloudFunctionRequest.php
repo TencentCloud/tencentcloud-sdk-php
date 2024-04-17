@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取投递规则属于的 topic id
  * @method void setTopicId(string $TopicId) 设置投递规则属于的 topic id
- * @method string getFunctionName() 获取投递的云函数名字
- * @method void setFunctionName(string $FunctionName) 设置投递的云函数名字
+ * @method string getFunctionName() 获取投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+ * @method void setFunctionName(string $FunctionName) 设置投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getQualifier() 获取函数版本
@@ -41,7 +41,7 @@ class CreateDeliverCloudFunctionRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 投递的云函数名字
+     * @var string 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
      */
     public $FunctionName;
 
@@ -67,7 +67,7 @@ class CreateDeliverCloudFunctionRequest extends AbstractModel
 
     /**
      * @param string $TopicId 投递规则属于的 topic id
-     * @param string $FunctionName 投递的云函数名字
+     * @param string $FunctionName 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
      * @param string $Namespace 命名空间
      * @param string $Qualifier 函数版本
      * @param integer $Timeout 投递最长等待时间，单位：秒

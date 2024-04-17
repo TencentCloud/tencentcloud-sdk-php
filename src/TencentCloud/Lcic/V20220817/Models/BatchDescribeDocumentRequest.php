@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
  * @method integer getPage() 获取分页查询当前页数，从1开始递增
  * @method void setPage(integer $Page) 设置分页查询当前页数，从1开始递增
- * @method integer getLimit() 获取每页数据量，最大1000
- * @method void setLimit(integer $Limit) 设置每页数据量，最大1000
+ * @method integer getLimit() 获取每页数据量，最大200
+ * @method void setLimit(integer $Limit) 设置每页数据量，最大200
  * @method array getPermission() 获取课件权限。[0]：获取owner的私有课件；[1]：获取owner的公开课件; [0,1]：则获取owner的私有课件和公开课件；[2]：获取owner的私有课件和所有人(包括owner)的公开课件
  * @method void setPermission(array $Permission) 设置课件权限。[0]：获取owner的私有课件；[1]：获取owner的公开课件; [0,1]：则获取owner的私有课件和公开课件；[2]：获取owner的私有课件和所有人(包括owner)的公开课件
  * @method string getOwner() 获取课件所有者的user_id，不填默认获取SdkAppId下所有课件
@@ -48,7 +48,7 @@ class BatchDescribeDocumentRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer 每页数据量，最大1000
+     * @var integer 每页数据量，最大200
      */
     public $Limit;
 
@@ -75,7 +75,7 @@ class BatchDescribeDocumentRequest extends AbstractModel
     /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $Page 分页查询当前页数，从1开始递增
-     * @param integer $Limit 每页数据量，最大1000
+     * @param integer $Limit 每页数据量，最大200
      * @param array $Permission 课件权限。[0]：获取owner的私有课件；[1]：获取owner的公开课件; [0,1]：则获取owner的私有课件和公开课件；[2]：获取owner的私有课件和所有人(包括owner)的公开课件
      * @param string $Owner 课件所有者的user_id，不填默认获取SdkAppId下所有课件
      * @param string $Keyword 课件名称搜索词

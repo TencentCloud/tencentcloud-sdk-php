@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIds() 获取媒体文件唯一标识列表，最大长度：100。
  * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表，最大长度：100。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method integer getRestoreDay() 获取解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
  * @method void setRestoreDay(integer $RestoreDay) 设置解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getRestoreTier() 获取解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
@@ -49,14 +49,14 @@ class RestoreMediaRequest extends AbstractModel
     public $FileIds;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     */
-    public $SubAppId;
-
-    /**
      * @var integer 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      */
     public $RestoreDay;
+
+    /**
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
@@ -71,8 +71,8 @@ class RestoreMediaRequest extends AbstractModel
 
     /**
      * @param array $FileIds 媒体文件唯一标识列表，最大长度：100。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param integer $RestoreDay 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
@@ -98,12 +98,12 @@ class RestoreMediaRequest extends AbstractModel
             $this->FileIds = $param["FileIds"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
-        }
-
         if (array_key_exists("RestoreDay",$param) and $param["RestoreDay"] !== null) {
             $this->RestoreDay = $param["RestoreDay"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("RestoreTier",$param) and $param["RestoreTier"] !== null) {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 函数类型或函数分类
  *
- * @method string getName() 获取无
- * @method void setName(string $Name) 设置无
- * @method string getZhName() 获取无
- * @method void setZhName(string $ZhName) 设置无
- * @method string getEnName() 获取无
- * @method void setEnName(string $EnName) 设置无
+ * @method string getName() 获取名称
+ * @method void setName(string $Name) 设置名称
+ * @method string getZhName() 获取函数分类英文名
+ * @method void setZhName(string $ZhName) 设置函数分类英文名
+ * @method string getEnName() 获取函数分类中文名
+ * @method void setEnName(string $EnName) 设置函数分类中文名
  */
 class FunctionTypeOrKind extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 名称
      */
     public $Name;
 
     /**
-     * @var string 无
+     * @var string 函数分类英文名
      */
     public $ZhName;
 
     /**
-     * @var string 无
+     * @var string 函数分类中文名
      */
     public $EnName;
 
     /**
-     * @param string $Name 无
-     * @param string $ZhName 无
-     * @param string $EnName 无
+     * @param string $Name 名称
+     * @param string $ZhName 函数分类英文名
+     * @param string $EnName 函数分类中文名
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getInCharge() 获取1
- * @method void setInCharge(string $InCharge) 设置1
+ * @method string getInCharge() 获取责任人
+ * @method void setInCharge(string $InCharge) 设置责任人
  */
 class DescribeSchedulerTaskTypeCntRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeSchedulerTaskTypeCntRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 1
+     * @var string 责任人
      */
     public $InCharge;
 
     /**
      * @param string $ProjectId 项目ID
-     * @param string $InCharge 1
+     * @param string $InCharge 责任人
      */
     function __construct()
     {

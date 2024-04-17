@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTaskAlarmRegular请求参数结构体
  *
- * @method string getId() 获取主键ID
- * @method void setId(string $Id) 设置主键ID
+ * @method string getId() 获取规则ID
+ * @method void setId(string $Id) 设置规则ID
  * @method TaskAlarmInfo getTaskAlarmInfo() 获取规则信息
  * @method void setTaskAlarmInfo(TaskAlarmInfo $TaskAlarmInfo) 设置规则信息
  * @method string getProjectId() 获取项目ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTaskAlarmRegularRequest extends AbstractModel
 {
     /**
-     * @var string 主键ID
+     * @var string 规则ID
      */
     public $Id;
 
@@ -45,7 +45,7 @@ class ModifyTaskAlarmRegularRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param string $Id 主键ID
+     * @param string $Id 规则ID
      * @param TaskAlarmInfo $TaskAlarmInfo 规则信息
      * @param string $ProjectId 项目ID
      */

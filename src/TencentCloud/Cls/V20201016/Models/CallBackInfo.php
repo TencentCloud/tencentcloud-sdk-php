@@ -20,29 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回调配置
  *
- * @method string getBody() 获取回调时的Body
- * @method void setBody(string $Body) 设置回调时的Body
- * @method array getHeaders() 获取回调时的Headers
+ * @method string getBody() 获取回调时的Body。
+可将各类告警变量放在请求内容中，详见[帮助文档](https://cloud.tencent.com/document/product/614/74718)。
+如下示例：
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+ * @method void setBody(string $Body) 设置回调时的Body。
+可将各类告警变量放在请求内容中，详见[帮助文档](https://cloud.tencent.com/document/product/614/74718)。
+如下示例：
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+ * @method array getHeaders() 获取回调时的HTTP请求头部字段。
+例如：下面请求头部字段来告知服务器请求主体的内容类型为JSON。
+```
+"Content-Type: application/json"
+```
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaders(array $Headers) 设置回调时的Headers
+ * @method void setHeaders(array $Headers) 设置回调时的HTTP请求头部字段。
+例如：下面请求头部字段来告知服务器请求主体的内容类型为JSON。
+```
+"Content-Type: application/json"
+```
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CallBackInfo extends AbstractModel
 {
     /**
-     * @var string 回调时的Body
+     * @var string 回调时的Body。
+可将各类告警变量放在请求内容中，详见[帮助文档](https://cloud.tencent.com/document/product/614/74718)。
+如下示例：
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
      */
     public $Body;
 
     /**
-     * @var array 回调时的Headers
+     * @var array 回调时的HTTP请求头部字段。
+例如：下面请求头部字段来告知服务器请求主体的内容类型为JSON。
+```
+"Content-Type: application/json"
+```
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
-     * @param string $Body 回调时的Body
-     * @param array $Headers 回调时的Headers
+     * @param string $Body 回调时的Body。
+可将各类告警变量放在请求内容中，详见[帮助文档](https://cloud.tencent.com/document/product/614/74718)。
+如下示例：
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+     * @param array $Headers 回调时的HTTP请求头部字段。
+例如：下面请求头部字段来告知服务器请求主体的内容类型为JSON。
+```
+"Content-Type: application/json"
+```
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

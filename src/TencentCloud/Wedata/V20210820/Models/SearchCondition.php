@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询实例条件
  *
- * @method SearchConditionInstance getInstance() 获取查询框架，必选
- * @method void setInstance(SearchConditionInstance $Instance) 设置查询框架，必选
+ * @method SearchConditionInstanceNew getInstance() 获取查询框架，必选
+ * @method void setInstance(SearchConditionInstanceNew $Instance) 设置查询框架，必选
  * @method string getKeyword() 获取查询关键字（任务Id精确匹配，任务名称模糊匹配），可选
  * @method void setKeyword(string $Keyword) 设置查询关键字（任务Id精确匹配，任务名称模糊匹配），可选
  * @method string getSort() 获取排序顺序（asc，desc）
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SearchCondition extends AbstractModel
 {
     /**
-     * @var SearchConditionInstance 查询框架，必选
+     * @var SearchConditionInstanceNew 查询框架，必选
      */
     public $Instance;
 
@@ -52,7 +52,7 @@ class SearchCondition extends AbstractModel
     public $SortCol;
 
     /**
-     * @param SearchConditionInstance $Instance 查询框架，必选
+     * @param SearchConditionInstanceNew $Instance 查询框架，必选
      * @param string $Keyword 查询关键字（任务Id精确匹配，任务名称模糊匹配），可选
      * @param string $Sort 排序顺序（asc，desc）
      * @param string $SortCol 排序列（costTime 运行耗时，startTime 开始时间，state 实例状态，curRunDate 数据时间）
@@ -71,7 +71,7 @@ class SearchCondition extends AbstractModel
             return;
         }
         if (array_key_exists("Instance",$param) and $param["Instance"] !== null) {
-            $this->Instance = new SearchConditionInstance();
+            $this->Instance = new SearchConditionInstanceNew();
             $this->Instance->deserialize($param["Instance"]);
         }
 

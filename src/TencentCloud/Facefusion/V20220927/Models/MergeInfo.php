@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputImageFaceRect(FaceRect $InputImageFaceRect) 设置上传的图片人脸位置信息（人脸框）
  * @method string getTemplateFaceID() 获取素材人脸ID，不填默认取最大人脸。
  * @method void setTemplateFaceID(string $TemplateFaceID) 设置素材人脸ID，不填默认取最大人脸。
- * @method FaceRect getTemplateFaceRect() 获取模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
- * @method void setTemplateFaceRect(FaceRect $TemplateFaceRect) 设置模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+ * @method FaceRect getTemplateFaceRect() 获取模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+ * @method void setTemplateFaceRect(FaceRect $TemplateFaceRect) 设置模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
  */
 class MergeInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class MergeInfo extends AbstractModel
     public $TemplateFaceID;
 
     /**
-     * @var FaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+     * @var FaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
      */
     public $TemplateFaceRect;
 
@@ -63,7 +63,7 @@ class MergeInfo extends AbstractModel
      * @param string $Url 输入图片url
      * @param FaceRect $InputImageFaceRect 上传的图片人脸位置信息（人脸框）
      * @param string $TemplateFaceID 素材人脸ID，不填默认取最大人脸。
-     * @param FaceRect $TemplateFaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+     * @param FaceRect $TemplateFaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
      */
     function __construct()
     {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBroadcastType(string $EventBroadcastType) 设置广播：BROADCAST,单播：SINGLE
  * @method string getTimeUnit() 获取周期类型为天和小时为HOURS ，周期类型为分钟 ：MINUTES,周期类型为秒：SECONDS
  * @method void setTimeUnit(string $TimeUnit) 设置周期类型为天和小时为HOURS ，周期类型为分钟 ：MINUTES,周期类型为秒：SECONDS
- * @method string getOwner() 获取TBDS 事件所属人
- * @method void setOwner(string $Owner) 设置TBDS 事件所属人
+ * @method string getOwner() 获取事件所属人
+ * @method void setOwner(string $Owner) 设置事件所属人
  * @method string getEventType() 获取事件类型，默认值：TIME_SERIES
  * @method void setEventType(string $EventType) 设置事件类型，默认值：TIME_SERIES
  * @method string getDimensionFormat() 获取对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
@@ -69,7 +69,7 @@ class RegisterEventRequest extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var string TBDS 事件所属人
+     * @var string 事件所属人
      */
     public $Owner;
 
@@ -99,7 +99,7 @@ class RegisterEventRequest extends AbstractModel
      * @param string $EventSubType 事件分割类型，周期类型: DAY，HOUR，MIN，SECOND
      * @param string $EventBroadcastType 广播：BROADCAST,单播：SINGLE
      * @param string $TimeUnit 周期类型为天和小时为HOURS ，周期类型为分钟 ：MINUTES,周期类型为秒：SECONDS
-     * @param string $Owner TBDS 事件所属人
+     * @param string $Owner 事件所属人
      * @param string $EventType 事件类型，默认值：TIME_SERIES
      * @param string $DimensionFormat 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss
      * @param integer $TimeToLive 存活时间

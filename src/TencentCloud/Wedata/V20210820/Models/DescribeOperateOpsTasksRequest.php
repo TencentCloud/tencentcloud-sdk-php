@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutorGroupIdList(string $ExecutorGroupIdList) 设置资源组id,多个资源组id之间以英文字符逗号分隔
  * @method array getTaskTags() 获取任务标签
  * @method void setTaskTags(array $TaskTags) 设置任务标签
+ * @method string getKeyWord() 获取查询关键字
+ * @method void setKeyWord(string $KeyWord) 设置查询关键字
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $TaskTags;
 
     /**
+     * @var string 查询关键字
+     */
+    public $KeyWord;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -200,6 +207,7 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $AlarmType 告警类型，多个类型以逗号分隔
      * @param string $ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
      * @param array $TaskTags 任务标签
+     * @param string $KeyWord 查询关键字
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TaskTags, $obj);
             }
+        }
+
+        if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
+            $this->KeyWord = $param["KeyWord"];
         }
     }
 }

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 1 标清
 2 高清
 3 全高清
- * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 16]
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
+ * @method integer getMaxMicNumber() 获取设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
  * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
@@ -162,7 +162,7 @@ class DescribeRoomResponse extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * @var integer 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public $MaxMicNumber;
 
@@ -308,7 +308,7 @@ video 纯视频
 1 标清
 2 高清
 3 全高清
-     * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * @param integer $MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦

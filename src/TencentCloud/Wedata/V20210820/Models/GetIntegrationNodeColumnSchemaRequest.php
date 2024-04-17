@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getColumnContent() 获取字段示例（json格式）
  * @method void setColumnContent(string $ColumnContent) 设置字段示例（json格式）
- * @method string getDatasourceType() 获取数据源类型
- * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+ * @method string getDatasourceType() 获取数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
  */
 class GetIntegrationNodeColumnSchemaRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class GetIntegrationNodeColumnSchemaRequest extends AbstractModel
     public $ColumnContent;
 
     /**
-     * @var string 数据源类型
+     * @var string 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
      */
     public $DatasourceType;
 
     /**
      * @param string $ColumnContent 字段示例（json格式）
-     * @param string $DatasourceType 数据源类型
+     * @param string $DatasourceType 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
      */
     function __construct()
     {

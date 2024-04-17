@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取对象唯一ID
  * @method void setId(integer $Id) 设置对象唯一ID
+ * @method string getEnv() 获取production：生产，development开发
+ * @method void setEnv(string $Env) 设置production：生产，development开发
  */
 class DescribeDatasourceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDatasourceRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string production：生产，development开发
+     */
+    public $Env;
+
+    /**
      * @param integer $Id 对象唯一ID
+     * @param string $Env production：生产，development开发
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDatasourceRequest extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
         }
     }
 }

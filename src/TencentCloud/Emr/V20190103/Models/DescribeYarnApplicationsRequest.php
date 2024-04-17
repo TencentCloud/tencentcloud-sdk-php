@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置起始时间秒
  * @method integer getEndTime() 获取结束时间秒，EndTime-StartTime不得超过1天秒数86400
  * @method void setEndTime(integer $EndTime) 设置结束时间秒，EndTime-StartTime不得超过1天秒数86400
- * @method integer getOffset() 获取分页起始偏移，从0开始
- * @method void setOffset(integer $Offset) 设置分页起始偏移，从0开始
+ * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页；如果limit=100，Offset=1，则表示第二页，数据第101条开始查询，返回100条数据；如果limit=100，Offset=2，则表示第三页，数据第201条开始查询，返回100条数据。依次类推
+ * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页；如果limit=100，Offset=1，则表示第二页，数据第101条开始查询，返回100条数据；如果limit=100，Offset=2，则表示第三页，数据第201条开始查询，返回100条数据。依次类推
  * @method integer getLimit() 获取分页大小，合法范围[1,100]
  * @method void setLimit(integer $Limit) 设置分页大小，合法范围[1,100]
  */
@@ -49,7 +49,7 @@ class DescribeYarnApplicationsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页起始偏移，从0开始
+     * @var integer 分页偏移量，Offset=0表示第一页；如果limit=100，Offset=1，则表示第二页，数据第101条开始查询，返回100条数据；如果limit=100，Offset=2，则表示第三页，数据第201条开始查询，返回100条数据。依次类推
      */
     public $Offset;
 
@@ -62,7 +62,7 @@ class DescribeYarnApplicationsRequest extends AbstractModel
      * @param string $InstanceId 集群ID
      * @param integer $StartTime 起始时间秒
      * @param integer $EndTime 结束时间秒，EndTime-StartTime不得超过1天秒数86400
-     * @param integer $Offset 分页起始偏移，从0开始
+     * @param integer $Offset 分页偏移量，Offset=0表示第一页；如果limit=100，Offset=1，则表示第二页，数据第101条开始查询，返回100条数据；如果limit=100，Offset=2，则表示第三页，数据第201条开始查询，返回100条数据。依次类推
      * @param integer $Limit 分页大小，合法范围[1,100]
      */
     function __construct()

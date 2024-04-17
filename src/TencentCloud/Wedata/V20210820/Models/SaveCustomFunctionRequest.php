@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnDesc(string $ReturnDesc) 设置返回值说明
  * @method string getExample() 获取示例
  * @method void setExample(string $Example) 设置示例
+ * @method string getProjectId() 获取项目id，不支持修改，dlc侧创建函数保存时用
+ * @method void setProjectId(string $ProjectId) 设置项目id，不支持修改，dlc侧创建函数保存时用
+ * @method string getDbName() 获取数据库名称，不支持修改，dlc侧创建函数保存时用
+ * @method void setDbName(string $DbName) 设置数据库名称，不支持修改，dlc侧创建函数保存时用
+ * @method string getName() 获取函数名称，不支持修改，dlc侧创建函数保存时用
+ * @method void setName(string $Name) 设置函数名称，不支持修改，dlc侧创建函数保存时用
  */
 class SaveCustomFunctionRequest extends AbstractModel
 {
@@ -94,6 +100,21 @@ class SaveCustomFunctionRequest extends AbstractModel
     public $Example;
 
     /**
+     * @var string 项目id，不支持修改，dlc侧创建函数保存时用
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 数据库名称，不支持修改，dlc侧创建函数保存时用
+     */
+    public $DbName;
+
+    /**
+     * @var string 函数名称，不支持修改，dlc侧创建函数保存时用
+     */
+    public $Name;
+
+    /**
      * @param string $FunctionId 函数唯一标识
      * @param string $Kind 分类：窗口函数、聚合函数、日期函数......
      * @param string $ClusterIdentifier 集群引擎实例
@@ -104,6 +125,9 @@ class SaveCustomFunctionRequest extends AbstractModel
      * @param string $ParamDesc 参数说明
      * @param string $ReturnDesc 返回值说明
      * @param string $Example 示例
+     * @param string $ProjectId 项目id，不支持修改，dlc侧创建函数保存时用
+     * @param string $DbName 数据库名称，不支持修改，dlc侧创建函数保存时用
+     * @param string $Name 函数名称，不支持修改，dlc侧创建函数保存时用
      */
     function __construct()
     {
@@ -161,6 +185,18 @@ class SaveCustomFunctionRequest extends AbstractModel
 
         if (array_key_exists("Example",$param) and $param["Example"] !== null) {
             $this->Example = $param["Example"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
+            $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

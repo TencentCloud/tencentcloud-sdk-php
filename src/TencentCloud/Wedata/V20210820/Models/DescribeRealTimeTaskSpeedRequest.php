@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealTimeTaskSpeed请求参数结构体
  *
- * @method string getTaskId() 获取无
- * @method void setTaskId(string $TaskId) 设置无
+ * @method string getTaskId() 获取任务id
+ * @method void setTaskId(string $TaskId) 设置任务id
  * @method integer getStartTime() 获取带毫秒的时间戳
  * @method void setStartTime(integer $StartTime) 设置带毫秒的时间戳
  * @method integer getEndTime() 获取带毫秒的时间戳
  * @method void setEndTime(integer $EndTime) 设置带毫秒的时间戳
  * @method integer getGranularity() 获取粒度，1或者5
  * @method void setGranularity(integer $Granularity) 设置粒度，1或者5
- * @method string getProjectId() 获取无
- * @method void setProjectId(string $ProjectId) 设置无
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  */
 class DescribeRealTimeTaskSpeedRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 任务id
      */
     public $TaskId;
 
@@ -54,16 +54,16 @@ class DescribeRealTimeTaskSpeedRequest extends AbstractModel
     public $Granularity;
 
     /**
-     * @var string 无
+     * @var string 项目id
      */
     public $ProjectId;
 
     /**
-     * @param string $TaskId 无
+     * @param string $TaskId 任务id
      * @param integer $StartTime 带毫秒的时间戳
      * @param integer $EndTime 带毫秒的时间戳
      * @param integer $Granularity 粒度，1或者5
-     * @param string $ProjectId 无
+     * @param string $ProjectId 项目id
      */
     function __construct()
     {

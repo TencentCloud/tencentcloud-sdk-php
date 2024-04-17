@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkipEventListening(boolean $SkipEventListening) 设置重跑忽略事件监听与否 
  * @method string getSonInstanceType() 获取下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
  * @method void setSonInstanceType(string $SonInstanceType) 设置下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
- * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件
- * @method void setSearchCondition(InstanceApiOpsRequest $SearchCondition) 设置查询条件
+ * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件,当前接口需要把要查询的示例信息放在该字段
+ * @method void setSearchCondition(InstanceApiOpsRequest $SearchCondition) 设置查询条件,当前接口需要把要查询的示例信息放在该字段
  * @method string getOptType() 获取访问类型
  * @method void setOptType(string $OptType) 设置访问类型
  * @method string getOperatorName() 获取操作者名称
@@ -90,7 +90,7 @@ class DagInstancesRequest extends AbstractModel
     public $SonInstanceType;
 
     /**
-     * @var InstanceApiOpsRequest 查询条件
+     * @var InstanceApiOpsRequest 查询条件,当前接口需要把要查询的示例信息放在该字段
      */
     public $SearchCondition;
 
@@ -156,7 +156,7 @@ class DagInstancesRequest extends AbstractModel
      * @param string $DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
      * @param boolean $SkipEventListening 重跑忽略事件监听与否 
      * @param string $SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
-     * @param InstanceApiOpsRequest $SearchCondition 查询条件
+     * @param InstanceApiOpsRequest $SearchCondition 查询条件,当前接口需要把要查询的示例信息放在该字段
      * @param string $OptType 访问类型
      * @param string $OperatorName 操作者名称
      * @param string $OperatorId 操作者id

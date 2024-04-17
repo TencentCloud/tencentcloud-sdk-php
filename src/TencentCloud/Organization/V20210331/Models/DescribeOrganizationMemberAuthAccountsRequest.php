@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。默认值：10。
  * @method integer getMemberUin() 获取成员Uin。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
- * @method integer getPolicyId() 获取策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)
- * @method void setPolicyId(integer $PolicyId) 设置策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)
+ * @method integer getPolicyId() 获取策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
  */
 class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @var integer 策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)
+     * @var integer 策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public $PolicyId;
 
@@ -55,7 +55,7 @@ class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel
      * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      * @param integer $Limit 限制数目。取值范围：1~50。默认值：10。
      * @param integer $MemberUin 成员Uin。
-     * @param integer $PolicyId 策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)
+     * @param integer $PolicyId 策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     function __construct()
     {

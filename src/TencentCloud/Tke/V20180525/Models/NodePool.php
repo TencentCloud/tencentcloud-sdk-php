@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredNodesNum(integer $DesiredNodesNum) 设置期望的节点数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RuntimeConfig getRuntimeConfig() 获取运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuntimeConfig(RuntimeConfig $RuntimeConfig) 设置运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodePoolOs() 获取节点池osName
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePoolOs(string $NodePoolOs) 设置节点池osName
@@ -186,6 +190,12 @@ class NodePool extends AbstractModel
     public $DesiredNodesNum;
 
     /**
+     * @var RuntimeConfig 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuntimeConfig;
+
+    /**
      * @var string 节点池osName
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,6 +291,8 @@ class NodePool extends AbstractModel
      * @param integer $MinNodesNum 最小节点数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredNodesNum 期望的节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuntimeConfig $RuntimeConfig 运行时描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodePoolOs 节点池osName
 注意：此字段可能返回 null，表示取不到有效值。
@@ -392,6 +404,11 @@ class NodePool extends AbstractModel
 
         if (array_key_exists("DesiredNodesNum",$param) and $param["DesiredNodesNum"] !== null) {
             $this->DesiredNodesNum = $param["DesiredNodesNum"];
+        }
+
+        if (array_key_exists("RuntimeConfig",$param) and $param["RuntimeConfig"] !== null) {
+            $this->RuntimeConfig = new RuntimeConfig();
+            $this->RuntimeConfig->deserialize($param["RuntimeConfig"]);
         }
 
         if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {

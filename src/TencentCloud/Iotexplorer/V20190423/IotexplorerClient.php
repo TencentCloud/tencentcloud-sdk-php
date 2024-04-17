@@ -56,6 +56,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeBatchProductionResponse DescribeBatchProduction(Models\DescribeBatchProductionRequest $req) 获取量产详情信息。
  * @method Models\DescribeBindedProductsResponse DescribeBindedProducts(Models\DescribeBindedProductsRequest $req) 获取网关产品已经绑定的子产品
  * @method Models\DescribeCloudStorageResponse DescribeCloudStorage(Models\DescribeCloudStorageRequest $req) 获取设备云存服务详情
+ * @method Models\DescribeCloudStorageAIServiceResponse DescribeCloudStorageAIService(Models\DescribeCloudStorageAIServiceRequest $req) 查询指定设备的云存 AI 服务开通状态与参数配置
+ * @method Models\DescribeCloudStorageAIServiceCallbackResponse DescribeCloudStorageAIServiceCallback(Models\DescribeCloudStorageAIServiceCallbackRequest $req) 查询云存AI分析回调配置
+ * @method Models\DescribeCloudStorageAIServiceTasksResponse DescribeCloudStorageAIServiceTasks(Models\DescribeCloudStorageAIServiceTasksRequest $req) 查询指定设备的云存 AI 分析任务列表
  * @method Models\DescribeCloudStorageDateResponse DescribeCloudStorageDate(Models\DescribeCloudStorageDateRequest $req) 获取具有云存的日期
  * @method Models\DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(Models\DescribeCloudStorageEventsRequest $req) 拉取云存事件列表
  * @method Models\DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnail(Models\DescribeCloudStorageMultiThumbnailRequest $req) 拉取多个云存事件缩略图
@@ -87,6 +90,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribePackageConsumeTaskResponse DescribePackageConsumeTask(Models\DescribePackageConsumeTaskRequest $req) 查询套餐消耗记录详情
  * @method Models\DescribePackageConsumeTasksResponse DescribePackageConsumeTasks(Models\DescribePackageConsumeTasksRequest $req) 查询套餐消耗记录列表
  * @method Models\DescribePositionFenceListResponse DescribePositionFenceList(Models\DescribePositionFenceListRequest $req) 获取围栏列表
+ * @method Models\DescribeProductCloudStorageAIServiceResponse DescribeProductCloudStorageAIService(Models\DescribeProductCloudStorageAIServiceRequest $req) 查询指定产品的云存 AI 服务开通状态
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 查询项目详情
  * @method Models\DescribeSpaceFenceEventListResponse DescribeSpaceFenceEventList(Models\DescribeSpaceFenceEventListRequest $req) 获取位置空间中围栏告警事件列表
  * @method Models\DescribeStudioProductResponse DescribeStudioProduct(Models\DescribeStudioProductRequest $req) 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
@@ -113,12 +117,15 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表
  * @method Models\ListTopicPolicyResponse ListTopicPolicy(Models\ListTopicPolicyRequest $req) 本接口（ListTopicPolicy）用于获取Topic列表
+ * @method Models\ModifyCloudStorageAIServiceResponse ModifyCloudStorageAIService(Models\ModifyCloudStorageAIServiceRequest $req) 修改指定设备的云存 AI 服务开通状态与参数配置
+ * @method Models\ModifyCloudStorageAIServiceCallbackResponse ModifyCloudStorageAIServiceCallback(Models\ModifyCloudStorageAIServiceCallbackRequest $req) 修改云存AI分析回调配置
  * @method Models\ModifyFenceBindResponse ModifyFenceBind(Models\ModifyFenceBindRequest $req) 更新围栏绑定信息
  * @method Models\ModifyLoRaFrequencyResponse ModifyLoRaFrequency(Models\ModifyLoRaFrequencyRequest $req) 修改LoRa自定义频点
  * @method Models\ModifyLoRaGatewayResponse ModifyLoRaGateway(Models\ModifyLoRaGatewayRequest $req) 修改 LoRa 网关信息
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyPositionFenceResponse ModifyPositionFence(Models\ModifyPositionFenceRequest $req) 更新围栏
  * @method Models\ModifyPositionSpaceResponse ModifyPositionSpace(Models\ModifyPositionSpaceRequest $req) 更新位置空间
+ * @method Models\ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIService(Models\ModifyProductCloudStorageAIServiceRequest $req) 修改指定产品的云存 AI 服务开通状态
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目
  * @method Models\ModifySpacePropertyResponse ModifySpaceProperty(Models\ModifySpacePropertyRequest $req) 更新位置空间产品属性
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateId(string $UpdateId) 设置本次更新的ID号，用来标记一次完整的更新过程。
  * @method array getItems() 获取云上资源列表。
  * @method void setItems(array $Items) 设置云上资源列表。
+ * @method array getCloudResourceItems() 获取必填，云数据库资源列表。
+ * @method void setCloudResourceItems(array $CloudResourceItems) 设置必填，云数据库资源列表。
  */
 class CreateDSPADbMetaResourcesRequest extends AbstractModel
 {
@@ -47,23 +49,32 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
 
     /**
      * @var string 资源所处地域。
+     * @deprecated
      */
     public $ResourceRegion;
 
     /**
      * @var string 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
+     * @deprecated
      */
     public $UpdateStatus;
 
     /**
      * @var string 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
     public $UpdateId;
 
     /**
      * @var array 云上资源列表。
+     * @deprecated
      */
     public $Items;
+
+    /**
+     * @var array 必填，云数据库资源列表。
+     */
+    public $CloudResourceItems;
 
     /**
      * @param string $DspaId DSPA实例ID。
@@ -72,6 +83,7 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
      * @param string $UpdateStatus 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
      * @param string $UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
      * @param array $Items 云上资源列表。
+     * @param array $CloudResourceItems 必填，云数据库资源列表。
      */
     function __construct()
     {
@@ -112,6 +124,15 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
                 $obj = new DspaCloudResourceMeta();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
+            }
+        }
+
+        if (array_key_exists("CloudResourceItems",$param) and $param["CloudResourceItems"] !== null) {
+            $this->CloudResourceItems = [];
+            foreach ($param["CloudResourceItems"] as $key => $value){
+                $obj = new CloudResourceItem();
+                $obj->deserialize($value);
+                array_push($this->CloudResourceItems, $obj);
             }
         }
     }

@@ -163,7 +163,13 @@ polarismesh - STANDARD版本
 - 0：不自动续费
 - 1：自动续费
  * @method array getEngineRegionInfos() 获取跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
  * @method void setEngineRegionInfos(array $EngineRegionInfos) 设置跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
+ * @method array getStorageOption() 获取zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+ * @method void setStorageOption(array $StorageOption) 设置zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
  */
 class CreateEngineRequest extends AbstractModel
 {
@@ -300,8 +306,15 @@ polarismesh - STANDARD版本
 
     /**
      * @var array 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
      */
     public $EngineRegionInfos;
+
+    /**
+     * @var array zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+     */
+    public $StorageOption;
 
     /**
      * @param string $EngineType 引擎类型。参考值：
@@ -376,6 +389,9 @@ polarismesh - STANDARD版本
 - 0：不自动续费
 - 1：自动续费
      * @param array $EngineRegionInfos 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
+     * @param array $StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
      */
     function __construct()
     {
@@ -467,6 +483,15 @@ polarismesh - STANDARD版本
                 $obj = new EngineRegionInfo();
                 $obj->deserialize($value);
                 array_push($this->EngineRegionInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("StorageOption",$param) and $param["StorageOption"] !== null) {
+            $this->StorageOption = [];
+            foreach ($param["StorageOption"] as $key => $value){
+                $obj = new StorageOption();
+                $obj->deserialize($value);
+                array_push($this->StorageOption, $obj);
             }
         }
     }

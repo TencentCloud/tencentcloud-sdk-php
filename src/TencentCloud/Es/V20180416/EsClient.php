@@ -47,6 +47,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeLogstashInstanceOperationsResponse DescribeLogstashInstanceOperations(Models\DescribeLogstashInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
  * @method Models\DescribeLogstashInstancesResponse DescribeLogstashInstances(Models\DescribeLogstashInstancesRequest $req) 查询用户该地域下符合条件的所有Logstash实例
  * @method Models\DescribeLogstashPipelinesResponse DescribeLogstashPipelines(Models\DescribeLogstashPipelinesRequest $req) 用于获取Logstash实例管道列表
+ * @method Models\DescribeServerlessInstancesResponse DescribeServerlessInstances(Models\DescribeServerlessInstancesRequest $req) Serverless获取索引列表
  * @method Models\DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(Models\DescribeServerlessSpaceUserRequest $req) 查看Serverless空间子用户
  * @method Models\DescribeServerlessSpacesResponse DescribeServerlessSpaces(Models\DescribeServerlessSpacesRequest $req) 获取Serverless索引空间列表
  * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口

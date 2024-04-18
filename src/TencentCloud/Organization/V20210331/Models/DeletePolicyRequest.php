@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+ * @method integer getPolicyId() 获取需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
- * @method void setPolicyId(integer $PolicyId) 设置需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+ * @method void setPolicyId(integer $PolicyId) 设置需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
  * @method string getType() 获取策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
  * @method void setType(string $Type) 设置策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeletePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @var integer 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
      */
     public $PolicyId;
@@ -41,7 +41,7 @@ class DeletePolicyRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param integer $PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @param integer $PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
      * @param string $Type 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
      */

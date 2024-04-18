@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcLoadDistribution(VpcLoadDistribution $VpcLoadDistribution) 设置压力来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getGeoRegionsLoadDistribution() 获取压力分布
+ * @method array getGeoRegionsLoadDistribution() 获取多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGeoRegionsLoadDistribution(array $GeoRegionsLoadDistribution) 设置压力分布
+ * @method void setGeoRegionsLoadDistribution(array $GeoRegionsLoadDistribution) 设置多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Load extends AbstractModel
@@ -48,7 +48,7 @@ class Load extends AbstractModel
     public $VpcLoadDistribution;
 
     /**
-     * @var array 压力分布
+     * @var array 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GeoRegionsLoadDistribution;
@@ -58,7 +58,7 @@ class Load extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcLoadDistribution $VpcLoadDistribution 压力来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $GeoRegionsLoadDistribution 压力分布
+     * @param array $GeoRegionsLoadDistribution 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

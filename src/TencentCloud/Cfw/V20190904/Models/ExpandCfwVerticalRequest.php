@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置带宽值
  * @method string getCfwInstance() 获取防火墙实例id
  * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id
+ * @method integer getElasticSwitch() 获取弹性开关 1打开 0 关闭
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关 1打开 0 关闭
+ * @method integer getElasticBandwidth() 获取弹性带宽上限，单位Mbps
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽上限，单位Mbps
+ * @method array getTags() 获取按量计费标签
+ * @method void setTags(array $Tags) 设置按量计费标签
  */
 class ExpandCfwVerticalRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class ExpandCfwVerticalRequest extends AbstractModel
     public $CfwInstance;
 
     /**
+     * @var integer 弹性开关 1打开 0 关闭
+     */
+    public $ElasticSwitch;
+
+    /**
+     * @var integer 弹性带宽上限，单位Mbps
+     */
+    public $ElasticBandwidth;
+
+    /**
+     * @var array 按量计费标签
+     */
+    public $Tags;
+
+    /**
      * @param string $FwType nat：nat防火墙，ew：东西向防火墙
      * @param integer $Width 带宽值
      * @param string $CfwInstance 防火墙实例id
+     * @param integer $ElasticSwitch 弹性开关 1打开 0 关闭
+     * @param integer $ElasticBandwidth 弹性带宽上限，单位Mbps
+     * @param array $Tags 按量计费标签
      */
     function __construct()
     {
@@ -72,6 +96,23 @@ class ExpandCfwVerticalRequest extends AbstractModel
 
         if (array_key_exists("CfwInstance",$param) and $param["CfwInstance"] !== null) {
             $this->CfwInstance = $param["CfwInstance"];
+        }
+
+        if (array_key_exists("ElasticSwitch",$param) and $param["ElasticSwitch"] !== null) {
+            $this->ElasticSwitch = $param["ElasticSwitch"];
+        }
+
+        if (array_key_exists("ElasticBandwidth",$param) and $param["ElasticBandwidth"] !== null) {
+            $this->ElasticBandwidth = $param["ElasticBandwidth"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -130,6 +130,14 @@ use TencentCloud\Common\AbstractModel;
 - cdc：独享集群版。如果不传默认发货为本地盘版本。
  * @method string getRedisClusterId() 获取独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
  * @method void setRedisClusterId(string $RedisClusterId) 设置独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+ * @method array getAlarmPolicyList() 获取告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -289,6 +297,14 @@ class CreateInstancesRequest extends AbstractModel
     public $RedisClusterId;
 
     /**
+     * @var array 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+     */
+    public $AlarmPolicyList;
+
+    /**
      * @param integer $TypeId 实例类型。
 <ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li></ul>
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
@@ -344,6 +360,10 @@ class CreateInstancesRequest extends AbstractModel
 - cloud：云盘版，
 - cdc：独享集群版。如果不传默认发货为本地盘版本。
      * @param string $RedisClusterId 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+     * @param array $AlarmPolicyList 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
      */
     function __construct()
     {
@@ -466,6 +486,10 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
             $this->RedisClusterId = $param["RedisClusterId"];
+        }
+
+        if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
+            $this->AlarmPolicyList = $param["AlarmPolicyList"];
         }
     }
 }

@@ -46,14 +46,12 @@ use TencentCloud\Common\AbstractModel;
 0：不添加。  
 其他数值：默认按1处理。  
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
- * @method string getEngine() 获取文生图引擎，默认使用engine1。 
-取值：  
-engine1  
-engine2
- * @method void setEngine(string $Engine) 设置文生图引擎，默认使用engine1。 
-取值：  
-engine1  
-engine2
+ * @method string getEngine() 获取文生图模型，默认使用engine1。
+engine1：文生图（高级版）-混元
+engine2：文生图（高级版）
+ * @method void setEngine(string $Engine) 设置文生图模型，默认使用engine1。
+engine1：文生图（高级版）-混元
+engine2：文生图（高级版）
  * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -95,10 +93,9 @@ class SubmitTextToImageProJobRequest extends AbstractModel
     public $LogoAdd;
 
     /**
-     * @var string 文生图引擎，默认使用engine1。 
-取值：  
-engine1  
-engine2
+     * @var string 文生图模型，默认使用engine1。
+engine1：文生图（高级版）-混元
+engine2：文生图（高级版）
      */
     public $Engine;
 
@@ -124,10 +121,9 @@ engine2
 0：不添加。  
 其他数值：默认按1处理。  
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
-     * @param string $Engine 文生图引擎，默认使用engine1。 
-取值：  
-engine1  
-engine2
+     * @param string $Engine 文生图模型，默认使用engine1。
+engine1：文生图（高级版）-混元
+engine2：文生图（高级版）
      * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。

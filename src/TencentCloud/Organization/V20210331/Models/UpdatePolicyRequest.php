@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取需要编辑的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
- * @method void setPolicyId(integer $PolicyId) 设置需要编辑的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+ * @method integer getPolicyId() 获取需要编辑的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
+ * @method void setPolicyId(integer $PolicyId) 设置需要编辑的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
  * @method string getDescription() 获取策略描述。
  * @method void setDescription(string $Description) 设置策略描述。
  * @method string getContent() 获取策略内容。参考CAM策略语法
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdatePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 需要编辑的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @var integer 需要编辑的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
      */
     public $PolicyId;
 
@@ -59,7 +59,7 @@ class UpdatePolicyRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param integer $PolicyId 需要编辑的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @param integer $PolicyId 需要编辑的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
      * @param string $Description 策略描述。
      * @param string $Content 策略内容。参考CAM策略语法
      * @param string $Name 策略名。长度为1~128个字符，可以包含汉字、英文字母、数字和下划线（_）

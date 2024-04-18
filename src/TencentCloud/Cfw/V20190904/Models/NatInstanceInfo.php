@@ -96,6 +96,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneBak(string $ZoneBak) 设置实例备所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReserveTime() 获取引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReserveTime(string $ReserveTime) 设置引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReserveVersion() 获取引擎预约升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReserveVersion(string $ReserveVersion) 设置引擎预约升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReserveVersionState() 获取引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticSwitch() 获取弹性开关
+1 打开
+0 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关
+1 打开
+0 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticBandwidth() 获取弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsFirstAfterPay() 获取是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -230,6 +262,46 @@ class NatInstanceInfo extends AbstractModel
     public $ZoneBak;
 
     /**
+     * @var string 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReserveTime;
+
+    /**
+     * @var string 引擎预约升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReserveVersion;
+
+    /**
+     * @var string 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReserveVersionState;
+
+    /**
+     * @var integer 弹性开关
+1 打开
+0 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticSwitch;
+
+    /**
+     * @var integer 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticBandwidth;
+
+    /**
+     * @var integer 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFirstAfterPay;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -267,6 +339,22 @@ class NatInstanceInfo extends AbstractModel
      * @param string $Zone 实例主所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneBak 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReserveTime 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReserveVersion 引擎预约升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReserveVersionState 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticSwitch 弹性开关
+1 打开
+0 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticBandwidth 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsFirstAfterPay 是否首次开通按量付费
+1 是
+0 不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +460,30 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("ZoneBak",$param) and $param["ZoneBak"] !== null) {
             $this->ZoneBak = $param["ZoneBak"];
+        }
+
+        if (array_key_exists("ReserveTime",$param) and $param["ReserveTime"] !== null) {
+            $this->ReserveTime = $param["ReserveTime"];
+        }
+
+        if (array_key_exists("ReserveVersion",$param) and $param["ReserveVersion"] !== null) {
+            $this->ReserveVersion = $param["ReserveVersion"];
+        }
+
+        if (array_key_exists("ReserveVersionState",$param) and $param["ReserveVersionState"] !== null) {
+            $this->ReserveVersionState = $param["ReserveVersionState"];
+        }
+
+        if (array_key_exists("ElasticSwitch",$param) and $param["ElasticSwitch"] !== null) {
+            $this->ElasticSwitch = $param["ElasticSwitch"];
+        }
+
+        if (array_key_exists("ElasticBandwidth",$param) and $param["ElasticBandwidth"] !== null) {
+            $this->ElasticBandwidth = $param["ElasticBandwidth"];
+        }
+
+        if (array_key_exists("IsFirstAfterPay",$param) and $param["IsFirstAfterPay"] !== null) {
+            $this->IsFirstAfterPay = $param["IsFirstAfterPay"];
         }
     }
 }

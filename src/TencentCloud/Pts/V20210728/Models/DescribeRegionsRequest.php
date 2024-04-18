@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegions请求参数结构体
  *
-
+ * @method integer getLoadType() 获取通过该参数指定不同压测网络环境，在不同网络环境下，PTS可用的地域不一样
+ * @method void setLoadType(integer $LoadType) 设置通过该参数指定不同压测网络环境，在不同网络环境下，PTS可用的地域不一样
  */
 class DescribeRegionsRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 通过该参数指定不同压测网络环境，在不同网络环境下，PTS可用的地域不一样
+     */
+    public $LoadType;
 
     /**
-
+     * @param integer $LoadType 通过该参数指定不同压测网络环境，在不同网络环境下，PTS可用的地域不一样
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("LoadType",$param) and $param["LoadType"] !== null) {
+            $this->LoadType = $param["LoadType"];
+        }
     }
 }

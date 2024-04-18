@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 集成中心填 non-cluster
  * @method string getClusterType() 获取集群类型(可不填)
  * @method void setClusterType(string $ClusterType) 设置集群类型(可不填)
- * @method array getFilters() 获取过滤条件，当前支持
-Name=state
-Value=up, down, unknown
- * @method void setFilters(array $Filters) 设置过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+ * @method array getFilters() 获取过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
+ * @method void setFilters(array $Filters) 设置过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
+ * @method integer getOffset() 获取targets偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置targets偏移量，默认为0
+ * @method integer getLimit() 获取targets返回数量，默认为20，最大值200
+ * @method void setLimit(integer $Limit) 设置targets返回数量，默认为20，最大值200
  */
 class DescribePrometheusTargetsTMPRequest extends AbstractModel
 {
@@ -54,20 +54,28 @@ class DescribePrometheusTargetsTMPRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+     * @var array 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
      */
     public $Filters;
+
+    /**
+     * @var integer targets偏移量，默认为0
+     */
+    public $Offset;
+
+    /**
+     * @var integer targets返回数量，默认为20，最大值200
+     */
+    public $Limit;
 
     /**
      * @param string $InstanceId 实例id
      * @param string $ClusterId 集成容器服务填绑定的集群id；
 集成中心填 non-cluster
      * @param string $ClusterType 集群类型(可不填)
-     * @param array $Filters 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+     * @param array $Filters 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
+     * @param integer $Offset targets偏移量，默认为0
+     * @param integer $Limit targets返回数量，默认为20，最大值200
      */
     function __construct()
     {
@@ -101,6 +109,14 @@ Value=up, down, unknown
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

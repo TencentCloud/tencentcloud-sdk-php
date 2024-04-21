@@ -46,14 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOption(RunOption $Option) 设置WDL运行选项。
  * @method NFOption getNFOption() 获取Nextflow运行选项。
  * @method void setNFOption(NFOption $NFOption) 设置Nextflow运行选项。
- * @method string getWorkDir() 获取工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
- * @method void setWorkDir(string $WorkDir) 设置工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+ * @method string getWorkDir() 获取工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+ * @method void setWorkDir(string $WorkDir) 设置工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
  * @method string getAccessMode() 获取访问模式，不填默认私有。取值范围
 - PRIVATE：私有应用
 - PUBLIC：公共应用
  * @method void setAccessMode(string $AccessMode) 设置访问模式，不填默认私有。取值范围
 - PRIVATE：私有应用
 - PUBLIC：公共应用
+ * @method array getVolumeIds() 获取缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+ * @method void setVolumeIds(array $VolumeIds) 设置缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
  */
 class RunApplicationRequest extends AbstractModel
 {
@@ -123,7 +125,7 @@ class RunApplicationRequest extends AbstractModel
     public $NFOption;
 
     /**
-     * @var string 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * @var string 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      */
     public $WorkDir;
 
@@ -133,6 +135,11 @@ class RunApplicationRequest extends AbstractModel
 - PUBLIC：公共应用
      */
     public $AccessMode;
+
+    /**
+     * @var array 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     */
+    public $VolumeIds;
 
     /**
      * @param string $ApplicationId 应用ID。
@@ -148,10 +155,11 @@ class RunApplicationRequest extends AbstractModel
      * @param string $ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
      * @param RunOption $Option WDL运行选项。
      * @param NFOption $NFOption Nextflow运行选项。
-     * @param string $WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * @param string $WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      * @param string $AccessMode 访问模式，不填默认私有。取值范围
 - PRIVATE：私有应用
 - PUBLIC：公共应用
+     * @param array $VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
      */
     function __construct()
     {
@@ -226,6 +234,10 @@ class RunApplicationRequest extends AbstractModel
 
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("VolumeIds",$param) and $param["VolumeIds"] !== null) {
+            $this->VolumeIds = $param["VolumeIds"];
         }
     }
 }

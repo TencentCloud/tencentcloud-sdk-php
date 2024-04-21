@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIp() 获取接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIp(string $Ip) 设置接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MQTTEndpointItem extends AbstractModel
 {
@@ -84,6 +88,12 @@ class MQTTEndpointItem extends AbstractModel
     public $Port;
 
     /**
+     * @var string 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ip;
+
+    /**
      * @param string $Type 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 接入点
@@ -95,6 +105,8 @@ class MQTTEndpointItem extends AbstractModel
      * @param string $Host 主机
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ip 接入点ip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class MQTTEndpointItem extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
     }
 }

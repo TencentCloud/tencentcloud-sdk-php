@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method integer getPureAudio() 获取是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
@@ -118,6 +122,12 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PureAudio;
+
+    /**
      * @param integer $Definition 转自适应码流模板唯一标识。
      * @param string $Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
@@ -136,6 +146,8 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 <li>1：是。</li>
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param integer $PureAudio 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -193,6 +205,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
         }
     }
 }

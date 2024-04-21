@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontType(string $FontType) 设置字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
- * @method string getFontSize() 获取字体大小，格式：Npx，N 为数值。
- * @method void setFontSize(string $FontSize) 设置字体大小，格式：Npx，N 为数值。
+ * @method string getFontSize() 获取字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
+ * @method void setFontSize(string $FontSize) 设置字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
  * @method string getFontColor() 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
  * @method void setFontColor(string $FontColor) 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
  * @method float getFontAlpha() 获取文字透明度，取值范围：(0, 1]
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontAlpha(float $FontAlpha) 设置文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
+ * @method string getTextContent() 获取文字内容，长度不超过100个字符。
+ * @method void setTextContent(string $TextContent) 设置文字内容，长度不超过100个字符。
  */
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
@@ -47,7 +49,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontType;
 
     /**
-     * @var string 字体大小，格式：Npx，N 为数值。
+     * @var string 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
      */
     public $FontSize;
 
@@ -64,14 +66,20 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontAlpha;
 
     /**
+     * @var string 文字内容，长度不超过100个字符。
+     */
+    public $TextContent;
+
+    /**
      * @param string $FontType 字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
-     * @param string $FontSize 字体大小，格式：Npx，N 为数值。
+     * @param string $FontSize 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
      * @param string $FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      * @param float $FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
+     * @param string $TextContent 文字内容，长度不超过100个字符。
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
 
         if (array_key_exists("FontAlpha",$param) and $param["FontAlpha"] !== null) {
             $this->FontAlpha = $param["FontAlpha"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

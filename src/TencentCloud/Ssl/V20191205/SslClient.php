@@ -44,6 +44,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(Models\DescribeCertificateOperateLogsRequest $req) 获取用户账号下有关证书的操作日志。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用于获取证书列表。
  * @method Models\DescribeCompaniesResponse DescribeCompanies(Models\DescribeCompaniesRequest $req) 查询公司列表
+ * @method Models\DescribeDeleteCertificatesTaskResultResponse DescribeDeleteCertificatesTaskResult(Models\DescribeDeleteCertificatesTaskResultRequest $req) 查询批量删除任务结果
  * @method Models\DescribeDeployedResourcesResponse DescribeDeployedResources(Models\DescribeDeployedResourcesRequest $req) 证书查询关联资源， 最新查询接口请使用CreateCertificateBindResourceSyncTask， 可以查询更多支持的云资源
  * @method Models\DescribeHostApiGatewayInstanceListResponse DescribeHostApiGatewayInstanceList(Models\DescribeHostApiGatewayInstanceListRequest $req) 查询证书apiGateway云资源部署实例列表
  * @method Models\DescribeHostCdnInstanceListResponse DescribeHostCdnInstanceList(Models\DescribeHostCdnInstanceListRequest $req) 查询证书cdn云资源部署实例列表

@@ -48,6 +48,26 @@ use TencentCloud\Common\AbstractModel;
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method integer getPureAudio() 获取是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+ * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -94,6 +114,20 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var integer 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+     */
+    public $PureAudio;
+
+    /**
      * @param integer $Definition 转自适应码流模板唯一标识。
      * @param string $Name 模板名称，长度限制：64 个字符。
      * @param string $Format 转自适应码流格式，取值范围：
@@ -108,6 +142,16 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @param array $StreamInfos 转自适应码流输入流参数信息，最多输入10路流。
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param integer $PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
      */
     function __construct()
     {
@@ -153,6 +197,10 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
         }
     }
 }

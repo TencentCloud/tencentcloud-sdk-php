@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewSlaveZone(array $NewSlaveZone) 设置新从可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNewSlaveZoneAttr() 获取新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) 设置新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOldSlaveZoneAttr() 获取旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldSlaveZoneAttr(array $OldSlaveZoneAttr) 设置旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterSlaveData extends AbstractModel
 {
@@ -64,6 +72,18 @@ class ClusterSlaveData extends AbstractModel
     public $NewSlaveZone;
 
     /**
+     * @var array 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewSlaveZoneAttr;
+
+    /**
+     * @var array 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldSlaveZoneAttr;
+
+    /**
      * @param string $OldMasterZone 旧主可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OldSlaveZone 旧从可用区
@@ -71,6 +91,10 @@ class ClusterSlaveData extends AbstractModel
      * @param string $NewMasterZone 新主可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewSlaveZone 新从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NewSlaveZoneAttr 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OldSlaveZoneAttr 旧可用区属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +124,24 @@ class ClusterSlaveData extends AbstractModel
 
         if (array_key_exists("NewSlaveZone",$param) and $param["NewSlaveZone"] !== null) {
             $this->NewSlaveZone = $param["NewSlaveZone"];
+        }
+
+        if (array_key_exists("NewSlaveZoneAttr",$param) and $param["NewSlaveZoneAttr"] !== null) {
+            $this->NewSlaveZoneAttr = [];
+            foreach ($param["NewSlaveZoneAttr"] as $key => $value){
+                $obj = new SlaveZoneAttrItem();
+                $obj->deserialize($value);
+                array_push($this->NewSlaveZoneAttr, $obj);
+            }
+        }
+
+        if (array_key_exists("OldSlaveZoneAttr",$param) and $param["OldSlaveZoneAttr"] !== null) {
+            $this->OldSlaveZoneAttr = [];
+            foreach ($param["OldSlaveZoneAttr"] as $key => $value){
+                $obj = new SlaveZoneAttrItem();
+                $obj->deserialize($value);
+                array_push($this->OldSlaveZoneAttr, $obj);
+            }
         }
     }
 }

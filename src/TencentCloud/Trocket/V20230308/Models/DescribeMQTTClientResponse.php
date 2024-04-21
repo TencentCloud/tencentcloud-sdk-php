@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
  * @method array getMQTTClientSubscriptions() 获取客户端的订阅列表
  * @method void setMQTTClientSubscriptions(array $MQTTClientSubscriptions) 设置客户端的订阅列表
+ * @method StatisticsReport getInbound() 获取服务端到客户端的流量统计
+ * @method void setInbound(StatisticsReport $Inbound) 设置服务端到客户端的流量统计
+ * @method StatisticsReport getOutBound() 获取客户端到服务端的流量统计
+ * @method void setOutBound(StatisticsReport $OutBound) 设置客户端到服务端的流量统计
+ * @method boolean getCleanSession() 获取cleansession标志
+ * @method void setCleanSession(boolean $CleanSession) 设置cleansession标志
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +95,21 @@ class DescribeMQTTClientResponse extends AbstractModel
     public $MQTTClientSubscriptions;
 
     /**
+     * @var StatisticsReport 服务端到客户端的流量统计
+     */
+    public $Inbound;
+
+    /**
+     * @var StatisticsReport 客户端到服务端的流量统计
+     */
+    public $OutBound;
+
+    /**
+     * @var boolean cleansession标志
+     */
+    public $CleanSession;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +124,9 @@ class DescribeMQTTClientResponse extends AbstractModel
      * @param integer $ConnectTime 上次建立连接时间
      * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
      * @param array $MQTTClientSubscriptions 客户端的订阅列表
+     * @param StatisticsReport $Inbound 服务端到客户端的流量统计
+     * @param StatisticsReport $OutBound 客户端到服务端的流量统计
+     * @param boolean $CleanSession cleansession标志
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -157,6 +181,20 @@ class DescribeMQTTClientResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MQTTClientSubscriptions, $obj);
             }
+        }
+
+        if (array_key_exists("Inbound",$param) and $param["Inbound"] !== null) {
+            $this->Inbound = new StatisticsReport();
+            $this->Inbound->deserialize($param["Inbound"]);
+        }
+
+        if (array_key_exists("OutBound",$param) and $param["OutBound"] !== null) {
+            $this->OutBound = new StatisticsReport();
+            $this->OutBound->deserialize($param["OutBound"]);
+        }
+
+        if (array_key_exists("CleanSession",$param) and $param["CleanSession"] !== null) {
+            $this->CleanSession = $param["CleanSession"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

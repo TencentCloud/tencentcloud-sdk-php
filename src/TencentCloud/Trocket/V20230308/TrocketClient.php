@@ -34,8 +34,8 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例
  * @method Models\DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(Models\DeleteMQTTInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点
- * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 删除实例
- * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 删除主题
+ * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 删除MQTT实例
+ * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 删除MQTT主题
  * @method Models\DeleteMQTTUserResponse DeleteMQTTUser(Models\DeleteMQTTUserRequest $req) 删除MQTT访问用户
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 删除角色
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题
@@ -66,7 +66,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeMQTTMessageResponse DescribeMQTTMessage(Models\DescribeMQTTMessageRequest $req) 查询MQTT消息详情
  * @method Models\DescribeMQTTMessageListResponse DescribeMQTTMessageList(Models\DescribeMQTTMessageListRequest $req) 查询消息列表，如查询死信，请设置ConsumerGroup参数
- * @method Models\DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(Models\DescribeMQTTProductSKUListRequest $req) 非对外接口，获取产品售卖规格
+ * @method Models\DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(Models\DescribeMQTTProductSKUListRequest $req) 获取产品售卖规格
  * @method Models\DescribeMQTTTopicResponse DescribeMQTTTopic(Models\DescribeMQTTTopicRequest $req) 查询mqtt主题详情
  * @method Models\DescribeMQTTTopicListResponse DescribeMQTTTopicList(Models\DescribeMQTTTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
 
@@ -89,7 +89,7 @@ ConsumerGroup，消费组名称过滤
  * @method Models\ImportSourceClusterTopicsResponse ImportSourceClusterTopics(Models\ImportSourceClusterTopicsRequest $req) 导入topic列表
  * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 修改消费组属性
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改实例属性
- * @method Models\ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(Models\ModifyMQTTInsPublicEndpointRequest $req) 为MQTT实例创建公网接入点
+ * @method Models\ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(Models\ModifyMQTTInsPublicEndpointRequest $req) 更新MQTT实例公网接入点
  * @method Models\ModifyMQTTInstanceResponse ModifyMQTTInstance(Models\ModifyMQTTInstanceRequest $req) 修改实例属性
  * @method Models\ModifyMQTTInstanceCertBindingResponse ModifyMQTTInstanceCertBinding(Models\ModifyMQTTInstanceCertBindingRequest $req) 更新MQTT集群绑定证书
 参数传空，则为删除证书

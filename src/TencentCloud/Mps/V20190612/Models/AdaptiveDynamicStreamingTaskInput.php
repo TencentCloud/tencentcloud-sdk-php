@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrmInfo(DrmInfo $DrmInfo) 设置Drm信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefinitionType() 获取自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefinitionType(string $DefinitionType) 设置自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -110,6 +118,14 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $DrmInfo;
 
     /**
+     * @var string 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefinitionType;
+
+    /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -127,6 +143,10 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param array $AddOnSubtitles 要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DrmInfo $DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefinitionType 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +204,10 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
         if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
             $this->DrmInfo = new DrmInfo();
             $this->DrmInfo->deserialize($param["DrmInfo"]);
+        }
+
+        if (array_key_exists("DefinitionType",$param) and $param["DefinitionType"] !== null) {
+            $this->DefinitionType = $param["DefinitionType"];
         }
     }
 }

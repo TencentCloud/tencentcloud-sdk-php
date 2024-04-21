@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则。
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则。
- * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填
- * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填
- * @method string getServerAddr() 获取服务地址，KafkaType为1时必填
- * @method void setServerAddr(string $ServerAddr) 设置服务地址，KafkaType为1时必填
- * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接，KafkaType为1时必填
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接，KafkaType为1时必填
+ * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填。
+ * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填。
+ * @method string getServerAddr() 获取服务地址，KafkaType为1时必填。
+ * @method void setServerAddr(string $ServerAddr) 设置服务地址，KafkaType为1时必填。
+ * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接，KafkaType为1时必填。
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接，KafkaType为1时必填。
  * @method KafkaProtocolInfo getProtocol() 获取加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
  * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
  * @method string getConsumerGroupName() 获取用户Kafka消费组名称
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称
  */
@@ -78,23 +78,23 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $LogRechargeRule;
 
     /**
-     * @var string 腾讯云CKafka实例ID，KafkaType为0时必填
+     * @var string 腾讯云CKafka实例ID，KafkaType为0时必填。
      */
     public $KafkaInstance;
 
     /**
-     * @var string 服务地址，KafkaType为1时必填
+     * @var string 服务地址，KafkaType为1时必填。
      */
     public $ServerAddr;
 
     /**
-     * @var boolean ServerAddr是否为加密连接，KafkaType为1时必填
+     * @var boolean ServerAddr是否为加密连接，KafkaType为1时必填。
      */
     public $IsEncryptionAddr;
 
     /**
      * @var KafkaProtocolInfo 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      */
     public $Protocol;
 
@@ -110,11 +110,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则。
-     * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param string $ServerAddr 服务地址，KafkaType为1时必填
-     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填
+     * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+     * @param string $ServerAddr 服务地址，KafkaType为1时必填。
+     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
      * @param KafkaProtocolInfo $Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      * @param string $ConsumerGroupName 用户Kafka消费组名称
      */
     function __construct()

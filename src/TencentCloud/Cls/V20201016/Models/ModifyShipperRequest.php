@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getShipperId() 获取投递规则ID
  * @method void setShipperId(string $ShipperId) 设置投递规则ID
- * @method string getBucket() 获取投递规则投递的新的bucket
- * @method void setBucket(string $Bucket) 设置投递规则投递的新的bucket
- * @method string getPrefix() 获取投递规则投递的新的目录前缀
- * @method void setPrefix(string $Prefix) 设置投递规则投递的新的目录前缀
- * @method boolean getStatus() 获取投递规则的开关状态
- * @method void setStatus(boolean $Status) 设置投递规则的开关状态
+ * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method string getPrefix() 获取投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
+ * @method void setPrefix(string $Prefix) 设置投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
+ * @method boolean getStatus() 获取投递规则的开关状态。true：开启投递任务；false：关闭投递任务。
+ * @method void setStatus(boolean $Status) 设置投递规则的开关状态。true：开启投递任务；false：关闭投递任务。
  * @method string getShipperName() 获取投递规则的名字
  * @method void setShipperName(string $ShipperName) 设置投递规则的名字
  * @method integer getInterval() 获取投递的时间间隔，单位 秒，默认300，范围 300-900
@@ -42,10 +46,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(CompressInfo $Compress) 设置投递日志的压缩配置
  * @method ContentInfo getContent() 获取投递日志的内容格式配置
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
- * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method string getStorageType() 获取cos桶类型
- * @method void setStorageType(string $StorageType) 设置cos桶类型
+ * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名。
+ * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名。
+ * @method string getStorageType() 获取cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
+ * @method void setStorageType(string $StorageType) 设置cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
  */
 class ModifyShipperRequest extends AbstractModel
 {
@@ -55,17 +75,19 @@ class ModifyShipperRequest extends AbstractModel
     public $ShipperId;
 
     /**
-     * @var string 投递规则投递的新的bucket
+     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      */
     public $Bucket;
 
     /**
-     * @var string 投递规则投递的新的目录前缀
+     * @var string 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
      */
     public $Prefix;
 
     /**
-     * @var boolean 投递规则的开关状态
+     * @var boolean 投递规则的开关状态。true：开启投递任务；false：关闭投递任务。
      */
     public $Status;
 
@@ -105,20 +127,30 @@ class ModifyShipperRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名。
      */
     public $FilenameMode;
 
     /**
-     * @var string cos桶类型
+     * @var string cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     public $StorageType;
 
     /**
      * @param string $ShipperId 投递规则ID
-     * @param string $Bucket 投递规则投递的新的bucket
-     * @param string $Prefix 投递规则投递的新的目录前缀
-     * @param boolean $Status 投递规则的开关状态
+     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param string $Prefix 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
+     * @param boolean $Status 投递规则的开关状态。true：开启投递任务；false：关闭投递任务。
      * @param string $ShipperName 投递规则的名字
      * @param integer $Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
      * @param integer $MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
@@ -126,8 +158,16 @@ class ModifyShipperRequest extends AbstractModel
      * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
-     * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param string $StorageType cos桶类型
+     * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名。
+     * @param string $StorageType cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     function __construct()
     {

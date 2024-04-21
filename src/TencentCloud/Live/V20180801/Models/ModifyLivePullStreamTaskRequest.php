@@ -164,6 +164,8 @@ PullVodPushLive -点播。
 传入新值，则替换原有地址。
  * @method void setBackupToUrl(string $BackupToUrl) 设置新的目标地址。传空值，则取消该地址的推流。
 传入新值，则替换原有地址。
+ * @method string getBackupVodUrl() 获取点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+ * @method void setBackupVodUrl(string $BackupVodUrl) 设置点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -320,6 +322,11 @@ PullVodPushLive -点播。
     public $BackupToUrl;
 
     /**
+     * @var string 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+     */
+    public $BackupVodUrl;
+
+    /**
      * @param string $TaskId 任务Id。
      * @param string $Operator 操作人姓名。
      * @param array $SourceUrls 拉流源url列表。
@@ -392,6 +399,7 @@ PullVodPushLive -点播。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
      * @param string $BackupToUrl 新的目标地址。传空值，则取消该地址的推流。
 传入新值，则替换原有地址。
+     * @param string $BackupVodUrl 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
      */
     function __construct()
     {
@@ -489,6 +497,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
             $this->BackupToUrl = $param["BackupToUrl"];
+        }
+
+        if (array_key_exists("BackupVodUrl",$param) and $param["BackupVodUrl"] !== null) {
+            $this->BackupVodUrl = $param["BackupVodUrl"];
         }
     }
 }

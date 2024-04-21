@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置带宽
  * @method array getRules() 获取公网访问规则
  * @method void setRules(array $Rules) 设置公网访问规则
+ * @method string getStatus() 获取公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+ * @method void setStatus(string $Status) 设置公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +66,16 @@ class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel
     public $Rules;
 
     /**
+     * @var string 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+     */
+    public $Status;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +85,12 @@ class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel
      * @param string $InstanceId 实例id
      * @param integer $Bandwidth 带宽
      * @param array $Rules 公网访问规则
+     * @param string $Status 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -102,6 +130,10 @@ class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -50,6 +50,26 @@ use TencentCloud\Common\AbstractModel;
 默认为否。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method integer getPureAudio() 获取是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+ * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -93,6 +113,20 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var integer 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+     */
+    public $PureAudio;
+
+    /**
      * @param string $Format 自适应转码格式，取值范围：
 <li>HLS，</li>
 <li>MPEG-DASH。</li>
@@ -108,6 +142,16 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>1：是。</li>
 默认为否。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param integer $PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
      */
     function __construct()
     {
@@ -149,6 +193,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
         }
     }
 }

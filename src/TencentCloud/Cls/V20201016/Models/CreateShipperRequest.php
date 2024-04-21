@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取创建的投递规则所属的日志主题ID
  * @method void setTopicId(string $TopicId) 设置创建的投递规则所属的日志主题ID
- * @method string getBucket() 获取创建的投递规则投递的bucket
- * @method void setBucket(string $Bucket) 设置创建的投递规则投递的bucket
- * @method string getPrefix() 获取创建的投递规则投递目录的前缀
- * @method void setPrefix(string $Prefix) 设置创建的投递规则投递目录的前缀
+ * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method string getPrefix() 获取投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
+ * @method void setPrefix(string $Prefix) 设置投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
  * @method string getShipperName() 获取投递规则的名字
  * @method void setShipperName(string $ShipperName) 设置投递规则的名字
  * @method integer getInterval() 获取投递的时间间隔，单位 秒，默认300，范围 300-900
@@ -42,12 +46,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method integer getStartTime() 获取投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
- * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
- * @method integer getEndTime() 获取投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
- * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
- * @method string getStorageType() 获取cos桶存储类型
- * @method void setStorageType(string $StorageType) 设置cos桶存储类型
+ * @method integer getStartTime() 获取投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
+ * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
+ * @method integer getEndTime() 获取投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
+ * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
+ * @method string getStorageType() 获取cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
+ * @method void setStorageType(string $StorageType) 设置cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -57,12 +81,14 @@ class CreateShipperRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 创建的投递规则投递的bucket
+     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      */
     public $Bucket;
 
     /**
-     * @var string 创建的投递规则投递目录的前缀
+     * @var string 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
      */
     public $Prefix;
 
@@ -107,24 +133,36 @@ class CreateShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
-     * @var integer 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+     * @var integer 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
      */
     public $StartTime;
 
     /**
-     * @var integer 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+     * @var integer 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
      */
     public $EndTime;
 
     /**
-     * @var string cos桶存储类型
+     * @var string cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     public $StorageType;
 
     /**
      * @param string $TopicId 创建的投递规则所属的日志主题ID
-     * @param string $Bucket 创建的投递规则投递的bucket
-     * @param string $Prefix 创建的投递规则投递目录的前缀
+     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param string $Prefix 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
      * @param string $ShipperName 投递规则的名字
      * @param integer $Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
      * @param integer $MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
@@ -133,9 +171,19 @@ class CreateShipperRequest extends AbstractModel
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param integer $StartTime 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
-     * @param integer $EndTime 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
-     * @param string $StorageType cos桶存储类型
+     * @param integer $StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
+     * @param integer $EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
+     * @param string $StorageType cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     function __construct()
     {

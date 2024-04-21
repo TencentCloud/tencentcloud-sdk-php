@@ -50,6 +50,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) 删除共享单元。
  * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) 删除共享单元成员
  * @method Models\DeleteShareUnitResourcesResponse DeleteShareUnitResources(Models\DeleteShareUnitResourcesRequest $req) 删除共享单元资源
+ * @method Models\DescribeEffectivePolicyResponse DescribeEffectivePolicy(Models\DescribeEffectivePolicyRequest $req) 查询目标关联的有效策略
  * @method Models\DescribeOrganizationResponse DescribeOrganization(Models\DescribeOrganizationRequest $req) 获取企业组织信息
  * @method Models\DescribeOrganizationAuthNodeResponse DescribeOrganizationAuthNode(Models\DescribeOrganizationAuthNodeRequest $req) 获取已设置管理员的互信主体关系列表
  * @method Models\DescribeOrganizationFinancialByMemberResponse DescribeOrganizationFinancialByMember(Models\DescribeOrganizationFinancialByMemberRequest $req) 以成员维度获取组织财务信息
@@ -70,6 +71,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DetachPolicyResponse DetachPolicy(Models\DetachPolicyRequest $req) 解绑策略
  * @method Models\DisablePolicyTypeResponse DisablePolicyType(Models\DisablePolicyTypeRequest $req) 禁用策略类型
  * @method Models\EnablePolicyTypeResponse EnablePolicyType(Models\EnablePolicyTypeRequest $req) 启用策略类型
+ * @method Models\ListNonCompliantResourceResponse ListNonCompliantResource(Models\ListNonCompliantResourceRequest $req) 获取成员标签检测不合规资源列表
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) 获取组织成员访问身份列表
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询查看策略列表数据
  * @method Models\ListPoliciesForTargetResponse ListPoliciesForTarget(Models\ListPoliciesForTargetRequest $req) 本接口（ListPoliciesForTarget）查询目标关联的策略列表

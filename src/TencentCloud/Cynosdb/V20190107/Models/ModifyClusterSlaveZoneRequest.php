@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldSlaveZone(string $OldSlaveZone) 设置旧从可用区
  * @method string getNewSlaveZone() 获取新从可用区
  * @method void setNewSlaveZone(string $NewSlaveZone) 设置新从可用区
+ * @method string getBinlogSyncWay() 获取binlog同步方式。默认值：async。可选值：sync、semisync、async
+ * @method void setBinlogSyncWay(string $BinlogSyncWay) 设置binlog同步方式。默认值：async。可选值：sync、semisync、async
  */
 class ModifyClusterSlaveZoneRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
     public $NewSlaveZone;
 
     /**
+     * @var string binlog同步方式。默认值：async。可选值：sync、semisync、async
+     */
+    public $BinlogSyncWay;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $OldSlaveZone 旧从可用区
      * @param string $NewSlaveZone 新从可用区
+     * @param string $BinlogSyncWay binlog同步方式。默认值：async。可选值：sync、semisync、async
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyClusterSlaveZoneRequest extends AbstractModel
 
         if (array_key_exists("NewSlaveZone",$param) and $param["NewSlaveZone"] !== null) {
             $this->NewSlaveZone = $param["NewSlaveZone"];
+        }
+
+        if (array_key_exists("BinlogSyncWay",$param) and $param["BinlogSyncWay"] !== null) {
+            $this->BinlogSyncWay = $param["BinlogSyncWay"];
         }
     }
 }

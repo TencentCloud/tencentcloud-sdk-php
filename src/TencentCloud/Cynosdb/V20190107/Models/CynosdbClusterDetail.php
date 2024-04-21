@@ -176,6 +176,10 @@ pausing
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(string $NetworkType) 设置节点网络类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSlaveZoneAttr() 获取备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaveZoneAttr(array $SlaveZoneAttr) 设置备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -454,6 +458,12 @@ pausing
     public $NetworkType;
 
     /**
+     * @var array 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaveZoneAttr;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -531,6 +541,8 @@ pausing
      * @param integer $RenewFlag 自动续费标识，1为自动续费，0为到期不续
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkType 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SlaveZoneAttr 备可用区属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -766,6 +778,15 @@ pausing
 
         if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
             $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("SlaveZoneAttr",$param) and $param["SlaveZoneAttr"] !== null) {
+            $this->SlaveZoneAttr = [];
+            foreach ($param["SlaveZoneAttr"] as $key => $value){
+                $obj = new SlaveZoneAttrItem();
+                $obj->deserialize($value);
+                array_push($this->SlaveZoneAttr, $obj);
+            }
         }
     }
 }

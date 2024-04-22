@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
  * @method string getPolicy() 获取切分策略
  * @method void setPolicy(string $Policy) 设置切分策略
- * @method string getOperate() 获取默认值: split
- * @method void setOperate(string $Operate) 设置默认值: split
+ * @method string getOperate() 获取默认值: parse
+ * @method void setOperate(string $Operate) 设置默认值: parse
  */
 class ParseDocRequest extends AbstractModel
 {
@@ -54,7 +54,8 @@ class ParseDocRequest extends AbstractModel
     public $Policy;
 
     /**
-     * @var string 默认值: split
+     * @var string 默认值: parse
+     * @deprecated
      */
     public $Operate;
 
@@ -63,7 +64,7 @@ class ParseDocRequest extends AbstractModel
      * @param string $Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
      * @param string $TaskId 任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
      * @param string $Policy 切分策略
-     * @param string $Operate 默认值: split
+     * @param string $Operate 默认值: parse
      */
     function __construct()
     {

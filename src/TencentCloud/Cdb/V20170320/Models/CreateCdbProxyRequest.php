@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesc(string $Desc) 设置描述
  * @method integer getConnectionPoolLimit() 获取连接池阈值
  * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置连接池阈值
+ * @method string getProxyVersion() 获取指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+ * @method void setProxyVersion(string $ProxyVersion) 设置指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
  */
 class CreateCdbProxyRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateCdbProxyRequest extends AbstractModel
     public $ConnectionPoolLimit;
 
     /**
+     * @var string 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+     */
+    public $ProxyVersion;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $UniqVpcId 私有网络ID
      * @param string $UniqSubnetId 私有子网ID
@@ -80,6 +87,7 @@ class CreateCdbProxyRequest extends AbstractModel
      * @param array $SecurityGroup 安全组
      * @param string $Desc 描述
      * @param integer $ConnectionPoolLimit 连接池阈值
+     * @param string $ProxyVersion 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateCdbProxyRequest extends AbstractModel
 
         if (array_key_exists("ConnectionPoolLimit",$param) and $param["ConnectionPoolLimit"] !== null) {
             $this->ConnectionPoolLimit = $param["ConnectionPoolLimit"];
+        }
+
+        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
+            $this->ProxyVersion = $param["ProxyVersion"];
         }
     }
 }

@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取NAT网关创建的时间。
  * @method void setCreatedTime(string $CreatedTime) 设置NAT网关创建的时间。
  * @method string getState() 获取NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+ 'PENDING'：生产中，'DELETING'：删除中/子实例关闭中，'AVAILABLE'：运行中，'UPDATING'：升级中，
+‘PENDFAILURE’：创建失败，‘DELETEFAILURE：删除失败，‘DENIED’：子实例关闭中
  * @method void setState(string $State) 设置NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+ 'PENDING'：生产中，'DELETING'：删除中/子实例关闭中，'AVAILABLE'：运行中，'UPDATING'：升级中，
+‘PENDFAILURE’：创建失败，‘DELETEFAILURE：删除失败，‘DENIED’：子实例关闭中
  * @method integer getInternetMaxBandwidthOut() 获取网关最大外网出带宽(单位:Mbps)。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关最大外网出带宽(单位:Mbps)。
  * @method integer getMaxConcurrentConnection() 获取网关并发连接上限。
@@ -108,8 +108,8 @@ class NatGateway extends AbstractModel
 
     /**
      * @var string NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+ 'PENDING'：生产中，'DELETING'：删除中/子实例关闭中，'AVAILABLE'：运行中，'UPDATING'：升级中，
+‘PENDFAILURE’：创建失败，‘DELETEFAILURE：删除失败，‘DENIED’：子实例关闭中
      */
     public $State;
 
@@ -218,8 +218,8 @@ class NatGateway extends AbstractModel
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
      * @param string $State NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+ 'PENDING'：生产中，'DELETING'：删除中/子实例关闭中，'AVAILABLE'：运行中，'UPDATING'：升级中，
+‘PENDFAILURE’：创建失败，‘DELETEFAILURE：删除失败，‘DENIED’：子实例关闭中
      * @param integer $InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
      * @param integer $MaxConcurrentConnection 网关并发连接上限。
      * @param array $PublicIpAddressSet 绑定NAT网关的公网IP对象数组。

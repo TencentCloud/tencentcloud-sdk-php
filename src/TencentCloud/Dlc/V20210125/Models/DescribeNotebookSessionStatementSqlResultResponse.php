@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputPath(string $OutputPath) 设置存储结果地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUseTime() 获取引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseTime(integer $UseTime) 设置引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAffectRows() 获取结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAffectRows(integer $AffectRows) 设置结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDataAmount() 获取数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataAmount(integer $DataAmount) 设置数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +79,24 @@ class DescribeNotebookSessionStatementSqlResultResponse extends AbstractModel
     public $OutputPath;
 
     /**
+     * @var integer 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseTime;
+
+    /**
+     * @var integer 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AffectRows;
+
+    /**
+     * @var integer 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataAmount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +108,12 @@ class DescribeNotebookSessionStatementSqlResultResponse extends AbstractModel
      * @param string $NextToken 分页信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputPath 存储结果地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UseTime 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AffectRows 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DataAmount 数据扫描量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +153,18 @@ class DescribeNotebookSessionStatementSqlResultResponse extends AbstractModel
 
         if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
             $this->OutputPath = $param["OutputPath"];
+        }
+
+        if (array_key_exists("UseTime",$param) and $param["UseTime"] !== null) {
+            $this->UseTime = $param["UseTime"];
+        }
+
+        if (array_key_exists("AffectRows",$param) and $param["AffectRows"] !== null) {
+            $this->AffectRows = $param["AffectRows"];
+        }
+
+        if (array_key_exists("DataAmount",$param) and $param["DataAmount"] !== null) {
+            $this->DataAmount = $param["DataAmount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

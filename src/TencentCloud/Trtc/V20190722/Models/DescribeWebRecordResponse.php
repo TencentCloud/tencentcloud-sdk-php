@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取1: 正在录制中
  * @method void setStatus(integer $Status) 设置1: 正在录制中
+ * @method string getTaskId() 获取在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(string $TaskId) 设置在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordId() 获取在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordId(string $RecordId) 设置在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +41,28 @@ class DescribeWebRecordResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
+
+    /**
+     * @var string 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Status 1: 正在录制中
+     * @param string $TaskId 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordId 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +80,14 @@ class DescribeWebRecordResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

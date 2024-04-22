@@ -18,28 +18,28 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * token 使用计数。
+ * Token 使用计数。
  *
- * @method integer getPromptTokens() 获取输入Token数。
- * @method void setPromptTokens(integer $PromptTokens) 设置输入Token数。
- * @method integer getTotalTokens() 获取总Token数。
- * @method void setTotalTokens(integer $TotalTokens) 设置总Token数。
+ * @method integer getPromptTokens() 获取输入 Token 数。
+ * @method void setPromptTokens(integer $PromptTokens) 设置输入 Token 数。
+ * @method integer getTotalTokens() 获取总 Token 数。
+ * @method void setTotalTokens(integer $TotalTokens) 设置总 Token 数。
  */
 class EmbeddingUsage extends AbstractModel
 {
     /**
-     * @var integer 输入Token数。
+     * @var integer 输入 Token 数。
      */
     public $PromptTokens;
 
     /**
-     * @var integer 总Token数。
+     * @var integer 总 Token 数。
      */
     public $TotalTokens;
 
     /**
-     * @param integer $PromptTokens 输入Token数。
-     * @param integer $TotalTokens 总Token数。
+     * @param integer $PromptTokens 输入 Token 数。
+     * @param integer $TotalTokens 总 Token 数。
      */
     function __construct()
     {

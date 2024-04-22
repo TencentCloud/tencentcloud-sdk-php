@@ -57,6 +57,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\GetAppSecretResponse GetAppSecret(Models\GetAppSecretRequest $req) 获取应用密钥
  * @method Models\GetDocPreviewResponse GetDocPreview(Models\GetDocPreviewRequest $req) 获取文档预览信息
  * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 获取特征向量
+本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\GetMsgRecordResponse GetMsgRecord(Models\GetMsgRecordRequest $req) 获取推荐问题
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) 获取任务状态
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) 获取ws token
@@ -89,6 +90,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ParseDocResponse ParseDoc(Models\ParseDocRequest $req) 解析拆分文件
  * @method Models\QueryParseDocResultResponse QueryParseDocResult(Models\QueryParseDocResultRequest $req) 查询文件解析结果
  * @method Models\QueryRewriteResponse QueryRewrite(Models\QueryRewriteRequest $req) 多轮改写
+本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\RateMsgRecordResponse RateMsgRecord(Models\RateMsgRecordRequest $req) 是否意图转人工
  * @method Models\ResetSessionResponse ResetSession(Models\ResetSessionRequest $req) 重置会话
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试

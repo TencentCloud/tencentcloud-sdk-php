@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取改写结果
  * @method void setContent(string $Content) 设置改写结果
+ * @method Usage getUsage() 获取消耗量，返回输入token数，输出token数以及总token数
+ * @method void setUsage(Usage $Usage) 设置消耗量，返回输入token数，输出token数以及总token数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class QueryRewriteResponse extends AbstractModel
     public $Content;
 
     /**
+     * @var Usage 消耗量，返回输入token数，输出token数以及总token数
+     */
+    public $Usage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Content 改写结果
+     * @param Usage $Usage 消耗量，返回输入token数，输出token数以及总token数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,11 @@ class QueryRewriteResponse extends AbstractModel
         }
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new Usage();
+            $this->Usage->deserialize($param["Usage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置文件下载地址
  * @method string getReason() 获取解析失败原因
  * @method void setReason(string $Reason) 设置解析失败原因
+ * @method Usage getUsage() 获取消耗量，输出页数
+ * @method void setUsage(Usage $Usage) 设置消耗量，输出页数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class QueryParseDocResultResponse extends AbstractModel
     public $Reason;
 
     /**
+     * @var Usage 消耗量，输出页数
+     */
+    public $Usage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class QueryParseDocResultResponse extends AbstractModel
      * @param string $Name 解析后的文件内容
      * @param string $Url 文件下载地址
      * @param string $Reason 解析失败原因
+     * @param Usage $Usage 消耗量，输出页数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,11 @@ class QueryParseDocResultResponse extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new Usage();
+            $this->Usage->deserialize($param["Usage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

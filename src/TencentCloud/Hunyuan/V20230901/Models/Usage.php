@@ -18,36 +18,36 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * token 数量
+ * Token 数量
  *
- * @method integer getPromptTokens() 获取输入 token 数量。
- * @method void setPromptTokens(integer $PromptTokens) 设置输入 token 数量。
- * @method integer getCompletionTokens() 获取输出 token 数量。
- * @method void setCompletionTokens(integer $CompletionTokens) 设置输出 token 数量。
- * @method integer getTotalTokens() 获取总 token 数量。
- * @method void setTotalTokens(integer $TotalTokens) 设置总 token 数量。
+ * @method integer getPromptTokens() 获取输入 Token 数量。
+ * @method void setPromptTokens(integer $PromptTokens) 设置输入 Token 数量。
+ * @method integer getCompletionTokens() 获取输出 Token 数量。
+ * @method void setCompletionTokens(integer $CompletionTokens) 设置输出 Token 数量。
+ * @method integer getTotalTokens() 获取总 Token 数量。
+ * @method void setTotalTokens(integer $TotalTokens) 设置总 Token 数量。
  */
 class Usage extends AbstractModel
 {
     /**
-     * @var integer 输入 token 数量。
+     * @var integer 输入 Token 数量。
      */
     public $PromptTokens;
 
     /**
-     * @var integer 输出 token 数量。
+     * @var integer 输出 Token 数量。
      */
     public $CompletionTokens;
 
     /**
-     * @var integer 总 token 数量。
+     * @var integer 总 Token 数量。
      */
     public $TotalTokens;
 
     /**
-     * @param integer $PromptTokens 输入 token 数量。
-     * @param integer $CompletionTokens 输出 token 数量。
-     * @param integer $TotalTokens 总 token 数量。
+     * @param integer $PromptTokens 输入 Token 数量。
+     * @param integer $CompletionTokens 输出 Token 数量。
+     * @param integer $TotalTokens 总 Token 数量。
      */
     function __construct()
     {

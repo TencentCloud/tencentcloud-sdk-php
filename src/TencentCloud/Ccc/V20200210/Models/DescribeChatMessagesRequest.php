@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置返回记录偏移，默认为 0
  * @method integer getOrder() 获取1为从早到晚，2为从晚到早，默认为2
  * @method void setOrder(integer $Order) 设置1为从早到晚，2为从晚到早，默认为2
- * @method string getSessionId() 获取服务记录 SessionID（必填）
- * @method void setSessionId(string $SessionId) 设置服务记录 SessionID（必填）
+ * @method string getSessionId() 获取服务记录 SessionID
+ * @method void setSessionId(string $SessionId) 设置服务记录 SessionID
  */
 class DescribeChatMessagesRequest extends AbstractModel
 {
@@ -50,6 +50,7 @@ class DescribeChatMessagesRequest extends AbstractModel
 
     /**
      * @var string 服务记录ID（废弃）
+     * @deprecated
      */
     public $CdrId;
 
@@ -69,7 +70,7 @@ class DescribeChatMessagesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 服务记录 SessionID（必填）
+     * @var string 服务记录 SessionID
      */
     public $SessionId;
 
@@ -80,7 +81,7 @@ class DescribeChatMessagesRequest extends AbstractModel
      * @param integer $Limit 返回记录条数，最大为100 默认20
      * @param integer $Offset 返回记录偏移，默认为 0
      * @param integer $Order 1为从早到晚，2为从晚到早，默认为2
-     * @param string $SessionId 服务记录 SessionID（必填）
+     * @param string $SessionId 服务记录 SessionID
      */
     function __construct()
     {

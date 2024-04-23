@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
- * @method integer getEndTime() 获取录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且EndTime - StartTime不能超过24小时。
- * @method void setEndTime(integer $EndTime) 设置录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且EndTime - StartTime不能超过24小时。
- * @method integer getStartTime() 获取录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。StartTime不能超过当前时间+6天。
- * @method void setStartTime(integer $StartTime) 设置录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。StartTime不能超过当前时间+6天。
+ * @method integer getEndTime() 获取录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+ * @method void setEndTime(integer $EndTime) 设置录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+ * @method integer getStartTime() 获取录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
+ * @method void setStartTime(integer $StartTime) 设置录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
  * @method integer getStreamType() 获取推流类型，默认0。取值：
 0-直播推流。
 1-合成流，即 A+B=C 类型混流。
@@ -59,12 +59,12 @@ class CreateRecordTaskRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且EndTime - StartTime不能超过24小时。
+     * @var integer 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
      */
     public $EndTime;
 
     /**
-     * @var integer 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。StartTime不能超过当前时间+6天。
+     * @var integer 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
      */
     public $StartTime;
 
@@ -89,8 +89,8 @@ class CreateRecordTaskRequest extends AbstractModel
      * @param string $StreamName 流名称。
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径。
-     * @param integer $EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且EndTime - StartTime不能超过24小时。
-     * @param integer $StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。StartTime不能超过当前时间+6天。
+     * @param integer $EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+     * @param integer $StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
      * @param integer $StreamType 推流类型，默认0。取值：
 0-直播推流。
 1-合成流，即 A+B=C 类型混流。

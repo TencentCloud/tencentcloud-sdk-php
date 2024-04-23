@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述
  * @method boolean getTraceFlag() 获取消息轨迹开关,true打开,false关闭,默认关闭
  * @method void setTraceFlag(boolean $TraceFlag) 设置消息轨迹开关,true打开,false关闭,默认关闭
+ * @method boolean getMirrorQueuePolicyFlag() 获取是否创建镜像队列策略，默认值 true
+ * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置是否创建镜像队列策略，默认值 true
  */
 class CreateRabbitMQVirtualHostRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateRabbitMQVirtualHostRequest extends AbstractModel
     public $TraceFlag;
 
     /**
+     * @var boolean 是否创建镜像队列策略，默认值 true
+     */
+    public $MirrorQueuePolicyFlag;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description 描述
      * @param boolean $TraceFlag 消息轨迹开关,true打开,false关闭,默认关闭
+     * @param boolean $MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateRabbitMQVirtualHostRequest extends AbstractModel
 
         if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
             $this->TraceFlag = $param["TraceFlag"];
+        }
+
+        if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
+            $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
         }
     }
 }

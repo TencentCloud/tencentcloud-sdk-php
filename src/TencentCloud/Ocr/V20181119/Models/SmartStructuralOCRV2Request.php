@@ -67,6 +67,7 @@ OnboardingDocuments -- 入职材料识别
 PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
+CarInsurance -- 车险保单
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -80,6 +81,7 @@ OnboardingDocuments -- 入职材料识别
 PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
+CarInsurance -- 车险保单
  * @method boolean getEnableSealRecognize() 获取是否打开印章识别
  * @method void setEnableSealRecognize(boolean $EnableSealRecognize) 设置是否打开印章识别
  */
@@ -140,6 +142,7 @@ OnboardingDocuments -- 入职材料识别
 PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
+CarInsurance -- 车险保单
      */
     public $ConfigId;
 
@@ -179,6 +182,7 @@ OnboardingDocuments -- 入职材料识别
 PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
+CarInsurance -- 车险保单
      * @param boolean $EnableSealRecognize 是否打开印章识别
      */
     function __construct()

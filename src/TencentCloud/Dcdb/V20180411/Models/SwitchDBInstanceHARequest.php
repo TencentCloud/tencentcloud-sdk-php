@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id，形如 tdsql-ow728lmc。
  * @method string getZone() 获取切换的目标区域，会自动选择该可用区中延迟最低的节点。
  * @method void setZone(string $Zone) 设置切换的目标区域，会自动选择该可用区中延迟最低的节点。
+ * @method array getShardInstanceIds() 获取指定分片实例id进行切换
+ * @method void setShardInstanceIds(array $ShardInstanceIds) 设置指定分片实例id进行切换
  */
 class SwitchDBInstanceHARequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SwitchDBInstanceHARequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var array 指定分片实例id进行切换
+     */
+    public $ShardInstanceIds;
+
+    /**
      * @param string $InstanceId 实例Id，形如 tdsql-ow728lmc。
      * @param string $Zone 切换的目标区域，会自动选择该可用区中延迟最低的节点。
+     * @param array $ShardInstanceIds 指定分片实例id进行切换
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SwitchDBInstanceHARequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ShardInstanceIds",$param) and $param["ShardInstanceIds"] !== null) {
+            $this->ShardInstanceIds = $param["ShardInstanceIds"];
         }
     }
 }

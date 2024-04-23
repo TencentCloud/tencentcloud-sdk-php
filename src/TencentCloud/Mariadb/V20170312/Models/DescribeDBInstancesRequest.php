@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusterIds(array $ExclusterIds) 设置按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
  * @method array getTagKeys() 获取按标签key查询
  * @method void setTagKeys(array $TagKeys) 设置按标签key查询
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  * @method string getFilterInstanceType() 获取实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
  * @method void setFilterInstanceType(string $FilterInstanceType) 设置实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
  * @method array getStatus() 获取按照实例状态进行筛选
@@ -142,6 +144,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $TagKeys;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @var string 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
      */
     public $FilterInstanceType;
@@ -173,6 +180,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      * @param array $ExclusterIds 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      * @param array $TagKeys 按标签key查询
+     * @param array $Tags 标签
      * @param string $FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
      * @param array $Status 按照实例状态进行筛选
      * @param array $ExcludeStatus 排除实例状态
@@ -252,6 +260,15 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("FilterInstanceType",$param) and $param["FilterInstanceType"] !== null) {

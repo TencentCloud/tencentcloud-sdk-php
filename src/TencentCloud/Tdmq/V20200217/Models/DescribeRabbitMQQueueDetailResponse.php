@@ -116,6 +116,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNode(string $Node) 设置节点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeadLetterStrategy() 获取仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadLetterStrategy(string $DeadLetterStrategy) 设置仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQueueLeaderLocator() 获取仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueueLeaderLocator(string $QueueLeaderLocator) 设置仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQuorumInitialGroupSize() 获取仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuorumInitialGroupSize(integer $QuorumInitialGroupSize) 设置仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -266,6 +278,24 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
     public $Node;
 
     /**
+     * @var string 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeadLetterStrategy;
+
+    /**
+     * @var string 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueueLeaderLocator;
+
+    /**
+     * @var integer 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuorumInitialGroupSize;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -318,6 +348,12 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
      * @param integer $CreateTime 创建时间戳,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Node 节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeadLetterStrategy 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QueueLeaderLocator 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QuorumInitialGroupSize 仲裁队列的初始副本组大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -428,6 +464,18 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
         if (array_key_exists("Node",$param) and $param["Node"] !== null) {
             $this->Node = $param["Node"];
+        }
+
+        if (array_key_exists("DeadLetterStrategy",$param) and $param["DeadLetterStrategy"] !== null) {
+            $this->DeadLetterStrategy = $param["DeadLetterStrategy"];
+        }
+
+        if (array_key_exists("QueueLeaderLocator",$param) and $param["QueueLeaderLocator"] !== null) {
+            $this->QueueLeaderLocator = $param["QueueLeaderLocator"];
+        }
+
+        if (array_key_exists("QuorumInitialGroupSize",$param) and $param["QuorumInitialGroupSize"] !== null) {
+            $this->QuorumInitialGroupSize = $param["QuorumInitialGroupSize"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

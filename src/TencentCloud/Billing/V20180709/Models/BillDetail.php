@@ -106,6 +106,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置账单记录ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionType() 获取国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionType(string $RegionType) 设置国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionTypeName() 获取国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionTypeName(string $RegionTypeName) 设置国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReserveDetail() 获取备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReserveDetail(string $ReserveDetail) 设置备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetail extends AbstractModel
 {
@@ -277,6 +289,24 @@ class BillDetail extends AbstractModel
     public $Id;
 
     /**
+     * @var string 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionType;
+
+    /**
+     * @var string 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionTypeName;
+
+    /**
+     * @var string 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReserveDetail;
+
+    /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
@@ -319,6 +349,12 @@ class BillDetail extends AbstractModel
      * @param string $BillMonth 账单归属月
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionType 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionTypeName 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -467,6 +503,18 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("RegionType",$param) and $param["RegionType"] !== null) {
+            $this->RegionType = $param["RegionType"];
+        }
+
+        if (array_key_exists("RegionTypeName",$param) and $param["RegionTypeName"] !== null) {
+            $this->RegionTypeName = $param["RegionTypeName"];
+        }
+
+        if (array_key_exists("ReserveDetail",$param) and $param["ReserveDetail"] !== null) {
+            $this->ReserveDetail = $param["ReserveDetail"];
         }
     }
 }

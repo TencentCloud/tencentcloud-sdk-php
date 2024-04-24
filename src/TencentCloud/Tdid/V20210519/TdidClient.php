@@ -36,7 +36,7 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\GetTDidPubKeyResponse GetTDidPubKey(Models\GetTDidPubKeyRequest $req) 查询DID标识的认证公钥
  * @method Models\IssueCredentialResponse IssueCredential(Models\IssueCredentialRequest $req) 颁发可验证凭证
  * @method Models\QueryAuthorityInfoResponse QueryAuthorityInfo(Models\QueryAuthorityInfoRequest $req) 查询权威机构信息
- * @method Models\QueryCPTResponse QueryCPT(Models\QueryCPTRequest $req) 查询凭证模版内容
+ * @method Models\QueryCPTResponse QueryCPT(Models\QueryCPTRequest $req) 查询凭证模板内容
  * @method Models\SetTDidAttributeResponse SetTDidAttribute(Models\SetTDidAttributeRequest $req) 设置DID文档的自定义属性
  * @method Models\UpdateCredentialStateResponse UpdateCredentialState(Models\UpdateCredentialStateRequest $req) 更新凭证的链上状态
  * @method Models\VerifyCredentialsResponse VerifyCredentials(Models\VerifyCredentialsRequest $req) 验证已签名的可验证凭证

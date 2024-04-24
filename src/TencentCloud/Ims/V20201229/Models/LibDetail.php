@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取该字段用于返回识别对象的ID以方便识别和区分。
  * @method void setId(integer $Id) 设置该字段用于返回识别对象的ID以方便识别和区分。
- * @method string getLibId() 获取该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
- * @method void setLibId(string $LibId) 设置该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
- * @method string getLibName() 获取该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
+ * @method string getLibId() 获取该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+ * @method void setLibId(string $LibId) 设置该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+ * @method string getLibName() 获取该字段用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibName(string $LibName) 设置该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
+ * @method void setLibName(string $LibName) 设置该字段用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取该字段用于返回识别图像对象的ID以方便文件管理。
  * @method void setImageId(string $ImageId) 设置该字段用于返回识别图像对象的ID以方便文件管理。
- * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
- * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
  * @method string getTag() 获取该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
@@ -47,12 +47,12 @@ class LibDetail extends AbstractModel
     public $Id;
 
     /**
-     * @var string 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @var string 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public $LibId;
 
     /**
-     * @var string 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
+     * @var string 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
@@ -63,7 +63,7 @@ class LibDetail extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -80,11 +80,11 @@ class LibDetail extends AbstractModel
 
     /**
      * @param integer $Id 该字段用于返回识别对象的ID以方便识别和区分。
-     * @param string $LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
-     * @param string $LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
+     * @param string $LibId 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @param string $LibName 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 该字段用于返回识别图像对象的ID以方便文件管理。
-     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Tag 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。

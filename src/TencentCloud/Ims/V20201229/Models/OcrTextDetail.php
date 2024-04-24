@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
  * @method void setText(string $Text) 设置该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
- * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
- * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
- * @method string getLibId() 获取该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
- * @method void setLibId(string $LibId) 设置该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
- * @method string getLibName() 获取该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
- * @method void setLibName(string $LibName) 设置该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getLibId() 获取该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+ * @method void setLibId(string $LibId) 设置该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+ * @method string getLibName() 获取该字段用于返回自定义库的名称，以方便自定义库管理和配置。
+ * @method void setLibName(string $LibName) 设置该字段用于返回自定义库的名称，以方便自定义库管理和配置。
  * @method array getKeywords() 获取该参数用于返回在当前label下命中的关键词。
  * @method void setKeywords(array $Keywords) 设置该参数用于返回在当前label下命中的关键词。
  * @method integer getScore() 获取该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
@@ -47,17 +47,17 @@ class OcrTextDetail extends AbstractModel
     public $Text;
 
     /**
-     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
     /**
-     * @var string 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @var string 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public $LibId;
 
     /**
-     * @var string 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
+     * @var string 该字段用于返回自定义库的名称，以方便自定义库管理和配置。
      */
     public $LibName;
 
@@ -88,9 +88,9 @@ class OcrTextDetail extends AbstractModel
 
     /**
      * @param string $Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
-     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-     * @param string $LibId 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
-     * @param string $LibName 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $LibId 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @param string $LibName 该字段用于返回自定义库的名称，以方便自定义库管理和配置。
      * @param array $Keywords 该参数用于返回在当前label下命中的关键词。
      * @param integer $Score 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
      * @param Location $Location 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。

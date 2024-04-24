@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 5:720P；
 6:1080P/I；
 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+ * @method boolean getIsInternal() 获取是否内网
+ * @method void setIsInternal(boolean $IsInternal) 设置是否内网
  */
 class ControlDeviceStreamRequest extends AbstractModel
 {
@@ -66,6 +68,11 @@ class ControlDeviceStreamRequest extends AbstractModel
     public $Resolution;
 
     /**
+     * @var boolean 是否内网
+     */
+    public $IsInternal;
+
+    /**
      * @param string $ChannelId 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
      * @param string $StreamType 流类型（1:主码流；
 2:子码流（不可以和 Resolution 同时下发））
@@ -76,6 +83,7 @@ class ControlDeviceStreamRequest extends AbstractModel
 5:720P；
 6:1080P/I；
 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+     * @param boolean $IsInternal 是否内网
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class ControlDeviceStreamRequest extends AbstractModel
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("IsInternal",$param) and $param["IsInternal"] !== null) {
+            $this->IsInternal = $param["IsInternal"];
         }
     }
 }

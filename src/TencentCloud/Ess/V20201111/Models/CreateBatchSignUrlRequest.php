@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
 <li>**false**: 会跳转至批量合同流程的列表,  点击需要批量签署合同后进入合同内容页面进行签署(默认)</li>
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
+ * @method FlowBatchUrlInfo getFlowBatchUrlInfo() 获取批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+ * @method void setFlowBatchUrlInfo(FlowBatchUrlInfo $FlowBatchUrlInfo) 设置批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
  */
 class CreateBatchSignUrlRequest extends AbstractModel
 {
@@ -196,6 +198,11 @@ class CreateBatchSignUrlRequest extends AbstractModel
     public $JumpToDetail;
 
     /**
+     * @var FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public $FlowBatchUrlInfo;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $Name 签署方经办人的姓名。
@@ -240,6 +247,7 @@ class CreateBatchSignUrlRequest extends AbstractModel
 <li>**false**: 会跳转至批量合同流程的列表,  点击需要批量签署合同后进入合同内容页面进行签署(默认)</li>
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
+     * @param FlowBatchUrlInfo $FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
      */
     function __construct()
     {
@@ -294,6 +302,11 @@ class CreateBatchSignUrlRequest extends AbstractModel
 
         if (array_key_exists("JumpToDetail",$param) and $param["JumpToDetail"] !== null) {
             $this->JumpToDetail = $param["JumpToDetail"];
+        }
+
+        if (array_key_exists("FlowBatchUrlInfo",$param) and $param["FlowBatchUrlInfo"] !== null) {
+            $this->FlowBatchUrlInfo = new FlowBatchUrlInfo();
+            $this->FlowBatchUrlInfo->deserialize($param["FlowBatchUrlInfo"]);
         }
     }
 }

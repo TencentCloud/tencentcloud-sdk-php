@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 <li>HTTP: HTTP协议回源；</li>
 <li>HTTPS: HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AccelerationDomainCertificate getCertificate() 获取域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertificate(AccelerationDomainCertificate $Certificate) 设置域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttpOriginPort() 获取HTTP回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP回源端口。
@@ -81,10 +85,6 @@ use TencentCloud\Common\AbstractModel;
  * @method OwnershipVerification getOwnershipVerification() 获取当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method AccelerationDomainCertificate getCertificate() 获取域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertificate(AccelerationDomainCertificate $Certificate) 设置域名证书信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccelerationDomain extends AbstractModel
@@ -123,6 +123,12 @@ class AccelerationDomain extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginProtocol;
+
+    /**
+     * @var AccelerationDomainCertificate 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Certificate;
 
     /**
      * @var integer HTTP回源端口。
@@ -173,12 +179,6 @@ class AccelerationDomain extends AbstractModel
     public $OwnershipVerification;
 
     /**
-     * @var AccelerationDomainCertificate 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Certificate;
-
-    /**
      * @param string $ZoneId 站点 ID。
      * @param string $DomainName 加速域名名称。
      * @param string $DomainStatus 加速域名状态，取值有：
@@ -193,6 +193,8 @@ class AccelerationDomain extends AbstractModel
 <li>FOLLOW: 协议跟随；</li>
 <li>HTTP: HTTP协议回源；</li>
 <li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccelerationDomainCertificate $Certificate 域名证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HttpOriginPort HTTP回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -209,8 +211,6 @@ class AccelerationDomain extends AbstractModel
      * @param string $CreatedOn 创建时间。
      * @param string $ModifiedOn 修改时间。
      * @param OwnershipVerification $OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccelerationDomainCertificate $Certificate 域名证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -247,6 +247,11 @@ class AccelerationDomain extends AbstractModel
             $this->OriginProtocol = $param["OriginProtocol"];
         }
 
+        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+            $this->Certificate = new AccelerationDomainCertificate();
+            $this->Certificate->deserialize($param["Certificate"]);
+        }
+
         if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
             $this->HttpOriginPort = $param["HttpOriginPort"];
         }
@@ -278,11 +283,6 @@ class AccelerationDomain extends AbstractModel
         if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
             $this->OwnershipVerification = new OwnershipVerification();
             $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
-        }
-
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = new AccelerationDomainCertificate();
-            $this->Certificate->deserialize($param["Certificate"]);
         }
     }
 }

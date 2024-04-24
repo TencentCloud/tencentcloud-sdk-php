@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置文件格式，"mp4"：mp4格式，"ts"：ts文件格式
  * @method boolean getIsRespActualTime() 获取响应data中是否携带实际下载录像的开始时间与结束时间
  * @method void setIsRespActualTime(boolean $IsRespActualTime) 设置响应data中是否携带实际下载录像的开始时间与结束时间
+ * @method boolean getIsInternal() 获取是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+ * @method void setIsInternal(boolean $IsInternal) 设置是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
  */
 class DescribeVideoDownloadUrlRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class DescribeVideoDownloadUrlRequest extends AbstractModel
     public $IsRespActualTime;
 
     /**
+     * @var boolean 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+     */
+    public $IsInternal;
+
+    /**
      * @param string $ChannelId 通道 ID
      * @param string $BeginTime 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
 注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
@@ -72,6 +79,7 @@ class DescribeVideoDownloadUrlRequest extends AbstractModel
 注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
      * @param string $FileType 文件格式，"mp4"：mp4格式，"ts"：ts文件格式
      * @param boolean $IsRespActualTime 响应data中是否携带实际下载录像的开始时间与结束时间
+     * @param boolean $IsInternal 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class DescribeVideoDownloadUrlRequest extends AbstractModel
 
         if (array_key_exists("IsRespActualTime",$param) and $param["IsRespActualTime"] !== null) {
             $this->IsRespActualTime = $param["IsRespActualTime"];
+        }
+
+        if (array_key_exists("IsInternal",$param) and $param["IsInternal"] !== null) {
+            $this->IsInternal = $param["IsInternal"];
         }
     }
 }

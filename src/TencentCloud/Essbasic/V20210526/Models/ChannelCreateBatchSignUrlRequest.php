@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
 <li>**false**: 会跳转至批量合同流程的列表,  点击需要批量签署合同后进入合同内容页面进行签署(默认)</li>
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
+ * @method FlowBatchUrlInfo getFlowBatchUrlInfo() 获取批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+ * @method void setFlowBatchUrlInfo(FlowBatchUrlInfo $FlowBatchUrlInfo) 设置批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
  */
 class ChannelCreateBatchSignUrlRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
     public $JumpToDetail;
 
     /**
+     * @var FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public $FlowBatchUrlInfo;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -272,6 +279,7 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 <li>**false**: 会跳转至批量合同流程的列表,  点击需要批量签署合同后进入合同内容页面进行签署(默认)</li>
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
+     * @param FlowBatchUrlInfo $FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
      */
     function __construct()
     {
@@ -326,6 +334,11 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 
         if (array_key_exists("JumpToDetail",$param) and $param["JumpToDetail"] !== null) {
             $this->JumpToDetail = $param["JumpToDetail"];
+        }
+
+        if (array_key_exists("FlowBatchUrlInfo",$param) and $param["FlowBatchUrlInfo"] !== null) {
+            $this->FlowBatchUrlInfo = new FlowBatchUrlInfo();
+            $this->FlowBatchUrlInfo->deserialize($param["FlowBatchUrlInfo"]);
         }
     }
 }

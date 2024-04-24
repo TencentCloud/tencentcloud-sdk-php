@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamType(integer $StreamType) 设置流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
  * @method string getResolution() 获取分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
  * @method void setResolution(string $Resolution) 设置分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+ * @method boolean getIsInternal() 获取是否内网
+ * @method void setIsInternal(boolean $IsInternal) 设置是否内网
  */
 class PlayRecordRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class PlayRecordRequest extends AbstractModel
     public $Resolution;
 
     /**
+     * @var boolean 是否内网
+     */
+    public $IsInternal;
+
+    /**
      * @param string $ChannelId 通道 ID（从查询通道DescribeDeviceChannel接口中获取）
      * @param integer $Start 起始时间
      * @param integer $End  结束时间
      * @param integer $StreamType 流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
      * @param string $Resolution 分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+     * @param boolean $IsInternal 是否内网
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class PlayRecordRequest extends AbstractModel
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("IsInternal",$param) and $param["IsInternal"] !== null) {
+            $this->IsInternal = $param["IsInternal"];
         }
     }
 }

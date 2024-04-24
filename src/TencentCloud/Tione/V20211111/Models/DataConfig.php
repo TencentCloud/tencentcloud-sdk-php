@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFSTurboSource(CFSTurbo $CFSTurboSource) 设置配置TurboFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LocalDisk getLocalDiskSource() 获取来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalDiskSource(LocalDisk $LocalDiskSource) 设置来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataConfig extends AbstractModel
 {
@@ -101,6 +105,12 @@ class DataConfig extends AbstractModel
     public $CFSTurboSource;
 
     /**
+     * @var LocalDisk 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalDiskSource;
+
+    /**
      * @param string $MappingPath 映射路径
      * @param string $DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +125,8 @@ class DataConfig extends AbstractModel
      * @param GooseFS $GooseFSSource 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CFSTurbo $CFSTurboSource 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalDisk $LocalDiskSource 来自本地磁盘的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -166,6 +178,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("CFSTurboSource",$param) and $param["CFSTurboSource"] !== null) {
             $this->CFSTurboSource = new CFSTurbo();
             $this->CFSTurboSource->deserialize($param["CFSTurboSource"]);
+        }
+
+        if (array_key_exists("LocalDiskSource",$param) and $param["LocalDiskSource"] !== null) {
+            $this->LocalDiskSource = new LocalDisk();
+            $this->LocalDiskSource->deserialize($param["LocalDiskSource"]);
         }
     }
 }

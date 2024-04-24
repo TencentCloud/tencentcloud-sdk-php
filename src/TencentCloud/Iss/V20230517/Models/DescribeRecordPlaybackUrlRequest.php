@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置回放开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
  * @method integer getEndTime() 获取回放结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
  * @method void setEndTime(integer $EndTime) 设置回放结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
+ * @method boolean getIsInternal() 获取是否获取内网地址
+ * @method void setIsInternal(boolean $IsInternal) 设置是否获取内网地址
  */
 class DescribeRecordPlaybackUrlRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeRecordPlaybackUrlRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var boolean 是否获取内网地址
+     */
+    public $IsInternal;
+
+    /**
      * @param string $ChannelId 设备通道ID
      * @param integer $StartTime 回放开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
      * @param integer $EndTime 回放结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
+     * @param boolean $IsInternal 是否获取内网地址
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeRecordPlaybackUrlRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("IsInternal",$param) and $param["IsInternal"] !== null) {
+            $this->IsInternal = $param["IsInternal"];
         }
     }
 }

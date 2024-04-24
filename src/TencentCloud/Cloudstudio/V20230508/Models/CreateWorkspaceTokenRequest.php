@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceKey(string $SpaceKey) 设置工作空间 SpaceKey
  * @method integer getTokenExpiredLimitSec() 获取token过期时间，单位是秒，默认 3600
  * @method void setTokenExpiredLimitSec(integer $TokenExpiredLimitSec) 设置token过期时间，单位是秒，默认 3600
- * @method array getPolicies() 获取token 授权策略，可选值为 workspace-run-only, all。默认为 all
- * @method void setPolicies(array $Policies) 设置token 授权策略，可选值为 workspace-run-only, all。默认为 all
+ * @method array getPolicies() 获取token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+ * @method void setPolicies(array $Policies) 设置token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
  */
 class CreateWorkspaceTokenRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateWorkspaceTokenRequest extends AbstractModel
     public $TokenExpiredLimitSec;
 
     /**
-     * @var array token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     * @var array token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
      */
     public $Policies;
 
     /**
      * @param string $SpaceKey 工作空间 SpaceKey
      * @param integer $TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
-     * @param array $Policies token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     * @param array $Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
      */
     function __construct()
     {

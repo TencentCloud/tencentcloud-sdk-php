@@ -75,6 +75,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 根据设备产品ID、设备名称，获取设备上报的属性数据。
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
  * @method Models\DescribeDeviceFirmWareResponse DescribeDeviceFirmWare(Models\DescribeDeviceFirmWareRequest $req) 获取设备固件信息
+ * @method Models\DescribeDeviceFirmwaresResponse DescribeDeviceFirmwares(Models\DescribeDeviceFirmwaresRequest $req) 获取设备当前固件信息
  * @method Models\DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolve(Models\DescribeDeviceLocationSolveRequest $req) 获取实时位置解析
  * @method Models\DescribeDevicePackagesResponse DescribeDevicePackages(Models\DescribeDevicePackagesRequest $req) 根据设备信息拉取有效套餐列表
  * @method Models\DescribeDevicePositionListResponse DescribeDevicePositionList(Models\DescribeDevicePositionListRequest $req) 获取设备位置列表

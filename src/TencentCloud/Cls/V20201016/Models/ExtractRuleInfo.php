@@ -60,50 +60,90 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchLogKey(string $UnMatchLogKey) 设置失败日志的key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBacktracking() 获取增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+ * @method integer getBacktracking() 获取增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBacktracking(integer $Backtracking) 设置增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+ * @method void setBacktracking(integer $Backtracking) 设置增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsGBK() 获取是否为Gbk编码.   0: 否, 1: 是
+ * @method integer getIsGBK() 获取是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsGBK(integer $IsGBK) 设置是否为Gbk编码.   0: 否, 1: 是
+ * @method void setIsGBK(integer $IsGBK) 设置是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJsonStandard() 获取是否为标准json.   0: 否, 1: 是
+ * @method integer getJsonStandard() 获取是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJsonStandard(integer $JsonStandard) 设置是否为标准json.   0: 否, 1: 是
+ * @method void setJsonStandard(integer $JsonStandard) 设置是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParseProtocol() 获取rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParseProtocol(string $ParseProtocol) 设置rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetadataType() 获取元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
- * @method void setMetadataType(integer $MetadataType) 设置元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
- * @method string getPathRegex() 获取采集配置路径正则表达式，MetadataType为3时必填
+ * @method integer getMetadataType() 获取元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
+ * @method void setMetadataType(integer $MetadataType) 设置元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
+ * @method string getPathRegex() 获取采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPathRegex(string $PathRegex) 设置采集配置路径正则表达式，MetadataType为3时必填
+ * @method void setPathRegex(string $PathRegex) 设置采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMetaTags() 获取用户自定义元数据信息，MetadataType为2时必填
- * @method void setMetaTags(array $MetaTags) 设置用户自定义元数据信息，MetadataType为2时必填
- * @method array getEventLogRules() 获取Windows事件日志采集
- * @method void setEventLogRules(array $EventLogRules) 设置Windows事件日志采集
+ * @method array getMetaTags() 获取用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
+ * @method void setMetaTags(array $MetaTags) 设置用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
+ * @method array getEventLogRules() 获取Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
+ * @method void setEventLogRules(array $EventLogRules) 设置Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -164,33 +204,41 @@ class ExtractRuleInfo extends AbstractModel
     public $UnMatchLogKey;
 
     /**
-     * @var integer 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * @var integer 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Backtracking;
 
     /**
-     * @var integer 是否为Gbk编码.   0: 否, 1: 是
+     * @var integer 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGBK;
 
     /**
-     * @var integer 是否为标准json.   0: 否, 1: 是
+     * @var integer 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonStandard;
 
     /**
      * @var string syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
@@ -198,30 +246,42 @@ class ExtractRuleInfo extends AbstractModel
     /**
      * @var string rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParseProtocol;
 
     /**
-     * @var integer 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     * @var integer 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
      */
     public $MetadataType;
 
     /**
-     * @var string 采集配置路径正则表达式，MetadataType为3时必填
+     * @var string 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathRegex;
 
     /**
-     * @var array 用户自定义元数据信息，MetadataType为2时必填
+     * @var array 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
      */
     public $MetaTags;
 
     /**
-     * @var array Windows事件日志采集
+     * @var array Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
      */
     public $EventLogRules;
 
@@ -246,28 +306,48 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnMatchLogKey 失败日志的key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * @param integer $Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsGBK 是否为Gbk编码.   0: 否, 1: 是
+     * @param integer $IsGBK 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JsonStandard 是否为标准json.   0: 否, 1: 是
+     * @param integer $JsonStandard 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
-     * @param string $PathRegex 采集配置路径正则表达式，MetadataType为3时必填
+     * @param integer $MetadataType 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
+     * @param string $PathRegex 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MetaTags 用户自定义元数据信息，MetadataType为2时必填
-     * @param array $EventLogRules Windows事件日志采集
+     * @param array $MetaTags 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
+     * @param array $EventLogRules Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
      */
     function __construct()
     {

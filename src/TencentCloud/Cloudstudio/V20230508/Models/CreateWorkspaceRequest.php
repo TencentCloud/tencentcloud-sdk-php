@@ -36,14 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtensions(array $Extensions) 设置预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
  * @method LifeCycle getLifecycle() 获取工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
  * @method void setLifecycle(LifeCycle $Lifecycle) 设置工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
- * @method integer getAppId() 获取应用名称
- * @method void setAppId(integer $AppId) 设置应用名称
- * @method string getUin() 获取用户UIN
- * @method void setUin(string $Uin) 设置用户UIN
- * @method string getUniqVpcId() 获取VPCID
- * @method void setUniqVpcId(string $UniqVpcId) 设置VPCID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method integer getTenantAppId() 获取应用名称
+ * @method void setTenantAppId(integer $TenantAppId) 设置应用名称
+ * @method string getTenantUin() 获取用户UIN
+ * @method void setTenantUin(string $TenantUin) 设置用户UIN
+ * @method string getTenantUniqVpcId() 获取VPCID
+ * @method void setTenantUniqVpcId(string $TenantUniqVpcId) 设置VPCID
+ * @method string getTenantSubnetId() 获取子网ID
+ * @method void setTenantSubnetId(string $TenantSubnetId) 设置子网ID
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
  */
 class CreateWorkspaceRequest extends AbstractModel
 {
@@ -90,22 +92,27 @@ class CreateWorkspaceRequest extends AbstractModel
     /**
      * @var integer 应用名称
      */
-    public $AppId;
+    public $TenantAppId;
 
     /**
      * @var string 用户UIN
      */
-    public $Uin;
+    public $TenantUin;
 
     /**
      * @var string VPCID
      */
-    public $UniqVpcId;
+    public $TenantUniqVpcId;
 
     /**
      * @var string 子网ID
      */
-    public $SubnetId;
+    public $TenantSubnetId;
+
+    /**
+     * @var string 地域
+     */
+    public $Region;
 
     /**
      * @param string $Name 工作空间名称, 长度限制 2~64
@@ -116,10 +123,11 @@ class CreateWorkspaceRequest extends AbstractModel
      * @param array $Envs 环境变量. 会被注入到工作空间中
      * @param array $Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
      * @param LifeCycle $Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
-     * @param integer $AppId 应用名称
-     * @param string $Uin 用户UIN
-     * @param string $UniqVpcId VPCID
-     * @param string $SubnetId 子网ID
+     * @param integer $TenantAppId 应用名称
+     * @param string $TenantUin 用户UIN
+     * @param string $TenantUniqVpcId VPCID
+     * @param string $TenantSubnetId 子网ID
+     * @param string $Region 地域
      */
     function __construct()
     {
@@ -173,20 +181,24 @@ class CreateWorkspaceRequest extends AbstractModel
             $this->Lifecycle->deserialize($param["Lifecycle"]);
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists("TenantAppId",$param) and $param["TenantAppId"] !== null) {
+            $this->TenantAppId = $param["TenantAppId"];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists("TenantUin",$param) and $param["TenantUin"] !== null) {
+            $this->TenantUin = $param["TenantUin"];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists("TenantUniqVpcId",$param) and $param["TenantUniqVpcId"] !== null) {
+            $this->TenantUniqVpcId = $param["TenantUniqVpcId"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists("TenantSubnetId",$param) and $param["TenantSubnetId"] !== null) {
+            $this->TenantSubnetId = $param["TenantSubnetId"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthClientIp(string $AuthClientIp) 设置允许访问的客户端IP
  * @method string getRWPermission() 获取读写权限, ro为只读，rw为读写
  * @method void setRWPermission(string $RWPermission) 设置读写权限, ro为只读，rw为读写
- * @method string getUserPermission() 获取用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
- * @method void setUserPermission(string $UserPermission) 设置用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
+ * @method string getUserPermission() 获取all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
+no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
+root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
+no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
+
+ * @method void setUserPermission(string $UserPermission) 设置all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
+no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
+root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
+no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
+
  * @method integer getPriority() 获取规则优先级，1-100。 其中 1 为最高，100为最低
  * @method void setPriority(integer $Priority) 设置规则优先级，1-100。 其中 1 为最高，100为最低
  */
@@ -49,7 +57,11 @@ class PGroupRuleInfo extends AbstractModel
     public $RWPermission;
 
     /**
-     * @var string 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
+     * @var string all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
+no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
+root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
+no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
+
      */
     public $UserPermission;
 
@@ -62,7 +74,11 @@ class PGroupRuleInfo extends AbstractModel
      * @param string $RuleId 规则ID
      * @param string $AuthClientIp 允许访问的客户端IP
      * @param string $RWPermission 读写权限, ro为只读，rw为读写
-     * @param string $UserPermission 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
+     * @param string $UserPermission all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
+no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
+root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
+no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
+
      * @param integer $Priority 规则优先级，1-100。 其中 1 为最高，100为最低
      */
     function __construct()

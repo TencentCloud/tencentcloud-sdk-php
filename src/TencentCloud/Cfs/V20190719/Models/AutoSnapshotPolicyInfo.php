@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextActiveTime(string $NextActiveTime) 设置下一次触发快照时间
  * @method string getStatus() 获取快照策略状态，1代表快照策略状态正常。这里只有一种状态
  * @method void setStatus(string $Status) 设置快照策略状态，1代表快照策略状态正常。这里只有一种状态
- * @method integer getAppId() 获取帐号ID
- * @method void setAppId(integer $AppId) 设置帐号ID
+ * @method integer getAppId() 获取账号ID
+ * @method void setAppId(integer $AppId) 设置账号ID
  * @method integer getAliveDays() 获取保留时间
  * @method void setAliveDays(integer $AliveDays) 设置保留时间
  * @method string getRegionName() 获取地域
@@ -105,7 +105,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 帐号ID
+     * @var integer 账号ID
      */
     public $AppId;
 
@@ -151,7 +151,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
      * @param integer $IsActivated 是否激活定期快照功能,1代表已激活，0代表未激活
      * @param string $NextActiveTime 下一次触发快照时间
      * @param string $Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
-     * @param integer $AppId 帐号ID
+     * @param integer $AppId 账号ID
      * @param integer $AliveDays 保留时间
      * @param string $RegionName 地域
      * @param array $FileSystems 文件系统信息

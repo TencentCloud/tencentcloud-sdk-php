@@ -18,7 +18,7 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * embedding 信息，当前不支持批量，所以数组元素数目为1。
+ * Embedding 信息。
  *
  * @method array getEmbedding() 获取embedding 信息。
 注意：此字段可能返回 null，表示取不到有效值。

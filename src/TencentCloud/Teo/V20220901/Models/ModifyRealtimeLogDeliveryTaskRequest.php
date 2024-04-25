@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置日志投递的过滤条件。不填表示投递全量日志。
  * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
  * @method void setSample(integer $Sample) 设置采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
+ * @method LogFormat getLogFormat() 获取日志投递的输出格式。不填保持原有配置。
+ * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。不填保持原有配置。
  * @method CustomEndpoint getCustomEndpoint() 获取自定义 HTTP 服务的配置信息，不填保持原有配置。 
  * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) 设置自定义 HTTP 服务的配置信息，不填保持原有配置。 
  * @method S3 getS3() 获取AWS S3 兼容存储桶的配置信息，不填保持原有配置。
@@ -103,6 +105,11 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Sample;
 
     /**
+     * @var LogFormat 日志投递的输出格式。不填保持原有配置。
+     */
+    public $LogFormat;
+
+    /**
      * @var CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
      */
     public $CustomEndpoint;
@@ -126,6 +133,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param array $CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。不填保持原有配置。
      * @param array $DeliveryConditions 日志投递的过滤条件。不填表示投递全量日志。
      * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
+     * @param LogFormat $LogFormat 日志投递的输出格式。不填保持原有配置。
      * @param CustomEndpoint $CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
      * @param S3 $S3 AWS S3 兼容存储桶的配置信息，不填保持原有配置。
      */
@@ -186,6 +194,11 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
 
         if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
             $this->Sample = $param["Sample"];
+        }
+
+        if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {
+            $this->LogFormat = new LogFormat();
+            $this->LogFormat->deserialize($param["LogFormat"]);
         }
 
         if (array_key_exists("CustomEndpoint",$param) and $param["CustomEndpoint"] !== null) {

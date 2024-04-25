@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmbedding返回参数结构体
  *
- * @method array getData() 获取返回的 embedding 信息。
- * @method void setData(array $Data) 设置返回的 embedding 信息。
- * @method EmbeddingUsage getUsage() 获取token 使用计数，按照总token数量收费。
- * @method void setUsage(EmbeddingUsage $Usage) 设置token 使用计数，按照总token数量收费。
+ * @method array getData() 获取返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+ * @method void setData(array $Data) 设置返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+ * @method EmbeddingUsage getUsage() 获取Token 使用计数，按照总 Token 数量收费。
+ * @method void setUsage(EmbeddingUsage $Usage) 设置Token 使用计数，按照总 Token 数量收费。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetEmbeddingResponse extends AbstractModel
 {
     /**
-     * @var array 返回的 embedding 信息。
+     * @var array 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
      */
     public $Data;
 
     /**
-     * @var EmbeddingUsage token 使用计数，按照总token数量收费。
+     * @var EmbeddingUsage Token 使用计数，按照总 Token 数量收费。
      */
     public $Usage;
 
@@ -45,8 +45,8 @@ class GetEmbeddingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 返回的 embedding 信息。
-     * @param EmbeddingUsage $Usage token 使用计数，按照总token数量收费。
+     * @param array $Data 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+     * @param EmbeddingUsage $Usage Token 使用计数，按照总 Token 数量收费。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

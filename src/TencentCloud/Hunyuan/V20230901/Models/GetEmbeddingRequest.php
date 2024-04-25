@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmbedding请求参数结构体
  *
- * @method string getInput() 获取输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
- * @method void setInput(string $Input) 设置输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+ * @method string getInput() 获取输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
+ * @method void setInput(string $Input) 设置输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
  */
 class GetEmbeddingRequest extends AbstractModel
 {
     /**
-     * @var string 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+     * @var string 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
      */
     public $Input;
 
     /**
-     * @param string $Input 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+     * @param string $Input 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
      */
     function __construct()
     {

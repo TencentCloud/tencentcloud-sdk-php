@@ -82,6 +82,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置见： ExtractRuleInfo 结构描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskType() 获取COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskType(integer $TaskType) 设置COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMetadata() 获取元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadata(array $Metadata) 设置元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosRechargeInfo extends AbstractModel
 {
@@ -177,6 +185,18 @@ class CosRechargeInfo extends AbstractModel
     public $ExtractRuleInfo;
 
     /**
+     * @var integer COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskType;
+
+    /**
+     * @var array 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadata;
+
+    /**
      * @param string $Id COS导入配置ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
@@ -207,6 +227,10 @@ class CosRechargeInfo extends AbstractModel
      * @param string $Compress supported: "", "gzip", "lzop", "snappy”; 默认空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractRuleInfo $ExtractRuleInfo 见： ExtractRuleInfo 结构描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Metadata 元数据。支持 bucket，object。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +305,14 @@ class CosRechargeInfo extends AbstractModel
         if (array_key_exists("ExtractRuleInfo",$param) and $param["ExtractRuleInfo"] !== null) {
             $this->ExtractRuleInfo = new ExtractRuleInfo();
             $this->ExtractRuleInfo->deserialize($param["ExtractRuleInfo"]);
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = $param["Metadata"];
         }
     }
 }

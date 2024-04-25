@@ -100,8 +100,8 @@ video 纯视频
  * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
- * @method integer getLiveType() 获取直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
- * @method void setLiveType(integer $LiveType) 设置直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+ * @method integer getLiveType() 获取直播方式：0 常规模式（默认）1 回放直播模式（伪直播）。 目前支持从回放直播模式（伪直播）改为常规模式，不支持从常规模式改为回放直播模式（伪直播）
+ * @method void setLiveType(integer $LiveType) 设置直播方式：0 常规模式（默认）1 回放直播模式（伪直播）。 目前支持从回放直播模式（伪直播）改为常规模式，不支持从常规模式改为回放直播模式（伪直播）
  * @method string getRecordLiveUrl() 获取伪直播链接
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
@@ -238,7 +238,7 @@ video 纯视频
     public $EndDelayTime;
 
     /**
-     * @var integer 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @var integer 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）。 目前支持从回放直播模式（伪直播）改为常规模式，不支持从常规模式改为回放直播模式（伪直播）
      */
     public $LiveType;
 
@@ -304,7 +304,7 @@ video 纯视频
 注：大班课的布局(layout)只有三分屏
      * @param integer $RecordLayout 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-     * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）。 目前支持从回放直播模式（伪直播）改为常规模式，不支持从常规模式改为回放直播模式（伪直播）
      * @param string $RecordLiveUrl 伪直播链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。

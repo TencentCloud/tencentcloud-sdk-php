@@ -22,12 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取任务 ID。
  * @method void setJobId(string $JobId) 设置任务 ID。
- * @method string getStatus() 获取状态。
- * @method void setStatus(string $Status) 设置状态。
  * @method string getTarget() 获取资源。
  * @method void setTarget(string $Target) 设置资源。
  * @method string getType() 获取任务类型。
  * @method void setType(string $Type) 设置任务类型。
+ * @method string getStatus() 获取状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+ * @method void setStatus(string $Status) 设置状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
  * @method string getCreateTime() 获取任务创建时间。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
  * @method string getUpdateTime() 获取任务完成时间。
@@ -41,11 +49,6 @@ class Task extends AbstractModel
     public $JobId;
 
     /**
-     * @var string 状态。
-     */
-    public $Status;
-
-    /**
      * @var string 资源。
      */
     public $Target;
@@ -54,6 +57,15 @@ class Task extends AbstractModel
      * @var string 任务类型。
      */
     public $Type;
+
+    /**
+     * @var string 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+     */
+    public $Status;
 
     /**
      * @var string 任务创建时间。
@@ -67,9 +79,13 @@ class Task extends AbstractModel
 
     /**
      * @param string $JobId 任务 ID。
-     * @param string $Status 状态。
      * @param string $Target 资源。
      * @param string $Type 任务类型。
+     * @param string $Status 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
      * @param string $CreateTime 任务创建时间。
      * @param string $UpdateTime 任务完成时间。
      */
@@ -90,16 +106,16 @@ class Task extends AbstractModel
             $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
         if (array_key_exists("Target",$param) and $param["Target"] !== null) {
             $this->Target = $param["Target"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

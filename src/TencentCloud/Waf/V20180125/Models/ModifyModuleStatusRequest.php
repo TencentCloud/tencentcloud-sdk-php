@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取需要设置的domain
  * @method void setDomain(string $Domain) 设置需要设置的domain
- * @method integer getWebSecurity() 获取WEB 安全模块开关，0或1
- * @method void setWebSecurity(integer $WebSecurity) 设置WEB 安全模块开关，0或1
+ * @method integer getWebSecurity() 获取Web 安全模块开关，0或1
+ * @method void setWebSecurity(integer $WebSecurity) 设置Web 安全模块开关，0或1
  * @method integer getAccessControl() 获取访问控制模块开关，0或者1
  * @method void setAccessControl(integer $AccessControl) 设置访问控制模块开关，0或者1
  * @method integer getCcProtection() 获取CC模块开关，0或者1
@@ -45,7 +45,7 @@ class ModifyModuleStatusRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer WEB 安全模块开关，0或1
+     * @var integer Web 安全模块开关，0或1
      */
     public $WebSecurity;
 
@@ -81,7 +81,7 @@ class ModifyModuleStatusRequest extends AbstractModel
 
     /**
      * @param string $Domain 需要设置的domain
-     * @param integer $WebSecurity WEB 安全模块开关，0或1
+     * @param integer $WebSecurity Web 安全模块开关，0或1
      * @param integer $AccessControl 访问控制模块开关，0或者1
      * @param integer $CcProtection CC模块开关，0或者1
      * @param integer $ApiProtection API安全模块开关，0或者1

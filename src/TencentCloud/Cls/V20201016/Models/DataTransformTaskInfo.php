@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集id
  * @method array getDstResources() 获取加工任务目的topic_id以及别名
  * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
- * @method string getEtlContent() 获取加工逻辑函数
- * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数
+ * @method string getEtlContent() 获取加工逻辑函数。
+ * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数。
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -110,7 +110,7 @@ class DataTransformTaskInfo extends AbstractModel
     public $DstResources;
 
     /**
-     * @var string 加工逻辑函数
+     * @var string 加工逻辑函数。
      */
     public $EtlContent;
 
@@ -127,7 +127,7 @@ class DataTransformTaskInfo extends AbstractModel
      * @param string $SrcTopicName 日志主题名称
      * @param string $LogsetId 日志集id
      * @param array $DstResources 加工任务目的topic_id以及别名
-     * @param string $EtlContent 加工逻辑函数
+     * @param string $EtlContent 加工逻辑函数。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromTopicId() 获取日志主题ID
  * @method void setFromTopicId(string $FromTopicId) 设置日志主题ID
- * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
- * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
+ * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
  * @method KafkaConsumerContent getConsumerContent() 获取kafka协议消费数据格式
  * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置kafka协议消费数据格式
  */
@@ -35,7 +35,7 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $FromTopicId;
 
     /**
-     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
      */
     public $Compression;
 
@@ -46,7 +46,7 @@ class OpenKafkaConsumerRequest extends AbstractModel
 
     /**
      * @param string $FromTopicId 日志主题ID
-     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
      * @param KafkaConsumerContent $ConsumerContent kafka协议消费数据格式
      */
     function __construct()

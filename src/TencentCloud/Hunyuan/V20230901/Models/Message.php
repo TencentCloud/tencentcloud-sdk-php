@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRole() 获取角色
  * @method void setRole(string $Role) 设置角色
- * @method string getContent() 获取消息内容
- * @method void setContent(string $Content) 设置消息内容
+ * @method string getContent() 获取文本内容
+ * @method void setContent(string $Content) 设置文本内容
  */
 class Message extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Message extends AbstractModel
     public $Role;
 
     /**
-     * @var string 消息内容
+     * @var string 文本内容
      */
     public $Content;
 
     /**
      * @param string $Role 角色
-     * @param string $Content 消息内容
+     * @param string $Content 文本内容
      */
     function __construct()
     {

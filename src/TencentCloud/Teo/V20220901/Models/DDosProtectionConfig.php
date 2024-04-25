@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLevelMainland() 获取中国大陆地区独立 DDoS 防护的规格。详情请参考 [独立 DDoS 防护相关费用](https://cloud.tencent.com/document/product/1552/94162)
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽，可配置最高 300 Gpbs 弹性防护带宽；</li>
-<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽，可配置最高 600 Gpbs 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
+<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽以及 300 Gbps 弹性防护带宽；</li>
+<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽以及 600 Gbps 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
  * @method void setLevelMainland(string $LevelMainland) 设置中国大陆地区独立 DDoS 防护的规格。详情请参考 [独立 DDoS 防护相关费用](https://cloud.tencent.com/document/product/1552/94162)
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽，可配置最高 300 Gpbs 弹性防护带宽；</li>
-<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽，可配置最高 600 Gpbs 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
+<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽以及 300 Gbps 弹性防护带宽；</li>
+<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽以及 600 Gbps 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
  * @method integer getMaxBandwidthMainland() 获取中国大陆地区独立 DDoS 防护的弹性防护带宽配置。
 仅当开启中国大陆区域独立 DDos 防护时有效（详见 LevelMainland 参数配置），且取值范围有如下限制：
 <li>开启中国大陆地区独立 DDoS 防护，使用 30 Gbps 保底防护带宽规格时（ LevelMainland 参数值为 BASE30_MAX300 ）：有效取值范围为 30 至 300，单位为 Gbps；</li>
@@ -40,11 +40,11 @@ use TencentCloud\Common\AbstractModel;
 <li>使用平台默认防护（ LevelMainland 参数值为 PLATFORM ）：不支持配置，本参数值无效。</li>
  * @method string getLevelOverseas() 获取全球（除中国大陆以外）地区独立 DDoS 防护的规格。
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>ANYCAST300：开启独立 DDoS 防护，提供合计最大 300 Gbps 防护带宽；</li>
+<li>ANYCAST300：开启独立 DDoS 防护，提供 300 Gbps 防护带宽；</li>
 <li>ANYCAST_ALLIN：开启独立 DDoS 防护，使用全部可用防护资源进行防护。</li>不填写参数时，取默认值 PLATFORM。
  * @method void setLevelOverseas(string $LevelOverseas) 设置全球（除中国大陆以外）地区独立 DDoS 防护的规格。
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>ANYCAST300：开启独立 DDoS 防护，提供合计最大 300 Gbps 防护带宽；</li>
+<li>ANYCAST300：开启独立 DDoS 防护，提供 300 Gbps 防护带宽；</li>
 <li>ANYCAST_ALLIN：开启独立 DDoS 防护，使用全部可用防护资源进行防护。</li>不填写参数时，取默认值 PLATFORM。
  */
 class DDosProtectionConfig extends AbstractModel
@@ -52,8 +52,8 @@ class DDosProtectionConfig extends AbstractModel
     /**
      * @var string 中国大陆地区独立 DDoS 防护的规格。详情请参考 [独立 DDoS 防护相关费用](https://cloud.tencent.com/document/product/1552/94162)
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽，可配置最高 300 Gpbs 弹性防护带宽；</li>
-<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽，可配置最高 600 Gpbs 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
+<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽以及 300 Gbps 弹性防护带宽；</li>
+<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽以及 600 Gbps 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
      */
     public $LevelMainland;
 
@@ -69,7 +69,7 @@ class DDosProtectionConfig extends AbstractModel
     /**
      * @var string 全球（除中国大陆以外）地区独立 DDoS 防护的规格。
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>ANYCAST300：开启独立 DDoS 防护，提供合计最大 300 Gbps 防护带宽；</li>
+<li>ANYCAST300：开启独立 DDoS 防护，提供 300 Gbps 防护带宽；</li>
 <li>ANYCAST_ALLIN：开启独立 DDoS 防护，使用全部可用防护资源进行防护。</li>不填写参数时，取默认值 PLATFORM。
      */
     public $LevelOverseas;
@@ -77,8 +77,8 @@ class DDosProtectionConfig extends AbstractModel
     /**
      * @param string $LevelMainland 中国大陆地区独立 DDoS 防护的规格。详情请参考 [独立 DDoS 防护相关费用](https://cloud.tencent.com/document/product/1552/94162)
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽，可配置最高 300 Gpbs 弹性防护带宽；</li>
-<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽，可配置最高 600 Gpbs 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
+<li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽以及 300 Gbps 弹性防护带宽；</li>
+<li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽以及 600 Gbps 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
      * @param integer $MaxBandwidthMainland 中国大陆地区独立 DDoS 防护的弹性防护带宽配置。
 仅当开启中国大陆区域独立 DDos 防护时有效（详见 LevelMainland 参数配置），且取值范围有如下限制：
 <li>开启中国大陆地区独立 DDoS 防护，使用 30 Gbps 保底防护带宽规格时（ LevelMainland 参数值为 BASE30_MAX300 ）：有效取值范围为 30 至 300，单位为 Gbps；</li>
@@ -86,7 +86,7 @@ class DDosProtectionConfig extends AbstractModel
 <li>使用平台默认防护（ LevelMainland 参数值为 PLATFORM ）：不支持配置，本参数值无效。</li>
      * @param string $LevelOverseas 全球（除中国大陆以外）地区独立 DDoS 防护的规格。
 <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-<li>ANYCAST300：开启独立 DDoS 防护，提供合计最大 300 Gbps 防护带宽；</li>
+<li>ANYCAST300：开启独立 DDoS 防护，提供 300 Gbps 防护带宽；</li>
 <li>ANYCAST_ALLIN：开启独立 DDoS 防护，使用全部可用防护资源进行防护。</li>不填写参数时，取默认值 PLATFORM。
      */
     function __construct()

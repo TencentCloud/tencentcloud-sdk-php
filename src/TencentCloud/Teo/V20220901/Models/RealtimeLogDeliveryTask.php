@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置日志投递的过滤条件。
  * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
  * @method void setSample(integer $Sample) 设置采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+ * @method LogFormat getLogFormat() 获取日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CLSTopic getCLS() 获取CLS 的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLS(CLSTopic $CLS) 设置CLS 的配置信息。
@@ -117,6 +125,14 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $Sample;
 
     /**
+     * @var LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogFormat;
+
+    /**
      * @var CLSTopic CLS 的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -156,6 +172,10 @@ class RealtimeLogDeliveryTask extends AbstractModel
      * @param array $CustomFields 投递的自定义字段列表。
      * @param array $DeliveryConditions 日志投递的过滤条件。
      * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+     * @param LogFormat $LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CLSTopic $CLS CLS 的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomEndpoint $CustomEndpoint 自定义 HTTP 服务的配置信息。
@@ -230,6 +250,11 @@ class RealtimeLogDeliveryTask extends AbstractModel
 
         if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
             $this->Sample = $param["Sample"];
+        }
+
+        if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {
+            $this->LogFormat = new LogFormat();
+            $this->LogFormat->deserialize($param["LogFormat"]);
         }
 
         if (array_key_exists("CLS",$param) and $param["CLS"] !== null) {

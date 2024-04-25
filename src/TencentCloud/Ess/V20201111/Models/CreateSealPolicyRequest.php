@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealId(string $SealId) 设置电子印章ID，为32位字符串。
 建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
 可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
- * @method integer getExpired() 获取授权有效期。时间戳秒级
- * @method void setExpired(integer $Expired) 设置授权有效期。时间戳秒级
+ * @method integer getExpired() 获取授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
+ * @method void setExpired(integer $Expired) 设置授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
  * @method array getUserIds() 获取需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
  * @method void setUserIds(array $UserIds) 设置需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
  * @method string getPolicy() 获取印章授权内容
@@ -64,7 +64,7 @@ class CreateSealPolicyRequest extends AbstractModel
     public $SealId;
 
     /**
-     * @var integer 授权有效期。时间戳秒级
+     * @var integer 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
      */
     public $Expired;
 
@@ -91,7 +91,7 @@ class CreateSealPolicyRequest extends AbstractModel
      * @param string $SealId 电子印章ID，为32位字符串。
 建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
 可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
-     * @param integer $Expired 授权有效期。时间戳秒级
+     * @param integer $Expired 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
      * @param array $UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
      * @param string $Policy 印章授权内容
      * @param Agent $Agent 代理企业和员工的信息。

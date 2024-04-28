@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobUpdateTime(integer $JobUpdateTime) 设置spark作业更新时间
  * @method string getCurrentTaskId() 获取spark作业最近任务ID
  * @method void setCurrentTaskId(string $CurrentTaskId) 设置spark作业最近任务ID
- * @method integer getJobStatus() 获取spark作业最近运行状态
- * @method void setJobStatus(integer $JobStatus) 设置spark作业最近运行状态
+ * @method integer getJobStatus() 获取spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
+ * @method void setJobStatus(integer $JobStatus) 设置spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
  * @method StreamingStatistics getStreamingStat() 获取spark流作业统计
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamingStat(StreamingStatistics $StreamingStat) 设置spark流作业统计
@@ -135,6 +135,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsSessionStarted() 获取是否使用session脚本的sql运行任务：false：否，true：是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSessionStarted(boolean $IsSessionStarted) 设置是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineTypeDetail() 获取引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
@@ -255,7 +259,7 @@ class SparkJobInfo extends AbstractModel
     public $CurrentTaskId;
 
     /**
-     * @var integer spark作业最近运行状态
+     * @var integer spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
      */
     public $JobStatus;
 
@@ -362,6 +366,12 @@ class SparkJobInfo extends AbstractModel
     public $IsSessionStarted;
 
     /**
+     * @var string 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineTypeDetail;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -385,7 +395,7 @@ class SparkJobInfo extends AbstractModel
      * @param integer $JobCreateTime spark作业创建时间
      * @param integer $JobUpdateTime spark作业更新时间
      * @param string $CurrentTaskId spark作业最近任务ID
-     * @param integer $JobStatus spark作业最近运行状态
+     * @param integer $JobStatus spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
      * @param StreamingStatistics $StreamingStat spark流作业统计
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSource 数据源名
@@ -419,6 +429,8 @@ class SparkJobInfo extends AbstractModel
      * @param integer $IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineTypeDetail 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -597,6 +609,10 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
             $this->IsSessionStarted = $param["IsSessionStarted"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
         }
     }
 }

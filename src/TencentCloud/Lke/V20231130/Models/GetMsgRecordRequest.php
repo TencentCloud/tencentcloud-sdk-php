@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID
  * @method string getBotAppKey() 获取机器人AppKey
  * @method void setBotAppKey(string $BotAppKey) 设置机器人AppKey
+ * @method integer getScene() 获取场景, 体验: 1; 正式: 2
+ * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
  */
 class GetMsgRecordRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class GetMsgRecordRequest extends AbstractModel
     public $BotAppKey;
 
     /**
+     * @var integer 场景, 体验: 1; 正式: 2
+     */
+    public $Scene;
+
+    /**
      * @param integer $Type 类型
      * @param integer $Count 数量
      * @param string $SessionId 会话sessionid
      * @param string $LastRecordId 最后一条记录ID
      * @param string $BotAppKey 机器人AppKey
+     * @param integer $Scene 场景, 体验: 1; 正式: 2
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class GetMsgRecordRequest extends AbstractModel
 
         if (array_key_exists("BotAppKey",$param) and $param["BotAppKey"] !== null) {
             $this->BotAppKey = $param["BotAppKey"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

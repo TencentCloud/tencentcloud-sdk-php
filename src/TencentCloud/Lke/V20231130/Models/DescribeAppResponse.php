@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBareAnswerInAppeal(boolean $BareAnswerInAppeal) 设置未知问题回复语是否在申诉中
  * @method string getAppKey() 获取应用appKey
  * @method void setAppKey(string $AppKey) 设置应用appKey
+ * @method integer getAppStatus() 获取应用状态，1：未上线，2：运行中，3：停用
+ * @method void setAppStatus(integer $AppStatus) 设置应用状态，1：未上线，2：运行中，3：停用
+ * @method string getAppStatusDesc() 获取状态说明
+ * @method void setAppStatusDesc(string $AppStatusDesc) 设置状态说明
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +107,16 @@ class DescribeAppResponse extends AbstractModel
     public $AppKey;
 
     /**
+     * @var integer 应用状态，1：未上线，2：运行中，3：停用
+     */
+    public $AppStatus;
+
+    /**
+     * @var string 状态说明
+     */
+    public $AppStatusDesc;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +133,8 @@ class DescribeAppResponse extends AbstractModel
      * @param boolean $GreetingInAppeal 欢迎语是否在申诉中
      * @param boolean $BareAnswerInAppeal 未知问题回复语是否在申诉中
      * @param string $AppKey 应用appKey
+     * @param integer $AppStatus 应用状态，1：未上线，2：运行中，3：停用
+     * @param string $AppStatusDesc 状态说明
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -178,6 +194,14 @@ class DescribeAppResponse extends AbstractModel
 
         if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
             $this->AppKey = $param["AppKey"];
+        }
+
+        if (array_key_exists("AppStatus",$param) and $param["AppStatus"] !== null) {
+            $this->AppStatus = $param["AppStatus"];
+        }
+
+        if (array_key_exists("AppStatusDesc",$param) and $param["AppStatusDesc"] !== null) {
+            $this->AppStatusDesc = $param["AppStatusDesc"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

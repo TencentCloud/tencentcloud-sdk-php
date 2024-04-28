@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReasons(array $Reasons) 设置评价原因
  * @method boolean getIsLlmGenerated() 获取是否大模型
  * @method void setIsLlmGenerated(boolean $IsLlmGenerated) 设置是否大模型
+ * @method array getImageUrls() 获取图片链接，可公有读
+ * @method void setImageUrls(array $ImageUrls) 设置图片链接，可公有读
+ * @method TokenStat getTokenStat() 获取当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTokenStat(TokenStat $TokenStat) 设置当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -122,6 +128,17 @@ class MsgRecord extends AbstractModel
     public $IsLlmGenerated;
 
     /**
+     * @var array 图片链接，可公有读
+     */
+    public $ImageUrls;
+
+    /**
+     * @var TokenStat 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TokenStat;
+
+    /**
      * @param string $Content 内容
      * @param string $RecordId 记录ID
      * @param string $RelatedRecordId 关联记录ID
@@ -136,6 +153,9 @@ class MsgRecord extends AbstractModel
      * @param array $References 引用来源
      * @param array $Reasons 评价原因
      * @param boolean $IsLlmGenerated 是否大模型
+     * @param array $ImageUrls 图片链接，可公有读
+     * @param TokenStat $TokenStat 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -209,6 +229,15 @@ class MsgRecord extends AbstractModel
 
         if (array_key_exists("IsLlmGenerated",$param) and $param["IsLlmGenerated"] !== null) {
             $this->IsLlmGenerated = $param["IsLlmGenerated"];
+        }
+
+        if (array_key_exists("ImageUrls",$param) and $param["ImageUrls"] !== null) {
+            $this->ImageUrls = $param["ImageUrls"];
+        }
+
+        if (array_key_exists("TokenStat",$param) and $param["TokenStat"] !== null) {
+            $this->TokenStat = new TokenStat();
+            $this->TokenStat->deserialize($param["TokenStat"]);
         }
     }
 }

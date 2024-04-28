@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBareAnswer(string $BareAnswer) 设置未知回复语，300字符以内
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getShowQuestionClarify() 获取是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShowQuestionClarify(boolean $ShowQuestionClarify) 设置是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUseQuestionClarify() 获取是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseQuestionClarify(boolean $UseQuestionClarify) 设置是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQuestionClarifyKeywords() 获取问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuestionClarifyKeywords(array $QuestionClarifyKeywords) 设置问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaOutput extends AbstractModel
 {
@@ -54,11 +66,35 @@ class KnowledgeQaOutput extends AbstractModel
     public $BareAnswer;
 
     /**
+     * @var boolean 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShowQuestionClarify;
+
+    /**
+     * @var boolean 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseQuestionClarify;
+
+    /**
+     * @var array 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuestionClarifyKeywords;
+
+    /**
      * @param integer $Method 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseGeneralKnowledge 通用模型回复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BareAnswer 未知回复语，300字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ShowQuestionClarify 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UseQuestionClarify 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $QuestionClarifyKeywords 问题澄清关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +120,18 @@ class KnowledgeQaOutput extends AbstractModel
 
         if (array_key_exists("BareAnswer",$param) and $param["BareAnswer"] !== null) {
             $this->BareAnswer = $param["BareAnswer"];
+        }
+
+        if (array_key_exists("ShowQuestionClarify",$param) and $param["ShowQuestionClarify"] !== null) {
+            $this->ShowQuestionClarify = $param["ShowQuestionClarify"];
+        }
+
+        if (array_key_exists("UseQuestionClarify",$param) and $param["UseQuestionClarify"] !== null) {
+            $this->UseQuestionClarify = $param["UseQuestionClarify"];
+        }
+
+        if (array_key_exists("QuestionClarifyKeywords",$param) and $param["QuestionClarifyKeywords"] !== null) {
+            $this->QuestionClarifyKeywords = $param["QuestionClarifyKeywords"];
         }
     }
 }

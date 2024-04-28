@@ -20,9 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎出参
  *
- * @method integer getCode() 获取返回码。0表示成功，非0标识失败错误码。
+ * @method integer getCode() 获取错误码，0 表示成功，非0表示失败错误码。
+0：成功
+1：错误
+1002：参数错误
+4300：未开通服务
+4301：后端未创建对应产品
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(integer $Code) 设置返回码。0表示成功，非0标识失败错误码。
+ * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。
+0：成功
+1：错误
+1002：参数错误
+4300：未开通服务
+4301：后端未创建对应产品
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class OutputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var integer 返回码。0表示成功，非0标识失败错误码。
+     * @var integer 错误码，0 表示成功，非0表示失败错误码。
+0：成功
+1：错误
+1002：参数错误
+4300：未开通服务
+4301：后端未创建对应产品
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
@@ -64,7 +79,12 @@ class OutputManageMarketingRisk extends AbstractModel
     public $UUid;
 
     /**
-     * @param integer $Code 返回码。0表示成功，非0标识失败错误码。
+     * @param integer $Code 错误码，0 表示成功，非0表示失败错误码。
+0：成功
+1：错误
+1002：参数错误
+4300：未开通服务
+4301：后端未创建对应产品
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。

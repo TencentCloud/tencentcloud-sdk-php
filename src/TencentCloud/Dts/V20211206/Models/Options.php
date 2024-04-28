@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitType(string $InitType) 设置同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDealOfExistSameTable() 获取同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+ * @method string getDealOfExistSameTable() 获取同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDealOfExistSameTable(string $DealOfExistSameTable) 设置同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+ * @method void setDealOfExistSameTable(string $DealOfExistSameTable) 设置同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConflictHandleType() 获取冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,7 +78,7 @@ class Options extends AbstractModel
     public $InitType;
 
     /**
-     * @var string 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * @var string 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOfExistSameTable;
@@ -146,7 +146,7 @@ class Options extends AbstractModel
     /**
      * @param string $InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
 注意：此字段可能返回 null，表示取不到有效值。

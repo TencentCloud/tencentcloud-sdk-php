@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplica(integer $Replica) 设置此地域节点分配数量
  * @method array getVpcInfos() 获取集群网络信息
  * @method void setVpcInfos(array $VpcInfos) 设置集群网络信息
- * @method boolean getMainRegion() 获取是否为主地域
- * @method void setMainRegion(boolean $MainRegion) 设置是否为主地域
+ * @method boolean getMainRegion() 获取Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
+ * @method void setMainRegion(boolean $MainRegion) 设置Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
  * @method string getSpecId() 获取引擎规格ID
  * @method void setSpecId(string $SpecId) 设置引擎规格ID
  */
@@ -49,7 +51,8 @@ class EngineRegionInfo extends AbstractModel
     public $VpcInfos;
 
     /**
-     * @var boolean 是否为主地域
+     * @var boolean Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
      */
     public $MainRegion;
 
@@ -62,7 +65,8 @@ class EngineRegionInfo extends AbstractModel
      * @param string $EngineRegion 引擎节点所在地域
      * @param integer $Replica 此地域节点分配数量
      * @param array $VpcInfos 集群网络信息
-     * @param boolean $MainRegion 是否为主地域
+     * @param boolean $MainRegion Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
      * @param string $SpecId 引擎规格ID
      */
     function __construct()

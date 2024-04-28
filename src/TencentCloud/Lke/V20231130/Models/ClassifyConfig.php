@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGreeting() 获取欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGreeting(string $Greeting) 设置欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClassifyConfig extends AbstractModel
 {
@@ -44,9 +48,17 @@ class ClassifyConfig extends AbstractModel
     public $Labels;
 
     /**
+     * @var string 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Greeting;
+
+    /**
      * @param AppModel $Model 模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,6 +86,10 @@ class ClassifyConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("Greeting",$param) and $param["Greeting"] !== null) {
+            $this->Greeting = $param["Greeting"];
         }
     }
 }

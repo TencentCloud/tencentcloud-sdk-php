@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQpsThresholds(array $QpsThresholds) 设置限流阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAccurateQpsThresholds() 获取精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccurateQpsThresholds(array $AccurateQpsThresholds) 设置精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LimitRule extends AbstractModel
 {
@@ -54,11 +58,19 @@ class LimitRule extends AbstractModel
     public $QpsThresholds;
 
     /**
+     * @var array 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccurateQpsThresholds;
+
+    /**
      * @param array $Filters 请求匹配条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LimitBy 参数限流依据组合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QpsThresholds 限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AccurateQpsThresholds 精确限流阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -98,6 +110,15 @@ class LimitRule extends AbstractModel
                 $obj = new QpsThreshold();
                 $obj->deserialize($value);
                 array_push($this->QpsThresholds, $obj);
+            }
+        }
+
+        if (array_key_exists("AccurateQpsThresholds",$param) and $param["AccurateQpsThresholds"] !== null) {
+            $this->AccurateQpsThresholds = [];
+            foreach ($param["AccurateQpsThresholds"] as $key => $value){
+                $obj = new AccurateQpsThreshold();
+                $obj->deserialize($value);
+                array_push($this->AccurateQpsThresholds, $obj);
             }
         }
     }

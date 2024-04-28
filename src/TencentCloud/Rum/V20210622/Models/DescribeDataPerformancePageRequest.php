@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtSecond(string $ExtSecond) 设置自定义2
  * @method string getExtThird() 获取自定义3
  * @method void setExtThird(string $ExtThird) 设置自定义3
- * @method string getIsAbroad() 获取是否海外
- * @method void setIsAbroad(string $IsAbroad) 设置是否海外
+ * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+ * @method void setIsAbroad(string $IsAbroad) 设置显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
  * @method string getOs() 获取操作系统
@@ -140,7 +140,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $ExtThird;
 
     /**
-     * @var string 是否海外
+     * @var string 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      */
     public $IsAbroad;
 
@@ -199,7 +199,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $ExtFirst 自定义1
      * @param string $ExtSecond 自定义2
      * @param string $ExtThird 自定义3
-     * @param string $IsAbroad 是否海外
+     * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Browser 浏览器
      * @param string $Os 操作系统
      * @param string $Engine 浏览器引擎

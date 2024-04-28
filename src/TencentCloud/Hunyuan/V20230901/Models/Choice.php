@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的回复, 支持多个
  *
- * @method string getFinishReason() 获取结束标志位，为 stop 则表示尾包。
- * @method void setFinishReason(string $FinishReason) 设置结束标志位，为 stop 则表示尾包。
+ * @method string getFinishReason() 获取结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+ * @method void setFinishReason(string $FinishReason) 设置结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
  * @method Delta getDelta() 获取增量返回值，流式调用时使用该字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelta(Delta $Delta) 设置增量返回值，流式调用时使用该字段。
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class Choice extends AbstractModel
 {
     /**
-     * @var string 结束标志位，为 stop 则表示尾包。
+     * @var string 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
      */
     public $FinishReason;
 
@@ -51,7 +54,8 @@ class Choice extends AbstractModel
     public $Message;
 
     /**
-     * @param string $FinishReason 结束标志位，为 stop 则表示尾包。
+     * @param string $FinishReason 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
      * @param Delta $Delta 增量返回值，流式调用时使用该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message $Message 返回值，非流式调用时使用该字段。

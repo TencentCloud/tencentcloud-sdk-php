@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(string $Compress) 设置supported: "", "gzip", "lzop", "snappy"; 默认空
  * @method ExtractRuleInfo getExtractRuleInfo() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置提取规则，如果设置了ExtractRule，则必须设置LogType
+ * @method integer getTaskType() 获取COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+ * @method void setTaskType(integer $TaskType) 设置COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+ * @method array getMetadata() 获取元数据。
+ * @method void setMetadata(array $Metadata) 设置元数据。
  */
 class CreateCosRechargeRequest extends AbstractModel
 {
@@ -90,6 +94,16 @@ class CreateCosRechargeRequest extends AbstractModel
     public $ExtractRuleInfo;
 
     /**
+     * @var integer COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+     */
+    public $TaskType;
+
+    /**
+     * @var array 元数据。
+     */
+    public $Metadata;
+
+    /**
      * @param string $TopicId 日志主题 ID
      * @param string $LogsetId 日志集ID
      * @param string $Name 投递任务名称
@@ -100,6 +114,8 @@ class CreateCosRechargeRequest extends AbstractModel
 默认为minimalist_log
      * @param string $Compress supported: "", "gzip", "lzop", "snappy"; 默认空
      * @param ExtractRuleInfo $ExtractRuleInfo 提取规则，如果设置了ExtractRule，则必须设置LogType
+     * @param integer $TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+     * @param array $Metadata 元数据。
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class CreateCosRechargeRequest extends AbstractModel
         if (array_key_exists("ExtractRuleInfo",$param) and $param["ExtractRuleInfo"] !== null) {
             $this->ExtractRuleInfo = new ExtractRuleInfo();
             $this->ExtractRuleInfo->deserialize($param["ExtractRuleInfo"]);
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = $param["Metadata"];
         }
     }
 }

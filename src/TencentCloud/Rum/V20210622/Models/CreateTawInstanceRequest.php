@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签列表
  * @method string getInstanceDesc() 获取实例描述，(最大长度不超过1024字节)
  * @method void setInstanceDesc(string $InstanceDesc) 设置实例描述，(最大长度不超过1024字节)
- * @method string getCountNum() 获取每天数据上报量
- * @method void setCountNum(string $CountNum) 设置每天数据上报量
+ * @method string getCountNum() 获取每天数据上报量，（不作量级限制）
+ * @method void setCountNum(string $CountNum) 设置每天数据上报量，（不作量级限制）
  * @method string getPeriodRetain() 获取数据存储时长计费
  * @method void setPeriodRetain(string $PeriodRetain) 设置数据存储时长计费
  * @method string getBuyingChannel() 获取实例购买渠道("cdn" 等)
@@ -78,7 +78,7 @@ class CreateTawInstanceRequest extends AbstractModel
     public $InstanceDesc;
 
     /**
-     * @var string 每天数据上报量
+     * @var string 每天数据上报量，（不作量级限制）
      */
     public $CountNum;
 
@@ -114,7 +114,7 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称，(最大长度不超过255字节)
      * @param array $Tags 标签列表
      * @param string $InstanceDesc 实例描述，(最大长度不超过1024字节)
-     * @param string $CountNum 每天数据上报量
+     * @param string $CountNum 每天数据上报量，（不作量级限制）
      * @param string $PeriodRetain 数据存储时长计费
      * @param string $BuyingChannel 实例购买渠道("cdn" 等)
      * @param integer $ResourcePackageType 预付费资源包类型(仅预付费需要)

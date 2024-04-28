@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
  * @method array getDataEngineConfigPairs() 获取用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
  * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) 设置用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
- * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业引擎资源配置模版
- * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业引擎资源配置模版
+ * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业引擎资源配置模板
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业引擎资源配置模板
  */
 class UpdateUserDataEngineConfigRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UpdateUserDataEngineConfigRequest extends AbstractModel
     public $DataEngineConfigPairs;
 
     /**
-     * @var SessionResourceTemplate 作业引擎资源配置模版
+     * @var SessionResourceTemplate 作业引擎资源配置模板
      */
     public $SessionResourceTemplate;
 
     /**
      * @param string $DataEngineId 引擎ID
      * @param array $DataEngineConfigPairs 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
-     * @param SessionResourceTemplate $SessionResourceTemplate 作业引擎资源配置模版
+     * @param SessionResourceTemplate $SessionResourceTemplate 作业引擎资源配置模板
      */
     function __construct()
     {

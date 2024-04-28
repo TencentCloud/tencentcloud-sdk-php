@@ -170,6 +170,8 @@ zk标准版没有跨地域部署，请不要填写
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
  * @method void setStorageOption(array $StorageOption) 设置zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+ * @method string getAffinityConstraint() 获取ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+ * @method void setAffinityConstraint(string $AffinityConstraint) 设置ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
  */
 class CreateEngineRequest extends AbstractModel
 {
@@ -317,6 +319,11 @@ zk标准版没有跨地域部署，请不要填写
     public $StorageOption;
 
     /**
+     * @var string ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+     */
+    public $AffinityConstraint;
+
+    /**
      * @param string $EngineType 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -392,6 +399,7 @@ polarismesh - STANDARD版本
 zk标准版没有跨地域部署，请不要填写
      * @param array $StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+     * @param string $AffinityConstraint ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
      */
     function __construct()
     {
@@ -493,6 +501,10 @@ zk标准版没有跨地域部署，请不要填写
                 $obj->deserialize($value);
                 array_push($this->StorageOption, $obj);
             }
+        }
+
+        if (array_key_exists("AffinityConstraint",$param) and $param["AffinityConstraint"] !== null) {
+            $this->AffinityConstraint = $param["AffinityConstraint"];
         }
     }
 }

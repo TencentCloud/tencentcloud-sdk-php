@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(SummaryOutput $Output) 设置知识摘要输出配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGreeting() 获取欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGreeting(string $Greeting) 设置欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SummaryConfig extends AbstractModel
 {
@@ -44,9 +48,17 @@ class SummaryConfig extends AbstractModel
     public $Output;
 
     /**
+     * @var string 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Greeting;
+
+    /**
      * @param AppModel $Model 模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SummaryOutput $Output 知识摘要输出配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,10 @@ class SummaryConfig extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new SummaryOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Greeting",$param) and $param["Greeting"] !== null) {
+            $this->Greeting = $param["Greeting"];
         }
     }
 }

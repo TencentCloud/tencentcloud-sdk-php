@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取机器人ID
  * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getFileType() 获取文件类型
+ * @method void setFileType(string $FileType) 设置文件类型
+ * @method boolean getIsPublic() 获取权限场景，是否公有权限
+ * @method void setIsPublic(boolean $IsPublic) 设置权限场景，是否公有权限
  */
 class DescribeStorageCredentialRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeStorageCredentialRequest extends AbstractModel
     public $BotBizId;
 
     /**
+     * @var string 文件类型
+     */
+    public $FileType;
+
+    /**
+     * @var boolean 权限场景，是否公有权限
+     */
+    public $IsPublic;
+
+    /**
      * @param string $BotBizId 机器人ID
+     * @param string $FileType 文件类型
+     * @param boolean $IsPublic 权限场景，是否公有权限
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeStorageCredentialRequest extends AbstractModel
         }
         if (array_key_exists("BotBizId",$param) and $param["BotBizId"] !== null) {
             $this->BotBizId = $param["BotBizId"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
+            $this->IsPublic = $param["IsPublic"];
         }
     }
 }

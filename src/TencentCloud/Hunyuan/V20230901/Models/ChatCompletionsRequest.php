@@ -35,13 +35,13 @@ use TencentCloud\Common\AbstractModel;
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
 2. Message.Role 可选值：system、user、assistant。
 其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
-3. Messages 中 Content 总长度不超过 16000 Token，超过则会截断最前面的内容，只保留尾部内容。建议不超过 4000 Token。
+3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
  * @method void setMessages(array $Messages) 设置聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
 2. Message.Role 可选值：system、user、assistant。
 其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
-3. Messages 中 Content 总长度不超过 16000 Token，超过则会截断最前面的内容，只保留尾部内容。建议不超过 4000 Token。
+3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
  * @method boolean getStream() 获取流式调用开关。
 说明：
 1. 未传值时默认为非流式调用（false）。
@@ -66,19 +66,19 @@ use TencentCloud\Common\AbstractModel;
 通过 SDK 调用时，流式和非流式调用需用**不同的方式**获取返回值，具体参考 SDK 中的注释或示例（在各语言 SDK 代码仓库的 examples/hunyuan/v20230901/ 目录中）。
  * @method boolean getStreamModeration() 获取流式输出审核开关。
 说明：
-1. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。
-2. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+1. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+2. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。未传值时默认为流式模式（true）。
 3. 如果值为 true，将对输出内容进行分段审核，审核通过的内容流式输出返回。如果出现审核不过，响应中的 FinishReason 值为 sensitive。
-4. 如果未传值或值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
+4. 如果值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
 
 注意：
 当选择流式输出审核时，可能会出现部分内容已输出，但中间某一段响应中的 FinishReason 值为 sensitive，此时说明安全审核未通过。如果业务场景有实时文字上屏的需求，需要自行撤回已上屏的内容，并建议自定义替换为一条提示语，如 “这个问题我不方便回答，不如我们换个话题试试”，以保障终端体验。
  * @method void setStreamModeration(boolean $StreamModeration) 设置流式输出审核开关。
 说明：
-1. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。
-2. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+1. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+2. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。未传值时默认为流式模式（true）。
 3. 如果值为 true，将对输出内容进行分段审核，审核通过的内容流式输出返回。如果出现审核不过，响应中的 FinishReason 值为 sensitive。
-4. 如果未传值或值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
+4. 如果值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
 
 注意：
 当选择流式输出审核时，可能会出现部分内容已输出，但中间某一段响应中的 FinishReason 值为 sensitive，此时说明安全审核未通过。如果业务场景有实时文字上屏的需求，需要自行撤回已上屏的内容，并建议自定义替换为一条提示语，如 “这个问题我不方便回答，不如我们换个话题试试”，以保障终端体验。
@@ -116,7 +116,7 @@ class ChatCompletionsRequest extends AbstractModel
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
 2. Message.Role 可选值：system、user、assistant。
 其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
-3. Messages 中 Content 总长度不超过 16000 Token，超过则会截断最前面的内容，只保留尾部内容。建议不超过 4000 Token。
+3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public $Messages;
 
@@ -138,10 +138,10 @@ class ChatCompletionsRequest extends AbstractModel
     /**
      * @var boolean 流式输出审核开关。
 说明：
-1. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。
-2. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+1. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+2. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。未传值时默认为流式模式（true）。
 3. 如果值为 true，将对输出内容进行分段审核，审核通过的内容流式输出返回。如果出现审核不过，响应中的 FinishReason 值为 sensitive。
-4. 如果未传值或值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
+4. 如果值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
 
 注意：
 当选择流式输出审核时，可能会出现部分内容已输出，但中间某一段响应中的 FinishReason 值为 sensitive，此时说明安全审核未通过。如果业务场景有实时文字上屏的需求，需要自行撤回已上屏的内容，并建议自定义替换为一条提示语，如 “这个问题我不方便回答，不如我们换个话题试试”，以保障终端体验。
@@ -175,7 +175,7 @@ class ChatCompletionsRequest extends AbstractModel
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
 2. Message.Role 可选值：system、user、assistant。
 其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
-3. Messages 中 Content 总长度不超过 16000 Token，超过则会截断最前面的内容，只保留尾部内容。建议不超过 4000 Token。
+3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      * @param boolean $Stream 流式调用开关。
 说明：
 1. 未传值时默认为非流式调用（false）。
@@ -189,10 +189,10 @@ class ChatCompletionsRequest extends AbstractModel
 通过 SDK 调用时，流式和非流式调用需用**不同的方式**获取返回值，具体参考 SDK 中的注释或示例（在各语言 SDK 代码仓库的 examples/hunyuan/v20230901/ 目录中）。
      * @param boolean $StreamModeration 流式输出审核开关。
 说明：
-1. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。
-2. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+1. 当使用流式输出（Stream 字段值为 true）时，该字段生效。
+2. 输出审核有流式和同步两种模式，**流式模式首包响应更快**。未传值时默认为流式模式（true）。
 3. 如果值为 true，将对输出内容进行分段审核，审核通过的内容流式输出返回。如果出现审核不过，响应中的 FinishReason 值为 sensitive。
-4. 如果未传值或值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
+4. 如果值为 false，则不使用流式输出审核，需要审核完所有输出内容后再返回结果。
 
 注意：
 当选择流式输出审核时，可能会出现部分内容已输出，但中间某一段响应中的 FinishReason 值为 sensitive，此时说明安全审核未通过。如果业务场景有实时文字上屏的需求，需要自行撤回已上屏的内容，并建议自定义替换为一条提示语，如 “这个问题我不方便回答，不如我们换个话题试试”，以保障终端体验。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceID() 获取实例ID：taw-123
  * @method void setInstanceID(string $InstanceID) 设置实例ID：taw-123
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getRemark() 获取备注（暂未作字节数限制）
+ * @method void setRemark(string $Remark) 设置备注（暂未作字节数限制）
  * @method string getWhitelistUin() 获取uin：业务方标识
  * @method void setWhitelistUin(string $WhitelistUin) 设置uin：业务方标识
  * @method string getAid() 获取业务方标识
@@ -37,7 +37,7 @@ class CreateWhitelistRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string 备注
+     * @var string 备注（暂未作字节数限制）
      */
     public $Remark;
 
@@ -53,7 +53,7 @@ class CreateWhitelistRequest extends AbstractModel
 
     /**
      * @param string $InstanceID 实例ID：taw-123
-     * @param string $Remark 备注
+     * @param string $Remark 备注（暂未作字节数限制）
      * @param string $WhitelistUin uin：业务方标识
      * @param string $Aid 业务方标识
      */

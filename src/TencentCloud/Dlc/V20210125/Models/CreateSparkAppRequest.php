@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngine(string $DataEngine) 设置执行spark作业的数据引擎名称
  * @method string getAppFile() 获取spark作业程序包文件路径
  * @method void setAppFile(string $AppFile) 设置spark作业程序包文件路径
- * @method integer getRoleArn() 获取数据访问策略，CAM Role arn
- * @method void setRoleArn(integer $RoleArn) 设置数据访问策略，CAM Role arn
+ * @method integer getRoleArn() 获取数据访问策略，CAM Role arn，控制台通过数据作业—>作业配置获取，SDK通过DescribeUserRoles接口获取对应的值；
+ * @method void setRoleArn(integer $RoleArn) 设置数据访问策略，CAM Role arn，控制台通过数据作业—>作业配置获取，SDK通过DescribeUserRoles接口获取对应的值；
  * @method string getAppDriverSize() 获取指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
  * @method void setAppDriverSize(string $AppDriverSize) 设置指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
  * @method string getAppExecutorSize() 获取指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
@@ -102,7 +102,7 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppFile;
 
     /**
-     * @var integer 数据访问策略，CAM Role arn
+     * @var integer 数据访问策略，CAM Role arn，控制台通过数据作业—>作业配置获取，SDK通过DescribeUserRoles接口获取对应的值；
      */
     public $RoleArn;
 
@@ -231,7 +231,7 @@ class CreateSparkAppRequest extends AbstractModel
      * @param integer $AppType spark作业类型，1代表spark jar作业，2代表spark streaming作业
      * @param string $DataEngine 执行spark作业的数据引擎名称
      * @param string $AppFile spark作业程序包文件路径
-     * @param integer $RoleArn 数据访问策略，CAM Role arn
+     * @param integer $RoleArn 数据访问策略，CAM Role arn，控制台通过数据作业—>作业配置获取，SDK通过DescribeUserRoles接口获取对应的值；
      * @param string $AppDriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param string $AppExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param integer $AppExecutorNums spark作业executor个数

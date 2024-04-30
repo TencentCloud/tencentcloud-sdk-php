@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getShipperId() 获取投递规则ID
  * @method void setShipperId(string $ShipperId) 设置投递规则ID
- * @method integer getStartTime() 获取查询的开始时间戳，支持最近3天的查询， 毫秒
- * @method void setStartTime(integer $StartTime) 设置查询的开始时间戳，支持最近3天的查询， 毫秒
- * @method integer getEndTime() 获取查询的结束时间戳， 毫秒
- * @method void setEndTime(integer $EndTime) 设置查询的结束时间戳， 毫秒
+ * @method integer getStartTime() 获取查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
+ * @method void setStartTime(integer $StartTime) 设置查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
+ * @method integer getEndTime() 获取查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
+ * @method void setEndTime(integer $EndTime) 设置查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
  */
 class DescribeShipperTasksRequest extends AbstractModel
 {
@@ -35,19 +39,23 @@ class DescribeShipperTasksRequest extends AbstractModel
     public $ShipperId;
 
     /**
-     * @var integer 查询的开始时间戳，支持最近3天的查询， 毫秒
+     * @var integer 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
      */
     public $StartTime;
 
     /**
-     * @var integer 查询的结束时间戳， 毫秒
+     * @var integer 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
      */
     public $EndTime;
 
     /**
      * @param string $ShipperId 投递规则ID
-     * @param integer $StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒
-     * @param integer $EndTime 查询的结束时间戳， 毫秒
+     * @param integer $StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
+     * @param integer $EndTime 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
      */
     function __construct()
     {

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 机器组类型描述
  *
- * @method string getType() 获取机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
- * @method void setType(string $Type) 设置机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
- * @method array getValues() 获取机器描述列表
- * @method void setValues(array $Values) 设置机器描述列表
+ * @method string getType() 获取机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
+ * @method void setType(string $Type) 设置机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
+ * @method array getValues() 获取机器描述列表。
+ * @method void setValues(array $Values) 设置机器描述列表。
  */
 class MachineGroupTypeInfo extends AbstractModel
 {
     /**
-     * @var string 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
+     * @var string 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
      */
     public $Type;
 
     /**
-     * @var array 机器描述列表
+     * @var array 机器描述列表。
      */
     public $Values;
 
     /**
-     * @param string $Type 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
-     * @param array $Values 机器描述列表
+     * @param string $Type 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
+     * @param array $Values 机器描述列表。
      */
     function __construct()
     {

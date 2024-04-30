@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置机器组ID
  * @method string getGroupName() 获取机器组名称
  * @method void setGroupName(string $GroupName) 设置机器组名称
- * @method MachineGroupTypeInfo getMachineGroupType() 获取机器组类型
- * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) 设置机器组类型
+ * @method MachineGroupTypeInfo getMachineGroupType() 获取机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+ * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) 设置机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  * @method boolean getAutoUpdate() 获取是否开启机器组自动更新
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置升级结束时间，建议业务低峰期升级LogListener
  * @method boolean getServiceLogging() 获取是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
- * @method integer getDelayCleanupTime() 获取机器组中机器定期离线清理时间
- * @method void setDelayCleanupTime(integer $DelayCleanupTime) 设置机器组中机器定期离线清理时间
+ * @method integer getDelayCleanupTime() 获取机器组中机器定期离线清理时间。单位：天
+ * @method void setDelayCleanupTime(integer $DelayCleanupTime) 设置机器组中机器定期离线清理时间。单位：天
  * @method array getMetaTags() 获取机器组元数据信息列表
  * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  */
@@ -54,7 +54,7 @@ class ModifyMachineGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var MachineGroupTypeInfo 机器组类型
+     * @var MachineGroupTypeInfo 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
      */
     public $MachineGroupType;
 
@@ -84,7 +84,7 @@ class ModifyMachineGroupRequest extends AbstractModel
     public $ServiceLogging;
 
     /**
-     * @var integer 机器组中机器定期离线清理时间
+     * @var integer 机器组中机器定期离线清理时间。单位：天
      */
     public $DelayCleanupTime;
 
@@ -96,13 +96,13 @@ class ModifyMachineGroupRequest extends AbstractModel
     /**
      * @param string $GroupId 机器组ID
      * @param string $GroupName 机器组名称
-     * @param MachineGroupTypeInfo $MachineGroupType 机器组类型
+     * @param MachineGroupTypeInfo $MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
      * @param array $Tags 标签列表
      * @param boolean $AutoUpdate 是否开启机器组自动更新
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-     * @param integer $DelayCleanupTime 机器组中机器定期离线清理时间
+     * @param integer $DelayCleanupTime 机器组中机器定期离线清理时间。单位：天
      * @param array $MetaTags 机器组元数据信息列表
      */
     function __construct()

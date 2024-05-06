@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAvailableClusterVersion请求参数结构体
  *
- * @method string getClusterId() 获取集群 Id
- * @method void setClusterId(string $ClusterId) 设置集群 Id
- * @method array getClusterIds() 获取集群 Id 列表
- * @method void setClusterIds(array $ClusterIds) 设置集群 Id 列表
+ * @method string getClusterId() 获取集群 Id。若只查询某个集群可升级的版本，需填写此项。
+ * @method void setClusterId(string $ClusterId) 设置集群 Id。若只查询某个集群可升级的版本，需填写此项。
+ * @method array getClusterIds() 获取集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
+ * @method void setClusterIds(array $ClusterIds) 设置集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
  */
 class DescribeAvailableClusterVersionRequest extends AbstractModel
 {
     /**
-     * @var string 集群 Id
+     * @var string 集群 Id。若只查询某个集群可升级的版本，需填写此项。
      */
     public $ClusterId;
 
     /**
-     * @var array 集群 Id 列表
+     * @var array 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
      */
     public $ClusterIds;
 
     /**
-     * @param string $ClusterId 集群 Id
-     * @param array $ClusterIds 集群 Id 列表
+     * @param string $ClusterId 集群 Id。若只查询某个集群可升级的版本，需填写此项。
+     * @param array $ClusterIds 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
      */
     function __construct()
     {

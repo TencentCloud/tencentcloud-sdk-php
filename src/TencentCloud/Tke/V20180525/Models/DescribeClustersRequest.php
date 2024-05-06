@@ -28,84 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20，最大为100
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20，最大为100
- * @method array getFilters() 获取·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
- * @method void setFilters(array $Filters) 设置·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+ * @method array getFilters() 获取· "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
+ * @method void setFilters(array $Filters) 设置· "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
  * @method string getClusterType() 获取集群类型，例如：MANAGED_CLUSTER
  * @method void setClusterType(string $ClusterType) 设置集群类型，例如：MANAGED_CLUSTER
  */
@@ -128,45 +52,7 @@ class DescribeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+     * @var array · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
      */
     public $Filters;
 
@@ -180,45 +66,7 @@ class DescribeClustersRequest extends AbstractModel
 表示获取账号下所有集群)
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20，最大为100
-     * @param array $Filters ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+     * @param array $Filters · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
      * @param string $ClusterType 集群类型，例如：MANAGED_CLUSTER
      */
     function __construct()

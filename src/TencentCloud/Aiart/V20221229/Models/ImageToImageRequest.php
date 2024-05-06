@@ -23,19 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInputImage() 获取输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
  * @method void setInputImage(string $InputImage) 设置输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
  * @method string getInputUrl() 获取输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
  * @method void setInputUrl(string $InputUrl) 设置输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
  * @method string getPrompt() 获取文本描述。
 用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
 推荐使用中文。最多支持256个 utf-8 字符。
@@ -75,10 +75,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method float getStrength() 获取生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
  * @method void setStrength(float $Strength) 设置生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
  * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
@@ -89,7 +89,7 @@ class ImageToImageRequest extends AbstractModel
      * @var string 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
      */
     public $InputImage;
 
@@ -97,7 +97,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * @var string 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
      */
     public $InputUrl;
 
@@ -146,7 +146,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * @var float 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
      */
     public $Strength;
@@ -160,11 +160,11 @@ Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使
      * @param string $InputImage 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
      * @param string $InputUrl 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
      * @param string $Prompt 文本描述。
 用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
 推荐使用中文。最多支持256个 utf-8 字符。
@@ -185,7 +185,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      * @param float $Strength 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
      * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
      */

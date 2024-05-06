@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIds() 获取节点列表，空为全部节点
  * @method void setInstanceIds(array $InstanceIds) 设置节点列表，空为全部节点
- * @method string getUpgradeType() 获取升级类型
- * @method void setUpgradeType(string $UpgradeType) 设置升级类型
+ * @method string getUpgradeType() 获取升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
+ * @method void setUpgradeType(string $UpgradeType) 设置升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
  * @method integer getOffset() 获取分页Offset
  * @method void setOffset(integer $Offset) 设置分页Offset
  * @method integer getLimit() 获取分页Limit
@@ -46,7 +46,7 @@ class CheckInstancesUpgradeAbleRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 升级类型
+     * @var string 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
      */
     public $UpgradeType;
 
@@ -68,7 +68,7 @@ class CheckInstancesUpgradeAbleRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 节点列表，空为全部节点
-     * @param string $UpgradeType 升级类型
+     * @param string $UpgradeType 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
      * @param integer $Offset 分页Offset
      * @param integer $Limit 分页Limit
      * @param array $Filter 过滤

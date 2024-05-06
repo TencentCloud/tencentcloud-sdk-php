@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取集群ID
  * @method void setInstanceIds(array $InstanceIds) 设置集群ID
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息（目前后端暂不支持此字段，我们将在未来的版本中实现）
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息（目前后端暂不支持此字段，我们将在未来的版本中实现）
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method LoginSettings getLoginSettings() 获取节点登录信息（目前仅支持使用Password或者单个KeyIds）
@@ -41,7 +41,7 @@ class ExistedInstancesPara extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceAdvancedSettings 实例额外需要设置参数信息
+     * @var InstanceAdvancedSettings 实例额外需要设置参数信息（目前后端暂不支持此字段，我们将在未来的版本中实现）
      */
     public $InstanceAdvancedSettings;
 
@@ -67,7 +67,7 @@ class ExistedInstancesPara extends AbstractModel
 
     /**
      * @param array $InstanceIds 集群ID
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息（目前后端暂不支持此字段，我们将在未来的版本中实现）
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getNodeRole() 获取缩容的实例角色：MASTER,ETCD,MASTER_ETCD
  * @method void setNodeRole(string $NodeRole) 设置缩容的实例角色：MASTER,ETCD,MASTER_ETCD
- * @method string getInstanceDeleteMode() 获取实例的保留模式
- * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置实例的保留模式
+ * @method string getInstanceDeleteMode() 获取实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+ * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  */
 class ScaleInMaster extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ScaleInMaster extends AbstractModel
     public $NodeRole;
 
     /**
-     * @var string 实例的保留模式
+     * @var string 实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public $InstanceDeleteMode;
 
     /**
      * @param string $InstanceId 实例ID
      * @param string $NodeRole 缩容的实例角色：MASTER,ETCD,MASTER_ETCD
-     * @param string $InstanceDeleteMode 实例的保留模式
+     * @param string $InstanceDeleteMode 实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     function __construct()
     {

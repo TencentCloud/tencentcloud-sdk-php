@@ -22,41 +22,31 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取ClusterId（集群id）
  * @method void setClusterId(string $ClusterId) 设置ClusterId（集群id）
- * @method array getFilters() 获取·  NodePoolsName
+ * @method array getFilters() 获取· "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
- * @method void setFilters(array $Filters) 设置·  NodePoolsName
+ * @method void setFilters(array $Filters) 设置· "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -69,22 +59,17 @@ class DescribeClusterNodePoolsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array ·  NodePoolsName
+     * @var array · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -93,22 +78,17 @@ class DescribeClusterNodePoolsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId ClusterId（集群id）
-     * @param array $Filters ·  NodePoolsName
+     * @param array $Filters · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否

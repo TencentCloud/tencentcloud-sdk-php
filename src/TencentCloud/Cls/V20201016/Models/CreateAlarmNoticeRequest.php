@@ -23,29 +23,49 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取通知渠道组名称。
  * @method void setName(string $Name) 设置通知渠道组名称。
  * @method string getType() 获取通知类型。可选值：
-<li> Trigger - 告警触发 </li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
- * @method void setType(string $Type) 设置通知类型。可选值：
-<li> Trigger - 告警触发 </li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
- * @method array getNoticeReceivers() 获取通知接收对象。
- * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
- * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
- * @method void setWebCallbacks(array $WebCallbacks) 设置接口回调信息（包括企业微信）。
- * @method array getNoticeRules() 获取通知规则。
+- Trigger - 告警触发
+- Recovery - 告警恢复
+- All - 告警触发和告警恢复
+
 
  注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method void setType(string $Type) 设置通知类型。可选值：
+- Trigger - 告警触发
+- Recovery - 告警恢复
+- All - 告警触发和告警恢复
 
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method array getNoticeReceivers() 获取通知接收对象。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method void setWebCallbacks(array $WebCallbacks) 设置接口回调信息（包括企业微信）。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+ * @method array getNoticeRules() 获取通知规则。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
 
 
  * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
-
  注意:  
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -56,28 +76,38 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
     /**
      * @var string 通知类型。可选值：
-<li> Trigger - 告警触发 </li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
+- Trigger - 告警触发
+- Recovery - 告警恢复
+- All - 告警触发和告警恢复
+
+
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
      */
     public $Type;
 
     /**
      * @var array 通知接收对象。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
      */
     public $NoticeReceivers;
 
     /**
      * @var array 接口回调信息（包括企业微信）。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
      */
     public $WebCallbacks;
 
     /**
      * @var array 通知规则。
-
  注意:  
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
 
 
      */
@@ -86,16 +116,26 @@ class CreateAlarmNoticeRequest extends AbstractModel
     /**
      * @param string $Name 通知渠道组名称。
      * @param string $Type 通知类型。可选值：
-<li> Trigger - 告警触发 </li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
-     * @param array $NoticeReceivers 通知接收对象。
-     * @param array $WebCallbacks 接口回调信息（包括企业微信）。
-     * @param array $NoticeRules 通知规则。
+- Trigger - 告警触发
+- Recovery - 告警恢复
+- All - 告警触发和告警恢复
+
 
  注意:  
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+     * @param array $NoticeReceivers 通知接收对象。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+     * @param array $WebCallbacks 接口回调信息（包括企业微信）。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+     * @param array $NoticeRules 通知规则。
+ 注意:  
+- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
      */
     function __construct()
     {

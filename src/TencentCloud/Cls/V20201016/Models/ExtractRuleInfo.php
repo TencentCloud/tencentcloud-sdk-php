@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchUpLoadSwitch(boolean $UnMatchUpLoadSwitch) 设置解析失败日志是否上传，true表示上传，false表示不上传
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnMatchLogKey() 获取失败日志的key
+ * @method string getUnMatchLogKey() 获取失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnMatchLogKey(string $UnMatchLogKey) 设置失败日志的key
+ * @method void setUnMatchLogKey(string $UnMatchLogKey) 设置失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBacktracking() 获取增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：
@@ -69,33 +69,39 @@ use TencentCloud\Common\AbstractModel;
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsGBK() 获取是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGBK(integer $IsGBK) 设置是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJsonStandard() 获取是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonStandard(integer $JsonStandard) 设置是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取syslog传输协议，取值为tcp或者udp。
+ * @method string getProtocol() 获取syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置syslog传输协议，取值为tcp或者udp。
+ * @method void setProtocol(string $Protocol) 设置syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAddress() 获取syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+ * @method string getAddress() 获取syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddress(string $Address) 设置syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+ * @method void setAddress(string $Address) 设置syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -103,6 +109,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getParseProtocol() 获取rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -110,6 +117,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
  * @method void setParseProtocol(string $ParseProtocol) 设置rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -138,12 +146,8 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为2时必填。
 - COS导入不支持此字段。
- * @method array getEventLogRules() 获取Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
- * @method void setEventLogRules(array $EventLogRules) 设置Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+ * @method array getEventLogRules() 获取Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+ * @method void setEventLogRules(array $EventLogRules) 设置Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -198,7 +202,7 @@ class ExtractRuleInfo extends AbstractModel
     public $UnMatchUpLoadSwitch;
 
     /**
-     * @var string 失败日志的key
+     * @var string 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnMatchLogKey;
@@ -213,7 +217,8 @@ class ExtractRuleInfo extends AbstractModel
 
     /**
      * @var integer 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -221,12 +226,14 @@ class ExtractRuleInfo extends AbstractModel
 
     /**
      * @var integer 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonStandard;
 
     /**
-     * @var string syslog传输协议，取值为tcp或者udp。
+     * @var string syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -235,7 +242,7 @@ class ExtractRuleInfo extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * @var string syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -247,6 +254,7 @@ class ExtractRuleInfo extends AbstractModel
      * @var string rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -279,9 +287,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     public $MetaTags;
 
     /**
-     * @var array Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+     * @var array Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
      */
     public $EventLogRules;
 
@@ -304,24 +310,27 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnMatchUpLoadSwitch 解析失败日志是否上传，true表示上传，false表示不上传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnMatchLogKey 失败日志的key
+     * @param string $UnMatchLogKey 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGBK 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JsonStandard 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol syslog传输协议，取值为tcp或者udp。
+     * @param string $Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * @param string $Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -329,6 +338,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * @param string $ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -345,9 +355,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 注意：
 - MetadataType为2时必填。
 - COS导入不支持此字段。
-     * @param array $EventLogRules Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+     * @param array $EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
      */
     function __construct()
     {

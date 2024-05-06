@@ -20,22 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回调地址
  *
- * @method string getUrl() 获取回调地址。
- * @method void setUrl(string $Url) 设置回调地址。
+ * @method string getUrl() 获取回调地址。最大支持1024个字节数。
+ * @method void setUrl(string $Url) 设置回调地址。最大支持1024个字节数。
  * @method string getCallbackType() 获取回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
  * @method void setCallbackType(string $CallbackType) 设置回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
  * @method string getMethod() 获取回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取请求头。
@@ -50,27 +54,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBody(string $Body) 设置请求内容。
 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndex() 获取序号
- * @method void setIndex(integer $Index) 设置序号
+ * @method integer getIndex() 获取序号。
+- 入参无效。
+- 出参有效。
+ * @method void setIndex(integer $Index) 设置序号。
+- 入参无效。
+- 出参有效。
  */
 class WebCallback extends AbstractModel
 {
     /**
-     * @var string 回调地址。
+     * @var string 回调地址。最大支持1024个字节数。
      */
     public $Url;
 
     /**
      * @var string 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
      */
     public $CallbackType;
 
     /**
      * @var string 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -91,18 +101,22 @@ class WebCallback extends AbstractModel
     public $Body;
 
     /**
-     * @var integer 序号
+     * @var integer 序号。
+- 入参无效。
+- 出参有效。
      */
     public $Index;
 
     /**
-     * @param string $Url 回调地址。
+     * @param string $Url 回调地址。最大支持1024个字节数。
      * @param string $CallbackType 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
      * @param string $Method 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 请求头。
@@ -111,7 +125,9 @@ class WebCallback extends AbstractModel
      * @param string $Body 请求内容。
 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Index 序号
+     * @param integer $Index 序号。
+- 入参无效。
+- 出参有效。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVpnGatewaysRenewFlag请求参数结构体
  *
- * @method array getVpnGatewayIds() 获取VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
- * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+ * @method array getVpnGatewayIds() 获取VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取，只能选择包年包月的VPN实例。
+ * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取，只能选择包年包月的VPN实例。
  * @method integer getAutoRenewFlag() 获取自动续费标记 [0, 1, 2]
 0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记 [0, 1, 2]
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SetVpnGatewaysRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+     * @var array VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取，只能选择包年包月的VPN实例。
      */
     public $VpnGatewayIds;
 
@@ -48,7 +48,7 @@ class SetVpnGatewaysRenewFlagRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param array $VpnGatewayIds VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+     * @param array $VpnGatewayIds VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取，只能选择包年包月的VPN实例。
      * @param integer $AutoRenewFlag 自动续费标记 [0, 1, 2]
 0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
      * @param string $Type VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。

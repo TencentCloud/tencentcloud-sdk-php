@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTaskIdList() 获取任务id 列表
  * @method void setTaskIdList(array $TaskIdList) 设置任务id 列表
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
 class DeleteRiskScanTaskRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteRiskScanTaskRequest extends AbstractModel
     public $TaskIdList;
 
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @param array $TaskIdList 任务id 列表
+     * @param array $MemberId 集团账号的成员id
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class DeleteRiskScanTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TaskIdList, $obj);
             }
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

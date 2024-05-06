@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method integer getInternetMaxBandwidthOut() 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+ * @method integer getInternetMaxBandwidthOut() 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：Mbps。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：Mbps。
  */
 class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends AbstractMod
     public $VpnGatewayId;
 
     /**
-     * @var integer 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @var integer 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：Mbps。
      */
     public $InternetMaxBandwidthOut;
 
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
-     * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：Mbps。
      */
     function __construct()
     {

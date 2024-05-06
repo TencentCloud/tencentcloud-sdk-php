@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanTaskList请求参数结构体
  *
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method Filter getFilter() 获取过滤内容
  * @method void setFilter(Filter $Filter) 设置过滤内容
  * @method array getTags() 获取标签
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeScanTaskListRequest extends AbstractModel
 {
+    /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
     /**
      * @var Filter 过滤内容
      */
@@ -38,6 +45,7 @@ class DescribeScanTaskListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @param array $MemberId 集团账号的成员id
      * @param Filter $Filter 过滤内容
      * @param array $Tags 标签
      */
@@ -54,6 +62,10 @@ class DescribeScanTaskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

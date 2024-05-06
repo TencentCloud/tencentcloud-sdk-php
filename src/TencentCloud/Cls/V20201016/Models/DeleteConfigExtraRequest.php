@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConfigExtra请求参数结构体
  *
- * @method string getConfigExtraId() 获取采集规则扩展配置ID
- * @method void setConfigExtraId(string $ConfigExtraId) 设置采集规则扩展配置ID
+ * @method string getConfigExtraId() 获取特殊采集规则扩展配置ID
+ * @method void setConfigExtraId(string $ConfigExtraId) 设置特殊采集规则扩展配置ID
  */
 class DeleteConfigExtraRequest extends AbstractModel
 {
     /**
-     * @var string 采集规则扩展配置ID
+     * @var string 特殊采集规则扩展配置ID
      */
     public $ConfigExtraId;
 
     /**
-     * @param string $ConfigExtraId 采集规则扩展配置ID
+     * @param string $ConfigExtraId 特殊采集规则扩展配置ID
      */
     function __construct()
     {

@@ -289,7 +289,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(Models\DeleteVpcEndPointServiceWhiteListRequest $req) 本接口（DeleteVpcEndPointServiceWhiteList）用于删除终端节点服务白名单。
  * @method Models\DeleteVpcPeeringConnectionResponse DeleteVpcPeeringConnection(Models\DeleteVpcPeeringConnectionRequest $req) 本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
  * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) 本接口（DeleteVpnConnection）用于删除VPN通道。
- * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) 本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
+ * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) 本接口（DeleteVpnGateway）用于删除VPN网关。
  * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) 本接口（DeleteVpnGatewayRoutes）用于删除VPN网关路由
  * @method Models\DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClient(Models\DeleteVpnGatewaySslClientRequest $req) 本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
  * @method Models\DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServer(Models\DeleteVpnGatewaySslServerRequest $req) 删除SSL-VPN-SERVER 实例
@@ -468,7 +468,7 @@ LimitTypes取值范围：
  * @method Models\InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGateway(Models\InquirePriceCreateDirectConnectGatewayRequest $req) 本接口（DescribePriceCreateDirectConnectGateway）用于创建专线网关询价。
  * @method Models\InquiryPriceCreateVpnGatewayResponse InquiryPriceCreateVpnGateway(Models\InquiryPriceCreateVpnGatewayRequest $req) 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
  * @method Models\InquiryPriceRenewVpnGatewayResponse InquiryPriceRenewVpnGateway(Models\InquiryPriceRenewVpnGatewayRequest $req) 本接口（InquiryPriceRenewVpnGateway）用于续费VPN网关询价。目前仅支持IPSEC类型网关的询价。
- * @method Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse InquiryPriceResetVpnGatewayInternetMaxBandwidth(Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（InquiryPriceResetVpnGatewayInternetMaxBandwidth）调整VPN网关带宽上限询价。
+ * @method Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse InquiryPriceResetVpnGatewayInternetMaxBandwidth(Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（InquiryPriceResetVpnGatewayInternetMaxBandwidth）用于调整VPN网关带宽上限询价。
  * @method Models\LockCcnBandwidthsResponse LockCcnBandwidths(Models\LockCcnBandwidthsRequest $req) 本接口（LockCcnBandwidths）用户锁定云联网限速实例。
 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（LockCcns）。
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统。

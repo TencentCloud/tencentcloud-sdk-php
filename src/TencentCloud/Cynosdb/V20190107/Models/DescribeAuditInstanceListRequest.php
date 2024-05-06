@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询实例列表的过滤条件。
  * @method integer getAuditMode() 获取实例的审计规则模式。1-规则审计；0-全审计。
  * @method void setAuditMode(integer $AuditMode) 设置实例的审计规则模式。1-规则审计；0-全审计。
- * @method integer getLimit() 获取单次请求返回的数量。默认值为30，最大值为 20000。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值为30，最大值为 20000。
+ * @method integer getLimit() 获取单次请求返回的数量。默认值为30，最大值为 100。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值为30，最大值为 100。
  * @method integer getOffset() 获取偏移量，默认值为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
  */
@@ -49,7 +49,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
     public $AuditMode;
 
     /**
-     * @var integer 单次请求返回的数量。默认值为30，最大值为 20000。
+     * @var integer 单次请求返回的数量。默认值为30，最大值为 100。
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
      * @param integer $AuditSwitch 实例审计开启的状态。1-已开启审计；0-未开启审计。
      * @param array $Filters 查询实例列表的过滤条件。
      * @param integer $AuditMode 实例的审计规则模式。1-规则审计；0-全审计。
-     * @param integer $Limit 单次请求返回的数量。默认值为30，最大值为 20000。
+     * @param integer $Limit 单次请求返回的数量。默认值为30，最大值为 100。
      * @param integer $Offset 偏移量，默认值为 0。
      */
     function __construct()

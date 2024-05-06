@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置处置状态，1为已处置、2为已忽略，3为取消已处置，4为取消已忽略
  * @method integer getType() 获取风险类型，0-端口风险， 1-漏洞风险，2-弱口令风险， 3-网站内容风险，4-配置风险，5-风险服务暴露
  * @method void setType(integer $Type) 设置风险类型，0-端口风险， 1-漏洞风险，2-弱口令风险， 3-网站内容风险，4-配置风险，5-风险服务暴露
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
 class ModifyRiskCenterRiskStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyRiskCenterRiskStatusRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @param array $RiskStatusKeys 风险资产相关数据
      * @param integer $Status 处置状态，1为已处置、2为已忽略，3为取消已处置，4为取消已忽略
      * @param integer $Type 风险类型，0-端口风险， 1-漏洞风险，2-弱口令风险， 3-网站内容风险，4-配置风险，5-风险服务暴露
+     * @param array $MemberId 集团账号的成员id
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ModifyRiskCenterRiskStatusRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

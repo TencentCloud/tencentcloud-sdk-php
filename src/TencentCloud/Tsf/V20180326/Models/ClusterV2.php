@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterV2 extends AbstractModel
 {
@@ -384,6 +388,12 @@ class ClusterV2 extends AbstractModel
     public $KuberneteNativeSecret;
 
     /**
+     * @var boolean 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableLogCollection;
+
+    /**
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
@@ -455,6 +465,8 @@ class ClusterV2 extends AbstractModel
      * @param string $KuberneteNativeType K : kubeconfig, S : service account
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KuberneteNativeSecret native secret
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableLogCollection 是否开启cls日志功能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -613,6 +625,10 @@ class ClusterV2 extends AbstractModel
 
         if (array_key_exists("KuberneteNativeSecret",$param) and $param["KuberneteNativeSecret"] !== null) {
             $this->KuberneteNativeSecret = $param["KuberneteNativeSecret"];
+        }
+
+        if (array_key_exists("EnableLogCollection",$param) and $param["EnableLogCollection"] !== null) {
+            $this->EnableLogCollection = $param["EnableLogCollection"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取请求对象个数。
  * @method void setLimit(integer $Limit) 设置请求对象个数。
- * @method array getSslVpnServerIds() 获取SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
- * @method void setSslVpnServerIds(array $SslVpnServerIds) 设置SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+ * @method array getSslVpnServerIds() 获取SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+ * @method void setSslVpnServerIds(array $SslVpnServerIds) 设置SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
@@ -54,7 +54,7 @@ class DescribeVpnGatewaySslServersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+     * @var array SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
      */
     public $SslVpnServerIds;
 
@@ -76,7 +76,7 @@ class DescribeVpnGatewaySslServersRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量。
      * @param integer $Limit 请求对象个数。
-     * @param array $SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+     * @param array $SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>

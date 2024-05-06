@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPlanType(integer $ScanPlanType) 设置0-周期任务,1-立即扫描,2-定时扫描,3-自定义；0,2,3则ScanPlanContent必填
  * @method string getTaskId() 获取要修改的任务id
  * @method void setTaskId(string $TaskId) 设置要修改的任务id
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method array getAssets() 获取扫描资产信息列表
  * @method void setAssets(array $Assets) 设置扫描资产信息列表
  * @method string getScanPlanContent() 获取扫描计划详情
@@ -69,6 +71,11 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @var array 扫描资产信息列表
      */
     public $Assets;
@@ -99,6 +106,7 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
      * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk
      * @param integer $ScanPlanType 0-周期任务,1-立即扫描,2-定时扫描,3-自定义；0,2,3则ScanPlanContent必填
      * @param string $TaskId 要修改的任务id
+     * @param array $MemberId 集团账号的成员id
      * @param array $Assets 扫描资产信息列表
      * @param string $ScanPlanContent 扫描计划详情
      * @param array $SelfDefiningAssets ip/域名/url数组
@@ -136,6 +144,10 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
 
         if (array_key_exists("Assets",$param) and $param["Assets"] !== null) {

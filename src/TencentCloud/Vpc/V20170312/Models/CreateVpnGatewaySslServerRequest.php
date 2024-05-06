@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
  * @method string getEncryptAlgorithm() 获取加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
- * @method boolean getCompress() 获取是否支持压缩。当前仅支持不支持压缩，默认False。
- * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前仅支持不支持压缩，默认False。
- * @method boolean getSsoEnabled() 获取是否开启SSO认证。默认为False
- * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证。默认为False
+ * @method boolean getCompress() 获取是否支持压缩。当前不支持压缩，默认False。
+ * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前不支持压缩，默认False。
+ * @method boolean getSsoEnabled() 获取是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+ * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
  * @method boolean getAccessPolicyEnabled() 获取是否开启策略访问控制。默认为False
  * @method void setAccessPolicyEnabled(boolean $AccessPolicyEnabled) 设置是否开启策略访问控制。默认为False
  * @method string getSamlData() 获取SAML-DATA，开启SSO时传。
@@ -88,12 +88,12 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     public $EncryptAlgorithm;
 
     /**
-     * @var boolean 是否支持压缩。当前仅支持不支持压缩，默认False。
+     * @var boolean 是否支持压缩。当前不支持压缩，默认False。
      */
     public $Compress;
 
     /**
-     * @var boolean 是否开启SSO认证。默认为False
+     * @var boolean 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      */
     public $SsoEnabled;
 
@@ -116,8 +116,8 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
      * @param integer $SslVpnPort SSL VPN服务端监听协议端口，默认1194。
      * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
      * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
-     * @param boolean $Compress 是否支持压缩。当前仅支持不支持压缩，默认False。
-     * @param boolean $SsoEnabled 是否开启SSO认证。默认为False
+     * @param boolean $Compress 是否支持压缩。当前不支持压缩，默认False。
+     * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      * @param boolean $AccessPolicyEnabled 是否开启策略访问控制。默认为False
      * @param string $SamlData SAML-DATA，开启SSO时传。
      */

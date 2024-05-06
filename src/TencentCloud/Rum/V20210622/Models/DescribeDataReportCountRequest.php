@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getID() 获取项目ID
  * @method void setID(integer $ID) 设置项目ID
- * @method string getReportType() 获取上报类型
- * @method void setReportType(string $ReportType) 设置上报类型
+ * @method string getReportType() 获取上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+ * @method void setReportType(string $ReportType) 设置上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
  * @method string getInstanceID() 获取实例ID
  * @method void setInstanceID(string $InstanceID) 设置实例ID
  */
@@ -49,7 +49,7 @@ class DescribeDataReportCountRequest extends AbstractModel
     public $ID;
 
     /**
-     * @var string 上报类型
+     * @var string 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
      */
     public $ReportType;
 
@@ -62,7 +62,7 @@ class DescribeDataReportCountRequest extends AbstractModel
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
      * @param integer $ID 项目ID
-     * @param string $ReportType 上报类型
+     * @param string $ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
      * @param string $InstanceID 实例ID
      */
     function __construct()

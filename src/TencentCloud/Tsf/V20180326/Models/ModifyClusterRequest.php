@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述信息
  * @method string getClusterRemarkName() 获取备注名
  * @method void setClusterRemarkName(string $ClusterRemarkName) 设置备注名
+ * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
+ * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
+ * @method boolean getRepairLog() 获取是否修复cls日志功能
+ * @method void setRepairLog(boolean $RepairLog) 设置是否修复cls日志功能
  */
 class ModifyClusterRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyClusterRequest extends AbstractModel
     public $ClusterRemarkName;
 
     /**
+     * @var boolean 是否开启cls日志功能
+     */
+    public $EnableLogCollection;
+
+    /**
+     * @var boolean 是否修复cls日志功能
+     */
+    public $RepairLog;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDesc 集群描述信息
      * @param string $ClusterRemarkName 备注名
+     * @param boolean $EnableLogCollection 是否开启cls日志功能
+     * @param boolean $RepairLog 是否修复cls日志功能
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ModifyClusterRequest extends AbstractModel
 
         if (array_key_exists("ClusterRemarkName",$param) and $param["ClusterRemarkName"] !== null) {
             $this->ClusterRemarkName = $param["ClusterRemarkName"];
+        }
+
+        if (array_key_exists("EnableLogCollection",$param) and $param["EnableLogCollection"] !== null) {
+            $this->EnableLogCollection = $param["EnableLogCollection"];
+        }
+
+        if (array_key_exists("RepairLog",$param) and $param["RepairLog"] !== null) {
+            $this->RepairLog = $param["RepairLog"];
         }
     }
 }

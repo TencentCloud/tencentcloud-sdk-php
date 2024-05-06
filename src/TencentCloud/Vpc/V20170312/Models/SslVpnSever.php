@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessPolicyEnabled(integer $AccessPolicyEnabled) 设置是否开启策略控制。0：不开启 1： 开启
  * @method array getAccessPolicy() 获取策略信息
  * @method void setAccessPolicy(array $AccessPolicy) 设置策略信息
+ * @method string getSpName() 获取CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpName(string $SpName) 设置CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SslVpnSever extends AbstractModel
 {
@@ -184,6 +188,12 @@ class SslVpnSever extends AbstractModel
     public $AccessPolicy;
 
     /**
+     * @var string CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpName;
+
+    /**
      * @param string $VpcId VPC实例ID.
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
@@ -212,6 +222,8 @@ class SslVpnSever extends AbstractModel
      * @param string $EiamApplicationId EIAM应用ID
      * @param integer $AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
      * @param array $AccessPolicy 策略信息
+     * @param string $SpName CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -305,6 +317,10 @@ class SslVpnSever extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccessPolicy, $obj);
             }
+        }
+
+        if (array_key_exists("SpName",$param) and $param["SpName"] !== null) {
+            $this->SpName = $param["SpName"];
         }
     }
 }

@@ -20,8 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigExtras请求参数结构体
  *
- * @method array getFilters() 获取支持的key： topicId,name, configExtraId, machineGroupId
- * @method void setFilters(array $Filters) 设置支持的key： topicId,name, configExtraId, machineGroupId
+ * @method array getFilters() 获取name
+- 按照【特殊采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
+
+configExtraId
+- 按照【特殊采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
+
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
+
+machineGroupId
+- 按照【机器组ID】进行过滤。
+- 类型：String
+- 必选：否
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+ * @method void setFilters(array $Filters) 设置name
+- 按照【特殊采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
+
+configExtraId
+- 按照【特殊采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
+
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
+
+machineGroupId
+- 按照【机器组ID】进行过滤。
+- 类型：String
+- 必选：否
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0
  * @method integer getLimit() 获取分页单页的限制数目，默认值为20，最大值100
@@ -30,7 +70,27 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConfigExtrasRequest extends AbstractModel
 {
     /**
-     * @var array 支持的key： topicId,name, configExtraId, machineGroupId
+     * @var array name
+- 按照【特殊采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
+
+configExtraId
+- 按照【特殊采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
+
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
+
+machineGroupId
+- 按照【机器组ID】进行过滤。
+- 类型：String
+- 必选：否
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public $Filters;
 
@@ -45,7 +105,27 @@ class DescribeConfigExtrasRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 支持的key： topicId,name, configExtraId, machineGroupId
+     * @param array $Filters name
+- 按照【特殊采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
+
+configExtraId
+- 按照【特殊采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
+
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
+
+machineGroupId
+- 按照【机器组ID】进行过滤。
+- 类型：String
+- 必选：否
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 分页的偏移量，默认值为0
      * @param integer $Limit 分页单页的限制数目，默认值为20，最大值100
      */

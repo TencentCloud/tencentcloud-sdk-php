@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsp(string $Isp) 设置运营商
  * @method string getFrom() 获取来源页面
  * @method void setFrom(string $From) 设置来源页面
- * @method string getLevel() 获取日志等级
- * @method void setLevel(string $Level) 设置日志等级
+ * @method string getLevel() 获取日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
+ * @method void setLevel(string $Level) 设置日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
  * @method string getBrand() 获取品牌
  * @method void setBrand(string $Brand) 设置品牌
  * @method string getArea() 获取地区
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtThird(string $ExtThird) 设置自定义3
  * @method string getExtFirst() 获取自定义1
  * @method void setExtFirst(string $ExtFirst) 设置自定义1
- * @method string getNetType() 获取网络类型
- * @method void setNetType(string $NetType) 设置网络类型
+ * @method string getNetType() 获取网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
+ * @method void setNetType(string $NetType) 设置网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
  * @method string getDevice() 获取机型
  * @method void setDevice(string $Device) 设置机型
  * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
@@ -110,7 +110,7 @@ class DescribeDataStaticProjectRequest extends AbstractModel
     public $From;
 
     /**
-     * @var string 日志等级
+     * @var string 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
      */
     public $Level;
 
@@ -145,7 +145,7 @@ class DescribeDataStaticProjectRequest extends AbstractModel
     public $ExtFirst;
 
     /**
-     * @var string 网络类型
+     * @var string 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
      */
     public $NetType;
 
@@ -193,14 +193,14 @@ class DescribeDataStaticProjectRequest extends AbstractModel
      * @param string $Engine 浏览器引擎
      * @param string $Isp 运营商
      * @param string $From 来源页面
-     * @param string $Level 日志等级
+     * @param string $Level 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
      * @param string $Brand 品牌
      * @param string $Area 地区
      * @param string $VersionNum 版本
      * @param string $Platform 平台
      * @param string $ExtThird 自定义3
      * @param string $ExtFirst 自定义1
-     * @param string $NetType 网络类型
+     * @param string $NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
      * @param string $Device 机型
      * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Os 操作系统

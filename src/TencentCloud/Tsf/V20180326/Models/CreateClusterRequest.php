@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
  * @method array getProgramIdList() 获取无
  * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
+ * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateClusterRequest extends AbstractModel
     public $ProgramIdList;
 
     /**
+     * @var boolean 是否开启cls日志功能
+     */
+    public $EnableLogCollection;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型
      * @param string $VpcId 私有网络ID
@@ -152,6 +159,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $KuberneteNativeType K : kubeconfig, S : service account
      * @param string $KuberneteNativeSecret native secret
      * @param array $ProgramIdList 无
+     * @param boolean $EnableLogCollection 是否开启cls日志功能
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
             $this->ProgramIdList = $param["ProgramIdList"];
+        }
+
+        if (array_key_exists("EnableLogCollection",$param) and $param["EnableLogCollection"] !== null) {
+            $this->EnableLogCollection = $param["EnableLogCollection"];
         }
     }
 }

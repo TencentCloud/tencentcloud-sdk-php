@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCps(integer $MaxCps) 设置监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
  * @method integer getIdleConnectTimeout() 获取空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+ * @method boolean getSnatEnable() 获取是否开启SNAT。
+ * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT。
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -153,6 +155,11 @@ class CreateListenerRequest extends AbstractModel
     public $IdleConnectTimeout;
 
     /**
+     * @var boolean 是否开启SNAT。
+     */
+    public $SnatEnable;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
      * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
@@ -172,6 +179,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $MaxConn 监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $MaxCps 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * @param boolean $SnatEnable 是否开启SNAT。
      */
     function __construct()
     {
@@ -259,6 +267,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

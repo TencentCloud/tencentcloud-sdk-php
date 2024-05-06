@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置域名。
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method string getPackageType() 获取证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
- * @method void setPackageType(string $PackageType) 设置证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+ * @method string getPackageType() 获取证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+ * @method void setPackageType(string $PackageType) 设置证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
  * @method string getContactEmail() 获取邮箱。
  * @method void setContactEmail(string $ContactEmail) 设置邮箱。
  * @method string getContactPhone() 获取手机。
  * @method void setContactPhone(string $ContactPhone) 设置手机。
- * @method string getValidityPeriod() 获取有效期，默认12个月，目前仅支持12个月。
- * @method void setValidityPeriod(string $ValidityPeriod) 设置有效期，默认12个月，目前仅支持12个月。
+ * @method string getValidityPeriod() 获取有效期，默认3个月，目前仅支持3个月。
+ * @method void setValidityPeriod(string $ValidityPeriod) 设置有效期，默认3个月，目前仅支持3个月。
  * @method string getCsrEncryptAlgo() 获取加密算法，支持 RSA及ECC。
  * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，支持 RSA及ECC。
  * @method string getCsrKeyParameter() 获取密钥对参数，RSA仅支持2048。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
@@ -69,7 +69,7 @@ class ApplyCertificateRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+     * @var string 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      */
     public $PackageType;
 
@@ -84,7 +84,7 @@ class ApplyCertificateRequest extends AbstractModel
     public $ContactPhone;
 
     /**
-     * @var string 有效期，默认12个月，目前仅支持12个月。
+     * @var string 有效期，默认3个月，目前仅支持3个月。
      */
     public $ValidityPeriod;
 
@@ -132,10 +132,10 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $DomainName 域名。
      * @param integer $ProjectId 项目 ID。
-     * @param string $PackageType 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+     * @param string $PackageType 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      * @param string $ContactEmail 邮箱。
      * @param string $ContactPhone 手机。
-     * @param string $ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
+     * @param string $ValidityPeriod 有效期，默认3个月，目前仅支持3个月。
      * @param string $CsrEncryptAlgo 加密算法，支持 RSA及ECC。
      * @param string $CsrKeyParameter 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
      * @param string $CsrKeyPassword CSR 的加密密码。

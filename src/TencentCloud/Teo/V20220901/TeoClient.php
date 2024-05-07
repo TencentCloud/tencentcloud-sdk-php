@@ -95,7 +95,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasks(Models\DescribeRealtimeLogDeliveryTasksRequest $req) 通过本接口查询实时日志投递任务列表。
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) 查询规则引擎规则。
  * @method Models\DescribeRulesSettingResponse DescribeRulesSetting(Models\DescribeRulesSettingRequest $req) 返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
- * @method Models\DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(Models\DescribeSecurityIPGroupInfoRequest $req) 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
+ * @method Models\DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(Models\DescribeSecurityIPGroupRequest $req) 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。
+ * @method Models\DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(Models\DescribeSecurityIPGroupInfoRequest $req) 接口已废弃，将于 2024 年 6 月 30 日停止服务。请使用 [查询安全 IP 组
+](https://cloud.tencent.com/document/product/1552/105866) 接口。
+
+查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) 查询指定策略模板的绑定关系列表。
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 本接口（DescribeTimingL4Data）用于查询四层时序流量数据列表。
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 本接口（DescribeTimingL7AnalysisData）查询七层数据分析类时序数据。

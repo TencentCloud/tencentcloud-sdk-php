@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  - 当指定C端签署人的签署方自定义控件别名不空时，除参数ApproverNumber外，可以只传参数ApproverSignRole。
 
 如果需要指定B端(企业身份类型)签署人，其中ReleasedApprover需要传递的参数如下：
-`ApproverNumber`, `OrganizationName`, `ApproverType`必传。</br>
+(`ApproverNumber`, `ReleasedApproverRecipientId`这两个二选一), `OrganizationName`, `ApproverType`必传。</br>
 对于其他身份标识：
 - **子客企业指定经办人**：OpenId必传，OrganizationOpenId必传；
 - **非子客企业经办人**：Name、Mobile必传。
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverType(string $ApproverType) 设置指定签署人类型，目前支持
 <ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
+ * @method string getReleasedApproverRecipientId() 获取签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+ * @method void setReleasedApproverRecipientId(string $ReleasedApproverRecipientId) 设置签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
  * @method string getName() 获取签署人姓名，最大长度50个字。
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字。
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
@@ -88,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
  * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+ * @method string getApproverSignSealId() 获取印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+ * @method void setApproverSignSealId(string $ApproverSignSealId) 设置印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -103,6 +109,12 @@ class ReleasedApprover extends AbstractModel
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
      */
     public $ApproverType;
+
+    /**
+     * @var string 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     */
+    public $ReleasedApproverRecipientId;
 
     /**
      * @var string 签署人姓名，最大长度50个字。
@@ -165,11 +177,18 @@ class ReleasedApprover extends AbstractModel
     public $ApproverSignRole;
 
     /**
+     * @var string 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public $ApproverSignSealId;
+
+    /**
      * @param integer $ApproverNumber 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
      * @param string $ApproverType 指定签署人类型，目前支持
 <ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
+     * @param string $ReleasedApproverRecipientId 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
      * @param string $Name 签署人姓名，最大长度50个字。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证(默认值)</li>
@@ -194,6 +213,7 @@ class ReleasedApprover extends AbstractModel
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+     * @param string $ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
      */
     function __construct()
     {
@@ -214,6 +234,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("ApproverType",$param) and $param["ApproverType"] !== null) {
             $this->ApproverType = $param["ApproverType"];
+        }
+
+        if (array_key_exists("ReleasedApproverRecipientId",$param) and $param["ReleasedApproverRecipientId"] !== null) {
+            $this->ReleasedApproverRecipientId = $param["ReleasedApproverRecipientId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -250,6 +274,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("ApproverSignRole",$param) and $param["ApproverSignRole"] !== null) {
             $this->ApproverSignRole = $param["ApproverSignRole"];
+        }
+
+        if (array_key_exists("ApproverSignSealId",$param) and $param["ApproverSignSealId"] !== null) {
+            $this->ApproverSignSealId = $param["ApproverSignSealId"];
         }
     }
 }

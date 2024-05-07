@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerNumber(integer $ConsumerNumber) 设置Consumer数量
  * @method integer getExchangeNumber() 获取Exchang数量
  * @method void setExchangeNumber(integer $ExchangeNumber) 设置Exchang数量
- * @method string getExceptionInformation() 获取集群异常。
+ * @method string getExceptionInformation() 获取集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常。
+ * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
  * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
@@ -69,6 +69,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMirrorQueuePolicyFlag() 获取是否开启镜像队列策略。1表示开启，0表示没开启。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMirrorQueuePolicyFlag(integer $MirrorQueuePolicyFlag) 设置是否开启镜像队列策略。1表示开启，0表示没开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMessageConsumeRate() 获取每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageConsumeRate(float $MessageConsumeRate) 设置每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterVersion() 获取集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQClusterInfo extends AbstractModel
@@ -156,7 +164,7 @@ class RabbitMQClusterInfo extends AbstractModel
     public $ExchangeNumber;
 
     /**
-     * @var string 集群异常。
+     * @var string 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptionInformation;
@@ -179,6 +187,18 @@ class RabbitMQClusterInfo extends AbstractModel
     public $MirrorQueuePolicyFlag;
 
     /**
+     * @var float 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageConsumeRate;
+
+    /**
+     * @var string 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterVersion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -197,12 +217,16 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param integer $ConnectionNumber Connection数量
      * @param integer $ConsumerNumber Consumer数量
      * @param integer $ExchangeNumber Exchang数量
-     * @param string $ExceptionInformation 集群异常。
+     * @param string $ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MessageConsumeRate 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterVersion 集群版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +325,14 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
             $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
+        }
+
+        if (array_key_exists("MessageConsumeRate",$param) and $param["MessageConsumeRate"] !== null) {
+            $this->MessageConsumeRate = $param["MessageConsumeRate"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
         }
     }
 }

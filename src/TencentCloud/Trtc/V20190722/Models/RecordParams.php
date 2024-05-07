@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordMode() 获取录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
  * @method void setRecordMode(integer $RecordMode) 设置录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
  * @method integer getMaxIdleTime() 获取房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
  * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
  * @method integer getStreamType() 获取录制的媒体流类型：
@@ -44,21 +44,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputFormat(integer $OutputFormat) 设置输出文件的格式（存储至COS等第三方存储时有效）。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。3：输出文件格式为mp4。4：输出文件格式为aac。
 
 存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
- * @method integer getAvMerge() 获取单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
- * @method void setAvMerge(integer $AvMerge) 设置单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+ * @method integer getAvMerge() 获取单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
+ * @method void setAvMerge(integer $AvMerge) 设置单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
  * @method integer getMaxMediaFileDuration() 获取如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
  * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) 设置如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
  * @method integer getMediaId() 获取指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
  * @method void setMediaId(integer $MediaId) 设置指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+ * @method integer getFillType() 获取上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+ * @method void setFillType(integer $FillType) 设置上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
  */
 class RecordParams extends AbstractModel
 {
     /**
      * @var integer 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
      */
     public $RecordMode;
 
@@ -88,7 +90,7 @@ class RecordParams extends AbstractModel
     public $OutputFormat;
 
     /**
-     * @var integer 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     * @var integer 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
      */
     public $AvMerge;
 
@@ -104,9 +106,14 @@ Hls 格式录制此参数不生效。
     public $MediaId;
 
     /**
+     * @var integer 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+     */
+    public $FillType;
+
+    /**
      * @param integer $RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
      * @param integer $MaxIdleTime 房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
      * @param integer $StreamType 录制的媒体流类型：
 0：录制音频+视频流（默认）;
@@ -116,10 +123,11 @@ Hls 格式录制此参数不生效。
      * @param integer $OutputFormat 输出文件的格式（存储至COS等第三方存储时有效）。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。3：输出文件格式为mp4。4：输出文件格式为aac。
 
 存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
-     * @param integer $AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     * @param integer $AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
      * @param integer $MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
      * @param integer $MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+     * @param integer $FillType 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
      */
     function __construct()
     {
@@ -165,6 +173,10 @@ Hls 格式录制此参数不生效。
 
         if (array_key_exists("MediaId",$param) and $param["MediaId"] !== null) {
             $this->MediaId = $param["MediaId"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

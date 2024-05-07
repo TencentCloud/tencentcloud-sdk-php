@@ -29,8 +29,9 @@ use TencentCloud\Common\AbstractModel;
 
 
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method void setType(string $Type) 设置通知类型。可选值：
 - Trigger - 告警触发
 - Recovery - 告警恢复
@@ -38,34 +39,41 @@ use TencentCloud\Common\AbstractModel;
 
 
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method array getNoticeReceivers() 获取通知接收对象。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method void setWebCallbacks(array $WebCallbacks) 设置接口回调信息（包括企业微信）。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  * @method array getNoticeRules() 获取通知规则。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
 
 
  * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -82,32 +90,36 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
 
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     public $Type;
 
     /**
      * @var array 通知接收对象。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     public $NoticeReceivers;
 
     /**
      * @var array 接口回调信息（包括企业微信）。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     public $WebCallbacks;
 
     /**
      * @var array 通知规则。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
 
 
      */
@@ -122,20 +134,24 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
 
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      * @param array $NoticeReceivers 通知接收对象。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      * @param array $WebCallbacks 接口回调信息（包括企业微信）。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      * @param array $NoticeRules 通知规则。
  注意:  
-- Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
+- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
+- 2组rule配置互斥
+- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     function __construct()
     {

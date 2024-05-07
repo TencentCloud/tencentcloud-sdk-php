@@ -119,7 +119,7 @@ use TencentCloud\Common\AbstractModel;
 <li>0：不自动续费</li>
 <li>1：开启自动续费</li>
 <li>2：禁止自动续费</li>
-<li>-1：无效</ii>
+<li>-1：无效</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记
@@ -127,7 +127,7 @@ use TencentCloud\Common\AbstractModel;
 <li>0：不自动续费</li>
 <li>1：开启自动续费</li>
 <li>2：禁止自动续费</li>
-<li>-1：无效</ii>
+<li>-1：无效</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNearExpire() 获取是否快过期
@@ -328,7 +328,7 @@ class PrometheusInstancesItem extends AbstractModel
 <li>0：不自动续费</li>
 <li>1：开启自动续费</li>
 <li>2：禁止自动续费</li>
-<li>-1：无效</ii>
+<li>-1：无效</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -472,7 +472,7 @@ class PrometheusInstancesItem extends AbstractModel
 <li>0：不自动续费</li>
 <li>1：开启自动续费</li>
 <li>2：禁止自动续费</li>
-<li>-1：无效</ii>
+<li>-1：无效</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNearExpire 是否快过期

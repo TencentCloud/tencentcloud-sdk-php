@@ -44,17 +44,17 @@ use TencentCloud\Common\AbstractModel;
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
- * @method string getStartTime() 获取允许接收信息的开始时间。
- * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。
- * @method string getEndTime() 获取允许接收信息的结束时间。
- * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。
+ * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`，必填。
+ * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`，必填。
+ * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`，必填。
+ * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。格式：`15:04:05`，必填。
  * @method integer getIndex() 获取位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
  * @method void setIndex(integer $Index) 设置位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
  */
 class NoticeReceiver extends AbstractModel
@@ -84,19 +84,19 @@ class NoticeReceiver extends AbstractModel
     public $ReceiverChannels;
 
     /**
-     * @var string 允许接收信息的开始时间。
+     * @var string 允许接收信息的开始时间。格式：`15:04:05`，必填。
      */
     public $StartTime;
 
     /**
-     * @var string 允许接收信息的结束时间。
+     * @var string 允许接收信息的结束时间。格式：`15:04:05`，必填。
      */
     public $EndTime;
 
     /**
      * @var integer 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
      */
     public $Index;
@@ -114,11 +114,11 @@ class NoticeReceiver extends AbstractModel
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
-     * @param string $StartTime 允许接收信息的开始时间。
-     * @param string $EndTime 允许接收信息的结束时间。
+     * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
      * @param integer $Index 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
      */
     function __construct()

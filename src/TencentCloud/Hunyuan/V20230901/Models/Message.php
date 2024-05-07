@@ -18,7 +18,7 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 单条消息
+ * 会话内容
  *
  * @method string getRole() 获取角色
  * @method void setRole(string $Role) 设置角色

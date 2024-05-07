@@ -28,20 +28,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置日志主题id
  * @method HostFileInfo getHostFile() 获取节点文件配置信息
  * @method void setHostFile(HostFileInfo $HostFile) 设置节点文件配置信息
- * @method ContainerFileInfo getContainerFile() 获取容器文件路径信息
- * @method void setContainerFile(ContainerFileInfo $ContainerFile) 设置容器文件路径信息
+ * @method ContainerFileInfo getContainerFile() 获取采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+ * @method void setContainerFile(ContainerFileInfo $ContainerFile) 设置采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
  * @method ContainerStdoutInfo getContainerStdout() 获取容器标准输出信息
  * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置容器标准输出信息
- * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
- * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
- * @method string getLogFormat() 获取日志格式化方式
- * @method void setLogFormat(string $LogFormat) 设置日志格式化方式
+ * @method string getLogType() 获取采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
+ * @method void setLogType(string $LogType) 设置采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
+ * @method string getLogFormat() 获取日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
+ * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
  * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
  * @method void setExtractRule(ExtractRuleInfo $ExtractRule) 设置提取规则，如果设置了ExtractRule，则必须设置LogType
  * @method array getExcludePaths() 获取采集黑名单路径列表
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
- * @method string getUserDefineRule() 获取用户自定义采集规则，Json格式序列化的字符串
- * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义采集规则，Json格式序列化的字符串
+ * @method string getUserDefineRule() 获取组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
+ * @method void setUserDefineRule(string $UserDefineRule) 设置组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
  * @method string getType() 获取类型：container_stdout、container_file、host_file
  * @method void setType(string $Type) 设置类型：container_stdout、container_file、host_file
  * @method string getGroupId() 获取机器组ID
@@ -58,12 +82,13 @@ use TencentCloud\Common\AbstractModel;
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
  * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
  */
 class ModifyConfigExtraRequest extends AbstractModel
 {
@@ -88,7 +113,8 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $HostFile;
 
     /**
-     * @var ContainerFileInfo 容器文件路径信息
+     * @var ContainerFileInfo 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
      */
     public $ContainerFile;
 
@@ -98,12 +124,21 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $ContainerStdout;
 
     /**
-     * @var string 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
+     * @var string 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
      */
     public $LogType;
 
     /**
-     * @var string 日志格式化方式
+     * @var string 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
      */
     public $LogFormat;
 
@@ -118,7 +153,9 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $ExcludePaths;
 
     /**
-     * @var string 用户自定义采集规则，Json格式序列化的字符串
+     * @var string 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
      */
     public $UserDefineRule;
 
@@ -157,7 +194,8 @@ class ModifyConfigExtraRequest extends AbstractModel
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
      */
     public $AdvancedConfig;
 
@@ -166,13 +204,25 @@ class ModifyConfigExtraRequest extends AbstractModel
      * @param string $Name 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
      * @param string $TopicId 日志主题id
      * @param HostFileInfo $HostFile 节点文件配置信息
-     * @param ContainerFileInfo $ContainerFile 容器文件路径信息
+     * @param ContainerFileInfo $ContainerFile 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
      * @param ContainerStdoutInfo $ContainerStdout 容器标准输出信息
-     * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
-     * @param string $LogFormat 日志格式化方式
+     * @param string $LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
+     * @param string $LogFormat 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
      * @param array $ExcludePaths 采集黑名单路径列表
-     * @param string $UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     * @param string $UserDefineRule 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
      * @param string $Type 类型：container_stdout、container_file、host_file
      * @param string $GroupId 机器组ID
      * @param string $ConfigFlag 自建采集配置标
@@ -183,7 +233,7 @@ class ModifyConfigExtraRequest extends AbstractModel
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
      */
     function __construct()
     {

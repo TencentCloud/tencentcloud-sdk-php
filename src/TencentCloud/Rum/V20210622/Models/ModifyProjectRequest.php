@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getID() 获取项目 id
  * @method void setID(integer $ID) 设置项目 id
- * @method string getName() 获取项目名(可选，不为空且最长为 200)
- * @method void setName(string $Name) 设置项目名(可选，不为空且最长为 200)
+ * @method string getName() 获取应用名称(可选，不为空且最长为 200字符)
+ * @method void setName(string $Name) 设置应用名称(可选，不为空且最长为 200字符)
  * @method string getURL() 获取项目网页地址(可选，最长为 256)
  * @method void setURL(string $URL) 设置项目网页地址(可选，最长为 256)
  * @method string getRepo() 获取项目仓库地址(可选，最长为 256)
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableURLGroup(integer $EnableURLGroup) 设置是否开启聚类(可选)
  * @method string getType() 获取项目类型(可接受值为 "web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
  * @method void setType(string $Type) 设置项目类型(可接受值为 "web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
- * @method string getDesc() 获取项目描述(可选，最长为 1000)
- * @method void setDesc(string $Desc) 设置项目描述(可选，最长为 1000)
+ * @method string getDesc() 获取应用描述(可选，最长为 1000字符)
+ * @method void setDesc(string $Desc) 设置应用描述(可选，最长为 1000字符)
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyProjectRequest extends AbstractModel
     public $ID;
 
     /**
-     * @var string 项目名(可选，不为空且最长为 200)
+     * @var string 应用名称(可选，不为空且最长为 200字符)
      */
     public $Name;
 
@@ -82,20 +82,20 @@ class ModifyProjectRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 项目描述(可选，最长为 1000)
+     * @var string 应用描述(可选，最长为 1000字符)
      */
     public $Desc;
 
     /**
      * @param integer $ID 项目 id
-     * @param string $Name 项目名(可选，不为空且最长为 200)
+     * @param string $Name 应用名称(可选，不为空且最长为 200字符)
      * @param string $URL 项目网页地址(可选，最长为 256)
      * @param string $Repo 项目仓库地址(可选，最长为 256)
      * @param string $InstanceID 项目需要转移到的实例 id(可选)
      * @param string $Rate 项目采样率(可选)
      * @param integer $EnableURLGroup 是否开启聚类(可选)
      * @param string $Type 项目类型(可接受值为 "web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
-     * @param string $Desc 项目描述(可选，最长为 1000)
+     * @param string $Desc 应用描述(可选，最长为 1000字符)
      */
     function __construct()
     {

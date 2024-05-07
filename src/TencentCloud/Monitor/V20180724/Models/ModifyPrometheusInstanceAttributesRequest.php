@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusInstanceAttributes请求参数结构体
  *
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method integer getDataRetentionTime() 获取存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
  * @method void setDataRetentionTime(integer $DataRetentionTime) 设置存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
  */
 class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 实例名称
-     */
-    public $InstanceName;
-
-    /**
      * @var string 实例 ID
      */
     public $InstanceId;
+
+    /**
+     * @var string 实例名称
+     */
+    public $InstanceName;
 
     /**
      * @var integer 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
@@ -45,8 +45,8 @@ class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
     public $DataRetentionTime;
 
     /**
-     * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例 ID
+     * @param string $InstanceName 实例名称
      * @param integer $DataRetentionTime 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
      */
     function __construct()
@@ -62,12 +62,12 @@ class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
 
         if (array_key_exists("DataRetentionTime",$param) and $param["DataRetentionTime"] !== null) {

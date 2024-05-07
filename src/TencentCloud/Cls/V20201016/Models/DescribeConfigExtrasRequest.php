@@ -20,46 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigExtras请求参数结构体
  *
- * @method array getFilters() 获取name
+ * @method array getFilters() 获取过滤器，支持如下选项：
+name
 - 按照【特殊采集配置名称】进行模糊匹配过滤。
 - 类型：String
-- 必选：否
 
 configExtraId
 - 按照【特殊采集配置ID】进行过滤。
 - 类型：String
-- 必选：否
 
 topicId
 - 按照【日志主题】进行过滤。
 - 类型：String
-- 必选：否
 
 machineGroupId
 - 按照【机器组ID】进行过滤。
 - 类型：String
-- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置name
+ * @method void setFilters(array $Filters) 设置过滤器，支持如下选项：
+name
 - 按照【特殊采集配置名称】进行模糊匹配过滤。
 - 类型：String
-- 必选：否
 
 configExtraId
 - 按照【特殊采集配置ID】进行过滤。
 - 类型：String
-- 必选：否
 
 topicId
 - 按照【日志主题】进行过滤。
 - 类型：String
-- 必选：否
 
 machineGroupId
 - 按照【机器组ID】进行过滤。
 - 类型：String
-- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
@@ -70,25 +64,22 @@ machineGroupId
 class DescribeConfigExtrasRequest extends AbstractModel
 {
     /**
-     * @var array name
+     * @var array 过滤器，支持如下选项：
+name
 - 按照【特殊采集配置名称】进行模糊匹配过滤。
 - 类型：String
-- 必选：否
 
 configExtraId
 - 按照【特殊采集配置ID】进行过滤。
 - 类型：String
-- 必选：否
 
 topicId
 - 按照【日志主题】进行过滤。
 - 类型：String
-- 必选：否
 
 machineGroupId
 - 按照【机器组ID】进行过滤。
 - 类型：String
-- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -105,25 +96,22 @@ machineGroupId
     public $Limit;
 
     /**
-     * @param array $Filters name
+     * @param array $Filters 过滤器，支持如下选项：
+name
 - 按照【特殊采集配置名称】进行模糊匹配过滤。
 - 类型：String
-- 必选：否
 
 configExtraId
 - 按照【特殊采集配置ID】进行过滤。
 - 类型：String
-- 必选：否
 
 topicId
 - 按照【日志主题】进行过滤。
 - 类型：String
-- 必选：否
 
 machineGroupId
 - 按照【机器组ID】进行过滤。
 - 类型：String
-- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 分页的偏移量，默认值为0

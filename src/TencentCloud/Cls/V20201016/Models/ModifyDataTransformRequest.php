@@ -24,8 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置加工任务id
  * @method string getName() 获取加工任务名称
  * @method void setName(string $Name) 设置加工任务名称
- * @method string getEtlContent() 获取加工语句
- * @method void setEtlContent(string $EtlContent) 设置加工语句
+ * @method string getEtlContent() 获取加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
+ * @method void setEtlContent(string $EtlContent) 设置加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
  * @method integer getEnableFlag() 获取任务启动状态. 默认为1，开启,  2关闭
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态. 默认为1，开启,  2关闭
  * @method array getDstResources() 获取加工任务目的topic_id以及别名
@@ -46,7 +56,12 @@ class ModifyDataTransformRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 加工语句
+     * @var string 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      */
     public $EtlContent;
 
@@ -68,7 +83,12 @@ class ModifyDataTransformRequest extends AbstractModel
     /**
      * @param string $TaskId 加工任务id
      * @param string $Name 加工任务名称
-     * @param string $EtlContent 加工语句
+     * @param string $EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      * @param integer $EnableFlag 任务启动状态. 默认为1，开启,  2关闭
      * @param array $DstResources 加工任务目的topic_id以及别名
      * @param integer $HasServicesLog 是否开启投递服务日志。1关闭，2开启

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProject请求参数结构体
  *
- * @method string getName() 获取创建的项目名(不为空且最长为 200)
- * @method void setName(string $Name) 设置创建的项目名(不为空且最长为 200)
+ * @method string getName() 获取应用名称(不为空且最长为 200)
+ * @method void setName(string $Name) 设置应用名称(不为空且最长为 200)
  * @method string getInstanceID() 获取业务系统 ID
  * @method void setInstanceID(string $InstanceID) 设置业务系统 ID
  * @method string getRate() 获取项目抽样率(大于等于 0)
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepo(string $Repo) 设置项目对应仓库地址(可选，最长为 256)
  * @method string getURL() 获取项目对应网页地址(可选，最长为 256)
  * @method void setURL(string $URL) 设置项目对应网页地址(可选，最长为 256)
- * @method string getDesc() 获取创建的项目描述(可选，最长为 1000)
- * @method void setDesc(string $Desc) 设置创建的项目描述(可选，最长为 1000)
+ * @method string getDesc() 获取应用描述(可选，最长为 1000)
+ * @method void setDesc(string $Desc) 设置应用描述(可选，最长为 1000)
  */
 class CreateProjectRequest extends AbstractModel
 {
     /**
-     * @var string 创建的项目名(不为空且最长为 200)
+     * @var string 应用名称(不为空且最长为 200)
      */
     public $Name;
 
@@ -75,19 +75,19 @@ class CreateProjectRequest extends AbstractModel
     public $URL;
 
     /**
-     * @var string 创建的项目描述(可选，最长为 1000)
+     * @var string 应用描述(可选，最长为 1000)
      */
     public $Desc;
 
     /**
-     * @param string $Name 创建的项目名(不为空且最长为 200)
+     * @param string $Name 应用名称(不为空且最长为 200)
      * @param string $InstanceID 业务系统 ID
      * @param string $Rate 项目抽样率(大于等于 0)
      * @param integer $EnableURLGroup 是否开启聚类
      * @param string $Type 项目类型("web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
      * @param string $Repo 项目对应仓库地址(可选，最长为 256)
      * @param string $URL 项目对应网页地址(可选，最长为 256)
-     * @param string $Desc 创建的项目描述(可选，最长为 1000)
+     * @param string $Desc 应用描述(可选，最长为 1000)
      */
     function __construct()
     {

@@ -50,6 +50,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+ * @method string getApproverSignSealId() 获取印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+ * @method void setApproverSignSealId(string $ApproverSignSealId) 设置印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -92,6 +95,11 @@ class ReleasedApprover extends AbstractModel
     public $ApproverSignRole;
 
     /**
+     * @var string 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public $ApproverSignSealId;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字。
 
      * @param string $Mobile 签署人手机号。
@@ -105,6 +113,8 @@ class ReleasedApprover extends AbstractModel
      * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+     * @param string $ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
      */
     function __construct()
     {
@@ -141,6 +151,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("ApproverSignRole",$param) and $param["ApproverSignRole"] !== null) {
             $this->ApproverSignRole = $param["ApproverSignRole"];
+        }
+
+        if (array_key_exists("ApproverSignSealId",$param) and $param["ApproverSignSealId"] !== null) {
+            $this->ApproverSignSealId = $param["ApproverSignSealId"];
         }
     }
 }

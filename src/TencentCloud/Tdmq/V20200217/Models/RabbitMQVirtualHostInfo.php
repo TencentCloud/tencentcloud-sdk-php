@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateOut(float $MessageRateOut) 设置输出消息速率
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMirrorQueuePolicyFlag() 获取是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -128,6 +132,12 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $MessageRateOut;
 
     /**
+     * @var boolean 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MirrorQueuePolicyFlag;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description vhost描述信息
@@ -147,6 +157,8 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param float $MessageRateIn 输入消息速率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateOut 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -205,6 +217,10 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
         if (array_key_exists("MessageRateOut",$param) and $param["MessageRateOut"] !== null) {
             $this->MessageRateOut = $param["MessageRateOut"];
+        }
+
+        if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
+            $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
         }
     }
 }

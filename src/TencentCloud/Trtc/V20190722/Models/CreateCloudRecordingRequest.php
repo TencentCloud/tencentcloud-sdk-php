@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 【*注意】必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
 1: 32位整型的RoomId（默认）
- * @method MixTranscodeParams getMixTranscodeParams() 获取混流的转码参数，录制模式为混流的时候可以设置。
- * @method void setMixTranscodeParams(MixTranscodeParams $MixTranscodeParams) 设置混流的转码参数，录制模式为混流的时候可以设置。
- * @method MixLayoutParams getMixLayoutParams() 获取混流的布局参数，录制模式为混流的时候可以设置。
- * @method void setMixLayoutParams(MixLayoutParams $MixLayoutParams) 设置混流的布局参数，录制模式为混流的时候可以设置。
+ * @method MixTranscodeParams getMixTranscodeParams() 获取合流的转码参数，录制模式为合流的时候可以设置。
+ * @method void setMixTranscodeParams(MixTranscodeParams $MixTranscodeParams) 设置合流的转码参数，录制模式为合流的时候可以设置。
+ * @method MixLayoutParams getMixLayoutParams() 获取合流的布局参数，录制模式为合流的时候可以设置。
+ * @method void setMixLayoutParams(MixLayoutParams $MixLayoutParams) 设置合流的布局参数，录制模式为合流的时候可以设置。
  * @method integer getResourceExpiredHour() 获取接口可以调用的时效性，从成功开启录制并获得任务ID后开始计算，超时后无法调用查询、更新和停止等接口，但是录制任务不会停止。 参数的单位是小时，默认72小时（3天），最大可设置720小时（30天），最小设置6小时。举例说明：如果不设置该参数，那么开始录制成功后，查询、更新和停止录制的调用时效为72个小时。
  * @method void setResourceExpiredHour(integer $ResourceExpiredHour) 设置接口可以调用的时效性，从成功开启录制并获得任务ID后开始计算，超时后无法调用查询、更新和停止等接口，但是录制任务不会停止。 参数的单位是小时，默认72小时（3天），最大可设置720小时（30天），最小设置6小时。举例说明：如果不设置该参数，那么开始录制成功后，查询、更新和停止录制的调用时效为72个小时。
  * @method string getPrivateMapKey() 获取TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
@@ -93,12 +93,12 @@ class CreateCloudRecordingRequest extends AbstractModel
     public $RoomIdType;
 
     /**
-     * @var MixTranscodeParams 混流的转码参数，录制模式为混流的时候可以设置。
+     * @var MixTranscodeParams 合流的转码参数，录制模式为合流的时候可以设置。
      */
     public $MixTranscodeParams;
 
     /**
-     * @var MixLayoutParams 混流的布局参数，录制模式为混流的时候可以设置。
+     * @var MixLayoutParams 合流的布局参数，录制模式为合流的时候可以设置。
      */
     public $MixLayoutParams;
 
@@ -124,8 +124,8 @@ class CreateCloudRecordingRequest extends AbstractModel
 【*注意】必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
 1: 32位整型的RoomId（默认）
-     * @param MixTranscodeParams $MixTranscodeParams 混流的转码参数，录制模式为混流的时候可以设置。
-     * @param MixLayoutParams $MixLayoutParams 混流的布局参数，录制模式为混流的时候可以设置。
+     * @param MixTranscodeParams $MixTranscodeParams 合流的转码参数，录制模式为合流的时候可以设置。
+     * @param MixLayoutParams $MixLayoutParams 合流的布局参数，录制模式为合流的时候可以设置。
      * @param integer $ResourceExpiredHour 接口可以调用的时效性，从成功开启录制并获得任务ID后开始计算，超时后无法调用查询、更新和停止等接口，但是录制任务不会停止。 参数的单位是小时，默认72小时（3天），最大可设置720小时（30天），最小设置6小时。举例说明：如果不设置该参数，那么开始录制成功后，查询、更新和停止录制的调用时效为72个小时。
      * @param string $PrivateMapKey TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
      */

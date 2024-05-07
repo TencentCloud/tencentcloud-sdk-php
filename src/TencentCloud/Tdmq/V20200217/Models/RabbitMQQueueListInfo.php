@@ -54,6 +54,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDurable() 获取队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDurable(boolean $Durable) 设置队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoDelete() 获取队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoDelete(boolean $AutoDelete) 设置队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVirtualHost() 获取队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualHost(string $VirtualHost) 设置队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNode() 获取队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNode(string $Node) 设置队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolicy() 获取生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicy(string $Policy) 设置生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArguments() 获取扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArguments(string $Arguments) 设置扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getExclusive() 获取是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExclusive(boolean $Exclusive) 设置是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQQueueListInfo extends AbstractModel
 {
@@ -111,6 +143,54 @@ class RabbitMQQueueListInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var boolean 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Durable;
+
+    /**
+     * @var boolean 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoDelete;
+
+    /**
+     * @var string 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VirtualHost;
+
+    /**
+     * @var string 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Node;
+
+    /**
+     * @var string 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Policy;
+
+    /**
+     * @var string 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Arguments;
+
+    /**
+     * @var boolean 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Exclusive;
+
+    /**
      * @param string $QueueName 队列名
      * @param string $Remark 备注说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,6 +207,22 @@ class RabbitMQQueueListInfo extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Durable 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VirtualHost 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Node 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Policy 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Arguments 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Exclusive 是否独占队列
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +273,38 @@ class RabbitMQQueueListInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Durable",$param) and $param["Durable"] !== null) {
+            $this->Durable = $param["Durable"];
+        }
+
+        if (array_key_exists("AutoDelete",$param) and $param["AutoDelete"] !== null) {
+            $this->AutoDelete = $param["AutoDelete"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("VirtualHost",$param) and $param["VirtualHost"] !== null) {
+            $this->VirtualHost = $param["VirtualHost"];
+        }
+
+        if (array_key_exists("Node",$param) and $param["Node"] !== null) {
+            $this->Node = $param["Node"];
+        }
+
+        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
+            $this->Policy = $param["Policy"];
+        }
+
+        if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
+            $this->Arguments = $param["Arguments"];
+        }
+
+        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
+            $this->Exclusive = $param["Exclusive"];
         }
     }
 }

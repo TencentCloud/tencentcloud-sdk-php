@@ -79,11 +79,9 @@ use TencentCloud\Common\AbstractModel;
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJsonStandard() 获取是否为标准json。  0：否； 1：是。
-注
 - 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonStandard(integer $JsonStandard) 设置是否为标准json。  0：否； 1：是。
-注
 - 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
@@ -226,7 +224,6 @@ class ExtractRuleInfo extends AbstractModel
 
     /**
      * @var integer 是否为标准json。  0：否； 1：是。
-注
 - 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -322,7 +319,6 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JsonStandard 是否为标准json。  0：否； 1：是。
-注
 - 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。

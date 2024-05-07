@@ -33,14 +33,18 @@ use TencentCloud\Common\AbstractModel;
 - DingTalk
 - Lark
  * @method string getMethod() 获取回调方法。可选值：
-- POST
+- POST（默认值）
 - PUT
-默认值为POST。CallbackType为Http时为必选。
+
+注意：
+- 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置回调方法。可选值：
-- POST
+- POST（默认值）
 - PUT
-默认值为POST。CallbackType为Http时为必选。
+
+注意：
+- 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取请求头。
 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
@@ -79,9 +83,11 @@ class WebCallback extends AbstractModel
 
     /**
      * @var string 回调方法。可选值：
-- POST
+- POST（默认值）
 - PUT
-默认值为POST。CallbackType为Http时为必选。
+
+注意：
+- 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
@@ -115,9 +121,11 @@ class WebCallback extends AbstractModel
 - DingTalk
 - Lark
      * @param string $Method 回调方法。可选值：
-- POST
+- POST（默认值）
 - PUT
-默认值为POST。CallbackType为Http时为必选。
+
+注意：
+- 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 请求头。
 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。

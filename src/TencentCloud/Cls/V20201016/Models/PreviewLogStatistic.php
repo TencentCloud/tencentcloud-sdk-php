@@ -22,14 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogContent() 获取日志内容
  * @method void setLogContent(string $LogContent) 设置日志内容
- * @method integer getLineNum() 获取行号
- * @method void setLineNum(integer $LineNum) 设置行号
+ * @method integer getLineNum() 获取行号。从0开始
+ * @method void setLineNum(integer $LineNum) 设置行号。从0开始
  * @method string getDstTopicId() 获取目标日志主题
  * @method void setDstTopicId(string $DstTopicId) 设置目标日志主题
- * @method string getFailReason() 获取失败错误码， 空字符串""表示正常
- * @method void setFailReason(string $FailReason) 设置失败错误码， 空字符串""表示正常
- * @method string getTime() 获取日志时间戳
- * @method void setTime(string $Time) 设置日志时间戳
+ * @method string getFailReason() 获取失败错误信息， 空字符串""表示正常
+ * @method void setFailReason(string $FailReason) 设置失败错误信息， 空字符串""表示正常
+ * @method string getTime() 获取日志时间，格式：`2024-05-07 17:13:17.105`
+
+- 入参时无效
+- 出参时有效，为日志中的时间格式
+ * @method void setTime(string $Time) 设置日志时间，格式：`2024-05-07 17:13:17.105`
+
+- 入参时无效
+- 出参时有效，为日志中的时间格式
  * @method string getDstTopicName() 获取目标topic-name
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstTopicName(string $DstTopicName) 设置目标topic-name
@@ -43,7 +49,7 @@ class PreviewLogStatistic extends AbstractModel
     public $LogContent;
 
     /**
-     * @var integer 行号
+     * @var integer 行号。从0开始
      */
     public $LineNum;
 
@@ -53,27 +59,34 @@ class PreviewLogStatistic extends AbstractModel
     public $DstTopicId;
 
     /**
-     * @var string 失败错误码， 空字符串""表示正常
+     * @var string 失败错误信息， 空字符串""表示正常
      */
     public $FailReason;
 
     /**
-     * @var string 日志时间戳
+     * @var string 日志时间，格式：`2024-05-07 17:13:17.105`
+
+- 入参时无效
+- 出参时有效，为日志中的时间格式
      */
     public $Time;
 
     /**
      * @var string 目标topic-name
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DstTopicName;
 
     /**
      * @param string $LogContent 日志内容
-     * @param integer $LineNum 行号
+     * @param integer $LineNum 行号。从0开始
      * @param string $DstTopicId 目标日志主题
-     * @param string $FailReason 失败错误码， 空字符串""表示正常
-     * @param string $Time 日志时间戳
+     * @param string $FailReason 失败错误信息， 空字符串""表示正常
+     * @param string $Time 日志时间，格式：`2024-05-07 17:13:17.105`
+
+- 入参时无效
+- 出参时有效，为日志中的时间格式
      * @param string $DstTopicName 目标topic-name
 注意：此字段可能返回 null，表示取不到有效值。
      */

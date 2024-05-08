@@ -14,39 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 风险趋势统计--值
+ * 有效期
  *
- * @method integer getRequests() 获取请求次数
+ * @method string getText() 获取文本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequests(integer $Requests) 设置请求次数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndex() 获取日期标签
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndex(string $Index) 设置日期标签
+ * @method void setText(string $Text) 设置文本
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OutputFrontRiskValue extends AbstractModel
+class ChemicalProductInfoValidityPeriod extends AbstractModel
 {
     /**
-     * @var integer 请求次数
+     * @var string 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Requests;
+    public $Text;
 
     /**
-     * @var string 日期标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Index;
-
-    /**
-     * @param integer $Requests 请求次数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Index 日期标签
+     * @param string $Text 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +50,8 @@ class OutputFrontRiskValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Requests",$param) and $param["Requests"] !== null) {
-            $this->Requests = $param["Requests"];
-        }
-
-        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
-            $this->Index = $param["Index"];
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
     }
 }

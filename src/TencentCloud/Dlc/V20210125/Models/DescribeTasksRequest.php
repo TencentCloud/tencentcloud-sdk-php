@@ -46,6 +46,8 @@ task-kind - string （任务类型过滤）
  * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
  * @method string getDataEngineName() 获取数据引擎名称，用于筛选
  * @method void setDataEngineName(string $DataEngineName) 设置数据引擎名称，用于筛选
+ * @method string getResourceGroupName() 获取spark引擎资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置spark引擎资源组名称
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -95,6 +97,11 @@ task-kind - string （任务类型过滤）
     public $DataEngineName;
 
     /**
+     * @var string spark引擎资源组名称
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
@@ -108,6 +115,7 @@ task-kind - string （任务类型过滤）
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
      * @param string $DataEngineName 数据引擎名称，用于筛选
+     * @param string $ResourceGroupName spark引擎资源组名称
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ task-kind - string （任务类型过滤）
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

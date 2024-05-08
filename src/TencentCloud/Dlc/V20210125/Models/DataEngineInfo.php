@@ -190,6 +190,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineNetworkId(string $EngineNetworkId) 设置引擎网络ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEngineResourceGroupCount() 获取标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineResourceGroupCount(integer $EngineResourceGroupCount) 设置标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEngineResourceUsedCU() 获取引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineResourceUsedCU(integer $EngineResourceUsedCU) 设置引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -475,6 +483,18 @@ class DataEngineInfo extends AbstractModel
     public $EngineNetworkId;
 
     /**
+     * @var integer 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineResourceGroupCount;
+
+    /**
+     * @var integer 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineResourceUsedCU;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -559,6 +579,10 @@ class DataEngineInfo extends AbstractModel
      * @param string $EngineTypeDetail 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineNetworkId 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EngineResourceGroupCount 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EngineResourceUsedCU 引擎当前使用量（Cu）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -780,6 +804,14 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("EngineNetworkId",$param) and $param["EngineNetworkId"] !== null) {
             $this->EngineNetworkId = $param["EngineNetworkId"];
+        }
+
+        if (array_key_exists("EngineResourceGroupCount",$param) and $param["EngineResourceGroupCount"] !== null) {
+            $this->EngineResourceGroupCount = $param["EngineResourceGroupCount"];
+        }
+
+        if (array_key_exists("EngineResourceUsedCU",$param) and $param["EngineResourceUsedCU"] !== null) {
+            $this->EngineResourceUsedCU = $param["EngineResourceUsedCU"];
         }
     }
 }

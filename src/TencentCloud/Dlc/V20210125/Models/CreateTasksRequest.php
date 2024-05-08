@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源名称，默认为DataLakeCatalog
  * @method string getDataEngineName() 获取计算引擎名称，不填任务提交到默认集群
  * @method void setDataEngineName(string $DataEngineName) 设置计算引擎名称，不填任务提交到默认集群
+ * @method string getResourceGroupName() 获取spark集群资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置spark集群资源组名称
  */
 class CreateTasksRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateTasksRequest extends AbstractModel
     public $DataEngineName;
 
     /**
+     * @var string spark集群资源组名称
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      * @param TasksInfo $Tasks SQL任务信息
      * @param string $DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      * @param string $DataEngineName 计算引擎名称，不填任务提交到默认集群
+     * @param string $ResourceGroupName spark集群资源组名称
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateTasksRequest extends AbstractModel
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getType() 获取推送类型。http：HTTP 回调
- * @method void setType(string $Type) 设置推送类型。http：HTTP 回调
+ * @method string getType() 获取推送类型。可选值：
+- `http`：HTTP 回调
+ * @method void setType(string $Type) 设置推送类型。可选值：
+- `http`：HTTP 回调
  * @method string getCallbackUrl() 获取HTTP 回调 URL
  * @method void setCallbackUrl(string $CallbackUrl) 设置HTTP 回调 URL
  * @method string getCallbackToken() 获取HTTP 回调鉴权 Token
@@ -37,7 +39,8 @@ class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string 推送类型。http：HTTP 回调
+     * @var string 推送类型。可选值：
+- `http`：HTTP 回调
      */
     public $Type;
 
@@ -53,7 +56,8 @@ class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel
 
     /**
      * @param string $ProductId 产品ID
-     * @param string $Type 推送类型。http：HTTP 回调
+     * @param string $Type 推送类型。可选值：
+- `http`：HTTP 回调
      * @param string $CallbackUrl HTTP 回调 URL
      * @param string $CallbackToken HTTP 回调鉴权 Token
      */

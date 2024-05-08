@@ -38,6 +38,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) 设置引擎的开源版本。每种引擎支持的开源版本不同，请参考产品文档或者控制台购买页
  * @method string getEngineProductVersion() 获取引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -54,6 +55,7 @@ polarismesh - STANDARD版本
 兼容原spec-xxxxxx形式的规格ID
  * @method void setEngineProductVersion(string $EngineProductVersion) 设置引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -164,8 +166,14 @@ polarismesh - STANDARD版本
 - 1：自动续费
  * @method array getEngineRegionInfos() 获取跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
  * @method void setEngineRegionInfos(array $EngineRegionInfos) 设置跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
  * @method array getStorageOption() 获取zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
  * @method void setStorageOption(array $StorageOption) 设置zk专业版至多有两个盘，且磁盘的容量在50-3200之间
@@ -194,6 +202,7 @@ class CreateEngineRequest extends AbstractModel
     /**
      * @var string 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -309,6 +318,9 @@ polarismesh - STANDARD版本
     /**
      * @var array 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
      */
     public $EngineRegionInfos;
 
@@ -334,6 +346,7 @@ zk标准版没有跨地域部署，请不要填写
      * @param string $EngineVersion 引擎的开源版本。每种引擎支持的开源版本不同，请参考产品文档或者控制台购买页
      * @param string $EngineProductVersion 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -397,6 +410,9 @@ polarismesh - STANDARD版本
 - 1：自动续费
      * @param array $EngineRegionInfos 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
      * @param array $StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
      * @param string $AffinityConstraint ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束

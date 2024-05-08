@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取文件名称(需要包括文件后缀, 最大长度1024字节)
  * @method void setName(string $Name) 设置文件名称(需要包括文件后缀, 最大长度1024字节)
- * @method string getUrl() 获取文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
- * @method void setUrl(string $Url) 设置文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+ * @method string getUrl() 获取文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
+ * @method void setUrl(string $Url) 设置文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
  * @method string getTaskId() 获取任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
  * @method void setTaskId(string $TaskId) 设置任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
  * @method string getPolicy() 获取切分策略
@@ -39,7 +39,7 @@ class ParseDocRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+     * @var string 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
      */
     public $Url;
 
@@ -61,7 +61,7 @@ class ParseDocRequest extends AbstractModel
 
     /**
      * @param string $Name 文件名称(需要包括文件后缀, 最大长度1024字节)
-     * @param string $Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+     * @param string $Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
      * @param string $TaskId 任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
      * @param string $Policy 切分策略
      * @param string $Operate 默认值: parse

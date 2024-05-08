@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserSig(string $UserSig) 设置录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
  * @method RecordParams getRecordParams() 获取云端录制控制参数。
  * @method void setRecordParams(RecordParams $RecordParams) 设置云端录制控制参数。
- * @method StorageParams getStorageParams() 获取云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。点播和对象存储的参数必填其中之一，不支持同时设置点播和对象存储。
- * @method void setStorageParams(StorageParams $StorageParams) 设置云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。点播和对象存储的参数必填其中之一，不支持同时设置点播和对象存储。
+ * @method StorageParams getStorageParams() 获取云端录制文件上传到云存储的参数（不支持同时设置云点播VOD和对象存储COS）
+ * @method void setStorageParams(StorageParams $StorageParams) 设置云端录制文件上传到云存储的参数（不支持同时设置云点播VOD和对象存储COS）
  * @method integer getRoomIdType() 获取TRTC房间号的类型。
 【*注意】必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
@@ -80,7 +80,7 @@ class CreateCloudRecordingRequest extends AbstractModel
     public $RecordParams;
 
     /**
-     * @var StorageParams 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。点播和对象存储的参数必填其中之一，不支持同时设置点播和对象存储。
+     * @var StorageParams 云端录制文件上传到云存储的参数（不支持同时设置云点播VOD和对象存储COS）
      */
     public $StorageParams;
 
@@ -119,7 +119,7 @@ class CreateCloudRecordingRequest extends AbstractModel
 【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
      * @param string $UserSig 录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      * @param RecordParams $RecordParams 云端录制控制参数。
-     * @param StorageParams $StorageParams 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。点播和对象存储的参数必填其中之一，不支持同时设置点播和对象存储。
+     * @param StorageParams $StorageParams 云端录制文件上传到云存储的参数（不支持同时设置云点播VOD和对象存储COS）
      * @param integer $RoomIdType TRTC房间号的类型。
 【*注意】必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId

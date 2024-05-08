@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mrs\V20200910\Models as Models;
 
 /**
+ * @method Models\DrugInstructionObjectResponse DrugInstructionObject(Models\DrugInstructionObjectRequest $req) 药品说明书PDF文件结构化
  * @method Models\ImageMaskResponse ImageMask(Models\ImageMaskRequest $req) 医疗报告图片脱敏接口
  * @method Models\ImageMaskAsyncResponse ImageMaskAsync(Models\ImageMaskAsyncRequest $req) 图片脱敏-异步接口
  * @method Models\ImageMaskAsyncGetResultResponse ImageMaskAsyncGetResult(Models\ImageMaskAsyncGetResultRequest $req) 图片脱敏-异步获取结果接口

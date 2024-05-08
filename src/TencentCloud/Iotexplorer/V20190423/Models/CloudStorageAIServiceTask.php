@@ -28,26 +28,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method integer getChannelId() 获取通道 ID
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
+ * @method string getServiceType() 获取云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+ * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
  * @method integer getStartTime() 获取对应云存视频的起始时间
  * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间
  * @method integer getEndTime() 获取对应云存视频的结束时间
  * @method void setEndTime(integer $EndTime) 设置对应云存视频的结束时间
- * @method integer getStatus() 获取任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
- * @method void setStatus(integer $Status) 设置任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+ * @method integer getStatus() 获取任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
+ * @method void setStatus(integer $Status) 设置任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
  * @method string getResult() 获取任务结果
  * @method void setResult(string $Result) 设置任务结果
- * @method string getServiceType() 获取云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFiles() 获取任务输出文件列表
+ * @method void setFiles(array $Files) 设置任务输出文件列表
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudStorageAIServiceTask extends AbstractModel
 {
@@ -72,6 +74,14 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var string 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     */
+    public $ServiceType;
+
+    /**
      * @var integer 对应云存视频的起始时间
      */
     public $StartTime;
@@ -82,7 +92,7 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * @var integer 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      */
     public $Status;
 
@@ -92,20 +102,17 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $Result;
 
     /**
-     * @var string 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 任务输出文件列表
      */
-    public $ServiceType;
+    public $Files;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -114,16 +121,17 @@ class CloudStorageAIServiceTask extends AbstractModel
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param integer $ChannelId 通道 ID
+     * @param string $ServiceType 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      * @param integer $StartTime 对应云存视频的起始时间
      * @param integer $EndTime 对应云存视频的结束时间
-     * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      * @param string $Result 任务结果
-     * @param string $ServiceType 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Files 任务输出文件列表
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CloudStorageAIServiceTask extends AbstractModel
             $this->ChannelId = $param["ChannelId"];
         }
 
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
+        }
+
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -170,8 +182,8 @@ class CloudStorageAIServiceTask extends AbstractModel
             $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
+            $this->Files = $param["Files"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

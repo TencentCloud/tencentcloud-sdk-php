@@ -24,12 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceType() 获取云存 AI 服务类型。可选值：PackageDetect
- * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：PackageDetect
+ * @method string getServiceType() 获取云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+ * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
  * @method boolean getEnabled() 获取启用状态
  * @method void setEnabled(boolean $Enabled) 设置启用状态
  * @method string getROI() 获取视频分析区域
  * @method void setROI(string $ROI) 设置视频分析区域
+ * @method string getConfig() 获取云存 AI 服务的配置参数
+ * @method void setConfig(string $Config) 设置云存 AI 服务的配置参数
  */
 class ModifyCloudStorageAIServiceRequest extends AbstractModel
 {
@@ -44,7 +50,9 @@ class ModifyCloudStorageAIServiceRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 云存 AI 服务类型。可选值：PackageDetect
+     * @var string 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public $ServiceType;
 
@@ -59,11 +67,19 @@ class ModifyCloudStorageAIServiceRequest extends AbstractModel
     public $ROI;
 
     /**
+     * @var string 云存 AI 服务的配置参数
+     */
+    public $Config;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param string $ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * @param string $ServiceType 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      * @param boolean $Enabled 启用状态
      * @param string $ROI 视频分析区域
+     * @param string $Config 云存 AI 服务的配置参数
      */
     function __construct()
     {
@@ -96,6 +112,10 @@ class ModifyCloudStorageAIServiceRequest extends AbstractModel
 
         if (array_key_exists("ROI",$param) and $param["ROI"] !== null) {
             $this->ROI = $param["ROI"];
+        }
+
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = $param["Config"];
         }
     }
 }

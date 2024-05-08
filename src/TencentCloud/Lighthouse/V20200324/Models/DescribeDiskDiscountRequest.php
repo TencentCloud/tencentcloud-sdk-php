@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskDiscount请求参数结构体
  *
- * @method string getDiskType() 获取云硬盘类型, 取值: "CLOUD_PREMIUM"。
- * @method void setDiskType(string $DiskType) 设置云硬盘类型, 取值: "CLOUD_PREMIUM"。
+ * @method string getDiskType() 获取云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
+ * @method void setDiskType(string $DiskType) 设置云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
  * @method integer getDiskSize() 获取云硬盘大小。
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小。
  * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDiskDiscountRequest extends AbstractModel
 {
     /**
-     * @var string 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+     * @var string 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
      */
     public $DiskType;
 
@@ -45,7 +45,7 @@ class DescribeDiskDiscountRequest extends AbstractModel
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskType 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+     * @param string $DiskType 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
      * @param integer $DiskSize 云硬盘大小。
      * @param integer $DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
      */

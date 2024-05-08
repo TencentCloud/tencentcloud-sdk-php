@@ -154,6 +154,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultFormat(string $ResultFormat) 设置结果文件格式：默认为csv
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineTypeDetail() 获取引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -389,6 +397,18 @@ class TaskResponseInfo extends AbstractModel
     public $ResultFormat;
 
     /**
+     * @var string 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineTypeDetail;
+
+    /**
+     * @var string spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -455,6 +475,10 @@ class TaskResponseInfo extends AbstractModel
      * @param PrestoMonitorMetrics $PrestoMonitorMetrics presto任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultFormat 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName spark引擎资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -635,6 +659,14 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("ResultFormat",$param) and $param["ResultFormat"] !== null) {
             $this->ResultFormat = $param["ResultFormat"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

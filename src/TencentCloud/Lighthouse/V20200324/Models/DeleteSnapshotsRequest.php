@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSnapshots请求参数结构体
  *
- * @method array getSnapshotIds() 获取要删除的快照 ID 列表，可通过 DescribeSnapshots 查询。
- * @method void setSnapshotIds(array $SnapshotIds) 设置要删除的快照 ID 列表，可通过 DescribeSnapshots 查询。
+ * @method array getSnapshotIds() 获取要删除的快照 ID 列表，可通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a>查询。
+ * @method void setSnapshotIds(array $SnapshotIds) 设置要删除的快照 ID 列表，可通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a>查询。
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
     /**
-     * @var array 要删除的快照 ID 列表，可通过 DescribeSnapshots 查询。
+     * @var array 要删除的快照 ID 列表，可通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a>查询。
      */
     public $SnapshotIds;
 
     /**
-     * @param array $SnapshotIds 要删除的快照 ID 列表，可通过 DescribeSnapshots 查询。
+     * @param array $SnapshotIds 要删除的快照 ID 列表，可通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a>查询。
      */
     function __construct()
     {

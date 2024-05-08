@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataEngineImageVersions请求参数结构体
  *
- * @method string getEngineType() 获取引擎类型：SQL、SparkBatch
- * @method void setEngineType(string $EngineType) 设置引擎类型：SQL、SparkBatch
+ * @method string getEngineType() 获取引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+ * @method void setEngineType(string $EngineType) 设置引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
  */
 class DescribeDataEngineImageVersionsRequest extends AbstractModel
 {
     /**
-     * @var string 引擎类型：SQL、SparkBatch
+     * @var string 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
      */
     public $EngineType;
 
     /**
-     * @param string $EngineType 引擎类型：SQL、SparkBatch
+     * @param string $EngineType 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
      */
     function __construct()
     {

@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskTrends请求参数结构体
+ * 执行标准
  *
- * @method InputFrontRisk getBusinessSecurityData() 获取业务入参
- * @method void setBusinessSecurityData(InputFrontRisk $BusinessSecurityData) 设置业务入参
+ * @method string getText() 获取文本内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setText(string $Text) 设置文本内容
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeRiskTrendsRequest extends AbstractModel
+class BiologicalProductInfoExecutiveStandards extends AbstractModel
 {
     /**
-     * @var InputFrontRisk 业务入参
+     * @var string 文本内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BusinessSecurityData;
+    public $Text;
 
     /**
-     * @param InputFrontRisk $BusinessSecurityData 业务入参
+     * @param string $Text 文本内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,9 +50,8 @@ class DescribeRiskTrendsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
-            $this->BusinessSecurityData = new InputFrontRisk();
-            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
     }
 }

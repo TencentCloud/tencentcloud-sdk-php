@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCertId() 获取证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertId(string $CertId) 设置证书ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDomainData extends AbstractModel
 {
@@ -94,6 +98,12 @@ class DescribeDomainData extends AbstractModel
     public $AppId;
 
     /**
+     * @var string 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertId;
+
+    /**
      * @param string $Id 域名ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PlayDomain 播放域名
@@ -107,6 +117,8 @@ class DescribeDomainData extends AbstractModel
      * @param string $ClusterName 服务节点名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CertId 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class DescribeDomainData extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
+            $this->CertId = $param["CertId"];
         }
     }
 }

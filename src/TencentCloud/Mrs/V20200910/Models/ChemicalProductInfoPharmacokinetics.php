@@ -14,39 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 风险趋势统计出参，需要为数组
+ * 药代动力学
  *
- * @method string getName() 获取名称
+ * @method string getText() 获取文本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValue() 获取参数值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(array $Value) 设置参数值
+ * @method void setText(string $Text) 设置文本
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OutputFrontRisk extends AbstractModel
+class ChemicalProductInfoPharmacokinetics extends AbstractModel
 {
     /**
-     * @var string 名称
+     * @var string 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Name;
+    public $Text;
 
     /**
-     * @var array 参数值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Value;
-
-    /**
-     * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Value 参数值
+     * @param string $Text 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,17 +50,8 @@ class OutputFrontRisk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = [];
-            foreach ($param["Value"] as $key => $value){
-                $obj = new OutputFrontRiskValue();
-                $obj->deserialize($value);
-                array_push($this->Value, $obj);
-            }
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapshotAttribute请求参数结构体
  *
- * @method string getSnapshotId() 获取快照 ID, 可通过 DescribeSnapshots 查询。
- * @method void setSnapshotId(string $SnapshotId) 设置快照 ID, 可通过 DescribeSnapshots 查询。
+ * @method string getSnapshotId() 获取快照 ID, 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 查询。
+ * @method void setSnapshotId(string $SnapshotId) 设置快照 ID, 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 查询。
  * @method string getSnapshotName() 获取新的快照名称，最长为 60 个字符。
  * @method void setSnapshotName(string $SnapshotName) 设置新的快照名称，最长为 60 个字符。
  */
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 快照 ID, 可通过 DescribeSnapshots 查询。
+     * @var string 快照 ID, 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 查询。
      */
     public $SnapshotId;
 
@@ -38,7 +38,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     public $SnapshotName;
 
     /**
-     * @param string $SnapshotId 快照 ID, 可通过 DescribeSnapshots 查询。
+     * @param string $SnapshotId 快照 ID, 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 查询。
      * @param string $SnapshotName 新的快照名称，最长为 60 个字符。
      */
     function __construct()

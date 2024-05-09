@@ -62,13 +62,13 @@ CSIP:云安全中心
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVictim(RoleInfo $Victim) 设置受害者
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEvidenceData() 获取证据数据(比如攻击内容等)
+ * @method string getEvidenceData() 获取证据数据(例如攻击内容等)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvidenceData(string $EvidenceData) 设置证据数据(比如攻击内容等)
+ * @method void setEvidenceData(string $EvidenceData) 设置证据数据(例如攻击内容等)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEvidenceLocation() 获取证据位置(比如协议端口)
+ * @method string getEvidenceLocation() 获取证据位置(例如协议端口)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvidenceLocation(string $EvidenceLocation) 设置证据位置(比如协议端口)
+ * @method void setEvidenceLocation(string $EvidenceLocation) 设置证据位置(例如协议端口)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEvidencePath() 获取证据路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,13 +197,13 @@ CSIP:云安全中心
     public $Victim;
 
     /**
-     * @var string 证据数据(比如攻击内容等)
+     * @var string 证据数据(例如攻击内容等)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvidenceData;
 
     /**
-     * @var string 证据位置(比如协议端口)
+     * @var string 证据位置(例如协议端口)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvidenceLocation;
@@ -345,9 +345,9 @@ CSIP:云安全中心
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleInfo $Victim 受害者
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EvidenceData 证据数据(比如攻击内容等)
+     * @param string $EvidenceData 证据数据(例如攻击内容等)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EvidenceLocation 证据位置(比如协议端口)
+     * @param string $EvidenceLocation 证据位置(例如协议端口)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EvidencePath 证据路径
 注意：此字段可能返回 null，表示取不到有效值。

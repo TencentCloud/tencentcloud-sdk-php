@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
 - Group - 用户组ID
 暂不支持其余接收者类型。
  * @method array getReceiverIds() 获取接收者。
-当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
 当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
  * @method void setReceiverIds(array $ReceiverIds) 设置接收者。
-当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
 当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
  * @method array getReceiverChannels() 获取通知接收渠道。
 - Email - 邮件
@@ -69,7 +69,7 @@ class NoticeReceiver extends AbstractModel
 
     /**
      * @var array 接收者。
-当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
 当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
      */
     public $ReceiverIds;
@@ -107,7 +107,7 @@ class NoticeReceiver extends AbstractModel
 - Group - 用户组ID
 暂不支持其余接收者类型。
      * @param array $ReceiverIds 接收者。
-当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
 当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
      * @param array $ReceiverChannels 通知接收渠道。
 - Email - 邮件

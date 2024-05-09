@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePublicProxyInstallCommand请求参数结构体
  *
- * @method string getIp() 获取nginx主机ip列表，逗号分隔
- * @method void setIp(string $Ip) 设置nginx主机ip列表，逗号分隔
+ * @method string getIp() 获取nginx主机IP列表，逗号分隔
+ * @method void setIp(string $Ip) 设置nginx主机IP列表，逗号分隔
  */
 class DescribePublicProxyInstallCommandRequest extends AbstractModel
 {
     /**
-     * @var string nginx主机ip列表，逗号分隔
+     * @var string nginx主机IP列表，逗号分隔
      */
     public $Ip;
 
     /**
-     * @param string $Ip nginx主机ip列表，逗号分隔
+     * @param string $Ip nginx主机IP列表，逗号分隔
      */
     function __construct()
     {

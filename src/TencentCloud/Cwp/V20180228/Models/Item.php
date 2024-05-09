@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomItemValues(array $CustomItemValues) 设置自定义阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCategoryId() 获取检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoryId(integer $CategoryId) 设置检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Item extends AbstractModel
 {
@@ -48,9 +52,17 @@ class Item extends AbstractModel
     public $CustomItemValues;
 
     /**
+     * @var integer 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoryId;
+
+    /**
      * @param integer $ItemId Id
      * @param string $ItemName 名称
      * @param array $CustomItemValues 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CategoryId 检测项所属分类
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,10 @@ class Item extends AbstractModel
 
         if (array_key_exists("CustomItemValues",$param) and $param["CustomItemValues"] !== null) {
             $this->CustomItemValues = $param["CustomItemValues"];
+        }
+
+        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
+            $this->CategoryId = $param["CategoryId"];
         }
     }
 }

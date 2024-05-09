@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
+ * @method CacheTag getCacheTag() 获取节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+ * @method void setCacheTag(CacheTag $CacheTag) 设置节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
  */
 class CreatePurgeTaskRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ class CreatePurgeTaskRequest extends AbstractModel
     public $EncodeUrl;
 
     /**
+     * @var CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     */
+    public $CacheTag;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param string $Type 节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
@@ -89,6 +96,7 @@ class CreatePurgeTaskRequest extends AbstractModel
      * @param array $Targets 要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
      * @param boolean $EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
+     * @param CacheTag $CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
      */
     function __construct()
     {
@@ -121,6 +129,11 @@ class CreatePurgeTaskRequest extends AbstractModel
 
         if (array_key_exists("EncodeUrl",$param) and $param["EncodeUrl"] !== null) {
             $this->EncodeUrl = $param["EncodeUrl"];
+        }
+
+        if (array_key_exists("CacheTag",$param) and $param["CacheTag"] !== null) {
+            $this->CacheTag = new CacheTag();
+            $this->CacheTag->deserialize($param["CacheTag"]);
         }
     }
 }

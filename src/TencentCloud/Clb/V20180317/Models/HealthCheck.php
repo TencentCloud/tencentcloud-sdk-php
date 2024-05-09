@@ -83,9 +83,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpVersion(string $HttpVersion) 设置HTTP版本。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSourceIpType() 获取健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+ * @method integer getSourceIpType() 获取健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceIpType(integer $SourceIpType) 设置健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+ * @method void setSourceIpType(integer $SourceIpType) 设置健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtendedCode() 获取GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,7 +186,7 @@ class HealthCheck extends AbstractModel
     public $HttpVersion;
 
     /**
-     * @var integer 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * @var integer 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceIpType;
@@ -229,7 +229,7 @@ class HealthCheck extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpVersion HTTP版本。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SourceIpType 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * @param integer $SourceIpType 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtendedCode GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
 注意：此字段可能返回 null，表示取不到有效值。

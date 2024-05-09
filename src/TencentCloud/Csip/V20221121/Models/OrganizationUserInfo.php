@@ -112,6 +112,14 @@ use TencentCloud\Common\AbstractModel;
 1 腾讯云接入账户
 2 非腾讯云
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubUserCount() 获取子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubUserCount(integer $SubUserCount) 设置子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJoinTypeInfo() 获取加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJoinTypeInfo(string $JoinTypeInfo) 设置加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrganizationUserInfo extends AbstractModel
 {
@@ -250,6 +258,18 @@ class OrganizationUserInfo extends AbstractModel
     public $TcMemberType;
 
     /**
+     * @var integer 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubUserCount;
+
+    /**
+     * @var string 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JoinTypeInfo;
+
+    /**
      * @param string $Uin 成员账号Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 成员账号名称
@@ -295,6 +315,10 @@ class OrganizationUserInfo extends AbstractModel
      * @param integer $TcMemberType 0 腾讯云集团账户
 1 腾讯云接入账户
 2 非腾讯云
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubUserCount 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JoinTypeInfo 加入方式详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +420,14 @@ class OrganizationUserInfo extends AbstractModel
 
         if (array_key_exists("TcMemberType",$param) and $param["TcMemberType"] !== null) {
             $this->TcMemberType = $param["TcMemberType"];
+        }
+
+        if (array_key_exists("SubUserCount",$param) and $param["SubUserCount"] !== null) {
+            $this->SubUserCount = $param["SubUserCount"];
+        }
+
+        if (array_key_exists("JoinTypeInfo",$param) and $param["JoinTypeInfo"] !== null) {
+            $this->JoinTypeInfo = $param["JoinTypeInfo"];
         }
     }
 }

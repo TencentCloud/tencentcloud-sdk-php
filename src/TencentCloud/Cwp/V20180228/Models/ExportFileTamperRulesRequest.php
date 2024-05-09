@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
  */
 class ExportFileTamperRulesRequest extends AbstractModel
 {
     /**
      * @var array 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      */
     public $Filters;
 
     /**
      * @param array $Filters 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      */
     function __construct()
     {

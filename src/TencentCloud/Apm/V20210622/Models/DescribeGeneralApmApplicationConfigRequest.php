@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceName() 获取应用名
  * @method void setServiceName(string $ServiceName) 设置应用名
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  */
 class DescribeGeneralApmApplicationConfigRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeGeneralApmApplicationConfigRequest extends AbstractModel
     public $ServiceName;
 
     /**
-     * @var string 实例Id
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
     /**
      * @param string $ServiceName 应用名
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 业务系统ID
      */
     function __construct()
     {

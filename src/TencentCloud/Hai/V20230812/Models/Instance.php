@@ -118,9 +118,9 @@ FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认5Mbps
+ * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认5Mbps
+ * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,7 +259,7 @@ FAILED：表示操作失败
     public $CreateTime;
 
     /**
-     * @var string 公网出带宽上限，默认5Mbps
+     * @var string 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxOutBandwidth;
@@ -338,7 +338,7 @@ FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 实例创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxOutBandwidth 公网出带宽上限，默认5Mbps
+     * @param string $MaxOutBandwidth 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MaxFreeTraffic 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。

@@ -218,7 +218,8 @@ use TencentCloud\Common\AbstractModel;
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
  * @method array getComponentLimitType() 获取当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
-<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
+<li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
 <li> <b>ESIGN</b> :个人印章类型。</li>
 <li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
@@ -228,7 +229,8 @@ use TencentCloud\Common\AbstractModel;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
  * @method void setComponentLimitType(array $ComponentLimitType) 设置当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
-<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
+<li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
 <li> <b>ESIGN</b> :个人印章类型。</li>
 <li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
@@ -497,7 +499,8 @@ class FlowCreateApprover extends AbstractModel
     /**
      * @var array 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
-<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
+<li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
 <li> <b>ESIGN</b> :个人印章类型。</li>
 <li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>
@@ -663,7 +666,8 @@ class FlowCreateApprover extends AbstractModel
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
      * @param array $ComponentLimitType 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
-<ul><li> <b>HANDWRITE</b> :手写签名。</li>
+<ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
+<li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
 <li> <b>ESIGN</b> :个人印章类型。</li>
 <li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>

@@ -46,6 +46,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeCompaniesResponse DescribeCompanies(Models\DescribeCompaniesRequest $req) 查询公司列表
  * @method Models\DescribeDeleteCertificatesTaskResultResponse DescribeDeleteCertificatesTaskResult(Models\DescribeDeleteCertificatesTaskResultRequest $req) 查询批量删除任务结果
  * @method Models\DescribeDeployedResourcesResponse DescribeDeployedResources(Models\DescribeDeployedResourcesRequest $req) 证书查询关联资源， 最新查询接口请使用CreateCertificateBindResourceSyncTask， 可以查询更多支持的云资源
+ * @method Models\DescribeDownloadCertificateUrlResponse DescribeDownloadCertificateUrl(Models\DescribeDownloadCertificateUrlRequest $req) 获取下载证书链接
  * @method Models\DescribeHostApiGatewayInstanceListResponse DescribeHostApiGatewayInstanceList(Models\DescribeHostApiGatewayInstanceListRequest $req) 查询证书apiGateway云资源部署实例列表
  * @method Models\DescribeHostCdnInstanceListResponse DescribeHostCdnInstanceList(Models\DescribeHostCdnInstanceListRequest $req) 查询证书cdn云资源部署实例列表
  * @method Models\DescribeHostClbInstanceListResponse DescribeHostClbInstanceList(Models\DescribeHostClbInstanceListRequest $req) 查询证书clb云资源部署实例列表

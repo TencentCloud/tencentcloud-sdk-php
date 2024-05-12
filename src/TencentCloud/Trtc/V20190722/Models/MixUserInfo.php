@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户ID。
  * @method string getRoomId() 获取动态布局时房间信息必须和主房间信息保持一致，自定义布局时房间信息必须和MixLayoutList中对应用户的房间信息保持一致，不填时默认与主房间信息一致。
  * @method void setRoomId(string $RoomId) 设置动态布局时房间信息必须和主房间信息保持一致，自定义布局时房间信息必须和MixLayoutList中对应用户的房间信息保持一致，不填时默认与主房间信息一致。
- * @method integer getRoomIdType() 获取房间号类型，0为整形房间号，1为字符串房间号。
- * @method void setRoomIdType(integer $RoomIdType) 设置房间号类型，0为整形房间号，1为字符串房间号。
+ * @method integer getRoomIdType() 获取房间号类型，0为整型房间号，1为字符串房间号。
+ * @method void setRoomIdType(integer $RoomIdType) 设置房间号类型，0为整型房间号，1为字符串房间号。
  */
 class MixUserInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class MixUserInfo extends AbstractModel
     public $RoomId;
 
     /**
-     * @var integer 房间号类型，0为整形房间号，1为字符串房间号。
+     * @var integer 房间号类型，0为整型房间号，1为字符串房间号。
      */
     public $RoomIdType;
 
     /**
      * @param string $UserId 用户ID。
      * @param string $RoomId 动态布局时房间信息必须和主房间信息保持一致，自定义布局时房间信息必须和MixLayoutList中对应用户的房间信息保持一致，不填时默认与主房间信息一致。
-     * @param integer $RoomIdType 房间号类型，0为整形房间号，1为字符串房间号。
+     * @param integer $RoomIdType 房间号类型，0为整型房间号，1为字符串房间号。
      */
     function __construct()
     {

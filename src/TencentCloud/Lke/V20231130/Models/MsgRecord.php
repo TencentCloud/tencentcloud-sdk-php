@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取内容
  * @method void setContent(string $Content) 设置内容
+ * @method string getSessionId() 获取当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordId() 获取记录ID
  * @method void setRecordId(string $RecordId) 设置记录ID
  * @method string getRelatedRecordId() 获取关联记录ID
@@ -40,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(integer $Score) 设置评价
  * @method boolean getCanRating() 获取是否评分
  * @method void setCanRating(boolean $CanRating) 设置是否评分
+ * @method boolean getCanFeedback() 获取是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanFeedback(boolean $CanFeedback) 设置是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取记录类型
  * @method void setType(integer $Type) 设置记录类型
  * @method array getReferences() 获取引用来源
@@ -54,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenStat(TokenStat $TokenStat) 设置当次 token 统计信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReplyMethod() 获取回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplyMethod(integer $ReplyMethod) 设置回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOptionCards() 获取选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOptionCards(array $OptionCards) 设置选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskFlowInfo getTaskFlow() 获取任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskFlow(TaskFlowInfo $TaskFlow) 设置任务信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -61,6 +81,12 @@ class MsgRecord extends AbstractModel
      * @var string 内容
      */
     public $Content;
+
+    /**
+     * @var string 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
 
     /**
      * @var string 记录ID
@@ -108,6 +134,12 @@ class MsgRecord extends AbstractModel
     public $CanRating;
 
     /**
+     * @var boolean 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanFeedback;
+
+    /**
      * @var integer 记录类型
      */
     public $Type;
@@ -139,7 +171,27 @@ class MsgRecord extends AbstractModel
     public $TokenStat;
 
     /**
+     * @var integer 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplyMethod;
+
+    /**
+     * @var array 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OptionCards;
+
+    /**
+     * @var TaskFlowInfo 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskFlow;
+
+    /**
      * @param string $Content 内容
+     * @param string $SessionId 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordId 记录ID
      * @param string $RelatedRecordId 关联记录ID
      * @param boolean $IsFromSelf 是否来自自己
@@ -149,12 +201,20 @@ class MsgRecord extends AbstractModel
      * @param boolean $HasRead 是否已读
      * @param integer $Score 评价
      * @param boolean $CanRating 是否评分
+     * @param boolean $CanFeedback 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 记录类型
      * @param array $References 引用来源
      * @param array $Reasons 评价原因
      * @param boolean $IsLlmGenerated 是否大模型
      * @param array $ImageUrls 图片链接，可公有读
      * @param TokenStat $TokenStat 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReplyMethod 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OptionCards 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskFlowInfo $TaskFlow 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +232,10 @@ class MsgRecord extends AbstractModel
         }
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
 
         if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
@@ -210,6 +274,10 @@ class MsgRecord extends AbstractModel
             $this->CanRating = $param["CanRating"];
         }
 
+        if (array_key_exists("CanFeedback",$param) and $param["CanFeedback"] !== null) {
+            $this->CanFeedback = $param["CanFeedback"];
+        }
+
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
         }
@@ -238,6 +306,19 @@ class MsgRecord extends AbstractModel
         if (array_key_exists("TokenStat",$param) and $param["TokenStat"] !== null) {
             $this->TokenStat = new TokenStat();
             $this->TokenStat->deserialize($param["TokenStat"]);
+        }
+
+        if (array_key_exists("ReplyMethod",$param) and $param["ReplyMethod"] !== null) {
+            $this->ReplyMethod = $param["ReplyMethod"];
+        }
+
+        if (array_key_exists("OptionCards",$param) and $param["OptionCards"] !== null) {
+            $this->OptionCards = $param["OptionCards"];
+        }
+
+        if (array_key_exists("TaskFlow",$param) and $param["TaskFlow"] !== null) {
+            $this->TaskFlow = new TaskFlowInfo();
+            $this->TaskFlow->deserialize($param["TaskFlow"]);
         }
     }
 }

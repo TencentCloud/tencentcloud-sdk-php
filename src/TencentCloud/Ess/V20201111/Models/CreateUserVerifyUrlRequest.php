@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
  * @method void setEndpoint(string $Endpoint) 设置要跳转的链接类型
 
 - HTTP：
@@ -52,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
  * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
@@ -106,6 +110,8 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
      */
     public $Endpoint;
 
@@ -137,6 +143,8 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
      * @param boolean $AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 

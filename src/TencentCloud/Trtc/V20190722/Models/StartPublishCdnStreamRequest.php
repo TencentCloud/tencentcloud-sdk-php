@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
  * @method string getRoomId() 获取主房间信息RoomId，转推的TRTC房间所对应的RoomId。
  * @method void setRoomId(string $RoomId) 设置主房间信息RoomId，转推的TRTC房间所对应的RoomId。
- * @method integer getRoomIdType() 获取主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
- * @method void setRoomIdType(integer $RoomIdType) 设置主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
+ * @method integer getRoomIdType() 获取主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
+ * @method void setRoomIdType(integer $RoomIdType) 设置主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
  * @method AgentParams getAgentParams() 获取转推服务加入TRTC房间的机器人参数。
  * @method void setAgentParams(AgentParams $AgentParams) 设置转推服务加入TRTC房间的机器人参数。
  * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
@@ -56,7 +56,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var integer 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
+     * @var integer 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
      */
     public $RoomIdType;
 
@@ -103,7 +103,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
     /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
      * @param string $RoomId 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
-     * @param integer $RoomIdType 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
+     * @param integer $RoomIdType 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
      * @param AgentParams $AgentParams 转推服务加入TRTC房间的机器人参数。
      * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
      * @param McuAudioParams $AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。

@@ -23,8 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tke\V20220501\Models as Models;
 
 /**
+ * @method Models\CreateNodePoolResponse CreateNodePool(Models\CreateNodePoolRequest $req) 创建 TKE 节点池
+ * @method Models\DeleteNodePoolResponse DeleteNodePool(Models\DeleteNodePoolRequest $req) 删除 TKE 节点池
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
  * @method Models\DescribeNodePoolsResponse DescribeNodePools(Models\DescribeNodePoolsRequest $req) 查询 TKE 节点池列表
+ * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池
  */
 
 class TkeClient extends AbstractClient

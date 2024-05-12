@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群 ID
  * @method string getNodePoolId() 获取节点池 ID
  * @method void setNodePoolId(string $NodePoolId) 设置节点池 ID
+ * @method array getTags() 获取节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置节点标签
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTaints() 获取节点污点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaints(array $Taints) 设置节点污点
@@ -31,6 +35,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getDeletionProtection() 获取是否开启删除保护
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启删除保护
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUnschedulable() 获取节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnschedulable(boolean $Unschedulable) 设置节点是否不可调度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取节点池类型
  * @method void setType(string $Type) 设置节点池类型
@@ -78,6 +86,12 @@ class NodePool extends AbstractModel
     public $NodePoolId;
 
     /**
+     * @var array 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @var array 节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,6 +102,12 @@ class NodePool extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionProtection;
+
+    /**
+     * @var boolean 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unschedulable;
 
     /**
      * @var string 节点池类型
@@ -148,9 +168,13 @@ class NodePool extends AbstractModel
     /**
      * @param string $ClusterId 集群 ID
      * @param string $NodePoolId 节点池 ID
+     * @param array $Tags 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Taints 节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 是否开启删除保护
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Unschedulable 节点是否不可调度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 节点池类型
      * @param array $Labels 节点  Labels
@@ -190,6 +214,15 @@ class NodePool extends AbstractModel
             $this->NodePoolId = $param["NodePoolId"];
         }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
         if (array_key_exists("Taints",$param) and $param["Taints"] !== null) {
             $this->Taints = [];
             foreach ($param["Taints"] as $key => $value){
@@ -201,6 +234,10 @@ class NodePool extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
+            $this->Unschedulable = $param["Unschedulable"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

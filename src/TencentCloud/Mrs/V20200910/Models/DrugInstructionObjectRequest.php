@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DrugInstructionObject请求参数结构体
  *
- * @method PdfInfo getPdfInfo() 获取药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
- * @method void setPdfInfo(PdfInfo $PdfInfo) 设置药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+ * @method PdfInfo getPdfInfo() 获取药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
+ * @method void setPdfInfo(PdfInfo $PdfInfo) 设置药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
  */
 class DrugInstructionObjectRequest extends AbstractModel
 {
     /**
-     * @var PdfInfo 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * @var PdfInfo 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
      */
     public $PdfInfo;
 
     /**
-     * @param PdfInfo $PdfInfo 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * @param PdfInfo $PdfInfo 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
      */
     function __construct()
     {

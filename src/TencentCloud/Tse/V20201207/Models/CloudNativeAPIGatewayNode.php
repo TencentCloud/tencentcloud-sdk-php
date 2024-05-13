@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWeight() 获取节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeight(integer $Weight) 设置节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDefaultWeight() 获取是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDefaultWeight(boolean $IsDefaultWeight) 设置是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayNode extends AbstractModel
 {
@@ -88,6 +96,18 @@ class CloudNativeAPIGatewayNode extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weight;
+
+    /**
+     * @var boolean 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDefaultWeight;
+
+    /**
      * @param string $NodeId 云原生网关节点 id
      * @param string $NodeIp 节点 ip
      * @param string $ZoneId Zone id
@@ -99,6 +119,10 @@ class CloudNativeAPIGatewayNode extends AbstractModel
      * @param string $GroupName 分组名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Weight 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDefaultWeight 是否默认权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +164,14 @@ class CloudNativeAPIGatewayNode extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("IsDefaultWeight",$param) and $param["IsDefaultWeight"] !== null) {
+            $this->IsDefaultWeight = $param["IsDefaultWeight"];
         }
     }
 }

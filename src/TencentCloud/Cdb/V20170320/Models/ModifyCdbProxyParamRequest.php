@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProxyGroupId() 获取代理组ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
  * @method integer getConnectionPoolLimit() 获取连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  */
 class ModifyCdbProxyParamRequest extends AbstractModel
 {
@@ -41,6 +43,7 @@ class ModifyCdbProxyParamRequest extends AbstractModel
 
     /**
      * @var integer 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public $ConnectionPoolLimit;
 
@@ -48,6 +51,7 @@ class ModifyCdbProxyParamRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $ProxyGroupId 代理组ID
      * @param integer $ConnectionPoolLimit 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     function __construct()
     {

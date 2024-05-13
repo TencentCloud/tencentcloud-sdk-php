@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置数据对比任务名称，若为空则默认给CompareTaskId相同值
  * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
  * @method void setObjectMode(string $ObjectMode) 设置数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
- * @method CompareObject getObjects() 获取一致性对比对象配置
- * @method void setObjects(CompareObject $Objects) 设置一致性对比对象配置
+ * @method CompareObject getObjects() 获取数据对比对象，当ObjectMode为custom时，此项需要填写。
+ * @method void setObjects(CompareObject $Objects) 设置数据对比对象，当ObjectMode为custom时，此项需要填写。
  * @method CompareOptions getOptions() 获取一致性校验选项
  * @method void setOptions(CompareOptions $Options) 设置一致性校验选项
  */
@@ -49,7 +49,7 @@ class CreateCompareTaskRequest extends AbstractModel
     public $ObjectMode;
 
     /**
-     * @var CompareObject 一致性对比对象配置
+     * @var CompareObject 数据对比对象，当ObjectMode为custom时，此项需要填写。
      */
     public $Objects;
 
@@ -62,7 +62,7 @@ class CreateCompareTaskRequest extends AbstractModel
      * @param string $JobId 任务 Id
      * @param string $TaskName 数据对比任务名称，若为空则默认给CompareTaskId相同值
      * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
-     * @param CompareObject $Objects 一致性对比对象配置
+     * @param CompareObject $Objects 数据对比对象，当ObjectMode为custom时，此项需要填写。
      * @param CompareOptions $Options 一致性校验选项
      */
     function __construct()

@@ -238,53 +238,53 @@ use TencentCloud\Common\AbstractModel;
 0：不开启；
 1：开启；
 默认值为0
- * @method integer getConvertNumMode() 获取阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
+ * @method integer getConvertNumMode() 获取阿拉伯数字智能转换（目前支持中文普通话引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
 3：打开数学相关数字转换（如：阿尔法转写为α）；
 默认值为 1
- * @method void setConvertNumMode(integer $ConvertNumMode) 设置阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
+ * @method void setConvertNumMode(integer $ConvertNumMode) 设置阿拉伯数字智能转换（目前支持中文普通话引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
 3：打开数学相关数字转换（如：阿尔法转写为α）；
 默认值为 1
- * @method integer getFilterDirty() 获取脏词过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method integer getFilterDirty() 获取脏词过滤（目前支持中文普通话引擎）
 0：不过滤脏词；
 1：过滤脏词；
 2：将脏词替换为 * ；
 默认值为 0
- * @method void setFilterDirty(integer $FilterDirty) 设置脏词过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method void setFilterDirty(integer $FilterDirty) 设置脏词过滤（目前支持中文普通话引擎）
 0：不过滤脏词；
 1：过滤脏词；
 2：将脏词替换为 * ；
 默认值为 0
- * @method integer getFilterPunc() 获取标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method integer getFilterPunc() 获取标点符号过滤（目前支持中文普通话引擎）
 0：不过滤标点；
 1：过滤句末标点；
 2：过滤所有标点；
 默认值为 0
- * @method void setFilterPunc(integer $FilterPunc) 设置标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method void setFilterPunc(integer $FilterPunc) 设置标点符号过滤（目前支持中文普通话引擎）
 0：不过滤标点；
 1：过滤句末标点；
 2：过滤所有标点；
 默认值为 0
- * @method integer getFilterModal() 获取语气词过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method integer getFilterModal() 获取语气词过滤（目前支持中文普通话引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
- * @method void setFilterModal(integer $FilterModal) 设置语气词过滤（目前仅支持8k_zh/16k_zh引擎）
+ * @method void setFilterModal(integer $FilterModal) 设置语气词过滤（目前支持中文普通话引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
- * @method integer getSentenceMaxLength() 获取单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
+ * @method integer getSentenceMaxLength() 获取单标点最多字数（目前支持中文普通话引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果
- * @method void setSentenceMaxLength(integer $SentenceMaxLength) 设置单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
+ * @method void setSentenceMaxLength(integer $SentenceMaxLength) 设置单标点最多字数（目前支持中文普通话引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -466,7 +466,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $EmotionalEnergy;
 
     /**
-     * @var integer 阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
+     * @var integer 阿拉伯数字智能转换（目前支持中文普通话引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
 3：打开数学相关数字转换（如：阿尔法转写为α）；
@@ -475,7 +475,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $ConvertNumMode;
 
     /**
-     * @var integer 脏词过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @var integer 脏词过滤（目前支持中文普通话引擎）
 0：不过滤脏词；
 1：过滤脏词；
 2：将脏词替换为 * ；
@@ -484,7 +484,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var integer 标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @var integer 标点符号过滤（目前支持中文普通话引擎）
 0：不过滤标点；
 1：过滤句末标点；
 2：过滤所有标点；
@@ -493,7 +493,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterPunc;
 
     /**
-     * @var integer 语气词过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @var integer 语气词过滤（目前支持中文普通话引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
@@ -502,7 +502,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
-     * @var integer 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
+     * @var integer 单标点最多字数（目前支持中文普通话引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -626,27 +626,27 @@ class CreateRecTaskRequest extends AbstractModel
 0：不开启；
 1：开启；
 默认值为0
-     * @param integer $ConvertNumMode 阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
+     * @param integer $ConvertNumMode 阿拉伯数字智能转换（目前支持中文普通话引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
 3：打开数学相关数字转换（如：阿尔法转写为α）；
 默认值为 1
-     * @param integer $FilterDirty 脏词过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @param integer $FilterDirty 脏词过滤（目前支持中文普通话引擎）
 0：不过滤脏词；
 1：过滤脏词；
 2：将脏词替换为 * ；
 默认值为 0
-     * @param integer $FilterPunc 标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @param integer $FilterPunc 标点符号过滤（目前支持中文普通话引擎）
 0：不过滤标点；
 1：过滤句末标点；
 2：过滤所有标点；
 默认值为 0
-     * @param integer $FilterModal 语气词过滤（目前仅支持8k_zh/16k_zh引擎）
+     * @param integer $FilterModal 语气词过滤（目前支持中文普通话引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
-     * @param integer $SentenceMaxLength 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
+     * @param integer $SentenceMaxLength 单标点最多字数（目前支持中文普通话引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0

@@ -66,6 +66,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWarningCode(array $WarningCode) 设置多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
+ * @method array getWarnCardInfos() 获取告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+ * @method void setWarnCardInfos(array $WarnCardInfos) 设置告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -130,6 +144,7 @@ class HKIDCardOCRResponse extends AbstractModel
 1：假；
 2：真。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $FakeDetectResult;
 
@@ -143,8 +158,20 @@ class HKIDCardOCRResponse extends AbstractModel
      * @var array 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
+     * @deprecated
      */
     public $WarningCode;
+
+    /**
+     * @var array 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+     */
+    public $WarnCardInfos;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -175,6 +202,13 @@ class HKIDCardOCRResponse extends AbstractModel
      * @param array $WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
+     * @param array $WarnCardInfos 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -240,6 +274,10 @@ class HKIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("WarningCode",$param) and $param["WarningCode"] !== null) {
             $this->WarningCode = $param["WarningCode"];
+        }
+
+        if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
+            $this->WarnCardInfos = $param["WarnCardInfos"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

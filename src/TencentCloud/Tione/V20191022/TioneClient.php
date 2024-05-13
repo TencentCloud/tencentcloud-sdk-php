@@ -45,7 +45,6 @@ use TencentCloud\Tione\V20191022\Models as Models;
  * @method Models\StopTrainingJobResponse StopTrainingJob(Models\StopTrainingJobRequest $req) 停止训练任务
  * @method Models\UpdateCodeRepositoryResponse UpdateCodeRepository(Models\UpdateCodeRepositoryRequest $req) 更新存储库
  * @method Models\UpdateNotebookInstanceResponse UpdateNotebookInstance(Models\UpdateNotebookInstanceRequest $req) 更新Notebook实例
- * @method Models\UpdateNotebookLifecycleScriptResponse UpdateNotebookLifecycleScript(Models\UpdateNotebookLifecycleScriptRequest $req) 更新notebook生命周期脚本
  */
 
 class TioneClient extends AbstractClient

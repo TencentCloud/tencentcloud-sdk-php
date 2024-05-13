@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicPosType(integer $DynamicPosType) 设置动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
  * @method integer getZOrder() 获取水印在输出时的层级，不填默认为0。
  * @method void setZOrder(integer $ZOrder) 设置水印在输出时的层级，不填默认为0。
+ * @method string getFont() 获取水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+ * @method void setFont(string $Font) 设置水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
  */
 class McuWaterMarkText extends AbstractModel
 {
@@ -94,6 +96,11 @@ class McuWaterMarkText extends AbstractModel
     public $ZOrder;
 
     /**
+     * @var string 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+     */
+    public $Font;
+
+    /**
      * @param string $Text 文字水印内容。
      * @param integer $WaterMarkWidth 水印在输出时的宽。单位为像素值。
      * @param integer $WaterMarkHeight 水印在输出时的高。单位为像素值。
@@ -104,6 +111,7 @@ class McuWaterMarkText extends AbstractModel
      * @param string $BackGroundColor 字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
      * @param integer $DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
      * @param integer $ZOrder 水印在输出时的层级，不填默认为0。
+     * @param string $Font 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class McuWaterMarkText extends AbstractModel
 
         if (array_key_exists("ZOrder",$param) and $param["ZOrder"] !== null) {
             $this->ZOrder = $param["ZOrder"];
+        }
+
+        if (array_key_exists("Font",$param) and $param["Font"] !== null) {
+            $this->Font = $param["Font"];
         }
     }
 }

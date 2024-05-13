@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(string $SubnetIds) 设置子网id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefaultWeight() 获取分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultWeight(integer $DefaultWeight) 设置分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeGatewayServerGroup extends AbstractModel
 {
@@ -129,6 +133,12 @@ class NativeGatewayServerGroup extends AbstractModel
     public $SubnetIds;
 
     /**
+     * @var integer 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultWeight;
+
+    /**
      * @param string $GroupId 云原生网关分组唯一id
      * @param string $Name 分组名
      * @param string $Description 描述信息
@@ -147,6 +157,8 @@ class NativeGatewayServerGroup extends AbstractModel
      * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetIds 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultWeight 分组默认权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -210,6 +222,10 @@ class NativeGatewayServerGroup extends AbstractModel
 
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
             $this->SubnetIds = $param["SubnetIds"];
+        }
+
+        if (array_key_exists("DefaultWeight",$param) and $param["DefaultWeight"] !== null) {
+            $this->DefaultWeight = $param["DefaultWeight"];
         }
     }
 }

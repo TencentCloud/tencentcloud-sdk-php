@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusiness() 获取DDoS防护子产品代号（bgp-multip表示高防包）
  * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgp-multip表示高防包）
- * @method string getStartTime() 获取统计开始时间。 例：“2020-09-22 00:00:00”
- * @method void setStartTime(string $StartTime) 设置统计开始时间。 例：“2020-09-22 00:00:00”
- * @method string getEndTime() 获取统计结束时间。 例：“2020-09-22 00:00:00”
- * @method void setEndTime(string $EndTime) 设置统计结束时间。 例：“2020-09-22 00:00:00”
+ * @method string getStartTime() 获取统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+ * @method void setStartTime(string $StartTime) 设置统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+ * @method string getEndTime() 获取统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+ * @method void setEndTime(string $EndTime) 设置统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
  * @method string getMetricName() 获取统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
  * @method void setMetricName(string $MetricName) 设置统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
  * @method string getInstanceId() 获取资源实例ID
@@ -41,12 +41,12 @@ class DescribeBgpBizTrendRequest extends AbstractModel
     public $Business;
 
     /**
-     * @var string 统计开始时间。 例：“2020-09-22 00:00:00”
+     * @var string 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public $StartTime;
 
     /**
-     * @var string 统计结束时间。 例：“2020-09-22 00:00:00”
+     * @var string 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public $EndTime;
 
@@ -67,8 +67,8 @@ class DescribeBgpBizTrendRequest extends AbstractModel
 
     /**
      * @param string $Business DDoS防护子产品代号（bgp-multip表示高防包）
-     * @param string $StartTime 统计开始时间。 例：“2020-09-22 00:00:00”
-     * @param string $EndTime 统计结束时间。 例：“2020-09-22 00:00:00”
+     * @param string $StartTime 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+     * @param string $EndTime 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      * @param string $MetricName 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
      * @param string $InstanceId 资源实例ID
      * @param integer $Flag 0表示固定时间，1表示自定义时间

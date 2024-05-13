@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HKIDCardOCR请求参数结构体
  *
- * @method boolean getDetectFake() 获取是否鉴伪。
- * @method void setDetectFake(boolean $DetectFake) 设置是否鉴伪。
  * @method boolean getReturnHeadImage() 获取是否返回人像照片。
  * @method void setReturnHeadImage(boolean $ReturnHeadImage) 设置是否返回人像照片。
+ * @method boolean getDetectFake() 获取是否鉴伪。
+ * @method void setDetectFake(boolean $DetectFake) 设置是否鉴伪。
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -44,14 +44,15 @@ use TencentCloud\Common\AbstractModel;
 class HKIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否鉴伪。
-     */
-    public $DetectFake;
-
-    /**
      * @var boolean 是否返回人像照片。
      */
     public $ReturnHeadImage;
+
+    /**
+     * @var boolean 是否鉴伪。
+     * @deprecated
+     */
+    public $DetectFake;
 
     /**
      * @var string 图片的 Base64 值。
@@ -70,8 +71,8 @@ class HKIDCardOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @param boolean $DetectFake 是否鉴伪。
      * @param boolean $ReturnHeadImage 是否返回人像照片。
+     * @param boolean $DetectFake 是否鉴伪。
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -94,12 +95,12 @@ class HKIDCardOCRRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectFake",$param) and $param["DetectFake"] !== null) {
-            $this->DetectFake = $param["DetectFake"];
-        }
-
         if (array_key_exists("ReturnHeadImage",$param) and $param["ReturnHeadImage"] !== null) {
             $this->ReturnHeadImage = $param["ReturnHeadImage"];
+        }
+
+        if (array_key_exists("DetectFake",$param) and $param["DetectFake"] !== null) {
+            $this->DetectFake = $param["DetectFake"];
         }
 
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {

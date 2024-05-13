@@ -25,7 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProxyGroupId() 获取代理组ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
  * @method array getProxyNodeCustom() 获取节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数
+Region：节点地域
+Zone：节点可用区
+Cpu：单个代理节点核数（单位：核）
+Mem：单个代理节点内存数（单位：MB）
  * @method void setProxyNodeCustom(array $ProxyNodeCustom) 设置节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数
+Region：节点地域
+Zone：节点可用区
+Cpu：单个代理节点核数（单位：核）
+Mem：单个代理节点内存数（单位：MB）
  * @method string getReloadBalance() 获取重新负载均衡：auto(自动),manual(手动)
  * @method void setReloadBalance(string $ReloadBalance) 设置重新负载均衡：auto(自动),manual(手动)
  * @method string getUpgradeTime() 获取升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
@@ -45,6 +59,13 @@ class AdjustCdbProxyRequest extends AbstractModel
 
     /**
      * @var array 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数
+Region：节点地域
+Zone：节点可用区
+Cpu：单个代理节点核数（单位：核）
+Mem：单个代理节点内存数（单位：MB）
      */
     public $ProxyNodeCustom;
 
@@ -62,6 +83,13 @@ class AdjustCdbProxyRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $ProxyGroupId 代理组ID
      * @param array $ProxyNodeCustom 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数
+Region：节点地域
+Zone：节点可用区
+Cpu：单个代理节点核数（单位：核）
+Mem：单个代理节点内存数（单位：MB）
      * @param string $ReloadBalance 重新负载均衡：auto(自动),manual(手动)
      * @param string $UpgradeTime 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
      */

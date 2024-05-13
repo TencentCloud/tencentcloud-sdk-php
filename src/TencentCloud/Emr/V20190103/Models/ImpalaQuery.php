@@ -116,6 +116,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPerNodePeakMemoryBytesSum(integer $PerNodePeakMemoryBytesSum) 设置单节点内存峰值和(Bytes)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBackendsCount() 获取后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackendsCount(integer $BackendsCount) 设置后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFragmentInstancesCount() 获取fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFragmentInstancesCount(integer $FragmentInstancesCount) 设置fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRemainingFragmentCount() 获取剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemainingFragmentCount(integer $RemainingFragmentCount) 设置剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImpalaQuery extends AbstractModel
 {
@@ -264,6 +276,24 @@ class ImpalaQuery extends AbstractModel
     public $PerNodePeakMemoryBytesSum;
 
     /**
+     * @var integer 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackendsCount;
+
+    /**
+     * @var integer fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FragmentInstancesCount;
+
+    /**
+     * @var integer 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemainingFragmentCount;
+
+    /**
      * @param string $Statement 执行语句
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 查询ID
@@ -311,6 +341,12 @@ class ImpalaQuery extends AbstractModel
      * @param string $SessionId 会话ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BackendsCount 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FragmentInstancesCount fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemainingFragmentCount 剩余未完成Fragment数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -420,6 +456,18 @@ class ImpalaQuery extends AbstractModel
 
         if (array_key_exists("PerNodePeakMemoryBytesSum",$param) and $param["PerNodePeakMemoryBytesSum"] !== null) {
             $this->PerNodePeakMemoryBytesSum = $param["PerNodePeakMemoryBytesSum"];
+        }
+
+        if (array_key_exists("BackendsCount",$param) and $param["BackendsCount"] !== null) {
+            $this->BackendsCount = $param["BackendsCount"];
+        }
+
+        if (array_key_exists("FragmentInstancesCount",$param) and $param["FragmentInstancesCount"] !== null) {
+            $this->FragmentInstancesCount = $param["FragmentInstancesCount"];
+        }
+
+        if (array_key_exists("RemainingFragmentCount",$param) and $param["RemainingFragmentCount"] !== null) {
+            $this->RemainingFragmentCount = $param["RemainingFragmentCount"];
         }
     }
 }

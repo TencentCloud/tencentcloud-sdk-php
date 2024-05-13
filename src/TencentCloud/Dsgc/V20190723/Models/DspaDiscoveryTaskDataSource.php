@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataSourceType() 获取无
+ * @method string getDataSourceType() 获取数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSourceType(string $DataSourceType) 设置无
+ * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskDataSource extends AbstractModel
@@ -72,7 +72,7 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
     public $ResourceRegion;
 
     /**
-     * @var string 无
+     * @var string 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
@@ -86,7 +86,7 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataSourceType 无
+     * @param string $DataSourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalDiskSource(LocalDisk $LocalDiskSource) 设置来自本地磁盘的信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CBSConfig getCBSSource() 获取CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCBSSource(CBSConfig $CBSSource) 设置CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataConfig extends AbstractModel
 {
@@ -111,6 +115,12 @@ class DataConfig extends AbstractModel
     public $LocalDiskSource;
 
     /**
+     * @var CBSConfig CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CBSSource;
+
+    /**
      * @param string $MappingPath 映射路径
      * @param string $DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,6 +137,8 @@ class DataConfig extends AbstractModel
      * @param CFSTurbo $CFSTurboSource 配置TurboFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalDisk $LocalDiskSource 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CBSConfig $CBSSource CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -183,6 +195,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("LocalDiskSource",$param) and $param["LocalDiskSource"] !== null) {
             $this->LocalDiskSource = new LocalDisk();
             $this->LocalDiskSource->deserialize($param["LocalDiskSource"]);
+        }
+
+        if (array_key_exists("CBSSource",$param) and $param["CBSSource"] !== null) {
+            $this->CBSSource = new CBSConfig();
+            $this->CBSSource->deserialize($param["CBSSource"]);
         }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCLSDelivery请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method array getCLSTopicIds() 获取开通的日志主题id
+ * @method void setCLSTopicIds(array $CLSTopicIds) 设置开通的日志主题id
  */
 class StartCLSDeliveryRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
 
     /**
+     * @var array 开通的日志主题id
+     */
+    public $CLSTopicIds;
 
+    /**
+     * @param string $InstanceId 实例id
+     * @param array $CLSTopicIds 开通的日志主题id
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class StartCLSDeliveryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("CLSTopicIds",$param) and $param["CLSTopicIds"] !== null) {
+            $this->CLSTopicIds = $param["CLSTopicIds"];
+        }
     }
 }

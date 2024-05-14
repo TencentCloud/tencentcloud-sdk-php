@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
- * @method string getStatus() 获取任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
- * @method void setStatus(string $Status) 设置任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+ * @method string getStatus() 获取任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
+ * @method void setStatus(string $Status) 设置任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
  * @method string getFileId() 获取视频 ID。
  * @method void setFileId(string $FileId) 设置视频 ID。
  * @method string getTaskType() 获取任务类型，取值：
@@ -69,7 +69,7 @@ class TaskSimpleInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @var string 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
      */
     public $Status;
 
@@ -121,7 +121,7 @@ class TaskSimpleInfo extends AbstractModel
 
     /**
      * @param string $TaskId 任务 ID。
-     * @param string $Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @param string $Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
      * @param string $FileId 视频 ID。
      * @param string $TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>

@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method string getDurationMs() 获取排序参数
  * @method void setDurationMs(string $DurationMs) 设置排序参数
+ * @method string getSql() 获取查询sql
+ * @method void setSql(string $Sql) 设置查询sql
+ * @method string getReadRows() 获取排序参数
+ * @method void setReadRows(string $ReadRows) 设置排序参数
+ * @method string getResultBytes() 获取排序参数
+ * @method void setResultBytes(string $ResultBytes) 设置排序参数
+ * @method string getMemoryUsage() 获取排序参数
+ * @method void setMemoryUsage(string $MemoryUsage) 设置排序参数
  */
 class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 {
@@ -59,11 +67,35 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
     public $DurationMs;
 
     /**
+     * @var string 查询sql
+     */
+    public $Sql;
+
+    /**
+     * @var string 排序参数
+     */
+    public $ReadRows;
+
+    /**
+     * @var string 排序参数
+     */
+    public $ResultBytes;
+
+    /**
+     * @var string 排序参数
+     */
+    public $MemoryUsage;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param string $DurationMs 排序参数
+     * @param string $Sql 查询sql
+     * @param string $ReadRows 排序参数
+     * @param string $ResultBytes 排序参数
+     * @param string $MemoryUsage 排序参数
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 
         if (array_key_exists("DurationMs",$param) and $param["DurationMs"] !== null) {
             $this->DurationMs = $param["DurationMs"];
+        }
+
+        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
+            $this->Sql = $param["Sql"];
+        }
+
+        if (array_key_exists("ReadRows",$param) and $param["ReadRows"] !== null) {
+            $this->ReadRows = $param["ReadRows"];
+        }
+
+        if (array_key_exists("ResultBytes",$param) and $param["ResultBytes"] !== null) {
+            $this->ResultBytes = $param["ResultBytes"];
+        }
+
+        if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
+            $this->MemoryUsage = $param["MemoryUsage"];
         }
     }
 }

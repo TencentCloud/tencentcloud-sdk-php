@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsQuery(integer $IsQuery) 设置是否是查询，0：否， 1：是
  * @method array getCatalogName() 获取catalog名称
  * @method void setCatalogName(array $CatalogName) 设置catalog名称
+ * @method string getSql() 获取sql名
+ * @method void setSql(string $Sql) 设置sql名
+ * @method string getReadRows() 获取ReadRows排序字段
+ * @method void setReadRows(string $ReadRows) 设置ReadRows排序字段
+ * @method string getResultBytes() 获取ResultBytes排序字段
+ * @method void setResultBytes(string $ResultBytes) 设置ResultBytes排序字段
+ * @method string getMemoryUsage() 获取MemoryUsage排序字段
+ * @method void setMemoryUsage(string $MemoryUsage) 设置MemoryUsage排序字段
  */
 class DescribeSlowQueryRecordsRequest extends AbstractModel
 {
@@ -94,6 +102,26 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
     public $CatalogName;
 
     /**
+     * @var string sql名
+     */
+    public $Sql;
+
+    /**
+     * @var string ReadRows排序字段
+     */
+    public $ReadRows;
+
+    /**
+     * @var string ResultBytes排序字段
+     */
+    public $ResultBytes;
+
+    /**
+     * @var string MemoryUsage排序字段
+     */
+    public $MemoryUsage;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -104,6 +132,10 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
      * @param array $DbName 数据库名称
      * @param integer $IsQuery 是否是查询，0：否， 1：是
      * @param array $CatalogName catalog名称
+     * @param string $Sql sql名
+     * @param string $ReadRows ReadRows排序字段
+     * @param string $ResultBytes ResultBytes排序字段
+     * @param string $MemoryUsage MemoryUsage排序字段
      */
     function __construct()
     {
@@ -156,6 +188,22 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
+            $this->Sql = $param["Sql"];
+        }
+
+        if (array_key_exists("ReadRows",$param) and $param["ReadRows"] !== null) {
+            $this->ReadRows = $param["ReadRows"];
+        }
+
+        if (array_key_exists("ResultBytes",$param) and $param["ResultBytes"] !== null) {
+            $this->ResultBytes = $param["ResultBytes"];
+        }
+
+        if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
+            $this->MemoryUsage = $param["MemoryUsage"];
         }
     }
 }

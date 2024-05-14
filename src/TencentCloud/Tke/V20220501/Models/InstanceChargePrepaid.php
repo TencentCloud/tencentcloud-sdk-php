@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
 1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
  * @method string getRenewFlag() 获取预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
  * @method void setRenewFlag(string $RenewFlag) 设置预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
  */
 class InstanceChargePrepaid extends AbstractModel
@@ -45,7 +45,7 @@ class InstanceChargePrepaid extends AbstractModel
     /**
      * @var string 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
      */
@@ -56,7 +56,7 @@ class InstanceChargePrepaid extends AbstractModel
 1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
      * @param string $RenewFlag 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
      */
     function __construct()

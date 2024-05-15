@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 消息字段与 es 索引的映射关系
  *
  * @method string getColumnName() 获取es 索引成员名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnName(string $ColumnName) 设置es 索引成员名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJsonKey() 获取消息字段名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonKey(string $JsonKey) 设置消息字段名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EsRecordMapping extends AbstractModel
 {
     /**
      * @var string es 索引成员名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnName;
 
     /**
      * @var string 消息字段名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonKey;
 
     /**
      * @param string $ColumnName es 索引成员名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JsonKey 消息字段名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置Kafka配置，Type 为 KAFKA 时返回
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MqttConnectParam getMqttConnectParam() 获取MQTT配置，Type 为 MQTT 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置MQTT配置，Type 为 MQTT 时返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeConnectResource extends AbstractModel
 {
@@ -244,6 +248,12 @@ class DescribeConnectResource extends AbstractModel
     public $KafkaConnectParam;
 
     /**
+     * @var MqttConnectParam MQTT配置，Type 为 MQTT 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MqttConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 连接源名称
@@ -287,6 +297,8 @@ class DescribeConnectResource extends AbstractModel
      * @param DorisConnectParam $DorisConnectParam Doris 配置，Type 为 DORIS 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaConnectParam $KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MqttConnectParam $MqttConnectParam MQTT配置，Type 为 MQTT 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -399,6 +411,11 @@ class DescribeConnectResource extends AbstractModel
         if (array_key_exists("KafkaConnectParam",$param) and $param["KafkaConnectParam"] !== null) {
             $this->KafkaConnectParam = new KafkaConnectParam();
             $this->KafkaConnectParam->deserialize($param["KafkaConnectParam"]);
+        }
+
+        if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
+            $this->MqttConnectParam = new MqttConnectParam();
+            $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
         }
     }
 }

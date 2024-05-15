@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfParam(ScfParam $ScfParam) 设置Scf配置，Type为SCF时必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MqttParam getMqttParam() 获取MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMqttParam(MqttParam $MqttParam) 设置MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatahubResource extends AbstractModel
 {
@@ -191,6 +195,12 @@ class DatahubResource extends AbstractModel
     public $ScfParam;
 
     /**
+     * @var MqttParam MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MqttParam;
+
+    /**
      * @param string $Type 资源类型
      * @param KafkaParam $KafkaParam ckafka配置，Type为KAFKA时必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,6 +233,8 @@ class DatahubResource extends AbstractModel
      * @param CtsdbParam $CtsdbParam Ctsdb配置，Type为CTSDB时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScfParam $ScfParam Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MqttParam $MqttParam MQTT配置，Type为 MQTT 时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,11 @@ class DatahubResource extends AbstractModel
         if (array_key_exists("ScfParam",$param) and $param["ScfParam"] !== null) {
             $this->ScfParam = new ScfParam();
             $this->ScfParam->deserialize($param["ScfParam"]);
+        }
+
+        if (array_key_exists("MqttParam",$param) and $param["MqttParam"] !== null) {
+            $this->MqttParam = new MqttParam();
+            $this->MqttParam->deserialize($param["MqttParam"]);
         }
     }
 }

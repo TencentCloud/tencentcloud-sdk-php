@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka连接源参数
  *
- * @method string getResource() 获取Kafka连接源的实例资源, 非自建时必填
+ * @method string getResource() 获取Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResource(string $Resource) 设置Kafka连接源的实例资源, 非自建时必填
+ * @method void setResource(string $Resource) 设置Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取是否为自建集群
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Dip任务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBrokerAddress() 获取Kafka连接的broker地址, 自建时必填
+ * @method string getBrokerAddress() 获取Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBrokerAddress(string $BrokerAddress) 设置Kafka连接的broker地址, 自建时必填
+ * @method void setBrokerAddress(string $BrokerAddress) 设置Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取CKafka连接源的实例资源地域, 跨地域时必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class KafkaConnectParam extends AbstractModel
 {
     /**
-     * @var string Kafka连接源的实例资源, 非自建时必填
+     * @var string Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
@@ -62,7 +62,7 @@ class KafkaConnectParam extends AbstractModel
     public $IsUpdate;
 
     /**
-     * @var string Kafka连接的broker地址, 自建时必填
+     * @var string Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerAddress;
@@ -74,13 +74,13 @@ class KafkaConnectParam extends AbstractModel
     public $Region;
 
     /**
-     * @param string $Resource Kafka连接源的实例资源, 非自建时必填
+     * @param string $Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt 是否为自建集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BrokerAddress Kafka连接的broker地址, 自建时必填
+     * @param string $BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region CKafka连接源的实例资源地域, 跨地域时必填
 注意：此字段可能返回 null，表示取不到有效值。

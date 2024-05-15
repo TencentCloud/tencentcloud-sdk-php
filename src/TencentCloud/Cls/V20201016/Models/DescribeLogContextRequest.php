@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取要查询的日志主题ID
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
- * @method string getBTime() 获取日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
- * @method void setBTime(string $BTime) 设置日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+ * @method string getBTime() 获取日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+ * @method void setBTime(string $BTime) 设置日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
  * @method string getPkgId() 获取日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
  * @method void setPkgId(string $PkgId) 设置日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
  * @method integer getPkgLogId() 获取日志包内一条日志的序号。
@@ -43,7 +43,7 @@ class DescribeLogContextRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+     * @var string 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public $BTime;
 
@@ -70,7 +70,7 @@ SearchLog接口返回信息中Results结构中的PkgLogId。
 
     /**
      * @param string $TopicId 要查询的日志主题ID
-     * @param string $BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+     * @param string $BTime 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      * @param string $PkgId 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
      * @param integer $PkgLogId 日志包内一条日志的序号。
 SearchLog接口返回信息中Results结构中的PkgLogId。

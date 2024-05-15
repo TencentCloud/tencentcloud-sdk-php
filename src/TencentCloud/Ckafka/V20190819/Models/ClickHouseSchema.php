@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * ClickHouse的Schema
  *
  * @method string getColumnName() 获取表的列名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnName(string $ColumnName) 设置表的列名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJsonKey() 获取该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonKey(string $JsonKey) 设置该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllowNull() 获取列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowNull(boolean $AllowNull) 设置列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClickHouseSchema extends AbstractModel
 {
     /**
      * @var string 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnName;
 
     /**
      * @var string 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonKey;
 
     /**
      * @var string 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var boolean 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowNull;
 
     /**
      * @param string $ColumnName 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JsonKey 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowNull 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

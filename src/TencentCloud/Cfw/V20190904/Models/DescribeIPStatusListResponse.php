@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIPStatusList返回参数结构体
  *
- * @method array getStatusList() 获取ip状态信息
- * @method void setStatusList(array $StatusList) 设置ip状态信息
+ * @method array getStatusList() 获取IP状态信息
+ * @method void setStatusList(array $StatusList) 设置IP状态信息
  * @method integer getReturnCode() 获取状态码
  * @method void setReturnCode(integer $ReturnCode) 设置状态码
  * @method string getReturnMsg() 获取状态信息
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIPStatusListResponse extends AbstractModel
 {
     /**
-     * @var array ip状态信息
+     * @var array IP状态信息
      */
     public $StatusList;
 
@@ -52,7 +52,7 @@ class DescribeIPStatusListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $StatusList ip状态信息
+     * @param array $StatusList IP状态信息
      * @param integer $ReturnCode 状态码
      * @param string $ReturnMsg 状态信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

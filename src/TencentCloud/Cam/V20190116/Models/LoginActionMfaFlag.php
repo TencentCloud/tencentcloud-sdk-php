@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 登录和敏感操作flag
  *
- * @method integer getPhone() 获取是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
- * @method void setPhone(integer $Phone) 设置是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
- * @method integer getStoken() 获取是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
- * @method void setStoken(integer $Stoken) 设置是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
- * @method integer getWechat() 获取是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
- * @method void setWechat(integer $Wechat) 设置是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method integer getPhone() 获取是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method void setPhone(integer $Phone) 设置是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method integer getStoken() 获取是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method void setStoken(integer $Stoken) 设置是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method integer getWechat() 获取是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+ * @method void setWechat(integer $Wechat) 设置是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
  */
 class LoginActionMfaFlag extends AbstractModel
 {
     /**
-     * @var integer 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @var integer 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public $Phone;
 
     /**
-     * @var integer 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @var integer 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public $Stoken;
 
     /**
-     * @var integer 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @var integer 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public $Wechat;
 
     /**
-     * @param integer $Phone 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
-     * @param integer $Stoken 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
-     * @param integer $Wechat 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param integer $Phone 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param integer $Stoken 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param integer $Wechat 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     function __construct()
     {

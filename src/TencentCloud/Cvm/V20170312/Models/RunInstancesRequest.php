@@ -78,6 +78,8 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查不通过，则返回对应错误码；
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
+ * @method CpuTopology getCpuTopology() 获取描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+ * @method void setCpuTopology(CpuTopology $CpuTopology) 设置描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
  * @method string getCamRoleName() 获取CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
  * @method string getHpcClusterId() 获取高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
@@ -211,6 +213,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $DryRun;
 
     /**
+     * @var CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public $CpuTopology;
+
+    /**
      * @var string CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      */
     public $CamRoleName;
@@ -270,6 +277,7 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查不通过，则返回对应错误码；
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
+     * @param CpuTopology $CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
      * @param string $CamRoleName CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
@@ -395,6 +403,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("CpuTopology",$param) and $param["CpuTopology"] !== null) {
+            $this->CpuTopology = new CpuTopology();
+            $this->CpuTopology->deserialize($param["CpuTopology"]);
         }
 
         if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Name - String - 是否必填：否 - 漏洞名称</li>
  * @method ImageInfo getImageInfo() 获取镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
- * @method integer getId() 获取镜像标识Id
- * @method void setId(integer $Id) 设置镜像标识Id
+ * @method integer getId() 获取必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
+ * @method void setId(integer $Id) 设置必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
  */
 class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
     public $ImageInfo;
 
     /**
-     * @var integer 镜像标识Id
+     * @var integer 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
      */
     public $Id;
 
@@ -79,7 +79,7 @@ class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
 <li>Level- String - 是否必填：否 - 漏洞级别筛选，</li>
 <li>Name - String - 是否必填：否 - 漏洞名称</li>
      * @param ImageInfo $ImageInfo 镜像信息
-     * @param integer $Id 镜像标识Id
+     * @param integer $Id 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
      */
     function __construct()
     {

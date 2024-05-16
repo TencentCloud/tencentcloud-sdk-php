@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) 设置消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
  * @method integer getVisibilityTimeout() 获取消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
  * @method void setVisibilityTimeout(integer $VisibilityTimeout) 设置消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
- * @method integer getMaxMsgSize() 获取消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
- * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+ * @method integer getMaxMsgSize() 获取消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
+ * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
  * @method integer getMsgRetentionSeconds() 获取消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
  * @method integer getRewindSeconds() 获取队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
@@ -78,7 +78,7 @@ class CreateCmqQueueRequest extends AbstractModel
     public $VisibilityTimeout;
 
     /**
-     * @var integer 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+     * @var integer 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
      */
     public $MaxMsgSize;
 
@@ -147,7 +147,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
      * @param integer $PollingWaitSeconds 消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
      * @param integer $VisibilityTimeout 消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
-     * @param integer $MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+     * @param integer $MaxMsgSize 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
      * @param integer $MsgRetentionSeconds 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
      * @param integer $RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
      * @param integer $Transaction 1 表示事务队列，0 表示普通队列

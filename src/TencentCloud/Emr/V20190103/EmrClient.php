@@ -36,6 +36,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询
+ * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
+ * @method Models\DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(Models\DescribeHBaseTableOverviewRequest $req) 获取Hbase表级监控数据概览接口
  * @method Models\DescribeHiveQueriesResponse DescribeHiveQueries(Models\DescribeHiveQueriesRequest $req) 获取hive查询信息
  * @method Models\DescribeImpalaQueriesResponse DescribeImpalaQueries(Models\DescribeImpalaQueriesRequest $req) DescribeImpalaQueries
  * @method Models\DescribeInsightListResponse DescribeInsightList(Models\DescribeInsightListRequest $req) 获取洞察结果信息

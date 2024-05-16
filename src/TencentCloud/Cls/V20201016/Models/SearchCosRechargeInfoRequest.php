@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
  * @method string getBucketRegion() 获取COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
  * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
- * @method string getPrefix() 获取cos文件所在文件夹的前缀
- * @method void setPrefix(string $Prefix) 设置cos文件所在文件夹的前缀
+ * @method string getPrefix() 获取COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+ * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
  * @method string getCompress() 获取压缩模式:   "", "gzip", "lzop", "snappy";   默认""
  * @method void setCompress(string $Compress) 设置压缩模式:   "", "gzip", "lzop", "snappy";   默认""
  */
@@ -63,7 +63,7 @@ class SearchCosRechargeInfoRequest extends AbstractModel
     public $BucketRegion;
 
     /**
-     * @var string cos文件所在文件夹的前缀
+     * @var string COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
      */
     public $Prefix;
 
@@ -78,7 +78,7 @@ class SearchCosRechargeInfoRequest extends AbstractModel
      * @param string $Name 投递任务名称
      * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      * @param string $BucketRegion COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
-     * @param string $Prefix cos文件所在文件夹的前缀
+     * @param string $Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
      * @param string $Compress 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
      */
     function __construct()

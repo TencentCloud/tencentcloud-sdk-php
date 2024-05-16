@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDorisConnectParam(DorisConnectParam $DorisConnectParam) 设置Doris 配置，Type为 DORIS 时必填
  * @method KafkaConnectParam getKafkaConnectParam() 获取Kafka配置，Type为 KAFKA 时必填
  * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置Kafka配置，Type为 KAFKA 时必填
+ * @method MqttConnectParam getMqttConnectParam() 获取MQTT配置，Type为 MQTT 时必填
+ * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置MQTT配置，Type为 MQTT 时必填
  */
 class CreateConnectResourceRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateConnectResourceRequest extends AbstractModel
     public $KafkaConnectParam;
 
     /**
+     * @var MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     */
+    public $MqttConnectParam;
+
+    /**
      * @param string $ResourceName 连接源名称
      * @param string $Type 连接源类型
      * @param string $Description 连接源描述
@@ -128,6 +135,7 @@ class CreateConnectResourceRequest extends AbstractModel
      * @param SQLServerConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
      * @param DorisConnectParam $DorisConnectParam Doris 配置，Type为 DORIS 时必填
      * @param KafkaConnectParam $KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     * @param MqttConnectParam $MqttConnectParam MQTT配置，Type为 MQTT 时必填
      */
     function __construct()
     {
@@ -202,6 +210,11 @@ class CreateConnectResourceRequest extends AbstractModel
         if (array_key_exists("KafkaConnectParam",$param) and $param["KafkaConnectParam"] !== null) {
             $this->KafkaConnectParam = new KafkaConnectParam();
             $this->KafkaConnectParam->deserialize($param["KafkaConnectParam"]);
+        }
+
+        if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
+            $this->MqttConnectParam = new MqttConnectParam();
+            $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
  * @method string getSessionContext() 获取会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
  * @method void setSessionContext(string $SessionContext) 设置会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+ * @method string getExtInfo() 获取保留字段，特殊用途时使用。 示例值：""
+ * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。 示例值：""
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class SimpleHlsClipRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var string 保留字段，特殊用途时使用。 示例值：""
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $Url 需要裁剪的腾讯云点播 HLS 视频 URL。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param float $StartTimeOffset 裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。例如 -10 表示从倒数第 10 秒开始裁剪。
@@ -112,6 +119,7 @@ class SimpleHlsClipRequest extends AbstractModel
 仅 IsPersistence 为 1 时有效。
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
      * @param string $SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+     * @param string $ExtInfo 保留字段，特殊用途时使用。 示例值：""
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class SimpleHlsClipRequest extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

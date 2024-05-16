@@ -42,17 +42,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置策略备注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateOwnerUin() 获取策略关联操作者主帐号
+ * @method string getOperateOwnerUin() 获取策略关联操作者主账号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置策略关联操作者主帐号
+ * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置策略关联操作者主账号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateUin() 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+ * @method string getOperateUin() 获取策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUin(string $OperateUin) 设置策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+ * @method void setOperateUin(string $OperateUin) 设置策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateUinType() 获取UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+ * @method integer getOperateUinType() 获取UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUinType(integer $OperateUinType) 设置UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+ * @method void setOperateUinType(integer $OperateUinType) 设置UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeactived() 获取是否已下线
 注意：此字段可能返回 null，表示取不到有效值。
@@ -101,19 +101,19 @@ class AttachPolicyInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 策略关联操作者主帐号
+     * @var string 策略关联操作者主账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOwnerUin;
 
     /**
-     * @var string 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+     * @var string 策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
     /**
-     * @var integer UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @var integer UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUinType;
@@ -142,11 +142,11 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateOwnerUin 策略关联操作者主帐号
+     * @param string $OperateOwnerUin 策略关联操作者主账号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+     * @param string $OperateUin 策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @param integer $OperateUinType UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deactived 是否已下线
 注意：此字段可能返回 null，表示取不到有效值。

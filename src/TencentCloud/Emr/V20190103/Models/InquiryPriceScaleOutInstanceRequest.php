@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouterCount(integer $RouterCount) 设置扩容的Router节点数量。
  * @method integer getMasterCount() 获取扩容的Master节点数量。
  * @method void setMasterCount(integer $MasterCount) 设置扩容的Master节点数量。
+ * @method string getResourceBaseType() 获取类型为ComputeResource和EMR以及默认，默认为EMR
+ * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR
+ * @method string getComputeResourceId() 获取计算资源id
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -115,6 +119,16 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     public $MasterCount;
 
     /**
+     * @var string 类型为ComputeResource和EMR以及默认，默认为EMR
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string 计算资源id
+     */
+    public $ComputeResourceId;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -132,6 +146,8 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 <li>CNY：表示人民币。</li>
      * @param integer $RouterCount 扩容的Router节点数量。
      * @param integer $MasterCount 扩容的Master节点数量。
+     * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
+     * @param string $ComputeResourceId 计算资源id
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
             $this->MasterCount = $param["MasterCount"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
         }
     }
 }

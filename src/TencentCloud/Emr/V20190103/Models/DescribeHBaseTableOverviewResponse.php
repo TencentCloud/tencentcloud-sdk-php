@@ -14,23 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskAssessment返回参数结构体
+ * DescribeHBaseTableOverview返回参数结构体
  *
+ * @method array getTableMonitorList() 获取概览数据数组
+ * @method void setTableMonitorList(array $TableMonitorList) 设置概览数据数组
+ * @method integer getTotalCount() 获取概览数据数组长度
+ * @method void setTotalCount(integer $TotalCount) 设置概览数据数组长度
+ * @method array getSchemaList() 获取表schema信息
+ * @method void setSchemaList(array $SchemaList) 设置表schema信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRiskAssessmentResponse extends AbstractModel
+class DescribeHBaseTableOverviewResponse extends AbstractModel
 {
+    /**
+     * @var array 概览数据数组
+     */
+    public $TableMonitorList;
+
+    /**
+     * @var integer 概览数据数组长度
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 表schema信息
+     */
+    public $SchemaList;
+
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $TableMonitorList 概览数据数组
+     * @param integer $TotalCount 概览数据数组长度
+     * @param array $SchemaList 表schema信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,28 @@ class DescribeRiskAssessmentResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TableMonitorList",$param) and $param["TableMonitorList"] !== null) {
+            $this->TableMonitorList = [];
+            foreach ($param["TableMonitorList"] as $key => $value){
+                $obj = new OverviewRow();
+                $obj->deserialize($value);
+                array_push($this->TableMonitorList, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("SchemaList",$param) and $param["SchemaList"] !== null) {
+            $this->SchemaList = [];
+            foreach ($param["SchemaList"] as $key => $value){
+                $obj = new TableSchemaItem();
+                $obj->deserialize($value);
+                array_push($this->SchemaList, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -14,20 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Vtc\V20240223\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskAssessment请求参数结构体
+ * 音频翻译结果
  *
-
+ * @method string getSourceText() 获取原文本
+ * @method void setSourceText(string $SourceText) 设置原文本
+ * @method string getTargetText() 获取目标文本
+ * @method void setTargetText(string $TargetText) 设置目标文本
  */
-class DescribeRiskAssessmentRequest extends AbstractModel
+class AudioTranslateResult extends AbstractModel
 {
-
+    /**
+     * @var string 原文本
+     */
+    public $SourceText;
 
     /**
+     * @var string 目标文本
+     */
+    public $TargetText;
 
+    /**
+     * @param string $SourceText 原文本
+     * @param string $TargetText 目标文本
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeRiskAssessmentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SourceText",$param) and $param["SourceText"] !== null) {
+            $this->SourceText = $param["SourceText"];
+        }
 
+        if (array_key_exists("TargetText",$param) and $param["TargetText"] !== null) {
+            $this->TargetText = $param["TargetText"];
+        }
     }
 }

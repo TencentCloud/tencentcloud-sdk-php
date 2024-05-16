@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method array getResourceIds() 获取销毁节点ID。该参数为预留参数，用户无需配置。
  * @method void setResourceIds(array $ResourceIds) 设置销毁节点ID。该参数为预留参数，用户无需配置。
+ * @method string getResourceBaseType() 获取类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+ * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+ * @method string getComputeResourceId() 获取计算资源ID
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源ID
  */
 class TerminateInstanceRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class TerminateInstanceRequest extends AbstractModel
     public $ResourceIds;
 
     /**
+     * @var string 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string 计算资源ID
+     */
+    public $ComputeResourceId;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param array $ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
+     * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * @param string $ComputeResourceId 计算资源ID
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class TerminateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
             $this->ResourceIds = $param["ResourceIds"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
         }
     }
 }

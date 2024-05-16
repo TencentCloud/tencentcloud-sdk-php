@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取用户SdkAppId（如：1400xxxxxx）
  * @method void setSdkAppId(integer $SdkAppId) 设置用户SdkAppId（如：1400xxxxxx）
- * @method integer getStartTime() 获取查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
-注意：支持查询14天内的数据
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
-注意：支持查询14天内的数据
+ * @method integer getStartTime() 获取查询开始时间，本地unix时间戳，单位为秒（如：1590065777）注意：最大支持查询14天内的数据
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）注意：最大支持查询14天内的数据
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
 注意：与StartTime间隔时间不超过24小时。
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
@@ -49,8 +47,7 @@ class DescribeRoomInfoRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
-注意：支持查询14天内的数据
+     * @var integer 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）注意：最大支持查询14天内的数据
      */
     public $StartTime;
 
@@ -79,8 +76,7 @@ class DescribeRoomInfoRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 用户SdkAppId（如：1400xxxxxx）
-     * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
-注意：支持查询14天内的数据
+     * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）注意：最大支持查询14天内的数据
      * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
 注意：与StartTime间隔时间不超过24小时。
      * @param string $RoomId 房间号（如：223)

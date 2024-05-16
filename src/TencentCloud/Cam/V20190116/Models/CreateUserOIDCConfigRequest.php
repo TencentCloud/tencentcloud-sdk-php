@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
  * @method void setIdentityUrl(string $IdentityUrl) 设置身份提供商URL。OpenID Connect身份提供商标识。
 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
- * @method string getIdentityKey() 获取签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
- * @method void setIdentityKey(string $IdentityKey) 设置签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
  * @method string getClientId() 获取客户端ID，在OpenID Connect身份提供商注册的客户端ID。
  * @method void setClientId(string $ClientId) 设置客户端ID，在OpenID Connect身份提供商注册的客户端ID。
  * @method string getAuthorizationEndpoint() 获取授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseMode(string $ResponseMode) 设置授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
  * @method string getMappingFiled() 获取映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
  * @method void setMappingFiled(string $MappingFiled) 设置映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+ * @method string getIdentityKey() 获取签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+ * @method void setIdentityKey(string $IdentityKey) 设置签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
  * @method array getScope() 获取授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
  * @method void setScope(array $Scope) 设置授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
  * @method string getDescription() 获取描述
@@ -48,11 +48,6 @@ class CreateUserOIDCConfigRequest extends AbstractModel
 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
      */
     public $IdentityUrl;
-
-    /**
-     * @var string 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-     */
-    public $IdentityKey;
 
     /**
      * @var string 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
@@ -80,6 +75,11 @@ class CreateUserOIDCConfigRequest extends AbstractModel
     public $MappingFiled;
 
     /**
+     * @var string 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     */
+    public $IdentityKey;
+
+    /**
      * @var array 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
      */
     public $Scope;
@@ -92,12 +92,12 @@ class CreateUserOIDCConfigRequest extends AbstractModel
     /**
      * @param string $IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
-     * @param string $IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
      * @param string $ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
      * @param string $AuthorizationEndpoint 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
      * @param string $ResponseType 授权请求Response type，固定值id_token
      * @param string $ResponseMode 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
      * @param string $MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+     * @param string $IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      * @param array $Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
      * @param string $Description 描述
      */
@@ -118,10 +118,6 @@ class CreateUserOIDCConfigRequest extends AbstractModel
             $this->IdentityUrl = $param["IdentityUrl"];
         }
 
-        if (array_key_exists("IdentityKey",$param) and $param["IdentityKey"] !== null) {
-            $this->IdentityKey = $param["IdentityKey"];
-        }
-
         if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
             $this->ClientId = $param["ClientId"];
         }
@@ -140,6 +136,10 @@ class CreateUserOIDCConfigRequest extends AbstractModel
 
         if (array_key_exists("MappingFiled",$param) and $param["MappingFiled"] !== null) {
             $this->MappingFiled = $param["MappingFiled"];
+        }
+
+        if (array_key_exists("IdentityKey",$param) and $param["IdentityKey"] !== null) {
+            $this->IdentityKey = $param["IdentityKey"];
         }
 
         if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {

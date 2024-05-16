@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
  * @method string getBucketRegion() 获取COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
  * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
- * @method string getPrefix() 获取COS文件所在文件夹的前缀
- * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀
+ * @method string getPrefix() 获取COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
+ * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文； 默认为minimalist_log
  * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文； 默认为minimalist_log
  * @method string getCompress() 获取解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
@@ -78,7 +78,7 @@ class ModifyCosRechargeRequest extends AbstractModel
     public $BucketRegion;
 
     /**
-     * @var string COS文件所在文件夹的前缀
+     * @var string COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
      */
     public $Prefix;
 
@@ -114,7 +114,7 @@ class ModifyCosRechargeRequest extends AbstractModel
      * @param integer $Enable 任务状态   0： 停用 ， 1：启用
      * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
      * @param string $BucketRegion COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
-     * @param string $Prefix COS文件所在文件夹的前缀
+     * @param string $Prefix COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文； 默认为minimalist_log
      * @param string $Compress 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
      * @param ExtractRuleInfo $ExtractRuleInfo 提取规则，如果设置了ExtractRule，则必须设置LogType

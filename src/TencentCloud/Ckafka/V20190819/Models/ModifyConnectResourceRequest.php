@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDorisConnectParam(DorisModifyConnectParam $DorisConnectParam) 设置Doris配置，Type为DORIS
  * @method KafkaConnectParam getKafkaConnectParam() 获取Kafka配置，Type为 KAFKA 时必填
  * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置Kafka配置，Type为 KAFKA 时必填
+ * @method MqttConnectParam getMqttConnectParam() 获取MQTT配置，Type为 MQTT 时必填
+ * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置MQTT配置，Type为 MQTT 时必填
  */
 class ModifyConnectResourceRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyConnectResourceRequest extends AbstractModel
     public $KafkaConnectParam;
 
     /**
+     * @var MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     */
+    public $MqttConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
      * @param string $ResourceName 连接源名称，为空时不修改
      * @param string $Description 连接源描述，为空时不修改
@@ -144,6 +151,7 @@ class ModifyConnectResourceRequest extends AbstractModel
      * @param CtsdbModifyConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB
      * @param DorisModifyConnectParam $DorisConnectParam Doris配置，Type为DORIS
      * @param KafkaConnectParam $KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     * @param MqttConnectParam $MqttConnectParam MQTT配置，Type为 MQTT 时必填
      */
     function __construct()
     {
@@ -227,6 +235,11 @@ class ModifyConnectResourceRequest extends AbstractModel
         if (array_key_exists("KafkaConnectParam",$param) and $param["KafkaConnectParam"] !== null) {
             $this->KafkaConnectParam = new KafkaConnectParam();
             $this->KafkaConnectParam->deserialize($param["KafkaConnectParam"]);
+        }
+
+        if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
+            $this->MqttConnectParam = new MqttConnectParam();
+            $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
         }
     }
 }

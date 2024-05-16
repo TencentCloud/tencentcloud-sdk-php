@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTicketNum(integer $TicketNum) 设置访问次数限制，限制范围1-99999，为空则不设置访问次数限制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGlobalParam() 获取全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGlobalParam(string $GlobalParam) 设置全局参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -164,6 +168,12 @@ class EmbedTokenInfo extends AbstractModel
     public $TicketNum;
 
     /**
+     * @var string 全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GlobalParam;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -191,6 +201,8 @@ class EmbedTokenInfo extends AbstractModel
      * @param string $UserId 使用者Id(仅用于多用户)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GlobalParam 全局参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("TicketNum",$param) and $param["TicketNum"] !== null) {
             $this->TicketNum = $param["TicketNum"];
+        }
+
+        if (array_key_exists("GlobalParam",$param) and $param["GlobalParam"] !== null) {
+            $this->GlobalParam = $param["GlobalParam"];
         }
     }
 }

@@ -36,6 +36,85 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置使用者Id(仅用于多用户)
  * @method integer getTicketNum() 获取访问次数限制，限制范围1-99999，为空则不设置访问次数限制
  * @method void setTicketNum(integer $TicketNum) 设置访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+ * @method string getGlobalParam() 获取全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+ * @method void setGlobalParam(string $GlobalParam) 设置全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
  */
 class CreateEmbedTokenRequest extends AbstractModel
 {
@@ -80,6 +159,50 @@ class CreateEmbedTokenRequest extends AbstractModel
     public $TicketNum;
 
     /**
+     * @var string 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+     */
+    public $GlobalParam;
+
+    /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0
      * @param string $Scope page表示嵌出页面，panel表嵌出整个看板
@@ -88,6 +211,45 @@ class CreateEmbedTokenRequest extends AbstractModel
      * @param string $UserCorpId 使用者企业Id(仅用于多用户)
      * @param string $UserId 使用者Id(仅用于多用户)
      * @param integer $TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+     * @param string $GlobalParam 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
      */
     function __construct()
     {
@@ -132,6 +294,10 @@ class CreateEmbedTokenRequest extends AbstractModel
 
         if (array_key_exists("TicketNum",$param) and $param["TicketNum"] !== null) {
             $this->TicketNum = $param["TicketNum"];
+        }
+
+        if (array_key_exists("GlobalParam",$param) and $param["GlobalParam"] !== null) {
+            $this->GlobalParam = $param["GlobalParam"];
         }
     }
 }

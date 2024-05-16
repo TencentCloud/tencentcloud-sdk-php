@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) 设置预设配置组
  * @method integer getAutoRenew() 获取0表示关闭自动续费，1表示开启自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置0表示关闭自动续费，1表示开启自动续费
+ * @method string getResourceBaseType() 获取类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+ * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+ * @method string getComputeResourceId() 获取计算资源id
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -239,6 +243,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $AutoRenew;
 
     /**
+     * @var string 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string 计算资源id
+     */
+    public $ComputeResourceId;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -276,6 +290,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $SubnetId 子网，默认是集群创建时的子网
      * @param string $ScaleOutServiceConfAssign 预设配置组
      * @param integer $AutoRenew 0表示关闭自动续费，1表示开启自动续费
+     * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * @param string $ComputeResourceId 计算资源id
      */
     function __construct()
     {
@@ -404,6 +420,14 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
         }
     }
 }

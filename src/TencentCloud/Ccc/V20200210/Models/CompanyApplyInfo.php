@@ -48,17 +48,33 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorporationIdPicUrl(string $CorporationIdPicUrl) 设置法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBusinessScope() 获取业务经营范围
+ * @method string getNetworkCommitmentPicUrl() 获取安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessScope(string $BusinessScope) 设置业务经营范围
+ * @method void setNetworkCommitmentPicUrl(string $NetworkCommitmentPicUrl) 设置安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsEqualTencentCloud() 获取是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsEqualTencentCloud(integer $IsEqualTencentCloud) 设置是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCorporationMobile() 获取法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCorporationMobile(string $CorporationMobile) 设置法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCorporationMobilePicUrl() 获取法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCorporationMobilePicUrl(string $CorporationMobilePicUrl) 设置法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUseDescribeFileUrl() 获取通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseDescribeFileUrl(string $UseDescribeFileUrl) 设置通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCompanyAuthLetterPicUrl() 获取公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompanyAuthLetterPicUrl(string $CompanyAuthLetterPicUrl) 设置公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAcceptPicUrl() 获取电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAcceptPicUrl(string $AcceptPicUrl) 设置电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkCommitmentPicUrl() 获取电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkCommitmentPicUrl(string $NetworkCommitmentPicUrl) 设置电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCorporationHoldingOnIdPicUrl() 获取法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,6 +99,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCommissionPicUrl() 获取委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommissionPicUrl(string $CommissionPicUrl) 设置委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperatorMobile() 获取经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperatorMobile(string $OperatorMobile) 设置经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperatorEmail() 获取经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperatorEmail(string $OperatorEmail) 设置经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperatorMobilePicUrl() 获取经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperatorMobilePicUrl(string $OperatorMobilePicUrl) 设置经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompanyApplyInfo extends AbstractModel
@@ -130,22 +158,46 @@ class CompanyApplyInfo extends AbstractModel
     public $CorporationIdPicUrl;
 
     /**
-     * @var string 业务经营范围
+     * @var string 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BusinessScope;
+    public $NetworkCommitmentPicUrl;
+
+    /**
+     * @var integer 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsEqualTencentCloud;
+
+    /**
+     * @var string 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CorporationMobile;
+
+    /**
+     * @var string 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CorporationMobilePicUrl;
+
+    /**
+     * @var string 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseDescribeFileUrl;
+
+    /**
+     * @var string 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CompanyAuthLetterPicUrl;
 
     /**
      * @var string 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AcceptPicUrl;
-
-    /**
-     * @var string 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NetworkCommitmentPicUrl;
 
     /**
      * @var string 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
@@ -184,6 +236,24 @@ class CompanyApplyInfo extends AbstractModel
     public $CommissionPicUrl;
 
     /**
+     * @var string 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperatorMobile;
+
+    /**
+     * @var string 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperatorEmail;
+
+    /**
+     * @var string 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperatorMobilePicUrl;
+
+    /**
      * @param integer $ApplicantType 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompanyName 企业名称
@@ -198,11 +268,19 @@ class CompanyApplyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CorporationIdPicUrl 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BusinessScope 业务经营范围
+     * @param string $NetworkCommitmentPicUrl 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsEqualTencentCloud 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CorporationMobile 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CorporationMobilePicUrl 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UseDescribeFileUrl 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CompanyAuthLetterPicUrl 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AcceptPicUrl 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkCommitmentPicUrl 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CorporationHoldingOnIdPicUrl 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,6 +293,12 @@ class CompanyApplyInfo extends AbstractModel
      * @param string $OperatorHoldingOnIdPicUrl 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CommissionPicUrl 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperatorMobile 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperatorEmail 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperatorMobilePicUrl 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -258,16 +342,32 @@ class CompanyApplyInfo extends AbstractModel
             $this->CorporationIdPicUrl = $param["CorporationIdPicUrl"];
         }
 
-        if (array_key_exists("BusinessScope",$param) and $param["BusinessScope"] !== null) {
-            $this->BusinessScope = $param["BusinessScope"];
+        if (array_key_exists("NetworkCommitmentPicUrl",$param) and $param["NetworkCommitmentPicUrl"] !== null) {
+            $this->NetworkCommitmentPicUrl = $param["NetworkCommitmentPicUrl"];
+        }
+
+        if (array_key_exists("IsEqualTencentCloud",$param) and $param["IsEqualTencentCloud"] !== null) {
+            $this->IsEqualTencentCloud = $param["IsEqualTencentCloud"];
+        }
+
+        if (array_key_exists("CorporationMobile",$param) and $param["CorporationMobile"] !== null) {
+            $this->CorporationMobile = $param["CorporationMobile"];
+        }
+
+        if (array_key_exists("CorporationMobilePicUrl",$param) and $param["CorporationMobilePicUrl"] !== null) {
+            $this->CorporationMobilePicUrl = $param["CorporationMobilePicUrl"];
+        }
+
+        if (array_key_exists("UseDescribeFileUrl",$param) and $param["UseDescribeFileUrl"] !== null) {
+            $this->UseDescribeFileUrl = $param["UseDescribeFileUrl"];
+        }
+
+        if (array_key_exists("CompanyAuthLetterPicUrl",$param) and $param["CompanyAuthLetterPicUrl"] !== null) {
+            $this->CompanyAuthLetterPicUrl = $param["CompanyAuthLetterPicUrl"];
         }
 
         if (array_key_exists("AcceptPicUrl",$param) and $param["AcceptPicUrl"] !== null) {
             $this->AcceptPicUrl = $param["AcceptPicUrl"];
-        }
-
-        if (array_key_exists("NetworkCommitmentPicUrl",$param) and $param["NetworkCommitmentPicUrl"] !== null) {
-            $this->NetworkCommitmentPicUrl = $param["NetworkCommitmentPicUrl"];
         }
 
         if (array_key_exists("CorporationHoldingOnIdPicUrl",$param) and $param["CorporationHoldingOnIdPicUrl"] !== null) {
@@ -292,6 +392,18 @@ class CompanyApplyInfo extends AbstractModel
 
         if (array_key_exists("CommissionPicUrl",$param) and $param["CommissionPicUrl"] !== null) {
             $this->CommissionPicUrl = $param["CommissionPicUrl"];
+        }
+
+        if (array_key_exists("OperatorMobile",$param) and $param["OperatorMobile"] !== null) {
+            $this->OperatorMobile = $param["OperatorMobile"];
+        }
+
+        if (array_key_exists("OperatorEmail",$param) and $param["OperatorEmail"] !== null) {
+            $this->OperatorEmail = $param["OperatorEmail"];
+        }
+
+        if (array_key_exists("OperatorMobilePicUrl",$param) and $param["OperatorMobilePicUrl"] !== null) {
+            $this->OperatorMobilePicUrl = $param["OperatorMobilePicUrl"];
         }
     }
 }

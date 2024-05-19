@@ -30,11 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
  * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5手机号，
 注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
- * @method string getDeviceId() 获取用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+ * @method string getDeviceId() 获取用户设备号（已不推荐使用）。
 
- * @method void setDeviceId(string $DeviceId) 设置用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号（已不推荐使用）。
  */
 class QQAccountInfo extends AbstractModel
 {
@@ -60,8 +58,7 @@ class QQAccountInfo extends AbstractModel
     public $MobilePhone;
 
     /**
-     * @var string 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * @var string 用户设备号（已不推荐使用）。
 
      */
     public $DeviceId;
@@ -72,8 +69,7 @@ class QQAccountInfo extends AbstractModel
      * @param string $AssociateAccount 用于标识QQ用户登录后所关联业务自身的账号ID。
      * @param string $MobilePhone 账号绑定的MD5手机号，
 注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
-     * @param string $DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * @param string $DeviceId 用户设备号（已不推荐使用）。
      */
     function __construct()
     {

@@ -23,13 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
@@ -73,10 +71,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-206: 设备异常，该设备存在异常的使用行为。
-2061: 疑似非常用设备，当前请求的设备非该账号常用设备。
-2062: 疑似虚拟设备，请求设备为模拟器、脚本、云设备等虚拟设备。
-2063: 疑似群控设备，请求设备为猫池、手机墙等群控设备。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(array $RiskType) 设置风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
@@ -97,10 +91,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-206: 设备异常，该设备存在异常的使用行为。
-2061: 疑似非常用设备，当前请求的设备非该账号常用设备。
-2062: 疑似虚拟设备，请求设备为模拟器、脚本、云设备等虚拟设备。
-2063: 疑似群控设备，请求设备为猫池、手机墙等群控设备。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConstId() 获取设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -117,7 +107,6 @@ class OutputManageMarketingRiskValue extends AbstractModel
      * @var string 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -170,10 +159,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-206: 设备异常，该设备存在异常的使用行为。
-2061: 疑似非常用设备，当前请求的设备非该账号常用设备。
-2062: 疑似虚拟设备，请求设备为模拟器、脚本、云设备等虚拟设备。
-2063: 疑似群控设备，请求设备为猫池、手机墙等群控设备。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
@@ -194,7 +179,6 @@ reject：高风险，建议拦截
      * @param string $UserId 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
@@ -227,10 +211,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-206: 设备异常，该设备存在异常的使用行为。
-2061: 疑似非常用设备，当前请求的设备非该账号常用设备。
-2062: 疑似虚拟设备，请求设备为模拟器、脚本、云设备等虚拟设备。
-2063: 疑似群控设备，请求设备为猫池、手机墙等群控设备。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。

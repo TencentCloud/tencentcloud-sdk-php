@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置公司统一社会信用代码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModifyTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(integer $ModifyTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompanyStateInfo extends AbstractModel
 {
@@ -91,6 +95,12 @@ class CompanyStateInfo extends AbstractModel
     public $BusinessId;
 
     /**
+     * @var integer 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
      * @param integer $Id 申请单ID
      * @param string $CompanyName 公司名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +113,8 @@ class CompanyStateInfo extends AbstractModel
      * @param integer $State 审核状态，1-待审核，2-审核通过，3-驳回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessId 公司统一社会信用代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,10 @@ class CompanyStateInfo extends AbstractModel
 
         if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
             $this->BusinessId = $param["BusinessId"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

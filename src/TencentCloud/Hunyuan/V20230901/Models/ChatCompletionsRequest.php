@@ -98,6 +98,18 @@ use TencentCloud\Common\AbstractModel;
 1. 较高的数值会使输出更加随机，而较低的数值会使其更加集中和确定。
 2. 默认 1.0，取值区间为 [0.0, 2.0]。
 3. 非必要不建议使用，不合理的取值会影响效果。
+ * @method boolean getEnableEnhancement() 获取功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+ * @method void setEnableEnhancement(boolean $EnableEnhancement) 设置功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -165,6 +177,16 @@ class ChatCompletionsRequest extends AbstractModel
     public $Temperature;
 
     /**
+     * @var boolean 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+     */
+    public $EnableEnhancement;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -204,6 +226,12 @@ class ChatCompletionsRequest extends AbstractModel
 1. 较高的数值会使输出更加随机，而较低的数值会使其更加集中和确定。
 2. 默认 1.0，取值区间为 [0.0, 2.0]。
 3. 非必要不建议使用，不合理的取值会影响效果。
+     * @param boolean $EnableEnhancement 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
      */
     function __construct()
     {
@@ -245,6 +273,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("Temperature",$param) and $param["Temperature"] !== null) {
             $this->Temperature = $param["Temperature"];
+        }
+
+        if (array_key_exists("EnableEnhancement",$param) and $param["EnableEnhancement"] !== null) {
+            $this->EnableEnhancement = $param["EnableEnhancement"];
         }
     }
 }

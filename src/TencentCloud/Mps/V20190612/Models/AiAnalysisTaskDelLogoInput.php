@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能去水印任务输入类型
+ * 智能擦除任务输入类型
  *
- * @method integer getDefinition() 获取视频智能去水印模板 ID。
- * @method void setDefinition(integer $Definition) 设置视频智能去水印模板 ID。
+ * @method integer getDefinition() 获取视频智能擦除模板 ID。
+ * @method void setDefinition(integer $Definition) 设置视频智能擦除模板 ID。
  */
 class AiAnalysisTaskDelLogoInput extends AbstractModel
 {
     /**
-     * @var integer 视频智能去水印模板 ID。
+     * @var integer 视频智能擦除模板 ID。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 视频智能去水印模板 ID。
+     * @param integer $Definition 视频智能擦除模板 ID。
      */
     function __construct()
     {

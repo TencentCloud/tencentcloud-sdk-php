@@ -18,7 +18,7 @@ namespace TencentCloud\Dsgc\V20190723\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DSPA评估模版
+ * DSPA评估模板
  *
  * @method integer getId() 获取id
 注意：此字段可能返回 null，表示取不到有效值。

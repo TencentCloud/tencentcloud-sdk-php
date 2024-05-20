@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能去水印结果信息
+ * 智能擦除结果信息
  *
- * @method string getPath() 获取去水印后文件的路径。
- * @method void setPath(string $Path) 设置去水印后文件的路径。
- * @method TaskOutputStorage getOutputStorage() 获取去水印后文件的存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置去水印后文件的存储位置。
+ * @method string getPath() 获取擦除后文件的路径。
+ * @method void setPath(string $Path) 设置擦除后文件的路径。
+ * @method TaskOutputStorage getOutputStorage() 获取擦除后文件的存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置擦除后文件的存储位置。
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
     /**
-     * @var string 去水印后文件的路径。
+     * @var string 擦除后文件的路径。
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage 去水印后文件的存储位置。
+     * @var TaskOutputStorage 擦除后文件的存储位置。
      */
     public $OutputStorage;
 
     /**
-     * @param string $Path 去水印后文件的路径。
-     * @param TaskOutputStorage $OutputStorage 去水印后文件的存储位置。
+     * @param string $Path 擦除后文件的路径。
+     * @param TaskOutputStorage $OutputStorage 擦除后文件的存储位置。
      */
     function __construct()
     {

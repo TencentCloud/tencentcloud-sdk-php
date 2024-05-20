@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能去水印结果类型
+ * 智能擦除结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiAnalysisTaskDelLogoInput getInput() 获取智能去水印任务输入。
- * @method void setInput(AiAnalysisTaskDelLogoInput $Input) 设置智能去水印任务输入。
- * @method AiAnalysisTaskDelLogoOutput getOutput() 获取智能去水印任务输出。
+ * @method AiAnalysisTaskDelLogoInput getInput() 获取智能擦除任务输入。
+ * @method void setInput(AiAnalysisTaskDelLogoInput $Input) 设置智能擦除任务输入。
+ * @method AiAnalysisTaskDelLogoOutput getOutput() 获取智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) 设置智能去水印任务输出。
+ * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) 设置智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskDelLogoResult extends AbstractModel
@@ -51,12 +51,12 @@ class AiAnalysisTaskDelLogoResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskDelLogoInput 智能去水印任务输入。
+     * @var AiAnalysisTaskDelLogoInput 智能擦除任务输入。
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDelLogoOutput 智能去水印任务输出。
+     * @var AiAnalysisTaskDelLogoOutput 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -65,8 +65,8 @@ class AiAnalysisTaskDelLogoResult extends AbstractModel
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
      * @param string $Message 错误信息。
-     * @param AiAnalysisTaskDelLogoInput $Input 智能去水印任务输入。
-     * @param AiAnalysisTaskDelLogoOutput $Output 智能去水印任务输出。
+     * @param AiAnalysisTaskDelLogoInput $Input 智能擦除任务输入。
+     * @param AiAnalysisTaskDelLogoOutput $Output 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

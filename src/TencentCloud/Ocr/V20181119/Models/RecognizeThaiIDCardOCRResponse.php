@@ -32,8 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssueDate(string $IssueDate) 设置泰文签发日期
  * @method string getExpirationDate() 获取泰文到期日期
  * @method void setExpirationDate(string $ExpirationDate) 设置泰文到期日期
+ * @method string getEnIssueDate() 获取英文签发日期
+ * @method void setEnIssueDate(string $EnIssueDate) 设置英文签发日期
+ * @method string getEnExpirationDate() 获取英文到期日期
+ * @method void setEnExpirationDate(string $EnExpirationDate) 设置英文到期日期
  * @method string getBirthday() 获取泰文出生日期
  * @method void setBirthday(string $Birthday) 设置泰文出生日期
+ * @method string getEnBirthday() 获取英文出生日期
+ * @method void setEnBirthday(string $EnBirthday) 设置英文出生日期
+ * @method string getReligion() 获取宗教信仰
+ * @method void setReligion(string $Religion) 设置宗教信仰
+ * @method string getSerialNumber() 获取序列号
+ * @method void setSerialNumber(string $SerialNumber) 设置序列号
  * @method string getAddress() 获取地址
  * @method void setAddress(string $Address) 设置地址
  * @method string getPortraitImage() 获取证件人像照片抠取
@@ -88,9 +98,34 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $ExpirationDate;
 
     /**
+     * @var string 英文签发日期
+     */
+    public $EnIssueDate;
+
+    /**
+     * @var string 英文到期日期
+     */
+    public $EnExpirationDate;
+
+    /**
      * @var string 泰文出生日期
      */
     public $Birthday;
+
+    /**
+     * @var string 英文出生日期
+     */
+    public $EnBirthday;
+
+    /**
+     * @var string 宗教信仰
+     */
+    public $Religion;
+
+    /**
+     * @var string 序列号
+     */
+    public $SerialNumber;
 
     /**
      * @var string 地址
@@ -125,7 +160,12 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $EnLastName 英文姓名
      * @param string $IssueDate 泰文签发日期
      * @param string $ExpirationDate 泰文到期日期
+     * @param string $EnIssueDate 英文签发日期
+     * @param string $EnExpirationDate 英文到期日期
      * @param string $Birthday 泰文出生日期
+     * @param string $EnBirthday 英文出生日期
+     * @param string $Religion 宗教信仰
+     * @param string $SerialNumber 序列号
      * @param string $Address 地址
      * @param string $PortraitImage 证件人像照片抠取
      * @param array $WarnCardInfos 告警码
@@ -174,8 +214,28 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
             $this->ExpirationDate = $param["ExpirationDate"];
         }
 
+        if (array_key_exists("EnIssueDate",$param) and $param["EnIssueDate"] !== null) {
+            $this->EnIssueDate = $param["EnIssueDate"];
+        }
+
+        if (array_key_exists("EnExpirationDate",$param) and $param["EnExpirationDate"] !== null) {
+            $this->EnExpirationDate = $param["EnExpirationDate"];
+        }
+
         if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
             $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("EnBirthday",$param) and $param["EnBirthday"] !== null) {
+            $this->EnBirthday = $param["EnBirthday"];
+        }
+
+        if (array_key_exists("Religion",$param) and $param["Religion"] !== null) {
+            $this->Religion = $param["Religion"];
+        }
+
+        if (array_key_exists("SerialNumber",$param) and $param["SerialNumber"] !== null) {
+            $this->SerialNumber = $param["SerialNumber"];
         }
 
         if (array_key_exists("Address",$param) and $param["Address"] !== null) {

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取dspa实例id
  * @method void setDspaId(string $DspaId) 设置dspa实例id
- * @method string getTemplateName() 获取模版名称
- * @method void setTemplateName(string $TemplateName) 设置模版名称
+ * @method string getTemplateName() 获取模板名称
+ * @method void setTemplateName(string $TemplateName) 设置模板名称
  * @method integer getRiskLevelId() 获取风险等级id
  * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级id
  * @method array getRiskIdList() 获取风险id列表
  * @method void setRiskIdList(array $RiskIdList) 设置风险id列表
- * @method string getTemplateDescription() 获取模版描述
- * @method void setTemplateDescription(string $TemplateDescription) 设置模版描述
+ * @method string getTemplateDescription() 获取模板描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置模板描述
  */
 class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel
     public $DspaId;
 
     /**
-     * @var string 模版名称
+     * @var string 模板名称
      */
     public $TemplateName;
 
@@ -54,16 +54,16 @@ class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel
     public $RiskIdList;
 
     /**
-     * @var string 模版描述
+     * @var string 模板描述
      */
     public $TemplateDescription;
 
     /**
      * @param string $DspaId dspa实例id
-     * @param string $TemplateName 模版名称
+     * @param string $TemplateName 模板名称
      * @param integer $RiskLevelId 风险等级id
      * @param array $RiskIdList 风险id列表
-     * @param string $TemplateDescription 模版描述
+     * @param string $TemplateDescription 模板描述
      */
     function __construct()
     {

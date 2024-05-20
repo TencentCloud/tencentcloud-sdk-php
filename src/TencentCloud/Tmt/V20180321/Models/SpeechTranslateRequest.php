@@ -85,11 +85,13 @@ class SpeechTranslateRequest extends AbstractModel
 
     /**
      * @var string 识别模式，该参数已废弃
+     * @deprecated
      */
     public $Mode;
 
     /**
      * @var integer 该参数已废弃
+     * @deprecated
      */
     public $TransType;
 

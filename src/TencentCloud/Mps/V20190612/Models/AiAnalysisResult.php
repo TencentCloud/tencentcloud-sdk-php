@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) 设置视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiAnalysisTaskDelLogoResult getDeLogoTask() 获取视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+ * @method AiAnalysisTaskDelLogoResult getDeLogoTask() 获取视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) 设置视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+ * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) 设置视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AiAnalysisTaskHeadTailResult getHeadTailTask() 获取视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,7 +78,7 @@ class AiAnalysisResult extends AbstractModel
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
      */
     public $Type;
@@ -114,7 +114,7 @@ class AiAnalysisResult extends AbstractModel
     public $HighlightTask;
 
     /**
-     * @var AiAnalysisTaskDelLogoResult 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * @var AiAnalysisTaskDelLogoResult 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeLogoTask;
@@ -138,7 +138,7 @@ class AiAnalysisResult extends AbstractModel
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,7 +150,7 @@ class AiAnalysisResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskHighlightResult $HighlightTask 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTaskDelLogoResult $DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * @param AiAnalysisTaskDelLogoResult $DeLogoTask 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskHeadTailResult $HeadTailTask 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。

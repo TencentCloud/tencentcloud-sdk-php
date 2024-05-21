@@ -70,6 +70,14 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCount(integer $DeviceCount) 设置设备数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRate() 获取平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRate(string $Rate) 设置平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPeriod() 获取有效期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPeriod(string $Period) 设置有效期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEntry extends AbstractModel
 {
@@ -175,6 +183,18 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     public $DeviceCount;
 
     /**
+     * @var string 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Rate;
+
+    /**
+     * @var string 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Period;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $CategoryId 产品分组模板ID
@@ -199,6 +219,10 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
      * @param integer $BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceCount 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Rate 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Period 有效期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +312,14 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
         if (array_key_exists("DeviceCount",$param) and $param["DeviceCount"] !== null) {
             $this->DeviceCount = $param["DeviceCount"];
+        }
+
+        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
+            $this->Rate = $param["Rate"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

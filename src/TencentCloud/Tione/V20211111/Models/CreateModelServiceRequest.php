@@ -128,8 +128,10 @@ HYBRID_PAID:
  * @method void setCommand(string $Command) 设置服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
  * @method ServiceEIP getServiceEIP() 获取是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
  * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
- * @method string getCommandBase64() 获取服务的启动命令，以base64格式进行输入
- * @method void setCommandBase64(string $CommandBase64) 设置服务的启动命令，以base64格式进行输入
+ * @method string getCommandBase64() 获取服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+ * @method void setCommandBase64(string $CommandBase64) 设置服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+ * @method integer getServicePort() 获取服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+ * @method void setServicePort(integer $ServicePort) 设置服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -312,9 +314,14 @@ HYBRID_PAID:
     public $ServiceEIP;
 
     /**
-     * @var string 服务的启动命令，以base64格式进行输入
+     * @var string 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      */
     public $CommandBase64;
+
+    /**
+     * @var integer 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     */
+    public $ServicePort;
 
     /**
      * @param string $ServiceGroupId 新增版本时需要填写
@@ -371,7 +378,8 @@ HYBRID_PAID:
      * @param string $ServiceCategory 服务分类
      * @param string $Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
      * @param ServiceEIP $ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
-     * @param string $CommandBase64 服务的启动命令，以base64格式进行输入
+     * @param string $CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+     * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
      */
     function __construct()
     {
@@ -536,6 +544,10 @@ HYBRID_PAID:
 
         if (array_key_exists("CommandBase64",$param) and $param["CommandBase64"] !== null) {
             $this->CommandBase64 = $param["CommandBase64"];
+        }
+
+        if (array_key_exists("ServicePort",$param) and $param["ServicePort"] !== null) {
+            $this->ServicePort = $param["ServicePort"];
         }
     }
 }

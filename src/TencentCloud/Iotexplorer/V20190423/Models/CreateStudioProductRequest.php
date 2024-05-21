@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
  * @method string getProjectId() 获取产品的项目ID
  * @method void setProjectId(string $ProjectId) 设置产品的项目ID
+ * @method string getRate() 获取平均传输速率
+ * @method void setRate(string $Rate) 设置平均传输速率
+ * @method string getPeriod() 获取期限
+ * @method void setPeriod(string $Period) 设置期限
  */
 class CreateStudioProductRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CreateStudioProductRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 平均传输速率
+     */
+    public $Rate;
+
+    /**
+     * @var string 期限
+     */
+    public $Period;
+
+    /**
      * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param integer $CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      * @param integer $ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
@@ -88,6 +102,8 @@ class CreateStudioProductRequest extends AbstractModel
      * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义)
      * @param string $ProductDesc 产品描述
      * @param string $ProjectId 产品的项目ID
+     * @param string $Rate 平均传输速率
+     * @param string $Period 期限
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CreateStudioProductRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
+            $this->Rate = $param["Rate"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

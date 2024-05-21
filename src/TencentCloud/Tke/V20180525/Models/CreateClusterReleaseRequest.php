@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置制品访问密码
  * @method string getChartNamespace() 获取制品命名空间
  * @method void setChartNamespace(string $ChartNamespace) 设置制品命名空间
- * @method string getClusterType() 获取集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
- * @method void setClusterType(string $ClusterType) 设置集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+ * @method string getClusterType() 获取集群类型，支持传 tke, eks, tkeedge, external(注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，支持传 tke, eks, tkeedge, external(注册集群）
  */
 class CreateClusterReleaseRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class CreateClusterReleaseRequest extends AbstractModel
     public $ChartNamespace;
 
     /**
-     * @var string 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * @var string 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     public $ClusterType;
 
@@ -119,7 +119,7 @@ class CreateClusterReleaseRequest extends AbstractModel
      * @param string $Username 制品访问用户名
      * @param string $Password 制品访问密码
      * @param string $ChartNamespace 制品命名空间
-     * @param string $ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * @param string $ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     function __construct()
     {

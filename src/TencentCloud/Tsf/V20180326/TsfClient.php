@@ -182,6 +182,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeUploadInfoResponse DescribeUploadInfo(Models\DescribeUploadInfoRequest $req) TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(Models\DescribeUsableUnitNamespacesRequest $req) 查询可用于被导入的命名空间列表
+ * @method Models\DisableLaneRuleResponse DisableLaneRule(Models\DisableLaneRuleRequest $req) 禁用泳道规则
  * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
  * @method Models\DisableUnitRouteResponse DisableUnitRoute(Models\DisableUnitRouteRequest $req) 禁用单元化路由
@@ -189,6 +190,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(Models\DisassociateBusinessLogConfigRequest $req) 取消关联业务日志配置项和应用
  * @method Models\DisassociateKafkaConfigResponse DisassociateKafkaConfig(Models\DisassociateKafkaConfigRequest $req) 取消关联投递信息和部署组
  * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
+ * @method Models\EnableLaneRuleResponse EnableLaneRule(Models\EnableLaneRuleRequest $req) 启用泳道规则
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
  * @method Models\EnableUnitRouteResponse EnableUnitRoute(Models\EnableUnitRouteRequest $req) 启用单元化路由

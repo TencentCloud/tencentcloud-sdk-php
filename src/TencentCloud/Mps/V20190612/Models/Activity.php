@@ -32,6 +32,9 @@ use TencentCloud\Common\AbstractModel;
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+
+
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityType(string $ActivityType) 设置原子任务类型：
 <li>input: 起始节点</li>
@@ -45,6 +48,9 @@ use TencentCloud\Common\AbstractModel;
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+
+
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReardriveIndex() 获取后驱节点索引数组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,6 +76,9 @@ class Activity extends AbstractModel
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityType;
@@ -99,6 +108,9 @@ class Activity extends AbstractModel
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReardriveIndex 后驱节点索引数组
 注意：此字段可能返回 null，表示取不到有效值。

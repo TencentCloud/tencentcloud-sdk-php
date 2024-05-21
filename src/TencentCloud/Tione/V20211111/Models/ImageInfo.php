@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 镜像描述信息
  *
- * @method string getImageType() 获取镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
- * @method void setImageType(string $ImageType) 设置镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
+ * @method string getImageType() 获取镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+ * @method void setImageType(string $ImageType) 设置镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
  * @method string getImageUrl() 获取镜像地址
  * @method void setImageUrl(string $ImageUrl) 设置镜像地址
  * @method string getRegistryRegion() 获取TCR镜像对应的地域
@@ -44,11 +44,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataPipeline(boolean $SupportDataPipeline) 设置是否支持数据构建
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageSecret getImageSecret() 获取镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageSecret(ImageSecret $ImageSecret) 设置镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInfo extends AbstractModel
 {
     /**
-     * @var string 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
+     * @var string 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
      */
     public $ImageType;
 
@@ -88,7 +92,13 @@ class ImageInfo extends AbstractModel
     public $SupportDataPipeline;
 
     /**
-     * @param string $ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
+     * @var ImageSecret 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageSecret;
+
+    /**
+     * @param string $ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
      * @param string $ImageUrl 镜像地址
      * @param string $RegistryRegion TCR镜像对应的地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,6 +109,8 @@ class ImageInfo extends AbstractModel
      * @param string $ImageName 镜像名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportDataPipeline 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageSecret $ImageSecret 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,11 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("SupportDataPipeline",$param) and $param["SupportDataPipeline"] !== null) {
             $this->SupportDataPipeline = $param["SupportDataPipeline"];
+        }
+
+        if (array_key_exists("ImageSecret",$param) and $param["ImageSecret"] !== null) {
+            $this->ImageSecret = new ImageSecret();
+            $this->ImageSecret->deserialize($param["ImageSecret"]);
         }
     }
 }

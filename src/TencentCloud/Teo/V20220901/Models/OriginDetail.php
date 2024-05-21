@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
  * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
  * @method string getOrigin() 获取源站地址，根据 OriginType 的取值分为以下情况：
@@ -81,7 +81,7 @@ class OriginDetail extends AbstractModel
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      */
@@ -147,7 +147,7 @@ class OriginDetail extends AbstractModel
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      * @param string $Origin 源站地址，根据 OriginType 的取值分为以下情况：

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置节点ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLocalPath() 获取本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalPath(string $LocalPath) 设置本地路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LocalDisk extends AbstractModel
 {
@@ -34,7 +38,15 @@ class LocalDisk extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalPath;
+
+    /**
      * @param string $InstanceId 节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LocalPath 本地路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class LocalDisk extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("LocalPath",$param) and $param["LocalPath"] !== null) {
+            $this->LocalPath = $param["LocalPath"];
         }
     }
 }

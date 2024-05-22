@@ -149,6 +149,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备
  * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品
+ * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于创建设备固件版本信息，在平台用于固件版本升级、固件资源下发等。

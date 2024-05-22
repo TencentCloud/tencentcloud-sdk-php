@@ -100,13 +100,13 @@ use TencentCloud\Common\AbstractModel;
 3. 非必要不建议使用，不合理的取值会影响效果。
  * @method boolean getEnableEnhancement() 获取功能增强（如搜索）开关。
 说明：
-1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+1. hunyuan-lite 无功能增强（如搜索）能力，该参数对 hunyuan-lite 版本不生效。
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
  * @method void setEnableEnhancement(boolean $EnableEnhancement) 设置功能增强（如搜索）开关。
 说明：
-1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+1. hunyuan-lite 无功能增强（如搜索）能力，该参数对 hunyuan-lite 版本不生效。
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
@@ -179,7 +179,7 @@ class ChatCompletionsRequest extends AbstractModel
     /**
      * @var boolean 功能增强（如搜索）开关。
 说明：
-1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+1. hunyuan-lite 无功能增强（如搜索）能力，该参数对 hunyuan-lite 版本不生效。
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
@@ -228,7 +228,7 @@ class ChatCompletionsRequest extends AbstractModel
 3. 非必要不建议使用，不合理的取值会影响效果。
      * @param boolean $EnableEnhancement 功能增强（如搜索）开关。
 说明：
-1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+1. hunyuan-lite 无功能增强（如搜索）能力，该参数对 hunyuan-lite 版本不生效。
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。

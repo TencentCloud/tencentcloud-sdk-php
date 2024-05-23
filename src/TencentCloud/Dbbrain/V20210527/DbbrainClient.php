@@ -59,6 +59,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeNoPrimaryKeyTablesResponse DescribeNoPrimaryKeyTables(Models\DescribeNoPrimaryKeyTablesRequest $req) 查询实例无主键表。
  * @method Models\DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatistics(Models\DescribeProxyProcessStatisticsRequest $req) 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。
  * @method Models\DescribeProxySessionKillTasksResponse DescribeProxySessionKillTasks(Models\DescribeProxySessionKillTasksRequest $req) 用于查询 redis 执行 kill 会话任务后代理节点的执行结果，入参异步任务 ID 从接口 CreateProxySessionKillTask 调用成功后取得。当前 product 只支持：redis。
+ * @method Models\DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasks(Models\DescribeRedisBigKeyAnalysisTasksRequest $req) 查询redis大key分析任务列表。
  * @method Models\DescribeRedisProcessListResponse DescribeRedisProcessList(Models\DescribeRedisProcessListRequest $req) 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
  * @method Models\DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeys(Models\DescribeRedisTopBigKeysRequest $req) 查询redis实例大key列表。
  * @method Models\DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixList(Models\DescribeRedisTopKeyPrefixListRequest $req) 查询redis实例top key前缀列表。
@@ -78,7 +79,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\KillMySqlThreadsResponse KillMySqlThreads(Models\KillMySqlThreadsRequest $req) 根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。
  * @method Models\ModifyAlarmPolicyResponse ModifyAlarmPolicy(Models\ModifyAlarmPolicyRequest $req) 修改告警策略
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 修改审计配置相关信息，如高频存储时长等
- * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) 修改实例巡检开关。
+ * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) 修改实例的配置信息。
  * @method Models\ModifySqlFiltersResponse ModifySqlFilters(Models\ModifySqlFiltersRequest $req) 更改实例限流任务状态，目前仅用于终止限流。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 开启数据库审计服务
  * @method Models\UpdateAgentSwitchResponse UpdateAgentSwitch(Models\UpdateAgentSwitchRequest $req) 更新agent状态（停止或重连Agent）

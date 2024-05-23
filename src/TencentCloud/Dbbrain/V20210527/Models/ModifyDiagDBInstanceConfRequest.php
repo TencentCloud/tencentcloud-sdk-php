@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceConfs(InstanceConfs $InstanceConfs) 设置实例配置，包括巡检、概览开关等。
  * @method string getRegions() 获取生效实例地域，取值为"All"，代表全地域。
  * @method void setRegions(string $Regions) 设置生效实例地域，取值为"All"，代表全地域。
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
  * @method array getInstanceIds() 获取指定更改巡检状态的实例ID。
  * @method void setInstanceIds(array $InstanceIds) 设置指定更改巡检状态的实例ID。
  */
@@ -42,7 +42,7 @@ class ModifyDiagDBInstanceConfRequest extends AbstractModel
     public $Regions;
 
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
      */
     public $Product;
 
@@ -54,7 +54,7 @@ class ModifyDiagDBInstanceConfRequest extends AbstractModel
     /**
      * @param InstanceConfs $InstanceConfs 实例配置，包括巡检、概览开关等。
      * @param string $Regions 生效实例地域，取值为"All"，代表全地域。
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
      * @param array $InstanceIds 指定更改巡检状态的实例ID。
      */
     function __construct()

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardNum(string $ShardNum) 设置分片节点数量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAnalysisTopKey() 获取是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysisTopKey(string $AnalysisTopKey) 设置是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceConfs extends AbstractModel
 {
@@ -58,11 +62,19 @@ class InstanceConfs extends AbstractModel
     public $ShardNum;
 
     /**
+     * @var string 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisTopKey;
+
+    /**
      * @param string $DailyInspection 数据库巡检开关, Yes/No。
      * @param string $OverviewDisplay 实例概览开关，Yes/No。
      * @param array $KeyDelimiters redis大key分析的自定义分割符，仅redis使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShardNum 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AnalysisTopKey 是否开启大key周期性分析，仅redis产品有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +104,10 @@ class InstanceConfs extends AbstractModel
 
         if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
             $this->ShardNum = $param["ShardNum"];
+        }
+
+        if (array_key_exists("AnalysisTopKey",$param) and $param["AnalysisTopKey"] !== null) {
+            $this->AnalysisTopKey = $param["AnalysisTopKey"];
         }
     }
 }

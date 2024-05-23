@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置用于分页
  * @method integer getLimit() 获取用于分页
  * @method void setLimit(integer $Limit) 设置用于分页
+ * @method array getClusterIds() 获取用于通过集群id过滤被绑定集群
+ * @method void setClusterIds(array $ClusterIds) 设置用于通过集群id过滤被绑定集群
+ * @method array getClusterTypes() 获取用于通过集群类型过滤被绑定集群
+ * @method void setClusterTypes(array $ClusterTypes) 设置用于通过集群类型过滤被绑定集群
+ * @method string getClusterName() 获取用于通过名称搜索被绑定集群
+ * @method void setClusterName(string $ClusterName) 设置用于通过名称搜索被绑定集群
  */
 class DescribePrometheusClusterAgentsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribePrometheusClusterAgentsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 用于通过集群id过滤被绑定集群
+     */
+    public $ClusterIds;
+
+    /**
+     * @var array 用于通过集群类型过滤被绑定集群
+     */
+    public $ClusterTypes;
+
+    /**
+     * @var string 用于通过名称搜索被绑定集群
+     */
+    public $ClusterName;
+
+    /**
      * @param string $InstanceId 实例id
      * @param integer $Offset 用于分页
      * @param integer $Limit 用于分页
+     * @param array $ClusterIds 用于通过集群id过滤被绑定集群
+     * @param array $ClusterTypes 用于通过集群类型过滤被绑定集群
+     * @param string $ClusterName 用于通过名称搜索被绑定集群
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribePrometheusClusterAgentsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
+        }
+
+        if (array_key_exists("ClusterTypes",$param) and $param["ClusterTypes"] !== null) {
+            $this->ClusterTypes = $param["ClusterTypes"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

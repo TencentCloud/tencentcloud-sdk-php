@@ -24,6 +24,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
  * @method Models\AddDMSPartitionsResponse AddDMSPartitions(Models\AddDMSPartitionsRequest $req) DMS元数据新增分区
+ * @method Models\AddOptimizerEnginesResponse AddOptimizerEngines(Models\AddOptimizerEnginesRequest $req) 添加数据优化资源
  * @method Models\AddUsersToWorkGroupResponse AddUsersToWorkGroup(Models\AddUsersToWorkGroupRequest $req) 添加用户到工作组
  * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) DMS元数据更新库
  * @method Models\AlterDMSPartitionResponse AlterDMSPartition(Models\AlterDMSPartitionRequest $req) DMS元数据更新分区
@@ -106,6 +107,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTaskLogResponse DescribeTaskLog(Models\DescribeTaskLogRequest $req) 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
+ * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
  * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 获取用户详细信息

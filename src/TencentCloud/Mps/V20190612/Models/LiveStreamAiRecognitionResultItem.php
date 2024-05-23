@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
  * @method void setType(string $Type) 设置结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
@@ -35,6 +36,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
  * @method array getFaceRecognitionResultSet() 获取人脸识别结果，当 Type 为
 FaceRecognition 时有效。
@@ -58,6 +60,8 @@ OcrFullTextRecognition 时有效。
 OcrFullTextRecognition 时有效。
  * @method array getTransTextRecognitionResultSet() 获取翻译结果，当Type 为 TransTextRecognition 时有效。
  * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) 设置翻译结果，当Type 为 TransTextRecognition 时有效。
+ * @method array getObjectRecognitionResultSet() 获取目标检测结果，当Type为 ObjectRecognition 时有效。
+ * @method void setObjectRecognitionResultSet(array $ObjectRecognitionResultSet) 设置目标检测结果，当Type为 ObjectRecognition 时有效。
  * @method array getTagRecognitionResultSet() 获取打点结果，当Type 为 TagRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagRecognitionResultSet(array $TagRecognitionResultSet) 设置打点结果，当Type 为 TagRecognition 时有效。
@@ -73,6 +77,7 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
      */
     public $Type;
@@ -113,6 +118,11 @@ OcrFullTextRecognition 时有效。
     public $TransTextRecognitionResultSet;
 
     /**
+     * @var array 目标检测结果，当Type为 ObjectRecognition 时有效。
+     */
+    public $ObjectRecognitionResultSet;
+
+    /**
      * @var array 打点结果，当Type 为 TagRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -126,6 +136,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
      * @param array $FaceRecognitionResultSet 人脸识别结果，当 Type 为
 FaceRecognition 时有效。
@@ -138,6 +149,7 @@ AsrFullTextRecognition 时有效。
      * @param array $OcrFullTextRecognitionResultSet 文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
      * @param array $TransTextRecognitionResultSet 翻译结果，当Type 为 TransTextRecognition 时有效。
+     * @param array $ObjectRecognitionResultSet 目标检测结果，当Type为 ObjectRecognition 时有效。
      * @param array $TagRecognitionResultSet 打点结果，当Type 为 TagRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,6 +221,15 @@ OcrFullTextRecognition 时有效。
                 $obj = new LiveStreamTransTextRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->TransTextRecognitionResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ObjectRecognitionResultSet",$param) and $param["ObjectRecognitionResultSet"] !== null) {
+            $this->ObjectRecognitionResultSet = [];
+            foreach ($param["ObjectRecognitionResultSet"] as $key => $value){
+                $obj = new LiveStreamObjectRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->ObjectRecognitionResultSet, $obj);
             }
         }
 

@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
- * @method string getSpec() 获取实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
- * @method void setSpec(string $Spec) 设置实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+ * @method string getSpec() 获取集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
+ * @method void setSpec(string $Spec) 设置集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
  * @method integer getNodeCount() 获取节点数量，最小2，最大20
  * @method void setNodeCount(integer $NodeCount) 设置节点数量，最小2，最大20
  * @method integer getStorageSize() 获取单节点存储空间，GB为单位，最低200GB
@@ -61,11 +53,7 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+     * @var string 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
      */
     public $Spec;
 
@@ -121,11 +109,7 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
 
     /**
      * @param string $Name 实例名称
-     * @param string $Spec 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+     * @param string $Spec 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
      * @param integer $NodeCount 节点数量，最小2，最大20
      * @param integer $StorageSize 单节点存储空间，GB为单位，最低200GB
      * @param array $ZoneIds 节点部署的区域ID列表，如广州一区，则是100001，具体可查询腾讯云官网

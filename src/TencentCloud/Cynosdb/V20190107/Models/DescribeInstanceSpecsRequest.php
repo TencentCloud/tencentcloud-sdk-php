@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method boolean getIncludeZoneStocks() 获取是否需要返回可用区信息
  * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) 设置是否需要返回可用区信息
+ * @method string getDeviceType() 获取实例机器类型
+ * @method void setDeviceType(string $DeviceType) 设置实例机器类型
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $IncludeZoneStocks;
 
     /**
+     * @var string 实例机器类型
+     */
+    public $DeviceType;
+
+    /**
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
      * @param boolean $IncludeZoneStocks 是否需要返回可用区信息
+     * @param string $DeviceType 实例机器类型
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
 
         if (array_key_exists("IncludeZoneStocks",$param) and $param["IncludeZoneStocks"] !== null) {
             $this->IncludeZoneStocks = $param["IncludeZoneStocks"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 第三方平台子客企业标识: Agent.ProxyOrganizationOpenId
 第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId
 第三方平台子客企业和员工必须已经经过实名认证
- * @method string getWorkflowInstanceId() 获取用印审批单的ID，可通过用印申请回调获取。
- * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置用印审批单的ID，可通过用印申请回调获取。
+ * @method string getWorkflowInstanceId() 获取用印审批单的ID，可通过用印[申请回调](https://qian.tencent.com/developers/partner/callback_types_seals#%E4%B8%89-%E7%94%A8%E5%8D%B0%E7%94%B3%E8%AF%B7%E5%AE%A1%E6%89%B9%E7%8A%B6%E6%80%81%E9%80%9A%E7%9F%A5)获取。
+ * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置用印审批单的ID，可通过用印[申请回调](https://qian.tencent.com/developers/partner/callback_types_seals#%E4%B8%89-%E7%94%A8%E5%8D%B0%E7%94%B3%E8%AF%B7%E5%AE%A1%E6%89%B9%E7%8A%B6%E6%80%81%E9%80%9A%E7%9F%A5)获取。
  * @method string getEndpoint() 获取生成链接的类型：
 生成链接的类型
 <ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
@@ -64,7 +64,7 @@ class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 用印审批单的ID，可通过用印申请回调获取。
+     * @var string 用印审批单的ID，可通过用印[申请回调](https://qian.tencent.com/developers/partner/callback_types_seals#%E4%B8%89-%E7%94%A8%E5%8D%B0%E7%94%B3%E8%AF%B7%E5%AE%A1%E6%89%B9%E7%8A%B6%E6%80%81%E9%80%9A%E7%9F%A5)获取。
      */
     public $WorkflowInstanceId;
 
@@ -86,7 +86,7 @@ class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
 第三方平台子客企业标识: Agent.ProxyOrganizationOpenId
 第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId
 第三方平台子客企业和员工必须已经经过实名认证
-     * @param string $WorkflowInstanceId 用印审批单的ID，可通过用印申请回调获取。
+     * @param string $WorkflowInstanceId 用印审批单的ID，可通过用印[申请回调](https://qian.tencent.com/developers/partner/callback_types_seals#%E4%B8%89-%E7%94%A8%E5%8D%B0%E7%94%B3%E8%AF%B7%E5%AE%A1%E6%89%B9%E7%8A%B6%E6%80%81%E9%80%9A%E7%9F%A5)获取。
      * @param string $Endpoint 生成链接的类型：
 生成链接的类型
 <ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>

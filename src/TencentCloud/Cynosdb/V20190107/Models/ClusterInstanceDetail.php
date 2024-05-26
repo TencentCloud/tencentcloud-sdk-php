@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例子状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInstanceTasks() 获取实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceTasks(array $InstanceTasks) 设置实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceDeviceType() 获取实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -127,6 +135,18 @@ class ClusterInstanceDetail extends AbstractModel
     public $ServerlessStatus;
 
     /**
+     * @var array 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceTasks;
+
+    /**
+     * @var string 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceDeviceType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -143,6 +163,10 @@ class ClusterInstanceDetail extends AbstractModel
      * @param array $MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerlessStatus serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InstanceTasks 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceDeviceType 实例机器类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +232,19 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("InstanceTasks",$param) and $param["InstanceTasks"] !== null) {
+            $this->InstanceTasks = [];
+            foreach ($param["InstanceTasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->InstanceTasks, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceDeviceType",$param) and $param["InstanceDeviceType"] !== null) {
+            $this->InstanceDeviceType = $param["InstanceDeviceType"];
         }
     }
 }

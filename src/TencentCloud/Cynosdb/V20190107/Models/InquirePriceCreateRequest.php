@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstancePayMode(string $InstancePayMode) 设置实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
  * @method string getStoragePayMode() 获取存储购买类型，可选值为：PREPAID, POSTPAID
  * @method void setStoragePayMode(string $StoragePayMode) 设置存储购买类型，可选值为：PREPAID, POSTPAID
+ * @method string getDeviceType() 获取实例设备类型
+ * @method void setDeviceType(string $DeviceType) 设置实例设备类型
  * @method integer getCpu() 获取CPU核数，PREPAID与POSTPAID实例类型必传
  * @method void setCpu(integer $Cpu) 设置CPU核数，PREPAID与POSTPAID实例类型必传
  * @method integer getMemory() 获取内存大小，单位G，PREPAID与POSTPAID实例类型必传
@@ -64,6 +66,11 @@ class InquirePriceCreateRequest extends AbstractModel
     public $StoragePayMode;
 
     /**
+     * @var string 实例设备类型
+     */
+    public $DeviceType;
+
+    /**
      * @var integer CPU核数，PREPAID与POSTPAID实例类型必传
      */
     public $Cpu;
@@ -98,6 +105,7 @@ class InquirePriceCreateRequest extends AbstractModel
      * @param integer $GoodsNum 购买计算节点个数
      * @param string $InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
      * @param string $StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
+     * @param string $DeviceType 实例设备类型
      * @param integer $Cpu CPU核数，PREPAID与POSTPAID实例类型必传
      * @param integer $Memory 内存大小，单位G，PREPAID与POSTPAID实例类型必传
      * @param float $Ccu Ccu大小，serverless类型必传
@@ -132,6 +140,10 @@ class InquirePriceCreateRequest extends AbstractModel
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {

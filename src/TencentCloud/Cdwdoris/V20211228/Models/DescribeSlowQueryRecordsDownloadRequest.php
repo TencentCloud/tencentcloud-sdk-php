@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultBytes(string $ResultBytes) 设置排序参数
  * @method string getMemoryUsage() 获取排序参数
  * @method void setMemoryUsage(string $MemoryUsage) 设置排序参数
+ * @method integer getIsQuery() 获取IsQuery条件
+ * @method void setIsQuery(integer $IsQuery) 设置IsQuery条件
  */
 class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
     public $MemoryUsage;
 
     /**
+     * @var integer IsQuery条件
+     */
+    public $IsQuery;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -96,6 +103,7 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
      * @param string $ReadRows 排序参数
      * @param string $ResultBytes 排序参数
      * @param string $MemoryUsage 排序参数
+     * @param integer $IsQuery IsQuery条件
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 
         if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
             $this->MemoryUsage = $param["MemoryUsage"];
+        }
+
+        if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
+            $this->IsQuery = $param["IsQuery"];
         }
     }
 }

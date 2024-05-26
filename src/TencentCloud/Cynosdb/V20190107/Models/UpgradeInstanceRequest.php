@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置数据库内存，单位GB
  * @method string getUpgradeType() 获取升级类型：upgradeImmediate，upgradeInMaintain
  * @method void setUpgradeType(string $UpgradeType) 设置升级类型：upgradeImmediate，upgradeInMaintain
+ * @method string getDeviceType() 获取实例机器类型
+ * @method void setDeviceType(string $DeviceType) 设置实例机器类型
  * @method integer getStorageLimit() 获取该参数已废弃
  * @method void setStorageLimit(integer $StorageLimit) 设置该参数已废弃
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
@@ -64,6 +66,11 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeType;
 
     /**
+     * @var string 实例机器类型
+     */
+    public $DeviceType;
+
+    /**
      * @var integer 该参数已废弃
      */
     public $StorageLimit;
@@ -98,6 +105,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $Cpu 数据库CPU
      * @param integer $Memory 数据库内存，单位GB
      * @param string $UpgradeType 升级类型：upgradeImmediate，upgradeInMaintain
+     * @param string $DeviceType 实例机器类型
      * @param integer $StorageLimit 该参数已废弃
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param string $DbType 该参数已废弃
@@ -132,6 +140,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {
             $this->UpgradeType = $param["UpgradeType"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {

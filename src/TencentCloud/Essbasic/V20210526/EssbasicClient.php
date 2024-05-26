@@ -721,8 +721,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 - 对于单个企业的查询，通过**指定子客的唯一标识**来查询该子客的企业信息
 - 对于整个应用下所有企业的查询，**不需要指定子客的唯一标识**，直接查询整个应用下所有子客企业的企业信息
- * @method Models\DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(Models\DescribeChannelSealPolicyWorkflowUrlRequest $req) 制定渠道分支客户的印刷申请审批微型应用程序链接，链接模式（通过H5触发微型应用程序或通过APP跳转进行查看）。
-此刻，代理参数中的OpenId 必须为审批者的openId，生成的链接必须由该用户启动，其他用户则无审批权限。
+ * @method Models\DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(Models\DescribeChannelSealPolicyWorkflowUrlRequest $req) 生成用印申请审批链接，审批人可以通过此链接进入小程序进行审批。
+ p.s.
+Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批人打开。
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 
 1. **企业自动签**

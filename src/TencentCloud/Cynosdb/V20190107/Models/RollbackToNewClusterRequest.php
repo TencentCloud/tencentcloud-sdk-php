@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getOriginalClusterId() 获取回档时，传入源集群ID，用于查找源poolId
  * @method void setOriginalClusterId(string $OriginalClusterId) 设置回档时，传入源集群ID，用于查找源poolId
- * @method string getClusterName() 获取集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
- * @method void setClusterName(string $ClusterName) 设置集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
  * @method string getUniqVpcId() 获取所属VPC网络ID
  * @method void setUniqVpcId(string $UniqVpcId) 设置所属VPC网络ID
  * @method string getUniqSubnetId() 获取所属子网ID
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置所属子网ID
+ * @method string getClusterName() 获取集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+ * @method void setClusterName(string $ClusterName) 设置集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+ * @method integer getRollbackId() 获取快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+ * @method void setRollbackId(integer $RollbackId) 设置快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+ * @method string getExpectTime() 获取时间点回档，指定时间；快照回档，快照时间
+ * @method void setExpectTime(string $ExpectTime) 设置时间点回档，指定时间；快照回档，快照时间
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
+ * @method array getResourceTags() 获取集群创建需要绑定的tag数组信息
+ * @method void setResourceTags(array $ResourceTags) 设置集群创建需要绑定的tag数组信息
  * @method string getDbMode() 获取Db类型
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
@@ -66,18 +72,14 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setAlarmPolicyIds(array $AlarmPolicyIds) 设置告警策略Id数组
  * @method array getClusterParams() 获取参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
  * @method void setClusterParams(array $ClusterParams) 设置参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
- * @method integer getDealMode() 获取0-下单并支付 1-下单
- * @method void setDealMode(integer $DealMode) 设置0-下单并支付 1-下单
  * @method integer getParamTemplateId() 获取参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
- * @method array getResourceTags() 获取集群创建需要绑定的tag数组信息
- * @method void setResourceTags(array $ResourceTags) 设置集群创建需要绑定的tag数组信息
  * @method array getInstanceInitInfos() 获取实例初始化配置信息，主要用于购买集群时选不同规格实例
  * @method void setInstanceInitInfos(array $InstanceInitInfos) 设置实例初始化配置信息，主要用于购买集群时选不同规格实例
- * @method integer getRollbackId() 获取快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
- * @method void setRollbackId(integer $RollbackId) 设置快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
- * @method string getExpectTime() 获取时间点回档，指定时间；快照回档，快照时间
- * @method void setExpectTime(string $ExpectTime) 设置时间点回档，指定时间；快照回档，快照时间
+ * @method integer getDealMode() 获取0-下单并支付 1-下单
+ * @method void setDealMode(integer $DealMode) 设置0-下单并支付 1-下单
+ * @method integer getPayMode() 获取计算节点付费模式：0-按量计费，1-预付费
+ * @method void setPayMode(integer $PayMode) 设置计算节点付费模式：0-按量计费，1-预付费
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -92,11 +94,6 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $OriginalClusterId;
 
     /**
-     * @var string 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     */
-    public $ClusterName;
-
-    /**
      * @var string 所属VPC网络ID
      */
     public $UniqVpcId;
@@ -107,9 +104,29 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var string 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     */
+    public $ClusterName;
+
+    /**
+     * @var integer 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     */
+    public $RollbackId;
+
+    /**
+     * @var string 时间点回档，指定时间；快照回档，快照时间
+     */
+    public $ExpectTime;
+
+    /**
      * @var integer 是否自动选择代金券 1是 0否 默认为0
      */
     public $AutoVoucher;
+
+    /**
+     * @var array 集群创建需要绑定的tag数组信息
+     */
+    public $ResourceTags;
 
     /**
      * @var string Db类型
@@ -161,19 +178,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $ClusterParams;
 
     /**
-     * @var integer 0-下单并支付 1-下单
-     */
-    public $DealMode;
-
-    /**
      * @var integer 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public $ParamTemplateId;
-
-    /**
-     * @var array 集群创建需要绑定的tag数组信息
-     */
-    public $ResourceTags;
 
     /**
      * @var array 实例初始化配置信息，主要用于购买集群时选不同规格实例
@@ -181,22 +188,25 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $InstanceInitInfos;
 
     /**
-     * @var integer 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * @var integer 0-下单并支付 1-下单
      */
-    public $RollbackId;
+    public $DealMode;
 
     /**
-     * @var string 时间点回档，指定时间；快照回档，快照时间
+     * @var integer 计算节点付费模式：0-按量计费，1-预付费
      */
-    public $ExpectTime;
+    public $PayMode;
 
     /**
      * @param string $Zone 可用区
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
-     * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
      * @param string $UniqVpcId 所属VPC网络ID
      * @param string $UniqSubnetId 所属子网ID
+     * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * @param integer $RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * @param array $ResourceTags 集群创建需要绑定的tag数组信息
      * @param string $DbMode Db类型
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
@@ -214,12 +224,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param array $SecurityGroupIds 安全组id数组
      * @param array $AlarmPolicyIds 告警策略Id数组
      * @param array $ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
-     * @param integer $DealMode 0-下单并支付 1-下单
      * @param integer $ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
-     * @param array $ResourceTags 集群创建需要绑定的tag数组信息
      * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
-     * @param integer $RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
-     * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * @param integer $DealMode 0-下单并支付 1-下单
+     * @param integer $PayMode 计算节点付费模式：0-按量计费，1-预付费
      */
     function __construct()
     {
@@ -242,10 +250,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
             $this->OriginalClusterId = $param["OriginalClusterId"];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
-        }
-
         if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
             $this->UniqVpcId = $param["UniqVpcId"];
         }
@@ -254,8 +258,29 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
             $this->UniqSubnetId = $param["UniqSubnetId"];
         }
 
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("RollbackId",$param) and $param["RollbackId"] !== null) {
+            $this->RollbackId = $param["RollbackId"];
+        }
+
+        if (array_key_exists("ExpectTime",$param) and $param["ExpectTime"] !== null) {
+            $this->ExpectTime = $param["ExpectTime"];
+        }
+
         if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
             $this->AutoVoucher = $param["AutoVoucher"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
 
         if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
@@ -295,21 +320,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
             }
         }
 
-        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
-            $this->DealMode = $param["DealMode"];
-        }
-
         if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
             $this->ParamTemplateId = $param["ParamTemplateId"];
-        }
-
-        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
-            $this->ResourceTags = [];
-            foreach ($param["ResourceTags"] as $key => $value){
-                $obj = new Tag();
-                $obj->deserialize($value);
-                array_push($this->ResourceTags, $obj);
-            }
         }
 
         if (array_key_exists("InstanceInitInfos",$param) and $param["InstanceInitInfos"] !== null) {
@@ -321,12 +333,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
             }
         }
 
-        if (array_key_exists("RollbackId",$param) and $param["RollbackId"] !== null) {
-            $this->RollbackId = $param["RollbackId"];
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
         }
 
-        if (array_key_exists("ExpectTime",$param) and $param["ExpectTime"] !== null) {
-            $this->ExpectTime = $param["ExpectTime"];
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

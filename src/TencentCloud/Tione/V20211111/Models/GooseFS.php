@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置GooseFSx实例需要挂载的路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNameSpace() 获取GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNameSpace(string $NameSpace) 设置GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GooseFS extends AbstractModel
 {
@@ -54,11 +58,19 @@ class GooseFS extends AbstractModel
     public $Path;
 
     /**
+     * @var string GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NameSpace;
+
+    /**
      * @param string $Id goosefs实例id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type GooseFS类型，包括GooseFS和GooseFSx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NameSpace GooseFS命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class GooseFS extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("NameSpace",$param) and $param["NameSpace"] !== null) {
+            $this->NameSpace = $param["NameSpace"];
         }
     }
 }

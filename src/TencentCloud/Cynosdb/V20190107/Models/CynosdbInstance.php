@@ -154,6 +154,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置当前实例支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceType() 获取实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceType(string $DeviceType) 设置实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -441,6 +445,12 @@ pause
     public $InstanceAbility;
 
     /**
+     * @var string 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceType;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -507,6 +517,8 @@ pause
      * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAbility $InstanceAbility 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceType 实例机器类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -757,6 +769,10 @@ pause
         if (array_key_exists("InstanceAbility",$param) and $param["InstanceAbility"] !== null) {
             $this->InstanceAbility = new InstanceAbility();
             $this->InstanceAbility->deserialize($param["InstanceAbility"]);
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

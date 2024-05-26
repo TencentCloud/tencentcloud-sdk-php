@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldMemory(integer $OldMemory) 设置变配前内存
  * @method integer getOldStorageLimit() 获取变配前存储上限
  * @method void setOldStorageLimit(integer $OldStorageLimit) 设置变配前存储上限
+ * @method string getOldDeviceType() 获取变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldDeviceType(string $OldDeviceType) 设置变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceType() 获取变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceType(string $DeviceType) 设置变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeType() 获取升级方式。升级完成后切换或维护时间内切换
  * @method void setUpgradeType(string $UpgradeType) 设置升级方式。升级完成后切换或维护时间内切换
  */
@@ -68,6 +76,18 @@ class ModifyInstanceData extends AbstractModel
     public $OldStorageLimit;
 
     /**
+     * @var string 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldDeviceType;
+
+    /**
+     * @var string 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceType;
+
+    /**
      * @var string 升级方式。升级完成后切换或维护时间内切换
      */
     public $UpgradeType;
@@ -79,6 +99,10 @@ class ModifyInstanceData extends AbstractModel
      * @param integer $OldCpu 变配前CPU
      * @param integer $OldMemory 变配前内存
      * @param integer $OldStorageLimit 变配前存储上限
+     * @param string $OldDeviceType 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceType 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeType 升级方式。升级完成后切换或维护时间内切换
      */
     function __construct()
@@ -116,6 +140,14 @@ class ModifyInstanceData extends AbstractModel
 
         if (array_key_exists("OldStorageLimit",$param) and $param["OldStorageLimit"] !== null) {
             $this->OldStorageLimit = $param["OldStorageLimit"];
+        }
+
+        if (array_key_exists("OldDeviceType",$param) and $param["OldDeviceType"] !== null) {
+            $this->OldDeviceType = $param["OldDeviceType"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {

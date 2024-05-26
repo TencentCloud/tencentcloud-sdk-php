@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) 设置0: 默认状态(用户未设置)
 1: 开启自动续费
 2: 明确不自动续费
+ * @method string getChannel() 获取实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannel(string $Channel) 设置实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaInstance extends AbstractModel
 {
@@ -135,6 +139,12 @@ class DspaInstance extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var string 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Channel;
+
+    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $DspaName DSPA实例名称。
      * @param string $DspaDescription DSPA实例描述信息。
@@ -152,6 +162,8 @@ class DspaInstance extends AbstractModel
      * @param integer $RenewFlag 0: 默认状态(用户未设置)
 1: 开启自动续费
 2: 明确不自动续费
+     * @param string $Channel 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -224,6 +236,10 @@ class DspaInstance extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

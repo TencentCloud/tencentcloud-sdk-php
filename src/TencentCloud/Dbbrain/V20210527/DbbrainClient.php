@@ -38,6 +38,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\CreateSqlFilterResponse CreateSqlFilter(Models\CreateSqlFilterRequest $req) 创建实例SQL限流任务。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasks(Models\DeleteDBDiagReportTasksRequest $req) 根据任务id删除健康报告生成任务
+ * @method Models\DeleteRedisBigKeyAnalysisTasksResponse DeleteRedisBigKeyAnalysisTasks(Models\DeleteRedisBigKeyAnalysisTasksRequest $req) 删除Redis实例的大key分析任务。
  * @method Models\DeleteSecurityAuditLogExportTasksResponse DeleteSecurityAuditLogExportTasks(Models\DeleteSecurityAuditLogExportTasksRequest $req) 删除安全审计日志导出任务。
  * @method Models\DeleteSqlFiltersResponse DeleteSqlFilters(Models\DeleteSqlFiltersRequest $req) 删除实例SQL限流任务。
  * @method Models\DescribeAlarmTemplateResponse DescribeAlarmTemplate(Models\DescribeAlarmTemplateRequest $req) 通知模板查询

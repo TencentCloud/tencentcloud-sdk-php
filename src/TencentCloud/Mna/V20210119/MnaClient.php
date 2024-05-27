@@ -34,8 +34,10 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicePayModeResponse GetDevicePayMode(Models\GetDevicePayModeRequest $req) 获取设备付费模式
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表
+ * @method Models\GetFlowAlarmInfoResponse GetFlowAlarmInfo(Models\GetFlowAlarmInfoRequest $req) 根据AppId查询用户设置的流量告警信息，包括阈值，回调url和key
  * @method Models\GetFlowPackagesResponse GetFlowPackages(Models\GetFlowPackagesRequest $req) 获取流量包列表
  * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
+ * @method Models\GetFlowStatisticByGroupResponse GetFlowStatisticByGroup(Models\GetFlowStatisticByGroupRequest $req) 获取指定分组，指定时间数据流量使用情况
  * @method Models\GetHardwareListResponse GetHardwareList(Models\GetHardwareListRequest $req) 获取厂商硬件列表
  * @method Models\GetMultiFlowStatisticResponse GetMultiFlowStatistic(Models\GetMultiFlowStatisticRequest $req) 批量获取设备流量统计曲线
  * @method Models\GetNetMonitorResponse GetNetMonitor(Models\GetNetMonitorRequest $req) 获取单设备的实时流量统计指标

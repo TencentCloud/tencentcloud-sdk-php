@@ -24,7 +24,9 @@ use TencentCloud\Domain\V20180808\Models as Models;
 
 /**
  * @method Models\BatchModifyDomainInfoResponse BatchModifyDomainInfo(Models\BatchModifyDomainInfoRequest $req) 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
+ * @method Models\BidDetailPageResponse BidDetailPage(Models\BidDetailPageRequest $req) 该接口用于用户详情页出价请求
  * @method Models\BidPreDomainsResponse BidPreDomains(Models\BidPreDomainsRequest $req) 用户合作商预释放出价
+ * @method Models\BiddingPreReleaseResponse BiddingPreRelease(Models\BiddingPreReleaseRequest $req) 用于出价界面出价请求
  * @method Models\CheckBatchStatusResponse CheckBatchStatus(Models\CheckBatchStatusRequest $req) 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 检查域名是否可以注册。
  * @method Models\CreateCustomDnsHostResponse CreateCustomDnsHost(Models\CreateCustomDnsHostRequest $req) 创建自定义DNS Host
@@ -32,24 +34,36 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\CreateDomainRedemptionResponse CreateDomainRedemption(Models\CreateDomainRedemptionRequest $req) 创建赎回订单。
  * @method Models\CreatePhoneEmailResponse CreatePhoneEmail(Models\CreatePhoneEmailRequest $req) 此接口用于创建有效的手机、邮箱
  * @method Models\CreateTemplateResponse CreateTemplate(Models\CreateTemplateRequest $req) 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
+ * @method Models\DeleteBiddingResponse DeleteBidding(Models\DeleteBiddingRequest $req) 删除记录。
  * @method Models\DeleteCustomDnsHostResponse DeleteCustomDnsHost(Models\DeleteCustomDnsHostRequest $req) 删除自定义DNS Host
  * @method Models\DeletePhoneEmailResponse DeletePhoneEmail(Models\DeletePhoneEmailRequest $req) 此接口用于删除已验证的手机邮箱
  * @method Models\DeleteReservedPreDomainInfoResponse DeleteReservedPreDomainInfo(Models\DeleteReservedPreDomainInfoRequest $req) 用于清除多余的预定域名信息
  * @method Models\DeleteTemplateResponse DeleteTemplate(Models\DeleteTemplateRequest $req) 本接口 ( DeleteTemplate ) 用于删除信息模板。
+ * @method Models\DescribeAuctionListResponse DescribeAuctionList(Models\DescribeAuctionListRequest $req) 用户控制台获取竞价列表
  * @method Models\DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetails(Models\DescribeBatchOperationLogDetailsRequest $req) 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
  * @method Models\DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(Models\DescribeBatchOperationLogsRequest $req) 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
+ * @method Models\DescribeBiddingAppointDetailResponse DescribeBiddingAppointDetail(Models\DescribeBiddingAppointDetailRequest $req) 我预约的域名-预约详情。
+ * @method Models\DescribeBiddingAppointListResponse DescribeBiddingAppointList(Models\DescribeBiddingAppointListRequest $req) 我预定的域名。
+ * @method Models\DescribeBiddingDetailResponse DescribeBiddingDetail(Models\DescribeBiddingDetailRequest $req) 我竞价的域名-竞价详情。
+ * @method Models\DescribeBiddingListResponse DescribeBiddingList(Models\DescribeBiddingListRequest $req) 我竞价的域名。
+ * @method Models\DescribeBiddingSuccessfulDetailResponse DescribeBiddingSuccessfulDetail(Models\DescribeBiddingSuccessfulDetailRequest $req) 我得标的域名-得标详情。
+ * @method Models\DescribeBiddingSuccessfulListResponse DescribeBiddingSuccessfulList(Models\DescribeBiddingSuccessfulListRequest $req) 我得标的域名。
  * @method Models\DescribeCustomDnsHostSetResponse DescribeCustomDnsHostSet(Models\DescribeCustomDnsHostSetRequest $req) 查询自定义DNS Host
  * @method Models\DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(Models\DescribeDomainBaseInfoRequest $req) 本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
  * @method Models\DescribeDomainNameListResponse DescribeDomainNameList(Models\DescribeDomainNameListRequest $req) 本接口 (  DescribeDomainNameList ) 我的域名列表。
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表
  * @method Models\DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfo(Models\DescribeDomainSimpleInfoRequest $req) 获取域名实名信息详情
+ * @method Models\DescribePayWaitDetailResponse DescribePayWaitDetail(Models\DescribePayWaitDetailRequest $req) 等待支付详情接口
  * @method Models\DescribePhoneEmailListResponse DescribePhoneEmailList(Models\DescribePhoneEmailListRequest $req) 本接口用于获取已验证的手机邮箱列表
+ * @method Models\DescribePreAuctionListResponse DescribePreAuctionList(Models\DescribePreAuctionListRequest $req) 用于预释放竞价列表数据查询
  * @method Models\DescribePreDomainListResponse DescribePreDomainList(Models\DescribePreDomainListRequest $req) 用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
+ * @method Models\DescribePreReleaseListResponse DescribePreReleaseList(Models\DescribePreReleaseListRequest $req) 接口用于预释放页面查询
  * @method Models\DescribeReservedBidInfoResponse DescribeReservedBidInfo(Models\DescribeReservedBidInfoRequest $req) 接口用于获取合作商竞价过程中竞价详情数据
  * @method Models\DescribeReservedPreDomainInfoResponse DescribeReservedPreDomainInfo(Models\DescribeReservedPreDomainInfoRequest $req) 合作商用于查询预约预释放状态信息内容
  * @method Models\DescribeTemplateResponse DescribeTemplate(Models\DescribeTemplateRequest $req) 本接口 (DescribeTemplate) 用于获取模板信息。
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 本接口 (DescribeTemplateList) 用于获取信息模板列表。
  * @method Models\DescribeTldListResponse DescribeTldList(Models\DescribeTldListRequest $req) 用于获取域名注册当前支持注册的后缀
+ * @method Models\DescribeUnPreDomainDetailResponse DescribeUnPreDomainDetail(Models\DescribeUnPreDomainDetailRequest $req) 查询预释放未预约域名详情接口
  * @method Models\ModifyCustomDnsHostResponse ModifyCustomDnsHost(Models\ModifyCustomDnsHostRequest $req) 修改自定义DNS Host
  * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
  * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。

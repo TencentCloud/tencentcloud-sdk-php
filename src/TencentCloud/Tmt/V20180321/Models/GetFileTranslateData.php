@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置错误提示
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GetFileTranslateData extends AbstractModel
 {
@@ -63,7 +61,6 @@ class GetFileTranslateData extends AbstractModel
 
     /**
      * @var integer 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
@@ -75,7 +72,6 @@ class GetFileTranslateData extends AbstractModel
      * @param string $Message 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

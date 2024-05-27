@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务 ID
  * @method void setTaskId(string $TaskId) 设置任务 ID
- * @method string getName() 获取任务名
- * @method void setName(string $Name) 设置任务名
+ * @method string getName() 获取任务名，该参数为空时不作任何修改。
+ * @method void setName(string $Name) 设置任务名，该参数为空时不作任何修改。
  */
 class UpdateProbeTaskAttributesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpdateProbeTaskAttributesRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 任务名
+     * @var string 任务名，该参数为空时不作任何修改。
      */
     public $Name;
 
     /**
      * @param string $TaskId 任务 ID
-     * @param string $Name 任务名
+     * @param string $Name 任务名，该参数为空时不作任何修改。
      */
     function __construct()
     {

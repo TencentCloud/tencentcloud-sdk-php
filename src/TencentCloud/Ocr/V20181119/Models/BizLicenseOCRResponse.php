@@ -62,6 +62,18 @@ WARN_RESHOOT_CARD翻拍件告警
  * @method void setAngle(float $Angle) 设置 图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
 
 
+ * @method boolean getNationalEmblem() 获取是否有国徽。0为没有，1为有。
+ * @method void setNationalEmblem(boolean $NationalEmblem) 设置是否有国徽。0为没有，1为有。
+ * @method boolean getQRCode() 获取是否有二维码。0为没有，1为有。
+ * @method void setQRCode(boolean $QRCode) 设置是否有二维码。0为没有，1为有。
+ * @method boolean getSeal() 获取是否有印章。0为没有，1为有。
+ * @method void setSeal(boolean $Seal) 设置是否有印章。0为没有，1为有。
+ * @method string getTitle() 获取标题
+ * @method void setTitle(string $Title) 设置标题
+ * @method string getSerialNumber() 获取编号
+ * @method void setSerialNumber(string $SerialNumber) 设置编号
+ * @method string getRegistrationAuthority() 获取登记机关
+ * @method void setRegistrationAuthority(string $RegistrationAuthority) 设置登记机关
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -149,6 +161,36 @@ WARN_RESHOOT_CARD翻拍件告警
     public $Angle;
 
     /**
+     * @var boolean 是否有国徽。0为没有，1为有。
+     */
+    public $NationalEmblem;
+
+    /**
+     * @var boolean 是否有二维码。0为没有，1为有。
+     */
+    public $QRCode;
+
+    /**
+     * @var boolean 是否有印章。0为没有，1为有。
+     */
+    public $Seal;
+
+    /**
+     * @var string 标题
+     */
+    public $Title;
+
+    /**
+     * @var string 编号
+     */
+    public $SerialNumber;
+
+    /**
+     * @var string 登记机关
+     */
+    public $RegistrationAuthority;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -175,6 +217,12 @@ WARN_RESHOOT_CARD翻拍件告警
      * @param float $Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
 
 
+     * @param boolean $NationalEmblem 是否有国徽。0为没有，1为有。
+     * @param boolean $QRCode 是否有二维码。0为没有，1为有。
+     * @param boolean $Seal 是否有印章。0为没有，1为有。
+     * @param string $Title 标题
+     * @param string $SerialNumber 编号
+     * @param string $RegistrationAuthority 登记机关
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -248,6 +296,30 @@ WARN_RESHOOT_CARD翻拍件告警
 
         if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
             $this->Angle = $param["Angle"];
+        }
+
+        if (array_key_exists("NationalEmblem",$param) and $param["NationalEmblem"] !== null) {
+            $this->NationalEmblem = $param["NationalEmblem"];
+        }
+
+        if (array_key_exists("QRCode",$param) and $param["QRCode"] !== null) {
+            $this->QRCode = $param["QRCode"];
+        }
+
+        if (array_key_exists("Seal",$param) and $param["Seal"] !== null) {
+            $this->Seal = $param["Seal"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("SerialNumber",$param) and $param["SerialNumber"] !== null) {
+            $this->SerialNumber = $param["SerialNumber"];
+        }
+
+        if (array_key_exists("RegistrationAuthority",$param) and $param["RegistrationAuthority"] !== null) {
+            $this->RegistrationAuthority = $param["RegistrationAuthority"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

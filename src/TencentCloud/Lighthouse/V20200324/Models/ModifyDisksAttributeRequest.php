@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisksAttribute请求参数结构体
  *
- * @method array getDiskIds() 获取云硬盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method array getDiskIds() 获取云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
  * @method string getDiskName() 获取云硬盘名称。
  * @method void setDiskName(string $DiskName) 设置云硬盘名称。
  */
 class ModifyDisksAttributeRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘ID列表。
+     * @var array 云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public $DiskIds;
 
@@ -38,7 +38,7 @@ class ModifyDisksAttributeRequest extends AbstractModel
     public $DiskName;
 
     /**
-     * @param array $DiskIds 云硬盘ID列表。
+     * @param array $DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      * @param string $DiskName 云硬盘名称。
      */
     function __construct()

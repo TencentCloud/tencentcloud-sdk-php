@@ -47,7 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
  * @method void setSample(integer $Sample) 设置采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
  * @method LogFormat getLogFormat() 获取日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
  * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
  * @method CustomEndpoint getCustomEndpoint() 获取自定义 HTTP 服务的配置信息，不填保持原有配置。 
  * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) 设置自定义 HTTP 服务的配置信息，不填保持原有配置。 
  * @method S3 getS3() 获取AWS S3 兼容存储桶的配置信息，不填保持原有配置。
@@ -106,6 +108,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @var LogFormat 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public $LogFormat;
 
@@ -134,6 +137,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param array $DeliveryConditions 日志投递的过滤条件。不填表示投递全量日志。
      * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
      * @param LogFormat $LogFormat 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      * @param CustomEndpoint $CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
      * @param S3 $S3 AWS S3 兼容存储桶的配置信息，不填保持原有配置。
      */

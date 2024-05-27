@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisksReturnable请求参数结构体
  *
- * @method array getDiskIds() 获取云硬盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method array getDiskIds() 获取云硬盘ID列表。每次批量请求云硬盘的上限为 10。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。每次批量请求云硬盘的上限为 10。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDisksReturnableRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘ID列表。
+     * @var array 云硬盘ID列表。每次批量请求云硬盘的上限为 10。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public $DiskIds;
 
@@ -45,7 +45,7 @@ class DescribeDisksReturnableRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $DiskIds 云硬盘ID列表。
+     * @param array $DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 10。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      */

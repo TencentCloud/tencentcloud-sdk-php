@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getDimension() 获取获取day：d，   获取min则不填
- * @method void setDimension(string $Dimension) 设置获取day：d，   获取min则不填
+ * @method string getDimension() 获取对PV指标的查询维度。获取day：d，   获取min则不填。
+ * @method void setDimension(string $Dimension) 设置对PV指标的查询维度。获取day：d，   获取min则不填。
  */
 class DescribePvListRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribePvListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 获取day：d，   获取min则不填
+     * @var string 对PV指标的查询维度。获取day：d，   获取min则不填。
      */
     public $Dimension;
 
@@ -55,7 +55,7 @@ class DescribePvListRequest extends AbstractModel
      * @param integer $ProjectId ID
      * @param string $EndTime 结束时间
      * @param string $StartTime 开始时间
-     * @param string $Dimension 获取day：d，   获取min则不填
+     * @param string $Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
      */
     function __construct()
     {

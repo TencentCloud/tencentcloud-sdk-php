@@ -74,7 +74,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\RevokeCertificateResponse RevokeCertificate(Models\RevokeCertificateRequest $req) 本接口（RevokeCertificate）用于吊销证书。
  * @method Models\SubmitAuditManagerResponse SubmitAuditManager(Models\SubmitAuditManagerRequest $req) 重新提交审核管理人
  * @method Models\SubmitCertificateInformationResponse SubmitCertificateInformation(Models\SubmitCertificateInformationRequest $req) 提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
- * @method Models\UpdateCertificateInstanceResponse UpdateCertificateInstance(Models\UpdateCertificateInstanceRequest $req) 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+ * @method Models\UpdateCertificateInstanceResponse UpdateCertificateInstance(Models\UpdateCertificateInstanceRequest $req) 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
  * @method Models\UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetry(Models\UpdateCertificateRecordRetryRequest $req) 云资源更新重试部署记录
  * @method Models\UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollback(Models\UpdateCertificateRecordRollbackRequest $req) 云资源更新一键回滚
  * @method Models\UploadCertificateResponse UploadCertificate(Models\UploadCertificateRequest $req) 本接口（UploadCertificate）用于上传证书。

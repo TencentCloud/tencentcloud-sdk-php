@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachDisks请求参数结构体
  *
- * @method array getDiskIds() 获取云硬盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method array getDiskIds() 获取云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
  */
 class DetachDisksRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘ID列表。
+     * @var array 云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public $DiskIds;
 
     /**
-     * @param array $DiskIds 云硬盘ID列表。
+     * @param array $DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 100。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     function __construct()
     {

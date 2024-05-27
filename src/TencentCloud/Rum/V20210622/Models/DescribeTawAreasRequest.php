@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaIds(array $AreaIds) 设置片区Id
  * @method array getAreaKeys() 获取片区Key
  * @method void setAreaKeys(array $AreaKeys) 设置片区Key
- * @method integer getLimit() 获取分页Limit
- * @method void setLimit(integer $Limit) 设置分页Limit
+ * @method integer getLimit() 获取分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+ * @method void setLimit(integer $Limit) 设置分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
  * @method array getAreaStatuses() 获取片区状态(1=有效，2=无效)
  * @method void setAreaStatuses(array $AreaStatuses) 设置片区状态(1=有效，2=无效)
- * @method integer getOffset() 获取分页Offset
- * @method void setOffset(integer $Offset) 设置分页Offset
+ * @method integer getOffset() 获取分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+ * @method void setOffset(integer $Offset) 设置分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
  */
 class DescribeTawAreasRequest extends AbstractModel
 {
@@ -44,7 +44,7 @@ class DescribeTawAreasRequest extends AbstractModel
     public $AreaKeys;
 
     /**
-     * @var integer 分页Limit
+     * @var integer 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
      */
     public $Limit;
 
@@ -54,16 +54,16 @@ class DescribeTawAreasRequest extends AbstractModel
     public $AreaStatuses;
 
     /**
-     * @var integer 分页Offset
+     * @var integer 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
      */
     public $Offset;
 
     /**
      * @param array $AreaIds 片区Id
      * @param array $AreaKeys 片区Key
-     * @param integer $Limit 分页Limit
+     * @param integer $Limit 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
      * @param array $AreaStatuses 片区状态(1=有效，2=无效)
-     * @param integer $Offset 分页Offset
+     * @param integer $Offset 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
      */
     function __construct()
     {

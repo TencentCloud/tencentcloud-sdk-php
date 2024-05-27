@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceRenewDisks请求参数结构体
  *
- * @method array getDiskIds() 获取云硬盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method array getDiskIds() 获取云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
  * @method RenewDiskChargePrepaid getRenewDiskChargePrepaid() 获取续费云硬盘包年包月相关参数设置。
  * @method void setRenewDiskChargePrepaid(RenewDiskChargePrepaid $RenewDiskChargePrepaid) 设置续费云硬盘包年包月相关参数设置。
  */
 class InquirePriceRenewDisksRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘ID列表。
+     * @var array 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public $DiskIds;
 
@@ -38,7 +38,7 @@ class InquirePriceRenewDisksRequest extends AbstractModel
     public $RenewDiskChargePrepaid;
 
     /**
-     * @param array $DiskIds 云硬盘ID列表。
+     * @param array $DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      * @param RenewDiskChargePrepaid $RenewDiskChargePrepaid 续费云硬盘包年包月相关参数设置。
      */
     function __construct()

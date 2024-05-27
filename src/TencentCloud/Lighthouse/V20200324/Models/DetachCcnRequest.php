@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachCcn请求参数结构体
  *
- * @method string getCcnId() 获取云联网实例ID。
- * @method void setCcnId(string $CcnId) 设置云联网实例ID。
+ * @method string getCcnId() 获取云联网实例ID。可通过[DescribeCcnAttachedInstances](https://cloud.tencent.com/document/product/1207/58797)接口返回值中的CcnId获取。
+ * @method void setCcnId(string $CcnId) 设置云联网实例ID。可通过[DescribeCcnAttachedInstances](https://cloud.tencent.com/document/product/1207/58797)接口返回值中的CcnId获取。
  */
 class DetachCcnRequest extends AbstractModel
 {
     /**
-     * @var string 云联网实例ID。
+     * @var string 云联网实例ID。可通过[DescribeCcnAttachedInstances](https://cloud.tencent.com/document/product/1207/58797)接口返回值中的CcnId获取。
      */
     public $CcnId;
 
     /**
-     * @param string $CcnId 云联网实例ID。
+     * @param string $CcnId 云联网实例ID。可通过[DescribeCcnAttachedInstances](https://cloud.tencent.com/document/product/1207/58797)接口返回值中的CcnId获取。
      */
     function __construct()
     {

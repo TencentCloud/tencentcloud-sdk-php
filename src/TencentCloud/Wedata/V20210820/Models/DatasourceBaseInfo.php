@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamsString(string $ParamsString) 设置数据源附带参数信息Params json字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategory() 获取区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategory(string $Category) 设置区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceBaseInfo extends AbstractModel
 {
@@ -118,6 +122,12 @@ class DatasourceBaseInfo extends AbstractModel
     public $ParamsString;
 
     /**
+     * @var string 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Category;
+
+    /**
      * @param array $DatabaseNames 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -135,6 +145,8 @@ class DatasourceBaseInfo extends AbstractModel
      * @param string $Version 数据源版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParamsString 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Category 区分数据源类型自定义源还是系统源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +200,10 @@ class DatasourceBaseInfo extends AbstractModel
 
         if (array_key_exists("ParamsString",$param) and $param["ParamsString"] !== null) {
             $this->ParamsString = $param["ParamsString"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

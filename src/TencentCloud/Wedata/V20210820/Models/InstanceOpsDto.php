@@ -260,6 +260,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryAttempts(integer $RetryAttempts) 设置自动重试次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeletedFatherList() 获取紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletedFatherList(array $DeletedFatherList) 设置紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCirculateInstanceList() 获取循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCirculateInstanceList(array $CirculateInstanceList) 设置循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -624,6 +632,18 @@ class InstanceOpsDto extends AbstractModel
     public $RetryAttempts;
 
     /**
+     * @var array 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletedFatherList;
+
+    /**
+     * @var array 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CirculateInstanceList;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -743,6 +763,10 @@ class InstanceOpsDto extends AbstractModel
      * @param InstanceLifeCycleOpsDto $InstanceLifeCycleOpsDto 实例生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetryAttempts 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeletedFatherList 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CirculateInstanceList 循环依赖关联的实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1003,6 +1027,19 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("RetryAttempts",$param) and $param["RetryAttempts"] !== null) {
             $this->RetryAttempts = $param["RetryAttempts"];
+        }
+
+        if (array_key_exists("DeletedFatherList",$param) and $param["DeletedFatherList"] !== null) {
+            $this->DeletedFatherList = $param["DeletedFatherList"];
+        }
+
+        if (array_key_exists("CirculateInstanceList",$param) and $param["CirculateInstanceList"] !== null) {
+            $this->CirculateInstanceList = [];
+            foreach ($param["CirculateInstanceList"] as $key => $value){
+                $obj = new InstanceOpsDto();
+                $obj->deserialize($value);
+                array_push($this->CirculateInstanceList, $obj);
+            }
         }
     }
 }

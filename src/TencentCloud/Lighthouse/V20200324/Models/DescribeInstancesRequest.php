@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。
+ * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method array getFilters() 获取过滤器列表。
 <li>instance-name</li>按照【实例名称】进行过滤。
 类型：String
@@ -82,7 +82,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例 ID 列表。每次请求批量实例的上限为 100。
+     * @var array 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceIds;
 
@@ -127,7 +127,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。
+     * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      * @param array $Filters 过滤器列表。
 <li>instance-name</li>按照【实例名称】进行过滤。
 类型：String

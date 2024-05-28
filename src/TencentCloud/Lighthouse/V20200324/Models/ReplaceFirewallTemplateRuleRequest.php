@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplaceFirewallTemplateRule请求参数结构体
  *
- * @method string getTemplateId() 获取防火墙模板ID。
- * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。
- * @method string getTemplateRuleId() 获取防火墙模板规则ID。
- * @method void setTemplateRuleId(string $TemplateRuleId) 设置防火墙模板规则ID。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+ * @method string getTemplateRuleId() 获取防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
+ * @method void setTemplateRuleId(string $TemplateRuleId) 设置防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
  * @method FirewallRule getTemplateRule() 获取替换后的防火墙模板规则。
  * @method void setTemplateRule(FirewallRule $TemplateRule) 设置替换后的防火墙模板规则。
  */
 class ReplaceFirewallTemplateRuleRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙模板ID。
+     * @var string 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
      */
     public $TemplateId;
 
     /**
-     * @var string 防火墙模板规则ID。
+     * @var string 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
      */
     public $TemplateRuleId;
 
@@ -45,8 +45,8 @@ class ReplaceFirewallTemplateRuleRequest extends AbstractModel
     public $TemplateRule;
 
     /**
-     * @param string $TemplateId 防火墙模板ID。
-     * @param string $TemplateRuleId 防火墙模板规则ID。
+     * @param string $TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+     * @param string $TemplateRuleId 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
      * @param FirewallRule $TemplateRule 替换后的防火墙模板规则。
      */
     function __construct()

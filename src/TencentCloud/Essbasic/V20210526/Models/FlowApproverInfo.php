@@ -37,14 +37,14 @@ RecipientId参数获取：
  * @method void setName(string $Name) 设置签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE : 其他证件</li></ul>
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE : 其他证件</li></ul>
@@ -307,7 +307,7 @@ class FlowApproverInfo extends AbstractModel
 
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE : 其他证件</li></ul>
@@ -544,7 +544,7 @@ class FlowApproverInfo extends AbstractModel
      * @param string $Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE : 其他证件</li></ul>

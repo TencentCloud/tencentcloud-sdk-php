@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLinkType(string $LinkType) 设置依赖边类型 1、“real_real”表示任务->任务；2、"virtual_real" 跨工作流任务->任务
  * @method string getLinkId() 获取依赖边id
  * @method void setLinkId(string $LinkId) 设置依赖边id
+ * @method string getLinkStyle() 获取为了区分新增的循环依赖新增的类型。默认是normal，循环依赖则是circulate
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLinkStyle(string $LinkStyle) 设置为了区分新增的循环依赖新增的类型。默认是normal，循环依赖则是circulate
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpsTaskLinkInfoDto extends AbstractModel
 {
@@ -52,10 +56,18 @@ class OpsTaskLinkInfoDto extends AbstractModel
     public $LinkId;
 
     /**
+     * @var string 为了区分新增的循环依赖新增的类型。默认是normal，循环依赖则是circulate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LinkStyle;
+
+    /**
      * @param string $TaskTo 下游任务id
      * @param string $TaskFrom 上游任务id
      * @param string $LinkType 依赖边类型 1、“real_real”表示任务->任务；2、"virtual_real" 跨工作流任务->任务
      * @param string $LinkId 依赖边id
+     * @param string $LinkStyle 为了区分新增的循环依赖新增的类型。默认是normal，循环依赖则是circulate
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class OpsTaskLinkInfoDto extends AbstractModel
 
         if (array_key_exists("LinkId",$param) and $param["LinkId"] !== null) {
             $this->LinkId = $param["LinkId"];
+        }
+
+        if (array_key_exists("LinkStyle",$param) and $param["LinkStyle"] !== null) {
+            $this->LinkStyle = $param["LinkStyle"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置目标表类型(HIVE或GBASE)
  * @method string getIncharge() 获取责任人
  * @method void setIncharge(string $Incharge) 设置责任人
+ * @method string getSchemaName() 获取schema名称
+ * @method void setSchemaName(string $SchemaName) 设置schema名称
  */
 class CreateHiveTableByDDLRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $Incharge;
 
     /**
+     * @var string schema名称
+     */
+    public $SchemaName;
+
+    /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
      * @param string $DDLSql 建hive表ddl
@@ -80,6 +87,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param string $Type 目标表类型(HIVE或GBASE)
      * @param string $Incharge 责任人
+     * @param string $SchemaName schema名称
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateHiveTableByDDLRequest extends AbstractModel
 
         if (array_key_exists("Incharge",$param) and $param["Incharge"] !== null) {
             $this->Incharge = $param["Incharge"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
         }
     }
 }

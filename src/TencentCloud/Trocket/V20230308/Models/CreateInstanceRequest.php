@@ -32,52 +32,8 @@ PRO  专业版
 PLATINUM 铂金版
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
- * @method string getSkuCode() 获取商品规格，可用规格如下：
-experiment_500,
-basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
- * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：
-experiment_500,
-basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
+ * @method string getSkuCode() 获取商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+ * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
@@ -118,29 +74,7 @@ PLATINUM 铂金版
     public $Name;
 
     /**
-     * @var string 商品规格，可用规格如下：
-experiment_500,
-basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
+     * @var string 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
      */
     public $SkuCode;
 
@@ -206,29 +140,7 @@ BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
      * @param string $Name 实例名称
-     * @param string $SkuCode 商品规格，可用规格如下：
-experiment_500,
-basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
+     * @param string $SkuCode 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
      * @param array $VpcList 实例绑定的VPC信息

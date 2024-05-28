@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
  * @method string getIdCardType() 获取证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
@@ -51,7 +51,7 @@ class UserThreeFactor extends AbstractModel
 
     /**
      * @var string 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -69,7 +69,7 @@ class UserThreeFactor extends AbstractModel
      * @param string $Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      * @param string $IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则

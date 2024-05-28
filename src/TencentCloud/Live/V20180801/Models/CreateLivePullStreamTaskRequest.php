@@ -224,6 +224,8 @@ PullVodPushLive -点播。
  * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
  * @method string getBackupToUrl() 获取新的目标地址，用于任务同时推两路场景。
  * @method void setBackupToUrl(string $BackupToUrl) 设置新的目标地址，用于任务同时推两路场景。
+ * @method string getTranscodeTemplateName() 获取直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+ * @method void setTranscodeTemplateName(string $TranscodeTemplateName) 设置直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -422,6 +424,11 @@ PullVodPushLive -点播。
     public $BackupToUrl;
 
     /**
+     * @var string 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+     */
+    public $TranscodeTemplateName;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播，
@@ -524,6 +531,7 @@ PullVodPushLive -点播。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
      * @param string $RecordTemplateId 录制模板 ID。
      * @param string $BackupToUrl 新的目标地址，用于任务同时推两路场景。
+     * @param string $TranscodeTemplateName 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
      */
     function __construct()
     {
@@ -633,6 +641,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
             $this->BackupToUrl = $param["BackupToUrl"];
+        }
+
+        if (array_key_exists("TranscodeTemplateName",$param) and $param["TranscodeTemplateName"] !== null) {
+            $this->TranscodeTemplateName = $param["TranscodeTemplateName"];
         }
     }
 }

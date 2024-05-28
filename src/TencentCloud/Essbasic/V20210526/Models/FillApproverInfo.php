@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getNotChannelOrganization() 获取签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
  * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
  * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 居民身份证</li>
+<ul><li>ID_CARD 中国大陆居民身份证</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
 `2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
  * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 居民身份证</li>
+<ul><li>ID_CARD 中国大陆居民身份证</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
@@ -109,7 +109,7 @@ class FillApproverInfo extends AbstractModel
 
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 居民身份证</li>
+<ul><li>ID_CARD 中国大陆居民身份证</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
@@ -144,7 +144,7 @@ class FillApproverInfo extends AbstractModel
      * @param string $OrganizationOpenId 企业OpenId
      * @param boolean $NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
      * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 居民身份证</li>
+<ul><li>ID_CARD 中国大陆居民身份证</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>

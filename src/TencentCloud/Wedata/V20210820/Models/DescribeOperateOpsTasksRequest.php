@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTags(array $TaskTags) 设置任务标签
  * @method string getKeyWord() 获取查询关键字
  * @method void setKeyWord(string $KeyWord) 设置查询关键字
+ * @method string getInitStrategy() 获取实例生成方式
+ * @method void setInitStrategy(string $InitStrategy) 设置实例生成方式
+ * @method array getRequestResourceTypes() 获取额外请求的资源类型
+ * @method void setRequestResourceTypes(array $RequestResourceTypes) 设置额外请求的资源类型
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $KeyWord;
 
     /**
+     * @var string 实例生成方式
+     */
+    public $InitStrategy;
+
+    /**
+     * @var array 额外请求的资源类型
+     */
+    public $RequestResourceTypes;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -208,6 +222,8 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
      * @param array $TaskTags 任务标签
      * @param string $KeyWord 查询关键字
+     * @param string $InitStrategy 实例生成方式
+     * @param array $RequestResourceTypes 额外请求的资源类型
      */
     function __construct()
     {
@@ -317,6 +333,14 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
             $this->KeyWord = $param["KeyWord"];
+        }
+
+        if (array_key_exists("InitStrategy",$param) and $param["InitStrategy"] !== null) {
+            $this->InitStrategy = $param["InitStrategy"];
+        }
+
+        if (array_key_exists("RequestResourceTypes",$param) and $param["RequestResourceTypes"] !== null) {
+            $this->RequestResourceTypes = $param["RequestResourceTypes"];
         }
     }
 }

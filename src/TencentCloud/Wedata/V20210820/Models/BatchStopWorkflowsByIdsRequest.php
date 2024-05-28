@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowIds(array $WorkflowIds) 设置工作流id列表
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method boolean getKillInstance() 获取是否终止已生成的实例
+ * @method void setKillInstance(boolean $KillInstance) 设置是否终止已生成的实例
  */
 class BatchStopWorkflowsByIdsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BatchStopWorkflowsByIdsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var boolean 是否终止已生成的实例
+     */
+    public $KillInstance;
+
+    /**
      * @param array $WorkflowIds 工作流id列表
      * @param string $ProjectId 项目id
+     * @param boolean $KillInstance 是否终止已生成的实例
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BatchStopWorkflowsByIdsRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("KillInstance",$param) and $param["KillInstance"] !== null) {
+            $this->KillInstance = $param["KillInstance"];
         }
     }
 }

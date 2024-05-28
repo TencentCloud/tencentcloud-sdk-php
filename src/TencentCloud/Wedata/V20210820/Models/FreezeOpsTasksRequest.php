@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置任务列表
  * @method boolean getOperateIsInform() 获取任务操作是否消息通知下游任务责任人
  * @method void setOperateIsInform(boolean $OperateIsInform) 设置任务操作是否消息通知下游任务责任人
+ * @method boolean getKillInstance() 获取是否终止已生成的实例
+ * @method void setKillInstance(boolean $KillInstance) 设置是否终止已生成的实例
  */
 class FreezeOpsTasksRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class FreezeOpsTasksRequest extends AbstractModel
     public $OperateIsInform;
 
     /**
+     * @var boolean 是否终止已生成的实例
+     */
+    public $KillInstance;
+
+    /**
      * @param array $Tasks 任务列表
      * @param boolean $OperateIsInform 任务操作是否消息通知下游任务责任人
+     * @param boolean $KillInstance 是否终止已生成的实例
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class FreezeOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("OperateIsInform",$param) and $param["OperateIsInform"] !== null) {
             $this->OperateIsInform = $param["OperateIsInform"];
+        }
+
+        if (array_key_exists("KillInstance",$param) and $param["KillInstance"] !== null) {
+            $this->KillInstance = $param["KillInstance"];
         }
     }
 }

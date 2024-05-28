@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteKeyPairs请求参数结构体
  *
- * @method array getKeyIds() 获取密钥对 ID 列表，每次请求批量密钥对的上限为 10。
- * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表，每次请求批量密钥对的上限为 10。
+ * @method array getKeyIds() 获取密钥对 ID 列表，每次请求批量密钥对的上限为 10。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
+ * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表，每次请求批量密钥对的上限为 10。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
  */
 class DeleteKeyPairsRequest extends AbstractModel
 {
     /**
-     * @var array 密钥对 ID 列表，每次请求批量密钥对的上限为 10。
+     * @var array 密钥对 ID 列表，每次请求批量密钥对的上限为 10。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
     public $KeyIds;
 
     /**
-     * @param array $KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 10。
+     * @param array $KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 10。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
     function __construct()
     {

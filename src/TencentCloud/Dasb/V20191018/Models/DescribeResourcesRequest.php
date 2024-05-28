@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置按照堡垒机开通的 VPC 实例ID查询
  * @method array getResourceIds() 获取资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
  * @method void setResourceIds(array $ResourceIds) 设置资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+ * @method integer getLimit() 获取每页条目数量
+ * @method void setLimit(integer $Limit) 设置每页条目数量
+ * @method integer getOffset() 获取分页偏移位置
+ * @method void setOffset(integer $Offset) 设置分页偏移位置
  */
 class DescribeResourcesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeResourcesRequest extends AbstractModel
     public $ResourceIds;
 
     /**
+     * @var integer 每页条目数量
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页偏移位置
+     */
+    public $Offset;
+
+    /**
      * @param string $ApCode 地域码, 如: ap-guangzhou
      * @param string $VpcId 按照堡垒机开通的 VPC 实例ID查询
      * @param array $ResourceIds 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+     * @param integer $Limit 每页条目数量
+     * @param integer $Offset 分页偏移位置
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeResourcesRequest extends AbstractModel
 
         if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
             $this->ResourceIds = $param["ResourceIds"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

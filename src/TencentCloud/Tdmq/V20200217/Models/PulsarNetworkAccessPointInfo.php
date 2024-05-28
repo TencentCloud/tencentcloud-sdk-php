@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPointsType() 获取接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPointsType(string $AccessPointsType) 设置接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -96,6 +100,12 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
     public $OperationType;
 
     /**
+     * @var string 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPointsType;
+
+    /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
@@ -111,6 +121,8 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPointsType 接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 
         if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
             $this->OperationType = $param["OperationType"];
+        }
+
+        if (array_key_exists("AccessPointsType",$param) and $param["AccessPointsType"] !== null) {
+            $this->AccessPointsType = $param["AccessPointsType"];
         }
     }
 }

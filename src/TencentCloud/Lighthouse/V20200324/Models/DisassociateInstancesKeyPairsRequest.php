@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateInstancesKeyPairs请求参数结构体
  *
- * @method array getKeyIds() 获取密钥对 ID 列表。每次请求批量密钥对的上限为 100。
- * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+ * @method array getKeyIds() 获取密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
+ * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
  * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  */
 class DisassociateInstancesKeyPairsRequest extends AbstractModel
 {
     /**
-     * @var array 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+     * @var array 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
     public $KeyIds;
 
@@ -38,7 +38,7 @@ class DisassociateInstancesKeyPairsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param array $KeyIds 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+     * @param array $KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
     function __construct()

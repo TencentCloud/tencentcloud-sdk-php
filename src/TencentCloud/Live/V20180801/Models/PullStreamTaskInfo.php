@@ -208,6 +208,10 @@ PullVodPushLive -点播。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupToUrl(string $BackupToUrl) 设置新增的推流地址。用于单任务推两路场景。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTranscodeTemplateName() 获取直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTranscodeTemplateName(string $TranscodeTemplateName) 设置直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -422,6 +426,12 @@ PullVodPushLive -点播。
     public $BackupToUrl;
 
     /**
+     * @var string 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TranscodeTemplateName;
+
+    /**
      * @param string $TaskId 拉流任务Id。
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
@@ -515,6 +525,8 @@ PullVodPushLive -点播。
      * @param string $RecordTemplateId 录制模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupToUrl 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TranscodeTemplateName 直播转码模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -650,6 +662,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
             $this->BackupToUrl = $param["BackupToUrl"];
+        }
+
+        if (array_key_exists("TranscodeTemplateName",$param) and $param["TranscodeTemplateName"] !== null) {
+            $this->TranscodeTemplateName = $param["TranscodeTemplateName"];
         }
     }
 }

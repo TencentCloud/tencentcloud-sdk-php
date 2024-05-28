@@ -90,11 +90,13 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
  * @method void setComponentWidth(float $ComponentWidth) 设置**在绝对定位方式和关键字定位方式下**，指定控件宽度，控件宽度是指控件在PDF文件中的宽度，单位为pt（点）。
 
  * @method integer getComponentPage() 获取**在绝对定位方式方式下**，指定控件所在PDF文件上的页码
+**在使用文件发起的情况下**，绝对定位方式的填写控件和签署控件支持使用负数来指定控件在PDF文件上的页码，使用负数时，页码从最后一页开始。例如：ComponentPage设置为-1，即代表在PDF文件的最后一页，以此类推。
 
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
 2.  <font color="red">页面编号不能超过PDF文件的页码总数</font>。如果指定的页码超过了PDF文件的页码总数，在填写和签署时会出现错误，导致无法正常进行操作。
  * @method void setComponentPage(integer $ComponentPage) 设置**在绝对定位方式方式下**，指定控件所在PDF文件上的页码
+**在使用文件发起的情况下**，绝对定位方式的填写控件和签署控件支持使用负数来指定控件在PDF文件上的页码，使用负数时，页码从最后一页开始。例如：ComponentPage设置为-1，即代表在PDF文件的最后一页，以此类推。
 
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
@@ -269,12 +271,12 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
  * @method void setIsFormType(boolean $IsFormType) 设置**在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
-<li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>
+<li> <b>MULTI_LINE_TEXT</b> : 文本内容，可以用  \n 来控制换行位置 </li>
 <li> <b>CHECK_BOX</b> : true/false</li>
 <li> <b>FILL_IMAGE、ATTACHMENT</b> : 附件的FileId，需要通过UploadFiles接口上传获取</li>
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
-<li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
+<li> <b>DATE</b> : 格式化为：xxxx年xx月xx日（例如2024年05年28日）</li>
 <li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
 <li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
@@ -284,12 +286,12 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 注：   `部分特殊控件需要在控制台配置模板形式创建`
  * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
-<li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>
+<li> <b>MULTI_LINE_TEXT</b> : 文本内容，可以用  \n 来控制换行位置 </li>
 <li> <b>CHECK_BOX</b> : true/false</li>
 <li> <b>FILL_IMAGE、ATTACHMENT</b> : 附件的FileId，需要通过UploadFiles接口上传获取</li>
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
-<li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
+<li> <b>DATE</b> : 格式化为：xxxx年xx月xx日（例如2024年05年28日）</li>
 <li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
 <li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
@@ -415,6 +417,7 @@ class Component extends AbstractModel
 
     /**
      * @var integer **在绝对定位方式方式下**，指定控件所在PDF文件上的页码
+**在使用文件发起的情况下**，绝对定位方式的填写控件和签署控件支持使用负数来指定控件在PDF文件上的页码，使用负数时，页码从最后一页开始。例如：ComponentPage设置为-1，即代表在PDF文件的最后一页，以此类推。
 
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
@@ -549,12 +552,12 @@ class Component extends AbstractModel
     /**
      * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
-<li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>
+<li> <b>MULTI_LINE_TEXT</b> : 文本内容，可以用  \n 来控制换行位置 </li>
 <li> <b>CHECK_BOX</b> : true/false</li>
 <li> <b>FILL_IMAGE、ATTACHMENT</b> : 附件的FileId，需要通过UploadFiles接口上传获取</li>
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
-<li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
+<li> <b>DATE</b> : 格式化为：xxxx年xx月xx日（例如2024年05年28日）</li>
 <li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
 <li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
@@ -677,6 +680,7 @@ class Component extends AbstractModel
      * @param float $ComponentWidth **在绝对定位方式和关键字定位方式下**，指定控件宽度，控件宽度是指控件在PDF文件中的宽度，单位为pt（点）。
 
      * @param integer $ComponentPage **在绝对定位方式方式下**，指定控件所在PDF文件上的页码
+**在使用文件发起的情况下**，绝对定位方式的填写控件和签署控件支持使用负数来指定控件在PDF文件上的页码，使用负数时，页码从最后一页开始。例如：ComponentPage设置为-1，即代表在PDF文件的最后一页，以此类推。
 
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
@@ -767,12 +771,12 @@ class Component extends AbstractModel
      * @param boolean $IsFormType **在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
-<li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>
+<li> <b>MULTI_LINE_TEXT</b> : 文本内容，可以用  \n 来控制换行位置 </li>
 <li> <b>CHECK_BOX</b> : true/false</li>
 <li> <b>FILL_IMAGE、ATTACHMENT</b> : 附件的FileId，需要通过UploadFiles接口上传获取</li>
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
-<li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
+<li> <b>DATE</b> : 格式化为：xxxx年xx月xx日（例如2024年05年28日）</li>
 <li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
 <li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 

@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaleout(boolean $Saleout) 设置产品是否售罄。
 - true：售罄。
 - false：未售罄。
- * @method string getEngine() 获取产品引擎。包括：腾讯云 CKV与社区版 Redis。
- * @method void setEngine(string $Engine) 设置产品引擎。包括：腾讯云 CKV与社区版 Redis。
+ * @method string getEngine() 获取产品引擎。Redis 或者 CKV。
+ * @method void setEngine(string $Engine) 设置产品引擎。Redis 或者 CKV。
  * @method string getVersion() 获取兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
  * @method void setVersion(string $Version) 设置兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
  * @method array getTotalSize() 获取规格总大小，单位GB。
@@ -127,7 +127,7 @@ class ProductConf extends AbstractModel
     public $Saleout;
 
     /**
-     * @var string 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+     * @var string 产品引擎。Redis 或者 CKV。
      */
     public $Engine;
 
@@ -196,7 +196,7 @@ class ProductConf extends AbstractModel
      * @param boolean $Saleout 产品是否售罄。
 - true：售罄。
 - false：未售罄。
-     * @param string $Engine 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+     * @param string $Engine 产品引擎。Redis 或者 CKV。
      * @param string $Version 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
      * @param array $TotalSize 规格总大小，单位GB。
      * @param array $ShardSize 每个分片大小，单位GB。

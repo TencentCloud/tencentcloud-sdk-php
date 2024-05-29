@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDiskNum请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。
+ * @method array getInstanceIds() 获取实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
  */
 class DescribeInstancesDiskNumRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表。
+     * @var array 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例ID列表。
+     * @param array $InstanceIds 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     function __construct()
     {

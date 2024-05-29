@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置产品 ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
- * @method integer getExpireTime() 获取过期时间 UNIX 时间戳（默认值为当前时间 1 小时后）
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间 UNIX 时间戳（默认值为当前时间 1 小时后）
+ * @method integer getExpireTime() 获取过期时间 UNIX 时间戳（默认值为当前时间 1 小时后，最大不超过文件所属任务的过期时间）
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间 UNIX 时间戳（默认值为当前时间 1 小时后，最大不超过文件所属任务的过期时间）
  */
 class GenerateCloudStorageAIServiceTaskFileURLRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class GenerateCloudStorageAIServiceTaskFileURLRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var integer 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后）
+     * @var integer 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后，最大不超过文件所属任务的过期时间）
      */
     public $ExpireTime;
 
     /**
      * @param string $TaskId 产品 ID
      * @param string $FileName 文件名
-     * @param integer $ExpireTime 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后）
+     * @param integer $ExpireTime 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后，最大不超过文件所属任务的过期时间）
      */
     function __construct()
     {

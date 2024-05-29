@@ -22,18 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取要查询的日志主题ID
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
- * @method string getBTime() 获取日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
- * @method void setBTime(string $BTime) 设置日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
- * @method string getPkgId() 获取日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
- * @method void setPkgId(string $PkgId) 设置日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
- * @method integer getPkgLogId() 获取日志包内一条日志的序号。
-SearchLog接口返回信息中Results结构中的PkgLogId。
- * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号。
-SearchLog接口返回信息中Results结构中的PkgLogId。
+ * @method string getBTime() 获取日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+ * @method void setBTime(string $BTime) 设置日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+ * @method string getPkgId() 获取日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+ * @method void setPkgId(string $PkgId) 设置日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+ * @method integer getPkgLogId() 获取日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+ * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
  * @method integer getPrevLogs() 获取前${PrevLogs}条日志，默认值10。
  * @method void setPrevLogs(integer $PrevLogs) 设置前${PrevLogs}条日志，默认值10。
  * @method integer getNextLogs() 获取后${NextLogs}条日志，默认值10。
  * @method void setNextLogs(integer $NextLogs) 设置后${NextLogs}条日志，默认值10。
+ * @method string getQuery() 获取检索语句，对日志上下文进行过滤，最大长度为12KB
+语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+ * @method void setQuery(string $Query) 设置检索语句，对日志上下文进行过滤，最大长度为12KB
+语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+ * @method integer getFrom() 获取上下文检索的开始时间，单位：毫秒级时间戳
+注意：
+- From为空时，表示上下文检索的开始时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+ * @method void setFrom(integer $From) 设置上下文检索的开始时间，单位：毫秒级时间戳
+注意：
+- From为空时，表示上下文检索的开始时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+ * @method integer getTo() 获取上下文检索的结束时间，单位：毫秒级时间戳。
+注意：
+- To为空时，表示上下文检索的结束时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+ * @method void setTo(integer $To) 设置上下文检索的结束时间，单位：毫秒级时间戳。
+注意：
+- To为空时，表示上下文检索的结束时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
  */
 class DescribeLogContextRequest extends AbstractModel
 {
@@ -43,18 +65,17 @@ class DescribeLogContextRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @var string 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public $BTime;
 
     /**
-     * @var string 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+     * @var string 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
      */
     public $PkgId;
 
     /**
-     * @var integer 日志包内一条日志的序号。
-SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @var integer 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
      */
     public $PkgLogId;
 
@@ -69,13 +90,48 @@ SearchLog接口返回信息中Results结构中的PkgLogId。
     public $NextLogs;
 
     /**
+     * @var string 检索语句，对日志上下文进行过滤，最大长度为12KB
+语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+     */
+    public $Query;
+
+    /**
+     * @var integer 上下文检索的开始时间，单位：毫秒级时间戳
+注意：
+- From为空时，表示上下文检索的开始时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     */
+    public $From;
+
+    /**
+     * @var integer 上下文检索的结束时间，单位：毫秒级时间戳。
+注意：
+- To为空时，表示上下文检索的结束时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     */
+    public $To;
+
+    /**
      * @param string $TopicId 要查询的日志主题ID
-     * @param string $BTime 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
-     * @param string $PkgId 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
-     * @param integer $PkgLogId 日志包内一条日志的序号。
-SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @param string $BTime 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @param string $PkgId 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+     * @param integer $PkgLogId 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
      * @param integer $PrevLogs 前${PrevLogs}条日志，默认值10。
      * @param integer $NextLogs 后${NextLogs}条日志，默认值10。
+     * @param string $Query 检索语句，对日志上下文进行过滤，最大长度为12KB
+语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+     * @param integer $From 上下文检索的开始时间，单位：毫秒级时间戳
+注意：
+- From为空时，表示上下文检索的开始时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     * @param integer $To 上下文检索的结束时间，单位：毫秒级时间戳。
+注意：
+- To为空时，表示上下文检索的结束时间不做限制
+- From和To非空时，From < To
+- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
      */
     function __construct()
     {
@@ -112,6 +168,18 @@ SearchLog接口返回信息中Results结构中的PkgLogId。
 
         if (array_key_exists("NextLogs",$param) and $param["NextLogs"] !== null) {
             $this->NextLogs = $param["NextLogs"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
+        }
+
+        if (array_key_exists("To",$param) and $param["To"] !== null) {
+            $this->To = $param["To"];
         }
     }
 }

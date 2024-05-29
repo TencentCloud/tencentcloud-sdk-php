@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置节点组的名称，主节点为空。
  * @method string getZoneId() 获取节点的可用区ID，比如ap-guangzhou-1
  * @method void setZoneId(string $ZoneId) 设置节点的可用区ID，比如ap-guangzhou-1
- * @method string getRole() 获取节点组类型，master为主节点，replica为副本节点
- * @method void setRole(string $Role) 设置节点组类型，master为主节点，replica为副本节点
+ * @method string getRole() 获取节点组类型，master为主节点，replica为副本节点。
+ * @method void setRole(string $Role) 设置节点组类型，master为主节点，replica为副本节点。
  * @method array getRedisNodes() 获取节点组节点列表
  * @method void setRedisNodes(array $RedisNodes) 设置节点组节点列表
  */
@@ -49,7 +49,7 @@ class ReplicaGroup extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 节点组类型，master为主节点，replica为副本节点
+     * @var string 节点组类型，master为主节点，replica为副本节点。
      */
     public $Role;
 
@@ -62,7 +62,7 @@ class ReplicaGroup extends AbstractModel
      * @param integer $GroupId 节点组 ID。
      * @param string $GroupName 节点组的名称，主节点为空。
      * @param string $ZoneId 节点的可用区ID，比如ap-guangzhou-1
-     * @param string $Role 节点组类型，master为主节点，replica为副本节点
+     * @param string $Role 节点组类型，master为主节点，replica为副本节点。
      * @param array $RedisNodes 节点组节点列表
      */
     function __construct()

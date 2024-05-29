@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRelateType(integer $RelateType) 设置是否预生成码关系
 0: 否, 1:是
 默认为1，仅对层级码有效
+ * @method integer getSceneCode() 获取场景值
+ * @method void setSceneCode(integer $SceneCode) 设置场景值
  */
 class CreateCustomPackRequest extends AbstractModel
 {
@@ -114,6 +116,11 @@ class CreateCustomPackRequest extends AbstractModel
     public $RelateType;
 
     /**
+     * @var integer 场景值
+     */
+    public $SceneCode;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $Amount 生码数量, 普通码包时必填
      * @param integer $CorpId 企业ID
@@ -128,6 +135,7 @@ class CreateCustomPackRequest extends AbstractModel
      * @param integer $RelateType 是否预生成码关系
 0: 否, 1:是
 默认为1，仅对层级码有效
+     * @param integer $SceneCode 场景值
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class CreateCustomPackRequest extends AbstractModel
 
         if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
             $this->RelateType = $param["RelateType"];
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
         }
     }
 }

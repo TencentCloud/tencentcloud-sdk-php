@@ -200,6 +200,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupMode() 获取备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupMode(string $BackupMode) 设置备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
 {
@@ -518,6 +522,12 @@ class InstanceSet extends AbstractModel
     public $UpgradeRedisVersion;
 
     /**
+     * @var string 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupMode;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param string $InstanceId 实例 ID。
      * @param integer $Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
@@ -607,6 +617,8 @@ class InstanceSet extends AbstractModel
      * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -859,6 +871,10 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("UpgradeRedisVersion",$param) and $param["UpgradeRedisVersion"] !== null) {
             $this->UpgradeRedisVersion = $param["UpgradeRedisVersion"];
+        }
+
+        if (array_key_exists("BackupMode",$param) and $param["BackupMode"] !== null) {
+            $this->BackupMode = $param["BackupMode"];
         }
     }
 }

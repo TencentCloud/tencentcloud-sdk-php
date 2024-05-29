@@ -92,6 +92,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductLogo() 获取产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductLogo(string $ProductLogo) 设置产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+ * @method void setStatus(integer $Status) 设置风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+ * @method integer getVerify() 获取是否开启验证
+0:否, 1:是
+ * @method void setVerify(integer $Verify) 设置是否开启验证
+0:否, 1:是
  */
 class ScanLog extends AbstractModel
 {
@@ -208,6 +220,24 @@ class ScanLog extends AbstractModel
     public $ProductName;
 
     /**
+     * @var string 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductLogo;
+
+    /**
+     * @var integer 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+     */
+    public $Status;
+
+    /**
+     * @var integer 是否开启验证
+0:否, 1:是
+     */
+    public $Verify;
+
+    /**
      * @param integer $LogId 行ID
      * @param string $Openid 微信openid
 注意：此字段可能返回 null，表示取不到有效值。
@@ -244,6 +274,12 @@ class ScanLog extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductLogo 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+     * @param integer $Verify 是否开启验证
+0:否, 1:是
      */
     function __construct()
     {
@@ -332,6 +368,18 @@ class ScanLog extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ProductLogo",$param) and $param["ProductLogo"] !== null) {
+            $this->ProductLogo = $param["ProductLogo"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Verify",$param) and $param["Verify"] !== null) {
+            $this->Verify = $param["Verify"];
         }
     }
 }

@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriods(array $Periods) 设置指标触发
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsLatenessMetric() 获取是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metric extends AbstractModel
 {
@@ -133,6 +137,12 @@ class Metric extends AbstractModel
     public $Periods;
 
     /**
+     * @var integer 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLatenessMetric;
+
+    /**
      * @param string $Namespace 告警策略类型
      * @param string $MetricName 指标名
      * @param string $Description 指标展示名
@@ -151,6 +161,8 @@ class Metric extends AbstractModel
      * @param array $Operators 匹配运算符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Periods 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsLatenessMetric 是否延迟指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -222,6 +234,10 @@ class Metric extends AbstractModel
 
         if (array_key_exists("Periods",$param) and $param["Periods"] !== null) {
             $this->Periods = $param["Periods"];
+        }
+
+        if (array_key_exists("IsLatenessMetric",$param) and $param["IsLatenessMetric"] !== null) {
+            $this->IsLatenessMetric = $param["IsLatenessMetric"];
         }
     }
 }

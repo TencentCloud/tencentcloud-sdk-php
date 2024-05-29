@@ -29,13 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEncryptionMode() 获取敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1:   使用MD5加密
-2:   使用SHA256
+1：使用MD5加密
+2：使用SHA256
+3：使用SM3加密
  * @method void setEncryptionMode(string $EncryptionMode) 设置敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1:   使用MD5加密
-2:   使用SHA256
+1：使用MD5加密
+2：使用SHA256
+3：使用SM3加密
  */
 class EncryptedPhoneVerificationRequest extends AbstractModel
 {
@@ -58,8 +60,9 @@ class EncryptedPhoneVerificationRequest extends AbstractModel
      * @var string 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1:   使用MD5加密
-2:   使用SHA256
+1：使用MD5加密
+2：使用SHA256
+3：使用SM3加密
      */
     public $EncryptionMode;
 
@@ -70,8 +73,9 @@ class EncryptedPhoneVerificationRequest extends AbstractModel
      * @param string $EncryptionMode 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1:   使用MD5加密
-2:   使用SHA256
+1：使用MD5加密
+2：使用SHA256
+3：使用SM3加密
      */
     function __construct()
     {

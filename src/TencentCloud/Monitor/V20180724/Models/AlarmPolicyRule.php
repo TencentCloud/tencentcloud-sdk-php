@@ -124,6 +124,10 @@ re=正则匹配
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置告警分级阈值配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsLatenessMetric() 获取是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -248,6 +252,12 @@ re=正则匹配
     public $HierarchicalValue;
 
     /**
+     * @var integer 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLatenessMetric;
+
+    /**
      * @param string $MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
@@ -299,6 +309,8 @@ re=正则匹配
      * @param float $ValueMin 最小值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmHierarchicalValue $HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsLatenessMetric 是否延迟指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -382,6 +394,10 @@ re=正则匹配
         if (array_key_exists("HierarchicalValue",$param) and $param["HierarchicalValue"] !== null) {
             $this->HierarchicalValue = new AlarmHierarchicalValue();
             $this->HierarchicalValue->deserialize($param["HierarchicalValue"]);
+        }
+
+        if (array_key_exists("IsLatenessMetric",$param) and $param["IsLatenessMetric"] !== null) {
+            $this->IsLatenessMetric = $param["IsLatenessMetric"];
         }
     }
 }

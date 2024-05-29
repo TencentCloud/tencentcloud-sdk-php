@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeParts(array $CodeParts) 设置码段配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUnit() 获取包装单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnit(string $Unit) 设置包装单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSceneCode() 获取场景值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneCode(integer $SceneCode) 设置场景值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackSpec extends AbstractModel
 {
@@ -65,12 +73,28 @@ class PackSpec extends AbstractModel
     public $CodeParts;
 
     /**
+     * @var string 包装单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unit;
+
+    /**
+     * @var integer 场景值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneCode;
+
+    /**
      * @param integer $Level 层级
      * @param integer $Rate 比例
      * @param integer $Amount 数量
      * @param string $CustomId 码规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CodeParts 码段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Unit 包装单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SceneCode 场景值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -109,6 +133,14 @@ class PackSpec extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CodeParts, $obj);
             }
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
         }
     }
 }

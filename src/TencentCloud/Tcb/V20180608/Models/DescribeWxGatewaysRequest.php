@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
+ * @method string getGatewayId() 获取网关ID
+ * @method void setGatewayId(string $GatewayId) 设置网关ID
  * @method string getGatewayName() 获取服务名称，精确匹配
  * @method void setGatewayName(string $GatewayName) 设置服务名称，精确匹配
  * @method integer getLimit() 获取分页参数
@@ -35,6 +37,11 @@ class DescribeWxGatewaysRequest extends AbstractModel
      * @var string 环境ID
      */
     public $EnvId;
+
+    /**
+     * @var string 网关ID
+     */
+    public $GatewayId;
 
     /**
      * @var string 服务名称，精确匹配
@@ -53,6 +60,7 @@ class DescribeWxGatewaysRequest extends AbstractModel
 
     /**
      * @param string $EnvId 环境ID
+     * @param string $GatewayId 网关ID
      * @param string $GatewayName 服务名称，精确匹配
      * @param integer $Limit 分页参数
      * @param integer $Offset 分页参数
@@ -72,6 +80,10 @@ class DescribeWxGatewaysRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
         if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {

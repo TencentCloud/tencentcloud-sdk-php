@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileURL() 获取文件下载 URL
  * @method void setFileURL(string $FileURL) 设置文件下载 URL
- * @method integer getExpireTime() 获取过期时间 UNIX 时间戳
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间 UNIX 时间戳
+ * @method integer getExpireTime() 获取过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class GenerateCloudStorageAIServiceTaskFileURLResponse extends AbstractModel
     public $FileURL;
 
     /**
-     * @var integer 过期时间 UNIX 时间戳
+     * @var integer 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
      */
     public $ExpireTime;
 
@@ -46,7 +46,7 @@ class GenerateCloudStorageAIServiceTaskFileURLResponse extends AbstractModel
 
     /**
      * @param string $FileURL 文件下载 URL
-     * @param integer $ExpireTime 过期时间 UNIX 时间戳
+     * @param integer $ExpireTime 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetFirewallTemplateRules请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID。
- * @method void setTemplateId(string $TemplateId) 设置模板ID。
- * @method array getTemplateRules() 获取重置后的防火墙模板规则列表。
- * @method void setTemplateRules(array $TemplateRules) 设置重置后的防火墙模板规则列表。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
+ * @method array getTemplateRules() 获取重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
+ * @method void setTemplateRules(array $TemplateRules) 设置重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
  */
 class ResetFirewallTemplateRulesRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID。
+     * @var string 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
      */
     public $TemplateId;
 
     /**
-     * @var array 重置后的防火墙模板规则列表。
+     * @var array 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
      */
     public $TemplateRules;
 
     /**
-     * @param string $TemplateId 模板ID。
-     * @param array $TemplateRules 重置后的防火墙模板规则列表。
+     * @param string $TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
+     * @param array $TemplateRules 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
      */
     function __construct()
     {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置关联产品ID
  * @method integer getRelateType() 获取层级码时是否提前生成关联关系，默认为 1
  * @method void setRelateType(integer $RelateType) 设置层级码时是否提前生成关联关系，默认为 1
+ * @method integer getSceneCode() 获取场景值
+ * @method void setSceneCode(integer $SceneCode) 设置场景值
  */
 class CreateCodePackRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateCodePackRequest extends AbstractModel
     public $RelateType;
 
     /**
+     * @var integer 场景值
+     */
+    public $SceneCode;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $CodeLength 码长度
      * @param string $CodeType 码类型 alphabet 字母, number 数字, mixin 混合
@@ -120,6 +127,7 @@ class CreateCodePackRequest extends AbstractModel
      * @param integer $SerialType 是否有流水码 0:无 1:有
      * @param string $ProductId 关联产品ID
      * @param integer $RelateType 层级码时是否提前生成关联关系，默认为 1
+     * @param integer $SceneCode 场景值
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class CreateCodePackRequest extends AbstractModel
 
         if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
             $this->RelateType = $param["RelateType"];
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
         }
     }
 }

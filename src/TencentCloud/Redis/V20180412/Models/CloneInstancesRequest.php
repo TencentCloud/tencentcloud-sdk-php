@@ -66,6 +66,11 @@ use TencentCloud\Common\AbstractModel;
 - 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
  * @method array getAlarmPolicyList() 获取指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
  * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+ * @method string getCloneTime() 获取克隆指定恢复数据的时间。
+仅支持已开通秒级备份的实例
+
+ * @method void setCloneTime(string $CloneTime) 设置克隆指定恢复数据的时间。
+仅支持已开通秒级备份的实例
  */
 class CloneInstancesRequest extends AbstractModel
 {
@@ -169,6 +174,13 @@ class CloneInstancesRequest extends AbstractModel
     public $AlarmPolicyList;
 
     /**
+     * @var string 克隆指定恢复数据的时间。
+仅支持已开通秒级备份的实例
+
+     */
+    public $CloneTime;
+
+    /**
      * @param string $InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      * @param integer $GoodsNum 单次克隆实例的数量。
 - 包年包月每次购买最大数量为100。
@@ -192,6 +204,8 @@ class CloneInstancesRequest extends AbstractModel
 - 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
 - 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
      * @param array $AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+     * @param string $CloneTime 克隆指定恢复数据的时间。
+仅支持已开通秒级备份的实例
      */
     function __construct()
     {
@@ -290,6 +304,10 @@ class CloneInstancesRequest extends AbstractModel
 
         if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
             $this->AlarmPolicyList = $param["AlarmPolicyList"];
+        }
+
+        if (array_key_exists("CloneTime",$param) and $param["CloneTime"] !== null) {
+            $this->CloneTime = $param["CloneTime"];
         }
     }
 }

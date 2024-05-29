@@ -116,6 +116,26 @@ use TencentCloud\Common\AbstractModel;
 0:否, 1:是
  * @method void setRelateType(integer $RelateType) 设置码关系是否预关联
 0:否, 1:是
+ * @method integer getSceneCode() 获取场景码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneCode(integer $SceneCode) 设置场景码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCodeRule() 获取码规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodeRule(string $CodeRule) 设置码规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsedAmount() 获取已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedAmount(integer $UsedAmount) 设置已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSerialStart() 获取开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSerialStart(integer $SerialStart) 设置开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSerialEnd() 获取结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSerialEnd(integer $SerialEnd) 设置结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodePack extends AbstractModel
 {
@@ -264,6 +284,36 @@ class CodePack extends AbstractModel
     public $RelateType;
 
     /**
+     * @var integer 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneCode;
+
+    /**
+     * @var string 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CodeRule;
+
+    /**
+     * @var integer 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedAmount;
+
+    /**
+     * @var integer 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SerialStart;
+
+    /**
+     * @var integer 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SerialEnd;
+
+    /**
      * @param string $PackId 码id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业id
@@ -312,6 +362,16 @@ class CodePack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RelateType 码关系是否预关联
 0:否, 1:是
+     * @param integer $SceneCode 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CodeRule 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UsedAmount 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SerialStart 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SerialEnd 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -425,6 +485,26 @@ class CodePack extends AbstractModel
 
         if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
             $this->RelateType = $param["RelateType"];
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
+        }
+
+        if (array_key_exists("CodeRule",$param) and $param["CodeRule"] !== null) {
+            $this->CodeRule = $param["CodeRule"];
+        }
+
+        if (array_key_exists("UsedAmount",$param) and $param["UsedAmount"] !== null) {
+            $this->UsedAmount = $param["UsedAmount"];
+        }
+
+        if (array_key_exists("SerialStart",$param) and $param["SerialStart"] !== null) {
+            $this->SerialStart = $param["SerialStart"];
+        }
+
+        if (array_key_exists("SerialEnd",$param) and $param["SerialEnd"] !== null) {
+            $this->SerialEnd = $param["SerialEnd"];
         }
     }
 }

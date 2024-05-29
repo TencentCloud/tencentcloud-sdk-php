@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResType(string $ResType) 设置资源类型 batch:批次, order_in 入库, order_out: 出入
  * @method string getResId() 获取资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
  * @method void setResId(string $ResId) 设置资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
+ * @method integer getSceneCode() 获取应用场景
+ * @method void setSceneCode(integer $SceneCode) 设置应用场景
+ * @method string getStatus() 获取码包状态
+ * @method void setStatus(string $Status) 设置码包状态
  */
 class DescribeCodePacksRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeCodePacksRequest extends AbstractModel
     public $ResId;
 
     /**
+     * @var integer 应用场景
+     */
+    public $SceneCode;
+
+    /**
+     * @var string 码包状态
+     */
+    public $Status;
+
+    /**
      * @param integer $PageSize 每页数量
      * @param integer $PageNumber 页数
      * @param string $Keyword 查询关键字
@@ -80,6 +94,8 @@ class DescribeCodePacksRequest extends AbstractModel
      * @param integer $SerialType 是否有流水码 0:无 1:有
      * @param string $ResType 资源类型 batch:批次, order_in 入库, order_out: 出入
      * @param string $ResId 资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
+     * @param integer $SceneCode 应用场景
+     * @param string $Status 码包状态
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class DescribeCodePacksRequest extends AbstractModel
 
         if (array_key_exists("ResId",$param) and $param["ResId"] !== null) {
             $this->ResId = $param["ResId"];
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

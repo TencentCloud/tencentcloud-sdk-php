@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 安全组出入规则
  *
  * @method string getAction() 获取标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
  * @method void setAction(string $Action) 设置标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
  * @method string getIp() 获取出入数据库的IP地址
  * @method void setIp(string $Ip) 设置出入数据库的IP地址
  * @method string getPort() 获取端口号。
@@ -33,6 +37,8 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
 {
     /**
      * @var string 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
      */
     public $Action;
 
@@ -53,6 +59,8 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
 
     /**
      * @param string $Action 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
      * @param string $Ip 出入数据库的IP地址
      * @param string $Port 端口号。
      * @param string $Proto 协议类型。

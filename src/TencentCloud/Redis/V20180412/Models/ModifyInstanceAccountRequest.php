@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：填写master或者replication，表示主节点或者从节点
  * @method string getPrivilege() 获取子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
  * @method void setPrivilege(string $Privilege) 设置子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
- * @method boolean getNoAuth() 获取true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
- * @method void setNoAuth(boolean $NoAuth) 设置true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+ * @method boolean getNoAuth() 获取true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+ * @method void setNoAuth(boolean $NoAuth) 设置true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Privilege;
 
     /**
-     * @var boolean true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * @var boolean true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
      */
     public $NoAuth;
 
@@ -79,7 +79,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
      * @param string $Remark 子账号描述信息
      * @param array $ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      * @param string $Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
-     * @param boolean $NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * @param boolean $NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
      */
     function __construct()
     {

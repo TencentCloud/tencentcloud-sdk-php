@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceSnapshot请求参数结构体
  *
- * @method string getInstanceId() 获取需要创建快照的实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置需要创建快照的实例 ID。
+ * @method string getInstanceId() 获取需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
+ * @method void setInstanceId(string $InstanceId) 设置需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
  * @method string getSnapshotName() 获取快照名称，最长为 60 个字符。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称，最长为 60 个字符。
  */
 class CreateInstanceSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 需要创建快照的实例 ID。
+     * @var string 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class CreateInstanceSnapshotRequest extends AbstractModel
     public $SnapshotName;
 
     /**
-     * @param string $InstanceId 需要创建快照的实例 ID。
+     * @param string $InstanceId 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
      * @param string $SnapshotName 快照名称，最长为 60 个字符。
      */
     function __construct()

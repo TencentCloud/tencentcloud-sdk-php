@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbSet(array $ClbSet) 设置堡垒机资源LB
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDomainCount() 获取网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainCount(integer $DomainCount) 设置网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsedDomainCount() 获取已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedDomainCount(integer $UsedDomainCount) 设置已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -240,6 +248,18 @@ class Resource extends AbstractModel
     public $ClbSet;
 
     /**
+     * @var integer 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainCount;
+
+    /**
+     * @var integer 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedDomainCount;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -271,6 +291,10 @@ class Resource extends AbstractModel
      * @param string $LogDeliveryArgs 日志投递规格信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClbSet 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DomainCount 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UsedDomainCount 已使用网络域个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -409,6 +433,14 @@ class Resource extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClbSet, $obj);
             }
+        }
+
+        if (array_key_exists("DomainCount",$param) and $param["DomainCount"] !== null) {
+            $this->DomainCount = $param["DomainCount"];
+        }
+
+        if (array_key_exists("UsedDomainCount",$param) and $param["UsedDomainCount"] !== null) {
+            $this->UsedDomainCount = $param["UsedDomainCount"];
         }
     }
 }

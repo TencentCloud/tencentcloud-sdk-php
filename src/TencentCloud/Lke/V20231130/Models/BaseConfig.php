@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取应用名称
  * @method void setName(string $Name) 设置应用名称
- * @method string getAvatar() 获取机器人头像
- * @method void setAvatar(string $Avatar) 设置机器人头像
- * @method string getDesc() 获取机器人描述
- * @method void setDesc(string $Desc) 设置机器人描述
+ * @method string getAvatar() 获取应用头像
+ * @method void setAvatar(string $Avatar) 设置应用头像
+ * @method string getDesc() 获取应用描述
+ * @method void setDesc(string $Desc) 设置应用描述
  */
 class BaseConfig extends AbstractModel
 {
@@ -35,19 +35,19 @@ class BaseConfig extends AbstractModel
     public $Name;
 
     /**
-     * @var string 机器人头像
+     * @var string 应用头像
      */
     public $Avatar;
 
     /**
-     * @var string 机器人描述
+     * @var string 应用描述
      */
     public $Desc;
 
     /**
      * @param string $Name 应用名称
-     * @param string $Avatar 机器人头像
-     * @param string $Desc 机器人描述
+     * @param string $Avatar 应用头像
+     * @param string $Desc 应用描述
      */
     function __construct()
     {

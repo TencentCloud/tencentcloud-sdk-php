@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpList(array $IpList) 设置IP列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpAccessControlItem extends AbstractModel
 {
@@ -109,6 +113,12 @@ class IpAccessControlItem extends AbstractModel
     public $IpList;
 
     /**
+     * @var integer 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Id mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 动作
@@ -123,6 +133,8 @@ class IpAccessControlItem extends AbstractModel
      * @param integer $RuleId 55000001
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 规则创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,10 @@ class IpAccessControlItem extends AbstractModel
 
         if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
             $this->IpList = $param["IpList"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

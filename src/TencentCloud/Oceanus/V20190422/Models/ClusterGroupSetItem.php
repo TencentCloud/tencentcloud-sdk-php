@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunningCu(float $RunningCu) 设置运行中CU
  * @method integer getPayMode() 获取付费模式
  * @method void setPayMode(integer $PayMode) 设置付费模式
+ * @method SubEks getSubEks() 获取弹性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubEks(SubEks $SubEks) 设置弹性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterGroupSetItem extends AbstractModel
 {
@@ -157,6 +161,12 @@ class ClusterGroupSetItem extends AbstractModel
     public $PayMode;
 
     /**
+     * @var SubEks 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubEks;
+
+    /**
      * @param string $ClusterId clusterGroup 的 SerialId
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -176,6 +186,8 @@ class ClusterGroupSetItem extends AbstractModel
      * @param float $FreeCu 细粒度资源下的空闲CU
      * @param float $RunningCu 运行中CU
      * @param integer $PayMode 付费模式
+     * @param SubEks $SubEks 弹性
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -264,6 +276,11 @@ class ClusterGroupSetItem extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("SubEks",$param) and $param["SubEks"] !== null) {
+            $this->SubEks = new SubEks();
+            $this->SubEks->deserialize($param["SubEks"]);
         }
     }
 }

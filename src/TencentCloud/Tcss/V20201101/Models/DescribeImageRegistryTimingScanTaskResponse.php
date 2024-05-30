@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanScope(integer $ScanScope) 设置扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
  * @method array getNamespace() 获取命名空间
  * @method void setNamespace(array $Namespace) 设置命名空间
+ * @method array getExcludeImageAssetIds() 获取排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExcludeImageAssetIds(array $ExcludeImageAssetIds) 设置排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -136,6 +140,12 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
     public $Namespace;
 
     /**
+     * @var array 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExcludeImageAssetIds;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -160,6 +170,8 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
      * @param boolean $ContainerRunning 是否存在运行中的容器	
      * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
      * @param array $Namespace 命名空间
+     * @param array $ExcludeImageAssetIds 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -230,6 +242,10 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ExcludeImageAssetIds",$param) and $param["ExcludeImageAssetIds"] !== null) {
+            $this->ExcludeImageAssetIds = $param["ExcludeImageAssetIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

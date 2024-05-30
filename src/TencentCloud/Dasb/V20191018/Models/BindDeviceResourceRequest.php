@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceIdSet(array $DeviceIdSet) 设置资产ID集合
  * @method string getResourceId() 获取堡垒机服务ID
  * @method void setResourceId(string $ResourceId) 设置堡垒机服务ID
+ * @method string getDomainId() 获取网络域ID
+ * @method void setDomainId(string $DomainId) 设置网络域ID
  */
 class BindDeviceResourceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BindDeviceResourceRequest extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string 网络域ID
+     */
+    public $DomainId;
+
+    /**
      * @param array $DeviceIdSet 资产ID集合
      * @param string $ResourceId 堡垒机服务ID
+     * @param string $DomainId 网络域ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BindDeviceResourceRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
         }
     }
 }

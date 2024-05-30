@@ -150,6 +150,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebUIType(integer $WebUIType) 设置0 公网访问 // 1 内网访问	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getType() 获取2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(integer $Type) 设置2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SubEks getSubEks() 获取子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubEks(SubEks $SubEks) 设置子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgentSerialId() 获取上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentSerialId(string $AgentSerialId) 设置上级集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -383,6 +395,24 @@ class Cluster extends AbstractModel
     public $WebUIType;
 
     /**
+     * @var integer 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var SubEks 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubEks;
+
+    /**
+     * @var string 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentSerialId;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -447,6 +477,12 @@ class Cluster extends AbstractModel
      * @param array $SqlGateways Gateway信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WebUIType 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Type 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubEks $SubEks 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgentSerialId 上级集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -655,6 +691,19 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("WebUIType",$param) and $param["WebUIType"] !== null) {
             $this->WebUIType = $param["WebUIType"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SubEks",$param) and $param["SubEks"] !== null) {
+            $this->SubEks = new SubEks();
+            $this->SubEks->deserialize($param["SubEks"]);
+        }
+
+        if (array_key_exists("AgentSerialId",$param) and $param["AgentSerialId"] !== null) {
+            $this->AgentSerialId = $param["AgentSerialId"];
         }
     }
 }

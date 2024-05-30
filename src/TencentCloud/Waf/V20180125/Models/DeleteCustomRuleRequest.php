@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置删除的规则ID
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method void setEdition(string $Edition) 设置WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
+ * @method array getDomainRuleIdList() 获取批量删除的规则列表
+ * @method void setDomainRuleIdList(array $DomainRuleIdList) 设置批量删除的规则列表
  */
 class DeleteCustomRuleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteCustomRuleRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var array 批量删除的规则列表
+     */
+    public $DomainRuleIdList;
+
+    /**
      * @param string $Domain 删除的域名
      * @param string $RuleId 删除的规则ID
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
+     * @param array $DomainRuleIdList 批量删除的规则列表
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DeleteCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("DomainRuleIdList",$param) and $param["DomainRuleIdList"] !== null) {
+            $this->DomainRuleIdList = [];
+            foreach ($param["DomainRuleIdList"] as $key => $value){
+                $obj = new DomainRuleId();
+                $obj->deserialize($value);
+                array_push($this->DomainRuleIdList, $obj);
+            }
         }
     }
 }

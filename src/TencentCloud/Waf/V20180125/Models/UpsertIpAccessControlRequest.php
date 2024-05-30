@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 全局域名为：global
  * @method void setDomain(string $Domain) 设置具体域名如：test.qcloudwaf.com
 全局域名为：global
- * @method array getItems() 获取ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
- * @method void setItems(array $Items) 设置ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+ * @method array getItems() 获取IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+ * @method void setItems(array $Items) 设置IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
- * @method string getSourceType() 获取是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
- * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+ * @method string getSourceType() 获取可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+ * @method void setSourceType(string $SourceType) 设置可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
  */
 class UpsertIpAccessControlRequest extends AbstractModel
 {
@@ -42,7 +42,7 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var array ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @var array IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      */
     public $Items;
 
@@ -57,17 +57,17 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var string 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+     * @var string 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public $SourceType;
 
     /**
      * @param string $Domain 具体域名如：test.qcloudwaf.com
 全局域名为：global
-     * @param array $Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @param array $Items IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $InstanceId 实例Id
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
-     * @param string $SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+     * @param string $SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     function __construct()
     {

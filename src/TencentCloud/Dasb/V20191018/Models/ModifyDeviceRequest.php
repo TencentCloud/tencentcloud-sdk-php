@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupIdSet(array $GroupIdSet) 设置资产所属组ID集合
  * @method string getDepartmentId() 获取资产所属部门ID
  * @method void setDepartmentId(string $DepartmentId) 设置资产所属部门ID
+ * @method string getDomainId() 获取网络域Id
+ * @method void setDomainId(string $DomainId) 设置网络域Id
  */
 class ModifyDeviceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyDeviceRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var string 网络域Id
+     */
+    public $DomainId;
+
+    /**
      * @param integer $Id 资产记录ID
      * @param integer $Port 管理端口
      * @param array $GroupIdSet 资产所属组ID集合
      * @param string $DepartmentId 资产所属部门ID
+     * @param string $DomainId 网络域Id
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyDeviceRequest extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
         }
     }
 }

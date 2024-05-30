@@ -160,6 +160,8 @@ https：使用https协议回源
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
  * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
+ * @method integer getProbeStatus() 获取0: 禁用拨测, 1: 启用拨测。默认启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置0: 禁用拨测, 1: 启用拨测。默认启用拨测
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -378,6 +380,11 @@ https：使用https协议回源
     public $ProxyBuffer;
 
     /**
+     * @var integer 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public $ProbeStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 必填项。域名唯一ID
      * @param string $InstanceID 必填项。域名所属实例id
@@ -448,6 +455,7 @@ https：使用https协议回源
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
      * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     * @param integer $ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
      */
     function __construct()
     {
@@ -609,6 +617,10 @@ https：使用https协议回源
 
         if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
             $this->ProxyBuffer = $param["ProxyBuffer"];
+        }
+
+        if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
+            $this->ProbeStatus = $param["ProbeStatus"];
         }
     }
 }

@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCRuleItems extends AbstractModel
 {
@@ -135,6 +139,12 @@ class CCRuleItems extends AbstractModel
     public $SessionApplied;
 
     /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Name 名字
      * @param integer $Status 状态
      * @param integer $Advance 模式
@@ -151,6 +161,8 @@ class CCRuleItems extends AbstractModel
      * @param string $EventId 事件id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SessionApplied 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +236,10 @@ class CCRuleItems extends AbstractModel
 
         if (array_key_exists("SessionApplied",$param) and $param["SessionApplied"] !== null) {
             $this->SessionApplied = $param["SessionApplied"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

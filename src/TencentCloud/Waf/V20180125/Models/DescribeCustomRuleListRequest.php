@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置asc或者desc
  * @method string getBy() 获取exp_ts或者mod_ts
  * @method void setBy(string $By) 设置exp_ts或者mod_ts
+ * @method array getDomainList() 获取查询的域名列表,访问控制页面不用传
+ * @method void setDomainList(array $DomainList) 设置查询的域名列表,访问控制页面不用传
  */
 class DescribeCustomRuleListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeCustomRuleListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var array 查询的域名列表,访问控制页面不用传
+     */
+    public $DomainList;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Offset 偏移
      * @param integer $Limit 容量
      * @param array $Filters 过滤数组,name可以是如下的值： RuleID,RuleName,Match
      * @param string $Order asc或者desc
      * @param string $By exp_ts或者mod_ts
+     * @param array $DomainList 查询的域名列表,访问控制页面不用传
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeCustomRuleListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
+            $this->DomainList = $param["DomainList"];
         }
     }
 }

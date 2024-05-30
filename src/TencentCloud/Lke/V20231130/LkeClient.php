@@ -25,7 +25,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 /**
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
- * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建只是引擎应用，包括：知识管理应用、知识摘要应用、标签提取应用。
+ * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建属性
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答

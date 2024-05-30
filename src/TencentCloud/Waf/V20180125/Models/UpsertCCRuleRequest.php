@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionApplied(array $SessionApplied) 设置规则需要启用的SessionID
  * @method integer getRuleId() 获取规则ID，新增时填0
  * @method void setRuleId(integer $RuleId) 设置规则ID，新增时填0
+ * @method integer getCreateTime() 获取规则创建时间
+ * @method void setCreateTime(integer $CreateTime) 设置规则创建时间
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class UpsertCCRuleRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 规则创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -160,6 +167,7 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $EventId 添加规则的来源事件id
      * @param array $SessionApplied 规则需要启用的SessionID
      * @param integer $RuleId 规则ID，新增时填0
+     * @param integer $CreateTime 规则创建时间
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

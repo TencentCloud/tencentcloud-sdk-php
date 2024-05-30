@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议
  * @method integer getStatus() 获取状态
  * @method void setStatus(integer $Status) 设置状态
+ * @method string getModifyTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheUrlItems extends AbstractModel
 {
@@ -66,12 +74,28 @@ class CacheUrlItems extends AbstractModel
     public $Status;
 
     /**
+     * @var string 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $Id 标识
      * @param string $Name 名字
      * @param string $Domain 域名
      * @param string $Uri 网址
      * @param string $Protocol 协议
      * @param integer $Status 状态
+     * @param string $ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +132,14 @@ class CacheUrlItems extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

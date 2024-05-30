@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置开关的状态，1是开启、0是关闭
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method void setEdition(string $Edition) 设置WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
+ * @method array getDomainRuleIdList() 获取规则id
+ * @method void setDomainRuleIdList(array $DomainRuleIdList) 设置规则id
  */
 class ModifyCustomRuleStatusRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyCustomRuleStatusRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var array 规则id
+     */
+    public $DomainRuleIdList;
+
+    /**
      * @param string $Domain 域名
      * @param integer $RuleId 规则ID
      * @param integer $Status 开关的状态，1是开启、0是关闭
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
+     * @param array $DomainRuleIdList 规则id
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ModifyCustomRuleStatusRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("DomainRuleIdList",$param) and $param["DomainRuleIdList"] !== null) {
+            $this->DomainRuleIdList = [];
+            foreach ($param["DomainRuleIdList"] as $key => $value){
+                $obj = new DomainRuleId();
+                $obj->deserialize($value);
+                array_push($this->DomainRuleIdList, $obj);
+            }
         }
     }
 }

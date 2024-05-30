@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置需要添加策略的域名
  * @method string getBypass() 获取放行的详情
  * @method void setBypass(string $Bypass) 设置放行的详情
+ * @method string getJobType() 获取定时任务类型
+ * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method JobDateTime getJobDateTime() 获取定时任务配置
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
  */
 class AddCustomWhiteRuleRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class AddCustomWhiteRuleRequest extends AbstractModel
     public $Bypass;
 
     /**
+     * @var string 定时任务类型
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 定时任务配置
+     */
+    public $JobDateTime;
+
+    /**
      * @param string $Name 规则名称
      * @param string $SortId 优先级
      * @param string $ExpireTime 过期时间
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
      * @param string $Bypass 放行的详情
+     * @param string $JobType 定时任务类型
+     * @param JobDateTime $JobDateTime 定时任务配置
      */
     function __construct()
     {
@@ -113,6 +129,15 @@ class AddCustomWhiteRuleRequest extends AbstractModel
 
         if (array_key_exists("Bypass",$param) and $param["Bypass"] !== null) {
             $this->Bypass = $param["Bypass"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
         }
     }
 }

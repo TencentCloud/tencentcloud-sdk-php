@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置规则名称
  * @method string getSortId() 获取优先级
  * @method void setSortId(string $SortId) 设置优先级
- * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
- * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
  * @method array getStrategies() 获取策略详情
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getDomain() 获取需要添加策略的域名
@@ -34,12 +32,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionType(string $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
  * @method string getRedirect() 获取如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method void setRedirect(string $Redirect) 设置如果动作是重定向，则表示重定向的地址；其他情况可以为空
+ * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method string getBypass() 获取放行的详情
  * @method void setBypass(string $Bypass) 设置放行的详情
  * @method string getEventId() 获取添加规则的来源，默认为空
  * @method void setEventId(string $EventId) 设置添加规则的来源，默认为空
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method JobDateTime getJobDateTime() 获取规则执行的时间
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置规则执行的时间
+ * @method string getSource() 获取规则来源，判断是不是小程序的
+ * @method void setSource(string $Source) 设置规则来源，判断是不是小程序的
+ * @method string getLabel() 获取规则标签，小程序规则用，标识是内置规则还是自定义规则
+ * @method void setLabel(string $Label) 设置规则标签，小程序规则用，标识是内置规则还是自定义规则
+ * @method integer getStatus() 获取开关状态，小程序风控规则的时候传该值
+ * @method void setStatus(integer $Status) 设置开关状态，小程序风控规则的时候传该值
+ * @method string getPageId() 获取拦截页面id
+ * @method void setPageId(string $PageId) 设置拦截页面id
  */
 class AddCustomRuleRequest extends AbstractModel
 {
@@ -52,11 +64,6 @@ class AddCustomRuleRequest extends AbstractModel
      * @var string 优先级
      */
     public $SortId;
-
-    /**
-     * @var string 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
-     */
-    public $ExpireTime;
 
     /**
      * @var array 策略详情
@@ -79,6 +86,11 @@ class AddCustomRuleRequest extends AbstractModel
     public $Redirect;
 
     /**
+     * @var string 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     */
+    public $ExpireTime;
+
+    /**
      * @var string WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public $Edition;
@@ -94,16 +106,52 @@ class AddCustomRuleRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 规则执行的时间
+     */
+    public $JobDateTime;
+
+    /**
+     * @var string 规则来源，判断是不是小程序的
+     */
+    public $Source;
+
+    /**
+     * @var string 规则标签，小程序规则用，标识是内置规则还是自定义规则
+     */
+    public $Label;
+
+    /**
+     * @var integer 开关状态，小程序风控规则的时候传该值
+     */
+    public $Status;
+
+    /**
+     * @var string 拦截页面id
+     */
+    public $PageId;
+
+    /**
      * @param string $Name 规则名称
      * @param string $SortId 优先级
-     * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
      * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
      * @param string $Redirect 如果动作是重定向，则表示重定向的地址；其他情况可以为空
+     * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $Bypass 放行的详情
      * @param string $EventId 添加规则的来源，默认为空
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @param JobDateTime $JobDateTime 规则执行的时间
+     * @param string $Source 规则来源，判断是不是小程序的
+     * @param string $Label 规则标签，小程序规则用，标识是内置规则还是自定义规则
+     * @param integer $Status 开关状态，小程序风控规则的时候传该值
+     * @param string $PageId 拦截页面id
      */
     function __construct()
     {
@@ -124,10 +172,6 @@ class AddCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("SortId",$param) and $param["SortId"] !== null) {
             $this->SortId = $param["SortId"];
-        }
-
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
         }
 
         if (array_key_exists("Strategies",$param) and $param["Strategies"] !== null) {
@@ -151,6 +195,10 @@ class AddCustomRuleRequest extends AbstractModel
             $this->Redirect = $param["Redirect"];
         }
 
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
         }
@@ -161,6 +209,31 @@ class AddCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
+            $this->PageId = $param["PageId"];
         }
     }
 }

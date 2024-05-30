@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUri(string $Uri) 设置匹配的URL
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAntiLeakageItem extends AbstractModel
 {
@@ -79,6 +83,12 @@ class DescribeAntiLeakageItem extends AbstractModel
     public $Uri;
 
     /**
+     * @var string 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
      * @param integer $RuleId 规则ID
      * @param string $Name 名称
      * @param integer $Status 状态值
@@ -87,6 +97,8 @@ class DescribeAntiLeakageItem extends AbstractModel
      * @param array $Strategies 匹配条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uri 匹配的URL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +145,10 @@ class DescribeAntiLeakageItem extends AbstractModel
 
         if (array_key_exists("Uri",$param) and $param["Uri"] !== null) {
             $this->Uri = $param["Uri"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

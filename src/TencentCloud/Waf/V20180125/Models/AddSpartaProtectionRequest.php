@@ -178,6 +178,8 @@ cdn-waf：CDN上的Web防护能力
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
  * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
+ * @method integer getProbeStatus() 获取0: 禁用拨测, 1: 启用拨测。默认启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置0: 禁用拨测, 1: 启用拨测。默认启用拨测
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -409,6 +411,11 @@ cdn-waf：CDN上的Web防护能力
     public $ProxyBuffer;
 
     /**
+     * @var integer 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public $ProbeStatus;
+
+    /**
      * @param string $Domain 需要防护的域名
      * @param integer $CertType 证书类型。
 0：仅配置HTTP监听端口，没有证书
@@ -488,6 +495,7 @@ cdn-waf：CDN上的Web防护能力
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
      * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     * @param integer $ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
      */
     function __construct()
     {
@@ -653,6 +661,10 @@ cdn-waf：CDN上的Web防护能力
 
         if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
             $this->ProxyBuffer = $param["ProxyBuffer"];
+        }
+
+        if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
+            $this->ProbeStatus = $param["ProbeStatus"];
         }
     }
 }

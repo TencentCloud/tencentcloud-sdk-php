@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(string $CloudType) 设置标记是否是混合云接入。hybrid表示混合云接入域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlbType() 获取标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlbType(string $AlbType) 设置标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBotStatus() 获取BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBotStatus(integer $BotStatus) 设置BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApiStatus() 获取API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiStatus(integer $ApiStatus) 设置API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDomainInfo extends AbstractModel
 {
@@ -106,6 +118,24 @@ class UserDomainInfo extends AbstractModel
     public $CloudType;
 
     /**
+     * @var string 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlbType;
+
+    /**
+     * @var integer BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BotStatus;
+
+    /**
+     * @var integer API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiStatus;
+
+    /**
      * @param integer $Appid 用户id
      * @param string $Domain 域名
      * @param string $DomainId 域名id
@@ -119,6 +149,12 @@ class UserDomainInfo extends AbstractModel
      * @param integer $Cls 指定域名是否写cls的开关 1:写 0:不写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlbType 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BotStatus BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApiStatus API开关状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +208,18 @@ class UserDomainInfo extends AbstractModel
 
         if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
             $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("AlbType",$param) and $param["AlbType"] !== null) {
+            $this->AlbType = $param["AlbType"];
+        }
+
+        if (array_key_exists("BotStatus",$param) and $param["BotStatus"] !== null) {
+            $this->BotStatus = $param["BotStatus"];
+        }
+
+        if (array_key_exists("ApiStatus",$param) and $param["ApiStatus"] !== null) {
+            $this->ApiStatus = $param["ApiStatus"];
         }
     }
 }

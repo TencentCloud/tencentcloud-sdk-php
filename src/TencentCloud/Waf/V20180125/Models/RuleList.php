@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置时间戳
  * @method integer getStatus() 获取开关状态
  * @method void setStatus(integer $Status) 设置开关状态
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleList extends AbstractModel
 {
@@ -66,12 +70,20 @@ class RuleList extends AbstractModel
     public $Status;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $Id 规则Id
      * @param array $Rules 规则列表的id
      * @param string $Url 请求url
      * @param string $Function 请求的方法
      * @param string $Time 时间戳
      * @param integer $Status 开关状态
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class RuleList extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

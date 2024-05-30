@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryType(array $RegistryType) 设置仓库类型 tcr,ccr,harbor
  * @method array getNamespace() 获取命名空间
  * @method void setNamespace(array $Namespace) 设置命名空间
+ * @method array getExcludeImageAssetIds() 获取排除的镜像资产id
+ * @method void setExcludeImageAssetIds(array $ExcludeImageAssetIds) 设置排除的镜像资产id
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -116,6 +118,11 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var array 排除的镜像资产id
+     */
+    public $ExcludeImageAssetIds;
+
+    /**
      * @param integer $ScanPeriod 定时扫描周期
      * @param boolean $Enable 定时扫描开关
      * @param string $ScanTime 定时扫描的时间
@@ -129,6 +136,7 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
      * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
      * @param array $RegistryType 仓库类型 tcr,ccr,harbor
      * @param array $Namespace 命名空间
+     * @param array $ExcludeImageAssetIds 排除的镜像资产id
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ExcludeImageAssetIds",$param) and $param["ExcludeImageAssetIds"] !== null) {
+            $this->ExcludeImageAssetIds = $param["ExcludeImageAssetIds"];
         }
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 02:00 时分
  * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
 02:00 时分
+ * @method array getExcludeImages() 获取排除扫描的镜像
+ * @method void setExcludeImages(array $ExcludeImages) 设置排除扫描的镜像
  */
 class CreateAssetImageScanSettingRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
     public $ScanEndTime;
 
     /**
+     * @var array 排除扫描的镜像
+     */
+    public $ExcludeImages;
+
+    /**
      * @param boolean $Enable 开关
      * @param string $ScanTime 扫描开始时间
 01:00 时分
@@ -121,6 +128,7 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
      * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
      * @param string $ScanEndTime 扫描结束时间
 02:00 时分
+     * @param array $ExcludeImages 排除扫描的镜像
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
 
         if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
             $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("ExcludeImages",$param) and $param["ExcludeImages"] !== null) {
+            $this->ExcludeImages = $param["ExcludeImages"];
         }
     }
 }

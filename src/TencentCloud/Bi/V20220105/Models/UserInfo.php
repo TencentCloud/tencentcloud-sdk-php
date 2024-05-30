@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCode(string $AreaCode) 设置手机号区号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserId() 获取企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserId(string $AppUserId) 设置企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserName() 获取企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserName(string $AppUserName) 设置企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
@@ -68,6 +76,18 @@ class UserInfo extends AbstractModel
     public $AreaCode;
 
     /**
+     * @var string 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserId;
+
+    /**
+     * @var string 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserName;
+
+    /**
      * @param string $UserId 用户ID
      * @param string $UserName 用户名
      * @param string $Email 邮箱
@@ -75,6 +95,10 @@ class UserInfo extends AbstractModel
      * @param string $PhoneNumber 手机号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AreaCode 手机号区号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserId 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserName 企微账号名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +132,14 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("AreaCode",$param) and $param["AreaCode"] !== null) {
             $this->AreaCode = $param["AreaCode"];
+        }
+
+        if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
+            $this->AppUserId = $param["AppUserId"];
+        }
+
+        if (array_key_exists("AppUserName",$param) and $param["AppUserName"] !== null) {
+            $this->AppUserName = $param["AppUserName"];
         }
     }
 }

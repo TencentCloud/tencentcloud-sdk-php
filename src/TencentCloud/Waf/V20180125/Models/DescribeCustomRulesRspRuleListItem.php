@@ -56,6 +56,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobType() 获取定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobType(string $JobType) 设置定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method JobDateTime getJobDateTime() 获取定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCronType() 获取周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCronType(string $CronType) 设置周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabel() 获取自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabel(string $Label) 设置自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPageId() 获取拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageId(string $PageId) 设置拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCustomRulesRspRuleListItem extends AbstractModel
 {
@@ -134,6 +158,42 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
     public $Source;
 
     /**
+     * @var string 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobDateTime;
+
+    /**
+     * @var string 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CronType;
+
+    /**
+     * @var string 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Label;
+
+    /**
+     * @var string 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageId;
+
+    /**
+     * @var string 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $ActionType 动作类型
      * @param string $Bypass 跳过的策略
      * @param string $CreateTime 创建时间
@@ -151,6 +211,18 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
      * @param integer $ValidStatus 生效状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobDateTime $JobDateTime 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CronType 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PageId 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -225,6 +297,31 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("CronType",$param) and $param["CronType"] !== null) {
+            $this->CronType = $param["CronType"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
+            $this->PageId = $param["PageId"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

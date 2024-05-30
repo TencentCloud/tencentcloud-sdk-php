@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SaveDoc请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method string getFileType() 获取文件类型(md|txt|docx|pdf|xlsx)
  * @method void setFileType(string $FileType) 设置文件类型(md|txt|docx|pdf|xlsx)
- * @method string getCosUrl() 获取cos路径
- * @method void setCosUrl(string $CosUrl) 设置cos路径
+ * @method string getCosUrl() 获取平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
+ * @method void setCosUrl(string $CosUrl) 设置平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
  * @method string getETag() 获取ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
  * @method void setETag(string $ETag) 设置ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
  * @method string getCosHash() 获取cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class SaveDocRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -73,7 +73,7 @@ class SaveDocRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var string cos路径
+     * @var string 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
      */
     public $CosUrl;
 
@@ -139,10 +139,10 @@ class SaveDocRequest extends AbstractModel
     public $Opt;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
      * @param string $FileType 文件类型(md|txt|docx|pdf|xlsx)
-     * @param string $CosUrl cos路径
+     * @param string $CosUrl 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
      * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
      * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
      * @param string $Size 文件大小

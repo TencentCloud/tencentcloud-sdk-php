@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
- * @method string getSourceType() 获取是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
- * @method void setSourceType(string $SourceType) 设置是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+ * @method string getSourceType() 获取可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+ * @method void setSourceType(string $SourceType) 设置可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
  */
@@ -73,7 +73,7 @@ class CreateIpAccessControlRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var string 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * @var string 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public $SourceType;
 
@@ -90,7 +90,7 @@ class CreateIpAccessControlRequest extends AbstractModel
      * @param integer $ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $InstanceId 实例Id
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
-     * @param string $SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * @param string $SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      * @param string $Note 备注
      */
     function __construct()

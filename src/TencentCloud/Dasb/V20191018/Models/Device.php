@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpPortSet(array $IpPortSet) 设置数据库资产的多节点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomainId() 获取网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainId(string $DomainId) 设置网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomainName() 获取网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainName(string $DomainName) 设置网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Device extends AbstractModel
 {
@@ -145,6 +153,18 @@ class Device extends AbstractModel
     public $IpPortSet;
 
     /**
+     * @var string 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainId;
+
+    /**
+     * @var string 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainName;
+
+    /**
      * @param integer $Id 资产ID
      * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
      * @param string $Name 资产名
@@ -163,6 +183,10 @@ class Device extends AbstractModel
      * @param Department $Department 资产所属部门
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpPortSet 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DomainId 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DomainName 网络域名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -247,6 +271,14 @@ class Device extends AbstractModel
 
         if (array_key_exists("IpPortSet",$param) and $param["IpPortSet"] !== null) {
             $this->IpPortSet = $param["IpPortSet"];
+        }
+
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
         }
     }
 }

@@ -46,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
 默认是0
  * @method void setExpireTime(integer $ExpireTime) 设置规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
 默认是0
+ * @method string getJobType() 获取定时任务类型
+ * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method JobDateTime getJobDateTime() 获取定时任务配置
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
+ * @method string getSource() 获取规则来源，判断是不是小程序的
+ * @method void setSource(string $Source) 设置规则来源，判断是不是小程序的
+ * @method integer getStatus() 获取开关状态，小程序风控规则的时候传该值
+ * @method void setStatus(integer $Status) 设置开关状态，小程序风控规则的时候传该值
+ * @method string getPageId() 获取拦截页面id
+ * @method void setPageId(string $PageId) 设置拦截页面id
  */
 class ModifyCustomRuleRequest extends AbstractModel
 {
@@ -103,6 +113,31 @@ class ModifyCustomRuleRequest extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 定时任务类型
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 定时任务配置
+     */
+    public $JobDateTime;
+
+    /**
+     * @var string 规则来源，判断是不是小程序的
+     */
+    public $Source;
+
+    /**
+     * @var integer 开关状态，小程序风控规则的时候传该值
+     */
+    public $Status;
+
+    /**
+     * @var string 拦截页面id
+     */
+    public $PageId;
+
+    /**
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
@@ -116,6 +151,11 @@ class ModifyCustomRuleRequest extends AbstractModel
 默认是100
      * @param integer $ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
 默认是0
+     * @param string $JobType 定时任务类型
+     * @param JobDateTime $JobDateTime 定时任务配置
+     * @param string $Source 规则来源，判断是不是小程序的
+     * @param integer $Status 开关状态，小程序风控规则的时候传该值
+     * @param string $PageId 拦截页面id
      */
     function __construct()
     {
@@ -173,6 +213,27 @@ class ModifyCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
+            $this->PageId = $param["PageId"];
         }
     }
 }

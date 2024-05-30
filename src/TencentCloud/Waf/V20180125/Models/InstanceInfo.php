@@ -152,6 +152,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastQpsExceedTime(string $LastQpsExceedTime) 设置最近一次超量时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MiniExtendPkg getMiniExtendPkg() 获取小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniExtendPkg(MiniExtendPkg $MiniExtendPkg) 设置小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingItem() 获取计费项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingItem(string $BillingItem) 设置计费项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -374,6 +382,18 @@ class InstanceInfo extends AbstractModel
     public $LastQpsExceedTime;
 
     /**
+     * @var MiniExtendPkg 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniExtendPkg;
+
+    /**
+     * @var string 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingItem;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -439,6 +459,10 @@ class InstanceInfo extends AbstractModel
      * @param integer $MiniMaxQPS 小程序qps峰值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastQpsExceedTime 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniExtendPkg $MiniExtendPkg 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingItem 计费项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -613,6 +637,15 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("LastQpsExceedTime",$param) and $param["LastQpsExceedTime"] !== null) {
             $this->LastQpsExceedTime = $param["LastQpsExceedTime"];
+        }
+
+        if (array_key_exists("MiniExtendPkg",$param) and $param["MiniExtendPkg"] !== null) {
+            $this->MiniExtendPkg = new MiniExtendPkg();
+            $this->MiniExtendPkg->deserialize($param["MiniExtendPkg"]);
+        }
+
+        if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
+            $this->BillingItem = $param["BillingItem"];
         }
     }
 }

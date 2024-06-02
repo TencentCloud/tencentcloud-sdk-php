@@ -38,7 +38,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
- * @method Models\DescribeAITranscriptionResponse DescribeAITranscription(Models\DescribeAITranscriptionRequest $req) 查询AI转录状态
+ * @method Models\DescribeAITranscriptionResponse DescribeAITranscription(Models\DescribeAITranscriptionRequest $req) 查询AI转录任务状态。
  * @method Models\DescribeCallDetailInfoResponse DescribeCallDetailInfo(Models\DescribeCallDetailInfoRequest $req) 查询指定时间内的用户列表及用户通话质量数据，最大可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
 **注意**：
 1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
@@ -173,7 +173,50 @@ xa0
  * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
- * @method Models\StartAITranscriptionResponse StartAITranscription(Models\StartAITranscriptionRequest $req) 这个接口调用后，后台会启动机器人，实时进行语音识别并下发字幕和会议记录。
+ * @method Models\StartAITranscriptionResponse StartAITranscription(Models\StartAITranscriptionRequest $req) 这个接口调用后，后台会启动转录机器人，实时进行语音识别并下发字幕和转录消息。
+转录机器人支持两种拉流方式，通过TranscriptionMode字段控制：
+- 拉取全房间的流。
+- 拉取特定用户的流。
+
+服务端实时下发字幕和会议记录有两种方式，通过IMAdminUserId和IMAdminUserSig字段控制：
+- 如果填写IMAdminUserId和IMAdminUserSig，服务端会调用IM的[发送群组消息](https://cloud.tencent.com/document/product/269/1629)API来向端上实时下发消息。客户端只需监听群组消息的回调即可，比如[web端回调](https://cloud.tencent.com/document/product/269/75319)。
+- 如果不填写IMAdminUserId和IMAdminUserSig，服务端使用TRTC自定义消息通道下发消息，CmdId固定是1。客户端只需监听自定义消息的回调即可，比如[c++回调](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565)。
+
+服务端实时下发的消息是JSON字符串，实时字幕具体格式如下：
+`{
+    "type": "subtitle",
+    "userid": "xxx",
+    "text": "xxx",
+    "translation_text": "xxx",
+    "start_time": "00:00:02",
+    "end_time": "00:00:05"
+}`
+字段作用如下：
+- type是subtitle，表示这是实时字幕消息。
+- userid表示是哪个用户说的话。
+- text是语音识别出的文本。
+- translation_text是text翻译后的文本，如果不启用翻译，则是空字符串。
+- start_time和end_time表示该字幕消息从任务开启后的开始和结束时间。
+
+转录消息具体格式如下：
+`{
+    "type": "transcription",
+    "userid": "xxx",
+    "text": "xxx",
+    "translation_text": "xx",
+    "start_time": "00:00:02",
+    "end_time": "00:00:05"
+}`
+字段作用如下：
+- type是transcription，表示这是转录消息。
+- 其余字段同实时字幕消息。
+
+转录消息和实时字幕消息的区别是，转录消息是完整的一句话，实时字幕消息则是这一句话的中间阶段。
+假如有一句完整的话，“今天天气怎么样？”，那么服务的下发消息的顺序可能是这样：
+- 字幕消息，“今天”
+- 字幕消息，“今天天气”
+- 字幕消息，“今天天气怎么样”
+- 转录消息，“今天天气怎么样？”
  * @method Models\StartMCUMixTranscodeResponse StartMCUMixTranscode(Models\StartMCUMixTranscodeRequest $req) 接口说明：启动云端混流，并指定混流画面中各路画面的布局位置。
 
 TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过此 API 接口，通知腾讯云服务端将多路视频画面合成一路，并指定每一路画面的位置，同时将多路声音进行混音，最终形成一路音视频流，以便用于录制和直播观看。房间销毁后混流自动结束。
@@ -317,13 +360,13 @@ ver：可以忽略。
 )
  * @method Models\StartWebRecordResponse StartWebRecord(Models\StartWebRecordRequest $req) 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
- * @method Models\StopAITranscriptionResponse StopAITranscription(Models\StopAITranscriptionRequest $req) 停止AI转录
+ * @method Models\StopAITranscriptionResponse StopAITranscription(Models\StopAITranscriptionRequest $req) 停止AI转录任务。
  * @method Models\StopMCUMixTranscodeResponse StopMCUMixTranscode(Models\StopMCUMixTranscodeRequest $req) 接口说明：结束云端混流
  * @method Models\StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomId(Models\StopMCUMixTranscodeByStrRoomIdRequest $req) 接口说明：结束云端混流
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) 停止转推任务。
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个输入在线媒体流任务。
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) 停止页面录制任务
- * @method Models\SummarizeTranscriptionResponse SummarizeTranscription(Models\SummarizeTranscriptionRequest $req) 对转录的文本进行总结
+ * @method Models\SummarizeTranscriptionResponse SummarizeTranscription(Models\SummarizeTranscriptionRequest $req) 对转录的文本进行总结。
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 更新转推任务。
 注：请参见启动转推任务的接口说明和使用说明。
  */

@@ -44,6 +44,12 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 
 1. ConsumerGroupName，名称模糊查询
 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
+ * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
+1. InstanceName, 名称模糊查询
+2. InstanceId，实例ID查询
+3. InstanceType, 实例类型查询，支持多选
+4. Version，实例版本查询
+当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDiskBackup请求参数结构体
  *
- * @method string getDiskId() 获取云硬盘 ID。当前只支持数据盘创建备份点。
- * @method void setDiskId(string $DiskId) 设置云硬盘 ID。当前只支持数据盘创建备份点。
- * @method string getDiskBackupName() 获取云硬盘备份点名称，最大长度90。
- * @method void setDiskBackupName(string $DiskBackupName) 设置云硬盘备份点名称，最大长度90。
+ * @method string getDiskId() 获取云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
+ * @method void setDiskId(string $DiskId) 设置云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
+ * @method string getDiskBackupName() 获取云硬盘备份点名称，最大长度为 90 。
+ * @method void setDiskBackupName(string $DiskBackupName) 设置云硬盘备份点名称，最大长度为 90 。
  */
 class CreateDiskBackupRequest extends AbstractModel
 {
     /**
-     * @var string 云硬盘 ID。当前只支持数据盘创建备份点。
+     * @var string 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
      */
     public $DiskId;
 
     /**
-     * @var string 云硬盘备份点名称，最大长度90。
+     * @var string 云硬盘备份点名称，最大长度为 90 。
      */
     public $DiskBackupName;
 
     /**
-     * @param string $DiskId 云硬盘 ID。当前只支持数据盘创建备份点。
-     * @param string $DiskBackupName 云硬盘备份点名称，最大长度90。
+     * @param string $DiskId 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
+     * @param string $DiskBackupName 云硬盘备份点名称，最大长度为 90 。
      */
     function __construct()
     {

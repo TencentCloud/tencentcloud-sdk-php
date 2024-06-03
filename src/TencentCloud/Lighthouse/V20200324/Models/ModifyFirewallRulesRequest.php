@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFirewallRules请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method array getFirewallRules() 获取防火墙规则列表。
- * @method void setFirewallRules(array $FirewallRules) 设置防火墙规则列表。
+ * @method string getInstanceId() 获取实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method array getFirewallRules() 获取防火墙规则列表。列表长度最大值是100。
+ * @method void setFirewallRules(array $FirewallRules) 设置防火墙规则列表。列表长度最大值是100。
  * @method integer getFirewallVersion() 获取防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
  * @method void setFirewallVersion(integer $FirewallVersion) 设置防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
  */
 class ModifyFirewallRulesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceId;
 
     /**
-     * @var array 防火墙规则列表。
+     * @var array 防火墙规则列表。列表长度最大值是100。
      */
     public $FirewallRules;
 
@@ -45,8 +45,8 @@ class ModifyFirewallRulesRequest extends AbstractModel
     public $FirewallVersion;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param array $FirewallRules 防火墙规则列表。
+     * @param string $InstanceId 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+     * @param array $FirewallRules 防火墙规则列表。列表长度最大值是100。
      * @param integer $FirewallVersion 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
      */
     function __construct()

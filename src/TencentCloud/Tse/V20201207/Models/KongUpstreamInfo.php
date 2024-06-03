@@ -104,6 +104,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfCamAuthEnable(boolean $ScfCamAuthEnable) 设置云函数是否开启CAM鉴权，不填时默认为开启(true)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScfIsBase64Encoded() 获取云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScfIsBase64Encoded(boolean $ScfIsBase64Encoded) 设置云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScfIsIntegratedResponse() 获取云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScfIsIntegratedResponse(boolean $ScfIsIntegratedResponse) 设置云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongUpstreamInfo extends AbstractModel
 {
@@ -234,6 +242,18 @@ class KongUpstreamInfo extends AbstractModel
     public $ScfCamAuthEnable;
 
     /**
+     * @var boolean 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScfIsBase64Encoded;
+
+    /**
+     * @var boolean 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScfIsIntegratedResponse;
+
+    /**
      * @param string $Host IP或域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
@@ -275,6 +295,10 @@ class KongUpstreamInfo extends AbstractModel
      * @param string $HealthStatus upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -377,6 +401,14 @@ class KongUpstreamInfo extends AbstractModel
 
         if (array_key_exists("ScfCamAuthEnable",$param) and $param["ScfCamAuthEnable"] !== null) {
             $this->ScfCamAuthEnable = $param["ScfCamAuthEnable"];
+        }
+
+        if (array_key_exists("ScfIsBase64Encoded",$param) and $param["ScfIsBase64Encoded"] !== null) {
+            $this->ScfIsBase64Encoded = $param["ScfIsBase64Encoded"];
+        }
+
+        if (array_key_exists("ScfIsIntegratedResponse",$param) and $param["ScfIsIntegratedResponse"] !== null) {
+            $this->ScfIsIntegratedResponse = $param["ScfIsIntegratedResponse"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskBackups请求参数结构体
  *
- * @method array getDiskBackupIds() 获取要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
- * @method void setDiskBackupIds(array $DiskBackupIds) 设置要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+ * @method array getDiskBackupIds() 获取查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
+ * @method void setDiskBackupIds(array $DiskBackupIds) 设置查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
  * @method array getFilters() 获取过滤器列表。
 <li>disk-backup-id</li>按照【云硬盘备份点 ID】进行过滤。
 类型：String
@@ -32,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -48,21 +49,22 @@ use TencentCloud\Common\AbstractModel;
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
 取值：SYSTEM_DISK或DATA_DISK
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为5。参数不支持同时指定DiskBackupIds 和 Filters。
- * @method integer getOffset() 获取偏移量，默认为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
+ * @method integer getOffset() 获取偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  */
 class DescribeDiskBackupsRequest extends AbstractModel
 {
     /**
-     * @var array 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * @var array 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
      */
     public $DiskBackupIds;
 
@@ -77,7 +79,8 @@ class DescribeDiskBackupsRequest extends AbstractModel
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -87,17 +90,17 @@ class DescribeDiskBackupsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为 0。
+     * @var integer 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100。
+     * @var integer 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public $Limit;
 
     /**
-     * @param array $DiskBackupIds 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * @param array $DiskBackupIds 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
      * @param array $Filters 过滤器列表。
 <li>disk-backup-id</li>按照【云硬盘备份点 ID】进行过滤。
 类型：String
@@ -108,14 +111,15 @@ class DescribeDiskBackupsRequest extends AbstractModel
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
 取值：SYSTEM_DISK或DATA_DISK
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为5。参数不支持同时指定DiskBackupIds 和 Filters。
-     * @param integer $Offset 偏移量，默认为 0。
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100。
+     * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+     * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     function __construct()
     {

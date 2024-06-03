@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFirewallTemplateApplyRecords请求参数结构体
  *
- * @method string getTemplateId() 获取防火墙模板ID。
- * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。
- * @method array getTaskIds() 获取应用任务ID列表。
- * @method void setTaskIds(array $TaskIds) 设置应用任务ID列表。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method array getTaskIds() 获取应用防火墙模版任务ID列表。可通过[ApplyFirewallTemplate](https://cloud.tencent.com/document/product/1207/96883)接口返回值TaskId字段获取。
+ * @method void setTaskIds(array $TaskIds) 设置应用防火墙模版任务ID列表。可通过[ApplyFirewallTemplate](https://cloud.tencent.com/document/product/1207/96883)接口返回值TaskId字段获取。
  */
 class DescribeFirewallTemplateApplyRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙模板ID。
+     * @var string 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public $TemplateId;
 
     /**
-     * @var array 应用任务ID列表。
+     * @var array 应用防火墙模版任务ID列表。可通过[ApplyFirewallTemplate](https://cloud.tencent.com/document/product/1207/96883)接口返回值TaskId字段获取。
      */
     public $TaskIds;
 
     /**
-     * @param string $TemplateId 防火墙模板ID。
-     * @param array $TaskIds 应用任务ID列表。
+     * @param string $TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+     * @param array $TaskIds 应用防火墙模版任务ID列表。可通过[ApplyFirewallTemplate](https://cloud.tencent.com/document/product/1207/96883)接口返回值TaskId字段获取。
      */
     function __construct()
     {

@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，取值范围大于等于0，默认值为0
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 50]，默认值为10
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
- * @method string getNamespaceId() 获取命名空间Id
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间Id
+ * @method string getNamespaceId() 获取命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
  * @method string getOrderBy() 获取排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
  * @method void setOrderBy(string $OrderBy) 设置排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
  * @method integer getOrderType() 获取排序方式：ASC:0、DESC:1
  * @method void setOrderType(integer $OrderType) 设置排序方式：ASC:0、DESC:1
- * @method string getEndTime() 获取开始时间：年月日 时分秒2020-05-12 14:43:12
- * @method void setEndTime(string $EndTime) 设置开始时间：年月日 时分秒2020-05-12 14:43:12
- * @method string getStartTime() 获取开始时间：年月日 时分秒2020-05-12 14:43:12
- * @method void setStartTime(string $StartTime) 设置开始时间：年月日 时分秒2020-05-12 14:43:12
+ * @method string getEndTime() 获取开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+ * @method void setEndTime(string $EndTime) 设置开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+ * @method string getStartTime() 获取开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+ * @method void setStartTime(string $StartTime) 设置开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
  * @method string getServiceName() 获取服务名称
  * @method void setServiceName(string $ServiceName) 设置服务名称
  * @method string getSearchWord() 获取搜索关键词
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(string $DbName) 设置数据库
  * @method array getNamespaceIdList() 获取命名空间id数组
  * @method void setNamespaceIdList(array $NamespaceIdList) 设置命名空间id数组
+ * @method string getConfigCenterInstanceId() 获取独占配置中心的ID
+ * @method void setConfigCenterInstanceId(string $ConfigCenterInstanceId) 设置独占配置中心的ID
  */
 class DescribeStatisticsRequest extends AbstractModel
 {
@@ -74,7 +76,7 @@ class DescribeStatisticsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 命名空间Id
+     * @var string 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
      */
     public $NamespaceId;
 
@@ -89,12 +91,12 @@ class DescribeStatisticsRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var string 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * @var string 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public $EndTime;
 
     /**
-     * @var string 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * @var string 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public $StartTime;
 
@@ -129,21 +131,27 @@ class DescribeStatisticsRequest extends AbstractModel
     public $NamespaceIdList;
 
     /**
+     * @var string 独占配置中心的ID
+     */
+    public $ConfigCenterInstanceId;
+
+    /**
      * @param string $Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
      * @param integer $TimeStep 步长，单位s：60、3600、86400
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
      * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
-     * @param string $NamespaceId 命名空间Id
+     * @param string $NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
      * @param string $OrderBy 排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
      * @param integer $OrderType 排序方式：ASC:0、DESC:1
-     * @param string $EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12
-     * @param string $StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * @param string $EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+     * @param string $StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      * @param string $ServiceName 服务名称
      * @param string $SearchWord 搜索关键词
      * @param array $MetricDimensionValues 维度
      * @param string $BucketKey 聚合关键词
      * @param string $DbName 数据库
      * @param array $NamespaceIdList 命名空间id数组
+     * @param string $ConfigCenterInstanceId 独占配置中心的ID
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class DescribeStatisticsRequest extends AbstractModel
 
         if (array_key_exists("NamespaceIdList",$param) and $param["NamespaceIdList"] !== null) {
             $this->NamespaceIdList = $param["NamespaceIdList"];
+        }
+
+        if (array_key_exists("ConfigCenterInstanceId",$param) and $param["ConfigCenterInstanceId"] !== null) {
+            $this->ConfigCenterInstanceId = $param["ConfigCenterInstanceId"];
         }
     }
 }

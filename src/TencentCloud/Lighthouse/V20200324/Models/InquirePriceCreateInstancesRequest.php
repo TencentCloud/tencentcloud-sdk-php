@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreateInstances请求参数结构体
  *
- * @method string getBundleId() 获取实例的套餐 ID。
- * @method void setBundleId(string $BundleId) 设置实例的套餐 ID。
+ * @method string getBundleId() 获取实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
+ * @method void setBundleId(string $BundleId) 设置实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method integer getInstanceCount() 获取创建数量，默认为 1。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InquirePriceCreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 实例的套餐 ID。
+     * @var string 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
      */
     public $BundleId;
 
@@ -52,7 +52,7 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
     public $BlueprintId;
 
     /**
-     * @param string $BundleId 实例的套餐 ID。
+     * @param string $BundleId 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      * @param integer $InstanceCount 创建数量，默认为 1。
      * @param string $BlueprintId 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。

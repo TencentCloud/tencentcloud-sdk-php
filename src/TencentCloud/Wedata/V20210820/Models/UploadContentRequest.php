@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScriptRequestInfo(ScriptRequestInfo $ScriptRequestInfo) 设置脚本上传信息
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  */
 class UploadContentRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UploadContentRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
+     * @var string 项目id
+     */
+    public $ProjectId;
+
+    /**
      * @param ScriptRequestInfo $ScriptRequestInfo 脚本上传信息
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     * @param string $ProjectId 项目id
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class UploadContentRequest extends AbstractModel
 
         if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
             $this->RequestFromSource = $param["RequestFromSource"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

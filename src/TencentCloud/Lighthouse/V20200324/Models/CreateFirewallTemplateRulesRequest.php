@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFirewallTemplateRules请求参数结构体
  *
- * @method string getTemplateId() 获取防火墙模板ID。
- * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
  * @method array getTemplateRules() 获取防火墙模板规则列表。
  * @method void setTemplateRules(array $TemplateRules) 设置防火墙模板规则列表。
  */
 class CreateFirewallTemplateRulesRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙模板ID。
+     * @var string 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public $TemplateId;
 
@@ -38,7 +38,7 @@ class CreateFirewallTemplateRulesRequest extends AbstractModel
     public $TemplateRules;
 
     /**
-     * @param string $TemplateId 防火墙模板ID。
+     * @param string $TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      * @param array $TemplateRules 防火墙模板规则列表。
      */
     function __construct()

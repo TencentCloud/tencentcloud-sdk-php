@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyAllocation(array $ProxyAllocation) 设置实例读权重分配
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessMode() 获取接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessMode(string $AccessMode) 设置接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoLoadBalance() 获取是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyAddress extends AbstractModel
 {
@@ -172,6 +180,18 @@ class ProxyAddress extends AbstractModel
     public $ProxyAllocation;
 
     /**
+     * @var string 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessMode;
+
+    /**
+     * @var boolean 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoLoadBalance;
+
+    /**
      * @param string $ProxyAddressId 代理组地址ID
      * @param string $UniqVpcId 私有网络ID
      * @param string $UniqSubnetId 私有子网ID
@@ -199,6 +219,10 @@ class ProxyAddress extends AbstractModel
      * @param string $Desc 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyAllocation 实例读权重分配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessMode 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoLoadBalance 是否开启自动负载均衡
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +305,14 @@ class ProxyAddress extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyAllocation, $obj);
             }
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScenes请求参数结构体
  *
- * @method array getSceneIds() 获取使用场景ID列表。
- * @method void setSceneIds(array $SceneIds) 设置使用场景ID列表。
+ * @method array getSceneIds() 获取使用场景ID列表。可通过[DescribeScenes](https://cloud.tencent.com/document/product/1207/83512)接口返回值中的SceneId获取。
+ * @method void setSceneIds(array $SceneIds) 设置使用场景ID列表。可通过[DescribeScenes](https://cloud.tencent.com/document/product/1207/83512)接口返回值中的SceneId获取。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScenesRequest extends AbstractModel
 {
     /**
-     * @var array 使用场景ID列表。
+     * @var array 使用场景ID列表。可通过[DescribeScenes](https://cloud.tencent.com/document/product/1207/83512)接口返回值中的SceneId获取。
      */
     public $SceneIds;
 
@@ -45,7 +45,7 @@ class DescribeScenesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $SceneIds 使用场景ID列表。
+     * @param array $SceneIds 使用场景ID列表。可通过[DescribeScenes](https://cloud.tencent.com/document/product/1207/83512)接口返回值中的SceneId获取。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      */

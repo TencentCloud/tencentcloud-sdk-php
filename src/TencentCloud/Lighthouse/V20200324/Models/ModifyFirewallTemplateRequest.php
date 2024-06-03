@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFirewallTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取防火墙模板ID。
- * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。
- * @method string getTemplateName() 获取模板名称。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method string getTemplateName() 获取防火墙模板名称。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method void setTemplateName(string $TemplateName) 设置防火墙模板名称。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
  */
 class ModifyFirewallTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙模板ID。
+     * @var string 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称。
+     * @var string 防火墙模板名称。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public $TemplateName;
 
     /**
-     * @param string $TemplateId 防火墙模板ID。
-     * @param string $TemplateName 模板名称。
+     * @param string $TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+     * @param string $TemplateName 防火墙模板名称。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     function __construct()
     {

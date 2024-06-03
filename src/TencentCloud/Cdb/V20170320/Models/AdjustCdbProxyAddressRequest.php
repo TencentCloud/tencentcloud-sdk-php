@@ -43,9 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getTransSplit() 获取是否开启事务分离，取值："true" | "false"
  * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务分离，取值："true" | "false"
  * @method boolean getConnectionPool() 获取是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  * @method void setConnectionPool(boolean $ConnectionPool) 设置是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  * @method array getProxyAllocation() 获取读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
  * @method void setProxyAllocation(array $ProxyAllocation) 设置读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+ * @method boolean getAutoLoadBalance() 获取是否开启自适应负载均衡
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自适应负载均衡
+ * @method string getAccessMode() 获取访问模式：就近访问，均衡分配
+ * @method void setAccessMode(string $AccessMode) 设置访问模式：就近访问，均衡分配
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
@@ -102,6 +108,7 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public $ConnectionPool;
 
@@ -109,6 +116,16 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @var array 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
      */
     public $ProxyAllocation;
+
+    /**
+     * @var boolean 是否开启自适应负载均衡
+     */
+    public $AutoLoadBalance;
+
+    /**
+     * @var string 访问模式：就近访问，均衡分配
+     */
+    public $AccessMode;
 
     /**
      * @param string $ProxyGroupId 代理组ID
@@ -123,7 +140,10 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @param string $ProxyAddressId 代理组地址ID
      * @param boolean $TransSplit 是否开启事务分离，取值："true" | "false"
      * @param boolean $ConnectionPool 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      * @param array $ProxyAllocation 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+     * @param boolean $AutoLoadBalance 是否开启自适应负载均衡
+     * @param string $AccessMode 访问模式：就近访问，均衡分配
      */
     function __construct()
     {
@@ -189,6 +209,14 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyAllocation, $obj);
             }
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
         }
     }
 }

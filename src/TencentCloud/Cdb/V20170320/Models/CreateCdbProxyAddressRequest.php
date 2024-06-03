@@ -47,7 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUniqSubnetId() 获取私有子网ID
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网ID
  * @method boolean getConnectionPool() 获取是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  * @method void setConnectionPool(boolean $ConnectionPool) 设置是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  * @method string getDesc() 获取描述
  * @method void setDesc(string $Desc) 设置描述
  * @method string getVip() 获取IP地址
@@ -58,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
  * @method string getConnectionPoolType() 获取连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
  * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+ * @method boolean getAutoLoadBalance() 获取是否自适应负载均衡
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否自适应负载均衡
+ * @method string getAccessMode() 获取接入模式
+ * @method void setAccessMode(string $AccessMode) 设置接入模式
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -124,6 +130,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public $ConnectionPool;
 
@@ -153,6 +160,16 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $ConnectionPoolType;
 
     /**
+     * @var boolean 是否自适应负载均衡
+     */
+    public $AutoLoadBalance;
+
+    /**
+     * @var string 接入模式
+     */
+    public $AccessMode;
+
+    /**
      * @param string $ProxyGroupId 代理组ID
      * @param string $WeightMode 权重分配模式，
 系统自动分配："system"， 自定义："custom"
@@ -167,11 +184,14 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param string $UniqVpcId 私有网络ID
      * @param string $UniqSubnetId 私有子网ID
      * @param boolean $ConnectionPool 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      * @param string $Desc 描述
      * @param string $Vip IP地址
      * @param integer $VPort 端口
      * @param array $SecurityGroup 安全组
      * @param string $ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     * @param boolean $AutoLoadBalance 是否自适应负载均衡
+     * @param string $AccessMode 接入模式
      */
     function __construct()
     {
@@ -261,6 +281,14 @@ class CreateCdbProxyAddressRequest extends AbstractModel
 
         if (array_key_exists("ConnectionPoolType",$param) and $param["ConnectionPoolType"] !== null) {
             $this->ConnectionPoolType = $param["ConnectionPoolType"];
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
         }
     }
 }

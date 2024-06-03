@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFirewallTemplates请求参数结构体
  *
- * @method array getTemplateIds() 获取防火墙模板ID列表。
- * @method void setTemplateIds(array $TemplateIds) 设置防火墙模板ID列表。
+ * @method array getTemplateIds() 获取防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
+ * @method void setTemplateIds(array $TemplateIds) 设置防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
  * @method array getFilters() 获取过滤器列表。
 <li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFirewallTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 防火墙模板ID列表。
+     * @var array 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
      */
     public $TemplateIds;
 
@@ -82,7 +82,7 @@ class DescribeFirewallTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $TemplateIds 防火墙模板ID列表。
+     * @param array $TemplateIds 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
      * @param array $Filters 过滤器列表。
 <li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String

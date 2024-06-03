@@ -520,6 +520,8 @@ p.s.
 <li>链接有效期默认7天，<code>最多30天</code>。</li>
 <li>该接口的链接适用于<code>小程序</code>端。</li>
 <li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
+ * @method Models\CreateUserMobileChangeUrlResponse CreateUserMobileChangeUrl(Models\CreateUserMobileChangeUrlRequest $req) 该接口会生成一个手机号变更的链接，用户可以通过该链接进入电子签系统进行手机号的变更。
+该接口支持员工和个人端手机号的变更。
  * @method Models\CreateUserVerifyUrlResponse CreateUserVerifyUrl(Models\CreateUserVerifyUrlRequest $req) 客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
 使用场景：
 用户集成场景

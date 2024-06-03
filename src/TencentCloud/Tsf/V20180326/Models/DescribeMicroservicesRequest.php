@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMicroserviceIdList(array $MicroserviceIdList) 设置IdList
  * @method array getMicroserviceNameList() 获取搜索的服务名列表
  * @method void setMicroserviceNameList(array $MicroserviceNameList) 设置搜索的服务名列表
+ * @method string getConfigCenterInstanceId() 获取注册中心实例id
+ * @method void setConfigCenterInstanceId(string $ConfigCenterInstanceId) 设置注册中心实例id
  */
 class DescribeMicroservicesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeMicroservicesRequest extends AbstractModel
     public $MicroserviceNameList;
 
     /**
+     * @var string 注册中心实例id
+     */
+    public $ConfigCenterInstanceId;
+
+    /**
      * @param string $NamespaceId 命名空间ID
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
@@ -96,6 +103,7 @@ class DescribeMicroservicesRequest extends AbstractModel
      * @param array $Status 状态过滤，online、offline、single_online
      * @param array $MicroserviceIdList IdList
      * @param array $MicroserviceNameList 搜索的服务名列表
+     * @param string $ConfigCenterInstanceId 注册中心实例id
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeMicroservicesRequest extends AbstractModel
 
         if (array_key_exists("MicroserviceNameList",$param) and $param["MicroserviceNameList"] !== null) {
             $this->MicroserviceNameList = $param["MicroserviceNameList"];
+        }
+
+        if (array_key_exists("ConfigCenterInstanceId",$param) and $param["ConfigCenterInstanceId"] !== null) {
+            $this->ConfigCenterInstanceId = $param["ConfigCenterInstanceId"];
         }
     }
 }

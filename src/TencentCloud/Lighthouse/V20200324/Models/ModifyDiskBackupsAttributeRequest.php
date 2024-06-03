@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskBackupsAttribute请求参数结构体
  *
- * @method array getDiskBackupIds() 获取云硬盘备份点ID列表。
- * @method void setDiskBackupIds(array $DiskBackupIds) 设置云硬盘备份点ID列表。
- * @method string getDiskBackupName() 获取云硬盘备份点名称，最大长度90。
- * @method void setDiskBackupName(string $DiskBackupName) 设置云硬盘备份点名称，最大长度90。
+ * @method array getDiskBackupIds() 获取云硬盘备份点ID，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379) 接口返回值中的 DiskBackupId 获取。
+ * @method void setDiskBackupIds(array $DiskBackupIds) 设置云硬盘备份点ID，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379) 接口返回值中的 DiskBackupId 获取。
+ * @method string getDiskBackupName() 获取云硬盘备份点名称，最大长度 90 。
+ * @method void setDiskBackupName(string $DiskBackupName) 设置云硬盘备份点名称，最大长度 90 。
  */
 class ModifyDiskBackupsAttributeRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘备份点ID列表。
+     * @var array 云硬盘备份点ID，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379) 接口返回值中的 DiskBackupId 获取。
      */
     public $DiskBackupIds;
 
     /**
-     * @var string 云硬盘备份点名称，最大长度90。
+     * @var string 云硬盘备份点名称，最大长度 90 。
      */
     public $DiskBackupName;
 
     /**
-     * @param array $DiskBackupIds 云硬盘备份点ID列表。
-     * @param string $DiskBackupName 云硬盘备份点名称，最大长度90。
+     * @param array $DiskBackupIds 云硬盘备份点ID，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379) 接口返回值中的 DiskBackupId 获取。
+     * @param string $DiskBackupName 云硬盘备份点名称，最大长度 90 。
      */
     function __construct()
     {

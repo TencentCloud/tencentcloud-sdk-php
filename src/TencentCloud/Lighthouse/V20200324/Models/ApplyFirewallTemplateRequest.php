@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyFirewallTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID。
- * @method void setTemplateId(string $TemplateId) 设置模板ID。
- * @method array getApplyInstances() 获取应用防火墙模板的实例列表。
- * @method void setApplyInstances(array $ApplyInstances) 设置应用防火墙模板的实例列表。
+ * @method string getTemplateId() 获取防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+ * @method array getApplyInstances() 获取应用防火墙模板的实例列表。列表长度最大值是100。
+ * @method void setApplyInstances(array $ApplyInstances) 设置应用防火墙模板的实例列表。列表长度最大值是100。
  */
 class ApplyFirewallTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID。
+     * @var string 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public $TemplateId;
 
     /**
-     * @var array 应用防火墙模板的实例列表。
+     * @var array 应用防火墙模板的实例列表。列表长度最大值是100。
      */
     public $ApplyInstances;
 
     /**
-     * @param string $TemplateId 模板ID。
-     * @param array $ApplyInstances 应用防火墙模板的实例列表。
+     * @param string $TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+     * @param array $ApplyInstances 应用防火墙模板的实例列表。列表长度最大值是100。
      */
     function __construct()
     {

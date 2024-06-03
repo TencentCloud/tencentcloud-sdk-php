@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置实例所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstNodeId() 获取实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstNodeId(string $InstNodeId) 设置实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstNodeRole() 获取节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstNodeRole(string $InstNodeRole) 设置节点角色
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInst extends AbstractModel
 {
@@ -94,6 +102,18 @@ class ProxyInst extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstNodeId;
+
+    /**
+     * @var string 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstNodeRole;
+
+    /**
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
@@ -107,6 +127,10 @@ class ProxyInst extends AbstractModel
      * @param string $Region 实例所属地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 实例所属可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstNodeId 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstNodeRole 节点角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,14 @@ class ProxyInst extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("InstNodeId",$param) and $param["InstNodeId"] !== null) {
+            $this->InstNodeId = $param["InstNodeId"];
+        }
+
+        if (array_key_exists("InstNodeRole",$param) and $param["InstNodeRole"] !== null) {
+            $this->InstNodeRole = $param["InstNodeRole"];
         }
     }
 }

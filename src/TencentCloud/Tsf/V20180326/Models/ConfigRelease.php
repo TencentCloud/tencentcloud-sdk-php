@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigCenters(array $ConfigCenters) 设置配置中心发布情况
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDaulStatus() 获取DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDaulStatus(string $DaulStatus) 设置DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigRelease extends AbstractModel
 {
@@ -164,6 +172,14 @@ class ConfigRelease extends AbstractModel
     public $ConfigCenters;
 
     /**
+     * @var string DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DaulStatus;
+
+    /**
      * @param string $ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 配置项ID
@@ -191,6 +207,10 @@ class ConfigRelease extends AbstractModel
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigCenters 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DaulStatus DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +285,10 @@ class ConfigRelease extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConfigCenters, $obj);
             }
+        }
+
+        if (array_key_exists("DaulStatus",$param) and $param["DaulStatus"] !== null) {
+            $this->DaulStatus = $param["DaulStatus"];
         }
     }
 }

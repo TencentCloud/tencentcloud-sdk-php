@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrentVersion() 获取当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentVersion(string $CurrentVersion) 设置当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetVersion() 获取需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetVersion(string $TargetVersion) 设置需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfConfigCenter extends AbstractModel
 {
@@ -74,6 +82,18 @@ class TsfConfigCenter extends AbstractModel
     public $NamespaceId;
 
     /**
+     * @var string 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurrentVersion;
+
+    /**
+     * @var string 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetVersion;
+
+    /**
      * @param string $ConfigType 配置中心类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigCenterInstanceId 配置中心实例id
@@ -83,6 +103,10 @@ class TsfConfigCenter extends AbstractModel
      * @param string $RegionId 实例地域id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceId 命名空间id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurrentVersion 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetVersion 需要升级的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +140,14 @@ class TsfConfigCenter extends AbstractModel
 
         if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
             $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("CurrentVersion",$param) and $param["CurrentVersion"] !== null) {
+            $this->CurrentVersion = $param["CurrentVersion"];
+        }
+
+        if (array_key_exists("TargetVersion",$param) and $param["TargetVersion"] !== null) {
+            $this->TargetVersion = $param["TargetVersion"];
         }
     }
 }

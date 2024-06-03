@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身问答模式的配置列表。当前仅支持一个问答。
  * @method array getIntentionActions() 获取意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
  * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
- * @method boolean getIntentionRecognition() 获取意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
- * @method void setIntentionRecognition(boolean $IntentionRecognition) 设置意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+ * @method boolean getIntentionRecognition() 获取意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
+ * @method void setIntentionRecognition(boolean $IntentionRecognition) 设置意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
  * @method boolean getIsSupportHMTResidentPermitOCR() 获取是否支持港澳台居住证识别
  * @method void setIsSupportHMTResidentPermitOCR(boolean $IsSupportHMTResidentPermitOCR) 设置是否支持港澳台居住证识别
  * @method boolean getMouthOpenRecognition() 获取用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
@@ -90,7 +90,7 @@ class GetEidTokenConfig extends AbstractModel
     public $IntentionActions;
 
     /**
-     * @var boolean 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     * @var boolean 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
      */
     public $IntentionRecognition;
 
@@ -117,7 +117,7 @@ class GetEidTokenConfig extends AbstractModel
      * @param string $IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      * @param array $IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
      * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
-     * @param boolean $IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     * @param boolean $IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
      * @param boolean $IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别
      * @param boolean $MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
      */

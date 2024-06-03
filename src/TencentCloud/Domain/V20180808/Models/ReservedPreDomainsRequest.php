@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainList(array $DomainList) 设置预约预释放域名列表
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
+ * @method integer getIsAutoPay() 获取结束后是否自动支付尾款，默认开启 传入1关闭
+ * @method void setIsAutoPay(integer $IsAutoPay) 设置结束后是否自动支付尾款，默认开启 传入1关闭
+ * @method integer getIsBidAutoPay() 获取结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+ * @method void setIsBidAutoPay(integer $IsBidAutoPay) 设置结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
  */
 class ReservedPreDomainsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ReservedPreDomainsRequest extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var integer 结束后是否自动支付尾款，默认开启 传入1关闭
+     */
+    public $IsAutoPay;
+
+    /**
+     * @var integer 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     */
+    public $IsBidAutoPay;
+
+    /**
      * @param array $DomainList 预约预释放域名列表
      * @param string $TemplateId 模板ID
+     * @param integer $IsAutoPay 结束后是否自动支付尾款，默认开启 传入1关闭
+     * @param integer $IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ReservedPreDomainsRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("IsAutoPay",$param) and $param["IsAutoPay"] !== null) {
+            $this->IsAutoPay = $param["IsAutoPay"];
+        }
+
+        if (array_key_exists("IsBidAutoPay",$param) and $param["IsBidAutoPay"] !== null) {
+            $this->IsBidAutoPay = $param["IsBidAutoPay"];
         }
     }
 }

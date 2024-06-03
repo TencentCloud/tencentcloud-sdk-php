@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportReadOnly(boolean $SupportReadOnly) 设置是否支持设置只读
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportAutoLoadBalance() 获取是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportAutoLoadBalance(boolean $SupportAutoLoadBalance) 设置是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportAccessMode() 获取是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportAccessMode(boolean $SupportAccessMode) 设置是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -106,6 +114,18 @@ class DescribeProxySupportParamResponse extends AbstractModel
     public $SupportReadOnly;
 
     /**
+     * @var boolean 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportAutoLoadBalance;
+
+    /**
+     * @var boolean 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportAccessMode;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -126,6 +146,10 @@ class DescribeProxySupportParamResponse extends AbstractModel
      * @param string $SupportTransSplitMinVersion 支持事务拆分的最小代理版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportReadOnly 是否支持设置只读
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportAutoLoadBalance 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportAccessMode 是否支持接入模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -172,6 +196,14 @@ class DescribeProxySupportParamResponse extends AbstractModel
 
         if (array_key_exists("SupportReadOnly",$param) and $param["SupportReadOnly"] !== null) {
             $this->SupportReadOnly = $param["SupportReadOnly"];
+        }
+
+        if (array_key_exists("SupportAutoLoadBalance",$param) and $param["SupportAutoLoadBalance"] !== null) {
+            $this->SupportAutoLoadBalance = $param["SupportAutoLoadBalance"];
+        }
+
+        if (array_key_exists("SupportAccessMode",$param) and $param["SupportAccessMode"] !== null) {
+            $this->SupportAccessMode = $param["SupportAccessMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

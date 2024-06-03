@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperPackFlag(integer $SuperPackFlag) 设置是否为超级高防包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getZoneId() 获取所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneId(integer $ZoneId) 设置所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstance extends AbstractModel
 {
@@ -256,6 +260,12 @@ class BGPInstance extends AbstractModel
     public $SuperPackFlag;
 
     /**
+     * @var integer 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneId;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -299,6 +309,8 @@ class BGPInstance extends AbstractModel
      * @param integer $TransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuperPackFlag 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ZoneId 所属ZoneId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -427,6 +439,10 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("SuperPackFlag",$param) and $param["SuperPackFlag"] !== null) {
             $this->SuperPackFlag = $param["SuperPackFlag"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

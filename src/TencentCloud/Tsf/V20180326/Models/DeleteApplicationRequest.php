@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
+ * @method boolean getSyncDeleteImageRepository() 获取是否删除镜像仓库
+ * @method void setSyncDeleteImageRepository(boolean $SyncDeleteImageRepository) 设置是否删除镜像仓库
  */
 class DeleteApplicationRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteApplicationRequest extends AbstractModel
     public $ApplicationId;
 
     /**
+     * @var boolean 是否删除镜像仓库
+     */
+    public $SyncDeleteImageRepository;
+
+    /**
      * @param string $ApplicationId 应用ID
+     * @param boolean $SyncDeleteImageRepository 是否删除镜像仓库
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteApplicationRequest extends AbstractModel
         }
         if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
             $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("SyncDeleteImageRepository",$param) and $param["SyncDeleteImageRepository"] !== null) {
+            $this->SyncDeleteImageRepository = $param["SyncDeleteImageRepository"];
         }
     }
 }

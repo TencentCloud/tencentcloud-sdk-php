@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLengthEnd(integer $LengthEnd) 设置结束域名长度
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取没页显示数
- * @method void setPageSize(integer $PageSize) 设置没页显示数
+ * @method integer getPageSize() 获取每页显示数
+ * @method void setPageSize(integer $PageSize) 设置每页显示数
  * @method array getSuffix() 获取后缀
  * @method void setSuffix(array $Suffix) 设置后缀
  * @method integer getClassOne() 获取一级分类
@@ -113,7 +113,7 @@ class DescribePreReleaseListRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer 没页显示数
+     * @var integer 每页显示数
      */
     public $PageSize;
 
@@ -187,7 +187,7 @@ class DescribePreReleaseListRequest extends AbstractModel
      * @param integer $LengthStart 起始域名长度
      * @param integer $LengthEnd 结束域名长度
      * @param integer $PageNumber 页码
-     * @param integer $PageSize 没页显示数
+     * @param integer $PageSize 每页显示数
      * @param array $Suffix 后缀
      * @param integer $ClassOne 一级分类
      * @param array $ClassTwo 二级分类

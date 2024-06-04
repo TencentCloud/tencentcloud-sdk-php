@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建者 Uin
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserDefined() 获取固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserDefined(string $UserDefined) 设置固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirmwareInfo extends AbstractModel
 {
@@ -105,6 +109,12 @@ class FirmwareInfo extends AbstractModel
     public $CreateUserId;
 
     /**
+     * @var string 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserDefined;
+
+    /**
      * @param string $Version 固件版本
      * @param string $Md5sum 固件MD5值
      * @param integer $CreateTime 固件创建时间
@@ -119,6 +129,8 @@ class FirmwareInfo extends AbstractModel
      * @param string $FwType 固件类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserDefined 固件用户自定义配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,10 @@ class FirmwareInfo extends AbstractModel
 
         if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
             $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("UserDefined",$param) and $param["UserDefined"] !== null) {
+            $this->UserDefined = $param["UserDefined"];
         }
     }
 }

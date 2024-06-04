@@ -162,6 +162,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentSerialId(string $AgentSerialId) 设置上级集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceType() 获取资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceType(integer $ResourceType) 设置资源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -413,6 +417,12 @@ class Cluster extends AbstractModel
     public $AgentSerialId;
 
     /**
+     * @var integer 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceType;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -483,6 +493,8 @@ class Cluster extends AbstractModel
      * @param SubEks $SubEks 子eks集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgentSerialId 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -704,6 +716,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("AgentSerialId",$param) and $param["AgentSerialId"] !== null) {
             $this->AgentSerialId = $param["AgentSerialId"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户标识
  * @method string getMusicId() 获取歌曲 Id 
  * @method void setMusicId(string $MusicId) 设置歌曲 Id 
+ * @method string getRoomId() 获取房间Id
+ * @method void setRoomId(string $RoomId) 设置房间Id
  */
 class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
     public $MusicId;
 
     /**
+     * @var string 房间Id
+     */
+    public $RoomId;
+
+    /**
      * @param string $AppName 应用名称
      * @param string $UserId 用户标识
      * @param string $MusicId 歌曲 Id 
+     * @param string $RoomId 房间Id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
 
         if (array_key_exists("MusicId",$param) and $param["MusicId"] !== null) {
             $this->MusicId = $param["MusicId"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
     }
 }

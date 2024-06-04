@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayMode(string $PlayMode) 设置播放模式，取值有：
 <li>RepeatPlaylist：列表循环</li>
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SetPlayModeCommandInput extends AbstractModel
 {
@@ -39,6 +41,7 @@ class SetPlayModeCommandInput extends AbstractModel
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlayMode;
 
@@ -48,6 +51,7 @@ class SetPlayModeCommandInput extends AbstractModel
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SetAudioParamCommandInput extends AbstractModel
 {
@@ -33,6 +35,7 @@ class SetAudioParamCommandInput extends AbstractModel
      * @var string 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -40,6 +43,7 @@ class SetAudioParamCommandInput extends AbstractModel
      * @param string $Type 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

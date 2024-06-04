@@ -18,7 +18,7 @@ namespace TencentCloud\Vdb\V20230616\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 网路信息
+ * 网络信息
  *
  * @method string getVpcId() 获取VpcId(VPC网络下有效)
 注意：此字段可能返回 null，表示取不到有效值。

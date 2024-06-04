@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDockerActivities请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method array getActivityIds() 获取Docker活动ID列表。
- * @method void setActivityIds(array $ActivityIds) 设置Docker活动ID列表。
+ * @method string getInstanceId() 获取实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method array getActivityIds() 获取Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
+ * @method void setActivityIds(array $ActivityIds) 设置Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDockerActivitiesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceId;
 
     /**
-     * @var array Docker活动ID列表。
+     * @var array Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
      */
     public $ActivityIds;
 
@@ -66,8 +66,8 @@ class DescribeDockerActivitiesRequest extends AbstractModel
     public $CreatedTimeEnd;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param array $ActivityIds Docker活动ID列表。
+     * @param string $InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+     * @param array $ActivityIds Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param integer $CreatedTimeBegin 活动创建时间的起始值，时间戳秒数。

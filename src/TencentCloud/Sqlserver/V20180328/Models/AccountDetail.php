@@ -18,7 +18,7 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 账户信息详情
+ * 账号信息详情
  *
  * @method string getName() 获取账户名
  * @method void setName(string $Name) 设置账户名
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbs(array $Dbs) 设置该账户对相关db的读写权限信息
  * @method boolean getIsAdmin() 获取是否为管理员账户
  * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户
+ * @method boolean getIsCam() 获取是否为cam托管账户
+ * @method void setIsCam(boolean $IsCam) 设置是否为cam托管账户
  * @method string getAuthentication() 获取win-windows鉴权,sql-sqlserver鉴权
  * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权
  * @method string getHost() 获取win-windows鉴权账户需要host
@@ -93,6 +95,11 @@ class AccountDetail extends AbstractModel
     public $IsAdmin;
 
     /**
+     * @var boolean 是否为cam托管账户
+     */
+    public $IsCam;
+
+    /**
      * @var string win-windows鉴权,sql-sqlserver鉴权
      */
     public $Authentication;
@@ -117,6 +124,7 @@ class AccountDetail extends AbstractModel
      * @param string $InternalStatus 账户内部状态，正常为enable
      * @param array $Dbs 该账户对相关db的读写权限信息
      * @param boolean $IsAdmin 是否为管理员账户
+     * @param boolean $IsCam 是否为cam托管账户
      * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权
      * @param string $Host win-windows鉴权账户需要host
      * @param string $AccountType 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
@@ -173,6 +181,10 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
             $this->IsAdmin = $param["IsAdmin"];
+        }
+
+        if (array_key_exists("IsCam",$param) and $param["IsCam"] !== null) {
+            $this->IsCam = $param["IsCam"];
         }
 
         if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {

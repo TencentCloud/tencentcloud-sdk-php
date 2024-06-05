@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Embedding 信息。
  *
- * @method array getEmbedding() 获取embedding 信息。
+ * @method array getEmbedding() 获取Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmbedding(array $Embedding) 设置embedding 信息。
+ * @method void setEmbedding(array $Embedding) 设置Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndex() 获取下标。
+ * @method integer getIndex() 获取下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndex(integer $Index) 设置下标。
+ * @method void setIndex(integer $Index) 设置下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getObject() 获取embedding
+ * @method string getObject() 获取目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObject(string $Object) 设置embedding
+ * @method void setObject(string $Object) 设置目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbeddingData extends AbstractModel
 {
     /**
-     * @var array embedding 信息。
+     * @var array Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Embedding;
 
     /**
-     * @var integer 下标。
+     * @var integer 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
-     * @var string embedding
+     * @var string 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Object;
 
     /**
-     * @param array $Embedding embedding 信息。
+     * @param array $Embedding Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Index 下标。
+     * @param integer $Index 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Object embedding
+     * @param string $Object 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

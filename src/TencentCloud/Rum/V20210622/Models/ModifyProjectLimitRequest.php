@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectID() 获取项目ID
  * @method void setProjectID(integer $ProjectID) 设置项目ID
- * @method string getProjectInterface() 获取项目接口
- * @method void setProjectInterface(string $ProjectInterface) 设置项目接口
+ * @method string getProjectInterface() 获取取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
+ * @method void setProjectInterface(string $ProjectInterface) 设置取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
  * @method integer getReportRate() 获取上报比例   10代表10%
  * @method void setReportRate(integer $ReportRate) 设置上报比例   10代表10%
  * @method integer getReportType() 获取上报类型 1：比例  2：上报量
@@ -39,7 +39,7 @@ class ModifyProjectLimitRequest extends AbstractModel
     public $ProjectID;
 
     /**
-     * @var string 项目接口
+     * @var string 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
      */
     public $ProjectInterface;
 
@@ -60,7 +60,7 @@ class ModifyProjectLimitRequest extends AbstractModel
 
     /**
      * @param integer $ProjectID 项目ID
-     * @param string $ProjectInterface 项目接口
+     * @param string $ProjectInterface 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
      * @param integer $ReportRate 上报比例   10代表10%
      * @param integer $ReportType 上报类型 1：比例  2：上报量
      * @param integer $ID 主键ID

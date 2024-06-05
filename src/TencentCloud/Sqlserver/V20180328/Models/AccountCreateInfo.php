@@ -28,12 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBPrivileges(array $DBPrivileges) 设置DB权限列表
  * @method string getRemark() 获取账号备注信息
  * @method void setRemark(string $Remark) 设置账号备注信息
- * @method boolean getIsAdmin() 获取是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
- * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
+ * @method boolean getIsAdmin() 获取是否为管理员账户，当值为true 等价于单节点AccountType=L0，双节点AccountType=L1，当值为false，等价于AccountType=L3
+ * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户，当值为true 等价于单节点AccountType=L0，双节点AccountType=L1，当值为false，等价于AccountType=L3
  * @method string getAuthentication() 获取win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
  * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
  * @method string getAccountType() 获取账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
  * @method void setAccountType(string $AccountType) 设置账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+ * @method boolean getIsCam() 获取是否开启CAM验证
+ * @method void setIsCam(boolean $IsCam) 设置是否开启CAM验证
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -58,7 +60,7 @@ class AccountCreateInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var boolean 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
+     * @var boolean 是否为管理员账户，当值为true 等价于单节点AccountType=L0，双节点AccountType=L1，当值为false，等价于AccountType=L3
      */
     public $IsAdmin;
 
@@ -73,13 +75,19 @@ class AccountCreateInfo extends AbstractModel
     public $AccountType;
 
     /**
+     * @var boolean 是否开启CAM验证
+     */
+    public $IsCam;
+
+    /**
      * @param string $UserName 实例用户名
      * @param string $Password 实例密码
      * @param array $DBPrivileges DB权限列表
      * @param string $Remark 账号备注信息
-     * @param boolean $IsAdmin 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
+     * @param boolean $IsAdmin 是否为管理员账户，当值为true 等价于单节点AccountType=L0，双节点AccountType=L1，当值为false，等价于AccountType=L3
      * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      * @param string $AccountType 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     * @param boolean $IsCam 是否开启CAM验证
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("IsCam",$param) and $param["IsCam"] !== null) {
+            $this->IsCam = $param["IsCam"];
         }
     }
 }

@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceTypes(array $DatasourceTypes) 设置支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserIdStr() 获取创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserIdStr(string $UserIdStr) 设置创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleTemplate extends AbstractModel
 {
@@ -206,6 +210,12 @@ class RuleTemplate extends AbstractModel
     public $DatasourceTypes;
 
     /**
+     * @var string 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserIdStr;
+
+    /**
      * @param integer $RuleTemplateId 规则模版ID
      * @param string $Name 规则模版名称
      * @param string $Description 规则模版描述
@@ -239,6 +249,8 @@ class RuleTemplate extends AbstractModel
      * @param SqlExpression $ResolvedSqlExpression sql表达式解析对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DatasourceTypes 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserIdStr 创建人IdStr
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +345,10 @@ class RuleTemplate extends AbstractModel
 
         if (array_key_exists("DatasourceTypes",$param) and $param["DatasourceTypes"] !== null) {
             $this->DatasourceTypes = $param["DatasourceTypes"];
+        }
+
+        if (array_key_exists("UserIdStr",$param) and $param["UserIdStr"] !== null) {
+            $this->UserIdStr = $param["UserIdStr"];
         }
     }
 }

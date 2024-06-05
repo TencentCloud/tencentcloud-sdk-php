@@ -24,6 +24,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
 
 /**
  * @method Models\AuthorizedTransferResponse AuthorizedTransfer(Models\AuthorizedTransferRequest $req) 接收客户侧的用户已授权的号码。
+ * @method Models\CreateChainBatchResponse CreateChainBatch(Models\CreateChainBatchRequest $req) 批量上链接口
  * @method Models\CreateCodeBatchResponse CreateCodeBatch(Models\CreateCodeBatchRequest $req) 新增批次
  * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成普通码包
  * @method Models\CreateCorporationOrderResponse CreateCorporationOrder(Models\CreateCorporationOrderRequest $req) 以订单方式新建企业信息/配额信息

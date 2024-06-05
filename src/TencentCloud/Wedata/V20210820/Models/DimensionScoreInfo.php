@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJoinTableNumber(integer $JoinTableNumber) 设置参与评估表数量
  * @method float getScore() 获取评分
  * @method void setScore(float $Score) 设置评分
+ * @method string getUserIdStr() 获取设置人idStr
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserIdStr(string $UserIdStr) 设置设置人idStr
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DimensionScoreInfo extends AbstractModel
 {
@@ -88,6 +92,12 @@ class DimensionScoreInfo extends AbstractModel
     public $Score;
 
     /**
+     * @var string 设置人idStr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserIdStr;
+
+    /**
      * @param string $Name 维度名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Weight 权重
@@ -100,6 +110,8 @@ class DimensionScoreInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JoinTableNumber 参与评估表数量
      * @param float $Score 评分
+     * @param string $UserIdStr 设置人idStr
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +152,10 @@ class DimensionScoreInfo extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("UserIdStr",$param) and $param["UserIdStr"] !== null) {
+            $this->UserIdStr = $param["UserIdStr"];
         }
     }
 }

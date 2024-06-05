@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
  * @method void setStatusCode(string $StatusCode) 设置任务状态码：
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
  * @method string getStatusMsg() 获取任务状态描述。
  * @method void setStatusMsg(string $StatusMsg) 设置任务状态描述。
  * @method string getResultVideoUrl() 获取处理结果视频Url。URL有效期为24小时。
@@ -53,8 +53,8 @@ class DescribeVideoStylizationJobResponse extends AbstractModel
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
      */
     public $StatusCode;
 
@@ -79,8 +79,8 @@ JobSuccess: "处理失败"。
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
      * @param string $StatusMsg 任务状态描述。
      * @param string $ResultVideoUrl 处理结果视频Url。URL有效期为24小时。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

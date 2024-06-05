@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscribeName(string $SubscribeName) 设置订阅名称，前缀模糊匹配
  * @method string getInstanceId() 获取订阅的云上数据库实例的 ID，精确匹配
  * @method void setInstanceId(string $InstanceId) 设置订阅的云上数据库实例的 ID，精确匹配
+ * @method string getTopic() 获取订阅的topicName
+ * @method void setTopic(string $Topic) 设置订阅的topicName
  * @method integer getPayType() 获取计费模式筛选，可能的值：0-包年包月，1-按量计费
  * @method void setPayType(integer $PayType) 设置计费模式筛选，可能的值：0-包年包月，1-按量计费
  * @method string getProduct() 获取订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
@@ -59,6 +61,11 @@ class DescribeSubscribeJobsRequest extends AbstractModel
      * @var string 订阅的云上数据库实例的 ID，精确匹配
      */
     public $InstanceId;
+
+    /**
+     * @var string 订阅的topicName
+     */
+    public $Topic;
 
     /**
      * @var integer 计费模式筛选，可能的值：0-包年包月，1-按量计费
@@ -104,6 +111,7 @@ class DescribeSubscribeJobsRequest extends AbstractModel
      * @param string $SubscribeId 订阅 ID 筛选，精确匹配
      * @param string $SubscribeName 订阅名称，前缀模糊匹配
      * @param string $InstanceId 订阅的云上数据库实例的 ID，精确匹配
+     * @param string $Topic 订阅的topicName
      * @param integer $PayType 计费模式筛选，可能的值：0-包年包月，1-按量计费
      * @param string $Product 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
      * @param array $Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
@@ -136,6 +144,10 @@ class DescribeSubscribeJobsRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
         }
 
         if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {

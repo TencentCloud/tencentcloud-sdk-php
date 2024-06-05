@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverName(string $ReceiverName) 设置接收人名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReceiverUserIdStr() 获取接收人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReceiverUserIdStr(string $ReceiverUserIdStr) 设置接收人Uin
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeReceiver extends AbstractModel
 {
@@ -44,9 +48,17 @@ class SubscribeReceiver extends AbstractModel
     public $ReceiverName;
 
     /**
+     * @var string 接收人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReceiverUserIdStr;
+
+    /**
      * @param integer $ReceiverUserId 接收人Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReceiverName 接收人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReceiverUserIdStr 接收人Uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class SubscribeReceiver extends AbstractModel
 
         if (array_key_exists("ReceiverName",$param) and $param["ReceiverName"] !== null) {
             $this->ReceiverName = $param["ReceiverName"];
+        }
+
+        if (array_key_exists("ReceiverUserIdStr",$param) and $param["ReceiverUserIdStr"] !== null) {
+            $this->ReceiverUserIdStr = $param["ReceiverUserIdStr"];
         }
     }
 }

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) 设置参数是否可修改
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamDetail extends AbstractModel
 {
@@ -148,6 +152,12 @@ class ParamDetail extends AbstractModel
     public $ModifiableInfo;
 
     /**
+     * @var string 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FuncPattern;
+
+    /**
      * @param string $ParamName 参数名称
      * @param string $ParamType 参数类型：integer，enum，float，string，func
      * @param boolean $SupportFunc true-支持"func"，false-不支持公式
@@ -167,6 +177,8 @@ class ParamDetail extends AbstractModel
      * @param string $Func 参数设置为公式时，Func返回设置的公式内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiableInfo $ModifiableInfo 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FuncPattern 支持公式的参数的默认公式样式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +257,10 @@ class ParamDetail extends AbstractModel
         if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
             $this->ModifiableInfo = new ModifiableInfo();
             $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
+        }
+
+        if (array_key_exists("FuncPattern",$param) and $param["FuncPattern"] !== null) {
+            $this->FuncPattern = $param["FuncPattern"];
         }
     }
 }

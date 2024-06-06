@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetCallInfo(IntranetCallInfo $IntranetCallInfo) 设置内网调用信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ServiceCallInfoV2 getServiceCallInfoV2() 获取基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceCallInfoV2(ServiceCallInfoV2 $ServiceCallInfoV2) 设置基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -76,6 +80,12 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
     public $IntranetCallInfo;
 
     /**
+     * @var ServiceCallInfoV2 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceCallInfoV2;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +100,8 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
      * @param TJCallInfo $TJCallInfo 太极服务的调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetCallInfo $IntranetCallInfo 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceCallInfoV2 $ServiceCallInfoV2 基于新网关的服务调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -129,6 +141,11 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
         if (array_key_exists("IntranetCallInfo",$param) and $param["IntranetCallInfo"] !== null) {
             $this->IntranetCallInfo = new IntranetCallInfo();
             $this->IntranetCallInfo->deserialize($param["IntranetCallInfo"]);
+        }
+
+        if (array_key_exists("ServiceCallInfoV2",$param) and $param["ServiceCallInfoV2"] !== null) {
+            $this->ServiceCallInfoV2 = new ServiceCallInfoV2();
+            $this->ServiceCallInfoV2->deserialize($param["ServiceCallInfoV2"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

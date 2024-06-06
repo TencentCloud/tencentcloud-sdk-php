@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServerlessDBInstances请求参数结构体
  *
- * @method array getFilter() 获取查询条件
- * @method void setFilter(array $Filter) 设置查询条件
+ * @method array getFilter() 获取查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
+ * @method void setFilter(array $Filter) 设置查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
  * @method integer getLimit() 获取查询个数
  * @method void setLimit(integer $Limit) 设置查询个数
  * @method integer getOffset() 获取偏移量
@@ -34,7 +46,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeServerlessDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 查询条件
+     * @var array 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
      */
     public $Filter;
 
@@ -59,7 +77,13 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filter 查询条件
+     * @param array $Filter 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
      * @param integer $Limit 查询个数
      * @param integer $Offset 偏移量
      * @param string $OrderBy 排序指标，目前支持实例创建时间CreateTime

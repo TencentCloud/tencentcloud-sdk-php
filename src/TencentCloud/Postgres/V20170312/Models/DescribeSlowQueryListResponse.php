@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowQueryList返回参数结构体
  *
- * @method integer getTotalCount() 获取选定时间范围内慢SQL总条数。
- * @method void setTotalCount(integer $TotalCount) 设置选定时间范围内慢SQL总条数。
- * @method array getDurationAnalysis() 获取指定时间范围内，慢SQL耗时分段分析。
+ * @method integer getTotalCount() 获取查询到的慢日志数量，最大值为10000条。	
+ * @method void setTotalCount(integer $TotalCount) 设置查询到的慢日志数量，最大值为10000条。	
+ * @method array getDurationAnalysis() 获取查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDurationAnalysis(array $DurationAnalysis) 设置指定时间范围内，慢SQL耗时分段分析。
+ * @method void setDurationAnalysis(array $DurationAnalysis) 设置查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRawSlowQueryList() 获取指定时间范围内 慢SQL流水。
+ * @method array getRawSlowQueryList() 获取查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRawSlowQueryList(array $RawSlowQueryList) 设置指定时间范围内 慢SQL流水。
+ * @method void setRawSlowQueryList(array $RawSlowQueryList) 设置查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowQueryListResponse extends AbstractModel
 {
     /**
-     * @var integer 选定时间范围内慢SQL总条数。
+     * @var integer 查询到的慢日志数量，最大值为10000条。	
      */
     public $TotalCount;
 
     /**
-     * @var array 指定时间范围内，慢SQL耗时分段分析。
+     * @var array 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationAnalysis;
 
     /**
-     * @var array 指定时间范围内 慢SQL流水。
+     * @var array 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawSlowQueryList;
@@ -58,10 +58,10 @@ class DescribeSlowQueryListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 选定时间范围内慢SQL总条数。
-     * @param array $DurationAnalysis 指定时间范围内，慢SQL耗时分段分析。
+     * @param integer $TotalCount 查询到的慢日志数量，最大值为10000条。	
+     * @param array $DurationAnalysis 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RawSlowQueryList 指定时间范围内 慢SQL流水。
+     * @param array $RawSlowQueryList 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

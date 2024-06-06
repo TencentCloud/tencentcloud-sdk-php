@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
+ * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
+ * @method integer getOffset() 获取数据偏移量，从0开始。	
+ * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。	
+ * @method integer getLimit() 获取单次显示数量
+ * @method void setLimit(integer $Limit) 设置单次显示数量
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeDatabasesRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
+     * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
+     */
+    public $Filters;
+
+    /**
+     * @var integer 数据偏移量，从0开始。	
+     */
+    public $Offset;
+
+    /**
+     * @var integer 单次显示数量
+     */
+    public $Limit;
+
+    /**
      * @param string $DBInstanceId 实例ID
+     * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
+     * @param integer $Offset 数据偏移量，从0开始。	
+     * @param integer $Limit 单次显示数量
      */
     function __construct()
     {
@@ -48,6 +72,23 @@ class DescribeDatabasesRequest extends AbstractModel
         }
         if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
             $this->DBInstanceId = $param["DBInstanceId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

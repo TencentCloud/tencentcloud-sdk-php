@@ -116,6 +116,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置函数tag
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOperatorUserIdsStr() 获取操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperatorUserIdsStr(array $OperatorUserIdsStr) 设置操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOwnerUserIdsStr() 获取公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerUserIdsStr(array $OwnerUserIdsStr) 设置公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrganizationalFunction extends AbstractModel
 {
@@ -272,6 +280,18 @@ class OrganizationalFunction extends AbstractModel
     public $Tag;
 
     /**
+     * @var array 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperatorUserIdsStr;
+
+    /**
+     * @var array 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerUserIdsStr;
+
+    /**
      * @param string $Name 名称
      * @param string $DisplayName 展示名称
      * @param string $LayerPath 层级路径
@@ -319,6 +339,10 @@ class OrganizationalFunction extends AbstractModel
      * @param string $SubmitTimestamp 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 函数tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OperatorUserIdsStr 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OwnerUserIdsStr 公有云 Owner ID 列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +465,14 @@ class OrganizationalFunction extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("OperatorUserIdsStr",$param) and $param["OperatorUserIdsStr"] !== null) {
+            $this->OperatorUserIdsStr = $param["OperatorUserIdsStr"];
+        }
+
+        if (array_key_exists("OwnerUserIdsStr",$param) and $param["OwnerUserIdsStr"] !== null) {
+            $this->OwnerUserIdsStr = $param["OwnerUserIdsStr"];
         }
     }
 }

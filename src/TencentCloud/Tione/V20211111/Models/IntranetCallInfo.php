@@ -28,13 +28,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceEIPInfo(array $ServiceEIPInfo) 设置共享弹性网卡信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDefaultInnerCallInfos() 获取默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultInnerCallInfos(array $DefaultInnerCallInfos) 设置默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateLinkInfos() 获取私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateLinkInfos(array $PrivateLinkInfos) 设置私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDefaultInnerCallInfos() 获取默认内网调用信息
+ * @method array getPrivateLinkInfosV2() 获取基于新网关的私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultInnerCallInfos(array $DefaultInnerCallInfos) 设置默认内网调用信息
+ * @method void setPrivateLinkInfosV2(array $PrivateLinkInfosV2) 设置基于新网关的私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntranetCallInfo extends AbstractModel
@@ -52,25 +56,33 @@ class IntranetCallInfo extends AbstractModel
     public $ServiceEIPInfo;
 
     /**
-     * @var array 私有连接信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PrivateLinkInfos;
-
-    /**
      * @var array 默认内网调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultInnerCallInfos;
 
     /**
+     * @var array 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrivateLinkInfos;
+
+    /**
+     * @var array 基于新网关的私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrivateLinkInfosV2;
+
+    /**
      * @param IngressPrivateLinkInfo $IngressPrivateLinkInfo 私有连接通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceEIPInfo 共享弹性网卡信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DefaultInnerCallInfos 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateLinkInfos 私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DefaultInnerCallInfos 默认内网调用信息
+     * @param array $PrivateLinkInfosV2 基于新网关的私有连接信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,15 @@ class IntranetCallInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("DefaultInnerCallInfos",$param) and $param["DefaultInnerCallInfos"] !== null) {
+            $this->DefaultInnerCallInfos = [];
+            foreach ($param["DefaultInnerCallInfos"] as $key => $value){
+                $obj = new DefaultInnerCallInfo();
+                $obj->deserialize($value);
+                array_push($this->DefaultInnerCallInfos, $obj);
+            }
+        }
+
         if (array_key_exists("PrivateLinkInfos",$param) and $param["PrivateLinkInfos"] !== null) {
             $this->PrivateLinkInfos = [];
             foreach ($param["PrivateLinkInfos"] as $key => $value){
@@ -109,12 +130,12 @@ class IntranetCallInfo extends AbstractModel
             }
         }
 
-        if (array_key_exists("DefaultInnerCallInfos",$param) and $param["DefaultInnerCallInfos"] !== null) {
-            $this->DefaultInnerCallInfos = [];
-            foreach ($param["DefaultInnerCallInfos"] as $key => $value){
-                $obj = new DefaultInnerCallInfo();
+        if (array_key_exists("PrivateLinkInfosV2",$param) and $param["PrivateLinkInfosV2"] !== null) {
+            $this->PrivateLinkInfosV2 = [];
+            foreach ($param["PrivateLinkInfosV2"] as $key => $value){
+                $obj = new PrivateLinkInfo();
                 $obj->deserialize($value);
-                array_push($this->DefaultInnerCallInfos, $obj);
+                array_push($this->PrivateLinkInfosV2, $obj);
             }
         }
     }

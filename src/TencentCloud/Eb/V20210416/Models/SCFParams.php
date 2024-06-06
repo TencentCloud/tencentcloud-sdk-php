@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 云函数参数
  *
  * @method integer getBatchTimeout() 获取批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchTimeout(integer $BatchTimeout) 设置批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBatchEventCount() 获取批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchEventCount(integer $BatchEventCount) 设置批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableBatchDelivery() 获取开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableBatchDelivery(boolean $EnableBatchDelivery) 设置开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SCFParams extends AbstractModel
 {
     /**
      * @var integer 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchTimeout;
 
     /**
      * @var integer 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchEventCount;
 
     /**
      * @var boolean 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableBatchDelivery;
 
     /**
      * @param integer $BatchTimeout 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BatchEventCount 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableBatchDelivery 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

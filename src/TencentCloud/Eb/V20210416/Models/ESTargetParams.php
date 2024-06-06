@@ -21,57 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 描述Es规则目标
  *
  * @method string getNetMode() 获取网络连接类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetMode(string $NetMode) 设置网络连接类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexPrefix() 获取索引前缀
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexPrefix(string $IndexPrefix) 设置索引前缀
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRotationInterval() 获取es日志轮换粒度
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotationInterval(string $RotationInterval) 设置es日志轮换粒度
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputMode() 获取DTS事件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputMode(string $OutputMode) 设置DTS事件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexSuffixMode() 获取DTS索引配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexSuffixMode(string $IndexSuffixMode) 设置DTS索引配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexTemplateType() 获取es模版类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexTemplateType(string $IndexTemplateType) 设置es模版类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ESTargetParams extends AbstractModel
 {
     /**
      * @var string 网络连接类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetMode;
 
     /**
      * @var string 索引前缀
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexPrefix;
 
     /**
      * @var string es日志轮换粒度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RotationInterval;
 
     /**
      * @var string DTS事件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputMode;
 
     /**
      * @var string DTS索引配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexSuffixMode;
 
     /**
      * @var string es模版类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexTemplateType;
 
     /**
      * @param string $NetMode 网络连接类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexPrefix 索引前缀
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RotationInterval es日志轮换粒度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputMode DTS事件配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexSuffixMode DTS索引配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexTemplateType es模版类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOfflineTime(string $OfflineTime) 设置下线时间
  * @method string getConsumeStartTime() 获取最近一次修改的消费时间起点，如果从未修改则为零值
  * @method void setConsumeStartTime(string $ConsumeStartTime) 设置最近一次修改的消费时间起点，如果从未修改则为零值
+ * @method integer getAutoRenewFlag() 获取自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取数据订阅实例所属地域
  * @method void setRegion(string $Region) 设置数据订阅实例所属地域
  * @method integer getPayType() 获取计费方式，0 - 包年包月，1 - 按量计费
@@ -65,10 +69,6 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoRenewFlag() 获取自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。0-不自动续费，1-自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubscribeVersion() 获取订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,6 +143,12 @@ class SubscribeInfo extends AbstractModel
     public $ConsumeStartTime;
 
     /**
+     * @var integer 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @var string 数据订阅实例所属地域
      */
     public $Region;
@@ -189,12 +195,6 @@ class SubscribeInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AutoRenewFlag;
-
-    /**
      * @var string 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -214,6 +214,8 @@ class SubscribeInfo extends AbstractModel
      * @param string $ExpireTime 到期时间
      * @param string $OfflineTime 下线时间
      * @param string $ConsumeStartTime 最近一次修改的消费时间起点，如果从未修改则为零值
+     * @param integer $AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 数据订阅实例所属地域
      * @param integer $PayType 计费方式，0 - 包年包月，1 - 按量计费
      * @param string $Vip 数据订阅实例的Vip
@@ -223,8 +225,6 @@ class SubscribeInfo extends AbstractModel
      * @param string $Status 数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中，offline - 已下线
      * @param string $SdkConsumedTime SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
 注意：此字段可能返回 null，表示取不到有效值。
@@ -294,6 +294,10 @@ class SubscribeInfo extends AbstractModel
             $this->ConsumeStartTime = $param["ConsumeStartTime"];
         }
 
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
         }
@@ -333,10 +337,6 @@ class SubscribeInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
-        }
-
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
 
         if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceParameters请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method array getParamList() 获取待修改参数及期望值
- * @method void setParamList(array $ParamList) 设置待修改参数及期望值
+ * @method string getDBInstanceId() 获取实例ID。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
+ * @method array getParamList() 获取待修改参数及期望值。
+ * @method void setParamList(array $ParamList) 设置待修改参数及期望值。
  */
 class ModifyDBInstanceParametersRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $DBInstanceId;
 
     /**
-     * @var array 待修改参数及期望值
+     * @var array 待修改参数及期望值。
      */
     public $ParamList;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param array $ParamList 待修改参数及期望值
+     * @param string $DBInstanceId 实例ID。
+     * @param array $ParamList 待修改参数及期望值。
      */
     function __construct()
     {

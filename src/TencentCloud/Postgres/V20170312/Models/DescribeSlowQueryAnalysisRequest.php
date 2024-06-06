@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
- * @method string getStartTime() 获取查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
- * @method void setStartTime(string $StartTime) 设置查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
- * @method string getEndTime() 获取查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
- * @method void setEndTime(string $EndTime) 设置查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
- * @method string getDatabaseName() 获取根据数据库名进行筛选，可以为空。
- * @method void setDatabaseName(string $DatabaseName) 设置根据数据库名进行筛选，可以为空。
- * @method string getOrderBy() 获取排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
- * @method void setOrderBy(string $OrderBy) 设置排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
- * @method string getOrderByType() 获取排序类型。升序asc、降序desc。默认desc。
- * @method void setOrderByType(string $OrderByType) 设置排序类型。升序asc、降序desc。默认desc。
- * @method integer getLimit() 获取分页大小。取值范围[1,100]。默认50。
- * @method void setLimit(integer $Limit) 设置分页大小。取值范围[1,100]。默认50。
- * @method integer getOffset() 获取分页偏移。取值范围[0,INF)。默认0。
- * @method void setOffset(integer $Offset) 设置分页偏移。取值范围[0,INF)。默认0。
+ * @method string getStartTime() 获取查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
+ * @method void setStartTime(string $StartTime) 设置查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
+ * @method string getEndTime() 获取查询结束时间，形如2018-01-01 00:00:00。
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，形如2018-01-01 00:00:00。
+ * @method string getDatabaseName() 获取数据库名字。	
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名字。	
+ * @method string getOrderBy() 获取排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
+ * @method string getOrderByType() 获取排序方式，包括升序：asc 降序：desc。默认值为desc。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc 降序：desc。默认值为desc。
+ * @method integer getLimit() 获取每页显示数量，取值范围为1-100。默认值为50。	
+ * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为1-100。默认值为50。	
+ * @method integer getOffset() 获取数据偏移量，从0开始。默认值为0。
+ * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。默认值为0。
  */
 class DescribeSlowQueryAnalysisRequest extends AbstractModel
 {
@@ -45,49 +45,49 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
+     * @var string 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @var string 查询结束时间，形如2018-01-01 00:00:00。
      */
     public $EndTime;
 
     /**
-     * @var string 根据数据库名进行筛选，可以为空。
+     * @var string 数据库名字。	
      */
     public $DatabaseName;
 
     /**
-     * @var string 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+     * @var string 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序类型。升序asc、降序desc。默认desc。
+     * @var string 排序方式，包括升序：asc 降序：desc。默认值为desc。
      */
     public $OrderByType;
 
     /**
-     * @var integer 分页大小。取值范围[1,100]。默认50。
+     * @var integer 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移。取值范围[0,INF)。默认0。
+     * @var integer 数据偏移量，从0开始。默认值为0。
      */
     public $Offset;
 
     /**
      * @param string $DBInstanceId 实例ID。
-     * @param string $StartTime 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
-     * @param string $EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
-     * @param string $DatabaseName 根据数据库名进行筛选，可以为空。
-     * @param string $OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
-     * @param string $OrderByType 排序类型。升序asc、降序desc。默认desc。
-     * @param integer $Limit 分页大小。取值范围[1,100]。默认50。
-     * @param integer $Offset 分页偏移。取值范围[0,INF)。默认0。
+     * @param string $StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
+     * @param string $EndTime 查询结束时间，形如2018-01-01 00:00:00。
+     * @param string $DatabaseName 数据库名字。	
+     * @param string $OrderBy 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
+     * @param string $OrderByType 排序方式，包括升序：asc 降序：desc。默认值为desc。
+     * @param integer $Limit 每页显示数量，取值范围为1-100。默认值为50。	
+     * @param integer $Offset 数据偏移量，从0开始。默认值为0。
      */
     function __construct()
     {

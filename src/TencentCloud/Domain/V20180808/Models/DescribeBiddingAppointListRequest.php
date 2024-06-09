@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBiddingAppointList请求参数结构体
  *
+ * @method integer getPageNumber() 获取页码
+ * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页数量
  * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  * @method array getStatus() 获取状态： 1 已预约 9 预约持有者索回
  * @method void setStatus(array $Status) 设置状态： 1 已预约 9 预约持有者索回
  * @method string getSortField() 获取排序字段：AppointEndTime 预约结束时间
@@ -32,9 +36,19 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBiddingAppointListRequest extends AbstractModel
 {
     /**
+     * @var integer 页码
+     */
+    public $PageNumber;
+
+    /**
      * @var integer 每页数量
      */
     public $PageSize;
+
+    /**
+     * @var string 域名
+     */
+    public $Domain;
 
     /**
      * @var array 状态： 1 已预约 9 预约持有者索回
@@ -52,7 +66,9 @@ class DescribeBiddingAppointListRequest extends AbstractModel
     public $SortOrder;
 
     /**
+     * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
+     * @param string $Domain 域名
      * @param array $Status 状态： 1 已预约 9 预约持有者索回
      * @param string $SortField 排序字段：AppointEndTime 预约结束时间
      * @param string $SortOrder 排序规则：asc升序，desc降序
@@ -70,8 +86,16 @@ class DescribeBiddingAppointListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

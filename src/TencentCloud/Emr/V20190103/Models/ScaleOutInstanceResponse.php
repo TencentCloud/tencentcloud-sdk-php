@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillId(string $BillId) 设置大订单号。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTraceId() 获取扩容TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceId(string $TraceId) 设置扩容TraceId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +77,12 @@ class ScaleOutInstanceResponse extends AbstractModel
     public $BillId;
 
     /**
+     * @var string 扩容TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +96,8 @@ class ScaleOutInstanceResponse extends AbstractModel
      * @param integer $FlowId 扩容流程ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillId 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TraceId 扩容TraceId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -120,6 +132,10 @@ class ScaleOutInstanceResponse extends AbstractModel
 
         if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
             $this->BillId = $param["BillId"];
+        }
+
+        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
+            $this->TraceId = $param["TraceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

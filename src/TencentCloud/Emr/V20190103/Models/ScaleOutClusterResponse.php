@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置扩容流程ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTraceId() 获取查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceId(string $TraceId) 设置查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,6 +57,12 @@ class ScaleOutClusterResponse extends AbstractModel
     public $FlowId;
 
     /**
+     * @var string 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -62,6 +72,8 @@ class ScaleOutClusterResponse extends AbstractModel
      * @param string $ClientToken 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowId 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TraceId 查询流程状态，流程额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -88,6 +100,10 @@ class ScaleOutClusterResponse extends AbstractModel
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
+            $this->TraceId = $param["TraceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

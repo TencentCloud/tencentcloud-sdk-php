@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBiddingDetail请求参数结构体
  *
-
+ * @method string getBusinessID() 获取business_id
+ * @method void setBusinessID(string $BusinessID) 设置business_id
  */
 class DescribeBiddingDetailRequest extends AbstractModel
 {
-
+    /**
+     * @var string business_id
+     */
+    public $BusinessID;
 
     /**
-
+     * @param string $BusinessID business_id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeBiddingDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("BusinessID",$param) and $param["BusinessID"] !== null) {
+            $this->BusinessID = $param["BusinessID"];
+        }
     }
 }

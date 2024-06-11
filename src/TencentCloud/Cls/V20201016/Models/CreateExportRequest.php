@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 0：Lucene语法，1：CQL语法。
  * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则,  默认值为0。
 0：Lucene语法，1：CQL语法。
+ * @method array getDerivedFields() 获取导出字段
+ * @method void setDerivedFields(array $DerivedFields) 设置导出字段
  */
 class CreateExportRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ class CreateExportRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
+     * @var array 导出字段
+     */
+    public $DerivedFields;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param integer $Count 日志导出数量,  最大值5000万
      * @param string $Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
@@ -92,6 +99,7 @@ class CreateExportRequest extends AbstractModel
      * @param string $Format 日志导出数据格式。json，csv，默认为json
      * @param integer $SyntaxRule 语法规则,  默认值为0。
 0：Lucene语法，1：CQL语法。
+     * @param array $DerivedFields 导出字段
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class CreateExportRequest extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("DerivedFields",$param) and $param["DerivedFields"] !== null) {
+            $this->DerivedFields = $param["DerivedFields"];
         }
     }
 }

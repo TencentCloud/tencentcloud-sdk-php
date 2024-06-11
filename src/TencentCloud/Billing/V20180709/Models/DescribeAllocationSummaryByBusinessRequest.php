@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() 获取数量，最大值为1000
  * @method void setLimit(integer $Limit) 设置数量，最大值为1000
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+ * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+ * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
  * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
 
  * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
@@ -99,7 +99,7 @@ class DescribeAllocationSummaryByBusinessRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      */
     public $Offset;
 
@@ -171,7 +171,7 @@ Trend - 环比(折后总额)
 
     /**
      * @param integer $Limit 数量，最大值为1000
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      * @param string $Month 账单月份，格式为2024-02，不传默认当前月
 
      * @param string $PeriodType 统计周期，枚举值如下

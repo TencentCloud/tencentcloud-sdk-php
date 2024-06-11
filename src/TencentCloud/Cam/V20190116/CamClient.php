@@ -28,6 +28,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachGroupPolicyResponse AttachGroupPolicy(Models\AttachGroupPolicyRequest $req) 本接口（AttachGroupPolicy）可用于绑定策略到用户组。
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) 本接口（AttachRolePolicy）用于绑定策略到角色。
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 本接口（AttachUserPolicy）可用于绑定到用户的策略。
+ * @method Models\BuildDataFlowAuthTokenResponse BuildDataFlowAuthToken(Models\BuildDataFlowAuthTokenRequest $req) 获取数据流认证Token
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) 验证自定义多因子Token
  * @method Models\CreateAccessKeyResponse CreateAccessKey(Models\CreateAccessKeyRequest $req) 为CAM用户创建访问密钥
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组

@@ -34,6 +34,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 查询异步任务状态接口
  * @method Models\DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(Models\DescribeBackupDownloadTaskRequest $req) 查询备份下载任务信息
+ * @method Models\DescribeBackupRulesResponse DescribeBackupRules(Models\DescribeBackupRulesRequest $req) 本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
  * @method Models\DescribeClientConnectionsResponse DescribeClientConnections(Models\DescribeClientConnectionsRequest $req) 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
  * @method Models\DescribeCurrentOpResponse DescribeCurrentOp(Models\DescribeCurrentOpRequest $req) 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
@@ -45,6 +46,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
  * @method Models\DescribeSpecInfoResponse DescribeSpecInfo(Models\DescribeSpecInfoRequest $req) 本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+ * @method Models\DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(Models\DescribeTransparentDataEncryptionStatusRequest $req) 获取实例透明加密的开启状态
+ * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
  * @method Models\FlashBackDBInstanceResponse FlashBackDBInstance(Models\FlashBackDBInstanceRequest $req) 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
  * @method Models\FlushInstanceRouterConfigResponse FlushInstanceRouterConfig(Models\FlushInstanceRouterConfigRequest $req) 在所有mongos上执行FlushRouterConfig命令
@@ -61,6 +64,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
  * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 修改实例用户的密码
  * @method Models\SetAccountUserPrivilegeResponse SetAccountUserPrivilege(Models\SetAccountUserPrivilegeRequest $req) 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
+ * @method Models\SetBackupRulesResponse SetBackupRules(Models\SetBackupRulesRequest $req) 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
  * @method Models\SetInstanceMaintenanceResponse SetInstanceMaintenance(Models\SetInstanceMaintenanceRequest $req) 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
  * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
  */

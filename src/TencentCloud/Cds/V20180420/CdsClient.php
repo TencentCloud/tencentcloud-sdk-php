@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cds\V20180420\Models as Models;
 
 /**
- * @method Models\DescribeDasbImageIdsResponse DescribeDasbImageIds(Models\DescribeDasbImageIdsRequest $req) 获取镜像列表
+ * @method Models\DescribeDasbImageIdsResponse DescribeDasbImageIds(Models\DescribeDasbImageIdsRequest $req) 这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
+
+获取镜像列表
  * @method Models\DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceType(Models\DescribeDbauditInstanceTypeRequest $req) 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
  * @method Models\DescribeDbauditInstancesResponse DescribeDbauditInstances(Models\DescribeDbauditInstancesRequest $req) 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
  * @method Models\DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(Models\DescribeDbauditUsedRegionsRequest $req) 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。

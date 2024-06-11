@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
- * @method StorageParams getStorageParams() 获取云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
- * @method void setStorageParams(StorageParams $StorageParams) 设置云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+ * @method StorageParams getStorageParams() 获取云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+ * @method void setStorageParams(StorageParams $StorageParams) 设置云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
  * @method WebRecordVideoParams getWebRecordVideoParams() 获取页面录制视频参数
  * @method void setWebRecordVideoParams(WebRecordVideoParams $WebRecordVideoParams) 设置页面录制视频参数
  * @method integer getSdkAppId() 获取TRTC的SdkAppId
@@ -56,7 +56,7 @@ class StartWebRecordRequest extends AbstractModel
     public $MaxDurationLimit;
 
     /**
-     * @var StorageParams 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+     * @var StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      */
     public $StorageParams;
 
@@ -86,7 +86,7 @@ class StartWebRecordRequest extends AbstractModel
 
      * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
-     * @param StorageParams $StorageParams 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+     * @param StorageParams $StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      * @param WebRecordVideoParams $WebRecordVideoParams 页面录制视频参数
      * @param integer $SdkAppId TRTC的SdkAppId
      * @param string $RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复

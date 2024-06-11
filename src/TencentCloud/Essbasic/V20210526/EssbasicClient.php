@@ -577,7 +577,6 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 <th>子客企业状态</th>
 <th>子客企业员工状态</th>
 <th>点击链接进入的流程</th>
-<th>视频样例</th>
 </tr>
 </thead>
 <tbody>
@@ -585,19 +584,16 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 <td>企业未激活</td>
 <td>员工未认证</td>
 <td>进入企业激活流程，首次完成企业激活流程的员工会成为超管</td>
-<td><a href="https://dyn.ess.tencent.cn/guide/apivideo/CreateConsoleLoginUrl_noverify.mp4" target="_blank">打开</a></td>
 </tr>
 <tr>
 <td>企业已激活</td>
 <td>员工未认证</td>
 <td>进入员认证并加入企业流程</td>
-<td>-</td>
 </tr>
 <tr>
 <td>企业已激活</td>
 <td>员工已认证</td>
 <td>进入子客企业Web控制台</td>
-<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -608,6 +604,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 系统的渠道企业, 应用, 子客企业, 子客员工的组织形式
 ![image](https://qcloudimg.tencent-cloud.cn/raw/bee4b7375fe7a097f3573b18a1c1e30b.png)
+
+
+<font color="red">相关视频指引</font> <br>
+1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-createconsoleloginin.mp4" target="_blank">【生成子客登录链接】代码编写 &  子企业认证示例</a><br>
  * @method Models\CreateFlowGroupSignReviewResponse CreateFlowGroupSignReview(Models\CreateFlowGroupSignReviewRequest $req) 1. 在使用[通过多文件创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByFiles)或[通过多模板创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates)创建合同组签署流程时，若指定了参数以下参数为true,则可以调用此接口提交企业内部签署审批结果,即使是自动签署也需要进行审核通过才会进行签署。
   - [FlowInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowinfo)
   - [FlowFileInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowfileinfo)

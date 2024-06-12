@@ -157,13 +157,17 @@ use TencentCloud\Common\AbstractModel;
 回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
+
+- 如果用户使用轮询方式获取识别结果，则无需提交该参数
+- 建议在回调URL中带上您的业务ID等信息，以便处理业务逻辑
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL
 用户自行搭建的用于接收识别结果的服务URL
 回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
+
+- 如果用户使用轮询方式获取识别结果，则无需提交该参数
+- 建议在回调URL中带上您的业务ID等信息，以便处理业务逻辑
  * @method integer getSpeakerDiarization() 获取是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；
@@ -399,7 +403,9 @@ class CreateRecTaskRequest extends AbstractModel
 回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
+
+- 如果用户使用轮询方式获取识别结果，则无需提交该参数
+- 建议在回调URL中带上您的业务ID等信息，以便处理业务逻辑
      */
     public $CallbackUrl;
 
@@ -594,7 +600,9 @@ class CreateRecTaskRequest extends AbstractModel
 回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
+
+- 如果用户使用轮询方式获取识别结果，则无需提交该参数
+- 建议在回调URL中带上您的业务ID等信息，以便处理业务逻辑
      * @param integer $SpeakerDiarization 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect，且ChannelNum=1时可用）；

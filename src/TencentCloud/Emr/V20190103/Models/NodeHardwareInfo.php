@@ -226,6 +226,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServicesStatus(string $ServicesStatus) 设置各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -537,6 +541,12 @@ class NodeHardwareInfo extends AbstractModel
     public $ServicesStatus;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -639,6 +649,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param integer $TradeVersion 0表示老计费，1表示新计费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -868,6 +880,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("ServicesStatus",$param) and $param["ServicesStatus"] !== null) {
             $this->ServicesStatus = $param["ServicesStatus"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

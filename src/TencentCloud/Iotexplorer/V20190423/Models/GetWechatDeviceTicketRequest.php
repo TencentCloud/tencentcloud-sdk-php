@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsThirdApp(integer $IsThirdApp) 设置是否第三方小程序
  * @method string getModelId() 获取模板ID
  * @method void setModelId(string $ModelId) 设置模板ID
+ * @method string getMiniProgramAppId() 获取小程序APPID
+ * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置小程序APPID
  */
 class GetWechatDeviceTicketRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GetWechatDeviceTicketRequest extends AbstractModel
     public $ModelId;
 
     /**
+     * @var string 小程序APPID
+     */
+    public $MiniProgramAppId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 产品名称
      * @param integer $IsThirdApp 是否第三方小程序
      * @param string $ModelId 模板ID
+     * @param string $MiniProgramAppId 小程序APPID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GetWechatDeviceTicketRequest extends AbstractModel
 
         if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
             $this->ModelId = $param["ModelId"];
+        }
+
+        if (array_key_exists("MiniProgramAppId",$param) and $param["MiniProgramAppId"] !== null) {
+            $this->MiniProgramAppId = $param["MiniProgramAppId"];
         }
     }
 }

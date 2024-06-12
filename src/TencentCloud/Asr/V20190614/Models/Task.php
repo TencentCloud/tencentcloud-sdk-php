@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * [录音文件识别](https://cloud.tencent.com/document/product/1093/37823#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)、[实时语音异步识别](https://cloud.tencent.com/document/product/1093/52061#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)请求的返回数据
  *
- * @method integer getTaskId() 获取任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
- * @method void setTaskId(integer $TaskId) 设置任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+ * @method integer getTaskId() 获取任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+ * @method void setTaskId(integer $TaskId) 设置任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
  */
 class Task extends AbstractModel
 {
     /**
-     * @var integer 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+     * @var integer 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
      */
     public $TaskId;
 
     /**
-     * @param integer $TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+     * @param integer $TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
      */
     function __construct()
     {

@@ -33,6 +33,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConf(Models\DescribeAutoScaleGroupGlobalConfRequest $req) 获取自动扩缩容全局配置
  * @method Models\DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(Models\DescribeAutoScaleRecordsRequest $req) 获取集群的自动扩缩容的详细记录
  * @method Models\DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategies(Models\DescribeAutoScaleStrategiesRequest $req) 获取自动扩缩容规则
+ * @method Models\DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetail(Models\DescribeClusterFlowStatusDetailRequest $req) 查询EMR任务运行详情状态
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询

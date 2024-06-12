@@ -63,6 +63,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 
 获取信息防泄漏规则列表
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
+ * @method Models\DescribeAreaBanSupportAreasResponse DescribeAreaBanSupportAreas(Models\DescribeAreaBanSupportAreasRequest $req) 获取WAF地域封禁支持的地域列表
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
@@ -126,6 +127,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyAntiInfoLeakRulesResponse ModifyAntiInfoLeakRules(Models\ModifyAntiInfoLeakRulesRequest $req) 编辑信息防泄漏规则
  * @method Models\ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatus(Models\ModifyApiAnalyzeStatusRequest $req) api分析页面开关
  * @method Models\ModifyApiSecEventChangeResponse ModifyApiSecEventChange(Models\ModifyApiSecEventChangeRequest $req) api安全状态变更接口
+ * @method Models\ModifyAreaBanAreasResponse ModifyAreaBanAreas(Models\ModifyAreaBanAreasRequest $req) 修改地域封禁中的地域信息
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(Models\ModifyAttackWhiteRuleRequest $req) 供用户控制台调用，修改Tiga规则引擎白名单。
  * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新

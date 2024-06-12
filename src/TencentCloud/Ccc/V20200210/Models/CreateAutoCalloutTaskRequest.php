@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置任务描述
  * @method integer getNotAfter() 获取任务停止时间戳，Unix 秒级时间戳
  * @method void setNotAfter(integer $NotAfter) 设置任务停止时间戳，Unix 秒级时间戳
- * @method integer getTries() 获取最大尝试次数
- * @method void setTries(integer $Tries) 设置最大尝试次数
+ * @method integer getTries() 获取最大尝试次数，1-3 次
+ * @method void setTries(integer $Tries) 设置最大尝试次数，1-3 次
  * @method array getVariables() 获取自定义变量（仅高级版支持）
  * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持）
  * @method string getUUI() 获取UUI
@@ -88,7 +88,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $NotAfter;
 
     /**
-     * @var integer 最大尝试次数
+     * @var integer 最大尝试次数，1-3 次
      */
     public $Tries;
 
@@ -116,7 +116,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $Name 任务名
      * @param string $Description 任务描述
      * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
-     * @param integer $Tries 最大尝试次数
+     * @param integer $Tries 最大尝试次数，1-3 次
      * @param array $Variables 自定义变量（仅高级版支持）
      * @param string $UUI UUI
      * @param array $CalleeAttributes 被叫属性

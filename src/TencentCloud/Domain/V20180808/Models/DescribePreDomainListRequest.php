@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePreDomainList请求参数结构体
  *
- * @method integer getPage() 获取页码
- * @method void setPage(integer $Page) 设置页码
- * @method integer getSize() 获取条数
- * @method void setSize(integer $Size) 设置条数
+ * @method integer getPage() 获取页码，默认为1
+ * @method void setPage(integer $Page) 设置页码，默认为1
+ * @method integer getSize() 获取条数，默认为20
+ * @method void setSize(integer $Size) 设置条数，默认为20
  * @method string getEndTime() 获取用于结束时间筛选
  * @method void setEndTime(string $EndTime) 设置用于结束时间筛选
  * @method string getUpTime() 获取用户指定上架时间筛选
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribePreDomainListRequest extends AbstractModel
 {
     /**
-     * @var integer 页码
+     * @var integer 页码，默认为1
      */
     public $Page;
 
     /**
-     * @var integer 条数
+     * @var integer 条数，默认为20
      */
     public $Size;
 
@@ -52,8 +52,8 @@ class DescribePreDomainListRequest extends AbstractModel
     public $UpTime;
 
     /**
-     * @param integer $Page 页码
-     * @param integer $Size 条数
+     * @param integer $Page 页码，默认为1
+     * @param integer $Size 条数，默认为20
      * @param string $EndTime 用于结束时间筛选
      * @param string $UpTime 用户指定上架时间筛选
      */

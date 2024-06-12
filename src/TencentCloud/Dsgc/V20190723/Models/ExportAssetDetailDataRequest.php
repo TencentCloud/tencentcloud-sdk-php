@@ -44,6 +44,8 @@ LevelID 敏感分级ID
 ResourceRegion 资源所在地域
 DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
 注意：每个name默认支持最多5个values。
+ * @method string getCasbId() 获取casbId
+ * @method void setCasbId(string $CasbId) 设置casbId
  */
 class ExportAssetDetailDataRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
     public $Filters;
 
     /**
+     * @var string casbId
+     */
+    public $CasbId;
+
+    /**
      * @param string $DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      * @param integer $ComplianceId 合规组id
      * @param string $MetaDataType 资产类型（rdb,cvm_db,cos）
@@ -88,6 +95,7 @@ LevelID 敏感分级ID
 ResourceRegion 资源所在地域
 DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
 注意：每个name默认支持最多5个values。
+     * @param string $CasbId casbId
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("CasbId",$param) and $param["CasbId"] !== null) {
+            $this->CasbId = $param["CasbId"];
         }
     }
 }

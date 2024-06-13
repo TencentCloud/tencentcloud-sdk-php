@@ -236,7 +236,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\UpdateAddonResponse UpdateAddon(Models\UpdateAddonRequest $req) 更新一个addon的参数和版本
  * @method Models\UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(Models\UpdateClusterKubeconfigRequest $req) 对集群的Kubeconfig信息进行更新
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) 升级集群 Master 组件到指定版本
- * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性 
+ * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性
  * @method Models\UpdateEKSContainerInstanceResponse UpdateEKSContainerInstance(Models\UpdateEKSContainerInstanceRequest $req) 更新容器实例
  * @method Models\UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersion(Models\UpdateEdgeClusterVersionRequest $req) 升级边缘集群组件到指定版本，此版本为TKEEdge专用版本。
  * @method Models\UpdateImageCacheResponse UpdateImageCache(Models\UpdateImageCacheRequest $req) 更新镜像缓存接口

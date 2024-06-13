@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(PhysicalBaseItem $Location) 设置左右手臂
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BloodPressureItem extends AbstractModel
 {
@@ -84,6 +88,12 @@ class BloodPressureItem extends AbstractModel
     public $Location;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param string $Name 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Item 项目原文
@@ -95,6 +105,8 @@ class BloodPressureItem extends AbstractModel
      * @param PhysicalBaseItem $Times 第几次
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Location 左右手臂
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class BloodPressureItem extends AbstractModel
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = new PhysicalBaseItem();
             $this->Location->deserialize($param["Location"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

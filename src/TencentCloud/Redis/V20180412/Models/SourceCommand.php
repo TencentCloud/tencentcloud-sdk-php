@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问命令
  *
- * @method string getCmd() 获取命令
- * @method void setCmd(string $Cmd) 设置命令
- * @method integer getCount() 获取执行次数
- * @method void setCount(integer $Count) 设置执行次数
+ * @method string getCmd() 获取命令名称。
+ * @method void setCmd(string $Cmd) 设置命令名称。
+ * @method integer getCount() 获取执行次数。
+ * @method void setCount(integer $Count) 设置执行次数。
  */
 class SourceCommand extends AbstractModel
 {
     /**
-     * @var string 命令
+     * @var string 命令名称。
      */
     public $Cmd;
 
     /**
-     * @var integer 执行次数
+     * @var integer 执行次数。
      */
     public $Count;
 
     /**
-     * @param string $Cmd 命令
-     * @param integer $Count 执行次数
+     * @param string $Cmd 命令名称。
+     * @param integer $Count 执行次数。
      */
     function __construct()
     {

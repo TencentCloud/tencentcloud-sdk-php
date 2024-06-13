@@ -36,10 +36,12 @@ use TencentCloud\Common\AbstractModel;
 如果WeChatSubType是2，填入以session_key 为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
  * @method string getAssociateAccount() 获取用于标识微信用户登录后所关联业务自身的账号ID。
  * @method void setAssociateAccount(string $AssociateAccount) 设置用于标识微信用户登录后所关联业务自身的账号ID。
- * @method string getMobilePhone() 获取账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
- * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+ * @method string getMobilePhone() 获取账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
+ * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
  * @method string getDeviceId() 获取用户设备号（已不推荐使用）。
  * @method void setDeviceId(string $DeviceId) 设置用户设备号（已不推荐使用）。
  */
@@ -74,8 +76,9 @@ class WeChatAccountInfo extends AbstractModel
     public $AssociateAccount;
 
     /**
-     * @var string 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * @var string 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
      */
     public $MobilePhone;
 
@@ -93,8 +96,9 @@ class WeChatAccountInfo extends AbstractModel
      * @param string $WeChatAccessToken 如果WeChatSubType 是1，填入授权的 access_token（注意：不是普通 access_token，详情请参阅官方说明文档。获取网页版本的 access_token 时，scope 字段必需填写snsapi_userinfo
 如果WeChatSubType是2，填入以session_key 为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
      * @param string $AssociateAccount 用于标识微信用户登录后所关联业务自身的账号ID。
-     * @param string $MobilePhone 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * @param string $MobilePhone 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
      * @param string $DeviceId 用户设备号（已不推荐使用）。
      */
     function __construct()

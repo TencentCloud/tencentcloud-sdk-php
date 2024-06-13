@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 弹性容器集群内网访问LB信息
  *
  * @method boolean getEnabled() 获取是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInternalLB extends AbstractModel
 {
     /**
      * @var boolean 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var string 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @param boolean $Enabled 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

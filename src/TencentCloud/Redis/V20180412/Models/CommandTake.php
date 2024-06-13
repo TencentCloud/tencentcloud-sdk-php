@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 命令耗时
  *
- * @method string getCmd() 获取命令
- * @method void setCmd(string $Cmd) 设置命令
- * @method integer getTook() 获取耗时
- * @method void setTook(integer $Took) 设置耗时
+ * @method string getCmd() 获取命令名。
+ * @method void setCmd(string $Cmd) 设置命令名。
+ * @method integer getTook() 获取耗时时长。
+ * @method void setTook(integer $Took) 设置耗时时长。
  */
 class CommandTake extends AbstractModel
 {
     /**
-     * @var string 命令
+     * @var string 命令名。
      */
     public $Cmd;
 
     /**
-     * @var integer 耗时
+     * @var integer 耗时时长。
      */
     public $Took;
 
     /**
-     * @param string $Cmd 命令
-     * @param integer $Took 耗时
+     * @param string $Cmd 命令名。
+     * @param integer $Took 耗时时长。
      */
     function __construct()
     {

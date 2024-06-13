@@ -122,6 +122,10 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudAttachId(string $CloudAttachId) 设置高速上云服务ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getShareOrNot() 获取是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShareOrNot(integer $ShareOrNot) 设置是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -297,6 +301,12 @@ REJECTED:拒绝
     public $CloudAttachId;
 
     /**
+     * @var integer 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShareOrNot;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -347,6 +357,8 @@ REJECTED:拒绝
      * @param boolean $SignLaw 专用通道关联的物理专线是否签署了用户协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudAttachId 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ShareOrNot 是否共享通道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -491,6 +503,10 @@ REJECTED:拒绝
 
         if (array_key_exists("CloudAttachId",$param) and $param["CloudAttachId"] !== null) {
             $this->CloudAttachId = $param["CloudAttachId"];
+        }
+
+        if (array_key_exists("ShareOrNot",$param) and $param["ShareOrNot"] !== null) {
+            $this->ShareOrNot = $param["ShareOrNot"];
         }
     }
 }

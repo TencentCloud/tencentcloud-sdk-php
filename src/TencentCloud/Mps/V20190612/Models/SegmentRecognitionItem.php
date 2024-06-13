@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentUrl(string $SegmentUrl) 设置拆条片段URL。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTitle() 获取分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTitle(string $Title) 设置分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSummary() 获取分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSummary(string $Summary) 设置分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SegmentRecognitionItem extends AbstractModel
 {
@@ -55,10 +63,26 @@ class SegmentRecognitionItem extends AbstractModel
     public $SegmentUrl;
 
     /**
+     * @var string 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Title;
+
+    /**
+     * @var string 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Summary;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
      * @param string $SegmentUrl 拆条片段URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Title 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Summary 分段概要。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +112,14 @@ class SegmentRecognitionItem extends AbstractModel
 
         if (array_key_exists("SegmentUrl",$param) and $param["SegmentUrl"] !== null) {
             $this->SegmentUrl = $param["SegmentUrl"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
     }
 }

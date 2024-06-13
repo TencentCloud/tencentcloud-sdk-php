@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTableId() 获取表唯一id
  * @method void setTableId(string $TableId) 设置表唯一id
+ * @method TableNameFilter getTableNameFilter() 获取按名称查询的条件
+ * @method void setTableNameFilter(TableNameFilter $TableNameFilter) 设置按名称查询的条件
+ * @method integer getTableFilterType() 获取查询条件类型0按id，1按名称，默认为0
+ * @method void setTableFilterType(integer $TableFilterType) 设置查询条件类型0按id，1按名称，默认为0
  */
 class DescribeTableMetaRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeTableMetaRequest extends AbstractModel
     public $TableId;
 
     /**
+     * @var TableNameFilter 按名称查询的条件
+     */
+    public $TableNameFilter;
+
+    /**
+     * @var integer 查询条件类型0按id，1按名称，默认为0
+     */
+    public $TableFilterType;
+
+    /**
      * @param string $TableId 表唯一id
+     * @param TableNameFilter $TableNameFilter 按名称查询的条件
+     * @param integer $TableFilterType 查询条件类型0按id，1按名称，默认为0
      */
     function __construct()
     {
@@ -48,6 +64,15 @@ class DescribeTableMetaRequest extends AbstractModel
         }
         if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
             $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("TableNameFilter",$param) and $param["TableNameFilter"] !== null) {
+            $this->TableNameFilter = new TableNameFilter();
+            $this->TableNameFilter->deserialize($param["TableNameFilter"]);
+        }
+
+        if (array_key_exists("TableFilterType",$param) and $param["TableFilterType"] !== null) {
+            $this->TableFilterType = $param["TableFilterType"];
         }
     }
 }

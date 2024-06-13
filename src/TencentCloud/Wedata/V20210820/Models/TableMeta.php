@@ -234,6 +234,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionExpireDays(integer $PartitionExpireDays) 设置生命周期-分区保留天数【分区保留策略时有效】
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTableProperties() 获取表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableProperties(array $TableProperties) 设置表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -557,6 +561,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $PartitionExpireDays;
 
     /**
+     * @var array 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableProperties;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -663,6 +673,8 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param array $PartitionColumns 分区字段 key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TableProperties 表附属信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -895,6 +907,15 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 
         if (array_key_exists("PartitionExpireDays",$param) and $param["PartitionExpireDays"] !== null) {
             $this->PartitionExpireDays = $param["PartitionExpireDays"];
+        }
+
+        if (array_key_exists("TableProperties",$param) and $param["TableProperties"] !== null) {
+            $this->TableProperties = [];
+            foreach ($param["TableProperties"] as $key => $value){
+                $obj = new TableMetaProperty();
+                $obj->deserialize($value);
+                array_push($this->TableProperties, $obj);
+            }
         }
     }
 }

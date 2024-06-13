@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParagraphBlock(ParagraphBlock $ParagraphBlock) 设置文本段落
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DischargeInfoBlock extends AbstractModel
 {
@@ -74,6 +78,12 @@ class DischargeInfoBlock extends AbstractModel
     public $ParagraphBlock;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param DiseaseHistoryBlock $DiseaseHistory 疾病史
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonalHistoryBlock $PersonalHistory 个人史
@@ -83,6 +93,8 @@ class DischargeInfoBlock extends AbstractModel
      * @param TreatmentRecordBlock $TreatmentRecord 治疗相关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ParagraphBlock $ParagraphBlock 文本段落
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,10 @@ class DischargeInfoBlock extends AbstractModel
         if (array_key_exists("ParagraphBlock",$param) and $param["ParagraphBlock"] !== null) {
             $this->ParagraphBlock = new ParagraphBlock();
             $this->ParagraphBlock->deserialize($param["ParagraphBlock"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

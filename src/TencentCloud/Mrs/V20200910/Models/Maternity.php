@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrText(string $OcrText) 设置报告原文
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Maternity extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Maternity extends AbstractModel
     public $OcrText;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param MaternityDesc $Desc 描述部分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaternitySummary $Summary 结论部分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrText 报告原文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,6 +98,10 @@ class Maternity extends AbstractModel
 
         if (array_key_exists("OcrText",$param) and $param["OcrText"] !== null) {
             $this->OcrText = $param["OcrText"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

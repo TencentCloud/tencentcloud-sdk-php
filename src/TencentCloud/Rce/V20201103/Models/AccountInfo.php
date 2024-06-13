@@ -23,17 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAccountType() 获取用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
  * @method void setAccountType(integer $AccountType) 设置用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
  * @method QQAccountInfo getQQAccount() 获取QQ账号信息，AccountType是"1"时，该字段必填。
  * @method void setQQAccount(QQAccountInfo $QQAccount) 设置QQ账号信息，AccountType是"1"时，该字段必填。
  * @method WeChatAccountInfo getWeChatAccount() 获取微信账号信息，AccountType是"2"时，该字段必填。
  * @method void setWeChatAccount(WeChatAccountInfo $WeChatAccount) 设置微信账号信息，AccountType是"2"时，该字段必填。
- * @method OtherAccountInfo getOtherAccount() 获取其它账号信息，AccountType是10004时，该字段必填。
- * @method void setOtherAccount(OtherAccountInfo $OtherAccount) 设置其它账号信息，AccountType是10004时，该字段必填。
+ * @method OtherAccountInfo getOtherAccount() 获取其它账号信息，AccountType是10004或10005时，该字段必填。
+ * @method void setOtherAccount(OtherAccountInfo $OtherAccount) 设置其它账号信息，AccountType是10004或10005时，该字段必填。
  */
 class AccountInfo extends AbstractModel
 {
@@ -41,7 +43,8 @@ class AccountInfo extends AbstractModel
      * @var integer 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
      */
     public $AccountType;
 
@@ -56,7 +59,7 @@ class AccountInfo extends AbstractModel
     public $WeChatAccount;
 
     /**
-     * @var OtherAccountInfo 其它账号信息，AccountType是10004时，该字段必填。
+     * @var OtherAccountInfo 其它账号信息，AccountType是10004或10005时，该字段必填。
      */
     public $OtherAccount;
 
@@ -64,10 +67,11 @@ class AccountInfo extends AbstractModel
      * @param integer $AccountType 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
      * @param QQAccountInfo $QQAccount QQ账号信息，AccountType是"1"时，该字段必填。
      * @param WeChatAccountInfo $WeChatAccount 微信账号信息，AccountType是"2"时，该字段必填。
-     * @param OtherAccountInfo $OtherAccount 其它账号信息，AccountType是10004时，该字段必填。
+     * @param OtherAccountInfo $OtherAccount 其它账号信息，AccountType是10004或10005时，该字段必填。
      */
     function __construct()
     {

@@ -214,6 +214,14 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserNetworkInfos(string $UserNetworkInfos) 设置用户可用区和子网信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableCoolDown() 获取是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableCoolDown(integer $EnableCoolDown) 设置是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCoolDownBucket() 获取冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoolDownBucket(string $CoolDownBucket) 设置冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -496,6 +504,18 @@ Modify 集群变更中；
     public $UserNetworkInfos;
 
     /**
+     * @var integer 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableCoolDown;
+
+    /**
+     * @var string 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CoolDownBucket;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -592,6 +612,10 @@ Modify 集群变更中；
      * @param boolean $EnableMultiZones 是否为多可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserNetworkInfos 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CoolDownBucket 冷热分层使用COS桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -792,6 +816,14 @@ Modify 集群变更中；
 
         if (array_key_exists("UserNetworkInfos",$param) and $param["UserNetworkInfos"] !== null) {
             $this->UserNetworkInfos = $param["UserNetworkInfos"];
+        }
+
+        if (array_key_exists("EnableCoolDown",$param) and $param["EnableCoolDown"] !== null) {
+            $this->EnableCoolDown = $param["EnableCoolDown"];
+        }
+
+        if (array_key_exists("CoolDownBucket",$param) and $param["CoolDownBucket"] !== null) {
+            $this->CoolDownBucket = $param["CoolDownBucket"];
         }
     }
 }

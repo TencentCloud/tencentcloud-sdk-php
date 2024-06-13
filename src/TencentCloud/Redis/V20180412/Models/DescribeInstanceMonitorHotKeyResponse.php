@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorHotKey返回参数结构体
  *
- * @method array getData() 获取热Key详细信息
- * @method void setData(array $Data) 设置热Key详细信息
+ * @method array getData() 获取热 Key 详细信息。
+ * @method void setData(array $Data) 设置热 Key 详细信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceMonitorHotKeyResponse extends AbstractModel
 {
     /**
-     * @var array 热Key详细信息
+     * @var array 热 Key 详细信息。
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeInstanceMonitorHotKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 热Key详细信息
+     * @param array $Data 热 Key 详细信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

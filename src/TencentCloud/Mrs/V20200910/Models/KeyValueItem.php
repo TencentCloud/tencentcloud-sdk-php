@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(PhysicalBaseItem $Result) 设置结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyValueItem extends AbstractModel
 {
@@ -54,11 +58,19 @@ class KeyValueItem extends AbstractModel
     public $Result;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param string $Name 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Item 项目原文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Result 结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,6 +98,10 @@ class KeyValueItem extends AbstractModel
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = new PhysicalBaseItem();
             $this->Result->deserialize($param["Result"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

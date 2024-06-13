@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorTookDist请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getDate() 获取时间；例如："20190219"
- * @method void setDate(string $Date) 设置时间；例如："20190219"
- * @method integer getSpanType() 获取时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
- * @method void setSpanType(integer $SpanType) 设置时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getDate() 获取查询时间日期。
+ * @method void setDate(string $Date) 设置查询时间日期。
+ * @method integer getSpanType() 获取时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
+ * @method void setSpanType(integer $SpanType) 设置时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
  */
 class DescribeInstanceMonitorTookDistRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 时间；例如："20190219"
+     * @var string 查询时间日期。
      */
     public $Date;
 
     /**
-     * @var integer 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * @var integer 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
      */
     public $SpanType;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $Date 时间；例如："20190219"
-     * @param integer $SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * @param string $InstanceId 实例 ID。
+     * @param string $Date 查询时间日期。
+     * @param integer $SpanType 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
      */
     function __construct()
     {

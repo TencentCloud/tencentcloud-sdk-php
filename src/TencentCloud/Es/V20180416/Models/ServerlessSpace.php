@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKibanaLanguage(string $KibanaLanguage) 设置//默认en， 可选zh-CN
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterType() 获取0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterType(integer $ClusterType) 设置0
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessSpace extends AbstractModel
 {
@@ -189,6 +193,12 @@ class ServerlessSpace extends AbstractModel
     public $KibanaLanguage;
 
     /**
+     * @var integer 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterType;
+
+    /**
      * @param string $SpaceId Serverless索引空间ID
      * @param string $SpaceName Serverless索引空间名
      * @param integer $Status Serverless索引空间状态，0正常，-1已删除
@@ -219,6 +229,8 @@ class ServerlessSpace extends AbstractModel
      * @param integer $AppId 空间所属appid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KibanaLanguage //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterType 0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -311,6 +323,10 @@ class ServerlessSpace extends AbstractModel
 
         if (array_key_exists("KibanaLanguage",$param) and $param["KibanaLanguage"] !== null) {
             $this->KibanaLanguage = $param["KibanaLanguage"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

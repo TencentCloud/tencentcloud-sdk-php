@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMolecular(array $Molecular) 设置分子病理
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathologyV2 extends AbstractModel
 {
@@ -164,6 +168,12 @@ class PathologyV2 extends AbstractModel
     public $Molecular;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param Report $PathologicalReportType 报告类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescInfo $Desc 描述段落
@@ -191,6 +201,8 @@ class PathologyV2 extends AbstractModel
      * @param array $LymphSize 淋巴结大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Molecular 分子病理
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,10 @@ class PathologyV2 extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Molecular, $obj);
             }
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

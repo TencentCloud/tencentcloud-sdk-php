@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreatmentOpinion(string $TreatmentOpinion) 设置治疗意见
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MedicalRecordInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class MedicalRecordInfo extends AbstractModel
     public $TreatmentOpinion;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param string $DiagnosisTime 就诊日期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiagnosisDepartmentName 就诊科室
@@ -119,6 +129,8 @@ class MedicalRecordInfo extends AbstractModel
      * @param string $InspectionFindings 检查结论
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreatmentOpinion 治疗意见
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class MedicalRecordInfo extends AbstractModel
 
         if (array_key_exists("TreatmentOpinion",$param) and $param["TreatmentOpinion"] !== null) {
             $this->TreatmentOpinion = $param["TreatmentOpinion"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMenstrualMedicalHistory(MenstrualMedicalHistory $MenstrualMedicalHistory) 设置月经史
  * @method TreatmentRecord getTreatmentRecord() 获取诊疗记录
  * @method void setTreatmentRecord(TreatmentRecord $TreatmentRecord) 设置诊疗记录
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MedDoc extends AbstractModel
 {
@@ -89,6 +93,12 @@ class MedDoc extends AbstractModel
     public $TreatmentRecord;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param Advice $Advice 建议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Diagnosis 诊断结果
@@ -100,6 +110,8 @@ class MedDoc extends AbstractModel
      * @param FamilyMedicalHistory $FamilyMedicalHistory 家族史
      * @param MenstrualMedicalHistory $MenstrualMedicalHistory 月经史
      * @param TreatmentRecord $TreatmentRecord 诊疗记录
+     * @param integer $Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class MedDoc extends AbstractModel
         if (array_key_exists("TreatmentRecord",$param) and $param["TreatmentRecord"] !== null) {
             $this->TreatmentRecord = new TreatmentRecord();
             $this->TreatmentRecord->deserialize($param["TreatmentRecord"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

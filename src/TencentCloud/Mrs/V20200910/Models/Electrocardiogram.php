@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEcgDiagnosis(EcgDiagnosis $EcgDiagnosis) 设置心电图诊断
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Electrocardiogram extends AbstractModel
 {
@@ -44,9 +48,17 @@ class Electrocardiogram extends AbstractModel
     public $EcgDiagnosis;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param EcgDescription $EcgDescription 心电图详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgDiagnosis $EcgDiagnosis 心电图诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,10 @@ class Electrocardiogram extends AbstractModel
         if (array_key_exists("EcgDiagnosis",$param) and $param["EcgDiagnosis"] !== null) {
             $this->EcgDiagnosis = new EcgDiagnosis();
             $this->EcgDiagnosis->deserialize($param["EcgDiagnosis"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

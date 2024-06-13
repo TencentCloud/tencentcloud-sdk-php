@@ -36,7 +36,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) 查询物理专线接入点
 
  * @method Models\DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(Models\DescribeDirectConnectTunnelExtraRequest $req) 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
- * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 用于查询专用通道列表。
+ * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 查询专用通道列表。
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) 查询物理专线列表。
  * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) 获取用户互联网公网地址信息
  * @method Models\DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(Models\DescribeInternetAddressQuotaRequest $req) 获取用户互联网公网地址配额

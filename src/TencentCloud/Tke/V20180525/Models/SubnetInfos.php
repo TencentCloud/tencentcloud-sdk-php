@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置子网节点名称
  * @method array getSecurityGroups() 获取安全组id
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
- * @method string getOs() 获取系统
- * @method void setOs(string $Os) 设置系统
- * @method string getArch() 获取硬件架构
- * @method void setArch(string $Arch) 设置硬件架构
+ * @method string getOs() 获取系统，默认linux
+ * @method void setOs(string $Os) 设置系统，默认linux
+ * @method string getArch() 获取硬件架构，默认amd64
+ * @method void setArch(string $Arch) 设置硬件架构，默认amd64
  */
 class SubnetInfos extends AbstractModel
 {
@@ -49,12 +49,12 @@ class SubnetInfos extends AbstractModel
     public $SecurityGroups;
 
     /**
-     * @var string 系统
+     * @var string 系统，默认linux
      */
     public $Os;
 
     /**
-     * @var string 硬件架构
+     * @var string 硬件架构，默认amd64
      */
     public $Arch;
 
@@ -62,8 +62,8 @@ class SubnetInfos extends AbstractModel
      * @param string $SubnetId 子网id
      * @param string $Name 子网节点名称
      * @param array $SecurityGroups 安全组id
-     * @param string $Os 系统
-     * @param string $Arch 硬件架构
+     * @param string $Os 系统，默认linux
+     * @param string $Arch 硬件架构，默认amd64
      */
     function __construct()
     {

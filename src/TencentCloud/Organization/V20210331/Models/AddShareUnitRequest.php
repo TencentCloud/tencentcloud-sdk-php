@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
  * @method string getDescription() 获取共享单元描述。最大128个字符。
  * @method void setDescription(string $Description) 设置共享单元描述。最大128个字符。
+ * @method integer getShareScope() 获取共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+ * @method void setShareScope(integer $ShareScope) 设置共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
  */
 class AddShareUnitRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddShareUnitRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+     */
+    public $ShareScope;
+
+    /**
      * @param string $Name 共享单元名称。仅支持大小写字母、数字、-、以及_的组合，3-128个字符。
      * @param string $Area 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      * @param string $Description 共享单元描述。最大128个字符。
+     * @param integer $ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AddShareUnitRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ShareScope",$param) and $param["ShareScope"] !== null) {
+            $this->ShareScope = $param["ShareScope"];
         }
     }
 }

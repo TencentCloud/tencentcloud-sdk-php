@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssueInfo(IssueInfo $IssueInfo) 设置签发信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BirthCert extends AbstractModel
 {
@@ -64,6 +68,12 @@ class BirthCert extends AbstractModel
     public $IssueInfo;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param NeonatalInfo $NeonatalInfo 新生儿信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentInfo $MotherInfo 母亲信息
@@ -71,6 +81,8 @@ class BirthCert extends AbstractModel
      * @param ParentInfo $FatherInfo 父亲信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IssueInfo $IssueInfo 签发信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ class BirthCert extends AbstractModel
         if (array_key_exists("IssueInfo",$param) and $param["IssueInfo"] !== null) {
             $this->IssueInfo = new IssueInfo();
             $this->IssueInfo->deserialize($param["IssueInfo"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

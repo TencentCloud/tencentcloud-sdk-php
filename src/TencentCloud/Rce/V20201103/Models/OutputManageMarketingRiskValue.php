@@ -21,14 +21,16 @@ use TencentCloud\Common\AbstractModel;
  * 全栈式风控引擎出参值
  *
  * @method string getUserId() 获取账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId。
-当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为10004时，对应手机号的MD5值。
+当AccountType为1时，对应QQ的OpenId；
+当AccountType为2时，对应微信的OpenId/UnionId；
+当AccountType为10004时，对应手机号的MD5值；
+当AccountType为10005时，对应手机号的SHA256值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId。
-当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为10004时，对应手机号的MD5值。
+当AccountType为1时，对应QQ的OpenId；
+当AccountType为2时，对应微信的OpenId/UnionId；
+当AccountType为10004时，对应手机号的MD5值；
+当AccountType为10005时，对应手机号的SHA256值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,9 +107,10 @@ class OutputManageMarketingRiskValue extends AbstractModel
 {
     /**
      * @var string 账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId。
-当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为10004时，对应手机号的MD5值。
+当AccountType为1时，对应QQ的OpenId；
+当AccountType为2时，对应微信的OpenId/UnionId；
+当AccountType为10004时，对应手机号的MD5值；
+当AccountType为10005时，对应手机号的SHA256值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
@@ -177,9 +180,10 @@ reject：高风险，建议拦截
 
     /**
      * @param string $UserId 账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId。
-当AccountType为2时，对应微信的OpenId/UnionId。
-当AccountType为10004时，对应手机号的MD5值。
+当AccountType为1时，对应QQ的OpenId；
+当AccountType为2时，对应微信的OpenId/UnionId；
+当AccountType为10004时，对应手机号的MD5值；
+当AccountType为10005时，对应手机号的SHA256值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。

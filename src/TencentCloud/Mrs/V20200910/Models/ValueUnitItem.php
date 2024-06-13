@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(PhysicalBaseItem $Unit) 设置单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueUnitItem extends AbstractModel
 {
@@ -64,6 +68,12 @@ class ValueUnitItem extends AbstractModel
     public $Unit;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param string $Name 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Item 项目原文
@@ -71,6 +81,8 @@ class ValueUnitItem extends AbstractModel
      * @param PhysicalBaseItem $Result 数值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -103,6 +115,10 @@ class ValueUnitItem extends AbstractModel
         if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
             $this->Unit = new PhysicalBaseItem();
             $this->Unit->deserialize($param["Unit"]);
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

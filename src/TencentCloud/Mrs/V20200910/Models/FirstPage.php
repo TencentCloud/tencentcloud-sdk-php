@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFp2NdItems(array $Fp2NdItems) 设置病案首页第二页
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPage() 获取数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirstPage extends AbstractModel
 {
@@ -74,6 +78,12 @@ class FirstPage extends AbstractModel
     public $Fp2NdItems;
 
     /**
+     * @var integer 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Page;
+
+    /**
      * @param array $DischargeDiagnosis 出入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $PathologicalDiagnosis 病理诊断
@@ -83,6 +93,8 @@ class FirstPage extends AbstractModel
      * @param BlockInfoV2 $DamagePoi 受伤中毒的外部原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Fp2NdItems 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Page 数据在原PDF文件中的第几页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -129,6 +141,10 @@ class FirstPage extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Fp2NdItems, $obj);
             }
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * bgp参数，包括Asn，AuthKey
  *
  * @method integer getAsn() 获取用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsn(integer $Asn) 设置用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthKey() 获取用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthKey(string $AuthKey) 设置用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BgpPeer extends AbstractModel
 {
     /**
      * @var integer 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Asn;
 
     /**
      * @var string 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthKey;
 
     /**
      * @param integer $Asn 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthKey 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

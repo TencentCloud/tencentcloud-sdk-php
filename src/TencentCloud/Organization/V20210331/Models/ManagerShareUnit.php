@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareMemberNum(integer $ShareMemberNum) 设置共享单元成员数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getShareScope() 获取共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShareScope(integer $ShareScope) 设置共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerShareUnit extends AbstractModel
 {
@@ -99,6 +103,12 @@ class ManagerShareUnit extends AbstractModel
     public $ShareMemberNum;
 
     /**
+     * @var integer 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShareScope;
+
+    /**
      * @param string $UnitId 共享单元ID。
      * @param string $Name 共享单元名称。
      * @param integer $Uin 共享单元管理员Uin。
@@ -111,6 +121,8 @@ class ManagerShareUnit extends AbstractModel
      * @param integer $ShareResourceNum 共享单元资源数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareMemberNum 共享单元成员数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,10 @@ class ManagerShareUnit extends AbstractModel
 
         if (array_key_exists("ShareMemberNum",$param) and $param["ShareMemberNum"] !== null) {
             $this->ShareMemberNum = $param["ShareMemberNum"];
+        }
+
+        if (array_key_exists("ShareScope",$param) and $param["ShareScope"] !== null) {
+            $this->ShareScope = $param["ShareScope"];
         }
     }
 }

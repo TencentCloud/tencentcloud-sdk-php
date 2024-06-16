@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlipayUserId(string $AlipayUserId) 设置支付宝的AlipayUserId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWeComUserId() 获取企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeComUserId(string $WeComUserId) 设置企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
@@ -296,6 +300,12 @@ class User extends AbstractModel
     public $AlipayUserId;
 
     /**
+     * @var string 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WeComUserId;
+
+    /**
      * @var string 描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -458,6 +468,8 @@ class User extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlipayUserId 支付宝的AlipayUserId
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WeComUserId 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 姓名
@@ -597,6 +609,10 @@ class User extends AbstractModel
 
         if (array_key_exists("AlipayUserId",$param) and $param["AlipayUserId"] !== null) {
             $this->AlipayUserId = $param["AlipayUserId"];
+        }
+
+        if (array_key_exists("WeComUserId",$param) and $param["WeComUserId"] !== null) {
+            $this->WeComUserId = $param["WeComUserId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置APM 实例，如果创建时传入的参数为空，则表示自动创建 APM 实例。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getNeedDelete() 获取是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNeedDelete(boolean $NeedDelete) 设置是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class APM extends AbstractModel
 {
@@ -51,10 +55,18 @@ class APM extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NeedDelete;
+
+    /**
      * @param boolean $Enable 是否启用
      * @param string $Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId APM 实例，如果创建时传入的参数为空，则表示自动创建 APM 实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $NeedDelete 是否要删除APM实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -80,6 +92,10 @@ class APM extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("NeedDelete",$param) and $param["NeedDelete"] !== null) {
+            $this->NeedDelete = $param["NeedDelete"];
         }
     }
 }

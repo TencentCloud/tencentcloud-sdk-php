@@ -68,16 +68,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
  * @method integer getPathType() 获取要跳转到的页面类型 
 
-<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
-<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
-注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认) <a href="https://qcloudimg.tencent-cloud.cn/raw/a2667ea84ec993cc060321afe3191d65.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)<a href="https://qcloudimg.tencent-cloud.cn/raw/446a679f09b1b7f40eb84e67face8acc.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **2** : 腾讯电子签小程序合同列表页 <a href="https://qcloudimg.tencent-cloud.cn/raw/c7b80e44c1d68ae3270a6fc4939c7214.jpg" target="_blank" >点击查看示例页面</a> </li>
+<li> **3** : 腾讯电子签小程序合同封面页  （注：`生成动态签署人补充链接时，必须指定为封面页`）<a href="https://qcloudimg.tencent-cloud.cn/raw/0d22cc587be4bf084877c151350c3bf7.jpg" target="_blank" >点击查看示例页面</a></li></ul>
  * @method void setPathType(integer $PathType) 设置要跳转到的页面类型 
 
-<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
-<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
-注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认) <a href="https://qcloudimg.tencent-cloud.cn/raw/a2667ea84ec993cc060321afe3191d65.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)<a href="https://qcloudimg.tencent-cloud.cn/raw/446a679f09b1b7f40eb84e67face8acc.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **2** : 腾讯电子签小程序合同列表页 <a href="https://qcloudimg.tencent-cloud.cn/raw/c7b80e44c1d68ae3270a6fc4939c7214.jpg" target="_blank" >点击查看示例页面</a> </li>
+<li> **3** : 腾讯电子签小程序合同封面页  （注：`生成动态签署人补充链接时，必须指定为封面页`）<a href="https://qcloudimg.tencent-cloud.cn/raw/0d22cc587be4bf084877c151350c3bf7.jpg" target="_blank" >点击查看示例页面</a></li></ul>
  * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
 
@@ -185,10 +185,10 @@ class CreateSchemeUrlRequest extends AbstractModel
     /**
      * @var integer 要跳转到的页面类型 
 
-<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
-<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
-注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认) <a href="https://qcloudimg.tencent-cloud.cn/raw/a2667ea84ec993cc060321afe3191d65.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)<a href="https://qcloudimg.tencent-cloud.cn/raw/446a679f09b1b7f40eb84e67face8acc.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **2** : 腾讯电子签小程序合同列表页 <a href="https://qcloudimg.tencent-cloud.cn/raw/c7b80e44c1d68ae3270a6fc4939c7214.jpg" target="_blank" >点击查看示例页面</a> </li>
+<li> **3** : 腾讯电子签小程序合同封面页  （注：`生成动态签署人补充链接时，必须指定为封面页`）<a href="https://qcloudimg.tencent-cloud.cn/raw/0d22cc587be4bf084877c151350c3bf7.jpg" target="_blank" >点击查看示例页面</a></li></ul>
      */
     public $PathType;
 
@@ -259,10 +259,10 @@ class CreateSchemeUrlRequest extends AbstractModel
      * @param string $FlowGroupId 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
      * @param integer $PathType 要跳转到的页面类型 
 
-<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
-<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
-注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认) <a href="https://qcloudimg.tencent-cloud.cn/raw/a2667ea84ec993cc060321afe3191d65.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)<a href="https://qcloudimg.tencent-cloud.cn/raw/446a679f09b1b7f40eb84e67face8acc.jpg" target="_blank" >点击查看示例页面</a></li>
+<li> **2** : 腾讯电子签小程序合同列表页 <a href="https://qcloudimg.tencent-cloud.cn/raw/c7b80e44c1d68ae3270a6fc4939c7214.jpg" target="_blank" >点击查看示例页面</a> </li>
+<li> **3** : 腾讯电子签小程序合同封面页  （注：`生成动态签署人补充链接时，必须指定为封面页`）<a href="https://qcloudimg.tencent-cloud.cn/raw/0d22cc587be4bf084877c151350c3bf7.jpg" target="_blank" >点击查看示例页面</a></li></ul>
      * @param boolean $AutoJumpBack 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
 

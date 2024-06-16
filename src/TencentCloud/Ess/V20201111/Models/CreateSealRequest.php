@@ -119,11 +119,17 @@ use TencentCloud\Common\AbstractModel;
 <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
 <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
  * @method string getTaxIdentifyCode() 获取企业税号
-注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
-`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+注:
+<ul>
+<li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
+<li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
+</ul>
  * @method void setTaxIdentifyCode(string $TaxIdentifyCode) 设置企业税号
-注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
-`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+注:
+<ul>
+<li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
+<li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
+</ul>
  */
 class CreateSealRequest extends AbstractModel
 {
@@ -242,8 +248,11 @@ class CreateSealRequest extends AbstractModel
 
     /**
      * @var string 企业税号
-注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
-`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+注:
+<ul>
+<li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
+<li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
+</ul>
      */
     public $TaxIdentifyCode;
 
@@ -298,8 +307,11 @@ class CreateSealRequest extends AbstractModel
 <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
 <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      * @param string $TaxIdentifyCode 企业税号
-注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
-`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+注:
+<ul>
+<li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
+<li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
+</ul>
      */
     function __construct()
     {

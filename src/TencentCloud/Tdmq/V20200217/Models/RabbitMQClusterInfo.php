@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayMode() 获取计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(integer $PayMode) 设置计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -199,6 +203,12 @@ class RabbitMQClusterInfo extends AbstractModel
     public $ClusterVersion;
 
     /**
+     * @var integer 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -227,6 +237,8 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param float $MessageConsumeRate 每秒消费消息数 单位：条/秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterVersion 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PayMode 计费模式，0-后付费，1-预付费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +345,10 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
             $this->ClusterVersion = $param["ClusterVersion"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

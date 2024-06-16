@@ -48,6 +48,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeBandwidthRangeResponse DescribeBandwidthRange(Models\DescribeBandwidthRangeRequest $req) 本接口（DescribeBandwidthRange）用于查询实例带宽信息。
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) 查询Redis实例列表信息。该接口已废弃。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
+ * @method Models\DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(Models\DescribeGlobalReplicationAreaRequest $req) 查询全球复制支持地域信息
  * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) 本接口（DescribeInstanceBackups）用于查询实例备份列表。
  * @method Models\DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(Models\DescribeInstanceDTSInfoRequest $req) 查询实例DTS信息
@@ -66,6 +67,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询实例参数列表。
  * @method Models\DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(Models\DescribeInstanceSecurityGroupRequest $req) 本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
  * @method Models\DescribeInstanceShardsResponse DescribeInstanceShards(Models\DescribeInstanceShardsRequest $req) 本接口（DescribeInstanceShards）用于获取集群架构实例的分片信息。
+ * @method Models\DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidth(Models\DescribeInstanceSpecBandwidthRequest $req) 本接口（DescribeInstanceSpecBandwidth）用于查询或计算带宽规格。
  * @method Models\DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeature(Models\DescribeInstanceSupportFeatureRequest $req) 本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
  * @method Models\DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(Models\DescribeInstanceZoneInfoRequest $req) 本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询Redis实例列表。
@@ -77,6 +79,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
  * @method Models\DescribeProxySlowLogResponse DescribeProxySlowLog(Models\DescribeProxySlowLogRequest $req) 本接口（DescribeProxySlowLog）用于查询代理慢查询。
  * @method Models\DescribeReplicationGroupResponse DescribeReplicationGroup(Models\DescribeReplicationGroupRequest $req) 本接口（DescribeReplicationGroup）用于查询复制组。
+ * @method Models\DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(Models\DescribeReplicationGroupInstanceRequest $req) 查询复制组信息
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。
  * @method Models\DescribeSlowLogResponse DescribeSlowLog(Models\DescribeSlowLogRequest $req) 本接口（DescribeSlowLog）查询实例慢查询记录。
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 本接口（DescribeTaskInfo）用于获取指定任务的执行情况。
@@ -106,6 +109,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
  * @method Models\ModifyNetworkConfigResponse ModifyNetworkConfig(Models\ModifyNetworkConfigRequest $req) 本接口（ModifyNetworkConfig）用于修改实例网络配置。
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 修改参数模板
+ * @method Models\ModifyReplicationGroupResponse ModifyReplicationGroup(Models\ModifyReplicationGroupRequest $req) 修改复制组信息
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 开启SSL
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) 关闭外网
  * @method Models\RemoveReplicationInstanceResponse RemoveReplicationInstance(Models\RemoveReplicationInstanceRequest $req) 移除复制组成员

@@ -19,7 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 导入用户信息
-1、UserName，PhoneNumber ，Email ，WechatOpenId ，WechatUnionId ，AlipayUserId ，QqOpenId ，QqUnionId 八个属性中，导入时必须包含其中一个属性并遵守初始化自定义属性的正则表达式规则。UserName，PhoneNumber，Email的正则表达式在控制台的自定义属性中可以查询到。
+1、UserName，PhoneNumber ，Email ，WechatOpenId ，WechatUnionId ，AlipayUserId ，QqOpenId ，QqUnionId ，WeComUserId 九个属性中，导入时必须包含其中一个属性并遵守初始化自定义属性的正则表达式规则。UserName，PhoneNumber，Email的正则表达式在控制台的自定义属性中可以查询到。
 2、对于密码的导入，导入的密码支持明文导入，MD5密文导入，SHA1密文导入，BCRYPT密文导入 ，这个需要在PasswordEncryptTypeEnum 字段中指定。
 3、IdentityVerified，IdentityVerificationMethod 支持导入，
 IdentityVerified 为true，IdentityVerificationMethod必传；
@@ -50,6 +50,8 @@ IdentityVerificationMethod 为nameIdCardAndPhone，Name,PhoneNumber,ResidentIden
  * @method void setWechatUnionId(string $WechatUnionId) 设置微信wechatUnionId
  * @method string getAlipayUserId() 获取支付宝alipayUserId
  * @method void setAlipayUserId(string $AlipayUserId) 设置支付宝alipayUserId
+ * @method string getWeComUserId() 获取企业微信weComUserId
+ * @method void setWeComUserId(string $WeComUserId) 设置企业微信weComUserId
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method string getBirthdate() 获取生日
@@ -150,6 +152,11 @@ class ImportUser extends AbstractModel
      * @var string 支付宝alipayUserId
      */
     public $AlipayUserId;
+
+    /**
+     * @var string 企业微信weComUserId
+     */
+    public $WeComUserId;
 
     /**
      * @var string 描述
@@ -259,6 +266,7 @@ class ImportUser extends AbstractModel
      * @param string $WechatOpenId 微信wechatOpenId
      * @param string $WechatUnionId 微信wechatUnionId
      * @param string $AlipayUserId 支付宝alipayUserId
+     * @param string $WeComUserId 企业微信weComUserId
      * @param string $Description 描述
      * @param string $Birthdate 生日
      * @param string $Name 姓名
@@ -338,6 +346,10 @@ class ImportUser extends AbstractModel
 
         if (array_key_exists("AlipayUserId",$param) and $param["AlipayUserId"] !== null) {
             $this->AlipayUserId = $param["AlipayUserId"];
+        }
+
+        if (array_key_exists("WeComUserId",$param) and $param["WeComUserId"] !== null) {
+            $this->WeComUserId = $param["WeComUserId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

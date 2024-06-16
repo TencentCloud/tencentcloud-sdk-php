@@ -87,13 +87,13 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeMachineGroupConfigsResponse DescribeMachineGroupConfigs(Models\DescribeMachineGroupConfigsRequest $req) 获取机器组绑定的采集规则配置
  * @method Models\DescribeMachineGroupsResponse DescribeMachineGroups(Models\DescribeMachineGroupsRequest $req) 获取机器组信息列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 获取指定机器组下的机器状态
- * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 本接口用于获取主题分区列表。
+ * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
  * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递到COS的任务配置信息
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 本接口用于获取日志主题列表，支持分页
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警策略执行详情
- * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 本接口用于合并一个读写态的主题分区，合并时指定一个主题分区 ID，日志服务会自动合并范围右相邻的分区。
+ * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyAlarmShieldResponse ModifyAlarmShield(Models\ModifyAlarmShieldRequest $req) 该接口用于修改告警屏蔽规则。
@@ -122,7 +122,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
 2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
- * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 本接口用于分裂主题分区
+ * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\UploadLogResponse UploadLog(Models\UploadLogRequest $req) ## 提示
 为了保障您日志数据的可靠性以及更高效地使用日志服务，建议您使用CLS优化后的接口[上传结构化日志](https://cloud.tencent.com/document/product/614/16873)。
 

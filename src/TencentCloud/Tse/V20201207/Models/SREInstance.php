@@ -140,6 +140,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageOption(array $StorageOption) 设置存储额外配置选项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ZookeeperRegionInfo getZookeeperRegionInfo() 获取Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZookeeperRegionInfo(ZookeeperRegionInfo $ZookeeperRegionInfo) 设置Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployMode() 获取部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployMode(string $DeployMode) 设置部署架构
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -340,6 +348,18 @@ class SREInstance extends AbstractModel
     public $StorageOption;
 
     /**
+     * @var ZookeeperRegionInfo Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZookeeperRegionInfo;
+
+    /**
+     * @var string 部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployMode;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -399,6 +419,10 @@ class SREInstance extends AbstractModel
      * @param boolean $EnableClientIntranet 引擎实例是否开启客户端内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StorageOption 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZookeeperRegionInfo $ZookeeperRegionInfo Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployMode 部署架构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -578,6 +602,15 @@ class SREInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StorageOption, $obj);
             }
+        }
+
+        if (array_key_exists("ZookeeperRegionInfo",$param) and $param["ZookeeperRegionInfo"] !== null) {
+            $this->ZookeeperRegionInfo = new ZookeeperRegionInfo();
+            $this->ZookeeperRegionInfo->deserialize($param["ZookeeperRegionInfo"]);
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
         }
     }
 }

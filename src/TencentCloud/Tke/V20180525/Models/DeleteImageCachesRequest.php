@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteImageCaches请求参数结构体
  *
- * @method array getImageCacheIds() 获取镜像缓存Id数组
- * @method void setImageCacheIds(array $ImageCacheIds) 设置镜像缓存Id数组
+ * @method array getImageCacheIds() 获取镜像缓存ID数组
+ * @method void setImageCacheIds(array $ImageCacheIds) 设置镜像缓存ID数组
  */
 class DeleteImageCachesRequest extends AbstractModel
 {
     /**
-     * @var array 镜像缓存Id数组
+     * @var array 镜像缓存ID数组
      */
     public $ImageCacheIds;
 
     /**
-     * @param array $ImageCacheIds 镜像缓存Id数组
+     * @param array $ImageCacheIds 镜像缓存ID数组
      */
     function __construct()
     {

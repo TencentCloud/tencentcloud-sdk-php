@@ -59,6 +59,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateRuleTemplateResponse CreateRuleTemplate(Models\CreateRuleTemplateRequest $req) 创建规则模板
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(Models\CreateTaskAlarmRegularRequest $req) 创建任务告警规则
+ * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) 编排空间-工作流-创建任务文件夹
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) 提交任务版本
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例

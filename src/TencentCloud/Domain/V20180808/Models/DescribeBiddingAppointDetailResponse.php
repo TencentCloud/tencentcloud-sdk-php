@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppointPrice(integer $AppointPrice) 设置当前价格
  * @method integer getAppointBondPrice() 获取预约保证金
  * @method void setAppointBondPrice(integer $AppointBondPrice) 设置预约保证金
- * @method integer getStatus() 获取 1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
- * @method void setStatus(integer $Status) 设置 1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
+ * @method integer getStatus() 获取1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
+ * @method void setStatus(integer $Status) 设置1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
  * @method string getBiddingBondRefund() 获取预约保证金是否已经退回
 yes：退回 no: 未退回
  * @method void setBiddingBondRefund(string $BiddingBondRefund) 设置预约保证金是否已经退回
@@ -95,7 +95,7 @@ class DescribeBiddingAppointDetailResponse extends AbstractModel
     public $AppointBondPrice;
 
     /**
-     * @var integer  1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
+     * @var integer 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
      */
     public $Status;
 
@@ -120,7 +120,7 @@ yes：退回 no: 未退回
      * @param string $DeleteTime 删除时间
      * @param integer $AppointPrice 当前价格
      * @param integer $AppointBondPrice 预约保证金
-     * @param integer $Status  1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
+     * @param integer $Status 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
      * @param string $BiddingBondRefund 预约保证金是否已经退回
 yes：退回 no: 未退回
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

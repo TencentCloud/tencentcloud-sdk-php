@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页数量
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method array getStatus() 获取2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
- * @method void setStatus(array $Status) 设置2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+ * @method array getStatus() 获取2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
+ * @method void setStatus(array $Status) 设置2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
  * @method string getSortField() 获取排序字段：BiddingEndTime 竞价结束时间	
 BiddingPrice 我的价格
  * @method void setSortField(string $SortField) 设置排序字段：BiddingEndTime 竞价结束时间	
@@ -53,7 +53,7 @@ class DescribeBiddingListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var array 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+     * @var array 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public $Status;
 
@@ -72,7 +72,7 @@ BiddingPrice 我的价格
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
      * @param string $Domain 域名
-     * @param array $Status 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+     * @param array $Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      * @param string $SortField 排序字段：BiddingEndTime 竞价结束时间	
 BiddingPrice 我的价格
      * @param string $SortOrder 排序规则：asc升序，desc降序

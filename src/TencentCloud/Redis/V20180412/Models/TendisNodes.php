@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeId(string $NodeId) 设置节点ID
  * @method string getNodeRole() 获取节点角色
  * @method void setNodeRole(string $NodeRole) 设置节点角色
+ * @method integer getZoneId() 获取可用区 ID。	
+ * @method void setZoneId(integer $ZoneId) 设置可用区 ID。	
  */
 class TendisNodes extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TendisNodes extends AbstractModel
     public $NodeRole;
 
     /**
+     * @var integer 可用区 ID。	
+     */
+    public $ZoneId;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $NodeRole 节点角色
+     * @param integer $ZoneId 可用区 ID。	
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class TendisNodes extends AbstractModel
 
         if (array_key_exists("NodeRole",$param) and $param["NodeRole"] !== null) {
             $this->NodeRole = $param["NodeRole"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

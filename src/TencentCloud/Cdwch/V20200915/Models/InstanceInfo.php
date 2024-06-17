@@ -210,6 +210,18 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasEsIndex(boolean $HasEsIndex) 设置true
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSecondaryZone() 获取true
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSecondaryZone(boolean $IsSecondaryZone) 设置true
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecondaryZoneInfo() 获取desc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecondaryZoneInfo(string $SecondaryZoneInfo) 设置desc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getClickHouseKeeper() 获取是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClickHouseKeeper(boolean $ClickHouseKeeper) 设置是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -493,6 +505,24 @@ Modify 集群变更中；
     public $HasEsIndex;
 
     /**
+     * @var boolean true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSecondaryZone;
+
+    /**
+     * @var string desc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecondaryZoneInfo;
+
+    /**
+     * @var boolean 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClickHouseKeeper;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -587,6 +617,12 @@ Modify 集群变更中；
      * @param string $EsIndexPassword password
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasEsIndex true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSecondaryZone true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecondaryZoneInfo desc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ClickHouseKeeper 是否clickhouse-keeper
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -797,6 +833,18 @@ Modify 集群变更中；
 
         if (array_key_exists("HasEsIndex",$param) and $param["HasEsIndex"] !== null) {
             $this->HasEsIndex = $param["HasEsIndex"];
+        }
+
+        if (array_key_exists("IsSecondaryZone",$param) and $param["IsSecondaryZone"] !== null) {
+            $this->IsSecondaryZone = $param["IsSecondaryZone"];
+        }
+
+        if (array_key_exists("SecondaryZoneInfo",$param) and $param["SecondaryZoneInfo"] !== null) {
+            $this->SecondaryZoneInfo = $param["SecondaryZoneInfo"];
+        }
+
+        if (array_key_exists("ClickHouseKeeper",$param) and $param["ClickHouseKeeper"] !== null) {
+            $this->ClickHouseKeeper = $param["ClickHouseKeeper"];
         }
     }
 }

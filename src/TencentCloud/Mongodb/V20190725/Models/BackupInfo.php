@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置备份状态，1-备份中，2-备份成功
  * @method integer getBackupMethod() 获取备份方法，0-逻辑备份，1-物理备份
  * @method void setBackupMethod(integer $BackupMethod) 设置备份方法，0-逻辑备份，1-物理备份
+ * @method integer getBackId() 获取备份记录id
+ * @method void setBackId(integer $BackId) 设置备份记录id
+ * @method string getDeleteTime() 获取备份删除时间
+ * @method void setDeleteTime(string $DeleteTime) 设置备份删除时间
+ * @method string getBackupRegion() 获取异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupRegion(string $BackupRegion) 设置异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupInfo extends AbstractModel
 {
@@ -99,6 +107,22 @@ class BackupInfo extends AbstractModel
     public $BackupMethod;
 
     /**
+     * @var integer 备份记录id
+     */
+    public $BackId;
+
+    /**
+     * @var string 备份删除时间
+     */
+    public $DeleteTime;
+
+    /**
+     * @var string 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupRegion;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $BackupType 备份方式，0-自动备份，1-手动备份
      * @param string $BackupName 备份名称
@@ -112,6 +136,10 @@ class BackupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 备份状态，1-备份中，2-备份成功
      * @param integer $BackupMethod 备份方法，0-逻辑备份，1-物理备份
+     * @param integer $BackId 备份记录id
+     * @param string $DeleteTime 备份删除时间
+     * @param string $BackupRegion 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -160,6 +188,18 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
             $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("BackId",$param) and $param["BackId"] !== null) {
+            $this->BackId = $param["BackId"];
+        }
+
+        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
+            $this->DeleteTime = $param["DeleteTime"];
+        }
+
+        if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
+            $this->BackupRegion = $param["BackupRegion"];
         }
     }
 }

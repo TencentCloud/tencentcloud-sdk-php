@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotStatus(integer $SnapshotStatus) 设置快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotResult extends AbstractModel
 {
@@ -124,6 +128,12 @@ class SnapshotResult extends AbstractModel
     public $SnapshotStatus;
 
     /**
+     * @var string 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $TableGroupId 表格所属表格组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表格名称
@@ -143,6 +153,8 @@ class SnapshotResult extends AbstractModel
      * @param integer $SnapshotSize 快照大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SnapshotStatus 快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 申请单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +209,10 @@ class SnapshotResult extends AbstractModel
 
         if (array_key_exists("SnapshotStatus",$param) and $param["SnapshotStatus"] !== null) {
             $this->SnapshotStatus = $param["SnapshotStatus"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

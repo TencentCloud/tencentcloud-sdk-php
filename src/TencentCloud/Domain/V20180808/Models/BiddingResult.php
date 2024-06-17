@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBiddingNum(integer $BiddingNum) 设置出价次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+ * @method integer getStatus() 获取2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+ * @method void setStatus(integer $Status) 设置2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BiddingResult extends AbstractModel
@@ -118,7 +118,7 @@ class BiddingResult extends AbstractModel
     public $BiddingNum;
 
     /**
-     * @var integer 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @var integer 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -142,7 +142,7 @@ class BiddingResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BiddingNum 出价次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @param integer $Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

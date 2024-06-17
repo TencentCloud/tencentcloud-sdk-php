@@ -21,73 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 比较表格的Meta信息
  *
  * @method string getSrcTableClusterId() 获取源表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcTableClusterId(string $SrcTableClusterId) 设置源表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcTableGroupId() 获取源表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcTableGroupId(string $SrcTableGroupId) 设置源表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcTableName() 获取源表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcTableName(string $SrcTableName) 设置源表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstTableClusterId() 获取目标表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstTableClusterId(string $DstTableClusterId) 设置目标表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstTableGroupId() 获取目标表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstTableGroupId(string $DstTableGroupId) 设置目标表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstTableName() 获取目标表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstTableName(string $DstTableName) 设置目标表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcTableInstanceId() 获取源表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcTableInstanceId(string $SrcTableInstanceId) 设置源表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstTableInstanceId() 获取目标表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstTableInstanceId(string $DstTableInstanceId) 设置目标表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareTablesInfo extends AbstractModel
 {
     /**
      * @var string 源表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcTableClusterId;
 
     /**
      * @var string 源表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcTableGroupId;
 
     /**
      * @var string 源表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcTableName;
 
     /**
      * @var string 目标表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstTableClusterId;
 
     /**
      * @var string 目标表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstTableGroupId;
 
     /**
      * @var string 目标表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstTableName;
 
     /**
      * @var string 源表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcTableInstanceId;
 
     /**
      * @var string 目标表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstTableInstanceId;
 
     /**
      * @param string $SrcTableClusterId 源表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcTableGroupId 源表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcTableName 源表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstTableClusterId 目标表格的集群id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstTableGroupId 目标表格的表格组id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstTableName 目标表格的表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcTableInstanceId 源表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstTableInstanceId 目标表格的实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

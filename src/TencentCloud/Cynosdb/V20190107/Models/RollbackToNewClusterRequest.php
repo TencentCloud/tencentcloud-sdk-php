@@ -80,6 +80,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setDealMode(integer $DealMode) 设置0-下单并支付 1-下单
  * @method integer getPayMode() 获取计算节点付费模式：0-按量计费，1-预付费
  * @method void setPayMode(integer $PayMode) 设置计算节点付费模式：0-按量计费，1-预付费
+ * @method integer getTimeSpan() 获取时间
+ * @method void setTimeSpan(integer $TimeSpan) 设置时间
+ * @method string getTimeUnit() 获取单位
+ * @method void setTimeUnit(string $TimeUnit) 设置单位
+ * @method array getRollbackDatabases() 获取回档库信息
+ * @method void setRollbackDatabases(array $RollbackDatabases) 设置回档库信息
+ * @method array getRollbackTables() 获取回档表信息
+ * @method void setRollbackTables(array $RollbackTables) 设置回档表信息
+ * @method array getOriginalROInstanceList() 获取原ro实例信息
+ * @method void setOriginalROInstanceList(array $OriginalROInstanceList) 设置原ro实例信息
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -198,6 +208,31 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $PayMode;
 
     /**
+     * @var integer 时间
+     */
+    public $TimeSpan;
+
+    /**
+     * @var string 单位
+     */
+    public $TimeUnit;
+
+    /**
+     * @var array 回档库信息
+     */
+    public $RollbackDatabases;
+
+    /**
+     * @var array 回档表信息
+     */
+    public $RollbackTables;
+
+    /**
+     * @var array 原ro实例信息
+     */
+    public $OriginalROInstanceList;
+
+    /**
      * @param string $Zone 可用区
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
      * @param string $UniqVpcId 所属VPC网络ID
@@ -228,6 +263,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
      * @param integer $DealMode 0-下单并支付 1-下单
      * @param integer $PayMode 计算节点付费模式：0-按量计费，1-预付费
+     * @param integer $TimeSpan 时间
+     * @param string $TimeUnit 单位
+     * @param array $RollbackDatabases 回档库信息
+     * @param array $RollbackTables 回档表信息
+     * @param array $OriginalROInstanceList 原ro实例信息
      */
     function __construct()
     {
@@ -339,6 +379,36 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
+            $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("RollbackDatabases",$param) and $param["RollbackDatabases"] !== null) {
+            $this->RollbackDatabases = [];
+            foreach ($param["RollbackDatabases"] as $key => $value){
+                $obj = new RollbackDatabase();
+                $obj->deserialize($value);
+                array_push($this->RollbackDatabases, $obj);
+            }
+        }
+
+        if (array_key_exists("RollbackTables",$param) and $param["RollbackTables"] !== null) {
+            $this->RollbackTables = [];
+            foreach ($param["RollbackTables"] as $key => $value){
+                $obj = new RollbackTable();
+                $obj->deserialize($value);
+                array_push($this->RollbackTables, $obj);
+            }
+        }
+
+        if (array_key_exists("OriginalROInstanceList",$param) and $param["OriginalROInstanceList"] !== null) {
+            $this->OriginalROInstanceList = $param["OriginalROInstanceList"];
         }
     }
 }

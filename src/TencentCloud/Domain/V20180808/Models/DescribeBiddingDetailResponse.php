@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentNickname(string $CurrentNickname) 设置当前用户昵称
  * @method integer getBiddingBondPrice() 获取竞价保证金
  * @method void setBiddingBondPrice(integer $BiddingBondPrice) 设置竞价保证金
- * @method integer getStatus() 获取1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
- * @method void setStatus(integer $Status) 设置1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+ * @method integer getStatus() 获取2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
+ * @method void setStatus(integer $Status) 设置2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
  * @method integer getBiddingFlag() 获取竞价标识，1 领先，2 落后
  * @method void setBiddingFlag(integer $BiddingFlag) 设置竞价标识，1 领先，2 落后
  * @method string getBiddingBondRefund() 获取是否退款，yes表示退款，no表示不退款
@@ -104,7 +104,7 @@ class DescribeBiddingDetailResponse extends AbstractModel
     public $BiddingBondPrice;
 
     /**
-     * @var integer 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @var integer 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public $Status;
 
@@ -139,7 +139,7 @@ class DescribeBiddingDetailResponse extends AbstractModel
      * @param integer $CurrentPrice 当前价格
      * @param string $CurrentNickname 当前用户昵称
      * @param integer $BiddingBondPrice 竞价保证金
-     * @param integer $Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @param integer $Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      * @param integer $BiddingFlag 竞价标识，1 领先，2 落后
      * @param string $BiddingBondRefund 是否退款，yes表示退款，no表示不退款
      * @param integer $BiddingPrice 我的出价

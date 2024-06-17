@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConfigCenters() 获取配置中心发布详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigCenters(array $ConfigCenters) 设置配置中心发布详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileConfigRelease extends AbstractModel
 {
@@ -144,6 +148,12 @@ class FileConfigRelease extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var array 配置中心发布详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigCenters;
+
+    /**
      * @param string $ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 配置项ID
@@ -167,6 +177,8 @@ class FileConfigRelease extends AbstractModel
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConfigCenters 配置中心发布详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,15 @@ class FileConfigRelease extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ConfigCenters",$param) and $param["ConfigCenters"] !== null) {
+            $this->ConfigCenters = [];
+            foreach ($param["ConfigCenters"] as $key => $value){
+                $obj = new TsfConfigCenter();
+                $obj->deserialize($value);
+                array_push($this->ConfigCenters, $obj);
+            }
         }
     }
 }

@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) 设置操作者
  * @method string getContent() 获取任务详情
  * @method void setContent(string $Content) 设置任务详情
+ * @method string getTableGroupId() 获取表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableGroupId(string $TableGroupId) 设置表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableGroupName() 获取表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableGroupName(string $TableGroupName) 设置表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableName() 获取表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableName(string $TableName) 设置表名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfoNew extends AbstractModel
 {
@@ -94,6 +106,24 @@ class TaskInfoNew extends AbstractModel
     public $Content;
 
     /**
+     * @var string 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableGroupId;
+
+    /**
+     * @var string 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableGroupName;
+
+    /**
+     * @var string 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableName;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskType 任务类型
      * @param string $TransId 任务所关联的TcaplusDB内部事务ID
@@ -104,6 +134,12 @@ class TaskInfoNew extends AbstractModel
      * @param string $UpdateTime 任务最后更新时间
      * @param string $Operator 操作者
      * @param string $Content 任务详情
+     * @param string $TableGroupId 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableGroupName 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +192,18 @@ class TaskInfoNew extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
+            $this->TableGroupId = $param["TableGroupId"];
+        }
+
+        if (array_key_exists("TableGroupName",$param) and $param["TableGroupName"] !== null) {
+            $this->TableGroupName = $param["TableGroupName"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
         }
     }
 }

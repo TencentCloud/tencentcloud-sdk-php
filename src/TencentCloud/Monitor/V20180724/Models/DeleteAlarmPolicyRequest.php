@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名，固定值 monitor
  * @method array getPolicyIds() 获取告警策略 ID 列表
  * @method void setPolicyIds(array $PolicyIds) 设置告警策略 ID 列表
+ * @method array getPromInsIds() 获取prom的实例id
+ * @method void setPromInsIds(array $PromInsIds) 设置prom的实例id
  */
 class DeleteAlarmPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteAlarmPolicyRequest extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var array prom的实例id
+     */
+    public $PromInsIds;
+
+    /**
      * @param string $Module 模块名，固定值 monitor
      * @param array $PolicyIds 告警策略 ID 列表
+     * @param array $PromInsIds prom的实例id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("PromInsIds",$param) and $param["PromInsIds"] !== null) {
+            $this->PromInsIds = $param["PromInsIds"];
         }
     }
 }

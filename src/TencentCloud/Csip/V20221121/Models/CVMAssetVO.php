@@ -272,6 +272,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentCpuPer(float $AgentCpuPer) 设置CPU使用率百分比
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRealAppid() 获取cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealAppid(integer $RealAppid) 设置cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCloudType() 获取云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudType(integer $CloudType) 设置云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CVMAssetVO extends AbstractModel
 {
@@ -654,6 +662,18 @@ class CVMAssetVO extends AbstractModel
     public $AgentCpuPer;
 
     /**
+     * @var integer cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealAppid;
+
+    /**
+     * @var integer 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudType;
+
+    /**
      * @param string $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名
@@ -779,6 +799,10 @@ class CVMAssetVO extends AbstractModel
      * @param integer $AgentMemRss 物理内存占用KB
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $AgentCpuPer CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RealAppid cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CloudType 云资产类型：0：腾讯云，1：aws，2：azure
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1059,6 +1083,14 @@ class CVMAssetVO extends AbstractModel
 
         if (array_key_exists("AgentCpuPer",$param) and $param["AgentCpuPer"] !== null) {
             $this->AgentCpuPer = $param["AgentCpuPer"];
+        }
+
+        if (array_key_exists("RealAppid",$param) and $param["RealAppid"] !== null) {
+            $this->RealAppid = $param["RealAppid"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

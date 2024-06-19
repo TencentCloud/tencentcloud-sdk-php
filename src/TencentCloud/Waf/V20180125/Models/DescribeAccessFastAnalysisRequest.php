@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessFastAnalysis请求参数结构体
  *
- * @method string getTopicId() 获取客户要查询的日志主题ID，每个客户都有对应的一个主题
- * @method void setTopicId(string $TopicId) 设置客户要查询的日志主题ID，每个客户都有对应的一个主题
  * @method integer getFrom() 获取要查询的日志的起始时间，Unix时间戳，单位ms
  * @method void setFrom(integer $From) 设置要查询的日志的起始时间，Unix时间戳，单位ms
  * @method integer getTo() 获取要查询的日志的结束时间，Unix时间戳，单位ms
@@ -30,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句，语句长度最大为4096，由于本接口是分析接口，如果无过滤条件，必须传 * 表示匹配所有，参考CLS的分析统计语句的文档
  * @method string getFieldName() 获取需要分析统计的字段名
  * @method void setFieldName(string $FieldName) 设置需要分析统计的字段名
+ * @method string getTopicId() 获取客户要查询的日志主题ID，每个客户都有对应的一个主题
+ * @method void setTopicId(string $TopicId) 设置客户要查询的日志主题ID，每个客户都有对应的一个主题
  * @method string getSort() 获取排序字段,升序asc,降序desc，默认降序desc 
  * @method void setSort(string $Sort) 设置排序字段,升序asc,降序desc，默认降序desc 
  * @method integer getCount() 获取返回的top数，默认返回top5
@@ -37,11 +37,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeAccessFastAnalysisRequest extends AbstractModel
 {
-    /**
-     * @var string 客户要查询的日志主题ID，每个客户都有对应的一个主题
-     */
-    public $TopicId;
-
     /**
      * @var integer 要查询的日志的起始时间，Unix时间戳，单位ms
      */
@@ -63,6 +58,12 @@ class DescribeAccessFastAnalysisRequest extends AbstractModel
     public $FieldName;
 
     /**
+     * @var string 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @deprecated
+     */
+    public $TopicId;
+
+    /**
      * @var string 排序字段,升序asc,降序desc，默认降序desc 
      */
     public $Sort;
@@ -73,11 +74,11 @@ class DescribeAccessFastAnalysisRequest extends AbstractModel
     public $Count;
 
     /**
-     * @param string $TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句，语句长度最大为4096，由于本接口是分析接口，如果无过滤条件，必须传 * 表示匹配所有，参考CLS的分析统计语句的文档
      * @param string $FieldName 需要分析统计的字段名
+     * @param string $TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
      * @param string $Sort 排序字段,升序asc,降序desc，默认降序desc 
      * @param integer $Count 返回的top数，默认返回top5
      */
@@ -94,10 +95,6 @@ class DescribeAccessFastAnalysisRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
-        }
-
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
         }
@@ -112,6 +109,10 @@ class DescribeAccessFastAnalysisRequest extends AbstractModel
 
         if (array_key_exists("FieldName",$param) and $param["FieldName"] !== null) {
             $this->FieldName = $param["FieldName"];
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {

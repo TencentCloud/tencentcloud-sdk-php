@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) 设置高级配置
  * @method integer getTaskMode() 获取体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
  * @method void setTaskMode(integer $TaskMode) 设置体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
+ * @method string getFinishWebHook() 获取任务完成回调webhook地址
+ * @method void setFinishWebHook(string $FinishWebHook) 设置任务完成回调webhook地址
  */
 class ModifyRiskCenterScanTaskRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
     public $TaskMode;
 
     /**
+     * @var string 任务完成回调webhook地址
+     */
+    public $FinishWebHook;
+
+    /**
      * @param string $TaskName 任务名称
      * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
      * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk
@@ -112,6 +119,7 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
      * @param array $SelfDefiningAssets ip/域名/url数组
      * @param TaskAdvanceCFG $TaskAdvanceCFG 高级配置
      * @param integer $TaskMode 体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
+     * @param string $FinishWebHook 任务完成回调webhook地址
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskMode",$param) and $param["TaskMode"] !== null) {
             $this->TaskMode = $param["TaskMode"];
+        }
+
+        if (array_key_exists("FinishWebHook",$param) and $param["FinishWebHook"] !== null) {
+            $this->FinishWebHook = $param["FinishWebHook"];
         }
     }
 }

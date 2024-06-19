@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupFileName(string $BackupFileName) 设置备份文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RollbackProcessInfo getRollbackProcess() 获取回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRollbackProcess(RollbackProcessInfo $RollbackProcess) 设置回档进程
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackData extends AbstractModel
 {
@@ -133,6 +137,12 @@ class RollbackData extends AbstractModel
     public $BackupFileName;
 
     /**
+     * @var RollbackProcessInfo 回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RollbackProcess;
+
+    /**
      * @param integer $Cpu 实例CPU
      * @param integer $Memory 实例内存
      * @param integer $StorageLimit 集群存储上限
@@ -151,6 +161,8 @@ class RollbackData extends AbstractModel
      * @param array $RollbackTables 回档数据表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupFileName 备份文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RollbackProcessInfo $RollbackProcess 回档进程
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -226,6 +238,11 @@ class RollbackData extends AbstractModel
 
         if (array_key_exists("BackupFileName",$param) and $param["BackupFileName"] !== null) {
             $this->BackupFileName = $param["BackupFileName"];
+        }
+
+        if (array_key_exists("RollbackProcess",$param) and $param["RollbackProcess"] !== null) {
+            $this->RollbackProcess = new RollbackProcessInfo();
+            $this->RollbackProcess->deserialize($param["RollbackProcess"]);
         }
     }
 }

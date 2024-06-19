@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DiagnosePro请求参数结构体
  *
+ * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+ * @method void setSearchCondition(InstanceApiOpsRequest $SearchCondition) 设置查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  * @method array getInstances() 获取实例列表
  * @method void setInstances(array $Instances) 设置实例列表
  * @method boolean getCheckFather() 获取检查父任务类型, true: 检查父任务; false: 不检查父任务 
@@ -32,16 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkipEventListening(boolean $SkipEventListening) 设置重跑忽略事件监听与否 
  * @method string getSonInstanceType() 获取下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
  * @method void setSonInstanceType(string $SonInstanceType) 设置下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
- * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
- * @method void setSearchCondition(InstanceApiOpsRequest $SearchCondition) 设置查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
  * @method string getOptType() 获取访问类型
  * @method void setOptType(string $OptType) 设置访问类型
  * @method string getOperatorName() 获取操作者名称
  * @method void setOperatorName(string $OperatorName) 设置操作者名称
  * @method string getOperatorId() 获取操作者id
  * @method void setOperatorId(string $OperatorId) 设置操作者id
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getProjectIdent() 获取项目标志
  * @method void setProjectIdent(string $ProjectIdent) 设置项目标志
  * @method string getProjectName() 获取项目名称
@@ -59,6 +59,16 @@ use TencentCloud\Common\AbstractModel;
  */
 class DiagnoseProRequest extends AbstractModel
 {
+    /**
+     * @var InstanceApiOpsRequest 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+     */
+    public $SearchCondition;
+
+    /**
+     * @var string 项目id
+     */
+    public $ProjectId;
+
     /**
      * @var array 实例列表
      */
@@ -90,11 +100,6 @@ class DiagnoseProRequest extends AbstractModel
     public $SonInstanceType;
 
     /**
-     * @var InstanceApiOpsRequest 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-     */
-    public $SearchCondition;
-
-    /**
      * @var string 访问类型
      */
     public $OptType;
@@ -108,11 +113,6 @@ class DiagnoseProRequest extends AbstractModel
      * @var string 操作者id
      */
     public $OperatorId;
-
-    /**
-     * @var string 项目id
-     */
-    public $ProjectId;
 
     /**
      * @var string 项目标志
@@ -150,17 +150,17 @@ class DiagnoseProRequest extends AbstractModel
     public $IsCount;
 
     /**
+     * @param InstanceApiOpsRequest $SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+     * @param string $ProjectId 项目id
      * @param array $Instances 实例列表
      * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
      * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
      * @param string $DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
      * @param boolean $SkipEventListening 重跑忽略事件监听与否 
      * @param string $SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
-     * @param InstanceApiOpsRequest $SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
      * @param string $OptType 访问类型
      * @param string $OperatorName 操作者名称
      * @param string $OperatorId 操作者id
-     * @param string $ProjectId 项目id
      * @param string $ProjectIdent 项目标志
      * @param string $ProjectName 项目名称
      * @param integer $PageIndex 索引页码
@@ -182,6 +182,15 @@ class DiagnoseProRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SearchCondition",$param) and $param["SearchCondition"] !== null) {
+            $this->SearchCondition = new InstanceApiOpsRequest();
+            $this->SearchCondition->deserialize($param["SearchCondition"]);
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
         if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
             $this->Instances = [];
             foreach ($param["Instances"] as $key => $value){
@@ -211,11 +220,6 @@ class DiagnoseProRequest extends AbstractModel
             $this->SonInstanceType = $param["SonInstanceType"];
         }
 
-        if (array_key_exists("SearchCondition",$param) and $param["SearchCondition"] !== null) {
-            $this->SearchCondition = new InstanceApiOpsRequest();
-            $this->SearchCondition->deserialize($param["SearchCondition"]);
-        }
-
         if (array_key_exists("OptType",$param) and $param["OptType"] !== null) {
             $this->OptType = $param["OptType"];
         }
@@ -226,10 +230,6 @@ class DiagnoseProRequest extends AbstractModel
 
         if (array_key_exists("OperatorId",$param) and $param["OperatorId"] !== null) {
             $this->OperatorId = $param["OperatorId"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("ProjectIdent",$param) and $param["ProjectIdent"] !== null) {

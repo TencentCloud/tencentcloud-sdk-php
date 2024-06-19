@@ -58,6 +58,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置公网带宽配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestId() 获取请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestId(string $RequestId) 设置请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOffset() 获取分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOffset(integer $Offset) 设置分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLimit() 获取分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimit(integer $Limit) 设置分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getForceCheckTag() 获取是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForceCheckTag(boolean $ForceCheckTag) 设置是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneResponse extends AbstractModel
 {
@@ -129,6 +149,36 @@ class ZoneResponse extends AbstractModel
     public $PublicNetworkLimit;
 
     /**
+     * @var string 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestId;
+
+    /**
+     * @var string 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var integer 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Limit;
+
+    /**
+     * @var boolean 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForceCheckTag;
+
+    /**
      * @param array $ZoneList zone列表
      * @param integer $MaxBuyInstanceNum 最大购买实例个数
      * @param integer $MaxBandwidth 最大购买带宽 单位Mb/s
@@ -147,6 +197,16 @@ class ZoneResponse extends AbstractModel
      * @param string $PublicNetwork 公网带宽
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicNetworkLimit 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Offset 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Limit 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ForceCheckTag 是否必须录入tag
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,6 +280,26 @@ class ZoneResponse extends AbstractModel
 
         if (array_key_exists("PublicNetworkLimit",$param) and $param["PublicNetworkLimit"] !== null) {
             $this->PublicNetworkLimit = $param["PublicNetworkLimit"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ForceCheckTag",$param) and $param["ForceCheckTag"] !== null) {
+            $this->ForceCheckTag = $param["ForceCheckTag"];
         }
     }
 }

@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置默认为 0，0：false；1：true。
  * @method integer getRetentionMs() 获取消息保留时间，单位：ms，当前最小值为60000ms。
  * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位：ms，当前最小值为60000ms。
- * @method integer getSegmentMs() 获取Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
- * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
  * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+ * @method integer getSegmentMs() 获取Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+ * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
  * @method string getCleanUpPolicy() 获取消息删除策略，可以选择delete 或者compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置消息删除策略，可以选择delete 或者compact
  * @method array getIpWhiteList() 获取Ip白名单列表，配额限制，enableWhileList=1时必选
@@ -95,14 +95,14 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $RetentionMs;
 
     /**
-     * @var integer Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-     */
-    public $SegmentMs;
-
-    /**
      * @var integer 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
      */
     public $MaxMessageBytes;
+
+    /**
+     * @var integer Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     */
+    public $SegmentMs;
 
     /**
      * @var string 消息删除策略，可以选择delete 或者compact
@@ -157,8 +157,8 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $MinInsyncReplicas 默认为1。
      * @param integer $UncleanLeaderElectionEnable 默认为 0，0：false；1：true。
      * @param integer $RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
-     * @param integer $SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
      * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+     * @param integer $SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
      * @param string $CleanUpPolicy 消息删除策略，可以选择delete 或者compact
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
@@ -210,12 +210,12 @@ class ModifyTopicAttributesRequest extends AbstractModel
             $this->RetentionMs = $param["RetentionMs"];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
-        }
-
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
+            $this->SegmentMs = $param["SegmentMs"];
         }
 
         if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {

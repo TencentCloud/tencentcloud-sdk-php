@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskMode(integer $TaskMode) 设置体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
  * @method AssetTag getTags() 获取资产标签
  * @method void setTags(AssetTag $Tags) 设置资产标签
+ * @method string getFinishWebHook() 获取任务完成回调webhook地址
+ * @method void setFinishWebHook(string $FinishWebHook) 设置任务完成回调webhook地址
  */
 class CreateRiskCenterScanTaskRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 任务完成回调webhook地址
+     */
+    public $FinishWebHook;
+
+    /**
      * @param string $TaskName 任务名称
      * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
      * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
@@ -120,6 +127,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
      * @param TaskAdvanceCFG $TaskAdvanceCFG 高级配置
      * @param integer $TaskMode 体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
      * @param AssetTag $Tags 资产标签
+     * @param string $FinishWebHook 任务完成回调webhook地址
      */
     function __construct()
     {
@@ -187,6 +195,10 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = new AssetTag();
             $this->Tags->deserialize($param["Tags"]);
+        }
+
+        if (array_key_exists("FinishWebHook",$param) and $param["FinishWebHook"] !== null) {
+            $this->FinishWebHook = $param["FinishWebHook"];
         }
     }
 }

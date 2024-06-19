@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemoryUsage(string $MemoryUsage) 设置排序参数
  * @method integer getIsQuery() 获取IsQuery条件
  * @method void setIsQuery(integer $IsQuery) 设置IsQuery条件
+ * @method array getDbName() 获取数据库名称
+ * @method void setDbName(array $DbName) 设置数据库名称
+ * @method array getCatalogName() 获取catalog名称
+ * @method void setCatalogName(array $CatalogName) 设置catalog名称
  */
 class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
     public $IsQuery;
 
     /**
+     * @var array 数据库名称
+     */
+    public $DbName;
+
+    /**
+     * @var array catalog名称
+     */
+    public $CatalogName;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -104,6 +118,8 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
      * @param string $ResultBytes 排序参数
      * @param string $MemoryUsage 排序参数
      * @param integer $IsQuery IsQuery条件
+     * @param array $DbName 数据库名称
+     * @param array $CatalogName catalog名称
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 
         if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
             $this->IsQuery = $param["IsQuery"];
+        }
+
+        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
+            $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

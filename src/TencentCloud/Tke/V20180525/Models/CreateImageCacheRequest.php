@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImages() 获取用于制作镜像缓存的容器镜像列表
  * @method void setImages(array $Images) 设置用于制作镜像缓存的容器镜像列表
- * @method string getSubnetId() 获取实例所属子网Id
- * @method void setSubnetId(string $SubnetId) 设置实例所属子网Id
- * @method string getVpcId() 获取实例所属VPC Id
- * @method void setVpcId(string $VpcId) 设置实例所属VPC Id
+ * @method string getSubnetId() 获取实例所属子网 ID
+ * @method void setSubnetId(string $SubnetId) 设置实例所属子网 ID
+ * @method string getVpcId() 获取实例所属 VPC ID
+ * @method void setVpcId(string $VpcId) 设置实例所属 VPC ID
  * @method string getImageCacheName() 获取镜像缓存名称
  * @method void setImageCacheName(string $ImageCacheName) 设置镜像缓存名称
- * @method array getSecurityGroupIds() 获取安全组Id
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组Id
+ * @method array getSecurityGroupIds() 获取安全组 ID
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组 ID
  * @method array getImageRegistryCredentials() 获取镜像仓库凭证数组
  * @method void setImageRegistryCredentials(array $ImageRegistryCredentials) 设置镜像仓库凭证数组
  * @method string getExistedEipId() 获取用来绑定容器实例的已有EIP
@@ -61,12 +61,12 @@ class CreateImageCacheRequest extends AbstractModel
     public $Images;
 
     /**
-     * @var string 实例所属子网Id
+     * @var string 实例所属子网 ID
      */
     public $SubnetId;
 
     /**
-     * @var string 实例所属VPC Id
+     * @var string 实例所属 VPC ID
      */
     public $VpcId;
 
@@ -76,7 +76,7 @@ class CreateImageCacheRequest extends AbstractModel
     public $ImageCacheName;
 
     /**
-     * @var array 安全组Id
+     * @var array 安全组 ID
      */
     public $SecurityGroupIds;
 
@@ -129,10 +129,10 @@ class CreateImageCacheRequest extends AbstractModel
 
     /**
      * @param array $Images 用于制作镜像缓存的容器镜像列表
-     * @param string $SubnetId 实例所属子网Id
-     * @param string $VpcId 实例所属VPC Id
+     * @param string $SubnetId 实例所属子网 ID
+     * @param string $VpcId 实例所属 VPC ID
      * @param string $ImageCacheName 镜像缓存名称
-     * @param array $SecurityGroupIds 安全组Id
+     * @param array $SecurityGroupIds 安全组 ID
      * @param array $ImageRegistryCredentials 镜像仓库凭证数组
      * @param string $ExistedEipId 用来绑定容器实例的已有EIP
      * @param boolean $AutoCreateEip 是否为容器实例自动创建EIP，默认为false。若传true，则此参数和ExistedEipIds互斥

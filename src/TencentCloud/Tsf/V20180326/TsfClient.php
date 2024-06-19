@@ -95,7 +95,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API 版本
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
- * @method Models\DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(Models\DescribeApplicationBusinessLogConfigRequest $req) 查询应用关联日志配置项信息
+ * @method Models\DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(Models\DescribeApplicationBusinessLogConfigRequest $req) 接口未使用，废弃录用
+
+查询应用关联日志配置项信息
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表
  * @method Models\DescribeBasicResourceUsageResponse DescribeBasicResourceUsage(Models\DescribeBasicResourceUsageRequest $req) TSF基本资源信息概览接口
  * @method Models\DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(Models\DescribeBusinessLogConfigRequest $req) 查询业务日志配置项信息

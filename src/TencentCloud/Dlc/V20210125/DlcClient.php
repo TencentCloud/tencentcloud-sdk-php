@@ -114,6 +114,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
  * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
+ * @method Models\DescribeTasksOverviewResponse DescribeTasksOverview(Models\DescribeTasksOverviewRequest $req) 查看任务概览页
  * @method Models\DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(Models\DescribeThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
  * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数

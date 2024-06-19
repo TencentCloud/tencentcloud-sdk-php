@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateImageCache请求参数结构体
  *
- * @method string getImageCacheId() 获取镜像缓存Id
- * @method void setImageCacheId(string $ImageCacheId) 设置镜像缓存Id
+ * @method string getImageCacheId() 获取镜像缓存ID
+ * @method void setImageCacheId(string $ImageCacheId) 设置镜像缓存ID
  * @method string getImageCacheName() 获取镜像缓存名称
  * @method void setImageCacheName(string $ImageCacheName) 设置镜像缓存名称
  * @method array getImageRegistryCredentials() 获取镜像仓库凭证数组
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateImageCacheRequest extends AbstractModel
 {
     /**
-     * @var string 镜像缓存Id
+     * @var string 镜像缓存ID
      */
     public $ImageCacheId;
 
@@ -73,7 +73,7 @@ class UpdateImageCacheRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ImageCacheId 镜像缓存Id
+     * @param string $ImageCacheId 镜像缓存ID
      * @param string $ImageCacheName 镜像缓存名称
      * @param array $ImageRegistryCredentials 镜像仓库凭证数组
      * @param array $Images 用于制作镜像缓存的容器镜像列表

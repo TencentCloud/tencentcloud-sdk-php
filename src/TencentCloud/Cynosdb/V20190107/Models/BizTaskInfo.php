@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置用户appid
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
  * @method string getDelayTime() 获取延迟执行时间
@@ -112,6 +116,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) 设置维护时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInstanceCLSDeliveryInfos() 获取实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) 设置实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BizTaskInfo extends AbstractModel
 {
@@ -129,6 +139,12 @@ class BizTaskInfo extends AbstractModel
      * @var string 集群id
      */
     public $ClusterId;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
 
     /**
      * @var string 任务创建时间
@@ -299,9 +315,18 @@ class BizTaskInfo extends AbstractModel
     public $TaskMaintainInfo;
 
     /**
+     * @var array 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceCLSDeliveryInfos;
+
+    /**
      * @param integer $ID 任务id
      * @param integer $AppId 用户appid
      * @param string $ClusterId 集群id
+     * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间
      * @param string $DelayTime 延迟执行时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -345,6 +370,9 @@ class BizTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMaintainInfo $TaskMaintainInfo 维护时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InstanceCLSDeliveryInfos 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -369,6 +397,10 @@ class BizTaskInfo extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -507,6 +539,15 @@ class BizTaskInfo extends AbstractModel
         if (array_key_exists("TaskMaintainInfo",$param) and $param["TaskMaintainInfo"] !== null) {
             $this->TaskMaintainInfo = new TaskMaintainInfo();
             $this->TaskMaintainInfo->deserialize($param["TaskMaintainInfo"]);
+        }
+
+        if (array_key_exists("InstanceCLSDeliveryInfos",$param) and $param["InstanceCLSDeliveryInfos"] !== null) {
+            $this->InstanceCLSDeliveryInfos = [];
+            foreach ($param["InstanceCLSDeliveryInfos"] as $key => $value){
+                $obj = new InstanceCLSDeliveryInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceCLSDeliveryInfos, $obj);
+            }
         }
     }
 }

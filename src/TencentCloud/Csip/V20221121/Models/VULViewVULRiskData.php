@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackHeat(integer $AttackHeat) 设置攻击热度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsSuggest() 获取是否必修漏洞1是，0不是
+ * @method integer getIsSuggest() 获取是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsSuggest(integer $IsSuggest) 设置是否必修漏洞1是，0不是
+ * @method void setIsSuggest(integer $IsSuggest) 设置是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHandleTaskId() 获取处置任务id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +103,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVulRiskId() 获取新的漏洞风险id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulRiskId(string $VulRiskId) 设置新的漏洞风险id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTvdID() 获取新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTvdID(string $TvdID) 设置新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsOneClick() 获取是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOneClick(integer $IsOneClick) 设置是否可以一键体检，1-可以，0-不可以
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULViewVULRiskData extends AbstractModel
@@ -246,7 +254,7 @@ class VULViewVULRiskData extends AbstractModel
     public $AttackHeat;
 
     /**
-     * @var integer 是否必修漏洞1是，0不是
+     * @var integer 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSuggest;
@@ -268,6 +276,18 @@ class VULViewVULRiskData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulRiskId;
+
+    /**
+     * @var string 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TvdID;
+
+    /**
+     * @var integer 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOneClick;
 
     /**
      * @param string $Port 端口
@@ -304,13 +324,17 @@ class VULViewVULRiskData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackHeat 攻击热度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsSuggest 是否必修漏洞1是，0不是
+     * @param integer $IsSuggest 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HandleTaskId 处置任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineSource 引擎来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulRiskId 新的漏洞风险id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TvdID 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsOneClick 是否可以一键体检，1-可以，0-不可以
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -444,6 +468,14 @@ class VULViewVULRiskData extends AbstractModel
 
         if (array_key_exists("VulRiskId",$param) and $param["VulRiskId"] !== null) {
             $this->VulRiskId = $param["VulRiskId"];
+        }
+
+        if (array_key_exists("TvdID",$param) and $param["TvdID"] !== null) {
+            $this->TvdID = $param["TvdID"];
+        }
+
+        if (array_key_exists("IsOneClick",$param) and $param["IsOneClick"] !== null) {
+            $this->IsOneClick = $param["IsOneClick"];
         }
     }
 }

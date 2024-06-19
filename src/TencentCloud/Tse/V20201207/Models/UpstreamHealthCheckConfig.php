@@ -56,9 +56,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyHttpStatuses(array $UnhealthyHttpStatuses) 设置异常HTTP状态码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIgnoreZeroWeightNodes() 获取健康检查屏蔽权重为0的节点
+ * @method boolean getIgnoreZeroWeightNodes() 获取健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIgnoreZeroWeightNodes(boolean $IgnoreZeroWeightNodes) 设置健康检查屏蔽权重为0的节点
+ * @method void setIgnoreZeroWeightNodes(boolean $IgnoreZeroWeightNodes) 设置健康检查监控上报的数据屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getZeroWeightHeathCheck() 获取健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZeroWeightHeathCheck(boolean $ZeroWeightHeathCheck) 设置健康检查支持权重为0节点
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpstreamHealthCheckConfig extends AbstractModel
@@ -118,10 +122,17 @@ class UpstreamHealthCheckConfig extends AbstractModel
     public $UnhealthyHttpStatuses;
 
     /**
-     * @var boolean 健康检查屏蔽权重为0的节点
+     * @var boolean 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $IgnoreZeroWeightNodes;
+
+    /**
+     * @var boolean 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZeroWeightHeathCheck;
 
     /**
      * @param boolean $EnableActiveHealthCheck 开启主动健康检查
@@ -142,7 +153,9 @@ class UpstreamHealthCheckConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnhealthyHttpStatuses 异常HTTP状态码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
+     * @param boolean $IgnoreZeroWeightNodes 健康检查监控上报的数据屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ZeroWeightHeathCheck 健康检查支持权重为0节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -198,6 +211,10 @@ class UpstreamHealthCheckConfig extends AbstractModel
 
         if (array_key_exists("IgnoreZeroWeightNodes",$param) and $param["IgnoreZeroWeightNodes"] !== null) {
             $this->IgnoreZeroWeightNodes = $param["IgnoreZeroWeightNodes"];
+        }
+
+        if (array_key_exists("ZeroWeightHeathCheck",$param) and $param["ZeroWeightHeathCheck"] !== null) {
+            $this->ZeroWeightHeathCheck = $param["ZeroWeightHeathCheck"];
         }
     }
 }

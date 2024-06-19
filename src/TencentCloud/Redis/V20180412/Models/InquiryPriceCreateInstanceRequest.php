@@ -20,8 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateInstance请求参数结构体
  *
- * @method integer getTypeId() 获取实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
- * @method void setTypeId(integer $TypeId) 设置实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+ * @method integer getTypeId() 获取实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+ * @method void setTypeId(integer $TypeId) 设置实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
  * @method integer getMemSize() 获取内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
 TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
  * @method void setMemSize(integer $MemSize) 设置内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
@@ -30,25 +48,52 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
  * @method integer getPeriod() 获取购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
  * @method void setPeriod(integer $Period) 设置购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
- * @method integer getBillingMode() 获取付费方式:0-按量计费，1-包年包月。
- * @method void setBillingMode(integer $BillingMode) 设置付费方式:0-按量计费，1-包年包月。
+ * @method integer getBillingMode() 获取付费方式。
+- 0：按量计费。
+- 1：包年包月。
+ * @method void setBillingMode(integer $BillingMode) 设置付费方式。
+- 0：按量计费。
+- 1：包年包月。
  * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method integer getRedisShardNum() 获取实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
- * @method integer getRedisReplicasNum() 获取实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
- * @method boolean getReplicasReadonly() 获取是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
- * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+ * @method integer getRedisShardNum() 获取实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+ * @method integer getRedisReplicasNum() 获取实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
+ * @method boolean getReplicasReadonly() 获取是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
+ * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
  * @method string getZoneName() 获取实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method string getProductVersion() 获取"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
- * @method void setProductVersion(string $ProductVersion) 设置"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+ * @method string getProductVersion() 获取部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
+ * @method void setProductVersion(string $ProductVersion) 设置部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+     * @var integer 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public $TypeId;
 
@@ -69,7 +114,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $Period;
 
     /**
-     * @var integer 付费方式:0-按量计费，1-包年包月。
+     * @var integer 付费方式。
+- 0：按量计费。
+- 1：包年包月。
      */
     public $BillingMode;
 
@@ -79,17 +126,21 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ZoneId;
 
     /**
-     * @var integer 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+     * @var integer 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @var integer 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
      */
     public $RedisReplicasNum;
 
     /**
-     * @var boolean 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @var boolean 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
      */
     public $ReplicasReadonly;
 
@@ -99,23 +150,44 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ZoneName;
 
     /**
-     * @var string "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+     * @var string 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
      */
     public $ProductVersion;
 
     /**
-     * @param integer $TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+     * @param integer $TypeId 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
 TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
      * @param integer $GoodsNum 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      * @param integer $Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
-     * @param integer $BillingMode 付费方式:0-按量计费，1-包年包月。
+     * @param integer $BillingMode 付费方式。
+- 0：按量计费。
+- 1：包年包月。
      * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param integer $RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
-     * @param integer $RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
-     * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @param integer $RedisShardNum 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+     * @param integer $RedisReplicasNum 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
+     * @param boolean $ReplicasReadonly 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
      * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param string $ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+     * @param string $ProductVersion 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
      */
     function __construct()
     {

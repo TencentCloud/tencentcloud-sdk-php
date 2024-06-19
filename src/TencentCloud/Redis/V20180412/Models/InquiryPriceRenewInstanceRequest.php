@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewInstance请求参数结构体
  *
- * @method integer getPeriod() 获取购买时长，单位：月
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method integer getPeriod() 获取包年包月实例的购买时长，单位：月。
+ * @method void setPeriod(integer $Period) 设置包年包月实例的购买时长，单位：月。
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 购买时长，单位：月
+     * @var integer 包年包月实例的购买时长，单位：月。
      */
     public $Period;
 
     /**
-     * @var string 实例ID
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @param integer $Period 购买时长，单位：月
-     * @param string $InstanceId 实例ID
+     * @param integer $Period 包年包月实例的购买时长，单位：月。
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     function __construct()
     {

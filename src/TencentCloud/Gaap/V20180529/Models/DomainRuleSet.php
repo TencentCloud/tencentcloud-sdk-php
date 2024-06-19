@@ -126,6 +126,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefaultServer(boolean $IsDefaultServer) 设置是否为默认域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTLSCiphers() 获取TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTLSCiphers(string $TLSCiphers) 设置TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTLSSupportVersion() 获取TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTLSSupportVersion(array $TLSSupportVersion) 设置TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -271,6 +279,18 @@ class DomainRuleSet extends AbstractModel
     public $IsDefaultServer;
 
     /**
+     * @var string TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TLSCiphers;
+
+    /**
+     * @var array TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TLSSupportVersion;
+
+    /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
@@ -323,6 +343,10 @@ class DomainRuleSet extends AbstractModel
 1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefaultServer 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TLSCiphers TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TLSSupportVersion TLS版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -439,6 +463,14 @@ class DomainRuleSet extends AbstractModel
 
         if (array_key_exists("IsDefaultServer",$param) and $param["IsDefaultServer"] !== null) {
             $this->IsDefaultServer = $param["IsDefaultServer"];
+        }
+
+        if (array_key_exists("TLSCiphers",$param) and $param["TLSCiphers"] !== null) {
+            $this->TLSCiphers = $param["TLSCiphers"];
+        }
+
+        if (array_key_exists("TLSSupportVersion",$param) and $param["TLSSupportVersion"] !== null) {
+            $this->TLSSupportVersion = $param["TLSSupportVersion"];
         }
     }
 }

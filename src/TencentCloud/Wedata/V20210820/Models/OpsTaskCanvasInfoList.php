@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksList(array $TasksList) 设置画布任务信息
  * @method array getLinksList() 获取画布任务链接信息
  * @method void setLinksList(array $LinksList) 设置画布任务链接信息
- * @method OpsTaskCanvasDto getCirculateTaskList() 获取画布循环依赖任务信息
+ * @method array getCirculateTaskList() 获取画布循环依赖任务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCirculateTaskList(OpsTaskCanvasDto $CirculateTaskList) 设置画布循环依赖任务信息
+ * @method void setCirculateTaskList(array $CirculateTaskList) 设置画布循环依赖任务信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpsTaskCanvasInfoList extends AbstractModel
@@ -42,7 +42,7 @@ class OpsTaskCanvasInfoList extends AbstractModel
     public $LinksList;
 
     /**
-     * @var OpsTaskCanvasDto 画布循环依赖任务信息
+     * @var array 画布循环依赖任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CirculateTaskList;
@@ -50,7 +50,7 @@ class OpsTaskCanvasInfoList extends AbstractModel
     /**
      * @param array $TasksList 画布任务信息
      * @param array $LinksList 画布任务链接信息
-     * @param OpsTaskCanvasDto $CirculateTaskList 画布循环依赖任务信息
+     * @param array $CirculateTaskList 画布循环依赖任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -85,8 +85,12 @@ class OpsTaskCanvasInfoList extends AbstractModel
         }
 
         if (array_key_exists("CirculateTaskList",$param) and $param["CirculateTaskList"] !== null) {
-            $this->CirculateTaskList = new OpsTaskCanvasDto();
-            $this->CirculateTaskList->deserialize($param["CirculateTaskList"]);
+            $this->CirculateTaskList = [];
+            foreach ($param["CirculateTaskList"] as $key => $value){
+                $obj = new OpsTaskCanvasDto();
+                $obj->deserialize($value);
+                array_push($this->CirculateTaskList, $obj);
+            }
         }
     }
 }

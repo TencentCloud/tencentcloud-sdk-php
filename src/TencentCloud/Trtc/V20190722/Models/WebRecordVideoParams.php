@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置录制画面宽度，默认为1280，取值范围[0, 1920]
  * @method integer getHeight() 获取录制画面高度，默认为720，取值范围[0, 1080]
  * @method void setHeight(integer $Height) 设置录制画面高度，默认为720，取值范围[0, 1080]
- * @method string getFormat() 获取指定输出格式，可选hls,mp4
+ * @method string getFormat() 获取指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
- * @method void setFormat(string $Format) 设置指定输出格式，可选hls,mp4
+ * @method void setFormat(string $Format) 设置指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
  * @method integer getMaxMediaFileDuration() 获取如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
@@ -48,7 +48,7 @@ class WebRecordVideoParams extends AbstractModel
     public $Height;
 
     /**
-     * @var string 指定输出格式，可选hls,mp4
+     * @var string 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
      */
     public $Format;
@@ -63,7 +63,7 @@ Hls 格式录制此参数不生效。
     /**
      * @param integer $Width 录制画面宽度，默认为1280，取值范围[0, 1920]
      * @param integer $Height 录制画面高度，默认为720，取值范围[0, 1080]
-     * @param string $Format 指定输出格式，可选hls,mp4
+     * @param string $Format 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
      * @param integer $MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。

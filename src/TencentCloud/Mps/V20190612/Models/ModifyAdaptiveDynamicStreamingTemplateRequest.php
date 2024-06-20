@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+ * @method string getSegmentType() 获取hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+ * @method void setSegmentType(string $SegmentType) 设置hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -128,6 +132,12 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $PureAudio;
 
     /**
+     * @var string hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition 转自适应码流模板唯一标识。
      * @param string $Name 模板名称，长度限制：64 个字符。
      * @param string $Format 转自适应码流格式，取值范围：
@@ -152,6 +162,8 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+     * @param string $SegmentType hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
      */
     function __construct()
     {
@@ -201,6 +213,10 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
             $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

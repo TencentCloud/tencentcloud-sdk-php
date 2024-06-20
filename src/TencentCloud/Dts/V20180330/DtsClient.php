@@ -44,9 +44,6 @@ use TencentCloud\Dts\V20180330\Models as Models;
 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrateJob'修改迁移配置或是调整源/目标实例的相关参数.
  * @method Models\DescribeMigrateJobsResponse DescribeMigrateJobs(Models\DescribeMigrateJobsRequest $req) 查询数据迁移任务.
 如果是金融区链路, 请使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
- * @method Models\DescribeRegionConfResponse DescribeRegionConf(Models\DescribeRegionConfRequest $req) 接口不再使用
-
-本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
  * @method Models\DescribeSubscribeConfResponse DescribeSubscribeConf(Models\DescribeSubscribeConfRequest $req) 本接口（DescribeSubscribeConf）用于查询订阅实例配置
  * @method Models\DescribeSubscribesResponse DescribeSubscribes(Models\DescribeSubscribesRequest $req) 本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
  * @method Models\IsolateSubscribeResponse IsolateSubscribe(Models\IsolateSubscribeRequest $req) 本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。

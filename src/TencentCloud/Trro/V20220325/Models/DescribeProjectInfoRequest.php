@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectInfo请求参数结构体
  *
- * @method string getProjectId() 获取目标项目ID
- * @method void setProjectId(string $ProjectId) 设置目标项目ID
+ * @method string getProjectId() 获取目标项目ID，必填参数
+ * @method void setProjectId(string $ProjectId) 设置目标项目ID，必填参数
  */
 class DescribeProjectInfoRequest extends AbstractModel
 {
     /**
-     * @var string 目标项目ID
+     * @var string 目标项目ID，必填参数
      */
     public $ProjectId;
 
     /**
-     * @param string $ProjectId 目标项目ID
+     * @param string $ProjectId 目标项目ID，必填参数
      */
     function __construct()
     {

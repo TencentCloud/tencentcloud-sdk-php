@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentConfig(string $ComponentConfig) 设置配置描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTags() 获取标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(string $Tags) 设置标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -375,6 +379,12 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
     public $ComponentConfig;
 
     /**
+     * @var string 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param string $ResourceName 资源名称
      * @param string $RealTotalCost 折后总价
@@ -439,6 +449,8 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @param string $ZoneName 可用区：资源所属可用区，如广州三区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentConfig 配置描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -608,6 +620,10 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
 
         if (array_key_exists("ComponentConfig",$param) and $param["ComponentConfig"] !== null) {
             $this->ComponentConfig = $param["ComponentConfig"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeQueueDetail请求参数结构体
  *
- * @method integer getOffset() 获取分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
- * @method void setOffset(integer $Offset) 设置分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
- * @method integer getLimit() 获取分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
- * @method void setLimit(integer $Limit) 设置分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
- * @method array getFilters() 获取筛选参数，目前支持QueueName筛选，且仅支持一个关键字
- * @method void setFilters(array $Filters) 设置筛选参数，目前支持QueueName筛选，且仅支持一个关键字
  * @method string getTagKey() 获取标签搜索
  * @method void setTagKey(string $TagKey) 设置标签搜索
+ * @method integer getLimit() 获取分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+ * @method void setLimit(integer $Limit) 设置分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
  * @method string getQueueName() 获取精确匹配QueueName
  * @method void setQueueName(string $QueueName) 设置精确匹配QueueName
+ * @method array getFilters() 获取筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+ * @method void setFilters(array $Filters) 设置筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+ * @method integer getOffset() 获取分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+ * @method void setOffset(integer $Offset) 设置分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
  */
 class DescribeQueueDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+     * @var string 标签搜索
      */
-    public $Offset;
+    public $TagKey;
 
     /**
      * @var integer 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
@@ -44,26 +44,26 @@ class DescribeQueueDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
-     */
-    public $Filters;
-
-    /**
-     * @var string 标签搜索
-     */
-    public $TagKey;
-
-    /**
      * @var string 精确匹配QueueName
      */
     public $QueueName;
 
     /**
-     * @param integer $Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
-     * @param integer $Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
-     * @param array $Filters 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+     * @var array 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+     */
+    public $Filters;
+
+    /**
+     * @var integer 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+     */
+    public $Offset;
+
+    /**
      * @param string $TagKey 标签搜索
+     * @param integer $Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      * @param string $QueueName 精确匹配QueueName
+     * @param array $Filters 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+     * @param integer $Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
     function __construct()
     {
@@ -78,12 +78,16 @@ class DescribeQueueDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -95,12 +99,8 @@ class DescribeQueueDetailRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

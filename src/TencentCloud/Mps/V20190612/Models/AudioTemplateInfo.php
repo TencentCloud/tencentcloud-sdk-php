@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 <li>aac；</li>
 <li>mp3；</li>
 <li>ac3。</li>
+<li>eac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>aac：更适合 mp4；</li>
 <li>mp3：更适合 flv；</li>
@@ -49,6 +50,7 @@ use TencentCloud\Common\AbstractModel;
 <li>aac；</li>
 <li>mp3；</li>
 <li>ac3。</li>
+<li>eac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>aac：更适合 mp4；</li>
 <li>mp3：更适合 flv；</li>
@@ -97,6 +99,7 @@ class AudioTemplateInfo extends AbstractModel
 <li>aac；</li>
 <li>mp3；</li>
 <li>ac3。</li>
+<li>eac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>aac：更适合 mp4；</li>
 <li>mp3：更适合 flv；</li>
@@ -144,6 +147,7 @@ class AudioTemplateInfo extends AbstractModel
 <li>aac；</li>
 <li>mp3；</li>
 <li>ac3。</li>
+<li>eac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>aac：更适合 mp4；</li>
 <li>mp3：更适合 flv；</li>

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Organization\V20210331\Models as Models;
 
 /**
+ * @method Models\AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitation(Models\AcceptJoinShareUnitInvitationRequest $req) 接受加入共享单元邀请。
  * @method Models\AddOrganizationMemberEmailResponse AddOrganizationMemberEmail(Models\AddOrganizationMemberEmailRequest $req) 添加组织成员邮箱
  * @method Models\AddOrganizationNodeResponse AddOrganizationNode(Models\AddOrganizationNodeRequest $req) 添加企业组织节点
  * @method Models\AddShareUnitResponse AddShareUnit(Models\AddShareUnitRequest $req) 创建共享单元，只有企业组织管理员可创建。
@@ -78,6 +79,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListTargetsForPolicyResponse ListTargetsForPolicy(Models\ListTargetsForPolicyRequest $req) 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
  * @method Models\MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembers(Models\MoveOrganizationNodeMembersRequest $req) 移动成员到指定企业组织节点
  * @method Models\QuitOrganizationResponse QuitOrganization(Models\QuitOrganizationRequest $req) 退出企业组织
+ * @method Models\RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(Models\RejectJoinShareUnitInvitationRequest $req) 拒绝加入共享单元邀请。
  * @method Models\UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(Models\UpdateOrganizationIdentityRequest $req) 更新组织身份
  * @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) 更新组织成员信息
  * @method Models\UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBind(Models\UpdateOrganizationMemberEmailBindRequest $req) 修改绑定成员邮箱

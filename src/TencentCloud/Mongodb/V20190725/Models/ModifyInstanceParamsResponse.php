@@ -14,30 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegionConf返回参数结构体
+ * ModifyInstanceParams返回参数结构体
  *
- * @method integer getTotalCount() 获取可售卖地域的数量
- * @method void setTotalCount(integer $TotalCount) 设置可售卖地域的数量
- * @method array getItems() 获取可售卖地域详情
- * @method void setItems(array $Items) 设置可售卖地域详情
+ * @method boolean getChanged() 获取修改参数配置是否生效。
+- true：参数修改后的值已生效。
+- false：执行失败。
+
+ * @method void setChanged(boolean $Changed) 设置修改参数配置是否生效。
+- true：参数修改后的值已生效。
+- false：执行失败。
+
+ * @method integer getTaskId() 获取该参数暂时无意义(兼容前端保留)。
+ * @method void setTaskId(integer $TaskId) 设置该参数暂时无意义(兼容前端保留)。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRegionConfResponse extends AbstractModel
+class ModifyInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var integer 可售卖地域的数量
+     * @var boolean 修改参数配置是否生效。
+- true：参数修改后的值已生效。
+- false：执行失败。
+
      */
-    public $TotalCount;
+    public $Changed;
 
     /**
-     * @var array 可售卖地域详情
+     * @var integer 该参数暂时无意义(兼容前端保留)。
      */
-    public $Items;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +54,11 @@ class DescribeRegionConfResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 可售卖地域的数量
-     * @param array $Items 可售卖地域详情
+     * @param boolean $Changed 修改参数配置是否生效。
+- true：参数修改后的值已生效。
+- false：执行失败。
+
+     * @param integer $TaskId 该参数暂时无意义(兼容前端保留)。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +74,12 @@ class DescribeRegionConfResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Changed",$param) and $param["Changed"] !== null) {
+            $this->Changed = $param["Changed"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new SubscribeRegionConf();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

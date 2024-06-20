@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegionConf请求参数结构体
+ * AcceptJoinShareUnitInvitation请求参数结构体
  *
-
+ * @method string getUnitId() 获取共享单元ID。
+ * @method void setUnitId(string $UnitId) 设置共享单元ID。
  */
-class DescribeRegionConfRequest extends AbstractModel
+class AcceptJoinShareUnitInvitationRequest extends AbstractModel
 {
-
+    /**
+     * @var string 共享单元ID。
+     */
+    public $UnitId;
 
     /**
-
+     * @param string $UnitId 共享单元ID。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeRegionConfRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("UnitId",$param) and $param["UnitId"] !== null) {
+            $this->UnitId = $param["UnitId"];
+        }
     }
 }

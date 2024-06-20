@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+ * @method string getSegmentType() 获取hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+ * @method void setSegmentType(string $SegmentType) 设置hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -127,6 +131,12 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $PureAudio;
 
     /**
+     * @var string hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Format 自适应转码格式，取值范围：
 <li>HLS，</li>
 <li>MPEG-DASH。</li>
@@ -152,6 +162,8 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+     * @param string $SegmentType hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
             $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

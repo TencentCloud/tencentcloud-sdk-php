@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getStatusDesc() 获取状态描述
+ * @method string getStatusDesc() 获取常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名字
  * @method void setClusterName(string $ClusterName) 设置集群名字
@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置地区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态码
+ * @method integer getStatus() 获取状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态码
+ * @method void setStatus(integer $Status) 设置状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取实例标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,7 +133,7 @@ class EmrListInstance extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 状态描述
+     * @var string 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
@@ -220,7 +220,7 @@ class EmrListInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 状态码
+     * @var integer 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -305,7 +305,7 @@ class EmrListInstance extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $StatusDesc 状态描述
+     * @param string $StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名字
      * @param integer $ZoneId 集群地域
@@ -328,7 +328,7 @@ class EmrListInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态码
+     * @param integer $Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 实例标签
 注意：此字段可能返回 null，表示取不到有效值。

@@ -60,6 +60,28 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频，1表示纯音频
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSegmentType() 获取hls 分片类型，可选值：
+<li>ts-segment：HLS+TS 切片</li>
+<li>ts-byterange：HLS+TS byte range</li>
+<li>mp4-segment：HLS+MP4 切片</li>
+<li>mp4-byterange：HLS+MP4 byte range</li>
+<li>ts-packed-audio：TS+Packed Audio</li>
+<li>mp4-packed-audio：MP4+Packed Audio</li>
+默认值：ts-segment
+
+注：自适应码流的hls分片格式已此字段为准
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentType(string $SegmentType) 设置hls 分片类型，可选值：
+<li>ts-segment：HLS+TS 切片</li>
+<li>ts-byterange：HLS+TS byte range</li>
+<li>mp4-segment：HLS+MP4 切片</li>
+<li>mp4-byterange：HLS+MP4 byte range</li>
+<li>ts-packed-audio：TS+Packed Audio</li>
+<li>mp4-packed-audio：MP4+Packed Audio</li>
+默认值：ts-segment
+
+注：自适应码流的hls分片格式已此字段为准
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
@@ -128,6 +150,21 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $PureAudio;
 
     /**
+     * @var string hls 分片类型，可选值：
+<li>ts-segment：HLS+TS 切片</li>
+<li>ts-byterange：HLS+TS byte range</li>
+<li>mp4-segment：HLS+MP4 切片</li>
+<li>mp4-byterange：HLS+MP4 byte range</li>
+<li>ts-packed-audio：TS+Packed Audio</li>
+<li>mp4-packed-audio：MP4+Packed Audio</li>
+默认值：ts-segment
+
+注：自适应码流的hls分片格式已此字段为准
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition 转自适应码流模板唯一标识。
      * @param string $Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
@@ -147,6 +184,17 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param integer $PureAudio 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SegmentType hls 分片类型，可选值：
+<li>ts-segment：HLS+TS 切片</li>
+<li>ts-byterange：HLS+TS byte range</li>
+<li>mp4-segment：HLS+MP4 切片</li>
+<li>mp4-byterange：HLS+MP4 byte range</li>
+<li>ts-packed-audio：TS+Packed Audio</li>
+<li>mp4-packed-audio：MP4+Packed Audio</li>
+默认值：ts-segment
+
+注：自适应码流的hls分片格式已此字段为准
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -209,6 +257,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
             $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

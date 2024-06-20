@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTargetUin() 获取指定用户Uin，不填默认为当前用户创建访问密钥
  * @method void setTargetUin(integer $TargetUin) 设置指定用户Uin，不填默认为当前用户创建访问密钥
+ * @method string getDescription() 获取密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+ * @method void setDescription(string $Description) 设置密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
  */
 class CreateAccessKeyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateAccessKeyRequest extends AbstractModel
     public $TargetUin;
 
     /**
+     * @var string 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+     */
+    public $Description;
+
+    /**
      * @param integer $TargetUin 指定用户Uin，不填默认为当前用户创建访问密钥
+     * @param string $Description 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateAccessKeyRequest extends AbstractModel
         }
         if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
             $this->TargetUin = $param["TargetUin"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

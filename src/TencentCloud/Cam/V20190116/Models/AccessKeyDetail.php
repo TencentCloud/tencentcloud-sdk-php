@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置密钥状态，激活（Active）或未激活（Inactive）
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getDescription() 获取描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessKeyDetail extends AbstractModel
 {
@@ -52,10 +56,18 @@ class AccessKeyDetail extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $AccessKeyId 访问密钥标识
      * @param string $SecretAccessKey 访问密钥（密钥仅创建时可见，请妥善保存）
      * @param string $Status 密钥状态，激活（Active）或未激活（Inactive）
      * @param string $CreateTime 创建时间
+     * @param string $Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class AccessKeyDetail extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -33,9 +33,9 @@ use TencentCloud\Cmq\V20190304\Models as Models;
  * @method Models\DeleteSubscribeResponse DeleteSubscribe(Models\DeleteSubscribeRequest $req) 删除订阅
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题
  * @method Models\DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(Models\DescribeDeadLetterSourceQueuesRequest $req) 枚举死信队列源队列
- * @method Models\DescribeQueueDetailResponse DescribeQueueDetail(Models\DescribeQueueDetailRequest $req) 枚举队列
+ * @method Models\DescribeQueueDetailResponse DescribeQueueDetail(Models\DescribeQueueDetailRequest $req) 枚举队列列表
  * @method Models\DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(Models\DescribeSubscriptionDetailRequest $req) 查询订阅详情
- * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) 查询主题详情 
+ * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) 查询主题详情
  * @method Models\ModifyQueueAttributeResponse ModifyQueueAttribute(Models\ModifyQueueAttributeRequest $req) 修改队列属性
  * @method Models\ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(Models\ModifySubscriptionAttributeRequest $req) 修改订阅属性
  * @method Models\ModifyTopicAttributeResponse ModifyTopicAttribute(Models\ModifyTopicAttributeRequest $req) 修改主题属性

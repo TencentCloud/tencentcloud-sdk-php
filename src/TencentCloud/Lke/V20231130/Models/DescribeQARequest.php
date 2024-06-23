@@ -24,9 +24,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setQaBizId(string $QaBizId) 设置QA业务ID
 
- * @method string getBotBizId() 获取机器人ID
-
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  */
 class DescribeQARequest extends AbstractModel
 {
@@ -37,15 +36,14 @@ class DescribeQARequest extends AbstractModel
     public $QaBizId;
 
     /**
-     * @var string 机器人ID
-
+     * @var string 应用ID
      */
     public $BotBizId;
 
     /**
      * @param string $QaBizId QA业务ID
 
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      */
     function __construct()
     {

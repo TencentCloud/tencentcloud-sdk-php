@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateQA请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getQuestion() 获取问题
  * @method void setQuestion(string $Question) 设置问题
  * @method string getAnswer() 获取答案
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateQARequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -94,7 +94,7 @@ class CreateQARequest extends AbstractModel
     public $ExpireEnd;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $Question 问题
      * @param string $Answer 答案
      * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件

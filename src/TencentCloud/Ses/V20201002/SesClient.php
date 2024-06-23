@@ -39,7 +39,6 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\GetEmailIdentityResponse GetEmailIdentity(Models\GetEmailIdentityRequest $req) 获取某个发信域名的配置详情
  * @method Models\GetEmailTemplateResponse GetEmailTemplate(Models\GetEmailTemplateRequest $req) 根据模板ID获取模板详情
  * @method Models\GetSendEmailStatusResponse GetSendEmailStatus(Models\GetSendEmailStatusRequest $req) 获取邮件发送状态。仅支持查询30天之内的数据
-默认接口请求频率限制：1次/秒
  * @method Models\GetStatisticsReportResponse GetStatisticsReport(Models\GetStatisticsReportRequest $req) 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。
  * @method Models\ListBlackEmailAddressResponse ListBlackEmailAddress(Models\ListBlackEmailAddressRequest $req) 腾讯云发送的邮件一旦被收件方判断为硬退(Hard Bounce)，腾讯云会拉黑该地址，并不允许所有用户向该地址发送邮件。成为邮箱黑名单。如果业务方确认是误判，可以从黑名单中删除。
  * @method Models\ListEmailAddressResponse ListEmailAddress(Models\ListEmailAddressRequest $req) 获取发信地址列表

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getAttributeBizId() 获取属性ID
  * @method void setAttributeBizId(string $AttributeBizId) 设置属性ID
  * @method integer getLimit() 获取每次加载的数量 
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -73,7 +73,7 @@ class DescribeAttributeLabelRequest extends AbstractModel
     public $LastLabelBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $AttributeBizId 属性ID
      * @param integer $Limit 每次加载的数量 
      * @param string $LoginUin 登录用户主账号(集成商模式必填)

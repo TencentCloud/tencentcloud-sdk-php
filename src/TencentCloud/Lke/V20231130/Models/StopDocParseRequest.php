@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopDocParse请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  */
 class StopDocParseRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -38,7 +38,7 @@ class StopDocParseRequest extends AbstractModel
     public $DocBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      */
     function __construct()

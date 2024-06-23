@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageCredential请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
- * @method string getFileType() 获取文件类型
- * @method void setFileType(string $FileType) 设置文件类型
- * @method boolean getIsPublic() 获取权限场景，是否公有权限
- * @method void setIsPublic(boolean $IsPublic) 设置权限场景，是否公有权限
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getFileType() 获取文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+ * @method void setFileType(string $FileType) 设置文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+ * @method boolean getIsPublic() 获取IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+ * @method void setIsPublic(boolean $IsPublic) 设置IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+ * @method string getTypeKey() 获取存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+ * @method void setTypeKey(string $TypeKey) 设置存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
  */
 class DescribeStorageCredentialRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
     /**
-     * @var string 文件类型
+     * @var string 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
      */
     public $FileType;
 
     /**
-     * @var boolean 权限场景，是否公有权限
+     * @var boolean IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
      */
     public $IsPublic;
 
     /**
-     * @param string $BotBizId 机器人ID
-     * @param string $FileType 文件类型
-     * @param boolean $IsPublic 权限场景，是否公有权限
+     * @var string 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public $TypeKey;
+
+    /**
+     * @param string $BotBizId 应用ID
+     * @param string $FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * @param boolean $IsPublic IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+     * @param string $TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeStorageCredentialRequest extends AbstractModel
 
         if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
             $this->IsPublic = $param["IsPublic"];
+        }
+
+        if (array_key_exists("TypeKey",$param) and $param["TypeKey"] !== null) {
+            $this->TypeKey = $param["TypeKey"];
         }
     }
 }

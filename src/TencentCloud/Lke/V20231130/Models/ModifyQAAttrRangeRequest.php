@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyQAAttrRange请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method array getQaBizIds() 获取问答ID
  * @method void setQaBizIds(array $QaBizIds) 设置问答ID
  * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyQAAttrRangeRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -52,7 +52,7 @@ class ModifyQAAttrRangeRequest extends AbstractModel
     public $AttrLabels;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param array $QaBizIds 问答ID
      * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
      * @param array $AttrLabels 属性标签引用

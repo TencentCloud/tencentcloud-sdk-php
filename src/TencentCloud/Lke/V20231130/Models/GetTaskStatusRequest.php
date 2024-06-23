@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getTaskType() 获取任务类型
  * @method void setTaskType(string $TaskType) 设置任务类型
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  */
 class GetTaskStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class GetTaskStatusRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
     /**
      * @param string $TaskId 任务ID
      * @param string $TaskType 任务类型
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分片高亮内容
  *
- * @method string getStartPos() 获取高亮启始位置
+ * @method string getStartPos() 获取高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartPos(string $StartPos) 设置高亮启始位置
+ * @method void setStartPos(string $StartPos) 设置高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndPos() 获取高亮结束位置
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class Highlight extends AbstractModel
 {
     /**
-     * @var string 高亮启始位置
+     * @var string 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -63,7 +63,7 @@ class Highlight extends AbstractModel
     public $Text;
 
     /**
-     * @param string $StartPos 高亮启始位置
+     * @param string $StartPos 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndPos 高亮结束位置

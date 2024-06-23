@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckAttributeLabelExist请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getLabelName() 获取属性名称
  * @method void setLabelName(string $LabelName) 设置属性名称
  * @method string getAttributeBizId() 获取属性ID
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CheckAttributeLabelExistRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -66,7 +66,7 @@ class CheckAttributeLabelExistRequest extends AbstractModel
     public $LastLabelBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $LabelName 属性名称
      * @param string $AttributeBizId 属性ID
      * @param string $LoginUin 登录用户主账号(集成商模式必填)

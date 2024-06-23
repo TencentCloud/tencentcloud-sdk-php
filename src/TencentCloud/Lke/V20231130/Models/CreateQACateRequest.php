@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateQACate请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getParentBizId() 获取父级业务ID
  * @method void setParentBizId(string $ParentBizId) 设置父级业务ID
  * @method string getName() 获取分类名称
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateQACateRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -47,7 +47,7 @@ class CreateQACateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $ParentBizId 父级业务ID
      * @param string $Name 分类名称
      */

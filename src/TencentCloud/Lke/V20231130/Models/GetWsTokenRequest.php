@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() 获取接入类型
  * @method void setType(integer $Type) 设置接入类型
- * @method string getBotAppKey() 获取机器人AppKey
- * @method void setBotAppKey(string $BotAppKey) 设置机器人AppKey
+ * @method string getBotAppKey() 获取应用AppKey
+ * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey
  * @method string getVisitorBizId() 获取坐席ID
  * @method void setVisitorBizId(string $VisitorBizId) 设置坐席ID
  * @method array getVisitorLabels() 获取坐席标签
@@ -37,7 +37,7 @@ class GetWsTokenRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 机器人AppKey
+     * @var string 应用AppKey
      */
     public $BotAppKey;
 
@@ -53,7 +53,7 @@ class GetWsTokenRequest extends AbstractModel
 
     /**
      * @param integer $Type 接入类型
-     * @param string $BotAppKey 机器人AppKey
+     * @param string $BotAppKey 应用AppKey
      * @param string $VisitorBizId 坐席ID
      * @param array $VisitorLabels 坐席标签
      */

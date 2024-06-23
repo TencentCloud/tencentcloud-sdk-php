@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRobotBizIDByAppKey请求参数结构体
  *
- * @method string getAppKey() 获取机器人appkey
- * @method void setAppKey(string $AppKey) 设置机器人appkey
+ * @method string getAppKey() 获取应用appkey
+ * @method void setAppKey(string $AppKey) 设置应用appkey
  */
 class DescribeRobotBizIDByAppKeyRequest extends AbstractModel
 {
     /**
-     * @var string 机器人appkey
+     * @var string 应用appkey
      */
     public $AppKey;
 
     /**
-     * @param string $AppKey 机器人appkey
+     * @param string $AppKey 应用appkey
      */
     function __construct()
     {

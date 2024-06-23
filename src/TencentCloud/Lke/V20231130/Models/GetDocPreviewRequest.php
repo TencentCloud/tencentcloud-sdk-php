@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDocBizId() 获取文档业务ID
  * @method void setDocBizId(string $DocBizId) 设置文档业务ID
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getTypeKey() 获取存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+ * @method void setTypeKey(string $TypeKey) 设置存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
  */
 class GetDocPreviewRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class GetDocPreviewRequest extends AbstractModel
     public $DocBizId;
 
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
     /**
+     * @var string 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public $TypeKey;
+
+    /**
      * @param string $DocBizId 文档业务ID
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
+     * @param string $TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class GetDocPreviewRequest extends AbstractModel
 
         if (array_key_exists("BotBizId",$param) and $param["BotBizId"] !== null) {
             $this->BotBizId = $param["BotBizId"];
+        }
+
+        if (array_key_exists("TypeKey",$param) and $param["TypeKey"] !== null) {
+            $this->TypeKey = $param["TypeKey"];
         }
     }
 }

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置模型别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTokenBalance() 获取token余量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTokenBalance(float $TokenBalance) 设置token余量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModel extends AbstractModel
 {
@@ -64,6 +68,12 @@ class AppModel extends AbstractModel
     public $AliasName;
 
     /**
+     * @var float token余量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TokenBalance;
+
+    /**
      * @param string $Name 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 模型描述
@@ -71,6 +81,8 @@ class AppModel extends AbstractModel
      * @param integer $ContextLimit 上下文指代轮次
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasName 模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TokenBalance token余量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class AppModel extends AbstractModel
 
         if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
             $this->AliasName = $param["AliasName"];
+        }
+
+        if (array_key_exists("TokenBalance",$param) and $param["TokenBalance"] !== null) {
+            $this->TokenBalance = $param["TokenBalance"];
         }
     }
 }

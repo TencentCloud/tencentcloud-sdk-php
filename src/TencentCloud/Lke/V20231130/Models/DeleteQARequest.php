@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteQA请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method array getQaBizIds() 获取问答ID
  * @method void setQaBizIds(array $QaBizIds) 设置问答ID
  */
 class DeleteQARequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -38,7 +38,7 @@ class DeleteQARequest extends AbstractModel
     public $QaBizIds;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param array $QaBizIds 问答ID
      */
     function __construct()

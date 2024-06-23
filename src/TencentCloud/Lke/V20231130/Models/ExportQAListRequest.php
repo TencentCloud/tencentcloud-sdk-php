@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportQAList请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method array getQaBizIds() 获取QA业务ID
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID
  * @method QAQuery getFilters() 获取查询参数
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ExportQAListRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -45,7 +45,7 @@ class ExportQAListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param array $QaBizIds QA业务ID
      * @param QAQuery $Filters 查询参数
      */

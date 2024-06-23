@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GroupQA请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method array getQaBizIds() 获取QA业务ID列表
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
  * @method string getCateBizId() 获取分组 ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GroupQARequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -45,7 +45,7 @@ class GroupQARequest extends AbstractModel
     public $CateBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param array $QaBizIds QA业务ID列表
      * @param string $CateBizId 分组 ID
      */

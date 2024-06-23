@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListUnsatisfiedReply请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取分页数量
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ListUnsatisfiedReplyRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -73,7 +73,7 @@ class ListUnsatisfiedReplyRequest extends AbstractModel
     public $Reasons;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 分页数量
      * @param string $LoginUin 登录用户主账号(集成商模式必填)

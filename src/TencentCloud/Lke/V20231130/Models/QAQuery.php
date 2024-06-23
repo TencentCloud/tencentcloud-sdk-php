@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setPageSize(integer $PageSize) 设置每页数量
 
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getQuery() 获取查询内容
 
  * @method void setQuery(string $Query) 设置查询内容
@@ -80,7 +80,7 @@ class QAQuery extends AbstractModel
     public $PageSize;
 
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -138,7 +138,7 @@ class QAQuery extends AbstractModel
 
      * @param integer $PageSize 每页数量
 
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $Query 查询内容
 
      * @param string $CateBizId 分类ID

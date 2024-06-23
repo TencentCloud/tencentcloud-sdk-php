@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListSelectDoc请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getFileName() 获取文档名称
 
  * @method void setFileName(string $FileName) 设置文档名称
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ListSelectDocRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -48,7 +48,7 @@ class ListSelectDocRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $FileName 文档名称
 
      * @param array $Status 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取内容
  * @method void setContent(string $Content) 设置内容
- * @method string getBotAppKey() 获取机器人appKey
- * @method void setBotAppKey(string $BotAppKey) 设置机器人appKey
+ * @method string getBotAppKey() 获取应用appKey
+ * @method void setBotAppKey(string $BotAppKey) 设置应用appKey
  */
 class IsTransferIntentRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class IsTransferIntentRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var string 机器人appKey
+     * @var string 应用appKey
      */
     public $BotAppKey;
 
     /**
      * @param string $Content 内容
-     * @param string $BotAppKey 机器人appKey
+     * @param string $BotAppKey 应用appKey
      */
     function __construct()
     {

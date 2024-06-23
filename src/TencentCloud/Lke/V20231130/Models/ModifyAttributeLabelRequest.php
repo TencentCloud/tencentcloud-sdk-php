@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getAttributeBizId() 获取属性ID
  * @method void setAttributeBizId(string $AttributeBizId) 设置属性ID
  * @method string getAttrKey() 获取属性标识
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -80,7 +80,7 @@ class ModifyAttributeLabelRequest extends AbstractModel
     public $Labels;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $AttributeBizId 属性ID
      * @param string $AttrKey 属性标识
      * @param string $AttrName 属性名称

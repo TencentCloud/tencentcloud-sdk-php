@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCorpUin(string $CorpUin) 设置主号
  * @method string getImagePath() 获取图片存储目录
  * @method void setImagePath(string $ImagePath) 设置图片存储目录
- * @method string getUploadPath() 获取上传存储目录
- * @method void setUploadPath(string $UploadPath) 设置上传存储目录
+ * @method string getUploadPath() 获取上传存储路径，到具体文件
+ * @method void setUploadPath(string $UploadPath) 设置上传存储路径，到具体文件
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,7 +91,7 @@ class DescribeStorageCredentialResponse extends AbstractModel
     public $ImagePath;
 
     /**
-     * @var string 上传存储目录
+     * @var string 上传存储路径，到具体文件
      */
     public $UploadPath;
 
@@ -110,7 +110,7 @@ class DescribeStorageCredentialResponse extends AbstractModel
      * @param string $Type 存储类型
      * @param string $CorpUin 主号
      * @param string $ImagePath 图片存储目录
-     * @param string $UploadPath 上传存储目录
+     * @param string $UploadPath 上传存储路径，到具体文件
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

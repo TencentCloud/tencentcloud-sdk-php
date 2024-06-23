@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RateMsgRecord请求参数结构体
  *
- * @method string getBotAppKey() 获取机器人appKey
- * @method void setBotAppKey(string $BotAppKey) 设置机器人appKey
+ * @method string getBotAppKey() 获取应用appKey
+ * @method void setBotAppKey(string $BotAppKey) 设置应用appKey
  * @method string getRecordId() 获取消息ID
  * @method void setRecordId(string $RecordId) 设置消息ID
  * @method integer getScore() 获取1点赞2点踩
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class RateMsgRecordRequest extends AbstractModel
 {
     /**
-     * @var string 机器人appKey
+     * @var string 应用appKey
      */
     public $BotAppKey;
 
@@ -52,7 +52,7 @@ class RateMsgRecordRequest extends AbstractModel
     public $Reasons;
 
     /**
-     * @param string $BotAppKey 机器人appKey
+     * @param string $BotAppKey 应用appKey
      * @param string $RecordId 消息ID
      * @param integer $Score 1点赞2点踩
      * @param array $Reasons 原因

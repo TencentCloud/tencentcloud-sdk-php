@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDoc请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method boolean getIsRefer() 获取是否引用链接
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDocRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -104,7 +104,7 @@ class ModifyDocRequest extends AbstractModel
     public $ExpireEnd;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
      * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件

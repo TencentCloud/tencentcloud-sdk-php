@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuestion(string $Question) 设置用户问题
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAnswer() 获取机器人回复
+ * @method string getAnswer() 获取应用回复
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnswer(string $Answer) 设置机器人回复
+ * @method void setAnswer(string $Answer) 设置应用回复
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReasons() 获取错误类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ class UnsatisfiedReply extends AbstractModel
     public $Question;
 
     /**
-     * @var string 机器人回复
+     * @var string 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Answer;
@@ -80,7 +80,7 @@ class UnsatisfiedReply extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Question 用户问题
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Answer 机器人回复
+     * @param string $Answer 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Reasons 错误类型
 注意：此字段可能返回 null，表示取不到有效值。

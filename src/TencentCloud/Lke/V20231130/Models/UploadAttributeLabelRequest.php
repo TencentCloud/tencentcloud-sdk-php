@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method string getCosUrl() 获取cos路径
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class UploadAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -73,7 +73,7 @@ class UploadAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
      * @param string $CosUrl cos路径
      * @param string $CosHash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性

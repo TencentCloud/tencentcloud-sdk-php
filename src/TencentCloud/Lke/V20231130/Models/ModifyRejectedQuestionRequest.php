@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getQuestion() 获取拒答问题
 
 
@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -57,7 +57,7 @@ class ModifyRejectedQuestionRequest extends AbstractModel
     public $RejectedBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $Question 拒答问题
 
 

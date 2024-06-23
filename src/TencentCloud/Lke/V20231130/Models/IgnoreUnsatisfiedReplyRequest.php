@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IgnoreUnsatisfiedReply请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method array getReplyBizIds() 获取不满意回复ID
  * @method void setReplyBizIds(array $ReplyBizIds) 设置不满意回复ID
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class IgnoreUnsatisfiedReplyRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -52,7 +52,7 @@ class IgnoreUnsatisfiedReplyRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param array $ReplyBizIds 不满意回复ID
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)

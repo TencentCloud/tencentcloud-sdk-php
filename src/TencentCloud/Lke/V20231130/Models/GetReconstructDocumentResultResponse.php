@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
  * @method string getDocumentRecognizeResultUrl() 获取输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
  * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
- * @method array getFailedPages() 获取还原失败的页
- * @method void setFailedPages(array $FailedPages) 设置还原失败的页
+ * @method array getFailedPages() 获取文档解析失败的页码
+ * @method void setFailedPages(array $FailedPages) 设置文档解析失败的页码
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class GetReconstructDocumentResultResponse extends AbstractModel
     public $DocumentRecognizeResultUrl;
 
     /**
-     * @var array 还原失败的页
+     * @var array 文档解析失败的页码
      */
     public $FailedPages;
 
@@ -54,7 +54,7 @@ class GetReconstructDocumentResultResponse extends AbstractModel
     /**
      * @param string $Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
      * @param string $DocumentRecognizeResultUrl 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
-     * @param array $FailedPages 还原失败的页
+     * @param array $FailedPages 文档解析失败的页码
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

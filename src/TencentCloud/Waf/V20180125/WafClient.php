@@ -25,6 +25,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 /**
  * @method Models\AddAntiFakeUrlResponse AddAntiFakeUrl(Models\AddAntiFakeUrlRequest $req) 添加防篡改url
  * @method Models\AddAntiInfoLeakRulesResponse AddAntiInfoLeakRules(Models\AddAntiInfoLeakRulesRequest $req) 添加信息防泄漏规则
+ * @method Models\AddAreaBanAreasResponse AddAreaBanAreas(Models\AddAreaBanAreasRequest $req) 添加地域封禁中的地域信息
  * @method Models\AddAttackWhiteRuleResponse AddAttackWhiteRule(Models\AddAttackWhiteRuleRequest $req) 供用户控制台调用，增加Tiga规则引擎白名单。
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则

@@ -64,6 +64,23 @@ use TencentCloud\Common\AbstractModel;
 注：1，模板图片宽高比应接近目标画面宽高比，以避免缩放适配目标画面时出现模板效果变形；2，透明模版只有RenderMode为0（裁剪）时才生效；3，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，透明模版将不会生效。
  * @method McuBackgroundCustomRender getBackgroundCustomRender() 获取子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
  * @method void setBackgroundCustomRender(McuBackgroundCustomRender $BackgroundCustomRender) 设置子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+ * @method integer getBackGroundColorMode() 获取子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+ * @method void setBackGroundColorMode(integer $BackGroundColorMode) 设置子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
  */
 class McuLayout extends AbstractModel
 {
@@ -142,6 +159,19 @@ class McuLayout extends AbstractModel
     public $BackgroundCustomRender;
 
     /**
+     * @var integer 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+     */
+    public $BackGroundColorMode;
+
+    /**
      * @param UserMediaStream $UserMediaStream 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。
      * @param integer $ImageWidth 子画面在输出时的宽度，单位为像素值，不填默认为0。
      * @param integer $ImageHeight 子画面在输出时的高度，单位为像素值，不填默认为0。
@@ -164,6 +194,14 @@ class McuLayout extends AbstractModel
      * @param string $TransparentUrl 子画面的透明模版url，指向一张包含透明通道的模板图片。填写该参数，后台混流时会提取该模板图片的透明通道，将其缩放作为目标画面的透明通道，再和其他画面进行混合。您可以通过透明模版实现目标画面的半透明效果和任意形状裁剪（如圆角、星形、心形等）。 支持png格式。图片大小限制不超过5MB。
 注：1，模板图片宽高比应接近目标画面宽高比，以避免缩放适配目标画面时出现模板效果变形；2，透明模版只有RenderMode为0（裁剪）时才生效；3，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，透明模版将不会生效。
      * @param McuBackgroundCustomRender $BackgroundCustomRender 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+     * @param integer $BackGroundColorMode 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
      */
     function __construct()
     {
@@ -231,6 +269,10 @@ class McuLayout extends AbstractModel
         if (array_key_exists("BackgroundCustomRender",$param) and $param["BackgroundCustomRender"] !== null) {
             $this->BackgroundCustomRender = new McuBackgroundCustomRender();
             $this->BackgroundCustomRender->deserialize($param["BackgroundCustomRender"]);
+        }
+
+        if (array_key_exists("BackGroundColorMode",$param) and $param["BackGroundColorMode"] !== null) {
+            $this->BackGroundColorMode = $param["BackGroundColorMode"];
         }
     }
 }

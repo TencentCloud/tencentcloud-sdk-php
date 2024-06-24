@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunDockerContainers请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
  * @method array getContainers() 获取要创建的容器列表。
  * @method void setContainers(array $Containers) 设置要创建的容器列表。
  */
 class RunDockerContainersRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class RunDockerContainersRequest extends AbstractModel
     public $Containers;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      * @param array $Containers 要创建的容器列表。
      */
     function __construct()

@@ -63,11 +63,13 @@ class CreateLegalSealQrCodeRequest extends AbstractModel
 
     /**
      * @var UserInfo 操作人信息
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @var OrganizationInfo 企业信息
+     * @deprecated
      */
     public $Organization;
 

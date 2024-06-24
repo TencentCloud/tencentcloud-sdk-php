@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
  * @method string getSpeakerNick() 获取说话人昵称  不超过32字节
  * @method void setSpeakerNick(string $SpeakerNick) 设置说话人昵称  不超过32字节
+ * @method string getGroupId() 获取分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+ * @method void setGroupId(string $GroupId) 设置分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
  */
 class VoicePrintEnrollRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class VoicePrintEnrollRequest extends AbstractModel
     public $SpeakerNick;
 
     /**
+     * @var string 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+     */
+    public $GroupId;
+
+    /**
      * @param integer $VoiceFormat 音频格式 0: pcm, 1: wav
      * @param integer $SampleRate 音频采样率，目前支持16000，单位：Hz，必填
      * @param string $Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
      * @param string $SpeakerNick 说话人昵称  不超过32字节
+     * @param string $GroupId 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class VoicePrintEnrollRequest extends AbstractModel
 
         if (array_key_exists("SpeakerNick",$param) and $param["SpeakerNick"] !== null) {
             $this->SpeakerNick = $param["SpeakerNick"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

@@ -82,6 +82,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 支持的输入格式：编码文件(PCM, WAV)、16 bit采样位数、单声道（mono）。
 
 支持的音频采样率：16000 Hz。
+ * @method Models\VoicePrintGroupVerifyResponse VoicePrintGroupVerify(Models\VoicePrintGroupVerifyRequest $req) 说话人验证1:N接口，可以通过传入一段说话人音频，并且指定已存在的groupId, 和返回topN,  接口返回groupId内所有声纹和传入音频声纹比对打分TopN的结果。
  * @method Models\VoicePrintUpdateResponse VoicePrintUpdate(Models\VoicePrintUpdateRequest $req) 本接口用于更新和覆盖已注册的音频数据和说话人昵称，更新后原有的音频数据将失效。
  * @method Models\VoicePrintVerifyResponse VoicePrintVerify(Models\VoicePrintVerifyRequest $req) 本接口用于校验传入音频与已注册音频的匹配程度，通过指定说话人ID（VoicePrintId）和一段音频进行音频和说话人的匹配度判断
  */

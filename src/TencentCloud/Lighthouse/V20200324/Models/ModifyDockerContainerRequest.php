@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDockerContainer请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getContainerId() 获取容器ID。
- * @method void setContainerId(string $ContainerId) 设置容器ID。
+ * @method string getInstanceId() 获取实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+ * @method string getContainerId() 获取容器ID。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
+ * @method void setContainerId(string $ContainerId) 设置容器ID。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
  * @method array getEnvs() 获取环境变量列表
  * @method void setEnvs(array $Envs) 设置环境变量列表
  * @method array getPublishPorts() 获取容器端口主机端口映射列表
@@ -50,12 +50,12 @@ unless-stopped: 始终重新启动容器，包括在守护进程启动时，除�
 class ModifyDockerContainerRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 容器ID。
+     * @var string 容器ID。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
      */
     public $ContainerId;
 
@@ -91,8 +91,8 @@ unless-stopped: 始终重新启动容器，包括在守护进程启动时，除�
     public $RestartPolicy;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $ContainerId 容器ID。
+     * @param string $InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+     * @param string $ContainerId 容器ID。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
      * @param array $Envs 环境变量列表
      * @param array $PublishPorts 容器端口主机端口映射列表
      * @param array $Volumes 容器加载本地卷列表

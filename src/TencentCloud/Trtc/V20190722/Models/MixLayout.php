@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 1：辅流；
  * @method integer getImageLayer() 获取该画布的图层顺序, 这个值越小表示图层越靠后。默认值为0。
  * @method void setImageLayer(integer $ImageLayer) 设置该画布的图层顺序, 这个值越小表示图层越靠后。默认值为0。
- * @method string getSubBackgroundImage() 获取图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
- * @method void setSubBackgroundImage(string $SubBackgroundImage) 设置图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+ * @method string getSubBackgroundImage() 获取图片的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+ * @method void setSubBackgroundImage(string $SubBackgroundImage) 设置图片的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  */
 class MixLayout extends AbstractModel
 {
@@ -113,7 +113,7 @@ class MixLayout extends AbstractModel
     public $ImageLayer;
 
     /**
-     * @var string 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @var string 图片的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public $SubBackgroundImage;
 
@@ -135,7 +135,7 @@ class MixLayout extends AbstractModel
 0：主流（默认）；
 1：辅流；
      * @param integer $ImageLayer 该画布的图层顺序, 这个值越小表示图层越靠后。默认值为0。
-     * @param string $SubBackgroundImage 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @param string $SubBackgroundImage 图片的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     function __construct()
     {

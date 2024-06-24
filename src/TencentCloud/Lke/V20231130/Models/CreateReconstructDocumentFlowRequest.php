@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileBase64(string $FileBase64) 设置文件的 Base64 值。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
  * @method string getFileUrl() 获取文件的 Url 地址。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经 Base64 编码后不超过 100M。文件下载时间不超过 15 秒。 支持的图片像素：单边介于20-10000px之间。 文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method void setFileUrl(string $FileUrl) 设置文件的 Url 地址。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经 Base64 编码后不超过 100M。文件下载时间不超过 15 秒。 支持的图片像素：单边介于20-10000px之间。 文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method integer getFileStartPageNumber() 获取当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
- * @method void setFileStartPageNumber(integer $FileStartPageNumber) 设置当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
- * @method integer getFileEndPageNumber() 获取当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
- * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+ * @method integer getFileStartPageNumber() 获取当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。默认为1，表示从pdf文件的第1页开始识别。
+ * @method void setFileStartPageNumber(integer $FileStartPageNumber) 设置当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。默认为1，表示从pdf文件的第1页开始识别。
+ * @method integer getFileEndPageNumber() 获取当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。默认为100，表示识别到pdf文件的第100页。单次调用最多支持识别100页内容，即FileEndPageNumber-FileStartPageNumber需要不大于100。
+ * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。默认为100，表示识别到pdf文件的第100页。单次调用最多支持识别100页内容，即FileEndPageNumber-FileStartPageNumber需要不大于100。
  * @method CreateReconstructDocumentFlowConfig getConfig() 获取创建文档解析任务配置信息
  * @method void setConfig(CreateReconstructDocumentFlowConfig $Config) 设置创建文档解析任务配置信息
  */
@@ -44,12 +44,12 @@ class CreateReconstructDocumentFlowRequest extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var integer 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
+     * @var integer 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。默认为1，表示从pdf文件的第1页开始识别。
      */
     public $FileStartPageNumber;
 
     /**
-     * @var integer 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+     * @var integer 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。默认为100，表示识别到pdf文件的第100页。单次调用最多支持识别100页内容，即FileEndPageNumber-FileStartPageNumber需要不大于100。
      */
     public $FileEndPageNumber;
 
@@ -61,8 +61,8 @@ class CreateReconstructDocumentFlowRequest extends AbstractModel
     /**
      * @param string $FileBase64 文件的 Base64 值。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
      * @param string $FileUrl 文件的 Url 地址。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经 Base64 编码后不超过 100M。文件下载时间不超过 15 秒。 支持的图片像素：单边介于20-10000px之间。 文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param integer $FileStartPageNumber 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
-     * @param integer $FileEndPageNumber 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+     * @param integer $FileStartPageNumber 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。默认为1，表示从pdf文件的第1页开始识别。
+     * @param integer $FileEndPageNumber 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。默认为100，表示识别到pdf文件的第100页。单次调用最多支持识别100页内容，即FileEndPageNumber-FileStartPageNumber需要不大于100。
      * @param CreateReconstructDocumentFlowConfig $Config 创建文档解析任务配置信息
      */
     function __construct()

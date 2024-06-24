@@ -233,7 +233,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\ReplaceFirewallTemplateRuleResponse ReplaceFirewallTemplateRule(Models\ReplaceFirewallTemplateRuleRequest $req) 本接口 (ReplaceFirewallTemplateRules) 用于替换防火墙模板规则。
- * @method Models\RerunDockerContainerResponse RerunDockerContainer(Models\RerunDockerContainerRequest $req) 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+ * @method Models\RerunDockerContainerResponse RerunDockerContainer(Models\RerunDockerContainerRequest $req) 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重建情况。
  * @method Models\ResetAttachCcnResponse ResetAttachCcn(Models\ResetAttachCcnRequest $req) 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
  * @method Models\ResetFirewallTemplateRulesResponse ResetFirewallTemplateRules(Models\ResetFirewallTemplateRulesRequest $req) 本接口 (ResetFirewallTemplateRules) 用于重置防火墙模板下所有规则。
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) 本接口（ResetInstance）用于重装指定实例上的镜像。

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVoicePrintList() 获取说话人id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoicePrintList(array $VoicePrintList) 设置说话人id列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VoicePrintCountData extends AbstractModel
 {
@@ -34,7 +38,15 @@ class VoicePrintCountData extends AbstractModel
     public $Total;
 
     /**
+     * @var array 说话人id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoicePrintList;
+
+    /**
      * @param integer $Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VoicePrintList 说话人id列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,15 @@ class VoicePrintCountData extends AbstractModel
         }
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("VoicePrintList",$param) and $param["VoicePrintList"] !== null) {
+            $this->VoicePrintList = [];
+            foreach ($param["VoicePrintList"] as $key => $value){
+                $obj = new VoicePrintBaseData();
+                $obj->deserialize($value);
+                array_push($this->VoicePrintList, $obj);
+            }
         }
     }
 }

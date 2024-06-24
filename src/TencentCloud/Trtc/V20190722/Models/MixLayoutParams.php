@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMixLayoutMode() 获取布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
-3：九宫格布局（默认）；
+3：九宫格布局；
 4：自定义布局；
 
 悬浮布局：默认第一个进入房间的主播（也可以指定一个主播）的视频画面会铺满整个屏幕。其他主播的视频画面从左下角开始依次按照进房顺序水平排列，显示为小画面，小画面悬浮于大画面之上。当画面数量小于等于17个时，每行4个（4 x 4排列）。当画面数量大于17个时，重新布局小画面为每行5个（5 x 5）排列。最多支持25个画面，如果用户只发送音频，仍然会占用画面位置。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMixLayoutMode(integer $MixLayoutMode) 设置布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
-3：九宫格布局（默认）；
+3：九宫格布局；
 4：自定义布局；
 
 悬浮布局：默认第一个进入房间的主播（也可以指定一个主播）的视频画面会铺满整个屏幕。其他主播的视频画面从左下角开始依次按照进房顺序水平排列，显示为小画面，小画面悬浮于大画面之上。当画面数量小于等于17个时，每行4个（4 x 4排列）。当画面数量大于17个时，重新布局小画面为每行5个（5 x 5）排列。最多支持25个画面，如果用户只发送音频，仍然会占用画面位置。
@@ -60,14 +60,14 @@ use TencentCloud\Common\AbstractModel;
 0：主流（默认）；
 1：辅流（屏幕分享）；
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
- * @method string getBackgroundImageUrl() 获取图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
- * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+ * @method string getBackgroundImageUrl() 获取图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method integer getPlaceHolderMode() 获取设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) 设置设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
  * @method integer getBackgroundImageRenderMode() 获取背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
  * @method void setBackgroundImageRenderMode(integer $BackgroundImageRenderMode) 设置背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
- * @method string getDefaultSubBackgroundImage() 获取子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
- * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) 设置子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+ * @method string getDefaultSubBackgroundImage() 获取子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+ * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) 设置子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method array getWaterMarkList() 获取水印布局参数， 最多支持25个。
  * @method void setWaterMarkList(array $WaterMarkList) 设置水印布局参数， 最多支持25个。
  * @method integer getRenderMode() 获取模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
@@ -81,7 +81,7 @@ class MixLayoutParams extends AbstractModel
      * @var integer 布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
-3：九宫格布局（默认）；
+3：九宫格布局；
 4：自定义布局；
 
 悬浮布局：默认第一个进入房间的主播（也可以指定一个主播）的视频画面会铺满整个屏幕。其他主播的视频画面从左下角开始依次按照进房顺序水平排列，显示为小画面，小画面悬浮于大画面之上。当画面数量小于等于17个时，每行4个（4 x 4排列）。当画面数量大于17个时，重新布局小画面为每行5个（5 x 5）排列。最多支持25个画面，如果用户只发送音频，仍然会占用画面位置。
@@ -118,7 +118,7 @@ class MixLayoutParams extends AbstractModel
     public $MediaId;
 
     /**
-     * @var string 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+     * @var string 图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public $BackgroundImageUrl;
 
@@ -133,7 +133,7 @@ class MixLayoutParams extends AbstractModel
     public $BackgroundImageRenderMode;
 
     /**
-     * @var string 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @var string 子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public $DefaultSubBackgroundImage;
 
@@ -156,7 +156,7 @@ class MixLayoutParams extends AbstractModel
      * @param integer $MixLayoutMode 布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
-3：九宫格布局（默认）；
+3：九宫格布局；
 4：自定义布局；
 
 悬浮布局：默认第一个进入房间的主播（也可以指定一个主播）的视频画面会铺满整个屏幕。其他主播的视频画面从左下角开始依次按照进房顺序水平排列，显示为小画面，小画面悬浮于大画面之上。当画面数量小于等于17个时，每行4个（4 x 4排列）。当画面数量大于17个时，重新布局小画面为每行5个（5 x 5）排列。最多支持25个画面，如果用户只发送音频，仍然会占用画面位置。
@@ -173,10 +173,10 @@ class MixLayoutParams extends AbstractModel
 0：主流（默认）；
 1：辅流（屏幕分享）；
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
-     * @param string $BackgroundImageUrl 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+     * @param string $BackgroundImageUrl 图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      * @param integer $PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
      * @param integer $BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
-     * @param string $DefaultSubBackgroundImage 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @param string $DefaultSubBackgroundImage 子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      * @param array $WaterMarkList 水印布局参数， 最多支持25个。
      * @param integer $RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
      * @param integer $MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。

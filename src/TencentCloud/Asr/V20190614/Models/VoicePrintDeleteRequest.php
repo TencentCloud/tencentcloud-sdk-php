@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVoicePrintId() 获取说话人id，说话人唯一标识
  * @method void setVoicePrintId(string $VoicePrintId) 设置说话人id，说话人唯一标识
+ * @method string getGroupId() 获取说话人分组ID,仅支持大小写字母和下划线的组合，不超过128个字符
+ * @method void setGroupId(string $GroupId) 设置说话人分组ID,仅支持大小写字母和下划线的组合，不超过128个字符
+ * @method integer getDelMod() 获取删除模式: 
+0.默认值，删除该条声纹
+1.从分组中删除该条声纹，声纹本身不删除
+2.从声纹库中删除分组，仅删除分组信息，不会真正删除分组中的声纹
+ * @method void setDelMod(integer $DelMod) 设置删除模式: 
+0.默认值，删除该条声纹
+1.从分组中删除该条声纹，声纹本身不删除
+2.从声纹库中删除分组，仅删除分组信息，不会真正删除分组中的声纹
  */
 class VoicePrintDeleteRequest extends AbstractModel
 {
@@ -31,7 +41,25 @@ class VoicePrintDeleteRequest extends AbstractModel
     public $VoicePrintId;
 
     /**
+     * @var string 说话人分组ID,仅支持大小写字母和下划线的组合，不超过128个字符
+     */
+    public $GroupId;
+
+    /**
+     * @var integer 删除模式: 
+0.默认值，删除该条声纹
+1.从分组中删除该条声纹，声纹本身不删除
+2.从声纹库中删除分组，仅删除分组信息，不会真正删除分组中的声纹
+     */
+    public $DelMod;
+
+    /**
      * @param string $VoicePrintId 说话人id，说话人唯一标识
+     * @param string $GroupId 说话人分组ID,仅支持大小写字母和下划线的组合，不超过128个字符
+     * @param integer $DelMod 删除模式: 
+0.默认值，删除该条声纹
+1.从分组中删除该条声纹，声纹本身不删除
+2.从声纹库中删除分组，仅删除分组信息，不会真正删除分组中的声纹
      */
     function __construct()
     {
@@ -48,6 +76,14 @@ class VoicePrintDeleteRequest extends AbstractModel
         }
         if (array_key_exists("VoicePrintId",$param) and $param["VoicePrintId"] !== null) {
             $this->VoicePrintId = $param["VoicePrintId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("DelMod",$param) and $param["DelMod"] !== null) {
+            $this->DelMod = $param["DelMod"];
         }
     }
 }

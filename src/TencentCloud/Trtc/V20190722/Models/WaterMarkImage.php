@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 水印类型为图片的参数列表
  *
- * @method string getWaterMarkUrl() 获取下载的url地址， 只支持jpg， png，大小限制不超过5M。
- * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置下载的url地址， 只支持jpg， png，大小限制不超过5M。
+ * @method string getWaterMarkUrl() 获取下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method integer getTop() 获取画布上该画面左上角的 y 轴坐标，取值范围 [0, 2560]，不能超过画布的高。
  * @method void setTop(integer $Top) 设置画布上该画面左上角的 y 轴坐标，取值范围 [0, 2560]，不能超过画布的高。
  * @method integer getLeft() 获取画布上该画面左上角的 x 轴坐标，取值范围 [0, 2560]，不能超过画布的宽。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class WaterMarkImage extends AbstractModel
 {
     /**
-     * @var string 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * @var string 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public $WaterMarkUrl;
 
@@ -59,7 +59,7 @@ class WaterMarkImage extends AbstractModel
     public $Height;
 
     /**
-     * @param string $WaterMarkUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * @param string $WaterMarkUrl 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      * @param integer $Top 画布上该画面左上角的 y 轴坐标，取值范围 [0, 2560]，不能超过画布的高。
      * @param integer $Left 画布上该画面左上角的 x 轴坐标，取值范围 [0, 2560]，不能超过画布的宽。
      * @param integer $Width 画布上该画面宽度的相对值，取值范围 [0, 2560]，与Left相加不应超过画布的宽。

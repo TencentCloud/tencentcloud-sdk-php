@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInTraffic(integer $InTraffic) 设置入流量，单位：`Byte`。
  * @method integer getOutTraffic() 获取出流量，单位：`Byte`。
  * @method void setOutTraffic(integer $OutTraffic) 设置出流量，单位：`Byte`。
+ * @method integer getConcurrentConnectionCount() 获取并发连接数。仅标准型nat支持此参数。
+ * @method void setConcurrentConnectionCount(integer $ConcurrentConnectionCount) 设置并发连接数。仅标准型nat支持此参数。
+ * @method integer getNewConnectionRate() 获取新建连接速率。仅标准型nat支持此参数。
+ * @method void setNewConnectionRate(integer $NewConnectionRate) 设置新建连接速率。仅标准型nat支持此参数。
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
@@ -59,11 +63,23 @@ class GatewayFlowMonitorDetail extends AbstractModel
     public $OutTraffic;
 
     /**
+     * @var integer 并发连接数。仅标准型nat支持此参数。
+     */
+    public $ConcurrentConnectionCount;
+
+    /**
+     * @var integer 新建连接速率。仅标准型nat支持此参数。
+     */
+    public $NewConnectionRate;
+
+    /**
      * @param string $PrivateIpAddress 来源`IP`。
      * @param integer $InPkg 入包量。
      * @param integer $OutPkg 出包量。
      * @param integer $InTraffic 入流量，单位：`Byte`。
      * @param integer $OutTraffic 出流量，单位：`Byte`。
+     * @param integer $ConcurrentConnectionCount 并发连接数。仅标准型nat支持此参数。
+     * @param integer $NewConnectionRate 新建连接速率。仅标准型nat支持此参数。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class GatewayFlowMonitorDetail extends AbstractModel
 
         if (array_key_exists("OutTraffic",$param) and $param["OutTraffic"] !== null) {
             $this->OutTraffic = $param["OutTraffic"];
+        }
+
+        if (array_key_exists("ConcurrentConnectionCount",$param) and $param["ConcurrentConnectionCount"] !== null) {
+            $this->ConcurrentConnectionCount = $param["ConcurrentConnectionCount"];
+        }
+
+        if (array_key_exists("NewConnectionRate",$param) and $param["NewConnectionRate"] !== null) {
+            $this->NewConnectionRate = $param["NewConnectionRate"];
         }
     }
 }

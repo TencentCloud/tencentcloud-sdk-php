@@ -256,6 +256,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
+ * @method Models\UploadResourceResponse UploadResource(Models\UploadResourceRequest $req) 资源管理-上传资源
  */
 
 class WedataClient extends AbstractClient

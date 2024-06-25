@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getIsValidated() 获取检查结果，true为合法，false为非法
  * @method void setIsValidated(boolean $IsValidated) 设置检查结果，true为合法，false为非法
+ * @method integer getDetailCode() 获取1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetailCode(integer $DetailCode) 设置1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class CheckInstanceNameResponse extends AbstractModel
     public $IsValidated;
 
     /**
+     * @var integer 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetailCode;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param boolean $IsValidated 检查结果，true为合法，false为非法
+     * @param integer $DetailCode 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class CheckInstanceNameResponse extends AbstractModel
         }
         if (array_key_exists("IsValidated",$param) and $param["IsValidated"] !== null) {
             $this->IsValidated = $param["IsValidated"];
+        }
+
+        if (array_key_exists("DetailCode",$param) and $param["DetailCode"] !== null) {
+            $this->DetailCode = $param["DetailCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

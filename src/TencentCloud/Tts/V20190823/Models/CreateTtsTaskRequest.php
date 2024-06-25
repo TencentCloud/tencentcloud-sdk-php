@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
  * @method void setText(string $Text) 设置合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
- * @method float getVolume() 获取音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
- * @method void setVolume(float $Volume) 设置音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+ * @method float getVolume() 获取音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+ * @method void setVolume(float $Volume) 设置音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
  * @method float getSpeed() 获取语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
  * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
  * @method integer getProjectId() 获取项目id，用户自定义，默认为0。
@@ -57,7 +57,7 @@ class CreateTtsTaskRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var float 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * @var float 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
      */
     public $Volume;
 
@@ -123,7 +123,7 @@ class CreateTtsTaskRequest extends AbstractModel
 
     /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
-     * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * @param float $Volume 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
      * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
      * @param integer $ModelType 模型类型，1-默认模型。

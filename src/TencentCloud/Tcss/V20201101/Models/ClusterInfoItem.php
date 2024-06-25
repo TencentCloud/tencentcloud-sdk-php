@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群节点数
  * @method string getRegion() 获取集群区域
  * @method void setRegion(string $Region) 设置集群区域
- * @method string getDefenderStatus() 获取监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
- * @method void setDefenderStatus(string $DefenderStatus) 设置监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+ * @method string getDefenderStatus() 获取防护状态: 已防护: Defended 未防护: UnDefended
+ * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 已防护: Defended 未防护: UnDefended
  * @method string getClusterStatus() 获取集群状态
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态
  * @method string getClusterCheckMode() 获取集群的检测模式，为Cluster_Normal或者Cluster_Actived.
@@ -96,10 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getChargeCoresCnt() 获取计费核数
+ * @method integer getChargeCoresCnt() 获取计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMasterAddresses() 获取master 地址列表
+ * @method void setMasterAddresses(array $MasterAddresses) 设置master 地址列表
+ * @method integer getCoresCnt() 获取核数
+ * @method void setCoresCnt(integer $CoresCnt) 设置核数
  */
 class ClusterInfoItem extends AbstractModel
 {
@@ -139,7 +143,7 @@ class ClusterInfoItem extends AbstractModel
     public $Region;
 
     /**
-     * @var string 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+     * @var string 防护状态: 已防护: Defended 未防护: UnDefended
      */
     public $DefenderStatus;
 
@@ -242,10 +246,20 @@ class ClusterInfoItem extends AbstractModel
     public $UnInstallAgentNodeCount;
 
     /**
-     * @var integer 计费核数
+     * @var integer 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeCoresCnt;
+
+    /**
+     * @var array master 地址列表
+     */
+    public $MasterAddresses;
+
+    /**
+     * @var integer 核数
+     */
+    public $CoresCnt;
 
     /**
      * @param string $ClusterId 集群id
@@ -255,7 +269,7 @@ class ClusterInfoItem extends AbstractModel
      * @param string $ClusterType 集群类型
      * @param integer $ClusterNodeNum 集群节点数
      * @param string $Region 集群区域
-     * @param string $DefenderStatus 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+     * @param string $DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
      * @param string $ClusterStatus 集群状态
      * @param string $ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
      * @param boolean $ClusterAutoCheck 是否自动定期检测
@@ -286,8 +300,10 @@ class ClusterInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnInstallAgentNodeCount 未安装agent节点数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ChargeCoresCnt 计费核数
+     * @param integer $ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MasterAddresses master 地址列表
+     * @param integer $CoresCnt 核数
      */
     function __construct()
     {
@@ -404,6 +420,14 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {
             $this->ChargeCoresCnt = $param["ChargeCoresCnt"];
+        }
+
+        if (array_key_exists("MasterAddresses",$param) and $param["MasterAddresses"] !== null) {
+            $this->MasterAddresses = $param["MasterAddresses"];
+        }
+
+        if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
+            $this->CoresCnt = $param["CoresCnt"];
         }
     }
 }

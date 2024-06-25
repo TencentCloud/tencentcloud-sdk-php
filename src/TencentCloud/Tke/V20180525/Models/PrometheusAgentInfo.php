@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群id
  * @method string getDescribe() 获取备注
  * @method void setDescribe(string $Describe) 设置备注
+ * @method string getRegion() 获取集群所在地域
+ * @method void setRegion(string $Region) 设置集群所在地域
  */
 class PrometheusAgentInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PrometheusAgentInfo extends AbstractModel
     public $Describe;
 
     /**
+     * @var string 集群所在地域
+     */
+    public $Region;
+
+    /**
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param string $Describe 备注
+     * @param string $Region 集群所在地域
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PrometheusAgentInfo extends AbstractModel
 
         if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
             $this->Describe = $param["Describe"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Asset getAsset() 获取基础对象
  * @method void setAsset(Asset $Asset) 设置基础对象
- * @method string getType() 获取表类型
- * @method void setType(string $Type) 设置表类型
+ * @method string getType() 获取表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
+ * @method void setType(string $Type) 设置表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
  * @method string getDbName() 获取数据库名称
  * @method void setDbName(string $DbName) 设置数据库名称
  * @method integer getStorageSize() 获取存储大小
@@ -61,7 +61,7 @@ class CreateDMSTableRequest extends AbstractModel
     public $Asset;
 
     /**
-     * @var string 表类型
+     * @var string 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
      */
     public $Type;
 
@@ -137,7 +137,7 @@ class CreateDMSTableRequest extends AbstractModel
 
     /**
      * @param Asset $Asset 基础对象
-     * @param string $Type 表类型
+     * @param string $Type 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
      * @param string $DbName 数据库名称
      * @param integer $StorageSize 存储大小
      * @param integer $RecordCount 记录数量

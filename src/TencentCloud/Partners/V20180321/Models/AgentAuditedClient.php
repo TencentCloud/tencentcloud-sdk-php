@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMail(string $Mail) 设置代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTransactionType() 获取交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransactionType(string $TransactionType) 设置交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentAuditedClient extends AbstractModel
 {
@@ -145,6 +149,12 @@ class AgentAuditedClient extends AbstractModel
     public $Mail;
 
     /**
+     * @var string 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TransactionType;
+
+    /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
      * @param string $AgentTime 代客审核通过时间戳
@@ -163,6 +173,8 @@ class AgentAuditedClient extends AbstractModel
      * @param string $SalesName 业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mail 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +252,10 @@ class AgentAuditedClient extends AbstractModel
 
         if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
             $this->Mail = $param["Mail"];
+        }
+
+        if (array_key_exists("TransactionType",$param) and $param["TransactionType"] !== null) {
+            $this->TransactionType = $param["TransactionType"];
         }
     }
 }

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayMode() 获取付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
  * @method void setPayMode(string $PayMode) 设置付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
- * @method string getSrcDatabaseType() 获取源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,tdstore等
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,tdstore等
+ * @method string getSrcDatabaseType() 获取源端数据库类型,如mysql,mariadb,percona,postgresql,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,tdstore(表示TDSQL TDStore版)等。
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源端数据库类型,如mysql,mariadb,percona,postgresql,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,tdstore(表示TDSQL TDStore版)等。
  * @method string getSrcRegion() 获取源端数据库所在地域,如ap-guangzhou
  * @method void setSrcRegion(string $SrcRegion) 设置源端数据库所在地域,如ap-guangzhou
- * @method string getDstDatabaseType() 获取目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka,tdstore等
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka,tdstore等
+ * @method string getDstDatabaseType() 获取目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
  * @method string getDstRegion() 获取目标端数据库所在地域,如ap-guangzhou
  * @method void setDstRegion(string $DstRegion) 设置目标端数据库所在地域,如ap-guangzhou
  * @method string getSpecification() 获取同步任务规格，Standard:标准版
@@ -53,7 +53,7 @@ class CreateSyncJobRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,tdstore等
+     * @var string 源端数据库类型,如mysql,mariadb,percona,postgresql,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,tdstore(表示TDSQL TDStore版)等。
      */
     public $SrcDatabaseType;
 
@@ -63,7 +63,7 @@ class CreateSyncJobRequest extends AbstractModel
     public $SrcRegion;
 
     /**
-     * @var string 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka,tdstore等
+     * @var string 目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
      */
     public $DstDatabaseType;
 
@@ -109,9 +109,9 @@ class CreateSyncJobRequest extends AbstractModel
 
     /**
      * @param string $PayMode 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
-     * @param string $SrcDatabaseType 源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,tdstore等
+     * @param string $SrcDatabaseType 源端数据库类型,如mysql,mariadb,percona,postgresql,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,tdstore(表示TDSQL TDStore版)等。
      * @param string $SrcRegion 源端数据库所在地域,如ap-guangzhou
-     * @param string $DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka,tdstore等
+     * @param string $DstDatabaseType 目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
      * @param string $DstRegion 目标端数据库所在地域,如ap-guangzhou
      * @param string $Specification 同步任务规格，Standard:标准版
      * @param array $Tags 标签信息

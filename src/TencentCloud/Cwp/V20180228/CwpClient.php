@@ -55,9 +55,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateVulFixResponse CreateVulFix(Models\CreateVulFixRequest $req) 提交漏洞修护
  * @method Models\CreateWhiteListOrderResponse CreateWhiteListOrder(Models\CreateWhiteListOrderRequest $req) 该接口可以创建白名单订单
  * @method Models\DeleteAllJavaMemShellsResponse DeleteAllJavaMemShells(Models\DeleteAllJavaMemShellsRequest $req) 删除全部java内存马事件
- * @method Models\DeleteAttackLogsResponse DeleteAttackLogs(Models\DeleteAttackLogsRequest $req) ModifyEventAttackStatus 接口替代
-
-删除网络攻击日志
  * @method Models\DeleteBanWhiteListResponse DeleteBanWhiteList(Models\DeleteBanWhiteListRequest $req) 删除阻断白名单列表
  * @method Models\DeleteBaselinePolicyResponse DeleteBaselinePolicy(Models\DeleteBaselinePolicyRequest $req) 删除基线策略配置
  * @method Models\DeleteBaselineRuleResponse DeleteBaselineRule(Models\DeleteBaselineRuleRequest $req) 删除基线规则

@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefendStatus(string $DefendStatus) 设置防护状态:
 已防护: Defended
 未防护: UnDefended
+ * @method integer getCoresCnt() 获取核数
+ * @method void setCoresCnt(integer $CoresCnt) 设置核数
  */
 class HostInfo extends AbstractModel
 {
@@ -190,6 +192,11 @@ class HostInfo extends AbstractModel
     public $DefendStatus;
 
     /**
+     * @var integer 核数
+     */
+    public $CoresCnt;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -216,6 +223,7 @@ class HostInfo extends AbstractModel
      * @param string $DefendStatus 防护状态:
 已防护: Defended
 未防护: UnDefended
+     * @param integer $CoresCnt 核数
      */
     function __construct()
     {
@@ -322,6 +330,10 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("DefendStatus",$param) and $param["DefendStatus"] !== null) {
             $this->DefendStatus = $param["DefendStatus"];
+        }
+
+        if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
+            $this->CoresCnt = $param["CoresCnt"];
         }
     }
 }

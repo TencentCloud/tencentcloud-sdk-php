@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRole(string $Role) 设置节点类型，proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDbKernel() 获取数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+ * @method string getDbKernel() 获取数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDbKernel(string $DbKernel) 设置数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+ * @method void setDbKernel(string $DbKernel) 设置数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取数据库实例ID，格式如：cdb-powiqx8q
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,7 +152,7 @@ class Endpoint extends AbstractModel
     public $Role;
 
     /**
-     * @var string 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * @var string 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbKernel;
@@ -318,7 +318,7 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role 节点类型，proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * @param string $DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 数据库实例ID，格式如：cdb-powiqx8q
 注意：此字段可能返回 null，表示取不到有效值。

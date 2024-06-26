@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略中监控任务的执行时间点
  *
- * @method string getType() 获取执行周期， 可选值：Period；Fixed。
+ * @method string getType() 获取执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
- * @method void setType(string $Type) 设置执行周期， 可选值：Period；Fixed。
+ * @method void setType(string $Type) 设置执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
  * @method integer getTime() 获取执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
  * @method void setTime(integer $Time) 设置执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
  */
 class MonitorTime extends AbstractModel
 {
     /**
-     * @var string 执行周期， 可选值：Period；Fixed。
+     * @var string 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
@@ -43,15 +45,17 @@ class MonitorTime extends AbstractModel
 
     /**
      * @var integer 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
      */
     public $Time;
 
     /**
-     * @param string $Type 执行周期， 可选值：Period；Fixed。
+     * @param string $Type 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
      * @param integer $Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
      */
     function __construct()
     {

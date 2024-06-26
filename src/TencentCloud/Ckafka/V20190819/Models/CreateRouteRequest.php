@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例唯一id
  * @method void setInstanceId(string $InstanceId) 设置实例唯一id
- * @method integer getVipType() 获取路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
- * @method void setVipType(integer $VipType) 设置路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+ * @method integer getVipType() 获取路由网络类型(3:vpc路由;7:内部支撑路由)
+ * @method void setVipType(integer $VipType) 设置路由网络类型(3:vpc路由;7:内部支撑路由)
  * @method string getVpcId() 获取vpc网络Id
  * @method void setVpcId(string $VpcId) 设置vpc网络Id
  * @method string getSubnetId() 获取vpc子网id
@@ -47,7 +47,7 @@ class CreateRouteRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+     * @var integer 路由网络类型(3:vpc路由;7:内部支撑路由)
      */
     public $VipType;
 
@@ -88,7 +88,7 @@ class CreateRouteRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例唯一id
-     * @param integer $VipType 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+     * @param integer $VipType 路由网络类型(3:vpc路由;7:内部支撑路由)
      * @param string $VpcId vpc网络Id
      * @param string $SubnetId vpc子网id
      * @param integer $AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl

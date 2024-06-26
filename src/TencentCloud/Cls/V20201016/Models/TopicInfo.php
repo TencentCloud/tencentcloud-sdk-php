@@ -92,6 +92,10 @@ HotPeriod=0为没有开启日志沉降。
  * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TopicExtendInfo getExtends() 获取日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -204,6 +208,12 @@ HotPeriod=0为没有开启日志沉降。
     public $IsWebTracking;
 
     /**
+     * @var TopicExtendInfo 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Extends;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名称
@@ -239,6 +249,8 @@ HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicExtendInfo $Extends 日志主题扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +341,11 @@ HotPeriod=0为没有开启日志沉降。
 
         if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
             $this->IsWebTracking = $param["IsWebTracking"];
+        }
+
+        if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
+            $this->Extends = new TopicExtendInfo();
+            $this->Extends->deserialize($param["Extends"]);
         }
     }
 }

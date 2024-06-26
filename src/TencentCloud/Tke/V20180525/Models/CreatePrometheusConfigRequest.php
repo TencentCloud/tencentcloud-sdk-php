@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) 设置PodMonitors配置
  * @method array getRawJobs() 获取prometheus原生Job配置
  * @method void setRawJobs(array $RawJobs) 设置prometheus原生Job配置
+ * @method array getProbes() 获取Probe 配置
+ * @method void setProbes(array $Probes) 设置Probe 配置
  */
 class CreatePrometheusConfigRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreatePrometheusConfigRequest extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var array Probe 配置
+     */
+    public $Probes;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param array $ServiceMonitors ServiceMonitors配置
      * @param array $PodMonitors PodMonitors配置
      * @param array $RawJobs prometheus原生Job配置
+     * @param array $Probes Probe 配置
      */
     function __construct()
     {
@@ -122,6 +130,15 @@ class CreatePrometheusConfigRequest extends AbstractModel
                 $obj = new PrometheusConfigItem();
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
+            }
+        }
+
+        if (array_key_exists("Probes",$param) and $param["Probes"] !== null) {
+            $this->Probes = [];
+            foreach ($param["Probes"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->Probes, $obj);
             }
         }
     }

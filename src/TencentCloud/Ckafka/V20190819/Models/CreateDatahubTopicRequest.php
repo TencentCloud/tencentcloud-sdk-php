@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic请求参数结构体
  *
- * @method string getName() 获取名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setName(string $Name) 设置名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method string getName() 获取名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method void setName(string $Name) 设置名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method integer getPartitionNum() 获取Partition个数，大于0
  * @method void setPartitionNum(integer $PartitionNum) 设置Partition个数，大于0
  * @method integer getRetentionMs() 获取消息保留时间，单位ms，当前最小值为60000ms
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string 名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public $Name;
 
@@ -59,7 +59,7 @@ class CreateDatahubTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name 名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param string $Name 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $PartitionNum Partition个数，大于0
      * @param integer $RetentionMs 消息保留时间，单位ms，当前最小值为60000ms
      * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)

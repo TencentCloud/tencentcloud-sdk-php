@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) 设置要删除的PodMonitor名字列表
  * @method array getRawJobs() 获取要删除的RawJobs名字列表
  * @method void setRawJobs(array $RawJobs) 设置要删除的RawJobs名字列表
+ * @method array getProbes() 获取要删除的Probe名字列表
+ * @method void setProbes(array $Probes) 设置要删除的Probe名字列表
  */
 class DeletePrometheusConfigRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DeletePrometheusConfigRequest extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var array 要删除的Probe名字列表
+     */
+    public $Probes;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param array $ServiceMonitors 要删除的ServiceMonitor名字列表
      * @param array $PodMonitors 要删除的PodMonitor名字列表
      * @param array $RawJobs 要删除的RawJobs名字列表
+     * @param array $Probes 要删除的Probe名字列表
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DeletePrometheusConfigRequest extends AbstractModel
 
         if (array_key_exists("RawJobs",$param) and $param["RawJobs"] !== null) {
             $this->RawJobs = $param["RawJobs"];
+        }
+
+        if (array_key_exists("Probes",$param) and $param["Probes"] !== null) {
+            $this->Probes = $param["Probes"];
         }
     }
 }

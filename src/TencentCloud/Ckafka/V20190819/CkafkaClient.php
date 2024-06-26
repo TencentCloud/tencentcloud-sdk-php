@@ -35,7 +35,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建Datahub连接源
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
- * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建Datahub主题
+ * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建DIP主题
  * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) 由于出参需要更新，当前接口将会在未来版本中废弃，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月),  仅支持创建专业版实例
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
@@ -49,7 +49,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) 删除ACL
  * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) 删除ACL规则
  * @method Models\DeleteConnectResourceResponse DeleteConnectResource(Models\DeleteConnectResourceRequest $req) 删除Datahub连接源
- * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除Datahub任务
+ * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除Dip任务
  * @method Models\DeleteDatahubTopicResponse DeleteDatahubTopic(Models\DeleteDatahubTopicRequest $req) 删除Datahub主题
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除消费组
  * @method Models\DeleteInstancePostResponse DeleteInstancePost(Models\DeleteInstancePostRequest $req) 删除后付费实例
@@ -69,7 +69,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(Models\DescribeDatahubGroupOffsetsRequest $req) 获取Datahub消费分组offset
  * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询Datahub任务信息
  * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表 
- * @method Models\DescribeDatahubTopicResponse DescribeDatahubTopic(Models\DescribeDatahubTopicRequest $req) 获取Datahub主题属性
+ * @method Models\DescribeDatahubTopicResponse DescribeDatahubTopic(Models\DescribeDatahubTopicRequest $req) 获取DIP主题属性
  * @method Models\DescribeDatahubTopicsResponse DescribeDatahubTopics(Models\DescribeDatahubTopicsRequest $req) 查询DIP主题列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 枚举消费分组(精简版)
  * @method Models\DescribeGroupInfoResponse DescribeGroupInfo(Models\DescribeGroupInfoRequest $req) 获取消费分组信息
@@ -99,7 +99,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
  * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑Datahub连接源
  * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改Datahub任务
- * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) 修改Datahub主题属性
+ * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) 修改DIP主题属性
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) 设置Groups 消费分组offset
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) 设置实例属性
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) 预付费实例变配接口，调整磁盘，带宽

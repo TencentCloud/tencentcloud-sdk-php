@@ -30,8 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNode(ComputeNode $ComputeNode) 设置指定计算节点。
  * @method integer getComputeNodeCount() 获取指定计算节点的数量。默认取值：0。
  * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置指定计算节点的数量。默认取值：0。
- * @method string getSchedulerType() 获取调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
- * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+ * @method string getSchedulerType() 获取调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+ * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+ * @method string getSchedulerVersion() 获取创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
+各调度器支持的集群版本：
+<li>SLURM：21.08.8、23.11.7</li>
+<li>SGE：     8.1.9</li>
+ * @method void setSchedulerVersion(string $SchedulerVersion) 设置创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
+各调度器支持的集群版本：
+<li>SLURM：21.08.8、23.11.7</li>
+<li>SGE：     8.1.9</li>
  * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
  * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
@@ -53,9 +61,9 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
  * @method string getAccountType() 获取域名字服务类型。默认取值：NIS。
-<li>NIS：NIS域名字服务。
+<li>NIS：NIS域名字服务。</li>
  * @method void setAccountType(string $AccountType) 设置域名字服务类型。默认取值：NIS。
-<li>NIS：NIS域名字服务。
+<li>NIS：NIS域名字服务。</li>
  * @method string getClusterName() 获取集群显示名称。
  * @method void setClusterName(string $ClusterName) 设置集群显示名称。
  * @method StorageOption getStorageOption() 获取集群存储选项
@@ -66,8 +74,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setLoginNodeCount(integer $LoginNodeCount) 设置指定登录节点的数量。默认取值：0。取值范围：0～10。
  * @method array getTags() 获取创建集群时同时绑定的标签对说明。
  * @method void setTags(array $Tags) 设置创建集群时同时绑定的标签对说明。
- * @method string getAutoScalingType() 获取弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
- * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+ * @method string getAutoScalingType() 获取弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+ * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
  * @method array getInitNodeScripts() 获取节点初始化脚本信息列表。
  * @method void setInitNodeScripts(array $InitNodeScripts) 设置节点初始化脚本信息列表。
  * @method string getHpcClusterId() 获取高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
@@ -101,9 +109,17 @@ class CreateClusterRequest extends AbstractModel
     public $ComputeNodeCount;
 
     /**
-     * @var string 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * @var string 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
      */
     public $SchedulerType;
+
+    /**
+     * @var string 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
+各调度器支持的集群版本：
+<li>SLURM：21.08.8、23.11.7</li>
+<li>SGE：     8.1.9</li>
+     */
+    public $SchedulerVersion;
 
     /**
      * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
@@ -141,7 +157,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
      * @var string 域名字服务类型。默认取值：NIS。
-<li>NIS：NIS域名字服务。
+<li>NIS：NIS域名字服务。</li>
      */
     public $AccountType;
 
@@ -171,7 +187,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $Tags;
 
     /**
-     * @var string 弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     * @var string 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
      */
     public $AutoScalingType;
 
@@ -191,7 +207,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param integer $ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
      * @param ComputeNode $ComputeNode 指定计算节点。
      * @param integer $ComputeNodeCount 指定计算节点的数量。默认取值：0。
-     * @param string $SchedulerType 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * @param string $SchedulerType 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+     * @param string $SchedulerVersion 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
+各调度器支持的集群版本：
+<li>SLURM：21.08.8、23.11.7</li>
+<li>SGE：     8.1.9</li>
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
      * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
      * @param LoginSettings $LoginSettings 集群登录设置。
@@ -203,13 +223,13 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $AccountType 域名字服务类型。默认取值：NIS。
-<li>NIS：NIS域名字服务。
+<li>NIS：NIS域名字服务。</li>
      * @param string $ClusterName 集群显示名称。
      * @param StorageOption $StorageOption 集群存储选项
      * @param LoginNode $LoginNode 指定登录节点。
      * @param integer $LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
      * @param array $Tags 创建集群时同时绑定的标签对说明。
-     * @param string $AutoScalingType 弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     * @param string $AutoScalingType 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
      * @param array $InitNodeScripts 节点初始化脚本信息列表。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      */
@@ -251,6 +271,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("SchedulerType",$param) and $param["SchedulerType"] !== null) {
             $this->SchedulerType = $param["SchedulerType"];
+        }
+
+        if (array_key_exists("SchedulerVersion",$param) and $param["SchedulerVersion"] !== null) {
+            $this->SchedulerVersion = $param["SchedulerVersion"];
         }
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {

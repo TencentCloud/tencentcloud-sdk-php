@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironments(array $Environments) 设置tcb环境实例详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getError() 获取是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setError(string $Error) 设置是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCBInstanceList extends AbstractModel
 {
@@ -41,8 +45,16 @@ class TCBInstanceList extends AbstractModel
     public $Environments;
 
     /**
+     * @var string 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Error;
+
+    /**
      * @param string $Region 地域
      * @param array $Environments tcb环境实例详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Error 是否查询异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,10 @@ class TCBInstanceList extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Environments, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

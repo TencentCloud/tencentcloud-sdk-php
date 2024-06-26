@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置live实例详情	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getError() 获取是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setError(string $Error) 设置是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveInstanceList extends AbstractModel
 {
@@ -41,8 +45,16 @@ class LiveInstanceList extends AbstractModel
     public $InstanceList;
 
     /**
+     * @var string 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Error;
+
+    /**
      * @param integer $TotalCount 该地域下live实例总数	
      * @param array $InstanceList live实例详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Error 是否查询异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,10 @@ class LiveInstanceList extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
- * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+ * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+ * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是分钟。取值范围是0~1440。
  * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是分钟。取值范围是0~1440。
  * @method array getAlarmNoticeIds() 获取关联的告警通知模板列表。
@@ -137,7 +137,7 @@ class ModifyAlarmRequest extends AbstractModel
     public $MultiConditions;
 
     /**
-     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      */
     public $TriggerCount;
 
@@ -229,7 +229,7 @@ Classifications元素的Value长度不能超过200个字符。
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      * @param integer $AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
      * @param array $AlarmTargets 监控对象列表。

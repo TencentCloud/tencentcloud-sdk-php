@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置该地域下TSE实例总数	
  * @method string getRegion() 获取地域	
  * @method void setRegion(string $Region) 设置地域	
+ * @method string getError() 获取是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setError(string $Error) 设置是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TSEInstanceList extends AbstractModel
 {
@@ -48,10 +52,18 @@ class TSEInstanceList extends AbstractModel
     public $Region;
 
     /**
+     * @var string 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Error;
+
+    /**
      * @param array $InstanceList TSE实例详情	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 该地域下TSE实例总数	
      * @param string $Region 地域	
+     * @param string $Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -81,6 +93,10 @@ class TSEInstanceList extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

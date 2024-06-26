@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTSE(array $TSE) 设置关联tse资源详情	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCOS() 获取关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCOS(array $COS) 设置关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -150,6 +154,12 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
     public $TSE;
 
     /**
+     * @var array 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $COS;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -178,6 +188,8 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
      * @param integer $Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
      * @param string $CacheTime 当前结果缓存时间
      * @param array $TSE 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $COS 关联的COS资源详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -298,6 +310,15 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
                 $obj = new TSEInstanceList();
                 $obj->deserialize($value);
                 array_push($this->TSE, $obj);
+            }
+        }
+
+        if (array_key_exists("COS",$param) and $param["COS"] !== null) {
+            $this->COS = [];
+            foreach ($param["COS"] as $key => $value){
+                $obj = new COSInstanceList();
+                $obj->deserialize($value);
+                array_push($this->COS, $obj);
             }
         }
 

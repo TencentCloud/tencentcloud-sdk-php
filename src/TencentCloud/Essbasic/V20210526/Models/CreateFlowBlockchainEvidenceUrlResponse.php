@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQrCode() 获取二维码图片下载链接，下载链接有效时间5分钟，请尽快下载保存。
  * @method void setQrCode(string $QrCode) 设置二维码图片下载链接，下载链接有效时间5分钟，请尽快下载保存。
- * @method string getUrl() 获取查看短链，可直接点击短链查看报告。
- * @method void setUrl(string $Url) 设置查看短链，可直接点击短链查看报告。
+ * @method string getUrl() 获取查看短链，可直接点击短链查看证书。
+ * @method void setUrl(string $Url) 设置查看短链，可直接点击短链查看证书。
  * @method integer getExpiredOn() 获取二维码和短链的过期时间戳，过期时间默认为生成链接后7天。
  * @method void setExpiredOn(integer $ExpiredOn) 设置二维码和短链的过期时间戳，过期时间默认为生成链接后7天。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class CreateFlowBlockchainEvidenceUrlResponse extends AbstractModel
     public $QrCode;
 
     /**
-     * @var string 查看短链，可直接点击短链查看报告。
+     * @var string 查看短链，可直接点击短链查看证书。
      */
     public $Url;
 
@@ -53,7 +53,7 @@ class CreateFlowBlockchainEvidenceUrlResponse extends AbstractModel
 
     /**
      * @param string $QrCode 二维码图片下载链接，下载链接有效时间5分钟，请尽快下载保存。
-     * @param string $Url 查看短链，可直接点击短链查看报告。
+     * @param string $Url 查看短链，可直接点击短链查看证书。
      * @param integer $ExpiredOn 二维码和短链的过期时间戳，过期时间默认为生成链接后7天。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

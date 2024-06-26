@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
  * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+ * @method TopicExtendInfo getExtends() 获取日志主题扩展信息
+ * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
  * @method integer getPartitionCount() 获取日志主题分区数量
  * @method void setPartitionCount(integer $PartitionCount) 设置日志主题分区数量
  */
@@ -105,6 +107,11 @@ class ModifyTopicRequest extends AbstractModel
     public $IsWebTracking;
 
     /**
+     * @var TopicExtendInfo 日志主题扩展信息
+     */
+    public $Extends;
+
+    /**
      * @var integer 日志主题分区数量
      */
     public $PartitionCount;
@@ -123,6 +130,7 @@ class ModifyTopicRequest extends AbstractModel
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * @param TopicExtendInfo $Extends 日志主题扩展信息
      * @param integer $PartitionCount 日志主题分区数量
      */
     function __construct()
@@ -181,6 +189,11 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
             $this->IsWebTracking = $param["IsWebTracking"];
+        }
+
+        if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
+            $this->Extends = new TopicExtendInfo();
+            $this->Extends->deserialize($param["Extends"]);
         }
 
         if (array_key_exists("PartitionCount",$param) and $param["PartitionCount"] !== null) {

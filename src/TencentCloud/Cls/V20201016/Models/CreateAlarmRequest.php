@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
  * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
- * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+ * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+ * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
  * @method integer getAlarmPeriod() 获取告警重复的周期，单位是分钟。取值范围是0~1440。
  * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期，单位是分钟。取值范围是0~1440。
  * @method array getAlarmNoticeIds() 获取关联的告警通知模板列表。
@@ -121,7 +121,7 @@ class CreateAlarmRequest extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      */
     public $TriggerCount;
 
@@ -226,7 +226,7 @@ Classifications元素的Value长度不能超过200个字符。
      * @param string $Name 告警策略名称
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      * @param integer $AlarmPeriod 告警重复的周期，单位是分钟。取值范围是0~1440。
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
      * @param string $Condition 触发条件

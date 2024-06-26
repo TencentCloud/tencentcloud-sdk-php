@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgents(array $Agents) 设置agent列表
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method boolean getForce() 获取在7天可回收期间，强制解除绑定
+ * @method void setForce(boolean $Force) 设置在7天可回收期间，强制解除绑定
  */
 class DeletePrometheusClusterAgentRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeletePrometheusClusterAgentRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 在7天可回收期间，强制解除绑定
+     */
+    public $Force;
+
+    /**
      * @param array $Agents agent列表
      * @param string $InstanceId 实例id
+     * @param boolean $Force 在7天可回收期间，强制解除绑定
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class DeletePrometheusClusterAgentRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

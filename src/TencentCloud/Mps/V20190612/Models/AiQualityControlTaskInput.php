@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频质检输入参数类型
  *
- * @method integer getDefinition() 获取视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+ * @method integer getDefinition() 获取媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefinition(integer $Definition) 设置视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+ * @method void setDefinition(integer $Definition) 设置媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelExtPara() 获取渠道扩展参数json序列化字符串。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AiQualityControlTaskInput extends AbstractModel
 {
     /**
-     * @var integer 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * @var integer 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
@@ -44,7 +44,7 @@ class AiQualityControlTaskInput extends AbstractModel
     public $ChannelExtPara;
 
     /**
-     * @param integer $Definition 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * @param integer $Definition 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelExtPara 渠道扩展参数json序列化字符串。
 注意：此字段可能返回 null，表示取不到有效值。

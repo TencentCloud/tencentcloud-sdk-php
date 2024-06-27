@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
  * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。 
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
+ * @method array getZones() 获取可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+ * @method void setZones(array $Zones) 设置可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
  */
 class CreateInput extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateInput extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+     */
+    public $Zones;
+
+    /**
      * @param string $InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
      * @param string $Description 输入描述，长度为[0, 255]。
@@ -120,6 +127,7 @@ class CreateInput extends AbstractModel
      * @param CreateInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
+     * @param array $Zones 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class CreateInput extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

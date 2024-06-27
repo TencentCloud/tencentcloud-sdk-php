@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryInfo(string $RetryInfo) 设置重试信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetryEnReason() 获取重试英文描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryEnReason(string $RetryEnReason) 设置重试英文描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetryReason() 获取重试描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryReason(string $RetryReason) 设置重试描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleRecord extends AbstractModel
 {
@@ -127,6 +135,18 @@ class AutoScaleRecord extends AbstractModel
     public $RetryInfo;
 
     /**
+     * @var string 重试英文描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryEnReason;
+
+    /**
+     * @var string 重试描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryReason;
+
+    /**
      * @param string $StrategyName 扩缩容规则名。
      * @param string $ScaleAction "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
      * @param string $ActionStatus 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
@@ -143,6 +163,10 @@ class AutoScaleRecord extends AbstractModel
      * @param integer $RetryCount 重试次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RetryInfo 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetryEnReason 重试英文描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetryReason 重试描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +232,14 @@ class AutoScaleRecord extends AbstractModel
 
         if (array_key_exists("RetryInfo",$param) and $param["RetryInfo"] !== null) {
             $this->RetryInfo = $param["RetryInfo"];
+        }
+
+        if (array_key_exists("RetryEnReason",$param) and $param["RetryEnReason"] !== null) {
+            $this->RetryEnReason = $param["RetryEnReason"];
+        }
+
+        if (array_key_exists("RetryReason",$param) and $param["RetryReason"] !== null) {
+            $this->RetryReason = $param["RetryReason"];
         }
     }
 }

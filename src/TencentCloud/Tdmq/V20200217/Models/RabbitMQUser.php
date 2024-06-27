@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置用户最后修改时间
  * @method string getType() 获取用户类型，System：系统创建，User：用户创建
  * @method void setType(string $Type) 设置用户类型，System：系统创建，User：用户创建
+ * @method integer getMaxConnections() 获取单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxConnections(integer $MaxConnections) 设置单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxChannels() 获取单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxChannels(integer $MaxChannels) 设置单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQUser extends AbstractModel
 {
@@ -86,6 +94,18 @@ class RabbitMQUser extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxConnections;
+
+    /**
+     * @var integer 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxChannels;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $User 用户名，登录时使用
      * @param string $Password 密码，登录时使用
@@ -96,6 +116,10 @@ class RabbitMQUser extends AbstractModel
      * @param string $CreateTime 用户创建时间
      * @param string $ModifyTime 用户最后修改时间
      * @param string $Type 用户类型，System：系统创建，User：用户创建
+     * @param integer $MaxConnections 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxChannels 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +164,14 @@ class RabbitMQUser extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MaxConnections",$param) and $param["MaxConnections"] !== null) {
+            $this->MaxConnections = $param["MaxConnections"];
+        }
+
+        if (array_key_exists("MaxChannels",$param) and $param["MaxChannels"] !== null) {
+            $this->MaxChannels = $param["MaxChannels"];
         }
     }
 }

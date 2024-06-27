@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 业务响应数据
  *
- * @method integer getId() 获取设备ID(只支持32位)
+ * @method integer getId() 获取设备ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置设备ID(只支持32位)
+ * @method void setId(integer $Id) 设置设备ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMid() 获取设备唯一标识符
+ * @method string getMid() 获取设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMid(string $Mid) 设置设备唯一标识符
+ * @method void setMid(string $Mid) 设置设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取终端名（设备名）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置终端名（设备名）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGroupId() 获取设备所在分组ID(只支持32位)
+ * @method integer getGroupId() 获取设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(integer $GroupId) 设置设备所在分组ID(只支持32位)
+ * @method void setGroupId(integer $GroupId) 设置设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOsType() 获取OS平台(只支持32位)
+ * @method integer getOsType() 获取OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOsType(integer $OsType) 设置OS平台(只支持32位)
+ * @method void setOsType(integer $OsType) 设置OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取设备IP地址（出口IP）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置设备IP地址（出口IP）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOnlineStatus() 获取在线状态 2 在线 0，1 离线(只支持32位)
+ * @method integer getOnlineStatus() 获取在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOnlineStatus(integer $OnlineStatus) 设置在线状态 2 在线 0，1 离线(只支持32位)
+ * @method void setOnlineStatus(integer $OnlineStatus) 设置在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取客户端版本号-大整数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,9 +64,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnActiveTime(string $ConnActiveTime) 设置最后一次在线时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLocked() 获取设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+ * @method integer getLocked() 获取设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocked(integer $Locked) 设置设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+ * @method void setLocked(integer $Locked) 设置设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalIpList() 获取设备本地IP列表, 包括IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCriticalVulListCount(integer $CriticalVulListCount) 设置未修复高危漏洞数(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComputerName() 获取设备名 和Name相同，保留参数
+ * @method string getComputerName() 获取设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComputerName(string $ComputerName) 设置设备名 和Name相同，保留参数
+ * @method void setComputerName(string $ComputerName) 设置设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainName() 获取登录域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,13 +100,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMacAddr(string $MacAddr) 设置MAC地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVulCount() 获取漏洞数(只支持32位)
+ * @method integer getVulCount() 获取漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVulCount(integer $VulCount) 设置漏洞数(只支持32位)
+ * @method void setVulCount(integer $VulCount) 设置漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRiskCount() 获取病毒风险数(只支持32位)
+ * @method integer getRiskCount() 获取病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskCount(integer $RiskCount) 设置病毒风险数(只支持32位)
+ * @method void setRiskCount(integer $RiskCount) 设置病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusVer() 获取病毒库版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,9 +132,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置终端用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFirewallStatus() 获取防火墙状态(只支持32位)
+ * @method integer getFirewallStatus() 获取防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirewallStatus(integer $FirewallStatus) 设置防火墙状态(只支持32位)
+ * @method void setFirewallStatus(integer $FirewallStatus) 设置防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSerialNum() 获取SN序列号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,9 +148,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNGNStrategyVer(string $NGNStrategyVer) 设置NGN策略版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIOAUserName() 获取最近登录账号
+ * @method string getIOAUserName() 获取最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIOAUserName(string $IOAUserName) 设置最近登录账号
+ * @method void setIOAUserName(string $IOAUserName) 设置最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceNewStrategyVer() 获取设备管控新策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,9 +184,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountGroupName(string $AccountGroupName) 设置最近登录账号部门
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountName() 获取登录账号姓名
+ * @method string getAccountName() 获取最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountName(string $AccountName) 设置登录账号姓名
+ * @method void setAccountName(string $AccountName) 设置最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAccountGroupId() 获取账号组id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,13 +196,13 @@ use TencentCloud\Common\AbstractModel;
 class DeviceDetail extends AbstractModel
 {
     /**
-     * @var integer 设备ID(只支持32位)
+     * @var integer 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 设备唯一标识符
+     * @var string 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mid;
@@ -214,13 +214,13 @@ class DeviceDetail extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 设备所在分组ID(只支持32位)
+     * @var integer 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var integer OS平台(只支持32位)
+     * @var integer OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsType;
@@ -232,7 +232,7 @@ class DeviceDetail extends AbstractModel
     public $Ip;
 
     /**
-     * @var integer 在线状态 2 在线 0，1 离线(只支持32位)
+     * @var integer 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnlineStatus;
@@ -262,7 +262,7 @@ class DeviceDetail extends AbstractModel
     public $ConnActiveTime;
 
     /**
-     * @var integer 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * @var integer 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locked;
@@ -298,7 +298,7 @@ class DeviceDetail extends AbstractModel
     public $CriticalVulListCount;
 
     /**
-     * @var string 设备名 和Name相同，保留参数
+     * @var string 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputerName;
@@ -316,13 +316,13 @@ class DeviceDetail extends AbstractModel
     public $MacAddr;
 
     /**
-     * @var integer 漏洞数(只支持32位)
+     * @var integer 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCount;
 
     /**
-     * @var integer 病毒风险数(只支持32位)
+     * @var integer 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskCount;
@@ -364,7 +364,7 @@ class DeviceDetail extends AbstractModel
     public $UserName;
 
     /**
-     * @var integer 防火墙状态(只支持32位)
+     * @var integer 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirewallStatus;
@@ -388,7 +388,7 @@ class DeviceDetail extends AbstractModel
     public $NGNStrategyVer;
 
     /**
-     * @var string 最近登录账号
+     * @var string 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IOAUserName;
@@ -442,7 +442,7 @@ class DeviceDetail extends AbstractModel
     public $AccountGroupName;
 
     /**
-     * @var string 登录账号姓名
+     * @var string 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
@@ -454,19 +454,19 @@ class DeviceDetail extends AbstractModel
     public $AccountGroupId;
 
     /**
-     * @param integer $Id 设备ID(只支持32位)
+     * @param integer $Id 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mid 设备唯一标识符
+     * @param string $Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 终端名（设备名）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GroupId 设备所在分组ID(只支持32位)
+     * @param integer $GroupId 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OsType OS平台(只支持32位)
+     * @param integer $OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip 设备IP地址（出口IP）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OnlineStatus 在线状态 2 在线 0，1 离线(只支持32位)
+     * @param integer $OnlineStatus 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 客户端版本号-大整数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -476,7 +476,7 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnActiveTime 最后一次在线时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Locked 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * @param integer $Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalIpList 设备本地IP列表, 包括IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -488,15 +488,15 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CriticalVulListCount 未修复高危漏洞数(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ComputerName 设备名 和Name相同，保留参数
+     * @param string $ComputerName 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainName 登录域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MacAddr MAC地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VulCount 漏洞数(只支持32位)
+     * @param integer $VulCount 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RiskCount 病毒风险数(只支持32位)
+     * @param integer $RiskCount 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusVer 病毒库版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -510,7 +510,7 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 终端用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FirewallStatus 防火墙状态(只支持32位)
+     * @param integer $FirewallStatus 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNum SN序列号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -518,7 +518,7 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NGNStrategyVer NGN策略版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IOAUserName 最近登录账号
+     * @param string $IOAUserName 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceNewStrategyVer 设备管控新策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -536,7 +536,7 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountGroupName 最近登录账号部门
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountName 登录账号姓名
+     * @param string $AccountName 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AccountGroupId 账号组id
 注意：此字段可能返回 null，表示取不到有效值。

@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReimburseOnlyMark(integer $ReimburseOnlyMark) 设置是否仅供报销使用（0：没有，1：有）
  * @method integer getRefundMark() 获取是否有退票费标识（0：没有，1：有）
  * @method void setRefundMark(integer $RefundMark) 设置是否有退票费标识（0：没有，1：有）
+ * @method integer getTicketChangeMark() 获取是否有改签费标识（0：没有，1：有）
+ * @method void setTicketChangeMark(integer $TicketChangeMark) 设置是否有改签费标识（0：没有，1：有）
  */
 class TrainTicket extends AbstractModel
 {
@@ -199,6 +201,11 @@ class TrainTicket extends AbstractModel
     public $RefundMark;
 
     /**
+     * @var integer 是否有改签费标识（0：没有，1：有）
+     */
+    public $TicketChangeMark;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Number 发票号码
      * @param string $DateGetOn 乘车日期
@@ -224,6 +231,7 @@ class TrainTicket extends AbstractModel
      * @param integer $QRCodeMark 是否存在二维码（1：有，0：无）
      * @param integer $ReimburseOnlyMark 是否仅供报销使用（0：没有，1：有）
      * @param integer $RefundMark 是否有退票费标识（0：没有，1：有）
+     * @param integer $TicketChangeMark 是否有改签费标识（0：没有，1：有）
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class TrainTicket extends AbstractModel
 
         if (array_key_exists("RefundMark",$param) and $param["RefundMark"] !== null) {
             $this->RefundMark = $param["RefundMark"];
+        }
+
+        if (array_key_exists("TicketChangeMark",$param) and $param["TicketChangeMark"] !== null) {
+            $this->TicketChangeMark = $param["TicketChangeMark"];
         }
     }
 }

@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZones() 获取可用区，output目前最多只支持一个。	
+ * @method void setZones(array $Zones) 设置可用区，output目前最多只支持一个。	
  */
 class DescribeOutput extends AbstractModel
 {
@@ -169,6 +171,11 @@ class DescribeOutput extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区，output目前最多只支持一个。	
+     */
+    public $Zones;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
@@ -196,6 +203,7 @@ class DescribeOutput extends AbstractModel
      * @param integer $MaxConcurrent 最大拉流并发数，最大为4，默认4。
      * @param array $SecurityGroupIds 绑定的安全组 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Zones 可用区，output目前最多只支持一个。	
      */
     function __construct()
     {
@@ -283,6 +291,10 @@ class DescribeOutput extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScaleStrategies返回参数结构体
  *
+ * @method array getLoadAutoScaleStrategies() 获取按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadAutoScaleStrategies(array $LoadAutoScaleStrategies) 设置按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimeBasedAutoScaleStrategies() 获取按时间伸缩规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeBasedAutoScaleStrategies(array $TimeBasedAutoScaleStrategies) 设置按时间伸缩规则
@@ -29,6 +33,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeAutoScaleStrategiesResponse extends AbstractModel
 {
+    /**
+     * @var array 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadAutoScaleStrategies;
+
     /**
      * @var array 按时间伸缩规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -41,6 +51,8 @@ class DescribeAutoScaleStrategiesResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param array $LoadAutoScaleStrategies 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeBasedAutoScaleStrategies 按时间伸缩规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,6 +70,15 @@ class DescribeAutoScaleStrategiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LoadAutoScaleStrategies",$param) and $param["LoadAutoScaleStrategies"] !== null) {
+            $this->LoadAutoScaleStrategies = [];
+            foreach ($param["LoadAutoScaleStrategies"] as $key => $value){
+                $obj = new LoadAutoScaleStrategy();
+                $obj->deserialize($value);
+                array_push($this->LoadAutoScaleStrategies, $obj);
+            }
+        }
+
         if (array_key_exists("TimeBasedAutoScaleStrategies",$param) and $param["TimeBasedAutoScaleStrategies"] !== null) {
             $this->TimeBasedAutoScaleStrategies = [];
             foreach ($param["TimeBasedAutoScaleStrategies"] as $key => $value){

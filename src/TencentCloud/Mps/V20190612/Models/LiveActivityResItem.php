@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveRecordTask(LiveScheduleLiveRecordTaskResult $LiveRecordTask) 设置直播录制任务输出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScheduleQualityControlTaskResult getLiveQualityControlTask() 获取媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLiveQualityControlTask(ScheduleQualityControlTaskResult $LiveQualityControlTask) 设置媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveActivityResItem extends AbstractModel
 {
@@ -34,7 +38,15 @@ class LiveActivityResItem extends AbstractModel
     public $LiveRecordTask;
 
     /**
+     * @var ScheduleQualityControlTaskResult 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LiveQualityControlTask;
+
+    /**
      * @param LiveScheduleLiveRecordTaskResult $LiveRecordTask 直播录制任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleQualityControlTaskResult $LiveQualityControlTask 媒体质检任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -53,6 +65,11 @@ class LiveActivityResItem extends AbstractModel
         if (array_key_exists("LiveRecordTask",$param) and $param["LiveRecordTask"] !== null) {
             $this->LiveRecordTask = new LiveScheduleLiveRecordTaskResult();
             $this->LiveRecordTask->deserialize($param["LiveRecordTask"]);
+        }
+
+        if (array_key_exists("LiveQualityControlTask",$param) and $param["LiveQualityControlTask"] !== null) {
+            $this->LiveQualityControlTask = new ScheduleQualityControlTaskResult();
+            $this->LiveQualityControlTask->deserialize($param["LiveQualityControlTask"]);
         }
     }
 }

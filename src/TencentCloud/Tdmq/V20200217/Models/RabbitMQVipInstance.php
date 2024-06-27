@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcs(array $Vpcs) 设置VPC 接入点列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -168,6 +172,12 @@ class RabbitMQVipInstance extends AbstractModel
     public $Vpcs;
 
     /**
+     * @var integer 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -191,6 +201,8 @@ class RabbitMQVipInstance extends AbstractModel
      * @param string $PublicAccessEndpoint 公网接入点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vpcs VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 创建时间，毫秒为单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ class RabbitMQVipInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Vpcs, $obj);
             }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

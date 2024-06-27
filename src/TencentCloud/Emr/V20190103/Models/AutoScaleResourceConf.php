@@ -40,6 +40,42 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGraceDownFlag(boolean $GraceDownFlag) 设置优雅缩容开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHardwareType() 获取"CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHardwareType(string $HardwareType) 设置"CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayMode() 获取"POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(string $PayMode) 设置"POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPostPayPercentMin() 获取竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostPayPercentMin(integer $PostPayPercentMin) 设置竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChangeToPod() 获取预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChangeToPod(integer $ChangeToPod) 设置预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getYarnNodeLabel() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGroupStatus() 获取伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupStatus(integer $GroupStatus) 设置伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getParallel() 获取并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParallel(integer $Parallel) 设置并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableMNode() 获取是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableMNode(integer $EnableMNode) 设置是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleResourceConf extends AbstractModel
 {
@@ -82,6 +118,60 @@ class AutoScaleResourceConf extends AbstractModel
     public $GraceDownFlag;
 
     /**
+     * @var string "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HardwareType;
+
+    /**
+     * @var string "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
+     * @var integer 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostPayPercentMin;
+
+    /**
+     * @var integer 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChangeToPod;
+
+    /**
+     * @var string 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
+
+    /**
+     * @var string 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $YarnNodeLabel;
+
+    /**
+     * @var integer 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupStatus;
+
+    /**
+     * @var integer 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Parallel;
+
+    /**
+     * @var integer 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableMNode;
+
+    /**
      * @param integer $Id 配置ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterId 集群实例ID。
@@ -91,6 +181,24 @@ class AutoScaleResourceConf extends AbstractModel
      * @param integer $NextTimeCanScale 下次能可扩容时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $GraceDownFlag 优雅缩容开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $YarnNodeLabel 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GroupStatus 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Parallel 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableMNode 是否支持MNode
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +240,42 @@ class AutoScaleResourceConf extends AbstractModel
 
         if (array_key_exists("GraceDownFlag",$param) and $param["GraceDownFlag"] !== null) {
             $this->GraceDownFlag = $param["GraceDownFlag"];
+        }
+
+        if (array_key_exists("HardwareType",$param) and $param["HardwareType"] !== null) {
+            $this->HardwareType = $param["HardwareType"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("PostPayPercentMin",$param) and $param["PostPayPercentMin"] !== null) {
+            $this->PostPayPercentMin = $param["PostPayPercentMin"];
+        }
+
+        if (array_key_exists("ChangeToPod",$param) and $param["ChangeToPod"] !== null) {
+            $this->ChangeToPod = $param["ChangeToPod"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
+            $this->YarnNodeLabel = $param["YarnNodeLabel"];
+        }
+
+        if (array_key_exists("GroupStatus",$param) and $param["GroupStatus"] !== null) {
+            $this->GroupStatus = $param["GroupStatus"];
+        }
+
+        if (array_key_exists("Parallel",$param) and $param["Parallel"] !== null) {
+            $this->Parallel = $param["Parallel"];
+        }
+
+        if (array_key_exists("EnableMNode",$param) and $param["EnableMNode"] !== null) {
+            $this->EnableMNode = $param["EnableMNode"];
         }
     }
 }

@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -47,14 +47,14 @@ use TencentCloud\Common\AbstractModel;
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFps() 获取视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+ * @method integer getFps() 获取视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+ * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -121,18 +121,18 @@ use TencentCloud\Common\AbstractModel;
 默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSegmentType() 获取hls 分片类型，可选值：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentType(integer $SegmentType) 设置hls 分片类型，可选值：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
@@ -149,7 +149,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -158,7 +158,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @var integer 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
@@ -229,11 +229,11 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
     /**
      * @var integer hls 分片类型，可选值：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentType;
@@ -250,12 +250,12 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @param integer $Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -290,11 +290,11 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SegmentType hls 分片类型，可选值：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

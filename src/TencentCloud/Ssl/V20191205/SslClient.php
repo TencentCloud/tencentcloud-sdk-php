@@ -33,6 +33,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(Models\CreateCertificateBindResourceSyncTaskRequest $req) 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
  * @method Models\CreateCertificateByPackageResponse CreateCertificateByPackage(Models\CreateCertificateByPackageRequest $req) 使用权益点创建证书
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
+ * @method Models\DeleteCertificatesResponse DeleteCertificates(Models\DeleteCertificatesRequest $req) 批量删除证书，删除证书前支持查询证书是否关联了腾讯云云资源 （需自定义配置参数，参数名称：IsSync）
  * @method Models\DeleteManagerResponse DeleteManager(Models\DeleteManagerRequest $req) 删除管理人
  * @method Models\DeployCertificateInstanceResponse DeployCertificateInstance(Models\DeployCertificateInstanceRequest $req) 证书部署到云资源实例列表
  * @method Models\DeployCertificateRecordRetryResponse DeployCertificateRecordRetry(Models\DeployCertificateRecordRetryRequest $req) 云资源部署重试部署记录

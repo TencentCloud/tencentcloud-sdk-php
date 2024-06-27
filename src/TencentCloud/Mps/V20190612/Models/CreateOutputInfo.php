@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxConcurrent(integer $MaxConcurrent) 设置最大拉流并发数，最大4，默认4。
  * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。 
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
+ * @method array getZones() 获取可用区，output最多只支持输入一个可用区。	
+ * @method void setZones(array $Zones) 设置可用区，output最多只支持输入一个可用区。	
  */
 class CreateOutputInfo extends AbstractModel
 {
@@ -97,6 +99,11 @@ class CreateOutputInfo extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区，output最多只支持输入一个可用区。	
+     */
+    public $Zones;
+
+    /**
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出描述。
      * @param string $Protocol 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
@@ -108,6 +115,7 @@ class CreateOutputInfo extends AbstractModel
 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
+     * @param array $Zones 可用区，output最多只支持输入一个可用区。	
      */
     function __construct()
     {
@@ -163,6 +171,10 @@ class CreateOutputInfo extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

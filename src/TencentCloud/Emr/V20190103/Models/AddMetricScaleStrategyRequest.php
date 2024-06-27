@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getStrategyType() 获取1表示按负载规则扩容，2表示按时间规则扩容。
- * @method void setStrategyType(integer $StrategyType) 设置1表示按负载规则扩容，2表示按时间规则扩容。
+ * @method integer getStrategyType() 获取1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+ * @method void setStrategyType(integer $StrategyType) 设置1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+ * @method LoadAutoScaleStrategy getLoadAutoScaleStrategy() 获取按负载扩容的规则。
+ * @method void setLoadAutoScaleStrategy(LoadAutoScaleStrategy $LoadAutoScaleStrategy) 设置按负载扩容的规则。
  * @method TimeAutoScaleStrategy getTimeAutoScaleStrategy() 获取按时间扩缩容的规则。
  * @method void setTimeAutoScaleStrategy(TimeAutoScaleStrategy $TimeAutoScaleStrategy) 设置按时间扩缩容的规则。
  */
@@ -35,9 +37,14 @@ class AddMetricScaleStrategyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 1表示按负载规则扩容，2表示按时间规则扩容。
+     * @var integer 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
      */
     public $StrategyType;
+
+    /**
+     * @var LoadAutoScaleStrategy 按负载扩容的规则。
+     */
+    public $LoadAutoScaleStrategy;
 
     /**
      * @var TimeAutoScaleStrategy 按时间扩缩容的规则。
@@ -46,7 +53,8 @@ class AddMetricScaleStrategyRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID。
-     * @param integer $StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。
+     * @param integer $StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+     * @param LoadAutoScaleStrategy $LoadAutoScaleStrategy 按负载扩容的规则。
      * @param TimeAutoScaleStrategy $TimeAutoScaleStrategy 按时间扩缩容的规则。
      */
     function __construct()
@@ -68,6 +76,11 @@ class AddMetricScaleStrategyRequest extends AbstractModel
 
         if (array_key_exists("StrategyType",$param) and $param["StrategyType"] !== null) {
             $this->StrategyType = $param["StrategyType"];
+        }
+
+        if (array_key_exists("LoadAutoScaleStrategy",$param) and $param["LoadAutoScaleStrategy"] !== null) {
+            $this->LoadAutoScaleStrategy = new LoadAutoScaleStrategy();
+            $this->LoadAutoScaleStrategy->deserialize($param["LoadAutoScaleStrategy"]);
         }
 
         if (array_key_exists("TimeAutoScaleStrategy",$param) and $param["TimeAutoScaleStrategy"] !== null) {

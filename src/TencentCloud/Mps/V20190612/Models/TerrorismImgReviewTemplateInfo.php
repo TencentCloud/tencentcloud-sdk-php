@@ -35,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：涉敏人物；</li>
-<li>scenario：涉敏画面。</li>
  * @method void setLabelSet(array $LabelSet) 设置画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
@@ -45,7 +44,6 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：涉敏人物；</li>
-<li>scenario：涉敏画面。</li>
  * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
@@ -70,7 +68,6 @@ class TerrorismImgReviewTemplateInfo extends AbstractModel
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：涉敏人物；</li>
-<li>scenario：涉敏画面。</li>
      */
     public $LabelSet;
 
@@ -97,7 +94,6 @@ class TerrorismImgReviewTemplateInfo extends AbstractModel
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：涉敏人物；</li>
-<li>scenario：涉敏画面。</li>
      * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
      * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
      */

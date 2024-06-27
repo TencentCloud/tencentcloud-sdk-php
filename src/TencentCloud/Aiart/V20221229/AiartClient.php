@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Aiart\V20221229\Models as Models;
 
 /**
+ * @method Models\GenerateAvatarResponse GenerateAvatar(Models\GenerateAvatarRequest $req) 百变头像接口将根据输入的人像照片，生成风格百变的头像。
+百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\ImageToImageResponse ImageToImage(Models\ImageToImageRequest $req) 图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
 图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\QueryDrawPortraitJobResponse QueryDrawPortraitJob(Models\QueryDrawPortraitJobRequest $req) AI 写真提供 AI 写真形象照的训练与生成能力，分为上传训练图片、训练模型、生成图片3个环节，需要依次调用对应接口。

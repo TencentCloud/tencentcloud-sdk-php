@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZones() 获取可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+ * @method void setZones(array $Zones) 设置可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
  */
 class DescribeInput extends AbstractModel
 {
@@ -163,6 +165,11 @@ class DescribeInput extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+     */
+    public $Zones;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -188,6 +195,7 @@ class DescribeInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。	
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Zones 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeInput extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

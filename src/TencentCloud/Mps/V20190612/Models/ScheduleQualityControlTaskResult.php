@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 质检任务结果类型
+ * 媒体质检任务结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiQualityControlTaskInput getInput() 获取质检任务的输入。
- * @method void setInput(AiQualityControlTaskInput $Input) 设置质检任务的输入。
- * @method QualityControlData getOutput() 获取质检任务的输出。
+ * @method AiQualityControlTaskInput getInput() 获取媒体质检任务的输入。
+ * @method void setInput(AiQualityControlTaskInput $Input) 设置媒体质检任务的输入。
+ * @method QualityControlData getOutput() 获取媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(QualityControlData $Output) 设置质检任务的输出。
+ * @method void setOutput(QualityControlData $Output) 设置媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScheduleQualityControlTaskResult extends AbstractModel
@@ -58,12 +58,12 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiQualityControlTaskInput 质检任务的输入。
+     * @var AiQualityControlTaskInput 媒体质检任务的输入。
      */
     public $Input;
 
     /**
-     * @var QualityControlData 质检任务的输出。
+     * @var QualityControlData 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -73,8 +73,8 @@ class ScheduleQualityControlTaskResult extends AbstractModel
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
-     * @param AiQualityControlTaskInput $Input 质检任务的输入。
-     * @param QualityControlData $Output 质检任务的输出。
+     * @param AiQualityControlTaskInput $Input 媒体质检任务的输入。
+     * @param QualityControlData $Output 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

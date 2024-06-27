@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数。
  * @method integer getLimit() 获取分页参数。最大支持100
  * @method void setLimit(integer $Limit) 设置分页参数。最大支持100
+ * @method integer getRecordSource() 获取表示是自动(0)还是托管伸缩(1)
+ * @method void setRecordSource(integer $RecordSource) 设置表示是自动(0)还是托管伸缩(1)
  */
 class DescribeAutoScaleRecordsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 表示是自动(0)还是托管伸缩(1)
+     */
+    public $RecordSource;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param array $Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
      * @param integer $Offset 分页参数。
      * @param integer $Limit 分页参数。最大支持100
+     * @param integer $RecordSource 表示是自动(0)还是托管伸缩(1)
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("RecordSource",$param) and $param["RecordSource"] !== null) {
+            $this->RecordSource = $param["RecordSource"];
         }
     }
 }

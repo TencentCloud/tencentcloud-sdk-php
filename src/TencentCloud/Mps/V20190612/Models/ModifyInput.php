@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
  * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。 仅支持关联一组安全组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 仅支持关联一组安全组。
+ * @method array getZones() 获取可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+ * @method void setZones(array $Zones) 设置可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
  */
 class ModifyInput extends AbstractModel
 {
@@ -124,6 +126,11 @@ class ModifyInput extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+     */
+    public $Zones;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -140,6 +147,7 @@ class ModifyInput extends AbstractModel
      * @param CreateInputHLSPullSettings $HLSPullSettings HLS_PULL的配置信息。
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 仅支持关联一组安全组。
+     * @param array $Zones 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
      */
     function __construct()
     {
@@ -210,6 +218,10 @@ class ModifyInput extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

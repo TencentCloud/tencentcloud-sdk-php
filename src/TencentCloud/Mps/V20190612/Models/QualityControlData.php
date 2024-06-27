@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 质检结果输出。
+ * 媒体质检结果输出。
  *
  * @method boolean getNoAudio() 获取为true时表示视频无音频轨。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置视频无参考质量打分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQualityControlResultSet() 获取质检检出异常项。
+ * @method array getQualityControlResultSet() 获取内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置质检检出异常项。
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class QualityControlData extends AbstractModel
@@ -58,7 +58,7 @@ class QualityControlData extends AbstractModel
     public $QualityEvaluationScore;
 
     /**
-     * @var array 质检检出异常项。
+     * @var array 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityControlResultSet;
@@ -70,7 +70,7 @@ class QualityControlData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QualityEvaluationScore 视频无参考质量打分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $QualityControlResultSet 质检检出异常项。
+     * @param array $QualityControlResultSet 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

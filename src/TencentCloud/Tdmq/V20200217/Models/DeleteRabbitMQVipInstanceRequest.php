@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method boolean getIsIntl() 获取是否国际站请求，默认 false
+ * @method void setIsIntl(boolean $IsIntl) 设置是否国际站请求，默认 false
  */
 class DeleteRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteRabbitMQVipInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 是否国际站请求，默认 false
+     */
+    public $IsIntl;
+
+    /**
      * @param string $InstanceId 实例Id
+     * @param boolean $IsIntl 是否国际站请求，默认 false
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteRabbitMQVipInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IsIntl",$param) and $param["IsIntl"] !== null) {
+            $this->IsIntl = $param["IsIntl"];
         }
     }
 }

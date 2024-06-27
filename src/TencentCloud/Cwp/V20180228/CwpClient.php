@@ -410,9 +410,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportAssetWebLocationListResponse ExportAssetWebLocationList(Models\ExportAssetWebLocationListRequest $req) 导出Web站点列表
  * @method Models\ExportAssetWebServiceInfoListResponse ExportAssetWebServiceInfoList(Models\ExportAssetWebServiceInfoListRequest $req) 导出资产管理Web服务列表
  * @method Models\ExportAttackEventsResponse ExportAttackEvents(Models\ExportAttackEventsRequest $req) 导出网络攻击事件
- * @method Models\ExportAttackLogsResponse ExportAttackLogs(Models\ExportAttackLogsRequest $req) ExportAttackEvents接口替代
-
-导出网络攻击日志
  * @method Models\ExportBaselineEffectHostListResponse ExportBaselineEffectHostList(Models\ExportBaselineEffectHostListRequest $req) 导出基线影响主机列表
  * @method Models\ExportBaselineFixListResponse ExportBaselineFixList(Models\ExportBaselineFixListRequest $req) 导出修复列表
  * @method Models\ExportBaselineHostDetectListResponse ExportBaselineHostDetectList(Models\ExportBaselineHostDetectListRequest $req) 导出基线主机检测

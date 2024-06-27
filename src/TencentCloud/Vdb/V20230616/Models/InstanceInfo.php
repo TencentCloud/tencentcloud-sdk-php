@@ -120,6 +120,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanAddress(string $WanAddress) 设置外网地址。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolateAt() 获取隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateAt(string $IsolateAt) 设置隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenew() 获取是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -274,6 +282,18 @@ class InstanceInfo extends AbstractModel
     public $WanAddress;
 
     /**
+     * @var string 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateAt;
+
+    /**
+     * @var integer 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $InstanceId 实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例自定义名称。
@@ -323,6 +343,10 @@ class InstanceInfo extends AbstractModel
      * @param boolean $IsNoExpired 是否不过期(永久)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanAddress 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolateAt 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -446,6 +470,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("WanAddress",$param) and $param["WanAddress"] !== null) {
             $this->WanAddress = $param["WanAddress"];
+        }
+
+        if (array_key_exists("IsolateAt",$param) and $param["IsolateAt"] !== null) {
+            $this->IsolateAt = $param["IsolateAt"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

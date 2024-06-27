@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleNum(integer $ScaleNum) 设置扩缩容数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStrategyStatus() 获取规则状态，1表示有效，2表示无效，3表示暂停。
+ * @method integer getStrategyStatus() 获取规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStrategyStatus(integer $StrategyStatus) 设置规则状态，1表示有效，2表示无效，3表示暂停。
+ * @method void setStrategyStatus(integer $StrategyStatus) 设置规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取规则优先级，越小越高。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,9 +92,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxUse(integer $MaxUse) 设置最长使用时间， 秒数，最短1小时，最长24小时
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSoftDeployInfo() 获取节点部署服务列表。
+ * @method array getSoftDeployInfo() 获取节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置节点部署服务列表。
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServiceNodeInfo() 获取启动进程列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,7 +136,7 @@ class TimeAutoScaleStrategy extends AbstractModel
     public $ScaleNum;
 
     /**
-     * @var integer 规则状态，1表示有效，2表示无效，3表示暂停。
+     * @var integer 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyStatus;
@@ -212,7 +212,7 @@ class TimeAutoScaleStrategy extends AbstractModel
     public $MaxUse;
 
     /**
-     * @var array 节点部署服务列表。
+     * @var array 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoftDeployInfo;
@@ -244,7 +244,7 @@ class TimeAutoScaleStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleNum 扩缩容数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。
+     * @param integer $StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 规则优先级，越小越高。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -272,7 +272,7 @@ class TimeAutoScaleStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxUse 最长使用时间， 秒数，最短1小时，最长24小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SoftDeployInfo 节点部署服务列表。
+     * @param array $SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceNodeInfo 启动进程列表。
 注意：此字段可能返回 null，表示取不到有效值。

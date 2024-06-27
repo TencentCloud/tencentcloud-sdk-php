@@ -36,10 +36,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageSize(integer $StorageSize) 设置单节点存储规格,不传默认为200G
  * @method boolean getEnableCreateDefaultHaMirrorQueue() 获取镜像队列,不传默认为false
  * @method void setEnableCreateDefaultHaMirrorQueue(boolean $EnableCreateDefaultHaMirrorQueue) 设置镜像队列,不传默认为false
- * @method boolean getAutoRenewFlag() 获取自动续费,不传默认为true
- * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置自动续费,不传默认为true
+ * @method boolean getAutoRenewFlag() 获取预付费使用。自动续费,不传默认为true
+ * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置预付费使用。自动续费,不传默认为true
  * @method integer getTimeSpan() 获取购买时长,不传默认为1(月)
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长,不传默认为1(月)
+ * @method integer getPayMode() 获取付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+ * @method void setPayMode(integer $PayMode) 设置付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+ * @method string getClusterVersion() 获取集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+ * @method boolean getIsIntl() 获取是否国际站请求，默认 false
+ * @method void setIsIntl(boolean $IsIntl) 设置是否国际站请求，默认 false
+ * @method array getResourceTags() 获取资源标签列表
+ * @method void setResourceTags(array $ResourceTags) 设置资源标签列表
+ * @method integer getBandwidth() 获取公网带宽大小，单位 M
+ * @method void setBandwidth(integer $Bandwidth) 设置公网带宽大小，单位 M
  */
 class CreateRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -84,7 +94,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $EnableCreateDefaultHaMirrorQueue;
 
     /**
-     * @var boolean 自动续费,不传默认为true
+     * @var boolean 预付费使用。自动续费,不传默认为true
      */
     public $AutoRenewFlag;
 
@@ -92,6 +102,31 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @var integer 购买时长,不传默认为1(月)
      */
     public $TimeSpan;
+
+    /**
+     * @var integer 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     */
+    public $PayMode;
+
+    /**
+     * @var string 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     */
+    public $ClusterVersion;
+
+    /**
+     * @var boolean 是否国际站请求，默认 false
+     */
+    public $IsIntl;
+
+    /**
+     * @var array 资源标签列表
+     */
+    public $ResourceTags;
+
+    /**
+     * @var integer 公网带宽大小，单位 M
+     */
+    public $Bandwidth;
 
     /**
      * @param array $ZoneIds 可用区
@@ -102,8 +137,13 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @param integer $NodeNum 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
      * @param integer $StorageSize 单节点存储规格,不传默认为200G
      * @param boolean $EnableCreateDefaultHaMirrorQueue 镜像队列,不传默认为false
-     * @param boolean $AutoRenewFlag 自动续费,不传默认为true
+     * @param boolean $AutoRenewFlag 预付费使用。自动续费,不传默认为true
      * @param integer $TimeSpan 购买时长,不传默认为1(月)
+     * @param integer $PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     * @param string $ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * @param boolean $IsIntl 是否国际站请求，默认 false
+     * @param array $ResourceTags 资源标签列表
+     * @param integer $Bandwidth 公网带宽大小，单位 M
      */
     function __construct()
     {
@@ -156,6 +196,31 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
+        }
+
+        if (array_key_exists("IsIntl",$param) and $param["IsIntl"] !== null) {
+            $this->IsIntl = $param["IsIntl"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
     }
 }

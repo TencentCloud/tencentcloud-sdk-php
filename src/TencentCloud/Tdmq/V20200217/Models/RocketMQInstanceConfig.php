@@ -46,6 +46,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) 设置每个主题最大队列数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxRetention() 获取最大可设置消息保留时间，小时为单位	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxRetention(integer $MaxRetention) 设置最大可设置消息保留时间，小时为单位	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinRetention() 获取最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinRetention(integer $MinRetention) 设置最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetention() 获取实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetention(integer $Retention) 设置实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicNumLowerLimit() 获取Topic个数最小配额，即免费额度，默认为集群规格单节点最小配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNumLowerLimit(integer $TopicNumLowerLimit) 设置Topic个数最小配额，即免费额度，默认为集群规格单节点最小配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicNumUpperLimit() 获取Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) 设置Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQInstanceConfig extends AbstractModel
 {
@@ -111,6 +131,36 @@ class RocketMQInstanceConfig extends AbstractModel
     public $MaxQueuesPerTopic;
 
     /**
+     * @var integer 最大可设置消息保留时间，小时为单位	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxRetention;
+
+    /**
+     * @var integer 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinRetention;
+
+    /**
+     * @var integer 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Retention;
+
+    /**
+     * @var integer Topic个数最小配额，即免费额度，默认为集群规格单节点最小配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNumLowerLimit;
+
+    /**
+     * @var integer Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNumUpperLimit;
+
+    /**
      * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
@@ -123,6 +173,16 @@ class RocketMQInstanceConfig extends AbstractModel
      * @param array $NodeDistribution 节点分布情况
      * @param array $TopicDistribution topic分布情况
      * @param integer $MaxQueuesPerTopic 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxRetention 最大可设置消息保留时间，小时为单位	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinRetention 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Retention 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicNumLowerLimit Topic个数最小配额，即免费额度，默认为集群规格单节点最小配额*节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicNumUpperLimit Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -194,6 +254,26 @@ class RocketMQInstanceConfig extends AbstractModel
 
         if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
             $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
+        }
+
+        if (array_key_exists("MaxRetention",$param) and $param["MaxRetention"] !== null) {
+            $this->MaxRetention = $param["MaxRetention"];
+        }
+
+        if (array_key_exists("MinRetention",$param) and $param["MinRetention"] !== null) {
+            $this->MinRetention = $param["MinRetention"];
+        }
+
+        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
+            $this->Retention = $param["Retention"];
+        }
+
+        if (array_key_exists("TopicNumLowerLimit",$param) and $param["TopicNumLowerLimit"] !== null) {
+            $this->TopicNumLowerLimit = $param["TopicNumLowerLimit"];
+        }
+
+        if (array_key_exists("TopicNumUpperLimit",$param) and $param["TopicNumUpperLimit"] !== null) {
+            $this->TopicNumUpperLimit = $param["TopicNumUpperLimit"];
         }
     }
 }

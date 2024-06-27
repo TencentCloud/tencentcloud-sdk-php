@@ -22,9 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getActivityType() 获取原子任务类型。
 <li>LiveRecord：直播录制。</li>
+<li>AiQualityControl：媒体质检。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityType(string $ActivityType) 设置原子任务类型。
 <li>LiveRecord：直播录制。</li>
+<li>AiQualityControl：媒体质检。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method LiveActivityResItem getLiveActivityResItem() 获取原子任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,6 +38,7 @@ class LiveActivityResult extends AbstractModel
     /**
      * @var string 原子任务类型。
 <li>LiveRecord：直播录制。</li>
+<li>AiQualityControl：媒体质检。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityType;
@@ -49,6 +52,7 @@ class LiveActivityResult extends AbstractModel
     /**
      * @param string $ActivityType 原子任务类型。
 <li>LiveRecord：直播录制。</li>
+<li>AiQualityControl：媒体质检。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveActivityResItem $LiveActivityResItem 原子任务输出。
 注意：此字段可能返回 null，表示取不到有效值。

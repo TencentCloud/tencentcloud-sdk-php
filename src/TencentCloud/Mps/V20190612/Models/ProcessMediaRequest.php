@@ -52,14 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务参数。
  * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
- * @method AiQualityControlTaskInput getAiQualityControlTask() 获取视频质检类型任务参数。
- * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置视频质检类型任务参数。
+ * @method AiQualityControlTaskInput getAiQualityControlTask() 获取媒体质检类型任务参数。
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置媒体质检类型任务参数。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
- * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
+ * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getTaskType() 获取任务类型，默认Online
@@ -120,7 +120,7 @@ class ProcessMediaRequest extends AbstractModel
     public $AiRecognitionTask;
 
     /**
-     * @var AiQualityControlTaskInput 视频质检类型任务参数。
+     * @var AiQualityControlTaskInput 媒体质检类型任务参数。
      */
     public $AiQualityControlTask;
 
@@ -135,7 +135,7 @@ class ProcessMediaRequest extends AbstractModel
     public $TasksPriority;
 
     /**
-     * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
      */
     public $SessionId;
 
@@ -168,10 +168,10 @@ class ProcessMediaRequest extends AbstractModel
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
-     * @param AiQualityControlTaskInput $AiQualityControlTask 视频质检类型任务参数。
+     * @param AiQualityControlTaskInput $AiQualityControlTask 媒体质检类型任务参数。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
-     * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $TaskType 任务类型，默认Online
 <li> Online：实时任务</li>

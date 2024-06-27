@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method integer getStrategyType() 获取自动扩缩容规则类型，1表示按负载指标扩缩容，2表示按时间扩缩容。
  * @method void setStrategyType(integer $StrategyType) 设置自动扩缩容规则类型，1表示按负载指标扩缩容，2表示按时间扩缩容。
+ * @method array getLoadAutoScaleStrategies() 获取按负载扩缩容的指标。
+ * @method void setLoadAutoScaleStrategies(array $LoadAutoScaleStrategies) 设置按负载扩缩容的指标。
  * @method array getTimeAutoScaleStrategies() 获取按时间扩缩容的规则。
  * @method void setTimeAutoScaleStrategies(array $TimeAutoScaleStrategies) 设置按时间扩缩容的规则。
  * @method integer getGroupId() 获取伸缩组Id
@@ -42,6 +44,11 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
     public $StrategyType;
 
     /**
+     * @var array 按负载扩缩容的指标。
+     */
+    public $LoadAutoScaleStrategies;
+
+    /**
      * @var array 按时间扩缩容的规则。
      */
     public $TimeAutoScaleStrategies;
@@ -54,6 +61,7 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID。
      * @param integer $StrategyType 自动扩缩容规则类型，1表示按负载指标扩缩容，2表示按时间扩缩容。
+     * @param array $LoadAutoScaleStrategies 按负载扩缩容的指标。
      * @param array $TimeAutoScaleStrategies 按时间扩缩容的规则。
      * @param integer $GroupId 伸缩组Id
      */
@@ -76,6 +84,15 @@ class ModifyAutoScaleStrategyRequest extends AbstractModel
 
         if (array_key_exists("StrategyType",$param) and $param["StrategyType"] !== null) {
             $this->StrategyType = $param["StrategyType"];
+        }
+
+        if (array_key_exists("LoadAutoScaleStrategies",$param) and $param["LoadAutoScaleStrategies"] !== null) {
+            $this->LoadAutoScaleStrategies = [];
+            foreach ($param["LoadAutoScaleStrategies"] as $key => $value){
+                $obj = new LoadAutoScaleStrategy();
+                $obj->deserialize($value);
+                array_push($this->LoadAutoScaleStrategies, $obj);
+            }
         }
 
         if (array_key_exists("TimeAutoScaleStrategies",$param) and $param["TimeAutoScaleStrategies"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 定时伸缩任务策略
  *
- * @method string getRepeatType() 获取取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
- * @method void setRepeatType(string $RepeatType) 设置取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+ * @method string getRepeatType() 获取取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
+ * @method void setRepeatType(string $RepeatType) 设置取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
  * @method DayRepeatStrategy getDayRepeat() 获取按天重复规则，当RepeatType为"DAY"时有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDayRepeat(DayRepeatStrategy $DayRepeat) 设置按天重复规则，当RepeatType为"DAY"时有效
@@ -38,15 +38,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotRepeat(NotRepeatStrategy $NotRepeat) 设置一次执行规则，当RepeatType为"NONE"时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpire() 获取规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+ * @method string getExpire() 获取规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpire(string $Expire) 设置规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+ * @method void setExpire(string $Expire) 设置规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RepeatStrategy extends AbstractModel
 {
     /**
-     * @var string 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+     * @var string 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      */
     public $RepeatType;
 
@@ -75,13 +75,13 @@ class RepeatStrategy extends AbstractModel
     public $NotRepeat;
 
     /**
-     * @var string 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * @var string 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expire;
 
     /**
-     * @param string $RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+     * @param string $RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      * @param DayRepeatStrategy $DayRepeat 按天重复规则，当RepeatType为"DAY"时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WeekRepeatStrategy $WeekRepeat 按周重复规则，当RepeatType为"DOW"时有效
@@ -90,7 +90,7 @@ class RepeatStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NotRepeatStrategy $NotRepeat 一次执行规则，当RepeatType为"NONE"时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * @param string $Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

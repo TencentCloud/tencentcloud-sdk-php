@@ -505,7 +505,6 @@ LimitTypes取值范围：
  * @method Models\ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(Models\ModifyCustomerGatewayAttributeRequest $req) 本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
  * @method Models\ModifyDhcpIpAttributeResponse ModifyDhcpIpAttribute(Models\ModifyDhcpIpAttributeRequest $req) 本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
  * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) 本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
-
  * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) 本接口（ModifyFlowLogAttribute）用于修改流日志属性。
  * @method Models\ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(Models\ModifyGatewayFlowQosRequest $req) 本接口（ModifyGatewayFlowQos）用于调整网关流控带宽。
  * @method Models\ModifyHaVipAttributeResponse ModifyHaVipAttribute(Models\ModifyHaVipAttributeRequest $req) 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性。

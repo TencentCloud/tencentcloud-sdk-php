@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOldCertificateId() 获取一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
  * @method void setOldCertificateId(string $OldCertificateId) 设置一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
- * @method array getResourceTypes() 获取需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
- * @method void setResourceTypes(array $ResourceTypes) 设置需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+ * @method array getResourceTypes() 获取需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
+ * @method void setResourceTypes(array $ResourceTypes) 设置需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
  * @method string getCertificateId() 获取一键更新新证书ID，不传该则证书公钥和私钥必传
  * @method void setCertificateId(string $CertificateId) 设置一键更新新证书ID，不传该则证书公钥和私钥必传
  * @method array getRegions() 获取需要部署的地域列表（废弃）
@@ -53,7 +53,7 @@ class UpdateCertificateInstanceRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @var array 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+     * @var array 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
      */
     public $ResourceTypes;
 
@@ -110,7 +110,7 @@ class UpdateCertificateInstanceRequest extends AbstractModel
 
     /**
      * @param string $OldCertificateId 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
-     * @param array $ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+     * @param array $ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
      * @param string $CertificateId 一键更新新证书ID，不传该则证书公钥和私钥必传
      * @param array $Regions 需要部署的地域列表（废弃）
      * @param array $ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等

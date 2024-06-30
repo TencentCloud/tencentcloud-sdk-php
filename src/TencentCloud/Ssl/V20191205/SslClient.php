@@ -30,7 +30,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) 提交证书订单。
  * @method Models\CompleteCertificateResponse CompleteCertificate(Models\CompleteCertificateRequest $req) 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建付费证书。
- * @method Models\CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(Models\CreateCertificateBindResourceSyncTaskRequest $req) 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+ * @method Models\CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(Models\CreateCertificateBindResourceSyncTaskRequest $req) 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
  * @method Models\CreateCertificateByPackageResponse CreateCertificateByPackage(Models\CreateCertificateByPackageRequest $req) 使用权益点创建证书
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
  * @method Models\DeleteCertificatesResponse DeleteCertificates(Models\DeleteCertificatesRequest $req) 批量删除证书，删除证书前支持查询证书是否关联了腾讯云云资源 （需自定义配置参数，参数名称：IsSync）
@@ -40,7 +40,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DeployCertificateRecordRollbackResponse DeployCertificateRecordRollback(Models\DeployCertificateRecordRollbackRequest $req) 云资源部署一键回滚
  * @method Models\DescribeCertificateResponse DescribeCertificate(Models\DescribeCertificateRequest $req) 本接口（DescribeCertificate）用于获取证书信息。
  * @method Models\DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetail(Models\DescribeCertificateBindResourceTaskDetailRequest $req) 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
- * @method Models\DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResult(Models\DescribeCertificateBindResourceTaskResultRequest $req) 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+ * @method Models\DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResult(Models\DescribeCertificateBindResourceTaskResultRequest $req) 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 获取证书详情。
  * @method Models\DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(Models\DescribeCertificateOperateLogsRequest $req) 获取用户账号下有关证书的操作日志。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用于获取证书列表。

@@ -20,15 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLegalSealQrCode返回参数结构体
  *
- * @method string getQrcodeBase64() 获取二维码图片base64值
- * @method void setQrcodeBase64(string $QrcodeBase64) 设置二维码图片base64值
+ * @method string getQrcodeBase64() 获取二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
+ * @method void setQrcodeBase64(string $QrcodeBase64) 设置二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLegalSealQrCodeResponse extends AbstractModel
 {
     /**
-     * @var string 二维码图片base64值
+     * @var string 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
      */
     public $QrcodeBase64;
 
@@ -38,7 +47,10 @@ class CreateLegalSealQrCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $QrcodeBase64 二维码图片base64值
+     * @param string $QrcodeBase64 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

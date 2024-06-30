@@ -38,28 +38,24 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
- * @method integer getLimit() 获取返回最大数量，最大为100
- * @method void setLimit(integer $Limit) 设置返回最大数量，最大为100
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 100。
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 100。
  * @method integer getOffset() 获取分页查询偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为0，最大为20000
- * @method integer getInfoType() 获取查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
- * @method void setInfoType(integer $InfoType) 设置查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
- * @method string getSealId() 获取印章id（没有输入返回所有）
+ * @method integer getInfoType() 获取查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+ * @method void setInfoType(integer $InfoType) 设置查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+ * @method string getSealId() 获取印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
- * @method void setSealId(string $SealId) 设置印章id（没有输入返回所有）
+ * @method void setSealId(string $SealId) 设置印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
  * @method array getSealTypes() 获取电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -68,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 
 注:  `为空时查询所有类型的印章。`
  * @method void setSealTypes(array $SealTypes) 设置电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -76,8 +72,14 @@ use TencentCloud\Common\AbstractModel;
 </ul>
 
 注:  `为空时查询所有类型的印章。`
- * @method array getSealStatuses() 获取查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
- * @method void setSealStatuses(array $SealStatuses) 设置查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+ * @method array getSealStatuses() 获取
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
+ * @method void setSealStatuses(array $SealStatuses) 设置
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
  */
 class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -95,7 +97,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var integer 返回最大数量，最大为100
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 100。
      */
     public $Limit;
 
@@ -105,16 +107,14 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
+     * @var integer 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
      */
     public $InfoType;
 
     /**
-     * @var string 印章id（没有输入返回所有）
+     * @var string 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
      */
@@ -122,7 +122,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 
     /**
      * @var array 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -134,7 +134,10 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $SealTypes;
 
     /**
-     * @var array 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     * @var array 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
      */
     public $SealStatuses;
 
@@ -148,18 +151,16 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
-     * @param integer $Limit 返回最大数量，最大为100
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 100。
      * @param integer $Offset 分页查询偏移量，默认为0，最大为20000
-     * @param integer $InfoType 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
-     * @param string $SealId 印章id（没有输入返回所有）
+     * @param integer $InfoType 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+     * @param string $SealId 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
      * @param array $SealTypes 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -167,7 +168,10 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 </ul>
 
 注:  `为空时查询所有类型的印章。`
-     * @param array $SealStatuses 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     * @param array $SealStatuses 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
      */
     function __construct()
     {

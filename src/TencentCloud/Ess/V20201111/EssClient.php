@@ -405,10 +405,15 @@ use TencentCloud\Ess\V20201111\Models as Models;
 p.s.
 此接口只能用于激活，不能用于续期。
  * @method Models\CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(Models\CreateIntegrationUserRolesRequest $req) 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
- * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码<br/>
+ * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
 
 **注意**
 1. 该二维码**有效期为7天**，过期后将失效，可重新创建 。
+2. 每个公司**只能有1个法人章**，无法重复创建或者创建多个
+
+法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
  * @method Models\CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(Models\CreateMultiFlowSignQRCodeRequest $req) 此接口（CreateMultiFlowSignQRCode）用于创建一码多签签署码。
 
 **适用场景**:
@@ -644,8 +649,10 @@ p.s.
  * @method Models\DescribeIntegrationRolesResponse DescribeIntegrationRoles(Models\DescribeIntegrationRolesRequest $req) 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
  * @method Models\DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(Models\DescribeOrganizationGroupOrganizationsRequest $req) 此API接口用来查询加入集团的成员企业信息
 适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计
- * @method Models\DescribeOrganizationSealsResponse DescribeOrganizationSeals(Models\DescribeOrganizationSealsRequest $req) 查询企业印章的列表，需要操作者具有查询印章权限
-客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
+ * @method Models\DescribeOrganizationSealsResponse DescribeOrganizationSeals(Models\DescribeOrganizationSealsRequest $req) 查询企业印章列表。
+
+注：
+1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
  * @method Models\DescribePersonCertificateResponse DescribePersonCertificate(Models\DescribePersonCertificateRequest $req) 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
  * @method Models\DescribeSignFaceVideoResponse DescribeSignFaceVideo(Models\DescribeSignFaceVideoRequest $req) 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
 

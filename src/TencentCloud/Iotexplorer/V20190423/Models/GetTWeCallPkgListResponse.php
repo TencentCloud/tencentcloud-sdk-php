@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTWeCallPkgList(array $TWeCallPkgList) 设置激活状态
  * @method integer getTotal() 获取总数
  * @method void setTotal(integer $Total) 设置总数
+ * @method array getTWeCallCategoryPkgList() 获取分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTWeCallCategoryPkgList(array $TWeCallCategoryPkgList) 设置分类统计
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class GetTWeCallPkgListResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var array 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TWeCallCategoryPkgList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class GetTWeCallPkgListResponse extends AbstractModel
     /**
      * @param array $TWeCallPkgList 激活状态
      * @param integer $Total 总数
+     * @param array $TWeCallCategoryPkgList 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +85,15 @@ class GetTWeCallPkgListResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("TWeCallCategoryPkgList",$param) and $param["TWeCallCategoryPkgList"] !== null) {
+            $this->TWeCallCategoryPkgList = [];
+            foreach ($param["TWeCallCategoryPkgList"] as $key => $value){
+                $obj = new TWeCallCategoryPkgInfo();
+                $obj->deserialize($value);
+                array_push($this->TWeCallCategoryPkgList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

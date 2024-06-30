@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
 1. 绝对定位方式 （可以通过 [PDF坐标计算助手](https://qian.tencent.com/developers/tools/template-editor)计算控件的坐标）
 2. 表单域(FIELD)定位方式
 3. 关键字(KEYWORD)定位方式，使用关键字定位时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找
-可以参考官网说明
-https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.8D.E5.AE.9A.E4.BD.8D.E6.96.B9.E5.BC.8F.E8.AF.B4.E6.98.8E
  *
  * @method string getComponentType() 获取**如果是Component填写控件类型，则可选的字段为**：
 

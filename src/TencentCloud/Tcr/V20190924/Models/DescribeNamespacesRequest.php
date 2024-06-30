@@ -31,7 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getAll() 获取列出所有命名空间
  * @method void setAll(boolean $All) 设置列出所有命名空间
  * @method array getFilters() 获取过滤条件
+- 按照【标签】过滤
+   Name: Tags
+   Value:   tagKey:tagVal
+
  * @method void setFilters(array $Filters) 设置过滤条件
+- 按照【标签】过滤
+   Name: Tags
+   Value:   tagKey:tagVal
+
  * @method boolean getKmsSignPolicy() 获取仅查询启用了 KMS 镜像签名的空间
  * @method void setKmsSignPolicy(boolean $KmsSignPolicy) 设置仅查询启用了 KMS 镜像签名的空间
  */
@@ -64,6 +72,10 @@ class DescribeNamespacesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件
+- 按照【标签】过滤
+   Name: Tags
+   Value:   tagKey:tagVal
+
      */
     public $Filters;
 
@@ -79,6 +91,10 @@ class DescribeNamespacesRequest extends AbstractModel
      * @param integer $Offset 页面偏移（第几页）
      * @param boolean $All 列出所有命名空间
      * @param array $Filters 过滤条件
+- 按照【标签】过滤
+   Name: Tags
+   Value:   tagKey:tagVal
+
      * @param boolean $KmsSignPolicy 仅查询启用了 KMS 镜像签名的空间
      */
     function __construct()

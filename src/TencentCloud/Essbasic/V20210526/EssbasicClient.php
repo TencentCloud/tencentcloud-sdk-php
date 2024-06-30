@@ -444,11 +444,10 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 **第二种**: 第三方应用的配置接口打开全第三个应用下的所有自己起开通, 需要**渠道方企业的超管**扫描二维码跳转到电子签小程序签署 <<渠道端下载渠道子客合同功能开通知情同意书>>
 ![image](https://qcloudimg.tencent-cloud.cn/raw/238979ef51dd381ccbdbc755a593debc/channel_DescribeResourceUrlsByFlows_appilications2.png)
- * @method Models\ChannelDescribeOrganizationSealsResponse ChannelDescribeOrganizationSeals(Models\ChannelDescribeOrganizationSealsRequest $req) 此接口（ChannelDescribeOrganizationSeals）查询子客企业电子印章。<br />
-注: 
-1. `查询子客企业电子印章，需要操作者具有管理印章权限`
-2. `客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理`
-3. `此接口只能查询启用的印章`
+ * @method Models\ChannelDescribeOrganizationSealsResponse ChannelDescribeOrganizationSeals(Models\ChannelDescribeOrganizationSealsRequest $req) 此接口查询子企业电子印章。<br />
+
+注：
+1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
  * @method Models\ChannelDescribeRolesResponse ChannelDescribeRoles(Models\ChannelDescribeRolesRequest $req) 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列。
 
 
@@ -692,7 +691,15 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
 2. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateFlowsByTemplates.mp4" target="_blank">【用模板创建签署流程】编写示例视频教程</a><br>
- * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 此接口用于获取创建法人章二维码图片base64
+ * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
+
+**注意**
+1. 该二维码**有效期为7天**，过期后将失效，可重新创建 。
+2. 每个公司**只能有1个法人章**，无法重复创建或者创建多个
+
+法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
  * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
 该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
 

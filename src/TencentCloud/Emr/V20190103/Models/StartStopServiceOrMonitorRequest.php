@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyConfig(StrategyConfig $StrategyConfig) 设置操作策略
  * @method StopParams getStopParams() 获取暂停服务时用的参数
  * @method void setStopParams(StopParams $StopParams) 设置暂停服务时用的参数
+ * @method boolean getKeepMonitorButNotRecoverProcess() 获取当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+ * @method void setKeepMonitorButNotRecoverProcess(boolean $KeepMonitorButNotRecoverProcess) 设置当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $StopParams;
 
     /**
+     * @var boolean 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+     */
+    public $KeepMonitorButNotRecoverProcess;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param string $OpType 操作类型，当前支持
 <li>StartService：启动服务</li>
@@ -84,6 +91,7 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
      * @param OpScope $OpScope 操作范围
      * @param StrategyConfig $StrategyConfig 操作策略
      * @param StopParams $StopParams 暂停服务时用的参数
+     * @param boolean $KeepMonitorButNotRecoverProcess 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
      */
     function __construct()
     {
@@ -119,6 +127,10 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
         if (array_key_exists("StopParams",$param) and $param["StopParams"] !== null) {
             $this->StopParams = new StopParams();
             $this->StopParams->deserialize($param["StopParams"]);
+        }
+
+        if (array_key_exists("KeepMonitorButNotRecoverProcess",$param) and $param["KeepMonitorButNotRecoverProcess"] !== null) {
+            $this->KeepMonitorButNotRecoverProcess = $param["KeepMonitorButNotRecoverProcess"];
         }
     }
 }

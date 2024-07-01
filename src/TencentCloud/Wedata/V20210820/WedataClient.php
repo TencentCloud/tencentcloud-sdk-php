@@ -101,6 +101,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeDrInstancePageResponse DescribeDrInstancePage(Models\DescribeDrInstancePageRequest $req) 分页查询试运行实例列表
  * @method Models\DescribeDsFolderTreeResponse DescribeDsFolderTree(Models\DescribeDsFolderTreeRequest $req) 查询目录树
  * @method Models\DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(Models\DescribeDsParentFolderTreeRequest $req) 查询父目录树，用于工作流、任务定位
+ * @method Models\DescribeDutyScheduleDetailsResponse DescribeDutyScheduleDetails(Models\DescribeDutyScheduleDetailsRequest $req) 获取值班日历
+ * @method Models\DescribeDutyScheduleListResponse DescribeDutyScheduleList(Models\DescribeDutyScheduleListRequest $req) 获取值班表列表
  * @method Models\DescribeEventResponse DescribeEvent(Models\DescribeEventRequest $req) 根据项目ID和事件名称查看事件详情
  * @method Models\DescribeEventCasesResponse DescribeEventCases(Models\DescribeEventCasesRequest $req) 根据条件查找事件实例
  * @method Models\DescribeEventConsumeTasksResponse DescribeEventConsumeTasks(Models\DescribeEventConsumeTasksRequest $req) 查看事件实例的消费任务

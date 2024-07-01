@@ -36,11 +36,13 @@ class DescribeManagerDetailRequest extends AbstractModel
 
     /**
      * @var integer 分页每页数量
+     * @deprecated
      */
     public $Limit;
 
     /**
      * @var integer 分页偏移量
+     * @deprecated
      */
     public $Offset;
 

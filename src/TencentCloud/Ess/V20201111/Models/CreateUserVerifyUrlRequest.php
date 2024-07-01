@@ -32,6 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCardType(string $IdCardType) 设置证件类型，目前只支持身份证类型：ID_CARD
  * @method string getMobile() 获取要实名的手机号，兼容带+86的格式
  * @method void setMobile(string $Mobile) 设置要实名的手机号，兼容带+86的格式
+ * @method string getJumpUrl() 获取实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+ * @method void setJumpUrl(string $JumpUrl) 设置实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
  * @method string getEndpoint() 获取要跳转的链接类型
 
 - HTTP：
@@ -43,7 +53,13 @@ use TencentCloud\Common\AbstractModel;
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
  * @method void setEndpoint(string $Endpoint) 设置要跳转的链接类型
 
 - HTTP：
@@ -55,19 +71,25 @@ use TencentCloud\Common\AbstractModel;
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
  * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
  * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
  * @method string getUserData() 获取在用户完成实名认证后，其自定义数据将通过[企业引导个人实名认证后回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E4%BA%8C-%E4%BC%81%E4%B8%9A%E5%BC%95%E5%AF%BC%E4%B8%AA%E4%BA%BA%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E5%90%8E%E5%9B%9E%E8%B0%83)返回，以便用户确认其个人数据信息。请注意，自定义数据的字符长度上限为1000，且必须采用base64编码格式。
@@ -102,6 +124,15 @@ class CreateUserVerifyUrlRequest extends AbstractModel
     public $Mobile;
 
     /**
+     * @var string 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+     */
+    public $JumpUrl;
+
+    /**
      * @var string 要跳转的链接类型
 
 - HTTP：
@@ -113,7 +144,13 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
      */
     public $Endpoint;
 
@@ -122,7 +159,7 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      */
@@ -140,6 +177,11 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 身份证号码如果有x的话，统一传大写X
      * @param string $IdCardType 证件类型，目前只支持身份证类型：ID_CARD
      * @param string $Mobile 要实名的手机号，兼容带+86的格式
+     * @param string $JumpUrl 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
      * @param string $Endpoint 要跳转的链接类型
 
 - HTTP：
@@ -151,12 +193,18 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
      * @param boolean $AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      * @param string $UserData 在用户完成实名认证后，其自定义数据将通过[企业引导个人实名认证后回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E4%BA%8C-%E4%BC%81%E4%B8%9A%E5%BC%95%E5%AF%BC%E4%B8%AA%E4%BA%BA%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E5%90%8E%E5%9B%9E%E8%B0%83)返回，以便用户确认其个人数据信息。请注意，自定义数据的字符长度上限为1000，且必须采用base64编码格式。
@@ -193,6 +241,10 @@ class CreateUserVerifyUrlRequest extends AbstractModel
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
+            $this->JumpUrl = $param["JumpUrl"];
         }
 
         if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {

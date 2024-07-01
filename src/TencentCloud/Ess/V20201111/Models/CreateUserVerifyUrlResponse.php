@@ -32,8 +32,14 @@ use TencentCloud\Common\AbstractModel;
 - 如果EndPoint是HTTP_SHORT_URL，
 得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
 
+- 如果EndPoint是H5，
+得到的链接类似于 https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb，点击后会跳转到腾讯电子签H5页面进行签署
 
-注： 生成的链路后面不能再增加参数
+- 如果EndPoint是H5_SHORT_URL，
+得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签H5页面进行签署
+
+
+`注：` <font color="red">生成的链路后面不能再增加参数</font>
 示例值：https://essurl.cn/2n**42Nd
  * @method void setUserVerifyUrl(string $UserVerifyUrl) 设置腾讯电子签小程序的实名认证链接。
 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
@@ -47,8 +53,14 @@ use TencentCloud\Common\AbstractModel;
 - 如果EndPoint是HTTP_SHORT_URL，
 得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
 
+- 如果EndPoint是H5，
+得到的链接类似于 https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb，点击后会跳转到腾讯电子签H5页面进行签署
 
-注： 生成的链路后面不能再增加参数
+- 如果EndPoint是H5_SHORT_URL，
+得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签H5页面进行签署
+
+
+`注：` <font color="red">生成的链路后面不能再增加参数</font>
 示例值：https://essurl.cn/2n**42Nd
  * @method integer getExpireTime() 获取链接过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置链接过期时间
@@ -72,8 +84,14 @@ class CreateUserVerifyUrlResponse extends AbstractModel
 - 如果EndPoint是HTTP_SHORT_URL，
 得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
 
+- 如果EndPoint是H5，
+得到的链接类似于 https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb，点击后会跳转到腾讯电子签H5页面进行签署
 
-注： 生成的链路后面不能再增加参数
+- 如果EndPoint是H5_SHORT_URL，
+得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签H5页面进行签署
+
+
+`注：` <font color="red">生成的链路后面不能再增加参数</font>
 示例值：https://essurl.cn/2n**42Nd
      */
     public $UserVerifyUrl;
@@ -106,8 +124,14 @@ class CreateUserVerifyUrlResponse extends AbstractModel
 - 如果EndPoint是HTTP_SHORT_URL，
 得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
 
+- 如果EndPoint是H5，
+得到的链接类似于 https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb，点击后会跳转到腾讯电子签H5页面进行签署
 
-注： 生成的链路后面不能再增加参数
+- 如果EndPoint是H5_SHORT_URL，
+得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签H5页面进行签署
+
+
+`注：` <font color="red">生成的链路后面不能再增加参数</font>
 示例值：https://essurl.cn/2n**42Nd
      * @param integer $ExpireTime 链接过期时间
      * @param string $MiniAppId 小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回

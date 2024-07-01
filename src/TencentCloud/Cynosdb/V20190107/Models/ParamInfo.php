@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunc(string $Func) 设置函数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamInfo extends AbstractModel
 {
@@ -144,6 +148,12 @@ class ParamInfo extends AbstractModel
     public $Func;
 
     /**
+     * @var string 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FuncPattern;
+
+    /**
      * @param string $CurrentValue 当前值
      * @param string $Default 默认值
      * @param array $EnumValue 参数为enum/string/bool时，可选值列表
@@ -163,6 +173,8 @@ class ParamInfo extends AbstractModel
      * @param boolean $IsFunc 是否为函数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Func 函数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FuncPattern 支持公式的参数的默认公式样式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -237,6 +249,10 @@ class ParamInfo extends AbstractModel
 
         if (array_key_exists("Func",$param) and $param["Func"] !== null) {
             $this->Func = $param["Func"];
+        }
+
+        if (array_key_exists("FuncPattern",$param) and $param["FuncPattern"] !== null) {
+            $this->FuncPattern = $param["FuncPattern"];
         }
     }
 }

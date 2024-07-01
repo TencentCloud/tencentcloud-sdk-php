@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) 设置是否支持手动发起快照备份
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsSupportTransparentDataEncryption() 获取是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) 设置是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNoSupportTransparentDataEncryptionReason() 获取不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ability extends AbstractModel
 {
@@ -68,6 +76,18 @@ class Ability extends AbstractModel
     public $IsSupportManualSnapshot;
 
     /**
+     * @var string 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportTransparentDataEncryption;
+
+    /**
+     * @var string 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoSupportTransparentDataEncryptionReason;
+
+    /**
      * @param string $IsSupportSlaveZone 是否支持从可用区
      * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,6 +95,10 @@ class Ability extends AbstractModel
      * @param string $NonsupportRoReason 不支持RO实例的原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSupportManualSnapshot 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsSupportTransparentDataEncryption 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +132,14 @@ class Ability extends AbstractModel
 
         if (array_key_exists("IsSupportManualSnapshot",$param) and $param["IsSupportManualSnapshot"] !== null) {
             $this->IsSupportManualSnapshot = $param["IsSupportManualSnapshot"];
+        }
+
+        if (array_key_exists("IsSupportTransparentDataEncryption",$param) and $param["IsSupportTransparentDataEncryption"] !== null) {
+            $this->IsSupportTransparentDataEncryption = $param["IsSupportTransparentDataEncryption"];
+        }
+
+        if (array_key_exists("NoSupportTransparentDataEncryptionReason",$param) and $param["NoSupportTransparentDataEncryptionReason"] !== null) {
+            $this->NoSupportTransparentDataEncryptionReason = $param["NoSupportTransparentDataEncryptionReason"];
         }
     }
 }

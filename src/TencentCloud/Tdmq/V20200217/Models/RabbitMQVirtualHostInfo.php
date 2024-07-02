@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHostStatistics(RabbitMQVirtualHostStatistics $VirtualHostStatistics) 设置vhost概览统计信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTraceFlag() 获取消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceFlag(boolean $TraceFlag) 设置消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取vhost状态，与原生控制台对应，有running、partial、stopped、unknown
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置vhost状态，与原生控制台对应，有running、partial、stopped、unknown
@@ -108,6 +112,12 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $VirtualHostStatistics;
 
     /**
+     * @var boolean 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceFlag;
+
+    /**
      * @var string vhost状态，与原生控制台对应，有running、partial、stopped、unknown
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -149,6 +159,8 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQVirtualHostStatistics $VirtualHostStatistics vhost概览统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TraceFlag 消息轨迹开关,true打开,false关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
 注意：此字段可能返回 null，表示取不到有效值。
@@ -201,6 +213,10 @@ class RabbitMQVirtualHostInfo extends AbstractModel
         if (array_key_exists("VirtualHostStatistics",$param) and $param["VirtualHostStatistics"] !== null) {
             $this->VirtualHostStatistics = new RabbitMQVirtualHostStatistics();
             $this->VirtualHostStatistics->deserialize($param["VirtualHostStatistics"]);
+        }
+
+        if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
+            $this->TraceFlag = $param["TraceFlag"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

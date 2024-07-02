@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置资源标签列表
  * @method integer getBandwidth() 获取公网带宽大小，单位 M
  * @method void setBandwidth(integer $Bandwidth) 设置公网带宽大小，单位 M
+ * @method boolean getEnablePublicAccess() 获取是否打开公网接入，不传默认为false
+ * @method void setEnablePublicAccess(boolean $EnablePublicAccess) 设置是否打开公网接入，不传默认为false
  */
 class CreateRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var boolean 是否打开公网接入，不传默认为false
+     */
+    public $EnablePublicAccess;
+
+    /**
      * @param array $ZoneIds 可用区
      * @param string $VpcId 私有网络VpcId
      * @param string $SubnetId 私有网络SubnetId
@@ -144,6 +151,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @param boolean $IsIntl 是否国际站请求，默认 false
      * @param array $ResourceTags 资源标签列表
      * @param integer $Bandwidth 公网带宽大小，单位 M
+     * @param boolean $EnablePublicAccess 是否打开公网接入，不传默认为false
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("EnablePublicAccess",$param) and $param["EnablePublicAccess"] !== null) {
+            $this->EnablePublicAccess = $param["EnablePublicAccess"];
         }
     }
 }

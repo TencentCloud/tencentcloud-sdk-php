@@ -44,6 +44,8 @@ use TencentCloud\Ims\V20201229\Models as Models;
 - 图片文件链接支持的传输协议：HTTP、HTTPS；
 - 若传入图片文件的访问链接，则需要注意**图片下载时间限制为3秒**，为保障被检测图片的稳定性和可靠性，建议您使用腾讯云COS存储或者CDN缓存等；
 - 默认接口请求频率限制：**20次/秒**，超过此调用频率则会报错。
+- ### 接口回调格式：
+- 图片异步检测接口回调格式同[图片同步检测接口输出参数](https://cloud.tencent.com/document/product/1125/53273#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
  * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 本接口（Image Moderation, IM）用于提交图片文件进行同步智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通图片内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
 ### 接口使用说明：
 - 前往“[内容安全控制台-图片内容安全](https://console.cloud.tencent.com/cms)”开启使用图片内容安全服务，首次开通服务的用户可免费领用试用套餐包，包含**3000张图片**识别额度，有效期为15天。

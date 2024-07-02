@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 端口视角的端口风险对象
  *
- * @method integer getNoHandleCount() 获取影响资产
- * @method void setNoHandleCount(integer $NoHandleCount) 设置影响资产
+ * @method integer getNoHandleCount() 获取未处理数量
+ * @method void setNoHandleCount(integer $NoHandleCount) 设置未处理数量
  * @method string getLevel() 获取风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method void setLevel(string $Level) 设置风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
  * @method string getProtocol() 获取协议
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method integer getSuggestion() 获取处置建议,0保持现状、1限制访问、2封禁端口
  * @method void setSuggestion(integer $Suggestion) 设置处置建议,0保持现状、1限制访问、2封禁端口
- * @method string getAffectAssetCount() 获取状态，0未处理、1已处置、2已忽略
- * @method void setAffectAssetCount(string $AffectAssetCount) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
- * @method string getFrom() 获取资产子类型
- * @method void setFrom(string $From) 设置资产子类型
+ * @method string getAffectAssetCount() 获取影响资产数量
+ * @method void setAffectAssetCount(string $AffectAssetCount) 设置影响资产数量
+ * @method string getId() 获取ID
+ * @method void setId(string $Id) 设置ID
+ * @method string getFrom() 获取识别来源
+ * @method void setFrom(string $From) 设置识别来源
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getAppId() 获取用户appid
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class PortViewPortRisk extends AbstractModel
 {
     /**
-     * @var integer 影响资产
+     * @var integer 未处理数量
      */
     public $NoHandleCount;
 
@@ -100,17 +100,17 @@ class PortViewPortRisk extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 状态，0未处理、1已处置、2已忽略
+     * @var string 影响资产数量
      */
     public $AffectAssetCount;
 
     /**
-     * @var string 资产唯一id
+     * @var string ID
      */
     public $Id;
 
     /**
-     * @var string 资产子类型
+     * @var string 识别来源
      */
     public $From;
 
@@ -142,7 +142,7 @@ class PortViewPortRisk extends AbstractModel
     public $Service;
 
     /**
-     * @param integer $NoHandleCount 影响资产
+     * @param integer $NoHandleCount 未处理数量
      * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $Protocol 协议
      * @param string $Component 组件
@@ -150,9 +150,9 @@ class PortViewPortRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Suggestion 处置建议,0保持现状、1限制访问、2封禁端口
-     * @param string $AffectAssetCount 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
-     * @param string $From 资产子类型
+     * @param string $AffectAssetCount 影响资产数量
+     * @param string $Id ID
+     * @param string $From 识别来源
      * @param string $Index 前端索引
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称

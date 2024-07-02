@@ -18,10 +18,10 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * https 服务端证书配置
+ * https 证书配置。
  *
- * @method string getCertId() 获取服务器证书 ID。
- * @method void setCertId(string $CertId) 设置服务器证书 ID。
+ * @method string getCertId() 获取证书 ID。
+ * @method void setCertId(string $CertId) 设置证书 ID。
  * @method string getAlias() 获取证书备注名。
  * @method void setAlias(string $Alias) 设置证书备注名。
  * @method string getType() 获取证书类型，取值有：
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class CertificateInfo extends AbstractModel
 {
     /**
-     * @var string 服务器证书 ID。
+     * @var string 证书 ID。
      */
     public $CertId;
 
@@ -97,7 +97,7 @@ class CertificateInfo extends AbstractModel
     public $Status;
 
     /**
-     * @param string $CertId 服务器证书 ID。
+     * @param string $CertId 证书 ID。
      * @param string $Alias 证书备注名。
      * @param string $Type 证书类型，取值有：
 <li>default：默认证书；</li>

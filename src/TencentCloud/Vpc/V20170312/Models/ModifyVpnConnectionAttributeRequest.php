@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
  * @method string getCustomerGatewayId() 获取对端网关ID，4.0及以上网关下的通道支持更新。
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID，4.0及以上网关下的通道支持更新。
+ * @method HealthCheckConfig getHealthCheckConfig() 获取健康检查配置
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置健康检查配置
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $CustomerGatewayId;
 
     /**
+     * @var HealthCheckConfig 健康检查配置
+     */
+    public $HealthCheckConfig;
+
+    /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      * @param string $VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      * @param string $PreShareKey 预共享密钥。
@@ -136,6 +143,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
      * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
      * @param string $CustomerGatewayId 对端网关ID，4.0及以上网关下的通道支持更新。
+     * @param HealthCheckConfig $HealthCheckConfig 健康检查配置
      */
     function __construct()
     {
@@ -211,6 +219,11 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
 
         if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
             $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        }
+
+        if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
+            $this->HealthCheckConfig = new HealthCheckConfig();
+            $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
         }
     }
 }

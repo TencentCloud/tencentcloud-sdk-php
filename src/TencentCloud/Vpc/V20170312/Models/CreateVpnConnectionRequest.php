@@ -60,6 +60,8 @@ CCN VPN 形的通道 可以不传VPCID
  * @method void setRoute(CreateVpnConnRoute $Route) 设置创建通道路由信息。
  * @method BgpConfig getBgpConfig() 获取BGP配置。
  * @method void setBgpConfig(BgpConfig $BgpConfig) 设置BGP配置。
+ * @method HealthCheckConfig getHealthCheckConfig() 获取健康检查NQA配置。
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置健康检查NQA配置。
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ CCN VPN 形的通道 可以不传VPCID
     public $BgpConfig;
 
     /**
+     * @var HealthCheckConfig 健康检查NQA配置。
+     */
+    public $HealthCheckConfig;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      * @param string $VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
@@ -180,6 +187,7 @@ CCN VPN 形的通道 可以不传VPCID
      * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
      * @param CreateVpnConnRoute $Route 创建通道路由信息。
      * @param BgpConfig $BgpConfig BGP配置。
+     * @param HealthCheckConfig $HealthCheckConfig 健康检查NQA配置。
      */
     function __construct()
     {
@@ -282,6 +290,11 @@ CCN VPN 形的通道 可以不传VPCID
         if (array_key_exists("BgpConfig",$param) and $param["BgpConfig"] !== null) {
             $this->BgpConfig = new BgpConfig();
             $this->BgpConfig->deserialize($param["BgpConfig"]);
+        }
+
+        if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
+            $this->HealthCheckConfig = new HealthCheckConfig();
+            $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
         }
     }
 }

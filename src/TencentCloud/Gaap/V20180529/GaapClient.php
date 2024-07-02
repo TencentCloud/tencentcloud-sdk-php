@@ -129,6 +129,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\OpenSecurityPolicyResponse OpenSecurityPolicy(Models\OpenSecurityPolicyRequest $req) 开启安全策略
  * @method Models\RemoveRealServersResponse RemoveRealServers(Models\RemoveRealServersRequest $req) 删除已添加的源站(服务器)IP或域名
  * @method Models\SetAuthenticationResponse SetAuthentication(Models\SetAuthenticationRequest $req) 本接口（SetAuthentication）用于通道的高级认证配置，包括认证方式选择，以及各种认证方式对应的证书选择。仅支持Version3.0的通道。
+ * @method Models\SetTlsVersionResponse SetTlsVersion(Models\SetTlsVersionRequest $req) 设置监听器TLS配置
  */
 
 class GaapClient extends AbstractClient

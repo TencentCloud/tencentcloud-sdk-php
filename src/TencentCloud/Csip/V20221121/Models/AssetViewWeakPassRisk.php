@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
  * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
+ * @method string getId() 获取ID，处理风险使用
+ * @method void setId(string $Id) 设置ID，处理风险使用
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getInstanceId() 获取实例id
@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVULURL(string $VULURL) 设置漏洞url
  * @method string getFix() 获取修复建议
  * @method void setFix(string $Fix) 设置修复建议
- * @method string getPayload() 获取负载
- * @method void setPayload(string $Payload) 设置负载
+ * @method string getPayload() 获取证明
+ * @method void setPayload(string $Payload) 设置证明
  */
 class AssetViewWeakPassRisk extends AbstractModel
 {
@@ -110,7 +110,7 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string 资产唯一id
+     * @var string ID，处理风险使用
      */
     public $Id;
 
@@ -172,7 +172,7 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $Fix;
 
     /**
-     * @var string 负载
+     * @var string 证明
      */
     public $Payload;
 
@@ -185,7 +185,7 @@ class AssetViewWeakPassRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Status 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
+     * @param string $Id ID，处理风险使用
      * @param string $Index 前端索引
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
@@ -199,7 +199,7 @@ class AssetViewWeakPassRisk extends AbstractModel
      * @param string $VULType 漏洞类型
      * @param string $VULURL 漏洞url
      * @param string $Fix 修复建议
-     * @param string $Payload 负载
+     * @param string $Payload 证明
      */
     function __construct()
     {

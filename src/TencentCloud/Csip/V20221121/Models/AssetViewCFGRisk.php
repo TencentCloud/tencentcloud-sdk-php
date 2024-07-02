@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(string $From) 设置来源
  * @method integer getStatus() 获取状态
  * @method void setStatus(integer $Status) 设置状态
- * @method string getCFGSTD() 获取-
- * @method void setCFGSTD(string $CFGSTD) 设置-
+ * @method string getCFGSTD() 获取相关规范
+ * @method void setCFGSTD(string $CFGSTD) 设置相关规范
  * @method string getCFGDescribe() 获取配置详情
  * @method void setCFGDescribe(string $CFGDescribe) 设置配置详情
  * @method string getCFGFix() 获取修复建议
@@ -128,7 +128,7 @@ class AssetViewCFGRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string -
+     * @var string 相关规范
      */
     public $CFGSTD;
 
@@ -182,7 +182,7 @@ class AssetViewCFGRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $From 来源
      * @param integer $Status 状态
-     * @param string $CFGSTD -
+     * @param string $CFGSTD 相关规范
      * @param string $CFGDescribe 配置详情
      * @param string $CFGFix 修复建议
      * @param string $CFGHelpURL 帮助文档链接

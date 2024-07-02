@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMode() 获取配置证书的模式，取值有： <li>disable：不配置证书；</li> <li>eofreecert：配置 EdgeOne 免费证书；</li> <li>sslcert：配置 SSL 证书。</li>
  * @method void setMode(string $Mode) 设置配置证书的模式，取值有： <li>disable：不配置证书；</li> <li>eofreecert：配置 EdgeOne 免费证书；</li> <li>sslcert：配置 SSL 证书。</li>
- * @method array getList() 获取证书列表。
+ * @method array getList() 获取服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置证书列表。
+ * @method void setList(array $List) 设置服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MutualTLS getClientCertInfo() 获取边缘双向认证配置。
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置边缘双向认证配置。
  */
 class AccelerationDomainCertificate extends AbstractModel
 {
@@ -35,15 +37,21 @@ class AccelerationDomainCertificate extends AbstractModel
     public $Mode;
 
     /**
-     * @var array 证书列表。
+     * @var array 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
+     * @var MutualTLS 边缘双向认证配置。
+     */
+    public $ClientCertInfo;
+
+    /**
      * @param string $Mode 配置证书的模式，取值有： <li>disable：不配置证书；</li> <li>eofreecert：配置 EdgeOne 免费证书；</li> <li>sslcert：配置 SSL 证书。</li>
-     * @param array $List 证书列表。
+     * @param array $List 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param MutualTLS $ClientCertInfo 边缘双向认证配置。
      */
     function __construct()
     {
@@ -69,6 +77,11 @@ class AccelerationDomainCertificate extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+            $this->ClientCertInfo = new MutualTLS();
+            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
         }
     }
 }

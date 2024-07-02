@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method array getContent() 获取-
- * @method void setContent(array $Content) 设置-
+ * @method array getContent() 获取资产
+ * @method void setContent(array $Content) 设置资产
  * @method integer getRetainPath() 获取是否保留路径配置，1：保留，其他：不保留，默认不传为不保留
  * @method void setRetainPath(integer $RetainPath) 设置是否保留路径配置，1：保留，其他：不保留，默认不传为不保留
  * @method integer getIgnoreAsset() 获取以后是否忽略该资产，，1：忽略，其他：不忽略，默认不传为忽略
@@ -41,7 +41,7 @@ class DeleteDomainAndIpRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array -
+     * @var array 资产
      */
     public $Content;
 
@@ -67,7 +67,7 @@ class DeleteDomainAndIpRequest extends AbstractModel
 
     /**
      * @param array $MemberId 集团账号的成员id
-     * @param array $Content -
+     * @param array $Content 资产
      * @param integer $RetainPath 是否保留路径配置，1：保留，其他：不保留，默认不传为不保留
      * @param integer $IgnoreAsset 以后是否忽略该资产，，1：忽略，其他：不忽略，默认不传为忽略
      * @param array $Tags 资产标签

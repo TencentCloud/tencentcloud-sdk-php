@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
  * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
+ * @method string getId() 获取ID,处理风险使用
+ * @method void setId(string $Id) 设置ID,处理风险使用
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getInstanceId() 获取实例id
@@ -91,7 +91,7 @@ class WebsiteRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string 资产唯一id
+     * @var string ID,处理风险使用
      */
     public $Id;
 
@@ -168,7 +168,7 @@ class WebsiteRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Status 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
+     * @param string $Id ID,处理风险使用
      * @param string $Index 前端索引
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名

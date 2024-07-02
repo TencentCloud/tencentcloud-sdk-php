@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildInstanceType(string $ChildInstanceType) 设置数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、例如：只读实例传ro、读写实例传rw
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSetId() 获取tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetId(string $SetId) 设置tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
@@ -314,6 +318,12 @@ class Endpoint extends AbstractModel
     public $ChildInstanceType;
 
     /**
+     * @var string tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetId;
+
+    /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role 节点类型，proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填
@@ -371,6 +381,8 @@ class Endpoint extends AbstractModel
      * @param string $ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、例如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SetId tdsql的分片id。如节点类型为set必填。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +512,10 @@ class Endpoint extends AbstractModel
 
         if (array_key_exists("ChildInstanceType",$param) and $param["ChildInstanceType"] !== null) {
             $this->ChildInstanceType = $param["ChildInstanceType"];
+        }
+
+        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
+            $this->SetId = $param["SetId"];
         }
     }
 }

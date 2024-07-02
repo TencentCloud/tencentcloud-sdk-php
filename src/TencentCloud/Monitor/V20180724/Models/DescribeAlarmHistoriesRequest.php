@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIds(array $PolicyIds) 设置根据告警策略 Id 列表搜索
  * @method array getAlarmLevels() 获取告警等级,取值范围：Remind、Serious、Warn
  * @method void setAlarmLevels(array $AlarmLevels) 设置告警等级,取值范围：Remind、Serious、Warn
+ * @method array getConvergenceHistoryIDs() 获取收敛历史的唯一id
+ * @method void setConvergenceHistoryIDs(array $ConvergenceHistoryIDs) 设置收敛历史的唯一id
  */
 class DescribeAlarmHistoriesRequest extends AbstractModel
 {
@@ -163,6 +165,11 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $AlarmLevels;
 
     /**
+     * @var array 收敛历史的唯一id
+     */
+    public $ConvergenceHistoryIDs;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -184,6 +191,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      * @param array $PolicyIds 根据告警策略 Id 列表搜索
      * @param array $AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
+     * @param array $ConvergenceHistoryIDs 收敛历史的唯一id
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
 
         if (array_key_exists("AlarmLevels",$param) and $param["AlarmLevels"] !== null) {
             $this->AlarmLevels = $param["AlarmLevels"];
+        }
+
+        if (array_key_exists("ConvergenceHistoryIDs",$param) and $param["ConvergenceHistoryIDs"] !== null) {
+            $this->ConvergenceHistoryIDs = $param["ConvergenceHistoryIDs"];
         }
     }
 }

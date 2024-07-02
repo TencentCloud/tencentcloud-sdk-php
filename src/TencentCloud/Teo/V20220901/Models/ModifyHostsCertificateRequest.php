@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method array getHosts() 获取需要修改证书配置的加速域名。
  * @method void setHosts(array $Hosts) 设置需要修改证书配置的加速域名。
- * @method string getMode() 获取配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
- * @method void setMode(string $Mode) 设置配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
- * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
- * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+ * @method string getMode() 获取配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
+ * @method void setMode(string $Mode) 设置配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
+ * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+ * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
  * @method string getApplyType() 获取托管类型，取值有：
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
@@ -42,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
+ * @method MutualTLS getClientCertInfo() 获取边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -56,15 +62,16 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $Hosts;
 
     /**
-     * @var string 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+     * @var string 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
      */
     public $Mode;
 
     /**
-     * @var array SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * @var array SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      */
     public $ServerCertInfo;
 
@@ -78,17 +85,26 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ApplyType;
 
     /**
+     * @var MutualTLS 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+     */
+    public $ClientCertInfo;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param array $Hosts 需要修改证书配置的加速域名。
-     * @param string $Mode 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
-     * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * @param string $Mode 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
+     * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      * @param string $ApplyType 托管类型，取值有：
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
+     * @param MutualTLS $ClientCertInfo 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
      */
     function __construct()
     {
@@ -126,6 +142,11 @@ class ModifyHostsCertificateRequest extends AbstractModel
 
         if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
             $this->ApplyType = $param["ApplyType"];
+        }
+
+        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+            $this->ClientCertInfo = new MutualTLS();
+            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
         }
     }
 }

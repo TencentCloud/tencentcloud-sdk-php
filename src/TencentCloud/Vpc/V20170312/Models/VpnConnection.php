@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBgpConfig(BgpConfigAndAsn $BgpConfig) 设置Bgp配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HealthCheckConfig getHealthCheckConfig() 获取Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpnConnection extends AbstractModel
 {
@@ -214,6 +218,12 @@ class VpnConnection extends AbstractModel
     public $BgpConfig;
 
     /**
+     * @var HealthCheckConfig Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckConfig;
+
+    /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
      * @param string $VpcId VPC实例ID。
@@ -243,6 +253,8 @@ class VpnConnection extends AbstractModel
      * @param string $NegotiationType 协商类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BgpConfigAndAsn $BgpConfig Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckConfig $HealthCheckConfig Nqa配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -369,6 +381,11 @@ class VpnConnection extends AbstractModel
         if (array_key_exists("BgpConfig",$param) and $param["BgpConfig"] !== null) {
             $this->BgpConfig = new BgpConfigAndAsn();
             $this->BgpConfig->deserialize($param["BgpConfig"]);
+        }
+
+        if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
+            $this->HealthCheckConfig = new HealthCheckConfig();
+            $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
         }
     }
 }

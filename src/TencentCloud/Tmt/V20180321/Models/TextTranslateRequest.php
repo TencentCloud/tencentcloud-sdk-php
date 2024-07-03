@@ -106,6 +106,10 @@ hi：印地语
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method string getUntranslatedText() 获取用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
  * @method void setUntranslatedText(string $UntranslatedText) 设置用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+ * @method array getTermRepoIDList() 获取需要使用的术语库列表
+ * @method void setTermRepoIDList(array $TermRepoIDList) 设置需要使用的术语库列表
+ * @method array getSentRepoIDList() 获取需要使用的例句库列表
+ * @method void setSentRepoIDList(array $SentRepoIDList) 设置需要使用的例句库列表
  */
 class TextTranslateRequest extends AbstractModel
 {
@@ -173,6 +177,16 @@ hi：印地语
     public $UntranslatedText;
 
     /**
+     * @var array 需要使用的术语库列表
+     */
+    public $TermRepoIDList;
+
+    /**
+     * @var array 需要使用的例句库列表
+     */
+    public $SentRepoIDList;
+
+    /**
      * @param string $SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于6000字符。
      * @param string $Source 源语言，支持：
 auto：自动识别（识别为一种语言）
@@ -216,6 +230,8 @@ hi：印地语
 <li>hi（印地语）：en（英语）</li>
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param string $UntranslatedText 用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+     * @param array $TermRepoIDList 需要使用的术语库列表
+     * @param array $SentRepoIDList 需要使用的例句库列表
      */
     function __construct()
     {
@@ -248,6 +264,14 @@ hi：印地语
 
         if (array_key_exists("UntranslatedText",$param) and $param["UntranslatedText"] !== null) {
             $this->UntranslatedText = $param["UntranslatedText"];
+        }
+
+        if (array_key_exists("TermRepoIDList",$param) and $param["TermRepoIDList"] !== null) {
+            $this->TermRepoIDList = $param["TermRepoIDList"];
+        }
+
+        if (array_key_exists("SentRepoIDList",$param) and $param["SentRepoIDList"] !== null) {
+            $this->SentRepoIDList = $param["SentRepoIDList"];
         }
     }
 }

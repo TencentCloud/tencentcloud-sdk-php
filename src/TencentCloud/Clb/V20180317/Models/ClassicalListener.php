@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthNum(integer $HealthNum) 设置健康阈值
  * @method integer getUnhealthNum() 获取不健康阈值
  * @method void setUnhealthNum(integer $UnhealthNum) 设置不健康阈值
- * @method string getHttpHash() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
- * @method void setHttpHash(string $HttpHash) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+ * @method string getHttpHash() 获取传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+ * @method void setHttpHash(string $HttpHash) 设置传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
  * @method integer getHttpCode() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
  * @method void setHttpCode(integer $HttpCode) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
  * @method string getHttpCheckPath() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
@@ -115,7 +115,7 @@ class ClassicalListener extends AbstractModel
     public $UnhealthNum;
 
     /**
-     * @var string 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @var string 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
      */
     public $HttpHash;
 
@@ -161,7 +161,7 @@ class ClassicalListener extends AbstractModel
      * @param integer $IntervalTime 检查间隔
      * @param integer $HealthNum 健康阈值
      * @param integer $UnhealthNum 不健康阈值
-     * @param string $HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @param string $HttpHash 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
      * @param integer $HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      * @param string $HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      * @param string $SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式

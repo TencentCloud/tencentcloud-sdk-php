@@ -46,6 +46,9 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 - 查询训练写真模型任务：根据写真模型 ID 查询训练任务的处理状态、处理结果。
 
 默认接口请求频率限制：20次/秒。
+ * @method Models\ReplaceBackgroundResponse ReplaceBackground(Models\ReplaceBackgroundRequest $req) 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
+
+商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SubmitDrawPortraitJobResponse SubmitDrawPortraitJob(Models\SubmitDrawPortraitJobRequest $req) AI 写真提供 AI 写真形象照的训练与生成能力，分为上传训练图片、训练模型、生成图片3个环节，需要依次调用对应接口。
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 生成图片分为提交任务和查询任务2个接口。

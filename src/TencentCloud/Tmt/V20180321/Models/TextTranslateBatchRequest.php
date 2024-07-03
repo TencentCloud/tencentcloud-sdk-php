@@ -104,6 +104,10 @@ hi：印地语
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method array getSourceTextList() 获取待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
  * @method void setSourceTextList(array $SourceTextList) 设置待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
+ * @method array getTermRepoIDList() 获取需要使用的术语库列表
+ * @method void setTermRepoIDList(array $TermRepoIDList) 设置需要使用的术语库列表
+ * @method array getSentRepoIDList() 获取需要使用的例句库列表
+ * @method void setSentRepoIDList(array $SentRepoIDList) 设置需要使用的例句库列表
  */
 class TextTranslateBatchRequest extends AbstractModel
 {
@@ -166,6 +170,16 @@ hi：印地语
     public $SourceTextList;
 
     /**
+     * @var array 需要使用的术语库列表
+     */
+    public $TermRepoIDList;
+
+    /**
+     * @var array 需要使用的例句库列表
+     */
+    public $SentRepoIDList;
+
+    /**
      * @param string $Source 源语言，支持： 
 auto：自动识别（识别为一种语言）
 zh：简体中文
@@ -208,6 +222,8 @@ hi：印地语
 <li>hi（印地语）：en（英语）</li>
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param array $SourceTextList 待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
+     * @param array $TermRepoIDList 需要使用的术语库列表
+     * @param array $SentRepoIDList 需要使用的例句库列表
      */
     function __construct()
     {
@@ -236,6 +252,14 @@ hi：印地语
 
         if (array_key_exists("SourceTextList",$param) and $param["SourceTextList"] !== null) {
             $this->SourceTextList = $param["SourceTextList"];
+        }
+
+        if (array_key_exists("TermRepoIDList",$param) and $param["TermRepoIDList"] !== null) {
+            $this->TermRepoIDList = $param["TermRepoIDList"];
+        }
+
+        if (array_key_exists("SentRepoIDList",$param) and $param["SentRepoIDList"] !== null) {
+            $this->SentRepoIDList = $param["SentRepoIDList"];
         }
     }
 }

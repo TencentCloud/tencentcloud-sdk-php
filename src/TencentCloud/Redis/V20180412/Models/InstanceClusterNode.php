@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例节点类型
  *
- * @method string getName() 获取节点名称。
- * @method void setName(string $Name) 设置节点名称。
+ * @method string getName() 获取节点组名称。
+ * @method void setName(string $Name) 设置节点组名称。
  * @method string getRunId() 获取实例运行时节点 ID。
  * @method void setRunId(string $RunId) 设置实例运行时节点 ID。
  * @method integer getRole() 获取集群角色。
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceClusterNode extends AbstractModel
 {
     /**
-     * @var string 节点名称。
+     * @var string 节点组名称。
      */
     public $Name;
 
@@ -136,7 +136,7 @@ class InstanceClusterNode extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @param string $Name 节点名称。
+     * @param string $Name 节点组名称。
      * @param string $RunId 实例运行时节点 ID。
      * @param integer $Role 集群角色。
 - 0：master。

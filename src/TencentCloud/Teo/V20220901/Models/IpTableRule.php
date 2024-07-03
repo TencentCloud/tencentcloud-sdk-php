@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP黑白名单详细规则
+ * 自定义规则-基础访问管控配置。
  *
  * @method string getAction() 获取动作，取值有：
 <li> drop：拦截；</li>
@@ -29,47 +29,69 @@ use TencentCloud\Common\AbstractModel;
 <li> trans：放行；</li>
 <li> monitor：观察。</li>
  * @method string getMatchFrom() 获取根据类型匹配，取值有：
-<li>ip：对ip进行匹配；</li>
-<li>area：对ip所属地区匹配。</li>
+<li>ip：客户端 IP 进行匹配；</li>
+<li>area：客户端 IP 所属地区匹配；</li>
+<li>asn：客户端所属的自治系统进行匹配；</li>
+<li>referer：请求头 Referer 进行匹配；</li>
+<li>ua：请求头 User-Agent 进行匹配；</li>
+<li>url：请求 URL 进行匹配。</li>
  * @method void setMatchFrom(string $MatchFrom) 设置根据类型匹配，取值有：
-<li>ip：对ip进行匹配；</li>
-<li>area：对ip所属地区匹配。</li>
- * @method string getOperator() 获取规则的匹配方式，默认为空代表等于。
-取值有：
-<li> is_emty：配置为空；</li>
-<li> not_exists：配置为不存在；</li>
-<li> include：包含；</li>
-<li> not_include：不包含；</li>
-<li> equal：等于；</li>
-<li> not_equal：不等于。</li>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperator(string $Operator) 设置规则的匹配方式，默认为空代表等于。
-取值有：
-<li> is_emty：配置为空；</li>
-<li> not_exists：配置为不存在；</li>
-<li> include：包含；</li>
-<li> not_include：不包含；</li>
-<li> equal：等于；</li>
-<li> not_equal：不等于。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ip：客户端 IP 进行匹配；</li>
+<li>area：客户端 IP 所属地区匹配；</li>
+<li>asn：客户端所属的自治系统进行匹配；</li>
+<li>referer：请求头 Referer 进行匹配；</li>
+<li>ua：请求头 User-Agent 进行匹配；</li>
+<li>url：请求 URL 进行匹配。</li>
+ * @method string getOperator() 获取规则的匹配方式。取值有：
+<li> match：匹配，适用于 MatchFrom 为 ip；</li>
+<li> not_match：不匹配，适用于 MatchFrom 为 ip；</li>
+<li> include_area：地域包含，适用于 MatchFrom 为 area；</li>
+<li> not_include_area：地域不包含，适用于 MatchFrom 为 area；</li>
+<li> asn_match：ASN 包含，适用于 MatchFrom 为 asn；</li>
+<li> asn_not_match：ASN 不包含，适用于 MatchFrom 为 asn；</li>
+<li> equal：等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_equal：不等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> include：通配符匹配，适用于 MatchFrom 为 ua , referer , url；</li>
+<li> not_include：通配符不匹配，适用于 MatchFrom 为 ua , referer；</li>
+<li> is_emty：配置内容为空，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_exists：配置内容不存在，适用于 MatchFrom 为 ua , referer。</li>
+ * @method void setOperator(string $Operator) 设置规则的匹配方式。取值有：
+<li> match：匹配，适用于 MatchFrom 为 ip；</li>
+<li> not_match：不匹配，适用于 MatchFrom 为 ip；</li>
+<li> include_area：地域包含，适用于 MatchFrom 为 area；</li>
+<li> not_include_area：地域不包含，适用于 MatchFrom 为 area；</li>
+<li> asn_match：ASN 包含，适用于 MatchFrom 为 asn；</li>
+<li> asn_not_match：ASN 不包含，适用于 MatchFrom 为 asn；</li>
+<li> equal：等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_equal：不等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> include：通配符匹配，适用于 MatchFrom 为 ua , referer , url；</li>
+<li> not_include：通配符不匹配，适用于 MatchFrom 为 ua , referer；</li>
+<li> is_emty：配置内容为空，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_exists：配置内容不存在，适用于 MatchFrom 为 ua , referer。</li>
  * @method integer getRuleID() 获取规则id。仅出参使用。
  * @method void setRuleID(integer $RuleID) 设置规则id。仅出参使用。
  * @method string getUpdateTime() 获取更新时间。仅出参使用。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。仅出参使用。
- * @method string getStatus() 获取规则启用状态，当返回为null时，为启用。取值有：
+ * @method string getStatus() 获取规则启用状态。取值有：
 <li> on：启用；</li>
 <li> off：未启用。</li>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置规则启用状态，当返回为null时，为启用。取值有：
+当入参缺省时，按 on 取值。
+ * @method void setStatus(string $Status) 设置规则启用状态。取值有：
 <li> on：启用；</li>
 <li> off：未启用。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+当入参缺省时，按 on 取值。
  * @method string getRuleName() 获取规则名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMatchContent() 获取匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
- * @method void setMatchContent(string $MatchContent) 设置匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+ * @method string getMatchContent() 获取匹配内容。支持多值输入。
+<li>当输入多个匹配值时，请使用英文逗号分隔；</li>
+<li>当 MatchFrom 为 ua 时，不支持多值输入；</li>
+<li>当 Operator 为 is_empty 或 not_exists 时，本字段入参值无效。</li>
+ * @method void setMatchContent(string $MatchContent) 设置匹配内容。支持多值输入。
+<li>当输入多个匹配值时，请使用英文逗号分隔；</li>
+<li>当 MatchFrom 为 ua 时，不支持多值输入；</li>
+<li>当 Operator 为 is_empty 或 not_exists 时，本字段入参值无效。</li>
  */
 class IpTableRule extends AbstractModel
 {
@@ -83,21 +105,29 @@ class IpTableRule extends AbstractModel
 
     /**
      * @var string 根据类型匹配，取值有：
-<li>ip：对ip进行匹配；</li>
-<li>area：对ip所属地区匹配。</li>
+<li>ip：客户端 IP 进行匹配；</li>
+<li>area：客户端 IP 所属地区匹配；</li>
+<li>asn：客户端所属的自治系统进行匹配；</li>
+<li>referer：请求头 Referer 进行匹配；</li>
+<li>ua：请求头 User-Agent 进行匹配；</li>
+<li>url：请求 URL 进行匹配。</li>
      */
     public $MatchFrom;
 
     /**
-     * @var string 规则的匹配方式，默认为空代表等于。
-取值有：
-<li> is_emty：配置为空；</li>
-<li> not_exists：配置为不存在；</li>
-<li> include：包含；</li>
-<li> not_include：不包含；</li>
-<li> equal：等于；</li>
-<li> not_equal：不等于。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 规则的匹配方式。取值有：
+<li> match：匹配，适用于 MatchFrom 为 ip；</li>
+<li> not_match：不匹配，适用于 MatchFrom 为 ip；</li>
+<li> include_area：地域包含，适用于 MatchFrom 为 area；</li>
+<li> not_include_area：地域不包含，适用于 MatchFrom 为 area；</li>
+<li> asn_match：ASN 包含，适用于 MatchFrom 为 asn；</li>
+<li> asn_not_match：ASN 不包含，适用于 MatchFrom 为 asn；</li>
+<li> equal：等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_equal：不等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> include：通配符匹配，适用于 MatchFrom 为 ua , referer , url；</li>
+<li> not_include：通配符不匹配，适用于 MatchFrom 为 ua , referer；</li>
+<li> is_emty：配置内容为空，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_exists：配置内容不存在，适用于 MatchFrom 为 ua , referer。</li>
      */
     public $Operator;
 
@@ -112,10 +142,10 @@ class IpTableRule extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 规则启用状态，当返回为null时，为启用。取值有：
+     * @var string 规则启用状态。取值有：
 <li> on：启用；</li>
 <li> off：未启用。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+当入参缺省时，按 on 取值。
      */
     public $Status;
 
@@ -126,7 +156,10 @@ class IpTableRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     * @var string 匹配内容。支持多值输入。
+<li>当输入多个匹配值时，请使用英文逗号分隔；</li>
+<li>当 MatchFrom 为 ua 时，不支持多值输入；</li>
+<li>当 Operator 为 is_empty 或 not_exists 时，本字段入参值无效。</li>
      */
     public $MatchContent;
 
@@ -136,26 +169,37 @@ class IpTableRule extends AbstractModel
 <li> trans：放行；</li>
 <li> monitor：观察。</li>
      * @param string $MatchFrom 根据类型匹配，取值有：
-<li>ip：对ip进行匹配；</li>
-<li>area：对ip所属地区匹配。</li>
-     * @param string $Operator 规则的匹配方式，默认为空代表等于。
-取值有：
-<li> is_emty：配置为空；</li>
-<li> not_exists：配置为不存在；</li>
-<li> include：包含；</li>
-<li> not_include：不包含；</li>
-<li> equal：等于；</li>
-<li> not_equal：不等于。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ip：客户端 IP 进行匹配；</li>
+<li>area：客户端 IP 所属地区匹配；</li>
+<li>asn：客户端所属的自治系统进行匹配；</li>
+<li>referer：请求头 Referer 进行匹配；</li>
+<li>ua：请求头 User-Agent 进行匹配；</li>
+<li>url：请求 URL 进行匹配。</li>
+     * @param string $Operator 规则的匹配方式。取值有：
+<li> match：匹配，适用于 MatchFrom 为 ip；</li>
+<li> not_match：不匹配，适用于 MatchFrom 为 ip；</li>
+<li> include_area：地域包含，适用于 MatchFrom 为 area；</li>
+<li> not_include_area：地域不包含，适用于 MatchFrom 为 area；</li>
+<li> asn_match：ASN 包含，适用于 MatchFrom 为 asn；</li>
+<li> asn_not_match：ASN 不包含，适用于 MatchFrom 为 asn；</li>
+<li> equal：等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_equal：不等于，适用于 MatchFrom 为 ua , referer；</li>
+<li> include：通配符匹配，适用于 MatchFrom 为 ua , referer , url；</li>
+<li> not_include：通配符不匹配，适用于 MatchFrom 为 ua , referer；</li>
+<li> is_emty：配置内容为空，适用于 MatchFrom 为 ua , referer；</li>
+<li> not_exists：配置内容不存在，适用于 MatchFrom 为 ua , referer。</li>
      * @param integer $RuleID 规则id。仅出参使用。
      * @param string $UpdateTime 更新时间。仅出参使用。
-     * @param string $Status 规则启用状态，当返回为null时，为启用。取值有：
+     * @param string $Status 规则启用状态。取值有：
 <li> on：启用；</li>
 <li> off：未启用。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+当入参缺省时，按 on 取值。
      * @param string $RuleName 规则名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MatchContent 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     * @param string $MatchContent 匹配内容。支持多值输入。
+<li>当输入多个匹配值时，请使用英文逗号分隔；</li>
+<li>当 MatchFrom 为 ua 时，不支持多值输入；</li>
+<li>当 Operator 为 is_empty 或 not_exists 时，本字段入参值无效。</li>
      */
     function __construct()
     {

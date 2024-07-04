@@ -20,24 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineItemDetectList请求参数结构体
  *
- * @method array getFilters() 获取<li>HostId - string - 是否必填：否 - 主机Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
- * @method void setFilters(array $Filters) 设置<li>HostId - string - 是否必填：否 - 主机Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+ * @method array getFilters() 获取<li>HostId - string - 是否必填：否 - 主机Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
+ * @method void setFilters(array $Filters) 设置<li>HostId - string - 是否必填：否 - 主机Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
  * @method integer getExportAll() 获取0:过滤的结果导出；1:全部导出
  * @method void setExportAll(integer $ExportAll) 设置0:过滤的结果导出；1:全部导出
+ * @method integer getIsExportDetail() 获取0:导出界面展示；1:导出全部结果事件
+ * @method void setIsExportDetail(integer $IsExportDetail) 设置0:导出界面展示；1:导出全部结果事件
  */
 class ExportBaselineItemDetectListRequest extends AbstractModel
 {
     /**
-     * @var array <li>HostId - string - 是否必填：否 - 主机Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @var array <li>HostId - string - 是否必填：否 - 主机Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public $Filters;
 
@@ -47,11 +40,14 @@ class ExportBaselineItemDetectListRequest extends AbstractModel
     public $ExportAll;
 
     /**
-     * @param array $Filters <li>HostId - string - 是否必填：否 - 主机Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @var integer 0:导出界面展示；1:导出全部结果事件
+     */
+    public $IsExportDetail;
+
+    /**
+     * @param array $Filters <li>HostId - string - 是否必填：否 - 主机Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      * @param integer $ExportAll 0:过滤的结果导出；1:全部导出
+     * @param integer $IsExportDetail 0:导出界面展示；1:导出全部结果事件
      */
     function __construct()
     {
@@ -77,6 +73,10 @@ class ExportBaselineItemDetectListRequest extends AbstractModel
 
         if (array_key_exists("ExportAll",$param) and $param["ExportAll"] !== null) {
             $this->ExportAll = $param["ExportAll"];
+        }
+
+        if (array_key_exists("IsExportDetail",$param) and $param["IsExportDetail"] !== null) {
+            $this->IsExportDetail = $param["IsExportDetail"];
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPersistence(integer $IsPersistence) 设置是否固化。0 不固化，1 固化。默认不固化。
  * @method string getExpireTime() 获取剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
  * @method void setExpireTime(string $ExpireTime) 设置剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
- * @method string getProcedure() 获取剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
- * @method void setProcedure(string $Procedure) 设置剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+ * @method string getProcedure() 获取剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
+ * @method void setProcedure(string $Procedure) 设置剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
  * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
 仅 IsPersistence 为 1 时有效。
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
  * @method string getSessionContext() 获取会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
  * @method void setSessionContext(string $SessionContext) 设置会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+ * @method string getPrecision() 获取裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+ * @method void setPrecision(string $Precision) 设置裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+ * @method string getOutputMediaType() 获取输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+ * @method void setOutputMediaType(string $OutputMediaType) 设置输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。 示例值：""
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。 示例值：""
  */
@@ -80,7 +84,7 @@ class SimpleHlsClipRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+     * @var string 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
      */
     public $Procedure;
 
@@ -102,6 +106,16 @@ class SimpleHlsClipRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var string 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+     */
+    public $Precision;
+
+    /**
+     * @var string 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+     */
+    public $OutputMediaType;
+
+    /**
      * @var string 保留字段，特殊用途时使用。 示例值：""
      */
     public $ExtInfo;
@@ -113,12 +127,14 @@ class SimpleHlsClipRequest extends AbstractModel
      * @param float $EndTimeOffset 裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。例如 -10 表示到倒数第 10 秒结束裁剪。
      * @param integer $IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
      * @param string $ExpireTime 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
-     * @param string $Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+     * @param string $Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
 仅 IsPersistence 为 1 时有效。
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
      * @param string $SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+     * @param string $Precision 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+     * @param string $OutputMediaType 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
      * @param string $ExtInfo 保留字段，特殊用途时使用。 示例值：""
      */
     function __construct()
@@ -172,6 +188,14 @@ class SimpleHlsClipRequest extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
+            $this->Precision = $param["Precision"];
+        }
+
+        if (array_key_exists("OutputMediaType",$param) and $param["OutputMediaType"] !== null) {
+            $this->OutputMediaType = $param["OutputMediaType"];
         }
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {

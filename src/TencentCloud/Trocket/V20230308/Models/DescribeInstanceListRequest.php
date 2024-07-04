@@ -20,27 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceList请求参数结构体
  *
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
  * @method array getFilters() 获取查询条件列表
  * @method void setFilters(array $Filters) 设置查询条件列表
  * @method array getTagFilters() 获取标签过滤器
  * @method void setTagFilters(array $TagFilters) 设置标签过滤器
+ * @method integer getOffset() 获取查询起始位置
+ * @method void setOffset(integer $Offset) 设置查询起始位置
+ * @method integer getLimit() 获取查询结果限制数量
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量
  */
 class DescribeInstanceListRequest extends AbstractModel
 {
-    /**
-     * @var integer 查询起始位置
-     */
-    public $Offset;
-
-    /**
-     * @var integer 查询结果限制数量
-     */
-    public $Limit;
-
     /**
      * @var array 查询条件列表
      */
@@ -52,10 +42,20 @@ class DescribeInstanceListRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @var integer 查询起始位置
+     */
+    public $Offset;
+
+    /**
+     * @var integer 查询结果限制数量
+     */
+    public $Limit;
+
+    /**
      * @param array $Filters 查询条件列表
      * @param array $TagFilters 标签过滤器
+     * @param integer $Offset 查询起始位置
+     * @param integer $Limit 查询结果限制数量
      */
     function __construct()
     {
@@ -70,14 +70,6 @@ class DescribeInstanceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -94,6 +86,14 @@ class DescribeInstanceListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

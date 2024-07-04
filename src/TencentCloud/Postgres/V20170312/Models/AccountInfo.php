@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-lnp6j617
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-lnp6j617
- * @method string getUserName() 获取帐号
- * @method void setUserName(string $UserName) 设置帐号
- * @method string getRemark() 获取帐号备注
- * @method void setRemark(string $Remark) 设置帐号备注
- * @method integer getStatus() 获取帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
- * @method void setStatus(integer $Status) 设置帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
- * @method string getCreateTime() 获取帐号创建时间
- * @method void setCreateTime(string $CreateTime) 设置帐号创建时间
- * @method string getUpdateTime() 获取帐号最后一次更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置帐号最后一次更新时间
+ * @method string getUserName() 获取账号
+ * @method void setUserName(string $UserName) 设置账号
+ * @method string getRemark() 获取账号备注
+ * @method void setRemark(string $Remark) 设置账号备注
+ * @method integer getStatus() 获取账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+ * @method void setStatus(integer $Status) 设置账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+ * @method string getCreateTime() 获取账号创建时间
+ * @method void setCreateTime(string $CreateTime) 设置账号创建时间
+ * @method string getUpdateTime() 获取账号最后一次更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置账号最后一次更新时间
+ * @method string getUserType() 获取账号类型
+ * @method void setUserType(string $UserType) 设置账号类型
  */
 class AccountInfo extends AbstractModel
 {
@@ -41,37 +43,43 @@ class AccountInfo extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 帐号
+     * @var string 账号
      */
     public $UserName;
 
     /**
-     * @var string 帐号备注
+     * @var string 账号备注
      */
     public $Remark;
 
     /**
-     * @var integer 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * @var integer 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
      */
     public $Status;
 
     /**
-     * @var string 帐号创建时间
+     * @var string 账号创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string 帐号最后一次更新时间
+     * @var string 账号最后一次更新时间
      */
     public $UpdateTime;
 
     /**
+     * @var string 账号类型
+     */
+    public $UserType;
+
+    /**
      * @param string $DBInstanceId 实例ID，形如postgres-lnp6j617
-     * @param string $UserName 帐号
-     * @param string $Remark 帐号备注
-     * @param integer $Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
-     * @param string $CreateTime 帐号创建时间
-     * @param string $UpdateTime 帐号最后一次更新时间
+     * @param string $UserName 账号
+     * @param string $Remark 账号备注
+     * @param integer $Status 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+     * @param string $CreateTime 账号创建时间
+     * @param string $UpdateTime 账号最后一次更新时间
+     * @param string $UserType 账号类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

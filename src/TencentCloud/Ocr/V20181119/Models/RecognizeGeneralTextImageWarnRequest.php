@@ -47,11 +47,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。 示例值：1
  * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。 示例值：1
  * @method string getType() 获取支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
  * @method void setType(string $Type) 设置支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
  */
 class RecognizeGeneralTextImageWarnRequest extends AbstractModel
 {
@@ -86,8 +86,8 @@ class RecognizeGeneralTextImageWarnRequest extends AbstractModel
 
     /**
      * @var string 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
      */
     public $Type;
 
@@ -106,8 +106,8 @@ class RecognizeGeneralTextImageWarnRequest extends AbstractModel
      * @param boolean $EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。 示例值：false
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。 示例值：1
      * @param string $Type 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
- * @method integer getLimit() 获取分页返回，每页最大返回数目，默认10，取值范围为1-100
- * @method void setLimit(integer $Limit) 设置分页返回，每页最大返回数目，默认10，取值范围为1-100
+ * @method integer getLimit() 获取分页返回，每页最大返回数目，默认20，取值范围为1-100
+ * @method void setLimit(integer $Limit) 设置分页返回，每页最大返回数目，默认20，取值范围为1-100
  * @method integer getOffset() 获取数据偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
- * @method string getOrderBy() 获取返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
- * @method void setOrderBy(string $OrderBy) 设置返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+ * @method string getOrderBy() 获取返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+ * @method void setOrderBy(string $OrderBy) 设置返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
  * @method string getOrderByType() 获取返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
  * @method void setOrderByType(string $OrderByType) 设置返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
  */
@@ -39,7 +39,7 @@ class DescribeAccountsRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var integer 分页返回，每页最大返回数目，默认10，取值范围为1-100
+     * @var integer 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
     public $Limit;
 
@@ -49,7 +49,7 @@ class DescribeAccountsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * @var string 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
      */
     public $OrderBy;
 
@@ -60,9 +60,9 @@ class DescribeAccountsRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-6fego161
-     * @param integer $Limit 分页返回，每页最大返回数目，默认10，取值范围为1-100
+     * @param integer $Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      * @param integer $Offset 数据偏移量，从0开始。
-     * @param string $OrderBy 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * @param string $OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
      * @param string $OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
      */
     function __construct()

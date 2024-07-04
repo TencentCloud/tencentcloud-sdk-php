@@ -22,6 +22,66 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取查询的机器组ID
  * @method void setGroupId(string $GroupId) 设置查询的机器组ID
+ * @method array getFilters() 获取ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method void setFilters(array $Filters) 设置ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method integer getOffset() 获取分页的偏移量。
+ * @method void setOffset(integer $Offset) 设置分页的偏移量。
+ * @method integer getLimit() 获取分页单页限制数目。最大支持100
+ * @method void setLimit(integer $Limit) 设置分页单页限制数目。最大支持100
  */
 class DescribeMachinesRequest extends AbstractModel
 {
@@ -31,7 +91,79 @@ class DescribeMachinesRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var array ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public $Filters;
+
+    /**
+     * @var integer 分页的偏移量。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页单页限制数目。最大支持100
+     */
+    public $Limit;
+
+    /**
      * @param string $GroupId 查询的机器组ID
+     * @param array $Filters ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param integer $Offset 分页的偏移量。
+     * @param integer $Limit 分页单页限制数目。最大支持100
      */
     function __construct()
     {
@@ -48,6 +180,23 @@ class DescribeMachinesRequest extends AbstractModel
         }
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

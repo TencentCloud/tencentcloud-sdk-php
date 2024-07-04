@@ -102,6 +102,10 @@ PREPAID，包年包月
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageDelay(integer $MaxMessageDelay) 设置延迟消息最大时长，小时为单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceItem extends AbstractModel
 {
@@ -219,6 +223,12 @@ PREPAID，包年包月
     public $MaxMessageDelay;
 
     /**
+     * @var integer 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
@@ -259,6 +269,8 @@ PREPAID，包年包月
      * @param integer $MessageRetention 消息保留时间，小时为单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageDelay 延迟消息最大时长，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -349,6 +361,10 @@ PREPAID，包年包月
 
         if (array_key_exists("MaxMessageDelay",$param) and $param["MaxMessageDelay"] !== null) {
             $this->MaxMessageDelay = $param["MaxMessageDelay"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

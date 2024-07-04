@@ -51,11 +51,11 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 4. Version，实例版本查询
 当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
- * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
+ * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取集群列表，仅支持 5.x 集群，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
-2. InstanceId，实例ID查询
-3. InstanceType, 实例类型查询，支持多选
-3. InstanceStatus，实例状态查询，支持多选
+2. InstanceId，集群ID查询
+3. InstanceType, 集群类型查询，支持多选
+3. InstanceStatus，集群状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeMQTTClientResponse DescribeMQTTClient(Models\DescribeMQTTClientRequest $req) 查询 MQTT 客户端详情

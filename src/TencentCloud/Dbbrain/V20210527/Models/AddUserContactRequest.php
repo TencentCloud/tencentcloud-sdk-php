@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
  * @method void setName(string $Name) 设置联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
- * @method string getContactInfo() 获取邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
- * @method void setContactInfo(string $ContactInfo) 设置邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
+ * @method string getContactInfo() 获取邮箱地址，支持大小写字母、数字、下划线、连字符及@字符， 只能以数字或字母开头，邮箱地址不可重复。
+ * @method void setContactInfo(string $ContactInfo) 设置邮箱地址，支持大小写字母、数字、下划线、连字符及@字符， 只能以数字或字母开头，邮箱地址不可重复。
  * @method string getProduct() 获取服务产品类型，固定值："mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，固定值："mysql"。
  */
@@ -35,7 +35,7 @@ class AddUserContactRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
+     * @var string 邮箱地址，支持大小写字母、数字、下划线、连字符及@字符， 只能以数字或字母开头，邮箱地址不可重复。
      */
     public $ContactInfo;
 
@@ -46,7 +46,7 @@ class AddUserContactRequest extends AbstractModel
 
     /**
      * @param string $Name 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
-     * @param string $ContactInfo 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
+     * @param string $ContactInfo 邮箱地址，支持大小写字母、数字、下划线、连字符及@字符， 只能以数字或字母开头，邮箱地址不可重复。
      * @param string $Product 服务产品类型，固定值："mysql"。
      */
     function __construct()

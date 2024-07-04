@@ -20,21 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineRuleDetectList请求参数结构体
  *
- * @method array getFilters() 获取<li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
- * @method void setFilters(array $Filters) 设置<li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+ * @method array getFilters() 获取<li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
+ * @method void setFilters(array $Filters) 设置<li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
  * @method integer getExportAll() 获取0:过滤的结果导出；1:全部导出
  * @method void setExportAll(integer $ExportAll) 设置0:过滤的结果导出；1:全部导出
+ * @method integer getIsExportDetail() 获取0:导出界面展示；1:导出全部结果事件
+ * @method void setIsExportDetail(integer $IsExportDetail) 设置0:导出界面展示；1:导出全部结果事件
  */
 class ExportBaselineRuleDetectListRequest extends AbstractModel
 {
     /**
-     * @var array <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @var array <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public $Filters;
 
@@ -44,10 +40,14 @@ class ExportBaselineRuleDetectListRequest extends AbstractModel
     public $ExportAll;
 
     /**
-     * @param array $Filters <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @var integer 0:导出界面展示；1:导出全部结果事件
+     */
+    public $IsExportDetail;
+
+    /**
+     * @param array $Filters <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      * @param integer $ExportAll 0:过滤的结果导出；1:全部导出
+     * @param integer $IsExportDetail 0:导出界面展示；1:导出全部结果事件
      */
     function __construct()
     {
@@ -73,6 +73,10 @@ class ExportBaselineRuleDetectListRequest extends AbstractModel
 
         if (array_key_exists("ExportAll",$param) and $param["ExportAll"] !== null) {
             $this->ExportAll = $param["ExportAll"];
+        }
+
+        if (array_key_exists("IsExportDetail",$param) and $param["IsExportDetail"] !== null) {
+            $this->IsExportDetail = $param["IsExportDetail"];
         }
     }
 }

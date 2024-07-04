@@ -36,6 +36,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScf(Scf $Scf) 设置动态获取Scf
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApproveStatus() 获取审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveStatus(integer $ApproveStatus) 设置审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproveMsg() 获取审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveMsg(string $ApproveMsg) 设置审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproveTime() 获取审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveTime(string $ApproveTime) 设置审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproveGroup() 获取审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveGroup(string $ApproveGroup) 设置审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApproveUser extends AbstractModel
 {
@@ -68,6 +84,30 @@ class ApproveUser extends AbstractModel
     public $Scf;
 
     /**
+     * @var integer 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveStatus;
+
+    /**
+     * @var string 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveMsg;
+
+    /**
+     * @var string 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveTime;
+
+    /**
+     * @var string 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveGroup;
+
+    /**
      * @param integer $Uin 用户uin
      * @param integer $Type 用户类型 (1:用户  2:用户组)
      * @param string $Desc 用户描述
@@ -75,6 +115,14 @@ class ApproveUser extends AbstractModel
      * @param string $Nick 用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Scf $Scf 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApproveStatus 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveMsg 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveTime 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveGroup 审批组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -109,6 +157,22 @@ class ApproveUser extends AbstractModel
         if (array_key_exists("Scf",$param) and $param["Scf"] !== null) {
             $this->Scf = new Scf();
             $this->Scf->deserialize($param["Scf"]);
+        }
+
+        if (array_key_exists("ApproveStatus",$param) and $param["ApproveStatus"] !== null) {
+            $this->ApproveStatus = $param["ApproveStatus"];
+        }
+
+        if (array_key_exists("ApproveMsg",$param) and $param["ApproveMsg"] !== null) {
+            $this->ApproveMsg = $param["ApproveMsg"];
+        }
+
+        if (array_key_exists("ApproveTime",$param) and $param["ApproveTime"] !== null) {
+            $this->ApproveTime = $param["ApproveTime"];
+        }
+
+        if (array_key_exists("ApproveGroup",$param) and $param["ApproveGroup"] !== null) {
+            $this->ApproveGroup = $param["ApproveGroup"];
         }
     }
 }

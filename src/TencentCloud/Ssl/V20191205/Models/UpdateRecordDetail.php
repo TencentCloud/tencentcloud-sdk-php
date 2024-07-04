@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTCBType(string $TCBType) 设置TCB部署类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUrl() 获取监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(string $Url) 设置监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateRecordDetail extends AbstractModel
 {
@@ -223,6 +227,12 @@ class UpdateRecordDetail extends AbstractModel
     public $TCBType;
 
     /**
+     * @var string 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Url;
+
+    /**
      * @param integer $Id 详情记录id
      * @param string $CertId 新证书ID
      * @param string $OldCertId 旧证书ID
@@ -259,6 +269,8 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $EnvId 环境ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TCBType TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Url 监听器Url(clb专属)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -360,6 +372,10 @@ class UpdateRecordDetail extends AbstractModel
 
         if (array_key_exists("TCBType",$param) and $param["TCBType"] !== null) {
             $this->TCBType = $param["TCBType"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

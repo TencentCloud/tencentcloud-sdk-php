@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletions请求参数结构体
  *
- * @method string getModel() 获取模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+ * @method string getModel() 获取模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
- * @method void setModel(string $Model) 设置模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+ * @method void setModel(string $Model) 设置模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -33,14 +33,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMessages() 获取聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
  * @method void setMessages(array $Messages) 设置聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
  * @method boolean getStream() 获取流式调用开关。
 说明：
@@ -110,11 +110,25 @@ use TencentCloud\Common\AbstractModel;
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
+ * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+ * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+ * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+ * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+ * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+ * @method void setCustomTool(Tool $CustomTool) 设置强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  */
 class ChatCompletionsRequest extends AbstractModel
 {
     /**
-     * @var string 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+     * @var string 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -126,8 +140,8 @@ class ChatCompletionsRequest extends AbstractModel
      * @var array 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public $Messages;
@@ -187,7 +201,26 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableEnhancement;
 
     /**
-     * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+     * @var array 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     */
+    public $Tools;
+
+    /**
+     * @var string 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+     */
+    public $ToolChoice;
+
+    /**
+     * @var Tool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public $CustomTool;
+
+    /**
+     * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -195,8 +228,8 @@ class ChatCompletionsRequest extends AbstractModel
      * @param array $Messages 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      * @param boolean $Stream 流式调用开关。
 说明：
@@ -232,6 +265,13 @@ class ChatCompletionsRequest extends AbstractModel
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
+     * @param array $Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+     * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
      */
     function __construct()
     {
@@ -277,6 +317,24 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableEnhancement",$param) and $param["EnableEnhancement"] !== null) {
             $this->EnableEnhancement = $param["EnableEnhancement"];
+        }
+
+        if (array_key_exists("Tools",$param) and $param["Tools"] !== null) {
+            $this->Tools = [];
+            foreach ($param["Tools"] as $key => $value){
+                $obj = new Tool();
+                $obj->deserialize($value);
+                array_push($this->Tools, $obj);
+            }
+        }
+
+        if (array_key_exists("ToolChoice",$param) and $param["ToolChoice"] !== null) {
+            $this->ToolChoice = $param["ToolChoice"];
+        }
+
+        if (array_key_exists("CustomTool",$param) and $param["CustomTool"] !== null) {
+            $this->CustomTool = new Tool();
+            $this->CustomTool->deserialize($param["CustomTool"]);
         }
     }
 }

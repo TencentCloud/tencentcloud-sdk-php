@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置部署的TCB地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUrl() 获取部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(array $Url) 设置部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployRecordDetail extends AbstractModel
 {
@@ -204,6 +208,12 @@ class DeployRecordDetail extends AbstractModel
     public $Region;
 
     /**
+     * @var array 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Url;
+
+    /**
      * @param integer $Id 部署记录详情ID
      * @param string $CertId 部署证书ID
      * @param string $OldCertId 原绑定证书ID
@@ -235,6 +245,8 @@ class DeployRecordDetail extends AbstractModel
      * @param string $TCBType 部署的TCB类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Url 部署CLB监听器的Url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -332,6 +344,10 @@ class DeployRecordDetail extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

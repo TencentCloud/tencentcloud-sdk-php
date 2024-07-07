@@ -198,6 +198,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineResourceUsedCU(integer $EngineResourceUsedCU) 设置引擎当前使用量（Cu）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAccessInfos() 获取引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessInfos(array $AccessInfos) 设置引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineNetworkName() 获取引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineNetworkName(string $EngineNetworkName) 设置引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -495,6 +503,18 @@ class DataEngineInfo extends AbstractModel
     public $EngineResourceUsedCU;
 
     /**
+     * @var array 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessInfos;
+
+    /**
+     * @var string 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineNetworkName;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -583,6 +603,10 @@ class DataEngineInfo extends AbstractModel
      * @param integer $EngineResourceGroupCount 标准引擎关联的资源组个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EngineResourceUsedCU 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AccessInfos 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineNetworkName 引擎所在网络名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -812,6 +836,19 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("EngineResourceUsedCU",$param) and $param["EngineResourceUsedCU"] !== null) {
             $this->EngineResourceUsedCU = $param["EngineResourceUsedCU"];
+        }
+
+        if (array_key_exists("AccessInfos",$param) and $param["AccessInfos"] !== null) {
+            $this->AccessInfos = [];
+            foreach ($param["AccessInfos"] as $key => $value){
+                $obj = new AccessInfo();
+                $obj->deserialize($value);
+                array_push($this->AccessInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("EngineNetworkName",$param) and $param["EngineNetworkName"] !== null) {
+            $this->EngineNetworkName = $param["EngineNetworkName"];
         }
     }
 }

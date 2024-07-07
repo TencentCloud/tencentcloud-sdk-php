@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiQualityControlTaskInput getQualityControlTask() 获取媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) 设置媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivityPara extends AbstractModel
 {
@@ -114,6 +118,12 @@ class ActivityPara extends AbstractModel
     public $AiRecognitionTask;
 
     /**
+     * @var AiQualityControlTaskInput 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityControlTask;
+
+    /**
      * @param TranscodeTaskInput $TranscodeTask 视频转码任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask 视频转动图任务
@@ -131,6 +141,8 @@ class ActivityPara extends AbstractModel
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiQualityControlTaskInput $QualityControlTask 媒体质检任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,11 @@ class ActivityPara extends AbstractModel
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
             $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+        }
+
+        if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
+            $this->QualityControlTask = new AiQualityControlTaskInput();
+            $this->QualityControlTask->deserialize($param["QualityControlTask"]);
         }
     }
 }

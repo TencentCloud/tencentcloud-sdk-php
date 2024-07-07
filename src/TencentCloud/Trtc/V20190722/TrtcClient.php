@@ -364,7 +364,9 @@ ver：可以忽略。
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) 停止转推任务。
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个输入在线媒体流任务。
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) 停止页面录制任务
- * @method Models\SummarizeTranscriptionResponse SummarizeTranscription(Models\SummarizeTranscriptionRequest $req) 对转录的文本进行总结。
+ * @method Models\SummarizeTranscriptionResponse SummarizeTranscription(Models\SummarizeTranscriptionRequest $req) 接口不再支持
+
+对转录的文本进行总结。
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 更新转推任务。
 注：请参见启动转推任务的接口说明和使用说明。
  */

@@ -306,6 +306,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetConnectScheme(string $NetConnectScheme) 设置网络连接方案
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDisasterRecoverGroupAffinity() 获取置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -801,6 +805,12 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $NetConnectScheme;
 
     /**
+     * @var integer 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisasterRecoverGroupAffinity;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -943,6 +953,8 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param array $OutboundPublicAcls 节点出站访问详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetConnectScheme 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DisasterRecoverGroupAffinity 置放群组相关参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1342,6 +1354,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("NetConnectScheme",$param) and $param["NetConnectScheme"] !== null) {
             $this->NetConnectScheme = $param["NetConnectScheme"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
+            $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
         }
     }
 }

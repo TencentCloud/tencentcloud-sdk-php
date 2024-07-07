@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDiagnose(boolean $EnableDiagnose) 设置是否开启智能巡检
  * @method string getCdcId() 获取cdcId，使用cdc子网时传递
  * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
+ * @method integer getDisasterRecoverGroupAffinity() 获取置放群组亲和度，范围[0,10]，0表示不开启
+ * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置置放群组亲和度，范围[0,10]，0表示不开启
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -293,6 +295,11 @@ class CreateInstanceRequest extends AbstractModel
     public $CdcId;
 
     /**
+     * @var integer 置放群组亲和度，范围[0,10]，0表示不开启
+     */
+    public $DisasterRecoverGroupAffinity;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -336,6 +343,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $DiskEnhance 是否开启essd 增强型云盘
      * @param boolean $EnableDiagnose 是否开启智能巡检
      * @param string $CdcId cdcId，使用cdc子网时传递
+     * @param integer $DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
      */
     function __construct()
     {
@@ -505,6 +513,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
+            $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
         }
     }
 }

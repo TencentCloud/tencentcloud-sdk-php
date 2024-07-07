@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadStatus(string $UploadStatus) 设置事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getData() 获取事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudStorageEvent extends AbstractModel
 {
@@ -62,11 +66,19 @@ class CloudStorageEvent extends AbstractModel
     public $UploadStatus;
 
     /**
+     * @var string 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
+
+    /**
      * @param integer $StartTime 事件起始时间（Unix 时间戳，秒级
      * @param integer $EndTime 事件结束时间（Unix 时间戳，秒级
      * @param string $Thumbnail 事件缩略图
      * @param string $EventId 事件ID
      * @param string $UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Data 事件自定义数据	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class CloudStorageEvent extends AbstractModel
 
         if (array_key_exists("UploadStatus",$param) and $param["UploadStatus"] !== null) {
             $this->UploadStatus = $param["UploadStatus"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
     }
 }

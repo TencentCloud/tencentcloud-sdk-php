@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUtc(integer $Utc) 设置语音开始的时间戳
  * @method integer getIsEnd() 获取是否最后一片语音分片，0-否，1-是
  * @method void setIsEnd(integer $IsEnd) 设置是否最后一片语音分片，0-否，1-是
- * @method integer getTranslateTime() 获取翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
- * @method void setTranslateTime(integer $TranslateTime) 设置翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+ * @method integer getTranslateTime() 获取翻译时机，0-不翻译 2-句子实时翻译
+ * @method void setTranslateTime(integer $TranslateTime) 设置翻译时机，0-不翻译 2-句子实时翻译
  * @method string getData() 获取语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
  * @method void setData(string $Data) 设置语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
  */
@@ -77,7 +77,7 @@ class TongChuanSyncRequest extends AbstractModel
     public $IsEnd;
 
     /**
-     * @var integer 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+     * @var integer 翻译时机，0-不翻译 2-句子实时翻译
      */
     public $TranslateTime;
 
@@ -94,7 +94,7 @@ class TongChuanSyncRequest extends AbstractModel
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $Utc 语音开始的时间戳
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
-     * @param integer $TranslateTime 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+     * @param integer $TranslateTime 翻译时机，0-不翻译 2-句子实时翻译
      * @param string $Data 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
      */
     function __construct()

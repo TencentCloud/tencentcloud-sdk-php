@@ -23,11 +23,21 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Smpn\V20190822\Models as Models;
 
 /**
- * @method Models\CreateSmpnEpaResponse CreateSmpnEpa(Models\CreateSmpnEpaRequest $req) 企业号码认证
- * @method Models\DescribeSmpnChpResponse DescribeSmpnChp(Models\DescribeSmpnChpRequest $req) 查询号码的标记和标记次数
- * @method Models\DescribeSmpnFnrResponse DescribeSmpnFnr(Models\DescribeSmpnFnrRequest $req) 虚假号码识别
- * @method Models\DescribeSmpnMhmResponse DescribeSmpnMhm(Models\DescribeSmpnMhmRequest $req) 号码营销监控
- * @method Models\DescribeSmpnMrlResponse DescribeSmpnMrl(Models\DescribeSmpnMrlRequest $req) 查询号码恶意标记等级
+ * @method Models\CreateSmpnEpaResponse CreateSmpnEpa(Models\CreateSmpnEpaRequest $req) 不在使用的API
+
+企业号码认证
+ * @method Models\DescribeSmpnChpResponse DescribeSmpnChp(Models\DescribeSmpnChpRequest $req) 不在使用的API
+
+查询号码的标记和标记次数
+ * @method Models\DescribeSmpnFnrResponse DescribeSmpnFnr(Models\DescribeSmpnFnrRequest $req) 不在使用的API
+
+虚假号码识别
+ * @method Models\DescribeSmpnMhmResponse DescribeSmpnMhm(Models\DescribeSmpnMhmRequest $req) 不在使用的API
+
+号码营销监控
+ * @method Models\DescribeSmpnMrlResponse DescribeSmpnMrl(Models\DescribeSmpnMrlRequest $req) 不在使用的API
+
+查询号码恶意标记等级
  */
 
 class SmpnClient extends AbstractClient

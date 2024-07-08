@@ -130,6 +130,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsAllowRetry() 获取是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAllowRetry(boolean $IsAllowRetry) 设置是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListDocItem extends AbstractModel
 {
@@ -297,6 +301,12 @@ class ListDocItem extends AbstractModel
     public $ExpireEnd;
 
     /**
+     * @var boolean 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAllowRetry;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -351,6 +361,8 @@ class ListDocItem extends AbstractModel
      * @param string $ExpireStart 有效开始时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsAllowRetry 是否允许重试，0：否，1：是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -477,6 +489,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
             $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("IsAllowRetry",$param) and $param["IsAllowRetry"] !== null) {
+            $this->IsAllowRetry = $param["IsAllowRetry"];
         }
     }
 }

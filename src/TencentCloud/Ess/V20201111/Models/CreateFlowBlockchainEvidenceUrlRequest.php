@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method integer getExpiredOn() 获取链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+ * @method void setExpiredOn(integer $ExpiredOn) 设置链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
  */
 class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel
 {
@@ -57,6 +61,12 @@ class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var integer 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     */
+    public $ExpiredOn;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowId 合同流程ID，为32位字符串。
@@ -64,6 +74,8 @@ class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param integer $ExpiredOn 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
      */
     function __construct()
     {
@@ -90,6 +102,10 @@ class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("ExpiredOn",$param) and $param["ExpiredOn"] !== null) {
+            $this->ExpiredOn = $param["ExpiredOn"];
         }
     }
 }

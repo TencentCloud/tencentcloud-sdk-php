@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置擦除后文件的路径。
  * @method TaskOutputStorage getOutputStorage() 获取擦除后文件的存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置擦除后文件的存储位置。
+ * @method string getOriginSubtitlePath() 获取基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginSubtitlePath(string $OriginSubtitlePath) 设置基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTranslateSubtitlePath() 获取基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) 设置基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -38,8 +46,24 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @var string 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginSubtitlePath;
+
+    /**
+     * @var string 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TranslateSubtitlePath;
+
+    /**
      * @param string $Path 擦除后文件的路径。
      * @param TaskOutputStorage $OutputStorage 擦除后文件的存储位置。
+     * @param string $OriginSubtitlePath 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +85,14 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("OriginSubtitlePath",$param) and $param["OriginSubtitlePath"] !== null) {
+            $this->OriginSubtitlePath = $param["OriginSubtitlePath"];
+        }
+
+        if (array_key_exists("TranslateSubtitlePath",$param) and $param["TranslateSubtitlePath"] !== null) {
+            $this->TranslateSubtitlePath = $param["TranslateSubtitlePath"];
         }
     }
 }

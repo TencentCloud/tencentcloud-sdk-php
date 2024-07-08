@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
- * @method array getTemplateIds() 获取合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+ * @method array getTemplateIds() 获取合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -66,7 +66,7 @@ use TencentCloud\Common\AbstractModel;
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
- * @method void setTemplateIds(array $TemplateIds) 设置合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+ * @method void setTemplateIds(array $TemplateIds) 设置合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -78,10 +78,10 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getLimit() 获取指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
  * @method void setLimit(integer $Limit) 设置指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
  * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`
@@ -168,7 +168,7 @@ class DescribeTemplatesRequest extends AbstractModel
     public $ContentType;
 
     /**
-     * @var array 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * @var array 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -184,7 +184,7 @@ class DescribeTemplatesRequest extends AbstractModel
     /**
      * @var integer 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
      */
     public $Limit;
 
@@ -262,7 +262,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
-     * @param array $TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * @param array $TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -274,7 +274,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
      * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
      * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`

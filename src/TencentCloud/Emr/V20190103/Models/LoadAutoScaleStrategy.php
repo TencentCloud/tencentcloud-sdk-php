@@ -40,27 +40,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleNum(integer $ScaleNum) 设置每次规则生效时的扩缩容数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLoadMetrics() 获取扩缩容负载指标。
+ * @method string getLoadMetrics() 获取扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadMetrics(string $LoadMetrics) 设置扩缩容负载指标。
+ * @method void setLoadMetrics(string $LoadMetrics) 设置扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricId() 获取规则元数据记录ID。
+ * @method integer getMetricId() 获取规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricId(integer $MetricId) 设置规则元数据记录ID。
+ * @method void setMetricId(integer $MetricId) 设置规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatisticPeriod() 获取规则统计周期，提供300s,600s,900s
+ * @method integer getStatisticPeriod() 获取规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatisticPeriod(integer $StatisticPeriod) 设置规则统计周期，提供300s,600s,900s
+ * @method void setStatisticPeriod(integer $StatisticPeriod) 设置规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProcessMethod() 获取指标处理方法，1表示MAX，2表示MIN，3表示AVG。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessMethod(integer $ProcessMethod) 设置指标处理方法，1表示MAX，2表示MIN，3表示AVG。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerThreshold() 获取触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
- * @method void setTriggerThreshold(integer $TriggerThreshold) 设置触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
- * @method TriggerConditions getTriggerConditions() 获取条件触发数组。
+ * @method integer getTriggerThreshold() 获取触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
+ * @method void setTriggerThreshold(integer $TriggerThreshold) 设置触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
+ * @method TriggerConditions getTriggerConditions() 获取条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerConditions(TriggerConditions $TriggerConditions) 设置条件触发数组。
+ * @method void setTriggerConditions(TriggerConditions $TriggerConditions) 设置条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取规则优先级，添加时无效，默认为自增。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,19 +138,19 @@ class LoadAutoScaleStrategy extends AbstractModel
     public $ScaleNum;
 
     /**
-     * @var string 扩缩容负载指标。
+     * @var string 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadMetrics;
 
     /**
-     * @var integer 规则元数据记录ID。
+     * @var integer 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricId;
 
     /**
-     * @var integer 规则统计周期，提供300s,600s,900s
+     * @var integer 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatisticPeriod;
@@ -162,12 +162,12 @@ class LoadAutoScaleStrategy extends AbstractModel
     public $ProcessMethod;
 
     /**
-     * @var integer 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
+     * @var integer 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
      */
     public $TriggerThreshold;
 
     /**
-     * @var TriggerConditions 条件触发数组。
+     * @var TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerConditions;
@@ -244,16 +244,16 @@ class LoadAutoScaleStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleNum 每次规则生效时的扩缩容数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LoadMetrics 扩缩容负载指标。
+     * @param string $LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricId 规则元数据记录ID。
+     * @param integer $MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StatisticPeriod 规则统计周期，提供300s,600s,900s
+     * @param integer $StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-     * @param TriggerConditions $TriggerConditions 条件触发数组。
+     * @param integer $TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
+     * @param TriggerConditions $TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 规则优先级，添加时无效，默认为自增。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -28,32 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstVersion(string $DstVersion) 设置升级任务目标版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取升级状态：
-
-- 0：设备离线。
-- 1：待处理。
-- 2：消息下发成功。
-- 3：下载中。
-- 4：烧录中。
-- 5：失败。
-- 6：升级完成。
-- 7：正在处理中。
-- 8：等待用户确认。
-- 20：下载完成。
-
- * @method void setStatus(integer $Status) 设置升级状态：
-
-- 0：设备离线。
-- 1：待处理。
-- 2：消息下发成功。
-- 3：下载中。
-- 4：烧录中。
-- 5：失败。
-- 6：升级完成。
-- 7：正在处理中。
-- 8：等待用户确认。
-- 20：下载完成。
-
+ * @method integer getStatus() 获取升级状态：- 0：设备离线。- 1：待处理。- 2：消息下发成功。- 3：下载中。- 4：烧录中。- 5：失败。- 6：升级完成。- 7：正在处理中。- 8：等待用户确认。- 10：升级超时。- 20：下载完成。
+ * @method void setStatus(integer $Status) 设置升级状态：- 0：设备离线。- 1：待处理。- 2：消息下发成功。- 3：下载中。- 4：烧录中。- 5：失败。- 6：升级完成。- 7：正在处理中。- 8：等待用户确认。- 10：升级超时。- 20：下载完成。
  * @method integer getPercent() 获取进度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(integer $Percent) 设置进度
@@ -76,19 +52,7 @@ class DescribeFirmwareUpdateStatusResponse extends AbstractModel
     public $DstVersion;
 
     /**
-     * @var integer 升级状态：
-
-- 0：设备离线。
-- 1：待处理。
-- 2：消息下发成功。
-- 3：下载中。
-- 4：烧录中。
-- 5：失败。
-- 6：升级完成。
-- 7：正在处理中。
-- 8：等待用户确认。
-- 20：下载完成。
-
+     * @var integer 升级状态：- 0：设备离线。- 1：待处理。- 2：消息下发成功。- 3：下载中。- 4：烧录中。- 5：失败。- 6：升级完成。- 7：正在处理中。- 8：等待用户确认。- 10：升级超时。- 20：下载完成。
      */
     public $Status;
 
@@ -108,19 +72,7 @@ class DescribeFirmwareUpdateStatusResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstVersion 升级任务目标版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 升级状态：
-
-- 0：设备离线。
-- 1：待处理。
-- 2：消息下发成功。
-- 3：下载中。
-- 4：烧录中。
-- 5：失败。
-- 6：升级完成。
-- 7：正在处理中。
-- 8：等待用户确认。
-- 20：下载完成。
-
+     * @param integer $Status 升级状态：- 0：设备离线。- 1：待处理。- 2：消息下发成功。- 3：下载中。- 4：烧录中。- 5：失败。- 6：升级完成。- 7：正在处理中。- 8：等待用户确认。- 10：升级超时。- 20：下载完成。
      * @param integer $Percent 进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

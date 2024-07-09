@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新属性时间
  * @method void setModifyTime(string $ModifyTime) 设置更新属性时间
+ * @method ChargeAttribute getChargeAttribute() 获取文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChargeAttribute(ChargeAttribute $ChargeAttribute) 设置文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FSAttribute extends AbstractModel
 {
@@ -114,6 +118,12 @@ class FSAttribute extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var ChargeAttribute 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChargeAttribute;
+
+    /**
      * @param string $Type 文件系统类型, 可填goosefs和goosefsx
      * @param string $FileSystemId 文件系统ID
      * @param string $CreateTime 创建时间
@@ -128,6 +138,8 @@ class FSAttribute extends AbstractModel
      * @param array $Tag Tag数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新属性时间
+     * @param ChargeAttribute $ChargeAttribute 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -194,6 +206,11 @@ class FSAttribute extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ChargeAttribute",$param) and $param["ChargeAttribute"] !== null) {
+            $this->ChargeAttribute = new ChargeAttribute();
+            $this->ChargeAttribute->deserialize($param["ChargeAttribute"]);
         }
     }
 }

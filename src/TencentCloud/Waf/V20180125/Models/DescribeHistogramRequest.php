@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromTime(string $FromTime) 设置起始时间
  * @method string getToTime() 获取结束时间
  * @method void setToTime(string $ToTime) 设置结束时间
- * @method string getQueryField() 获取聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合
- * @method void setQueryField(string $QueryField) 设置聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合
+ * @method string getQueryField() 获取聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合,qps为每秒请求数峰值的聚合，up为上行带宽峰值聚合，down为下行带峰值聚合
+ * @method void setQueryField(string $QueryField) 设置聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合,qps为每秒请求数峰值的聚合，up为上行带宽峰值聚合，down为下行带峰值聚合
  * @method string getSource() 获取条件，access为访问日志，attack为攻击日志
  * @method void setSource(string $Source) 设置条件，access为访问日志，attack为攻击日志
  * @method string getHost() 获取兼容Host，逐步淘汰Host字段
@@ -50,7 +50,7 @@ class DescribeHistogramRequest extends AbstractModel
     public $ToTime;
 
     /**
-     * @var string 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合
+     * @var string 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合,qps为每秒请求数峰值的聚合，up为上行带宽峰值聚合，down为下行带峰值聚合
      */
     public $QueryField;
 
@@ -82,7 +82,7 @@ class DescribeHistogramRequest extends AbstractModel
     /**
      * @param string $FromTime 起始时间
      * @param string $ToTime 结束时间
-     * @param string $QueryField 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合
+     * @param string $QueryField 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合,qps为每秒请求数峰值的聚合，up为上行带宽峰值聚合，down为下行带峰值聚合
      * @param string $Source 条件，access为访问日志，attack为攻击日志
      * @param string $Host 兼容Host，逐步淘汰Host字段
      * @param string $Edition 只有两个值有效，sparta-waf，clb-waf，不传则不过滤

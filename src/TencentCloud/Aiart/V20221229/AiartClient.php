@@ -32,8 +32,6 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 生成图片分为提交任务和查询任务2个接口。
 - 提交生成写真图片任务：完成训练写真模型后，选择写真风格模板，提交一个生成写真图片异步任务，根据写真模型 ID 开始生成人物形象在指定风格上的写真图片，获得任务 ID。
 - 查询生成写真图片任务：根据任务 ID 查询生成图片任务的处理状态、处理结果。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\QueryTextToImageProJobResponse QueryTextToImageProJob(Models\QueryTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -44,8 +42,6 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 训练模型分为提交任务和查询任务2个接口。
 - 提交训练写真模型任务：完成上传训练图片后，提交一个训练写真模型异步任务，根据写真模型 ID 开始训练模型。
 - 查询训练写真模型任务：根据写真模型 ID 查询训练任务的处理状态、处理结果。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\ReplaceBackgroundResponse ReplaceBackground(Models\ReplaceBackgroundRequest $req) 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
 
 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。

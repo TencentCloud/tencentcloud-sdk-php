@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroupPolicies请求参数结构体
  *
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+ * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  * @method array getFilters() 获取过滤条件。
 <li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupPoliciesRequest extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @var string 安全组实例ID，例如：sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     public $SecurityGroupId;
 
@@ -65,7 +65,7 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @param string $SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param array $Filters 过滤条件。
 <li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>

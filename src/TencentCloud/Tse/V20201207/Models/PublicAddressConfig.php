@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkId(string $NetworkId) 设置公网负载均衡 id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PublicAddressConfig extends AbstractModel
 {
@@ -74,6 +78,12 @@ class PublicAddressConfig extends AbstractModel
     public $NetworkId;
 
     /**
+     * @var string 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $Vip 公网 ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetMaxBandwidthOut 公网最大带宽
@@ -83,6 +93,8 @@ class PublicAddressConfig extends AbstractModel
      * @param string $GroupName 公网所属分组名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkId 公网负载均衡 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 公网负载均衡描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class PublicAddressConfig extends AbstractModel
 
         if (array_key_exists("NetworkId",$param) and $param["NetworkId"] !== null) {
             $this->NetworkId = $param["NetworkId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

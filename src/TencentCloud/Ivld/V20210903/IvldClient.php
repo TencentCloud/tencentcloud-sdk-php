@@ -53,6 +53,31 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 
 请注意，本接口为异步接口，**返回TaskId只代表任务创建成功，不代表任务执行成功**。
 
+ * @method Models\CreateVideoSummaryTaskResponse CreateVideoSummaryTask(Models\CreateVideoSummaryTaskRequest $req) 创建一个视频缩编任务。
+
+### 回调事件消息通知协议
+
+#### 网络协议
+- 回调接口协议目前仅支持http/https协议；
+- 请求：HTTP POST 请求，包体内容为 JSON，每一种消息的具体包体内容参见后文。
+- 应答：HTTP STATUS CODE = 200，服务端忽略应答包具体内容，为了协议友好，建议客户应答内容携带 JSON： `{"code":0}`
+
+#### 通知可靠性
+
+事件通知服务具备重试能力，事件通知失败后会总计重试3次；
+为了避免重试对您的服务器以及网络带宽造成冲击，请保持正常回包。触发重试条件如下：
+- 长时间（5 秒）未回包应答。
+- 应答 HTTP STATUS 不为200。
+
+
+#### 回调接口协议
+
+##### 分析任务完成消息回调
+| 参数名称 | 必选 | 类型 | 描述 |
+|---------|---------|---------|---------|
+| TaskId | 是 | String | 任务ID |
+| TaskStatus | 是 | Integer | 任务执行状态 |
+| FailedReason | 是 | String | 若任务失败，该字段为失败原因 |
  * @method Models\DeleteCustomCategoryResponse DeleteCustomCategory(Models\DeleteCustomCategoryRequest $req) 删除自定义分类信息
  * @method Models\DeleteCustomPersonResponse DeleteCustomPerson(Models\DeleteCustomPersonRequest $req) 删除自定义人物
  * @method Models\DeleteCustomPersonImageResponse DeleteCustomPersonImage(Models\DeleteCustomPersonImageRequest $req) 删除自定义人脸数据
@@ -87,6 +112,8 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 依照输入条件，描述命中的任务信息，包括任务创建时间，处理时间信息等。
 
 请注意，本接口最多支持同时描述**50**个任务信息
+ * @method Models\DescribeUsageAmountResponse DescribeUsageAmount(Models\DescribeUsageAmountRequest $req) 获取用户资源使用量
+ * @method Models\DescribeVideoSummaryDetailResponse DescribeVideoSummaryDetail(Models\DescribeVideoSummaryDetailRequest $req) 描述任务信息，如果任务成功完成，还将返回任务结果
  * @method Models\ImportMediaResponse ImportMedia(Models\ImportMediaRequest $req) 将URL指向的媒资视频文件导入系统之中。
 
 **请注意，本接口为异步接口**。接口返回MediaId仅代表导入视频任务发起，不代表任务完成，您可调用读接口(DescribeMedia/DescribeMedias)接口查询MediaId

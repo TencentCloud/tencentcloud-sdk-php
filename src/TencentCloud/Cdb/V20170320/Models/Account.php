@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 数据库账号信息
  *
  * @method string getUser() 获取新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHost() 获取新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Account extends AbstractModel
 {
     /**
      * @var string 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @param string $User 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Host 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

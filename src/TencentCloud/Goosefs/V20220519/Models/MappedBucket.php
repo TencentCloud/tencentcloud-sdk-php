@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketRegion(string $BucketRegion) 设置桶所在的园区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndpoint() 获取自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndpoint(string $Endpoint) 设置自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MappedBucket extends AbstractModel
 {
@@ -116,6 +120,12 @@ class MappedBucket extends AbstractModel
     public $BucketRegion;
 
     /**
+     * @var string 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Endpoint;
+
+    /**
      * @param string $BucketName 对象存储Bucket名
      * @param string $FileSystemPath 映射到的文件系统路径, 默认为/
      * @param array $DataRepositoryTaskAutoStrategy 数据流动的自动策略, 包含加载与沉降。策略可以是多种的组合
@@ -135,6 +145,8 @@ class MappedBucket extends AbstractModel
      * @param boolean $AccelerateFlag 是否使用全球加速域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketRegion 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Endpoint 自定义Endpoint
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class MappedBucket extends AbstractModel
 
         if (array_key_exists("BucketRegion",$param) and $param["BucketRegion"] !== null) {
             $this->BucketRegion = $param["BucketRegion"];
+        }
+
+        if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
+            $this->Endpoint = $param["Endpoint"];
         }
     }
 }

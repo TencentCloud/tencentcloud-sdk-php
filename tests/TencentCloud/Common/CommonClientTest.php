@@ -75,4 +75,28 @@ final class CommonClientTest extends TestCase
         );
     }
 
+	public function testSseResponse()
+    {
+        $cred = new Credential(
+            getenv("TENCENTCLOUD_SECRET_ID"),
+            getenv("TENCENTCLOUD_SECRET_KEY")
+        );
+        $httpProfile = new HttpProfile();
+        $httpProfile->setReqMethod("GET");
+        $clientProfile = new ClientProfile();
+        $clientProfile->setHttpProfile($httpProfile);
+        $client = new CommonClient("hunyuan", "2023-09-01", $cred, "", $clientProfile);
+        $params = "{\"Model\":\"hunyuan-pro\",\"Messages\":[{\"Role\":\"user\",\"Content\":\"你好\"}],\"Stream\":true,\"StreamModeration\":true,\"TopP\":1,\"Temperature\":1,\"EnableEnhancement\":true}";
+        $reqBody = json_decode($params, true);
+        $resp = $client->callJsonWithSSEResponse("","ChatCompletions", $reqBody);
+        if (!is_null($resp))
+        {
+            if (is_array($resp)) {
+                echo json_encode($resp, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+            } else {
+                echo $resp;
+            }
+        }         
+    }    
+
 }

@@ -266,23 +266,36 @@ abstract class AbstractClient
             $contentType = $responseData->getHeaderLine('Content-Type');
             if ($contentType === 'text/event-stream') {
                 $body = $responseData->getBody();
-                $buffer = '';
-                while (!$body->eof()) {
-                    $buffer .= $body->read(1024);
-                    $delimiterPosition = strpos($buffer, "\n\n");
-                    while ($delimiterPosition !== false) {
-                        $chunk = substr($buffer, 0, $delimiterPosition + 2);
-                        $buffer = substr($buffer, $delimiterPosition + 2);
-                        $callback($chunk);
+                $buffer = '';                
+                if (isset($callback) && is_callable($callback)) {
+                    while (!$body->eof()) {
+                        $buffer .= $body->read(1024);
                         $delimiterPosition = strpos($buffer, "\n\n");
+                        while ($delimiterPosition !== false) {
+                            $chunk = substr($buffer, 0, $delimiterPosition + 2);
+                            $buffer = substr($buffer, $delimiterPosition + 2);
+                            
+                            $callback($chunk);
+                            $delimiterPosition = strpos($buffer, "\n\n");
+                        }
                     }
-                }
-                if (!empty($buffer)) {
-                    $callback($buffer);
+                    if (!empty($buffer)) {
+                        $callback($buffer);
+                    }
+                } else {
+                    while (!$body->eof()) {
+                        $buffer .= $body->read(1024);
+                    }
+                    return $buffer;
                 }
             } else {
-                throw new TencentCloudSDKException("ServerError", "The Response content-type is not text/event-stream " . $responseData->getBody());
-            }
+                $resp = json_decode($responseData->getBody(), true)["Response"];
+                if (array_key_exists("Error", $resp)) {
+                    throw new TencentCloudSDKException($resp["Error"]["Code"], $resp["Error"]["Message"], $resp["RequestId"]);
+                }                
+                return $resp;
+            }            
+
         } catch (\Exception $e) {
             if (!($e instanceof TencentCloudSDKException)) {
                 throw new TencentCloudSDKException("", $e->getMessage());

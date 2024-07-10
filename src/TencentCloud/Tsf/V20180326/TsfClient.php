@@ -53,6 +53,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailResp(Models\CreatePathRewritesWithDetailRespRequest $req) 创建路径重写，并返回路径重写规则信息
+ * @method Models\CreateProgramResponse CreateProgram(Models\CreateProgramRequest $req) 创建数据集
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
@@ -210,6 +211,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 修改命名空间
  * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
+ * @method Models\ModifyProgramResponse ModifyProgram(Models\ModifyProgramRequest $req) 更新数据集
  * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。

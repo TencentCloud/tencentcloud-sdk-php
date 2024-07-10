@@ -25,10 +25,12 @@ use TencentCloud\Mna\V20210119\Models as Models;
 /**
  * @method Models\ActivateHardwareResponse ActivateHardware(Models\ActivateHardwareRequest $req) 激活硬件设备
  * @method Models\AddDeviceResponse AddDevice(Models\AddDeviceRequest $req) 新建设备记录
+ * @method Models\AddGroupResponse AddGroup(Models\AddGroupRequest $req) 新建分组
  * @method Models\AddHardwareResponse AddHardware(Models\AddHardwareRequest $req) 添加硬件设备，生成未激活的硬件设备，可支持批量添加
  * @method Models\CreateEncryptedKeyResponse CreateEncryptedKey(Models\CreateEncryptedKeyRequest $req) 通过此接口设置和更新预置密钥
  * @method Models\CreateQosResponse CreateQos(Models\CreateQosRequest $req) 移动网络发起Qos加速过程
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备信息
+ * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除分组
  * @method Models\DeleteQosResponse DeleteQos(Models\DeleteQosRequest $req) 移动网络停止Qos加速过程
  * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 获取Qos加速状态
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
@@ -38,15 +40,22 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetFlowPackagesResponse GetFlowPackages(Models\GetFlowPackagesRequest $req) 获取流量包列表
  * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetFlowStatisticByGroupResponse GetFlowStatisticByGroup(Models\GetFlowStatisticByGroupRequest $req) 获取指定分组，指定时间数据流量使用情况
+ * @method Models\GetFlowStatisticByRegionResponse GetFlowStatisticByRegion(Models\GetFlowStatisticByRegionRequest $req) 获取指定区域，指定时间点数据流量使用情况
+ * @method Models\GetGroupDetailResponse GetGroupDetail(Models\GetGroupDetailRequest $req) 查看分组详细信息
+ * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取分组列表
  * @method Models\GetHardwareListResponse GetHardwareList(Models\GetHardwareListRequest $req) 获取厂商硬件列表
  * @method Models\GetMultiFlowStatisticResponse GetMultiFlowStatistic(Models\GetMultiFlowStatisticRequest $req) 批量获取设备流量统计曲线
  * @method Models\GetNetMonitorResponse GetNetMonitor(Models\GetNetMonitorRequest $req) 获取单设备的实时流量统计指标
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) 获取公钥用于验签
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) 在用量统计页面下载流量数据
  * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) 获取厂商硬件设备列表
+ * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) 向已存在分组中添加设备
+ * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) 删除分组中的设备
  * @method Models\ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(Models\ModifyPackageRenewFlagRequest $req) 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
  * @method Models\OrderFlowPackageResponse OrderFlowPackage(Models\OrderFlowPackageRequest $req) 购买预付费流量包
+ * @method Models\SetNotifyUrlResponse SetNotifyUrl(Models\SetNotifyUrlRequest $req) 设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息
+ * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新分组备注
  * @method Models\UpdateHardwareResponse UpdateHardware(Models\UpdateHardwareRequest $req) 更新硬件信息
  */
 

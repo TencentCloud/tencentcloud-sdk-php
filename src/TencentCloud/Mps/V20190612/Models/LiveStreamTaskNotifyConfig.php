@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
  * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
+ * @method string getNotifyKey() 获取用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotifyKey(string $NotifyKey) 设置用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
@@ -72,6 +76,12 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
     public $NotifyUrl;
 
     /**
+     * @var string 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotifyKey;
+
+    /**
      * @param string $NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
@@ -80,6 +90,8 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
      * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      * @param string $TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     * @param string $NotifyKey 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
             $this->NotifyUrl = $param["NotifyUrl"];
+        }
+
+        if (array_key_exists("NotifyKey",$param) and $param["NotifyKey"] !== null) {
+            $this->NotifyKey = $param["NotifyKey"];
         }
     }
 }

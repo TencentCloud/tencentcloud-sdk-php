@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceFormat(integer $VoiceFormat) 设置音频格式 0: pcm, 1: wav
  * @method integer getSampleRate() 获取音频采样率，目前支持16000，单位：Hz，必填
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率，目前支持16000，单位：Hz，必填
- * @method string getVoicePrintId() 获取说话人id, 说话人唯一标识
- * @method void setVoicePrintId(string $VoicePrintId) 设置说话人id, 说话人唯一标识
  * @method string getData() 获取音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
  * @method void setData(string $Data) 设置音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+ * @method string getVoicePrintId() 获取说话人id, 说话人唯一标识
+ * @method void setVoicePrintId(string $VoicePrintId) 设置说话人id, 说话人唯一标识
  */
 class VoicePrintVerifyRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class VoicePrintVerifyRequest extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var string 说话人id, 说话人唯一标识
-     */
-    public $VoicePrintId;
-
-    /**
      * @var string 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
      */
     public $Data;
 
     /**
+     * @var string 说话人id, 说话人唯一标识
+     */
+    public $VoicePrintId;
+
+    /**
      * @param integer $VoiceFormat 音频格式 0: pcm, 1: wav
      * @param integer $SampleRate 音频采样率，目前支持16000，单位：Hz，必填
-     * @param string $VoicePrintId 说话人id, 说话人唯一标识
      * @param string $Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+     * @param string $VoicePrintId 说话人id, 说话人唯一标识
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class VoicePrintVerifyRequest extends AbstractModel
             $this->SampleRate = $param["SampleRate"];
         }
 
-        if (array_key_exists("VoicePrintId",$param) and $param["VoicePrintId"] !== null) {
-            $this->VoicePrintId = $param["VoicePrintId"];
-        }
-
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("VoicePrintId",$param) and $param["VoicePrintId"] !== null) {
+            $this->VoicePrintId = $param["VoicePrintId"];
         }
     }
 }

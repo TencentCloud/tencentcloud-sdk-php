@@ -82,8 +82,8 @@ AnycastEIP是否用于绑定负载均衡。
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
  * @method string getAddressName() 获取EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
  * @method void setAddressName(string $AddressName) 设置EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
- * @method string getEgress() 获取静态单线IP网络出口，默认值：center_egress1
- * @method void setEgress(string $Egress) 设置静态单线IP网络出口，默认值：center_egress1
+ * @method string getEgress() 获取网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
+ * @method void setEgress(string $Egress) 设置网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
  * @method string getAntiDDoSPackageId() 获取高防包ID， 申请高防IP时，该字段必传。
  * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID， 申请高防IP时，该字段必传。
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
@@ -167,7 +167,7 @@ AnycastEIP是否用于绑定负载均衡。
     public $AddressName;
 
     /**
-     * @var string 静态单线IP网络出口，默认值：center_egress1
+     * @var string 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      */
     public $Egress;
 
@@ -213,7 +213,7 @@ AnycastEIP是否用于绑定负载均衡。
      * @param array $Tags 需要关联的标签列表。
      * @param string $BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      * @param string $AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
-     * @param string $Egress 静态单线IP网络出口，默认值：center_egress1
+     * @param string $Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      * @param string $AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
      */

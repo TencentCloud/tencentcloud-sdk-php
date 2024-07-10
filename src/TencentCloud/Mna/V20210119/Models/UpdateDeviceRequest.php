@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置设备备注
  * @method array getUpdateNetInfo() 获取更新设备网络信息
  * @method void setUpdateNetInfo(array $UpdateNetInfo) 设置更新设备网络信息
+ * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
+ * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
  */
 class UpdateDeviceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateDeviceRequest extends AbstractModel
     public $UpdateNetInfo;
 
     /**
+     * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     */
+    public $FlowTrunc;
+
+    /**
      * @param string $DeviceId 设备id
      * @param string $DeviceName 设备名称
      * @param string $Remark 设备备注
      * @param array $UpdateNetInfo 更新设备网络信息
+     * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class UpdateDeviceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UpdateNetInfo, $obj);
             }
+        }
+
+        if (array_key_exists("FlowTrunc",$param) and $param["FlowTrunc"] !== null) {
+            $this->FlowTrunc = $param["FlowTrunc"];
         }
     }
 }

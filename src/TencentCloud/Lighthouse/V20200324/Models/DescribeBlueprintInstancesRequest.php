@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlueprintInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例 ID 列表，当前最多支持 1 个。
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，当前最多支持 1 个。
+ * @method array getInstanceIds() 获取实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
  */
 class DescribeBlueprintInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例 ID 列表，当前最多支持 1 个。
+     * @var array 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例 ID 列表，当前最多支持 1 个。
+     * @param array $InstanceIds 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
      */
     function __construct()
     {

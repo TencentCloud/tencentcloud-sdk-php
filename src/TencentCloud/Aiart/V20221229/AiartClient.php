@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Aiart\V20221229\Models as Models;
 
 /**
+ * @method Models\ChangeClothesResponse ChangeClothes(Models\ChangeClothesRequest $req) 上传正面全身模特照和服装平铺图，生成模特换装后的图片。
+生成的换装图片分辨率和模特照分辨率一致。
+模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\GenerateAvatarResponse GenerateAvatar(Models\GenerateAvatarRequest $req) 百变头像接口将根据输入的人像照片，生成风格百变的头像。
 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\ImageToImageResponse ImageToImage(Models\ImageToImageRequest $req) 图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getDnssecConflictMode() 获取开启DNSSEC时，强制添加CNAME/URL记录
  * @method void setDnssecConflictMode(string $DnssecConflictMode) 设置开启DNSSEC时，强制添加CNAME/URL记录
+ * @method integer getGroupId() 获取记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+ * @method void setGroupId(integer $GroupId) 设置记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
  */
 class CreateRecordRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateRecordRequest extends AbstractModel
     public $DnssecConflictMode;
 
     /**
+     * @var integer 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     */
+    public $GroupId;
+
+    /**
      * @param string $Domain 域名
      * @param string $RecordType 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
      * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
@@ -128,6 +135,7 @@ class CreateRecordRequest extends AbstractModel
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
      * @param string $Remark 备注
      * @param string $DnssecConflictMode 开启DNSSEC时，强制添加CNAME/URL记录
+     * @param integer $GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateRecordRequest extends AbstractModel
 
         if (array_key_exists("DnssecConflictMode",$param) and $param["DnssecConflictMode"] !== null) {
             $this->DnssecConflictMode = $param["DnssecConflictMode"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

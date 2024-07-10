@@ -46,6 +46,7 @@ try {
     $req = new ChatCompletionsRequest();
     $req->TopP = 0;
     $req->Temperature = 0;
+    $req->Model = "hunyuan-standard";
     $reqMessage = new Message();
     $reqMessage->Role = "user";
     $reqMessage->Content = "计算1+1";

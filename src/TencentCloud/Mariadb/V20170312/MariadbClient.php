@@ -111,6 +111,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(Models\TerminateDedicatedDBInstanceRequest $req) 本接口（TerminateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口(UpgradeDBInstance)用于扩容云数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
  * @method Models\UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstance(Models\UpgradeDedicatedDBInstanceRequest $req) 本接口(UpgradeDedicatedDBInstance)用于扩容独享云数据库实例。
+ * @method Models\UpgradeHourDBInstanceResponse UpgradeHourDBInstance(Models\UpgradeHourDBInstanceRequest $req) 升级MariaDB按量计费实例
  */
 
 class MariadbClient extends AbstractClient

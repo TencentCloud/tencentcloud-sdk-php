@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectID(integer $ProjectID) 设置项目 id
  * @method string getFileVersion() 获取文件版本
  * @method void setFileVersion(string $FileVersion) 设置文件版本
+ * @method string getFileName() 获取查询过滤条件（根据sourcemap的文件名模糊匹配）
+ * @method void setFileName(string $FileName) 设置查询过滤条件（根据sourcemap的文件名模糊匹配）
  */
 class DescribeReleaseFilesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeReleaseFilesRequest extends AbstractModel
     public $FileVersion;
 
     /**
+     * @var string 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     */
+    public $FileName;
+
+    /**
      * @param integer $ProjectID 项目 id
      * @param string $FileVersion 文件版本
+     * @param string $FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeReleaseFilesRequest extends AbstractModel
 
         if (array_key_exists("FileVersion",$param) and $param["FileVersion"] !== null) {
             $this->FileVersion = $param["FileVersion"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
     }
 }

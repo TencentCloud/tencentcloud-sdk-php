@@ -101,6 +101,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(Models\DescribeSecurityPolicyDetailRequest $req) 获取安全策略详情
  * @method Models\DescribeSecurityRulesResponse DescribeSecurityRules(Models\DescribeSecurityRulesRequest $req) 本接口（DescribeSecurityRules）用于根据安全规则ID查询安全规则详情列表。支持一个或多个安全规则的查询。一次最多支持20个安全规则的查询。
  * @method Models\DescribeTCPListenersResponse DescribeTCPListeners(Models\DescribeTCPListenersRequest $req) 该接口（DescribeTCPListeners）用于查询单通道或者通道组下的TCP监听器信息。
+ * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 查询异步任务执行状态
  * @method Models\DescribeUDPListenersResponse DescribeUDPListeners(Models\DescribeUDPListenersRequest $req) 该接口（DescribeUDPListeners）用于查询单通道或者通道组下的UDP监听器信息
  * @method Models\DestroyProxiesResponse DestroyProxies(Models\DestroyProxiesRequest $req) 本接口（DestroyProxies）用于销毁。通道销毁后，不再产生任何费用。
  * @method Models\DisableGlobalDomainResponse DisableGlobalDomain(Models\DisableGlobalDomainRequest $req) 暂停域名解析

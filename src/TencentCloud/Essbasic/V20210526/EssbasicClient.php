@@ -610,6 +610,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-createconsoleloginin.mp4" target="_blank">【生成子客登录链接】代码编写 &  子企业认证示例</a><br>
+ * @method Models\CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCode(Models\CreateEmployeeQualificationSealQrCodeRequest $req) 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+
+**注意**
+1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
  * @method Models\CreateFlowBlockchainEvidenceUrlResponse CreateFlowBlockchainEvidenceUrl(Models\CreateFlowBlockchainEvidenceUrlRequest $req) 获取区块链存证证书查看链接/二维码接口
 
 适用场景：企业员工可以通过此接口生成合同区块链存证证书的查看链接/二维码，以供他人扫码打开腾讯电子签小程序查看。

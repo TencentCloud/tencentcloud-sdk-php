@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
 支持填入集团子公司经办人 userId 代发合同。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
- * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
  * @method array getApprovers() 获取合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
@@ -60,6 +60,7 @@ use TencentCloud\Common\AbstractModel;
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
  * @method void setComponents(array $Components) 设置模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li> 单行文本控件      </li>
@@ -67,6 +68,7 @@ use TencentCloud\Common\AbstractModel;
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
@@ -200,7 +202,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var string 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
      */
@@ -239,6 +241,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
      */
     public $Components;
@@ -364,7 +367,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 支持填入集团子公司经办人 userId 代发合同。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
      * @param array $Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
@@ -383,6 +386,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 

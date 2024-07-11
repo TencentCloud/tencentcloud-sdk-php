@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceName(string $WorkspaceName) 设置es空间中文
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlinkVersion() 获取flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlinkVersion(string $FlinkVersion) 设置flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -335,6 +339,12 @@ class JobConfig extends AbstractModel
     public $WorkspaceName;
 
     /**
+     * @var string flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlinkVersion;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -395,6 +405,8 @@ class JobConfig extends AbstractModel
      * @param string $IndexName es索引中文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkspaceName es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlinkVersion flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -554,6 +566,10 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("WorkspaceName",$param) and $param["WorkspaceName"] !== null) {
             $this->WorkspaceName = $param["WorkspaceName"];
+        }
+
+        if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
+            $this->FlinkVersion = $param["FlinkVersion"];
         }
     }
 }

@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置es索引名称
  * @method string getEsServerlessSpace() 获取es索引空间
  * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es索引空间
+ * @method string getFlinkVersion() 获取flink版本
+ * @method void setFlinkVersion(string $FlinkVersion) 设置flink版本
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $EsServerlessSpace;
 
     /**
+     * @var string flink版本
+     */
+    public $FlinkVersion;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -248,6 +255,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param JobGraph $JobGraph 算子拓扑图
      * @param string $EsServerlessIndex es索引名称
      * @param string $EsServerlessSpace es索引空间
+     * @param string $FlinkVersion flink版本
      */
     function __construct()
     {
@@ -390,6 +398,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("EsServerlessSpace",$param) and $param["EsServerlessSpace"] !== null) {
             $this->EsServerlessSpace = $param["EsServerlessSpace"];
+        }
+
+        if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
+            $this->FlinkVersion = $param["FlinkVersion"];
         }
     }
 }

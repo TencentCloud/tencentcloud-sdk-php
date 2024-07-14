@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
 
- * @method integer getMemory() 获取实例配置变更后的内存大小。
-- 单位：GB。
-- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
- * @method void setMemory(integer $Memory) 设置实例配置变更后的内存大小。
-- 单位：GB。
-- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
- * @method integer getVolume() 获取实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>
- * @method void setVolume(integer $Volume) 设置实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>
+ * @method integer getMemory() 获取实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+ * @method void setMemory(integer $Memory) 设置实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+ * @method integer getVolume() 获取实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
+ * @method void setVolume(integer $Volume) 设置实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
  * @method integer getOplogSize() 获取(已废弃) 请使用ResizeOplog独立接口完成。
 
 实例配置变更后 Oplog 的大小。
@@ -42,20 +38,24 @@ use TencentCloud\Common\AbstractModel;
 实例配置变更后 Oplog 的大小。
 - 单位：GB。
 - 默认 Oplog 占用容量为磁盘空间的10%。系统允许设置的 Oplog 容量范围为磁盘空间的[10%,90%]。
- * @method integer getNodeNum() 获取实例变更后的节点数(mongod节点或mongos节点或readonly节点调整后的节点数，具体类型取决于AddNodeList或RemoveNodeList参数的节点类型)。
-<ul><li>副本集：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。</li><li>分片集群：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。</li></ul>
- * @method void setNodeNum(integer $NodeNum) 设置实例变更后的节点数(mongod节点或mongos节点或readonly节点调整后的节点数，具体类型取决于AddNodeList或RemoveNodeList参数的节点类型)。
-<ul><li>副本集：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。</li><li>分片集群：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。</li></ul>
- * @method integer getReplicateSetNum() 获取实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数MinReplicateSetNum与MaxReplicateSetNum获取。</li><li>该参数只能增加不能减少。</li></ul>
- * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数MinReplicateSetNum与MaxReplicateSetNum获取。</li><li>该参数只能增加不能减少。</li></ul>
- * @method integer getInMaintenance() 获取实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
-<b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
- * @method void setInMaintenance(integer $InMaintenance) 设置实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
-<b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
- * @method array getAddNodeList() 获取新增节点属性列表。
- * @method void setAddNodeList(array $AddNodeList) 设置新增节点属性列表。
- * @method array getRemoveNodeList() 获取删除节点属性列表。
- * @method void setRemoveNodeList(array $RemoveNodeList) 设置删除节点属性列表。
+ * @method integer getNodeNum() 获取实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+ * @method void setNodeNum(integer $NodeNum) 设置实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+ * @method integer getReplicateSetNum() 获取实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+ * @method integer getInMaintenance() 获取实例配置变更的切换时间。
+- 0：调整完成时，立即执行变配任务。默认为0。
+- 1：在维护时间窗内，执行变配任务。
+**说明**：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。
+ * @method void setInMaintenance(integer $InMaintenance) 设置实例配置变更的切换时间。
+- 0：调整完成时，立即执行变配任务。默认为0。
+- 1：在维护时间窗内，执行变配任务。
+**说明**：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。
+ * @method string getMongosMemory() 获取分片实例配置变更后的mongos内存大小。- 单位：GB。
+ * @method void setMongosMemory(string $MongosMemory) 设置分片实例配置变更后的mongos内存大小。- 单位：GB。
+ * @method array getAddNodeList() 获取新增节点列表，节点类型及可用区信息。
+ * @method void setAddNodeList(array $AddNodeList) 设置新增节点列表，节点类型及可用区信息。
+ * @method array getRemoveNodeList() 获取删除节点列表，注意：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。
+ * @method void setRemoveNodeList(array $RemoveNodeList) 设置删除节点列表，注意：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -66,14 +66,12 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 实例配置变更后的内存大小。
-- 单位：GB。
-- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+     * @var integer 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
      */
     public $Memory;
 
     /**
-     * @var integer 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>
+     * @var integer 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
      */
     public $Volume;
 
@@ -87,51 +85,57 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $OplogSize;
 
     /**
-     * @var integer 实例变更后的节点数(mongod节点或mongos节点或readonly节点调整后的节点数，具体类型取决于AddNodeList或RemoveNodeList参数的节点类型)。
-<ul><li>副本集：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。</li><li>分片集群：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。</li></ul>
+     * @var integer 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
      */
     public $NodeNum;
 
     /**
-     * @var integer 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数MinReplicateSetNum与MaxReplicateSetNum获取。</li><li>该参数只能增加不能减少。</li></ul>
+     * @var integer 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
      */
     public $ReplicateSetNum;
 
     /**
-     * @var integer 实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
-<b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
+     * @var integer 实例配置变更的切换时间。
+- 0：调整完成时，立即执行变配任务。默认为0。
+- 1：在维护时间窗内，执行变配任务。
+**说明**：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。
      */
     public $InMaintenance;
 
     /**
-     * @var array 新增节点属性列表。
+     * @var string 分片实例配置变更后的mongos内存大小。- 单位：GB。
+     */
+    public $MongosMemory;
+
+    /**
+     * @var array 新增节点列表，节点类型及可用区信息。
      */
     public $AddNodeList;
 
     /**
-     * @var array 删除节点属性列表。
+     * @var array 删除节点列表，注意：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。
      */
     public $RemoveNodeList;
 
     /**
      * @param string $InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
 
-     * @param integer $Memory 实例配置变更后的内存大小。
-- 单位：GB。
-- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
-     * @param integer $Volume 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>
+     * @param integer $Memory 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+     * @param integer $Volume 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
      * @param integer $OplogSize (已废弃) 请使用ResizeOplog独立接口完成。
 
 实例配置变更后 Oplog 的大小。
 - 单位：GB。
 - 默认 Oplog 占用容量为磁盘空间的10%。系统允许设置的 Oplog 容量范围为磁盘空间的[10%,90%]。
-     * @param integer $NodeNum 实例变更后的节点数(mongod节点或mongos节点或readonly节点调整后的节点数，具体类型取决于AddNodeList或RemoveNodeList参数的节点类型)。
-<ul><li>副本集：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。</li><li>分片集群：取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。</li></ul>
-     * @param integer $ReplicateSetNum 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数MinReplicateSetNum与MaxReplicateSetNum获取。</li><li>该参数只能增加不能减少。</li></ul>
-     * @param integer $InMaintenance 实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
-<b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
-     * @param array $AddNodeList 新增节点属性列表。
-     * @param array $RemoveNodeList 删除节点属性列表。
+     * @param integer $NodeNum 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+     * @param integer $ReplicateSetNum 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+     * @param integer $InMaintenance 实例配置变更的切换时间。
+- 0：调整完成时，立即执行变配任务。默认为0。
+- 1：在维护时间窗内，执行变配任务。
+**说明**：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。
+     * @param string $MongosMemory 分片实例配置变更后的mongos内存大小。- 单位：GB。
+     * @param array $AddNodeList 新增节点列表，节点类型及可用区信息。
+     * @param array $RemoveNodeList 删除节点列表，注意：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。
      */
     function __construct()
     {
@@ -172,6 +176,10 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("InMaintenance",$param) and $param["InMaintenance"] !== null) {
             $this->InMaintenance = $param["InMaintenance"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
         }
 
         if (array_key_exists("AddNodeList",$param) and $param["AddNodeList"] !== null) {

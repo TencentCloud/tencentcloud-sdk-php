@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置需要过滤的设备名称
  * @method string getProjectId() 获取项目ID。产品 ID 为 -1 时，该参数必填
  * @method void setProjectId(string $ProjectId) 设置项目ID。产品 ID 为 -1 时，该参数必填
+ * @method array getFilters() 获取每次请求的Filters的上限为10，Filter.Values的上限为1。
+ * @method void setFilters(array $Filters) 设置每次请求的Filters的上限为10，Filter.Values的上限为1。
  */
 class GetDeviceListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class GetDeviceListRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 每次请求的Filters的上限为10，Filter.Values的上限为1。
+     */
+    public $Filters;
+
+    /**
      * @param string $ProductId 需要查看设备列表的产品ID, -1代表ProjectId来筛选
      * @param integer $Offset 分页偏移
      * @param integer $Limit 分页的大小，数值范围 10-100
      * @param string $FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
      * @param string $DeviceName 需要过滤的设备名称
      * @param string $ProjectId 项目ID。产品 ID 为 -1 时，该参数必填
+     * @param array $Filters 每次请求的Filters的上限为10，Filter.Values的上限为1。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class GetDeviceListRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

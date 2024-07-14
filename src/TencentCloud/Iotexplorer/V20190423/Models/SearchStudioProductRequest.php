@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevStatus(string $DevStatus) 设置产品Status
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
+ * @method array getFilters() 获取每次请求的Filters的上限为10，Filter.Values的上限为1。
+ * @method void setFilters(array $Filters) 设置每次请求的Filters的上限为10，Filter.Values的上限为1。
  */
 class SearchStudioProductRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SearchStudioProductRequest extends AbstractModel
     public $ProductId;
 
     /**
+     * @var array 每次请求的Filters的上限为10，Filter.Values的上限为1。
+     */
+    public $Filters;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $ProductName 产品名称
      * @param integer $Limit 列表Limit
      * @param integer $Offset 列表Offset
      * @param string $DevStatus 产品Status
      * @param string $ProductId 产品ID
+     * @param array $Filters 每次请求的Filters的上限为10，Filter.Values的上限为1。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class SearchStudioProductRequest extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

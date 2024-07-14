@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskStatus请求参数结构体
  *
-
+ * @method string getTaskId() 获取任务ID，值为异步接口返回的RequestId
+ * @method void setTaskId(string $TaskId) 设置任务ID，值为异步接口返回的RequestId
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
-
+    /**
+     * @var string 任务ID，值为异步接口返回的RequestId
+     */
+    public $TaskId;
 
     /**
-
+     * @param string $TaskId 任务ID，值为异步接口返回的RequestId
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeTaskStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
     }
 }

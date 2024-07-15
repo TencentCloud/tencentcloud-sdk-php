@@ -86,6 +86,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setDynamicVip(boolean $DynamicVip) 设置创建域名化负载均衡。
  * @method string getEgress() 获取网络出口
  * @method void setEgress(string $Egress) 设置网络出口
+ * @method LBChargePrepaid getLBChargePrepaid() 获取负载均衡实例的预付费相关属性
+ * @method void setLBChargePrepaid(LBChargePrepaid $LBChargePrepaid) 设置负载均衡实例的预付费相关属性
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -231,6 +233,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Egress;
 
     /**
+     * @var LBChargePrepaid 负载均衡实例的预付费相关属性
+     */
+    public $LBChargePrepaid;
+
+    /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
@@ -264,6 +271,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      * @param boolean $DynamicVip 创建域名化负载均衡。
      * @param string $Egress 网络出口
+     * @param LBChargePrepaid $LBChargePrepaid 负载均衡实例的预付费相关属性
      */
     function __construct()
     {
@@ -396,6 +404,11 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("LBChargePrepaid",$param) and $param["LBChargePrepaid"] !== null) {
+            $this->LBChargePrepaid = new LBChargePrepaid();
+            $this->LBChargePrepaid->deserialize($param["LBChargePrepaid"]);
         }
     }
 }

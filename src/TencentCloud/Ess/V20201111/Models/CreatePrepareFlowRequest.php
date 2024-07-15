@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
- * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method string getFlowName() 获取自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
- * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后文件下载的默认文件名称。
+ * @method void setFlowName(string $FlowName) 设置自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
  * @method integer getResourceType() 获取资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -157,8 +159,9 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var string 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      */
     public $FlowName;
 
@@ -283,8 +286,9 @@ class CreatePrepareFlowRequest extends AbstractModel
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
-     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>

@@ -66,6 +66,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
+ * @method Models\AssociateInstancesToCcnRouteTableResponse AssociateInstancesToCcnRouteTable(Models\AssociateInstancesToCcnRouteTableRequest $req) 本接口（AssociateInstancesToCcnRouteTable）用于将指定的云联网实例关联到指定的云联网路由表。
  * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) 本接口（AssociateNetworkAclSubnets）用于网络ACL关联VPC下的子网。
  * @method Models\AssociateNetworkInterfaceSecurityGroupsResponse AssociateNetworkInterfaceSecurityGroups(Models\AssociateNetworkInterfaceSecurityGroupsRequest $req) 本接口（AssociateNetworkInterfaceSecurityGroups）用于弹性网卡绑定安全组（SecurityGroup）。
@@ -94,6 +95,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
  * @method Models\CheckDefaultSubnetResponse CheckDefaultSubnet(Models\CheckDefaultSubnetRequest $req) 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口（CheckNetDetectState）用于验证网络探测。
+ * @method Models\ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPolicies(Models\ClearRouteTableSelectionPoliciesRequest $req) 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
  * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 本接口（CreateAddressTemplate）用于创建IP地址模板。
  * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合。
@@ -110,6 +112,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) 本接口（CreateCcn）用于创建云联网（CCN）。<br />
 * 创建云联网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * 每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+ * @method Models\CreateCcnRouteTablesResponse CreateCcnRouteTables(Models\CreateCcnRouteTablesRequest $req) 本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
  * @method Models\CreateCustomerGatewayResponse CreateCustomerGateway(Models\CreateCustomerGatewayRequest $req) 本接口（CreateCustomerGateway）用于创建对端网关。
  * @method Models\CreateDefaultSecurityGroupResponse CreateDefaultSecurityGroup(Models\CreateDefaultSecurityGroupRequest $req) 本接口（CreateDefaultSecurityGroup）用于创建（如果项目下未存在默认安全组，则创建；已存在则获取。）默认安全组（SecurityGroup）。
 * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
@@ -236,6 +239,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteCcnResponse DeleteCcn(Models\DeleteCcnRequest $req) 本接口（DeleteCcn）用于删除云联网。
 * 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
 * 删除云联网是不可逆的操作，请谨慎处理。
+ * @method Models\DeleteCcnRouteTablesResponse DeleteCcnRouteTables(Models\DeleteCcnRouteTablesRequest $req) 本接口（DeleteCcnRouteTables）用于删除云联网路由表。
  * @method Models\DeleteCustomerGatewayResponse DeleteCustomerGateway(Models\DeleteCustomerGatewayRequest $req) 本接口（DeleteCustomerGateway）用于删除对端网关。
  * @method Models\DeleteDhcpIpResponse DeleteDhcpIp(Models\DeleteDhcpIpRequest $req) 本接口（DeleteDhcpIp）用于删除DhcpIp。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
@@ -314,6 +318,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeBandwidthPackagesResponse DescribeBandwidthPackages(Models\DescribeBandwidthPackagesRequest $req) 接口用于查询带宽包详细信息，包括带宽包唯一标识ID，类型，计费模式，名称，资源信息等
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) 本接口（DescribeCcnAttachedInstances）用于查询云联网实例下已关联的网络实例。
  * @method Models\DescribeCcnRegionBandwidthLimitsResponse DescribeCcnRegionBandwidthLimits(Models\DescribeCcnRegionBandwidthLimitsRequest $req) 本接口（DescribeCcnRegionBandwidthLimits）用于查询云联网各地域出带宽上限，该接口只返回已关联网络实例包含的地域。
+ * @method Models\DescribeCcnRouteTableBroadcastPolicysResponse DescribeCcnRouteTableBroadcastPolicys(Models\DescribeCcnRouteTableBroadcastPolicysRequest $req) 本接口(DescribeCcnRouteTableBroadcastPolicys)用于查询指定云联网路由表的路由传播策略。
+ * @method Models\DescribeCcnRouteTableInputPolicysResponse DescribeCcnRouteTableInputPolicys(Models\DescribeCcnRouteTableInputPolicysRequest $req) 本接口(DescribeCcnRouteTableInputPolicys)用于查询指定云联网路由表的路由接收策略。
+ * @method Models\DescribeCcnRouteTablesResponse DescribeCcnRouteTables(Models\DescribeCcnRouteTablesRequest $req) 该接口用于查询指定的云联网实例的路由表信息。
  * @method Models\DescribeCcnRoutesResponse DescribeCcnRoutes(Models\DescribeCcnRoutesRequest $req) 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由。
  * @method Models\DescribeCcnsResponse DescribeCcns(Models\DescribeCcnsRequest $req) 本接口（DescribeCcns）用于查询云联网（CCN）列表。
  * @method Models\DescribeClassicLinkInstancesResponse DescribeClassicLinkInstances(Models\DescribeClassicLinkInstancesRequest $req) 本接口（DescribeClassicLinkInstances）用于查询私有网络和基础网络设备互通列表。
@@ -363,6 +370,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribePrivateNatGatewaysResponse DescribePrivateNatGateways(Models\DescribePrivateNatGatewaysRequest $req) 本接口（DescribePrivateNatGateways）用于查询私网NAT网关
  * @method Models\DescribeProductQuotaResponse DescribeProductQuota(Models\DescribeProductQuotaRequest $req) 本接口（DescribeProductQuota）用于查询网络产品的配额信息。
  * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
+ * @method Models\DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstances(Models\DescribeRouteTableAssociatedInstancesRequest $req) 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
+ * @method Models\DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPolicies(Models\DescribeRouteTableSelectionPoliciesRequest $req) 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
  * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req) 本接口（DescribeRouteTables）用于查询路由表。
  * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) 本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
  * @method Models\DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(Models\DescribeSecurityGroupLimitsRequest $req) 本接口(DescribeSecurityGroupLimits)用于查询用户安全组配额。
@@ -516,6 +525,7 @@ LimitTypes取值范围：
  * @method Models\ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(Models\ModifyCcnAttachedInstancesAttributeRequest $req) 修改CCN关联实例属性，目前仅修改备注description
  * @method Models\ModifyCcnAttributeResponse ModifyCcnAttribute(Models\ModifyCcnAttributeRequest $req) 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
  * @method Models\ModifyCcnRegionBandwidthLimitsTypeResponse ModifyCcnRegionBandwidthLimitsType(Models\ModifyCcnRegionBandwidthLimitsTypeRequest $req) 本接口（ModifyCcnRegionBandwidthLimitsType）用于修改后付费云联网实例修改带宽限速策略。
+ * @method Models\ModifyCcnRouteTablesResponse ModifyCcnRouteTables(Models\ModifyCcnRouteTablesRequest $req) 该接口用于修改云联网路由表名称和备注。
  * @method Models\ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(Models\ModifyCustomerGatewayAttributeRequest $req) 本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
  * @method Models\ModifyDhcpIpAttributeResponse ModifyDhcpIpAttribute(Models\ModifyDhcpIpAttributeRequest $req) 本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
  * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) 本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
@@ -544,6 +554,7 @@ LimitTypes取值范围：
  * @method Models\ModifyPrivateNatGatewayTranslationAclRuleResponse ModifyPrivateNatGatewayTranslationAclRule(Models\ModifyPrivateNatGatewayTranslationAclRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
  * @method Models\ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRule(Models\ModifyPrivateNatGatewayTranslationNatRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) 本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
+ * @method Models\ModifyRouteTableSelectionPoliciesResponse ModifyRouteTableSelectionPolicies(Models\ModifyRouteTableSelectionPoliciesRequest $req) 该接口用于编辑云联网路由表选择策略
  * @method Models\ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(Models\ModifySecurityGroupAttributeRequest $req) 本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。
  * @method Models\ModifySecurityGroupPoliciesResponse ModifySecurityGroupPolicies(Models\ModifySecurityGroupPoliciesRequest $req) 本接口（ModifySecurityGroupPolicies）用于重置安全组出站和入站规则（SecurityGroupPolicy）。
 
@@ -597,6 +608,43 @@ LimitTypes取值范围：
 2. 支持批量删除同一个转换实例下的多个转换规则
  * @method Models\RenewAddressesResponse RenewAddresses(Models\RenewAddressesRequest $req) 该接口用于续费包月带宽计费模式的弹性公网IP
  * @method Models\RenewVpnGatewayResponse RenewVpnGateway(Models\RenewVpnGatewayRequest $req) 本接口（RenewVpnGateway）用于预付费（包年包月）VPN网关续费。目前只支持IPSEC网关。
+ * @method Models\ReplaceCcnRouteTableBroadcastPolicysResponse ReplaceCcnRouteTableBroadcastPolicys(Models\ReplaceCcnRouteTableBroadcastPolicysRequest $req) 本接口(ReplaceCcnRouteTableBroadcastPolicys)用于替换云联网路由表路由传播策略。
+> 特别注意：是全量覆盖，非增量添加
+
+**路由条件支持以下四种：**
+
+- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+- 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+- 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+- 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+
+
+**传播条件支持以下三种：**
+
+- 实例类型: `instance-type`，格式同路由条件
+- 实例ID: `instance-id`，格式同路由条件
+- 实例地域: `instance-region`，格式同路由条件
+
+
+**使用限制：**
+- 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+- 一张路由表，最大支持 `100` 条路由传播策略
+- 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+ * @method Models\ReplaceCcnRouteTableInputPolicysResponse ReplaceCcnRouteTableInputPolicys(Models\ReplaceCcnRouteTableInputPolicysRequest $req) 本接口(ReplaceRouteTableInputPolicys)用于替换云联网路由表路由接收策略。
+> 特别注意：是全量覆盖，非增量添加
+
+**路由条件支持以下四种：**
+
+- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+- 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+- 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+- 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+
+
+**使用限制：**
+- 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+- 一张路由表，最大支持 `100` 条路由接收策略
+- 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
  * @method Models\ReplaceDirectConnectGatewayCcnRoutesResponse ReplaceDirectConnectGatewayCcnRoutes(Models\ReplaceDirectConnectGatewayCcnRoutesRequest $req) 本接口（ReplaceDirectConnectGatewayCcnRoutes）根据路由ID（RouteId）修改指定的路由（Route），支持批量修改。
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
 * 一个子网只能关联一个路由表。

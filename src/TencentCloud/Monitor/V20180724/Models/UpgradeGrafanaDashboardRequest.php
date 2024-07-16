@@ -22,60 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method array getIntegrationCodes() 获取Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-<li>qcloud</li>
-<li>cvm_process_exporter</li>
-<li>cvm_node_exporter</li>
-<li>cvm</li>
-<li>kubernetes</li>
-<li>cdwch</li>
-<li>rocketmq</li>
-<li>spring_mvc</li>
-<li>mysql</li>
-<li>go</li>
-<li>redis</li>
-<li>jvm</li>
-<li>pgsql</li>
-<li>mongo</li>
-<li>kafka</li>
-<li>es</li>
-<li>flink</li>
-<li>blackbox</li>
-<li>consule</li>
-<li>memcached</li>
-<li>zk</li>
-<li>tps</li>
-<li>istio</li>
-<li>etcd</li>
-<li>pts</li>
-<li>kong</li>
- * @method void setIntegrationCodes(array $IntegrationCodes) 设置Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-<li>qcloud</li>
-<li>cvm_process_exporter</li>
-<li>cvm_node_exporter</li>
-<li>cvm</li>
-<li>kubernetes</li>
-<li>cdwch</li>
-<li>rocketmq</li>
-<li>spring_mvc</li>
-<li>mysql</li>
-<li>go</li>
-<li>redis</li>
-<li>jvm</li>
-<li>pgsql</li>
-<li>mongo</li>
-<li>kafka</li>
-<li>es</li>
-<li>flink</li>
-<li>blackbox</li>
-<li>consule</li>
-<li>memcached</li>
-<li>zk</li>
-<li>tps</li>
-<li>istio</li>
-<li>etcd</li>
-<li>pts</li>
-<li>kong</li>
+ * @method array getIntegrationCodes() 获取Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：<li>qcloud</li><li>cvm_process_exporter</li><li>cvm_node_exporter</li><li>cvm</li><li>tps</li><li>nginx-ingress</li><li>nvidia-gpu</li><li>cdwch</li><li>emr</li><li>apache</li><li>rocketmq</li><li>rabbitmq</li><li>spring_mvc</li><li>mysql</li><li>mssql</li><li>go</li><li>redis</li><li>jvm</li><li>pgsql</li><li>ceph</li><li>docker</li><li>nginx</li><li>oracledb</li><li>mongo</li><li>kafka</li><li>es</li><li>flink</li><li>blackbox</li><li>consule</li><li>memcached</li><li>zk</li><li>tps</li><li>istio</li><li>etcd</li><li>pts</li><li>kong</li>
+ * @method void setIntegrationCodes(array $IntegrationCodes) 设置Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：<li>qcloud</li><li>cvm_process_exporter</li><li>cvm_node_exporter</li><li>cvm</li><li>tps</li><li>nginx-ingress</li><li>nvidia-gpu</li><li>cdwch</li><li>emr</li><li>apache</li><li>rocketmq</li><li>rabbitmq</li><li>spring_mvc</li><li>mysql</li><li>mssql</li><li>go</li><li>redis</li><li>jvm</li><li>pgsql</li><li>ceph</li><li>docker</li><li>nginx</li><li>oracledb</li><li>mongo</li><li>kafka</li><li>es</li><li>flink</li><li>blackbox</li><li>consule</li><li>memcached</li><li>zk</li><li>tps</li><li>istio</li><li>etcd</li><li>pts</li><li>kong</li>
  */
 class UpgradeGrafanaDashboardRequest extends AbstractModel
 {
@@ -85,65 +33,13 @@ class UpgradeGrafanaDashboardRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-<li>qcloud</li>
-<li>cvm_process_exporter</li>
-<li>cvm_node_exporter</li>
-<li>cvm</li>
-<li>kubernetes</li>
-<li>cdwch</li>
-<li>rocketmq</li>
-<li>spring_mvc</li>
-<li>mysql</li>
-<li>go</li>
-<li>redis</li>
-<li>jvm</li>
-<li>pgsql</li>
-<li>mongo</li>
-<li>kafka</li>
-<li>es</li>
-<li>flink</li>
-<li>blackbox</li>
-<li>consule</li>
-<li>memcached</li>
-<li>zk</li>
-<li>tps</li>
-<li>istio</li>
-<li>etcd</li>
-<li>pts</li>
-<li>kong</li>
+     * @var array Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：<li>qcloud</li><li>cvm_process_exporter</li><li>cvm_node_exporter</li><li>cvm</li><li>tps</li><li>nginx-ingress</li><li>nvidia-gpu</li><li>cdwch</li><li>emr</li><li>apache</li><li>rocketmq</li><li>rabbitmq</li><li>spring_mvc</li><li>mysql</li><li>mssql</li><li>go</li><li>redis</li><li>jvm</li><li>pgsql</li><li>ceph</li><li>docker</li><li>nginx</li><li>oracledb</li><li>mongo</li><li>kafka</li><li>es</li><li>flink</li><li>blackbox</li><li>consule</li><li>memcached</li><li>zk</li><li>tps</li><li>istio</li><li>etcd</li><li>pts</li><li>kong</li>
      */
     public $IntegrationCodes;
 
     /**
      * @param string $InstanceId 实例 ID
-     * @param array $IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-<li>qcloud</li>
-<li>cvm_process_exporter</li>
-<li>cvm_node_exporter</li>
-<li>cvm</li>
-<li>kubernetes</li>
-<li>cdwch</li>
-<li>rocketmq</li>
-<li>spring_mvc</li>
-<li>mysql</li>
-<li>go</li>
-<li>redis</li>
-<li>jvm</li>
-<li>pgsql</li>
-<li>mongo</li>
-<li>kafka</li>
-<li>es</li>
-<li>flink</li>
-<li>blackbox</li>
-<li>consule</li>
-<li>memcached</li>
-<li>zk</li>
-<li>tps</li>
-<li>istio</li>
-<li>etcd</li>
-<li>pts</li>
-<li>kong</li>
+     * @param array $IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：<li>qcloud</li><li>cvm_process_exporter</li><li>cvm_node_exporter</li><li>cvm</li><li>tps</li><li>nginx-ingress</li><li>nvidia-gpu</li><li>cdwch</li><li>emr</li><li>apache</li><li>rocketmq</li><li>rabbitmq</li><li>spring_mvc</li><li>mysql</li><li>mssql</li><li>go</li><li>redis</li><li>jvm</li><li>pgsql</li><li>ceph</li><li>docker</li><li>nginx</li><li>oracledb</li><li>mongo</li><li>kafka</li><li>es</li><li>flink</li><li>blackbox</li><li>consule</li><li>memcached</li><li>zk</li><li>tps</li><li>istio</li><li>etcd</li><li>pts</li><li>kong</li>
      */
     function __construct()
     {

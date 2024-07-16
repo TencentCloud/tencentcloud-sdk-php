@@ -138,6 +138,10 @@ OPEN 开启
 CLOSE 关闭
  * @method integer getCvmDelayOnlineTime() 获取cvm延迟上架参数
  * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) 设置cvm延迟上架参数
+ * @method integer getShardAllocationConcurrents() 获取分片迁移并发数
+ * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) 设置分片迁移并发数
+ * @method integer getShardAllocationBytes() 获取分片迁移并发速度
+ * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -353,6 +357,16 @@ CLOSE 关闭
     public $CvmDelayOnlineTime;
 
     /**
+     * @var integer 分片迁移并发数
+     */
+    public $ShardAllocationConcurrents;
+
+    /**
+     * @var integer 分片迁移并发速度
+     */
+    public $ShardAllocationBytes;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -412,6 +426,8 @@ CLOSE 关闭
 OPEN 开启
 CLOSE 关闭
      * @param integer $CvmDelayOnlineTime cvm延迟上架参数
+     * @param integer $ShardAllocationConcurrents 分片迁移并发数
+     * @param integer $ShardAllocationBytes 分片迁移并发速度
      */
     function __construct()
     {
@@ -597,6 +613,14 @@ CLOSE 关闭
 
         if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
             $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
+        }
+
+        if (array_key_exists("ShardAllocationConcurrents",$param) and $param["ShardAllocationConcurrents"] !== null) {
+            $this->ShardAllocationConcurrents = $param["ShardAllocationConcurrents"];
+        }
+
+        if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
+            $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
         }
     }
 }

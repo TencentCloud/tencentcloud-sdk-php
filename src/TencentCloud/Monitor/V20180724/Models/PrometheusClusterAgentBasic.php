@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 与腾讯云可观测平台融合托管 Prometheus 实例，关联集群基础信息
  *
- * @method string getRegion() 获取集群ID
- * @method void setRegion(string $Region) 设置集群ID
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
  * @method string getClusterType() 获取集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
  * @method void setClusterType(string $ClusterType) 设置集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
  * @method string getClusterId() 获取集群ID
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class PrometheusClusterAgentBasic extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 地域
      */
     public $Region;
 
@@ -87,7 +87,7 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $OpenDefaultRecord;
 
     /**
-     * @param string $Region 集群ID
+     * @param string $Region 地域
      * @param string $ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
      * @param string $ClusterId 集群ID
      * @param boolean $EnableExternal 是否开启公网CLB

@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() 获取`HAVIP`所在私有网络`ID`。
  * @method void setVpcId(string $VpcId) 设置`HAVIP`所在私有网络`ID`。
- * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
- * @method void setSubnetId(string $SubnetId) 设置`HAVIP`所在子网`ID`。
  * @method string getHaVipName() 获取`HAVIP`名称。
  * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称。
+ * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
+ * @method void setSubnetId(string $SubnetId) 设置`HAVIP`所在子网`ID`。
  * @method string getVip() 获取指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
  * @method void setVip(string $Vip) 设置指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
  * @method string getNetworkInterfaceId() 获取`HAVIP`所在弹性网卡`ID`。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置`HAVIP`所在弹性网卡`ID`。
+ * @method boolean getCheckAssociate() 获取是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+ * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
  */
 class CreateHaVipRequest extends AbstractModel
 {
@@ -39,14 +41,14 @@ class CreateHaVipRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string `HAVIP`所在子网`ID`。
-     */
-    public $SubnetId;
-
-    /**
      * @var string `HAVIP`名称。
      */
     public $HaVipName;
+
+    /**
+     * @var string `HAVIP`所在子网`ID`。
+     */
+    public $SubnetId;
 
     /**
      * @var string 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
@@ -59,11 +61,17 @@ class CreateHaVipRequest extends AbstractModel
     public $NetworkInterfaceId;
 
     /**
+     * @var boolean 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+     */
+    public $CheckAssociate;
+
+    /**
      * @param string $VpcId `HAVIP`所在私有网络`ID`。
-     * @param string $SubnetId `HAVIP`所在子网`ID`。
      * @param string $HaVipName `HAVIP`名称。
+     * @param string $SubnetId `HAVIP`所在子网`ID`。
      * @param string $Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      * @param string $NetworkInterfaceId `HAVIP`所在弹性网卡`ID`。
+     * @param boolean $CheckAssociate 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
      */
     function __construct()
     {
@@ -82,12 +90,12 @@ class CreateHaVipRequest extends AbstractModel
             $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
-        }
-
         if (array_key_exists("HaVipName",$param) and $param["HaVipName"] !== null) {
             $this->HaVipName = $param["HaVipName"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
@@ -96,6 +104,10 @@ class CreateHaVipRequest extends AbstractModel
 
         if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
             $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        }
+
+        if (array_key_exists("CheckAssociate",$param) and $param["CheckAssociate"] !== null) {
+            $this->CheckAssociate = $param["CheckAssociate"];
         }
     }
 }

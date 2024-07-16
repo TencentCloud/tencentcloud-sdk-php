@@ -104,8 +104,8 @@ video 纯视频
  * @method void setVideoDuration(integer $VideoDuration) 设置录制时长
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
- * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播
- * @method void setLiveType(integer $LiveType) 设置直播类型：0 常规（默认）1 伪直播
+ * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
+ * @method void setLiveType(integer $LiveType) 设置直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
  * @method string getRecordLiveUrl() 获取伪直播链接
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
@@ -258,7 +258,7 @@ video 纯视频
     public $EndDelayTime;
 
     /**
-     * @var integer 直播类型：0 常规（默认）1 伪直播
+     * @var integer 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
      */
     public $LiveType;
 
@@ -340,7 +340,7 @@ video 纯视频
 注：大班课的布局(layout)只有三分屏
      * @param integer $VideoDuration 录制时长
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-     * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播
+     * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
      * @param string $RecordLiveUrl 伪直播链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道

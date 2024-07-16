@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMsg(ErrorMsg $ErrorMsg) 设置错误信息。
 如果流式返回中服务处理异常，返回该错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModerationLevel() 获取多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+ * @method void setModerationLevel(string $ModerationLevel) 设置多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  */
@@ -77,6 +79,11 @@ class ChatCompletionsResponse extends AbstractModel
     public $ErrorMsg;
 
     /**
+     * @var string 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     */
+    public $ModerationLevel;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     public $RequestId;
@@ -91,6 +98,7 @@ class ChatCompletionsResponse extends AbstractModel
      * @param ErrorMsg $ErrorMsg 错误信息。
 如果流式返回中服务处理异常，返回该错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     function __construct()
@@ -135,6 +143,10 @@ class ChatCompletionsResponse extends AbstractModel
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = new ErrorMsg();
             $this->ErrorMsg->deserialize($param["ErrorMsg"]);
+        }
+
+        if (array_key_exists("ModerationLevel",$param) and $param["ModerationLevel"] !== null) {
+            $this->ModerationLevel = $param["ModerationLevel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

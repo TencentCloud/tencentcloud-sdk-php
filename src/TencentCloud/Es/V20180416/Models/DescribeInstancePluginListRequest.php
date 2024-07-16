@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始值, 默认值0
  * @method integer getLimit() 获取分页大小，默认值10
  * @method void setLimit(integer $Limit) 设置分页大小，默认值10
- * @method string getOrderBy() 获取排序字段<li>1：插件名 pluginName
- * @method void setOrderBy(string $OrderBy) 设置排序字段<li>1：插件名 pluginName
+ * @method string getOrderBy() 获取排序字段<li>1：插件名 pluginName</li>
+ * @method void setOrderBy(string $OrderBy) 设置排序字段<li>1：插件名 pluginName</li>
  * @method string getOrderByType() 获取排序方式<li>0：升序 asc</li><li>1：降序 desc</li>
  * @method void setOrderByType(string $OrderByType) 设置排序方式<li>0：升序 asc</li><li>1：降序 desc</li>
  * @method integer getPluginType() 获取0：系统插件
@@ -51,7 +51,7 @@ class DescribeInstancePluginListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段<li>1：插件名 pluginName
+     * @var string 排序字段<li>1：插件名 pluginName</li>
      */
     public $OrderBy;
 
@@ -69,7 +69,7 @@ class DescribeInstancePluginListRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param integer $Offset 分页起始值, 默认值0
      * @param integer $Limit 分页大小，默认值10
-     * @param string $OrderBy 排序字段<li>1：插件名 pluginName
+     * @param string $OrderBy 排序字段<li>1：插件名 pluginName</li>
      * @param string $OrderByType 排序方式<li>0：升序 asc</li><li>1：降序 desc</li>
      * @param integer $PluginType 0：系统插件
      */

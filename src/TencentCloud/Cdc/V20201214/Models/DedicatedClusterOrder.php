@@ -78,6 +78,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderType(string $OrderType) 设置订单类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckStatus() 获取验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckStatus(string $CheckStatus) 设置验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliverExpectTime() 获取交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliverExpectTime(string $DeliverExpectTime) 设置交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliverFinishTime() 获取交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliverFinishTime(string $DeliverFinishTime) 设置交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckExpectTime() 获取验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckExpectTime(string $CheckExpectTime) 设置验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckFinishTime() 获取验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckFinishTime(string $CheckFinishTime) 设置验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderSLA() 获取订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderSLA(string $OrderSLA) 设置订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderPayPlan() 获取订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderPayPlan(string $OrderPayPlan) 设置订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrder extends AbstractModel
 {
@@ -191,6 +219,48 @@ class DedicatedClusterOrder extends AbstractModel
     public $OrderType;
 
     /**
+     * @var string 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckStatus;
+
+    /**
+     * @var string 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliverExpectTime;
+
+    /**
+     * @var string 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliverFinishTime;
+
+    /**
+     * @var string 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckExpectTime;
+
+    /**
+     * @var string 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckFinishTime;
+
+    /**
+     * @var string 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderSLA;
+
+    /**
+     * @var string 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderPayPlan;
+
+    /**
      * @param string $DedicatedClusterId 专用集群id
      * @param string $DedicatedClusterTypeId 专用集群类型id（移到下一层级，已经废弃，后续将删除）
      * @param array $SupportedStorageType 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
@@ -219,6 +289,20 @@ class DedicatedClusterOrder extends AbstractModel
      * @param integer $TimeSpan 购买时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderType 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckStatus 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeliverExpectTime 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeliverFinishTime 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckExpectTime 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckFinishTime 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderSLA 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderPayPlan 订单支付计划
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -317,6 +401,34 @@ class DedicatedClusterOrder extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("DeliverExpectTime",$param) and $param["DeliverExpectTime"] !== null) {
+            $this->DeliverExpectTime = $param["DeliverExpectTime"];
+        }
+
+        if (array_key_exists("DeliverFinishTime",$param) and $param["DeliverFinishTime"] !== null) {
+            $this->DeliverFinishTime = $param["DeliverFinishTime"];
+        }
+
+        if (array_key_exists("CheckExpectTime",$param) and $param["CheckExpectTime"] !== null) {
+            $this->CheckExpectTime = $param["CheckExpectTime"];
+        }
+
+        if (array_key_exists("CheckFinishTime",$param) and $param["CheckFinishTime"] !== null) {
+            $this->CheckFinishTime = $param["CheckFinishTime"];
+        }
+
+        if (array_key_exists("OrderSLA",$param) and $param["OrderSLA"] !== null) {
+            $this->OrderSLA = $param["OrderSLA"];
+        }
+
+        if (array_key_exists("OrderPayPlan",$param) and $param["OrderPayPlan"] !== null) {
+            $this->OrderPayPlan = $param["OrderPayPlan"];
         }
     }
 }

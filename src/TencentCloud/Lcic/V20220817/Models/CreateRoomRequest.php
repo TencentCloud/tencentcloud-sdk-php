@@ -116,6 +116,8 @@ video 纯视频
  * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method integer getRecordStream() 获取录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+ * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -285,6 +287,11 @@ video 纯视频
     public $RecordLang;
 
     /**
+     * @var integer 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public $RecordStream;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
@@ -333,6 +340,7 @@ video 纯视频
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      */
     function __construct()
     {
@@ -461,6 +469,10 @@ video 纯视频
 
         if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
             $this->RecordLang = $param["RecordLang"];
+        }
+
+        if (array_key_exists("RecordStream",$param) and $param["RecordStream"] !== null) {
+            $this->RecordStream = $param["RecordStream"];
         }
     }
 }

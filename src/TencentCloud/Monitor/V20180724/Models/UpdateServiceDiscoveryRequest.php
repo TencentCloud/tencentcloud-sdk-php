@@ -36,70 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
 <li> 3 = JobMonitor</li>
- * @method string getYaml() 获取服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
- * @method void setYaml(string $Yaml) 设置服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+ * @method string getYaml() 获取服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
+ * @method void setYaml(string $Yaml) 设置服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
  */
 class UpdateServiceDiscoveryRequest extends AbstractModel
 {
@@ -128,38 +66,7 @@ class UpdateServiceDiscoveryRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+     * @var string 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     public $Yaml;
 
@@ -172,38 +79,7 @@ spec:
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
 <li> 3 = JobMonitor</li>
-     * @param string $Yaml 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+     * @param string $Yaml 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     function __construct()
     {

@@ -62,6 +62,12 @@ selfbuilt-db 表示自建数据库
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
  * @method void setTimingStartTime(string $TimingStartTime) 设置任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
+ * @method string getOrder() 获取random-随机，asc生序，desc降序
+ * @method void setOrder(string $Order) 设置random-随机，asc生序，desc降序
+ * @method integer getRows() 获取抽样的条数，范围30-1000
+ * @method void setRows(integer $Rows) 设置抽样的条数，范围30-1000
+ * @method string getGlobalOrderField() 获取抽样的排序字段
+ * @method void setGlobalOrderField(string $GlobalOrderField) 设置抽样的排序字段
  */
 class CreateDSPADiscoveryTaskRequest extends AbstractModel
 {
@@ -139,6 +145,21 @@ selfbuilt-db 表示自建数据库
     public $TimingStartTime;
 
     /**
+     * @var string random-随机，asc生序，desc降序
+     */
+    public $Order;
+
+    /**
+     * @var integer 抽样的条数，范围30-1000
+     */
+    public $Rows;
+
+    /**
+     * @var string 抽样的排序字段
+     */
+    public $GlobalOrderField;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $Name 任务名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
      * @param string $DataSourceId 数据源ID
@@ -160,6 +181,9 @@ selfbuilt-db 表示自建数据库
      * @param array $ComplianceGroupIds 合规组ID列表，最多支持添加5个
      * @param string $TimingStartTime 任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
+     * @param string $Order random-随机，asc生序，desc降序
+     * @param integer $Rows 抽样的条数，范围30-1000
+     * @param string $GlobalOrderField 抽样的排序字段
      */
     function __construct()
     {
@@ -224,6 +248,18 @@ selfbuilt-db 表示自建数据库
 
         if (array_key_exists("TimingStartTime",$param) and $param["TimingStartTime"] !== null) {
             $this->TimingStartTime = $param["TimingStartTime"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Rows",$param) and $param["Rows"] !== null) {
+            $this->Rows = $param["Rows"];
+        }
+
+        if (array_key_exists("GlobalOrderField",$param) and $param["GlobalOrderField"] !== null) {
+            $this->GlobalOrderField = $param["GlobalOrderField"];
         }
     }
 }

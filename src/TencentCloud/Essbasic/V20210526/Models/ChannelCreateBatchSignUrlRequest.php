@@ -41,19 +41,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
  * @method void setName(string $Name) 设置签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
  * @method string getMobile() 获取手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
  * @method void setMobile(string $Mobile) 设置手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
  * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
@@ -96,23 +96,23 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
  * @method void setFlowIds(array $FlowIds) 设置批量签署的合同流程ID数组。
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
- * @method string getOrganizationName() 获取目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+ * @method string getOrganizationName() 获取SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
- * @method void setOrganizationName(string $OrganizationName) 设置目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+ * @method void setOrganizationName(string $OrganizationName) 设置SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
  * @method boolean getJumpToDetail() 获取是否直接跳转至合同内容页面进行签署
 <ul>
@@ -126,6 +126,22 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method FlowBatchUrlInfo getFlowBatchUrlInfo() 获取批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
  * @method void setFlowBatchUrlInfo(FlowBatchUrlInfo $FlowBatchUrlInfo) 设置批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+ * @method string getOpenId() 获取第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+ * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+ * @method string getOrganizationOpenId() 获取第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
  */
 class ChannelCreateBatchSignUrlRequest extends AbstractModel
 {
@@ -146,7 +162,7 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
      * @var string 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public $Name;
 
@@ -154,7 +170,7 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
      * @var string 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public $Mobile;
 
@@ -200,14 +216,14 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
     public $FlowIds;
 
     /**
-     * @var string 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * @var string SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
      */
     public $OrganizationName;
@@ -227,6 +243,22 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
     public $FlowBatchUrlInfo;
 
     /**
+     * @var string 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+     */
+    public $OpenId;
+
+    /**
+     * @var string 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+     */
+    public $OrganizationOpenId;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -239,11 +271,11 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
      * @param string $Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
      * @param string $Mobile 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $IdCardType 证件类型，支持以下类型
@@ -265,14 +297,14 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 </ul>
      * @param array $FlowIds 批量签署的合同流程ID数组。
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     * @param string $OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * @param string $OrganizationName SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
      * @param boolean $JumpToDetail 是否直接跳转至合同内容页面进行签署
 <ul>
@@ -280,6 +312,14 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
      * @param FlowBatchUrlInfo $FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     * @param string $OpenId 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+     * @param string $OrganizationOpenId 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
      */
     function __construct()
     {
@@ -339,6 +379,14 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
         if (array_key_exists("FlowBatchUrlInfo",$param) and $param["FlowBatchUrlInfo"] !== null) {
             $this->FlowBatchUrlInfo = new FlowBatchUrlInfo();
             $this->FlowBatchUrlInfo->deserialize($param["FlowBatchUrlInfo"]);
+        }
+
+        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
+            $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("OrganizationOpenId",$param) and $param["OrganizationOpenId"] !== null) {
+            $this->OrganizationOpenId = $param["OrganizationOpenId"];
         }
     }
 }

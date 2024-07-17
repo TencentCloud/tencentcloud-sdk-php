@@ -30,8 +30,8 @@ Level 按模板级别过滤
 Name 按名称过滤
 Describe 按描述过滤
 ID 按templateId过滤
- * @method integer getOffset() 获取分页偏移
- * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method integer getOffset() 获取分页偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
  * @method integer getLimit() 获取总数限制
  * @method void setLimit(integer $Limit) 设置总数限制
  */
@@ -47,7 +47,7 @@ ID 按templateId过滤
     public $Filters;
 
     /**
-     * @var integer 分页偏移
+     * @var integer 分页偏移量，默认为0
      */
     public $Offset;
 
@@ -62,7 +62,7 @@ Level 按模板级别过滤
 Name 按名称过滤
 Describe 按描述过滤
 ID 按templateId过滤
-     * @param integer $Offset 分页偏移
+     * @param integer $Offset 分页偏移量，默认为0
      * @param integer $Limit 总数限制
      */
     function __construct()

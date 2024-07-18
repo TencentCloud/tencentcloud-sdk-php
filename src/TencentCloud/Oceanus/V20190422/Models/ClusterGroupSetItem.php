@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubEks(SubEks $SubEks) 设置弹性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingResourceMode() 获取默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingResourceMode(string $BillingResourceMode) 设置默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterGroupSetItem extends AbstractModel
 {
@@ -167,6 +171,12 @@ class ClusterGroupSetItem extends AbstractModel
     public $SubEks;
 
     /**
+     * @var string 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingResourceMode;
+
+    /**
      * @param string $ClusterId clusterGroup 的 SerialId
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -187,6 +197,8 @@ class ClusterGroupSetItem extends AbstractModel
      * @param float $RunningCu 运行中CU
      * @param integer $PayMode 付费模式
      * @param SubEks $SubEks 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingResourceMode 默认 "" 包销模式 "exclusiveSale"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ class ClusterGroupSetItem extends AbstractModel
         if (array_key_exists("SubEks",$param) and $param["SubEks"] !== null) {
             $this->SubEks = new SubEks();
             $this->SubEks->deserialize($param["SubEks"]);
+        }
+
+        if (array_key_exists("BillingResourceMode",$param) and $param["BillingResourceMode"] !== null) {
+            $this->BillingResourceMode = $param["BillingResourceMode"];
         }
     }
 }

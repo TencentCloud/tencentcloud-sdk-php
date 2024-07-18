@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitHunyuanImageJob请求参数结构体
  *
- * @method string getPrompt() 获取文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
- * @method void setPrompt(string $Prompt) 设置文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+ * @method string getPrompt() 获取文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+ * @method void setPrompt(string $Prompt) 设置文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
  * @method string getStyle() 获取绘画风格。
 请在 [混元生图风格列表](https://cloud.tencent.com/document/product/1729/105846) 中选择期望的风格，传入风格编号。
 不传默认不指定风格。
@@ -54,7 +58,9 @@ use TencentCloud\Common\AbstractModel;
 class SubmitHunyuanImageJobRequest extends AbstractModel
 {
     /**
-     * @var string 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+     * @var string 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
      */
     public $Prompt;
 
@@ -89,7 +95,9 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
     public $Revise;
 
     /**
-     * @param string $Prompt 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+     * @param string $Prompt 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
      * @param string $Style 绘画风格。
 请在 [混元生图风格列表](https://cloud.tencent.com/document/product/1729/105846) 中选择期望的风格，传入风格编号。
 不传默认不指定风格。

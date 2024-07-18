@@ -166,6 +166,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(integer $ResourceType) 设置资源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingResourceMode() 获取集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingResourceMode(string $BillingResourceMode) 设置集群类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -423,6 +427,12 @@ class Cluster extends AbstractModel
     public $ResourceType;
 
     /**
+     * @var string 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingResourceMode;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -495,6 +505,8 @@ class Cluster extends AbstractModel
      * @param string $AgentSerialId 上级集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingResourceMode 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -720,6 +732,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("BillingResourceMode",$param) and $param["BillingResourceMode"] !== null) {
+            $this->BillingResourceMode = $param["BillingResourceMode"];
         }
     }
 }

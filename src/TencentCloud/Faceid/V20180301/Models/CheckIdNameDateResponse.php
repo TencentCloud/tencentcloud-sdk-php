@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
 0: 一致
@@ -42,6 +43,7 @@ use TencentCloud\Common\AbstractModel;
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,6 +63,7 @@ class CheckIdNameDateResponse extends AbstractModel
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
      */
     public $Result;
 
@@ -86,6 +89,7 @@ class CheckIdNameDateResponse extends AbstractModel
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
      * @param string $Description 业务结果描述。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

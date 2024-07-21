@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID。
  * @method string getInstanceName() 获取实例名称。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method array getInstanceRegion() 获取实例所在地域。
- * @method void setInstanceRegion(array $InstanceRegion) 设置实例所在地域。
+ * @method string getInstanceRegion() 获取实例所在地域。
+ * @method void setInstanceRegion(string $InstanceRegion) 设置实例所在地域。
  * @method string getInstanceUin() 获取实例所属的账户uin。
  * @method void setInstanceUin(string $InstanceUin) 设置实例所属的账户uin。
  * @method string getState() 获取关联实例状态：
@@ -90,7 +90,7 @@ class InstanceBind extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var array 实例所在地域。
+     * @var string 实例所在地域。
      */
     public $InstanceRegion;
 
@@ -120,7 +120,7 @@ class InstanceBind extends AbstractModel
      * @param string $InstanceBindTime 实例绑定路由表的时间。
      * @param string $RouteTableId 路由表ID。
      * @param string $InstanceName 实例名称。
-     * @param array $InstanceRegion 实例所在地域。
+     * @param string $InstanceRegion 实例所在地域。
      * @param string $InstanceUin 实例所属的账户uin。
      * @param string $State 关联实例状态：
 <li>`PENDING`：申请中</li>

@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
 3. 未设置时，默认值为auto
  * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  * @method void setCustomTool(Tool $CustomTool) 设置强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+ * @method boolean getSearchInfo() 获取默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+ * @method void setSearchInfo(boolean $SearchInfo) 设置默认是false，在值为true且命中搜索时，接口会返回SearchInfo
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $CustomTool;
 
     /**
+     * @var boolean 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+     */
+    public $SearchInfo;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -272,6 +279,7 @@ class ChatCompletionsRequest extends AbstractModel
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     * @param boolean $SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
      */
     function __construct()
     {
@@ -335,6 +343,10 @@ class ChatCompletionsRequest extends AbstractModel
         if (array_key_exists("CustomTool",$param) and $param["CustomTool"] !== null) {
             $this->CustomTool = new Tool();
             $this->CustomTool->deserialize($param["CustomTool"]);
+        }
+
+        if (array_key_exists("SearchInfo",$param) and $param["SearchInfo"] !== null) {
+            $this->SearchInfo = $param["SearchInfo"];
         }
     }
 }

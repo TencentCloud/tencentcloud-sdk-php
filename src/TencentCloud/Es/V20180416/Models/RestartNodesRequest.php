@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsOffline(boolean $IsOffline) 设置节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
  * @method integer getCvmDelayOnlineTime() 获取cvm延迟上架时间
  * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) 设置cvm延迟上架时间
+ * @method integer getShardAllocationConcurrents() 获取分片迁移并发数
+ * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) 设置分片迁移并发数
+ * @method integer getShardAllocationBytes() 获取分片迁移并发速度
+ * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class RestartNodesRequest extends AbstractModel
     public $CvmDelayOnlineTime;
 
     /**
+     * @var integer 分片迁移并发数
+     */
+    public $ShardAllocationConcurrents;
+
+    /**
+     * @var integer 分片迁移并发速度
+     */
+    public $ShardAllocationBytes;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $NodeNames 节点名称列表
      * @param boolean $ForceRestart 是否强制重启
      * @param string $RestartMode 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
      * @param boolean $IsOffline 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
      * @param integer $CvmDelayOnlineTime cvm延迟上架时间
+     * @param integer $ShardAllocationConcurrents 分片迁移并发数
+     * @param integer $ShardAllocationBytes 分片迁移并发速度
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
             $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
+        }
+
+        if (array_key_exists("ShardAllocationConcurrents",$param) and $param["ShardAllocationConcurrents"] !== null) {
+            $this->ShardAllocationConcurrents = $param["ShardAllocationConcurrents"];
+        }
+
+        if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
+            $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
         }
     }
 }

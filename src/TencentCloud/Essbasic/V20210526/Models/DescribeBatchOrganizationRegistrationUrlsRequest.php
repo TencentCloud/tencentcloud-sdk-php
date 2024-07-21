@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
- * @method string getTaskId() 获取通过接口CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任得到的任务Id
- * @method void setTaskId(string $TaskId) 设置通过接口CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任得到的任务Id
+ * @method string getTaskId() 获取通过接口<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks" target="_blank">提交子企业批量认证链接创建任务</a>调用得到的任务ID。
+ * @method void setTaskId(string $TaskId) 设置通过接口<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks" target="_blank">提交子企业批量认证链接创建任务</a>调用得到的任务ID。
  */
 class DescribeBatchOrganizationRegistrationUrlsRequest extends AbstractModel
 {
@@ -57,7 +57,7 @@ class DescribeBatchOrganizationRegistrationUrlsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 通过接口CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任得到的任务Id
+     * @var string 通过接口<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks" target="_blank">提交子企业批量认证链接创建任务</a>调用得到的任务ID。
      */
     public $TaskId;
 
@@ -71,7 +71,7 @@ class DescribeBatchOrganizationRegistrationUrlsRequest extends AbstractModel
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
-     * @param string $TaskId 通过接口CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任得到的任务Id
+     * @param string $TaskId 通过接口<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks" target="_blank">提交子企业批量认证链接创建任务</a>调用得到的任务ID。
      */
     function __construct()
     {

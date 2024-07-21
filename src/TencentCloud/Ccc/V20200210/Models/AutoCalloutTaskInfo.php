@@ -34,8 +34,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIvrId() 获取任务使用的IvrId
  * @method void setIvrId(integer $IvrId) 设置任务使用的IvrId
- * @method integer getState() 获取任务状态0初始 1运行中 2已完成 3结束中 4已结束
- * @method void setState(integer $State) 设置任务状态0初始 1运行中 2已完成 3结束中 4已结束
+ * @method integer getState() 获取任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
+ * @method void setState(integer $State) 设置任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
  * @method integer getTaskId() 获取任务Id
  * @method void setTaskId(integer $TaskId) 设置任务Id
  */
@@ -73,7 +83,12 @@ class AutoCalloutTaskInfo extends AbstractModel
     public $IvrId;
 
     /**
-     * @var integer 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+     * @var integer 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
      */
     public $State;
 
@@ -90,7 +105,12 @@ class AutoCalloutTaskInfo extends AbstractModel
      * @param integer $NotAfter 结束时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IvrId 任务使用的IvrId
-     * @param integer $State 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+     * @param integer $State 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
      * @param integer $TaskId 任务Id
      */
     function __construct()

@@ -207,7 +207,7 @@ RecipientId参数获取：
  * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
-<li> **3** :运营商三要素</li></ul>
+<li> **3** :运营商三要素（如果是港澳台客户，建议不要选择这个）</li></ul>
 
 默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
@@ -217,7 +217,7 @@ RecipientId参数获取：
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
-<li> **3** :运营商三要素</li></ul>
+<li> **3** :运营商三要素（如果是港澳台客户，建议不要选择这个）</li></ul>
 
 默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
@@ -466,7 +466,7 @@ class FlowApproverInfo extends AbstractModel
      * @var array 签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
-<li> **3** :运营商三要素</li></ul>
+<li> **3** :运营商三要素（如果是港澳台客户，建议不要选择这个）</li></ul>
 
 默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
@@ -630,7 +630,7 @@ class FlowApproverInfo extends AbstractModel
      * @param array $ApproverSignTypes 签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
-<li> **3** :运营商三要素</li></ul>
+<li> **3** :运营商三要素（如果是港澳台客户，建议不要选择这个）</li></ul>
 
 默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 

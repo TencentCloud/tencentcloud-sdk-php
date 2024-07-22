@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置规则创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobType() 获取定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobType(string $JobType) 设置定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCronType() 获取周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCronType(string $CronType) 设置周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method JobDateTime getJobDateTime() 获取定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpAccessControlItem extends AbstractModel
 {
@@ -119,6 +131,24 @@ class IpAccessControlItem extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobType;
+
+    /**
+     * @var string 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CronType;
+
+    /**
+     * @var JobDateTime 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobDateTime;
+
+    /**
      * @param string $Id mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 动作
@@ -135,6 +165,12 @@ class IpAccessControlItem extends AbstractModel
      * @param array $IpList IP列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CronType 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobDateTime $JobDateTime 定时任务配置详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +228,19 @@ class IpAccessControlItem extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("CronType",$param) and $param["CronType"] !== null) {
+            $this->CronType = $param["CronType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
         }
     }
 }

@@ -20,29 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusTemp请求参数结构体
  *
- * @method array getFilters() 获取模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
- * @method void setFilters(array $Filters) 设置模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+ * @method array getFilters() 获取仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
+ * @method void setFilters(array $Filters) 设置仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
  * @method integer getOffset() 获取分页偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
- * @method integer getLimit() 获取总数限制
- * @method void setLimit(integer $Limit) 设置总数限制
+ * @method integer getLimit() 获取分页返回数量，默认为20，最大值为100
+ * @method void setLimit(integer $Limit) 设置分页返回数量，默认为20，最大值为100
  */
 class DescribePrometheusTempRequest extends AbstractModel
 {
     /**
-     * @var array 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+     * @var array 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
      */
     public $Filters;
 
@@ -52,18 +64,22 @@ ID 按templateId过滤
     public $Offset;
 
     /**
-     * @var integer 总数限制
+     * @var integer 分页返回数量，默认为20，最大值为100
      */
     public $Limit;
 
     /**
-     * @param array $Filters 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+     * @param array $Filters 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
      * @param integer $Offset 分页偏移量，默认为0
-     * @param integer $Limit 总数限制
+     * @param integer $Limit 分页返回数量，默认为20，最大值为100
      */
     function __construct()
     {

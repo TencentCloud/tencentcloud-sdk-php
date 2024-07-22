@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignatureId(string $SignatureId) 设置规则Id
  * @method array getSignatureIds() 获取加白的规则ID列表
  * @method void setSignatureIds(array $SignatureIds) 设置加白的规则ID列表
+ * @method array getTypeIds() 获取加白的大类规则ID
+ * @method void setTypeIds(array $TypeIds) 设置加白的大类规则ID
+ * @method integer getMode() 获取0:按照特定规则ID加白, 1:按照规则类型加白
+ * @method void setMode(integer $Mode) 设置0:按照特定规则ID加白, 1:按照规则类型加白
+ * @method string getName() 获取规则名
+ * @method void setName(string $Name) 设置规则名
  */
 class AddAttackWhiteRuleRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class AddAttackWhiteRuleRequest extends AbstractModel
     public $SignatureIds;
 
     /**
+     * @var array 加白的大类规则ID
+     */
+    public $TypeIds;
+
+    /**
+     * @var integer 0:按照特定规则ID加白, 1:按照规则类型加白
+     */
+    public $Mode;
+
+    /**
+     * @var string 规则名
+     */
+    public $Name;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Status 规则状态
      * @param array $Rules 匹配规则项列表
      * @param integer $RuleId 规则序号
      * @param string $SignatureId 规则Id
      * @param array $SignatureIds 加白的规则ID列表
+     * @param array $TypeIds 加白的大类规则ID
+     * @param integer $Mode 0:按照特定规则ID加白, 1:按照规则类型加白
+     * @param string $Name 规则名
      */
     function __construct()
     {
@@ -113,6 +137,18 @@ class AddAttackWhiteRuleRequest extends AbstractModel
 
         if (array_key_exists("SignatureIds",$param) and $param["SignatureIds"] !== null) {
             $this->SignatureIds = $param["SignatureIds"];
+        }
+
+        if (array_key_exists("TypeIds",$param) and $param["TypeIds"] !== null) {
+            $this->TypeIds = $param["TypeIds"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

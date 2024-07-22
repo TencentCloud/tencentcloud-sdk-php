@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(integer $RuleId) 设置规则ID，新增时填0
  * @method integer getCreateTime() 获取规则创建时间
  * @method void setCreateTime(integer $CreateTime) 设置规则创建时间
+ * @method integer getLength() 获取url长度
+ * @method void setLength(integer $Length) 设置url长度
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class UpsertCCRuleRequest extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer url长度
+     */
+    public $Length;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -168,6 +175,7 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param array $SessionApplied 规则需要启用的SessionID
      * @param integer $RuleId 规则ID，新增时填0
      * @param integer $CreateTime 规则创建时间
+     * @param integer $Length url长度
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+            $this->Length = $param["Length"];
         }
     }
 }

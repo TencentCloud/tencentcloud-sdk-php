@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCtsMax(integer $CtsMax) 设置最大创建时间的时间戳
  * @method integer getOffSet() 获取分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
  * @method void setOffSet(integer $OffSet) 设置分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
- * @method integer getLimit() 获取每页返回的数量
- * @method void setLimit(integer $Limit) 设置每页返回的数量
+ * @method integer getLimit() 获取每页返回的数量，默认为20
+ * @method void setLimit(integer $Limit) 设置每页返回的数量，默认为20
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
  * @method string getSort() 获取排序参数
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidTimeStampMax(string $ValidTimeStampMax) 设置最大有效时间的时间戳
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
+ * @method integer getTimerType() 获取定时任务类型筛选0 1 2 3 4
+ * @method void setTimerType(integer $TimerType) 设置定时任务类型筛选0 1 2 3 4
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -98,7 +100,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $OffSet;
 
     /**
-     * @var integer 每页返回的数量
+     * @var integer 每页返回的数量，默认为20
      */
     public $Limit;
 
@@ -138,6 +140,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 定时任务类型筛选0 1 2 3 4
+     */
+    public $TimerType;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
@@ -146,7 +153,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param integer $CtsMin 最小创建时间的时间戳
      * @param integer $CtsMax 最大创建时间的时间戳
      * @param integer $OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
-     * @param integer $Limit 每页返回的数量
+     * @param integer $Limit 每页返回的数量，默认为20
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip IP
@@ -154,6 +161,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param string $ValidTimeStampMin 最小有效时间的时间戳
      * @param string $ValidTimeStampMax 最大有效时间的时间戳
      * @param integer $RuleId 规则ID
+     * @param integer $TimerType 定时任务类型筛选0 1 2 3 4
      */
     function __construct()
     {
@@ -230,6 +238,10 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("TimerType",$param) and $param["TimerType"] !== null) {
+            $this->TimerType = $param["TimerType"];
         }
     }
 }

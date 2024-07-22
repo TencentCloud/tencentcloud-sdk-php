@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusAlertPolicy请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method PrometheusAlertPolicyItem getAlertRule() 获取告警配置
- * @method void setAlertRule(PrometheusAlertPolicyItem $AlertRule) 设置告警配置
+ * @method string getInstanceId() 获取Prometheus 实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method PrometheusAlertPolicyItem getAlertRule() 获取告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
+ * @method void setAlertRule(PrometheusAlertPolicyItem $AlertRule) 设置告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
  */
 class ModifyPrometheusAlertPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string Prometheus 实例 ID
      */
     public $InstanceId;
 
     /**
-     * @var PrometheusAlertPolicyItem 告警配置
+     * @var PrometheusAlertPolicyItem 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
      */
     public $AlertRule;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param PrometheusAlertPolicyItem $AlertRule 告警配置
+     * @param string $InstanceId Prometheus 实例 ID
+     * @param PrometheusAlertPolicyItem $AlertRule 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
      */
     function __construct()
     {

@@ -86,7 +86,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeImagePersonalResponse DescribeImagePersonal(Models\DescribeImagePersonalRequest $req) 用于获取个人版镜像仓库tag列表
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 查询镜像版本列表或指定容器镜像信息
  * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) 列出镜像不可变规则
- * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) 查询所有实例命名空间列表
+ * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) 查询所有有实例命名空间列表
  * @method Models\DescribeInstanceCustomizedDomainResponse DescribeInstanceCustomizedDomain(Models\DescribeInstanceCustomizedDomainRequest $req) 查询实例自定义域名列表
  * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) 查询实例当前状态以及过程信息
  * @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) 查询长期访问凭证信息
@@ -107,7 +107,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeServiceAccountsResponse DescribeServiceAccounts(Models\DescribeServiceAccountsRequest $req) 查询服务级账号
  * @method Models\DescribeTagRetentionExecutionResponse DescribeTagRetentionExecution(Models\DescribeTagRetentionExecutionRequest $req) 查询版本保留执行记录
  * @method Models\DescribeTagRetentionExecutionTaskResponse DescribeTagRetentionExecutionTask(Models\DescribeTagRetentionExecutionTaskRequest $req) 查询版本保留执行任务
- * @method Models\DescribeTagRetentionRulesResponse DescribeTagRetentionRules(Models\DescribeTagRetentionRulesRequest $req) 查询版本保留规则
+ * @method Models\DescribeTagRetentionRulesResponse DescribeTagRetentionRules(Models\DescribeTagRetentionRulesRequest $req) 查询镜像版本保留规则
  * @method Models\DescribeUserQuotaPersonalResponse DescribeUserQuotaPersonal(Models\DescribeUserQuotaPersonalRequest $req) 查询个人用户配额
  * @method Models\DescribeWebhookTriggerResponse DescribeWebhookTrigger(Models\DescribeWebhookTriggerRequest $req) 查询触发器
  * @method Models\DescribeWebhookTriggerLogResponse DescribeWebhookTriggerLog(Models\DescribeWebhookTriggerLogRequest $req) 获取触发器日志

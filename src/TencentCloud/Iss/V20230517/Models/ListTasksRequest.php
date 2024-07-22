@@ -27,11 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperation() 获取默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
  * @method void setOperation(string $Operation) 设置默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
  * @method integer getStatus() 获取默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
  * @method void setStatus(integer $Status) 设置默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
  * @method integer getBeginTime() 获取开始时间
@@ -55,7 +57,8 @@ class ListTasksRequest extends AbstractModel
      * @var string 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
      */
     public $Operation;
 
@@ -80,7 +83,8 @@ BatchRebootDevice
      * @param string $Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
      * @param integer $Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
      * @param integer $BeginTime 开始时间
      * @param integer $EndTime 结束时间

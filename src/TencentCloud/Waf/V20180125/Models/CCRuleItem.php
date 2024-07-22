@@ -46,6 +46,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptionsArr(string $OptionsArr) 设置高级参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLength() 获取url长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLength(integer $Length) 设置url长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleId() 获取规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleId(integer $RuleId) 设置规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventId() 获取事件id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventId(string $EventId) 设置事件id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSessionApplied() 获取关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCRuleItem extends AbstractModel
 {
@@ -111,6 +131,36 @@ class CCRuleItem extends AbstractModel
     public $OptionsArr;
 
     /**
+     * @var integer url长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Length;
+
+    /**
+     * @var integer 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleId;
+
+    /**
+     * @var string 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventId;
+
+    /**
+     * @var array 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionApplied;
+
+    /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $ActionType 动作
      * @param integer $Advance 高级模式
      * @param integer $Interval 时间周期
@@ -123,6 +173,16 @@ class CCRuleItem extends AbstractModel
      * @param string $Url 匹配url
      * @param integer $ValidTime 策略动作有效时间
      * @param string $OptionsArr 高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Length url长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleId 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SessionApplied 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +244,26 @@ class CCRuleItem extends AbstractModel
 
         if (array_key_exists("OptionsArr",$param) and $param["OptionsArr"] !== null) {
             $this->OptionsArr = $param["OptionsArr"];
+        }
+
+        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+            $this->Length = $param["Length"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("SessionApplied",$param) and $param["SessionApplied"] !== null) {
+            $this->SessionApplied = $param["SessionApplied"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

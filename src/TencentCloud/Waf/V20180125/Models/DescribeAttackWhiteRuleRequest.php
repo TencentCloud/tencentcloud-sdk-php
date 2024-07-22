@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页
  * @method integer getLimit() 获取每页容量
  * @method void setLimit(integer $Limit) 设置每页容量
- * @method string getBy() 获取排序字段，支持user_id, signature_id, modify_time
- * @method void setBy(string $By) 设置排序字段，支持user_id, signature_id, modify_time
+ * @method string getBy() 获取排序的字段，支持user_id, signature_id, modify_time
+ * @method void setBy(string $By) 设置排序的字段，支持user_id, signature_id, modify_time
  * @method string getOrder() 获取排序方式
  * @method void setOrder(string $Order) 设置排序方式
  * @method array getFilters() 获取筛选条件，支持SignatureId, MatchContent
@@ -51,7 +51,7 @@ class DescribeAttackWhiteRuleRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段，支持user_id, signature_id, modify_time
+     * @var string 排序的字段，支持user_id, signature_id, modify_time
      */
     public $By;
 
@@ -69,7 +69,7 @@ class DescribeAttackWhiteRuleRequest extends AbstractModel
      * @param string $Domain 需要查询的域名
      * @param integer $Offset 分页
      * @param integer $Limit 每页容量
-     * @param string $By 排序字段，支持user_id, signature_id, modify_time
+     * @param string $By 排序的字段，支持user_id, signature_id, modify_time
      * @param string $Order 排序方式
      * @param array $Filters 筛选条件，支持SignatureId, MatchContent
      */

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络的ID。
  * @method string getSubnetId() 获取私有网络的子网ID。
  * @method void setSubnetId(string $SubnetId) 设置私有网络的子网ID。
- * @method integer getStatus() 获取实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
- * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+ * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+ * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
  * @method string getVip() 获取实例IP。
  * @method void setVip(string $Vip) 设置实例IP。
  * @method integer getVport() 获取端口号。
@@ -186,7 +186,7 @@ class InstanceDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * @var integer 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public $Status;
 
@@ -390,7 +390,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
      * @param string $VpcId 私有网络的ID。
      * @param string $SubnetId 私有网络的子网ID。
-     * @param integer $Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * @param integer $Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
      * @param string $Vip 实例IP。
      * @param integer $Vport 端口号。
      * @param string $CreateTime 实例创建时间。

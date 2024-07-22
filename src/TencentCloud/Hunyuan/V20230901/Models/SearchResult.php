@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 搜索引文信息
  *
- * @method string getIndex() 获取搜索引文序号
+ * @method integer getIndex() 获取搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndex(string $Index) 设置搜索引文序号
+ * @method void setIndex(integer $Index) 设置搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTitle() 获取搜索引文标题
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class SearchResult extends AbstractModel
 {
     /**
-     * @var string 搜索引文序号
+     * @var integer 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
@@ -54,7 +54,7 @@ class SearchResult extends AbstractModel
     public $Url;
 
     /**
-     * @param string $Index 搜索引文序号
+     * @param integer $Index 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 搜索引文标题
 注意：此字段可能返回 null，表示取不到有效值。

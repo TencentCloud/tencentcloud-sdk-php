@@ -91,6 +91,9 @@ use TencentCloud\Common\AbstractModel;
 2：iOS
 3：H5
 4：小程序
+
+ * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息。
+ * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息。
  */
 class InputManageMarketingRisk extends AbstractModel
 {
@@ -219,6 +222,11 @@ class InputManageMarketingRisk extends AbstractModel
     public $Platform;
 
     /**
+     * @var DataAuthorizationInfo 数据授权信息。
+     */
+    public $DataAuthorization;
+
+    /**
      * @param AccountInfo $Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
@@ -254,6 +262,8 @@ class InputManageMarketingRisk extends AbstractModel
 2：iOS
 3：H5
 4：小程序
+
+     * @param DataAuthorizationInfo $DataAuthorization 数据授权信息。
      */
     function __construct()
     {
@@ -362,6 +372,11 @@ class InputManageMarketingRisk extends AbstractModel
 
         if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
             $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("DataAuthorization",$param) and $param["DataAuthorization"] !== null) {
+            $this->DataAuthorization = new DataAuthorizationInfo();
+            $this->DataAuthorization->deserialize($param["DataAuthorization"]);
         }
     }
 }

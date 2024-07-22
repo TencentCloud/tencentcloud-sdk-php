@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
+ * @method string getNamespaceName() 获取命名空间名称
+ * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method string getRepositoryName() 获取镜像仓库名称
  * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
  * @method string getImageVersion() 获取镜像版本
  * @method void setImageVersion(string $ImageVersion) 设置镜像版本
- * @method string getNamespaceName() 获取命名空间名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  */
 class DeleteImageRequest extends AbstractModel
 {
@@ -35,6 +35,11 @@ class DeleteImageRequest extends AbstractModel
      * @var string 实例Id
      */
     public $RegistryId;
+
+    /**
+     * @var string 命名空间名称
+     */
+    public $NamespaceName;
 
     /**
      * @var string 镜像仓库名称
@@ -47,15 +52,10 @@ class DeleteImageRequest extends AbstractModel
     public $ImageVersion;
 
     /**
-     * @var string 命名空间名称
-     */
-    public $NamespaceName;
-
-    /**
      * @param string $RegistryId 实例Id
+     * @param string $NamespaceName 命名空间名称
      * @param string $RepositoryName 镜像仓库名称
      * @param string $ImageVersion 镜像版本
-     * @param string $NamespaceName 命名空间名称
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class DeleteImageRequest extends AbstractModel
             $this->RegistryId = $param["RegistryId"];
         }
 
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
+        }
+
         if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
             $this->RepositoryName = $param["RepositoryName"];
         }
 
         if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
             $this->ImageVersion = $param["ImageVersion"];
-        }
-
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
         }
     }
 }

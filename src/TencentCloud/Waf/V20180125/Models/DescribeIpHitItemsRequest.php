@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getCount() 获取计数标识
  * @method void setCount(integer $Count) 设置计数标识
- * @method string getCategory() 获取类别
- * @method void setCategory(string $Category) 设置类别
+ * @method string getCategory() 获取类别，ip封禁传值auto_deny
+ * @method void setCategory(string $Category) 设置类别，ip封禁传值auto_deny
  * @method integer getVtsMin() 获取有效时间最小时间戳
  * @method void setVtsMin(integer $VtsMin) 设置有效时间最小时间戳
  * @method integer getVtsMax() 获取有效时间最大时间戳
@@ -62,7 +62,7 @@ class DescribeIpHitItemsRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var string 类别
+     * @var string 类别，ip封禁传值auto_deny
      */
     public $Category;
 
@@ -126,7 +126,7 @@ class DescribeIpHitItemsRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
-     * @param string $Category 类别
+     * @param string $Category 类别，ip封禁传值auto_deny
      * @param integer $VtsMin 有效时间最小时间戳
      * @param integer $VtsMax 有效时间最大时间戳
      * @param integer $CtsMin 创建时间最小时间戳

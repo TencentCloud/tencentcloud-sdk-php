@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupType(integer $SkillGroupType) 设置技能组类型0-电话，1-在线，3-音频，4-视频	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SkillGroupInfoItem extends AbstractModel
 {
@@ -95,6 +99,12 @@ class SkillGroupInfoItem extends AbstractModel
     public $SkillGroupType;
 
     /**
+     * @var string 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param integer $SkillGroupId 技能组ID
      * @param string $SkillGroupName 技能组名称
      * @param string $Type （废弃）类型：IM、TEL、ALL（全媒体）
@@ -107,6 +117,8 @@ class SkillGroupInfoItem extends AbstractModel
      * @param integer $LastModifyTimestamp 最后修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 技能组内线号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,10 @@ class SkillGroupInfoItem extends AbstractModel
 
         if (array_key_exists("SkillGroupType",$param) and $param["SkillGroupType"] !== null) {
             $this->SkillGroupType = $param["SkillGroupType"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

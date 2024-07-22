@@ -160,6 +160,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItem(string $BillingItem) 设置计费项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFreeDelayFlag() 获取实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -394,6 +398,12 @@ class InstanceInfo extends AbstractModel
     public $BillingItem;
 
     /**
+     * @var integer 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FreeDelayFlag;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -463,6 +473,8 @@ class InstanceInfo extends AbstractModel
      * @param MiniExtendPkg $MiniExtendPkg 小程序安全接入ID数量扩张包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItem 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FreeDelayFlag 实例延期释放标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -646,6 +658,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
             $this->BillingItem = $param["BillingItem"];
+        }
+
+        if (array_key_exists("FreeDelayFlag",$param) and $param["FreeDelayFlag"] !== null) {
+            $this->FreeDelayFlag = $param["FreeDelayFlag"];
         }
     }
 }

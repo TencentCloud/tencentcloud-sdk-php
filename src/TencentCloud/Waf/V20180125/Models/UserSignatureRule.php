@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置规则描述
  * @method integer getReason() 获取0/1
  * @method void setReason(integer $Reason) 设置0/1
+ * @method integer getRiskLevel() 获取1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(integer $RiskLevel) 设置1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserSignatureRule extends AbstractModel
 {
@@ -101,6 +105,12 @@ class UserSignatureRule extends AbstractModel
     public $Reason;
 
     /**
+     * @var integer 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskLevel;
+
+    /**
      * @param string $ID 特征ID
      * @param integer $Status 规则开关
      * @param string $MainClassID 主类ID
@@ -112,6 +122,8 @@ class UserSignatureRule extends AbstractModel
      * @param string $SubClassName 子类名字，根据Language字段输出中文/英文，若子类id为00000000，此字段为空
      * @param string $Description 规则描述
      * @param integer $Reason 0/1
+     * @param integer $RiskLevel 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class UserSignatureRule extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

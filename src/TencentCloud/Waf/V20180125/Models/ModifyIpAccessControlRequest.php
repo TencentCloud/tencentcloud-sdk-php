@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
+ * @method string getJobType() 获取定时配置类型
+ * @method void setJobType(string $JobType) 设置定时配置类型
+ * @method JobDateTime getJobDateTime() 获取定时配置详情
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时配置详情
  */
 class ModifyIpAccessControlRequest extends AbstractModel
 {
@@ -90,6 +94,16 @@ class ModifyIpAccessControlRequest extends AbstractModel
     public $Note;
 
     /**
+     * @var string 定时配置类型
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 定时配置详情
+     */
+    public $JobDateTime;
+
+    /**
      * @param string $Domain 具体域名如：test.qcloudwaf.com
 全局域名为：global
      * @param array $IpList ip参数列表
@@ -100,6 +114,8 @@ class ModifyIpAccessControlRequest extends AbstractModel
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
      * @param string $Note 备注
+     * @param string $JobType 定时配置类型
+     * @param JobDateTime $JobDateTime 定时配置详情
      */
     function __construct()
     {
@@ -148,6 +164,15 @@ class ModifyIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
         }
     }
 }

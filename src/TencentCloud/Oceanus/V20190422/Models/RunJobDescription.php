@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseOldSystemConnector(boolean $UseOldSystemConnector) 设置使用历史版本系统依赖
  * @method integer getCustomTimestamp() 获取自定义时间戳
  * @method void setCustomTimestamp(integer $CustomTimestamp) 设置自定义时间戳
+ * @method string getKafkaScanMode() 获取timestamp; latest-offset;  earliest-offset; 任选一种
+ * @method void setKafkaScanMode(string $KafkaScanMode) 设置timestamp; latest-offset;  earliest-offset; 任选一种
  */
 class RunJobDescription extends AbstractModel
 {
@@ -86,6 +88,11 @@ class RunJobDescription extends AbstractModel
     public $CustomTimestamp;
 
     /**
+     * @var string timestamp; latest-offset;  earliest-offset; 任选一种
+     */
+    public $KafkaScanMode;
+
+    /**
      * @param string $JobId 作业Id
      * @param integer $RunType 运行类型，1：启动，2：恢复
      * @param string $StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
@@ -96,6 +103,7 @@ class RunJobDescription extends AbstractModel
      * @param string $SavepointId Savepoint的Id
      * @param boolean $UseOldSystemConnector 使用历史版本系统依赖
      * @param integer $CustomTimestamp 自定义时间戳
+     * @param string $KafkaScanMode timestamp; latest-offset;  earliest-offset; 任选一种
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class RunJobDescription extends AbstractModel
 
         if (array_key_exists("CustomTimestamp",$param) and $param["CustomTimestamp"] !== null) {
             $this->CustomTimestamp = $param["CustomTimestamp"];
+        }
+
+        if (array_key_exists("KafkaScanMode",$param) and $param["KafkaScanMode"] !== null) {
+            $this->KafkaScanMode = $param["KafkaScanMode"];
         }
     }
 }

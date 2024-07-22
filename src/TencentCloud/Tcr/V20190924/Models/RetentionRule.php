@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 版本保留规则
  *
  * @method string getKey() 获取支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取规则设置下的对应值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置规则设置下的对应值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RetentionRule extends AbstractModel
 {
     /**
      * @var string 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 规则设置下的对应值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 支持的策略，可选值为latestPushedK（保留最新推送多少个版本）nDaysSinceLastPush（保留近天内推送）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 规则设置下的对应值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -30,6 +30,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateBackupDownloadTaskResponse CreateBackupDownloadTask(Models\CreateBackupDownloadTaskRequest $req) 本接口用来创建某个备份文件的下载任务
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) 本接口（CreateDBInstanceHour）用于创建按量计费的MongoDB云数据库实例。
+ * @method Models\CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(Models\CreateDBInstanceParamTplRequest $req) 本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
+**说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) 本接口（DeleteAccountUser）用于删除实例的自定义账号。
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 查询异步任务状态接口
@@ -40,6 +42,10 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
  * @method Models\DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(Models\DescribeDBInstanceNodePropertyRequest $req) 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
+ * @method Models\DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(Models\DescribeDBInstanceParamTplRequest $req) 本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
+**说明：DescribeDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+ * @method Models\DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetail(Models\DescribeDBInstanceParamTplDetailRequest $req) 本接口(DescribeDBInstanceParamTplDetail )用于查询MongoDB云数据库实例的参数模板详情。
+**说明：DescribeDBInstanceParamTplDetail  API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
@@ -47,6 +53,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
  * @method Models\DescribeSpecInfoResponse DescribeSpecInfo(Models\DescribeSpecInfoRequest $req) 本接口(DescribeSpecInfo)用于查询实例的售卖规格。
  * @method Models\DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(Models\DescribeTransparentDataEncryptionStatusRequest $req) 获取实例透明加密的开启状态
+ * @method Models\DropDBInstanceParamTplResponse DropDBInstanceParamTpl(Models\DropDBInstanceParamTplRequest $req) 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
+**说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
  * @method Models\FlashBackDBInstanceResponse FlashBackDBInstance(Models\FlashBackDBInstanceRequest $req) 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
@@ -57,6 +65,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口(IsolateDBInstance)用于隔离MongoDB云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。在隔离中的按量计费实例无法恢复，请谨慎操作。
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
  * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) 本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
+ * @method Models\ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTpl(Models\ModifyDBInstanceParamTplRequest $req) 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
+**说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(Models\ModifyDBInstanceSecurityGroupRequest $req) 本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。

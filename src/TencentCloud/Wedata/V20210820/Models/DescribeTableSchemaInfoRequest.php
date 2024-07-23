@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionType(string $ConnectionType) 设置连接类型（示例值rpc）
  * @method string getSchemaName() 获取元数据Database下的Schema名称
  * @method void setSchemaName(string $SchemaName) 设置元数据Database下的Schema名称
+ * @method string getProjectId() 获取项目空间ID
+ * @method void setProjectId(string $ProjectId) 设置项目空间ID
  */
 class DescribeTableSchemaInfoRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeTableSchemaInfoRequest extends AbstractModel
     public $SchemaName;
 
     /**
+     * @var string 项目空间ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $Name 表名称
      * @param string $DatabaseName 数据库名称
      * @param string $MsType 数据源的类型（例如MYSQL、HIVE、KAFKA等）
      * @param string $DatasourceId 数据源id
      * @param string $ConnectionType 连接类型（示例值rpc）
      * @param string $SchemaName 元数据Database下的Schema名称
+     * @param string $ProjectId 项目空间ID
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeTableSchemaInfoRequest extends AbstractModel
 
         if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
             $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

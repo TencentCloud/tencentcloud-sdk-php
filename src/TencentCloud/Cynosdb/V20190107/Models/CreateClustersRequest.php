@@ -87,9 +87,9 @@ timeRollback，时间点回档
  * @method string getTimeUnit() 获取包年包月购买时长单位，['s','d','m','y']
  * @method void setTimeUnit(string $TimeUnit) 设置包年包月购买时长单位，['s','d','m','y']
  * @method integer getAutoRenewFlag() 获取包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
  * @method integer getHaCount() 获取实例数量（该参数已不再使用，只做存量兼容处理）
@@ -276,7 +276,7 @@ timeRollback，时间点回档
 
     /**
      * @var integer 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      */
     public $AutoRenewFlag;
 
@@ -411,7 +411,7 @@ timeRollback，时间点回档
      * @param integer $TimeSpan 包年包月购买时长
      * @param string $TimeUnit 包年包月购买时长单位，['s','d','m','y']
      * @param integer $AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
      * @param string $OrderSource 订单来源

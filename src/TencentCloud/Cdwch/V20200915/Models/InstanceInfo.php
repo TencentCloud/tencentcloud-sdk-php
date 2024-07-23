@@ -222,6 +222,10 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClickHouseKeeper(boolean $ClickHouseKeeper) 设置是否clickhouse-keeper
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceDetail getDetails() 获取实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetails(InstanceDetail $Details) 设置实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -523,6 +527,12 @@ Modify 集群变更中；
     public $ClickHouseKeeper;
 
     /**
+     * @var InstanceDetail 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Details;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -623,6 +633,8 @@ Modify 集群变更中；
      * @param string $SecondaryZoneInfo desc
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ClickHouseKeeper 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceDetail $Details 实例扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -845,6 +857,11 @@ Modify 集群变更中；
 
         if (array_key_exists("ClickHouseKeeper",$param) and $param["ClickHouseKeeper"] !== null) {
             $this->ClickHouseKeeper = $param["ClickHouseKeeper"];
+        }
+
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = new InstanceDetail();
+            $this->Details->deserialize($param["Details"]);
         }
     }
 }

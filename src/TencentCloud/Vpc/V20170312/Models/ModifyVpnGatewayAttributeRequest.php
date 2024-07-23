@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
  * @method integer getBgpAsn() 获取BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
  * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+ * @method integer getMaxConnection() 获取服务端最大连接数个数。
+ * @method void setMaxConnection(integer $MaxConnection) 设置服务端最大连接数个数。
  */
 class ModifyVpnGatewayAttributeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyVpnGatewayAttributeRequest extends AbstractModel
     public $BgpAsn;
 
     /**
+     * @var integer 服务端最大连接数个数。
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      * @param string $InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
      * @param integer $BgpAsn BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+     * @param integer $MaxConnection 服务端最大连接数个数。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyVpnGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
             $this->BgpAsn = $param["BgpAsn"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

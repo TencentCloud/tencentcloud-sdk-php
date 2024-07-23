@@ -62,6 +62,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteBroadcastPolicyFlag(boolean $RouteBroadcastPolicyFlag) 设置是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRouteECMPFlag() 获取是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteECMPFlag(boolean $RouteECMPFlag) 设置是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRouteOverlapFlag() 获取是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteOverlapFlag(boolean $RouteOverlapFlag) 设置是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTrafficMarkingPolicyFlag() 获取是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrafficMarkingPolicyFlag(boolean $TrafficMarkingPolicyFlag) 设置是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRouteSelectPolicyFlag() 获取是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteSelectPolicyFlag(boolean $RouteSelectPolicyFlag) 设置是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDirectConnectAccelerateChannelFlag() 获取是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDirectConnectAccelerateChannelFlag(boolean $DirectConnectAccelerateChannelFlag) 设置是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -147,6 +167,36 @@ class CCN extends AbstractModel
     public $RouteBroadcastPolicyFlag;
 
     /**
+     * @var boolean 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteECMPFlag;
+
+    /**
+     * @var boolean 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteOverlapFlag;
+
+    /**
+     * @var boolean 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrafficMarkingPolicyFlag;
+
+    /**
+     * @var boolean 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteSelectPolicyFlag;
+
+    /**
+     * @var boolean 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DirectConnectAccelerateChannelFlag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -167,6 +217,16 @@ class CCN extends AbstractModel
      * @param boolean $IsSecurityLock `true`：实例已被封禁，流量不通，`false`:解封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RouteECMPFlag 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RouteOverlapFlag 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TrafficMarkingPolicyFlag 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RouteSelectPolicyFlag 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +305,26 @@ class CCN extends AbstractModel
 
         if (array_key_exists("RouteBroadcastPolicyFlag",$param) and $param["RouteBroadcastPolicyFlag"] !== null) {
             $this->RouteBroadcastPolicyFlag = $param["RouteBroadcastPolicyFlag"];
+        }
+
+        if (array_key_exists("RouteECMPFlag",$param) and $param["RouteECMPFlag"] !== null) {
+            $this->RouteECMPFlag = $param["RouteECMPFlag"];
+        }
+
+        if (array_key_exists("RouteOverlapFlag",$param) and $param["RouteOverlapFlag"] !== null) {
+            $this->RouteOverlapFlag = $param["RouteOverlapFlag"];
+        }
+
+        if (array_key_exists("TrafficMarkingPolicyFlag",$param) and $param["TrafficMarkingPolicyFlag"] !== null) {
+            $this->TrafficMarkingPolicyFlag = $param["TrafficMarkingPolicyFlag"];
+        }
+
+        if (array_key_exists("RouteSelectPolicyFlag",$param) and $param["RouteSelectPolicyFlag"] !== null) {
+            $this->RouteSelectPolicyFlag = $param["RouteSelectPolicyFlag"];
+        }
+
+        if (array_key_exists("DirectConnectAccelerateChannelFlag",$param) and $param["DirectConnectAccelerateChannelFlag"] !== null) {
+            $this->DirectConnectAccelerateChannelFlag = $param["DirectConnectAccelerateChannelFlag"];
         }
     }
 }

@@ -28,6 +28,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\AddQueueResponse AddQueue(Models\AddQueueRequest $req) 本接口(AddQueue)用于添加队列到指定集群。
 * 本接口为目前只支持SchedulerType为SLURM的集群。
 * 单个集群中队列数量上限为10个。
+ * @method Models\AttachNodesResponse AttachNodes(Models\AttachNodesRequest $req) 本接口 (AttachNodes) 用于绑定一个或者多个计算节点指定资源到指定集群中。
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 本接口 (CreateCluster) 用于创建并启动集群。
 
 * 本接口为异步接口， 当创建集群请求下发成功后会返回一个集群`ID`和一个`RequestId`，此时创建集群操作并未立即完成。在此期间集群的状态将会处于“PENDING”或者“INITING”，集群创建结果可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/1527/72100)  接口查询，如果集群状态(ClusterStatus)变为“RUNNING(运行中)”，则代表集群创建成功，“ INIT_FAILED”代表集群创建失败。
@@ -45,6 +46,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DescribeInitNodeScriptsResponse DescribeInitNodeScripts(Models\DescribeInitNodeScriptsRequest $req) 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
  * @method Models\DescribeNodesResponse DescribeNodes(Models\DescribeNodesRequest $req) 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
  * @method Models\DescribeQueuesResponse DescribeQueues(Models\DescribeQueuesRequest $req) 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
+ * @method Models\DetachNodesResponse DetachNodes(Models\DetachNodesRequest $req) 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
  * @method Models\ModifyInitNodeScriptsResponse ModifyInitNodeScripts(Models\ModifyInitNodeScriptsRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(Models\SetAutoScalingConfigurationRequest $req) 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
  */

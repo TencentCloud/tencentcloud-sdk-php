@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicas(integer $Replicas) 设置期望节点数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadyReplicas() 获取就绪 Machine 个数
+ * @method void setReadyReplicas(integer $ReadyReplicas) 设置就绪 Machine 个数
  * @method InternetAccessible getInternetAccessible() 获取公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽设置
@@ -200,6 +202,11 @@ class NativeNodePoolInfo extends AbstractModel
     public $Replicas;
 
     /**
+     * @var integer 就绪 Machine 个数
+     */
+    public $ReadyReplicas;
+
+    /**
      * @var InternetAccessible 公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -244,6 +251,7 @@ class NativeNodePoolInfo extends AbstractModel
      * @param array $InstanceTypes 机型列表
      * @param integer $Replicas 期望节点数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadyReplicas 就绪 Machine 个数
      * @param InternetAccessible $InternetAccessible 公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataDisks 原生节点池数据盘
@@ -338,6 +346,10 @@ class NativeNodePoolInfo extends AbstractModel
 
         if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
             $this->Replicas = $param["Replicas"];
+        }
+
+        if (array_key_exists("ReadyReplicas",$param) and $param["ReadyReplicas"] !== null) {
+            $this->ReadyReplicas = $param["ReadyReplicas"];
         }
 
         if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {

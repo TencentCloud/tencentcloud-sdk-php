@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 - 视频分辨率：540P~2056P，即长宽像素数均在540px～2056px范围内；
 - 视频大小：不超过200M；
 - 视频FPS：15～60fps。
+ * @method string getStyleStrength() 获取风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+ * @method void setStyleStrength(string $StyleStrength) 设置风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
  */
 class SubmitVideoStylizationJobRequest extends AbstractModel
 {
@@ -53,6 +59,13 @@ class SubmitVideoStylizationJobRequest extends AbstractModel
     public $VideoUrl;
 
     /**
+     * @var string 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+     */
+    public $StyleStrength;
+
+    /**
      * @param string $StyleId 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
      * @param string $VideoUrl 输入视频URL。视频要求：
 - 视频格式：mp4、mov；
@@ -60,6 +73,9 @@ class SubmitVideoStylizationJobRequest extends AbstractModel
 - 视频分辨率：540P~2056P，即长宽像素数均在540px～2056px范围内；
 - 视频大小：不超过200M；
 - 视频FPS：15～60fps。
+     * @param string $StyleStrength 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
      */
     function __construct()
     {
@@ -80,6 +96,10 @@ class SubmitVideoStylizationJobRequest extends AbstractModel
 
         if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
             $this->VideoUrl = $param["VideoUrl"];
+        }
+
+        if (array_key_exists("StyleStrength",$param) and $param["StyleStrength"] !== null) {
+            $this->StyleStrength = $param["StyleStrength"];
         }
     }
 }

@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRoleArn() 获取角色RoleArn信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoleArn(string $RoleArn) 设置角色RoleArn信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleInfo extends AbstractModel
 {
@@ -113,6 +117,12 @@ class RoleInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 角色RoleArn信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoleArn;
+
+    /**
      * @param string $RoleId 角色ID
      * @param string $RoleName 角色名称
      * @param string $PolicyDocument 角色的策略文档
@@ -127,6 +137,8 @@ class RoleInfo extends AbstractModel
      * @param string $DeletionTaskId 服务相关角色删除TaskId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RoleArn 角色RoleArn信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,10 @@ class RoleInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
         }
     }
 }

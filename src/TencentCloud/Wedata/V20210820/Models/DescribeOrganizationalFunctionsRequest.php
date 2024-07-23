@@ -35,6 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvType(string $EnvType) 设置标准模式开发环境：DEV
 标准模式生产环境：PROD
 简单模式：ALL
+
+ * @method Filter getFilters() 获取过滤条件
+ * @method void setFilters(Filter $Filters) 设置过滤条件
+ * @method OrderField getOrderFields() 获取排序条件
+ * @method void setOrderFields(OrderField $OrderFields) 设置排序条件
  */
 class DescribeOrganizationalFunctionsRequest extends AbstractModel
 {
@@ -67,6 +72,16 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
     public $EnvType;
 
     /**
+     * @var Filter 过滤条件
+     */
+    public $Filters;
+
+    /**
+     * @var OrderField 排序条件
+     */
+    public $OrderFields;
+
+    /**
      * @param string $Type 场景类型：开发、使用
      * @param string $ProjectId 项目 ID
      * @param string $Name 函数名称
@@ -74,6 +89,9 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
      * @param string $EnvType 标准模式开发环境：DEV
 标准模式生产环境：PROD
 简单模式：ALL
+
+     * @param Filter $Filters 过滤条件
+     * @param OrderField $OrderFields 排序条件
      */
     function __construct()
     {
@@ -106,6 +124,16 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
 
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = new Filter();
+            $this->Filters->deserialize($param["Filters"]);
+        }
+
+        if (array_key_exists("OrderFields",$param) and $param["OrderFields"] !== null) {
+            $this->OrderFields = new OrderField();
+            $this->OrderFields->deserialize($param["OrderFields"]);
         }
     }
 }

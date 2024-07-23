@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置节点所在可用区信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeState() 获取节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+ * @method string getNodeState() 获取节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeState(string $NodeState) 设置节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+ * @method void setNodeState(string $NodeState) 设置节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取镜像ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,13 +40,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueName(string $QueueName) 设置节点所属队列名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeRole() 获取节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+ * @method string getNodeRole() 获取节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeRole(string $NodeRole) 设置节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+ * @method void setNodeRole(string $NodeRole) 设置节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeType() 获取节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+ * @method string getNodeType() 获取节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeType(string $NodeType) 设置节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+ * @method void setNodeType(string $NodeType) 设置节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeId() 获取thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeId(string $NodeId) 设置thpc集群节点id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeOverview extends AbstractModel
@@ -64,7 +68,7 @@ class NodeOverview extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * @var string 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeState;
@@ -82,31 +86,39 @@ class NodeOverview extends AbstractModel
     public $QueueName;
 
     /**
-     * @var string 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * @var string 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeRole;
 
     /**
-     * @var string 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * @var string 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
+
+    /**
+     * @var string thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeId;
 
     /**
      * @param string $InstanceId 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 节点所在可用区信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeState 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * @param string $NodeState 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 镜像ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueName 节点所属队列名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeRole 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * @param string $NodeRole 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeType 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * @param string $NodeType 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeId thpc集群节点id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class NodeOverview extends AbstractModel
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
             $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

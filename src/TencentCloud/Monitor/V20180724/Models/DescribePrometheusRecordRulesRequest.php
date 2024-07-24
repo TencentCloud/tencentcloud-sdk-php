@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusRecordRules请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
-
-示例值：prom-343kafd34
- * @method void setInstanceId(string $InstanceId) 设置实例ID
-
-示例值：prom-343kafd34
- * @method integer getOffset() 获取偏移量，默认为0。 示例值：1
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。 示例值：1
+ * @method string getInstanceId() 获取Prometheus 实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
-示例值：1
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
-示例值：1
- * @method array getFilters() 获取仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
- * @method void setFilters(array $Filters) 设置仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+ * @method array getFilters() 获取仅支持按Name, Values字段过滤。
+ * @method void setFilters(array $Filters) 设置仅支持按Name, Values字段过滤。
  */
 class DescribePrometheusRecordRulesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
-
-示例值：prom-343kafd34
+     * @var string Prometheus 实例 ID
      */
     public $InstanceId;
 
     /**
-     * @var integer 偏移量，默认为0。 示例值：1
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
      * @var integer 返回数量，默认为20，最大值为100。
-示例值：1
      */
     public $Limit;
 
     /**
-     * @var array 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+     * @var array 仅支持按Name, Values字段过滤。
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId 实例ID
-
-示例值：prom-343kafd34
-     * @param integer $Offset 偏移量，默认为0。 示例值：1
+     * @param string $InstanceId Prometheus 实例 ID
+     * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
-示例值：1
-     * @param array $Filters 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+     * @param array $Filters 仅支持按Name, Values字段过滤。
      */
     function __construct()
     {

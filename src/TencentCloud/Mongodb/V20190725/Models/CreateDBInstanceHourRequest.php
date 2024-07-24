@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) 设置指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
  * @method string getHiddenZone() 获取Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
  * @method void setHiddenZone(string $HiddenZone) 设置Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
+ * @method string getParamTemplateId() 获取参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+ * @method void setParamTemplateId(string $ParamTemplateId) 设置参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -293,6 +295,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $HiddenZone;
 
     /**
+     * @var string 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+     */
+    public $ParamTemplateId;
+
+    /**
      * @param integer $Memory 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      * @param integer $Volume 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      * @param integer $ReplicateSetNum - 创建副本集实例，指副本集数量，该参数只能为1。
@@ -348,6 +355,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $ReadonlyNodeNum 只读节点数量，取值范围[0,5]。
      * @param array $ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
      * @param string $HiddenZone Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
+     * @param string $ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("HiddenZone",$param) and $param["HiddenZone"] !== null) {
             $this->HiddenZone = $param["HiddenZone"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

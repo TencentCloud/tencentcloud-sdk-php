@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取主题id
  * @method void setTopicId(string $TopicId) 设置主题id
- * @method string getHashKey() 获取根据 hashkey 写入相应范围的主题分区
- * @method void setHashKey(string $HashKey) 设置根据 hashkey 写入相应范围的主题分区
+ * @method string getHashKey() 获取该参数已废弃，请勿使用
+ * @method void setHashKey(string $HashKey) 设置该参数已废弃，请勿使用
  * @method string getCompressType() 获取压缩方法
  * @method void setCompressType(string $CompressType) 设置压缩方法
  */
@@ -35,7 +35,8 @@ class UploadLogRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 根据 hashkey 写入相应范围的主题分区
+     * @var string 该参数已废弃，请勿使用
+     * @deprecated
      */
     public $HashKey;
 
@@ -46,7 +47,7 @@ class UploadLogRequest extends AbstractModel
 
     /**
      * @param string $TopicId 主题id
-     * @param string $HashKey 根据 hashkey 写入相应范围的主题分区
+     * @param string $HashKey 该参数已废弃，请勿使用
      * @param string $CompressType 压缩方法
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP, ALL。
  * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP, ALL。
- * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
- * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+ * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
+ * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
  * @method string getCidrBlock() 获取网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
@@ -53,7 +53,7 @@ class NetworkAclEntry extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * @var string 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      */
     public $Port;
 
@@ -101,7 +101,7 @@ class NetworkAclEntry extends AbstractModel
 
     /**
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
-     * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      * @param string $CidrBlock 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $Action ACCEPT 或 DROP。

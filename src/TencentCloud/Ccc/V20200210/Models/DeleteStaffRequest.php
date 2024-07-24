@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method array getStaffList() 获取待删除客服邮箱列表
- * @method void setStaffList(array $StaffList) 设置待删除客服邮箱列表
+ * @method array getStaffList() 获取待删除客服邮箱列表，一次最大支持200个。
+ * @method void setStaffList(array $StaffList) 设置待删除客服邮箱列表，一次最大支持200个。
  */
 class DeleteStaffRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteStaffRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array 待删除客服邮箱列表
+     * @var array 待删除客服邮箱列表，一次最大支持200个。
      */
     public $StaffList;
 
     /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param array $StaffList 待删除客服邮箱列表
+     * @param array $StaffList 待删除客服邮箱列表，一次最大支持200个。
      */
     function __construct()
     {

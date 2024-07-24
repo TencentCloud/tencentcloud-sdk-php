@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCdr请求参数结构体
  *
- * @method integer getStartTimeStamp() 获取起始时间戳，Unix 秒级时间戳
- * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 秒级时间戳
- * @method integer getEndTimeStamp() 获取结束时间戳，Unix 秒级时间戳
- * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 秒级时间戳
+ * @method integer getStartTimeStamp() 获取起始时间戳，Unix 秒级时间戳，最大支持近180天。
+ * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 秒级时间戳，最大支持近180天。
+ * @method integer getEndTimeStamp() 获取结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+ * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
  * @method integer getInstanceId() 获取实例 ID（废弃）
  * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
  * @method integer getLimit() 获取返回数据条数，上限（废弃）
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTelCdrRequest extends AbstractModel
 {
     /**
-     * @var integer 起始时间戳，Unix 秒级时间戳
+     * @var integer 起始时间戳，Unix 秒级时间戳，最大支持近180天。
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer 结束时间戳，Unix 秒级时间戳
+     * @var integer 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
      */
     public $EndTimeStamp;
 
@@ -95,8 +95,8 @@ class DescribeTelCdrRequest extends AbstractModel
     public $SessionIds;
 
     /**
-     * @param integer $StartTimeStamp 起始时间戳，Unix 秒级时间戳
-     * @param integer $EndTimeStamp 结束时间戳，Unix 秒级时间戳
+     * @param integer $StartTimeStamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * @param integer $EndTimeStamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
      * @param integer $InstanceId 实例 ID（废弃）
      * @param integer $Limit 返回数据条数，上限（废弃）
      * @param integer $Offset 偏移（废弃）

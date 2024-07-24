@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommand(string $Command) 设置任务过滤条件，相关命令，多个","隔开。
  * @method string getInfo() 获取任务过滤条件，支持单条件前缀匹配。
  * @method void setInfo(string $Info) 设置任务过滤条件，支持单条件前缀匹配。
+ * @method array getInfos() 获取任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+ * @method void setInfos(array $Infos) 设置任务过滤条件，支持多个关键字匹配，与Info参数互斥。
  * @method string getUser() 获取任务过滤条件，用户类型。
  * @method void setUser(string $User) 设置任务过滤条件，用户类型。
  * @method integer getTime() 获取任务过滤条件，会话持续时长，单位秒。
@@ -72,6 +74,11 @@ class CreateKillTaskRequest extends AbstractModel
     public $Info;
 
     /**
+     * @var array 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+     */
+    public $Infos;
+
+    /**
      * @var string 任务过滤条件，用户类型。
      */
     public $User;
@@ -93,6 +100,7 @@ class CreateKillTaskRequest extends AbstractModel
      * @param string $DB 任务过滤条件，数据库库名,多个","隔开。
      * @param string $Command 任务过滤条件，相关命令，多个","隔开。
      * @param string $Info 任务过滤条件，支持单条件前缀匹配。
+     * @param array $Infos 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
      * @param string $User 任务过滤条件，用户类型。
      * @param integer $Time 任务过滤条件，会话持续时长，单位秒。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
@@ -132,6 +140,10 @@ class CreateKillTaskRequest extends AbstractModel
 
         if (array_key_exists("Info",$param) and $param["Info"] !== null) {
             $this->Info = $param["Info"];
+        }
+
+        if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
+            $this->Infos = $param["Infos"];
         }
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {

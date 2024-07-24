@@ -37,7 +37,6 @@ use TencentCloud\Ams\V20201229\Models as Models;
 - 接口仅限音频文件传入，视频文件传入请调用长音频异步接口；
 - 接口**默认QPS为20**，如需自定义配置并发或请求频率，请工单咨询；
 - 接口**默认超时为10s**，请求如超过该时长则接口会报错。
-
  * @method Models\CreateAudioModerationTaskResponse CreateAudioModerationTask(Models\CreateAudioModerationTaskRequest $req) 本接口（Audio Moderation）用于提交音频内容（包括音频文件或流地址）进行智能审核任务，使用前请您使用腾讯云主账号登录控制台[开通音频内容安全服务](https://console.cloud.tencent.com/cms)并调整好对应的业务配置。<br>
 
 ### 功能使用说明：

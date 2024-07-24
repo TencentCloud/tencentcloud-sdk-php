@@ -26,7 +26,6 @@ use TencentCloud\Common\AbstractModel;
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -44,7 +43,6 @@ use TencentCloud\Common\AbstractModel;
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -99,7 +97,6 @@ class Groups extends AbstractModel
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -160,7 +157,6 @@ class Groups extends AbstractModel
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡

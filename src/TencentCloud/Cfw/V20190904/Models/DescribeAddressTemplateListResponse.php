@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainTemplateCount(integer $DomainTemplateCount) 设置域名地址模板数量
  * @method integer getPortTemplateCount() 获取协议端口模板数量
  * @method void setPortTemplateCount(integer $PortTemplateCount) 设置协议端口模板数量
+ * @method integer getUsedTemplateCount() 获取已使用的地址模版数
+ * @method void setUsedTemplateCount(integer $UsedTemplateCount) 设置已使用的地址模版数
+ * @method integer getTemplateQuotaCount() 获取地址模版配额数量
+ * @method void setTemplateQuotaCount(integer $TemplateQuotaCount) 设置地址模版配额数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +72,16 @@ class DescribeAddressTemplateListResponse extends AbstractModel
     public $PortTemplateCount;
 
     /**
+     * @var integer 已使用的地址模版数
+     */
+    public $UsedTemplateCount;
+
+    /**
+     * @var integer 地址模版配额数量
+     */
+    public $TemplateQuotaCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +93,8 @@ class DescribeAddressTemplateListResponse extends AbstractModel
      * @param integer $IpTemplateCount Ip地址模板数量
      * @param integer $DomainTemplateCount 域名地址模板数量
      * @param integer $PortTemplateCount 协议端口模板数量
+     * @param integer $UsedTemplateCount 已使用的地址模版数
+     * @param integer $TemplateQuotaCount 地址模版配额数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -121,6 +137,14 @@ class DescribeAddressTemplateListResponse extends AbstractModel
 
         if (array_key_exists("PortTemplateCount",$param) and $param["PortTemplateCount"] !== null) {
             $this->PortTemplateCount = $param["PortTemplateCount"];
+        }
+
+        if (array_key_exists("UsedTemplateCount",$param) and $param["UsedTemplateCount"] !== null) {
+            $this->UsedTemplateCount = $param["UsedTemplateCount"];
+        }
+
+        if (array_key_exists("TemplateQuotaCount",$param) and $param["TemplateQuotaCount"] !== null) {
+            $this->TemplateQuotaCount = $param["TemplateQuotaCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method array getCLSInfoList() 获取日志投递配置
  * @method void setCLSInfoList(array $CLSInfoList) 设置日志投递配置
+ * @method string getLogType() 获取日志类型
+ * @method void setLogType(string $LogType) 设置日志类型
+ * @method string getIsInMaintainPeriod() 获取是否维护时间运行
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置是否维护时间运行
  */
 class CreateCLSDeliveryRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class CreateCLSDeliveryRequest extends AbstractModel
     public $CLSInfoList;
 
     /**
+     * @var string 日志类型
+     */
+    public $LogType;
+
+    /**
+     * @var string 是否维护时间运行
+     */
+    public $IsInMaintainPeriod;
+
+    /**
      * @param string $InstanceId 实例id
      * @param array $CLSInfoList 日志投递配置
+     * @param string $LogType 日志类型
+     * @param string $IsInMaintainPeriod 是否维护时间运行
      */
     function __construct()
     {
@@ -65,6 +81,14 @@ class CreateCLSDeliveryRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CLSInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("IsInMaintainPeriod",$param) and $param["IsInMaintainPeriod"] !== null) {
+            $this->IsInMaintainPeriod = $param["IsInMaintainPeriod"];
         }
     }
 }

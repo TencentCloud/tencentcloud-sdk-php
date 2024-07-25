@@ -33,10 +33,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置当 Type 为 text 时使用，表示具体的文本内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageUrl getImageUrl() 获取图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64" 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrl(ImageUrl $ImageUrl) 设置图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64" 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Content extends AbstractModel
@@ -57,7 +57,7 @@ class Content extends AbstractModel
 
     /**
      * @var ImageUrl 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64" 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrl;
@@ -70,7 +70,7 @@ class Content extends AbstractModel
      * @param string $Text 当 Type 为 text 时使用，表示具体的文本内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl $ImageUrl 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64" 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
- * @method UpdateInstanceSettings getUpdateSpec() 获取节点变配的目标配置。
- * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) 设置节点变配的目标配置。
  * @method integer getPayMode() 获取实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
  * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
+ * @method UpdateInstanceSettings getUpdateSpec() 获取节点变配的目标配置。
+ * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) 设置节点变配的目标配置。
  * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method string getCurrency() 获取货币种类。取值范围：
@@ -66,16 +66,16 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var UpdateInstanceSettings 节点变配的目标配置。
-     */
-    public $UpdateSpec;
-
-    /**
      * @var integer 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
      */
     public $PayMode;
+
+    /**
+     * @var UpdateInstanceSettings 节点变配的目标配置。
+     */
+    public $UpdateSpec;
 
     /**
      * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -100,10 +100,10 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
      * @param integer $TimeSpan 变配的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
-     * @param UpdateInstanceSettings $UpdateSpec 节点变配的目标配置。
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
+     * @param UpdateInstanceSettings $UpdateSpec 节点变配的目标配置。
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $Currency 货币种类。取值范围：
 <li>CNY：表示人民币。</li>
@@ -130,13 +130,13 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
             $this->TimeSpan = $param["TimeSpan"];
         }
 
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
         if (array_key_exists("UpdateSpec",$param) and $param["UpdateSpec"] !== null) {
             $this->UpdateSpec = new UpdateInstanceSettings();
             $this->UpdateSpec->deserialize($param["UpdateSpec"]);
-        }
-
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
         }
 
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {

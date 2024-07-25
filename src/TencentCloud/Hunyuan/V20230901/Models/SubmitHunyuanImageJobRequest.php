@@ -36,6 +36,24 @@ use TencentCloud\Common\AbstractModel;
 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3），不传默认使用1024:1024。
  * @method void setResolution(string $Resolution) 设置生成图分辨率。
 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3），不传默认使用1024:1024。
+ * @method integer getNum() 获取图片生成数量。
+支持1 ~ 4张，默认生成1张。
+ * @method void setNum(integer $Num) 设置图片生成数量。
+支持1 ~ 4张，默认生成1张。
+ * @method integer getSeed() 获取随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+ * @method void setSeed(integer $Seed) 设置随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+ * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+ * @method void setRevise(integer $Revise) 设置prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
  * @method integer getLogoAdd() 获取为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -46,14 +64,10 @@ use TencentCloud\Common\AbstractModel;
 0：不添加。  
 其他数值：默认按1处理。  
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
- * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
- * @method void setRevise(integer $Revise) 设置prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+ * @method LogoParam getLogoParam() 获取标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  */
 class SubmitHunyuanImageJobRequest extends AbstractModel
 {
@@ -78,13 +92,17 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     * @var integer 图片生成数量。
+支持1 ~ 4张，默认生成1张。
      */
-    public $LogoAdd;
+    public $Num;
+
+    /**
+     * @var integer 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+     */
+    public $Seed;
 
     /**
      * @var integer prompt 扩写开关。1为开启，0为关闭，不传默认开启。
@@ -95,6 +113,21 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
     public $Revise;
 
     /**
+     * @var integer 为生成结果图添加显式水印标识的开关，默认为1。  
+1：添加。  
+0：不添加。  
+其他数值：默认按1处理。  
+建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     */
+    public $LogoAdd;
+
+    /**
+     * @var LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public $LogoParam;
+
+    /**
      * @param string $Prompt 文本描述。 
 算法将根据输入的文本智能生成与之相关的图像。 
 不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
@@ -103,15 +136,22 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
 不传默认不指定风格。
      * @param string $Resolution 生成图分辨率。
 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3），不传默认使用1024:1024。
+     * @param integer $Num 图片生成数量。
+支持1 ~ 4张，默认生成1张。
+     * @param integer $Seed 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+     * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
      * @param integer $LogoAdd 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
 其他数值：默认按1处理。  
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
-     * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     * @param LogoParam $LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      */
     function __construct()
     {
@@ -138,12 +178,25 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
             $this->Resolution = $param["Resolution"];
         }
 
-        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
-            $this->LogoAdd = $param["LogoAdd"];
+        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
+            $this->Num = $param["Num"];
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
 
         if (array_key_exists("Revise",$param) and $param["Revise"] !== null) {
             $this->Revise = $param["Revise"];
+        }
+
+        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
+            $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
+            $this->LogoParam = new LogoParam();
+            $this->LogoParam->deserialize($param["LogoParam"]);
         }
     }
 }

@@ -70,13 +70,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getImageSegments() 获取该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method array getImageSegments() 获取该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSegments(array $ImageSegments) 设置该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method void setImageSegments(array $ImageSegments) 设置该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAudioSegments() 获取该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method array getAudioSegments() 获取该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioSegments(array $AudioSegments) 设置该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method void setAudioSegments(array $AudioSegments) 设置该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorType() 获取当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
@@ -93,6 +93,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLabel() 获取该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SegmentCosUrlList getSegmentCosUrlList() 获取该字段用于返回检测结果明细数据相关的cos url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentCosUrlList(SegmentCosUrlList $SegmentCosUrlList) 设置该字段用于返回检测结果明细数据相关的cos url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAudioText() 获取该字段用于返回音频审核的ASR识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioText(string $AudioText) 设置该字段用于返回音频审核的ASR识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTryInSeconds() 获取在秒后重试
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTryInSeconds(integer $TryInSeconds) 设置在秒后重试
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAsrs() 获取该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsrs(array $Asrs) 设置该字段用于返回音频文件识别出的对应文本内容。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -173,13 +189,13 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @var array 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @var array 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSegments;
 
     /**
-     * @var array 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @var array 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioSegments;
@@ -203,6 +219,30 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
+
+    /**
+     * @var SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentCosUrlList;
+
+    /**
+     * @var string 该字段用于返回音频审核的ASR识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioText;
+
+    /**
+     * @var integer 在秒后重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TryInSeconds;
+
+    /**
+     * @var array 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Asrs;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -235,9 +275,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @param array $ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @param array $AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
@@ -246,6 +286,14 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentCosUrlList $SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AudioText 该字段用于返回音频审核的ASR识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TryInSeconds 在秒后重试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Asrs 该字段用于返回音频文件识别出的对应文本内容。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -345,6 +393,28 @@ class DescribeTaskDetailResponse extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("SegmentCosUrlList",$param) and $param["SegmentCosUrlList"] !== null) {
+            $this->SegmentCosUrlList = new SegmentCosUrlList();
+            $this->SegmentCosUrlList->deserialize($param["SegmentCosUrlList"]);
+        }
+
+        if (array_key_exists("AudioText",$param) and $param["AudioText"] !== null) {
+            $this->AudioText = $param["AudioText"];
+        }
+
+        if (array_key_exists("TryInSeconds",$param) and $param["TryInSeconds"] !== null) {
+            $this->TryInSeconds = $param["TryInSeconds"];
+        }
+
+        if (array_key_exists("Asrs",$param) and $param["Asrs"] !== null) {
+            $this->Asrs = [];
+            foreach ($param["Asrs"] as $key => $value){
+                $obj = new RcbAsr();
+                $obj->deserialize($value);
+                array_push($this->Asrs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

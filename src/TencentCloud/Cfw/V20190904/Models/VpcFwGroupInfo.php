@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrossUserMode(string $CrossUserMode) 设置跨租户模式 1管理员 2单边 0 非跨租户
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNeedSwitchCcnOverlap() 获取云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNeedSwitchCcnOverlap(integer $NeedSwitchCcnOverlap) 设置云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCcnId() 获取云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcnId(string $CcnId) 设置云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwGroupInfo extends AbstractModel
 {
@@ -144,6 +152,18 @@ class VpcFwGroupInfo extends AbstractModel
     public $CrossUserMode;
 
     /**
+     * @var integer 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NeedSwitchCcnOverlap;
+
+    /**
+     * @var string 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcnId;
+
+    /**
      * @param string $FwGroupId 防火墙(组)ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwGroupName 防火墙(组)名称
@@ -167,6 +187,10 @@ class VpcFwGroupInfo extends AbstractModel
      * @param string $CdcName cdc专用集群场景时表示cdc名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CrossUserMode 跨租户模式 1管理员 2单边 0 非跨租户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CcnId 云联网模式下，实例关联的云联网id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +257,14 @@ class VpcFwGroupInfo extends AbstractModel
 
         if (array_key_exists("CrossUserMode",$param) and $param["CrossUserMode"] !== null) {
             $this->CrossUserMode = $param["CrossUserMode"];
+        }
+
+        if (array_key_exists("NeedSwitchCcnOverlap",$param) and $param["NeedSwitchCcnOverlap"] !== null) {
+            $this->NeedSwitchCcnOverlap = $param["NeedSwitchCcnOverlap"];
+        }
+
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
         }
     }
 }

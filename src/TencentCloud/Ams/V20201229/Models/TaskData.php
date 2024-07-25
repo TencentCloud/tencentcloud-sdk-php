@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InputInfo getInputInfo() 获取任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputInfo(InputInfo $InputInfo) 设置任务信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskData extends AbstractModel
 {
@@ -128,6 +132,12 @@ class TaskData extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var InputInfo 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InputInfo;
+
+    /**
      * @param string $DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
@@ -147,6 +157,8 @@ class TaskData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
      * @param string $UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputInfo $InputInfo 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -210,6 +222,11 @@ class TaskData extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+            $this->InputInfo = new InputInfo();
+            $this->InputInfo->deserialize($param["InputInfo"]);
         }
     }
 }

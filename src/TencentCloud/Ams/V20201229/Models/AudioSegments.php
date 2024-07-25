@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(AudioResult $Result) 设置该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioSegments extends AbstractModel
 {
@@ -44,9 +48,17 @@ class AudioSegments extends AbstractModel
     public $Result;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
      * @param string $OffsetTime 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioResult $Result 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,10 @@ class AudioSegments extends AbstractModel
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = new AudioResult();
             $this->Result->deserialize($param["Result"]);
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
     }
 }

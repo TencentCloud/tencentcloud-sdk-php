@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置投递状态creating,running,offlining,offlined
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogType() 获取日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogType(string $LogType) 设置日志类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceCLSDeliveryInfo extends AbstractModel
 {
@@ -122,6 +126,12 @@ class InstanceCLSDeliveryInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogType;
+
+    /**
      * @param string $InstanceId 实例id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例name
@@ -143,6 +153,8 @@ class InstanceCLSDeliveryInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 投递状态creating,running,offlining,offlined
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogType 日志类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +200,10 @@ class InstanceCLSDeliveryInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

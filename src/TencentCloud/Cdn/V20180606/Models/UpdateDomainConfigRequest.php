@@ -134,6 +134,8 @@ global：全球加速
  * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) 设置其他厂商对象存储回源鉴权
  * @method HttpsBilling getHttpsBilling() 获取HTTPS服务（收费服务，详见计费说明和产品文档）
  * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务（收费服务，详见计费说明和产品文档）
+ * @method ParamFilter getParamFilter() 获取参数黑名单
+ * @method void setParamFilter(ParamFilter $ParamFilter) 设置参数黑名单
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -391,6 +393,11 @@ global：全球加速
     public $HttpsBilling;
 
     /**
+     * @var ParamFilter 参数黑名单
+     */
+    public $ParamFilter;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -448,6 +455,7 @@ global：全球加速
      * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
      * @param OthersPrivateAccess $OthersPrivateAccess 其他厂商对象存储回源鉴权
      * @param HttpsBilling $HttpsBilling HTTPS服务（收费服务，详见计费说明和产品文档）
+     * @param ParamFilter $ParamFilter 参数黑名单
      */
     function __construct()
     {
@@ -700,6 +708,11 @@ global：全球加速
         if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
             $this->HttpsBilling = new HttpsBilling();
             $this->HttpsBilling->deserialize($param["HttpsBilling"]);
+        }
+
+        if (array_key_exists("ParamFilter",$param) and $param["ParamFilter"] !== null) {
+            $this->ParamFilter = new ParamFilter();
+            $this->ParamFilter->deserialize($param["ParamFilter"]);
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method array getCLSTopicIds() 获取开通的日志主题id
  * @method void setCLSTopicIds(array $CLSTopicIds) 设置开通的日志主题id
+ * @method string getLogType() 获取日志类型
+ * @method void setLogType(string $LogType) 设置日志类型
+ * @method string getIsInMaintainPeriod() 获取是否维护时间运行
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置是否维护时间运行
  */
 class StartCLSDeliveryRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class StartCLSDeliveryRequest extends AbstractModel
     public $CLSTopicIds;
 
     /**
+     * @var string 日志类型
+     */
+    public $LogType;
+
+    /**
+     * @var string 是否维护时间运行
+     */
+    public $IsInMaintainPeriod;
+
+    /**
      * @param string $InstanceId 实例id
      * @param array $CLSTopicIds 开通的日志主题id
+     * @param string $LogType 日志类型
+     * @param string $IsInMaintainPeriod 是否维护时间运行
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class StartCLSDeliveryRequest extends AbstractModel
 
         if (array_key_exists("CLSTopicIds",$param) and $param["CLSTopicIds"] !== null) {
             $this->CLSTopicIds = $param["CLSTopicIds"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("IsInMaintainPeriod",$param) and $param["IsInMaintainPeriod"] !== null) {
+            $this->IsInMaintainPeriod = $param["IsInMaintainPeriod"];
         }
     }
 }

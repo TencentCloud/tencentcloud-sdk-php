@@ -64,6 +64,7 @@ class AudioResultDetailMoanResult extends AbstractModel
 
     /**
      * @var string *内测中，敬请期待*
+     * @deprecated
      */
     public $SubLabelCode;
 

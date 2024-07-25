@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabelCode(string $SubLabelCode) 设置该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageResultsResultDetail extends AbstractModel
 {
@@ -127,6 +131,12 @@ class ImageResultsResultDetail extends AbstractModel
     public $SubLabelCode;
 
     /**
+     * @var string 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 该字段用于返回图片OCR文本识别的检测结果，识别**上限在5000字节内**。
@@ -147,6 +157,8 @@ class ImageResultsResultDetail extends AbstractModel
      * @param integer $Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabelCode 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +213,10 @@ class ImageResultsResultDetail extends AbstractModel
 
         if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
             $this->SubLabelCode = $param["SubLabelCode"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

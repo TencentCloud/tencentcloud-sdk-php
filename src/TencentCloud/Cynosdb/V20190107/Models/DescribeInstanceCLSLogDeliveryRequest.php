@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getLogType() 获取日志类型
+ * @method void setLogType(string $LogType) 设置日志类型
  */
 class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 日志类型
+     */
+    public $LogType;
+
+    /**
      * @param string $InstanceId 实例id
+     * @param string $LogType 日志类型
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+ * @method string getUrl() 获取该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+ * @method void setUrl(string $Url) 设置该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDuration() 获取该字段用于返回音频文件的时长，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,7 +109,7 @@ class AudioResult extends AbstractModel
     public $Text;
 
     /**
-     * @var string 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * @var string 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
@@ -168,7 +168,7 @@ class AudioResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * @param string $Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 该字段用于返回音频文件的时长，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。

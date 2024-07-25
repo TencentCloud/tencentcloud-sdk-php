@@ -64,9 +64,7 @@ use TencentCloud\Vm\V20201229\Models as Models;
 - 视频流支持格式：rmtp，flv 等主流视频流编码格式。
 - 视频文件支持的传输协议：HTTP/HTTPS/RTMP；
 - 支持用户配置是否需要开启音频审核，若不开启则将仅对视频流图像内容进行审核。
- * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。<br>
-
-默认接口请求频率限制：**200次/秒**。
+ * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 通过查看审核任务列表接口，可查询任务队列；您可根据多种业务信息（业务类型、审核结果、任务状态等）筛选审核任务列表。<br>
 
 默认接口请求频率限制：**20次/秒**。

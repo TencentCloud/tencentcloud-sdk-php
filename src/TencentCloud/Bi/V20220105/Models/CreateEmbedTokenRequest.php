@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置分享项目id
  * @method integer getPageId() 获取分享页面id，嵌出看板时此为空值0
  * @method void setPageId(integer $PageId) 设置分享页面id，嵌出看板时此为空值0
- * @method string getScope() 获取page表示嵌出页面，panel表嵌出整个看板
- * @method void setScope(string $Scope) 设置page表示嵌出页面，panel表嵌出整个看板
+ * @method string getScope() 获取page表示嵌出页面，panel表示嵌出整个看板
+ * @method void setScope(string $Scope) 设置page表示嵌出页面，panel表示嵌出整个看板
  * @method string getExpireTime() 获取过期时间。 单位：分钟 最大值：240。即，4小时 默认值：240
  * @method void setExpireTime(string $ExpireTime) 设置过期时间。 单位：分钟 最大值：240。即，4小时 默认值：240
  * @method string getExtraParam() 获取备用字段
@@ -129,7 +129,7 @@ class CreateEmbedTokenRequest extends AbstractModel
     public $PageId;
 
     /**
-     * @var string page表示嵌出页面，panel表嵌出整个看板
+     * @var string page表示嵌出页面，panel表示嵌出整个看板
      */
     public $Scope;
 
@@ -205,7 +205,7 @@ Operator 目前支持
     /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0
-     * @param string $Scope page表示嵌出页面，panel表嵌出整个看板
+     * @param string $Scope page表示嵌出页面，panel表示嵌出整个看板
      * @param string $ExpireTime 过期时间。 单位：分钟 最大值：240。即，4小时 默认值：240
      * @param string $ExtraParam 备用字段
      * @param string $UserCorpId 使用者企业Id(仅用于多用户)

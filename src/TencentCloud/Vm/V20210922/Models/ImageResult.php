@@ -64,9 +64,9 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置画面截帧图片结果集
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取图片URL地址
+ * @method string getUrl() 获取该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置图片URL地址
+ * @method void setUrl(string $Url) 设置该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取附加字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,7 +118,7 @@ Block 确认违规
     public $Results;
 
     /**
-     * @var string 图片URL地址
+     * @var string 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
@@ -152,7 +152,7 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 画面截帧图片结果集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url 图片URL地址
+     * @param string $Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 附加字段
 注意：此字段可能返回 null，表示取不到有效值。

@@ -74,13 +74,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTryInSeconds(integer $TryInSeconds) 设置在秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getImageSegments() 获取该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method array getImageSegments() 获取该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSegments(array $ImageSegments) 设置该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method void setImageSegments(array $ImageSegments) 设置该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAudioSegments() 获取该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method array getAudioSegments() 获取该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioSegments(array $AudioSegments) 设置该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+ * @method void setAudioSegments(array $AudioSegments) 设置该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorType() 获取当任务状态为Error时，返回对应错误的类型，取值：
 **DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
@@ -205,13 +205,13 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $TryInSeconds;
 
     /**
-     * @var array 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @var array 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSegments;
 
     /**
-     * @var array 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @var array 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioSegments;
@@ -292,9 +292,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TryInSeconds 在秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @param array $ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+     * @param array $AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
 **DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）

@@ -171,6 +171,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribePrometheusTemplatesResponse DescribePrometheusTemplates(Models\DescribePrometheusTemplatesRequest $req) 拉取模板列表，默认模板将总是在最前面
  * @method Models\DescribeRIUtilizationDetailResponse DescribeRIUtilizationDetail(Models\DescribeRIUtilizationDetailRequest $req) 预留实例用量查询
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 获取容器服务支持的所有地域
+ * @method Models\DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRate(Models\DescribeReservedInstanceUtilizationRateRequest $req) 查询各种规格类型的预留券使用率
  * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) 查询预留实例列表
  * @method Models\DescribeResourceUsageResponse DescribeResourceUsage(Models\DescribeResourceUsageRequest $req) 获取集群资源使用量
  * @method Models\DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(Models\DescribeRouteTableConflictsRequest $req) 查询路由表冲突列表

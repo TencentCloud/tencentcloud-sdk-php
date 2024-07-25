@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaInfo getMediaInfo() 获取媒体信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaInfo(MediaInfo $MediaInfo) 设置媒体信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -189,6 +193,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $Label;
 
     /**
+     * @var MediaInfo 媒体信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -226,6 +236,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaInfo $MediaInfo 媒体信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -315,6 +327,11 @@ class DescribeTaskDetailResponse extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("MediaInfo",$param) and $param["MediaInfo"] !== null) {
+            $this->MediaInfo = new MediaInfo();
+            $this->MediaInfo->deserialize($param["MediaInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

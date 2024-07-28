@@ -26,19 +26,19 @@ use TencentCloud\Common\AbstractModel;
 请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
  * @method string getInputImage() 获取输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputImage(string $InputImage) 设置输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getInputUrl() 获取输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputUrl(string $InputUrl) 设置输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method integer getFilter() 获取输入图像质量检测开关，默认开启。
 1：开启
@@ -80,7 +80,7 @@ class GenerateAvatarRequest extends AbstractModel
     /**
      * @var string 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputImage;
@@ -88,7 +88,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     /**
      * @var string 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputUrl;
@@ -128,11 +128,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
      * @param string $InputImage 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $InputUrl 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param integer $Filter 输入图像质量检测开关，默认开启。
 1：开启

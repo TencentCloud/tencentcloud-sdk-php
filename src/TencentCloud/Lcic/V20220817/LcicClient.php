@@ -87,6 +87,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
  * @method Models\StartRoomResponse StartRoom(Models\StartRoomRequest $req) 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
  * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) 文档从房间解绑
+ * @method Models\UnblockKickedUserResponse UnblockKickedUser(Models\UnblockKickedUserRequest $req) 解禁从房间里面踢出的用户
  */
 
 class LcicClient extends AbstractClient

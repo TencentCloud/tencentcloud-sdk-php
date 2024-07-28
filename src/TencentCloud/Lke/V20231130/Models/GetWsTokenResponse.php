@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetWsToken返回参数结构体
  *
- * @method string getToken() 获取token值
- * @method void setToken(string $Token) 设置token值
- * @method float getBalance() 获取余额; 余额大于 0 时表示有效.
+ * @method string getToken() 获取token值（有效期60s）
+ * @method void setToken(string $Token) 设置token值（有效期60s）
+ * @method float getBalance() 获取余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBalance(float $Balance) 设置余额; 余额大于 0 时表示有效.
+ * @method void setBalance(float $Balance) 设置余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInputLenLimit() 获取对话窗输入字符限制
  * @method void setInputLenLimit(integer $InputLenLimit) 设置对话窗输入字符限制
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class GetWsTokenResponse extends AbstractModel
 {
     /**
-     * @var string token值
+     * @var string token值（有效期60s）
      */
     public $Token;
 
     /**
-     * @var float 余额; 余额大于 0 时表示有效.
+     * @var float 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Balance;
@@ -55,8 +55,8 @@ class GetWsTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Token token值
-     * @param float $Balance 余额; 余额大于 0 时表示有效.
+     * @param string $Token token值（有效期60s）
+     * @param float $Balance 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InputLenLimit 对话窗输入字符限制
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

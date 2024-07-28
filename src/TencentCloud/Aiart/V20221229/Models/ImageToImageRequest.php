@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputImage() 获取输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputImage(string $InputImage) 设置输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getInputUrl() 获取输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputUrl(string $InputUrl) 设置输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getPrompt() 获取文本描述。
 用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
 推荐使用中文。最多支持256个 utf-8 字符。
@@ -88,16 +88,16 @@ class ImageToImageRequest extends AbstractModel
     /**
      * @var string 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputImage;
 
     /**
      * @var string 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputUrl;
 
@@ -159,12 +159,12 @@ Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传�
     /**
      * @param string $InputImage 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $InputUrl 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
+Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $Prompt 文本描述。
 用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
 推荐使用中文。最多支持256个 utf-8 字符。

@@ -42,6 +42,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteDomainCustomLineResponse DeleteDomainCustomLine(Models\DeleteDomainCustomLineRequest $req) 删除域名的自定义线路
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
  * @method Models\DeleteRecordBatchResponse DeleteRecordBatch(Models\DeleteRecordBatchRequest $req) 批量删除解析记录
+备注：因存储限制， 建议一次批量删除最多2000条
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 按账号删除域名共享
  * @method Models\DeleteSnapshotResponse DeleteSnapshot(Models\DeleteSnapshotRequest $req) 删除快照

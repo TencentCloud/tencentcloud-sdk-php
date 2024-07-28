@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * logo参数
  *
- * @method string getLogoUrl() 获取水印url
- * @method void setLogoUrl(string $LogoUrl) 设置水印url
- * @method string getLogoImage() 获取水印base64，url和base64二选一传入
- * @method void setLogoImage(string $LogoImage) 设置水印base64，url和base64二选一传入
- * @method LogoRect getLogoRect() 获取水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
- * @method void setLogoRect(LogoRect $LogoRect) 设置水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+ * @method string getLogoUrl() 获取水印 Url
+ * @method void setLogoUrl(string $LogoUrl) 设置水印 Url
+ * @method string getLogoImage() 获取水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
+ * @method void setLogoImage(string $LogoImage) 设置水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
+ * @method LogoRect getLogoRect() 获取水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+ * @method void setLogoRect(LogoRect $LogoRect) 设置水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
  */
 class LogoParam extends AbstractModel
 {
     /**
-     * @var string 水印url
+     * @var string 水印 Url
      */
     public $LogoUrl;
 
     /**
-     * @var string 水印base64，url和base64二选一传入
+     * @var string 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
      */
     public $LogoImage;
 
     /**
-     * @var LogoRect 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * @var LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
      */
     public $LogoRect;
 
     /**
-     * @param string $LogoUrl 水印url
-     * @param string $LogoImage 水印base64，url和base64二选一传入
-     * @param LogoRect $LogoRect 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * @param string $LogoUrl 水印 Url
+     * @param string $LogoImage 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
+     * @param LogoRect $LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
      */
     function __construct()
     {

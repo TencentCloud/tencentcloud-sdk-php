@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAirTicketInfo(AirTicketInfo $AirTicketInfo) 设置航空运输电子客票行程单信息
  * @method RailwayTicketInfo getRailwayTicketInfo() 获取铁路电子客票
  * @method void setRailwayTicketInfo(RailwayTicketInfo $RailwayTicketInfo) 设置铁路电子客票
+ * @method string getInvoiceTitle() 获取发票标题
+ * @method void setInvoiceTitle(string $InvoiceTitle) 设置发票标题
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -177,6 +179,11 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
     public $RailwayTicketInfo;
 
     /**
+     * @var string 发票标题
+     */
+    public $InvoiceTitle;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +214,7 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
      * @param array $GoodsInfos 货物或服务清单
      * @param AirTicketInfo $AirTicketInfo 航空运输电子客票行程单信息
      * @param RailwayTicketInfo $RailwayTicketInfo 铁路电子客票
+     * @param string $InvoiceTitle 发票标题
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -305,6 +313,10 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
         if (array_key_exists("RailwayTicketInfo",$param) and $param["RailwayTicketInfo"] !== null) {
             $this->RailwayTicketInfo = new RailwayTicketInfo();
             $this->RailwayTicketInfo->deserialize($param["RailwayTicketInfo"]);
+        }
+
+        if (array_key_exists("InvoiceTitle",$param) and $param["InvoiceTitle"] !== null) {
+            $this->InvoiceTitle = $param["InvoiceTitle"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

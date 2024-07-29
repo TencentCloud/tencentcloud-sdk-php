@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(string $Pid) 设置进程号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDetectBy() 获取数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetectBy(string $DetectBy) 设置数据来源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashEventsInfo extends AbstractModel
 {
@@ -238,6 +242,12 @@ class BashEventsInfo extends AbstractModel
     public $Pid;
 
     /**
+     * @var string 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetectBy;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 云镜ID
      * @param string $Quuid 主机ID
@@ -275,6 +285,8 @@ class BashEventsInfo extends AbstractModel
      * @param string $User 登录用户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pid 进程号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DetectBy 数据来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -388,6 +400,10 @@ class BashEventsInfo extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("DetectBy",$param) and $param["DetectBy"] !== null) {
+            $this->DetectBy = $param["DetectBy"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlux(float $Flux) 设置流量 （单位MB）。
  * @method integer getRequest() 获取请求数。
  * @method void setRequest(integer $Request) 设置请求数。
- * @method integer getOnline() 获取在线人数。
- * @method void setOnline(integer $Online) 设置在线人数。
+ * @method integer getOnline() 获取在线人数。当前后端接口数据的统计方式与客户端侧不同，该数据仅供参考，具体数据请以业务客户端侧统计数据为准。
+ * @method void setOnline(integer $Online) 设置在线人数。当前后端接口数据的统计方式与客户端侧不同，该数据仅供参考，具体数据请以业务客户端侧统计数据为准。
  */
 class DayStreamPlayInfo extends AbstractModel
 {
@@ -63,7 +63,7 @@ class DayStreamPlayInfo extends AbstractModel
     public $Request;
 
     /**
-     * @var integer 在线人数。
+     * @var integer 在线人数。当前后端接口数据的统计方式与客户端侧不同，该数据仅供参考，具体数据请以业务客户端侧统计数据为准。
      */
     public $Online;
 
@@ -75,7 +75,7 @@ class DayStreamPlayInfo extends AbstractModel
      * @param float $Bandwidth 带宽（单位Mbps）。
      * @param float $Flux 流量 （单位MB）。
      * @param integer $Request 请求数。
-     * @param integer $Online 在线人数。
+     * @param integer $Online 在线人数。当前后端接口数据的统计方式与客户端侧不同，该数据仅供参考，具体数据请以业务客户端侧统计数据为准。
      */
     function __construct()
     {

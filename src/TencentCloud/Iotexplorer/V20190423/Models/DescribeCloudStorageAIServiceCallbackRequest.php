@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudStorageAIServiceCallback请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getProductId() 获取产品 ID
+ * @method void setProductId(string $ProductId) 设置产品 ID
  */
 class DescribeCloudStorageAIServiceCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 产品 ID
      */
     public $ProductId;
 
     /**
-     * @param string $ProductId 产品ID
+     * @param string $ProductId 产品 ID
      */
     function __construct()
     {

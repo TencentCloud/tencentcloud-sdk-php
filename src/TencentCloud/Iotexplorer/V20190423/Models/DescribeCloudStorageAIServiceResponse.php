@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudStorageAIService返回参数结构体
  *
- * @method boolean getEnabled() 获取启用状态
- * @method void setEnabled(boolean $Enabled) 设置启用状态
- * @method string getROI() 获取视频分析区域
- * @method void setROI(string $ROI) 设置视频分析区域
- * @method string getConfig() 获取云存 AI 服务的配置参数
- * @method void setConfig(string $Config) 设置云存 AI 服务的配置参数
+ * @method boolean getEnabled() 获取视频分析启用状态
+ * @method void setEnabled(boolean $Enabled) 设置视频分析启用状态
+ * @method string getConfig() 获取视频分析配置参数
+ * @method void setConfig(string $Config) 设置视频分析配置参数
+ * @method string getROI() 获取视频分析识别区域
+ * @method void setROI(string $ROI) 设置视频分析识别区域
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudStorageAIServiceResponse extends AbstractModel
 {
     /**
-     * @var boolean 启用状态
+     * @var boolean 视频分析启用状态
      */
     public $Enabled;
 
     /**
-     * @var string 视频分析区域
-     */
-    public $ROI;
-
-    /**
-     * @var string 云存 AI 服务的配置参数
+     * @var string 视频分析配置参数
      */
     public $Config;
+
+    /**
+     * @var string 视频分析识别区域
+     */
+    public $ROI;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +52,9 @@ class DescribeCloudStorageAIServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Enabled 启用状态
-     * @param string $ROI 视频分析区域
-     * @param string $Config 云存 AI 服务的配置参数
+     * @param boolean $Enabled 视频分析启用状态
+     * @param string $Config 视频分析配置参数
+     * @param string $ROI 视频分析识别区域
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,12 +74,12 @@ class DescribeCloudStorageAIServiceResponse extends AbstractModel
             $this->Enabled = $param["Enabled"];
         }
 
-        if (array_key_exists("ROI",$param) and $param["ROI"] !== null) {
-            $this->ROI = $param["ROI"];
-        }
-
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("ROI",$param) and $param["ROI"] !== null) {
+            $this->ROI = $param["ROI"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

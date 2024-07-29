@@ -140,6 +140,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetName(string $TargetName) 设置访问目的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastHitTime() 获取规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastHitTime(string $LastHitTime) 设置规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescAcItem extends AbstractModel
 {
@@ -328,6 +332,12 @@ class DescAcItem extends AbstractModel
     public $TargetName;
 
     /**
+     * @var string 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastHitTime;
+
+    /**
      * @param string $SourceContent 访问源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetContent 访问目的
@@ -387,6 +397,8 @@ class DescAcItem extends AbstractModel
      * @param string $SourceName 访问源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastHitTime 规则最近命中时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -529,6 +541,10 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("TargetName",$param) and $param["TargetName"] !== null) {
             $this->TargetName = $param["TargetName"];
+        }
+
+        if (array_key_exists("LastHitTime",$param) and $param["LastHitTime"] !== null) {
+            $this->LastHitTime = $param["LastHitTime"];
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
  * @method string getEtlContent() 获取加工逻辑函数。
  * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数。
+ * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class DataTransformTaskInfo extends AbstractModel
     public $EtlContent;
 
     /**
+     * @var integer 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataTransformType;
+
+    /**
      * @param string $Name 数据加工任务名称
      * @param string $TaskId 数据加工任务id
      * @param integer $EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
@@ -128,6 +138,8 @@ class DataTransformTaskInfo extends AbstractModel
      * @param string $LogsetId 日志集id
      * @param array $DstResources 加工任务目的topic_id以及别名
      * @param string $EtlContent 加工逻辑函数。
+     * @param integer $DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class DataTransformTaskInfo extends AbstractModel
 
         if (array_key_exists("EtlContent",$param) and $param["EtlContent"] !== null) {
             $this->EtlContent = $param["EtlContent"];
+        }
+
+        if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
+            $this->DataTransformType = $param["DataTransformType"];
         }
     }
 }

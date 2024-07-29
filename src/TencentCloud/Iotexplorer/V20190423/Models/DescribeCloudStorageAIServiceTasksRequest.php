@@ -25,10 +25,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method integer getLimit() 获取分页拉取数量
  * @method void setLimit(integer $Limit) 设置分页拉取数量
@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
 - `2`：成功但结果为空
 - `3`：成功且结果非空
 - `4`：执行中
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method integer getChannelId() 获取通道ID 非NVR设备则不填 NVR设备则必填 默认为无
- * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+ * @method string getUserId() 获取用户 ID
+ * @method void setUserId(string $UserId) 设置用户 ID
+ * @method integer getChannelId() 获取通道 ID
+ * @method void setChannelId(integer $ChannelId) 设置通道 ID
  */
 class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 
     /**
      * @var string 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public $ServiceType;
@@ -91,12 +91,12 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 用户ID
+     * @var string 用户 ID
      */
     public $UserId;
 
     /**
-     * @var integer 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @var integer 通道 ID
      */
     public $ChannelId;
 
@@ -104,7 +104,7 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param integer $Limit 分页拉取数量
      * @param integer $Offset 分页拉取偏移
@@ -114,8 +114,8 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 - `2`：成功但结果为空
 - `3`：成功且结果非空
 - `4`：执行中
-     * @param string $UserId 用户ID
-     * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @param string $UserId 用户 ID
+     * @param integer $ChannelId 通道 ID
      */
     function __construct()
     {

@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudStorageAIService请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getProductId() 获取产品 ID
+ * @method void setProductId(string $ProductId) 设置产品 ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
- * @method boolean getEnabled() 获取启用状态
- * @method void setEnabled(boolean $Enabled) 设置启用状态
- * @method string getROI() 获取视频分析区域
- * @method void setROI(string $ROI) 设置视频分析区域
- * @method string getConfig() 获取云存 AI 服务的配置参数
- * @method void setConfig(string $Config) 设置云存 AI 服务的配置参数
+ * @method boolean getEnabled() 获取视频分析启用状态
+ * @method void setEnabled(boolean $Enabled) 设置视频分析启用状态
+ * @method string getROI() 获取视频分析识别区域
+ * @method void setROI(string $ROI) 设置视频分析识别区域
+ * @method string getConfig() 获取视频分析配置参数
+ * @method void setConfig(string $Config) 设置视频分析配置参数
  */
 class ModifyCloudStorageAIServiceRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 产品 ID
      */
     public $ProductId;
 
@@ -51,35 +51,35 @@ class ModifyCloudStorageAIServiceRequest extends AbstractModel
 
     /**
      * @var string 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public $ServiceType;
 
     /**
-     * @var boolean 启用状态
+     * @var boolean 视频分析启用状态
      */
     public $Enabled;
 
     /**
-     * @var string 视频分析区域
+     * @var string 视频分析识别区域
      */
     public $ROI;
 
     /**
-     * @var string 云存 AI 服务的配置参数
+     * @var string 视频分析配置参数
      */
     public $Config;
 
     /**
-     * @param string $ProductId 产品ID
+     * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
-     * @param boolean $Enabled 启用状态
-     * @param string $ROI 视频分析区域
-     * @param string $Config 云存 AI 服务的配置参数
+     * @param boolean $Enabled 视频分析启用状态
+     * @param string $ROI 视频分析识别区域
+     * @param string $Config 视频分析配置参数
      */
     function __construct()
     {

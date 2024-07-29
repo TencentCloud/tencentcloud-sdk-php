@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexBashCmd(string $RegexBashCmd) 设置自动生成的正则表达式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostName() 获取主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostName(string $HostName) 设置主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashEvent extends AbstractModel
 {
@@ -175,6 +179,12 @@ class BashEvent extends AbstractModel
     public $RegexBashCmd;
 
     /**
+     * @var string 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostName;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 主机安全ID
      * @param string $Quuid 主机ID
@@ -199,6 +209,8 @@ class BashEvent extends AbstractModel
      * @param integer $RuleCategory 规则类别  0=系统规则，1=用户规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegexBashCmd 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostName 主机HostName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +300,10 @@ class BashEvent extends AbstractModel
 
         if (array_key_exists("RegexBashCmd",$param) and $param["RegexBashCmd"] !== null) {
             $this->RegexBashCmd = $param["RegexBashCmd"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

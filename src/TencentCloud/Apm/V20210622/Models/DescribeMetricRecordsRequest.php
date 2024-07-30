@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页长
  * @method array getOrFilters() 获取Or过滤条件
  * @method void setOrFilters(array $OrFilters) 设置Or过滤条件
+ * @method string getType() 获取数据来源
+ * @method void setType(string $Type) 设置数据来源
  */
 class DescribeMetricRecordsRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $OrFilters;
 
     /**
+     * @var string 数据来源
+     */
+    public $Type;
+
+    /**
      * @param array $Filters 过滤条件
      * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
@@ -128,6 +135,7 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @param integer $PageIndex 页码
      * @param integer $PageSize 页长
      * @param array $OrFilters Or过滤条件
+     * @param string $Type 数据来源
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class DescribeMetricRecordsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrFilters, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

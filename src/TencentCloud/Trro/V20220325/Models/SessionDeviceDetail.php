@@ -60,9 +60,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDecodeCost(array $DecodeCost) 设置解码耗时，单位：ms
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRenderConst() 获取渲染耗时，单位：ms
+ * @method array getRenderConst() 获取【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenderConst(array $RenderConst) 设置渲染耗时，单位：ms
+ * @method void setRenderConst(array $RenderConst) 设置【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getK100() 获取卡顿k100
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,6 +95,46 @@ use TencentCloud\Common\AbstractModel;
  * @method array getCaptureCost() 获取采集耗时，单位：ms
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptureCost(array $CaptureCost) 设置采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRenderCost() 获取渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenderCost(array $RenderCost) 设置渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigWidth() 获取配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigWidth(integer $ConfigWidth) 设置配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigHeight() 获取配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigHeight(integer $ConfigHeight) 设置配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFrameDelta() 获取平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrameDelta(array $FrameDelta) 设置平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMaxFrameDelta() 获取最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxFrameDelta(array $MaxFrameDelta) 设置最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTotalBitrateEstimate() 获取总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalBitrateEstimate(array $TotalBitrateEstimate) 设置总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLag100Duration() 获取帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLag100Duration(array $Lag100Duration) 设置帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLag150Duration() 获取帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLag150Duration(array $Lag150Duration) 设置帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMultiMode() 获取是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiMode(integer $MultiMode) 设置是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiNet() 获取多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiNet(array $MultiNet) 设置多网卡信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SessionDeviceDetail extends AbstractModel
@@ -188,8 +228,9 @@ class SessionDeviceDetail extends AbstractModel
     public $DecodeCost;
 
     /**
-     * @var array 渲染耗时，单位：ms
+     * @var array 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $RenderConst;
 
@@ -242,6 +283,66 @@ class SessionDeviceDetail extends AbstractModel
     public $CaptureCost;
 
     /**
+     * @var array 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenderCost;
+
+    /**
+     * @var integer 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigWidth;
+
+    /**
+     * @var integer 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigHeight;
+
+    /**
+     * @var array 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrameDelta;
+
+    /**
+     * @var array 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxFrameDelta;
+
+    /**
+     * @var array 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalBitrateEstimate;
+
+    /**
+     * @var array 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Lag100Duration;
+
+    /**
+     * @var array 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Lag150Duration;
+
+    /**
+     * @var integer 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiMode;
+
+    /**
+     * @var array 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiNet;
+
+    /**
      * @param string $DeviceType 设备类型：field或remote
      * @param integer $StartTime 起始点位时间，单位：秒
      * @param integer $EndTime 结束点位时间，单位：秒
@@ -262,7 +363,7 @@ class SessionDeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DecodeCost 解码耗时，单位：ms
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RenderConst 渲染耗时，单位：ms
+     * @param array $RenderConst 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $K100 卡顿k100
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,6 +380,26 @@ class SessionDeviceDetail extends AbstractModel
      * @param array $EncodeCost 编码耗时，单位：ms
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CaptureCost 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RenderCost 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigWidth 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigHeight 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FrameDelta 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MaxFrameDelta 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TotalBitrateEstimate 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Lag100Duration 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Lag150Duration 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MultiMode 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiNet 多网卡信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +517,51 @@ class SessionDeviceDetail extends AbstractModel
 
         if (array_key_exists("CaptureCost",$param) and $param["CaptureCost"] !== null) {
             $this->CaptureCost = $param["CaptureCost"];
+        }
+
+        if (array_key_exists("RenderCost",$param) and $param["RenderCost"] !== null) {
+            $this->RenderCost = $param["RenderCost"];
+        }
+
+        if (array_key_exists("ConfigWidth",$param) and $param["ConfigWidth"] !== null) {
+            $this->ConfigWidth = $param["ConfigWidth"];
+        }
+
+        if (array_key_exists("ConfigHeight",$param) and $param["ConfigHeight"] !== null) {
+            $this->ConfigHeight = $param["ConfigHeight"];
+        }
+
+        if (array_key_exists("FrameDelta",$param) and $param["FrameDelta"] !== null) {
+            $this->FrameDelta = $param["FrameDelta"];
+        }
+
+        if (array_key_exists("MaxFrameDelta",$param) and $param["MaxFrameDelta"] !== null) {
+            $this->MaxFrameDelta = $param["MaxFrameDelta"];
+        }
+
+        if (array_key_exists("TotalBitrateEstimate",$param) and $param["TotalBitrateEstimate"] !== null) {
+            $this->TotalBitrateEstimate = $param["TotalBitrateEstimate"];
+        }
+
+        if (array_key_exists("Lag100Duration",$param) and $param["Lag100Duration"] !== null) {
+            $this->Lag100Duration = $param["Lag100Duration"];
+        }
+
+        if (array_key_exists("Lag150Duration",$param) and $param["Lag150Duration"] !== null) {
+            $this->Lag150Duration = $param["Lag150Duration"];
+        }
+
+        if (array_key_exists("MultiMode",$param) and $param["MultiMode"] !== null) {
+            $this->MultiMode = $param["MultiMode"];
+        }
+
+        if (array_key_exists("MultiNet",$param) and $param["MultiNet"] !== null) {
+            $this->MultiNet = [];
+            foreach ($param["MultiNet"] as $key => $value){
+                $obj = new MultiNet();
+                $obj->deserialize($value);
+                array_push($this->MultiNet, $obj);
+            }
         }
     }
 }

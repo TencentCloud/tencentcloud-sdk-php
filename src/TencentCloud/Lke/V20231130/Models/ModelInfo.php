@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置模型名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceStatus() 获取资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceStatus(integer $ResourceStatus) 设置资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPromptWordsLimit() 获取提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPromptWordsLimit(string $PromptWordsLimit) 设置提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelInfo extends AbstractModel
 {
@@ -54,11 +62,27 @@ class ModelInfo extends AbstractModel
     public $AliasName;
 
     /**
+     * @var integer 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceStatus;
+
+    /**
+     * @var string 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PromptWordsLimit;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasName 模型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PromptWordsLimit 提示词内容字符限制
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +108,14 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
             $this->AliasName = $param["AliasName"];
+        }
+
+        if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
+            $this->ResourceStatus = $param["ResourceStatus"];
+        }
+
+        if (array_key_exists("PromptWordsLimit",$param) and $param["PromptWordsLimit"] !== null) {
+            $this->PromptWordsLimit = $param["PromptWordsLimit"];
         }
     }
 }

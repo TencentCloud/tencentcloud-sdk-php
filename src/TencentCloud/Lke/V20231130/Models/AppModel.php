@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenBalance(float $TokenBalance) 设置token余量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsUseContext() 获取是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsUseContext(boolean $IsUseContext) 设置是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHistoryLimit() 获取上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHistoryLimit(integer $HistoryLimit) 设置上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUsageType() 获取使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsageType(string $UsageType) 设置使用类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModel extends AbstractModel
 {
@@ -74,6 +86,24 @@ class AppModel extends AbstractModel
     public $TokenBalance;
 
     /**
+     * @var boolean 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsUseContext;
+
+    /**
+     * @var integer 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HistoryLimit;
+
+    /**
+     * @var string 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsageType;
+
+    /**
      * @param string $Name 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 模型描述
@@ -83,6 +113,12 @@ class AppModel extends AbstractModel
      * @param string $AliasName 模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TokenBalance token余量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsUseContext 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HistoryLimit 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UsageType 使用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +152,18 @@ class AppModel extends AbstractModel
 
         if (array_key_exists("TokenBalance",$param) and $param["TokenBalance"] !== null) {
             $this->TokenBalance = $param["TokenBalance"];
+        }
+
+        if (array_key_exists("IsUseContext",$param) and $param["IsUseContext"] !== null) {
+            $this->IsUseContext = $param["IsUseContext"];
+        }
+
+        if (array_key_exists("HistoryLimit",$param) and $param["HistoryLimit"] !== null) {
+            $this->HistoryLimit = $param["HistoryLimit"];
+        }
+
+        if (array_key_exists("UsageType",$param) and $param["UsageType"] !== null) {
+            $this->UsageType = $param["UsageType"];
         }
     }
 }

@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcedures(array $Procedures) 设置执行过程信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTraceId() 获取执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceId(string $TraceId) 设置执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TokenStat extends AbstractModel
 {
@@ -134,6 +138,12 @@ class TokenStat extends AbstractModel
     public $Procedures;
 
     /**
+     * @var string 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceId;
+
+    /**
      * @param string $SessionId 会话 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 请求 ID
@@ -155,6 +165,8 @@ class TokenStat extends AbstractModel
      * @param integer $TokenCount 当前请求消耗 token 数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Procedures 执行过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TraceId 执行过程信息TraceId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -217,6 +229,10 @@ class TokenStat extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Procedures, $obj);
             }
+        }
+
+        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
+            $this->TraceId = $param["TraceId"];
         }
     }
 }

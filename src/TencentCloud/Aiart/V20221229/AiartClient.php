@@ -66,7 +66,9 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 - 提交训练写真模型任务：完成上传训练图片后，提交一个训练写真模型异步任务，根据写真模型 ID 开始训练模型。
 - 查询训练写真模型任务：根据写真模型 ID 查询训练任务的处理状态、处理结果。
 提交训练写真模型任务按并发任务数计费，无默认并发额度。
- * @method Models\TextToImageResponse TextToImage(Models\TextToImageRequest $req) 智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
+ * @method Models\TextToImageResponse TextToImage(Models\TextToImageRequest $req) **本接口已迁移至腾讯混元大模型-文生图轻量版，即将停止此处维护，可切换至 [文生图轻量版 API](https://cloud.tencent.com/document/product/1729/108738) 继续使用。**
+
+智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
 
 智能文生图默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\UploadTrainPortraitImagesResponse UploadTrainPortraitImages(Models\UploadTrainPortraitImagesRequest $req) AI 写真提供 AI 写真形象照的训练与生成能力，分为上传训练图片、训练模型、生成图片3个环节，需要依次调用对应接口。

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
  * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+ * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method string getFlowType() 获取合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
  * @method string getFlowDescription() 获取合同流程描述信息(可自定义此描述)，最大长度1000个字符。
  * @method void setFlowDescription(string $FlowDescription) 设置合同流程描述信息(可自定义此描述)，最大长度1000个字符。
- * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
- * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method boolean getUnordered() 获取合同流程的签署顺序类型：
 **false**：(默认)有序签署, 本合同多个参与人需要依次签署
 **true**：无序签署, 本合同多个参与人没有先后签署限制
@@ -83,6 +83,11 @@ class BaseFlowInfo extends AbstractModel
     public $FlowName;
 
     /**
+     * @var integer 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public $Deadline;
+
+    /**
      * @var string 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
     public $FlowType;
@@ -91,11 +96,6 @@ class BaseFlowInfo extends AbstractModel
      * @var string 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      */
     public $FlowDescription;
-
-    /**
-     * @var integer 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     */
-    public $Deadline;
 
     /**
      * @var boolean 合同流程的签署顺序类型：
@@ -154,9 +154,9 @@ class BaseFlowInfo extends AbstractModel
 
     /**
      * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      * @param string $FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
-     * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      * @param boolean $Unordered 合同流程的签署顺序类型：
 **false**：(默认)有序签署, 本合同多个参与人需要依次签署
 **true**：无序签署, 本合同多个参与人没有先后签署限制
@@ -198,16 +198,16 @@ class BaseFlowInfo extends AbstractModel
             $this->FlowName = $param["FlowName"];
         }
 
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
+        }
+
         if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
             $this->FlowType = $param["FlowType"];
         }
 
         if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
             $this->FlowDescription = $param["FlowDescription"];
-        }
-
-        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
-            $this->Deadline = $param["Deadline"];
         }
 
         if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {

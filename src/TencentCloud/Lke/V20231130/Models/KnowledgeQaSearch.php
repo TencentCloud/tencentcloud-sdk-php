@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置检索置信度，针对文档和问答有效，最小0.01，最大0.99
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceStatus() 获取资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceStatus(integer $ResourceStatus) 设置资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaSearch extends AbstractModel
 {
@@ -104,6 +108,12 @@ class KnowledgeQaSearch extends AbstractModel
     public $Confidence;
 
     /**
+     * @var integer 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceStatus;
+
+    /**
      * @param string $Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplyFlexibility 问答-回复灵活度 1：已采纳答案直接回复 2：已采纳润色后回复
@@ -119,6 +129,8 @@ class KnowledgeQaSearch extends AbstractModel
      * @param integer $DocTopN 文档最大召回数量, 默认3，限制5
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceStatus 资源状态 1：资源可用；2：资源已用尽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class KnowledgeQaSearch extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
+            $this->ResourceStatus = $param["ResourceStatus"];
         }
     }
 }

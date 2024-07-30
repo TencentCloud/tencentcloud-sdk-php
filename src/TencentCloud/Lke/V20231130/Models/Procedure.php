@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置消耗 token 数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ProcedureDebugging getDebugging() 获取调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDebugging(ProcedureDebugging $Debugging) 设置调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceStatus() 获取计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceStatus(integer $ResourceStatus) 设置计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Procedure extends AbstractModel
 {
@@ -64,6 +72,18 @@ class Procedure extends AbstractModel
     public $Count;
 
     /**
+     * @var ProcedureDebugging 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Debugging;
+
+    /**
+     * @var integer 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceStatus;
+
+    /**
      * @param string $Name 执行过程英语名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 中文名, 用于展示
@@ -71,6 +91,10 @@ class Procedure extends AbstractModel
      * @param string $Status 状态常量: 使用中: processing, 成功: success, 失败: failed
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 消耗 token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcedureDebugging $Debugging 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceStatus 计费资源状态，1：可用，2：不可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +124,15 @@ class Procedure extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("Debugging",$param) and $param["Debugging"] !== null) {
+            $this->Debugging = new ProcedureDebugging();
+            $this->Debugging->deserialize($param["Debugging"]);
+        }
+
+        if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
+            $this->ResourceStatus = $param["ResourceStatus"];
         }
     }
 }

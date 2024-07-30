@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getApprovers() 获取补充企业签署人信息。
+ * @method array getApprovers() 获取补充签署环节签署候选人信息。
 
-- 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
+注：` 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充； 如果不指定，则使用姓名和手机号进行补充。`
+ * @method void setApprovers(array $Approvers) 设置补充签署环节签署候选人信息。
 
-- 如果不指定，则使用姓名和手机号进行补充。
- * @method void setApprovers(array $Approvers) 设置补充企业签署人信息。
-
-- 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
-
-- 如果不指定，则使用姓名和手机号进行补充。
+注：` 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充； 如果不指定，则使用姓名和手机号进行补充。`
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
@@ -42,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
  * @method integer getFillApproverType() 获取签署人信息补充方式
 
-<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+<ul><li>**0**: <font color="red">或签合同</font>添加签署候选人，或签支持一个节点传多个签署人，不传值默认或签。
 注: `或签只支持企业签署方`</li>
-<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+<li>**1**: <font color="red">动态签署人合同</font>的添加签署候选人，支持企业或个人签署方。</li></ul>
  * @method void setFillApproverType(integer $FillApproverType) 设置签署人信息补充方式
 
-<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+<ul><li>**0**: <font color="red">或签合同</font>添加签署候选人，或签支持一个节点传多个签署人，不传值默认或签。
 注: `或签只支持企业签署方`</li>
-<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+<li>**1**: <font color="red">动态签署人合同</font>的添加签署候选人，支持企业或个人签署方。</li></ul>
  * @method string getInitiator() 获取在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
  * @method void setInitiator(string $Initiator) 设置在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
  * @method Agent getAgent() 获取代理企业和员工的信息。
@@ -68,11 +64,9 @@ class CreateFlowApproversRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 补充企业签署人信息。
+     * @var array 补充签署环节签署候选人信息。
 
-- 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
-
-- 如果不指定，则使用姓名和手机号进行补充。
+注：` 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充； 如果不指定，则使用姓名和手机号进行补充。`
      */
     public $Approvers;
 
@@ -86,9 +80,9 @@ class CreateFlowApproversRequest extends AbstractModel
     /**
      * @var integer 签署人信息补充方式
 
-<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+<ul><li>**0**: <font color="red">或签合同</font>添加签署候选人，或签支持一个节点传多个签署人，不传值默认或签。
 注: `或签只支持企业签署方`</li>
-<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+<li>**1**: <font color="red">动态签署人合同</font>的添加签署候选人，支持企业或个人签署方。</li></ul>
      */
     public $FillApproverType;
 
@@ -111,19 +105,17 @@ class CreateFlowApproversRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $Approvers 补充企业签署人信息。
+     * @param array $Approvers 补充签署环节签署候选人信息。
 
-- 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
-
-- 如果不指定，则使用姓名和手机号进行补充。
+注：` 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充； 如果不指定，则使用姓名和手机号进行补充。`
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      * @param integer $FillApproverType 签署人信息补充方式
 
-<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+<ul><li>**0**: <font color="red">或签合同</font>添加签署候选人，或签支持一个节点传多个签署人，不传值默认或签。
 注: `或签只支持企业签署方`</li>
-<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+<li>**1**: <font color="red">动态签署人合同</font>的添加签署候选人，支持企业或个人签署方。</li></ul>
      * @param string $Initiator 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。

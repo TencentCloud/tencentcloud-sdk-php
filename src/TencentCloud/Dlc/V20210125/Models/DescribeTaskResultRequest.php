@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskResult请求参数结构体
  *
- * @method string getTaskId() 获取任务唯一ID
- * @method void setTaskId(string $TaskId) 设置任务唯一ID
+ * @method string getTaskId() 获取任务唯一ID，仅支持30天内的任务
+ * @method void setTaskId(string $TaskId) 设置任务唯一ID，仅支持30天内的任务
  * @method string getNextToken() 获取上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
  * @method void setNextToken(string $NextToken) 设置上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
  * @method integer getMaxResults() 获取返回结果的最大行数，范围0~1000，默认为1000.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var string 任务唯一ID
+     * @var string 任务唯一ID，仅支持30天内的任务
      */
     public $TaskId;
 
@@ -52,7 +52,7 @@ class DescribeTaskResultRequest extends AbstractModel
     public $IsTransformDataType;
 
     /**
-     * @param string $TaskId 任务唯一ID
+     * @param string $TaskId 任务唯一ID，仅支持30天内的任务
      * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      * @param integer $MaxResults 返回结果的最大行数，范围0~1000，默认为1000.
      * @param boolean $IsTransformDataType 是否转化数据类型

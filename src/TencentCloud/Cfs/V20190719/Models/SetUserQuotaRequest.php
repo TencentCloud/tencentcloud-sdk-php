@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getUserType() 获取指定配额类型，包括Uid、Gid
- * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid、Gid
+ * @method string getUserType() 获取指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+ * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
  * @method string getUserId() 获取UID/GID信息
  * @method void setUserId(string $UserId) 设置UID/GID信息
- * @method integer getCapacityHardLimit() 获取容量硬限制，单位GiB
- * @method void setCapacityHardLimit(integer $CapacityHardLimit) 设置容量硬限制，单位GiB
- * @method integer getFileHardLimit() 获取文件硬限制，单位个
- * @method void setFileHardLimit(integer $FileHardLimit) 设置文件硬限制，单位个
+ * @method integer getCapacityHardLimit() 获取容量硬限制，单位GiB。设置范围10-10000000。
+ * @method void setCapacityHardLimit(integer $CapacityHardLimit) 设置容量硬限制，单位GiB。设置范围10-10000000。
+ * @method integer getFileHardLimit() 获取文件硬限制，单位个。设置范围1000-100000000
+ * @method void setFileHardLimit(integer $FileHardLimit) 设置文件硬限制，单位个。设置范围1000-100000000
+ * @method string getDirectoryPath() 获取需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+ * @method void setDirectoryPath(string $DirectoryPath) 设置需设置目录配额的目录绝对路径，不同目录不可存在包含关系
  */
 class SetUserQuotaRequest extends AbstractModel
 {
@@ -39,7 +41,7 @@ class SetUserQuotaRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string 指定配额类型，包括Uid、Gid
+     * @var string 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
      */
     public $UserType;
 
@@ -49,21 +51,27 @@ class SetUserQuotaRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var integer 容量硬限制，单位GiB
+     * @var integer 容量硬限制，单位GiB。设置范围10-10000000。
      */
     public $CapacityHardLimit;
 
     /**
-     * @var integer 文件硬限制，单位个
+     * @var integer 文件硬限制，单位个。设置范围1000-100000000
      */
     public $FileHardLimit;
 
     /**
+     * @var string 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     */
+    public $DirectoryPath;
+
+    /**
      * @param string $FileSystemId 文件系统 ID
-     * @param string $UserType 指定配额类型，包括Uid、Gid
+     * @param string $UserType 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
      * @param string $UserId UID/GID信息
-     * @param integer $CapacityHardLimit 容量硬限制，单位GiB
-     * @param integer $FileHardLimit 文件硬限制，单位个
+     * @param integer $CapacityHardLimit 容量硬限制，单位GiB。设置范围10-10000000。
+     * @param integer $FileHardLimit 文件硬限制，单位个。设置范围1000-100000000
+     * @param string $DirectoryPath 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class SetUserQuotaRequest extends AbstractModel
 
         if (array_key_exists("FileHardLimit",$param) and $param["FileHardLimit"] !== null) {
             $this->FileHardLimit = $param["FileHardLimit"];
+        }
+
+        if (array_key_exists("DirectoryPath",$param) and $param["DirectoryPath"] !== null) {
+            $this->DirectoryPath = $param["DirectoryPath"];
         }
     }
 }

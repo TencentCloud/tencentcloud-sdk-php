@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceLanguage(string $SourceLanguage) 设置视频源语言。
  * @method string getDestinationLanguage() 获取翻译目标语言。
  * @method void setDestinationLanguage(string $DestinationLanguage) 设置翻译目标语言。
+ * @method string getSubtitleFormat() 获取生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+ * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
  */
 class TranslateConfigureInfoForUpdate extends AbstractModel
 {
@@ -51,11 +55,19 @@ class TranslateConfigureInfoForUpdate extends AbstractModel
     public $DestinationLanguage;
 
     /**
+     * @var string 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+     */
+    public $SubtitleFormat;
+
+    /**
      * @param string $Switch 语音翻译任务开关，可选值：
 <li>ON：开启智能语音翻译任务；</li>
 <li>OFF：关闭智能语音翻译任务。</li>
      * @param string $SourceLanguage 视频源语言。
      * @param string $DestinationLanguage 翻译目标语言。
+     * @param string $SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
      */
     function __construct()
     {
@@ -80,6 +92,10 @@ class TranslateConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("DestinationLanguage",$param) and $param["DestinationLanguage"] !== null) {
             $this->DestinationLanguage = $param["DestinationLanguage"];
+        }
+
+        if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
+            $this->SubtitleFormat = $param["SubtitleFormat"];
         }
     }
 }

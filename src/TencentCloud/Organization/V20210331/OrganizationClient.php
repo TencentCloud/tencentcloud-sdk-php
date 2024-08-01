@@ -74,6 +74,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\EnablePolicyTypeResponse EnablePolicyType(Models\EnablePolicyTypeRequest $req) 启用策略类型
  * @method Models\ListNonCompliantResourceResponse ListNonCompliantResource(Models\ListNonCompliantResourceRequest $req) 获取成员标签检测不合规资源列表
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) 获取组织成员访问身份列表
+ * @method Models\ListOrganizationServiceResponse ListOrganizationService(Models\ListOrganizationServiceRequest $req) 获取集团服务设置列表
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询查看策略列表数据
  * @method Models\ListPoliciesForTargetResponse ListPoliciesForTarget(Models\ListPoliciesForTargetRequest $req) 本接口（ListPoliciesForTarget）查询目标关联的策略列表
  * @method Models\ListTargetsForPolicyResponse ListTargetsForPolicy(Models\ListTargetsForPolicyRequest $req) 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表

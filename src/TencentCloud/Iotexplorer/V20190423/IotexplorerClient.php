@@ -34,6 +34,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CheckFirmwareUpdateResponse CheckFirmwareUpdate(Models\CheckFirmwareUpdateRequest $req) 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
  * @method Models\CreateBatchProductionResponse CreateBatchProduction(Models\CreateBatchProductionRequest $req) 用于新建批量生产设备
+ * @method Models\CreateCloudStorageAIServiceResponse CreateCloudStorageAIService(Models\CreateCloudStorageAIServiceRequest $req) 开通设备云存AI分析服务
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 创建设备
  * @method Models\CreateFenceBindResponse CreateFenceBind(Models\CreateFenceBindRequest $req) 创建围栏绑定信息
  * @method Models\CreateIotVideoCloudStorageResponse CreateIotVideoCloudStorage(Models\CreateIotVideoCloudStorageRequest $req) 开通云存服务
@@ -153,6 +154,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTC(Models\RemoveUserByRoomIdFromTRTCRequest $req) TRTC操作，将用户从房间移出
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务
+ * @method Models\ResetCloudStorageAIServiceResponse ResetCloudStorageAIService(Models\ResetCloudStorageAIServiceRequest $req) 重置指定设备的云存 AI 服务
  * @method Models\ResetCloudStorageEventResponse ResetCloudStorageEvent(Models\ResetCloudStorageEventRequest $req) 重置云存事件
  * @method Models\SearchPositionSpaceResponse SearchPositionSpace(Models\SearchPositionSpaceRequest $req) 搜索位置空间
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力

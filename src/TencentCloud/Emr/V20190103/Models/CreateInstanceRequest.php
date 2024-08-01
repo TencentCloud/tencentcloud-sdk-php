@@ -162,6 +162,8 @@ Hadoop-Hbase
  * @method void setMultiZone(boolean $MultiZone) 设置true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
  * @method array getMultiZoneSettings() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  * @method void setMultiZoneSettings(array $MultiZoneSettings) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+ * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
+ * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -365,6 +367,11 @@ Hadoop-Hbase
     public $MultiZoneSettings;
 
     /**
+     * @var string cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public $CosBucket;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -436,6 +443,7 @@ Hadoop-Hbase
      * @param integer $VersionID 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
      * @param boolean $MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
      * @param array $MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
      */
     function __construct()
     {
@@ -602,6 +610,10 @@ Hadoop-Hbase
                 $obj->deserialize($value);
                 array_push($this->MultiZoneSettings, $obj);
             }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
         }
     }
 }

@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getUserType() 获取指定配额类型，包括Uid、Gid
- * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid、Gid
+ * @method string getUserType() 获取指定配额类型，包括Uid、Gid、Dir
+ * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid、Gid、Dir
  * @method string getUserId() 获取UID/GID信息
  * @method void setUserId(string $UserId) 设置UID/GID信息
+ * @method string getDirectoryPath() 获取设置目录配额的目录的绝对路径
+ * @method void setDirectoryPath(string $DirectoryPath) 设置设置目录配额的目录的绝对路径
  */
 class DeleteUserQuotaRequest extends AbstractModel
 {
@@ -35,7 +37,7 @@ class DeleteUserQuotaRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string 指定配额类型，包括Uid、Gid
+     * @var string 指定配额类型，包括Uid、Gid、Dir
      */
     public $UserType;
 
@@ -45,9 +47,15 @@ class DeleteUserQuotaRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 设置目录配额的目录的绝对路径
+     */
+    public $DirectoryPath;
+
+    /**
      * @param string $FileSystemId 文件系统 ID
-     * @param string $UserType 指定配额类型，包括Uid、Gid
+     * @param string $UserType 指定配额类型，包括Uid、Gid、Dir
      * @param string $UserId UID/GID信息
+     * @param string $DirectoryPath 设置目录配额的目录的绝对路径
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteUserQuotaRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("DirectoryPath",$param) and $param["DirectoryPath"] !== null) {
+            $this->DirectoryPath = $param["DirectoryPath"];
         }
     }
 }

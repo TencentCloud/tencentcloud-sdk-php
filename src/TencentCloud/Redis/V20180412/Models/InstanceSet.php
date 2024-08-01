@@ -188,6 +188,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolarisServer(string $PolarisServer) 设置北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRedisClusterId() 获取CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRedisClusterId(string $RedisClusterId) 设置CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductVersion() 获取产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductVersion(string $ProductVersion) 设置产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentProxyVersion() 获取实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置实例当前Proxy版本。
@@ -504,6 +516,24 @@ class InstanceSet extends AbstractModel
     public $PolarisServer;
 
     /**
+     * @var string CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RedisClusterId;
+
+    /**
+     * @var string CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DedicatedClusterId;
+
+    /**
+     * @var string 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductVersion;
+
+    /**
      * @var string 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -617,6 +647,12 @@ class InstanceSet extends AbstractModel
      * @param string $WanAddress 外网地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolarisServer 北极星服务地址，内部使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RedisClusterId CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DedicatedClusterId CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentProxyVersion 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -863,6 +899,18 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("PolarisServer",$param) and $param["PolarisServer"] !== null) {
             $this->PolarisServer = $param["PolarisServer"];
+        }
+
+        if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
+            $this->RedisClusterId = $param["RedisClusterId"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
         }
 
         if (array_key_exists("CurrentProxyVersion",$param) and $param["CurrentProxyVersion"] !== null) {

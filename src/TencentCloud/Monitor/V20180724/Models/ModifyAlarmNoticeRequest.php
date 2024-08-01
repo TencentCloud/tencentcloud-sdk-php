@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeId(string $NoticeId) 设置告警通知模板 ID
  * @method array getUserNotices() 获取用户通知 最多5个
  * @method void setUserNotices(array $UserNotices) 设置用户通知 最多5个
- * @method array getURLNotices() 获取回调通知 最多3个
- * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
+ * @method array getURLNotices() 获取回调通知 最多6个
+ * @method void setURLNotices(array $URLNotices) 设置回调通知 最多6个
  * @method array getCLSNotices() 获取告警通知推送到CLS服务 最多1个
  * @method void setCLSNotices(array $CLSNotices) 设置告警通知推送到CLS服务 最多1个
  * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
@@ -72,7 +72,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $UserNotices;
 
     /**
-     * @var array 回调通知 最多3个
+     * @var array 回调通知 最多6个
      */
     public $URLNotices;
 
@@ -93,7 +93,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
      * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
      * @param string $NoticeId 告警通知模板 ID
      * @param array $UserNotices 用户通知 最多5个
-     * @param array $URLNotices 回调通知 最多3个
+     * @param array $URLNotices 回调通知 最多6个
      * @param array $CLSNotices 告警通知推送到CLS服务 最多1个
      * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
      */

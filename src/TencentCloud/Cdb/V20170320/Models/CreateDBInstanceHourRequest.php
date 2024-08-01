@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
  * @method integer getVolume() 获取实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
- * @method string getEngineVersion() 获取MySQL 版本，值包括：5.5、5.6、5.7、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-说明：若此参数不填，则默认值为5.6。
- * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6、5.7、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-说明：若此参数不填，则默认值为5.6。
+ * @method string getEngineVersion() 获取MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
+ * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
  * @method string getUniqVpcId() 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
- * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+ * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
  * @method integer getProjectId() 获取项目 ID，不填为默认项目。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，不填为默认项目。
  * @method string getZone() 获取可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
@@ -73,7 +75,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method string getDeviceType() 获取实例隔离类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"BASIC_V2" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型实例。
+说明：如果创建的是集群版实例，此参数为必填。
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"BASIC_V2" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型实例。
+说明：如果创建的是集群版实例，此参数为必填。
  * @method integer getParamTemplateId() 获取参数模板 id。
 备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板 id。
@@ -100,8 +104,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineType(string $EngineType) 设置实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
  * @method array getVips() 获取指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
  * @method void setVips(array $Vips) 设置指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+ * @method integer getDataProtectVolume() 获取集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
+ * @method void setDataProtectVolume(integer $DataProtectVolume) 设置集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
  * @method ClusterTopology getClusterTopology() 获取集群版节点拓扑配置。
+说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版节点拓扑配置。
+说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
+ * @method string getDiskType() 获取磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+ * @method void setDiskType(string $DiskType) 设置磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -121,18 +131,19 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string MySQL 版本，值包括：5.5、5.6、5.7、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-说明：若此参数不填，则默认值为5.6。
+     * @var string MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
      */
     public $EngineVersion;
 
     /**
      * @var string 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+     * @var string 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      */
     public $UniqSubnetId;
 
@@ -233,6 +244,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
     /**
      * @var string 实例隔离类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"BASIC_V2" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型实例。
+说明：如果创建的是集群版实例，此参数为必填。
      */
     public $DeviceType;
 
@@ -294,18 +306,30 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Vips;
 
     /**
+     * @var integer 集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
+     */
+    public $DataProtectVolume;
+
+    /**
      * @var ClusterTopology 集群版节点拓扑配置。
+说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
      */
     public $ClusterTopology;
+
+    /**
+     * @var string 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+     */
+    public $DiskType;
 
     /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
-     * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6、5.7、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-说明：若此参数不填，则默认值为5.6。
+     * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
      * @param string $UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
-     * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+     * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      * @param integer $ProjectId 项目 ID，不填为默认项目。
      * @param string $Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      * @param string $MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
@@ -326,6 +350,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $DeviceType 实例隔离类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"BASIC_V2" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型实例。
+说明：如果创建的是集群版实例，此参数为必填。
      * @param integer $ParamTemplateId 参数模板 id。
 备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
      * @param array $AlarmPolicyList 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
@@ -339,7 +364,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
      * @param string $EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
      * @param array $Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+     * @param integer $DataProtectVolume 集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
      * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
+说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
+     * @param string $DiskType 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
      */
     function __construct()
     {
@@ -513,9 +541,17 @@ class CreateDBInstanceHourRequest extends AbstractModel
             $this->Vips = $param["Vips"];
         }
 
+        if (array_key_exists("DataProtectVolume",$param) and $param["DataProtectVolume"] !== null) {
+            $this->DataProtectVolume = $param["DataProtectVolume"];
+        }
+
         if (array_key_exists("ClusterTopology",$param) and $param["ClusterTopology"] !== null) {
             $this->ClusterTopology = new ClusterTopology();
             $this->ClusterTopology->deserialize($param["ClusterTopology"]);
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

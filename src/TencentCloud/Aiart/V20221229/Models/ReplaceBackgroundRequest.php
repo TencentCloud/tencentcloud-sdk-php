@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setProductUrl(string $ProductUrl) 设置商品原图 Url。
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+ * @method string getPrompt() 获取对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+ * @method void setPrompt(string $Prompt) 设置对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
  * @method string getMaskUrl() 获取商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -32,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
 图片限制：Mask 图必须和商品原图分辨率一致，转成 Base64 字符串后小于 6MB，格式仅支持 png。
- * @method string getPrompt() 获取对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
- * @method void setPrompt(string $Prompt) 设置对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
  * @method string getResolution() 获取替换背景后生成的商品图分辨率。
 支持生成单边分辨率大于500且小于4000、长宽比在2:5 ~ 5:2之间的图片，不传默认生成1280:1280。
 建议图片比例为1:1、9:16、16:9，生成效果更佳，使用其他比例的生成效果可能不如建议比例。
@@ -70,18 +70,18 @@ class ReplaceBackgroundRequest extends AbstractModel
     public $ProductUrl;
 
     /**
+     * @var string 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public $Prompt;
+
+    /**
      * @var string 商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
 图片限制：Mask 图必须和商品原图分辨率一致，转成 Base64 字符串后小于 6MB，格式仅支持 png。
      */
     public $MaskUrl;
-
-    /**
-     * @var string 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
-     */
-    public $Prompt;
 
     /**
      * @var string 替换背景后生成的商品图分辨率。
@@ -114,12 +114,12 @@ class ReplaceBackgroundRequest extends AbstractModel
     /**
      * @param string $ProductUrl 商品原图 Url。
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+     * @param string $Prompt 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
      * @param string $MaskUrl 商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
 图片限制：Mask 图必须和商品原图分辨率一致，转成 Base64 字符串后小于 6MB，格式仅支持 png。
-     * @param string $Prompt 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
      * @param string $Resolution 替换背景后生成的商品图分辨率。
 支持生成单边分辨率大于500且小于4000、长宽比在2:5 ~ 5:2之间的图片，不传默认生成1280:1280。
 建议图片比例为1:1、9:16、16:9，生成效果更佳，使用其他比例的生成效果可能不如建议比例。
@@ -150,12 +150,12 @@ class ReplaceBackgroundRequest extends AbstractModel
             $this->ProductUrl = $param["ProductUrl"];
         }
 
-        if (array_key_exists("MaskUrl",$param) and $param["MaskUrl"] !== null) {
-            $this->MaskUrl = $param["MaskUrl"];
-        }
-
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("MaskUrl",$param) and $param["MaskUrl"] !== null) {
+            $this->MaskUrl = $param["MaskUrl"];
         }
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {

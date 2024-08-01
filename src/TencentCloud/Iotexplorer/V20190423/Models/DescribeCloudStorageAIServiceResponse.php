@@ -20,6 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudStorageAIService返回参数结构体
  *
+ * @method integer getType() 获取云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(integer $Type) 设置云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExpireTime() 获取云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(integer $ExpireTime) 设置云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnabled() 获取视频分析启用状态
  * @method void setEnabled(boolean $Enabled) 设置视频分析启用状态
  * @method string getConfig() 获取视频分析配置参数
@@ -31,6 +61,37 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeCloudStorageAIServiceResponse extends AbstractModel
 {
+    /**
+     * @var integer 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var integer 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var integer 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
     /**
      * @var boolean 视频分析启用状态
      */
@@ -52,6 +113,21 @@ class DescribeCloudStorageAIServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param integer $Type 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExpireTime 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 视频分析启用状态
      * @param string $Config 视频分析配置参数
      * @param string $ROI 视频分析识别区域
@@ -70,6 +146,22 @@ class DescribeCloudStorageAIServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
         }

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。 支持填入集团子公司经办人 userId 代发合同。  注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getHintText() 获取提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的
- * @method void setHintText(string $HintText) 设置提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的
+ * @method string getHintText() 获取提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的，会在授权界面下面的位置展示。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/8436ffd78c20605e6b133ff4bc4d2ac7.png)
+ * @method void setHintText(string $HintText) 设置提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的，会在授权界面下面的位置展示。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/8436ffd78c20605e6b133ff4bc4d2ac7.png)
  */
 class CreateEmployeeQualificationSealQrCodeRequest extends AbstractModel
 {
@@ -40,14 +44,18 @@ class CreateEmployeeQualificationSealQrCodeRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的
+     * @var string 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的，会在授权界面下面的位置展示。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/8436ffd78c20605e6b133ff4bc4d2ac7.png)
      */
     public $HintText;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。 支持填入集团子公司经办人 userId 代发合同。  注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $HintText 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的
+     * @param string $HintText 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的，会在授权界面下面的位置展示。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/8436ffd78c20605e6b133ff4bc4d2ac7.png)
      */
     function __construct()
     {

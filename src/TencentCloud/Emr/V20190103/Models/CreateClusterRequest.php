@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependService(array $DependService) 设置共享组件信息
  * @method array getZoneResourceConfiguration() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+ * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
+ * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -221,6 +223,11 @@ class CreateClusterRequest extends AbstractModel
     public $ZoneResourceConfiguration;
 
     /**
+     * @var string cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public $CosBucket;
+
+    /**
      * @param string $ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      * @param boolean $EnableSupportHAFlag 是否开启节点高可用。取值范围：
 <li>true：表示开启节点高可用。</li>
@@ -260,6 +267,7 @@ class CreateClusterRequest extends AbstractModel
 当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
      * @param array $DependService 共享组件信息
      * @param array $ZoneResourceConfiguration 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
      */
     function __construct()
     {
@@ -376,6 +384,10 @@ class CreateClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ZoneResourceConfiguration, $obj);
             }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
         }
     }
 }

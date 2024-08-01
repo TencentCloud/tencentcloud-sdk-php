@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 按照总 Token 数量计费。
  * @method string getNote() 获取免责声明。
  * @method void setNote(string $Note) 设置免责声明。
- * @method string getId() 获取本轮对话的 ID。
- * @method void setId(string $Id) 设置本轮对话的 ID。
+ * @method string getId() 获取本次请求的 RequestId。
+ * @method void setId(string $Id) 设置本次请求的 RequestId。
  * @method array getChoices() 获取回复内容。
  * @method void setChoices(array $Choices) 设置回复内容。
  * @method ErrorMsg getErrorMsg() 获取错误信息。
@@ -64,7 +64,7 @@ class ChatCompletionsResponse extends AbstractModel
     public $Note;
 
     /**
-     * @var string 本轮对话的 ID。
+     * @var string 本次请求的 RequestId。
      */
     public $Id;
 
@@ -100,7 +100,7 @@ class ChatCompletionsResponse extends AbstractModel
      * @param Usage $Usage Token 统计信息。
 按照总 Token 数量计费。
      * @param string $Note 免责声明。
-     * @param string $Id 本轮对话的 ID。
+     * @param string $Id 本次请求的 RequestId。
      * @param array $Choices 回复内容。
      * @param ErrorMsg $ErrorMsg 错误信息。
 如果流式返回中服务处理异常，返回该错误信息。

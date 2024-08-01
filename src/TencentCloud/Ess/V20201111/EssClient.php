@@ -164,10 +164,19 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 预览合同流程的嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/dc7af994e2f6da56bdad5975e927de34.png)
- * @method Models\CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCode(Models\CreateEmployeeQualificationSealQrCodeRequest $req) 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+ * @method Models\CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCode(Models\CreateEmployeeQualificationSealQrCodeRequest $req) 该接口用于获取个人授权执业章给企业的微信二维码，需要个人用户通过微信扫码。
+
+扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。
+
+个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+
 
 **注意**
 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+
+整体流程入下图
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/21b6b56dbc796c9d6f402d6ce6febb07.png)
  * @method Models\CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfos(Models\CreateExtendedServiceAuthInfosRequest $req) 创建企业扩展服务授权，当前仅支持授权 “企业自动签” 和 “批量签署” 给企业员工。
 该接口作用和电子签控制台 企业设置-扩展服务-企业自动签署和批量签署授权 两个模块功能相同，可通过该接口授权给企业员工。
 
@@ -217,8 +226,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 当通过模板或文件发起合同时， 签署人不制定， 等合同发起后再指定 可以用下面2种方案
 
 <b><font color="red">1. 或签合同</font>: 若未指定企业签署人信息（只指定企业的名字），合同变成或签合同（个人签署方不支持或签合同）</b>。需调用此接口补充或添加签署人。或签签署人在控制台上的展示样式如下（会带有<b>或签</b>标识）：
+
 ![image](https://qcloudimg.tencent-cloud.cn/raw/b2715f0236faee807cfc0521f93cf01b.png)
+
 <b><font color="red">2. 动态签署人合同</font>: 若未指定具体签署人的信息，则合同变成动态签署人合同</b>。需调用此接口补充或添加签署人。可以参考文档  [动态签署人合同](https://qian.tencent.com/developers/company/dynamic_signer/) 。动态签署人在控制台上的展示样式如下：
+
 ![image](https://qcloudimg.tencent-cloud.cn/raw/2729477978e020c3bbb4d2e767bb78eb.png)
 
 实际签署人需要通过[获取跳转至腾讯电子签小程序的签署链接](https://qian.tencent.com/developers/companyApis/startFlows/CreateSchemeUrl/)生成的链接进入小程序，领取合同并签署。同一签署环节可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。
@@ -423,13 +435,15 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景4：主企业代理子企业操作的场景，需要设置Agent参数，并且ProxyOrganizationId设置为子企业的id即可。
 
 注意事项：SaaS角色和集团角色对应的权限树是不一样的。
- * @method Models\CreateIntegrationSubOrganizationActiveRecordResponse CreateIntegrationSubOrganizationActiveRecord(Models\CreateIntegrationSubOrganizationActiveRecordRequest $req) 通过此接口，创建子企业激活记录，集团企业管理员可针对未激活的成员企业进行激活。
-激活子企业时请保证子企业 lisence 充足。
+ * @method Models\CreateIntegrationSubOrganizationActiveRecordResponse CreateIntegrationSubOrganizationActiveRecord(Models\CreateIntegrationSubOrganizationActiveRecordRequest $req) 使用此接口，可创建子企业激活记录。<font color="red">集团企业管理员</font>可以针对尚未激活的成员企业进行激活操作。
+
+
 这个操作与页面端激活成员企业操作类似
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c4e76fbac92e4ce451a03601c964793b.png)
 
-p.s.
-此接口只能用于激活，不能用于续期。
+注意：
+1. 此接口只能用于激活，**不能用于续期**。
+2. 在激活子企业时，**请确保子企业的许可证数量充足**。
  * @method Models\CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(Models\CreateIntegrationUserRolesRequest $req) 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
  * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
 
@@ -847,6 +861,10 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/ess_uploadfiles.mp4" target="_blank">上传用于合同发起的PDF文件代码编写示例</a><br>
  * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
+
+
+**补充**： 可以到控制台[合同验签](https://qian.tencent.com/verifySign)体验验签功能，界面如下
+![image](https://qcloudimg.tencent-cloud.cn/raw/81c333ccb07f0c5fbaf840d9cee61333.png)
  */
 
 class EssClient extends AbstractClient

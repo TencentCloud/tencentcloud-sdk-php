@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method MixUserInfo getUserInfo() 获取用户参数。
  * @method void setUserInfo(MixUserInfo $UserInfo) 设置用户参数。
+ * @method integer getSoundLevel() 获取混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+ * @method void setSoundLevel(integer $SoundLevel) 设置混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
  */
 class McuUserInfoParams extends AbstractModel
 {
@@ -31,7 +35,15 @@ class McuUserInfoParams extends AbstractModel
     public $UserInfo;
 
     /**
+     * @var integer 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+     */
+    public $SoundLevel;
+
+    /**
      * @param MixUserInfo $UserInfo 用户参数。
+     * @param integer $SoundLevel 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
      */
     function __construct()
     {
@@ -49,6 +61,10 @@ class McuUserInfoParams extends AbstractModel
         if (array_key_exists("UserInfo",$param) and $param["UserInfo"] !== null) {
             $this->UserInfo = new MixUserInfo();
             $this->UserInfo->deserialize($param["UserInfo"]);
+        }
+
+        if (array_key_exists("SoundLevel",$param) and $param["SoundLevel"] !== null) {
+            $this->SoundLevel = $param["SoundLevel"];
         }
     }
 }

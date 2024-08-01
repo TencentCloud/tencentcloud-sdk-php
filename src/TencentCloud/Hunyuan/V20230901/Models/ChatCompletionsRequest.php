@@ -126,6 +126,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomTool(Tool $CustomTool) 设置强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  * @method boolean getSearchInfo() 获取默认是false，在值为true且命中搜索时，接口会返回SearchInfo
  * @method void setSearchInfo(boolean $SearchInfo) 设置默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+ * @method boolean getCitation() 获取搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+ * @method void setCitation(boolean $Citation) 设置搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -227,6 +237,15 @@ class ChatCompletionsRequest extends AbstractModel
     public $SearchInfo;
 
     /**
+     * @var boolean 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+     */
+    public $Citation;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -280,6 +299,11 @@ class ChatCompletionsRequest extends AbstractModel
 3. 未设置时，默认值为auto
      * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
      * @param boolean $SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+     * @param boolean $Citation 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
      */
     function __construct()
     {
@@ -347,6 +371,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("SearchInfo",$param) and $param["SearchInfo"] !== null) {
             $this->SearchInfo = $param["SearchInfo"];
+        }
+
+        if (array_key_exists("Citation",$param) and $param["Citation"] !== null) {
+            $this->Citation = $param["Citation"];
         }
     }
 }

@@ -503,6 +503,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method Models\ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(Models\ChannelUpdateSealStatusRequest $req) 此接口（ChannelUpdateSealStatus）用于第三方应用平台为子客企业更新印章状态。
  * @method Models\ChannelVerifyPdfResponse ChannelVerifyPdf(Models\ChannelVerifyPdfRequest $req) 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
+
+**补充**： 可以到控制台[合同验签](https://qian.tencent.com/verifySign)体验验签功能，界面如下
+![image](https://qcloudimg.tencent-cloud.cn/raw/81c333ccb07f0c5fbaf840d9cee61333.png)
  * @method Models\CreateBatchOrganizationRegistrationTasksResponse CreateBatchOrganizationRegistrationTasks(Models\CreateBatchOrganizationRegistrationTasksRequest $req) 该接口用于批量创建企业认证链接， 可以支持PC浏览器，H5和小程序三种途径。
 此接口为异步提交任务接口，需要与[查询子企业批量认证链接](https://qcloudimg.tencent-cloud.cn/raw/1d3737991b2a3be78002bd78a47d6917.png)配合使用，整体流程如下图。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/654aa2a72ab7d42f06464ea33c50c3bb.png)
@@ -623,10 +626,19 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-createconsoleloginin.mp4" target="_blank">【生成子客登录链接】代码编写 &  子企业认证示例</a><br>
- * @method Models\CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCode(Models\CreateEmployeeQualificationSealQrCodeRequest $req) 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+ * @method Models\CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCode(Models\CreateEmployeeQualificationSealQrCodeRequest $req) 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。
+
+扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。
+
+个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
 
 **注意**
 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+ 
+
+整体流程入下图
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/21b6b56dbc796c9d6f402d6ce6febb07.png)
  * @method Models\CreateFlowBlockchainEvidenceUrlResponse CreateFlowBlockchainEvidenceUrl(Models\CreateFlowBlockchainEvidenceUrlRequest $req) 获取区块链存证证书查看链接/二维码接口
 
 适用场景：企业员工可以通过此接口生成合同区块链存证证书的查看链接/二维码，以供他人扫码打开腾讯电子签小程序查看。

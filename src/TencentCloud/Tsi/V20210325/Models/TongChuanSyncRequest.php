@@ -22,10 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSessionUuid() 获取一段完整的语音对应一个SessionUuid
  * @method void setSessionUuid(string $SessionUuid) 设置一段完整的语音对应一个SessionUuid
- * @method string getSource() 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setSource(string $Source) 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method string getTarget() 获取翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setTarget(string $Target) 设置翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method string getSource() 获取源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+ * @method void setSource(string $Source) 设置源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+ * @method string getTarget() 获取目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
+ * @method void setTarget(string $Target) 设置目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
  * @method integer getAudioFormat() 获取语音编码类型，1-pcm
  * @method void setAudioFormat(integer $AudioFormat) 设置语音编码类型，1-pcm
  * @method integer getSeq() 获取语音分片的序号，从0开始
@@ -47,12 +67,22 @@ class TongChuanSyncRequest extends AbstractModel
     public $SessionUuid;
 
     /**
-     * @var string 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
      */
     public $Source;
 
     /**
-     * @var string 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      */
     public $Target;
 
@@ -88,8 +118,18 @@ class TongChuanSyncRequest extends AbstractModel
 
     /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
-     * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param string $Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param string $Source 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+     * @param string $Target 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      * @param integer $AudioFormat 语音编码类型，1-pcm
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $Utc 语音开始的时间戳

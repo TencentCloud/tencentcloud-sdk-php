@@ -40,7 +40,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
 此接口需提交工单，开启白名单之后才能使用。
  * @method Models\DeleteMountTargetResponse DeleteMountTarget(Models\DeleteMountTargetRequest $req) 本接口（DeleteMountTarget）用于删除挂载点
 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
- * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 指定条件删除文件系统配额
+ * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 指定条件删除文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(Models\DescribeAutoSnapshotPoliciesRequest $req) 查询文件系统快照定期策略列表信息
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) 本接口（DescribeAvailableZoneInfo）用于查询区域的可用情况。
  * @method Models\DescribeBucketListResponse DescribeBucketList(Models\DescribeBucketListRequest $req) 用于获取数据源桶列表。
@@ -59,7 +59,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略
  * @method Models\ScaleUpFileSystemResponse ScaleUpFileSystem(Models\ScaleUpFileSystemRequest $req) 该接口用于对turbo 文件系统扩容使用
- * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口
+ * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。
  * @method Models\StopMigrationTaskResponse StopMigrationTask(Models\StopMigrationTaskRequest $req) 用于终止迁移任务。
 此接口需提交工单，开启白名单之后才能使用。

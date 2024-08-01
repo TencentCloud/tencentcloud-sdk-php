@@ -118,6 +118,10 @@ video 纯视频
  * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method integer getRecordStream() 获取录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+ * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+ * @method integer getRecordLayout() 获取录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -293,6 +297,16 @@ video 纯视频
     public $RecordLang;
 
     /**
+     * @var integer 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public $RecordStream;
+
+    /**
+     * @var integer 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public $RecordLayout;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -347,6 +361,8 @@ video 纯视频
      * @param string $RTMPStreamingURL RTMP推流链接
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     * @param integer $RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -480,6 +496,14 @@ video 纯视频
 
         if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
             $this->RecordLang = $param["RecordLang"];
+        }
+
+        if (array_key_exists("RecordStream",$param) and $param["RecordStream"] !== null) {
+            $this->RecordStream = $param["RecordStream"];
+        }
+
+        if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {
+            $this->RecordLayout = $param["RecordLayout"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

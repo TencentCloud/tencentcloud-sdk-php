@@ -78,6 +78,8 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroup(Models\DescribeProjectSecurityGroupRequest $req) 查询项目安全组信息
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
  * @method Models\DescribeProxySlowLogResponse DescribeProxySlowLog(Models\DescribeProxySlowLogRequest $req) 本接口（DescribeProxySlowLog）用于查询代理慢查询。
+ * @method Models\DescribeRedisClusterOverviewResponse DescribeRedisClusterOverview(Models\DescribeRedisClusterOverviewRequest $req) 查询Redis独享集群概览信息
+ * @method Models\DescribeRedisClustersResponse DescribeRedisClusters(Models\DescribeRedisClustersRequest $req) 查询Redis独享集群列表
  * @method Models\DescribeReplicationGroupResponse DescribeReplicationGroup(Models\DescribeReplicationGroupRequest $req) 本接口（DescribeReplicationGroup）用于查询复制组。
  * @method Models\DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(Models\DescribeReplicationGroupInstanceRequest $req) 查询复制组信息
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。

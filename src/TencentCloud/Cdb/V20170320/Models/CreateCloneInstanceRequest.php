@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取克隆源实例Id。
  * @method void setInstanceId(string $InstanceId) 设置克隆源实例Id。
- * @method string getSpecifiedRollbackTime() 获取如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
- * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) 设置如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
- * @method integer getSpecifiedBackupId() 获取如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
- * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) 设置如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
+ * @method string getSpecifiedRollbackTime() 获取如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
+说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
+ * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) 设置如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
+说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
+ * @method integer getSpecifiedBackupId() 获取如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+ * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) 设置如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
  * @method string getUniqVpcId() 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
  * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
@@ -77,12 +81,14 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
+     * @var string 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
+说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
      */
     public $SpecifiedRollbackTime;
 
     /**
-     * @var integer 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
+     * @var integer 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
      */
     public $SpecifiedBackupId;
 
@@ -193,8 +199,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 克隆源实例Id。
-     * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
-     * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
+     * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
+说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
+     * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
      * @param string $UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      * @param integer $Memory 实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。

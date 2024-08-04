@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getPolicyName() 获取策略名称，不超过20字符
- * @method void setPolicyName(string $PolicyName) 设置策略名称，不超过20字符
+ * @method string getPolicyName() 获取策略名称，不超过60字符
+ * @method void setPolicyName(string $PolicyName) 设置策略名称，不超过60字符
  * @method string getMonitorType() 获取监控类型 MT_QCE=云产品监控
  * @method void setMonitorType(string $MonitorType) 设置监控类型 MT_QCE=云产品监控
  * @method string getNamespace() 获取告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
@@ -67,7 +67,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 策略名称，不超过20字符
+     * @var string 策略名称，不超过60字符
      */
     public $PolicyName;
 
@@ -158,7 +158,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
     /**
      * @param string $Module 固定值，为"monitor"
-     * @param string $PolicyName 策略名称，不超过20字符
+     * @param string $PolicyName 策略名称，不超过60字符
      * @param string $MonitorType 监控类型 MT_QCE=云产品监控
      * @param string $Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
      * @param string $Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-

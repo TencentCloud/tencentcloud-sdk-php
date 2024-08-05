@@ -58,13 +58,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceAuthType(string $ResourceAuthType) 设置授权方式
  * @method string getResourceAuthAccount() 获取授权账号名
  * @method void setResourceAuthAccount(string $ResourceAuthAccount) 设置授权账号名
- * @method string getInstanceType() 获取x
+ * @method string getInstanceType() 获取实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置x
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceValue() 获取x
+ * @method string getInstanceValue() 获取实例值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceValue(string $InstanceValue) 设置x
+ * @method void setInstanceValue(string $InstanceValue) 设置实例值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaUserResourceMeta extends AbstractModel
@@ -165,13 +165,13 @@ class DspaUserResourceMeta extends AbstractModel
     public $ResourceAuthAccount;
 
     /**
-     * @var string x
+     * @var string 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
-     * @var string x
+     * @var string 实例值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceValue;
@@ -196,9 +196,9 @@ class DspaUserResourceMeta extends AbstractModel
      * @param string $ResourceVersion 资源版本号。
      * @param string $ResourceAuthType 授权方式
      * @param string $ResourceAuthAccount 授权账号名
-     * @param string $InstanceType x
+     * @param string $InstanceType 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceValue x
+     * @param string $InstanceValue 实例值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

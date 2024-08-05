@@ -38,6 +38,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDirectConnectGatewayIds() 获取专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) 设置专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNatType() 获取私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatType(string $NatType) 设置私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PrivateNatCrossDomainInfo getCrossDomainInfo() 获取私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCrossDomainInfo(PrivateNatCrossDomainInfo $CrossDomainInfo) 设置私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getVpcType() 获取是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcType(boolean $VpcType) 设置是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCcnId() 获取跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcnId(string $CcnId) 设置跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateNatGateway extends AbstractModel
 {
@@ -79,6 +99,36 @@ class PrivateNatGateway extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DirectConnectGatewayIds;
+
+    /**
+     * @var string 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatType;
+
+    /**
+     * @var PrivateNatCrossDomainInfo 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CrossDomainInfo;
+
+    /**
+     * @var boolean 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcType;
+
+    /**
+     * @var string 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcnId;
+
+    /**
      * @param string $NatGatewayId 私网网关`ID`。
      * @param string $NatGatewayName 私网网关名称。
      * @param string $VpcId 私网网关关联`VPC`实例`ID`。
@@ -87,6 +137,16 @@ class PrivateNatGateway extends AbstractModel
      * @param boolean $CrossDomain 私网网关跨域标志。
      * @param string $CreatedTime 创建时间
      * @param array $TagSet 标签键值对。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DirectConnectGatewayIds 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NatType 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivateNatCrossDomainInfo $CrossDomainInfo 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $VpcType 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CcnId 跨域私网NAT关联的云联网ID	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +193,27 @@ class PrivateNatGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("DirectConnectGatewayIds",$param) and $param["DirectConnectGatewayIds"] !== null) {
+            $this->DirectConnectGatewayIds = $param["DirectConnectGatewayIds"];
+        }
+
+        if (array_key_exists("NatType",$param) and $param["NatType"] !== null) {
+            $this->NatType = $param["NatType"];
+        }
+
+        if (array_key_exists("CrossDomainInfo",$param) and $param["CrossDomainInfo"] !== null) {
+            $this->CrossDomainInfo = new PrivateNatCrossDomainInfo();
+            $this->CrossDomainInfo->deserialize($param["CrossDomainInfo"]);
+        }
+
+        if (array_key_exists("VpcType",$param) and $param["VpcType"] !== null) {
+            $this->VpcType = $param["VpcType"];
+        }
+
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
         }
     }
 }

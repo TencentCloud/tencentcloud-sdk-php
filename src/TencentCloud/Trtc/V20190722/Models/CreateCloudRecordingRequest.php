@@ -23,7 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSdkAppId() 获取TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
  * @method string getRoomId() 获取TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
  * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
  * @method string getUserId() 获取录制机器人的UserId，用于进房发起录制任务。
 【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
  * @method void setUserId(string $UserId) 设置录制机器人的UserId，用于进房发起录制任务。
@@ -60,6 +64,8 @@ class CreateCloudRecordingRequest extends AbstractModel
 
     /**
      * @var string TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
      */
     public $RoomId;
 
@@ -115,6 +121,8 @@ class CreateCloudRecordingRequest extends AbstractModel
     /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
      * @param string $UserId 录制机器人的UserId，用于进房发起录制任务。
 【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
      * @param string $UserSig 录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。

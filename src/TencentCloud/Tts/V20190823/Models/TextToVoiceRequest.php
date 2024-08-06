@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getModelType() 获取模型类型，1-默认模型。
  * @method void setModelType(integer $ModelType) 设置模型类型，1-默认模型。
  * @method integer getVoiceType() 获取音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
+若使用一句话版声音复刻，请填入固定值“200000000”
  * @method void setVoiceType(integer $VoiceType) 设置音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
+若使用一句话版声音复刻，请填入固定值“200000000”
  * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
  * @method integer getSampleRate() 获取音频采样率：
@@ -58,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 示例值：neutral
  * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
  * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
- * @method string getFastVoiceType() 获取预留参数，暂未使用
- * @method void setFastVoiceType(string $FastVoiceType) 设置预留参数，暂未使用
+ * @method string getFastVoiceType() 获取一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+ * @method void setFastVoiceType(string $FastVoiceType) 设置一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -96,6 +98,7 @@ class TextToVoiceRequest extends AbstractModel
 
     /**
      * @var integer 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
+若使用一句话版声音复刻，请填入固定值“200000000”
      */
     public $VoiceType;
 
@@ -139,7 +142,7 @@ class TextToVoiceRequest extends AbstractModel
     public $EmotionIntensity;
 
     /**
-     * @var string 预留参数，暂未使用
+     * @var string 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
      */
     public $FastVoiceType;
 
@@ -152,6 +155,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param integer $VoiceType 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
+若使用一句话版声音复刻，请填入固定值“200000000”
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
      * @param integer $SampleRate 音频采样率：
 <li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
@@ -163,7 +167,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param string $EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
 示例值：neutral
      * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
-     * @param string $FastVoiceType 预留参数，暂未使用
+     * @param string $FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
      */
     function __construct()
     {

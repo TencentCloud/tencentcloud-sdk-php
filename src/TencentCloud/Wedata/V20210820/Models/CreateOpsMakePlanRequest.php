@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchedulerResourceGroupName(string $SchedulerResourceGroupName) 设置补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
  * @method string getIntegrationResourceGroupName() 获取补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
  * @method void setIntegrationResourceGroupName(string $IntegrationResourceGroupName) 设置补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
+ * @method array getMakeExtList() 获取补录扩展属性
+ * @method void setMakeExtList(array $MakeExtList) 设置补录扩展属性
+ * @method boolean getSameSelfWorkflowDependType() 获取补录扩展属性
+ * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置补录扩展属性
+ * @method string getSelfWorkflowDependency() 获取补录扩展属性
+ * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置补录扩展属性
  */
 class CreateOpsMakePlanRequest extends AbstractModel
 {
@@ -194,6 +200,21 @@ class CreateOpsMakePlanRequest extends AbstractModel
     public $IntegrationResourceGroupName;
 
     /**
+     * @var array 补录扩展属性
+     */
+    public $MakeExtList;
+
+    /**
+     * @var boolean 补录扩展属性
+     */
+    public $SameSelfWorkflowDependType;
+
+    /**
+     * @var string 补录扩展属性
+     */
+    public $SelfWorkflowDependency;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $MakeName 补录计划名称
      * @param array $TaskIdList 补录任务集合
@@ -220,6 +241,9 @@ class CreateOpsMakePlanRequest extends AbstractModel
      * @param string $IntegrationResourceGroup 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
      * @param string $SchedulerResourceGroupName 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
      * @param string $IntegrationResourceGroupName 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
+     * @param array $MakeExtList 补录扩展属性
+     * @param boolean $SameSelfWorkflowDependType 补录扩展属性
+     * @param string $SelfWorkflowDependency 补录扩展属性
      */
     function __construct()
     {
@@ -334,6 +358,23 @@ class CreateOpsMakePlanRequest extends AbstractModel
 
         if (array_key_exists("IntegrationResourceGroupName",$param) and $param["IntegrationResourceGroupName"] !== null) {
             $this->IntegrationResourceGroupName = $param["IntegrationResourceGroupName"];
+        }
+
+        if (array_key_exists("MakeExtList",$param) and $param["MakeExtList"] !== null) {
+            $this->MakeExtList = [];
+            foreach ($param["MakeExtList"] as $key => $value){
+                $obj = new StrToStrMap();
+                $obj->deserialize($value);
+                array_push($this->MakeExtList, $obj);
+            }
+        }
+
+        if (array_key_exists("SameSelfWorkflowDependType",$param) and $param["SameSelfWorkflowDependType"] !== null) {
+            $this->SameSelfWorkflowDependType = $param["SameSelfWorkflowDependType"];
+        }
+
+        if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
+            $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
         }
     }
 }

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Hunyuan\V20230901\Models as Models;
 
 /**
+ * @method Models\ActivateServiceResponse ActivateService(Models\ActivateServiceRequest $req) 开通服务
  * @method Models\ChatCompletionsResponse ChatCompletions(Models\ChatCompletionsRequest $req) 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
 
  1. 本接口暂不支持返回图片内容。
@@ -35,6 +36,7 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+ * @method Models\SetPayModeResponse SetPayMode(Models\SetPayModeRequest $req) 设置付费模式
  * @method Models\SubmitHunyuanImageJobResponse SubmitHunyuanImageJob(Models\SubmitHunyuanImageJobRequest $req) 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。

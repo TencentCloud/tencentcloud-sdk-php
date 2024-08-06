@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaName(string $SchemaName) 设置模式名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPermission() 获取是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermission(boolean $Permission) 设置是否有权限
@@ -107,6 +111,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDsEnvType() 获取数据源环境：0或者未返回.未定义，1.生产 2.开发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDsEnvType(integer $DsEnvType) 设置数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterDeployType() 获取EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterDeployType(string $ClusterDeployType) 设置EMR集群部署方式：CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
@@ -190,6 +198,12 @@ class RuleGroup extends AbstractModel
     public $DatabaseName;
 
     /**
+     * @var string 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaName;
+
+    /**
      * @var boolean 是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -244,6 +258,12 @@ class RuleGroup extends AbstractModel
     public $DsEnvType;
 
     /**
+     * @var string EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterDeployType;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -270,6 +290,8 @@ class RuleGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Permission 是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCount 已经配置的规则数量
@@ -287,6 +309,8 @@ class RuleGroup extends AbstractModel
      * @param boolean $SubscribeConfig 是否已配置执行策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DsEnvType 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterDeployType EMR集群部署方式：CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +380,10 @@ class RuleGroup extends AbstractModel
             $this->DatabaseName = $param["DatabaseName"];
         }
 
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
         if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
             $this->Permission = $param["Permission"];
         }
@@ -390,6 +418,10 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
             $this->DsEnvType = $param["DsEnvType"];
+        }
+
+        if (array_key_exists("ClusterDeployType",$param) and $param["ClusterDeployType"] !== null) {
+            $this->ClusterDeployType = $param["ClusterDeployType"];
         }
     }
 }

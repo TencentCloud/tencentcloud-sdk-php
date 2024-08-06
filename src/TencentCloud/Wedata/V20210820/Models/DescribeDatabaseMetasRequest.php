@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤字段，projectIds/msTypes/createTime/modifiedTime
  * @method array getOrderFields() 获取排序字段，如name
  * @method void setOrderFields(array $OrderFields) 设置排序字段，如name
+ * @method integer getPageSize() 获取pagesize
+ * @method void setPageSize(integer $PageSize) 设置pagesize
+ * @method integer getPageNumber() 获取pageNumber
+ * @method void setPageNumber(integer $PageNumber) 设置pageNumber
  */
 class DescribeDatabaseMetasRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeDatabaseMetasRequest extends AbstractModel
     public $OrderFields;
 
     /**
+     * @var integer pagesize
+     */
+    public $PageSize;
+
+    /**
+     * @var integer pageNumber
+     */
+    public $PageNumber;
+
+    /**
      * @param array $Filters 过滤字段，projectIds/msTypes/createTime/modifiedTime
      * @param array $OrderFields 排序字段，如name
+     * @param integer $PageSize pagesize
+     * @param integer $PageNumber pageNumber
      */
     function __construct()
     {
@@ -70,6 +86,14 @@ class DescribeDatabaseMetasRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrderFields, $obj);
             }
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
         }
     }
 }

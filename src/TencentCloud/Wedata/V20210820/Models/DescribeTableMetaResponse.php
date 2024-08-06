@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableMeta(TableMeta $TableMeta) 设置表的元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LifecycleInfo getLifecycleInfo() 获取生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLifecycleInfo(LifecycleInfo $LifecycleInfo) 设置生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TagVoteSum getTagVoteSumList() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagVoteSumList(TagVoteSum $TagVoteSumList) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +44,28 @@ class DescribeTableMetaResponse extends AbstractModel
     public $TableMeta;
 
     /**
+     * @var LifecycleInfo 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LifecycleInfo;
+
+    /**
+     * @var TagVoteSum 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagVoteSumList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param TableMeta $TableMeta 表的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifecycleInfo $LifecycleInfo 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagVoteSum $TagVoteSumList 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,6 +85,16 @@ class DescribeTableMetaResponse extends AbstractModel
         if (array_key_exists("TableMeta",$param) and $param["TableMeta"] !== null) {
             $this->TableMeta = new TableMeta();
             $this->TableMeta->deserialize($param["TableMeta"]);
+        }
+
+        if (array_key_exists("LifecycleInfo",$param) and $param["LifecycleInfo"] !== null) {
+            $this->LifecycleInfo = new LifecycleInfo();
+            $this->LifecycleInfo->deserialize($param["LifecycleInfo"]);
+        }
+
+        if (array_key_exists("TagVoteSumList",$param) and $param["TagVoteSumList"] !== null) {
+            $this->TagVoteSumList = new TagVoteSum();
+            $this->TagVoteSumList->deserialize($param["TagVoteSumList"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelRank(integer $LevelRank) 设置安全等级：值范围1-10
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInfluxCategory() 获取influxdb字段类别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInfluxCategory(string $InfluxCategory) 设置influxdb字段类别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnMeta extends AbstractModel
 {
@@ -144,6 +148,12 @@ class ColumnMeta extends AbstractModel
     public $LevelRank;
 
     /**
+     * @var string influxdb字段类别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InfluxCategory;
+
+    /**
      * @param string $NameEn 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameCn 字段中文名称
@@ -167,6 +177,8 @@ class ColumnMeta extends AbstractModel
      * @param string $LevelName 安全等级：名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelRank 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InfluxCategory influxdb字段类别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +245,10 @@ class ColumnMeta extends AbstractModel
 
         if (array_key_exists("LevelRank",$param) and $param["LevelRank"] !== null) {
             $this->LevelRank = $param["LevelRank"];
+        }
+
+        if (array_key_exists("InfluxCategory",$param) and $param["InfluxCategory"] !== null) {
+            $this->InfluxCategory = $param["InfluxCategory"];
         }
     }
 }

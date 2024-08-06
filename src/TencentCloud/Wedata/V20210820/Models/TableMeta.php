@@ -238,6 +238,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableProperties(array $TableProperties) 设置表附属信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvironment() 获取环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironment(string $Environment) 设置环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchema() 获取数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchema(string $Schema) 设置数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -567,6 +575,18 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $TableProperties;
 
     /**
+     * @var string 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Environment;
+
+    /**
+     * @var string 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Schema;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -675,6 +695,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param integer $PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableProperties 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Schema 数据库模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -916,6 +940,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
                 $obj->deserialize($value);
                 array_push($this->TableProperties, $obj);
             }
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
         }
     }
 }

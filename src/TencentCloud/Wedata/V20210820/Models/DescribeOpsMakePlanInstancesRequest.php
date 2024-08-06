@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置分页页码，默认值1
  * @method integer getPageSize() 获取分页大小，默认值10
  * @method void setPageSize(integer $PageSize) 设置分页大小，默认值10
+ * @method array getStateList() 获取实例状态列表
+ * @method void setStateList(array $StateList) 设置实例状态列表
  */
 class DescribeOpsMakePlanInstancesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeOpsMakePlanInstancesRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var array 实例状态列表
+     */
+    public $StateList;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $PlanId 补录计划ID
      * @param string $TaskId 补录任务ID
      * @param integer $PageNumber 分页页码，默认值1
      * @param integer $PageSize 分页大小，默认值10
+     * @param array $StateList 实例状态列表
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeOpsMakePlanInstancesRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StateList",$param) and $param["StateList"] !== null) {
+            $this->StateList = $param["StateList"];
         }
     }
 }

@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称  CITY
  * @method array getSourceEngineTypes() 获取该规则适配的执行引擎
  * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置该规则适配的执行引擎
+ * @method string getTargetDatabaseName() 获取目标库名
+ * @method void setTargetDatabaseName(string $TargetDatabaseName) 设置目标库名
+ * @method string getTargetSchemaName() 获取目标模式名
+ * @method void setTargetSchemaName(string $TargetSchemaName) 设置目标模式名
+ * @method string getTargetTableName() 获取目标表名
+ * @method void setTargetTableName(string $TargetTableName) 设置目标表名
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -185,6 +191,21 @@ class ModifyRuleRequest extends AbstractModel
     public $SourceEngineTypes;
 
     /**
+     * @var string 目标库名
+     */
+    public $TargetDatabaseName;
+
+    /**
+     * @var string 目标模式名
+     */
+    public $TargetSchemaName;
+
+    /**
+     * @var string 目标表名
+     */
+    public $TargetTableName;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param integer $RuleId 规则ID
      * @param integer $RuleGroupId 规则组ID
@@ -208,6 +229,9 @@ class ModifyRuleRequest extends AbstractModel
      * @param RuleFieldConfig $FieldConfig 自定义模版sql表达式字段替换参数
      * @param string $TargetObjectValue 目标字段名称  CITY
      * @param array $SourceEngineTypes 该规则适配的执行引擎
+     * @param string $TargetDatabaseName 目标库名
+     * @param string $TargetSchemaName 目标模式名
+     * @param string $TargetTableName 目标表名
      */
     function __construct()
     {
@@ -314,6 +338,18 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("SourceEngineTypes",$param) and $param["SourceEngineTypes"] !== null) {
             $this->SourceEngineTypes = $param["SourceEngineTypes"];
+        }
+
+        if (array_key_exists("TargetDatabaseName",$param) and $param["TargetDatabaseName"] !== null) {
+            $this->TargetDatabaseName = $param["TargetDatabaseName"];
+        }
+
+        if (array_key_exists("TargetSchemaName",$param) and $param["TargetSchemaName"] !== null) {
+            $this->TargetSchemaName = $param["TargetSchemaName"];
+        }
+
+        if (array_key_exists("TargetTableName",$param) and $param["TargetTableName"] !== null) {
+            $this->TargetTableName = $param["TargetTableName"];
         }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetVRSVoiceTypes请求参数结构体
  *
-
+ * @method integer getTaskType() 获取复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+ * @method void setTaskType(integer $TaskType) 设置复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
  */
 class GetVRSVoiceTypesRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+     */
+    public $TaskType;
 
     /**
-
+     * @param integer $TaskType 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
      */
     function __construct()
     {
@@ -42,6 +54,8 @@ class GetVRSVoiceTypesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
     }
 }

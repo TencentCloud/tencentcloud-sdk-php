@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIP(string $ClientIP) 设置客户端IP
  * @method string getQQOpenId() 获取QQ的OpenId
  * @method void setQQOpenId(string $QQOpenId) 设置QQ的OpenId
+ * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息
+ * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息
  */
 class DescribeFraudUltimateRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeFraudUltimateRequest extends AbstractModel
     public $QQOpenId;
 
     /**
+     * @var DataAuthorizationInfo 数据授权信息
+     */
+    public $DataAuthorization;
+
+    /**
      * @param string $DeviceToken 客户端通过SDK获取的设备Token
      * @param string $SceneCode 使用场景。目前仅支持login-登录场景、register-注册场景
      * @param string $UserId 用户唯一标识
@@ -96,6 +103,7 @@ class DescribeFraudUltimateRequest extends AbstractModel
      * @param string $PhoneNumber 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
      * @param string $ClientIP 客户端IP
      * @param string $QQOpenId QQ的OpenId
+     * @param DataAuthorizationInfo $DataAuthorization 数据授权信息
      */
     function __construct()
     {
@@ -144,6 +152,11 @@ class DescribeFraudUltimateRequest extends AbstractModel
 
         if (array_key_exists("QQOpenId",$param) and $param["QQOpenId"] !== null) {
             $this->QQOpenId = $param["QQOpenId"];
+        }
+
+        if (array_key_exists("DataAuthorization",$param) and $param["DataAuthorization"] !== null) {
+            $this->DataAuthorization = new DataAuthorizationInfo();
+            $this->DataAuthorization->deserialize($param["DataAuthorization"]);
         }
     }
 }

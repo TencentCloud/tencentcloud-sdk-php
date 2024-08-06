@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubTax(string $SubTax) 设置小计税额
  * @method array getVatElectronicItems() 获取电子发票详细条目信息
  * @method void setVatElectronicItems(array $VatElectronicItems) 设置电子发票详细条目信息
+ * @method string getServiceTypeLabel() 获取业务类型标志
+ * @method void setServiceTypeLabel(string $ServiceTypeLabel) 设置业务类型标志
  */
 class VatElectronicInfo extends AbstractModel
 {
@@ -136,6 +138,11 @@ class VatElectronicInfo extends AbstractModel
     public $VatElectronicItems;
 
     /**
+     * @var string 业务类型标志
+     */
+    public $ServiceTypeLabel;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -152,6 +159,7 @@ class VatElectronicInfo extends AbstractModel
      * @param string $SubTotal 小计金额
      * @param string $SubTax 小计税额
      * @param array $VatElectronicItems 电子发票详细条目信息
+     * @param string $ServiceTypeLabel 业务类型标志
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class VatElectronicInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VatElectronicItems, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceTypeLabel",$param) and $param["ServiceTypeLabel"] !== null) {
+            $this->ServiceTypeLabel = $param["ServiceTypeLabel"];
         }
     }
 }

@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDsEnvType(integer $DsEnvType) 设置0或者未返回或者null：未定义，1：生产，2：开发
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaName(string $SchemaName) 设置模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupTableId() 获取规则表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupTableId(string $RuleGroupTableId) 设置规则表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableQualityDetail extends AbstractModel
 {
@@ -124,6 +132,18 @@ class TableQualityDetail extends AbstractModel
     public $DsEnvType;
 
     /**
+     * @var string 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 规则表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupTableId;
+
+    /**
      * @param string $DatabaseId 数据库id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称
@@ -143,6 +163,10 @@ class TableQualityDetail extends AbstractModel
      * @param float $LastPeriodRatio 表环比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupTableId 规则表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +220,14 @@ class TableQualityDetail extends AbstractModel
 
         if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
             $this->DsEnvType = $param["DsEnvType"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("RuleGroupTableId",$param) and $param["RuleGroupTableId"] !== null) {
+            $this->RuleGroupTableId = $param["RuleGroupTableId"];
         }
     }
 }

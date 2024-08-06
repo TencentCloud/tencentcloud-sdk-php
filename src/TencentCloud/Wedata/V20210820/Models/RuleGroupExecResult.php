@@ -84,6 +84,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleExecResultVOList(array $RuleExecResultVOList) 设置规则执行结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseName() 获取数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupTableId() 获取本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupTableId(string $RuleGroupTableId) 设置本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterDeployType() 获取集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterDeployType(string $ClusterDeployType) 设置集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDsEnvType() 获取数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDsEnvType(string $DsEnvType) 设置数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecResult extends AbstractModel
 {
@@ -184,6 +204,36 @@ class RuleGroupExecResult extends AbstractModel
     public $RuleExecResultVOList;
 
     /**
+     * @var string 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseName;
+
+    /**
+     * @var string 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupTableId;
+
+    /**
+     * @var string 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterDeployType;
+
+    /**
+     * @var string 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DsEnvType;
+
+    /**
      * @param integer $RuleGroupExecId 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -215,6 +265,16 @@ class RuleGroupExecResult extends AbstractModel
      * @param string $EngineType 实际执行引擎
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleExecResultVOList 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupTableId 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterDeployType 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DsEnvType 数据库所属环境，0.未定义，1.生产 2.开发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +357,26 @@ class RuleGroupExecResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RuleExecResultVOList, $obj);
             }
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("RuleGroupTableId",$param) and $param["RuleGroupTableId"] !== null) {
+            $this->RuleGroupTableId = $param["RuleGroupTableId"];
+        }
+
+        if (array_key_exists("ClusterDeployType",$param) and $param["ClusterDeployType"] !== null) {
+            $this->ClusterDeployType = $param["ClusterDeployType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
+            $this->DsEnvType = $param["DsEnvType"];
         }
     }
 }

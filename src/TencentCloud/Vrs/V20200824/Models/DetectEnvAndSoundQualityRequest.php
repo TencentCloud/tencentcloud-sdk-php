@@ -28,12 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeId(integer $TypeId) 设置1:环境检测 2:音质检测
  * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
  * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
- * @method integer getSampleRate() 获取音频采样率：
-
-16000：16k（默认）
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
-
-16000：16k（默认）
+ * @method integer getSampleRate() 获取音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
+ * @method void setSampleRate(integer $SampleRate) 设置音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
+ * @method integer getTaskType() 获取复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+ * @method void setTaskType(integer $TaskType) 设置复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
  */
 class DetectEnvAndSoundQualityRequest extends AbstractModel
 {
@@ -58,20 +66,32 @@ class DetectEnvAndSoundQualityRequest extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 音频采样率：
-
-16000：16k（默认）
+     * @var integer 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
      */
     public $SampleRate;
+
+    /**
+     * @var integer 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+     */
+    public $TaskType;
 
     /**
      * @param string $TextId 标注文本信息 ID
      * @param string $AudioData 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
      * @param integer $TypeId 1:环境检测 2:音质检测
      * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
-     * @param integer $SampleRate 音频采样率：
-
-16000：16k（默认）
+     * @param integer $SampleRate 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
+     * @param integer $TaskType 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
      */
     function __construct()
     {
@@ -104,6 +124,10 @@ class DetectEnvAndSoundQualityRequest extends AbstractModel
 
         if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
             $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

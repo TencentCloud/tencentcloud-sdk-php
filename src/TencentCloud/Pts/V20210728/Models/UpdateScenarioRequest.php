@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScenarioId() 获取场景ID
  * @method void setScenarioId(string $ScenarioId) 设置场景ID
- * @method string getName() 获取场景名
- * @method void setName(string $Name) 设置场景名
+ * @method string getName() 获取场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
+ * @method void setName(string $Name) 设置场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
  * @method string getDescription() 获取场景描述
  * @method void setDescription(string $Description) 设置场景描述
  * @method string getType() 获取压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
@@ -73,7 +73,7 @@ class UpdateScenarioRequest extends AbstractModel
     public $ScenarioId;
 
     /**
-     * @var string 场景名
+     * @var string 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
      */
     public $Name;
 
@@ -179,7 +179,7 @@ class UpdateScenarioRequest extends AbstractModel
 
     /**
      * @param string $ScenarioId 场景ID
-     * @param string $Name 场景名
+     * @param string $Name 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
      * @param string $Description 场景描述
      * @param string $Type 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
      * @param Load $Load 施压配置

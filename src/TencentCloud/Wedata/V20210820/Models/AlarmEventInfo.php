@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreshold(float $Threshold) 设置指标阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmReason() 获取告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmReason(string $AlarmReason) 设置告警原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmEventInfo extends AbstractModel
 {
@@ -257,6 +261,12 @@ class AlarmEventInfo extends AbstractModel
     public $Threshold;
 
     /**
+     * @var string 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmReason;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmTime 告警时间
      * @param string $TaskId 任务ID
@@ -299,6 +309,8 @@ class AlarmEventInfo extends AbstractModel
      * @param string $MonitorObjectName 监控对象名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Threshold 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmReason 告警原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -416,6 +428,10 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
             $this->Threshold = $param["Threshold"];
+        }
+
+        if (array_key_exists("AlarmReason",$param) and $param["AlarmReason"] !== null) {
+            $this->AlarmReason = $param["AlarmReason"];
         }
     }
 }

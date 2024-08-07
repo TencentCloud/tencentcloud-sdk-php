@@ -32,9 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetUserId(string $TargetUserId) 设置机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxIdleTime() 获取房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+ * @method integer getMaxIdleTime() 获取房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+ * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWelcomeMessage() 获取机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWelcomeMessage(string $WelcomeMessage) 设置机器人的欢迎语
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentConfig extends AbstractModel
@@ -58,10 +62,16 @@ class AgentConfig extends AbstractModel
     public $TargetUserId;
 
     /**
-     * @var integer 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * @var integer 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxIdleTime;
+
+    /**
+     * @var string 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WelcomeMessage;
 
     /**
      * @param string $UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
@@ -70,7 +80,9 @@ class AgentConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetUserId 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxIdleTime 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * @param integer $MaxIdleTime 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WelcomeMessage 机器人的欢迎语
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class AgentConfig extends AbstractModel
 
         if (array_key_exists("MaxIdleTime",$param) and $param["MaxIdleTime"] !== null) {
             $this->MaxIdleTime = $param["MaxIdleTime"];
+        }
+
+        if (array_key_exists("WelcomeMessage",$param) and $param["WelcomeMessage"] !== null) {
+            $this->WelcomeMessage = $param["WelcomeMessage"];
         }
     }
 }

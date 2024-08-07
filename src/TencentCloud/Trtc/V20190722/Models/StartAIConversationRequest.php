@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，表示开启对话任务的房间号。
  * @method AgentConfig getAgentConfig() 获取机器人参数
  * @method void setAgentConfig(AgentConfig $AgentConfig) 设置机器人参数
- * @method string getSessionId() 获取调用方传入的唯一Id，服务端用来去重。
- * @method void setSessionId(string $SessionId) 设置调用方传入的唯一Id，服务端用来去重。
+ * @method string getSessionId() 获取调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
+ * @method void setSessionId(string $SessionId) 设置调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
  * @method integer getRoomIdType() 获取TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
  * @method void setRoomIdType(integer $RoomIdType) 设置TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
  * @method STTConfig getSTTConfig() 获取语音识别配置。
@@ -61,7 +61,7 @@ class StartAIConversationRequest extends AbstractModel
     public $AgentConfig;
 
     /**
-     * @var string 调用方传入的唯一Id，服务端用来去重。
+     * @var string 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
      */
     public $SessionId;
 
@@ -92,7 +92,7 @@ class StartAIConversationRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，表示开启对话任务的房间号。
      * @param AgentConfig $AgentConfig 机器人参数
-     * @param string $SessionId 调用方传入的唯一Id，服务端用来去重。
+     * @param string $SessionId 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
      * @param integer $RoomIdType TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
      * @param STTConfig $STTConfig 语音识别配置。
      * @param string $LLMConfig LLM配置。需符合openai规范，为JSON字符串，示例如下：

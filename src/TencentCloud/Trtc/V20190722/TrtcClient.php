@@ -175,7 +175,9 @@ xa0
  * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
- * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) 启动一个任务，机器人将进入TRTC房间，与指定成员进行AI对话
+ * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) 启动AI对话任务，AI通道机器人进入TRTC房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
+
+TRTC AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
  * @method Models\StartAITranscriptionResponse StartAITranscription(Models\StartAITranscriptionRequest $req) 这个接口调用后，后台会启动转录机器人，实时进行语音识别并下发字幕和转录消息。
 转录机器人支持两种拉流方式，通过TranscriptionMode字段控制：
 - 拉取全房间的流。

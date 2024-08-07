@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceUrl(array $SourceUrl) 设置【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
  * @method integer getSeekSecond() 获取指定视频从某个秒时间戳播放
  * @method void setSeekSecond(integer $SeekSecond) 设置指定视频从某个秒时间戳播放
+ * @method boolean getAutoPush() 获取开启自动旁路推流，请确认控制台已经开启该功能。
+ * @method void setAutoPush(boolean $AutoPush) 设置开启自动旁路推流，请确认控制台已经开启该功能。
+ * @method integer getRepeatNum() 获取循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+ * @method void setRepeatNum(integer $RepeatNum) 设置循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+ * @method integer getMaxDuration() 获取循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+ * @method void setMaxDuration(integer $MaxDuration) 设置循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
  */
 class StartStreamIngestRequest extends AbstractModel
 {
@@ -113,6 +125,24 @@ class StartStreamIngestRequest extends AbstractModel
     public $SeekSecond;
 
     /**
+     * @var boolean 开启自动旁路推流，请确认控制台已经开启该功能。
+     */
+    public $AutoPush;
+
+    /**
+     * @var integer 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+     */
+    public $RepeatNum;
+
+    /**
+     * @var integer 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+     */
+    public $MaxDuration;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType TRTC房间号的类型。
@@ -127,6 +157,12 @@ class StartStreamIngestRequest extends AbstractModel
      * @param AudioEncodeParams $AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
      * @param array $SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      * @param integer $SeekSecond 指定视频从某个秒时间戳播放
+     * @param boolean $AutoPush 开启自动旁路推流，请确认控制台已经开启该功能。
+     * @param integer $RepeatNum 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+     * @param integer $MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
      */
     function __construct()
     {
@@ -185,6 +221,18 @@ class StartStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("SeekSecond",$param) and $param["SeekSecond"] !== null) {
             $this->SeekSecond = $param["SeekSecond"];
+        }
+
+        if (array_key_exists("AutoPush",$param) and $param["AutoPush"] !== null) {
+            $this->AutoPush = $param["AutoPush"];
+        }
+
+        if (array_key_exists("RepeatNum",$param) and $param["RepeatNum"] !== null) {
+            $this->RepeatNum = $param["RepeatNum"];
+        }
+
+        if (array_key_exists("MaxDuration",$param) and $param["MaxDuration"] !== null) {
+            $this->MaxDuration = $param["MaxDuration"];
         }
     }
 }

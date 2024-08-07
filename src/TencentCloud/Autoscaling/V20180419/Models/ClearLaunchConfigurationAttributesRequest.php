@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
  * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) 设置是否清空置放群组信息，非必填，默认为 false。
 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+ * @method boolean getClearInstanceTags() 获取是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+ * @method void setClearInstanceTags(boolean $ClearInstanceTags) 设置是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -71,6 +75,12 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
     public $ClearDisasterRecoverGroupIds;
 
     /**
+     * @var boolean 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     */
+    public $ClearInstanceTags;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param boolean $ClearDataDisks 是否清空数据盘信息，非必填，默认为 false。
 填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
@@ -80,6 +90,8 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
      * @param boolean $ClearDisasterRecoverGroupIds 是否清空置放群组信息，非必填，默认为 false。
 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+     * @param boolean $ClearInstanceTags 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 
         if (array_key_exists("ClearDisasterRecoverGroupIds",$param) and $param["ClearDisasterRecoverGroupIds"] !== null) {
             $this->ClearDisasterRecoverGroupIds = $param["ClearDisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("ClearInstanceTags",$param) and $param["ClearInstanceTags"] !== null) {
+            $this->ClearInstanceTags = $param["ClearInstanceTags"];
         }
     }
 }

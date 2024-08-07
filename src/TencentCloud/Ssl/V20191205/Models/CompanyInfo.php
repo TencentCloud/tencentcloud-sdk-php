@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdNumber(string $IdNumber) 设置ID号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompanyInfo extends AbstractModel
 {
@@ -93,6 +97,12 @@ class CompanyInfo extends AbstractModel
     public $IdNumber;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $CompanyName 公司名称
      * @param integer $CompanyId 公司ID
      * @param string $CompanyCountry 公司所在国家
@@ -103,6 +113,8 @@ class CompanyInfo extends AbstractModel
      * @param string $IdType 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdNumber ID号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,15 @@ class CompanyInfo extends AbstractModel
 
         if (array_key_exists("IdNumber",$param) and $param["IdNumber"] !== null) {
             $this->IdNumber = $param["IdNumber"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

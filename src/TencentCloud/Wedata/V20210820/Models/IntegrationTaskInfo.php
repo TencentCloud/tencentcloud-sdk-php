@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置应用id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+ * @method integer getStatus() 获取0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+ * @method void setStatus(integer $Status) 设置0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodes() 获取节点列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -289,7 +289,7 @@ class IntegrationTaskInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer 1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @var integer 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -528,7 +528,7 @@ class IntegrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 应用id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @param integer $Status 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Nodes 节点列表
 注意：此字段可能返回 null，表示取不到有效值。

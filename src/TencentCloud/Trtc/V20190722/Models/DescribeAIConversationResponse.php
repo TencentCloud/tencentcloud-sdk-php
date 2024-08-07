@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置任务开始时间。
  * @method string getStatus() 获取任务状态。有4个值：1、Idle表示任务未开始2、Preparing表示任务准备中3、InProgress表示任务正在运行4、Stopped表示任务已停止，正在清理资源中
  * @method void setStatus(string $Status) 设置任务状态。有4个值：1、Idle表示任务未开始2、Preparing表示任务准备中3、InProgress表示任务正在运行4、Stopped表示任务已停止，正在清理资源中
- * @method string getTaskId() 获取唯一标识一次任务。
- * @method void setTaskId(string $TaskId) 设置唯一标识一次任务。
+ * @method string getTaskId() 获取任务的唯一标识，在启动任务时生成
+ * @method void setTaskId(string $TaskId) 设置任务的唯一标识，在启动任务时生成
  * @method string getSessionId() 获取开启对话任务时填写的SessionId，如果没写则不返回。
  * @method void setSessionId(string $SessionId) 设置开启对话任务时填写的SessionId，如果没写则不返回。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class DescribeAIConversationResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 唯一标识一次任务。
+     * @var string 任务的唯一标识，在启动任务时生成
      */
     public $TaskId;
 
@@ -61,7 +61,7 @@ class DescribeAIConversationResponse extends AbstractModel
     /**
      * @param string $StartTime 任务开始时间。
      * @param string $Status 任务状态。有4个值：1、Idle表示任务未开始2、Preparing表示任务准备中3、InProgress表示任务正在运行4、Stopped表示任务已停止，正在清理资源中
-     * @param string $TaskId 唯一标识一次任务。
+     * @param string $TaskId 任务的唯一标识，在启动任务时生成
      * @param string $SessionId 开启对话任务时填写的SessionId，如果没写则不返回。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

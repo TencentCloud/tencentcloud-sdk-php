@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置分页第n页
  * @method integer getPageSize() 获取分页大小
  * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method array getFilters() 获取查询filter
- * @method void setFilters(array $Filters) 设置查询filter
+ * @method array getFilters() 获取查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
+ * @method void setFilters(array $Filters) 设置查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
  * @method array getOrderFields() 获取排序字段信息
  * @method void setOrderFields(array $OrderFields) 设置排序字段信息
  * @method string getStartTime() 获取开始时间
@@ -55,7 +55,7 @@ class DescribeIntegrationTasksRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var array 查询filter
+     * @var array 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
      */
     public $Filters;
 
@@ -83,7 +83,7 @@ class DescribeIntegrationTasksRequest extends AbstractModel
      * @param string $ProjectId 项目id
      * @param integer $PageNumber 分页第n页
      * @param integer $PageSize 分页大小
-     * @param array $Filters 查询filter
+     * @param array $Filters 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
      * @param array $OrderFields 排序字段信息
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间

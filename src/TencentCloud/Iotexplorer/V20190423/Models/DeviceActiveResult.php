@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExpireTime() 获取过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceActiveResult extends AbstractModel
 {
@@ -54,11 +58,19 @@ class DeviceActiveResult extends AbstractModel
     public $ErrCode;
 
     /**
+     * @var integer 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
      * @param string $ModelId 模版ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn SN信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrCode 设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExpireTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class DeviceActiveResult extends AbstractModel
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

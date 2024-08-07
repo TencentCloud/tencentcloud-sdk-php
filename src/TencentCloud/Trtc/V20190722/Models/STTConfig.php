@@ -72,10 +72,12 @@ use TencentCloud\Common\AbstractModel;
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAlternativeLanguage() 获取额外识别可能替代语言,最多3个, 需高级版支持,Language指定方言时，不允许设置该字段
+ * @method array getAlternativeLanguage() 获取发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
+注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置额外识别可能替代语言,最多3个, 需高级版支持,Language指定方言时，不允许设置该字段
+ * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
+注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
  */
@@ -112,7 +114,8 @@ class STTConfig extends AbstractModel
     public $Language;
 
     /**
-     * @var array 额外识别可能替代语言,最多3个, 需高级版支持,Language指定方言时，不允许设置该字段
+     * @var array 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
+注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +148,8 @@ class STTConfig extends AbstractModel
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AlternativeLanguage 额外识别可能替代语言,最多3个, 需高级版支持,Language指定方言时，不允许设置该字段
+     * @param array $AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
+注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
      */

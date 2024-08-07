@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
  * @method integer getDisasterRecoverGroupAffinity() 获取置放群组亲和度，范围[0,10]，0表示不开启
  * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置置放群组亲和度，范围[0,10]，0表示不开启
+ * @method string getSubProductCode() 获取子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+ * @method void setSubProductCode(string $SubProductCode) 设置子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -300,6 +302,11 @@ class CreateInstanceRequest extends AbstractModel
     public $DisasterRecoverGroupAffinity;
 
     /**
+     * @var string 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     */
+    public $SubProductCode;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -344,6 +351,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param boolean $EnableDiagnose 是否开启智能巡检
      * @param string $CdcId cdcId，使用cdc子网时传递
      * @param integer $DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
+     * @param string $SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
      */
     function __construct()
     {
@@ -517,6 +525,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
             $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
+        }
+
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
         }
     }
 }

@@ -310,6 +310,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置置放群组相关参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubProductCode() 获取子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubProductCode(string $SubProductCode) 设置子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -811,6 +815,12 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $DisasterRecoverGroupAffinity;
 
     /**
+     * @var string 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubProductCode;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -955,6 +965,8 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $NetConnectScheme 网络连接方案
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DisasterRecoverGroupAffinity 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1358,6 +1370,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("DisasterRecoverGroupAffinity",$param) and $param["DisasterRecoverGroupAffinity"] !== null) {
             $this->DisasterRecoverGroupAffinity = $param["DisasterRecoverGroupAffinity"];
+        }
+
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
         }
     }
 }

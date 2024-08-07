@@ -29,15 +29,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
  * @method string getInstanceTypesCheckPolicy() 获取实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
+<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
+<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
  * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) 设置实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
+<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
+<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
  * @method string getLaunchConfigurationName() 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
@@ -53,13 +51,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。
 当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
  * @method string getInstanceChargeType() 获取实例计费类型。具体取值范围如下：
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。具体取值范围如下：
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
 若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
 当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
@@ -77,11 +75,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
 当修改本字段时，当前付费模式必须为竞价付费。
  * @method string getDiskTypePolicy() 获取云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型。
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+<li>ORIGINAL：使用设置的云盘类型。</li>
+<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
  * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型。
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+<li>ORIGINAL：使用设置的云盘类型。</li>
+<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
  * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。
  * @method array getDataDisks() 获取实例数据盘配置信息。
@@ -116,6 +114,10 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
  * @method LoginSettings getLoginSettings() 获取实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+ * @method array getInstanceTags() 获取实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+ * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -137,9 +139,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
     /**
      * @var string 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
+<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
+<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      */
@@ -169,9 +170,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
     /**
      * @var string 实例计费类型。具体取值范围如下：
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
      */
     public $InstanceChargeType;
 
@@ -193,8 +194,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
     /**
      * @var string 云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型。
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+<li>ORIGINAL：使用设置的云盘类型。</li>
+<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
      */
     public $DiskTypePolicy;
 
@@ -256,14 +257,19 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $LoginSettings;
 
     /**
+     * @var array 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+     */
+    public $InstanceTags;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
      * @param string $InstanceTypesCheckPolicy 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
+<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
+<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      * @param string $LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
@@ -273,9 +279,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。
 当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
      * @param string $InstanceChargeType 实例计费类型。具体取值范围如下：
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
 若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
 当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
@@ -285,8 +291,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
 当修改本字段时，当前付费模式必须为竞价付费。
      * @param string $DiskTypePolicy 云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型。
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+<li>ORIGINAL：使用设置的云盘类型。</li>
+<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
      * @param SystemDisk $SystemDisk 实例系统盘配置信息。
      * @param array $DataDisks 实例数据盘配置信息。
 最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
@@ -304,6 +310,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
      * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      * @param LoginSettings $LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+     * @param array $InstanceTags 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
      */
     function __construct()
     {
@@ -418,6 +426,15 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
             $this->LoginSettings = new LoginSettings();
             $this->LoginSettings->deserialize($param["LoginSettings"]);
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new InstanceTag();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置服务端推送播报文本
  * @method boolean getInterrupt() 获取是否允许该文本打断机器人说话
  * @method void setInterrupt(boolean $Interrupt) 设置是否允许该文本打断机器人说话
+ * @method boolean getStopAfterPlay() 获取播报完文本后，是否自动关闭对话任务
+ * @method void setStopAfterPlay(boolean $StopAfterPlay) 设置播报完文本后，是否自动关闭对话任务
  */
 class ServerPushText extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ServerPushText extends AbstractModel
     public $Interrupt;
 
     /**
+     * @var boolean 播报完文本后，是否自动关闭对话任务
+     */
+    public $StopAfterPlay;
+
+    /**
      * @param string $Text 服务端推送播报文本
      * @param boolean $Interrupt 是否允许该文本打断机器人说话
+     * @param boolean $StopAfterPlay 播报完文本后，是否自动关闭对话任务
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ServerPushText extends AbstractModel
 
         if (array_key_exists("Interrupt",$param) and $param["Interrupt"] !== null) {
             $this->Interrupt = $param["Interrupt"];
+        }
+
+        if (array_key_exists("StopAfterPlay",$param) and $param["StopAfterPlay"] !== null) {
+            $this->StopAfterPlay = $param["StopAfterPlay"];
         }
     }
 }

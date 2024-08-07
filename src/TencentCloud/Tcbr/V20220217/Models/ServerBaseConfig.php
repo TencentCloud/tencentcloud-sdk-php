@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogTopicId(string $LogTopicId) 设置cls 主题id
  * @method string getLogParseType() 获取解析类型：json ｜ line
  * @method void setLogParseType(string $LogParseType) 设置解析类型：json ｜ line
+ * @method string getTag() 获取服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(string $Tag) 设置服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -164,6 +168,12 @@ class ServerBaseConfig extends AbstractModel
     public $LogParseType;
 
     /**
+     * @var string 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -184,6 +194,8 @@ class ServerBaseConfig extends AbstractModel
      * @param string $LogSetId cls setId
      * @param string $LogTopicId cls 主题id
      * @param string $LogParseType 解析类型：json ｜ line
+     * @param string $Tag 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -281,6 +293,10 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("LogParseType",$param) and $param["LogParseType"] !== null) {
             $this->LogParseType = $param["LogParseType"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

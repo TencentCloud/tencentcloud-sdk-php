@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthStatus(array $HealthStatus) 设置健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
  * @method array getVpcIds() 获取Vpc列表 筛选项
  * @method void setVpcIds(array $VpcIds) 设置Vpc列表 筛选项
+ * @method string getCdcId() 获取cdc集群id
+ * @method void setCdcId(string $CdcId) 设置cdc集群id
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $VpcIds;
 
     /**
+     * @var string cdc集群id
+     */
+    public $CdcId;
+
+    /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 集群实例ID列表
      * @param array $InstanceNames 集群实例名称列表
@@ -120,6 +127,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $ZoneList 可用区列表
      * @param array $HealthStatus 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
      * @param array $VpcIds Vpc列表 筛选项
+     * @param string $CdcId cdc集群id
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
             $this->VpcIds = $param["VpcIds"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

@@ -3,7 +3,7 @@ require_once __DIR__.'/../../../vendor/autoload.php';
 // 导入对应产品模块的client
 use TencentCloud\Hunyuan\V20230901\HunyuanClient;
 // 导入要请求接口对应的Request类
-use TencentCloud\Hunyuan\V20230901\Models\ChatStdRequest;
+use TencentCloud\Hunyuan\V20230901\Models\ChatCompletionsRequest;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
@@ -43,16 +43,17 @@ try {
     
     
     // 实例化一个hunyuan实例信息查询请求对象,每个接口都会对应一个request对象。
-    $req = new ChatStdRequest();
+    $req = new ChatCompletionsRequest();
     $req->TopP = 0;
     $req->Temperature = 0;
+    $req->Model = "hunyuan-standard";
     $reqMessage = new Message();
     $reqMessage->Role = "user";
     $reqMessage->Content = "计算1+1";
     $req->Messages = [$reqMessage];
     
-    // 通过client对象调用ChatStd方法发起请求。注意请求方法名与请求对象是对应的
-    $client->ChatStd($req);
+    // 通过client对象调用ChatCompletions方法发起请求。注意请求方法名与请求对象是对应的
+    $client->ChatCompletions($req);
     
 }
 catch(TencentCloudSDKException $e) {

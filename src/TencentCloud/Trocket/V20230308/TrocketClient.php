@@ -44,6 +44,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 
 1. ConsumerGroupName，名称模糊查询
 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
+ * @method Models\DescribeConsumerLagResponse DescribeConsumerLag(Models\DescribeConsumerLagRequest $req) 查询指定消费组堆积数。
  * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询

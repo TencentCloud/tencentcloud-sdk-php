@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCustomerAssetId() 获取客户资产ID。
  * @method void setCustomerAssetId(integer $CustomerAssetId) 设置客户资产ID。
+ * @method string getAssetType() 获取资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+ * @method void setAssetType(string $AssetType) 设置资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
  */
 class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
     public $CustomerAssetId;
 
     /**
+     * @var string 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $CustomerAssetId 客户资产ID。
+     * @param string $AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
         }
         if (array_key_exists("CustomerAssetId",$param) and $param["CustomerAssetId"] !== null) {
             $this->CustomerAssetId = $param["CustomerAssetId"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

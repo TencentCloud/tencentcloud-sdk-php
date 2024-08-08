@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerPolicyItemId(integer $CustomerPolicyItemId) 设置指定的检测项的ID
  * @method array getCustomerAssetIdSet() 获取要重新扫描的客户资产项ID的列表。
  * @method void setCustomerAssetIdSet(array $CustomerAssetIdSet) 设置要重新扫描的客户资产项ID的列表。
+ * @method string getAssetType() 获取扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+ * @method void setAssetType(string $AssetType) 设置扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
  */
 class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
     public $CustomerAssetIdSet;
 
     /**
+     * @var string 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $CustomerPolicyItemId 指定的检测项的ID
      * @param array $CustomerAssetIdSet 要重新扫描的客户资产项ID的列表。
+     * @param string $AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
 
         if (array_key_exists("CustomerAssetIdSet",$param) and $param["CustomerAssetIdSet"] !== null) {
             $this->CustomerAssetIdSet = $param["CustomerAssetIdSet"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

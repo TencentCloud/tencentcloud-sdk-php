@@ -62,6 +62,10 @@ Dress：连衣裙
 0：不添加标识。
 其他数值：默认按1处理。
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+ * @method LogoParam getLogoParam() 获取标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
 生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
@@ -107,6 +111,12 @@ Dress：连衣裙
     public $LogoAdd;
 
     /**
+     * @var LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public $LogoParam;
+
+    /**
      * @var string 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
 生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。
      */
@@ -134,6 +144,8 @@ Dress：连衣裙
 0：不添加标识。
 其他数值：默认按1处理。
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     * @param LogoParam $LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
 生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。
      */
@@ -164,6 +176,11 @@ Dress：连衣裙
 
         if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
             $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
+            $this->LogoParam = new LogoParam();
+            $this->LogoParam->deserialize($param["LogoParam"]);
         }
 
         if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {

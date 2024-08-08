@@ -33,6 +33,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(Models\BindOrganizationMemberAuthAccountRequest $req) 绑定组织成员和组织管理员子账号的授权关系
  * @method Models\CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(Models\CancelOrganizationMemberAuthAccountRequest $req) 取消组织成员和组织管理员子账号的授权关系
  * @method Models\CheckAccountDeleteResponse CheckAccountDelete(Models\CheckAccountDeleteRequest $req) 成员账号删除检查
+ * @method Models\CreateOrgServiceAssignResponse CreateOrgServiceAssign(Models\CreateOrgServiceAssignRequest $req) 添加集团服务委派管理员
  * @method Models\CreateOrganizationResponse CreateOrganization(Models\CreateOrganizationRequest $req) 创建企业组织
  * @method Models\CreateOrganizationIdentityResponse CreateOrganizationIdentity(Models\CreateOrganizationIdentityRequest $req) 添加组织身份
  * @method Models\CreateOrganizationMemberResponse CreateOrganizationMember(Models\CreateOrganizationMemberRequest $req) 创建组织成员
@@ -41,6 +42,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(Models\CreateOrganizationMembersPolicyRequest $req) 创建组织成员访问策略
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 创建一个特殊类型的策略，您可以关联到企业组织Root节点、企业部门节点或者企业的成员账号。
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 删除成员账号
+ * @method Models\DeleteOrgServiceAssignResponse DeleteOrgServiceAssign(Models\DeleteOrgServiceAssignRequest $req) 删除集团服务委派管理员
  * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 删除企业组织
  * @method Models\DeleteOrganizationIdentityResponse DeleteOrganizationIdentity(Models\DeleteOrganizationIdentityRequest $req) 删除组织身份
  * @method Models\DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentity(Models\DeleteOrganizationMemberAuthIdentityRequest $req) 删除组织成员访问授权
@@ -73,6 +75,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DisablePolicyTypeResponse DisablePolicyType(Models\DisablePolicyTypeRequest $req) 禁用策略类型
  * @method Models\EnablePolicyTypeResponse EnablePolicyType(Models\EnablePolicyTypeRequest $req) 启用策略类型
  * @method Models\ListNonCompliantResourceResponse ListNonCompliantResource(Models\ListNonCompliantResourceRequest $req) 获取成员标签检测不合规资源列表
+ * @method Models\ListOrgServiceAssignMemberResponse ListOrgServiceAssignMember(Models\ListOrgServiceAssignMemberRequest $req) 获取集团服务委派管理员列表
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) 获取组织成员访问身份列表
  * @method Models\ListOrganizationServiceResponse ListOrganizationService(Models\ListOrganizationServiceRequest $req) 获取集团服务设置列表
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询查看策略列表数据

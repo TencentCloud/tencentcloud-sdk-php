@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAssetPolicySetList() 获取资产ID+检查项IDs. 列表
  * @method void setAssetPolicySetList(array $AssetPolicySetList) 设置资产ID+检查项IDs. 列表
+ * @method string getAssetType() 获取扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+ * @method void setAssetType(string $AssetType) 设置扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
  */
 class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
     public $AssetPolicySetList;
 
     /**
+     * @var string 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public $AssetType;
+
+    /**
      * @param array $AssetPolicySetList 资产ID+检查项IDs. 列表
+     * @param string $AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AssetPolicySetList, $obj);
             }
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

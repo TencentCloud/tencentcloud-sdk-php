@@ -92,6 +92,14 @@ RESULT_FAILED: 未通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditProcedure(string $AuditProcedure) 设置检查项审计方法
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsEnable() 获取是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsEnable(integer $IsEnable) 设置是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompliancePolicyItemSummary extends AbstractModel
 {
@@ -204,6 +212,14 @@ RESULT_FAILED: 未通过
     public $AuditProcedure;
 
     /**
+     * @var integer 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsEnable;
+
+    /**
      * @param integer $CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      * @param integer $BasePolicyItemId 检测项的原始ID。
      * @param string $Name 检测项的名称。
@@ -239,6 +255,10 @@ RESULT_FAILED: 未通过
      * @param string $Description 检查项描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuditProcedure 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsEnable 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +344,10 @@ RESULT_FAILED: 未通过
 
         if (array_key_exists("AuditProcedure",$param) and $param["AuditProcedure"] !== null) {
             $this->AuditProcedure = $param["AuditProcedure"];
+        }
+
+        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
+            $this->IsEnable = $param["IsEnable"];
         }
     }
 }

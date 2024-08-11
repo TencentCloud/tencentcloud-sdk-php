@@ -34,7 +34,8 @@ use TencentCloud\Common\AbstractModel;
 分页参数<br>
 <li>PageNum 从1开始，小于等于0时使用默认参数。</li>
 <li>PageSize 最大值5000，最好不超过100。</li>
- * @method integer getGroupId() 获取私有化默认分组id-名称-操作系统
+ * @method integer getGroupId() 获取【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -48,7 +49,8 @@ use TencentCloud\Common\AbstractModel;
 40000402	未分组终端	Android
 40000501	全网终端	iOS
 40000502	未分组终端	iOS
- * @method void setGroupId(integer $GroupId) 设置私有化默认分组id-名称-操作系统
+ * @method void setGroupId(integer $GroupId) 设置【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -62,18 +64,18 @@ use TencentCloud\Common\AbstractModel;
 40000402	未分组终端	Android
 40000501	全网终端	iOS
 40000502	未分组终端	iOS
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
- * @method integer getOnlineStatus() 获取在线状态 2 在线 0，1 离线
- * @method void setOnlineStatus(integer $OnlineStatus) 设置在线状态 2 在线 0，1 离线
+ * @method integer getOsType() 获取【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+ * @method void setOsType(integer $OsType) 设置【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+ * @method integer getOnlineStatus() 获取在线状态 （2表示在线，0或者1表示离线）
+ * @method void setOnlineStatus(integer $OnlineStatus) 设置在线状态 （2表示在线，0或者1表示离线）
  * @method array getFilters() 获取过滤条件--兼容旧接口,参数同Condition
  * @method void setFilters(array $Filters) 设置过滤条件--兼容旧接口,参数同Condition
  * @method Sort getSort() 获取排序字段--兼容旧接口,参数同Condition
  * @method void setSort(Sort $Sort) 设置排序字段--兼容旧接口,参数同Condition
- * @method integer getPageNum() 获取获取第几页--兼容旧接口,参数同Condition(只支持32位)
- * @method void setPageNum(integer $PageNum) 设置获取第几页--兼容旧接口,参数同Condition(只支持32位)
- * @method integer getPageSize() 获取每页获取数--兼容旧接口,参数同Condition(只支持32位)
- * @method void setPageSize(integer $PageSize) 设置每页获取数--兼容旧接口,参数同Condition(只支持32位)
+ * @method integer getPageNum() 获取获取第几页--兼容旧接口,参数同Condition
+ * @method void setPageNum(integer $PageNum) 设置获取第几页--兼容旧接口,参数同Condition
+ * @method integer getPageSize() 获取每页获取数--兼容旧接口,参数同Condition
+ * @method void setPageSize(integer $PageSize) 设置每页获取数--兼容旧接口,参数同Condition
  * @method integer getStatus() 获取授权状态 4未授权 5已授权
  * @method void setStatus(integer $Status) 设置授权状态 4未授权 5已授权
  */
@@ -91,7 +93,8 @@ class DescribeDevicesRequest extends AbstractModel
     public $Condition;
 
     /**
-     * @var integer 私有化默认分组id-名称-操作系统
+     * @var integer 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -109,12 +112,12 @@ class DescribeDevicesRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * @var integer 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
      */
     public $OsType;
 
     /**
-     * @var integer 在线状态 2 在线 0，1 离线
+     * @var integer 在线状态 （2表示在线，0或者1表示离线）
      */
     public $OnlineStatus;
 
@@ -129,12 +132,12 @@ class DescribeDevicesRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var integer 获取第几页--兼容旧接口,参数同Condition(只支持32位)
+     * @var integer 获取第几页--兼容旧接口,参数同Condition
      */
     public $PageNum;
 
     /**
-     * @var integer 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+     * @var integer 每页获取数--兼容旧接口,参数同Condition
      */
     public $PageSize;
 
@@ -151,7 +154,8 @@ class DescribeDevicesRequest extends AbstractModel
 分页参数<br>
 <li>PageNum 从1开始，小于等于0时使用默认参数。</li>
 <li>PageSize 最大值5000，最好不超过100。</li>
-     * @param integer $GroupId 私有化默认分组id-名称-操作系统
+     * @param integer $GroupId 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -165,12 +169,12 @@ class DescribeDevicesRequest extends AbstractModel
 40000402	未分组终端	Android
 40000501	全网终端	iOS
 40000502	未分组终端	iOS
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
-     * @param integer $OnlineStatus 在线状态 2 在线 0，1 离线
+     * @param integer $OsType 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * @param integer $OnlineStatus 在线状态 （2表示在线，0或者1表示离线）
      * @param array $Filters 过滤条件--兼容旧接口,参数同Condition
      * @param Sort $Sort 排序字段--兼容旧接口,参数同Condition
-     * @param integer $PageNum 获取第几页--兼容旧接口,参数同Condition(只支持32位)
-     * @param integer $PageSize 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+     * @param integer $PageNum 获取第几页--兼容旧接口,参数同Condition
+     * @param integer $PageSize 每页获取数--兼容旧接口,参数同Condition
      * @param integer $Status 授权状态 4未授权 5已授权
      */
     function __construct()

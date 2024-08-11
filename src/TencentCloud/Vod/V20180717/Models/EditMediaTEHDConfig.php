@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
  * @method void setType(string $Type) 设置极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
+ * @method integer getMaxVideoBitrate() 获取视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) 设置视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
  */
 class EditMediaTEHDConfig extends AbstractModel
 {
@@ -31,7 +35,15 @@ class EditMediaTEHDConfig extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+     */
+    public $MaxVideoBitrate;
+
+    /**
      * @param string $Type 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
+     * @param integer $MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class EditMediaTEHDConfig extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MaxVideoBitrate",$param) and $param["MaxVideoBitrate"] !== null) {
+            $this->MaxVideoBitrate = $param["MaxVideoBitrate"];
         }
     }
 }

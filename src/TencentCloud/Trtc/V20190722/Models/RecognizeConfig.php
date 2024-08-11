@@ -50,7 +50,6 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
  * @method void setLanguage(string $Language) 设置语音转文字支持识别的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
@@ -81,65 +80,14 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
  * @method array getAlternativeLanguage() 获取发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
  * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
- * @method string getModel() 获取使用的模型，目前支持tencent和google，默认是tencent。
- * @method void setModel(string $Model) 设置使用的模型，目前支持tencent和google，默认是tencent。
- * @method string getTranslationLanguage() 获取翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
- * @method void setTranslationLanguage(string $TranslationLanguage) 设置翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+ * @method string getModel() 获取目前已不支持
+ * @method void setModel(string $Model) 设置目前已不支持
+ * @method string getTranslationLanguage() 获取目前已不支持
+ * @method void setTranslationLanguage(string $TranslationLanguage) 设置目前已不支持
  */
 class RecognizeConfig extends AbstractModel
 {
@@ -174,7 +122,6 @@ class RecognizeConfig extends AbstractModel
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
      */
     public $Language;
 
@@ -185,38 +132,14 @@ class RecognizeConfig extends AbstractModel
     public $AlternativeLanguage;
 
     /**
-     * @var string 使用的模型，目前支持tencent和google，默认是tencent。
+     * @var string 目前已不支持
      * @deprecated
      */
     public $Model;
 
     /**
-     * @var string 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+     * @var string 目前已不支持
+     * @deprecated
      */
     public $TranslationLanguage;
 
@@ -251,36 +174,10 @@ Russian = "ru"
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
      * @param array $AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
-     * @param string $Model 使用的模型，目前支持tencent和google，默认是tencent。
-     * @param string $TranslationLanguage 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+     * @param string $Model 目前已不支持
+     * @param string $TranslationLanguage 目前已不支持
      */
     function __construct()
     {

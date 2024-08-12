@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectConnectAccelerateChannelFlag(boolean $DirectConnectAccelerateChannelFlag) 设置是否开启二层云联网通道。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpv6Flag() 获取是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Flag(string $Ipv6Flag) 设置是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -197,6 +201,12 @@ class CCN extends AbstractModel
     public $DirectConnectAccelerateChannelFlag;
 
     /**
+     * @var string 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Flag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -227,6 +237,8 @@ class CCN extends AbstractModel
      * @param boolean $RouteSelectPolicyFlag 是否开启路由表选择策略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -325,6 +337,10 @@ class CCN extends AbstractModel
 
         if (array_key_exists("DirectConnectAccelerateChannelFlag",$param) and $param["DirectConnectAccelerateChannelFlag"] !== null) {
             $this->DirectConnectAccelerateChannelFlag = $param["DirectConnectAccelerateChannelFlag"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
         }
     }
 }

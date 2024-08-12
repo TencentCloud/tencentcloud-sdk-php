@@ -202,7 +202,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeCanFixVulMachineResponse DescribeCanFixVulMachine(Models\DescribeCanFixVulMachineRequest $req) 漏洞修护-查询可修护主机信息
  * @method Models\DescribeCanNotSeparateMachineResponse DescribeCanNotSeparateMachine(Models\DescribeCanNotSeparateMachineRequest $req) 获取木马不可隔离的主机
  * @method Models\DescribeClientExceptionResponse DescribeClientException(Models\DescribeClientExceptionRequest $req) 获取客户端异常事件
- * @method Models\DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(Models\DescribeCloudProtectServiceOrderListRequest $req) 查询云护航服务订单列表
+ * @method Models\DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(Models\DescribeCloudProtectServiceOrderListRequest $req) 云护航计费产品已下线
+
+查询云护航服务订单列表
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) 获取漏洞防御事件详情
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) 获取专线agent安装命令，包含token

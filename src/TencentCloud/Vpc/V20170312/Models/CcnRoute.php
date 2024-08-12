@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoutePriority(integer $RoutePriority) 设置路由优先级
  * @method string getInstanceExtraName() 获取下一跳扩展名称（关联实例的扩展名称）
  * @method void setInstanceExtraName(string $InstanceExtraName) 设置下一跳扩展名称（关联实例的扩展名称）
+ * @method string getAliasType() 获取实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliasType(string $AliasType) 设置实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAliasInstanceId() 获取实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliasInstanceId(string $AliasInstanceId) 设置实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnRoute extends AbstractModel
 {
@@ -115,6 +123,18 @@ class CcnRoute extends AbstractModel
     public $InstanceExtraName;
 
     /**
+     * @var string 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliasType;
+
+    /**
+     * @var string 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliasInstanceId;
+
+    /**
      * @param string $RouteId 路由策略ID
      * @param string $DestinationCidrBlock 目的端
      * @param string $InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
@@ -128,6 +148,10 @@ class CcnRoute extends AbstractModel
      * @param boolean $IsBgp 是否动态路由
      * @param integer $RoutePriority 路由优先级
      * @param string $InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
+     * @param string $AliasType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AliasInstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +216,14 @@ class CcnRoute extends AbstractModel
 
         if (array_key_exists("InstanceExtraName",$param) and $param["InstanceExtraName"] !== null) {
             $this->InstanceExtraName = $param["InstanceExtraName"];
+        }
+
+        if (array_key_exists("AliasType",$param) and $param["AliasType"] !== null) {
+            $this->AliasType = $param["AliasType"];
+        }
+
+        if (array_key_exists("AliasInstanceId",$param) and $param["AliasInstanceId"] !== null) {
+            $this->AliasInstanceId = $param["AliasInstanceId"];
         }
     }
 }

@@ -132,6 +132,8 @@ use TencentCloud\Common\AbstractModel;
 1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
 2. false：开关关闭，true：开关打开。
 3. 未传值时默认开关关闭（false）。
+ * @method boolean getEnableSpeedSearch() 获取是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+ * @method void setEnableSpeedSearch(boolean $EnableSpeedSearch) 设置是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -240,6 +242,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $Citation;
 
     /**
+     * @var boolean 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+     */
+    public $EnableSpeedSearch;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -296,6 +303,7 @@ class ChatCompletionsRequest extends AbstractModel
 1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
 2. false：开关关闭，true：开关打开。
 3. 未传值时默认开关关闭（false）。
+     * @param boolean $EnableSpeedSearch 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
      */
     function __construct()
     {
@@ -367,6 +375,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("Citation",$param) and $param["Citation"] !== null) {
             $this->Citation = $param["Citation"];
+        }
+
+        if (array_key_exists("EnableSpeedSearch",$param) and $param["EnableSpeedSearch"] !== null) {
+            $this->EnableSpeedSearch = $param["EnableSpeedSearch"];
         }
     }
 }

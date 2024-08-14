@@ -134,6 +134,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscribeSwitch(integer $SubscribeSwitch) 设置订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppName() 获取RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppName(string $AppName) 设置RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStreamName() 获取RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStreamName(string $StreamName) 设置RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceData extends AbstractModel
 {
@@ -307,6 +315,18 @@ class DescribeDeviceData extends AbstractModel
     public $SubscribeSwitch;
 
     /**
+     * @var string RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppName;
+
+    /**
+     * @var string RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StreamName;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
@@ -363,6 +383,10 @@ class DescribeDeviceData extends AbstractModel
      * @param integer $AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppName RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StreamName RTMP推流地址自定义streamName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -488,6 +512,14 @@ class DescribeDeviceData extends AbstractModel
 
         if (array_key_exists("SubscribeSwitch",$param) and $param["SubscribeSwitch"] !== null) {
             $this->SubscribeSwitch = $param["SubscribeSwitch"];
+        }
+
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
     }
 }

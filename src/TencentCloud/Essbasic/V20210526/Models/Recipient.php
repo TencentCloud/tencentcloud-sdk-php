@@ -76,6 +76,14 @@ false-否
 <li> 4 :UKey认证</li>
 <li> 5 :设备指纹识别</li>
 <li> 6 :设备面容识别</li></ul>
+ * @method boolean getNoTransfer() 获取签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+ * @method void setNoTransfer(boolean $NoTransfer) 设置签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
  */
 class Recipient extends AbstractModel
 {
@@ -152,6 +160,14 @@ false-否
     public $ApproverSignTypes;
 
     /**
+     * @var boolean 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+     */
+    public $NoTransfer;
+
+    /**
      * @param string $RecipientId 合同参与方的角色ID
      * @param string $RecipientType 参与者类型, 可以选择的类型如下:
 <ul><li> **ENTERPRISE** :此角色为企业参与方</li>
@@ -180,6 +196,10 @@ false-否
 <li> 4 :UKey认证</li>
 <li> 5 :设备指纹识别</li>
 <li> 6 :设备面容识别</li></ul>
+     * @param boolean $NoTransfer 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
      */
     function __construct()
     {
@@ -236,6 +256,10 @@ false-否
 
         if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
             $this->ApproverSignTypes = $param["ApproverSignTypes"];
+        }
+
+        if (array_key_exists("NoTransfer",$param) and $param["NoTransfer"] !== null) {
+            $this->NoTransfer = $param["NoTransfer"];
         }
     }
 }

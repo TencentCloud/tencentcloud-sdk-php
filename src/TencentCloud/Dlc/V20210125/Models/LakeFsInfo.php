@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置容量
  * @method integer getCreateTimeStamp() 获取创建时候的时间戳
  * @method void setCreateTimeStamp(integer $CreateTimeStamp) 设置创建时候的时间戳
+ * @method integer getDefaultBucket() 获取是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultBucket(integer $DefaultBucket) 设置是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShortName() 获取托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShortName(string $ShortName) 设置托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LakeFsInfo extends AbstractModel
 {
@@ -52,10 +68,42 @@ class LakeFsInfo extends AbstractModel
     public $CreateTimeStamp;
 
     /**
+     * @var integer 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultBucket;
+
+    /**
+     * @var string 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShortName;
+
+    /**
+     * @var string 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var string 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $Name 托管存储名称
      * @param string $Type 托管存储类型
      * @param float $SpaceUsedSize 容量
      * @param integer $CreateTimeStamp 创建时候的时间戳
+     * @param integer $DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShortName 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +132,22 @@ class LakeFsInfo extends AbstractModel
 
         if (array_key_exists("CreateTimeStamp",$param) and $param["CreateTimeStamp"] !== null) {
             $this->CreateTimeStamp = $param["CreateTimeStamp"];
+        }
+
+        if (array_key_exists("DefaultBucket",$param) and $param["DefaultBucket"] !== null) {
+            $this->DefaultBucket = $param["DefaultBucket"];
+        }
+
+        if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
+            $this->ShortName = $param["ShortName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

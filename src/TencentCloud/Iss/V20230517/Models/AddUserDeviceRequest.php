@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置设备用户名（仅网关接入需要）
  * @method string getSNCode() 获取设备 SN，仅IVCP 协议设备需要
  * @method void setSNCode(string $SNCode) 设置设备 SN，仅IVCP 协议设备需要
+ * @method string getAppName() 获取RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+ * @method void setAppName(string $AppName) 设置RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+ * @method string getStreamName() 获取RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+ * @method void setStreamName(string $StreamName) 设置RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
  */
 class AddUserDeviceRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class AddUserDeviceRequest extends AbstractModel
     public $SNCode;
 
     /**
+     * @var string RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public $AppName;
+
+    /**
+     * @var string RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public $StreamName;
+
+    /**
      * @param string $Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
      * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
      * @param integer $Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
@@ -136,6 +150,8 @@ class AddUserDeviceRequest extends AbstractModel
      * @param integer $Port 设备端口（仅网关接入需要）
      * @param string $Username 设备用户名（仅网关接入需要）
      * @param string $SNCode 设备 SN，仅IVCP 协议设备需要
+     * @param string $AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * @param string $StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class AddUserDeviceRequest extends AbstractModel
 
         if (array_key_exists("SNCode",$param) and $param["SNCode"] !== null) {
             $this->SNCode = $param["SNCode"];
+        }
+
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
     }
 }

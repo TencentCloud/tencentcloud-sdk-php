@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取）
  * @method void setClusterId(string $ClusterId) 设置服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取）
+ * @method integer getDomainType() 获取域名类型，0:拉流域名 1:推流域名
+ * @method void setDomainType(integer $DomainType) 设置域名类型，0:拉流域名 1:推流域名
  */
 class DescribeCNAMERequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeCNAMERequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var integer 域名类型，0:拉流域名 1:推流域名
+     */
+    public $DomainType;
+
+    /**
      * @param string $ClusterId 服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取）
+     * @param integer $DomainType 域名类型，0:拉流域名 1:推流域名
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeCNAMERequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("DomainType",$param) and $param["DomainType"] !== null) {
+            $this->DomainType = $param["DomainType"];
         }
     }
 }

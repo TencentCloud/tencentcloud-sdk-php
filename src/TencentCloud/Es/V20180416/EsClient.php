@@ -49,6 +49,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeLogstashPipelinesResponse DescribeLogstashPipelines(Models\DescribeLogstashPipelinesRequest $req) 用于获取Logstash实例管道列表
  * @method Models\DescribeServerlessInstancesResponse DescribeServerlessInstances(Models\DescribeServerlessInstancesRequest $req) Serverless获取索引列表
  * @method Models\DescribeServerlessMetricsResponse DescribeServerlessMetrics(Models\DescribeServerlessMetricsRequest $req) 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+获取一段时间时间范围内的指标数据
  * @method Models\DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(Models\DescribeServerlessSpaceUserRequest $req) 查看Serverless空间子用户
  * @method Models\DescribeServerlessSpacesResponse DescribeServerlessSpaces(Models\DescribeServerlessSpacesRequest $req) 获取Serverless索引空间列表
  * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口

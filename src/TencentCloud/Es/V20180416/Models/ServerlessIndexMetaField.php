@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取标签信息
  * @method void setTagList(array $TagList) 设置标签信息
+ * @method float getIndexTraffic() 获取3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexTraffic(float $IndexTraffic) 设置3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessIndexMetaField extends AbstractModel
 {
@@ -191,6 +195,12 @@ class ServerlessIndexMetaField extends AbstractModel
     public $TagList;
 
     /**
+     * @var float 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexTraffic;
+
+    /**
      * @param integer $AppId 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexName 索引名
@@ -224,6 +234,8 @@ class ServerlessIndexMetaField extends AbstractModel
      * @param integer $StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 标签信息
+     * @param float $IndexTraffic 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -312,6 +324,10 @@ class ServerlessIndexMetaField extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("IndexTraffic",$param) and $param["IndexTraffic"] !== null) {
+            $this->IndexTraffic = $param["IndexTraffic"];
         }
     }
 }

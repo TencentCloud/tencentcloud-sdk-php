@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getInstanceName() 获取实例名。
- * @method void setInstanceName(string $InstanceName) 设置实例名。
+ * @method string getInstanceName() 获取实例名称。有效长度为 1～60 字符。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。有效长度为 1～60 字符。
  */
 class ModifyRegisterInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyRegisterInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例名。
+     * @var string 实例名称。有效长度为 1～60 字符。
      */
     public $InstanceName;
 
     /**
      * @param string $InstanceId 实例ID。
-     * @param string $InstanceName 实例名。
+     * @param string $InstanceName 实例名称。有效长度为 1～60 字符。
      */
     function __construct()
     {

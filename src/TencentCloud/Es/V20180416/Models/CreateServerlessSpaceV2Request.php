@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKibanaWhiteIpList(array $KibanaWhiteIpList) 设置白名单列表
  * @method integer getZoneId() 获取空间id
  * @method void setZoneId(integer $ZoneId) 设置空间id
+ * @method array getTagList() 获取标签信息
+ * @method void setTagList(array $TagList) 设置标签信息
  */
 class CreateServerlessSpaceV2Request extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateServerlessSpaceV2Request extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var array 标签信息
+     */
+    public $TagList;
+
+    /**
      * @param array $VpcInfo vpc信息
      * @param string $SpaceName 索引空间名
      * @param string $Zone 空间名称
      * @param array $KibanaWhiteIpList 白名单列表
      * @param integer $ZoneId 空间id
+     * @param array $TagList 标签信息
      */
     function __construct()
     {
@@ -101,6 +109,15 @@ class CreateServerlessSpaceV2Request extends AbstractModel
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

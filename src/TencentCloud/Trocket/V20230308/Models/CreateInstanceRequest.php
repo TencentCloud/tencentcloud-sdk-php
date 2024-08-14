@@ -30,30 +30,32 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
- * @method string getName() 获取实例名称
- * @method void setName(string $Name) 设置实例名称
+ * @method string getName() 获取集群名称
+ * @method void setName(string $Name) 设置集群名称
  * @method string getSkuCode() 获取商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
  * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
  * @method void setTagList(array $TagList) 设置标签列表
- * @method array getVpcList() 获取实例绑定的VPC信息
- * @method void setVpcList(array $VpcList) 设置实例绑定的VPC信息
- * @method boolean getEnablePublic() 获取是否开启公网
- * @method void setEnablePublic(boolean $EnablePublic) 设置是否开启公网
- * @method integer getBandwidth() 获取公网带宽（单位：兆）
- * @method void setBandwidth(integer $Bandwidth) 设置公网带宽（单位：兆）
+ * @method array getVpcList() 获取集群绑定的VPC信息，必填
+ * @method void setVpcList(array $VpcList) 设置集群绑定的VPC信息，必填
+ * @method boolean getEnablePublic() 获取是否开启公网，默认值为false表示不开启
+ * @method void setEnablePublic(boolean $EnablePublic) 设置是否开启公网，默认值为false表示不开启
+ * @method boolean getBillingFlow() 获取公网是否按流量计费，默认值为false表示不按流量计费
+ * @method void setBillingFlow(boolean $BillingFlow) 设置公网是否按流量计费，默认值为false表示不按流量计费
+ * @method integer getBandwidth() 获取公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
+ * @method void setBandwidth(integer $Bandwidth) 设置公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
  * @method array getIpRules() 获取公网访问白名单
  * @method void setIpRules(array $IpRules) 设置公网访问白名单
  * @method integer getMessageRetention() 获取消息保留时长（单位：小时）
  * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长（单位：小时）
- * @method integer getPayMode() 获取付费模式（0: 后付费；1: 预付费）
- * @method void setPayMode(integer $PayMode) 设置付费模式（0: 后付费；1: 预付费）
- * @method integer getRenewFlag() 获取是否自动续费（0: 不自动续费；1: 自动续费）
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费（0: 不自动续费；1: 自动续费）
- * @method integer getTimeSpan() 获取购买时长（单位：月）
- * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月）
+ * @method integer getPayMode() 获取付费模式（0: 后付费；1: 预付费），默认值为0
+ * @method void setPayMode(integer $PayMode) 设置付费模式（0: 后付费；1: 预付费），默认值为0
+ * @method integer getRenewFlag() 获取是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+ * @method integer getTimeSpan() 获取购买时长（单位：月），默认值为1
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月），默认值为1
  * @method integer getMaxTopicNum() 获取最大可创建主题数
  * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
  */
@@ -69,7 +71,7 @@ PLATINUM 铂金版
     public $InstanceType;
 
     /**
-     * @var string 实例名称
+     * @var string 集群名称
      */
     public $Name;
 
@@ -89,17 +91,22 @@ PLATINUM 铂金版
     public $TagList;
 
     /**
-     * @var array 实例绑定的VPC信息
+     * @var array 集群绑定的VPC信息，必填
      */
     public $VpcList;
 
     /**
-     * @var boolean 是否开启公网
+     * @var boolean 是否开启公网，默认值为false表示不开启
      */
     public $EnablePublic;
 
     /**
-     * @var integer 公网带宽（单位：兆）
+     * @var boolean 公网是否按流量计费，默认值为false表示不按流量计费
+     */
+    public $BillingFlow;
+
+    /**
+     * @var integer 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
      */
     public $Bandwidth;
 
@@ -114,17 +121,17 @@ PLATINUM 铂金版
     public $MessageRetention;
 
     /**
-     * @var integer 付费模式（0: 后付费；1: 预付费）
+     * @var integer 付费模式（0: 后付费；1: 预付费），默认值为0
      */
     public $PayMode;
 
     /**
-     * @var integer 是否自动续费（0: 不自动续费；1: 自动续费）
+     * @var integer 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public $RenewFlag;
 
     /**
-     * @var integer 购买时长（单位：月）
+     * @var integer 购买时长（单位：月），默认值为1
      */
     public $TimeSpan;
 
@@ -139,18 +146,19 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-     * @param string $Name 实例名称
+     * @param string $Name 集群名称
      * @param string $SkuCode 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
-     * @param array $VpcList 实例绑定的VPC信息
-     * @param boolean $EnablePublic 是否开启公网
-     * @param integer $Bandwidth 公网带宽（单位：兆）
+     * @param array $VpcList 集群绑定的VPC信息，必填
+     * @param boolean $EnablePublic 是否开启公网，默认值为false表示不开启
+     * @param boolean $BillingFlow 公网是否按流量计费，默认值为false表示不按流量计费
+     * @param integer $Bandwidth 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
      * @param array $IpRules 公网访问白名单
      * @param integer $MessageRetention 消息保留时长（单位：小时）
-     * @param integer $PayMode 付费模式（0: 后付费；1: 预付费）
-     * @param integer $RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
-     * @param integer $TimeSpan 购买时长（单位：月）
+     * @param integer $PayMode 付费模式（0: 后付费；1: 预付费），默认值为0
+     * @param integer $RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * @param integer $TimeSpan 购买时长（单位：月），默认值为1
      * @param integer $MaxTopicNum 最大可创建主题数
      */
     function __construct()
@@ -202,6 +210,10 @@ PLATINUM 铂金版
 
         if (array_key_exists("EnablePublic",$param) and $param["EnablePublic"] !== null) {
             $this->EnablePublic = $param["EnablePublic"];
+        }
+
+        if (array_key_exists("BillingFlow",$param) and $param["BillingFlow"] !== null) {
+            $this->BillingFlow = $param["BillingFlow"];
         }
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {

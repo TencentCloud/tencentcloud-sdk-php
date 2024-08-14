@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getStorage() 获取storage指标值，单位byte
  * @method void setStorage(float $Storage) 设置storage指标值，单位byte
+ * @method float getIndexTraffic() 获取IndexTraffic指标值，单位byte
+ * @method void setIndexTraffic(float $IndexTraffic) 设置IndexTraffic指标值，单位byte
+ * @method integer getReadReqTimes() 获取读请求数，单位次数
+ * @method void setReadReqTimes(integer $ReadReqTimes) 设置读请求数，单位次数
+ * @method integer getWriteReqTimes() 获取写请求数，单位次数
+ * @method void setWriteReqTimes(integer $WriteReqTimes) 设置写请求数，单位次数
+ * @method integer getDocCount() 获取文档数量，单位个数
+ * @method void setDocCount(integer $DocCount) 设置文档数量，单位个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +41,36 @@ class DescribeServerlessMetricsResponse extends AbstractModel
     public $Storage;
 
     /**
+     * @var float IndexTraffic指标值，单位byte
+     */
+    public $IndexTraffic;
+
+    /**
+     * @var integer 读请求数，单位次数
+     */
+    public $ReadReqTimes;
+
+    /**
+     * @var integer 写请求数，单位次数
+     */
+    public $WriteReqTimes;
+
+    /**
+     * @var integer 文档数量，单位个数
+     */
+    public $DocCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param float $Storage storage指标值，单位byte
+     * @param float $IndexTraffic IndexTraffic指标值，单位byte
+     * @param integer $ReadReqTimes 读请求数，单位次数
+     * @param integer $WriteReqTimes 写请求数，单位次数
+     * @param integer $DocCount 文档数量，单位个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +88,22 @@ class DescribeServerlessMetricsResponse extends AbstractModel
         }
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("IndexTraffic",$param) and $param["IndexTraffic"] !== null) {
+            $this->IndexTraffic = $param["IndexTraffic"];
+        }
+
+        if (array_key_exists("ReadReqTimes",$param) and $param["ReadReqTimes"] !== null) {
+            $this->ReadReqTimes = $param["ReadReqTimes"];
+        }
+
+        if (array_key_exists("WriteReqTimes",$param) and $param["WriteReqTimes"] !== null) {
+            $this->WriteReqTimes = $param["WriteReqTimes"];
+        }
+
+        if (array_key_exists("DocCount",$param) and $param["DocCount"] !== null) {
+            $this->DocCount = $param["DocCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

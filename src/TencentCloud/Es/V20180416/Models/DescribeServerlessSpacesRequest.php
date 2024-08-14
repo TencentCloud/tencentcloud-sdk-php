@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始
  * @method integer getLimit() 获取分页条数
  * @method void setLimit(integer $Limit) 设置分页条数
+ * @method array getTagList() 获取标签信息
+ * @method void setTagList(array $TagList) 设置标签信息
  */
 class DescribeServerlessSpacesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeServerlessSpacesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 标签信息
+     */
+    public $TagList;
+
+    /**
      * @param array $SpaceIds 过滤的空间ID
      * @param array $SpaceNames 过滤的空间名
      * @param string $Order 排序顺序，支持升序asc、降序desc
@@ -80,6 +87,7 @@ class DescribeServerlessSpacesRequest extends AbstractModel
      * @param array $VpcIds vpcId信息数组
      * @param integer $Offset 分页起始
      * @param integer $Limit 分页条数
+     * @param array $TagList 标签信息
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class DescribeServerlessSpacesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

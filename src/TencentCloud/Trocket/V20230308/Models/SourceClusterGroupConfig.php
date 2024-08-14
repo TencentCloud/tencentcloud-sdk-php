@@ -48,6 +48,22 @@ Success 成功
 Failure 失败
 AlreadyExists 已存在
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceV4() 获取4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupNameV4() 获取4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupNameV4(string $GroupNameV4) 设置4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullNamespaceV4() 获取4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getConsumeMessageOrderly() 获取是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceClusterGroupConfig extends AbstractModel
 {
@@ -86,6 +102,30 @@ AlreadyExists 已存在
     public $ImportStatus;
 
     /**
+     * @var string 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceV4;
+
+    /**
+     * @var string 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupNameV4;
+
+    /**
+     * @var string 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullNamespaceV4;
+
+    /**
+     * @var boolean 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumeMessageOrderly;
+
+    /**
      * @param string $GroupName 消费组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
@@ -99,6 +139,14 @@ Unknown 未知
 Success 成功
 Failure 失败
 AlreadyExists 已存在
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupNameV4 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullNamespaceV4 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ConsumeMessageOrderly 是否为顺序投递，5.0有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +180,22 @@ AlreadyExists 已存在
 
         if (array_key_exists("ImportStatus",$param) and $param["ImportStatus"] !== null) {
             $this->ImportStatus = $param["ImportStatus"];
+        }
+
+        if (array_key_exists("NamespaceV4",$param) and $param["NamespaceV4"] !== null) {
+            $this->NamespaceV4 = $param["NamespaceV4"];
+        }
+
+        if (array_key_exists("GroupNameV4",$param) and $param["GroupNameV4"] !== null) {
+            $this->GroupNameV4 = $param["GroupNameV4"];
+        }
+
+        if (array_key_exists("FullNamespaceV4",$param) and $param["FullNamespaceV4"] !== null) {
+            $this->FullNamespaceV4 = $param["FullNamespaceV4"];
+        }
+
+        if (array_key_exists("ConsumeMessageOrderly",$param) and $param["ConsumeMessageOrderly"] !== null) {
+            $this->ConsumeMessageOrderly = $param["ConsumeMessageOrderly"];
         }
     }
 }

@@ -42,6 +42,7 @@ use TencentCloud\Common\AbstractModel;
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
  * @method void setResult(string $Result) 设置认证结果码
 收费结果码：
 '0': '认证通过'
@@ -64,6 +65,7 @@ use TencentCloud\Common\AbstractModel;
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -94,6 +96,7 @@ class BankCardVerificationResponse extends AbstractModel
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
      */
     public $Result;
 
@@ -130,6 +133,7 @@ class BankCardVerificationResponse extends AbstractModel
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
      * @param string $Description 业务结果描述。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

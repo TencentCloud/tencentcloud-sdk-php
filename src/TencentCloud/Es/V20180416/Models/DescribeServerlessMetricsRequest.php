@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceId(string $SpaceId) 设置space空间id
  * @method string getIndexId() 获取index索引id
  * @method void setIndexId(string $IndexId) 设置index索引id
- * @method array getMetricType() 获取指标类型，暂时只支持Storage
- * @method void setMetricType(array $MetricType) 设置指标类型，暂时只支持Storage
+ * @method array getMetricType() 获取指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
+ * @method void setMetricType(array $MetricType) 设置指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
+ * @method integer getDurationType() 获取时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+ * @method void setDurationType(integer $DurationType) 设置时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
  */
 class DescribeServerlessMetricsRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class DescribeServerlessMetricsRequest extends AbstractModel
     public $IndexId;
 
     /**
-     * @var array 指标类型，暂时只支持Storage
+     * @var array 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
      */
     public $MetricType;
 
     /**
+     * @var integer 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+     */
+    public $DurationType;
+
+    /**
      * @param string $SpaceId space空间id
      * @param string $IndexId index索引id
-     * @param array $MetricType 指标类型，暂时只支持Storage
+     * @param array $MetricType 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
+     * @param integer $DurationType 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeServerlessMetricsRequest extends AbstractModel
 
         if (array_key_exists("MetricType",$param) and $param["MetricType"] !== null) {
             $this->MetricType = $param["MetricType"];
+        }
+
+        if (array_key_exists("DurationType",$param) and $param["DurationType"] !== null) {
+            $this->DurationType = $param["DurationType"];
         }
     }
 }

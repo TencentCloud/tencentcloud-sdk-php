@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodecs(string $Codecs) 设置视频Codecs。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFpsNumerator() 获取帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFpsNumerator(integer $FpsNumerator) 设置帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFpsDenominator() 获取帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFpsDenominator(integer $FpsDenominator) 设置帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -109,6 +117,18 @@ class MediaVideoStreamItem extends AbstractModel
     public $Codecs;
 
     /**
+     * @var integer 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FpsNumerator;
+
+    /**
+     * @var integer 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FpsDenominator;
+
+    /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
      * @param integer $Height 视频流的高度，单位：px。
      * @param integer $Width 视频流的宽度，单位：px。
@@ -123,6 +143,10 @@ class MediaVideoStreamItem extends AbstractModel
      * @param string $HdrType HDR类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Codecs 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FpsNumerator 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FpsDenominator 帧率分母部分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +200,14 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
             $this->Codecs = $param["Codecs"];
+        }
+
+        if (array_key_exists("FpsNumerator",$param) and $param["FpsNumerator"] !== null) {
+            $this->FpsNumerator = $param["FpsNumerator"];
+        }
+
+        if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
+            $this->FpsDenominator = $param["FpsDenominator"];
         }
     }
 }

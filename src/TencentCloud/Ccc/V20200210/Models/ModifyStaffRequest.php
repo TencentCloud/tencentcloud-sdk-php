@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置座席手机号（带0086前缀,示例：008618011111111）
  * @method string getNick() 获取座席昵称
  * @method void setNick(string $Nick) 设置座席昵称
+ * @method string getStaffNo() 获取座席工号
+ * @method void setStaffNo(string $StaffNo) 设置座席工号
  * @method array getSkillGroupIds() 获取绑定技能组ID列表
  * @method void setSkillGroupIds(array $SkillGroupIds) 设置绑定技能组ID列表
  * @method boolean getUseMobileCallOut() 获取是否开启手机外呼开关
@@ -65,6 +67,11 @@ class ModifyStaffRequest extends AbstractModel
     public $Nick;
 
     /**
+     * @var string 座席工号
+     */
+    public $StaffNo;
+
+    /**
      * @var array 绑定技能组ID列表
      */
     public $SkillGroupIds;
@@ -85,6 +92,7 @@ class ModifyStaffRequest extends AbstractModel
      * @param string $Name 座席名称
      * @param string $Phone 座席手机号（带0086前缀,示例：008618011111111）
      * @param string $Nick 座席昵称
+     * @param string $StaffNo 座席工号
      * @param array $SkillGroupIds 绑定技能组ID列表
      * @param boolean $UseMobileCallOut 是否开启手机外呼开关
      * @param integer $UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
@@ -120,6 +128,10 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("Nick",$param) and $param["Nick"] !== null) {
             $this->Nick = $param["Nick"];
+        }
+
+        if (array_key_exists("StaffNo",$param) and $param["StaffNo"] !== null) {
+            $this->StaffNo = $param["StaffNo"];
         }
 
         if (array_key_exists("SkillGroupIds",$param) and $param["SkillGroupIds"] !== null) {

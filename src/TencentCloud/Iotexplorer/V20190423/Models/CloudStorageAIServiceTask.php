@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
  * @method string getServiceType() 获取云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method integer getStartTime() 获取对应云存视频的起始时间
  * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getUpdateTime() 获取最后更新时间
  * @method void setUpdateTime(integer $UpdateTime) 设置最后更新时间
+ * @method string getCustomId() 获取自定义任务 ID
+ * @method void setCustomId(string $CustomId) 设置自定义任务 ID
  */
 class CloudStorageAIServiceTask extends AbstractModel
 {
@@ -76,7 +78,7 @@ class CloudStorageAIServiceTask extends AbstractModel
     /**
      * @var string 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public $ServiceType;
@@ -117,13 +119,18 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 自定义任务 ID
+     */
+    public $CustomId;
+
+    /**
      * @param string $TaskId 云存 AI 服务任务 ID
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param integer $ChannelId 通道 ID
      * @param string $ServiceType 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param integer $StartTime 对应云存视频的起始时间
      * @param integer $EndTime 对应云存视频的结束时间
@@ -132,6 +139,7 @@ class CloudStorageAIServiceTask extends AbstractModel
      * @param array $Files 任务输出文件列表
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 最后更新时间
+     * @param string $CustomId 自定义任务 ID
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CloudStorageAIServiceTask extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("CustomId",$param) and $param["CustomId"] !== null) {
+            $this->CustomId = $param["CustomId"];
         }
     }
 }

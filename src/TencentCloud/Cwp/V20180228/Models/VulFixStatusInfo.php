@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixSuccessCnt(integer $FixSuccessCnt) 设置修复成功的数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFixMethod() 获取修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixMethod(integer $FixMethod) 设置修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulFixStatusInfo extends AbstractModel
 {
@@ -81,6 +85,12 @@ class VulFixStatusInfo extends AbstractModel
     public $FixSuccessCnt;
 
     /**
+     * @var integer 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixMethod;
+
+    /**
      * @param integer $VulId 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulName 漏洞名称
@@ -91,6 +101,8 @@ class VulFixStatusInfo extends AbstractModel
      * @param integer $FailCnt 漏洞修复失败主机数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixSuccessCnt 修复成功的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +145,10 @@ class VulFixStatusInfo extends AbstractModel
 
         if (array_key_exists("FixSuccessCnt",$param) and $param["FixSuccessCnt"] !== null) {
             $this->FixSuccessCnt = $param["FixSuccessCnt"];
+        }
+
+        if (array_key_exists("FixMethod",$param) and $param["FixMethod"] !== null) {
+            $this->FixMethod = $param["FixMethod"];
         }
     }
 }

@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置路由行为，`accept` 允许，`drop` 拒绝。
  * @method string getDescription() 获取策略描述。
  * @method void setDescription(string $Description) 设置策略描述。
+ * @method string getOperateAsPath() 获取as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperateAsPath(string $OperateAsPath) 设置as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsPathOperateMode() 获取as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsPathOperateMode(string $AsPathOperateMode) 设置as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnRouteTableInputPolicy extends AbstractModel
 {
@@ -45,9 +53,25 @@ class CcnRouteTableInputPolicy extends AbstractModel
     public $Description;
 
     /**
+     * @var string as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperateAsPath;
+
+    /**
+     * @var string as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsPathOperateMode;
+
+    /**
      * @param array $RouteConditions 路由条件。
      * @param string $Action 路由行为，`accept` 允许，`drop` 拒绝。
      * @param string $Description 策略描述。
+     * @param string $OperateAsPath as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsPathOperateMode as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -77,6 +101,14 @@ class CcnRouteTableInputPolicy extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("OperateAsPath",$param) and $param["OperateAsPath"] !== null) {
+            $this->OperateAsPath = $param["OperateAsPath"];
+        }
+
+        if (array_key_exists("AsPathOperateMode",$param) and $param["AsPathOperateMode"] !== null) {
+            $this->AsPathOperateMode = $param["AsPathOperateMode"];
         }
     }
 }

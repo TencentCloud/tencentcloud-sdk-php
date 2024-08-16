@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDashboardSubscribe请求参数结构体
  *
-
+ * @method integer getId() 获取仪表盘订阅记录id。
+ * @method void setId(integer $Id) 设置仪表盘订阅记录id。
  */
 class DeleteDashboardSubscribeRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 仪表盘订阅记录id。
+     */
+    public $Id;
 
     /**
-
+     * @param integer $Id 仪表盘订阅记录id。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeleteDashboardSubscribeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
     }
 }

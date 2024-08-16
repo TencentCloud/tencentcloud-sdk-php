@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * logo参数
  *
- * @method FaceRect getLogoRect() 获取标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
- * @method void setLogoRect(FaceRect $LogoRect) 设置标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
- * @method string getLogoUrl() 获取标识图片Url地址
- * @method void setLogoUrl(string $LogoUrl) 设置标识图片Url地址
+ * @method FaceRect getLogoRect() 获取标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
+ * @method void setLogoRect(FaceRect $LogoRect) 设置标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
+ * @method string getLogoUrl() 获取标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
+ * @method void setLogoUrl(string $LogoUrl) 设置标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
  * @method string getLogoImage() 获取标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
  * @method void setLogoImage(string $LogoImage) 设置标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
  */
 class LogoParam extends AbstractModel
 {
     /**
-     * @var FaceRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * @var FaceRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
      */
     public $LogoRect;
 
     /**
-     * @var string 标识图片Url地址
+     * @var string 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public $LogoUrl;
 
     /**
      * @var string 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public $LogoImage;
 
     /**
-     * @param FaceRect $LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-     * @param string $LogoUrl 标识图片Url地址
+     * @param FaceRect $LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
+     * @param string $LogoUrl 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      * @param string $LogoImage 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     function __construct()
     {

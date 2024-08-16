@@ -40,22 +40,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyCode(string $VerifyCode) 设置验证码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
- * @method void setStartTime(string $StartTime) 设置开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
- * @method string getEndTime() 获取结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
- * @method void setEndTime(string $EndTime) 设置结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
- * @method integer getNowTime() 获取当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+ * @method string getStartTime() 获取默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
+ * @method void setStartTime(string $StartTime) 设置默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
+ * @method string getEndTime() 获取默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
+ * @method void setEndTime(string $EndTime) 设置默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
+ * @method integer getNowTime() 获取仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNowTime(integer $NowTime) 设置当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+ * @method void setNowTime(integer $NowTime) 设置仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParams() 获取params参数列表，当Type为2时支持
+ * @method array getParams() 获取默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParams(array $Params) 设置params参数列表，当Type为2时支持
+ * @method void setParams(array $Params) 设置默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsLockTimeRange() 获取是否允许访问者自行修改检索分析时间范围，默认不锁定
- * @method void setIsLockTimeRange(boolean $IsLockTimeRange) 设置是否允许访问者自行修改检索分析时间范围，默认不锁定
- * @method boolean getIsLockQuery() 获取是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
- * @method void setIsLockQuery(boolean $IsLockQuery) 设置是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+ * @method boolean getIsLockTimeRange() 获取是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
+ * @method void setIsLockTimeRange(boolean $IsLockTimeRange) 设置是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
+ * @method boolean getIsLockQuery() 获取是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
+ * @method void setIsLockQuery(boolean $IsLockQuery) 设置是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
+ * @method boolean getIsSupportLogExport() 获取检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportLogExport(boolean $IsSupportLogExport) 设置检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsoleSharingConfig extends AbstractModel
 {
@@ -94,36 +98,42 @@ class ConsoleSharingConfig extends AbstractModel
     public $VerifyCode;
 
     /**
-     * @var string 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * @var string 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * @var string 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
      */
     public $EndTime;
 
     /**
-     * @var integer 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * @var integer 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NowTime;
 
     /**
-     * @var array params参数列表，当Type为2时支持
+     * @var array 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
-     * @var boolean 是否允许访问者自行修改检索分析时间范围，默认不锁定
+     * @var boolean 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
      */
     public $IsLockTimeRange;
 
     /**
-     * @var boolean 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+     * @var boolean 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
      */
     public $IsLockQuery;
+
+    /**
+     * @var boolean 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportLogExport;
 
     /**
      * @param string $Name 分享链接名称
@@ -136,14 +146,16 @@ class ConsoleSharingConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyCode 验证码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
-     * @param string $EndTime 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
-     * @param integer $NowTime 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * @param string $StartTime 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
+     * @param string $EndTime 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
+     * @param integer $NowTime 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Params params参数列表，当Type为2时支持
+     * @param array $Params 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsLockTimeRange 是否允许访问者自行修改检索分析时间范围，默认不锁定
-     * @param boolean $IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+     * @param boolean $IsLockTimeRange 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
+     * @param boolean $IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
+     * @param boolean $IsSupportLogExport 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -209,6 +221,10 @@ class ConsoleSharingConfig extends AbstractModel
 
         if (array_key_exists("IsLockQuery",$param) and $param["IsLockQuery"] !== null) {
             $this->IsLockQuery = $param["IsLockQuery"];
+        }
+
+        if (array_key_exists("IsSupportLogExport",$param) and $param["IsSupportLogExport"] !== null) {
+            $this->IsSupportLogExport = $param["IsSupportLogExport"];
         }
     }
 }

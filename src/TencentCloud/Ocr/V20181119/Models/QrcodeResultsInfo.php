@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 二维码/条形码识别结果信息
  *
- * @method string getTypeName() 获取类型（二维码、条形码）
- * @method void setTypeName(string $TypeName) 设置类型（二维码、条形码）
+ * @method string getTypeName() 获取类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
+ * @method void setTypeName(string $TypeName) 设置类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
  * @method string getUrl() 获取二维码/条形码包含的地址
  * @method void setUrl(string $Url) 设置二维码/条形码包含的地址
  * @method QrcodePositionObj getPosition() 获取二维码/条形码坐标
@@ -30,7 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class QrcodeResultsInfo extends AbstractModel
 {
     /**
-     * @var string 类型（二维码、条形码）
+     * @var string 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
      */
     public $TypeName;
 
@@ -45,7 +60,12 @@ class QrcodeResultsInfo extends AbstractModel
     public $Position;
 
     /**
-     * @param string $TypeName 类型（二维码、条形码）
+     * @param string $TypeName 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
      * @param string $Url 二维码/条形码包含的地址
      * @param QrcodePositionObj $Position 二维码/条形码坐标
      */

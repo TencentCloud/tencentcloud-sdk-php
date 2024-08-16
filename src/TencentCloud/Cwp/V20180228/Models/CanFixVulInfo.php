@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixTag(array $FixTag) 设置修复提示tag
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVulCategory() 获取漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulCategory(integer $VulCategory) 设置漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CanFixVulInfo extends AbstractModel
 {
@@ -64,6 +68,12 @@ class CanFixVulInfo extends AbstractModel
     public $FixTag;
 
     /**
+     * @var integer 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulCategory;
+
+    /**
      * @param integer $VulId 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulName 漏洞名称
@@ -71,6 +81,8 @@ class CanFixVulInfo extends AbstractModel
      * @param array $HostList 该漏洞可修复的主机信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FixTag 修复提示tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +117,10 @@ class CanFixVulInfo extends AbstractModel
 
         if (array_key_exists("FixTag",$param) and $param["FixTag"] !== null) {
             $this->FixTag = $param["FixTag"];
+        }
+
+        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
+            $this->VulCategory = $param["VulCategory"];
         }
     }
 }

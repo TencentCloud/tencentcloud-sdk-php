@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置付费模式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBillingFlow() 获取公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingFlow(boolean $BillingFlow) 设置公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -104,6 +108,12 @@ class DescribeRocketMQPublicAccessPointResponse extends AbstractModel
     public $PayMode;
 
     /**
+     * @var boolean 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingFlow;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -126,6 +136,8 @@ class DescribeRocketMQPublicAccessPointResponse extends AbstractModel
      * @param integer $Bandwidth 带宽
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 付费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BillingFlow 公网是否按流量计费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +181,10 @@ class DescribeRocketMQPublicAccessPointResponse extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("BillingFlow",$param) and $param["BillingFlow"] !== null) {
+            $this->BillingFlow = $param["BillingFlow"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

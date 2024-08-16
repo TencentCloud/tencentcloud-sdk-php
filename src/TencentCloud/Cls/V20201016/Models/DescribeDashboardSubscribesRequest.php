@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDashboardSubscribes请求参数结构体
  *
-
+ * @method array getFilters() 获取<br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method void setFilters(array $Filters) 设置<br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method integer getOffset() 获取分页的偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
+ * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
+ * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为20，最大值100。
  */
 class DescribeDashboardSubscribesRequest extends AbstractModel
 {
-
+    /**
+     * @var array <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public $Filters;
 
     /**
+     * @var integer 分页的偏移量，默认值为0。
+     */
+    public $Offset;
 
+    /**
+     * @var integer 分页单页限制数目，默认值为20，最大值100。
+     */
+    public $Limit;
+
+    /**
+     * @param array $Filters <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param integer $Offset 分页的偏移量，默认值为0。
+     * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class DescribeDashboardSubscribesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

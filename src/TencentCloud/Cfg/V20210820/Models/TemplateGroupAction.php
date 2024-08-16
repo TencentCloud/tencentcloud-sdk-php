@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置动作类型：平台和自定义
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionRisk() 获取动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActionRisk(string $ActionRisk) 设置动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateGroupAction extends AbstractModel
 {
@@ -146,6 +150,12 @@ class TemplateGroupAction extends AbstractModel
     public $ActionType;
 
     /**
+     * @var string 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActionRisk;
+
+    /**
      * @param integer $TemplateGroupActionId 经验库分组动作ID
      * @param integer $ActionId 动作ID
      * @param integer $Order 分组动作顺序
@@ -167,6 +177,8 @@ class TemplateGroupAction extends AbstractModel
      * @param integer $ActionAttribute 1:故障，2:恢复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 动作类型：平台和自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -236,6 +248,10 @@ class TemplateGroupAction extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("ActionRisk",$param) and $param["ActionRisk"] !== null) {
+            $this->ActionRisk = $param["ActionRisk"];
         }
     }
 }

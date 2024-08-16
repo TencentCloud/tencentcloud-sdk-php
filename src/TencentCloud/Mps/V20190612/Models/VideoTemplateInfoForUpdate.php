@@ -52,14 +52,20 @@ use TencentCloud\Common\AbstractModel;
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFps() 获取视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+ * @method integer getFps() 获取视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+ * @method void setFps(integer $Fps) 设置视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+ * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+ * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
@@ -134,6 +140,12 @@ use TencentCloud\Common\AbstractModel;
 <li>5：HLS+MP4 byte range</li>
 默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFpsDenominator() 获取帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFpsDenominator(integer $FpsDenominator) 设置帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -158,13 +170,16 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @var integer 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
 
     /**
-     * @var integer 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @var integer 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -239,6 +254,13 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $SegmentType;
 
     /**
+     * @var integer 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FpsDenominator;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -255,9 +277,12 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @param integer $Fps 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
@@ -295,6 +320,9 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FpsDenominator 帧率分母部分
+注意：值必须大于0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -352,6 +380,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
+            $this->FpsDenominator = $param["FpsDenominator"];
         }
     }
 }

@@ -76,7 +76,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeConsoleSharingListResponse DescribeConsoleSharingList(Models\DescribeConsoleSharingListRequest $req) 批量查询控制台分享列表
  * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) 本接口用于获取投递配置
  * @method Models\DescribeCosRechargesResponse DescribeCosRecharges(Models\DescribeCosRechargesRequest $req) 本接口用于获取cos导入配置
- * @method Models\DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(Models\DescribeDashboardSubscribesRequest $req)  本接口用于获取仪表盘订阅列表，支持分页
+ * @method Models\DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(Models\DescribeDashboardSubscribesRequest $req) 本接口用于获取仪表盘订阅列表，支持分页
  * @method Models\DescribeDashboardsResponse DescribeDashboards(Models\DescribeDashboardsRequest $req) 本接口用于获取仪表盘
  * @method Models\DescribeDataTransformInfoResponse DescribeDataTransformInfo(Models\DescribeDataTransformInfoRequest $req) 本接口用于获取数据加工任务列表基本信息
  * @method Models\DescribeExportsResponse DescribeExports(Models\DescribeExportsRequest $req) 本接口用于获取日志下载任务列表

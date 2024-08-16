@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) 设置漏洞id
  * @method array getQuuids() 获取需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。
  * @method void setQuuids(array $Quuids) 设置需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。
+ * @method integer getFixMethod() 获取修复方式 0组件更新或者安装补丁,1禁用服务
+ * @method void setFixMethod(integer $FixMethod) 设置修复方式 0组件更新或者安装补丁,1禁用服务
  */
 class CreateVulFixTaskQuuids extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateVulFixTaskQuuids extends AbstractModel
     public $Quuids;
 
     /**
+     * @var integer 修复方式 0组件更新或者安装补丁,1禁用服务
+     */
+    public $FixMethod;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param array $Quuids 需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。
+     * @param integer $FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateVulFixTaskQuuids extends AbstractModel
 
         if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
             $this->Quuids = $param["Quuids"];
+        }
+
+        if (array_key_exists("FixMethod",$param) and $param["FixMethod"] !== null) {
+            $this->FixMethod = $param["FixMethod"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片编码参数
  *
- * @method array getMetaData() 获取元数据
- * @method void setMetaData(array $MetaData) 设置元数据
+ * @method array getMetaData() 获取元数据，个数不能大于1。
+ * @method void setMetaData(array $MetaData) 设置元数据，个数不能大于1。
  */
 class ImageCodecParam extends AbstractModel
 {
     /**
-     * @var array 元数据
+     * @var array 元数据，个数不能大于1。
      */
     public $MetaData;
 
     /**
-     * @param array $MetaData 元数据
+     * @param array $MetaData 元数据，个数不能大于1。
      */
     function __construct()
     {

@@ -86,6 +86,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Flag(string $Ipv6Flag) 设置是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMrtbAggregatePolicyFlag() 获取是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMrtbAggregatePolicyFlag(boolean $MrtbAggregatePolicyFlag) 设置是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMrtbPolicyValueFlag() 获取是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMrtbPolicyValueFlag(boolean $MrtbPolicyValueFlag) 设置是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -207,6 +215,18 @@ class CCN extends AbstractModel
     public $Ipv6Flag;
 
     /**
+     * @var boolean 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MrtbAggregatePolicyFlag;
+
+    /**
+     * @var boolean 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MrtbPolicyValueFlag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -239,6 +259,10 @@ class CCN extends AbstractModel
      * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ipv6Flag 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $MrtbAggregatePolicyFlag 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $MrtbPolicyValueFlag 是否支持策略值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -341,6 +365,14 @@ class CCN extends AbstractModel
 
         if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
             $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("MrtbAggregatePolicyFlag",$param) and $param["MrtbAggregatePolicyFlag"] !== null) {
+            $this->MrtbAggregatePolicyFlag = $param["MrtbAggregatePolicyFlag"];
+        }
+
+        if (array_key_exists("MrtbPolicyValueFlag",$param) and $param["MrtbPolicyValueFlag"] !== null) {
+            $this->MrtbPolicyValueFlag = $param["MrtbPolicyValueFlag"];
         }
     }
 }

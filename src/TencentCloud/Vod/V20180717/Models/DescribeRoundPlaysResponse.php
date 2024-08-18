@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的轮播播单总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的轮播播单总数。
+ * @method integer getTotalCount() 获取符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
  * @method array getRoundPlaySet() 获取轮播播单详情列表。
  * @method void setRoundPlaySet(array $RoundPlaySet) 设置轮播播单详情列表。
+ * @method string getScrollToken() 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+ * @method void setScrollToken(string $ScrollToken) 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRoundPlaysResponse extends AbstractModel
 {
     /**
-     * @var integer 符合过滤条件的轮播播单总数。
+     * @var integer 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
      */
     public $TotalCount;
 
@@ -40,13 +42,19 @@ class DescribeRoundPlaysResponse extends AbstractModel
     public $RoundPlaySet;
 
     /**
+     * @var string 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     */
+    public $ScrollToken;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的轮播播单总数。
+     * @param integer $TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
      * @param array $RoundPlaySet 轮播播单详情列表。
+     * @param string $ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeRoundPlaysResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RoundPlaySet, $obj);
             }
+        }
+
+        if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
+            $this->ScrollToken = $param["ScrollToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

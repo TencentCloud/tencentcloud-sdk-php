@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
 0，表格以MD形式返回
 1，表格以HTML形式返回
 默认为1
+ * @method string getResultType() 获取智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+ * @method void setResultType(string $ResultType) 设置智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
  */
 class CreateReconstructDocumentFlowConfig extends AbstractModel
 {
@@ -40,10 +56,30 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
     public $TableResultType;
 
     /**
+     * @var string 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+     */
+    public $ResultType;
+
+    /**
      * @param string $TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
 默认为1
+     * @param string $ResultType 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
      */
     function __construct()
     {
@@ -60,6 +96,10 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
         }
         if (array_key_exists("TableResultType",$param) and $param["TableResultType"] !== null) {
             $this->TableResultType = $param["TableResultType"];
+        }
+
+        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
+            $this->ResultType = $param["ResultType"];
         }
     }
 }

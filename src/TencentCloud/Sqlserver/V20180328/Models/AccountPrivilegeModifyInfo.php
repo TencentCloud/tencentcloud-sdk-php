@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserName() 获取数据库用户名
  * @method void setUserName(string $UserName) 设置数据库用户名
- * @method array getDBPrivileges() 获取账号权限变更信息
- * @method void setDBPrivileges(array $DBPrivileges) 设置账号权限变更信息
+ * @method array getDBPrivileges() 获取账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
+ * @method void setDBPrivileges(array $DBPrivileges) 设置账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
  * @method boolean getIsAdmin() 获取表示是否为管理员账户，当值为true，表示是 管理员。若实例 是 单节点，则管理员所在的 账号类型为超级权限账号 ，即AccountType=L0；若实例 是 双节点，则管理员所在的 账号类型为高级权限账号，即AccountType=L1；当值为false，表示 不是管理员，则账号类型为普通账号，即AccountType=L3
  * @method void setIsAdmin(boolean $IsAdmin) 设置表示是否为管理员账户，当值为true，表示是 管理员。若实例 是 单节点，则管理员所在的 账号类型为超级权限账号 ，即AccountType=L0；若实例 是 双节点，则管理员所在的 账号类型为高级权限账号，即AccountType=L1；当值为false，表示 不是管理员，则账号类型为普通账号，即AccountType=L3
  * @method string getAccountType() 获取账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
  * @method void setAccountType(string $AccountType) 设置账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+ * @method SelectAllDB getAccAllDB() 获取全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+ * @method void setAccAllDB(SelectAllDB $AccAllDB) 设置全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
  */
 class AccountPrivilegeModifyInfo extends AbstractModel
 {
@@ -37,7 +39,7 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     public $UserName;
 
     /**
-     * @var array 账号权限变更信息
+     * @var array 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
      */
     public $DBPrivileges;
 
@@ -52,10 +54,16 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     public $AccountType;
 
     /**
+     * @var SelectAllDB 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+     */
+    public $AccAllDB;
+
+    /**
      * @param string $UserName 数据库用户名
-     * @param array $DBPrivileges 账号权限变更信息
+     * @param array $DBPrivileges 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
      * @param boolean $IsAdmin 表示是否为管理员账户，当值为true，表示是 管理员。若实例 是 单节点，则管理员所在的 账号类型为超级权限账号 ，即AccountType=L0；若实例 是 双节点，则管理员所在的 账号类型为高级权限账号，即AccountType=L1；当值为false，表示 不是管理员，则账号类型为普通账号，即AccountType=L3
      * @param string $AccountType 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     * @param SelectAllDB $AccAllDB 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class AccountPrivilegeModifyInfo extends AbstractModel
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("AccAllDB",$param) and $param["AccAllDB"] !== null) {
+            $this->AccAllDB = new SelectAllDB();
+            $this->AccAllDB->deserialize($param["AccAllDB"]);
         }
     }
 }

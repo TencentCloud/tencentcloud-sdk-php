@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认20。
  * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+ * @method array getStatDimensions() 获取会话统计的维度信息,可以多个维度。
+ * @method void setStatDimensions(array $StatDimensions) 设置会话统计的维度信息,可以多个维度。
  */
 class DescribeMySqlProcessListRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeMySqlProcessListRequest extends AbstractModel
     public $Product;
 
     /**
+     * @var array 会话统计的维度信息,可以多个维度。
+     */
+    public $StatDimensions;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param integer $ID 线程的ID，用于筛选线程列表。
      * @param string $User 线程的操作账号名，用于筛选线程列表。
@@ -112,6 +119,7 @@ class DescribeMySqlProcessListRequest extends AbstractModel
      * @param string $Info 线程的操作语句，用于筛选线程列表。
      * @param integer $Limit 返回数量，默认20。
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @param array $StatDimensions 会话统计的维度信息,可以多个维度。
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class DescribeMySqlProcessListRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("StatDimensions",$param) and $param["StatDimensions"] !== null) {
+            $this->StatDimensions = [];
+            foreach ($param["StatDimensions"] as $key => $value){
+                $obj = new StatDimension();
+                $obj->deserialize($value);
+                array_push($this->StatDimensions, $obj);
+            }
         }
     }
 }

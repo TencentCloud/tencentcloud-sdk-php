@@ -34,12 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置轮播播单名称，长度限制：64 个字符。
  * @method string getDesc() 获取轮播播单描述信息，长度限制：256 个字符。
  * @method void setDesc(string $Desc) 设置轮播播单描述信息，长度限制：256 个字符。
- * @method string getStatus() 获取播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
- * @method void setStatus(string $Status) 设置播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+ * @method string getStatus() 获取播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
+ * @method void setStatus(string $Status) 设置播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
  * @method string getPlayBackMode() 获取播放模式，可选值：
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
@@ -81,9 +77,7 @@ class ModifyRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * @var string 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      */
     public $Status;
 
@@ -102,9 +96,7 @@ class ModifyRoundPlayRequest extends AbstractModel
 <li>数组长度限制：100。</li>
      * @param string $Name 轮播播单名称，长度限制：64 个字符。
      * @param string $Desc 轮播播单描述信息，长度限制：256 个字符。
-     * @param string $Status 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * @param string $Status 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      * @param string $PlayBackMode 播放模式，可选值：
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>

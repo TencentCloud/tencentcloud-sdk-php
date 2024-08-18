@@ -50,6 +50,10 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 1- 传入的是图片类型
 2- 传入的是视频类型
 其他 - 返回错误码InvalidParameter
+ * @method Encryption getEncryption() 获取是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getEncryptedBody() 获取加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+ * @method void setEncryptedBody(string $EncryptedBody) 设置加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
  */
 class DetectAIFakeFacesRequest extends AbstractModel
 {
@@ -77,6 +81,16 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
     public $FaceInputType;
 
     /**
+     * @var Encryption 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
+     * @var string 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+     */
+    public $EncryptedBody;
+
+    /**
      * @param string $FaceInput 传入需要进行检测的带有人脸的图片或视频，使用base64编码的形式。
 
 图片的Base64值：
@@ -92,6 +106,8 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 1- 传入的是图片类型
 2- 传入的是视频类型
 其他 - 返回错误码InvalidParameter
+     * @param Encryption $Encryption 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $EncryptedBody 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
      */
     function __construct()
     {
@@ -112,6 +128,15 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 
         if (array_key_exists("FaceInputType",$param) and $param["FaceInputType"] !== null) {
             $this->FaceInputType = $param["FaceInputType"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
+        }
+
+        if (array_key_exists("EncryptedBody",$param) and $param["EncryptedBody"] !== null) {
+            $this->EncryptedBody = $param["EncryptedBody"];
         }
     }
 }

@@ -61,6 +61,7 @@ use TencentCloud\Cdwdoris\V20211228\Models as Models;
  * @method Models\DescribeSlowQueryRecordsDownloadResponse DescribeSlowQueryRecordsDownload(Models\DescribeSlowQueryRecordsDownloadRequest $req) 下载慢查询文件
  * @method Models\DescribeSpecResponse DescribeSpec(Models\DescribeSpecRequest $req) 购买页拉取集群的数据节点和zookeeper节点的规格列表
  * @method Models\DescribeSqlApisResponse DescribeSqlApis(Models\DescribeSqlApisRequest $req) 针对驱动sql命令查询ck集群接口
+ * @method Models\DescribeTableListResponse DescribeTableList(Models\DescribeTableListRequest $req) 获取指定数据源和库下的表列表
  * @method Models\DescribeUserBindWorkloadGroupResponse DescribeUserBindWorkloadGroup(Models\DescribeUserBindWorkloadGroupRequest $req) 获取当前集群各用户绑定的资源信息
  * @method Models\DescribeWorkloadGroupResponse DescribeWorkloadGroup(Models\DescribeWorkloadGroupRequest $req) 获取资源组信息
  * @method Models\DestroyInstanceResponse DestroyInstance(Models\DestroyInstanceRequest $req) 销毁集群

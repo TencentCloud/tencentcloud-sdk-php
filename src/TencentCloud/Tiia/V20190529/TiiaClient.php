@@ -148,13 +148,6 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\DetectProductResponse DetectProduct(Models\DetectProductRequest $req) 本接口支持识别图片中包含的商品，能够输出商品的品类名称、类别，还可以输出商品在图片中的位置。支持一张图片多个商品的识别。
 >?    
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\DetectProductBetaResponse DetectProductBeta(Models\DetectProductBetaRequest $req) 产品不再维护，准备下线。
-
-商品识别-微信识物版，基于人工智能技术、海量训练图片、亿级商品库，可以实现全覆盖、细粒度、高准确率的商品识别和商品推荐功能。
-本服务可以识别出图片中的主体位置、主体商品类型，覆盖亿级SKU，输出具体商品的价格、型号等详细信息。
-客户无需自建商品库，即可快速实现商品识别、拍照搜商品等功能。
->?   
-- 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\DetectSecurityResponse DetectSecurity(Models\DetectSecurityRequest $req) 安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
 "被优选过滤"标签值在人体优选开关开启时才会返回。
 

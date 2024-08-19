@@ -18,35 +18,61 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播流质检结果
+ * 直播流媒体质检结果
  *
- * @method array getQualityControlResults() 获取质检结果列表。
+ * @method array getQualityControlResults() 获取内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityControlResults(array $QualityControlResults) 设置质检结果列表。
+ * @method void setQualityControlResults(array $QualityControlResults) 设置内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDiagnoseResults() 获取格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnoseResults(array $DiagnoseResults) 设置格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQualityControlResultSet() 获取内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDiagnoseResultSet() 获取格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiagnoseResultSet(array $DiagnoseResultSet) 设置格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamAiQualityControlResultInfo extends AbstractModel
 {
     /**
-     * @var array 质检结果列表。
+     * @var array 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $QualityControlResults;
 
     /**
      * @var array 格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DiagnoseResults;
 
     /**
-     * @param array $QualityControlResults 质检结果列表。
+     * @var array 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityControlResultSet;
+
+    /**
+     * @var array 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiagnoseResultSet;
+
+    /**
+     * @param array $QualityControlResults 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DiagnoseResults 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $QualityControlResultSet 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DiagnoseResultSet 格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +103,24 @@ class LiveStreamAiQualityControlResultInfo extends AbstractModel
                 $obj = new DiagnoseResult();
                 $obj->deserialize($value);
                 array_push($this->DiagnoseResults, $obj);
+            }
+        }
+
+        if (array_key_exists("QualityControlResultSet",$param) and $param["QualityControlResultSet"] !== null) {
+            $this->QualityControlResultSet = [];
+            foreach ($param["QualityControlResultSet"] as $key => $value){
+                $obj = new QualityControlResult();
+                $obj->deserialize($value);
+                array_push($this->QualityControlResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("DiagnoseResultSet",$param) and $param["DiagnoseResultSet"] !== null) {
+            $this->DiagnoseResultSet = [];
+            foreach ($param["DiagnoseResultSet"] as $key => $value){
+                $obj = new DiagnoseResult();
+                $obj->deserialize($value);
+                array_push($this->DiagnoseResultSet, $obj);
             }
         }
     }

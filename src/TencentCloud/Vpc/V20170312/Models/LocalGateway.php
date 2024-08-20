@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置CDC实例ID
  * @method string getVpcId() 获取VPC实例ID
  * @method void setVpcId(string $VpcId) 设置VPC实例ID
- * @method string getUniqLocalGwId() 获取本地网关实例ID
- * @method void setUniqLocalGwId(string $UniqLocalGwId) 设置本地网关实例ID
+ * @method string getUniqLocalGwId() 获取本地网关实例ID（计划弃用）
+ * @method void setUniqLocalGwId(string $UniqLocalGwId) 设置本地网关实例ID（计划弃用）
  * @method string getLocalGatewayName() 获取本地网关名称
  * @method void setLocalGatewayName(string $LocalGatewayName) 设置本地网关名称
  * @method string getLocalGwIp() 获取本地网关IP地址
  * @method void setLocalGwIp(string $LocalGwIp) 设置本地网关IP地址
  * @method string getCreateTime() 获取本地网关创建时间
  * @method void setCreateTime(string $CreateTime) 设置本地网关创建时间
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLocalGatewayId() 获取本地网关实例ID（计划起用）
+ * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID（计划起用）
  */
 class LocalGateway extends AbstractModel
 {
@@ -46,7 +52,7 @@ class LocalGateway extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 本地网关实例ID
+     * @var string 本地网关实例ID（计划弃用）
      */
     public $UniqLocalGwId;
 
@@ -66,12 +72,26 @@ class LocalGateway extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
+     * @var string 本地网关实例ID（计划起用）
+     */
+    public $LocalGatewayId;
+
+    /**
      * @param string $CdcId CDC实例ID
      * @param string $VpcId VPC实例ID
-     * @param string $UniqLocalGwId 本地网关实例ID
+     * @param string $UniqLocalGwId 本地网关实例ID（计划弃用）
      * @param string $LocalGatewayName 本地网关名称
      * @param string $LocalGwIp 本地网关IP地址
      * @param string $CreateTime 本地网关创建时间
+     * @param array $TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LocalGatewayId 本地网关实例ID（计划起用）
      */
     function __construct()
     {
@@ -108,6 +128,19 @@ class LocalGateway extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("LocalGatewayId",$param) and $param["LocalGatewayId"] !== null) {
+            $this->LocalGatewayId = $param["LocalGatewayId"];
         }
     }
 }

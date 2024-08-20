@@ -68,6 +68,10 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
 其中敏感信息包括：Response.IdNum、Response.Name
  * @method void setIsEncrypt(boolean $IsEncrypt) 设置是否需要对返回中的敏感信息进行加密。默认false。
 其中敏感信息包括：Response.IdNum、Response.Name
+ * @method boolean getIsEncryptResponse() 获取是否需要对响应体加密
+ * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置是否需要对响应体加密
+ * @method Encryption getEncryption() 获取是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+ * @method void setEncryption(Encryption $Encryption) 设置是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
  */
 class CheckIdCardInformationRequest extends AbstractModel
 {
@@ -112,6 +116,16 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
     public $IsEncrypt;
 
     /**
+     * @var boolean 是否需要对响应体加密
+     */
+    public $IsEncryptResponse;
+
+    /**
+     * @var Encryption 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+     */
+    public $Encryption;
+
+    /**
      * @param string $ImageBase64 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。
@@ -136,6 +150,8 @@ API 3.0 Explorer 设置方式参考：
 Config = {"CopyWarn":true,"ReshootWarn":true}
      * @param boolean $IsEncrypt 是否需要对返回中的敏感信息进行加密。默认false。
 其中敏感信息包括：Response.IdNum、Response.Name
+     * @param boolean $IsEncryptResponse 是否需要对响应体加密
+     * @param Encryption $Encryption 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
      */
     function __construct()
     {
@@ -164,6 +180,15 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
 
         if (array_key_exists("IsEncrypt",$param) and $param["IsEncrypt"] !== null) {
             $this->IsEncrypt = $param["IsEncrypt"];
+        }
+
+        if (array_key_exists("IsEncryptResponse",$param) and $param["IsEncryptResponse"] !== null) {
+            $this->IsEncryptResponse = $param["IsEncryptResponse"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

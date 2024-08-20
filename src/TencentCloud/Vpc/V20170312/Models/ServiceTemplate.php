@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getServiceExtraSet() 获取带备注的协议端口信息。
  * @method void setServiceExtraSet(array $ServiceExtraSet) 设置带备注的协议端口信息。
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -59,11 +63,19 @@ class ServiceTemplate extends AbstractModel
     public $ServiceExtraSet;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      * @param string $ServiceTemplateName 模板名称。
      * @param array $ServiceSet 协议端口信息。
      * @param string $CreatedTime 创建时间。
      * @param array $ServiceExtraSet 带备注的协议端口信息。
+     * @param array $TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -100,6 +112,15 @@ class ServiceTemplate extends AbstractModel
                 $obj = new ServicesInfo();
                 $obj->deserialize($value);
                 array_push($this->ServiceExtraSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

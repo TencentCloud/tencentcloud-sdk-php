@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取空间 ID。
  * @method void setZoneId(string $ZoneId) 设置空间 ID。
- * @method string getRoleConfigurationName() 获取访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
- * @method void setRoleConfigurationName(string $RoleConfigurationName) 设置访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
- * @method string getDescription() 获取访问配置的描述。 长度：最大 1024 个字符。
- * @method void setDescription(string $Description) 设置访问配置的描述。 长度：最大 1024 个字符。
- * @method integer getSessionDuration() 获取会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
- * @method void setSessionDuration(integer $SessionDuration) 设置会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
- * @method string getRelayState() 获取初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
- * @method void setRelayState(string $RelayState) 设置初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+ * @method string getRoleConfigurationName() 获取权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+ * @method void setRoleConfigurationName(string $RoleConfigurationName) 设置权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+ * @method string getDescription() 获取权限配置的描述。 长度：最大 1024 个字符。
+ * @method void setDescription(string $Description) 设置权限配置的描述。 长度：最大 1024 个字符。
+ * @method integer getSessionDuration() 获取会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+ * @method void setSessionDuration(integer $SessionDuration) 设置会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+ * @method string getRelayState() 获取初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+ * @method void setRelayState(string $RelayState) 设置初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
  */
 class CreateRoleConfigurationRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class CreateRoleConfigurationRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+     * @var string 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
      */
     public $RoleConfigurationName;
 
     /**
-     * @var string 访问配置的描述。 长度：最大 1024 个字符。
+     * @var string 权限配置的描述。 长度：最大 1024 个字符。
      */
     public $Description;
 
     /**
-     * @var integer 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+     * @var integer 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
      */
     public $SessionDuration;
 
     /**
-     * @var string 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+     * @var string 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
      */
     public $RelayState;
 
     /**
      * @param string $ZoneId 空间 ID。
-     * @param string $RoleConfigurationName 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
-     * @param string $Description 访问配置的描述。 长度：最大 1024 个字符。
-     * @param integer $SessionDuration 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
-     * @param string $RelayState 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+     * @param string $RoleConfigurationName 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+     * @param string $Description 权限配置的描述。 长度：最大 1024 个字符。
+     * @param integer $SessionDuration 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+     * @param string $RelayState 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
      */
     function __construct()
     {

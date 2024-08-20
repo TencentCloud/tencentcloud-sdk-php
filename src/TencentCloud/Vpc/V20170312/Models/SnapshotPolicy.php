@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotPolicy extends AbstractModel
 {
@@ -103,6 +107,12 @@ class SnapshotPolicy extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $SnapshotPolicyName 快照策略名称。
      * @param string $BackupType 备份策略类型，operate-操作备份，time-定时备份。
      * @param integer $KeepTime 保留时间，支持1～365天。
@@ -115,6 +125,8 @@ class SnapshotPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enable 启用状态，True-启用，False-停用，默认为True。
      * @param string $CreateTime 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,15 @@ class SnapshotPolicy extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

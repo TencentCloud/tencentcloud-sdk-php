@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetType(string $TargetType) 设置同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
  * @method integer getTargetUin() 获取同步的集团账号目标账号的UIN。
  * @method void setTargetUin(integer $TargetUin) 设置同步的集团账号目标账号的UIN。
- * @method string getPrincipalType() 获取CAM 用户同步的身份类型。取值： User：表示该 CAM 用户同步的身份是CIC用户。 Group：表示该 CAM 用户同步的身份是CIC用户组。
- * @method void setPrincipalType(string $PrincipalType) 设置CAM 用户同步的身份类型。取值： User：表示该 CAM 用户同步的身份是CIC用户。 Group：表示该 CAM 用户同步的身份是CIC用户组。
- * @method string getPrincipalId() 获取CAM 用户同步的身份 ID。取值： 当PrincipalType取值为Group时，该值为CIC 用户组 ID（g-********）。 当PrincipalType取值为User时，该值为CIC 用户 ID（u-********）。
- * @method void setPrincipalId(string $PrincipalId) 设置CAM 用户同步的身份 ID。取值： 当PrincipalType取值为Group时，该值为CIC 用户组 ID（g-********）。 当PrincipalType取值为User时，该值为CIC 用户 ID（u-********）。
+ * @method string getPrincipalType() 获取CAM 用户同步的身份类型。取值： User：表示同步的身份是用户。 Group：表示同步的身份是用户组。
+ * @method void setPrincipalType(string $PrincipalType) 设置CAM 用户同步的身份类型。取值： User：表示同步的身份是用户。 Group：表示同步的身份是用户组。
+ * @method string getPrincipalId() 获取用户同步 ID。取值： 当PrincipalType取值为Group时，该值为用户组 ID（g-****)，当PrincipalType取值为User时，该值为用户 ID （u-****）。
+ * @method void setPrincipalId(string $PrincipalId) 设置用户同步 ID。取值： 当PrincipalType取值为Group时，该值为用户组 ID（g-****)，当PrincipalType取值为User时，该值为用户 ID （u-****）。
  * @method string getFilter() 获取查询条件，目前只支持权限配置名称查询。
  * @method void setFilter(string $Filter) 设置查询条件，目前只支持权限配置名称查询。
  */
@@ -72,12 +72,12 @@ class ListRoleAssignmentsRequest extends AbstractModel
     public $TargetUin;
 
     /**
-     * @var string CAM 用户同步的身份类型。取值： User：表示该 CAM 用户同步的身份是CIC用户。 Group：表示该 CAM 用户同步的身份是CIC用户组。
+     * @var string CAM 用户同步的身份类型。取值： User：表示同步的身份是用户。 Group：表示同步的身份是用户组。
      */
     public $PrincipalType;
 
     /**
-     * @var string CAM 用户同步的身份 ID。取值： 当PrincipalType取值为Group时，该值为CIC 用户组 ID（g-********）。 当PrincipalType取值为User时，该值为CIC 用户 ID（u-********）。
+     * @var string 用户同步 ID。取值： 当PrincipalType取值为Group时，该值为用户组 ID（g-****)，当PrincipalType取值为User时，该值为用户 ID （u-****）。
      */
     public $PrincipalId;
 
@@ -93,8 +93,8 @@ class ListRoleAssignmentsRequest extends AbstractModel
      * @param string $NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
      * @param string $TargetType 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
      * @param integer $TargetUin 同步的集团账号目标账号的UIN。
-     * @param string $PrincipalType CAM 用户同步的身份类型。取值： User：表示该 CAM 用户同步的身份是CIC用户。 Group：表示该 CAM 用户同步的身份是CIC用户组。
-     * @param string $PrincipalId CAM 用户同步的身份 ID。取值： 当PrincipalType取值为Group时，该值为CIC 用户组 ID（g-********）。 当PrincipalType取值为User时，该值为CIC 用户 ID（u-********）。
+     * @param string $PrincipalType CAM 用户同步的身份类型。取值： User：表示同步的身份是用户。 Group：表示同步的身份是用户组。
+     * @param string $PrincipalId 用户同步 ID。取值： 当PrincipalType取值为Group时，该值为用户组 ID（g-****)，当PrincipalType取值为User时，该值为用户 ID （u-****）。
      * @param string $Filter 查询条件，目前只支持权限配置名称查询。
      */
     function __construct()

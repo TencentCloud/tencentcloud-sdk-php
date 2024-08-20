@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HaVip extends AbstractModel
 {
@@ -137,6 +141,12 @@ class HaVip extends AbstractModel
     public $FlushedTime;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      * @param string $HaVipName `HAVIP`名称。
      * @param string $Vip 虚拟IP地址。
@@ -155,6 +165,8 @@ class HaVip extends AbstractModel
      * @param boolean $CheckAssociate 是否开启`HAVIP`的飘移范围校验。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +241,15 @@ class HaVip extends AbstractModel
 
         if (array_key_exists("FlushedTime",$param) and $param["FlushedTime"] !== null) {
             $this->FlushedTime = $param["FlushedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

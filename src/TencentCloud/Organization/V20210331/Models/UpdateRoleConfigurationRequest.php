@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置空间 ID
  * @method string getRoleConfigurationId() 获取权限配置 ID
  * @method void setRoleConfigurationId(string $RoleConfigurationId) 设置权限配置 ID
- * @method string getNewDescription() 获取新的访问配置描述。  长度：最大 1024 个字符。
- * @method void setNewDescription(string $NewDescription) 设置新的访问配置描述。  长度：最大 1024 个字符。
- * @method integer getNewSessionDuration() 获取新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
- * @method void setNewSessionDuration(integer $NewSessionDuration) 设置新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
- * @method string getNewRelayState() 获取新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
- * @method void setNewRelayState(string $NewRelayState) 设置新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+ * @method string getNewDescription() 获取新的权限配置描述。  长度：最大 1024 个字符。
+ * @method void setNewDescription(string $NewDescription) 设置新的权限配置描述。  长度：最大 1024 个字符。
+ * @method integer getNewSessionDuration() 获取新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+ * @method void setNewSessionDuration(integer $NewSessionDuration) 设置新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+ * @method string getNewRelayState() 获取新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+ * @method void setNewRelayState(string $NewRelayState) 设置新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
  */
 class UpdateRoleConfigurationRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class UpdateRoleConfigurationRequest extends AbstractModel
     public $RoleConfigurationId;
 
     /**
-     * @var string 新的访问配置描述。  长度：最大 1024 个字符。
+     * @var string 新的权限配置描述。  长度：最大 1024 个字符。
      */
     public $NewDescription;
 
     /**
-     * @var integer 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * @var integer 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
      */
     public $NewSessionDuration;
 
     /**
-     * @var string 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * @var string 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
      */
     public $NewRelayState;
 
     /**
      * @param string $ZoneId 空间 ID
      * @param string $RoleConfigurationId 权限配置 ID
-     * @param string $NewDescription 新的访问配置描述。  长度：最大 1024 个字符。
-     * @param integer $NewSessionDuration 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
-     * @param string $NewRelayState 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * @param string $NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
+     * @param integer $NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * @param string $NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
      */
     function __construct()
     {

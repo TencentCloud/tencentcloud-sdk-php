@@ -41,7 +41,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\CreateDSPACosMetaResourcesResponse CreateDSPACosMetaResources(Models\CreateDSPACosMetaResourcesRequest $req) 添加COS元数据
  * @method Models\CreateDSPADbMetaResourcesResponse CreateDSPADbMetaResources(Models\CreateDSPADbMetaResourcesRequest $req) 添加用户云上数据库类型资源
  * @method Models\CreateDSPADiscoveryRuleResponse CreateDSPADiscoveryRule(Models\CreateDSPADiscoveryRuleRequest $req) 新增分类分级规则，单个用户最多允许创建200个规则。
-
  * @method Models\CreateDSPADiscoveryTaskResponse CreateDSPADiscoveryTask(Models\CreateDSPADiscoveryTaskRequest $req) 新增分类分级任务，单个用户最多允许创建100个任务。
  * @method Models\CreateDSPALevelGroupResponse CreateDSPALevelGroup(Models\CreateDSPALevelGroupRequest $req) 新增分级，单个Casb实例最多允许创建100个数据分级
  * @method Models\CreateDSPAMetaResourcesResponse CreateDSPAMetaResources(Models\CreateDSPAMetaResourcesRequest $req) 添加用户云上资源列表

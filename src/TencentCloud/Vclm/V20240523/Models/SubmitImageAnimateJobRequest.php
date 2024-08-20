@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method boolean getEnableAudio() 获取结果视频是否保留模板音频。默认为true
  * @method void setEnableAudio(boolean $EnableAudio) 设置结果视频是否保留模板音频。默认为true
+ * @method boolean getEnableBodyJoins() 获取是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+ * @method void setEnableBodyJoins(boolean $EnableBodyJoins) 设置是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
  */
 class SubmitImageAnimateJobRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class SubmitImageAnimateJobRequest extends AbstractModel
     public $EnableAudio;
 
     /**
+     * @var boolean 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     */
+    public $EnableBodyJoins;
+
+    /**
      * @param string $ImageUrl 图片格式：支持PNG、JPG、JPEG格式；
 图片分辨率：长边分辨率不超过2056；
 图片大小：不超过10M；
@@ -72,6 +79,7 @@ class SubmitImageAnimateJobRequest extends AbstractModel
      * @param string $TemplateId 动作模板ID。取值说明：ke3 科目三；tuziwu 兔子舞；huajiangwu 划桨舞。
 
      * @param boolean $EnableAudio 结果视频是否保留模板音频。默认为true
+     * @param boolean $EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class SubmitImageAnimateJobRequest extends AbstractModel
 
         if (array_key_exists("EnableAudio",$param) and $param["EnableAudio"] !== null) {
             $this->EnableAudio = $param["EnableAudio"];
+        }
+
+        if (array_key_exists("EnableBodyJoins",$param) and $param["EnableBodyJoins"] !== null) {
+            $this->EnableBodyJoins = $param["EnableBodyJoins"];
         }
     }
 }

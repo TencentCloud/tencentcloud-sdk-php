@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置服务实例总数量。
  * @method array getContent() 获取服务里实例列表。
  * @method void setContent(array $Content) 设置服务里实例列表。
+ * @method Location getLocation() 获取地域
+ * @method void setLocation(Location $Location) 设置地域
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeGovernanceInstancesResponse extends AbstractModel
     public $Content;
 
     /**
+     * @var Location 地域
+     */
+    public $Location;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeGovernanceInstancesResponse extends AbstractModel
     /**
      * @param integer $TotalCount 服务实例总数量。
      * @param array $Content 服务里实例列表。
+     * @param Location $Location 地域
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,11 @@ class DescribeGovernanceInstancesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = new Location();
+            $this->Location->deserialize($param["Location"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

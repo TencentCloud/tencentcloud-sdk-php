@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasRuleName(string $AliasRuleName) 设置别名规则名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRuleEffectItems() 获取各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleEffectItems(array $RuleEffectItems) 设置各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleStatus() 获取规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleStatus(integer $RuleStatus) 设置规则状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CategoryRule extends AbstractModel
 {
@@ -86,6 +94,18 @@ class CategoryRule extends AbstractModel
     public $AliasRuleName;
 
     /**
+     * @var array 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleEffectItems;
+
+    /**
+     * @var integer 规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleStatus;
+
+    /**
      * @param integer $CategoryId 分类id
      * @param integer $RuleId 规则id
      * @param string $RuleName 规则名称
@@ -95,6 +115,10 @@ class CategoryRule extends AbstractModel
      * @param integer $AliasRuleId 别名ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasRuleName 别名规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RuleEffectItems 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleStatus 规则状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +164,19 @@ class CategoryRule extends AbstractModel
 
         if (array_key_exists("AliasRuleName",$param) and $param["AliasRuleName"] !== null) {
             $this->AliasRuleName = $param["AliasRuleName"];
+        }
+
+        if (array_key_exists("RuleEffectItems",$param) and $param["RuleEffectItems"] !== null) {
+            $this->RuleEffectItems = [];
+            foreach ($param["RuleEffectItems"] as $key => $value){
+                $obj = new RuleEffectItem();
+                $obj->deserialize($value);
+                array_push($this->RuleEffectItems, $obj);
+            }
+        }
+
+        if (array_key_exists("RuleStatus",$param) and $param["RuleStatus"] !== null) {
+            $this->RuleStatus = $param["RuleStatus"];
         }
     }
 }

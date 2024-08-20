@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptedBody() 获取加密后的数据
+ * @method void setEncryptedBody(string $EncryptedBody) 设置加密后的数据
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -147,6 +149,11 @@ class CheckIdCardInformationResponse extends AbstractModel
     public $Encryption;
 
     /**
+     * @var string 加密后的数据
+     */
+    public $EncryptedBody;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -175,6 +182,7 @@ class CheckIdCardInformationResponse extends AbstractModel
      * @param float $Quality 图片质量分数，当请求Config中配置图片模糊告警该参数才有意义，取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。
      * @param Encryption $Encryption 敏感数据加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptedBody 加密后的数据
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -241,6 +249,10 @@ class CheckIdCardInformationResponse extends AbstractModel
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = new Encryption();
             $this->Encryption->deserialize($param["Encryption"]);
+        }
+
+        if (array_key_exists("EncryptedBody",$param) and $param["EncryptedBody"] !== null) {
+            $this->EncryptedBody = $param["EncryptedBody"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

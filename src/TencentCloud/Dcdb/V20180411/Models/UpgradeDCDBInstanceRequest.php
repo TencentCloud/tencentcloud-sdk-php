@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  * @method array getZones() 获取变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
  * @method void setZones(array $Zones) 设置变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+ * @method string getSwitchStartTime() 获取切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+ * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+ * @method string getSwitchEndTime() 获取切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+ * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+ * @method integer getSwitchAutoRetry() 获取是否自动重试。 0：不自动重试 1：自动重试
+ * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) 设置是否自动重试。 0：不自动重试 1：自动重试
  */
 class UpgradeDCDBInstanceRequest extends AbstractModel
 {
@@ -89,6 +95,21 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
     public $Zones;
 
     /**
+     * @var string 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     */
+    public $SwitchStartTime;
+
+    /**
+     * @var string 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     */
+    public $SwitchEndTime;
+
+    /**
+     * @var integer 是否自动重试。 0：不自动重试 1：自动重试
+     */
+    public $SwitchAutoRetry;
+
+    /**
      * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UpgradeType 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
@@ -100,6 +121,9 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param array $Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * @param string $SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     * @param string $SwitchEndTime 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     * @param integer $SwitchAutoRetry 是否自动重试。 0：不自动重试 1：自动重试
      */
     function __construct()
     {
@@ -147,6 +171,18 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("SwitchStartTime",$param) and $param["SwitchStartTime"] !== null) {
+            $this->SwitchStartTime = $param["SwitchStartTime"];
+        }
+
+        if (array_key_exists("SwitchEndTime",$param) and $param["SwitchEndTime"] !== null) {
+            $this->SwitchEndTime = $param["SwitchEndTime"];
+        }
+
+        if (array_key_exists("SwitchAutoRetry",$param) and $param["SwitchAutoRetry"] !== null) {
+            $this->SwitchAutoRetry = $param["SwitchAutoRetry"];
         }
     }
 }

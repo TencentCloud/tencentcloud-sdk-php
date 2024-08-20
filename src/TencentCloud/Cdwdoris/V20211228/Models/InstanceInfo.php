@@ -226,6 +226,14 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(InstanceDetail $Details) 设置实例扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableDlc() 获取是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableDlc(integer $EnableDlc) 设置是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccountType() 获取账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccountType(integer $AccountType) 设置账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -526,6 +534,18 @@ Modify 集群变更中；
     public $Details;
 
     /**
+     * @var integer 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableDlc;
+
+    /**
+     * @var integer 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccountType;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -628,6 +648,10 @@ Modify 集群变更中；
      * @param string $CoolDownBucket 冷热分层使用COS桶
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceDetail $Details 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableDlc 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccountType 账户类型 0:普通用户 1:CAM用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -841,6 +865,14 @@ Modify 集群变更中；
         if (array_key_exists("Details",$param) and $param["Details"] !== null) {
             $this->Details = new InstanceDetail();
             $this->Details->deserialize($param["Details"]);
+        }
+
+        if (array_key_exists("EnableDlc",$param) and $param["EnableDlc"] !== null) {
+            $this->EnableDlc = $param["EnableDlc"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

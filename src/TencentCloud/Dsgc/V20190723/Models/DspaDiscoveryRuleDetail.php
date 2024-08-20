@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSRules(DspaDiscoveryCOSRules $COSRules) 设置COS规则详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryRuleDetail extends AbstractModel
 {
@@ -84,6 +88,12 @@ class DspaDiscoveryRuleDetail extends AbstractModel
     public $COSRules;
 
     /**
+     * @var integer 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 规则名称
@@ -95,6 +105,8 @@ class DspaDiscoveryRuleDetail extends AbstractModel
      * @param DspaDiscoveryRDBRules $RDBRules RDB规则详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryCOSRules $COSRules COS规则详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -134,6 +146,10 @@ class DspaDiscoveryRuleDetail extends AbstractModel
         if (array_key_exists("COSRules",$param) and $param["COSRules"] !== null) {
             $this->COSRules = new DspaDiscoveryCOSRules();
             $this->COSRules->deserialize($param["COSRules"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

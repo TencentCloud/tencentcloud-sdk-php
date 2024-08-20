@@ -68,7 +68,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(Models\DeleteUserSyncProvisioningRequest $req) 删除子用户同步任务
  * @method Models\DescribeEffectivePolicyResponse DescribeEffectivePolicy(Models\DescribeEffectivePolicyRequest $req) 查询目标关联的有效策略
- * @method Models\DescribeIdentityCenterResponse DescribeIdentityCenter(Models\DescribeIdentityCenterRequest $req) 获取cam身份中心服务信息
+ * @method Models\DescribeIdentityCenterResponse DescribeIdentityCenter(Models\DescribeIdentityCenterRequest $req) 获取集团账号身份中心服务信息
  * @method Models\DescribeOrganizationResponse DescribeOrganization(Models\DescribeOrganizationRequest $req) 获取企业组织信息
  * @method Models\DescribeOrganizationAuthNodeResponse DescribeOrganizationAuthNode(Models\DescribeOrganizationAuthNodeRequest $req) 获取已设置管理员的互信主体关系列表
  * @method Models\DescribeOrganizationFinancialByMemberResponse DescribeOrganizationFinancialByMember(Models\DescribeOrganizationFinancialByMemberRequest $req) 以成员维度获取组织财务信息
@@ -118,7 +118,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListUserSyncProvisioningsResponse ListUserSyncProvisionings(Models\ListUserSyncProvisioningsRequest $req) 查询CAM用户同步列表
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 查询用户列表
  * @method Models\MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembers(Models\MoveOrganizationNodeMembersRequest $req) 移动成员到指定企业组织节点
- * @method Models\OpenIdentityCenterResponse OpenIdentityCenter(Models\OpenIdentityCenterRequest $req) 开通CIC服务
+ * @method Models\OpenIdentityCenterResponse OpenIdentityCenter(Models\OpenIdentityCenterRequest $req) 开通身份中心服务（CIC）
  * @method Models\ProvisionRoleConfigurationResponse ProvisionRoleConfiguration(Models\ProvisionRoleConfigurationRequest $req) 将权限配置部署到成员账号上
  * @method Models\QuitOrganizationResponse QuitOrganization(Models\QuitOrganizationRequest $req) 退出企业组织
  * @method Models\RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(Models\RejectJoinShareUnitInvitationRequest $req) 拒绝加入共享单元邀请。

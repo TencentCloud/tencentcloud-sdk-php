@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cdwdoris\V20211228\Models as Models;
 
 /**
+ * @method Models\ActionAlterUserResponse ActionAlterUser(Models\ActionAlterUserRequest $req) 新增和修改用户接口
  * @method Models\CancelBackupJobResponse CancelBackupJob(Models\CancelBackupJobRequest $req) 取消对应的备份实例任务
  * @method Models\CheckCoolDownWorkingVariableConfigCorrectResponse CheckCoolDownWorkingVariableConfigCorrect(Models\CheckCoolDownWorkingVariableConfigCorrectRequest $req) 查询冷热分层生效变量和配置是否正确
  * @method Models\CreateBackUpScheduleResponse CreateBackUpSchedule(Models\CreateBackUpScheduleRequest $req) 创建或者修改备份策略

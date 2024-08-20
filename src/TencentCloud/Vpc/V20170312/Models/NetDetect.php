@@ -80,6 +80,10 @@ NONEXTHOP：无下一跳；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetDetect extends AbstractModel
 {
@@ -166,6 +170,12 @@ NONEXTHOP：无下一跳；
     public $CreateTime;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      * @param string $VpcName `VPC`实例名称。
      * @param string $SubnetId 子网实例ID。形如：subnet-12345678。
@@ -195,6 +205,8 @@ NONEXTHOP：无下一跳；
      * @param string $NetDetectDescription 网络探测描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,15 @@ NONEXTHOP：无下一跳；
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

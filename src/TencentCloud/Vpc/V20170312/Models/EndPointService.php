@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessIpType(integer $BusinessIpType) 设置服务IP类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndPointService extends AbstractModel
 {
@@ -127,6 +131,12 @@ class EndPointService extends AbstractModel
     public $BusinessIpType;
 
     /**
+     * @var array 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $EndPointServiceId 终端节点服务ID
      * @param string $VpcId VPCID。
      * @param string $ServiceOwner APPID。
@@ -143,6 +153,8 @@ class EndPointService extends AbstractModel
      * @param string $ServiceUin Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BusinessIpType 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,15 @@ class EndPointService extends AbstractModel
 
         if (array_key_exists("BusinessIpType",$param) and $param["BusinessIpType"] !== null) {
             $this->BusinessIpType = $param["BusinessIpType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

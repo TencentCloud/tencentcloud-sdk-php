@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRelationActionId(integer $RelationActionId) 设置关联的动作ID
  * @method string getActionCommand() 获取操作命令
  * @method void setActionCommand(string $ActionCommand) 设置操作命令
- * @method integer getActionCommandType() 获取动作类型( 0 -- tat   1 -- 云API）
- * @method void setActionCommandType(integer $ActionCommandType) 设置动作类型( 0 -- tat   1 -- 云API）
+ * @method integer getActionCommandType() 获取动作类型（0 -- tat   1 -- 云API）
+ * @method void setActionCommandType(integer $ActionCommandType) 设置动作类型（0 -- tat   1 -- 云API）
  * @method string getActionContent() 获取自定义动作的参数，json string
  * @method void setActionContent(string $ActionContent) 设置自定义动作的参数，json string
  * @method string getResourceType() 获取二级分类
@@ -133,7 +133,7 @@ class ActionLibraryListResult extends AbstractModel
     public $ActionCommand;
 
     /**
-     * @var integer 动作类型( 0 -- tat   1 -- 云API）
+     * @var integer 动作类型（0 -- tat   1 -- 云API）
      */
     public $ActionCommandType;
 
@@ -196,7 +196,7 @@ class ActionLibraryListResult extends AbstractModel
      * @param integer $AttributeId 动作属性（ 1：故障  2：恢复）
      * @param integer $RelationActionId 关联的动作ID
      * @param string $ActionCommand 操作命令
-     * @param integer $ActionCommandType 动作类型( 0 -- tat   1 -- 云API）
+     * @param integer $ActionCommandType 动作类型（0 -- tat   1 -- 云API）
      * @param string $ActionContent 自定义动作的参数，json string
      * @param string $ResourceType 二级分类
 注意：此字段可能返回 null，表示取不到有效值。

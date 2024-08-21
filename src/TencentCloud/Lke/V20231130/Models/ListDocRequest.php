@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDoc请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页数量
  * @method void setPageSize(integer $PageSize) 设置每页数量
  * @method string getQuery() 获取查询内容
  * @method void setQuery(string $Query) 设置查询内容
- * @method array getStatus() 获取文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
- * @method void setStatus(array $Status) 设置文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+ * @method array getStatus() 获取文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+ * @method void setStatus(array $Status) 设置文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
  */
 class ListDocRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -54,16 +54,16 @@ class ListDocRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var array 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * @var array 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      */
     public $Status;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
      * @param string $Query 查询内容
-     * @param array $Status 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * @param array $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      */
     function __construct()
     {

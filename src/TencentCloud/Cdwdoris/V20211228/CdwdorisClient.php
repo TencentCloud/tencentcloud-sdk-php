@@ -63,6 +63,7 @@ use TencentCloud\Cdwdoris\V20211228\Models as Models;
  * @method Models\DescribeUserBindWorkloadGroupResponse DescribeUserBindWorkloadGroup(Models\DescribeUserBindWorkloadGroupRequest $req) 获取当前集群各用户绑定的资源信息
  * @method Models\DescribeWorkloadGroupResponse DescribeWorkloadGroup(Models\DescribeWorkloadGroupRequest $req) 获取资源组信息
  * @method Models\DestroyInstanceResponse DestroyInstance(Models\DestroyInstanceRequest $req) 销毁集群
+ * @method Models\ModifyClusterConfigsResponse ModifyClusterConfigs(Models\ModifyClusterConfigsRequest $req) 在集群配置页面修改集群配置文件接口，xml模式
  * @method Models\ModifyCoolDownPolicyResponse ModifyCoolDownPolicy(Models\ModifyCoolDownPolicyRequest $req) 修改冷热分层策略
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改集群名称
  * @method Models\ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigs(Models\ModifyInstanceKeyValConfigsRequest $req) KV模式修改配置接口

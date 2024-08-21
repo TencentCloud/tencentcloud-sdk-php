@@ -336,6 +336,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrUrl(string $AsrUrl) 设置获取录音ASR文本信息地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsrStatus() 获取AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsrStatus(string $AsrStatus) 设置AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomRecordURL() 获取录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方COS地址
@@ -643,6 +657,17 @@ class TelCdrInfo extends AbstractModel
     public $AsrUrl;
 
     /**
+     * @var string AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsrStatus;
+
+    /**
      * @var string 录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -831,6 +856,13 @@ class TelCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrUrl 获取录音ASR文本信息地址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsrStatus AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRecordURL 录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
@@ -993,6 +1025,10 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("AsrUrl",$param) and $param["AsrUrl"] !== null) {
             $this->AsrUrl = $param["AsrUrl"];
+        }
+
+        if (array_key_exists("AsrStatus",$param) and $param["AsrStatus"] !== null) {
+            $this->AsrStatus = $param["AsrStatus"];
         }
 
         if (array_key_exists("CustomRecordURL",$param) and $param["CustomRecordURL"] !== null) {

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.   默认为1:开启,  2:关闭
  * @method array getPreviewLogStatistics() 获取用于预览加工结果的测试数据
  * @method void setPreviewLogStatistics(array $PreviewLogStatistics) 设置用于预览加工结果的测试数据
+ * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+ * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  */
 class CreateDataTransformRequest extends AbstractModel
 {
@@ -98,6 +100,11 @@ class CreateDataTransformRequest extends AbstractModel
     public $PreviewLogStatistics;
 
     /**
+     * @var integer 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+     */
+    public $DataTransformType;
+
+    /**
      * @param integer $FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      * @param string $SrcTopicId 源日志主题
      * @param string $Name 加工任务名称
@@ -112,6 +119,7 @@ class CreateDataTransformRequest extends AbstractModel
      * @param array $DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
      * @param integer $EnableFlag 任务启动状态.   默认为1:开启,  2:关闭
      * @param array $PreviewLogStatistics 用于预览加工结果的测试数据
+     * @param integer $DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class CreateDataTransformRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PreviewLogStatistics, $obj);
             }
+        }
+
+        if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
+            $this->DataTransformType = $param["DataTransformType"];
         }
     }
 }

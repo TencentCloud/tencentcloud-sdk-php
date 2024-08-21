@@ -44,12 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
- * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+ * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
@@ -98,7 +102,9 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var array 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * @var array 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
@@ -147,7 +153,9 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`

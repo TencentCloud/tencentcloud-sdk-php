@@ -96,9 +96,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicPlusFlag(integer $BasicPlusFlag) 设置是否是基础防护加强版 0: 不是 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPlanCntFlag() 获取是否是商业模式优化-普惠版
+ * @method integer getPlanCntFlag() 获取是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPlanCntFlag(integer $PlanCntFlag) 设置是否是商业模式优化-普惠版
+ * @method void setPlanCntFlag(integer $PlanCntFlag) 设置是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTransRegionFlag() 获取是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
 注意：此字段可能返回 null，表示取不到有效值。
@@ -242,7 +242,7 @@ class BGPInstance extends AbstractModel
     public $BasicPlusFlag;
 
     /**
-     * @var integer 是否是商业模式优化-普惠版
+     * @var integer 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanCntFlag;
@@ -304,7 +304,7 @@ class BGPInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BasicPlusFlag 是否是基础防护加强版 0: 不是 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PlanCntFlag 是否是商业模式优化-普惠版
+     * @param integer $PlanCntFlag 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
 注意：此字段可能返回 null，表示取不到有效值。

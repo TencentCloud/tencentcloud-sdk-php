@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCname(string $Cname) 设置高防IP实例的Cname
  * @method boolean getExport() 获取默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
  * @method void setExport(boolean $Export) 设置默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+ * @method string getSource() 获取源站，模糊查询
+ * @method void setSource(string $Source) 设置源站，模糊查询
  */
 class DescribeBGPIPL7RulesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeBGPIPL7RulesRequest extends AbstractModel
     public $Export;
 
     /**
+     * @var string 源站，模糊查询
+     */
+    public $Source;
+
+    /**
      * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param array $StatusList 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param string $Domain 域名搜索，选填，当需要搜索域名请填写
@@ -96,6 +103,7 @@ class DescribeBGPIPL7RulesRequest extends AbstractModel
      * @param array $ProtocolList 转发协议搜索，选填，取值[http, https, http/https]
      * @param string $Cname 高防IP实例的Cname
      * @param boolean $Export 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+     * @param string $Source 源站，模糊查询
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeBGPIPL7RulesRequest extends AbstractModel
 
         if (array_key_exists("Export",$param) and $param["Export"] !== null) {
             $this->Export = $param["Export"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

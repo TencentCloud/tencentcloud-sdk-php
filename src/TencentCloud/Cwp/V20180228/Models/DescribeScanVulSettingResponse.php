@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClickTimeout(integer $ClickTimeout) 设置一键扫描超时时长，如：1800秒（s）
  * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
  * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+ * @method integer getScanMethod() 获取0版本比对,2版本比对+poc
+ * @method void setScanMethod(integer $ScanMethod) 设置0版本比对,2版本比对+poc
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +98,11 @@ class DescribeScanVulSettingResponse extends AbstractModel
     public $Uuids;
 
     /**
+     * @var integer 0版本比对,2版本比对+poc
+     */
+    public $ScanMethod;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +118,7 @@ class DescribeScanVulSettingResponse extends AbstractModel
      * @param string $EndTime 结束时间
      * @param integer $ClickTimeout 一键扫描超时时长，如：1800秒（s）
      * @param array $Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @param integer $ScanMethod 0版本比对,2版本比对+poc
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +172,10 @@ class DescribeScanVulSettingResponse extends AbstractModel
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("ScanMethod",$param) and $param["ScanMethod"] !== null) {
+            $this->ScanMethod = $param["ScanMethod"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method array getTagKeys() 获取标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
  * @method void setTagKeys(array $TagKeys) 设置标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
- * @method integer getShowProject() 获取是否展现项目标签
- * @method void setShowProject(integer $ShowProject) 设置是否展现项目标签
+ * @method integer getShowProject() 获取是否展现项目标签。1:展示  0:不展示
+ * @method void setShowProject(integer $ShowProject) 设置是否展现项目标签。1:展示  0:不展示
  */
 class DescribeTagsSeqRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeTagsSeqRequest extends AbstractModel
     public $TagKeys;
 
     /**
-     * @var integer 是否展现项目标签
+     * @var integer 是否展现项目标签。1:展示  0:不展示
      */
     public $ShowProject;
 
@@ -79,7 +79,7 @@ class DescribeTagsSeqRequest extends AbstractModel
      * @param integer $Limit 每页大小，默认为 15
      * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      * @param array $TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
-     * @param integer $ShowProject 是否展现项目标签
+     * @param integer $ShowProject 是否展现项目标签。1:展示  0:不展示
      */
     function __construct()
     {

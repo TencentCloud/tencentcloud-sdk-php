@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置视频转码模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印。
- * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
- * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印。
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印。
+ * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印，该功能已不再支持使用。
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印，该功能已不再支持使用。
+ * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印，该功能已不再支持使用。
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印，该功能已不再支持使用。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  * @method array getHeadTailSet() 获取片头片尾列表，支持多片头片尾，最大可支持 10 个。
@@ -62,12 +62,12 @@ class TranscodeTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var TraceWatermarkInput 溯源水印。
+     * @var TraceWatermarkInput 溯源水印，该功能已不再支持使用。
      */
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 版权水印。
+     * @var CopyRightWatermarkInput 版权水印，该功能已不再支持使用。
      */
     public $CopyRightWatermark;
 
@@ -100,8 +100,8 @@ class TranscodeTaskInput extends AbstractModel
     /**
      * @param integer $Definition 视频转码模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param TraceWatermarkInput $TraceWatermark 溯源水印。
-     * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印。
+     * @param TraceWatermarkInput $TraceWatermark 溯源水印，该功能已不再支持使用。
+     * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印，该功能已不再支持使用。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      * @param array $HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。

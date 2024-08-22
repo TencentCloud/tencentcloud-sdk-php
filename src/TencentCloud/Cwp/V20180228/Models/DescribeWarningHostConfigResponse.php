@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemLabelIds(array $ItemLabelIds) 设置项目或标签的id列表，自选主机时为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExcludedQuuids() 获取需排除的机器列表
+ * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +75,11 @@ class DescribeWarningHostConfigResponse extends AbstractModel
     public $ItemLabelIds;
 
     /**
+     * @var array 需排除的机器列表
+     */
+    public $ExcludedQuuids;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeWarningHostConfigResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ItemLabelIds 项目或标签的id列表，自选主机时为空
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExcludedQuuids 需排除的机器列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -120,6 +128,10 @@ class DescribeWarningHostConfigResponse extends AbstractModel
 
         if (array_key_exists("ItemLabelIds",$param) and $param["ItemLabelIds"] !== null) {
             $this->ItemLabelIds = $param["ItemLabelIds"];
+        }
+
+        if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
+            $this->ExcludedQuuids = $param["ExcludedQuuids"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

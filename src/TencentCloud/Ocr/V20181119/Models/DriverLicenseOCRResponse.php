@@ -88,6 +88,12 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
  * @method void setBackPageName(string $BackPageName) 设置驾驶证副页姓名
  * @method string getBackPageCardCode() 获取驾驶证副页证号
  * @method void setBackPageCardCode(string $BackPageCardCode) 设置驾驶证副页证号
+ * @method string getDriverLicenseType() 获取驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+ * @method void setDriverLicenseType(string $DriverLicenseType) 设置驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -212,6 +218,13 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     public $BackPageCardCode;
 
     /**
+     * @var string 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+     */
+    public $DriverLicenseType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -251,6 +264,9 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
      * @param string $GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
      * @param string $BackPageName 驾驶证副页姓名
      * @param string $BackPageCardCode 驾驶证副页证号
+     * @param string $DriverLicenseType 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -348,6 +364,10 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
 
         if (array_key_exists("BackPageCardCode",$param) and $param["BackPageCardCode"] !== null) {
             $this->BackPageCardCode = $param["BackPageCardCode"];
+        }
+
+        if (array_key_exists("DriverLicenseType",$param) and $param["DriverLicenseType"] !== null) {
+            $this->DriverLicenseType = $param["DriverLicenseType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

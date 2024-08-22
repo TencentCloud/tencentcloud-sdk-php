@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcesTagValue请求参数结构体
  *
- * @method string getServiceType() 获取资源所属业务名称（资源六段式中的第三段）
- * @method void setServiceType(string $ServiceType) 设置资源所属业务名称（资源六段式中的第三段）
+ * @method string getServiceType() 获取业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+ * @method void setServiceType(string $ServiceType) 设置业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
  * @method array getResourceIds() 获取资源ID数组，资源个数最多为50
  * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，资源个数最多为50
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
- * @method string getResourceRegion() 获取资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method string getResourcePrefix() 获取资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
- * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+ * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method string getResourcePrefix() 获取资源前缀（资源六段式中最后一段"/"前面的部分），例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
+ * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀（资源六段式中最后一段"/"前面的部分），例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
  */
 class ModifyResourcesTagValueRequest extends AbstractModel
 {
     /**
-     * @var string 资源所属业务名称（资源六段式中的第三段）
+     * @var string 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      */
     public $ServiceType;
 
@@ -56,22 +56,22 @@ class ModifyResourcesTagValueRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @var string 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
      */
     public $ResourceRegion;
 
     /**
-     * @var string 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+     * @var string 资源前缀（资源六段式中最后一段"/"前面的部分），例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
      */
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType 资源所属业务名称（资源六段式中的第三段）
+     * @param string $ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      * @param array $ResourceIds 资源ID数组，资源个数最多为50
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
-     * @param string $ResourceRegion 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
-     * @param string $ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param string $ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
      */
     function __construct()
     {

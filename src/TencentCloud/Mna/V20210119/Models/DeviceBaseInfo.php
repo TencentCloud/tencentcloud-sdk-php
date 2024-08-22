@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSn() 获取设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSn(string $Sn) 设置设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVendor() 获取厂商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVendor(string $Vendor) 设置厂商
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceBaseInfo extends AbstractModel
 {
@@ -116,6 +124,18 @@ class DeviceBaseInfo extends AbstractModel
     public $FlowTrunc;
 
     /**
+     * @var string 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Sn;
+
+    /**
+     * @var string 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vendor;
+
+    /**
      * @param string $DeviceId 设备唯一ID
      * @param string $DeviceName 设备名称
      * @param string $CreateTime 设备创建的时间，单位：ms
@@ -131,6 +151,10 @@ class DeviceBaseInfo extends AbstractModel
      * @param string $GroupName 设备分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Sn 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vendor 厂商
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +212,14 @@ class DeviceBaseInfo extends AbstractModel
 
         if (array_key_exists("FlowTrunc",$param) and $param["FlowTrunc"] !== null) {
             $this->FlowTrunc = $param["FlowTrunc"];
+        }
+
+        if (array_key_exists("Sn",$param) and $param["Sn"] !== null) {
+            $this->Sn = $param["Sn"];
+        }
+
+        if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
+            $this->Vendor = $param["Vendor"];
         }
     }
 }

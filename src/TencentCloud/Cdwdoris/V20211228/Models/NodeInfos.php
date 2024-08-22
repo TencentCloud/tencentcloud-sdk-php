@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点信息列表
  *
- * @method string getNodeName() 获取节点在doris中明朝n
- * @method void setNodeName(string $NodeName) 设置节点在doris中明朝n
+ * @method string getNodeName() 获取节点名称
+ * @method void setNodeName(string $NodeName) 设置节点名称
  * @method integer getStatus() 获取节点状态
  * @method void setStatus(integer $Status) 设置节点状态
  * @method string getIp() 获取节点ip
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class NodeInfos extends AbstractModel
 {
     /**
-     * @var string 节点在doris中明朝n
+     * @var string 节点名称
      */
     public $NodeName;
 
@@ -66,7 +66,7 @@ class NodeInfos extends AbstractModel
     public $LastRestartTime;
 
     /**
-     * @param string $NodeName 节点在doris中明朝n
+     * @param string $NodeName 节点名称
      * @param integer $Status 节点状态
      * @param string $Ip 节点ip
      * @param string $NodeRole 节点角色

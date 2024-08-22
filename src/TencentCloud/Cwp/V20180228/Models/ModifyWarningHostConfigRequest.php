@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuids(array $Quuids) 设置机器列表
  * @method array getItemLabelIds() 获取项目或标签的id列表，自选主机时为空
  * @method void setItemLabelIds(array $ItemLabelIds) 设置项目或标签的id列表，自选主机时为空
+ * @method array getExcludedQuuids() 获取需排除的机器列表
+ * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表
  */
 class ModifyWarningHostConfigRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyWarningHostConfigRequest extends AbstractModel
     public $ItemLabelIds;
 
     /**
+     * @var array 需排除的机器列表
+     */
+    public $ExcludedQuuids;
+
+    /**
      * @param integer $Type 告警类型
      * @param integer $HostRange 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
      * @param array $ItemLabels 项目或标签的名称列表，自选主机时为空
      * @param array $Quuids 机器列表
      * @param array $ItemLabelIds 项目或标签的id列表，自选主机时为空
+     * @param array $ExcludedQuuids 需排除的机器列表
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyWarningHostConfigRequest extends AbstractModel
 
         if (array_key_exists("ItemLabelIds",$param) and $param["ItemLabelIds"] !== null) {
             $this->ItemLabelIds = $param["ItemLabelIds"];
+        }
+
+        if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
+            $this->ExcludedQuuids = $param["ExcludedQuuids"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 提取溯源水印输出信息
  *
- * @method string getUv() 获取播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
- * @method void setUv(string $Uv) 设置播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+ * @method string getUv() 获取播放者的 ID，以十六进制表示，共6位。
+ * @method void setUv(string $Uv) 设置播放者的 ID，以十六进制表示，共6位。
  * @method string getUid() 获取该字段已废弃。
  * @method void setUid(string $Uid) 设置该字段已废弃。
  */
 class ExtractTraceWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+     * @var string 播放者的 ID，以十六进制表示，共6位。
      */
     public $Uv;
 
@@ -38,7 +38,7 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
     public $Uid;
 
     /**
-     * @param string $Uv 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+     * @param string $Uv 播放者的 ID，以十六进制表示，共6位。
      * @param string $Uid 该字段已废弃。
      */
     function __construct()

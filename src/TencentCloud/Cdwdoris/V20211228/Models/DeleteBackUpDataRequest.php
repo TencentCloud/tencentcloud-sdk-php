@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群id
  * @method integer getBackUpJobId() 获取任务id
  * @method void setBackUpJobId(integer $BackUpJobId) 设置任务id
- * @method boolean getIsDeleteAll() 获取是否删除所有数据
- * @method void setIsDeleteAll(boolean $IsDeleteAll) 设置是否删除所有数据
+ * @method boolean getIsDeleteAll() 获取是否删除所有实例
+ * @method void setIsDeleteAll(boolean $IsDeleteAll) 设置是否删除所有实例
  */
 class DeleteBackUpDataRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteBackUpDataRequest extends AbstractModel
     public $BackUpJobId;
 
     /**
-     * @var boolean 是否删除所有数据
+     * @var boolean 是否删除所有实例
      */
     public $IsDeleteAll;
 
     /**
      * @param string $InstanceId 集群id
      * @param integer $BackUpJobId 任务id
-     * @param boolean $IsDeleteAll 是否删除所有数据
+     * @param boolean $IsDeleteAll 是否删除所有实例
      */
     function __construct()
     {

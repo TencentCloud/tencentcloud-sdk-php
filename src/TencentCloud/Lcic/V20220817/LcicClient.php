@@ -58,6 +58,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
+ * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 录制流查询
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间配置信息
  * @method Models\DescribeRoomForbiddenUserResponse DescribeRoomForbiddenUser(Models\DescribeRoomForbiddenUserRequest $req) 根据房间ID获取群组中被禁言的用户列表。
  * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) 获取房间统计信息，仅可在房间结束后调用。

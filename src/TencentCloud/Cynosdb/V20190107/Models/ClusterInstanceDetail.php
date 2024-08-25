@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceStorageType() 获取实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -147,6 +151,12 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceDeviceType;
 
     /**
+     * @var string 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceStorageType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -167,6 +177,8 @@ class ClusterInstanceDetail extends AbstractModel
      * @param array $InstanceTasks 实例任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceDeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceStorageType 实例存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +257,10 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceDeviceType",$param) and $param["InstanceDeviceType"] !== null) {
             $this->InstanceDeviceType = $param["InstanceDeviceType"];
+        }
+
+        if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
+            $this->InstanceStorageType = $param["InstanceStorageType"];
         }
     }
 }

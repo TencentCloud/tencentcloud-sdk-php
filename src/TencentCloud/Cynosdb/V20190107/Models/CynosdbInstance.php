@@ -158,6 +158,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceStorageType() 获取实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -451,6 +455,12 @@ pause
     public $DeviceType;
 
     /**
+     * @var string 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceStorageType;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -519,6 +529,8 @@ pause
      * @param InstanceAbility $InstanceAbility 当前实例支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceStorageType 实例存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -773,6 +785,10 @@ pause
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
+            $this->InstanceStorageType = $param["InstanceStorageType"];
         }
     }
 }

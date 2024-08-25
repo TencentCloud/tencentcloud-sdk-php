@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescribe(string $Describe) 设置描述
  * @method string getOldPwd() 获取旧密码
  * @method void setOldPwd(string $OldPwd) 设置旧密码
+ * @method string getCamUin() 获取绑定的子用户uin
+ * @method void setCamUin(string $CamUin) 设置绑定的子用户uin
  */
 class UserInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UserInfo extends AbstractModel
     public $OldPwd;
 
     /**
+     * @var string 绑定的子用户uin
+     */
+    public $CamUin;
+
+    /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
      * @param string $PassWord 密码
@@ -80,6 +87,7 @@ class UserInfo extends AbstractModel
      * @param string $OldWhiteHost 修改前用户链接来自的 IP
      * @param string $Describe 描述
      * @param string $OldPwd 旧密码
+     * @param string $CamUin 绑定的子用户uin
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("OldPwd",$param) and $param["OldPwd"] !== null) {
             $this->OldPwd = $param["OldPwd"];
+        }
+
+        if (array_key_exists("CamUin",$param) and $param["CamUin"] !== null) {
+            $this->CamUin = $param["CamUin"];
         }
     }
 }

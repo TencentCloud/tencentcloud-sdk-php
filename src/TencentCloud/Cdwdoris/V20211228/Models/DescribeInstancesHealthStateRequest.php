@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceID() 获取集群Id
  * @method void setInstanceID(string $InstanceID) 设置集群Id
- * @method string getInput() 获取"" 或者  某个集群Id
- * @method void setInput(string $Input) 设置"" 或者  某个集群Id
+ * @method string getInput() 获取为空：代表当前appId下所有集群 或者  某个集群Id
+ * @method void setInput(string $Input) 设置为空：代表当前appId下所有集群 或者  某个集群Id
  */
 class DescribeInstancesHealthStateRequest extends AbstractModel
 {
@@ -34,13 +34,13 @@ class DescribeInstancesHealthStateRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string "" 或者  某个集群Id
+     * @var string 为空：代表当前appId下所有集群 或者  某个集群Id
      */
     public $Input;
 
     /**
      * @param string $InstanceID 集群Id
-     * @param string $Input "" 或者  某个集群Id
+     * @param string $Input 为空：代表当前appId下所有集群 或者  某个集群Id
      */
     function __construct()
     {

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveProjectName(string $ApproveProjectName) 设置审批所属项目
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplyId() 获取审批id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplyId(string $ApplyId) 设置审批id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Apply extends AbstractModel
 {
@@ -164,6 +168,12 @@ class Apply extends AbstractModel
     public $ApproveProjectName;
 
     /**
+     * @var string 审批id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplyId;
+
+    /**
      * @param string $ApplicantId 申请人id
      * @param string $ApplicantName 申请人名称
      * @param string $Remark 审批备注
@@ -187,6 +197,8 @@ class Apply extends AbstractModel
      * @param string $ApproverName 审批人名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveProjectName 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplyId 审批id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +280,10 @@ class Apply extends AbstractModel
 
         if (array_key_exists("ApproveProjectName",$param) and $param["ApproveProjectName"] !== null) {
             $this->ApproveProjectName = $param["ApproveProjectName"];
+        }
+
+        if (array_key_exists("ApplyId",$param) and $param["ApplyId"] !== null) {
+            $this->ApplyId = $param["ApplyId"];
         }
     }
 }

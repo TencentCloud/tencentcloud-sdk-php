@@ -234,6 +234,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) 设置支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCertRevokedTime() 获取证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertRevokedTime(string $CertRevokedTime) 设置证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -557,6 +561,12 @@ class Certificates extends AbstractModel
     public $SupportDownloadType;
 
     /**
+     * @var string 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertRevokedTime;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -663,6 +673,8 @@ class Certificates extends AbstractModel
      * @param boolean $KeyPasswordCustomFlag 是否存在私钥密码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportDownloadType $SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CertRevokedTime 证书吊销完成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -897,6 +909,10 @@ class Certificates extends AbstractModel
         if (array_key_exists("SupportDownloadType",$param) and $param["SupportDownloadType"] !== null) {
             $this->SupportDownloadType = new SupportDownloadType();
             $this->SupportDownloadType->deserialize($param["SupportDownloadType"]);
+        }
+
+        if (array_key_exists("CertRevokedTime",$param) and $param["CertRevokedTime"] !== null) {
+            $this->CertRevokedTime = $param["CertRevokedTime"];
         }
     }
 }

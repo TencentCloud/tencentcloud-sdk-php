@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldPwd(string $OldPwd) 设置旧密码
  * @method string getCamUin() 获取绑定的子用户uin
  * @method void setCamUin(string $CamUin) 设置绑定的子用户uin
+ * @method array getCamRangerGroupIds() 获取ranger group id列表
+ * @method void setCamRangerGroupIds(array $CamRangerGroupIds) 设置ranger group id列表
  */
 class UserInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UserInfo extends AbstractModel
     public $CamUin;
 
     /**
+     * @var array ranger group id列表
+     */
+    public $CamRangerGroupIds;
+
+    /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
      * @param string $PassWord 密码
@@ -88,6 +95,7 @@ class UserInfo extends AbstractModel
      * @param string $Describe 描述
      * @param string $OldPwd 旧密码
      * @param string $CamUin 绑定的子用户uin
+     * @param array $CamRangerGroupIds ranger group id列表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("CamUin",$param) and $param["CamUin"] !== null) {
             $this->CamUin = $param["CamUin"];
+        }
+
+        if (array_key_exists("CamRangerGroupIds",$param) and $param["CamRangerGroupIds"] !== null) {
+            $this->CamRangerGroupIds = $param["CamRangerGroupIds"];
         }
     }
 }

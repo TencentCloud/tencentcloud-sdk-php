@@ -44,15 +44,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) 设置镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getImagePort() 获取镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+ * @method integer getImagePort() 获取镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+默认值：9000
+示例值：9000
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
@@ -98,10 +102,12 @@ class ImageConfig extends AbstractModel
     public $ContainerImageAccelerate;
 
     /**
-     * @var integer 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * @var integer 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImagePort;
@@ -119,10 +125,12 @@ class ImageConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ContainerImageAccelerate 镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ImagePort 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * @param integer $ImagePort 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

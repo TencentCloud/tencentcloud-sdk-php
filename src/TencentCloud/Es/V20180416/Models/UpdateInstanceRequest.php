@@ -142,6 +142,8 @@ CLOSE 关闭
  * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) 设置分片迁移并发数
  * @method integer getShardAllocationBytes() 获取分片迁移并发速度
  * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
+ * @method integer getReadWriteMode() 获取读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+ * @method void setReadWriteMode(integer $ReadWriteMode) 设置读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -367,6 +369,11 @@ CLOSE 关闭
     public $ShardAllocationBytes;
 
     /**
+     * @var integer 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+     */
+    public $ReadWriteMode;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -428,6 +435,7 @@ CLOSE 关闭
      * @param integer $CvmDelayOnlineTime cvm延迟上架参数
      * @param integer $ShardAllocationConcurrents 分片迁移并发数
      * @param integer $ShardAllocationBytes 分片迁移并发速度
+     * @param integer $ReadWriteMode 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
      */
     function __construct()
     {
@@ -621,6 +629,10 @@ CLOSE 关闭
 
         if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
             $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
+        }
+
+        if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
+            $this->ReadWriteMode = $param["ReadWriteMode"];
         }
     }
 }

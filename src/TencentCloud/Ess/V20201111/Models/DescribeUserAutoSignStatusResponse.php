@@ -34,12 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseTo(integer $LicenseTo) 设置自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
- * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
- * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+ * @method string getSealId() 获取用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+ * @method void setSealId(string $SealId) 设置用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -65,11 +63,14 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
     public $LicenseTo;
 
     /**
-     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
      */
     public $LicenseType;
+
+    /**
+     * @var string 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     */
+    public $SealId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -84,9 +85,8 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
      * @param integer $LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
-     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+     * @param string $SealId 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +116,10 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
+            $this->SealId = $param["SealId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

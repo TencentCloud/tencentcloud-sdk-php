@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedDomainCount(integer $UsedDomainCount) 设置已使用网络域个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTrial() 获取0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrial(integer $Trial) 设置0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -260,6 +264,12 @@ class Resource extends AbstractModel
     public $UsedDomainCount;
 
     /**
+     * @var integer 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Trial;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -295,6 +305,8 @@ class Resource extends AbstractModel
      * @param integer $DomainCount 网络域个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedDomainCount 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Trial 0 非试用版，1 试用版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +453,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("UsedDomainCount",$param) and $param["UsedDomainCount"] !== null) {
             $this->UsedDomainCount = $param["UsedDomainCount"];
+        }
+
+        if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
+            $this->Trial = $param["Trial"];
         }
     }
 }

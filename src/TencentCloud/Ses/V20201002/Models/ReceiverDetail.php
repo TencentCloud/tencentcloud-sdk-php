@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getTemplateData() 获取模板参数
  * @method void setTemplateData(string $TemplateData) 设置模板参数
+ * @method string getReason() 获取无效原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReason(string $Reason) 设置无效原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取1:有效，2:无效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置1:有效，2:无效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEmailId() 获取收件人地址id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmailId(integer $EmailId) 设置收件人地址id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReceiverDetail extends AbstractModel
 {
@@ -45,9 +57,33 @@ class ReceiverDetail extends AbstractModel
     public $TemplateData;
 
     /**
+     * @var string 无效原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Reason;
+
+    /**
+     * @var integer 1:有效，2:无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var integer 收件人地址id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmailId;
+
+    /**
      * @param string $Email 收件人地址
      * @param string $CreateTime 创建时间
      * @param string $TemplateData 模板参数
+     * @param string $Reason 无效原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 1:有效，2:无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EmailId 收件人地址id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +108,18 @@ class ReceiverDetail extends AbstractModel
 
         if (array_key_exists("TemplateData",$param) and $param["TemplateData"] !== null) {
             $this->TemplateData = $param["TemplateData"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EmailId",$param) and $param["EmailId"] !== null) {
+            $this->EmailId = $param["EmailId"];
         }
     }
 }

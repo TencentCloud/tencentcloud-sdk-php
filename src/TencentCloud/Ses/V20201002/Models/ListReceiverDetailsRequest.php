@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目，整型,不超过100
  * @method string getEmail() 获取收件人地址，长度0-50，示例：xxx@te.com，支持模糊查询
  * @method void setEmail(string $Email) 设置收件人地址，长度0-50，示例：xxx@te.com，支持模糊查询
+ * @method string getCreateTimeBegin() 获取搜索开始时间
+ * @method void setCreateTimeBegin(string $CreateTimeBegin) 设置搜索开始时间
+ * @method string getCreateTimeEnd() 获取搜索结束时间
+ * @method void setCreateTimeEnd(string $CreateTimeEnd) 设置搜索结束时间
+ * @method integer getStatus() 获取1:有效，2:无效
+ * @method void setStatus(integer $Status) 设置1:有效，2:无效
  */
 class ListReceiverDetailsRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ListReceiverDetailsRequest extends AbstractModel
     public $Email;
 
     /**
+     * @var string 搜索开始时间
+     */
+    public $CreateTimeBegin;
+
+    /**
+     * @var string 搜索结束时间
+     */
+    public $CreateTimeEnd;
+
+    /**
+     * @var integer 1:有效，2:无效
+     */
+    public $Status;
+
+    /**
      * @param integer $ReceiverId 收件人列表ID,CreateReceiver接口创建收件人列表时会返回该值
      * @param integer $Offset 偏移量，整型，从0开始
      * @param integer $Limit 限制数目，整型,不超过100
      * @param string $Email 收件人地址，长度0-50，示例：xxx@te.com，支持模糊查询
+     * @param string $CreateTimeBegin 搜索开始时间
+     * @param string $CreateTimeEnd 搜索结束时间
+     * @param integer $Status 1:有效，2:无效
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ListReceiverDetailsRequest extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("CreateTimeBegin",$param) and $param["CreateTimeBegin"] !== null) {
+            $this->CreateTimeBegin = $param["CreateTimeBegin"];
+        }
+
+        if (array_key_exists("CreateTimeEnd",$param) and $param["CreateTimeEnd"] !== null) {
+            $this->CreateTimeEnd = $param["CreateTimeEnd"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

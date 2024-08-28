@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间,如:2021-09-28 16:40:35
  * @method void setCreateTime(string $CreateTime) 设置创建时间,如:2021-09-28 16:40:35
+ * @method integer getInvalidCount() 获取无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInvalidCount(integer $InvalidCount) 设置无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReceiverData extends AbstractModel
 {
@@ -72,6 +76,12 @@ class ReceiverData extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InvalidCount;
+
+    /**
      * @param integer $ReceiverId 收件人列表ID
      * @param string $ReceiversName 收件人列表名称
      * @param integer $Count 收件人地址总数
@@ -80,6 +90,8 @@ class ReceiverData extends AbstractModel
      * @param integer $ReceiversStatus 列表状态(1 待上传 2 上传中 3 上传完成)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间,如:2021-09-28 16:40:35
+     * @param integer $InvalidCount 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ class ReceiverData extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("InvalidCount",$param) and $param["InvalidCount"] !== null) {
+            $this->InvalidCount = $param["InvalidCount"];
         }
     }
 }

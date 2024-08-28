@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenReadOnlyInstanceExclusiveAccess请求参数结构体
  *
- * @method string getClusterId() 获取请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
- * @method void setClusterId(string $ClusterId) 设置请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
- * @method string getInstanceId() 获取请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
- * @method void setInstanceId(string $InstanceId) 设置请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
- * @method string getVpcId() 获取指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
- * @method void setVpcId(string $VpcId) 设置指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
- * @method string getSubnetId() 获取指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
- * @method void setSubnetId(string $SubnetId) 设置指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
- * @method integer getPort() 获取用户自定义的端口
- * @method void setPort(integer $Port) 设置用户自定义的端口
- * @method array getSecurityGroupIds() 获取安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
+ * @method string getClusterId() 获取请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 clusterId。
+ * @method void setClusterId(string $ClusterId) 设置请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 clusterId。
+ * @method string getInstanceId() 获取请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 instanceId。
+ * @method void setInstanceId(string $InstanceId) 设置请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 instanceId。
+ * @method string getVpcId() 获取指定的 vpc ID，请使用 [查询私有网络列表](https://cloud.tencent.com/document/api/215/15778) 获取 vpc ID。
+ * @method void setVpcId(string $VpcId) 设置指定的 vpc ID，请使用 [查询私有网络列表](https://cloud.tencent.com/document/api/215/15778) 获取 vpc ID。
+ * @method string getSubnetId() 获取指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 [查询子网列表](https://cloud.tencent.com/document/api/215/15784) 获取 SubnetId。
+ * @method void setSubnetId(string $SubnetId) 设置指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 [查询子网列表](https://cloud.tencent.com/document/api/215/15784) 获取 SubnetId。
+ * @method integer getPort() 获取用户自定义的端口。
+ * @method void setPort(integer $Port) 设置用户自定义的端口。
+ * @method array getSecurityGroupIds() 获取安全组 ID，请使用 [查看安全组](https://cloud.tencent.com/document/api/215/15808) 获取 SecurityGroupId。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组 ID，请使用 [查看安全组](https://cloud.tencent.com/document/api/215/15808) 获取 SecurityGroupId。
  */
 class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
 {
     /**
-     * @var string 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
+     * @var string 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 clusterId。
      */
     public $ClusterId;
 
     /**
-     * @var string 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
+     * @var string 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 instanceId。
      */
     public $InstanceId;
 
     /**
-     * @var string 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
+     * @var string 指定的 vpc ID，请使用 [查询私有网络列表](https://cloud.tencent.com/document/api/215/15778) 获取 vpc ID。
      */
     public $VpcId;
 
     /**
-     * @var string 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
+     * @var string 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 [查询子网列表](https://cloud.tencent.com/document/api/215/15784) 获取 SubnetId。
      */
     public $SubnetId;
 
     /**
-     * @var integer 用户自定义的端口
+     * @var integer 用户自定义的端口。
      */
     public $Port;
 
     /**
-     * @var array 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
+     * @var array 安全组 ID，请使用 [查看安全组](https://cloud.tencent.com/document/api/215/15808) 获取 SecurityGroupId。
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
-     * @param string $InstanceId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
-     * @param string $VpcId 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
-     * @param string $SubnetId 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
-     * @param integer $Port 用户自定义的端口
-     * @param array $SecurityGroupIds 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
+     * @param string $ClusterId 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 clusterId。
+     * @param string $InstanceId 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 instanceId。
+     * @param string $VpcId 指定的 vpc ID，请使用 [查询私有网络列表](https://cloud.tencent.com/document/api/215/15778) 获取 vpc ID。
+     * @param string $SubnetId 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 [查询子网列表](https://cloud.tencent.com/document/api/215/15784) 获取 SubnetId。
+     * @param integer $Port 用户自定义的端口。
+     * @param array $SecurityGroupIds 安全组 ID，请使用 [查看安全组](https://cloud.tencent.com/document/api/215/15808) 获取 SecurityGroupId。
      */
     function __construct()
     {

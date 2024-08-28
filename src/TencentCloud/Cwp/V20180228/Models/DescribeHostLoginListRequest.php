@@ -24,30 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置需要返回的数量，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤条件。
-<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
-<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
-<li>MachineName - String - 是否必填：否 - 主机别名</li>
-<li>Ip - String - 是否必填：否 - 主机ip</li>
-<li>InstanceID - String - 是否必填：否 - 主机实例ID</li>
-<li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>UserName - String - 是否必填：否 - 用户名筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
-<li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
-<li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
-<li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
-<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
-<li>MachineName - String - 是否必填：否 - 主机别名</li>
-<li>Ip - String - 是否必填：否 - 主机ip</li>
-<li>InstanceID - String - 是否必填：否 - 主机实例ID</li>
-<li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>UserName - String - 是否必填：否 - 用户名筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
-<li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
-<li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
-<li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+ * @method array getFilters() 获取过滤条件。<li>Quuid - String - 是否必填：否 - 云服务器uuid</li><li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li><li>MachineName - String - 是否必填：否 - 主机别名</li><li>Ip - String - 是否必填：否 - 主机ip</li><li>InstanceID - String - 是否必填：否 - 主机实例ID</li><li>SrcIp - String - 是否必填：否 - 来源ip筛选</li><li>UserName - String - 是否必填：否 - 用户名筛选</li><li>Status - string - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li><li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li><li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li><li>RiskLevel - string - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。<li>Quuid - String - 是否必填：否 - 云服务器uuid</li><li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li><li>MachineName - String - 是否必填：否 - 主机别名</li><li>Ip - String - 是否必填：否 - 主机ip</li><li>InstanceID - String - 是否必填：否 - 主机实例ID</li><li>SrcIp - String - 是否必填：否 - 来源ip筛选</li><li>UserName - String - 是否必填：否 - 用户名筛选</li><li>Status - string - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li><li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li><li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li><li>RiskLevel - string - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
  * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
  * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
  * @method string getBy() 获取排序字段：LoginTime-发生时间
@@ -66,18 +44,7 @@ class DescribeHostLoginListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件。
-<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
-<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
-<li>MachineName - String - 是否必填：否 - 主机别名</li>
-<li>Ip - String - 是否必填：否 - 主机ip</li>
-<li>InstanceID - String - 是否必填：否 - 主机实例ID</li>
-<li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>UserName - String - 是否必填：否 - 用户名筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
-<li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
-<li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
-<li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+     * @var array 过滤条件。<li>Quuid - String - 是否必填：否 - 云服务器uuid</li><li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li><li>MachineName - String - 是否必填：否 - 主机别名</li><li>Ip - String - 是否必填：否 - 主机ip</li><li>InstanceID - String - 是否必填：否 - 主机实例ID</li><li>SrcIp - String - 是否必填：否 - 来源ip筛选</li><li>UserName - String - 是否必填：否 - 用户名筛选</li><li>Status - string - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li><li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li><li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li><li>RiskLevel - string - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      */
     public $Filters;
 
@@ -94,18 +61,7 @@ class DescribeHostLoginListRequest extends AbstractModel
     /**
      * @param integer $Limit 需要返回的数量，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤条件。
-<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
-<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
-<li>MachineName - String - 是否必填：否 - 主机别名</li>
-<li>Ip - String - 是否必填：否 - 主机ip</li>
-<li>InstanceID - String - 是否必填：否 - 主机实例ID</li>
-<li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>UserName - String - 是否必填：否 - 用户名筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
-<li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
-<li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
-<li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+     * @param array $Filters 过滤条件。<li>Quuid - String - 是否必填：否 - 云服务器uuid</li><li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li><li>MachineName - String - 是否必填：否 - 主机别名</li><li>Ip - String - 是否必填：否 - 主机ip</li><li>InstanceID - String - 是否必填：否 - 主机实例ID</li><li>SrcIp - String - 是否必填：否 - 来源ip筛选</li><li>UserName - String - 是否必填：否 - 用户名筛选</li><li>Status - string - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li><li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li><li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li><li>RiskLevel - string - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
      * @param string $By 排序字段：LoginTime-发生时间
      */

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeSubversion(integer $UpgradeSubversion) 设置是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
  * @method integer getMaxDelayTime() 获取延迟阈值。取值范围1~10
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围1~10
+ * @method integer getIgnoreErrKeyword() 获取5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+ * @method void setIgnoreErrKeyword(integer $IgnoreErrKeyword) 设置5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
  * @method array getParamList() 获取版本升级支持指定参数
  * @method void setParamList(array $ParamList) 设置版本升级支持指定参数
  */
@@ -61,6 +63,11 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
     public $MaxDelayTime;
 
     /**
+     * @var integer 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     */
+    public $IgnoreErrKeyword;
+
+    /**
      * @var array 版本升级支持指定参数
      */
     public $ParamList;
@@ -71,6 +78,7 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
      * @param integer $WaitSwitch 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
      * @param integer $UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
      * @param integer $MaxDelayTime 延迟阈值。取值范围1~10
+     * @param integer $IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
      * @param array $ParamList 版本升级支持指定参数
      */
     function __construct()
@@ -104,6 +112,10 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 
         if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
             $this->MaxDelayTime = $param["MaxDelayTime"];
+        }
+
+        if (array_key_exists("IgnoreErrKeyword",$param) and $param["IgnoreErrKeyword"] !== null) {
+            $this->IgnoreErrKeyword = $param["IgnoreErrKeyword"];
         }
 
         if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {

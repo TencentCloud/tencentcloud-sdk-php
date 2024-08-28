@@ -23,7 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tms\V20201229\Models as Models;
 
 /**
- * @method Models\AnswerQuestionResponse AnswerQuestion(Models\AnswerQuestionRequest $req) "AIGC代答"产品帮助客户在其AIGC场景下，对于敏感类的问题，不是由客户的大模型机器人来回答，而是我们来进行代答，尽最大可能帮助客户规避风险。
  * @method Models\ModerateTextResponse ModerateText(Models\ModerateTextRequest $req) 天御文本内容安全定制标签文本审核接口为定制接口，会按照客户定制标签输出审核结果，如需使用请联系商务经理或[在线客服](https://cloud.tencent.com/online-service?from=doc_1125)咨询。
  * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 本接口（Text Moderation）用于提交文本内容进行智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通文本内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
 

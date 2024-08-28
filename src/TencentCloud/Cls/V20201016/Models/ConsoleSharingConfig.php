@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置仪表盘: 1; 检索页:2
  * @method integer getDurationMilliseconds() 获取分享链接有效期，单位：毫秒，最长支持30天
  * @method void setDurationMilliseconds(integer $DurationMilliseconds) 设置分享链接有效期，单位：毫秒，最长支持30天
- * @method array getResources() 获取允许访问的资源列表
- * @method void setResources(array $Resources) 设置允许访问的资源列表
+ * @method array getResources() 获取允许访问的资源列表，目前仅支持一个Resource
+ * @method void setResources(array $Resources) 设置允许访问的资源列表，目前仅支持一个Resource
  * @method string getDomain() 获取分享链接域名，可选范围
 - 公网匿名分享：填写clsshare.com
 - datasight内网匿名分享(若开启)：datasight内网域名
@@ -79,7 +79,7 @@ class ConsoleSharingConfig extends AbstractModel
     public $DurationMilliseconds;
 
     /**
-     * @var array 允许访问的资源列表
+     * @var array 允许访问的资源列表，目前仅支持一个Resource
      */
     public $Resources;
 
@@ -139,7 +139,7 @@ class ConsoleSharingConfig extends AbstractModel
      * @param string $Name 分享链接名称
      * @param integer $Type 仪表盘: 1; 检索页:2
      * @param integer $DurationMilliseconds 分享链接有效期，单位：毫秒，最长支持30天
-     * @param array $Resources 允许访问的资源列表
+     * @param array $Resources 允许访问的资源列表，目前仅支持一个Resource
      * @param string $Domain 分享链接域名，可选范围
 - 公网匿名分享：填写clsshare.com
 - datasight内网匿名分享(若开启)：datasight内网域名

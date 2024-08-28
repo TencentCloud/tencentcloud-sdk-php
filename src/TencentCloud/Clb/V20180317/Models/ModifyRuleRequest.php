@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
  * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
+ * @method OAuth getOAuth() 获取OAuth配置信息。
+ * @method void setOAuth(OAuth $OAuth) 设置OAuth配置信息。
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class ModifyRuleRequest extends AbstractModel
     public $TrpcFunc;
 
     /**
+     * @var OAuth OAuth配置信息。
+     */
+    public $OAuth;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $ListenerId 负载均衡监听器 ID。
      * @param string $LocationId 要修改的转发规则的 ID。
@@ -108,6 +115,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
+     * @param OAuth $OAuth OAuth配置信息。
      */
     function __construct()
     {
@@ -161,6 +169,11 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuth();
+            $this->OAuth->deserialize($param["OAuth"]);
         }
     }
 }

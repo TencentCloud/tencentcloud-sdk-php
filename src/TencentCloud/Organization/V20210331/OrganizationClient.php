@@ -125,6 +125,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\RemoveExternalSAMLIdPCertificateResponse RemoveExternalSAMLIdPCertificate(Models\RemoveExternalSAMLIdPCertificateRequest $req) 移除SAML签名证书
  * @method Models\RemovePermissionPolicyFromRoleConfigurationResponse RemovePermissionPolicyFromRoleConfiguration(Models\RemovePermissionPolicyFromRoleConfigurationRequest $req) 为权限配置移除策略
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组中移除用户
+ * @method Models\SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmail(Models\SendOrgMemberAccountBindEmailRequest $req) 重新发送成员绑定邮箱激活邮件
  * @method Models\SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProvider(Models\SetExternalSAMLIdentityProviderRequest $req) 配置SAML身份提供商信息
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 修改用户组信息
  * @method Models\UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(Models\UpdateOrganizationIdentityRequest $req) 更新组织身份

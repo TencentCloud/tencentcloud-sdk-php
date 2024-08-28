@@ -104,6 +104,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFromLogAnalysisData(array $FromLogAnalysisData) 设置来源日志分析的信息字段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerName() 获取容器名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerName(string $ContainerName) 设置容器名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerID() 获取容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerID(string $ContainerID) 设置容器ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleInfo extends AbstractModel
 {
@@ -234,6 +242,18 @@ class RoleInfo extends AbstractModel
     public $FromLogAnalysisData;
 
     /**
+     * @var string 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerName;
+
+    /**
+     * @var string 容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerID;
+
+    /**
      * @param string $IP IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP HostIP
@@ -275,6 +295,10 @@ class RoleInfo extends AbstractModel
      * @param integer $AssetType 1:主机资产 2:域名资产 3:网络资产
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FromLogAnalysisData 来源日志分析的信息字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerName 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerID 容器ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -377,6 +401,14 @@ class RoleInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FromLogAnalysisData, $obj);
             }
+        }
+
+        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
+            $this->ContainerName = $param["ContainerName"];
+        }
+
+        if (array_key_exists("ContainerID",$param) and $param["ContainerID"] !== null) {
+            $this->ContainerID = $param["ContainerID"];
         }
     }
 }

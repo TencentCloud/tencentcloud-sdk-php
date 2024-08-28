@@ -300,6 +300,90 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHitStrategy(string $HitStrategy) 设置主机防护命中策略，是策略ID和策略名称的组合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProcessName() 获取进程名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessName(string $ProcessName) 设置进程名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPID() 获取PID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPID(string $PID) 设置PID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPodName() 获取容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodName(string $PodName) 设置容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPodID() 获取容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodID(string $PodID) 设置容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResponse() 获取Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResponse(string $Response) 设置Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSystemCall() 获取系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSystemCall(string $SystemCall) 设置系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVerb() 获取操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerb(string $Verb) 设置操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogID() 获取日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogID(string $LogID) 设置日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDifferent() 获取变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDifferent(string $Different) 设置变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventType() 获取事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventType(string $EventType) 设置事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetAddress() 获取目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetAddress(string $TargetAddress) 设置目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaliciousRequestDomain() 获取恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaliciousRequestDomain(string $MaliciousRequestDomain) 设置恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleType() 获取规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleType(string $RuleType) 设置规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestURI() 获取请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestURI(string $RequestURI) 设置请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestUser() 获取发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestUser(string $RequestUser) 设置发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestObject() 获取请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestObject(string $RequestObject) 设置请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResponseObject() 获取响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResponseObject(string $ResponseObject) 设置响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileType() 获取文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileType(string $FileType) 设置文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTIType() 获取标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTIType(string $TIType) 设置标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceIP() 获取来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceIP(string $SourceIP) 设置来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertExtraInfo extends AbstractModel
 {
@@ -720,6 +804,132 @@ class AlertExtraInfo extends AbstractModel
     public $HitStrategy;
 
     /**
+     * @var string 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessName;
+
+    /**
+     * @var string PID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PID;
+
+    /**
+     * @var string 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodName;
+
+    /**
+     * @var string 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodID;
+
+    /**
+     * @var string Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Response;
+
+    /**
+     * @var string 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SystemCall;
+
+    /**
+     * @var string 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Verb;
+
+    /**
+     * @var string 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogID;
+
+    /**
+     * @var string 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Different;
+
+    /**
+     * @var string 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventType;
+
+    /**
+     * @var string 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var string 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetAddress;
+
+    /**
+     * @var string 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaliciousRequestDomain;
+
+    /**
+     * @var string 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleType;
+
+    /**
+     * @var string 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestURI;
+
+    /**
+     * @var string 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestUser;
+
+    /**
+     * @var string 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestObject;
+
+    /**
+     * @var string 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResponseObject;
+
+    /**
+     * @var string 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileType;
+
+    /**
+     * @var string 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TIType;
+
+    /**
+     * @var string 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceIP;
+
+    /**
      * @param RelatedEvent $RelateEvent 相关攻击事件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LeakContent 泄漏内容
@@ -859,6 +1069,48 @@ class AlertExtraInfo extends AbstractModel
      * @param string $StrategyName 主机防护策略名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HitStrategy 主机防护命中策略，是策略ID和策略名称的组合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProcessName 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PID PID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PodName 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PodID 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Response Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SystemCall 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Verb 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogID 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Different 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventType 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetAddress 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaliciousRequestDomain 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestURI 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestUser 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestObject 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResponseObject 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileType 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TIType 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceIP 来源IP(容器K8sAPI异常请求)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1154,6 +1406,90 @@ class AlertExtraInfo extends AbstractModel
 
         if (array_key_exists("HitStrategy",$param) and $param["HitStrategy"] !== null) {
             $this->HitStrategy = $param["HitStrategy"];
+        }
+
+        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
+            $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("PID",$param) and $param["PID"] !== null) {
+            $this->PID = $param["PID"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodID",$param) and $param["PodID"] !== null) {
+            $this->PodID = $param["PodID"];
+        }
+
+        if (array_key_exists("Response",$param) and $param["Response"] !== null) {
+            $this->Response = $param["Response"];
+        }
+
+        if (array_key_exists("SystemCall",$param) and $param["SystemCall"] !== null) {
+            $this->SystemCall = $param["SystemCall"];
+        }
+
+        if (array_key_exists("Verb",$param) and $param["Verb"] !== null) {
+            $this->Verb = $param["Verb"];
+        }
+
+        if (array_key_exists("LogID",$param) and $param["LogID"] !== null) {
+            $this->LogID = $param["LogID"];
+        }
+
+        if (array_key_exists("Different",$param) and $param["Different"] !== null) {
+            $this->Different = $param["Different"];
+        }
+
+        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
+            $this->EventType = $param["EventType"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("TargetAddress",$param) and $param["TargetAddress"] !== null) {
+            $this->TargetAddress = $param["TargetAddress"];
+        }
+
+        if (array_key_exists("MaliciousRequestDomain",$param) and $param["MaliciousRequestDomain"] !== null) {
+            $this->MaliciousRequestDomain = $param["MaliciousRequestDomain"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RequestURI",$param) and $param["RequestURI"] !== null) {
+            $this->RequestURI = $param["RequestURI"];
+        }
+
+        if (array_key_exists("RequestUser",$param) and $param["RequestUser"] !== null) {
+            $this->RequestUser = $param["RequestUser"];
+        }
+
+        if (array_key_exists("RequestObject",$param) and $param["RequestObject"] !== null) {
+            $this->RequestObject = $param["RequestObject"];
+        }
+
+        if (array_key_exists("ResponseObject",$param) and $param["ResponseObject"] !== null) {
+            $this->ResponseObject = $param["ResponseObject"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("TIType",$param) and $param["TIType"] !== null) {
+            $this->TIType = $param["TIType"];
+        }
+
+        if (array_key_exists("SourceIP",$param) and $param["SourceIP"] !== null) {
+            $this->SourceIP = $param["SourceIP"];
         }
     }
 }

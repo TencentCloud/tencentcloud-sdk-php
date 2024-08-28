@@ -32,11 +32,19 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
  * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
  * @method Models\GetTokenCountResponse GetTokenCount(Models\GetTokenCountRequest $req) 该接口用于计算文本对应Token数、字符数。
+ * @method Models\QueryHunyuanImageChatJobResponse QueryHunyuanImageChatJob(Models\QueryHunyuanImageChatJobRequest $req) 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\QueryHunyuanImageJobResponse QueryHunyuanImageJob(Models\QueryHunyuanImageJobRequest $req) 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SetPayModeResponse SetPayMode(Models\SetPayModeRequest $req) 设置付费模式
+ * @method Models\SubmitHunyuanImageChatJobResponse SubmitHunyuanImageChatJob(Models\SubmitHunyuanImageChatJobRequest $req) 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SubmitHunyuanImageJobResponse SubmitHunyuanImageJob(Models\SubmitHunyuanImageJobRequest $req) 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。

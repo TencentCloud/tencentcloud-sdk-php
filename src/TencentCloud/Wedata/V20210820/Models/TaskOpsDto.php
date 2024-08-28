@@ -348,6 +348,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskExtInfo() 获取任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskExtInfo(string $TaskExtInfo) 设置任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEventListenerInfos() 获取任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventListenerInfos(array $EventListenerInfos) 设置任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiopsScriptInfo getScriptInfo() 获取脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScriptInfo(AiopsScriptInfo $ScriptInfo) 设置脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiopsDLCResourceConfigDto getDLCResourceConfig() 获取DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDLCResourceConfig(AiopsDLCResourceConfigDto $DLCResourceConfig) 设置DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiopsSimpleTaskDto getParentTaskInfos() 获取父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentTaskInfos(AiopsSimpleTaskDto $ParentTaskInfos) 设置父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtResourceFlagDto getExtResourceFlag() 获取资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtResourceFlag(ExtResourceFlagDto $ExtResourceFlag) 设置资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -844,6 +868,42 @@ class TaskOpsDto extends AbstractModel
     public $ExecutorGroupName;
 
     /**
+     * @var string 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskExtInfo;
+
+    /**
+     * @var array 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventListenerInfos;
+
+    /**
+     * @var AiopsScriptInfo 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScriptInfo;
+
+    /**
+     * @var AiopsDLCResourceConfigDto DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DLCResourceConfig;
+
+    /**
+     * @var AiopsSimpleTaskDto 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentTaskInfos;
+
+    /**
+     * @var ExtResourceFlagDto 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtResourceFlag;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1007,6 +1067,18 @@ class TaskOpsDto extends AbstractModel
      * @param string $ExecutorGroupId 资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskExtInfo 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EventListenerInfos 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiopsScriptInfo $ScriptInfo 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiopsDLCResourceConfigDto $DLCResourceConfig DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiopsSimpleTaskDto $ParentTaskInfos 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtResourceFlagDto $ExtResourceFlag 资源获取标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1350,6 +1422,39 @@ class TaskOpsDto extends AbstractModel
 
         if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
             $this->ExecutorGroupName = $param["ExecutorGroupName"];
+        }
+
+        if (array_key_exists("TaskExtInfo",$param) and $param["TaskExtInfo"] !== null) {
+            $this->TaskExtInfo = $param["TaskExtInfo"];
+        }
+
+        if (array_key_exists("EventListenerInfos",$param) and $param["EventListenerInfos"] !== null) {
+            $this->EventListenerInfos = [];
+            foreach ($param["EventListenerInfos"] as $key => $value){
+                $obj = new AiOpsEventListenerDTO();
+                $obj->deserialize($value);
+                array_push($this->EventListenerInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("ScriptInfo",$param) and $param["ScriptInfo"] !== null) {
+            $this->ScriptInfo = new AiopsScriptInfo();
+            $this->ScriptInfo->deserialize($param["ScriptInfo"]);
+        }
+
+        if (array_key_exists("DLCResourceConfig",$param) and $param["DLCResourceConfig"] !== null) {
+            $this->DLCResourceConfig = new AiopsDLCResourceConfigDto();
+            $this->DLCResourceConfig->deserialize($param["DLCResourceConfig"]);
+        }
+
+        if (array_key_exists("ParentTaskInfos",$param) and $param["ParentTaskInfos"] !== null) {
+            $this->ParentTaskInfos = new AiopsSimpleTaskDto();
+            $this->ParentTaskInfos->deserialize($param["ParentTaskInfos"]);
+        }
+
+        if (array_key_exists("ExtResourceFlag",$param) and $param["ExtResourceFlag"] !== null) {
+            $this->ExtResourceFlag = new ExtResourceFlagDto();
+            $this->ExtResourceFlag->deserialize($param["ExtResourceFlag"]);
         }
     }
 }

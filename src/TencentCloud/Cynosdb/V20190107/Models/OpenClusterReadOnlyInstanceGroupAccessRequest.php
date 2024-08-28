@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenClusterReadOnlyInstanceGroupAccess请求参数结构体
  *
-
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getPort() 获取端口
+ * @method void setPort(string $Port) 设置端口
+ * @method array getSecurityGroupIds() 获取安全组ID 
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID 
  */
 class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
 
     /**
+     * @var string 端口
+     */
+    public $Port;
 
+    /**
+     * @var array 安全组ID 
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @param string $ClusterId 集群ID
+     * @param string $Port 端口
+     * @param array $SecurityGroupIds 安全组ID 
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
     }
 }

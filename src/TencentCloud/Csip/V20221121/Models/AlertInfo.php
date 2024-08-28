@@ -148,6 +148,14 @@ CSIP:云安全中心
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskTreatment(string $RiskTreatment) 设置风险处置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogType() 获取日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogType(string $LogType) 设置日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogSearch() 获取语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogSearch(string $LogSearch) 设置语句检索
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertInfo extends AbstractModel
 {
@@ -324,6 +332,18 @@ CSIP:云安全中心
     public $RiskTreatment;
 
     /**
+     * @var string 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogType;
+
+    /**
+     * @var string 语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogSearch;
+
+    /**
      * @param string $ID 告警ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警名称
@@ -387,6 +407,10 @@ CSIP:云安全中心
      * @param string $RiskInvestigation 风险排查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskTreatment 风险处置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogType 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogSearch 语句检索
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -511,6 +535,14 @@ CSIP:云安全中心
 
         if (array_key_exists("RiskTreatment",$param) and $param["RiskTreatment"] !== null) {
             $this->RiskTreatment = $param["RiskTreatment"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("LogSearch",$param) and $param["LogSearch"] !== null) {
+            $this->LogSearch = $param["LogSearch"];
         }
     }
 }

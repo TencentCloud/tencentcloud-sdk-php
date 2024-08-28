@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpandCpu(integer $ExpandCpu) 设置当前扩容的CPU核心数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterInfo() 获取实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterInfo(array $ClusterInfo) 设置实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -389,6 +393,12 @@ class InstanceInfo extends AbstractModel
     public $ExpandCpu;
 
     /**
+     * @var array 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterInfo;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -447,6 +457,8 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
      * @param integer $ExpandCpu 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterInfo 实例集群版节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -666,6 +678,15 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ExpandCpu",$param) and $param["ExpandCpu"] !== null) {
             $this->ExpandCpu = $param["ExpandCpu"];
+        }
+
+        if (array_key_exists("ClusterInfo",$param) and $param["ClusterInfo"] !== null) {
+            $this->ClusterInfo = [];
+            foreach ($param["ClusterInfo"] as $key => $value){
+                $obj = new ClusterInfo();
+                $obj->deserialize($value);
+                array_push($this->ClusterInfo, $obj);
+            }
         }
     }
 }

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStamp(string $Stamp) 设置Stamp
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -92,6 +96,12 @@ class LayerVersionInfo extends AbstractModel
     public $Stamp;
 
     /**
+     * @var array 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param array $CompatibleRuntimes 版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
@@ -103,6 +113,8 @@ class LayerVersionInfo extends AbstractModel
      * @param string $LayerName 层名称
      * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $Stamp Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 返回层绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,15 @@ class LayerVersionInfo extends AbstractModel
 
         if (array_key_exists("Stamp",$param) and $param["Stamp"] !== null) {
             $this->Stamp = $param["Stamp"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

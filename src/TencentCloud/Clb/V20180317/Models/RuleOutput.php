@@ -92,6 +92,10 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupList(array $TargetGroupList) 设置绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OAuth getOAuth() 获取OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOAuth(OAuth $OAuth) 设置OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleOutput extends AbstractModel
 {
@@ -224,6 +228,12 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     public $TargetGroupList;
 
     /**
+     * @var OAuth OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OAuth;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,6 +269,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
      * @param array $Domains 转发规则的域名列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OAuth $OAuth OAuth配置状态信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -373,6 +385,11 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
                 $obj->deserialize($value);
                 array_push($this->TargetGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuth();
+            $this->OAuth->deserialize($param["OAuth"]);
         }
     }
 }

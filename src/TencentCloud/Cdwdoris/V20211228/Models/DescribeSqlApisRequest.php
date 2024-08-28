@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCatalog(string $Catalog) 设置catalog名称
  * @method array getCatalogs() 获取catalog集合
  * @method void setCatalogs(array $Catalogs) 设置catalog集合
+ * @method string getDatabaseName() 获取数据库名
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名
+ * @method string getTableName() 获取表名
+ * @method void setTableName(string $TableName) 设置表名
  */
 class DescribeSqlApisRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeSqlApisRequest extends AbstractModel
     public $Catalogs;
 
     /**
+     * @var string 数据库名
+     */
+    public $DatabaseName;
+
+    /**
+     * @var string 表名
+     */
+    public $TableName;
+
+    /**
      * @param string $WhiteHost 用户链接来自的 IP
      * @param string $Catalog catalog名称
      * @param array $Catalogs catalog集合
+     * @param string $DatabaseName 数据库名
+     * @param string $TableName 表名
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeSqlApisRequest extends AbstractModel
 
         if (array_key_exists("Catalogs",$param) and $param["Catalogs"] !== null) {
             $this->Catalogs = $param["Catalogs"];
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
         }
     }
 }

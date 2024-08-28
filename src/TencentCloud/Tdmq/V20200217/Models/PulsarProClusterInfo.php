@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExpireTime() 获取实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -103,6 +107,12 @@ class PulsarProClusterInfo extends AbstractModel
     public $BillingLabelVersion;
 
     /**
+     * @var integer 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -115,6 +125,8 @@ class PulsarProClusterInfo extends AbstractModel
      * @param boolean $CanEditRoute 是否可以修改路由
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExpireTime 实例到期时间戳，毫秒级精度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,10 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
             $this->BillingLabelVersion = $param["BillingLabelVersion"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

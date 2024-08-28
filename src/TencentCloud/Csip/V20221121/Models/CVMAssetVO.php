@@ -19,6 +19,15 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 主机资产信息
+
+主机防护状态枚举，左边是常量，右边是显示
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
  *
  * @method string getAssetId() 获取资产id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,6 +288,28 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCloudType() 获取云资产类型：0：腾讯云，1：aws，2：azure
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(integer $CloudType) 设置云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProtectStatus() 获取主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectStatus(integer $ProtectStatus) 设置主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOfflineTime() 获取最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineTime(string $OfflineTime) 设置最后离线时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CVMAssetVO extends AbstractModel
@@ -674,6 +705,25 @@ class CVMAssetVO extends AbstractModel
     public $CloudType;
 
     /**
+     * @var integer 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectStatus;
+
+    /**
+     * @var string 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineTime;
+
+    /**
      * @param string $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名
@@ -803,6 +853,17 @@ class CVMAssetVO extends AbstractModel
      * @param integer $RealAppid cvm真正所属的appid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CloudType 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProtectStatus 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OfflineTime 最后离线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1091,6 +1152,14 @@ class CVMAssetVO extends AbstractModel
 
         if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
             $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("ProtectStatus",$param) and $param["ProtectStatus"] !== null) {
+            $this->ProtectStatus = $param["ProtectStatus"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

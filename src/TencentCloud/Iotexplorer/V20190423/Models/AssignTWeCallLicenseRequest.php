@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgType(integer $PkgType) 设置voip类型
  * @method string getMiniProgramAppId() 获取appId
  * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置appId
- * @method integer getDeductNum() 获取License数
- * @method void setDeductNum(integer $DeductNum) 设置License数
+ * @method integer getDeductNum() 获取License数，只支持50,500,1000,5000,10000,20000,50000
+ * @method void setDeductNum(integer $DeductNum) 设置License数，只支持50,500,1000,5000,10000,20000,50000
  */
 class AssignTWeCallLicenseRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AssignTWeCallLicenseRequest extends AbstractModel
     public $MiniProgramAppId;
 
     /**
-     * @var integer License数
+     * @var integer License数，只支持50,500,1000,5000,10000,20000,50000
      */
     public $DeductNum;
 
     /**
      * @param integer $PkgType voip类型
      * @param string $MiniProgramAppId appId
-     * @param integer $DeductNum License数
+     * @param integer $DeductNum License数，只支持50,500,1000,5000,10000,20000,50000
      */
     function __construct()
     {

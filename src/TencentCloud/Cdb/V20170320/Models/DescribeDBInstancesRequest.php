@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyIds(array $ProxyIds) 设置数据库代理 ID 。
  * @method array getEngineTypes() 获取数据库引擎类型。
  * @method void setEngineTypes(array $EngineTypes) 设置数据库引擎类型。
+ * @method boolean getQueryClusterInfo() 获取是否获取集群版实例节点信息，可填：true或false
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取集群版实例节点信息，可填：true或false
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -269,6 +271,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $EngineTypes;
 
     /**
+     * @var boolean 是否获取集群版实例节点信息，可填：true或false
+     */
+    public $QueryClusterInfo;
+
+    /**
      * @param integer $ProjectId 项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param array $Vips 实例的内网 IP 地址。
@@ -304,6 +311,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ProxyVips 数据库代理 IP 。
      * @param array $ProxyIds 数据库代理 ID 。
      * @param array $EngineTypes 数据库引擎类型。
+     * @param boolean $QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
      */
     function __construct()
     {
@@ -461,6 +469,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("EngineTypes",$param) and $param["EngineTypes"] !== null) {
             $this->EngineTypes = $param["EngineTypes"];
+        }
+
+        if (array_key_exists("QueryClusterInfo",$param) and $param["QueryClusterInfo"] !== null) {
+            $this->QueryClusterInfo = $param["QueryClusterInfo"];
         }
     }
 }

@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method array getSimilarQuestions() 获取相似问列表信息
+ * @method void setSimilarQuestions(array $SimilarQuestions) 设置相似问列表信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -248,6 +250,11 @@ class DescribeQAResponse extends AbstractModel
     public $ExpireEnd;
 
     /**
+     * @var array 相似问列表信息
+     */
+    public $SimilarQuestions;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -295,6 +302,7 @@ class DescribeQAResponse extends AbstractModel
      * @param array $AttrLabels 属性标签
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param array $SimilarQuestions 相似问列表信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -414,6 +422,15 @@ class DescribeQAResponse extends AbstractModel
 
         if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
             $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("SimilarQuestions",$param) and $param["SimilarQuestions"] !== null) {
+            $this->SimilarQuestions = [];
+            foreach ($param["SimilarQuestions"] as $key => $value){
+                $obj = new SimilarQuestion();
+                $obj->deserialize($value);
+                array_push($this->SimilarQuestions, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -34,11 +34,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserHost(string $UserHost) 设置IP来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQueryTime() 获取执行时间,单位秒
- * @method void setQueryTime(integer $QueryTime) 设置执行时间,单位秒
- * @method integer getLockTime() 获取锁时间,单位秒
+ * @method float getQueryTime() 获取执行时间,单位秒
+ * @method void setQueryTime(float $QueryTime) 设置执行时间,单位秒
+ * @method float getLockTime() 获取锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLockTime(integer $LockTime) 设置锁时间,单位秒
+ * @method void setLockTime(float $LockTime) 设置锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRowsExamined() 获取扫描行数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,12 +79,12 @@ class SlowLogInfoItem extends AbstractModel
     public $UserHost;
 
     /**
-     * @var integer 执行时间,单位秒
+     * @var float 执行时间,单位秒
      */
     public $QueryTime;
 
     /**
-     * @var integer 锁时间,单位秒
+     * @var float 锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockTime;
@@ -109,8 +109,8 @@ class SlowLogInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserHost IP来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QueryTime 执行时间,单位秒
-     * @param integer $LockTime 锁时间,单位秒
+     * @param float $QueryTime 执行时间,单位秒
+     * @param float $LockTime 锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RowsExamined 扫描行数
 注意：此字段可能返回 null，表示取不到有效值。

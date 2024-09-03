@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealImgCallback(boolean $SealImgCallback) 设置回调中是否需要自动签将要使用的印章（签名）图片的 base64:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**: 需要</li></ul>
- * @method string getCallbackUrl() 获取回调链接，如果渠道已经配置了，可以不传
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调链接，如果渠道已经配置了，可以不传
+ * @method string getCallbackUrl() 获取该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+ * @method void setCallbackUrl(string $CallbackUrl) 设置该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
  * @method array getVerifyChannels() 获取开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
 <li>**INSIGHT** : 慧眼人脸认别</li>
@@ -114,7 +114,8 @@ class AutoSignConfig extends AbstractModel
     public $SealImgCallback;
 
     /**
-     * @var string 回调链接，如果渠道已经配置了，可以不传
+     * @var string 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
     public $CallbackUrl;
 
@@ -162,7 +163,7 @@ class AutoSignConfig extends AbstractModel
      * @param boolean $SealImgCallback 回调中是否需要自动签将要使用的印章（签名）图片的 base64:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**: 需要</li></ul>
-     * @param string $CallbackUrl 回调链接，如果渠道已经配置了，可以不传
+     * @param string $CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
      * @param array $VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
 <li>**INSIGHT** : 慧眼人脸认别</li>

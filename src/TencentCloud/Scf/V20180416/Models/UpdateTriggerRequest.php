@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置函数名称
  * @method string getTriggerName() 获取触发器名称
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
- * @method string getType() 获取触发器类型
- * @method void setType(string $Type) 设置触发器类型
+ * @method string getType() 获取触发器类型，目前只支持timer、ckafka、http三种类型
+ * @method void setType(string $Type) 设置触发器类型，目前只支持timer、ckafka、http三种类型
  * @method string getEnable() 获取触发器开启或关闭，传参为OPEN为开启，CLOSE为关闭
  * @method void setEnable(string $Enable) 设置触发器开启或关闭，传参为OPEN为开启，CLOSE为关闭
- * @method string getQualifier() 获取函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
- * @method void setQualifier(string $Qualifier) 设置函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
- * @method string getNamespace() 获取函数的命名空间
- * @method void setNamespace(string $Namespace) 设置函数的命名空间
+ * @method string getQualifier() 获取触发器创建时所指向的函数版本或别名，默认为 $LATEST
+ * @method void setQualifier(string $Qualifier) 设置触发器创建时所指向的函数版本或别名，默认为 $LATEST
+ * @method string getNamespace() 获取函数的命名空间，默认值为default
+ * @method void setNamespace(string $Namespace) 设置函数的命名空间，默认值为default
  * @method string getTriggerDesc() 获取TriggerDesc参数
  * @method void setTriggerDesc(string $TriggerDesc) 设置TriggerDesc参数
  * @method string getDescription() 获取触发器描述
@@ -52,7 +52,7 @@ class UpdateTriggerRequest extends AbstractModel
     public $TriggerName;
 
     /**
-     * @var string 触发器类型
+     * @var string 触发器类型，目前只支持timer、ckafka、http三种类型
      */
     public $Type;
 
@@ -62,12 +62,12 @@ class UpdateTriggerRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+     * @var string 触发器创建时所指向的函数版本或别名，默认为 $LATEST
      */
     public $Qualifier;
 
     /**
-     * @var string 函数的命名空间
+     * @var string 函数的命名空间，默认值为default
      */
     public $Namespace;
 
@@ -89,10 +89,10 @@ class UpdateTriggerRequest extends AbstractModel
     /**
      * @param string $FunctionName 函数名称
      * @param string $TriggerName 触发器名称
-     * @param string $Type 触发器类型
+     * @param string $Type 触发器类型，目前只支持timer、ckafka、http三种类型
      * @param string $Enable 触发器开启或关闭，传参为OPEN为开启，CLOSE为关闭
-     * @param string $Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
-     * @param string $Namespace 函数的命名空间
+     * @param string $Qualifier 触发器创建时所指向的函数版本或别名，默认为 $LATEST
+     * @param string $Namespace 函数的命名空间，默认值为default
      * @param string $TriggerDesc TriggerDesc参数
      * @param string $Description 触发器描述
      * @param string $CustomArgument 用户附加信息

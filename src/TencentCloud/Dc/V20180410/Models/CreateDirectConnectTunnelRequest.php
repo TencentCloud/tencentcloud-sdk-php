@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 共享专线时这里需要填写共享专线的开发商账号 ID。
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) 设置物理专线owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID。
- * @method string getNetworkType() 获取网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
- * @method void setNetworkType(string $NetworkType) 设置网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+ * @method string getNetworkType() 获取网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
+ * @method void setNetworkType(string $NetworkType) 设置网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
  * @method string getNetworkRegion() 获取网络地域。
  * @method void setNetworkRegion(string $NetworkRegion) 设置网络地域。
- * @method string getVpcId() 获取私有网络统一ID或黑石网络统一ID。
- * @method void setVpcId(string $VpcId) 设置私有网络统一ID或黑石网络统一ID。
+ * @method string getVpcId() 获取私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
+ * @method void setVpcId(string $VpcId) 设置私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
  * @method string getDirectConnectGatewayId() 获取专线网关ID，例如 dcg-d545ddf。
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，例如 dcg-d545ddf。
  * @method integer getBandwidth() 获取专线带宽，单位：Mbps；默认是物理专线带宽值。
@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBfdInfo(BFDInfo $BfdInfo) 设置BFD配置信息。
  * @method NQAInfo getNqaInfo() 获取NQA配置信息。
  * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息。
+ * @method array getTags() 获取标签键值对
+ * @method void setTags(array $Tags) 设置标签键值对
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -84,7 +86,7 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
     public $DirectConnectOwnerAccount;
 
     /**
-     * @var string 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+     * @var string 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
      */
     public $NetworkType;
 
@@ -94,7 +96,7 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
     public $NetworkRegion;
 
     /**
-     * @var string 私有网络统一ID或黑石网络统一ID。
+     * @var string 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
      */
     public $VpcId;
 
@@ -170,13 +172,18 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
     public $NqaInfo;
 
     /**
+     * @var array 标签键值对
+     */
+    public $Tags;
+
+    /**
      * @param string $DirectConnectId 物理专线ID，例如：dc-kd7d06of。
      * @param string $DirectConnectTunnelName 专用通道名称。
      * @param string $DirectConnectOwnerAccount 物理专线owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID。
-     * @param string $NetworkType 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+     * @param string $NetworkType 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
      * @param string $NetworkRegion 网络地域。
-     * @param string $VpcId 私有网络统一ID或黑石网络统一ID。
+     * @param string $VpcId 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
      * @param string $DirectConnectGatewayId 专线网关ID，例如 dcg-d545ddf。
      * @param integer $Bandwidth 专线带宽，单位：Mbps；默认是物理专线带宽值。
      * @param string $RouteType 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
@@ -192,6 +199,7 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
      * @param integer $NqaEnable 是否开启NQA。
      * @param BFDInfo $BfdInfo BFD配置信息。
      * @param NQAInfo $NqaInfo NQA配置信息。
+     * @param array $Tags 标签键值对
      */
     function __construct()
     {
@@ -292,6 +300,15 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
         if (array_key_exists("NqaInfo",$param) and $param["NqaInfo"] !== null) {
             $this->NqaInfo = new NQAInfo();
             $this->NqaInfo->deserialize($param["NqaInfo"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

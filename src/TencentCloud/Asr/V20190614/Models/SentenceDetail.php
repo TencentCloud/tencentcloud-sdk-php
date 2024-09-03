@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmotionType(array $EmotionType) 设置情绪类型（可能为空）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKeyWordResults() 获取关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyWordResults(array $KeyWordResults) 设置关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -144,6 +148,12 @@ class SentenceDetail extends AbstractModel
     public $EmotionType;
 
     /**
+     * @var array 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyWordResults;
+
+    /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
@@ -167,6 +177,8 @@ class SentenceDetail extends AbstractModel
      * @param integer $SilenceTime 本句与上一句之间的静音时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EmotionType 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $KeyWordResults 关键词识别结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +245,15 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("EmotionType",$param) and $param["EmotionType"] !== null) {
             $this->EmotionType = $param["EmotionType"];
+        }
+
+        if (array_key_exists("KeyWordResults",$param) and $param["KeyWordResults"] !== null) {
+            $this->KeyWordResults = [];
+            foreach ($param["KeyWordResults"] as $key => $value){
+                $obj = new KeyWordResult();
+                $obj->deserialize($value);
+                array_push($this->KeyWordResults, $obj);
+            }
         }
     }
 }

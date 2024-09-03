@@ -70,18 +70,8 @@ use TencentCloud\Common\AbstractModel;
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
- * @method string getCallbackUrl() 获取执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
- * @method void setCallbackUrl(string $CallbackUrl) 设置执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+ * @method string getCallbackUrl() 获取该字段已废弃，请使用【应用号配置】中的回调地址
+ * @method void setCallbackUrl(string $CallbackUrl) 设置该字段已废弃，请使用【应用号配置】中的回调地址
  * @method boolean getUnordered() 获取合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
@@ -231,12 +221,8 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+     * @var string 该字段已废弃，请使用【应用号配置】中的回调地址
+     * @deprecated
      */
     public $CallbackUrl;
 
@@ -357,12 +343,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>数据表格等填写控件</li></ul>
      * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     * @param string $CallbackUrl 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+     * @param string $CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址
      * @param boolean $Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>

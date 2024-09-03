@@ -98,6 +98,10 @@ DeadLetter 死信
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientProtocol(string $ClientProtocol) 设置协议类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientSubscriptionInfos() 获取客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientSubscriptionInfos(array $ClientSubscriptionInfos) 设置客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQSubscription extends AbstractModel
 {
@@ -201,6 +205,12 @@ DeadLetter 死信
     public $ClientProtocol;
 
     /**
+     * @var array 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientSubscriptionInfos;
+
+    /**
      * @param string $Topic 主题名称
      * @param string $Type 主题类型：
 Normal 普通,
@@ -239,6 +249,8 @@ DeadLetter 死信
      * @param integer $MaxRetryTimes 最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientProtocol 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientSubscriptionInfos 客户端订阅详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -312,6 +324,15 @@ DeadLetter 死信
 
         if (array_key_exists("ClientProtocol",$param) and $param["ClientProtocol"] !== null) {
             $this->ClientProtocol = $param["ClientProtocol"];
+        }
+
+        if (array_key_exists("ClientSubscriptionInfos",$param) and $param["ClientSubscriptionInfos"] !== null) {
+            $this->ClientSubscriptionInfos = [];
+            foreach ($param["ClientSubscriptionInfos"] as $key => $value){
+                $obj = new ClientSubscriptionInfo();
+                $obj->deserialize($value);
+                array_push($this->ClientSubscriptionInfos, $obj);
+            }
         }
     }
 }

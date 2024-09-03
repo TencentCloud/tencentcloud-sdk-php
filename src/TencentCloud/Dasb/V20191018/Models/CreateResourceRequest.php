@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费
  * @method string getDeployZone() 获取部署zone
  * @method void setDeployZone(string $DeployZone) 设置部署zone
+ * @method integer getTrial() 获取0非试用版，1试用版
+ * @method void setTrial(integer $Trial) 设置0非试用版，1试用版
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateResourceRequest extends AbstractModel
     public $DeployZone;
 
     /**
+     * @var integer 0非试用版，1试用版
+     */
+    public $Trial;
+
+    /**
      * @param string $DeployRegion 部署region
      * @param string $VpcId 部署堡垒机的VpcId
      * @param string $SubnetId 部署堡垒机的SubnetId
@@ -104,6 +111,7 @@ class CreateResourceRequest extends AbstractModel
      * @param integer $PayMode 计费模式 1预付费
      * @param integer $AutoRenewFlag 自动续费
      * @param string $DeployZone 部署zone
+     * @param integer $Trial 0非试用版，1试用版
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("DeployZone",$param) and $param["DeployZone"] !== null) {
             $this->DeployZone = $param["DeployZone"];
+        }
+
+        if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
+            $this->Trial = $param["Trial"];
         }
     }
 }

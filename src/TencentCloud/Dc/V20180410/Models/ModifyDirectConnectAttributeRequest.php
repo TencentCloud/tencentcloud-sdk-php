@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDirectConnectAttribute请求参数结构体
  *
- * @method string getDirectConnectId() 获取物理专线的ID。
- * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线的ID。
+ * @method string getDirectConnectId() 获取物理专线ID。
+ * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线ID。
  * @method string getDirectConnectName() 获取物理专线名称。
  * @method void setDirectConnectName(string $DirectConnectName) 设置物理专线名称。
  * @method string getCircuitCode() 获取运营商或者服务商为物理专线提供的电路编码。
@@ -42,15 +42,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
- * @method boolean getSignLaw() 获取物理专线申请者补签用户使用协议
- * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者补签用户使用协议
- * @method integer getBandwidth() 获取物理专线带宽
- * @method void setBandwidth(integer $Bandwidth) 设置物理专线带宽
+ * @method boolean getSignLaw() 获取物理专线申请者补签用户使用协议。
+ * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者补签用户使用协议。
+ * @method integer getBandwidth() 获取物理专线带宽。
+ * @method void setBandwidth(integer $Bandwidth) 设置物理专线带宽。
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 物理专线的ID。
+     * @var string 物理专线ID。
      */
     public $DirectConnectId;
 
@@ -105,17 +105,17 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $FaultReportContactNumber;
 
     /**
-     * @var boolean 物理专线申请者补签用户使用协议
+     * @var boolean 物理专线申请者补签用户使用协议。
      */
     public $SignLaw;
 
     /**
-     * @var integer 物理专线带宽
+     * @var integer 物理专线带宽。
      */
     public $Bandwidth;
 
     /**
-     * @param string $DirectConnectId 物理专线的ID。
+     * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线名称。
      * @param string $CircuitCode 运营商或者服务商为物理专线提供的电路编码。
      * @param integer $Vlan 物理专线调试VLAN。
@@ -126,8 +126,8 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @param string $CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
-     * @param boolean $SignLaw 物理专线申请者补签用户使用协议
-     * @param integer $Bandwidth 物理专线带宽
+     * @param boolean $SignLaw 物理专线申请者补签用户使用协议。
+     * @param integer $Bandwidth 物理专线带宽。
      */
     function __construct()
     {

@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectHasNewAction(boolean $ObjectHasNewAction) 设置是否包含新动作
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getObjectPlatformName() 获取对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectPlatformName(string $ObjectPlatformName) 设置对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getObjectSupportType() 获取1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectSupportType(integer $ObjectSupportType) 设置1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectType extends AbstractModel
 {
@@ -72,6 +80,18 @@ class ObjectType extends AbstractModel
     public $ObjectHasNewAction;
 
     /**
+     * @var string 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectPlatformName;
+
+    /**
+     * @var integer 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectSupportType;
+
+    /**
      * @param integer $ObjectTypeId 对象类型ID
      * @param string $ObjectTypeTitle 对象类型名称
      * @param string $ObjectTypeLevelOne 对象类型第一级
@@ -79,6 +99,10 @@ class ObjectType extends AbstractModel
      * @param ObjectTypeJsonParse $ObjectTypeJsonParse tke接口json解析规则，null不需要解析
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ObjectHasNewAction 是否包含新动作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ObjectPlatformName 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,6 +142,14 @@ class ObjectType extends AbstractModel
 
         if (array_key_exists("ObjectHasNewAction",$param) and $param["ObjectHasNewAction"] !== null) {
             $this->ObjectHasNewAction = $param["ObjectHasNewAction"];
+        }
+
+        if (array_key_exists("ObjectPlatformName",$param) and $param["ObjectPlatformName"] !== null) {
+            $this->ObjectPlatformName = $param["ObjectPlatformName"];
+        }
+
+        if (array_key_exists("ObjectSupportType",$param) and $param["ObjectSupportType"] !== null) {
+            $this->ObjectSupportType = $param["ObjectSupportType"];
         }
     }
 }

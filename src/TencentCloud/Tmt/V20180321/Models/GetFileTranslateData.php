@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
- * @method string getFileData() 获取文件数据
+ * @method string getFileData() 获取文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileData(string $FileData) 设置文件数据
+ * @method void setFileData(string $FileData) 设置文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误提示
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,7 +48,7 @@ class GetFileTranslateData extends AbstractModel
     public $Status;
 
     /**
-     * @var string 文件数据
+     * @var string 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileData;
@@ -67,7 +67,7 @@ class GetFileTranslateData extends AbstractModel
     /**
      * @param string $TaskId 任务ID
      * @param string $Status 状态
-     * @param string $FileData 文件数据
+     * @param string $FileData 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误提示
 注意：此字段可能返回 null，表示取不到有效值。

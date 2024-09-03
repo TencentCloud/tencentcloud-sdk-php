@@ -170,6 +170,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingResourceMode(string $BillingResourceMode) 设置集群类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemRatio() 获取Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemRatio(integer $MemRatio) 设置Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -433,6 +437,12 @@ class Cluster extends AbstractModel
     public $BillingResourceMode;
 
     /**
+     * @var integer Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemRatio;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -507,6 +517,8 @@ class Cluster extends AbstractModel
      * @param integer $ResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingResourceMode 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemRatio Cu比例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -736,6 +748,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("BillingResourceMode",$param) and $param["BillingResourceMode"] !== null) {
             $this->BillingResourceMode = $param["BillingResourceMode"];
+        }
+
+        if (array_key_exists("MemRatio",$param) and $param["MemRatio"] !== null) {
+            $this->MemRatio = $param["MemRatio"];
         }
     }
 }

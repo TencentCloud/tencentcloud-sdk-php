@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRouteTriggerTime请求参数结构体
  *
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method string getDelayTime() 获取修改时间
  * @method void setDelayTime(string $DelayTime) 设置修改时间
  */
 class DeleteRouteTriggerTimeRequest extends AbstractModel
 {
     /**
+     * @var string 实例id
+     */
+    public $InstanceId;
+
+    /**
      * @var string 修改时间
      */
     public $DelayTime;
 
     /**
+     * @param string $InstanceId 实例id
      * @param string $DelayTime 修改时间
      */
     function __construct()
@@ -46,6 +54,10 @@ class DeleteRouteTriggerTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
             $this->DelayTime = $param["DelayTime"];
         }

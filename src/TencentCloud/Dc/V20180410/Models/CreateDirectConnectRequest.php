@@ -78,6 +78,8 @@ ChinaOther：中国其他；
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
  * @method boolean getSignLaw() 获取物理专线申请者是否签署了用户使用协议。默认已签署。
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者是否签署了用户使用协议。默认已签署。
+ * @method array getTags() 获取标签键值对
+ * @method void setTags(array $Tags) 设置标签键值对
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
@@ -179,6 +181,11 @@ ChinaOther：中国其他；
     public $SignLaw;
 
     /**
+     * @var array 标签键值对
+     */
+    public $Tags;
+
+    /**
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线所在的接入点。
 您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
@@ -208,6 +215,7 @@ ChinaOther：中国其他；
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
      * @param boolean $SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
+     * @param array $Tags 标签键值对
      */
     function __construct()
     {
@@ -288,6 +296,15 @@ ChinaOther：中国其他；
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

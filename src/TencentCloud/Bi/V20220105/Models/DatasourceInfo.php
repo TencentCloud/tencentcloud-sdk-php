@@ -140,6 +140,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbTypeName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbTypeName(string $DbTypeName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceInfo extends AbstractModel
 {
@@ -344,6 +348,12 @@ class DatasourceInfo extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbTypeName;
+
+    /**
      * @param integer $Id 数据库ID
      * @param string $DbName 数据库名称
      * @param string $ServiceType 域类型，1、腾讯云，2、本地
@@ -403,6 +413,8 @@ class DatasourceInfo extends AbstractModel
      * @param string $DataOriginDatasourceId 第三方数据源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbTypeName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -562,6 +574,10 @@ class DatasourceInfo extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("DbTypeName",$param) and $param["DbTypeName"] !== null) {
+            $this->DbTypeName = $param["DbTypeName"];
         }
     }
 }

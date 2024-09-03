@@ -41,6 +41,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
  * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于查看备份文件列表。
  * @method Models\DescribeBackupTimeResponse DescribeBackupTime(Models\DescribeBackupTimeRequest $req) 本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
+ * @method Models\DescribeBinlogTimeResponse DescribeBinlogTime(Models\DescribeBinlogTimeRequest $req) 本接口（DescribeBinlogTime）用于查询可回档时间范围。
  * @method Models\DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(Models\DescribeDBEncryptAttributesRequest $req) 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) 本接口(DescribeDBInstanceDetail)用于查询指定实例的详细信息。
  * @method Models\DescribeDBInstanceSpecsResponse DescribeDBInstanceSpecs(Models\DescribeDBInstanceSpecsRequest $req) 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。

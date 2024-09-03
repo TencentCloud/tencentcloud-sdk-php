@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessPolicyEnabled(boolean $AccessPolicyEnabled) 设置是否开启策略访问控制。默认为False
  * @method string getSamlData() 获取SAML-DATA，开启SSO时传。
  * @method void setSamlData(string $SamlData) 设置SAML-DATA，开启SSO时传。
+ * @method array getTags() 获取指定绑定的标签列表
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表
  */
 class CreateVpnGatewaySslServerRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     public $SamlData;
 
     /**
+     * @var array 指定绑定的标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
      * @param array $LocalAddress 云端地址（CIDR）列表。
@@ -120,6 +127,7 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
      * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      * @param boolean $AccessPolicyEnabled 是否开启策略访问控制。默认为False
      * @param string $SamlData SAML-DATA，开启SSO时传。
+     * @param array $Tags 指定绑定的标签列表
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
 
         if (array_key_exists("SamlData",$param) and $param["SamlData"] !== null) {
             $this->SamlData = $param["SamlData"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

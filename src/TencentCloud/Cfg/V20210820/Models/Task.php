@@ -114,6 +114,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskPlanStartTime() 获取计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPlanStartTime(string $TaskPlanStartTime) 设置计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskPlanEndTime() 获取计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPlanEndTime(string $TaskPlanEndTime) 设置计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaskOrg() 获取人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskOrg(array $TaskOrg) 设置人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskIssue() 获取问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskIssue(string $TaskIssue) 设置问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Task extends AbstractModel
 {
@@ -281,6 +297,30 @@ class Task extends AbstractModel
     public $PolicyDealType;
 
     /**
+     * @var string 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPlanStartTime;
+
+    /**
+     * @var string 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPlanEndTime;
+
+    /**
+     * @var array 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskOrg;
+
+    /**
+     * @var string 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskIssue;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -327,6 +367,14 @@ class Task extends AbstractModel
      * @param integer $VerifyId 关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskPlanStartTime 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskPlanEndTime 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskOrg 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskIssue 问题和改进
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -477,6 +525,27 @@ class Task extends AbstractModel
 
         if (array_key_exists("PolicyDealType",$param) and $param["PolicyDealType"] !== null) {
             $this->PolicyDealType = $param["PolicyDealType"];
+        }
+
+        if (array_key_exists("TaskPlanStartTime",$param) and $param["TaskPlanStartTime"] !== null) {
+            $this->TaskPlanStartTime = $param["TaskPlanStartTime"];
+        }
+
+        if (array_key_exists("TaskPlanEndTime",$param) and $param["TaskPlanEndTime"] !== null) {
+            $this->TaskPlanEndTime = $param["TaskPlanEndTime"];
+        }
+
+        if (array_key_exists("TaskOrg",$param) and $param["TaskOrg"] !== null) {
+            $this->TaskOrg = [];
+            foreach ($param["TaskOrg"] as $key => $value){
+                $obj = new TaskOrg();
+                $obj->deserialize($value);
+                array_push($this->TaskOrg, $obj);
+            }
+        }
+
+        if (array_key_exists("TaskIssue",$param) and $param["TaskIssue"] !== null) {
+            $this->TaskIssue = $param["TaskIssue"];
         }
     }
 }

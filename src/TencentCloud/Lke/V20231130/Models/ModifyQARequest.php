@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method SimilarQuestionModify getSimilarQuestionModify() 获取相似问修改信息(相似问没有修改则不传)
+ * @method void setSimilarQuestionModify(SimilarQuestionModify $SimilarQuestionModify) 设置相似问修改信息(相似问没有修改则不传)
  */
 class ModifyQARequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyQARequest extends AbstractModel
     public $ExpireEnd;
 
     /**
+     * @var SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
+     */
+    public $SimilarQuestionModify;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
@@ -112,6 +119,7 @@ class ModifyQARequest extends AbstractModel
      * @param string $CateBizId 分类ID
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param SimilarQuestionModify $SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ class ModifyQARequest extends AbstractModel
 
         if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
             $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("SimilarQuestionModify",$param) and $param["SimilarQuestionModify"] !== null) {
+            $this->SimilarQuestionModify = new SimilarQuestionModify();
+            $this->SimilarQuestionModify->deserialize($param["SimilarQuestionModify"]);
         }
     }
 }

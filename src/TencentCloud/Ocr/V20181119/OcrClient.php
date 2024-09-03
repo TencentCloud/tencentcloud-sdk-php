@@ -53,7 +53,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\ClassifyStoreNameResponse ClassifyStoreName(Models\ClassifyStoreNameRequest $req) 本接口用于识别门头照分类标签信息
- * @method Models\CreateAIFormTaskResponse CreateAIFormTask(Models\CreateAIFormTaskRequest $req) 本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
+默认接口请求频率限制：1次/秒
+ * @method Models\CreateAIFormTaskResponse CreateAIFormTask(Models\CreateAIFormTaskRequest $req) 智慧表单产品已下线，需要下线相关API
+
+本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
 
 智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\DriverLicenseOCRResponse DriverLicenseOCR(Models\DriverLicenseOCRRequest $req) 本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
@@ -291,7 +294,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\GeneralHandwritingOCRResponse GeneralHandwritingOCR(Models\GeneralHandwritingOCRRequest $req) 本接口支持图片内手写体文字的检测和识别，针对手写字体无规则、字迹潦草、模糊等特点进行了识别能力的增强。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+ * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 智慧表单产品已下线，需要下线相关API
+
+支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) 本接口支持中国香港身份证人像面中关键字段的识别，包括中文姓名、英文姓名、姓名电码、出生日期、性别、证件符号、首次签发日期、最近领用日期、身份证号、是否是永久性居民身份证；具备人像照片裁剪等扩展功能。
 
 默认接口请求频率限制：5次/秒。
@@ -623,6 +628,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeStoreNameResponse RecognizeStoreName(Models\RecognizeStoreNameRequest $req) 本接口用于识别门头照文字识别结果以及对应分类标签信息
+默认接口请求频率限制：1次/秒
  * @method Models\RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(Models\RecognizeTableAccurateOCRRequest $req) 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。点击[立即体验](https://cloud.tencent.com/act/event/ocrdemo)。
 
 默认接口请求频率限制：2次/秒。

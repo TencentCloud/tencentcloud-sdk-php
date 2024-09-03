@@ -20,6 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSqlApis请求参数结构体
  *
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getApiType() 获取GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+ * @method void setApiType(string $ApiType) 设置GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+ * @method string getUserName() 获取用户名称
+ * @method void setUserName(string $UserName) 设置用户名称
  * @method string getWhiteHost() 获取用户链接来自的 IP
  * @method void setWhiteHost(string $WhiteHost) 设置用户链接来自的 IP
  * @method string getCatalog() 获取catalog名称
@@ -33,6 +49,26 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeSqlApisRequest extends AbstractModel
 {
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
+
+    /**
+     * @var string GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+     */
+    public $ApiType;
+
+    /**
+     * @var string 用户名称
+     */
+    public $UserName;
+
     /**
      * @var string 用户链接来自的 IP
      */
@@ -59,6 +95,14 @@ class DescribeSqlApisRequest extends AbstractModel
     public $TableName;
 
     /**
+     * @param string $InstanceId 实例id
+     * @param string $ApiType GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+     * @param string $UserName 用户名称
      * @param string $WhiteHost 用户链接来自的 IP
      * @param string $Catalog catalog名称
      * @param array $Catalogs catalog集合
@@ -78,6 +122,18 @@ class DescribeSqlApisRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ApiType",$param) and $param["ApiType"] !== null) {
+            $this->ApiType = $param["ApiType"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
         if (array_key_exists("WhiteHost",$param) and $param["WhiteHost"] !== null) {
             $this->WhiteHost = $param["WhiteHost"];
         }

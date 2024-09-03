@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程的描述，长度不超过1000个字符
  * @method string getFlowType() 获取签署流程的类型，长度不超过255个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型，长度不超过255个字符
- * @method string getCallbackUrl() 获取签署流程回调地址，长度不超过255个字符
- * @method void setCallbackUrl(string $CallbackUrl) 设置签署流程回调地址，长度不超过255个字符
+ * @method string getCallbackUrl() 获取已废弃，请使用【应用号配置】中的回调地址统一接收消息
+ * @method void setCallbackUrl(string $CallbackUrl) 设置已废弃，请使用【应用号配置】中的回调地址统一接收消息
  * @method string getCustomerData() 获取第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method void setCustomerData(string $CustomerData) 设置第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method boolean getUnordered() 获取合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
@@ -78,7 +78,8 @@ class FlowFileInfo extends AbstractModel
     public $FlowType;
 
     /**
-     * @var string 签署流程回调地址，长度不超过255个字符
+     * @var string 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @deprecated
      */
     public $CallbackUrl;
 
@@ -114,7 +115,7 @@ class FlowFileInfo extends AbstractModel
      * @param integer $Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
      * @param string $FlowDescription 签署流程的描述，长度不超过1000个字符
      * @param string $FlowType 签署流程的类型，长度不超过255个字符
-     * @param string $CallbackUrl 签署流程回调地址，长度不超过255个字符
+     * @param string $CallbackUrl 已废弃，请使用【应用号配置】中的回调地址统一接收消息
      * @param string $CustomerData 第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
      * @param array $Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充

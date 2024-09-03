@@ -140,6 +140,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinBandwidth(integer $MinBandwidth) 设置物理专线最小带宽
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConstruct() 获取建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConstruct(integer $Construct) 设置建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPointName() 获取物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPointName(string $AccessPointName) 设置物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnect extends AbstractModel
 {
@@ -332,6 +340,18 @@ class DirectConnect extends AbstractModel
     public $MinBandwidth;
 
     /**
+     * @var integer 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Construct;
+
+    /**
+     * @var string 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPointName;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -391,6 +411,10 @@ class DirectConnect extends AbstractModel
      * @param integer $OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinBandwidth 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Construct 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPointName 物理专线的接入点名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -537,6 +561,14 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("MinBandwidth",$param) and $param["MinBandwidth"] !== null) {
             $this->MinBandwidth = $param["MinBandwidth"];
+        }
+
+        if (array_key_exists("Construct",$param) and $param["Construct"] !== null) {
+            $this->Construct = $param["Construct"];
+        }
+
+        if (array_key_exists("AccessPointName",$param) and $param["AccessPointName"] !== null) {
+            $this->AccessPointName = $param["AccessPointName"];
         }
     }
 }

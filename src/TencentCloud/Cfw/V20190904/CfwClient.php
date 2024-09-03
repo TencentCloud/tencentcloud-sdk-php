@@ -49,6 +49,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 批量删除入侵防御封禁列表、放通列表规则（新）
  * @method Models\DeleteIdsWhiteRuleResponse DeleteIdsWhiteRule(Models\DeleteIdsWhiteRuleRequest $req) 删除入侵防御规则白名单接口
  * @method Models\DeleteNatFwInstanceResponse DeleteNatFwInstance(Models\DeleteNatFwInstanceRequest $req) 销毁防火墙实例
+ * @method Models\DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(Models\DeleteRemoteAccessDomainRequest $req) 删除远程运维域名
  * @method Models\DeleteResourceGroupResponse DeleteResourceGroup(Models\DeleteResourceGroupRequest $req) DeleteResourceGroup-资产中心资产组删除
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DeleteVpcFwGroupResponse DeleteVpcFwGroup(Models\DeleteVpcFwGroupRequest $req) 删除防火墙(组)，或者删除其中实例

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDirectConnects请求参数结构体
  *
- * @method array getFilters() 获取过滤条件:
- * @method void setFilters(array $Filters) 设置过滤条件:
- * @method array getDirectConnectIds() 获取物理专线 ID数组
- * @method void setDirectConnectIds(array $DirectConnectIds) 设置物理专线 ID数组
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
+ * @method array getFilters() 获取过滤条件。
+ * @method void setFilters(array $Filters) 设置过滤条件。
+ * @method array getDirectConnectIds() 获取物理专线 ID数组。
+ * @method void setDirectConnectIds(array $DirectConnectIds) 设置物理专线 ID数组。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeDirectConnectsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件:
+     * @var array 过滤条件。
      */
     public $Filters;
 
     /**
-     * @var array 物理专线 ID数组
+     * @var array 物理专线 ID数组。
      */
     public $DirectConnectIds;
 
     /**
-     * @var integer 偏移量，默认为0
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件:
-     * @param array $DirectConnectIds 物理专线 ID数组
-     * @param integer $Offset 偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为100
+     * @param array $Filters 过滤条件。
+     * @param array $DirectConnectIds 物理专线 ID数组。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

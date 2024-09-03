@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScalableTps(integer $ScalableTps) 设置规格外弹性TPS
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxPartitions() 获取32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxPartitions(integer $MaxPartitions) 设置32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
@@ -69,12 +75,22 @@ class PulsarProClusterSpecInfo extends AbstractModel
     public $ScalableTps;
 
     /**
+     * @var integer 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxPartitions;
+
+    /**
      * @param string $SpecName 集群规格名称
      * @param integer $MaxTps 峰值tps
      * @param integer $MaxBandWidth 峰值带宽。单位：mbps
      * @param integer $MaxNamespaces 最大命名空间个数
      * @param integer $MaxTopics 最大主题分区数
      * @param integer $ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxPartitions 32或者128
+当前集群topic的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +128,10 @@ class PulsarProClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("ScalableTps",$param) and $param["ScalableTps"] !== null) {
             $this->ScalableTps = $param["ScalableTps"];
+        }
+
+        if (array_key_exists("MaxPartitions",$param) and $param["MaxPartitions"] !== null) {
+            $this->MaxPartitions = $param["MaxPartitions"];
         }
     }
 }

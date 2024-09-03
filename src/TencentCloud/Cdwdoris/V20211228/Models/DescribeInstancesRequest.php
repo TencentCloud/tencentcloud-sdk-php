@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，第一页为0，第二页为10
  * @method integer getLimit() 获取分页参数，分页步长，默认为10
  * @method void setLimit(integer $Limit) 设置分页参数，分页步长，默认为10
- * @method array getSearchTags() 获取搜索标签列表
- * @method void setSearchTags(array $SearchTags) 设置搜索标签列表
+ * @method array getSearchTags() 获取搜索标签列表，没匹配到则不过滤集群列表
+ * @method void setSearchTags(array $SearchTags) 设置搜索标签列表，没匹配到则不过滤集群列表
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 搜索标签列表
+     * @var array 搜索标签列表，没匹配到则不过滤集群列表
      */
     public $SearchTags;
 
@@ -63,7 +63,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $SearchInstanceName 搜索的集群name
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
-     * @param array $SearchTags 搜索标签列表
+     * @param array $SearchTags 搜索标签列表，没匹配到则不过滤集群列表
      */
     function __construct()
     {

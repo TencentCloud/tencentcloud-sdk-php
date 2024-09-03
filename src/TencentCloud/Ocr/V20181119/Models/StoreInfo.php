@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 门头照识别结果
  *
- * @method string getName() 获取识别出的字段名称(关键字)，支持以下字段：
-付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
- * @method void setName(string $Name) 设置识别出的字段名称(关键字)，支持以下字段：
-付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
+ * @method string getName() 获取识别出的字段名称(关键字)，如商店名称
+ * @method void setName(string $Name) 设置识别出的字段名称(关键字)，如商店名称
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method Rect getRect() 获取文本行在旋转纠正之后的图像中的像素坐标
@@ -32,8 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class StoreInfo extends AbstractModel
 {
     /**
-     * @var string 识别出的字段名称(关键字)，支持以下字段：
-付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
+     * @var string 识别出的字段名称(关键字)，如商店名称
      */
     public $Name;
 
@@ -48,8 +45,7 @@ class StoreInfo extends AbstractModel
     public $Rect;
 
     /**
-     * @param string $Name 识别出的字段名称(关键字)，支持以下字段：
-付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
+     * @param string $Name 识别出的字段名称(关键字)，如商店名称
      * @param string $Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      * @param Rect $Rect 文本行在旋转纠正之后的图像中的像素坐标
      */

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSslVpnClientName(string $SslVpnClientName) 设置SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
  * @method array getSslVpnClientNames() 获取SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
  * @method void setSslVpnClientNames(array $SslVpnClientNames) 设置SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+ * @method array getTags() 获取指定绑定的标签列表
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表
  */
 class CreateVpnGatewaySslClientRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateVpnGatewaySslClientRequest extends AbstractModel
     public $SslVpnClientNames;
 
     /**
+     * @var array 指定绑定的标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
      * @param string $SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
      * @param array $SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     * @param array $Tags 指定绑定的标签列表
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateVpnGatewaySslClientRequest extends AbstractModel
 
         if (array_key_exists("SslVpnClientNames",$param) and $param["SslVpnClientNames"] !== null) {
             $this->SslVpnClientNames = $param["SslVpnClientNames"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

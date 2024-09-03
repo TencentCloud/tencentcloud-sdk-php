@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListQA请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页大小
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询问题
  * @method array getAcceptStatus() 获取校验状态(1未校验2采纳3不采纳)
  * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态(1未校验2采纳3不采纳)
- * @method array getReleaseStatus() 获取发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
- * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+ * @method array getReleaseStatus() 获取发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+ * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method integer getSource() 获取来源(1 文档生成 2 批量导入 3 手动添加)
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ListQARequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -69,7 +69,7 @@ class ListQARequest extends AbstractModel
     public $AcceptStatus;
 
     /**
-     * @var array 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+     * @var array 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
      */
     public $ReleaseStatus;
 
@@ -94,12 +94,12 @@ class ListQARequest extends AbstractModel
     public $QaBizIds;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页大小
      * @param string $Query 查询问题
      * @param array $AcceptStatus 校验状态(1未校验2采纳3不采纳)
-     * @param array $ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+     * @param array $ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
      * @param string $DocBizId 文档ID
      * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
      * @param string $QueryAnswer 查询答案

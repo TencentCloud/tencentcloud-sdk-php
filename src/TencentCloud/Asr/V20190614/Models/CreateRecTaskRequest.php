@@ -340,6 +340,9 @@ use TencentCloud\Common\AbstractModel;
 - 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
 
 - 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+ * @method array getKeyWordLibIdList() 获取关键词识别ID列表，默认空为不进行识别，最多10个
+
+ * @method void setKeyWordLibIdList(array $KeyWordLibIdList) 设置关键词识别ID列表，默认空为不进行识别，最多10个
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -593,6 +596,12 @@ class CreateRecTaskRequest extends AbstractModel
     public $HotwordList;
 
     /**
+     * @var array 关键词识别ID列表，默认空为不进行识别，最多10个
+
+     */
+    public $KeyWordLibIdList;
+
+    /**
      * @param string $EngineModelType 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -753,6 +762,7 @@ class CreateRecTaskRequest extends AbstractModel
 - 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
 
 - 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+     * @param array $KeyWordLibIdList 关键词识别ID列表，默认空为不进行识别，最多10个
      */
     function __construct()
     {
@@ -853,6 +863,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("HotwordList",$param) and $param["HotwordList"] !== null) {
             $this->HotwordList = $param["HotwordList"];
+        }
+
+        if (array_key_exists("KeyWordLibIdList",$param) and $param["KeyWordLibIdList"] !== null) {
+            $this->KeyWordLibIdList = $param["KeyWordLibIdList"];
         }
     }
 }

@@ -52,6 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置文档类型
  * @method string getQaCharSize() 获取问答字符数
  * @method void setQaCharSize(string $QaCharSize) 设置问答字符数
+ * @method string getExpireStart() 获取有效开始时间，unix时间戳
+ * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
+ * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
+ * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
+ * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件
+ * @method array getAttrLabels() 获取属性标签
+ * @method void setAttrLabels(array $AttrLabels) 设置属性标签
+ * @method integer getSimilarQuestionNum() 获取相似问个数
+ * @method void setSimilarQuestionNum(integer $SimilarQuestionNum) 设置相似问个数
  */
 class ListQaItem extends AbstractModel
 {
@@ -136,6 +146,31 @@ class ListQaItem extends AbstractModel
     public $QaCharSize;
 
     /**
+     * @var string 有效开始时间，unix时间戳
+     */
+    public $ExpireStart;
+
+    /**
+     * @var string 有效结束时间，unix时间戳，0代表永久有效
+     */
+    public $ExpireEnd;
+
+    /**
+     * @var integer 属性标签适用范围 1：全部，2：按条件
+     */
+    public $AttrRange;
+
+    /**
+     * @var array 属性标签
+     */
+    public $AttrLabels;
+
+    /**
+     * @var integer 相似问个数
+     */
+    public $SimilarQuestionNum;
+
+    /**
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
@@ -152,6 +187,11 @@ class ListQaItem extends AbstractModel
      * @param string $FileName 文档名称
      * @param string $FileType 文档类型
      * @param string $QaCharSize 问答字符数
+     * @param string $ExpireStart 有效开始时间，unix时间戳
+     * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
+     * @param array $AttrLabels 属性标签
+     * @param integer $SimilarQuestionNum 相似问个数
      */
     function __construct()
     {
@@ -228,6 +268,31 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("QaCharSize",$param) and $param["QaCharSize"] !== null) {
             $this->QaCharSize = $param["QaCharSize"];
+        }
+
+        if (array_key_exists("ExpireStart",$param) and $param["ExpireStart"] !== null) {
+            $this->ExpireStart = $param["ExpireStart"];
+        }
+
+        if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
+            $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("AttrRange",$param) and $param["AttrRange"] !== null) {
+            $this->AttrRange = $param["AttrRange"];
+        }
+
+        if (array_key_exists("AttrLabels",$param) and $param["AttrLabels"] !== null) {
+            $this->AttrLabels = [];
+            foreach ($param["AttrLabels"] as $key => $value){
+                $obj = new AttrLabel();
+                $obj->deserialize($value);
+                array_push($this->AttrLabels, $obj);
+            }
+        }
+
+        if (array_key_exists("SimilarQuestionNum",$param) and $param["SimilarQuestionNum"] !== null) {
+            $this->SimilarQuestionNum = $param["SimilarQuestionNum"];
         }
     }
 }

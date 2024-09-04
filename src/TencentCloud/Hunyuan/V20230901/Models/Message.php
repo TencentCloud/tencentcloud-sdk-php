@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToolCallId(string $ToolCallId) 设置当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getToolCalls() 获取模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+ * @method array getToolCalls() 获取模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+ * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Message extends AbstractModel
@@ -62,7 +62,7 @@ class Message extends AbstractModel
     public $ToolCallId;
 
     /**
-     * @var array 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @var array 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ToolCalls;
@@ -74,7 +74,7 @@ class Message extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ToolCallId 当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @param array $ToolCalls 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

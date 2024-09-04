@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaCode(string $AreaCode) 设置手机区号
  * @method string getAppUserId() 获取企业微信应用用户id
  * @method void setAppUserId(string $AppUserId) 设置企业微信应用用户id
+ * @method integer getLoginSecurityStatus() 获取是否开启手机验证码登录（0 关闭，1 开启）
+ * @method void setLoginSecurityStatus(integer $LoginSecurityStatus) 设置是否开启手机验证码登录（0 关闭，1 开启）
  */
 class ModifyUserRoleRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyUserRoleRequest extends AbstractModel
     public $AppUserId;
 
     /**
+     * @var integer 是否开启手机验证码登录（0 关闭，1 开启）
+     */
+    public $LoginSecurityStatus;
+
+    /**
      * @param string $UserId 用户ID
      * @param array $RoleIdList 角色ID 列表
      * @param string $Email 邮箱
@@ -80,6 +87,7 @@ class ModifyUserRoleRequest extends AbstractModel
      * @param string $PhoneNumber 手机号
      * @param string $AreaCode 手机区号
      * @param string $AppUserId 企业微信应用用户id
+     * @param integer $LoginSecurityStatus 是否开启手机验证码登录（0 关闭，1 开启）
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyUserRoleRequest extends AbstractModel
 
         if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
             $this->AppUserId = $param["AppUserId"];
+        }
+
+        if (array_key_exists("LoginSecurityStatus",$param) and $param["LoginSecurityStatus"] !== null) {
+            $this->LoginSecurityStatus = $param["LoginSecurityStatus"];
         }
     }
 }

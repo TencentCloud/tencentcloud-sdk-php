@@ -28,7 +28,6 @@ id,地域,简称信息如下：
 - 1,   广州,ap-guangzhou
 - 4,   上海,ap-shanghai
 - 5,   中国香港,ap-hongkong
-- 6,   多伦多,na-toronto
 - 7,   上海金融,ap-shanghai-fsi
 - 8,   北京,ap-beijing
 - 9,   新加坡,ap-singapore
@@ -52,7 +51,6 @@ id,地域,简称信息如下：
 - 1,   广州,ap-guangzhou
 - 4,   上海,ap-shanghai
 - 5,   中国香港,ap-hongkong
-- 6,   多伦多,na-toronto
 - 7,   上海金融,ap-shanghai-fsi
 - 8,   北京,ap-beijing
 - 9,   新加坡,ap-singapore
@@ -85,7 +83,6 @@ id,地域,简称信息如下：
 - 1,   广州,ap-guangzhou
 - 4,   上海,ap-shanghai
 - 5,   中国香港,ap-hongkong
-- 6,   多伦多,na-toronto
 - 7,   上海金融,ap-shanghai-fsi
 - 8,   北京,ap-beijing
 - 9,   新加坡,ap-singapore
@@ -114,7 +111,6 @@ id,地域,简称信息如下：
 - 1,   广州,ap-guangzhou
 - 4,   上海,ap-shanghai
 - 5,   中国香港,ap-hongkong
-- 6,   多伦多,na-toronto
 - 7,   上海金融,ap-shanghai-fsi
 - 8,   北京,ap-beijing
 - 9,   新加坡,ap-singapore

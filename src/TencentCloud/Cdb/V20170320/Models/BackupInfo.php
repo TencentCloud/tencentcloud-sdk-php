@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置本地备份所在地域
  * @method array getRemoteInfo() 获取异地备份详细信息
  * @method void setRemoteInfo(array $RemoteInfo) 设置异地备份详细信息
- * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，默认为0
- * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，默认为0
+ * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+ * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getEncryptionFlag() 获取备份文件是否加密， on-加密， off-未加密
@@ -155,7 +155,7 @@ class BackupInfo extends AbstractModel
     public $RemoteInfo;
 
     /**
-     * @var integer 存储方式，0-常规存储，1-归档存储，默认为0
+     * @var integer 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      */
     public $CosStorageType;
 
@@ -194,7 +194,7 @@ class BackupInfo extends AbstractModel
      * @param string $SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
      * @param string $Region 本地备份所在地域
      * @param array $RemoteInfo 异地备份详细信息
-     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
 注意：此字段可能返回 null，表示取不到有效值。

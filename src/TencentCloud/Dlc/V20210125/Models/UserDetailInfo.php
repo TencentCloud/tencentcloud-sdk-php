@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowFilterInfo(Policys $RowFilterInfo) 设置行过滤集合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccountType() 获取账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccountType(string $AccountType) 设置账号类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDetailInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ class UserDetailInfo extends AbstractModel
     public $RowFilterInfo;
 
     /**
+     * @var string 账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
@@ -131,6 +141,8 @@ class UserDetailInfo extends AbstractModel
      * @param string $UserAlias 用户别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $RowFilterInfo 行过滤集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccountType 账号类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +196,10 @@ class UserDetailInfo extends AbstractModel
         if (array_key_exists("RowFilterInfo",$param) and $param["RowFilterInfo"] !== null) {
             $this->RowFilterInfo = new Policys();
             $this->RowFilterInfo->deserialize($param["RowFilterInfo"]);
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

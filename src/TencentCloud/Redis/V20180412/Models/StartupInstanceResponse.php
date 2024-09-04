@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartupInstance返回参数结构体
  *
- * @method integer getTaskId() 获取任务id
- * @method void setTaskId(integer $TaskId) 设置任务id
+ * @method integer getTaskId() 获取该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
+ * @method void setTaskId(integer $TaskId) 设置该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class StartupInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 任务id
+     * @var integer 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class StartupInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 任务id
+     * @param integer $TaskId 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

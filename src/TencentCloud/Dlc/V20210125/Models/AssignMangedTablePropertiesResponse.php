@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssignMangedTableProperties返回参数结构体
  *
+ * @method array getProperties() 获取分配的原生表表属性
+ * @method void setProperties(array $Properties) 设置分配的原生表表属性
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AssignMangedTablePropertiesResponse extends AbstractModel
 {
     /**
+     * @var array 分配的原生表表属性
+     */
+    public $Properties;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Properties 分配的原生表表属性
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class AssignMangedTablePropertiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Properties",$param) and $param["Properties"] !== null) {
+            $this->Properties = [];
+            foreach ($param["Properties"] as $key => $value){
+                $obj = new Property();
+                $obj->deserialize($value);
+                array_push($this->Properties, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

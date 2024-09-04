@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getDomain() 获取查询的域名，全部域名不指定
- * @method void setDomain(string $Domain) 设置查询的域名，全部域名不指定
+ * @method string getDomain() 获取查询的域名，全部域名填all
+ * @method void setDomain(string $Domain) 设置查询的域名，全部域名填all
  * @method string getQueryString() 获取查询条件，默认为""
  * @method void setQueryString(string $QueryString) 设置查询条件，默认为""
  */
@@ -42,7 +42,7 @@ class GetAttackTotalCountRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 查询的域名，全部域名不指定
+     * @var string 查询的域名，全部域名填all
      */
     public $Domain;
 
@@ -54,7 +54,7 @@ class GetAttackTotalCountRequest extends AbstractModel
     /**
      * @param string $StartTime 起始时间
      * @param string $EndTime 结束时间
-     * @param string $Domain 查询的域名，全部域名不指定
+     * @param string $Domain 查询的域名，全部域名填all
      * @param string $QueryString 查询条件，默认为""
      */
     function __construct()

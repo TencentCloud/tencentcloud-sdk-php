@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApp请求参数结构体
  *
- * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
- * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+ * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理
+ * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理
  * @method BaseConfig getBaseConfig() 获取应用基础配置
  * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
  */
 class CreateAppRequest extends AbstractModel
 {
     /**
-     * @var string 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @var string 应用类型；knowledge_qa-知识问答管理
      */
     public $AppType;
 
@@ -38,7 +38,7 @@ class CreateAppRequest extends AbstractModel
     public $BaseConfig;
 
     /**
-     * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @param string $AppType 应用类型；knowledge_qa-知识问答管理
      * @param BaseConfig $BaseConfig 应用基础配置
      */
     function __construct()

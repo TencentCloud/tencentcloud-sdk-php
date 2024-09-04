@@ -27,6 +27,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\CancelAuditCertificateResponse CancelAuditCertificate(Models\CancelAuditCertificateRequest $req) 取消证书审核
  * @method Models\CancelCertificateOrderResponse CancelCertificateOrder(Models\CancelCertificateOrderRequest $req) 取消证书订单。
  * @method Models\CheckCertificateChainResponse CheckCertificateChain(Models\CheckCertificateChainRequest $req) 本接口（CheckCertificateChain）用于检查证书链是否完整。
+ * @method Models\CheckCertificateDomainVerificationResponse CheckCertificateDomainVerification(Models\CheckCertificateDomainVerificationRequest $req) 检查证书域名验证
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) 提交证书订单。
  * @method Models\CompleteCertificateResponse CompleteCertificate(Models\CompleteCertificateRequest $req) 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建付费证书。

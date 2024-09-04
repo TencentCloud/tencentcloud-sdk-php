@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBackUpSchedule请求参数结构体
  *
+ * @method string getInstanceId() 获取集群id
+ * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getOperationType() 获取操作类型 create(创建) update(编辑修改)
+ * @method void setOperationType(string $OperationType) 设置操作类型 create(创建) update(编辑修改)
  * @method integer getScheduleId() 获取编辑时需要传
  * @method void setScheduleId(integer $ScheduleId) 设置编辑时需要传
  * @method string getWeekDays() 获取选择的星期 逗号分隔
@@ -44,9 +48,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthType(integer $AuthType) 设置0为默认。1时是提供自定义的secret连接cos
  * @method CosSourceInfo getCosSourceInfo() 获取cos认证的信息
  * @method void setCosSourceInfo(CosSourceInfo $CosSourceInfo) 设置cos认证的信息
+ * @method string getScheduleName() 获取调度任务名
+ * @method void setScheduleName(string $ScheduleName) 设置调度任务名
+ * @method ScheduleInfo getScheduleInfo() 获取调度信息
+ * @method void setScheduleInfo(ScheduleInfo $ScheduleInfo) 设置调度信息
+ * @method integer getUpdateStatus() 获取更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+ * @method void setUpdateStatus(integer $UpdateStatus) 设置更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+ * @method string getCosBucket() 获取当前任务的cos桶信息
+ * @method void setCosBucket(string $CosBucket) 设置当前任务的cos桶信息
  */
 class CreateBackUpScheduleRequest extends AbstractModel
 {
+    /**
+     * @var string 集群id
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 操作类型 create(创建) update(编辑修改)
+     */
+    public $OperationType;
+
     /**
      * @var integer 编辑时需要传
      */
@@ -100,6 +128,31 @@ class CreateBackUpScheduleRequest extends AbstractModel
     public $CosSourceInfo;
 
     /**
+     * @var string 调度任务名
+     */
+    public $ScheduleName;
+
+    /**
+     * @var ScheduleInfo 调度信息
+     */
+    public $ScheduleInfo;
+
+    /**
+     * @var integer 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+     */
+    public $UpdateStatus;
+
+    /**
+     * @var string 当前任务的cos桶信息
+     */
+    public $CosBucket;
+
+    /**
+     * @param string $InstanceId 集群id
+     * @param string $OperationType 操作类型 create(创建) update(编辑修改)
      * @param integer $ScheduleId 编辑时需要传
      * @param string $WeekDays 选择的星期 逗号分隔
 废弃：使用ScheduleInfo
@@ -112,6 +165,13 @@ class CreateBackUpScheduleRequest extends AbstractModel
      * @param integer $RestoreType 0为默认。1时是备份完成后立即恢复
      * @param integer $AuthType 0为默认。1时是提供自定义的secret连接cos
      * @param CosSourceInfo $CosSourceInfo cos认证的信息
+     * @param string $ScheduleName 调度任务名
+     * @param ScheduleInfo $ScheduleInfo 调度信息
+     * @param integer $UpdateStatus 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+     * @param string $CosBucket 当前任务的cos桶信息
      */
     function __construct()
     {
@@ -126,6 +186,14 @@ class CreateBackUpScheduleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
+        }
+
         if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
             $this->ScheduleId = $param["ScheduleId"];
         }
@@ -171,6 +239,23 @@ class CreateBackUpScheduleRequest extends AbstractModel
         if (array_key_exists("CosSourceInfo",$param) and $param["CosSourceInfo"] !== null) {
             $this->CosSourceInfo = new CosSourceInfo();
             $this->CosSourceInfo->deserialize($param["CosSourceInfo"]);
+        }
+
+        if (array_key_exists("ScheduleName",$param) and $param["ScheduleName"] !== null) {
+            $this->ScheduleName = $param["ScheduleName"];
+        }
+
+        if (array_key_exists("ScheduleInfo",$param) and $param["ScheduleInfo"] !== null) {
+            $this->ScheduleInfo = new ScheduleInfo();
+            $this->ScheduleInfo->deserialize($param["ScheduleInfo"]);
+        }
+
+        if (array_key_exists("UpdateStatus",$param) and $param["UpdateStatus"] !== null) {
+            $this->UpdateStatus = $param["UpdateStatus"];
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
         }
     }
 }

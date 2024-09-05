@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群实例id
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
- * @method string getPassWord() 获取密码
- * @method void setPassWord(string $PassWord) 设置密码
+ * @method string getPassWord() 获取base64加密后的密码
+ * @method void setPassWord(string $PassWord) 设置base64加密后的密码
  * @method string getDescribe() 获取描述
  * @method void setDescribe(string $Describe) 设置描述
  */
@@ -42,7 +42,7 @@ class CkUserAlterInfo extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 密码
+     * @var string base64加密后的密码
      */
     public $PassWord;
 
@@ -54,7 +54,7 @@ class CkUserAlterInfo extends AbstractModel
     /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
-     * @param string $PassWord 密码
+     * @param string $PassWord base64加密后的密码
      * @param string $Describe 描述
      */
     function __construct()

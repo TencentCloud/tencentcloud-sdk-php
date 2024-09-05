@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfirm(integer $Confirm) 设置是否需要确认翻译结果0：不需要，1：需要
  * @method integer getLipSync() 获取是否开启口型驱动，0：不开启，1：开启。默认开启。
  * @method void setLipSync(integer $LipSync) 设置是否开启口型驱动，0：不开启，1：开启。默认开启。
+ * @method string getVoiceType() 获取音色 ID
+ * @method void setVoiceType(string $VoiceType) 设置音色 ID
  */
 class SubmitVideoTranslateJobRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SubmitVideoTranslateJobRequest extends AbstractModel
     public $LipSync;
 
     /**
+     * @var string 音色 ID
+     */
+    public $VoiceType;
+
+    /**
      * @param string $VideoUrl 视频地址URL。
      * @param string $SrcLang 源语言：zh, en
      * @param string $DstLang 目标语言：zh, en
      * @param string $AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型
      * @param integer $Confirm 是否需要确认翻译结果0：不需要，1：需要
      * @param integer $LipSync 是否开启口型驱动，0：不开启，1：开启。默认开启。
+     * @param string $VoiceType 音色 ID
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SubmitVideoTranslateJobRequest extends AbstractModel
 
         if (array_key_exists("LipSync",$param) and $param["LipSync"] !== null) {
             $this->LipSync = $param["LipSync"];
+        }
+
+        if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {
+            $this->VoiceType = $param["VoiceType"];
         }
     }
 }

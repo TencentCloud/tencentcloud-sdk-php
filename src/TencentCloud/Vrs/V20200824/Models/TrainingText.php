@@ -21,8 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * 训练文本
  *
  * @method string getTextId() 获取文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextId(string $TextId) 设置文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -33,6 +35,7 @@ class TrainingText extends AbstractModel
 {
     /**
      * @var string 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextId;
@@ -45,6 +48,7 @@ class TrainingText extends AbstractModel
 
     /**
      * @param string $TextId 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 文本
 注意：此字段可能返回 null，表示取不到有效值。

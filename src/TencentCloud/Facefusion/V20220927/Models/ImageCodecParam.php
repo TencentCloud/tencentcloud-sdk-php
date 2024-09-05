@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片编码参数
  *
- * @method array getMetaData() 获取元数据，个数不能大于1。
- * @method void setMetaData(array $MetaData) 设置元数据，个数不能大于1。
+ * @method array getMetaData() 获取元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
+ * @method void setMetaData(array $MetaData) 设置元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
  */
 class ImageCodecParam extends AbstractModel
 {
     /**
-     * @var array 元数据，个数不能大于1。
+     * @var array 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
      */
     public $MetaData;
 
     /**
-     * @param array $MetaData 元数据，个数不能大于1。
+     * @param array $MetaData 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
      */
     function __construct()
     {

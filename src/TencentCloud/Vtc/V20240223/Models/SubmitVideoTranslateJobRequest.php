@@ -21,39 +21,77 @@ use TencentCloud\Common\AbstractModel;
  * SubmitVideoTranslateJob请求参数结构体
  *
  * @method string getVideoUrl() 获取视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
  * @method void setVideoUrl(string $VideoUrl) 设置视频地址URL。
- * @method string getSrcLang() 获取源语言：zh, en
- * @method void setSrcLang(string $SrcLang) 设置源语言：zh, en
- * @method string getDstLang() 获取目标语言：zh, en
- * @method void setDstLang(string $DstLang) 设置目标语言：zh, en
- * @method string getAudioUrl() 获取当音频 URL 不为空时，默认以音频驱动视频任务口型
- * @method void setAudioUrl(string $AudioUrl) 设置当音频 URL 不为空时，默认以音频驱动视频任务口型
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
+ * @method string getSrcLang() 获取源语言：zh(中文), en(英文)
+ * @method void setSrcLang(string $SrcLang) 设置源语言：zh(中文), en(英文)
+ * @method string getDstLang() 获取目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
+ * @method void setDstLang(string $DstLang) 设置目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
+ * @method string getAudioUrl() 获取当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
+ * @method void setAudioUrl(string $AudioUrl) 设置当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
  * @method integer getConfirm() 获取是否需要确认翻译结果0：不需要，1：需要
  * @method void setConfirm(integer $Confirm) 设置是否需要确认翻译结果0：不需要，1：需要
  * @method integer getLipSync() 获取是否开启口型驱动，0：不开启，1：开启。默认开启。
  * @method void setLipSync(integer $LipSync) 设置是否开启口型驱动，0：不开启，1：开启。默认开启。
- * @method string getVoiceType() 获取音色 ID
- * @method void setVoiceType(string $VoiceType) 设置音色 ID
+ * @method string getVoiceType() 获取音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
+ * @method void setVoiceType(string $VoiceType) 设置音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
  */
 class SubmitVideoTranslateJobRequest extends AbstractModel
 {
     /**
      * @var string 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
      */
     public $VideoUrl;
 
     /**
-     * @var string 源语言：zh, en
+     * @var string 源语言：zh(中文), en(英文)
      */
     public $SrcLang;
 
     /**
-     * @var string 目标语言：zh, en
+     * @var string 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
      */
     public $DstLang;
 
     /**
-     * @var string 当音频 URL 不为空时，默认以音频驱动视频任务口型
+     * @var string 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
      */
     public $AudioUrl;
 
@@ -68,18 +106,36 @@ class SubmitVideoTranslateJobRequest extends AbstractModel
     public $LipSync;
 
     /**
-     * @var string 音色 ID
+     * @var string 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
      */
     public $VoiceType;
 
     /**
      * @param string $VideoUrl 视频地址URL。
-     * @param string $SrcLang 源语言：zh, en
-     * @param string $DstLang 目标语言：zh, en
-     * @param string $AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
+     * @param string $SrcLang 源语言：zh(中文), en(英文)
+     * @param string $DstLang 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
+     * @param string $AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
      * @param integer $Confirm 是否需要确认翻译结果0：不需要，1：需要
      * @param integer $LipSync 是否开启口型驱动，0：不开启，1：开启。默认开启。
-     * @param string $VoiceType 音色 ID
+     * @param string $VoiceType 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
      */
     function __construct()
     {

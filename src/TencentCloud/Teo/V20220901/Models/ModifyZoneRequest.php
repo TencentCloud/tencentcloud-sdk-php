@@ -23,11 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method string getType() 获取站点接入方式，取值有：
-<li> full：NS 接入；</li>
-<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+<li>full：NS 接入；</li>
+<li>partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到 CNAME 接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
  * @method void setType(string $Type) 设置站点接入方式，取值有：
-<li> full：NS 接入；</li>
-<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+<li>full：NS 接入；</li>
+<li>partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到 CNAME 接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
  * @method VanityNameServers getVanityNameServers() 获取自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
  * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
@@ -52,8 +54,9 @@ class ModifyZoneRequest extends AbstractModel
 
     /**
      * @var string 站点接入方式，取值有：
-<li> full：NS 接入；</li>
-<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+<li>full：NS 接入；</li>
+<li>partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到 CNAME 接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
      */
     public $Type;
 
@@ -83,8 +86,9 @@ class ModifyZoneRequest extends AbstractModel
     /**
      * @param string $ZoneId 站点 ID。
      * @param string $Type 站点接入方式，取值有：
-<li> full：NS 接入；</li>
-<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+<li>full：NS 接入；</li>
+<li>partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到 CNAME 接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
      * @param VanityNameServers $VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
      * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
      * @param string $Area 站点接入地域，取值有：

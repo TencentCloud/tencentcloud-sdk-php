@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
  * @method void setType(string $Type) 设置站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
  * @method string getZoneName() 获取站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
  * @method void setZoneName(string $ZoneName) 设置站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
  * @method string getArea() 获取Type 取值为 partial/full 时，七层域名的加速区域。以下为该参数取值，不填写时该值默认为 overseas。Type 取值为 noDomainAccess 时该值请保留为空：
@@ -58,8 +60,9 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @var string 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      */
     public $Type;
 
@@ -108,8 +111,9 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @param string $Type 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      * @param string $ZoneName 站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
      * @param string $Area Type 取值为 partial/full 时，七层域名的加速区域。以下为该参数取值，不填写时该值默认为 overseas。Type 取值为 noDomainAccess 时该值请保留为空：
 <li> global: 全球可用区；</li>

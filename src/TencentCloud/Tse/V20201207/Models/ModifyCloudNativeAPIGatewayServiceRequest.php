@@ -34,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
 - http 
 - tcp 
 - udp
- * @method string getPath() 获取请求路径
- * @method void setPath(string $Path) 设置请求路径
  * @method integer getTimeout() 获取超时时间，单位ms
  * @method void setTimeout(integer $Timeout) 设置超时时间，单位ms
  * @method integer getRetries() 获取重试次数
@@ -56,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpstreamInfo(KongUpstreamInfo $UpstreamInfo) 设置服务配置
  * @method string getID() 获取服务ID
  * @method void setID(string $ID) 设置服务ID
+ * @method string getPath() 获取请求路径
+ * @method void setPath(string $Path) 设置请求路径
  */
 class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
 {
@@ -77,11 +77,6 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
 - udp
      */
     public $Protocol;
-
-    /**
-     * @var string 请求路径
-     */
-    public $Path;
 
     /**
      * @var integer 超时时间，单位ms
@@ -114,6 +109,11 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
     public $ID;
 
     /**
+     * @var string 请求路径
+     */
+    public $Path;
+
+    /**
      * @param string $GatewayId 网关ID
      * @param string $Name 服务名称
      * @param string $Protocol 请求协议： 
@@ -121,7 +121,6 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
 - http 
 - tcp 
 - udp
-     * @param string $Path 请求路径
      * @param integer $Timeout 超时时间，单位ms
      * @param integer $Retries 重试次数
      * @param string $UpstreamType 服务类型: 
@@ -132,6 +131,7 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
 - Scf	
      * @param KongUpstreamInfo $UpstreamInfo 服务配置
      * @param string $ID 服务ID
+     * @param string $Path 请求路径
      */
     function __construct()
     {
@@ -158,10 +158,6 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
             $this->Protocol = $param["Protocol"];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
-        }
-
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
         }
@@ -181,6 +177,10 @@ class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel
 
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

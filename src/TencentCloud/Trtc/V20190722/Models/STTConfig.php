@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class STTConfig extends AbstractModel
 {
@@ -122,6 +126,12 @@ class STTConfig extends AbstractModel
     public $AlternativeLanguage;
 
     /**
+     * @var integer 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VadSilenceTime;
+
+    /**
      * @param string $Language 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -152,6 +162,8 @@ class STTConfig extends AbstractModel
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +184,10 @@ class STTConfig extends AbstractModel
 
         if (array_key_exists("AlternativeLanguage",$param) and $param["AlternativeLanguage"] !== null) {
             $this->AlternativeLanguage = $param["AlternativeLanguage"];
+        }
+
+        if (array_key_exists("VadSilenceTime",$param) and $param["VadSilenceTime"] !== null) {
+            $this->VadSilenceTime = $param["VadSilenceTime"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitVideoTranslateJob返回参数结构体
  *
- * @method string getJobId() 获取任务ID。
- * @method void setJobId(string $JobId) 设置任务ID。
+ * @method string getJobId() 获取视频转译任务的Job id
+ * @method void setJobId(string $JobId) 设置视频转译任务的Job id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SubmitVideoTranslateJobResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID。
+     * @var string 视频转译任务的Job id
      */
     public $JobId;
 
@@ -38,7 +38,7 @@ class SubmitVideoTranslateJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 任务ID。
+     * @param string $JobId 视频转译任务的Job id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

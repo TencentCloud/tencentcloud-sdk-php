@@ -69,6 +69,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) 删除spark作业
+ * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 删除表
  * @method Models\DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(Models\DeleteThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
@@ -146,6 +147,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
+ * @method Models\QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(Models\QueryInternalTableWarehouseRequest $req) 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
  * @method Models\QueryResultResponse QueryResult(Models\QueryResultRequest $req) 获取任务结果查询
  * @method Models\QueryTaskCostDetailResponse QueryTaskCostDetail(Models\QueryTaskCostDetailRequest $req) 该接口（QueryTaskCostDetail）用于查询任务消耗明细
  * @method Models\RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUser(Models\RegisterThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问

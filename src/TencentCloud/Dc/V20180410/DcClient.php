@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
- * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) 接受专用通道申请
+ * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) 接受专用通道申请。
  * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) 申请互联网CIDR地址
  * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) 申请物理专线接入。
 调用该接口时，请注意：
@@ -32,9 +32,8 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) 创建专用通道。
  * @method Models\DeleteDirectConnectResponse DeleteDirectConnect(Models\DeleteDirectConnectRequest $req) 删除物理专线。只能删除处于已连接状态的物理专线。
  * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) 删除专用通道。
- * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) 查询物理专线接入点
-
- * @method Models\DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(Models\DescribeDirectConnectTunnelExtraRequest $req) 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+ * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) 查询物理专线接入点。
+ * @method Models\DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(Models\DescribeDirectConnectTunnelExtraRequest $req) 查询专用通道扩展信息。
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 查询专用通道列表。
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) 查询物理专线列表。
  * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) 获取用户互联网公网地址信息
@@ -46,7 +45,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) 修改专用通道属性。
  * @method Models\ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(Models\ModifyDirectConnectTunnelExtraRequest $req) 修改专用通道扩展信息。
- * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请
+ * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请。
  * @method Models\ReleaseInternetAddressResponse ReleaseInternetAddress(Models\ReleaseInternetAddressRequest $req) 释放已申请的互联网地址
  */
 

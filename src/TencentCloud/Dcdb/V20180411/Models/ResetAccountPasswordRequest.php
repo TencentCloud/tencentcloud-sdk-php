@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置用户允许的访问 host，用户名+host唯一确定一个账号。
  * @method string getPassword() 获取新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
  * @method void setPassword(string $Password) 设置新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+ * @method string getEncryptedPassword() 获取使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+ * @method void setEncryptedPassword(string $EncryptedPassword) 设置使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ResetAccountPasswordRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var string 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+     */
+    public $EncryptedPassword;
+
+    /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      * @param string $UserName 登录用户名。
      * @param string $Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      * @param string $Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * @param string $EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ResetAccountPasswordRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptedPassword",$param) and $param["EncryptedPassword"] !== null) {
+            $this->EncryptedPassword = $param["EncryptedPassword"];
         }
     }
 }

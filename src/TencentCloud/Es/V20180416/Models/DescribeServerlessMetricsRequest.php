@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricType(array $MetricType) 设置指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
  * @method integer getDurationType() 获取时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
  * @method void setDurationType(integer $DurationType) 设置时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+ * @method array getBatchIndexList() 获取索引数据
+ * @method void setBatchIndexList(array $BatchIndexList) 设置索引数据
  */
 class DescribeServerlessMetricsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeServerlessMetricsRequest extends AbstractModel
     public $DurationType;
 
     /**
+     * @var array 索引数据
+     */
+    public $BatchIndexList;
+
+    /**
      * @param string $SpaceId space空间id
      * @param string $IndexId index索引id
      * @param array $MetricType 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
      * @param integer $DurationType 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+     * @param array $BatchIndexList 索引数据
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeServerlessMetricsRequest extends AbstractModel
 
         if (array_key_exists("DurationType",$param) and $param["DurationType"] !== null) {
             $this->DurationType = $param["DurationType"];
+        }
+
+        if (array_key_exists("BatchIndexList",$param) and $param["BatchIndexList"] !== null) {
+            $this->BatchIndexList = $param["BatchIndexList"];
         }
     }
 }

@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateContent() 获取模板内容。
  * @method void setTemplateContent(string $TemplateContent) 设置模板内容。
  * @method integer getSmsType() 获取短信类型，1表示营销短信，2表示通知短信，3表示验证码短信。
-注：原“普通短信”类型模板目前仍支持提交申请，但为进一步提升短信发送质量、提高短信模板审核通过率，建议按“通知短信”类型或“验证码短信”类型申请新增模板，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。
+注：为进一步提升短信发送质量、提高短信模板审核通过率，从2024年5月16日起，腾讯云短信模板类型优化为“验证码短信”、“通知短信”、“营销短信”，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。新开通短信服务的客户需严格参考新的短信类型申请短信模板。
  * @method void setSmsType(integer $SmsType) 设置短信类型，1表示营销短信，2表示通知短信，3表示验证码短信。
-注：原“普通短信”类型模板目前仍支持提交申请，但为进一步提升短信发送质量、提高短信模板审核通过率，建议按“通知短信”类型或“验证码短信”类型申请新增模板，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。
+注：为进一步提升短信发送质量、提高短信模板审核通过率，从2024年5月16日起，腾讯云短信模板类型优化为“验证码短信”、“通知短信”、“营销短信”，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。新开通短信服务的客户需严格参考新的短信类型申请短信模板。
  * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
@@ -51,7 +51,7 @@ class AddSmsTemplateRequest extends AbstractModel
 
     /**
      * @var integer 短信类型，1表示营销短信，2表示通知短信，3表示验证码短信。
-注：原“普通短信”类型模板目前仍支持提交申请，但为进一步提升短信发送质量、提高短信模板审核通过率，建议按“通知短信”类型或“验证码短信”类型申请新增模板，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。
+注：为进一步提升短信发送质量、提高短信模板审核通过率，从2024年5月16日起，腾讯云短信模板类型优化为“验证码短信”、“通知短信”、“营销短信”，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。新开通短信服务的客户需严格参考新的短信类型申请短信模板。
      */
     public $SmsType;
 
@@ -71,7 +71,7 @@ class AddSmsTemplateRequest extends AbstractModel
      * @param string $TemplateName 模板名称。
      * @param string $TemplateContent 模板内容。
      * @param integer $SmsType 短信类型，1表示营销短信，2表示通知短信，3表示验证码短信。
-注：原“普通短信”类型模板目前仍支持提交申请，但为进一步提升短信发送质量、提高短信模板审核通过率，建议按“通知短信”类型或“验证码短信”类型申请新增模板，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。
+注：为进一步提升短信发送质量、提高短信模板审核通过率，从2024年5月16日起，腾讯云短信模板类型优化为“验证码短信”、“通知短信”、“营销短信”，可参考[关于腾讯云短信模板类型优化公告](https://cloud.tencent.com/document/product/382/106171)。新开通短信服务的客户需严格参考新的短信类型申请短信模板。
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。

@@ -39,6 +39,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
 注意：注意：相同用户名，不同Host是不同的账号。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
+ * @method Models\DescribeBackupConfigsResponse DescribeBackupConfigs(Models\DescribeBackupConfigsRequest $req) 本接口(DescribeBackupConfigs)用于查询数据库备份配置信息。
  * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于查看备份文件列表。
  * @method Models\DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(Models\DescribeDBEncryptAttributesRequest $req) 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
  * @method Models\DescribeDBLogFilesResponse DescribeDBLogFiles(Models\DescribeDBLogFilesRequest $req) 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
@@ -89,6 +90,9 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
 - 系统保留库："mysql"，只开放["SELECT"]权限
 - 只读账号授予读写权限会报错
 - 不传权限参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+ * @method Models\ModifyBackupConfigsResponse ModifyBackupConfigs(Models\ModifyBackupConfigsRequest $req) 本接口(ModifyBackupConfigs)用于修改数据库备份配置信息。
+
+1. 修改数据库超期备份配置，目前按年、按月、按日只支持一种，存在互斥关系，如当前策略按年备份，如果传入按月备份策略将会覆盖当前的按年备份策略，务必注意。
  * @method Models\ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(Models\ModifyDBEncryptAttributesRequest $req) 本接口(ModifyDBEncryptAttributes)用于修改实例数据加密。
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改实例名字
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组

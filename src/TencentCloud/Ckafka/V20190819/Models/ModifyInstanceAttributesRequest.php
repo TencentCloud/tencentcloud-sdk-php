@@ -78,6 +78,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
 
     /**
      * @var DynamicDiskConfig 动态硬盘扩容策略配置
+     * @deprecated
      */
     public $DynamicDiskConfig;
 

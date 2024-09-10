@@ -28,6 +28,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
 新增用户列表（用户管理）。
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
+ * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建 Lite HBase 实例
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
  * @method Models\DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(Models\DeleteAutoScaleStrategyRequest $req) 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
  * @method Models\DeleteUserManagerUserListResponse DeleteUserManagerUserList(Models\DeleteUserManagerUserListRequest $req) 删除用户列表（用户管理）
  * @method Models\DeployYarnConfResponse DeployYarnConf(Models\DeployYarnConfRequest $req) yarn资源调度-部署生效
@@ -49,6 +52,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
  * @method Models\DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(Models\DescribeResourceScheduleDiffDetailRequest $req) YARN资源调度-变更详情
+ * @method Models\DescribeSLInstanceResponse DescribeSLInstance(Models\DescribeSLInstanceRequest $req) 本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+ * @method Models\DescribeSLInstanceListResponse DescribeSLInstanceList(Models\DescribeSLInstanceListRequest $req) 本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
  * @method Models\DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(Models\DescribeServiceNodeInfosRequest $req) 查询服务进程信息
  * @method Models\DescribeTrinoQueryInfoResponse DescribeTrinoQueryInfo(Models\DescribeTrinoQueryInfoRequest $req) 获取trino查询结果
  * @method Models\DescribeUsersForUserManagerResponse DescribeUsersForUserManager(Models\DescribeUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
@@ -68,6 +73,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效。
  * @method Models\ModifyResourcesTagsResponse ModifyResourcesTags(Models\ModifyResourcesTagsRequest $req) 强制修改标签
+ * @method Models\ModifySLInstanceResponse ModifySLInstance(Models\ModifySLInstanceRequest $req) 本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
  * @method Models\ModifyUserManagerPwdResponse ModifyUserManagerPwd(Models\ModifyUserManagerPwdRequest $req) 修改用户密码（用户管理）
  * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息
@@ -79,6 +87,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\SyncPodStateResponse SyncPodState(Models\SyncPodStateRequest $req) EMR同步TKE中POD状态
  * @method Models\TerminateClusterNodesResponse TerminateClusterNodes(Models\TerminateClusterNodesRequest $req) 销毁集群节点
  * @method Models\TerminateInstanceResponse TerminateInstance(Models\TerminateInstanceRequest $req) 销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。
+ * @method Models\TerminateSLInstanceResponse TerminateSLInstance(Models\TerminateSLInstanceRequest $req) 本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
  * @method Models\TerminateTasksResponse TerminateTasks(Models\TerminateTasksRequest $req) 缩容Task节点
  */
 

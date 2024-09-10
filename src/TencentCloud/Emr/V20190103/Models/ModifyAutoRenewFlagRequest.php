@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIds(array $ResourceIds) 设置实例ID
  * @method string getRenewFlag() 获取NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：表示不通知即将过期，也不自动续费。
  * @method void setRenewFlag(string $RenewFlag) 设置NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：表示不通知即将过期，也不自动续费。
+ * @method string getComputeResourceId() 获取计算资源id
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
  */
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var string 计算资源id
+     */
+    public $ComputeResourceId;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param array $ResourceIds 实例ID
      * @param string $RenewFlag NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：表示不通知即将过期，也不自动续费。
+     * @param string $ComputeResourceId 计算资源id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
         }
     }
 }

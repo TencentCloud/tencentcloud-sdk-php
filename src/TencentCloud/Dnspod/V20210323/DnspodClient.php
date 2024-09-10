@@ -59,6 +59,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainPreviewResponse DescribeDomainPreview(Models\DescribeDomainPreviewRequest $req) 获取域名概览信息
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
+ * @method Models\DescribeDomainShareUserListResponse DescribeDomainShareUserList(Models\DescribeDomainShareUserListRequest $req) 获取指定域名的已共享列表
  * @method Models\DescribeDomainWhoisResponse DescribeDomainWhois(Models\DescribeDomainWhoisRequest $req) 获取域名Whois信息
  * @method Models\DescribePackageDetailResponse DescribePackageDetail(Models\DescribePackageDetailRequest $req) 获取各套餐配置详情
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息

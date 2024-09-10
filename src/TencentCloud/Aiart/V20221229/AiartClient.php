@@ -48,6 +48,8 @@ use TencentCloud\Aiart\V20221229\Models as Models;
  * @method Models\ReplaceBackgroundResponse ReplaceBackground(Models\ReplaceBackgroundRequest $req) 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
 
 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+ * @method Models\SketchToImageResponse SketchToImage(Models\SketchToImageRequest $req) 线稿生图接口支持上传一张黑白线稿图，按照指定的主体对象以及样式、颜色、材质、风格等的文本描述prompt ，对线稿图进行色彩填充与细节描绘，得到一张完整绘制的图像。生成图分辨率默认为1024:1024。
+线稿生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SubmitDrawPortraitJobResponse SubmitDrawPortraitJob(Models\SubmitDrawPortraitJobRequest $req) AI 写真提供 AI 写真形象照的训练与生成能力，分为上传训练图片、训练模型、生成图片3个环节，需要依次调用对应接口。
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 生成图片分为提交任务和查询任务2个接口。

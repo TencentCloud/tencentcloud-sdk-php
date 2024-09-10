@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 统计曲线数据项
  *
- * @method integer getTimestamp() 获取返回数据对应时间点，采用unix秒级时间戳。
- * @method void setTimestamp(integer $Timestamp) 设置返回数据对应时间点，采用unix秒级时间戳。
+ * @method integer getTimestamp() 获取返回数据对应时间点，采用 unix 秒级时间戳。
+ * @method void setTimestamp(integer $Timestamp) 设置返回数据对应时间点，采用 unix 秒级时间戳。
  * @method integer getValue() 获取具体数值。
  * @method void setValue(integer $Value) 设置具体数值。
  */
 class TimingDataItem extends AbstractModel
 {
     /**
-     * @var integer 返回数据对应时间点，采用unix秒级时间戳。
+     * @var integer 返回数据对应时间点，采用 unix 秒级时间戳。
      */
     public $Timestamp;
 
@@ -38,7 +38,7 @@ class TimingDataItem extends AbstractModel
     public $Value;
 
     /**
-     * @param integer $Timestamp 返回数据对应时间点，采用unix秒级时间戳。
+     * @param integer $Timestamp 返回数据对应时间点，采用 unix 秒级时间戳。
      * @param integer $Value 具体数值。
      */
     function __construct()

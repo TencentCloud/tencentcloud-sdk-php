@@ -44,12 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：开启 VODEO 后默认接入。</li>
  * @method void setType(string $Type) 设置站点接入方式，取值有：
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：开启 VODEO 后默认接入。</li>
  * @method boolean getPaused() 获取站点是否关闭。
  * @method void setPaused(boolean $Paused) 设置站点是否关闭。
  * @method string getCnameSpeedUp() 获取是否开启 CNAME 加速，取值有：
@@ -150,7 +148,6 @@ class Zone extends AbstractModel
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：开启 VODEO 后默认接入。</li>
      */
     public $Type;
 
@@ -260,7 +257,6 @@ class Zone extends AbstractModel
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：开启 VODEO 后默认接入。</li>
      * @param boolean $Paused 站点是否关闭。
      * @param string $CnameSpeedUp 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>

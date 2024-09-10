@@ -121,6 +121,7 @@ class OriginInfo extends AbstractModel
 
     /**
      * @var integer VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
+     * @deprecated
      */
     public $VodeoSubAppId;
 
@@ -128,11 +129,13 @@ class OriginInfo extends AbstractModel
      * @var string VODEO 分发范围，该参数当 OriginType = VODEO 时必填。取值有： 
 <li>All：当前应用下所有存储桶；</li> 
 <li>Bucket：指定的某一个存储桶。</li>
+     * @deprecated
      */
     public $VodeoDistributionRange;
 
     /**
      * @var string VODEO 存储桶 ID，该参数当 OriginType = VODEO 且 VodeoDistributionRange = Bucket 时必填。
+     * @deprecated
      */
     public $VodeoBucketId;
 

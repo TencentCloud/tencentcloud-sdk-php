@@ -49,11 +49,11 @@ use TencentCloud\Common\AbstractModel;
 <li>hour: 1小时 ；</li>
 <li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
  * @method array getFilters() 获取过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
  * @method string getArea() 获取数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>
@@ -105,8 +105,8 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
      */
     public $Filters;
 
@@ -134,8 +134,8 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>hour: 1小时 ；</li>
 <li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
      * @param string $Area 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>

@@ -52,6 +52,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 获取一段时间时间范围内的指标数据
  * @method Models\DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(Models\DescribeServerlessSpaceUserRequest $req) 查看Serverless空间子用户
  * @method Models\DescribeServerlessSpacesResponse DescribeServerlessSpaces(Models\DescribeServerlessSpacesRequest $req) 获取Serverless索引空间列表
+ * @method Models\DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaTools(Models\DescribeSpaceKibanaToolsRequest $req) space维度的kibana获取登录token
  * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群

@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescriptionTask(AiAnalysisTaskDescriptionResult $DescriptionTask) 设置视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() 获取视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask) 设置视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -142,6 +146,12 @@ class AiAnalysisResult extends AbstractModel
     public $DescriptionTask;
 
     /**
+     * @var AiAnalysisTaskHorizontalToVerticalResult 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HorizontalToVerticalTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -167,6 +177,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskHeadTailResult $HeadTailTask 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskDescriptionResult $DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +241,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("DescriptionTask",$param) and $param["DescriptionTask"] !== null) {
             $this->DescriptionTask = new AiAnalysisTaskDescriptionResult();
             $this->DescriptionTask->deserialize($param["DescriptionTask"]);
+        }
+
+        if (array_key_exists("HorizontalToVerticalTask",$param) and $param["HorizontalToVerticalTask"] !== null) {
+            $this->HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult();
+            $this->HorizontalToVerticalTask->deserialize($param["HorizontalToVerticalTask"]);
         }
     }
 }

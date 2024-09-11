@@ -86,6 +86,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbnormal(integer $Abnormal) 设置开关是否异常,0:正常,1:异常
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getORTableId() 获取nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setORTableId(string $ORTableId) 设置nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getORTableName() 获取nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setORTableName(string $ORTableName) 设置nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOhavips() 获取出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOhavips(array $Ohavips) 设置出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatSwitchListData extends AbstractModel
 {
@@ -191,6 +203,24 @@ class NatSwitchListData extends AbstractModel
     public $Abnormal;
 
     /**
+     * @var string nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ORTableId;
+
+    /**
+     * @var string nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ORTableName;
+
+    /**
+     * @var array 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ohavips;
+
+    /**
      * @param integer $Id 列表ID
      * @param string $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,6 +253,12 @@ class NatSwitchListData extends AbstractModel
      * @param string $Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Abnormal 开关是否异常,0:正常,1:异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ORTableId nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ORTableName nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Ohavips 出口Snat Ip列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +340,18 @@ class NatSwitchListData extends AbstractModel
 
         if (array_key_exists("Abnormal",$param) and $param["Abnormal"] !== null) {
             $this->Abnormal = $param["Abnormal"];
+        }
+
+        if (array_key_exists("ORTableId",$param) and $param["ORTableId"] !== null) {
+            $this->ORTableId = $param["ORTableId"];
+        }
+
+        if (array_key_exists("ORTableName",$param) and $param["ORTableName"] !== null) {
+            $this->ORTableName = $param["ORTableName"];
+        }
+
+        if (array_key_exists("Ohavips",$param) and $param["Ohavips"] !== null) {
+            $this->Ohavips = $param["Ohavips"];
         }
     }
 }

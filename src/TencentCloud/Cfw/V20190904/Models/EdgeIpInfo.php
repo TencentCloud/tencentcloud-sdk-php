@@ -134,6 +134,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名化CLB的域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOverUsedStatus() 获取IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOverUsedStatus(integer $OverUsedStatus) 设置IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeIpInfo extends AbstractModel
 {
@@ -283,6 +287,12 @@ class EdgeIpInfo extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OverUsedStatus;
+
+    /**
      * @param string $PublicIp 公网IP
      * @param integer $PublicIpType 公网 IP 类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -339,6 +349,8 @@ class EdgeIpInfo extends AbstractModel
      * @param integer $SwitchWeight 开关权重
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OverUsedStatus IP超量状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -440,6 +452,10 @@ class EdgeIpInfo extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("OverUsedStatus",$param) and $param["OverUsedStatus"] !== null) {
+            $this->OverUsedStatus = $param["OverUsedStatus"];
         }
     }
 }

@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRule(CustomWhiteRule $CustomRule) 设置自定义规则细节
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFwType() 获取1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFwType(integer $FwType) 设置1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlockIgnoreRule extends AbstractModel
 {
@@ -254,6 +258,12 @@ class BlockIgnoreRule extends AbstractModel
     public $CustomRule;
 
     /**
+     * @var integer 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FwType;
+
+    /**
      * @param integer $RuleType 1 封禁 2外部IP 3域名 4情报 5assets 6udf  7入侵防御规则id （2-7属于白名单类型）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ioc 规则ip或白名单内容
@@ -299,6 +309,8 @@ class BlockIgnoreRule extends AbstractModel
      * @param string $LastHitTime 上次命中时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomWhiteRule $CustomRule 自定义规则细节
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FwType 1 border 2 nat 4 vpc 8 border-serial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -405,6 +417,10 @@ class BlockIgnoreRule extends AbstractModel
         if (array_key_exists("CustomRule",$param) and $param["CustomRule"] !== null) {
             $this->CustomRule = new CustomWhiteRule();
             $this->CustomRule->deserialize($param["CustomRule"]);
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

@@ -116,9 +116,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBetaList(array $BetaList) 设置关联任务详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScope() 获取生效范围：serial，串行；side，旁路；all，全局
+ * @method string getScope() 获取（1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScope(string $Scope) 设置生效范围：serial，串行；side，旁路；all，全局
+ * @method void setScope(string $Scope) 设置（1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScopeDesc() 获取生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScopeDesc(string $ScopeDesc) 设置生效范围描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInternetBorderUuid() 获取互联网边界防火墙使用的内部规则id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -296,10 +302,17 @@ class DescAcItem extends AbstractModel
     public $BetaList;
 
     /**
-     * @var string 生效范围：serial，串行；side，旁路；all，全局
+     * @var string （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scope;
+
+    /**
+     * @var string 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScopeDesc;
 
     /**
      * @var string 互联网边界防火墙使用的内部规则id
@@ -386,7 +399,10 @@ class DescAcItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BetaList 关联任务详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scope 生效范围：serial，串行；side，旁路；all，全局
+     * @param string $Scope （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScopeDesc 生效范围描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetBorderUuid 互联网边界防火墙使用的内部规则id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -521,6 +537,10 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
             $this->Scope = $param["Scope"];
+        }
+
+        if (array_key_exists("ScopeDesc",$param) and $param["ScopeDesc"] !== null) {
+            $this->ScopeDesc = $param["ScopeDesc"];
         }
 
         if (array_key_exists("InternetBorderUuid",$param) and $param["InternetBorderUuid"] !== null) {

@@ -635,11 +635,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 <li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
  * @method Models\CreateUserMobileChangeUrlResponse CreateUserMobileChangeUrl(Models\CreateUserMobileChangeUrlRequest $req) 该接口会生成一个手机号变更的链接，用户可以通过该链接进入电子签系统进行手机号的变更。
 该接口支持员工和个人端手机号的变更。
- * @method Models\CreateUserVerifyUrlResponse CreateUserVerifyUrl(Models\CreateUserVerifyUrlRequest $req) 客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
-使用场景：
-用户集成场景
-使用限制：
-此接口需要购买单独的实名套餐包方可调用，如有需求请联系对接人员评估
+ * @method Models\CreateUserVerifyUrlResponse CreateUserVerifyUrl(Models\CreateUserVerifyUrlRequest $req) 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。
+
+注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
  * @method Models\CreateWebThemeConfigResponse CreateWebThemeConfig(Models\CreateWebThemeConfigRequest $req) 用来设置本企业嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），设置后获取的web签署界面都会使用此配置进行展示。
 
 如果多次调用，会以最后一次的配置为准
@@ -760,8 +758,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 注意: 
 <ul>
-<li>此接口为合作引流场景使用，使用`有白名单限制`，使用前请联系对接的客户经理沟通。</li>
-<li>`AuthCode 只能使用一次`，查询一次再次查询会返回错误</li>
+<li>此接口为合作引流场景使用，使用<b>有白名单限制</b>，使用前请联系对接的客户经理沟通。</li>
+<li><b>AuthCode 只能使用一次</b>，查询一次再次查询会返回错误</li>
 </ul>
  * @method Models\DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatus(Models\DescribeUserAutoSignStatusRequest $req) 通过此接口获取个人用户自动签的开通状态。
 

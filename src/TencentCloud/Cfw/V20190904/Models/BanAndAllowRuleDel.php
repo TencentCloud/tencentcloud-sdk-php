@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIoc(string $Ioc) 设置封禁和放通对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDirectionList() 获取0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+ * @method string getDirectionList() 获取0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDirectionList(string $DirectionList) 设置0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+ * @method void setDirectionList(string $DirectionList) 设置0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleType() 获取规则类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class BanAndAllowRuleDel extends AbstractModel
     public $Ioc;
 
     /**
-     * @var string 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * @var string 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DirectionList;
@@ -56,7 +56,7 @@ class BanAndAllowRuleDel extends AbstractModel
     /**
      * @param string $Ioc 封禁和放通对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * @param string $DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleType 规则类型
 注意：此字段可能返回 null，表示取不到有效值。

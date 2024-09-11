@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置片段起始时间偏移。
  * @method float getEndTimeOffset() 获取片段结束时间偏移。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置片段结束时间偏移。
+ * @method array getSegmentTags() 获取片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentTags(array $SegmentTags) 设置片段标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -45,9 +49,17 @@ class HighlightSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var array 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentTags;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
+     * @param array $SegmentTags 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class HighlightSegmentItem extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("SegmentTags",$param) and $param["SegmentTags"] !== null) {
+            $this->SegmentTags = $param["SegmentTags"];
         }
     }
 }

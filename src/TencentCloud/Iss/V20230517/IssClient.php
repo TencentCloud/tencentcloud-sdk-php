@@ -36,6 +36,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\AddStreamAuthResponse AddStreamAuth(Models\AddStreamAuthRequest $req) 用于设置推拉流鉴权配置。
  * @method Models\AddUserDeviceResponse AddUserDevice(Models\AddUserDeviceRequest $req) 用于新增单个设备。添加设备之后，可根据返回结果到设备上进行配置，配置后等待设备注册/推流。
  * @method Models\BatchOperateDeviceResponse BatchOperateDevice(Models\BatchOperateDeviceRequest $req) 用于批量操作（启用，禁用，删除）设备
+ * @method Models\CallISAPIResponse CallISAPI(Models\CallISAPIRequest $req) 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 用于检测域名是否备案。
  * @method Models\ControlDevicePTZResponse ControlDevicePTZ(Models\ControlDevicePTZRequest $req) 用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
  * @method Models\ControlDevicePresetResponse ControlDevicePreset(Models\ControlDevicePresetRequest $req) 用于操作设备预置位，包括设置、删除、调用。

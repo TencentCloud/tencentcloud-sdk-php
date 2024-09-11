@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportStatus(string $ReportStatus) 设置实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
  * @method string getDescription() 获取用户接收短信状态描述。
  * @method void setDescription(string $Description) 设置用户接收短信状态描述。
- * @method string getSessionContext() 获取用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+ * @method string getSessionContext() 获取用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) 评估。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+ * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) 评估。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullSmsSendStatus extends AbstractModel
@@ -77,7 +77,7 @@ class PullSmsSendStatus extends AbstractModel
     public $Description;
 
     /**
-     * @var string 用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+     * @var string 用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) 评估。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionContext;
@@ -90,7 +90,7 @@ class PullSmsSendStatus extends AbstractModel
      * @param string $SerialNo 本次发送标识 ID。
      * @param string $ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
      * @param string $Description 用户接收短信状态描述。
-     * @param string $SessionContext 用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+     * @param string $SessionContext 用户的 session 内容。与请求中的 SessionContext 一致，默认为空，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) 评估。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

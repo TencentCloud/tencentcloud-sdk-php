@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRule(CustomWhiteRule $CustomRule) 设置自定义白名单规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFwType() 获取放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFwType(integer $FwType) 设置放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BanAndAllowRule extends AbstractModel
 {
@@ -74,6 +78,12 @@ class BanAndAllowRule extends AbstractModel
     public $CustomRule;
 
     /**
+     * @var integer 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FwType;
+
+    /**
      * @param string $Ioc 封禁和放通对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
@@ -83,6 +93,8 @@ class BanAndAllowRule extends AbstractModel
      * @param string $Comment 规则评论
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomWhiteRule $CustomRule 自定义白名单规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FwType 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,10 @@ class BanAndAllowRule extends AbstractModel
         if (array_key_exists("CustomRule",$param) and $param["CustomRule"] !== null) {
             $this->CustomRule = new CustomWhiteRule();
             $this->CustomRule->deserialize($param["CustomRule"]);
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

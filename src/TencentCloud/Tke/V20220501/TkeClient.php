@@ -23,10 +23,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tke\V20220501\Models as Models;
 
 /**
+ * @method Models\CreateHealthCheckPolicyResponse CreateHealthCheckPolicy(Models\CreateHealthCheckPolicyRequest $req) 创建健康检测策略
  * @method Models\CreateNodePoolResponse CreateNodePool(Models\CreateNodePoolRequest $req) 创建 TKE 节点池
+ * @method Models\DeleteHealthCheckPolicyResponse DeleteHealthCheckPolicy(Models\DeleteHealthCheckPolicyRequest $req) 删除健康检测策略
  * @method Models\DeleteNodePoolResponse DeleteNodePool(Models\DeleteNodePoolRequest $req) 删除 TKE 节点池
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
+ * @method Models\DescribeHealthCheckPoliciesResponse DescribeHealthCheckPolicies(Models\DescribeHealthCheckPoliciesRequest $req) 查询健康检测策略
+ * @method Models\DescribeHealthCheckPolicyBindingsResponse DescribeHealthCheckPolicyBindings(Models\DescribeHealthCheckPolicyBindingsRequest $req) 查询健康检测策略绑定关系
+ * @method Models\DescribeHealthCheckTemplateResponse DescribeHealthCheckTemplate(Models\DescribeHealthCheckTemplateRequest $req) 查询健康检测策略模板
  * @method Models\DescribeNodePoolsResponse DescribeNodePools(Models\DescribeNodePoolsRequest $req) 查询 TKE 节点池列表
+ * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略
  * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池
  */
 

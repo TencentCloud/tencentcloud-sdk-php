@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class ResourceInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $AttributionType 归属类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceType 资源类型
@@ -95,6 +105,8 @@ class ResourceInfo extends AbstractModel
      * @param array $Favor 亲和性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 标准引擎资源组信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

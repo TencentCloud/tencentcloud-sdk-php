@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTDSQLPostgreSql(DataSourceInfo $TDSQLPostgreSql) 设置TDSQL-PostgreSQL数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TCHouseD getTCHouseD() 获取Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTCHouseD(TCHouseD $TCHouseD) 设置Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceConnectionConfig extends AbstractModel
 {
@@ -114,6 +118,12 @@ class DatasourceConnectionConfig extends AbstractModel
     public $TDSQLPostgreSql;
 
     /**
+     * @var TCHouseD Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TCHouseD;
+
+    /**
      * @param MysqlInfo $Mysql Mysql数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HiveInfo $Hive Hive数据源连接的属性
@@ -131,6 +141,8 @@ class DatasourceConnectionConfig extends AbstractModel
      * @param ElasticsearchInfo $Elasticsearch Elasticsearch数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceInfo $TDSQLPostgreSql TDSQL-PostgreSQL数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TCHouseD $TCHouseD Doris数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,11 @@ class DatasourceConnectionConfig extends AbstractModel
         if (array_key_exists("TDSQLPostgreSql",$param) and $param["TDSQLPostgreSql"] !== null) {
             $this->TDSQLPostgreSql = new DataSourceInfo();
             $this->TDSQLPostgreSql->deserialize($param["TDSQLPostgreSql"]);
+        }
+
+        if (array_key_exists("TCHouseD",$param) and $param["TCHouseD"] !== null) {
+            $this->TCHouseD = new TCHouseD();
+            $this->TCHouseD->deserialize($param["TCHouseD"]);
         }
     }
 }

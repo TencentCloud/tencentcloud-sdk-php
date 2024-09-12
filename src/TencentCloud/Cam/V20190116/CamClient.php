@@ -44,6 +44,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeleteAccessKeyResponse DeleteAccessKey(Models\DeleteAccessKeyRequest $req) 为CAM用户删除访问密钥。
 此接口属于高风险操作，删除密钥后不可恢复，腾讯云将永久拒绝此密钥的所有请求，请谨慎使用。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除用户组
+ * @method Models\DeleteMessageReceiverResponse DeleteMessageReceiver(Models\DeleteMessageReceiverRequest $req) 删除消息接收人
  * @method Models\DeleteOIDCConfigResponse DeleteOIDCConfig(Models\DeleteOIDCConfigRequest $req) 删除OIDC身份提供商
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 本接口（DeletePolicy）可用于删除策略。
  * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) 本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
@@ -90,6 +91,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询策略列表。
  * @method Models\ListPoliciesGrantingServiceAccessResponse ListPoliciesGrantingServiceAccess(Models\ListPoliciesGrantingServiceAccessRequest $req) 获取所有已授权服务
  * @method Models\ListPolicyVersionsResponse ListPolicyVersions(Models\ListPolicyVersionsRequest $req) 该接口（ListPolicyVersions）用于获取策略版本列表
+ * @method Models\ListReceiverResponse ListReceiver(Models\ListReceiverRequest $req) 获取消息接收人列表
  * @method Models\ListSAMLProvidersResponse ListSAMLProviders(Models\ListSAMLProvidersRequest $req) 查询SAML身份提供商列表
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 拉取子用户
  * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) 查询用户组关联的用户列表

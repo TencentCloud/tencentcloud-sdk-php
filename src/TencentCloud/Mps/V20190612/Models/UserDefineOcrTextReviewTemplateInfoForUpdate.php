@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置用户自定文本审核任务开关，可选值：
 <li>ON：开启自定义文本审核任务；</li>
 <li>OFF：关闭自定义文本审核任务。</li>
- * @method string getLabelSet() 获取用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+ * @method array getLabelSet() 获取用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
- * @method void setLabelSet(string $LabelSet) 设置用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+ * @method void setLabelSet(array $LabelSet) 设置用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
  * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
@@ -45,7 +45,7 @@ class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * @var array 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
     public $LabelSet;
@@ -64,7 +64,7 @@ class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch 用户自定文本审核任务开关，可选值：
 <li>ON：开启自定义文本审核任务；</li>
 <li>OFF：关闭自定义文本审核任务。</li>
-     * @param string $LabelSet 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * @param array $LabelSet 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。

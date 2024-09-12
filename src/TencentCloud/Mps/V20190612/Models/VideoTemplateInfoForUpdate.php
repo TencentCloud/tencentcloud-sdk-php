@@ -29,12 +29,14 @@ use TencentCloud\Common\AbstractModel;
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
@@ -45,12 +47,14 @@ use TencentCloud\Common\AbstractModel;
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFps() 获取视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
@@ -146,6 +150,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFpsDenominator(integer $FpsDenominator) 设置帧率分母部分
 注意：值必须大于0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStereo3dType() 获取3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStereo3dType(string $Stereo3dType) 设置3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -159,12 +173,14 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codec;
@@ -261,6 +277,15 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $FpsDenominator;
 
     /**
+     * @var string 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Stereo3dType;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -270,12 +295,14 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Fps 视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
@@ -323,6 +350,11 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FpsDenominator 帧率分母部分
 注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -384,6 +416,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
             $this->FpsDenominator = $param["FpsDenominator"];
+        }
+
+        if (array_key_exists("Stereo3dType",$param) and $param["Stereo3dType"] !== null) {
+            $this->Stereo3dType = $param["Stereo3dType"];
         }
     }
 }

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceNodes请求参数结构体
  *
-
+ * @method integer getLimit() 获取limit
+ * @method void setLimit(integer $Limit) 设置limit
+ * @method integer getOffset() 获取offset
+ * @method void setOffset(integer $Offset) 设置offset
+ * @method string getComponent() 获取component
+ * @method void setComponent(string $Component) 设置component
  */
 class DescribeInstanceNodesRequest extends AbstractModel
 {
-
+    /**
+     * @var integer limit
+     */
+    public $Limit;
 
     /**
+     * @var integer offset
+     */
+    public $Offset;
 
+    /**
+     * @var string component
+     */
+    public $Component;
+
+    /**
+     * @param integer $Limit limit
+     * @param integer $Offset offset
+     * @param string $Component component
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DescribeInstanceNodesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Component",$param) and $param["Component"] !== null) {
+            $this->Component = $param["Component"];
+        }
     }
 }

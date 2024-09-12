@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidStatus(string $ValidStatus) 设置绑定的状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBindType() 获取绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindType(string $BindType) 设置绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DbInfo extends AbstractModel
 {
@@ -44,9 +48,17 @@ class DbInfo extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var string 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindType;
+
+    /**
      * @param string $DbName 数据库名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidStatus 绑定的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BindType 绑定的类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DbInfo extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("BindType",$param) and $param["BindType"] !== null) {
+            $this->BindType = $param["BindType"];
         }
     }
 }

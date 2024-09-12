@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayModeEffective(boolean $PayModeEffective) 设置实例计费模式是否生效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -314,6 +318,12 @@ class ApmInstanceDetail extends AbstractModel
     public $PayModeEffective;
 
     /**
+     * @var integer 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -371,6 +381,8 @@ class ApmInstanceDetail extends AbstractModel
 0为按量付费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PayModeEffective 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -505,6 +517,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("PayModeEffective",$param) and $param["PayModeEffective"] !== null) {
             $this->PayModeEffective = $param["PayModeEffective"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
         }
     }
 }

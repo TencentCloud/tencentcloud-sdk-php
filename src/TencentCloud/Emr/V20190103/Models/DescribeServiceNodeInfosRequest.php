@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
 "-99"代表所有
 "-3"代表存在隐患
 "-4"代表未探测
- * @method string getServiceName() 获取服务组件名称，都是大写比如YARN
- * @method void setServiceName(string $ServiceName) 设置服务组件名称，都是大写比如YARN
+ * @method string getServiceName() 获取服务组件名称，都是大写例如YARN
+ * @method void setServiceName(string $ServiceName) 设置服务组件名称，都是大写例如YARN
  * @method string getNodeTypeName() 获取节点名称
 master
 core
@@ -143,7 +143,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
     public $HealthStateId;
 
     /**
-     * @var string 服务组件名称，都是大写比如YARN
+     * @var string 服务组件名称，都是大写例如YARN
      */
     public $ServiceName;
 
@@ -192,7 +192,7 @@ router
 "-99"代表所有
 "-3"代表存在隐患
 "-4"代表未探测
-     * @param string $ServiceName 服务组件名称，都是大写比如YARN
+     * @param string $ServiceName 服务组件名称，都是大写例如YARN
      * @param string $NodeTypeName 节点名称
 master
 core

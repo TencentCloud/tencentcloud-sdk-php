@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置任务异常原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretId() 获取临时AK
+ * @method string getSecretId() 获取临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretId(string $SecretId) 设置临时AK
+ * @method void setSecretId(string $SecretId) 设置临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretKey() 获取临时SK
+ * @method string getSecretKey() 获取临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretKey(string $SecretKey) 设置临时SK
+ * @method void setSecretKey(string $SecretKey) 设置临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getToken() 获取临时Token
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,13 +65,13 @@ class DescribeResultDownloadResponse extends AbstractModel
     public $Reason;
 
     /**
-     * @var string 临时AK
+     * @var string 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretId;
 
     /**
-     * @var string 临时SK
+     * @var string 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
@@ -93,9 +93,9 @@ class DescribeResultDownloadResponse extends AbstractModel
      * @param string $Status 任务状态 init | queue | format | compress | success|  timeout | error
      * @param string $Reason 任务异常原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretId 临时AK
+     * @param string $SecretId 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretKey 临时SK
+     * @param string $SecretKey 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Token 临时Token
 注意：此字段可能返回 null，表示取不到有效值。

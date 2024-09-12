@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置模板类型过滤条件，不填则返回所有，可选值：
 * Preset：系统预置模板；
 * Custom：用户自定义模板。
+ * @method string getName() 获取视频内容分析模板标识过滤条件，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置视频内容分析模板标识过滤条件，长度限制：64 个字符。
  */
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 视频内容分析模板标识过滤条件，长度限制：64 个字符。
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $Type 模板类型过滤条件，不填则返回所有，可选值：
 * Preset：系统预置模板；
 * Custom：用户自定义模板。
+     * @param string $Name 视频内容分析模板标识过滤条件，长度限制：64 个字符。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

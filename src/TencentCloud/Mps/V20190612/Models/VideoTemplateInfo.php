@@ -29,12 +29,14 @@ use TencentCloud\Common\AbstractModel;
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -44,12 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
  * @method integer getFps() 获取视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
 当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
@@ -96,10 +100,8 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
- * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -140,6 +142,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFpsDenominator(integer $FpsDenominator) 设置帧率分母部分
 注意：值必须大于0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStereo3dType() 获取3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStereo3dType(string $Stereo3dType) 设置3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -153,12 +165,14 @@ class VideoTemplateInfo extends AbstractModel
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
      */
     public $Codec;
 
@@ -206,8 +220,7 @@ class VideoTemplateInfo extends AbstractModel
     public $Height;
 
     /**
-     * @var integer 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+     * @var integer 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
      */
     public $Gop;
 
@@ -248,6 +261,15 @@ class VideoTemplateInfo extends AbstractModel
     public $FpsDenominator;
 
     /**
+     * @var string 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Stereo3dType;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -257,12 +279,14 @@ class VideoTemplateInfo extends AbstractModel
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
      * @param integer $Fps 视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
 当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
@@ -286,8 +310,7 @@ class VideoTemplateInfo extends AbstractModel
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -307,6 +330,11 @@ class VideoTemplateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FpsDenominator 帧率分母部分
 注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -364,6 +392,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
             $this->FpsDenominator = $param["FpsDenominator"];
+        }
+
+        if (array_key_exists("Stereo3dType",$param) and $param["Stereo3dType"] !== null) {
+            $this->Stereo3dType = $param["Stereo3dType"];
         }
     }
 }

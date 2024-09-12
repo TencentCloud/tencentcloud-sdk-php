@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置修改计费模式
 1为预付费
 0为按量付费
+ * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -156,6 +158,11 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 响应时间满意阈值
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名
      * @param array $Tags 标签列表
@@ -176,6 +183,7 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $PayMode 修改计费模式
 1为预付费
 0为按量付费
+     * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
         }
     }
 }

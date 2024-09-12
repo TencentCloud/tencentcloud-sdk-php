@@ -59,6 +59,9 @@ use TencentCloud\Common\AbstractModel;
 <li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
+ * @method string getName() 获取转码模板标识过滤条件，长度限制：64 个字符。	
+ * @method void setName(string $Name) 设置转码模板标识过滤条件，长度限制：64 个字符。	
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -111,6 +114,11 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $TranscodeType;
 
     /**
+     * @var string 转码模板标识过滤条件，长度限制：64 个字符。	
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
@@ -130,6 +138,8 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 <li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
+     * @param string $Name 转码模板标识过滤条件，长度限制：64 个字符。	
      */
     function __construct()
     {
@@ -170,6 +180,10 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("TranscodeType",$param) and $param["TranscodeType"] !== null) {
             $this->TranscodeType = $param["TranscodeType"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

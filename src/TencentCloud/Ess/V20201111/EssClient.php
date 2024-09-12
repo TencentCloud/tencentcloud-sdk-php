@@ -704,7 +704,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景：可用于主动查询某个合同流程的签署状态信息。可以配合回调通知使用。
 
 注: `每个企业限制日调用量限制：100W，当日超过此限制后再调用接口返回错误`
- * @method Models\DescribeFlowComponentsResponse DescribeFlowComponents(Models\DescribeFlowComponentsRequest $req) 查询流程填写控件内容，可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容。
+ * @method Models\DescribeFlowComponentsResponse DescribeFlowComponents(Models\DescribeFlowComponentsRequest $req) 可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容，包括填写控件的归属方、填写控件是否已经填写以及填写的内容等信息。
  * @method Models\DescribeFlowEvidenceReportResponse DescribeFlowEvidenceReport(Models\DescribeFlowEvidenceReportRequest $req) 获取出证报告任务执行结果，返回报告 URL。
 
 

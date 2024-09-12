@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>最大值：100。</li>
  * @method string getType() 获取"Preset"：预设，Custom":客户魔板
  * @method void setType(string $Type) 设置"Preset"：预设，Custom":客户魔板
+ * @method string getName() 获取媒体质检模板标识过滤条件，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置媒体质检模板标识过滤条件，长度限制：64 个字符。
  */
 class DescribeQualityControlTemplatesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 媒体质检模板标识过滤条件，长度限制：64 个字符。
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions 媒体质检模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
      * @param string $Type "Preset"：预设，Custom":客户魔板
+     * @param string $Name 媒体质检模板标识过滤条件，长度限制：64 个字符。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

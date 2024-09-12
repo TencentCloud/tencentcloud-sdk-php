@@ -136,7 +136,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeOpsMakePlansResponse DescribeOpsMakePlans(Models\DescribeOpsMakePlansRequest $req) 根据条件分页查询补录计划
  * @method Models\DescribeOpsWorkflowsResponse DescribeOpsWorkflows(Models\DescribeOpsWorkflowsRequest $req) 查询用户生产工作流列表
  * @method Models\DescribeOrganizationalFunctionsResponse DescribeOrganizationalFunctions(Models\DescribeOrganizationalFunctionsRequest $req) 查询全量函数
- * @method Models\DescribePendingSubmitTaskListResponse DescribePendingSubmitTaskList(Models\DescribePendingSubmitTaskListRequest $req) 获取待提交任务预提交校验信息
+ * @method Models\DescribePendingSubmitTaskListResponse DescribePendingSubmitTaskList(Models\DescribePendingSubmitTaskListRequest $req) 获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 获取项目信息
  * @method Models\DescribeQualityScoreResponse DescribeQualityScore(Models\DescribeQualityScoreRequest $req) 质量报告-质量评分
  * @method Models\DescribeQualityScoreTrendResponse DescribeQualityScoreTrend(Models\DescribeQualityScoreTrendRequest $req) 质量报告-质量分周期趋势

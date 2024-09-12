@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Custom：用户自定义模板。</li>
  * @method integer getPureAudio() 获取是否为纯音频，0表示视频，1表示纯音频
  * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频，1表示纯音频
+ * @method string getName() 获取自适应转码模板标识过滤条件，长度限制：64 个字符
+ * @method void setName(string $Name) 设置自适应转码模板标识过滤条件，长度限制：64 个字符
  */
 class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
     public $PureAudio;
 
     /**
+     * @var string 自适应转码模板标识过滤条件，长度限制：64 个字符
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions 转自适应码流模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
@@ -72,6 +79,7 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param integer $PureAudio 是否为纯音频，0表示视频，1表示纯音频
+     * @param string $Name 自适应转码模板标识过滤条件，长度限制：64 个字符
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 
         if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
             $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

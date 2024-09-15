@@ -74,6 +74,8 @@ WARN_RESHOOT_CARD翻拍件告警
  * @method void setSerialNumber(string $SerialNumber) 设置编号
  * @method string getRegistrationAuthority() 获取登记机关
  * @method void setRegistrationAuthority(string $RegistrationAuthority) 设置登记机关
+ * @method boolean getElectronic() 获取是否是电子营业执照。0为不是，1为是。
+ * @method void setElectronic(boolean $Electronic) 设置是否是电子营业执照。0为不是，1为是。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -191,6 +193,11 @@ WARN_RESHOOT_CARD翻拍件告警
     public $RegistrationAuthority;
 
     /**
+     * @var boolean 是否是电子营业执照。0为不是，1为是。
+     */
+    public $Electronic;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +230,7 @@ WARN_RESHOOT_CARD翻拍件告警
      * @param string $Title 标题
      * @param string $SerialNumber 编号
      * @param string $RegistrationAuthority 登记机关
+     * @param boolean $Electronic 是否是电子营业执照。0为不是，1为是。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -320,6 +328,10 @@ WARN_RESHOOT_CARD翻拍件告警
 
         if (array_key_exists("RegistrationAuthority",$param) and $param["RegistrationAuthority"] !== null) {
             $this->RegistrationAuthority = $param["RegistrationAuthority"];
+        }
+
+        if (array_key_exists("Electronic",$param) and $param["Electronic"] !== null) {
+            $this->Electronic = $param["Electronic"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

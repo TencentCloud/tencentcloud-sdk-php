@@ -37,14 +37,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResume(boolean $Resume) 设置Resume。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNFVersion() 获取Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNFVersion(string $NFVersion) 设置Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaunchDir() 获取启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaunchDir(string $LaunchDir) 设置启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NFOption extends AbstractModel
@@ -75,12 +77,17 @@ class NFOption extends AbstractModel
 
     /**
      * @var string Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NFVersion;
+
+    /**
+     * @var string 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaunchDir;
 
     /**
      * @param string $Config Config。
@@ -92,9 +99,10 @@ class NFOption extends AbstractModel
      * @param boolean $Resume Resume。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NFVersion Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaunchDir 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +136,10 @@ class NFOption extends AbstractModel
 
         if (array_key_exists("NFVersion",$param) and $param["NFVersion"] !== null) {
             $this->NFVersion = $param["NFVersion"];
+        }
+
+        if (array_key_exists("LaunchDir",$param) and $param["LaunchDir"] !== null) {
+            $this->LaunchDir = $param["LaunchDir"];
         }
     }
 }

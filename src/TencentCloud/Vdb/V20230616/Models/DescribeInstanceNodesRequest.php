@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceNodes请求参数结构体
  *
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method integer getLimit() 获取limit
  * @method void setLimit(integer $Limit) 设置limit
  * @method integer getOffset() 获取offset
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeInstanceNodesRequest extends AbstractModel
 {
+    /**
+     * @var string 实例ID。
+     */
+    public $InstanceId;
+
     /**
      * @var integer limit
      */
@@ -45,6 +52,7 @@ class DescribeInstanceNodesRequest extends AbstractModel
     public $Component;
 
     /**
+     * @param string $InstanceId 实例ID。
      * @param integer $Limit limit
      * @param integer $Offset offset
      * @param string $Component component
@@ -62,6 +70,10 @@ class DescribeInstanceNodesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }

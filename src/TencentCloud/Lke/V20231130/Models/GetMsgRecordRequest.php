@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置会话sessionid
  * @method string getLastRecordId() 获取最后一条记录ID
  * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID
- * @method string getBotAppKey() 获取应用AppKey
- * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey
+ * @method string getBotAppKey() 获取应用AppKey, 当Type=5[API访客]时, 该字段必填
+ * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填
  * @method integer getScene() 获取场景, 体验: 1; 正式: 2
  * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
  */
@@ -56,7 +56,7 @@ class GetMsgRecordRequest extends AbstractModel
     public $LastRecordId;
 
     /**
-     * @var string 应用AppKey
+     * @var string 应用AppKey, 当Type=5[API访客]时, 该字段必填
      */
     public $BotAppKey;
 
@@ -70,7 +70,7 @@ class GetMsgRecordRequest extends AbstractModel
      * @param integer $Count 数量
      * @param string $SessionId 会话sessionid
      * @param string $LastRecordId 最后一条记录ID
-     * @param string $BotAppKey 应用AppKey
+     * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
      * @param integer $Scene 场景, 体验: 1; 正式: 2
      */
     function __construct()

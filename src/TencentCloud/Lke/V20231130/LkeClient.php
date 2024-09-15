@@ -100,7 +100,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\QueryParseDocResultResponse QueryParseDocResult(Models\QueryParseDocResultRequest $req) 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\QueryRewriteResponse QueryRewrite(Models\QueryRewriteRequest $req) 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
 本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
- * @method Models\RateMsgRecordResponse RateMsgRecord(Models\RateMsgRecordRequest $req) 是否意图转人工
+ * @method Models\RateMsgRecordResponse RateMsgRecord(Models\RateMsgRecordRequest $req) 点赞点踩消息
  * @method Models\ReconstructDocumentResponse ReconstructDocument(Models\ReconstructDocumentRequest $req) 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。

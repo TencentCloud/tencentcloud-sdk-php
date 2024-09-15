@@ -108,8 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
- * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+ * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
  * @method string getNeedMasterWan() 获取是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
@@ -272,7 +272,7 @@ class CreateInstanceRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      */
     public $ClientToken;
 
@@ -416,7 +416,7 @@ Hadoop-Hbase
      * @param integer $AutoRenew 包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
-     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      * @param string $NeedMasterWan 是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。

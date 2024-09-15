@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateNetworkInterfaceSecurityGroups请求参数结构体
  *
- * @method array getNetworkInterfaceIds() 获取弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
- * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+ * @method array getNetworkInterfaceIds() 获取弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
+ * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
  * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
  */
 class AssociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+     * @var array 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
      */
     public $NetworkInterfaceIds;
 
@@ -38,7 +38,7 @@ class AssociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param array $NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+     * @param array $NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
      * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
      */
     function __construct()

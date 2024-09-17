@@ -106,16 +106,16 @@ use TencentCloud\Common\AbstractModel;
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
- * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
- * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+ * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
+ * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
  * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
  * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
  * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
@@ -134,6 +134,18 @@ use TencentCloud\Common\AbstractModel;
 3. 未传值时默认开关关闭（false）。
  * @method boolean getEnableSpeedSearch() 获取是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
  * @method void setEnableSpeedSearch(boolean $EnableSpeedSearch) 设置是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+ * @method boolean getEnableMultimedia() 获取图文并茂开关。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+ * @method void setEnableMultimedia(boolean $EnableMultimedia) 设置图文并茂开关。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -209,14 +221,14 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableEnhancement;
 
     /**
-     * @var array 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * @var array 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
      */
     public $Tools;
 
     /**
      * @var string 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      */
@@ -245,6 +257,16 @@ class ChatCompletionsRequest extends AbstractModel
      * @var boolean 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
      */
     public $EnableSpeedSearch;
+
+    /**
+     * @var boolean 图文并茂开关。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     */
+    public $EnableMultimedia;
 
     /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
@@ -290,10 +312,10 @@ class ChatCompletionsRequest extends AbstractModel
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
-     * @param array $Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * @param array $Tools 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
      * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
@@ -304,6 +326,12 @@ class ChatCompletionsRequest extends AbstractModel
 2. false：开关关闭，true：开关打开。
 3. 未传值时默认开关关闭（false）。
      * @param boolean $EnableSpeedSearch 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+     * @param boolean $EnableMultimedia 图文并茂开关。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
      */
     function __construct()
     {
@@ -379,6 +407,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableSpeedSearch",$param) and $param["EnableSpeedSearch"] !== null) {
             $this->EnableSpeedSearch = $param["EnableSpeedSearch"];
+        }
+
+        if (array_key_exists("EnableMultimedia",$param) and $param["EnableMultimedia"] !== null) {
+            $this->EnableMultimedia = $param["EnableMultimedia"];
         }
     }
 }

@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModerationLevel(string $ModerationLevel) 设置多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
  * @method SearchInfo getSearchInfo() 获取搜索结果信息
  * @method void setSearchInfo(SearchInfo $SearchInfo) 设置搜索结果信息
+ * @method array getReplaces() 获取多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+ * @method void setReplaces(array $Replaces) 设置多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  */
@@ -91,6 +99,14 @@ class ChatCompletionsResponse extends AbstractModel
     public $SearchInfo;
 
     /**
+     * @var array 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     */
+    public $Replaces;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     public $RequestId;
@@ -107,6 +123,10 @@ class ChatCompletionsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
      * @param SearchInfo $SearchInfo 搜索结果信息
+     * @param array $Replaces 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     function __construct()
@@ -160,6 +180,15 @@ class ChatCompletionsResponse extends AbstractModel
         if (array_key_exists("SearchInfo",$param) and $param["SearchInfo"] !== null) {
             $this->SearchInfo = new SearchInfo();
             $this->SearchInfo->deserialize($param["SearchInfo"]);
+        }
+
+        if (array_key_exists("Replaces",$param) and $param["Replaces"] !== null) {
+            $this->Replaces = [];
+            foreach ($param["Replaces"] as $key => $value){
+                $obj = new Replace();
+                $obj->deserialize($value);
+                array_push($this->Replaces, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

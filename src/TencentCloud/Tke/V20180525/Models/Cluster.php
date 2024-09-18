@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) 设置集群当前etcd数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcId() 获取本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -231,6 +235,12 @@ class Cluster extends AbstractModel
     public $ClusterEtcdNodeNum;
 
     /**
+     * @var string 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -267,6 +277,8 @@ class Cluster extends AbstractModel
      * @param string $RuntimeVersion 运行时版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterEtcdNodeNum 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdcId 本地专用集群Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -382,6 +394,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ClusterEtcdNodeNum",$param) and $param["ClusterEtcdNodeNum"] !== null) {
             $this->ClusterEtcdNodeNum = $param["ClusterEtcdNodeNum"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

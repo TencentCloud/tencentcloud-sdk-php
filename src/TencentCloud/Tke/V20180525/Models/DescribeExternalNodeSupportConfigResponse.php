@@ -64,8 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnabledPublicConnect() 获取是否开启第三方节点公网连接支持
  * @method void setEnabledPublicConnect(boolean $EnabledPublicConnect) 设置是否开启第三方节点公网连接支持
- * @method string getPublicConnectUrl() 获取公网连接地址
- * @method void setPublicConnectUrl(string $PublicConnectUrl) 设置公网连接地址
+ * @method string getPublicConnectUrl() 获取注册节点公网版公网连接地址
+ * @method void setPublicConnectUrl(string $PublicConnectUrl) 设置注册节点公网版公网连接地址
+ * @method string getPublicCustomDomain() 获取注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicCustomDomain(string $PublicCustomDomain) 设置注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -142,9 +146,15 @@ class DescribeExternalNodeSupportConfigResponse extends AbstractModel
     public $EnabledPublicConnect;
 
     /**
-     * @var string 公网连接地址
+     * @var string 注册节点公网版公网连接地址
      */
     public $PublicConnectUrl;
+
+    /**
+     * @var string 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicCustomDomain;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -174,7 +184,9 @@ class DescribeExternalNodeSupportConfigResponse extends AbstractModel
      * @param array $Progress 用于记录开启第三方节点的过程进行到哪一步了
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnabledPublicConnect 是否开启第三方节点公网连接支持
-     * @param string $PublicConnectUrl 公网连接地址
+     * @param string $PublicConnectUrl 注册节点公网版公网连接地址
+     * @param string $PublicCustomDomain 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -245,6 +257,10 @@ class DescribeExternalNodeSupportConfigResponse extends AbstractModel
 
         if (array_key_exists("PublicConnectUrl",$param) and $param["PublicConnectUrl"] !== null) {
             $this->PublicConnectUrl = $param["PublicConnectUrl"];
+        }
+
+        if (array_key_exists("PublicCustomDomain",$param) and $param["PublicCustomDomain"] !== null) {
+            $this->PublicCustomDomain = $param["PublicCustomDomain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

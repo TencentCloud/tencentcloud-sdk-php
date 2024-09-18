@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPointVip(string $EndPointVip) 设置终端节点VIP，可以指定IP申请。
  * @method string getSecurityGroupId() 获取安全组ID。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateVpcEndPointRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID。
      * @param string $EndPointName 终端节点名称。
      * @param string $EndPointServiceId 终端节点服务ID。
      * @param string $EndPointVip 终端节点VIP，可以指定IP申请。
      * @param string $SecurityGroupId 安全组ID。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateVpcEndPointRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
             $this->SecurityGroupId = $param["SecurityGroupId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

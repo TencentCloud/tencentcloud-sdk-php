@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceTemplateId() 获取服务模版id
+ * @method string getServiceTemplateId() 获取服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模版id
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouInstanceName() 获取源资产名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,9 +104,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouCidr(string $SouCidr) 设置源资产网段信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSouParameterName() 获取源模版名称
+ * @method string getSouParameterName() 获取源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSouParameterName(string $SouParameterName) 设置源模版名称
+ * @method void setSouParameterName(string $SouParameterName) 设置源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取目的资产名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,13 +124,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置目的资产网段信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParameterName() 获取目的模版名称
+ * @method string getParameterName() 获取目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParameterName(string $ParameterName) 设置目的模版名称
+ * @method void setParameterName(string $ParameterName) 设置目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocolPortName() 获取端口模版名称
+ * @method string getProtocolPortName() 获取端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模版名称
+ * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBetaList() 获取自动化任务任务信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -240,7 +240,7 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $IsDelay;
 
     /**
-     * @var string 服务模版id
+     * @var string 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTemplateId;
@@ -270,7 +270,7 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $SouCidr;
 
     /**
-     * @var string 源模版名称
+     * @var string 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouParameterName;
@@ -300,13 +300,13 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $Cidr;
 
     /**
-     * @var string 目的模版名称
+     * @var string 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
     /**
-     * @var string 端口模版名称
+     * @var string 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolPortName;
@@ -356,7 +356,7 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsDelay 是否延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceTemplateId 服务模版id
+     * @param string $ServiceTemplateId 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouInstanceName 源资产名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -366,7 +366,7 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouCidr 源资产网段信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SouParameterName 源模版名称
+     * @param string $SouParameterName 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 目的资产名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -376,9 +376,9 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cidr 目的资产网段信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParameterName 目的模版名称
+     * @param string $ParameterName 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProtocolPortName 端口模版名称
+     * @param string $ProtocolPortName 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BetaList 自动化任务任务信息
 注意：此字段可能返回 null，表示取不到有效值。

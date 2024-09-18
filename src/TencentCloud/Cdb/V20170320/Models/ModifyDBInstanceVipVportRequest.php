@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网统一 ID。
  * @method integer getReleaseDuration() 获取进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
  * @method void setReleaseDuration(integer $ReleaseDuration) 设置进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+ * @method string getOpResourceId() 获取变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+ * @method void setOpResourceId(string $OpResourceId) 设置变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     public $ReleaseDuration;
 
     /**
+     * @var string 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     */
+    public $OpResourceId;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c2nl9rpv 或者 cdbrg-c3nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param string $DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
      * @param integer $DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      * @param string $UniqVpcId 私有网络统一 ID。
      * @param string $UniqSubnetId 子网统一 ID。
      * @param integer $ReleaseDuration 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+     * @param string $OpResourceId 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
 
         if (array_key_exists("ReleaseDuration",$param) and $param["ReleaseDuration"] !== null) {
             $this->ReleaseDuration = $param["ReleaseDuration"];
+        }
+
+        if (array_key_exists("OpResourceId",$param) and $param["OpResourceId"] !== null) {
+            $this->OpResourceId = $param["OpResourceId"];
         }
     }
 }

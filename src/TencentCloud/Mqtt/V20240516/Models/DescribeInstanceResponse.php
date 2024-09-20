@@ -1,0 +1,353 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mqtt\V20240516\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeInstance返回参数结构体
+ *
+ * @method string getInstanceType() 获取实例类型，
+EXPERIMENT 体验版
+BASIC 基础版
+PRO  专业版
+PLATINUM 铂金版
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，
+EXPERIMENT 体验版
+BASIC 基础版
+PRO  专业版
+PLATINUM 铂金版
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method integer getTopicNum() 获取主题数量
+ * @method void setTopicNum(integer $TopicNum) 设置主题数量
+ * @method integer getTopicNumLimit() 获取实例最大主题数量
+ * @method void setTopicNumLimit(integer $TopicNumLimit) 设置实例最大主题数量
+ * @method integer getTpsLimit() 获取TPS限流值
+ * @method void setTpsLimit(integer $TpsLimit) 设置TPS限流值
+ * @method integer getCreatedTime() 获取创建时间，秒为单位
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
+ * @method string getRemark() 获取备注信息
+ * @method void setRemark(string $Remark) 设置备注信息
+ * @method string getInstanceStatus() 获取实例状态
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
+ * @method string getSkuCode() 获取实例规格
+ * @method void setSkuCode(string $SkuCode) 设置实例规格
+ * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数
+ * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数
+ * @method integer getAuthorizationPolicyLimit() 获取授权规则条数
+ * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数
+ * @method integer getClientNumLimit() 获取客户端数量上限
+ * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端数量上限
+ * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：JITP，API
+ * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置客户端证书注册方式：JITP，API
+ * @method boolean getAutomaticActivation() 获取自动注册设备证书时是否自动激活
+ * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册设备证书时是否自动激活
+ * @method integer getRenewFlag() 获取是否自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
+ * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
+ * @method void setPayMode(string $PayMode) 设置计费模式， POSTPAID，按量计费 PREPAID，包年包月
+ * @method integer getExpiryTime() 获取到期时间，秒为单位
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
+ * @method integer getDestroyTime() 获取预销毁时间
+ * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
+ * @method string getX509Mode() 获取    TLS,单向认证
+    mTLS,双向认证
+    BYOC;一机一证
+ * @method void setX509Mode(string $X509Mode) 设置    TLS,单向认证
+    mTLS,双向认证
+    BYOC;一机一证
+ * @method integer getMaxCaNum() 获取最大Ca配额
+ * @method void setMaxCaNum(integer $MaxCaNum) 设置最大Ca配额
+ * @method string getRegistrationCode() 获取证书注册码
+ * @method void setRegistrationCode(string $RegistrationCode) 设置证书注册码
+ * @method integer getMaxSubscription() 获取集群最大订阅数
+ * @method void setMaxSubscription(integer $MaxSubscription) 设置集群最大订阅数
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ */
+class DescribeInstanceResponse extends AbstractModel
+{
+    /**
+     * @var string 实例类型，
+EXPERIMENT 体验版
+BASIC 基础版
+PRO  专业版
+PLATINUM 铂金版
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 实例名称
+     */
+    public $InstanceName;
+
+    /**
+     * @var integer 主题数量
+     */
+    public $TopicNum;
+
+    /**
+     * @var integer 实例最大主题数量
+     */
+    public $TopicNumLimit;
+
+    /**
+     * @var integer TPS限流值
+     */
+    public $TpsLimit;
+
+    /**
+     * @var integer 创建时间，秒为单位
+     */
+    public $CreatedTime;
+
+    /**
+     * @var string 备注信息
+     */
+    public $Remark;
+
+    /**
+     * @var string 实例状态
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var string 实例规格
+     */
+    public $SkuCode;
+
+    /**
+     * @var integer 单客户端最大订阅数
+     */
+    public $MaxSubscriptionPerClient;
+
+    /**
+     * @var integer 授权规则条数
+     */
+    public $AuthorizationPolicyLimit;
+
+    /**
+     * @var integer 客户端数量上限
+     */
+    public $ClientNumLimit;
+
+    /**
+     * @var string 客户端证书注册方式：JITP，API
+     */
+    public $DeviceCertificateProvisionType;
+
+    /**
+     * @var boolean 自动注册设备证书时是否自动激活
+     */
+    public $AutomaticActivation;
+
+    /**
+     * @var integer 是否自动续费
+     */
+    public $RenewFlag;
+
+    /**
+     * @var string 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+     */
+    public $PayMode;
+
+    /**
+     * @var integer 到期时间，秒为单位
+     */
+    public $ExpiryTime;
+
+    /**
+     * @var integer 预销毁时间
+     */
+    public $DestroyTime;
+
+    /**
+     * @var string     TLS,单向认证
+    mTLS,双向认证
+    BYOC;一机一证
+     */
+    public $X509Mode;
+
+    /**
+     * @var integer 最大Ca配额
+     */
+    public $MaxCaNum;
+
+    /**
+     * @var string 证书注册码
+     */
+    public $RegistrationCode;
+
+    /**
+     * @var integer 集群最大订阅数
+     */
+    public $MaxSubscription;
+
+    /**
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param string $InstanceType 实例类型，
+EXPERIMENT 体验版
+BASIC 基础版
+PRO  专业版
+PLATINUM 铂金版
+     * @param string $InstanceId 实例ID
+     * @param string $InstanceName 实例名称
+     * @param integer $TopicNum 主题数量
+     * @param integer $TopicNumLimit 实例最大主题数量
+     * @param integer $TpsLimit TPS限流值
+     * @param integer $CreatedTime 创建时间，秒为单位
+     * @param string $Remark 备注信息
+     * @param string $InstanceStatus 实例状态
+     * @param string $SkuCode 实例规格
+     * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
+     * @param integer $AuthorizationPolicyLimit 授权规则条数
+     * @param integer $ClientNumLimit 客户端数量上限
+     * @param string $DeviceCertificateProvisionType 客户端证书注册方式：JITP，API
+     * @param boolean $AutomaticActivation 自动注册设备证书时是否自动激活
+     * @param integer $RenewFlag 是否自动续费
+     * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+     * @param integer $ExpiryTime 到期时间，秒为单位
+     * @param integer $DestroyTime 预销毁时间
+     * @param string $X509Mode     TLS,单向认证
+    mTLS,双向认证
+    BYOC;一机一证
+     * @param integer $MaxCaNum 最大Ca配额
+     * @param string $RegistrationCode 证书注册码
+     * @param integer $MaxSubscription 集群最大订阅数
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("TopicNum",$param) and $param["TopicNum"] !== null) {
+            $this->TopicNum = $param["TopicNum"];
+        }
+
+        if (array_key_exists("TopicNumLimit",$param) and $param["TopicNumLimit"] !== null) {
+            $this->TopicNumLimit = $param["TopicNumLimit"];
+        }
+
+        if (array_key_exists("TpsLimit",$param) and $param["TpsLimit"] !== null) {
+            $this->TpsLimit = $param["TpsLimit"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("SkuCode",$param) and $param["SkuCode"] !== null) {
+            $this->SkuCode = $param["SkuCode"];
+        }
+
+        if (array_key_exists("MaxSubscriptionPerClient",$param) and $param["MaxSubscriptionPerClient"] !== null) {
+            $this->MaxSubscriptionPerClient = $param["MaxSubscriptionPerClient"];
+        }
+
+        if (array_key_exists("AuthorizationPolicyLimit",$param) and $param["AuthorizationPolicyLimit"] !== null) {
+            $this->AuthorizationPolicyLimit = $param["AuthorizationPolicyLimit"];
+        }
+
+        if (array_key_exists("ClientNumLimit",$param) and $param["ClientNumLimit"] !== null) {
+            $this->ClientNumLimit = $param["ClientNumLimit"];
+        }
+
+        if (array_key_exists("DeviceCertificateProvisionType",$param) and $param["DeviceCertificateProvisionType"] !== null) {
+            $this->DeviceCertificateProvisionType = $param["DeviceCertificateProvisionType"];
+        }
+
+        if (array_key_exists("AutomaticActivation",$param) and $param["AutomaticActivation"] !== null) {
+            $this->AutomaticActivation = $param["AutomaticActivation"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ExpiryTime",$param) and $param["ExpiryTime"] !== null) {
+            $this->ExpiryTime = $param["ExpiryTime"];
+        }
+
+        if (array_key_exists("DestroyTime",$param) and $param["DestroyTime"] !== null) {
+            $this->DestroyTime = $param["DestroyTime"];
+        }
+
+        if (array_key_exists("X509Mode",$param) and $param["X509Mode"] !== null) {
+            $this->X509Mode = $param["X509Mode"];
+        }
+
+        if (array_key_exists("MaxCaNum",$param) and $param["MaxCaNum"] !== null) {
+            $this->MaxCaNum = $param["MaxCaNum"];
+        }
+
+        if (array_key_exists("RegistrationCode",$param) and $param["RegistrationCode"] !== null) {
+            $this->RegistrationCode = $param["RegistrationCode"];
+        }
+
+        if (array_key_exists("MaxSubscription",$param) and $param["MaxSubscription"] !== null) {
+            $this->MaxSubscription = $param["MaxSubscription"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}

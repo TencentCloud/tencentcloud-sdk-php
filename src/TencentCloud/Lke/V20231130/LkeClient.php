@@ -45,15 +45,23 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DeleteRejectedQuestionResponse DeleteRejectedQuestion(Models\DeleteRejectedQuestionRequest $req) 删除拒答问题
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取企业下应用详情
  * @method Models\DescribeAttributeLabelResponse DescribeAttributeLabel(Models\DescribeAttributeLabelRequest $req) 查询属性标签详情
+ * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) 接口调用折线图
+ * @method Models\DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(Models\DescribeConcurrencyUsageRequest $req) 并发调用响应
+ * @method Models\DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(Models\DescribeConcurrencyUsageGraphRequest $req) 并发调用折线图
  * @method Models\DescribeCorpResponse DescribeCorp(Models\DescribeCorpRequest $req) 企业详情
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) 文档详情
+ * @method Models\DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(Models\DescribeKnowledgeUsageRequest $req) 查询知识库用量
+ * @method Models\DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(Models\DescribeKnowledgeUsagePieGraphRequest $req) 查询企业知识库容量饼图
  * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) 问答详情
  * @method Models\DescribeReferResponse DescribeRefer(Models\DescribeReferRequest $req) 获取来源详情列表
  * @method Models\DescribeReleaseResponse DescribeRelease(Models\DescribeReleaseRequest $req) 发布详情
  * @method Models\DescribeReleaseInfoResponse DescribeReleaseInfo(Models\DescribeReleaseInfoRequest $req) 拉取发布按钮状态、最后发布时间
  * @method Models\DescribeRobotBizIDByAppKeyResponse DescribeRobotBizIDByAppKey(Models\DescribeRobotBizIDByAppKeyRequest $req) 通过appKey获取应用业务ID
+ * @method Models\DescribeSearchStatsGraphResponse DescribeSearchStatsGraph(Models\DescribeSearchStatsGraphRequest $req) 查询搜索服务调用折线图
  * @method Models\DescribeSegmentsResponse DescribeSegments(Models\DescribeSegmentsRequest $req) 获取片段详情
  * @method Models\DescribeStorageCredentialResponse DescribeStorageCredential(Models\DescribeStorageCredentialRequest $req) 获取文件上传临时密钥
+ * @method Models\DescribeTokenUsageResponse DescribeTokenUsage(Models\DescribeTokenUsageRequest $req) 接口调用token详情
+ * @method Models\DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(Models\DescribeTokenUsageGraphRequest $req) 接口调用token折线图
  * @method Models\DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContext(Models\DescribeUnsatisfiedReplyContextRequest $req) 获取不满意回复上下文
  * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) 导出属性标签
  * @method Models\ExportQAListResponse ExportQAList(Models\ExportQAListRequest $req) 导出QA列表

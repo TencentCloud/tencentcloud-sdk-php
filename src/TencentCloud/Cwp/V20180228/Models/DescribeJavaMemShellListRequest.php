@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJavaMemShellList请求参数结构体
  *
- * @method array getFilters() 获取过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
- * @method void setFilters(array $Filters) 设置过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+ * @method array getFilters() 获取过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+ * @method void setFilters(array $Filters) 设置过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeJavaMemShellListRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * @var array 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      */
     public $Filters;
 
@@ -45,7 +51,9 @@ class DescribeJavaMemShellListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * @param array $Filters 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      */

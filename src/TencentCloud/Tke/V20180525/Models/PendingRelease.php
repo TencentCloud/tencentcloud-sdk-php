@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置应用命名空间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取应用状态
+ * @method string getStatus() 获取应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置应用状态
+ * @method void setStatus(string $Status) 设置应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedTime() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,7 +82,7 @@ class PendingRelease extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 应用状态
+     * @var string 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -104,7 +104,7 @@ class PendingRelease extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 应用命名空间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 应用状态
+     * @param string $Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。

@@ -89,7 +89,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(Models\DeleteComplianceAssetPolicySetFromWhitelistRequest $req) 移除安全合规忽略(资产+检测项)列表，不显示指定的检查项包含的资产内容
 参考的AddCompliancePolicyAssetSetToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
  * @method Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest $req) 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
- * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 从白名单中删除将指定的检测项。
+ * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 产品重构优化，这几个接口已经没有调用了
+
+从白名单中删除将指定的检测项。
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) 删除逃逸白名单
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) 取消漏洞扫描忽略漏洞
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) 删除k8sapi异常事件规则

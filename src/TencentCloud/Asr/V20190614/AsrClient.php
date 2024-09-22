@@ -74,6 +74,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\GetAsrVocabListResponse GetAsrVocabList(Models\GetAsrVocabListRequest $req) 用户通过该接口，可获得所有的热词表及其信息。
  * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询自学习模型列表
  * @method Models\GetModelInfoResponse GetModelInfo(Models\GetModelInfoRequest $req) 通过自学习模型id获取自学习模型详细信息
+ * @method Models\GetUsageByDateResponse GetUsageByDate(Models\GetUsageByDateRequest $req) 查询用户用量
  * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
  * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改自学习模型状态，上下线自学习模型
  * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。

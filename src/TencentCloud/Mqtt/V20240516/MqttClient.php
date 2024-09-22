@@ -23,6 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mqtt\V20240516\Models as Models;
 
 /**
+ * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) 创建MQTT实例的性能测试任务
+ * @method Models\CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(Models\CreateJWKSAuthenticatorRequest $req) 创建一个jwks的认证
+ * @method Models\CreateJWTAuthenticatorResponse CreateJWTAuthenticator(Models\CreateJWTAuthenticatorRequest $req) 创建一个jwks的认证
+ * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
+ * @method Models\DeleteAuthenticatorResponse DeleteAuthenticator(Models\DeleteAuthenticatorRequest $req) 根据认证器类型删除一个MQTT认证器
+ * @method Models\DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(Models\DeleteAuthorizationPolicyRequest $req) 删除策略规则
+ * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除MQTT主题
+ * @method Models\DescribeAuthenticatorResponse DescribeAuthenticator(Models\DescribeAuthenticatorRequest $req) 查询MQTT认证器
+ * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) 查询授权规则
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
@@ -31,6 +40,17 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
+ * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询mqtt主题详情
+ * @method Models\DescribeTopicListResponse DescribeTopicList(Models\DescribeTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
+
+1. TopicName，主题名称模糊搜索
+2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+ * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) 修改策略规则
+ * @method Models\ModifyJWKSAuthenticatorResponse ModifyJWKSAuthenticator(Models\ModifyJWKSAuthenticatorRequest $req) 修改MQTT JWKS 认证器
+ * @method Models\ModifyJWTAuthenticatorResponse ModifyJWTAuthenticator(Models\ModifyJWTAuthenticatorRequest $req) 修改MQTT JWKS 认证器
+ * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
+ * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书
+ * @method Models\UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(Models\UpdateAuthorizationPolicyPriorityRequest $req) 修改策略规则优先级
  */
 
 class MqttClient extends AbstractClient

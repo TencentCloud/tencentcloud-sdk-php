@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineVersion(string $EngineVersion) 设置引擎版本。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApiVersion() 获取api版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiVersion(string $ApiVersion) 设置api版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取计费模式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置计费模式。
@@ -252,6 +256,12 @@ class InstanceInfo extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var string api版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiVersion;
+
+    /**
      * @var integer 计费模式。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,6 +343,8 @@ class InstanceInfo extends AbstractModel
      * @param string $EngineName 引擎名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineVersion 引擎版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApiVersion api版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 计费模式。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -450,6 +462,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("ApiVersion",$param) and $param["ApiVersion"] !== null) {
+            $this->ApiVersion = $param["ApiVersion"];
         }
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {

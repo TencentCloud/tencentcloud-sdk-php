@@ -50,6 +50,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置服务器uuid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClassName() 获取类名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClassName(string $ClassName) 设置类名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSuperClassName() 获取父类名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSuperClassName(string $SuperClassName) 设置父类名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInterfaces() 获取继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInterfaces(string $Interfaces) 设置继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAnnotations() 获取注释
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnnotations(string $Annotations) 设置注释
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoaderClassName() 获取所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoaderClassName(string $LoaderClassName) 设置所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JavaMemShellInfo extends AbstractModel
 {
@@ -113,6 +133,36 @@ class JavaMemShellInfo extends AbstractModel
     public $Uuid;
 
     /**
+     * @var string 类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClassName;
+
+    /**
+     * @var string 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SuperClassName;
+
+    /**
+     * @var string 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Interfaces;
+
+    /**
+     * @var string 注释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Annotations;
+
+    /**
+     * @var string 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoaderClassName;
+
+    /**
      * @param integer $Id 事件ID
      * @param string $Alias 服务器名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,6 +177,16 @@ class JavaMemShellInfo extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 服务器uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClassName 类名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SuperClassName 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Interfaces 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Annotations 注释
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoaderClassName 所属的类加载器
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -185,6 +245,26 @@ class JavaMemShellInfo extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
+            $this->ClassName = $param["ClassName"];
+        }
+
+        if (array_key_exists("SuperClassName",$param) and $param["SuperClassName"] !== null) {
+            $this->SuperClassName = $param["SuperClassName"];
+        }
+
+        if (array_key_exists("Interfaces",$param) and $param["Interfaces"] !== null) {
+            $this->Interfaces = $param["Interfaces"];
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = $param["Annotations"];
+        }
+
+        if (array_key_exists("LoaderClassName",$param) and $param["LoaderClassName"] !== null) {
+            $this->LoaderClassName = $param["LoaderClassName"];
         }
     }
 }

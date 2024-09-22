@@ -18,7 +18,7 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 高位命令策略
+ * 高危命令策略
  *
  * @method string getName() 获取策略名称
  * @method void setName(string $Name) 设置策略名称
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhite(integer $White) 设置0:黑名单 1:白名单
  * @method integer getBashAction() 获取0:告警 1:白名单 2:拦截
  * @method void setBashAction(integer $BashAction) 设置0:告警 1:白名单 2:拦截
- * @method string getRule() 获取正则表达式
- * @method void setRule(string $Rule) 设置正则表达式
+ * @method string getRule() 获取正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+ * @method void setRule(string $Rule) 设置正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
  * @method integer getLevel() 获取危险等级(0:无，1: 高危 2:中危 3: 低危)
  * @method void setLevel(integer $Level) 设置危险等级(0:无，1: 高危 2:中危 3: 低危)
  * @method integer getScope() 获取生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method array getUuids() 获取老版本兼容可能会用到
  * @method void setUuids(array $Uuids) 设置老版本兼容可能会用到
+ * @method PolicyRules getRules() 获取规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRules(PolicyRules $Rules) 设置规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashPolicy extends AbstractModel
 {
@@ -84,7 +88,7 @@ class BashPolicy extends AbstractModel
     public $BashAction;
 
     /**
-     * @var string 正则表达式
+     * @var string 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
      */
     public $Rule;
 
@@ -148,11 +152,17 @@ class BashPolicy extends AbstractModel
     public $Uuids;
 
     /**
+     * @var PolicyRules 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Rules;
+
+    /**
      * @param string $Name 策略名称
      * @param integer $Enable 1:有效 0:无效
      * @param integer $White 0:黑名单 1:白名单
      * @param integer $BashAction 0:告警 1:白名单 2:拦截
-     * @param string $Rule 正则表达式
+     * @param string $Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
      * @param integer $Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
      * @param integer $Scope 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
      * @param integer $Id 策略ID
@@ -168,6 +178,8 @@ class BashPolicy extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 修改时间
      * @param array $Uuids 老版本兼容可能会用到
+     * @param PolicyRules $Rules 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +256,11 @@ class BashPolicy extends AbstractModel
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = new PolicyRules();
+            $this->Rules->deserialize($param["Rules"]);
         }
     }
 }

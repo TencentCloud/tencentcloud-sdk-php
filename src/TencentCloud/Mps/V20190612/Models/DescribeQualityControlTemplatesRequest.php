@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
- * @method string getType() 获取"Preset"：预设，Custom":客户魔板
- * @method void setType(string $Type) 设置"Preset"：预设，Custom":客户魔板
+ * @method string getType() 获取"Preset"：预设，Custom":自定义模板
+ * @method void setType(string $Type) 设置"Preset"：预设，Custom":自定义模板
  * @method string getName() 获取媒体质检模板标识过滤条件，长度限制：64 个字符。
  * @method void setName(string $Name) 设置媒体质检模板标识过滤条件，长度限制：64 个字符。
  */
@@ -55,7 +55,7 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string "Preset"：预设，Custom":客户魔板
+     * @var string "Preset"：预设，Custom":自定义模板
      */
     public $Type;
 
@@ -70,7 +70,7 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
      * @param integer $Limit 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
-     * @param string $Type "Preset"：预设，Custom":客户魔板
+     * @param string $Type "Preset"：预设，Custom":自定义模板
      * @param string $Name 媒体质检模板标识过滤条件，长度限制：64 个字符。
      */
     function __construct()

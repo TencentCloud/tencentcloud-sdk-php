@@ -20,17 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述配额信息
  *
- * @method string getQuotaId() 获取配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
- * @method void setQuotaId(string $QuotaId) 设置配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+ * @method string getQuotaId() 获取配额名称，取值范围：
+- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
+- `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
+- `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
+ * @method void setQuotaId(string $QuotaId) 设置配额名称，取值范围：
+- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
+- `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
+- `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
  * @method integer getQuotaCurrent() 获取当前数量
  * @method void setQuotaCurrent(integer $QuotaCurrent) 设置当前数量
  * @method integer getQuotaLimit() 获取配额数量
  * @method void setQuotaLimit(integer $QuotaLimit) 设置配额数量
+ * @method string getQuotaGroup() 获取配额所属的网络组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuotaGroup(string $QuotaGroup) 设置配额所属的网络组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Quota extends AbstractModel
 {
     /**
-     * @var string 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * @var string 配额名称，取值范围：
+- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
+- `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
+- `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
      */
     public $QuotaId;
 
@@ -45,9 +67,23 @@ class Quota extends AbstractModel
     public $QuotaLimit;
 
     /**
-     * @param string $QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * @var string 配额所属的网络组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuotaGroup;
+
+    /**
+     * @param string $QuotaId 配额名称，取值范围：
+- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
+- `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
+- `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
      * @param integer $QuotaCurrent 当前数量
      * @param integer $QuotaLimit 配额数量
+     * @param string $QuotaGroup 配额所属的网络组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +108,10 @@ class Quota extends AbstractModel
 
         if (array_key_exists("QuotaLimit",$param) and $param["QuotaLimit"] !== null) {
             $this->QuotaLimit = $param["QuotaLimit"];
+        }
+
+        if (array_key_exists("QuotaGroup",$param) and $param["QuotaGroup"] !== null) {
+            $this->QuotaGroup = $param["QuotaGroup"];
         }
     }
 }

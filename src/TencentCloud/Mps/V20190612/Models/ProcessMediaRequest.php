@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method MediaInputInfo getInputInfo() 获取媒体处理的文件输入信息。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的文件输入信息。
  * @method TaskOutputStorage getOutputStorage() 获取媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
  * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
 如果不填，表示与 InputInfo 中文件所在的目录一致。
  * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
@@ -78,6 +80,7 @@ class ProcessMediaRequest extends AbstractModel
 
     /**
      * @var TaskOutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
      */
     public $OutputStorage;
 
@@ -154,6 +157,7 @@ class ProcessMediaRequest extends AbstractModel
     /**
      * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
      * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
 如果不填，表示与 InputInfo 中文件所在的目录一致。
      * @param integer $ScheduleId 编排ID。

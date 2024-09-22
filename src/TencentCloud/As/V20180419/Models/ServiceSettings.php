@@ -32,6 +32,16 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
 默认取值：CLASSIC_SCALING
  * @method boolean getReplaceLoadBalancerUnhealthy() 获取开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
  * @method void setReplaceLoadBalancerUnhealthy(boolean $ReplaceLoadBalancerUnhealthy) 设置开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+ * @method string getReplaceMode() 获取不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplaceMode(string $ReplaceMode) 设置不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceSettings extends AbstractModel
 {
@@ -54,12 +64,26 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
     public $ReplaceLoadBalancerUnhealthy;
 
     /**
+     * @var string 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplaceMode;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      * @param string $ScalingMode 取值范围： 
 CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
 WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
 默认取值：CLASSIC_SCALING
      * @param boolean $ReplaceLoadBalancerUnhealthy 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * @param string $ReplaceMode 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +108,10 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
 
         if (array_key_exists("ReplaceLoadBalancerUnhealthy",$param) and $param["ReplaceLoadBalancerUnhealthy"] !== null) {
             $this->ReplaceLoadBalancerUnhealthy = $param["ReplaceLoadBalancerUnhealthy"];
+        }
+
+        if (array_key_exists("ReplaceMode",$param) and $param["ReplaceMode"] !== null) {
+            $this->ReplaceMode = $param["ReplaceMode"];
         }
     }
 }

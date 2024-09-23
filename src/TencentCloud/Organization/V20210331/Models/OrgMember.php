@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionStatus(string $PermissionStatus) 设置成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMember extends AbstractModel
 {
@@ -194,6 +198,12 @@ class OrgMember extends AbstractModel
     public $PermissionStatus;
 
     /**
+     * @var array 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param integer $MemberUin 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 成员名
@@ -227,6 +237,8 @@ class OrgMember extends AbstractModel
      * @param string $BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PermissionStatus 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 成员标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -318,6 +330,15 @@ class OrgMember extends AbstractModel
 
         if (array_key_exists("PermissionStatus",$param) and $param["PermissionStatus"] !== null) {
             $this->PermissionStatus = $param["PermissionStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

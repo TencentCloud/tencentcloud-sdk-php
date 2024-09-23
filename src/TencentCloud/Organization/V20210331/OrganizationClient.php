@@ -99,6 +99,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\GetUserSyncProvisioningResponse GetUserSyncProvisioning(Models\GetUserSyncProvisioningRequest $req) 查询CAM用户同步
  * @method Models\GetZoneSAMLServiceProviderInfoResponse GetZoneSAMLServiceProviderInfo(Models\GetZoneSAMLServiceProviderInfoRequest $req) 查询SAML服务提供商配置信息
  * @method Models\GetZoneStatisticsResponse GetZoneStatistics(Models\GetZoneStatisticsRequest $req) 查询空间的统计信息
+ * @method Models\InviteOrganizationMemberResponse InviteOrganizationMember(Models\InviteOrganizationMemberRequest $req) 邀请组织成员
  * @method Models\ListExternalSAMLIdPCertificatesResponse ListExternalSAMLIdPCertificates(Models\ListExternalSAMLIdPCertificatesRequest $req) 查询SAML签名证书列表
  * @method Models\ListGroupMembersResponse ListGroupMembers(Models\ListGroupMembersRequest $req) 查询用户组中的用户列表
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) 查询用户组列表
@@ -127,6 +128,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组中移除用户
  * @method Models\SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmail(Models\SendOrgMemberAccountBindEmailRequest $req) 重新发送成员绑定邮箱激活邮件
  * @method Models\SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProvider(Models\SetExternalSAMLIdentityProviderRequest $req) 配置SAML身份提供商信息
+ * @method Models\UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfiguration(Models\UpdateCustomPolicyForRoleConfigurationRequest $req) 为权限配置修改自定义策略
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 修改用户组信息
  * @method Models\UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(Models\UpdateOrganizationIdentityRequest $req) 更新组织身份
  * @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) 更新组织成员信息

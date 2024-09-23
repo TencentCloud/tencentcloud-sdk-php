@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityRoleID(array $IdentityRoleID) 设置成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
  * @method integer getAuthRelationId() 获取认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
  * @method void setAuthRelationId(integer $AuthRelationId) 设置认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+ * @method array getTags() 获取成员标签列表。最大10个
+ * @method void setTags(array $Tags) 设置成员标签列表。最大10个
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $AuthRelationId;
 
     /**
+     * @var array 成员标签列表。最大10个
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      * @param string $PolicyType 关系策略。取值：Financial
      * @param array $PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
@@ -104,6 +111,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
      * @param string $PayUin 代付者Uin。成员代付费时需要
      * @param array $IdentityRoleID 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
      * @param integer $AuthRelationId 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+     * @param array $Tags 成员标签列表。最大10个
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class CreateOrganizationMemberRequest extends AbstractModel
 
         if (array_key_exists("AuthRelationId",$param) and $param["AuthRelationId"] !== null) {
             $this->AuthRelationId = $param["AuthRelationId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

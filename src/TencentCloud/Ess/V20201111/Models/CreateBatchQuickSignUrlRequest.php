@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
 <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
 注：
 `不指定该值时，默认为签署方自行选择。`
+ * @method FlowBatchUrlInfo getFlowBatchUrlInfo() 获取批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+ * @method void setFlowBatchUrlInfo(FlowBatchUrlInfo $FlowBatchUrlInfo) 设置批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
  */
 class CreateBatchQuickSignUrlRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $SignTypeSelector;
 
     /**
+     * @var FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public $FlowBatchUrlInfo;
+
+    /**
      * @param FlowCreateApprover $FlowApproverInfo 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -208,6 +215,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
 注：
 `不指定该值时，默认为签署方自行选择。`
+     * @param FlowBatchUrlInfo $FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
      */
     function __construct()
     {
@@ -259,6 +267,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 
         if (array_key_exists("SignTypeSelector",$param) and $param["SignTypeSelector"] !== null) {
             $this->SignTypeSelector = $param["SignTypeSelector"];
+        }
+
+        if (array_key_exists("FlowBatchUrlInfo",$param) and $param["FlowBatchUrlInfo"] !== null) {
+            $this->FlowBatchUrlInfo = new FlowBatchUrlInfo();
+            $this->FlowBatchUrlInfo->deserialize($param["FlowBatchUrlInfo"]);
         }
     }
 }

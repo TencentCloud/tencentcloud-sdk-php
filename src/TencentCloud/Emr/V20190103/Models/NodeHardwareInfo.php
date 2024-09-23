@@ -230,6 +230,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSharedClusterId() 获取共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSharedClusterId(string $SharedClusterId) 设置共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSharedClusterIdDesc() 获取共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSharedClusterIdDesc(string $SharedClusterIdDesc) 设置共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -547,6 +555,18 @@ class NodeHardwareInfo extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SharedClusterId;
+
+    /**
+     * @var string 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SharedClusterIdDesc;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -651,6 +671,10 @@ class NodeHardwareInfo extends AbstractModel
      * @param string $ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SharedClusterId 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SharedClusterIdDesc 共享集群id描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -884,6 +908,14 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("SharedClusterId",$param) and $param["SharedClusterId"] !== null) {
+            $this->SharedClusterId = $param["SharedClusterId"];
+        }
+
+        if (array_key_exists("SharedClusterIdDesc",$param) and $param["SharedClusterIdDesc"] !== null) {
+            $this->SharedClusterIdDesc = $param["SharedClusterIdDesc"];
         }
     }
 }

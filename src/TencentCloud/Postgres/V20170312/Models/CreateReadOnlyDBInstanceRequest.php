@@ -33,40 +33,40 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method integer getPeriod() 获取购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
- * @method string getVpcId() 获取私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
- * @method void setVpcId(string $VpcId) 设置私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
- * @method string getSubnetId() 获取私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
- * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
+ * @method string getVpcId() 获取私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method string getSubnetId() 获取私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
  * @method string getInstanceChargeType() 获取实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+<li>PREPAID：预付费，即包年包月。</li>
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
 默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+<li>PREPAID：预付费，即包年包月。</li>
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
 默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
  * @method integer getAutoVoucher() 获取是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  * @method integer getAutoRenewFlag() 获取续费标记：
-<li>0：手动续费
-<li>1：自动续费
+<li>0：手动续费</li>
+<li>1：自动续费</li>
 默认值：0
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：
-<li>0：手动续费
-<li>1：自动续费
+<li>0：手动续费</li>
+<li>1：自动续费</li>
 默认值：0
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
@@ -81,12 +81,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
 
  * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
  * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
  * @method string getName() 获取实例名(后续支持)
  * @method void setName(string $Name) 设置实例名(后续支持)
@@ -123,33 +123,33 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
     /**
      * @var integer 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
      */
     public $Period;
 
     /**
-     * @var string 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @var string 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * @var string 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
     public $SubnetId;
 
     /**
      * @var string 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+<li>PREPAID：预付费，即包年包月。</li>
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
 默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public $InstanceChargeType;
 
     /**
      * @var integer 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      */
     public $AutoVoucher;
@@ -161,8 +161,8 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
     /**
      * @var integer 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+<li>0：手动续费</li>
+<li>1：自动续费</li>
 默认值：0
      */
     public $AutoRenewFlag;
@@ -195,8 +195,8 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
     /**
      * @var integer 是否需要支持Ipv6：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      */
     public $NeedSupportIpv6;
@@ -219,22 +219,22 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param integer $Storage 实例容量大小，单位：GB。
      * @param integer $InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      * @param integer $Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
-     * @param string $VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
-     * @param string $SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+<li>后付费：只支持1</li>
+     * @param string $VpcId 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @param string $SubnetId 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      * @param string $InstanceChargeType 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+<li>PREPAID：预付费，即包年包月。</li>
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
 默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      * @param integer $AutoVoucher 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param integer $AutoRenewFlag 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+<li>0：手动续费</li>
+<li>1：自动续费</li>
 默认值：0
      * @param integer $ProjectId 项目ID。
      * @param integer $ActivityId 优惠活动ID
@@ -243,8 +243,8 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param array $SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
 
      * @param integer $NeedSupportIpv6 是否需要支持Ipv6：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      * @param string $Name 实例名(后续支持)
      * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致

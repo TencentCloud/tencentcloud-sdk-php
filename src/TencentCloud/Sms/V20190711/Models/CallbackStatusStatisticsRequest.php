@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStartDateTime() 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
  * @method void setStartDateTime(integer $StartDateTime) 设置开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
  * @method integer getEndDataTime() 获取结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
  * @method void setEndDataTime(integer $EndDataTime) 设置结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
  * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method integer getLimit() 获取最大上限。
@@ -46,7 +46,7 @@ class CallbackStatusStatisticsRequest extends AbstractModel
 
     /**
      * @var integer 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
      */
     public $EndDataTime;
 
@@ -70,7 +70,7 @@ class CallbackStatusStatisticsRequest extends AbstractModel
     /**
      * @param integer $StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
      * @param integer $EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
      * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
      * @param integer $Limit 最大上限。
 注：目前固定设置为0。

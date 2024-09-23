@@ -77,6 +77,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
 服务若需要鉴权限流生效，则需要绑定使用计划到此服务中，本接口用于查询绑定到一个服务及其中 API 的所有使用计划。
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) 本接口（DescribeApisStatus）用于查看一个服务下的某个 API 或所有 API 列表及其相关信息。
  * @method Models\DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(Models\DescribeExclusiveInstanceDetailRequest $req) 本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。
+ * @method Models\DescribeExclusiveInstanceRegionsResponse DescribeExclusiveInstanceRegions(Models\DescribeExclusiveInstanceRegionsRequest $req) Get the list of supported regions for dedicated instances
  * @method Models\DescribeExclusiveInstancesResponse DescribeExclusiveInstances(Models\DescribeExclusiveInstancesRequest $req) 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。
  * @method Models\DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(Models\DescribeExclusiveInstancesStatusRequest $req) 查询专享实例列表（新）
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) 本接口（DescribeIPStrategy）用于查询IP策略详情。

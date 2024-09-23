@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method integer getLimit() 获取最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
  * @method void setLimit(integer $Limit) 设置最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
  * @method integer getOffset() 获取偏移量。
-注：目前固定设置为0。
  * @method void setOffset(integer $Offset) 设置偏移量。
-注：目前固定设置为0。
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
@@ -38,20 +38,20 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 
     /**
      * @var integer 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public $Limit;
 
     /**
      * @var integer 偏移量。
-注：目前固定设置为0。
      */
     public $Offset;
 
     /**
      * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
      * @param integer $Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      * @param integer $Offset 偏移量。
-注：目前固定设置为0。
      */
     function __construct()
     {

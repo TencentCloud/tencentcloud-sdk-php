@@ -102,7 +102,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 | --- | --- | --- |
 | 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
 | 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
- * @method Models\CreateBatchQuickSignUrlResponse CreateBatchQuickSignUrl(Models\CreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署。
+ * @method Models\CreateBatchQuickSignUrlResponse CreateBatchQuickSignUrl(Models\CreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量待办链接, 暂时不支持企业端签署。
 **注意：**
 1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=1)。
 2. 该接口可生成批量签署链接的C端签署人**必须仅有手写签名(控件类型为SIGN_SIGNATURE)和时间类型的签署控件**，**不支持填写控件** 。

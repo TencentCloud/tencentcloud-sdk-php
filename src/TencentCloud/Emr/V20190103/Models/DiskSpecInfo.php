@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置数据容量，单位为GB
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExtraPerformance() 获取额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraPerformance(integer $ExtraPerformance) 设置额外性能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiskSpecInfo extends AbstractModel
 {
@@ -99,6 +103,12 @@ class DiskSpecInfo extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var integer 额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraPerformance;
+
+    /**
      * @param integer $Count 磁盘数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 系统盘类型 取值范围：
@@ -119,6 +129,8 @@ class DiskSpecInfo extends AbstractModel
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 数据容量，单位为GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExtraPerformance 额外性能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,10 @@ class DiskSpecInfo extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("ExtraPerformance",$param) and $param["ExtraPerformance"] !== null) {
+            $this->ExtraPerformance = $param["ExtraPerformance"];
         }
     }
 }

@@ -23,16 +23,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSmsSdkAppId() 获取短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
  * @method void setSmsSdkAppId(string $SmsSdkAppId) 设置短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
  * @method integer getLimit() 获取最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
  * @method void setLimit(integer $Limit) 设置最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
- * @method string getBeginTime() 获取起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+ * @method string getBeginTime() 获取起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
- * @method void setBeginTime(string $BeginTime) 设置起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+ * @method void setBeginTime(string $BeginTime) 设置起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
- * @method string getEndTime() 获取结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+ * @method string getEndTime() 获取结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+ * @method void setEndTime(string $EndTime) 设置结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
@@ -44,6 +46,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 
     /**
      * @var integer 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public $Limit;
 
@@ -53,13 +56,13 @@ class SmsPackagesStatisticsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * @var string 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * @var string 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public $EndTime;
@@ -67,10 +70,11 @@ class SmsPackagesStatisticsRequest extends AbstractModel
     /**
      * @param string $SmsSdkAppId 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
      * @param integer $Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      * @param integer $Offset 偏移量。
-     * @param string $BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * @param string $BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
-     * @param string $EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * @param string $EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     function __construct()

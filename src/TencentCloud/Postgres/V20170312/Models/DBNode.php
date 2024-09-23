@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述实例节点信息，包括节点类型、节点所在可用区。
+ * 描述实例节点信息，包括节点类型、节点所在可用区、节点所在专属集群。
  *
  * @method string getRole() 获取节点类型，值可以为：
 Primary，代表主节点；

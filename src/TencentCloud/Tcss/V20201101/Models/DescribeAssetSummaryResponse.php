@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecommendedFixImageCnt(integer $RecommendedFixImageCnt) 设置推荐处置镜像个数
  * @method integer getScannedImageCnt() 获取已扫描镜像个数
  * @method void setScannedImageCnt(integer $ScannedImageCnt) 设置已扫描镜像个数
+ * @method integer getUnScannedImageCnt() 获取待扫描镜像个数
+ * @method void setUnScannedImageCnt(integer $UnScannedImageCnt) 设置待扫描镜像个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -208,6 +210,11 @@ class DescribeAssetSummaryResponse extends AbstractModel
     public $ScannedImageCnt;
 
     /**
+     * @var integer 待扫描镜像个数
+     */
+    public $UnScannedImageCnt;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -239,6 +246,7 @@ class DescribeAssetSummaryResponse extends AbstractModel
      * @param integer $TodayUnsafeImageCnt 今日新增风险镜像个数
      * @param integer $RecommendedFixImageCnt 推荐处置镜像个数
      * @param integer $ScannedImageCnt 已扫描镜像个数
+     * @param integer $UnScannedImageCnt 待扫描镜像个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -356,6 +364,10 @@ class DescribeAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("ScannedImageCnt",$param) and $param["ScannedImageCnt"] !== null) {
             $this->ScannedImageCnt = $param["ScannedImageCnt"];
+        }
+
+        if (array_key_exists("UnScannedImageCnt",$param) and $param["UnScannedImageCnt"] !== null) {
+            $this->UnScannedImageCnt = $param["UnScannedImageCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

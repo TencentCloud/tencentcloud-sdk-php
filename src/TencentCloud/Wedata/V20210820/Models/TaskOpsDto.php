@@ -372,6 +372,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtResourceFlag(ExtResourceFlagDto $ExtResourceFlag) 设置资源获取标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNewParentTaskInfos() 获取父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewParentTaskInfos(array $NewParentTaskInfos) 设置父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -904,6 +908,12 @@ class TaskOpsDto extends AbstractModel
     public $ExtResourceFlag;
 
     /**
+     * @var array 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewParentTaskInfos;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1079,6 +1089,8 @@ class TaskOpsDto extends AbstractModel
      * @param AiopsSimpleTaskDto $ParentTaskInfos 父任务simple信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtResourceFlagDto $ExtResourceFlag 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NewParentTaskInfos 父任务simple信息(新)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1455,6 +1467,15 @@ class TaskOpsDto extends AbstractModel
         if (array_key_exists("ExtResourceFlag",$param) and $param["ExtResourceFlag"] !== null) {
             $this->ExtResourceFlag = new ExtResourceFlagDto();
             $this->ExtResourceFlag->deserialize($param["ExtResourceFlag"]);
+        }
+
+        if (array_key_exists("NewParentTaskInfos",$param) and $param["NewParentTaskInfos"] !== null) {
+            $this->NewParentTaskInfos = [];
+            foreach ($param["NewParentTaskInfos"] as $key => $value){
+                $obj = new AiopsSimpleTaskDto();
+                $obj->deserialize($value);
+                array_push($this->NewParentTaskInfos, $obj);
+            }
         }
     }
 }

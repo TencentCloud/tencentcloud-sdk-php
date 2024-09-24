@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据授权信息
  *
- * @method string getDataProviderName() 获取客户主体名称。
+ * @method string getDataProviderName() 获取数据委托方、需求方：客户主体名称。
 
 示例值：某某有限公司。
- * @method void setDataProviderName(string $DataProviderName) 设置客户主体名称。
+ * @method void setDataProviderName(string $DataProviderName) 设置数据委托方、需求方：客户主体名称。
 
 示例值：某某有限公司。
- * @method string getDataRecipientName() 获取接收方主体名称。
+ * @method string getDataRecipientName() 获取数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
 
 示例值：腾讯云计算（北京）有限责任公司
- * @method void setDataRecipientName(string $DataRecipientName) 设置接收方主体名称。
+ * @method void setDataRecipientName(string $DataRecipientName) 设置数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
 
 示例值：腾讯云计算（北京）有限责任公司
- * @method array getUserDataType() 获取客户请求RCE所涉及的用户敏感数据类型，支持多选。实际以接口请求传参为准。
+ * @method array getUserDataType() 获取客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
 
@@ -46,12 +46,10 @@ use TencentCloud\Common\AbstractModel;
 
 4-IP地址；
 
-5-设备指纹；
-
 999-其它；
 
 示例值：[1, 4]
- * @method void setUserDataType(array $UserDataType) 设置客户请求RCE所涉及的用户敏感数据类型，支持多选。实际以接口请求传参为准。
+ * @method void setUserDataType(array $UserDataType) 设置客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
 
@@ -61,30 +59,20 @@ use TencentCloud\Common\AbstractModel;
 
 4-IP地址；
 
-5-设备指纹；
-
 999-其它；
 
 示例值：[1, 4]
- * @method integer getIsAuthorize() 获取客户是否已经获取用户授权。
-
+ * @method integer getIsAuthorize() 获取客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-
 示例值：1
- * @method void setIsAuthorize(integer $IsAuthorize) 设置客户是否已经获取用户授权。
-
+ * @method void setIsAuthorize(integer $IsAuthorize) 设置客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-
 示例值：1
- * @method integer getIsPersonalData() 获取是否是用户个人敏感数据。
-
-固定填：1。
-
+ * @method integer getIsOrderHandling() 获取客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
+1-已授权；其它值为未授权。
 示例值：1
- * @method void setIsPersonalData(integer $IsPersonalData) 设置是否是用户个人敏感数据。
-
-固定填：1。
-
+ * @method void setIsOrderHandling(integer $IsOrderHandling) 设置客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
+1-已授权；其它值为未授权。
 示例值：1
  * @method integer getAuthorizationTerm() 获取客户获得的用户授权期限时间戳（单位秒）。
 
@@ -96,24 +84,36 @@ use TencentCloud\Common\AbstractModel;
 不填默认无固定期限。
 
 示例值：1719805604
- * @method string getPrivacyPolicyLink() 获取客户获得用户授权所依赖的协议地址。
+ * @method string getPrivacyPolicyLink() 获取	
+客户获得用户授权所依赖的协议地址。
 
-示例值：https://www.*****.com/*****
- * @method void setPrivacyPolicyLink(string $PrivacyPolicyLink) 设置客户获得用户授权所依赖的协议地址。
+示例值：https://www.*****.com/*
+ * @method void setPrivacyPolicyLink(string $PrivacyPolicyLink) 设置	
+客户获得用户授权所依赖的协议地址。
 
-示例值：https://www.*****.com/*****
+示例值：https://www.*****.com/*
+ * @method integer getIsPersonalData() 获取是否是用户个人敏感数据。
+
+固定填：1。
+
+示例值：1
+ * @method void setIsPersonalData(integer $IsPersonalData) 设置是否是用户个人敏感数据。
+
+固定填：1。
+
+示例值：1
  */
 class DataAuthorizationInfo extends AbstractModel
 {
     /**
-     * @var string 客户主体名称。
+     * @var string 数据委托方、需求方：客户主体名称。
 
 示例值：某某有限公司。
      */
     public $DataProviderName;
 
     /**
-     * @var string 接收方主体名称。
+     * @var string 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
 
@@ -122,7 +122,7 @@ class DataAuthorizationInfo extends AbstractModel
     public $DataRecipientName;
 
     /**
-     * @var array 客户请求RCE所涉及的用户敏感数据类型，支持多选。实际以接口请求传参为准。
+     * @var array 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
 
@@ -132,8 +132,6 @@ class DataAuthorizationInfo extends AbstractModel
 
 4-IP地址；
 
-5-设备指纹；
-
 999-其它；
 
 示例值：[1, 4]
@@ -141,22 +139,18 @@ class DataAuthorizationInfo extends AbstractModel
     public $UserDataType;
 
     /**
-     * @var integer 客户是否已经获取用户授权。
-
+     * @var integer 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-
 示例值：1
      */
     public $IsAuthorize;
 
     /**
-     * @var integer 是否是用户个人敏感数据。
-
-固定填：1。
-
+     * @var integer 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
+1-已授权；其它值为未授权。
 示例值：1
      */
-    public $IsPersonalData;
+    public $IsOrderHandling;
 
     /**
      * @var integer 客户获得的用户授权期限时间戳（单位秒）。
@@ -168,22 +162,32 @@ class DataAuthorizationInfo extends AbstractModel
     public $AuthorizationTerm;
 
     /**
-     * @var string 客户获得用户授权所依赖的协议地址。
+     * @var string 	
+客户获得用户授权所依赖的协议地址。
 
-示例值：https://www.*****.com/*****
+示例值：https://www.*****.com/*
      */
     public $PrivacyPolicyLink;
 
     /**
-     * @param string $DataProviderName 客户主体名称。
+     * @var integer 是否是用户个人敏感数据。
+
+固定填：1。
+
+示例值：1
+     */
+    public $IsPersonalData;
+
+    /**
+     * @param string $DataProviderName 数据委托方、需求方：客户主体名称。
 
 示例值：某某有限公司。
-     * @param string $DataRecipientName 接收方主体名称。
+     * @param string $DataRecipientName 数据受托方、提供方：腾讯云主体名称。
 
 固定填：腾讯云计算（北京）有限责任公司
 
 示例值：腾讯云计算（北京）有限责任公司
-     * @param array $UserDataType 客户请求RCE所涉及的用户敏感数据类型，支持多选。实际以接口请求传参为准。
+     * @param array $UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
 
 1-手机号；
 
@@ -193,29 +197,29 @@ class DataAuthorizationInfo extends AbstractModel
 
 4-IP地址；
 
-5-设备指纹；
-
 999-其它；
 
 示例值：[1, 4]
-     * @param integer $IsAuthorize 客户是否已经获取用户授权。
-
+     * @param integer $IsAuthorize 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
 1-已授权；其它值为未授权。
-
 示例值：1
-     * @param integer $IsPersonalData 是否是用户个人敏感数据。
-
-固定填：1。
-
+     * @param integer $IsOrderHandling 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
+1-已授权；其它值为未授权。
 示例值：1
      * @param integer $AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。
 
 不填默认无固定期限。
 
 示例值：1719805604
-     * @param string $PrivacyPolicyLink 客户获得用户授权所依赖的协议地址。
+     * @param string $PrivacyPolicyLink 	
+客户获得用户授权所依赖的协议地址。
 
-示例值：https://www.*****.com/*****
+示例值：https://www.*****.com/*
+     * @param integer $IsPersonalData 是否是用户个人敏感数据。
+
+固定填：1。
+
+示例值：1
      */
     function __construct()
     {
@@ -246,8 +250,8 @@ class DataAuthorizationInfo extends AbstractModel
             $this->IsAuthorize = $param["IsAuthorize"];
         }
 
-        if (array_key_exists("IsPersonalData",$param) and $param["IsPersonalData"] !== null) {
-            $this->IsPersonalData = $param["IsPersonalData"];
+        if (array_key_exists("IsOrderHandling",$param) and $param["IsOrderHandling"] !== null) {
+            $this->IsOrderHandling = $param["IsOrderHandling"];
         }
 
         if (array_key_exists("AuthorizationTerm",$param) and $param["AuthorizationTerm"] !== null) {
@@ -256,6 +260,10 @@ class DataAuthorizationInfo extends AbstractModel
 
         if (array_key_exists("PrivacyPolicyLink",$param) and $param["PrivacyPolicyLink"] !== null) {
             $this->PrivacyPolicyLink = $param["PrivacyPolicyLink"];
+        }
+
+        if (array_key_exists("IsPersonalData",$param) and $param["IsPersonalData"] !== null) {
+            $this->IsPersonalData = $param["IsPersonalData"];
         }
     }
 }

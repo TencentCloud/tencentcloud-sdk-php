@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置实例名(后续支持)
  * @method string getDBVersion() 获取【废弃】不再需要指定，内核版本号与主实例保持一致
  * @method void setDBVersion(string $DBVersion) 设置【废弃】不再需要指定，内核版本号与主实例保持一致
+ * @method string getDedicatedClusterId() 获取专属集群ID
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置专属集群ID
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -212,6 +214,11 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $DBVersion;
 
     /**
+     * @var string 专属集群ID
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      * @param string $MasterDBInstanceId 只读实例的主实例ID。
@@ -248,6 +255,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 默认值：0
      * @param string $Name 实例名(后续支持)
      * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * @param string $DedicatedClusterId 专属集群ID
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
             $this->DBVersion = $param["DBVersion"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

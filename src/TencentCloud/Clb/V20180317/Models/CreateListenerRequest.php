@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
  * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
- * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
- * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+ * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
+ * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
  * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。
  * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。
  * @method string getSessionType() 获取会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。（若选择QUIC_CID，则Protocol必须为UDP，Scheduler必须为WRR，同时只支持ipv4）
@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT。
  * @method array getFullEndPorts() 获取全端口段监听器的结束端口
  * @method void setFullEndPorts(array $FullEndPorts) 设置全端口段监听器的结束端口
+ * @method boolean getH2cSwitch() 获取内网http监听器开启h2c开关
+ * @method void setH2cSwitch(boolean $H2cSwitch) 设置内网http监听器开启h2c开关
+ * @method boolean getSslCloseSwitch() 获取TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+ * @method void setSslCloseSwitch(boolean $SslCloseSwitch) 设置TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -107,7 +111,7 @@ class CreateListenerRequest extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+     * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
      */
     public $SniSwitch;
 
@@ -167,6 +171,16 @@ class CreateListenerRequest extends AbstractModel
     public $FullEndPorts;
 
     /**
+     * @var boolean 内网http监听器开启h2c开关
+     */
+    public $H2cSwitch;
+
+    /**
+     * @var boolean TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     */
+    public $SslCloseSwitch;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
      * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
@@ -176,7 +190,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
-     * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+     * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。
      * @param string $SessionType 会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。（若选择QUIC_CID，则Protocol必须为UDP，Scheduler必须为WRR，同时只支持ipv4）
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭。
@@ -188,6 +202,8 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
      * @param boolean $SnatEnable 是否开启SNAT。
      * @param array $FullEndPorts 全端口段监听器的结束端口
+     * @param boolean $H2cSwitch 内网http监听器开启h2c开关
+     * @param boolean $SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
      */
     function __construct()
     {
@@ -283,6 +299,14 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("FullEndPorts",$param) and $param["FullEndPorts"] !== null) {
             $this->FullEndPorts = $param["FullEndPorts"];
+        }
+
+        if (array_key_exists("H2cSwitch",$param) and $param["H2cSwitch"] !== null) {
+            $this->H2cSwitch = $param["H2cSwitch"];
+        }
+
+        if (array_key_exists("SslCloseSwitch",$param) and $param["SslCloseSwitch"] !== null) {
+            $this->SslCloseSwitch = $param["SslCloseSwitch"];
         }
     }
 }

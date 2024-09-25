@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDepartmentId(string $DepartmentId) 设置权限所属部门的ID，如：1.2.3
  * @method boolean getAllowAccessCredential() 获取是否允许使用访问串
  * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串
+ * @method boolean getAllowKeyboardLogger() 获取是否允许键盘记录
+ * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许键盘记录
  */
 class ModifyAclRequest extends AbstractModel
 {
@@ -226,6 +228,11 @@ class ModifyAclRequest extends AbstractModel
     public $AllowAccessCredential;
 
     /**
+     * @var boolean 是否允许键盘记录
+     */
+    public $AllowKeyboardLogger;
+
+    /**
      * @param string $Name 访问权限名称，最大32字符，不能包含空白字符
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
      * @param boolean $AllowAnyAccount 是否允许任意账号登录
@@ -256,6 +263,7 @@ class ModifyAclRequest extends AbstractModel
 生效、失效时间不填则访问权限长期有效
      * @param string $DepartmentId 权限所属部门的ID，如：1.2.3
      * @param boolean $AllowAccessCredential 是否允许使用访问串
+     * @param boolean $AllowKeyboardLogger 是否允许键盘记录
      */
     function __construct()
     {
@@ -380,6 +388,10 @@ class ModifyAclRequest extends AbstractModel
 
         if (array_key_exists("AllowAccessCredential",$param) and $param["AllowAccessCredential"] !== null) {
             $this->AllowAccessCredential = $param["AllowAccessCredential"];
+        }
+
+        if (array_key_exists("AllowKeyboardLogger",$param) and $param["AllowKeyboardLogger"] !== null) {
+            $this->AllowKeyboardLogger = $param["AllowKeyboardLogger"];
         }
     }
 }

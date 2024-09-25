@@ -60,18 +60,24 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
- * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
+ * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
 
+
+
+
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
+
+
+
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method string getApproverIdCardNumber() 获取签署方经办人的证件号码，应符合以下规则
@@ -94,12 +100,12 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 `如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信`
- * @method integer getApproverRole() 获取收据场景设置签署人角色类型, 可以设置如下****类型****:
+ * @method integer getApproverRole() 获取收据场景设置签署人角色类型, 可以设置如下<b>类型</b>:
 <ul><li> **1**  :收款人</li>
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>
 注: `收据场景为白名单功能，使用前请联系对接的客户经理沟通。`
- * @method void setApproverRole(integer $ApproverRole) 设置收据场景设置签署人角色类型, 可以设置如下****类型****:
+ * @method void setApproverRole(integer $ApproverRole) 设置收据场景设置签署人角色类型, 可以设置如下<b>类型</b>:
 <ul><li> **1**  :收款人</li>
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>
@@ -290,11 +296,14 @@ class ApproverInfo extends AbstractModel
     public $SignComponents;
 
     /**
-     * @var string 签署方经办人的证件类型，支持以下类型
+     * @var string 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
+
+
+
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      */
@@ -319,7 +328,7 @@ class ApproverInfo extends AbstractModel
     public $NotifyType;
 
     /**
-     * @var integer 收据场景设置签署人角色类型, 可以设置如下****类型****:
+     * @var integer 收据场景设置签署人角色类型, 可以设置如下<b>类型</b>:
 <ul><li> **1**  :收款人</li>
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>
@@ -475,11 +484,14 @@ class ApproverInfo extends AbstractModel
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
-     * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
+     * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
+
+
+
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param string $ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
@@ -492,7 +504,7 @@ class ApproverInfo extends AbstractModel
 
 注意：
 `如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信`
-     * @param integer $ApproverRole 收据场景设置签署人角色类型, 可以设置如下****类型****:
+     * @param integer $ApproverRole 收据场景设置签署人角色类型, 可以设置如下<b>类型</b>:
 <ul><li> **1**  :收款人</li>
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>

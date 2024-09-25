@@ -238,6 +238,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertRevokedTime(string $CertRevokedTime) 设置证书吊销完成时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHostingResourceTypes() 获取托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostingResourceTypes(array $HostingResourceTypes) 设置托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HostingConfig getHostingConfig() 获取托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostingConfig(HostingConfig $HostingConfig) 设置托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -567,6 +575,18 @@ class Certificates extends AbstractModel
     public $CertRevokedTime;
 
     /**
+     * @var array 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostingResourceTypes;
+
+    /**
+     * @var HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostingConfig;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -675,6 +695,10 @@ class Certificates extends AbstractModel
      * @param SupportDownloadType $SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertRevokedTime 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HostingResourceTypes 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingConfig $HostingConfig 托管配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -913,6 +937,15 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("CertRevokedTime",$param) and $param["CertRevokedTime"] !== null) {
             $this->CertRevokedTime = $param["CertRevokedTime"];
+        }
+
+        if (array_key_exists("HostingResourceTypes",$param) and $param["HostingResourceTypes"] !== null) {
+            $this->HostingResourceTypes = $param["HostingResourceTypes"];
+        }
+
+        if (array_key_exists("HostingConfig",$param) and $param["HostingConfig"] !== null) {
+            $this->HostingConfig = new HostingConfig();
+            $this->HostingConfig->deserialize($param["HostingConfig"]);
         }
     }
 }

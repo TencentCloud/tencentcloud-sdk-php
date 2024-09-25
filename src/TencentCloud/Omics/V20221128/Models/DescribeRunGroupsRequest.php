@@ -32,10 +32,14 @@ use TencentCloud\Common\AbstractModel;
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
  * @method void setFilters(array $Filters) 设置过滤器，支持过滤字段：
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
  */
 class DescribeRunGroupsRequest extends AbstractModel
 {
@@ -60,6 +64,8 @@ class DescribeRunGroupsRequest extends AbstractModel
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
      */
     public $Filters;
 
@@ -72,6 +78,8 @@ class DescribeRunGroupsRequest extends AbstractModel
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
      */
     function __construct()
     {

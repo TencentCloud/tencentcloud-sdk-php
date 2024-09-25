@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallCached(boolean $CallCached) 设置Cache命中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkDir() 获取工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkDir(string $WorkDir) 设置工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdout() 获取标准输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdout(string $Stdout) 设置标准输出。
@@ -216,6 +220,12 @@ class RunMetadata extends AbstractModel
     public $CallCached;
 
     /**
+     * @var string 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkDir;
+
+    /**
      * @var string 标准输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,6 +279,8 @@ class RunMetadata extends AbstractModel
      * @param boolean $PostProcess 后处理。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CallCached Cache命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkDir 工作目录。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Stdout 标准输出。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -360,6 +372,10 @@ class RunMetadata extends AbstractModel
 
         if (array_key_exists("CallCached",$param) and $param["CallCached"] !== null) {
             $this->CallCached = $param["CallCached"];
+        }
+
+        if (array_key_exists("WorkDir",$param) and $param["WorkDir"] !== null) {
+            $this->WorkDir = $param["WorkDir"];
         }
 
         if (array_key_exists("Stdout",$param) and $param["Stdout"] !== null) {

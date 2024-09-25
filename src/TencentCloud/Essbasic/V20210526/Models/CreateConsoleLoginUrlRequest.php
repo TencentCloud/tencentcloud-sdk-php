@@ -158,6 +158,8 @@ use TencentCloud\Common\AbstractModel;
 注意：`目前仅支持 H5 和 PC`。
  * @method string getTopNavigationStatus() 获取是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
  * @method void setTopNavigationStatus(string $TopNavigationStatus) 设置是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+ * @method boolean getAutoActive() 获取是否自动激活子客
+ * @method void setAutoActive(boolean $AutoActive) 设置是否自动激活子客
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -292,6 +294,11 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $TopNavigationStatus;
 
     /**
+     * @var boolean 是否自动激活子客
+     */
+    public $AutoActive;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -361,6 +368,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $AutoJumpUrl 认证完成跳转链接。
 注意：`目前仅支持 H5 和 PC`。
      * @param string $TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+     * @param boolean $AutoActive 是否自动激活子客
      */
     function __construct()
     {
@@ -435,6 +443,10 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("TopNavigationStatus",$param) and $param["TopNavigationStatus"] !== null) {
             $this->TopNavigationStatus = $param["TopNavigationStatus"];
+        }
+
+        if (array_key_exists("AutoActive",$param) and $param["AutoActive"] !== null) {
+            $this->AutoActive = $param["AutoActive"];
         }
     }
 }

@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
 - RunGroupId：任务批次ID
 - Status：任务状态
 - RunUuid：任务UUID
-- UserDefinedId：用户定义ID
+- ApplicationId：应用ID
+- UserDefinedId：用户定义ID（批量运行表格第一列）
  * @method void setFilters(array $Filters) 设置过滤器，支持过滤字段：
 - RunGroupId：任务批次ID
 - Status：任务状态
 - RunUuid：任务UUID
-- UserDefinedId：用户定义ID
+- ApplicationId：应用ID
+- UserDefinedId：用户定义ID（批量运行表格第一列）
  */
 class DescribeRunsRequest extends AbstractModel
 {
@@ -62,7 +64,8 @@ class DescribeRunsRequest extends AbstractModel
 - RunGroupId：任务批次ID
 - Status：任务状态
 - RunUuid：任务UUID
-- UserDefinedId：用户定义ID
+- ApplicationId：应用ID
+- UserDefinedId：用户定义ID（批量运行表格第一列）
      */
     public $Filters;
 
@@ -75,7 +78,8 @@ class DescribeRunsRequest extends AbstractModel
 - RunGroupId：任务批次ID
 - Status：任务状态
 - RunUuid：任务UUID
-- UserDefinedId：用户定义ID
+- ApplicationId：应用ID
+- UserDefinedId：用户定义ID（批量运行表格第一列）
      */
     function __construct()
     {

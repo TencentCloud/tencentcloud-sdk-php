@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitInfo(string $GitInfo) 设置Git信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GitInfo getGitSource() 获取Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGitSource(GitInfo $GitSource) 设置Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationVersion extends AbstractModel
 {
@@ -110,8 +114,15 @@ class ApplicationVersion extends AbstractModel
     /**
      * @var string Git信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $GitInfo;
+
+    /**
+     * @var GitInfo Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GitSource;
 
     /**
      * @param string $Type 版本类型。
@@ -131,6 +142,8 @@ class ApplicationVersion extends AbstractModel
      * @param string $CreatorId 创建者ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GitInfo Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GitInfo $GitSource Git信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +193,11 @@ class ApplicationVersion extends AbstractModel
 
         if (array_key_exists("GitInfo",$param) and $param["GitInfo"] !== null) {
             $this->GitInfo = $param["GitInfo"];
+        }
+
+        if (array_key_exists("GitSource",$param) and $param["GitSource"] !== null) {
+            $this->GitSource = new GitInfo();
+            $this->GitSource->deserialize($param["GitSource"]);
         }
     }
 }

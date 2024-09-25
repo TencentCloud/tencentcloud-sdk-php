@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDeleteImage(boolean $IsDeleteImage) 设置只有删除服务的时候，才会起作用
  * @method string getOperatorRemark() 获取操作备注
  * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
+ * @method integer getDelayedDeletionTime() 获取延迟删除版本时间
+ * @method void setDelayedDeletionTime(integer $DelayedDeletionTime) 设置延迟删除版本时间
  */
 class DeleteCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DeleteCloudBaseRunServerVersionRequest extends AbstractModel
     public $OperatorRemark;
 
     /**
+     * @var integer 延迟删除版本时间
+     */
+    public $DelayedDeletionTime;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $ServerName 服务名称
      * @param string $VersionName 版本名称
      * @param boolean $IsDeleteServer 是否删除服务，只有最后一个版本的时候，才生效。
      * @param boolean $IsDeleteImage 只有删除服务的时候，才会起作用
      * @param string $OperatorRemark 操作备注
+     * @param integer $DelayedDeletionTime 延迟删除版本时间
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DeleteCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("OperatorRemark",$param) and $param["OperatorRemark"] !== null) {
             $this->OperatorRemark = $param["OperatorRemark"];
+        }
+
+        if (array_key_exists("DelayedDeletionTime",$param) and $param["DelayedDeletionTime"] !== null) {
+            $this->DelayedDeletionTime = $param["DelayedDeletionTime"];
         }
     }
 }

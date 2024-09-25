@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnVpcId(string $UnVpcId) 设置传统弹性公网IPv6所属vpc唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取CDC唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置CDC唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -266,6 +270,12 @@ class Address extends AbstractModel
     public $UnVpcId;
 
     /**
+     * @var string CDC唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -311,6 +321,8 @@ class Address extends AbstractModel
      * @param string $BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnVpcId 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DedicatedClusterId CDC唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -434,6 +446,10 @@ class Address extends AbstractModel
 
         if (array_key_exists("UnVpcId",$param) and $param["UnVpcId"] !== null) {
             $this->UnVpcId = $param["UnVpcId"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

@@ -306,16 +306,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署人的签署截止时间，格式为Unix标准时间戳（秒）, 超过此时间未签署的合同变成已过期状态，不能在继续签署
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
- * @method Intention getIntention() 获取视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+ * @method Intention getIntention() 获取<b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
- * @method void setIntention(Intention $Intention) 设置视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>合同发起的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+ * @method void setIntention(Intention $Intention) 设置<b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
+
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>合同发起的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -572,11 +578,14 @@ class FlowCreateApprover extends AbstractModel
     public $Deadline;
 
     /**
-     * @var Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+     * @var Intention <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>合同发起的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
      */
     public $Intention;
 
@@ -724,11 +733,14 @@ class FlowCreateApprover extends AbstractModel
      * @param integer $Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）, 超过此时间未签署的合同变成已过期状态，不能在继续签署
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
-     * @param Intention $Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+     * @param Intention $Intention <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>合同发起的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
      */
     function __construct()
     {

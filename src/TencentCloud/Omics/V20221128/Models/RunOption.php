@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseRelativeOutputPaths(boolean $UseRelativeOutputPaths) 设置是否使用相对目录归档输出。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAddRunInfoToOutputDir() 获取是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddRunInfoToOutputDir(boolean $AddRunInfoToOutputDir) 设置是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunOption extends AbstractModel
 {
@@ -71,6 +75,12 @@ class RunOption extends AbstractModel
     public $UseRelativeOutputPaths;
 
     /**
+     * @var boolean 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddRunInfoToOutputDir;
+
+    /**
      * @param string $FailureMode 运行失败模式，取值范围：
 - ContinueWhilePossible
 - NoNewCalls
@@ -79,6 +89,8 @@ class RunOption extends AbstractModel
      * @param string $FinalWorkflowOutputsDir 输出归档COS路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseRelativeOutputPaths 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AddRunInfoToOutputDir 是否添加运行信息到输出目录中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +124,10 @@ class RunOption extends AbstractModel
 
         if (array_key_exists("UseRelativeOutputPaths",$param) and $param["UseRelativeOutputPaths"] !== null) {
             $this->UseRelativeOutputPaths = $param["UseRelativeOutputPaths"];
+        }
+
+        if (array_key_exists("AddRunInfoToOutputDir",$param) and $param["AddRunInfoToOutputDir"] !== null) {
+            $this->AddRunInfoToOutputDir = $param["AddRunInfoToOutputDir"];
         }
     }
 }

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNfsVolumes(array $NfsVolumes) 设置Nfs挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMountPropagation() 获取挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountPropagation(string $MountPropagation) 设置挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVolumeMount extends AbstractModel
 {
@@ -64,6 +68,12 @@ class CloudBaseRunVolumeMount extends AbstractModel
     public $NfsVolumes;
 
     /**
+     * @var string 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MountPropagation;
+
+    /**
      * @param string $Name 资源名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountPath 挂载路径
@@ -71,6 +81,8 @@ class CloudBaseRunVolumeMount extends AbstractModel
      * @param boolean $ReadOnly 是否只读
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NfsVolumes Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MountPropagation 挂载配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +117,10 @@ class CloudBaseRunVolumeMount extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NfsVolumes, $obj);
             }
+        }
+
+        if (array_key_exists("MountPropagation",$param) and $param["MountPropagation"] !== null) {
+            $this->MountPropagation = $param["MountPropagation"];
         }
     }
 }

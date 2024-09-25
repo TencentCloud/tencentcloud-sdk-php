@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
  * @method string getSrcConnectType() 获取源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
  * @method void setSrcConnectType(string $SrcConnectType) 设置源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
- * @method Endpoint getSrcInfo() 获取源端信息，单节点数据库使用，且SrcNodeType传single
- * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用，且SrcNodeType传single
- * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，多节点数据库使用，且SrcNodeType传cluster
- * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，多节点数据库使用，且SrcNodeType传cluster
+ * @method Endpoint getSrcInfo() 获取源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+ * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+ * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
  * @method string getSrcNodeType() 获取枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
  * @method void setSrcNodeType(string $SrcNodeType) 设置枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
- * @method Endpoint getDstInfo() 获取目标端信息，单节点数据库使用
- * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单节点数据库使用
- * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，多节点数据库使用，且DstNodeType传cluster
- * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，多节点数据库使用，且DstNodeType传cluster
+ * @method Endpoint getDstInfo() 获取目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+ * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+ * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
  * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
  * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
  * @method Options getOptions() 获取同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
@@ -103,12 +103,12 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $SrcConnectType;
 
     /**
-     * @var Endpoint 源端信息，单节点数据库使用，且SrcNodeType传single
+     * @var Endpoint 源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
      */
     public $SrcInfo;
 
     /**
-     * @var SyncDBEndpointInfos 源端信息，多节点数据库使用，且SrcNodeType传cluster
+     * @var SyncDBEndpointInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
      */
     public $SrcInfos;
 
@@ -118,12 +118,12 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $SrcNodeType;
 
     /**
-     * @var Endpoint 目标端信息，单节点数据库使用
+     * @var Endpoint 目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
      */
     public $DstInfo;
 
     /**
-     * @var SyncDBEndpointInfos 目标端信息，多节点数据库使用，且DstNodeType传cluster
+     * @var SyncDBEndpointInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
      */
     public $DstInfos;
 
@@ -152,11 +152,11 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param string $RunMode 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
      * @param string $ExpectRunTime 期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
      * @param string $SrcConnectType 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
-     * @param Endpoint $SrcInfo 源端信息，单节点数据库使用，且SrcNodeType传single
-     * @param SyncDBEndpointInfos $SrcInfos 源端信息，多节点数据库使用，且SrcNodeType传cluster
+     * @param Endpoint $SrcInfo 源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+     * @param SyncDBEndpointInfos $SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
      * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-     * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
-     * @param SyncDBEndpointInfos $DstInfos 目标端信息，多节点数据库使用，且DstNodeType传cluster
+     * @param Endpoint $DstInfo 目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+     * @param SyncDBEndpointInfos $DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
      * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
      * @param Options $Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试

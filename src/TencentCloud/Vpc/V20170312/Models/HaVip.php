@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的飘移范围校验。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcId() 获取CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
@@ -135,6 +139,12 @@ class HaVip extends AbstractModel
     public $CheckAssociate;
 
     /**
+     * @var string CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -163,6 +173,8 @@ class HaVip extends AbstractModel
      * @param array $HaVipAssociationSet `HAVIP`的飘移范围。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdcId CDC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
@@ -237,6 +249,10 @@ class HaVip extends AbstractModel
 
         if (array_key_exists("CheckAssociate",$param) and $param["CheckAssociate"] !== null) {
             $this->CheckAssociate = $param["CheckAssociate"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
 
         if (array_key_exists("FlushedTime",$param) and $param["FlushedTime"] !== null) {

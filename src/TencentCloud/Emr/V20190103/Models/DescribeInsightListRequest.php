@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置分页查询时的分页大小，最小1，最大100
  * @method integer getPage() 获取分页查询时的页号，从1开始
  * @method void setPage(integer $Page) 设置分页查询时的页号，从1开始
+ * @method string getType() 获取查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+ * @method void setType(string $Type) 设置查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
  */
 class DescribeInsightListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeInsightListRequest extends AbstractModel
     public $Page;
 
     /**
+     * @var string 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     */
+    public $Type;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param integer $StartTime 获取的洞察结果开始时间，此时间针对对App或者Hive查询的开始时间的过滤
      * @param integer $EndTime 获取的洞察结果结束时间，此时间针对对App或者Hive查询的开始时间的过滤
      * @param integer $PageSize 分页查询时的分页大小，最小1，最大100
      * @param integer $Page 分页查询时的页号，从1开始
+     * @param string $Type 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeInsightListRequest extends AbstractModel
 
         if (array_key_exists("Page",$param) and $param["Page"] !== null) {
             $this->Page = $param["Page"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

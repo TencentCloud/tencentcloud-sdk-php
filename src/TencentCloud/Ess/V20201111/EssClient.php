@@ -703,8 +703,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId需要传递超管或者法人的UserId)
  * @method Models\DescribeFileUrlsResponse DescribeFileUrls(Models\DescribeFileUrlsRequest $req) 本接口（DescribeFileUrls）用于查询文件的下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
- * @method Models\DescribeFlowBriefsResponse DescribeFlowBriefs(Models\DescribeFlowBriefsRequest $req) 查询流程基础信息
-适用场景：可用于主动查询某个合同流程的签署状态信息。可以配合回调通知使用。
+ * @method Models\DescribeFlowBriefsResponse DescribeFlowBriefs(Models\DescribeFlowBriefsRequest $req) 查询流程基础信息，主要用于<font color="red">查询合同的状态</font>信息。可以配合回调通知使用。
 
 注: `每个企业限制日调用量限制：100W，当日超过此限制后再调用接口返回错误`
  * @method Models\DescribeFlowComponentsResponse DescribeFlowComponents(Models\DescribeFlowComponentsRequest $req) 可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容，包括填写控件的归属方、填写控件是否已经填写以及填写的具体内容。

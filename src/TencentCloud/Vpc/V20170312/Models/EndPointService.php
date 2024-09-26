@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS
  * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS
+ * @method string getCdcId() 获取CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceUin() 获取Uin
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceUin(string $ServiceUin) 设置Uin
@@ -119,6 +123,12 @@ class EndPointService extends AbstractModel
     public $ServiceType;
 
     /**
+     * @var string CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @var string Uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -150,6 +160,8 @@ class EndPointService extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     * @param string $CdcId CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceUin Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BusinessIpType 服务IP类型
@@ -217,6 +229,10 @@ class EndPointService extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
 
         if (array_key_exists("ServiceUin",$param) and $param["ServiceUin"] !== null) {

@@ -88,6 +88,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取路由策略创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置路由策略创建时间
+ * @method string getCdcId() 获取CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
@@ -174,6 +178,12 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     public $CreatedTime;
 
     /**
+     * @var string CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @param string $DestinationCidrBlock 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
@@ -208,6 +218,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
      * @param boolean $PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 路由策略创建时间
+     * @param string $CdcId CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -268,6 +280,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

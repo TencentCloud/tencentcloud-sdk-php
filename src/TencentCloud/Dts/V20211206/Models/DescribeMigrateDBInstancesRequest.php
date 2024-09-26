@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method string getAccountMode() 获取资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
  * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
- * @method string getTmpSecretId() 获取临时密钥Id，若为跨账号资源此项必填
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，若为跨账号资源此项必填
- * @method string getTmpSecretKey() 获取临时密钥Key，若为跨账号资源此项必填
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key，若为跨账号资源此项必填
- * @method string getTmpToken() 获取临时密钥Token，若为跨账号资源此项必填
- * @method void setTmpToken(string $TmpToken) 设置临时密钥Token，若为跨账号资源此项必填
+ * @method string getTmpSecretId() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method string getTmpSecretKey() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method string getTmpToken() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method void setTmpToken(string $TmpToken) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
  */
 class DescribeMigrateDBInstancesRequest extends AbstractModel
 {
@@ -79,17 +79,17 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
     public $AccountMode;
 
     /**
-     * @var string 临时密钥Id，若为跨账号资源此项必填
+     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时密钥Key，若为跨账号资源此项必填
+     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      */
     public $TmpSecretKey;
 
     /**
-     * @var string 临时密钥Token，若为跨账号资源此项必填
+     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      */
     public $TmpToken;
 
@@ -101,9 +101,9 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
      * @param integer $Limit 返回数量限制
      * @param integer $Offset 偏移量
      * @param string $AccountMode 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
-     * @param string $TmpSecretId 临时密钥Id，若为跨账号资源此项必填
-     * @param string $TmpSecretKey 临时密钥Key，若为跨账号资源此项必填
-     * @param string $TmpToken 临时密钥Token，若为跨账号资源此项必填
+     * @param string $TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @param string $TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @param string $TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      */
     function __construct()
     {

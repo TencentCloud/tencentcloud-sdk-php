@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSatisfaction(IMSatisfaction $Satisfaction) 设置满意度
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientUserId() 获取用户ID
+ * @method void setClientUserId(string $ClientUserId) 设置用户ID
  */
 class IMCdrInfo extends AbstractModel
 {
@@ -140,6 +142,11 @@ class IMCdrInfo extends AbstractModel
     public $Satisfaction;
 
     /**
+     * @var string 用户ID
+     */
+    public $ClientUserId;
+
+    /**
      * @param string $Id 服务记录ID
      * @param integer $Duration 服务时长秒数
      * @param integer $EndStatus 结束状态
@@ -164,6 +171,7 @@ class IMCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IMSatisfaction $Satisfaction 满意度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientUserId 用户ID
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class IMCdrInfo extends AbstractModel
         if (array_key_exists("Satisfaction",$param) and $param["Satisfaction"] !== null) {
             $this->Satisfaction = new IMSatisfaction();
             $this->Satisfaction->deserialize($param["Satisfaction"]);
+        }
+
+        if (array_key_exists("ClientUserId",$param) and $param["ClientUserId"] !== null) {
+            $this->ClientUserId = $param["ClientUserId"];
         }
     }
 }

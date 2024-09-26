@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数
  * @method string getHpcClusterId() 获取高性能计算集群ID。
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。
+ * @method CpuTopology getCpuTopology() 获取描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+ * @method void setCpuTopology(CpuTopology $CpuTopology) 设置描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
  * @method LaunchTemplate getLaunchTemplate() 获取实例启动模板。
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) 设置实例启动模板。
  */
@@ -165,6 +167,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $HpcClusterId;
 
     /**
+     * @var CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public $CpuTopology;
+
+    /**
      * @var LaunchTemplate 实例启动模板。
      */
     public $LaunchTemplate;
@@ -191,6 +198,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
      * @param string $HpcClusterId 高性能计算集群ID。
+     * @param CpuTopology $CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
      */
     function __construct()
@@ -298,6 +306,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
 
         if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
             $this->HpcClusterId = $param["HpcClusterId"];
+        }
+
+        if (array_key_exists("CpuTopology",$param) and $param["CpuTopology"] !== null) {
+            $this->CpuTopology = new CpuTopology();
+            $this->CpuTopology->deserialize($param["CpuTopology"]);
         }
 
         if (array_key_exists("LaunchTemplate",$param) and $param["LaunchTemplate"] !== null) {

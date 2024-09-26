@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置终端节点服务名称。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcId() 获取CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
@@ -122,6 +126,12 @@ class EndPoint extends AbstractModel
     public $ServiceName;
 
     /**
+     * @var string CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @var array 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,6 +151,8 @@ class EndPoint extends AbstractModel
      * @param string $CreateTime 创建时间。
      * @param array $GroupSet 终端节点绑定的安全组实例ID列表。
      * @param string $ServiceName 终端节点服务名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdcId CDC 集群唯一 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。	
 注意：此字段可能返回 null，表示取不到有效值。
@@ -208,6 +220,10 @@ class EndPoint extends AbstractModel
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
 
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {

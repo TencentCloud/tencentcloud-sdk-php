@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 返回项： Linux 。
  * @method void setProductDescription(string $ProductDescription) 设置预留实例计费的平台描述（即操作系统）。形如：Linux。
 返回项： Linux 。
+ * @method float getDiscountUsagePrice() 获取预支合计费用，单位：元。
+ * @method void setDiscountUsagePrice(float $DiscountUsagePrice) 设置预支合计费用，单位：元。
+ * @method float getDiscountFixedPrice() 获取后续合计费用的折扣价，单位：元/小时
+ * @method void setDiscountFixedPrice(float $DiscountFixedPrice) 设置后续合计费用的折扣价，单位：元/小时
  */
 class ReservedInstancePriceItem extends AbstractModel
 {
@@ -79,6 +83,16 @@ class ReservedInstancePriceItem extends AbstractModel
     public $ProductDescription;
 
     /**
+     * @var float 预支合计费用，单位：元。
+     */
+    public $DiscountUsagePrice;
+
+    /**
+     * @var float 后续合计费用的折扣价，单位：元/小时
+     */
+    public $DiscountFixedPrice;
+
+    /**
      * @param string $OfferingType 付费类型，如："All Upfront","Partial Upfront","No Upfront"
      * @param float $FixedPrice 预支合计费用，单位：元。
      * @param float $UsagePrice 后续合计费用，单位：元/小时
@@ -88,6 +102,8 @@ class ReservedInstancePriceItem extends AbstractModel
 计量单位：秒
      * @param string $ProductDescription 预留实例计费的平台描述（即操作系统）。形如：Linux。
 返回项： Linux 。
+     * @param float $DiscountUsagePrice 预支合计费用，单位：元。
+     * @param float $DiscountFixedPrice 后续合计费用的折扣价，单位：元/小时
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ class ReservedInstancePriceItem extends AbstractModel
 
         if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
             $this->ProductDescription = $param["ProductDescription"];
+        }
+
+        if (array_key_exists("DiscountUsagePrice",$param) and $param["DiscountUsagePrice"] !== null) {
+            $this->DiscountUsagePrice = $param["DiscountUsagePrice"];
+        }
+
+        if (array_key_exists("DiscountFixedPrice",$param) and $param["DiscountFixedPrice"] !== null) {
+            $this->DiscountFixedPrice = $param["DiscountFixedPrice"];
         }
     }
 }

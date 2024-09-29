@@ -35,6 +35,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\CreateCompanyApplyResponse CreateCompanyApply(Models\CreateCompanyApplyRequest $req) 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
  * @method Models\CreateExtensionResponse CreateExtension(Models\CreateExtensionRequest $req) 创建话机账号
  * @method Models\CreateIVRSessionResponse CreateIVRSession(Models\CreateIVRSessionRequest $req) 创建关联 IVR 的会话，仅高级版支持，目前支持呼入和自动外呼两种 IVR 类型。收到请求后 TCCC 会先尝试呼通被叫，然后进入 IVR 流程。
+ * @method Models\CreateOwnNumberApplyResponse CreateOwnNumberApply(Models\CreateOwnNumberApplyRequest $req) 创建客户自携号码接入审核
  * @method Models\CreatePredictiveDialingCampaignResponse CreatePredictiveDialingCampaign(Models\CreatePredictiveDialingCampaignRequest $req) 创建预测式外呼任务
  * @method Models\CreateSDKLoginTokenResponse CreateSDKLoginToken(Models\CreateSDKLoginTokenRequest $req) 创建 SDK 登录 Token。
  * @method Models\CreateStaffResponse CreateStaff(Models\CreateStaffRequest $req) 创建客服账号。
@@ -73,6 +74,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\HangUpCallResponse HangUpCall(Models\HangUpCallRequest $req) 挂断电话
  * @method Models\ModifyCompanyApplyResponse ModifyCompanyApply(Models\ModifyCompanyApplyRequest $req) 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
  * @method Models\ModifyExtensionResponse ModifyExtension(Models\ModifyExtensionRequest $req) 修改话机账号(绑定技能组、绑定坐席账号)
+ * @method Models\ModifyOwnNumberApplyResponse ModifyOwnNumberApply(Models\ModifyOwnNumberApplyRequest $req) 修改客户自携号码审批单
  * @method Models\ModifyStaffResponse ModifyStaff(Models\ModifyStaffRequest $req) 修改客服账号
  * @method Models\ModifyStaffPasswordResponse ModifyStaffPassword(Models\ModifyStaffPasswordRequest $req) 修改座席的密码
  * @method Models\PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(Models\PausePredictiveDialingCampaignRequest $req) 暂停预测式外呼任务

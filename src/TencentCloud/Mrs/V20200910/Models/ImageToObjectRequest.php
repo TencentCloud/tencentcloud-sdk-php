@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 （1）检验报告 11，默认使用 V2，最高支持 V3。
 （2）病理报告 15，默认使用 V1，最高支持 V2。
 （3）入院记录29、出院记录 28、病历记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+ * @method array getOcrInfoList() 获取可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+ * @method void setOcrInfoList(array $OcrInfoList) 设置可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
  */
 class ImageToObjectRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ class ImageToObjectRequest extends AbstractModel
     public $ReportTypeVersion;
 
     /**
+     * @var array 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+     */
+    public $OcrInfoList;
+
+    /**
      * @param array $ImageInfoList 图片列表，允许传入多张图片，目前只支持传入图片base64编码，图片url暂不支持
      * @param HandleParam $HandleParam 图片处理参数
      * @param integer $Type 报告类型，目前支持11（检验报告），12（检查报告），15（病理报告），28（出院报告），29（入院报告），210（门诊病历），212（手术记录），218（诊断证明），363（心电图），27（内窥镜检查），215（处方单），219（免疫接种证明），301（C14呼气试验）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
@@ -88,6 +95,7 @@ class ImageToObjectRequest extends AbstractModel
 （1）检验报告 11，默认使用 V2，最高支持 V3。
 （2）病理报告 15，默认使用 V1，最高支持 V2。
 （3）入院记录29、出院记录 28、病历记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+     * @param array $OcrInfoList 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
      */
     function __construct()
     {
@@ -134,6 +142,15 @@ class ImageToObjectRequest extends AbstractModel
                 $obj = new ReportTypeVersion();
                 $obj->deserialize($value);
                 array_push($this->ReportTypeVersion, $obj);
+            }
+        }
+
+        if (array_key_exists("OcrInfoList",$param) and $param["OcrInfoList"] !== null) {
+            $this->OcrInfoList = [];
+            foreach ($param["OcrInfoList"] as $key => $value){
+                $obj = new OcrInfo();
+                $obj->deserialize($value);
+                array_push($this->OcrInfoList, $obj);
             }
         }
     }

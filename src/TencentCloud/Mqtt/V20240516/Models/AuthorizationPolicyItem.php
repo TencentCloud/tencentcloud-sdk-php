@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsername(string $Username) 设置用户
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取ip地址
+ * @method string getIp() 获取IP地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置ip地址
+ * @method void setIp(string $Ip) 设置IP地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQos() 获取0，1，2
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,7 +138,7 @@ class AuthorizationPolicyItem extends AbstractModel
     public $Username;
 
     /**
-     * @var string ip地址
+     * @var string IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
@@ -190,7 +190,7 @@ class AuthorizationPolicyItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Username 用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip ip地址
+     * @param string $Ip IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qos 0，1，2
 注意：此字段可能返回 null，表示取不到有效值。

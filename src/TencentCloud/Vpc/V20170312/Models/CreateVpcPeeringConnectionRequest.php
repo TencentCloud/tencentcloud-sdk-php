@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargeType(string $ChargeType) 设置计费模式，日峰值POSTPAID_BY_DAY_MAX，月95POSTPAID_BY_MONTH_95。
  * @method string getQosLevel() 获取服务分级：PT、AU、AG。
  * @method void setQosLevel(string $QosLevel) 设置服务分级：PT、AU、AG。
+ * @method array getTags() 获取标签键值对
+ * @method void setTags(array $Tags) 设置标签键值对
  */
 class CreateVpcPeeringConnectionRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateVpcPeeringConnectionRequest extends AbstractModel
     public $QosLevel;
 
     /**
+     * @var array 标签键值对
+     */
+    public $Tags;
+
+    /**
      * @param string $SourceVpcId 本端VPC唯一ID。
      * @param string $PeeringConnectionName 对等连接名称。
      * @param string $DestinationVpcId 对端VPC唯一ID。
@@ -96,6 +103,7 @@ class CreateVpcPeeringConnectionRequest extends AbstractModel
      * @param string $Type 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
      * @param string $ChargeType 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95POSTPAID_BY_MONTH_95。
      * @param string $QosLevel 服务分级：PT、AU、AG。
+     * @param array $Tags 标签键值对
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateVpcPeeringConnectionRequest extends AbstractModel
 
         if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
             $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

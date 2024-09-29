@@ -76,6 +76,12 @@ IMPORTFAILED-导入失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseType() 获取镜像许可类型
  * @method void setLicenseType(string $LicenseType) 设置镜像许可类型
+ * @method string getImageFamily() 获取镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageFamily(string $ImageFamily) 设置镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getImageDeprecated() 获取镜像是否废弃
+ * @method void setImageDeprecated(boolean $ImageDeprecated) 设置镜像是否废弃
  */
 class Image extends AbstractModel
 {
@@ -176,6 +182,17 @@ IMPORTFAILED-导入失败
     public $LicenseType;
 
     /**
+     * @var string 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageFamily;
+
+    /**
+     * @var boolean 镜像是否废弃
+     */
+    public $ImageDeprecated;
+
+    /**
      * @param string $ImageId 镜像ID
      * @param string $OsName 镜像操作系统
      * @param string $ImageType 镜像类型
@@ -204,6 +221,9 @@ IMPORTFAILED-导入失败
      * @param array $Tags 镜像关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 镜像许可类型
+     * @param string $ImageFamily 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ImageDeprecated 镜像是否废弃
      */
     function __construct()
     {
@@ -294,6 +314,14 @@ IMPORTFAILED-导入失败
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("ImageDeprecated",$param) and $param["ImageDeprecated"] !== null) {
+            $this->ImageDeprecated = $param["ImageDeprecated"];
         }
     }
 }

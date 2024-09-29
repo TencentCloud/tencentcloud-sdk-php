@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateSecurityGroups请求参数结构体
  *
- * @method array getInstanceIds() 获取实例组ID数组
- * @method void setInstanceIds(array $InstanceIds) 设置实例组ID数组
+ * @method array getInstanceIds() 获取实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
  * @method array getSecurityGroupIds() 获取要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
  * @method string getZone() 获取可用区
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 实例组ID数组
+     * @var array 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
      */
     public $InstanceIds;
 
@@ -45,7 +48,8 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @param array $InstanceIds 实例组ID数组
+     * @param array $InstanceIds 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
      * @param array $SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
      * @param string $Zone 可用区
      */

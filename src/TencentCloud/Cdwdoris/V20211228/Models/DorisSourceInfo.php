@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置doris集群的账号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassword() 获取doris集群的密码
+ * @method string getPassword() 获取base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassword(string $Password) 设置doris集群的密码
+ * @method void setPassword(string $Password) 设置base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DorisSourceInfo extends AbstractModel
@@ -58,7 +58,7 @@ class DorisSourceInfo extends AbstractModel
     public $User;
 
     /**
-     * @var string doris集群的密码
+     * @var string base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
@@ -70,7 +70,7 @@ class DorisSourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User doris集群的账号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Password doris集群的密码
+     * @param string $Password base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVerifyReport请求参数结构体
  *
- * @method string getApplyCustomerType() 获取客户类型 1:个人，2:企业
- * @method void setApplyCustomerType(string $ApplyCustomerType) 设置客户类型 1:个人，2:企业
+ * @method string getApplyCustomerType() 获取申请者类型 1:个人，2:企业
+ * @method void setApplyCustomerType(string $ApplyCustomerType) 设置申请者类型 1:个人，2:企业
  * @method string getApplyCustomerName() 获取申请企业 or 自然人名称
  * @method void setApplyCustomerName(string $ApplyCustomerName) 设置申请企业 or 自然人名称
- * @method string getApplyName() 获取验签申请人姓名
- * @method void setApplyName(string $ApplyName) 设置验签申请人姓名
- * @method string getApplyMobile() 获取验签申请人电弧
- * @method void setApplyMobile(string $ApplyMobile) 设置验签申请人电弧
+ * @method string getApplyName() 获取验签申请经办人姓名
+ * @method void setApplyName(string $ApplyName) 设置验签申请经办人姓名
+ * @method string getApplyMobile() 获取验签申请经办人电话
+ * @method void setApplyMobile(string $ApplyMobile) 设置验签申请经办人电话
  * @method string getFileId() 获取验签文件id
  * @method void setFileId(string $FileId) 设置验签文件id
- * @method string getApplyEmail() 获取验签申请人邮箱
- * @method void setApplyEmail(string $ApplyEmail) 设置验签申请人邮箱
+ * @method string getApplyEmail() 获取验签申请经办人邮箱
+ * @method void setApplyEmail(string $ApplyEmail) 设置验签申请经办人邮箱
  */
 class CreateVerifyReportRequest extends AbstractModel
 {
     /**
-     * @var string 客户类型 1:个人，2:企业
+     * @var string 申请者类型 1:个人，2:企业
      */
     public $ApplyCustomerType;
 
@@ -46,12 +46,12 @@ class CreateVerifyReportRequest extends AbstractModel
     public $ApplyCustomerName;
 
     /**
-     * @var string 验签申请人姓名
+     * @var string 验签申请经办人姓名
      */
     public $ApplyName;
 
     /**
-     * @var string 验签申请人电弧
+     * @var string 验签申请经办人电话
      */
     public $ApplyMobile;
 
@@ -61,17 +61,17 @@ class CreateVerifyReportRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var string 验签申请人邮箱
+     * @var string 验签申请经办人邮箱
      */
     public $ApplyEmail;
 
     /**
-     * @param string $ApplyCustomerType 客户类型 1:个人，2:企业
+     * @param string $ApplyCustomerType 申请者类型 1:个人，2:企业
      * @param string $ApplyCustomerName 申请企业 or 自然人名称
-     * @param string $ApplyName 验签申请人姓名
-     * @param string $ApplyMobile 验签申请人电弧
+     * @param string $ApplyName 验签申请经办人姓名
+     * @param string $ApplyMobile 验签申请经办人电话
      * @param string $FileId 验签文件id
-     * @param string $ApplyEmail 验签申请人邮箱
+     * @param string $ApplyEmail 验签申请经办人邮箱
      */
     function __construct()
     {

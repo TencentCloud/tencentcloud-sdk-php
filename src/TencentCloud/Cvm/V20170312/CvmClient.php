@@ -78,6 +78,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
  * @method Models\DescribeHpcClustersResponse DescribeHpcClusters(Models\DescribeHpcClustersRequest $req) 查询高性能集群信息
+ * @method Models\DescribeImageFromFamilyResponse DescribeImageFromFamily(Models\DescribeImageFromFamilyRequest $req) 本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
  * @method Models\DescribeImageQuotaResponse DescribeImageQuota(Models\DescribeImageQuotaRequest $req) 本接口(DescribeImageQuota)用于查询用户账号的镜像配额。
  * @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) 本接口（DescribeImageSharePermission）用于查询镜像分享信息。
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 本接口(DescribeImages) 用于查看镜像列表。

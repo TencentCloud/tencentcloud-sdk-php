@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileBody() 获取BASE64编码后的文件内容
  * @method void setFileBody(string $FileBody) 设置BASE64编码后的文件内容
- * @method string getFileName() 获取文件名，最大长度不超过200字符
- * @method void setFileName(string $FileName) 设置文件名，最大长度不超过200字符
+ * @method string getFileName() 获取文件名及类型，最大长度不超过200字符
+ * @method void setFileName(string $FileName) 设置文件名及类型，最大长度不超过200字符
  */
 class FileInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FileInfo extends AbstractModel
     public $FileBody;
 
     /**
-     * @var string 文件名，最大长度不超过200字符
+     * @var string 文件名及类型，最大长度不超过200字符
      */
     public $FileName;
 
     /**
      * @param string $FileBody BASE64编码后的文件内容
-     * @param string $FileName 文件名，最大长度不超过200字符
+     * @param string $FileName 文件名及类型，最大长度不超过200字符
      */
     function __construct()
     {

@@ -118,6 +118,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
  * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+ * @method string getImageFamily() 获取镜像族名称。
+ * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -263,6 +265,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $InstanceTags;
 
     /**
+     * @var string 镜像族名称。
+     */
+    public $ImageFamily;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -312,6 +319,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
      * @param LoginSettings $LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
      * @param array $InstanceTags 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+     * @param string $ImageFamily 镜像族名称。
      */
     function __construct()
     {
@@ -435,6 +443,10 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
                 $obj->deserialize($value);
                 array_push($this->InstanceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }

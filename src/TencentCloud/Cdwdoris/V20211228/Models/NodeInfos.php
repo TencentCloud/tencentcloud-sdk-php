@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentName(string $ComponentName) 设置组件名
  * @method string getLastRestartTime() 获取上一次重启时间
  * @method void setLastRestartTime(string $LastRestartTime) 设置上一次重启时间
+ * @method string getId() 获取id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfos extends AbstractModel
 {
@@ -66,12 +74,28 @@ class NodeInfos extends AbstractModel
     public $LastRestartTime;
 
     /**
+     * @var string id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
+     * @var string 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param string $NodeName 节点名称
      * @param integer $Status 节点状态
      * @param string $Ip 节点ip
      * @param string $NodeRole 节点角色
      * @param string $ComponentName 组件名
      * @param string $LastRestartTime 上一次重启时间
+     * @param string $Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +132,14 @@ class NodeInfos extends AbstractModel
 
         if (array_key_exists("LastRestartTime",$param) and $param["LastRestartTime"] !== null) {
             $this->LastRestartTime = $param["LastRestartTime"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

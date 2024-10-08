@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置节点所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getId() 获取Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class NodeInfo extends AbstractModel
     public $Zone;
 
     /**
+     * @var string Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
      * @param string $Ip 用户IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 节点状态
@@ -107,6 +117,8 @@ class NodeInfo extends AbstractModel
      * @param string $LastRestartTime 节点上次重启的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Id Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

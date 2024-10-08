@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationSec(float $DurationSec) 设置DurationMs的秒表示
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getState() 获取状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setState(string $State) 设置状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowQueryRecord extends AbstractModel
 {
@@ -144,6 +152,18 @@ class SlowQueryRecord extends AbstractModel
     public $DurationSec;
 
     /**
+     * @var string 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $State;
+
+    /**
+     * @var string Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
      * @param string $OsUser 查询用户
      * @param string $InitialQueryId 查询ID
      * @param string $Sql SQL语句
@@ -163,6 +183,10 @@ class SlowQueryRecord extends AbstractModel
      * @param float $MemoryUsageMB MemoryUsage的MB表示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DurationSec DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $State 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName Catalog  Name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -236,6 +260,14 @@ class SlowQueryRecord extends AbstractModel
 
         if (array_key_exists("DurationSec",$param) and $param["DurationSec"] !== null) {
             $this->DurationSec = $param["DurationSec"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

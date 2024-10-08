@@ -153,11 +153,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyOperatorIdCardNumber(string $ProxyOperatorIdCardNumber) 设置子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
  * @method string getAutoJumpUrl() 获取认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
  * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
  * @method string getTopNavigationStatus() 获取是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
  * @method void setTopNavigationStatus(string $TopNavigationStatus) 设置是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
  * @method boolean getAutoActive() 获取是否自动激活子客
  * @method void setAutoActive(boolean $AutoActive) 设置是否自动激活子客
  */
@@ -284,12 +288,14 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var string 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public $AutoJumpUrl;
 
     /**
      * @var string 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      */
     public $TopNavigationStatus;
 
@@ -366,8 +372,10 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $ProxyOperatorIdCardNumber 子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
      * @param string $AutoJumpUrl 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      * @param string $TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      * @param boolean $AutoActive 是否自动激活子客
      */
     function __construct()

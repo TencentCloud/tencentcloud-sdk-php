@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncrypt(integer $Encrypt) 设置Encryptid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMain() 获取是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMain(boolean $Main) 设置是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -55,10 +59,18 @@ class ZoneInfo extends AbstractModel
     public $Encrypt;
 
     /**
+     * @var boolean 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Main;
+
+    /**
      * @param string $Name 可用区名称，例如"ap-guangzhou-1"
      * @param string $Desc 可用区描述信息，例如“广州一区”
      * @param integer $ZoneId 可用区唯一标记
      * @param integer $Encrypt Encryptid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Main 是否为主力园区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +100,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
             $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("Main",$param) and $param["Main"] !== null) {
+            $this->Main = $param["Main"];
         }
     }
 }

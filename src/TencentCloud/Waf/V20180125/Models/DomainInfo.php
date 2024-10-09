@@ -266,6 +266,10 @@ public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabels() 获取域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(array $Labels) 设置域名标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -533,6 +537,12 @@ public：公有云域名
     public $AccessStatus;
 
     /**
+     * @var array 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
@@ -655,6 +665,8 @@ public：公有云域名
      * @param string $SgID 安全组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AccessStatus clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Labels 域名标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -818,6 +830,10 @@ public：公有云域名
 
         if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
             $this->AccessStatus = $param["AccessStatus"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

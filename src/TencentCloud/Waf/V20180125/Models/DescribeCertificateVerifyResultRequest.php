@@ -22,14 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getCertType() 获取证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
- * @method void setCertType(integer $CertType) 设置证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
+ * @method integer getCertType() 获取证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+ * @method void setCertType(integer $CertType) 设置证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
  * @method string getCertificate() 获取CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method void setCertificate(string $Certificate) 设置CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method string getCertID() 获取CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method void setCertID(string $CertID) 设置CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method string getPrivateKey() 获取CertType为1时，需要填充此参数，表示自有证书的私钥
  * @method void setPrivateKey(string $PrivateKey) 设置CertType为1时，需要填充此参数，表示自有证书的私钥
+ * @method integer getGmCertType() 获取国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method void setGmCertType(integer $GmCertType) 设置国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method string getGmCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method void setGmCert(string $GmCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method string getGmPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method void setGmPrivateKey(string $GmPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method string getGmEncCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method void setGmEncCert(string $GmEncCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method string getGmEncPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  */
 class DescribeCertificateVerifyResultRequest extends AbstractModel
 {
@@ -39,7 +51,7 @@ class DescribeCertificateVerifyResultRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * @var integer 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
      */
     public $CertType;
 
@@ -59,11 +71,47 @@ class DescribeCertificateVerifyResultRequest extends AbstractModel
     public $PrivateKey;
 
     /**
+     * @var integer 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public $GmCertType;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public $GmCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public $GmSSLId;
+
+    /**
      * @param string $Domain 域名
-     * @param integer $CertType 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * @param integer $CertType 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
      * @param string $Certificate CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $CertID CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
+     * @param integer $GmCertType 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param string $GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * @param string $GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     function __construct()
     {
@@ -96,6 +144,30 @@ class DescribeCertificateVerifyResultRequest extends AbstractModel
 
         if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
             $this->PrivateKey = $param["PrivateKey"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
         }
     }
 }

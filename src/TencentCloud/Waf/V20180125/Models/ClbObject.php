@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbObject extends AbstractModel
 {
@@ -199,6 +203,12 @@ class ClbObject extends AbstractModel
     public $ObjectFlowMode;
 
     /**
+     * @var integer 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumericalVpcId;
+
+    /**
      * @param string $ObjectId 对象ID
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -227,6 +237,8 @@ class ClbObject extends AbstractModel
      * @param integer $ApiStatus api防护开关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumericalVpcId 数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -328,6 +340,10 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("ObjectFlowMode",$param) and $param["ObjectFlowMode"] !== null) {
             $this->ObjectFlowMode = $param["ObjectFlowMode"];
+        }
+
+        if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
+            $this->NumericalVpcId = $param["NumericalVpcId"];
         }
     }
 }

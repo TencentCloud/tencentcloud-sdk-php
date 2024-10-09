@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method array getRuleIds() 获取规则ID列表，支持批量删除
- * @method void setRuleIds(array $RuleIds) 设置规则ID列表，支持批量删除
- * @method boolean getDeleteAll() 获取是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
- * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+ * @method array getRuleIds() 获取规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
+ * @method void setRuleIds(array $RuleIds) 设置规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
+ * @method boolean getDeleteAll() 获取是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
+ * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
  * @method string getSourceType() 获取batch表示为批量防护的IP黑白名单
  * @method void setSourceType(string $SourceType) 设置batch表示为批量防护的IP黑白名单
- * @method integer getActionType() 获取IP黑白名单类型，40为IP白名单，42为IP黑名单
- * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40为IP白名单，42为IP黑名单
+ * @method integer getActionType() 获取IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
+ * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
  */
 class DeleteIpAccessControlV2Request extends AbstractModel
 {
@@ -39,12 +39,12 @@ class DeleteIpAccessControlV2Request extends AbstractModel
     public $Domain;
 
     /**
-     * @var array 规则ID列表，支持批量删除
+     * @var array 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
      */
     public $RuleIds;
 
     /**
-     * @var boolean 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+     * @var boolean 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
      */
     public $DeleteAll;
 
@@ -54,16 +54,16 @@ class DeleteIpAccessControlV2Request extends AbstractModel
     public $SourceType;
 
     /**
-     * @var integer IP黑白名单类型，40为IP白名单，42为IP黑名单
+     * @var integer IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
      */
     public $ActionType;
 
     /**
      * @param string $Domain 域名
-     * @param array $RuleIds 规则ID列表，支持批量删除
-     * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+     * @param array $RuleIds 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
+     * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
      * @param string $SourceType batch表示为批量防护的IP黑白名单
-     * @param integer $ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
+     * @param integer $ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
      */
     function __construct()
     {

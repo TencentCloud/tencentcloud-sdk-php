@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置域名备注信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabels() 获取域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(array $Labels) 设置域名标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbDomainsInfo extends AbstractModel
 {
@@ -140,6 +144,12 @@ class ClbDomainsInfo extends AbstractModel
     public $Note;
 
     /**
+     * @var array 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例ID
@@ -159,6 +169,8 @@ class ClbDomainsInfo extends AbstractModel
      * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Labels 域名标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +245,10 @@ class ClbDomainsInfo extends AbstractModel
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

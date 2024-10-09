@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。
  * @method string getResultVideoUrl() 获取结果视频URL。有效期 24 小时。
  * @method void setResultVideoUrl(string $ResultVideoUrl) 设置结果视频URL。有效期 24 小时。
+ * @method string getMaskVideoUrl() 获取掩码视频链接
+ * @method void setMaskVideoUrl(string $MaskVideoUrl) 设置掩码视频链接
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeImageAnimateJobResponse extends AbstractModel
     public $ResultVideoUrl;
 
     /**
+     * @var string 掩码视频链接
+     */
+    public $MaskVideoUrl;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeImageAnimateJobResponse extends AbstractModel
      * @param string $ErrorCode 错误码。
      * @param string $ErrorMessage 错误信息。
      * @param string $ResultVideoUrl 结果视频URL。有效期 24 小时。
+     * @param string $MaskVideoUrl 掩码视频链接
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeImageAnimateJobResponse extends AbstractModel
 
         if (array_key_exists("ResultVideoUrl",$param) and $param["ResultVideoUrl"] !== null) {
             $this->ResultVideoUrl = $param["ResultVideoUrl"];
+        }
+
+        if (array_key_exists("MaskVideoUrl",$param) and $param["MaskVideoUrl"] !== null) {
+            $this->MaskVideoUrl = $param["MaskVideoUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

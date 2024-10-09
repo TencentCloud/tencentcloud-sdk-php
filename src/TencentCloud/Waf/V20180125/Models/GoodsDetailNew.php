@@ -152,6 +152,10 @@ Saas 域名扩展包  sv_wsm_waf_domain
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMicroVersion() 获取模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMicroVersion(string $MicroVersion) 设置模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GoodsDetailNew extends AbstractModel
 {
@@ -270,6 +274,12 @@ Saas 域名扩展包  sv_wsm_waf_domain
     public $ResourceId;
 
     /**
+     * @var string 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MicroVersion;
+
+    /**
      * @param integer $TimeSpan 时间间隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 单位，支持购买d、m、y 即（日、月、年）
@@ -336,6 +346,8 @@ Saas 域名扩展包  sv_wsm_waf_domain
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源id
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MicroVersion 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -396,6 +408,10 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("MicroVersion",$param) and $param["MicroVersion"] !== null) {
+            $this->MicroVersion = $param["MicroVersion"];
         }
     }
 }

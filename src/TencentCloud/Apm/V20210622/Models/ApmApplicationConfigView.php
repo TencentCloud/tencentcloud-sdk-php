@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用相关的配置列表项
  *
- * @method string getInstanceKey() 获取实例ID	
- * @method void setInstanceKey(string $InstanceKey) 设置实例ID	
- * @method string getServiceName() 获取服务名	
- * @method void setServiceName(string $ServiceName) 设置服务名	
+ * @method string getInstanceKey() 获取业务系统ID	
+ * @method void setInstanceKey(string $InstanceKey) 设置业务系统ID	
+ * @method string getServiceName() 获取应用名	
+ * @method void setServiceName(string $ServiceName) 设置应用名	
  * @method string getOperationNameFilter() 获取接口过滤
  * @method void setOperationNameFilter(string $OperationNameFilter) 设置接口过滤
- * @method string getExceptionFilter() 获取异常过滤
- * @method void setExceptionFilter(string $ExceptionFilter) 设置异常过滤
- * @method string getErrorCodeFilter() 获取错误码过滤	
- * @method void setErrorCodeFilter(string $ErrorCodeFilter) 设置错误码过滤	
- * @method boolean getEventEnable() 获取应用诊断开关
+ * @method string getExceptionFilter() 获取错误类型过滤
+ * @method void setExceptionFilter(string $ExceptionFilter) 设置错误类型过滤
+ * @method string getErrorCodeFilter() 获取HTTP状态码过滤
+ * @method void setErrorCodeFilter(string $ErrorCodeFilter) 设置HTTP状态码过滤
+ * @method boolean getEventEnable() 获取应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventEnable(boolean $EventEnable) 设置应用诊断开关
+ * @method void setEventEnable(boolean $EventEnable) 设置应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUrlConvergenceSwitch() 获取URL收敛开关 0 关 1 开
  * @method void setUrlConvergenceSwitch(integer $UrlConvergenceSwitch) 设置URL收敛开关 0 关 1 开
@@ -44,36 +44,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlExclude(string $UrlExclude) 设置URL排除规则正则
  * @method integer getIsRelatedLog() 获取是否开启日志 0 关 1 开
  * @method void setIsRelatedLog(integer $IsRelatedLog) 设置是否开启日志 0 关 1 开
- * @method string getLogSource() 获取日志来源	
+ * @method string getLogSource() 获取日志源	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogSource(string $LogSource) 设置日志来源	
+ * @method void setLogSource(string $LogSource) 设置日志源	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogSet() 获取CLS日志集 
- * @method void setLogSet(string $LogSet) 设置CLS日志集 
- * @method string getLogTopicID() 获取日志主题ID
- * @method void setLogTopicID(string $LogTopicID) 设置日志主题ID
- * @method boolean getSnapshotEnable() 获取线程剖析开关
- * @method void setSnapshotEnable(boolean $SnapshotEnable) 设置线程剖析开关
- * @method integer getSnapshotTimeout() 获取线程剖析超时阈值	
- * @method void setSnapshotTimeout(integer $SnapshotTimeout) 设置线程剖析超时阈值	
- * @method boolean getAgentEnable() 获取探针开启开关
- * @method void setAgentEnable(boolean $AgentEnable) 设置探针开启开关
- * @method array getInstrumentList() 获取组件列表开关
+ * @method string getLogSet() 获取日志集 
+ * @method void setLogSet(string $LogSet) 设置日志集 
+ * @method string getLogTopicID() 获取日志主题
+ * @method void setLogTopicID(string $LogTopicID) 设置日志主题
+ * @method boolean getSnapshotEnable() 获取方法栈快照开关 true 开启 false 关闭
+ * @method void setSnapshotEnable(boolean $SnapshotEnable) 设置方法栈快照开关 true 开启 false 关闭
+ * @method integer getSnapshotTimeout() 获取慢调用监听触发阈值
+ * @method void setSnapshotTimeout(integer $SnapshotTimeout) 设置慢调用监听触发阈值
+ * @method boolean getAgentEnable() 获取探针总开关
+ * @method void setAgentEnable(boolean $AgentEnable) 设置探针总开关
+ * @method array getInstrumentList() 获取组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstrumentList(array $InstrumentList) 设置组件列表开关
+ * @method void setInstrumentList(array $InstrumentList) 设置组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getTraceSquash() 获取链路压缩开关
- * @method void setTraceSquash(boolean $TraceSquash) 设置链路压缩开关
+ * @method boolean getTraceSquash() 获取链路压缩开关（已废弃）
+ * @method void setTraceSquash(boolean $TraceSquash) 设置链路压缩开关（已废弃）
  */
 class ApmApplicationConfigView extends AbstractModel
 {
     /**
-     * @var string 实例ID	
+     * @var string 业务系统ID	
      */
     public $InstanceKey;
 
     /**
-     * @var string 服务名	
+     * @var string 应用名	
      */
     public $ServiceName;
 
@@ -83,17 +83,17 @@ class ApmApplicationConfigView extends AbstractModel
     public $OperationNameFilter;
 
     /**
-     * @var string 异常过滤
+     * @var string 错误类型过滤
      */
     public $ExceptionFilter;
 
     /**
-     * @var string 错误码过滤	
+     * @var string HTTP状态码过滤
      */
     public $ErrorCodeFilter;
 
     /**
-     * @var boolean 应用诊断开关
+     * @var boolean 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventEnable;
@@ -124,70 +124,70 @@ class ApmApplicationConfigView extends AbstractModel
     public $IsRelatedLog;
 
     /**
-     * @var string 日志来源	
+     * @var string 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSource;
 
     /**
-     * @var string CLS日志集 
+     * @var string 日志集 
      */
     public $LogSet;
 
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题
      */
     public $LogTopicID;
 
     /**
-     * @var boolean 线程剖析开关
+     * @var boolean 方法栈快照开关 true 开启 false 关闭
      */
     public $SnapshotEnable;
 
     /**
-     * @var integer 线程剖析超时阈值	
+     * @var integer 慢调用监听触发阈值
      */
     public $SnapshotTimeout;
 
     /**
-     * @var boolean 探针开启开关
+     * @var boolean 探针总开关
      */
     public $AgentEnable;
 
     /**
-     * @var array 组件列表开关
+     * @var array 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstrumentList;
 
     /**
-     * @var boolean 链路压缩开关
+     * @var boolean 链路压缩开关（已废弃）
      */
     public $TraceSquash;
 
     /**
-     * @param string $InstanceKey 实例ID	
-     * @param string $ServiceName 服务名	
+     * @param string $InstanceKey 业务系统ID	
+     * @param string $ServiceName 应用名	
      * @param string $OperationNameFilter 接口过滤
-     * @param string $ExceptionFilter 异常过滤
-     * @param string $ErrorCodeFilter 错误码过滤	
-     * @param boolean $EventEnable 应用诊断开关
+     * @param string $ExceptionFilter 错误类型过滤
+     * @param string $ErrorCodeFilter HTTP状态码过滤
+     * @param boolean $EventEnable 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UrlConvergenceSwitch URL收敛开关 0 关 1 开
      * @param integer $UrlConvergenceThreshold URL收敛阈值	
      * @param string $UrlConvergence URL收敛规则正则	
      * @param string $UrlExclude URL排除规则正则
      * @param integer $IsRelatedLog 是否开启日志 0 关 1 开
-     * @param string $LogSource 日志来源	
+     * @param string $LogSource 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogSet CLS日志集 
-     * @param string $LogTopicID 日志主题ID
-     * @param boolean $SnapshotEnable 线程剖析开关
-     * @param integer $SnapshotTimeout 线程剖析超时阈值	
-     * @param boolean $AgentEnable 探针开启开关
-     * @param array $InstrumentList 组件列表开关
+     * @param string $LogSet 日志集 
+     * @param string $LogTopicID 日志主题
+     * @param boolean $SnapshotEnable 方法栈快照开关 true 开启 false 关闭
+     * @param integer $SnapshotTimeout 慢调用监听触发阈值
+     * @param boolean $AgentEnable 探针总开关
+     * @param array $InstrumentList 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $TraceSquash 链路压缩开关
+     * @param boolean $TraceSquash 链路压缩开关（已废弃）
      */
     function __construct()
     {

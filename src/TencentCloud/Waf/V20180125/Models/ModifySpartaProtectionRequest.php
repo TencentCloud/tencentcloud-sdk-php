@@ -102,10 +102,24 @@ https：使用https协议回源
  * @method void setNote(string $Note) 设置域名备注信息
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
- * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
- * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
- * @method integer getProbeStatus() 获取0: 禁用拨测, 1: 启用拨测。默认启用拨测
- * @method void setProbeStatus(integer $ProbeStatus) 设置0: 禁用拨测, 1: 启用拨测。默认启用拨测
+ * @method integer getProxyBuffer() 获取是否开启缓存。 0：关闭 1：开启
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存。 0：关闭 1：开启
+ * @method integer getProbeStatus() 获取是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+ * @method integer getGmType() 获取国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method void setGmType(integer $GmType) 设置国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method integer getGmCertType() 获取国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method void setGmCertType(integer $GmCertType) 设置国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method string getGmCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method void setGmCert(string $GmCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method string getGmPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method void setGmPrivateKey(string $GmPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method string getGmEncCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method void setGmEncCert(string $GmEncCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method string getGmEncPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -291,14 +305,49 @@ https：使用https协议回源
     public $UpstreamHost;
 
     /**
-     * @var integer 是否开启缓存 0-关闭 1-开启
+     * @var integer 是否开启缓存。 0：关闭 1：开启
      */
     public $ProxyBuffer;
 
     /**
-     * @var integer 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @var integer 是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
      */
     public $ProbeStatus;
+
+    /**
+     * @var integer 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     */
+    public $GmType;
+
+    /**
+     * @var integer 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public $GmCertType;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public $GmCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public $GmSSLId;
 
     /**
      * @param string $Domain 域名
@@ -342,8 +391,15 @@ https：使用https协议回源
      * @param integer $XFFReset 是否开启XFF重置。0：关闭1：开启
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
-     * @param integer $ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @param integer $ProxyBuffer 是否开启缓存。 0：关闭 1：开启
+     * @param integer $ProbeStatus 是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+     * @param integer $GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * @param integer $GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param string $GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * @param string $GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     function __construct()
     {
@@ -509,6 +565,34 @@ https：使用https协议回源
 
         if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
             $this->ProbeStatus = $param["ProbeStatus"];
+        }
+
+        if (array_key_exists("GmType",$param) and $param["GmType"] !== null) {
+            $this->GmType = $param["GmType"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
         }
     }
 }

@@ -98,6 +98,12 @@ use TencentCloud\Common\AbstractModel;
         ARGS_HEADER（Header参数值）
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCaseNotSensitive() 获取0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCaseNotSensitive(integer $CaseNotSensitive) 设置0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Strategy extends AbstractModel
 {
@@ -157,6 +163,13 @@ class Strategy extends AbstractModel
     public $Arg;
 
     /**
+     * @var integer 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CaseNotSensitive;
+
+    /**
      * @param string $Field 匹配字段
 
     匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示：
@@ -196,6 +209,9 @@ class Strategy extends AbstractModel
         ARGS_HEADER（Header参数值）
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CaseNotSensitive 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -224,6 +240,10 @@ class Strategy extends AbstractModel
 
         if (array_key_exists("Arg",$param) and $param["Arg"] !== null) {
             $this->Arg = $param["Arg"];
+        }
+
+        if (array_key_exists("CaseNotSensitive",$param) and $param["CaseNotSensitive"] !== null) {
+            $this->CaseNotSensitive = $param["CaseNotSensitive"];
         }
     }
 }

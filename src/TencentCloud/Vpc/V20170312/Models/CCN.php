@@ -211,6 +211,7 @@ class CCN extends AbstractModel
     /**
      * @var string 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Ipv6Flag;
 

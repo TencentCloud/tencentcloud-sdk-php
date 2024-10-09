@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
  * @method array getConnDetectConfig() 获取联通性检测的配置
  * @method void setConnDetectConfig(array $ConnDetectConfig) 设置联通性检测的配置
+ * @method integer getRegistryId() 获取仓库唯一id
+ * @method void setRegistryId(integer $RegistryId) 设置仓库唯一id
  */
 class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $ConnDetectConfig;
 
     /**
+     * @var integer 仓库唯一id
+     */
+    public $RegistryId;
+
+    /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
@@ -112,6 +119,7 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param integer $SpeedLimit 限速
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
      * @param array $ConnDetectConfig 联通性检测的配置
+     * @param integer $RegistryId 仓库唯一id
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConnDetectConfig, $obj);
             }
+        }
+
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
         }
     }
 }

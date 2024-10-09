@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGeneralApmApplicationConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取业务系统Id
+ * @method void setInstanceId(string $InstanceId) 设置业务系统Id
  * @method array getTags() 获取需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
  * @method void setTags(array $Tags) 设置需要修改的字段key value分别指定字段名、字段值
- * @method array getServiceNames() 获取需要修改配置的服务列表名称	
- * @method void setServiceNames(array $ServiceNames) 设置需要修改配置的服务列表名称	
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
+ * @method array getServiceNames() 获取需要修改配置的应用列表名称	
+ * @method void setServiceNames(array $ServiceNames) 设置需要修改配置的应用列表名称	
  */
 class ModifyGeneralApmApplicationConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 业务系统Id
      */
     public $InstanceId;
 
     /**
      * @var array 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
      */
     public $Tags;
 
     /**
-     * @var array 需要修改配置的服务列表名称	
+     * @var array 需要修改配置的应用列表名称	
      */
     public $ServiceNames;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 业务系统Id
      * @param array $Tags 需要修改的字段key value分别指定字段名、字段值
-     * @param array $ServiceNames 需要修改配置的服务列表名称	
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
+     * @param array $ServiceNames 需要修改配置的应用列表名称	
      */
     function __construct()
     {

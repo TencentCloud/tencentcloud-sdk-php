@@ -69,7 +69,9 @@ use TencentCloud\Common\AbstractModel;
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
  * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -79,7 +81,9 @@ use TencentCloud\Common\AbstractModel;
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
  * @method string getApproverIdCardNumber() 获取签署方经办人的证件号码，应符合以下规则
 <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>
@@ -305,7 +309,9 @@ class ApproverInfo extends AbstractModel
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
      */
     public $ApproverIdCardType;
 
@@ -493,7 +499,9 @@ class ApproverInfo extends AbstractModel
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
      * @param string $ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
 <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ess\V20201111\Models as Models;
 
 /**
+ * @method Models\ArchiveDynamicFlowResponse ArchiveDynamicFlow(Models\ArchiveDynamicFlowRequest $req) 该接口用于结束动态签署流程，若当前合同还存在签署方未签署，无法结束。
  * @method Models\BindEmployeeUserIdWithClientOpenIdResponse BindEmployeeUserIdWithClientOpenId(Models\BindEmployeeUserIdWithClientOpenIdRequest $req) 此接口（BindEmployeeUserIdWithClientOpenId）用于将电子签系统员工UserId与客户系统员工OpenId进行绑定。
 
 此OpenId只在 [更新企业员工信息 ](https://qian.tencent.com/developers/companyApis/staffs/UpdateIntegrationEmployees)、[移除企业员工](https://qian.tencent.com/developers/companyApis/staffs/DeleteIntegrationEmployees) 等场景下可以使用
@@ -167,6 +168,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 合成后合同样子示例
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/140a2fb771ac66a185d0a000d37485f6.png)
+ * @method Models\CreateDynamicFlowApproverResponse CreateDynamicFlowApprover(Models\CreateDynamicFlowApproverRequest $req) 此接口（CreateDynamicFlowApprover）用来补充动态合同的签署人信息。<br/>
+适用场景：使用CreateFlowByFiles指定：OpenDynamicSignFlow=true发起的合同，可以使用该接口补充后续签署人。<br/>
  * @method Models\CreateEmbedWebUrlResponse CreateEmbedWebUrl(Models\CreateEmbedWebUrlRequest $req) 本接口（CreateEmbedWebUrl）用于创建可嵌入web页面的URL（此web页面可以通过iframe方式嵌入到贵方系统的网页中），支持以下类型的Web链接创建：
 1. 创建印章
 2. 创建模板

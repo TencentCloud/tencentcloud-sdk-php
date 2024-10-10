@@ -82,9 +82,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectConnectAccelerateChannelFlag(boolean $DirectConnectAccelerateChannelFlag) 设置是否开启二层云联网通道。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIpv6Flag() 获取是否支持ipv6路由表
+ * @method boolean getIpv6Flag() 获取是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6Flag(string $Ipv6Flag) 设置是否支持ipv6路由表
+ * @method void setIpv6Flag(boolean $Ipv6Flag) 设置是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMrtbAggregatePolicyFlag() 获取是否支持路由表聚合策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -209,9 +209,8 @@ class CCN extends AbstractModel
     public $DirectConnectAccelerateChannelFlag;
 
     /**
-     * @var string 是否支持ipv6路由表
+     * @var boolean 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @deprecated
      */
     public $Ipv6Flag;
 
@@ -259,7 +258,7 @@ class CCN extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ipv6Flag 是否支持ipv6路由表
+     * @param boolean $Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MrtbAggregatePolicyFlag 是否支持路由表聚合策略
 注意：此字段可能返回 null，表示取不到有效值。

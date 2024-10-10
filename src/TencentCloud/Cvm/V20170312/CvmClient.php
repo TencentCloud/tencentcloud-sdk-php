@@ -152,7 +152,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\EnterRescueModeResponse EnterRescueMode(Models\EnterRescueModeRequest $req) 进入救援模式
  * @method Models\ExitRescueModeResponse ExitRescueMode(Models\ExitRescueModeRequest $req) 退出救援模式
  * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) 提供导出自定义镜像到指定COS存储桶的能力
- * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
+ * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持RAW、VHD、QCOW2、VMDK镜像格式。
  * @method Models\ImportInstancesActionTimerResponse ImportInstancesActionTimer(Models\ImportInstancesActionTimerRequest $req) 导入定时任务
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) 本接口 (ImportKeyPair) 用于导入密钥对。
 

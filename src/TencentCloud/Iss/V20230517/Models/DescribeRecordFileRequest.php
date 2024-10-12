@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置检索开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
  * @method integer getEndTime() 获取检索结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
  * @method void setEndTime(integer $EndTime) 设置检索结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
+ * @method boolean getWithUrl() 获取是否携带每个时间段的播放url
+ * @method void setWithUrl(boolean $WithUrl) 设置是否携带每个时间段的播放url
  */
 class DescribeRecordFileRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeRecordFileRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var boolean 是否携带每个时间段的播放url
+     */
+    public $WithUrl;
+
+    /**
      * @param string $DeviceId 通道所属设备ID
      * @param string $ChannelId 通道ID
      * @param integer $StartTime 检索开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
      * @param integer $EndTime 检索结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
+     * @param boolean $WithUrl 是否携带每个时间段的播放url
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeRecordFileRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("WithUrl",$param) and $param["WithUrl"] !== null) {
+            $this->WithUrl = $param["WithUrl"];
         }
     }
 }

@@ -64,6 +64,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
 
 获取信息防泄漏规则列表
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
+ * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 获取Api请求详情信息
+ * @method Models\DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(Models\DescribeApiListVersionTwoRequest $req) api资产列表
  * @method Models\DescribeAreaBanAreasResponse DescribeAreaBanAreas(Models\DescribeAreaBanAreasRequest $req) 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
  * @method Models\DescribeAreaBanSupportAreasResponse DescribeAreaBanSupportAreas(Models\DescribeAreaBanSupportAreasRequest $req) 获取WAF地域封禁支持的地域列表
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览

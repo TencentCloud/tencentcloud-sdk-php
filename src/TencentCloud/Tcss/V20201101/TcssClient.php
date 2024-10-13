@@ -106,17 +106,23 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) 查询运行时异常进程事件详细信息
  * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) 查询待处理异常进程事件趋势
  * @method Models\DescribeAbnormalProcessEventsResponse DescribeAbnormalProcessEvents(Models\DescribeAbnormalProcessEventsRequest $req) 查询运行时异常进程事件列表信息
- * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 查询运行时异常进程事件列表信息导出
+ * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 接口已废弃
+
+查询运行时异常进程事件列表信息导出
  * @method Models\DescribeAbnormalProcessLevelSummaryResponse DescribeAbnormalProcessLevelSummary(Models\DescribeAbnormalProcessLevelSummaryRequest $req) 统计异常进程各威胁等级待处理事件数
  * @method Models\DescribeAbnormalProcessRuleDetailResponse DescribeAbnormalProcessRuleDetail(Models\DescribeAbnormalProcessRuleDetailRequest $req) 查询运行时异常策略详细信息
  * @method Models\DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(Models\DescribeAbnormalProcessRulesRequest $req) 查询运行时异常进程策略列表信息
- * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 查询运行时异常进程策略列表信息导出
+ * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 接口已废弃
+
+查询运行时异常进程策略列表信息导出
  * @method Models\DescribeAccessControlDetailResponse DescribeAccessControlDetail(Models\DescribeAccessControlDetailRequest $req) 查询运行时访问控制事件的详细信息
  * @method Models\DescribeAccessControlEventsResponse DescribeAccessControlEvents(Models\DescribeAccessControlEventsRequest $req) 查询运行时访问控制事件列表
  * @method Models\DescribeAccessControlEventsExportResponse DescribeAccessControlEventsExport(Models\DescribeAccessControlEventsExportRequest $req) 查询运行时访问控制事件列表导出
  * @method Models\DescribeAccessControlRuleDetailResponse DescribeAccessControlRuleDetail(Models\DescribeAccessControlRuleDetailRequest $req) 查询运行时访问控制策略详细信息
  * @method Models\DescribeAccessControlRulesResponse DescribeAccessControlRules(Models\DescribeAccessControlRulesRequest $req) 查询运行访问控制策略列表信息
- * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) 查询运行时访问控制策略列表导出
+ * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) 接口已废弃
+
+查询运行时访问控制策略列表导出
  * @method Models\DescribeAffectedClusterCountResponse DescribeAffectedClusterCount(Models\DescribeAffectedClusterCountRequest $req) 获取受影响的集群数量，返回数量
  * @method Models\DescribeAffectedNodeListResponse DescribeAffectedNodeList(Models\DescribeAffectedNodeListRequest $req) 查询节点类型的影响范围，返回节点列表
  * @method Models\DescribeAffectedWorkloadListResponse DescribeAffectedWorkloadList(Models\DescribeAffectedWorkloadListRequest $req) 查询workload类型的影响范围，返回workload列表
@@ -134,7 +140,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAssetImageDetailResponse DescribeAssetImageDetail(Models\DescribeAssetImageDetailRequest $req) 查询镜像详细信息
  * @method Models\DescribeAssetImageHostListResponse DescribeAssetImageHostList(Models\DescribeAssetImageHostListRequest $req) 容器安全查询镜像关联主机
  * @method Models\DescribeAssetImageListResponse DescribeAssetImageList(Models\DescribeAssetImageListRequest $req) 容器安全搜索查询镜像列表
- * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) 容器安全搜索查询镜像列表导出
+ * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) 接口已废弃
+
+容器安全搜索查询镜像列表导出
  * @method Models\DescribeAssetImageRegistryAssetStatusResponse DescribeAssetImageRegistryAssetStatus(Models\DescribeAssetImageRegistryAssetStatusRequest $req) 查看镜像仓库资产更新进度状态
  * @method Models\DescribeAssetImageRegistryDetailResponse DescribeAssetImageRegistryDetail(Models\DescribeAssetImageRegistryDetailRequest $req) 镜像仓库镜像仓库列表详情
  * @method Models\DescribeAssetImageRegistryListResponse DescribeAssetImageRegistryList(Models\DescribeAssetImageRegistryListRequest $req) 镜像仓库镜像仓库列表
@@ -189,7 +197,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeEscapeEventInfoResponse DescribeEscapeEventInfo(Models\DescribeEscapeEventInfoRequest $req) DescribeEscapeEventInfo 查询容器逃逸事件列表
  * @method Models\DescribeEscapeEventTendencyResponse DescribeEscapeEventTendency(Models\DescribeEscapeEventTendencyRequest $req) 查询待处理逃逸事件趋势
  * @method Models\DescribeEscapeEventTypeSummaryResponse DescribeEscapeEventTypeSummary(Models\DescribeEscapeEventTypeSummaryRequest $req) 统计容器逃逸各事件类型和待处理事件数
- * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) DescribeEscapeEventsExport  查询容器逃逸事件列表导出
+ * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) 接口已废弃
+
+DescribeEscapeEventsExport  查询容器逃逸事件列表导出
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) DescribeEscapeSafeState 查询容器逃逸安全状态
  * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) 查询逃逸白名单

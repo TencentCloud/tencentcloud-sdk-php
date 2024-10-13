@@ -53,6 +53,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) 创建媒体传输的输入配置。
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) 创建媒体传输流的输出信息。
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) 创建用户自定义转码模板，数量上限：1000
+ * @method Models\CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(Models\CreateVideoDatabaseEntryTaskRequest $req) 对URL链接或COS中的视频发起入库任务。
+可选在任务完成后向回调方发送任务完成状态信息。
+ * @method Models\CreateVideoSearchTaskResponse CreateVideoSearchTask(Models\CreateVideoSearchTaskRequest $req) 使用检索值检索库中最接近检索值的若干视频。
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) 创建用户自定义水印模板，数量上限：1000。
  * @method Models\CreateWordSamplesResponse CreateWordSamples(Models\CreateWordSamplesRequest $req) 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行不适宜内容识别、内容识别等视频处理。
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
@@ -118,6 +121,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
 * 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
 * 只能查询到最近七天（168小时）内的任务。
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method Models\DescribeVideoDatabaseEntryTaskDetailResponse DescribeVideoDatabaseEntryTaskDetail(Models\DescribeVideoDatabaseEntryTaskDetailRequest $req) 根据任务ID查询视频入库任务的状态。
+ * @method Models\DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetail(Models\DescribeVideoSearchTaskDetailRequest $req) 根据任务ID查询视频检索任务的状态。
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) 查询用户自定义水印模板，支持根据条件，分页查询。
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。

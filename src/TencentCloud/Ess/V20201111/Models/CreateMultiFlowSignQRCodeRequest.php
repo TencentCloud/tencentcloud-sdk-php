@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  * @method array getApproverComponentLimitTypes() 获取指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
  * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+ * @method boolean getForbidPersonalMultipleSign() 获取禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+ * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
  */
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -152,6 +154,11 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $ApproverComponentLimitTypes;
 
     /**
+     * @var boolean 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public $ForbidPersonalMultipleSign;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $TemplateId 合同模板ID，为32位字符串。
@@ -178,6 +185,7 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param array $ApproverComponentLimitTypes 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+     * @param boolean $ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
      */
     function __construct()
     {
@@ -251,6 +259,10 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApproverComponentLimitTypes, $obj);
             }
+        }
+
+        if (array_key_exists("ForbidPersonalMultipleSign",$param) and $param["ForbidPersonalMultipleSign"] !== null) {
+            $this->ForbidPersonalMultipleSign = $param["ForbidPersonalMultipleSign"];
         }
     }
 }

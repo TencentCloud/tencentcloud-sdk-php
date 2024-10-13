@@ -33,6 +33,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
  * @method void setFilters(array $Filters) 设置过滤项。
 可过滤值包括：
 ResoureRegion - 资源所处地域，需要填写完整地域名称，不支持模糊匹配。
@@ -44,6 +46,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
  * @method integer getLimit() 获取分页步长，默认为100。
  * @method void setLimit(integer $Limit) 设置分页步长，默认为100。
  * @method integer getOffset() 获取分页偏移量，默认为0。
@@ -70,6 +74,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
      */
     public $Filters;
 
@@ -101,6 +107,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
      * @param integer $Limit 分页步长，默认为100。
      * @param integer $Offset 分页偏移量，默认为0。
      * @param string $BindType 资源绑定状态过滤，默认为全部

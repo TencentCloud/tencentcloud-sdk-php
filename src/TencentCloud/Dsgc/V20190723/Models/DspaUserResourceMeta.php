@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceValue(string $InstanceValue) 设置实例值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGovernAuthStatus() 获取//治理授权状态（0：关闭 1：开启）
+ * @method void setGovernAuthStatus(integer $GovernAuthStatus) 设置//治理授权状态（0：关闭 1：开启）
+ * @method string getAuthRange() 获取授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuthRange(string $AuthRange) 设置授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaUserResourceMeta extends AbstractModel
 {
@@ -177,6 +183,17 @@ class DspaUserResourceMeta extends AbstractModel
     public $InstanceValue;
 
     /**
+     * @var integer //治理授权状态（0：关闭 1：开启）
+     */
+    public $GovernAuthStatus;
+
+    /**
+     * @var string 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AuthRange;
+
+    /**
      * @param string $ResourceId 用户资源ID。
      * @param string $ResourceName 资源名称。
      * @param string $ResourceVip 资源VIP。
@@ -199,6 +216,9 @@ class DspaUserResourceMeta extends AbstractModel
      * @param string $InstanceType 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceValue 实例值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GovernAuthStatus //治理授权状态（0：关闭 1：开启）
+     * @param string $AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -296,6 +316,14 @@ class DspaUserResourceMeta extends AbstractModel
 
         if (array_key_exists("InstanceValue",$param) and $param["InstanceValue"] !== null) {
             $this->InstanceValue = $param["InstanceValue"];
+        }
+
+        if (array_key_exists("GovernAuthStatus",$param) and $param["GovernAuthStatus"] !== null) {
+            $this->GovernAuthStatus = $param["GovernAuthStatus"];
+        }
+
+        if (array_key_exists("AuthRange",$param) and $param["AuthRange"] !== null) {
+            $this->AuthRange = $param["AuthRange"];
         }
     }
 }

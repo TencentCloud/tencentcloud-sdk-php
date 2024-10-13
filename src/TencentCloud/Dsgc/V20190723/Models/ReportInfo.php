@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgressPercent(integer $ProgressPercent) 设置进度百分比
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReportTemplateName() 获取报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportTemplateName(string $ReportTemplateName) 设置报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportInfo extends AbstractModel
 {
@@ -158,6 +162,12 @@ class ReportInfo extends AbstractModel
     public $ProgressPercent;
 
     /**
+     * @var string 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportTemplateName;
+
+    /**
      * @param integer $Id 任务id
      * @param string $ReportName 报告名称
      * @param string $ReportType 报告类型（AssetSorting:资产梳理）
@@ -183,6 +193,8 @@ class ReportInfo extends AbstractModel
      * @param string $ComplianceName 识别模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProgressPercent 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReportTemplateName 报告模版名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -252,6 +264,10 @@ class ReportInfo extends AbstractModel
 
         if (array_key_exists("ProgressPercent",$param) and $param["ProgressPercent"] !== null) {
             $this->ProgressPercent = $param["ProgressPercent"];
+        }
+
+        if (array_key_exists("ReportTemplateName",$param) and $param["ReportTemplateName"] !== null) {
+            $this->ReportTemplateName = $param["ReportTemplateName"];
         }
     }
 }

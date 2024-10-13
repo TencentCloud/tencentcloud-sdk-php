@@ -24,40 +24,30 @@ use TencentCloud\Common\AbstractModel;
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
  * @method void setVendor(integer $Vendor) 设置腾讯云对象存储COS以及第三方云存储账号信息
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
  * @method string getRegion() 获取腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
  * @method void setRegion(string $Region) 设置腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
  * @method string getBucket() 获取云存储桶名称。
  * @method void setBucket(string $Bucket) 设置云存储桶名称。
  * @method string getAccessKey() 获取云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
  * @method void setAccessKey(string $AccessKey) 设置云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
  * @method string getSecretKey() 获取云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
  * @method void setSecretKey(string $SecretKey) 设置云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
  * @method array getFileNamePrefix() 获取云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
  * @method void setFileNamePrefix(array $FileNamePrefix) 设置云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
  */
 class CloudStorage extends AbstractModel
 {
@@ -66,7 +56,6 @@ class CloudStorage extends AbstractModel
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
      */
     public $Vendor;
 
@@ -75,7 +64,6 @@ class CloudStorage extends AbstractModel
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
      */
     public $Region;
 
@@ -87,20 +75,17 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
     /**
      * @var string 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
      */
     public $AccessKey;
 
     /**
      * @var string 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
      */
     public $SecretKey;
 
     /**
      * @var array 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
      */
     public $FileNamePrefix;
 
@@ -109,21 +94,16 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
      * @param string $Region 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
      * @param string $Bucket 云存储桶名称。
      * @param string $AccessKey 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
      * @param string $SecretKey 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
      * @param array $FileNamePrefix 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
      */
     function __construct()
     {

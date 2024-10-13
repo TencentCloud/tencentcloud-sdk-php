@@ -106,16 +106,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestoreTime(string $RestoreTime) 设置克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
  * @method string getInstanceName() 获取实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
- * @method array getAvailabilityZoneList() 获取多可用区部署的节点列表。具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)获取。
+ * @method array getAvailabilityZoneList() 获取若多可用区部署云数据库实例，指定多可用区列表。
+- 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
+- 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
 - 多可用区部署节点只能部署在3个不同可用区。不支持将集群的大多数节点部署在同一个可用区。例如：3节点集群不支持2个节点部署在同一个区。
-- 不支持4.2及以上版本。
-- 不支持只读灾备实例。
-- 不能选择基础网络。
- * @method void setAvailabilityZoneList(array $AvailabilityZoneList) 设置多可用区部署的节点列表。具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)获取。
+ * @method void setAvailabilityZoneList(array $AvailabilityZoneList) 设置若多可用区部署云数据库实例，指定多可用区列表。
+- 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
+- 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
 - 多可用区部署节点只能部署在3个不同可用区。不支持将集群的大多数节点部署在同一个可用区。例如：3节点集群不支持2个节点部署在同一个区。
-- 不支持4.2及以上版本。
-- 不支持只读灾备实例。
-- 不能选择基础网络。
  * @method integer getMongosCpu() 获取Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
  * @method void setMongosCpu(integer $MongosCpu) 设置Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
  * @method integer getMongosMemory() 获取Mongos 内存大小。
@@ -273,11 +271,10 @@ class CreateDBInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var array 多可用区部署的节点列表。具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)获取。
+     * @var array 若多可用区部署云数据库实例，指定多可用区列表。
+- 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
+- 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
 - 多可用区部署节点只能部署在3个不同可用区。不支持将集群的大多数节点部署在同一个可用区。例如：3节点集群不支持2个节点部署在同一个区。
-- 不支持4.2及以上版本。
-- 不支持只读灾备实例。
-- 不能选择基础网络。
      */
     public $AvailabilityZoneList;
 
@@ -364,11 +361,10 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $SecurityGroup 安全组 ID。 
      * @param string $RestoreTime 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
      * @param string $InstanceName 实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
-     * @param array $AvailabilityZoneList 多可用区部署的节点列表。具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)获取。
+     * @param array $AvailabilityZoneList 若多可用区部署云数据库实例，指定多可用区列表。
+- 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
+- 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
 - 多可用区部署节点只能部署在3个不同可用区。不支持将集群的大多数节点部署在同一个可用区。例如：3节点集群不支持2个节点部署在同一个区。
-- 不支持4.2及以上版本。
-- 不支持只读灾备实例。
-- 不能选择基础网络。
      * @param integer $MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
      * @param integer $MongosMemory Mongos 内存大小。
 -  购买分片集群时，必须填写。

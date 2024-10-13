@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupMethod(string $BackupMethod) 设置备份方式。auto-自动备份，manual-手动
  * @method string getSnapshotTime() 获取备份时间
  * @method void setSnapshotTime(string $SnapshotTime) 设置备份时间
+ * @method array getCrossRegionBackupInfos() 获取跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCrossRegionBackupInfos(array $CrossRegionBackupInfos) 设置跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManualBackupData extends AbstractModel
 {
@@ -45,9 +49,17 @@ class ManualBackupData extends AbstractModel
     public $SnapshotTime;
 
     /**
+     * @var array 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CrossRegionBackupInfos;
+
+    /**
      * @param string $BackupType 备份类型。snapshot-快照备份
      * @param string $BackupMethod 备份方式。auto-自动备份，manual-手动
      * @param string $SnapshotTime 备份时间
+     * @param array $CrossRegionBackupInfos 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,15 @@ class ManualBackupData extends AbstractModel
 
         if (array_key_exists("SnapshotTime",$param) and $param["SnapshotTime"] !== null) {
             $this->SnapshotTime = $param["SnapshotTime"];
+        }
+
+        if (array_key_exists("CrossRegionBackupInfos",$param) and $param["CrossRegionBackupInfos"] !== null) {
+            $this->CrossRegionBackupInfos = [];
+            foreach ($param["CrossRegionBackupInfos"] as $key => $value){
+                $obj = new CrossRegionBackupItem();
+                $obj->deserialize($value);
+                array_push($this->CrossRegionBackupInfos, $obj);
+            }
         }
     }
 }

@@ -226,6 +226,14 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(InstanceDetail $Details) 设置实例扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsWhiteSGs() 获取安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsWhiteSGs(boolean $IsWhiteSGs) 设置安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBindSGs() 获取绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindSGs(array $BindSGs) 设置绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -533,6 +541,18 @@ Modify 集群变更中；
     public $Details;
 
     /**
+     * @var boolean 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsWhiteSGs;
+
+    /**
+     * @var array 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindSGs;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -635,6 +655,10 @@ Modify 集群变更中；
      * @param boolean $ClickHouseKeeper 是否clickhouse-keeper
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceDetail $Details 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsWhiteSGs 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BindSGs 绑定的安全组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -862,6 +886,14 @@ Modify 集群变更中；
         if (array_key_exists("Details",$param) and $param["Details"] !== null) {
             $this->Details = new InstanceDetail();
             $this->Details->deserialize($param["Details"]);
+        }
+
+        if (array_key_exists("IsWhiteSGs",$param) and $param["IsWhiteSGs"] !== null) {
+            $this->IsWhiteSGs = $param["IsWhiteSGs"];
+        }
+
+        if (array_key_exists("BindSGs",$param) and $param["BindSGs"] !== null) {
+            $this->BindSGs = $param["BindSGs"];
         }
     }
 }

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBUnbindNum(integer $DBUnbindNum) 设置db月解绑次数
  * @method integer getCOSUnbindNum() 获取cos月解绑次数
  * @method void setCOSUnbindNum(integer $COSUnbindNum) 设置cos月解绑次数
+ * @method integer getInsTotalQuota() 获取用户购买的实例配额。
+ * @method void setInsTotalQuota(integer $InsTotalQuota) 设置用户购买的实例配额。
+ * @method integer getInsRemainQuota() 获取用户可用的实例配额。
+ * @method void setInsRemainQuota(integer $InsRemainQuota) 设置用户可用的实例配额。
+ * @method string getVersion() 获取用户购买的版本
+ * @method void setVersion(string $Version) 设置用户购买的版本
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +88,21 @@ class GetUserQuotaInfoResponse extends AbstractModel
     public $COSUnbindNum;
 
     /**
+     * @var integer 用户购买的实例配额。
+     */
+    public $InsTotalQuota;
+
+    /**
+     * @var integer 用户可用的实例配额。
+     */
+    public $InsRemainQuota;
+
+    /**
+     * @var string 用户购买的版本
+     */
+    public $Version;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +116,9 @@ class GetUserQuotaInfoResponse extends AbstractModel
      * @param string $CosQuotaUnit COS存储量单位，例如TB。
      * @param integer $DBUnbindNum db月解绑次数
      * @param integer $COSUnbindNum cos月解绑次数
+     * @param integer $InsTotalQuota 用户购买的实例配额。
+     * @param integer $InsRemainQuota 用户可用的实例配额。
+     * @param string $Version 用户购买的版本
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +164,18 @@ class GetUserQuotaInfoResponse extends AbstractModel
 
         if (array_key_exists("COSUnbindNum",$param) and $param["COSUnbindNum"] !== null) {
             $this->COSUnbindNum = $param["COSUnbindNum"];
+        }
+
+        if (array_key_exists("InsTotalQuota",$param) and $param["InsTotalQuota"] !== null) {
+            $this->InsTotalQuota = $param["InsTotalQuota"];
+        }
+
+        if (array_key_exists("InsRemainQuota",$param) and $param["InsRemainQuota"] !== null) {
+            $this->InsRemainQuota = $param["InsRemainQuota"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

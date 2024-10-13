@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - tagKey：标签键。
- * @method array getValue() 获取过滤字段值。
- * @method void setValue(array $Value) 设置过滤字段值。
+ * @method array getValue() 获取过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
+ * @method void setValue(array $Value) 设置过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
  * @method boolean getFuzzy() 获取是否启用模糊查询，仅支持过滤字段名为origin，domain。
 模糊查询时，Value长度最大为1，否则Value长度最大为5。
  * @method void setFuzzy(boolean $Fuzzy) 设置是否启用模糊查询，仅支持过滤字段名为origin，domain。
@@ -70,7 +70,7 @@ class DomainFilter extends AbstractModel
     public $Name;
 
     /**
-     * @var array 过滤字段值。
+     * @var array 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
      */
     public $Value;
 
@@ -93,7 +93,7 @@ class DomainFilter extends AbstractModel
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - tagKey：标签键。
-     * @param array $Value 过滤字段值。
+     * @param array $Value 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
      * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为origin，domain。
 模糊查询时，Value长度最大为1，否则Value长度最大为5。
      */

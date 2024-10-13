@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtendScene getExtendScene() 获取印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtendScene(ExtendScene $ExtendScene) 设置印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OccupiedSeal extends AbstractModel
 {
@@ -107,6 +111,12 @@ class OccupiedSeal extends AbstractModel
     public $AuthorizedUsers;
 
     /**
+     * @var ExtendScene 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtendScene;
+
+    /**
      * @param string $SealId 电子印章编号
      * @param string $SealName 电子印章名称
      * @param integer $CreateOn 电子印章授权时间戳，单位秒
@@ -119,6 +129,8 @@ class OccupiedSeal extends AbstractModel
      * @param string $SealType 印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
      * @param boolean $IsAllTime 用印申请是否为永久授权，true-是，false-否
      * @param array $AuthorizedUsers 授权人列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendScene $ExtendScene 印章扩展数据信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +193,11 @@ class OccupiedSeal extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AuthorizedUsers, $obj);
             }
+        }
+
+        if (array_key_exists("ExtendScene",$param) and $param["ExtendScene"] !== null) {
+            $this->ExtendScene = new ExtendScene();
+            $this->ExtendScene->deserialize($param["ExtendScene"]);
         }
     }
 }

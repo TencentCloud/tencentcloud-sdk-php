@@ -34,6 +34,8 @@ UserName和Password必须同时填写或同时为空。
 UserName和Password必须同时填写或同时为空。
  * @method void setPassword(string $Password) 设置账户密码，为空则表示不更新。
 UserName和Password必须同时填写或同时为空。
+ * @method string getAuthRange() 获取授权范围：all 授权全部  manual：手动指定
+ * @method void setAuthRange(string $AuthRange) 设置授权范围：all 授权全部  manual：手动指定
  */
 class UpdateDSPASelfBuildResourceRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ UserName和Password必须同时填写或同时为空。
     public $Password;
 
     /**
+     * @var string 授权范围：all 授权全部  manual：手动指定
+     */
+    public $AuthRange;
+
+    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $ResourceId 云资源名称，如果是通过CVM访问则填写CVM的资源ID，如果是通过LB访问则填写LB的资源ID。
      * @param integer $ResourceVPort 资源绑定的端口，为0则表示不更新。
@@ -72,6 +79,7 @@ UserName和Password必须同时填写或同时为空。
 UserName和Password必须同时填写或同时为空。
      * @param string $Password 账户密码，为空则表示不更新。
 UserName和Password必须同时填写或同时为空。
+     * @param string $AuthRange 授权范围：all 授权全部  manual：手动指定
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ UserName和Password必须同时填写或同时为空。
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("AuthRange",$param) and $param["AuthRange"] !== null) {
+            $this->AuthRange = $param["AuthRange"];
         }
     }
 }

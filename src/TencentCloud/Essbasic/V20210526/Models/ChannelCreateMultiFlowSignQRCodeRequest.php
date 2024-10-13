@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
+ * @method boolean getForbidPersonalMultipleSign() 获取禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+ * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -134,6 +136,11 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var boolean 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public $ForbidPersonalMultipleSign;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -155,6 +162,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 <br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param UserInfo $Operator 暂未开放
+     * @param boolean $ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("ForbidPersonalMultipleSign",$param) and $param["ForbidPersonalMultipleSign"] !== null) {
+            $this->ForbidPersonalMultipleSign = $param["ForbidPersonalMultipleSign"];
         }
     }
 }

@@ -20,27 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyExtendedService返回参数结构体
  *
- * @method string getOperateUrl() 获取操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+ * @method string getOperateUrl() 获取操作跳转链接
+<ul>
+<li><strong>有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>无跳转链接返回的情况：</strong> 如果在操作过程中没有返回跳转链接，这意味着无需进行跳转操作。在这种情况下，服务将会直接被开通或关闭。
+<li><strong>有跳转链接返回的情况：</strong> 当操作类型为“OPEN”（开通服务），并且扩展服务类型为以下之一时，  系统将返回一个操作链接。当前操作人（超级管理员或法人）需要点击此链接，以完成服务的开通操作。
 
-当操作类型是 OPEN 且 扩展服务类型是  OPEN_SERVER_SIGN 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接当前操作人（超管或法人）点击链接完成服务开通操作。
- * @method void setOperateUrl(string $OperateUrl) 设置操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+<ul>
+<li><strong>OPEN_SERVER_SIGN</strong>（开放服务器签名）</li>
+<li><strong>OVERSEA_SIGN</strong>（海外签名）</li>
+</ul></li></li>
+</ul>
+ * @method void setOperateUrl(string $OperateUrl) 设置操作跳转链接
+<ul>
+<li><strong>有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>无跳转链接返回的情况：</strong> 如果在操作过程中没有返回跳转链接，这意味着无需进行跳转操作。在这种情况下，服务将会直接被开通或关闭。
+<li><strong>有跳转链接返回的情况：</strong> 当操作类型为“OPEN”（开通服务），并且扩展服务类型为以下之一时，  系统将返回一个操作链接。当前操作人（超级管理员或法人）需要点击此链接，以完成服务的开通操作。
 
-当操作类型是 OPEN 且 扩展服务类型是  OPEN_SERVER_SIGN 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接当前操作人（超管或法人）点击链接完成服务开通操作。
+<ul>
+<li><strong>OPEN_SERVER_SIGN</strong>（开放服务器签名）</li>
+<li><strong>OVERSEA_SIGN</strong>（海外签名）</li>
+</ul></li></li>
+</ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyExtendedServiceResponse extends AbstractModel
 {
     /**
-     * @var string 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+     * @var string 操作跳转链接
+<ul>
+<li><strong>有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>无跳转链接返回的情况：</strong> 如果在操作过程中没有返回跳转链接，这意味着无需进行跳转操作。在这种情况下，服务将会直接被开通或关闭。
+<li><strong>有跳转链接返回的情况：</strong> 当操作类型为“OPEN”（开通服务），并且扩展服务类型为以下之一时，  系统将返回一个操作链接。当前操作人（超级管理员或法人）需要点击此链接，以完成服务的开通操作。
 
-当操作类型是 OPEN 且 扩展服务类型是  OPEN_SERVER_SIGN 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接当前操作人（超管或法人）点击链接完成服务开通操作。
+<ul>
+<li><strong>OPEN_SERVER_SIGN</strong>（开放服务器签名）</li>
+<li><strong>OVERSEA_SIGN</strong>（海外签名）</li>
+</ul></li></li>
+</ul>
      */
     public $OperateUrl;
 
@@ -50,11 +68,17 @@ class ModifyExtendedServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OperateUrl 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+     * @param string $OperateUrl 操作跳转链接
+<ul>
+<li><strong>有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>无跳转链接返回的情况：</strong> 如果在操作过程中没有返回跳转链接，这意味着无需进行跳转操作。在这种情况下，服务将会直接被开通或关闭。
+<li><strong>有跳转链接返回的情况：</strong> 当操作类型为“OPEN”（开通服务），并且扩展服务类型为以下之一时，  系统将返回一个操作链接。当前操作人（超级管理员或法人）需要点击此链接，以完成服务的开通操作。
 
-当操作类型是 OPEN 且 扩展服务类型是  OPEN_SERVER_SIGN 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接当前操作人（超管或法人）点击链接完成服务开通操作。
+<ul>
+<li><strong>OPEN_SERVER_SIGN</strong>（开放服务器签名）</li>
+<li><strong>OVERSEA_SIGN</strong>（海外签名）</li>
+</ul></li></li>
+</ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -30,7 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
 <li>mv-hevc：MV-HEVC 编码</li>
-注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
@@ -47,7 +46,6 @@ use TencentCloud\Common\AbstractModel;
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
 <li>mv-hevc：MV-HEVC 编码</li>
-注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
@@ -100,13 +98,26 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
- * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method integer getGop() 获取关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]，
+当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]，
+当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method string getGopUnit() 获取Gop数值单位，可选值：
+frame：表示帧
+second：表示秒
+默认值：frame
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGopUnit(string $GopUnit) 设置Gop数值单位，可选值：
+frame：表示帧
+second：表示秒
+默认值：frame
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+<li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
 注意：自适应码流只支持 stretch、black。
  * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -114,14 +125,31 @@ use TencentCloud\Common\AbstractModel;
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+<li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
 注意：自适应码流只支持 stretch、black。
- * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[1, 51]。
+ * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[0, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
- * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[1, 51]。
+注意：
+若Mode选择ABR，无需配置Vcrf值
+若Mode选择CBR，无需配置Vcrf值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[0, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
+注意：
+若Mode选择ABR，无需配置Vcrf值
+若Mode选择CBR，无需配置Vcrf值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHlsTime() 获取分片平均时长，范围：（0-10]，单位：秒
+默认值：10
+注意：只能在封装格式hls的情况下使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHlsTime(integer $HlsTime) 设置分片平均时长，范围：（0-10]，单位：秒
+默认值：10
+注意：只能在封装格式hls的情况下使用
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSegmentType() 获取hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
@@ -152,6 +180,90 @@ use TencentCloud\Common\AbstractModel;
 <li>top_bottom：上下视角</li>
 默认值:side_by_side
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVideoProfile() 获取Profile，适用于不同场景。
+baseline: 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。
+main: 主流Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。
+high: 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。
+default：随原视频自动填充。    
+
+仅编码标准选择h264时出现该配置， 支持 baseline/main/high，默认为：default
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoProfile(string $VideoProfile) 设置Profile，适用于不同场景。
+baseline: 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。
+main: 主流Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。
+high: 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。
+default：随原视频自动填充。    
+
+仅编码标准选择h264时出现该配置， 支持 baseline/main/high，默认为：default
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVideoLevel() 获取编码器级别，默认为自动（""）
+若编码标准选择H264: 支持以下选项：""，1 , 1.1 , 1.2 , 1.3 , 2 , 2.1 , 2.2 , 3 , 3.1 , 3.2 , 4 , 4.1 , 4.2 , 5 , 5.1
+若编码标准选择H265: 支持以下选项：""，1 , 2 , 2.1 , 3 , 3.1 , 4 , 4.1 , 5 , 5.1 , 5.2 , 6 , 6.1 , 6.2 , 8.5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoLevel(string $VideoLevel) 设置编码器级别，默认为自动（""）
+若编码标准选择H264: 支持以下选项：""，1 , 1.1 , 1.2 , 1.3 , 2 , 2.1 , 2.2 , 3 , 3.1 , 3.2 , 4 , 4.1 , 4.2 , 5 , 5.1
+若编码标准选择H265: 支持以下选项：""，1 , 2 , 2.1 , 3 , 3.1 , 4 , 4.1 , 5 , 5.1 , 5.2 , 6 , 6.1 , 6.2 , 8.5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBframes() 获取参考帧之间的B帧数，默认选自动，支持 0 - 16
+注意：不填表示使用自动
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBframes(integer $Bframes) 设置参考帧之间的B帧数，默认选自动，支持 0 - 16
+注意：不填表示使用自动
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMode() 获取码率控制模式：可选值：
+VBR（Variable Bit Rate）：动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。
+ABR（Average Bit Rate）：平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。
+CBR（Constant Bit Rate）：恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。
+VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。
+默认选择 VBR
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMode(string $Mode) 设置码率控制模式：可选值：
+VBR（Variable Bit Rate）：动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。
+ABR（Average Bit Rate）：平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。
+CBR（Constant Bit Rate）：恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。
+VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。
+默认选择 VBR
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSar() 获取显示高宽比，可选值：[1:1，2:1，default]
+默认值：default
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSar(string $Sar) 设置显示高宽比，可选值：[1:1，2:1，default]
+默认值：default
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNoScenecut() 获取自适应I帧决策，开启后，媒体处理将自动识别视频中不同场景之间的过渡点（通常是视觉上显著不同的帧，比如从一个镜头切换到另一个镜头），在这些点自适应插入关键帧（I帧），从而提高视频的随机访问性和编码效率。可选值：
+0：关闭自适应I帧决策 
+1：使用自适应I帧决策
+默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoScenecut(integer $NoScenecut) 设置自适应I帧决策，开启后，媒体处理将自动识别视频中不同场景之间的过渡点（通常是视觉上显著不同的帧，比如从一个镜头切换到另一个镜头），在这些点自适应插入关键帧（I帧），从而提高视频的随机访问性和编码效率。可选值：
+0：关闭自适应I帧决策 
+1：使用自适应I帧决策
+默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBitDepth() 获取比特位：支持8/10，默认为8
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBitDepth(integer $BitDepth) 设置比特位：支持8/10，默认为8
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRawPts() 获取保持原始时间戳：可选值：
+0：表示关闭
+1：表示打开
+默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRawPts(integer $RawPts) 设置保持原始时间戳：可选值：
+0：表示关闭
+1：表示打开
+默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCompress() 获取按比例压缩码率，开启后，将根据比例来调整输出视频的码率。填写压缩率后，系统会根据视频源码率自动计算目标输出码率。压缩率范围0-100
+不填此值表示不开启，默认不开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompress(integer $Compress) 设置按比例压缩码率，开启后，将根据比例来调整输出视频的码率。填写压缩率后，系统会根据视频源码率自动计算目标输出码率。压缩率范围0-100
+不填此值表示不开启，默认不开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SegmentSpecificInfo getSegmentSpecificInfo() 获取切片特殊配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentSpecificInfo(SegmentSpecificInfo $SegmentSpecificInfo) 设置切片特殊配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -166,7 +278,6 @@ class VideoTemplateInfo extends AbstractModel
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
 <li>mv-hevc：MV-HEVC 编码</li>
-注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
@@ -220,9 +331,19 @@ class VideoTemplateInfo extends AbstractModel
     public $Height;
 
     /**
-     * @var integer 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
+     * @var integer 关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]，
+当填 0 或不填时，系统将自动设置 gop 长度。
      */
     public $Gop;
+
+    /**
+     * @var string Gop数值单位，可选值：
+frame：表示帧
+second：表示秒
+默认值：frame
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GopUnit;
 
     /**
      * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -230,17 +351,30 @@ class VideoTemplateInfo extends AbstractModel
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+<li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
 注意：自适应码流只支持 stretch、black。
      */
     public $FillType;
 
     /**
-     * @var integer 视频恒定码率控制因子，取值范围为[1, 51]。
+     * @var integer 视频恒定码率控制因子，取值范围为[0, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
+注意：
+若Mode选择ABR，无需配置Vcrf值
+若Mode选择CBR，无需配置Vcrf值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vcrf;
+
+    /**
+     * @var integer 分片平均时长，范围：（0-10]，单位：秒
+默认值：10
+注意：只能在封装格式hls的情况下使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HlsTime;
 
     /**
      * @var integer hls 分片类型，可选值 ：
@@ -270,6 +404,88 @@ class VideoTemplateInfo extends AbstractModel
     public $Stereo3dType;
 
     /**
+     * @var string Profile，适用于不同场景。
+baseline: 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。
+main: 主流Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。
+high: 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。
+default：随原视频自动填充。    
+
+仅编码标准选择h264时出现该配置， 支持 baseline/main/high，默认为：default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoProfile;
+
+    /**
+     * @var string 编码器级别，默认为自动（""）
+若编码标准选择H264: 支持以下选项：""，1 , 1.1 , 1.2 , 1.3 , 2 , 2.1 , 2.2 , 3 , 3.1 , 3.2 , 4 , 4.1 , 4.2 , 5 , 5.1
+若编码标准选择H265: 支持以下选项：""，1 , 2 , 2.1 , 3 , 3.1 , 4 , 4.1 , 5 , 5.1 , 5.2 , 6 , 6.1 , 6.2 , 8.5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoLevel;
+
+    /**
+     * @var integer 参考帧之间的B帧数，默认选自动，支持 0 - 16
+注意：不填表示使用自动
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Bframes;
+
+    /**
+     * @var string 码率控制模式：可选值：
+VBR（Variable Bit Rate）：动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。
+ABR（Average Bit Rate）：平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。
+CBR（Constant Bit Rate）：恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。
+VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。
+默认选择 VBR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Mode;
+
+    /**
+     * @var string 显示高宽比，可选值：[1:1，2:1，default]
+默认值：default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Sar;
+
+    /**
+     * @var integer 自适应I帧决策，开启后，媒体处理将自动识别视频中不同场景之间的过渡点（通常是视觉上显著不同的帧，比如从一个镜头切换到另一个镜头），在这些点自适应插入关键帧（I帧），从而提高视频的随机访问性和编码效率。可选值：
+0：关闭自适应I帧决策 
+1：使用自适应I帧决策
+默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoScenecut;
+
+    /**
+     * @var integer 比特位：支持8/10，默认为8
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BitDepth;
+
+    /**
+     * @var integer 保持原始时间戳：可选值：
+0：表示关闭
+1：表示打开
+默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RawPts;
+
+    /**
+     * @var integer 按比例压缩码率，开启后，将根据比例来调整输出视频的码率。填写压缩率后，系统会根据视频源码率自动计算目标输出码率。压缩率范围0-100
+不填此值表示不开启，默认不开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Compress;
+
+    /**
+     * @var SegmentSpecificInfo 切片特殊配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentSpecificInfo;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -280,7 +496,6 @@ class VideoTemplateInfo extends AbstractModel
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
 <li>mv-hevc：MV-HEVC 编码</li>
-注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
@@ -310,17 +525,32 @@ class VideoTemplateInfo extends AbstractModel
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param integer $Gop 关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]，
+当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param string $GopUnit Gop数值单位，可选值：
+frame：表示帧
+second：表示秒
+默认值：frame
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
+<li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
 注意：自适应码流只支持 stretch、black。
-     * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
+     * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[0, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
+注意：
+若Mode选择ABR，无需配置Vcrf值
+若Mode选择CBR，无需配置Vcrf值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HlsTime 分片平均时长，范围：（0-10]，单位：秒
+默认值：10
+注意：只能在封装格式hls的情况下使用
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SegmentType hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
@@ -335,6 +565,48 @@ class VideoTemplateInfo extends AbstractModel
 <li>side_by_side：左右视角</li>
 <li>top_bottom：上下视角</li>
 默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VideoProfile Profile，适用于不同场景。
+baseline: 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。
+main: 主流Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。
+high: 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。
+default：随原视频自动填充。    
+
+仅编码标准选择h264时出现该配置， 支持 baseline/main/high，默认为：default
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VideoLevel 编码器级别，默认为自动（""）
+若编码标准选择H264: 支持以下选项：""，1 , 1.1 , 1.2 , 1.3 , 2 , 2.1 , 2.2 , 3 , 3.1 , 3.2 , 4 , 4.1 , 4.2 , 5 , 5.1
+若编码标准选择H265: 支持以下选项：""，1 , 2 , 2.1 , 3 , 3.1 , 4 , 4.1 , 5 , 5.1 , 5.2 , 6 , 6.1 , 6.2 , 8.5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Bframes 参考帧之间的B帧数，默认选自动，支持 0 - 16
+注意：不填表示使用自动
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Mode 码率控制模式：可选值：
+VBR（Variable Bit Rate）：动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。
+ABR（Average Bit Rate）：平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。
+CBR（Constant Bit Rate）：恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。
+VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。
+默认选择 VBR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Sar 显示高宽比，可选值：[1:1，2:1，default]
+默认值：default
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NoScenecut 自适应I帧决策，开启后，媒体处理将自动识别视频中不同场景之间的过渡点（通常是视觉上显著不同的帧，比如从一个镜头切换到另一个镜头），在这些点自适应插入关键帧（I帧），从而提高视频的随机访问性和编码效率。可选值：
+0：关闭自适应I帧决策 
+1：使用自适应I帧决策
+默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BitDepth 比特位：支持8/10，默认为8
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RawPts 保持原始时间戳：可选值：
+0：表示关闭
+1：表示打开
+默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Compress 按比例压缩码率，开启后，将根据比例来调整输出视频的码率。填写压缩率后，系统会根据视频源码率自动计算目标输出码率。压缩率范围0-100
+不填此值表示不开启，默认不开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentSpecificInfo $SegmentSpecificInfo 切片特殊配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -378,12 +650,20 @@ class VideoTemplateInfo extends AbstractModel
             $this->Gop = $param["Gop"];
         }
 
+        if (array_key_exists("GopUnit",$param) and $param["GopUnit"] !== null) {
+            $this->GopUnit = $param["GopUnit"];
+        }
+
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
         }
 
         if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
             $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("HlsTime",$param) and $param["HlsTime"] !== null) {
+            $this->HlsTime = $param["HlsTime"];
         }
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
@@ -396,6 +676,47 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("Stereo3dType",$param) and $param["Stereo3dType"] !== null) {
             $this->Stereo3dType = $param["Stereo3dType"];
+        }
+
+        if (array_key_exists("VideoProfile",$param) and $param["VideoProfile"] !== null) {
+            $this->VideoProfile = $param["VideoProfile"];
+        }
+
+        if (array_key_exists("VideoLevel",$param) and $param["VideoLevel"] !== null) {
+            $this->VideoLevel = $param["VideoLevel"];
+        }
+
+        if (array_key_exists("Bframes",$param) and $param["Bframes"] !== null) {
+            $this->Bframes = $param["Bframes"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("Sar",$param) and $param["Sar"] !== null) {
+            $this->Sar = $param["Sar"];
+        }
+
+        if (array_key_exists("NoScenecut",$param) and $param["NoScenecut"] !== null) {
+            $this->NoScenecut = $param["NoScenecut"];
+        }
+
+        if (array_key_exists("BitDepth",$param) and $param["BitDepth"] !== null) {
+            $this->BitDepth = $param["BitDepth"];
+        }
+
+        if (array_key_exists("RawPts",$param) and $param["RawPts"] !== null) {
+            $this->RawPts = $param["RawPts"];
+        }
+
+        if (array_key_exists("Compress",$param) and $param["Compress"] !== null) {
+            $this->Compress = $param["Compress"];
+        }
+
+        if (array_key_exists("SegmentSpecificInfo",$param) and $param["SegmentSpecificInfo"] !== null) {
+            $this->SegmentSpecificInfo = new SegmentSpecificInfo();
+            $this->SegmentSpecificInfo->deserialize($param["SegmentSpecificInfo"]);
         }
     }
 }

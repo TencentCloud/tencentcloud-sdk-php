@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosUrl(string $CosUrl) 设置cos路径
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getStatus() 获取文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
- * @method void setStatus(integer $Status) 设置文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+ * @method integer getStatus() 获取文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
+ * @method void setStatus(integer $Status) 设置文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
  * @method string getStatusDesc() 获取文档状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置文档状态描述
  * @method string getReason() 获取生成失败原因
@@ -99,8 +97,7 @@ class DescribeDocResponse extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+     * @var integer 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
      */
     public $Status;
 
@@ -200,8 +197,7 @@ class DescribeDocResponse extends AbstractModel
      * @param string $FileType 文件类型
      * @param string $CosUrl cos路径
      * @param string $UpdateTime 更新时间
-     * @param integer $Status 文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+     * @param integer $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
      * @param string $StatusDesc 文档状态描述
      * @param string $Reason 生成失败原因
      * @param boolean $IsRefer 答案中是否引用

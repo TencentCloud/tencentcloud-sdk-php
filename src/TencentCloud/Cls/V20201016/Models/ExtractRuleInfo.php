@@ -146,6 +146,16 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 - COS导入不支持此字段。
  * @method array getEventLogRules() 获取Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
  * @method void setEventLogRules(array $EventLogRules) 设置Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+ * @method array getAdvanceFilterRules() 获取日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvanceFilterRules(array $AdvanceFilterRules) 设置日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -289,6 +299,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     public $EventLogRules;
 
     /**
+     * @var array 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvanceFilterRules;
+
+    /**
      * @param string $TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
@@ -352,6 +371,11 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 - MetadataType为2时必填。
 - COS导入不支持此字段。
      * @param array $EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+     * @param array $AdvanceFilterRules 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -454,6 +478,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
                 $obj = new EventLog();
                 $obj->deserialize($value);
                 array_push($this->EventLogRules, $obj);
+            }
+        }
+
+        if (array_key_exists("AdvanceFilterRules",$param) and $param["AdvanceFilterRules"] !== null) {
+            $this->AdvanceFilterRules = [];
+            foreach ($param["AdvanceFilterRules"] as $key => $value){
+                $obj = new AdvanceFilterRuleInfo();
+                $obj->deserialize($value);
+                array_push($this->AdvanceFilterRules, $obj);
             }
         }
     }

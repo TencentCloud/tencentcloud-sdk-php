@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() 获取云联网路由表id。
  * @method void setRouteTableId(string $RouteTableId) 设置云联网路由表id。
- * @method string getName() 获取云联网路由表名称。
- * @method void setName(string $Name) 设置云联网路由表名称。
- * @method string getDescription() 获取云联网路由表描述。
- * @method void setDescription(string $Description) 设置云联网路由表描述。
+ * @method string getName() 获取云联网路由表名称。Name和Description 两者必传一个。
+ * @method void setName(string $Name) 设置云联网路由表名称。Name和Description 两者必传一个。
+ * @method string getDescription() 获取云联网路由表描述。Name和Description 两者必传一个。
+ * @method void setDescription(string $Description) 设置云联网路由表描述。Name和Description 两者必传一个。
  */
 class ModifyRouteTableInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyRouteTableInfo extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var string 云联网路由表名称。
+     * @var string 云联网路由表名称。Name和Description 两者必传一个。
      */
     public $Name;
 
     /**
-     * @var string 云联网路由表描述。
+     * @var string 云联网路由表描述。Name和Description 两者必传一个。
      */
     public $Description;
 
     /**
      * @param string $RouteTableId 云联网路由表id。
-     * @param string $Name 云联网路由表名称。
-     * @param string $Description 云联网路由表描述。
+     * @param string $Name 云联网路由表名称。Name和Description 两者必传一个。
+     * @param string $Description 云联网路由表描述。Name和Description 两者必传一个。
      */
     function __construct()
     {

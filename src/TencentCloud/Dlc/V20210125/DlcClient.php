@@ -116,6 +116,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTaskLogResponse DescribeTaskLog(Models\DescribeTaskLogRequest $req) 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果，仅支持30天以内的任务查询结果，且返回数据大小超过近50M会进行截断。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
+ * @method Models\DescribeTasksAnalysisResponse DescribeTasksAnalysis(Models\DescribeTasksAnalysisRequest $req) 该接口用于洞察分析列表
  * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
  * @method Models\DescribeTasksOverviewResponse DescribeTasksOverview(Models\DescribeTasksOverviewRequest $req) 查看任务概览页
  * @method Models\DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(Models\DescribeThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息

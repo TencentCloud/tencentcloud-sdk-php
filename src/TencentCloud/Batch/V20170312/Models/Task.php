@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplication(Application $Application) 设置应用程序信息
  * @method string getTaskName() 获取任务名称，在一个作业内部唯一
  * @method void setTaskName(string $TaskName) 设置任务名称，在一个作业内部唯一
- * @method integer getTaskInstanceNum() 获取任务实例运行个数
- * @method void setTaskInstanceNum(integer $TaskInstanceNum) 设置任务实例运行个数
+ * @method integer getTaskInstanceNum() 获取任务实例运行个数，默认为1
+ * @method void setTaskInstanceNum(integer $TaskInstanceNum) 设置任务实例运行个数，默认为1
  * @method AnonymousComputeEnv getComputeEnv() 获取运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
  * @method void setComputeEnv(AnonymousComputeEnv $ComputeEnv) 设置运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
  * @method string getEnvId() 获取计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
@@ -55,7 +55,21 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getRestartComputeNode() 获取任务完成后，重启计算节点。适用于指定计算环境执行任务。
  * @method void setRestartComputeNode(boolean $RestartComputeNode) 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
  * @method integer getResourceMaxRetryCount() 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+计算资源创建重试的等待时间间隔策略设置如下：
+[1, 3]: 等待600 s发起重试；
+[4, 10]: 等待900 s发起重试；
+[11, 50]: 等待1800 s发起重试；
+[51, 100]: 等待3600 s发起重试；
+[a, b]表示重试次数区间，每次重试的等待时间随着重试次数的增加而递增。
+例如，计算资源创建重试8次的耗时为：3*600 + 5*900 = 6300 s
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+计算资源创建重试的等待时间间隔策略设置如下：
+[1, 3]: 等待600 s发起重试；
+[4, 10]: 等待900 s发起重试；
+[11, 50]: 等待1800 s发起重试；
+[51, 100]: 等待3600 s发起重试；
+[a, b]表示重试次数区间，每次重试的等待时间随着重试次数的增加而递增。
+例如，计算资源创建重试8次的耗时为：3*600 + 5*900 = 6300 s
  */
 class Task extends AbstractModel
 {
@@ -70,7 +84,7 @@ class Task extends AbstractModel
     public $TaskName;
 
     /**
-     * @var integer 任务实例运行个数
+     * @var integer 任务实例运行个数，默认为1
      */
     public $TaskInstanceNum;
 
@@ -146,13 +160,20 @@ class Task extends AbstractModel
 
     /**
      * @var integer 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+计算资源创建重试的等待时间间隔策略设置如下：
+[1, 3]: 等待600 s发起重试；
+[4, 10]: 等待900 s发起重试；
+[11, 50]: 等待1800 s发起重试；
+[51, 100]: 等待3600 s发起重试；
+[a, b]表示重试次数区间，每次重试的等待时间随着重试次数的增加而递增。
+例如，计算资源创建重试8次的耗时为：3*600 + 5*900 = 6300 s
      */
     public $ResourceMaxRetryCount;
 
     /**
      * @param Application $Application 应用程序信息
      * @param string $TaskName 任务名称，在一个作业内部唯一
-     * @param integer $TaskInstanceNum 任务实例运行个数
+     * @param integer $TaskInstanceNum 任务实例运行个数，默认为1
      * @param AnonymousComputeEnv $ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @param string $EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @param RedirectInfo $RedirectInfo 重定向信息
@@ -168,6 +189,13 @@ class Task extends AbstractModel
      * @param integer $MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      * @param boolean $RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
      * @param integer $ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+计算资源创建重试的等待时间间隔策略设置如下：
+[1, 3]: 等待600 s发起重试；
+[4, 10]: 等待900 s发起重试；
+[11, 50]: 等待1800 s发起重试；
+[51, 100]: 等待3600 s发起重试；
+[a, b]表示重试次数区间，每次重试的等待时间随着重试次数的增加而递增。
+例如，计算资源创建重试8次的耗时为：3*600 + 5*900 = 6300 s
      */
     function __construct()
     {

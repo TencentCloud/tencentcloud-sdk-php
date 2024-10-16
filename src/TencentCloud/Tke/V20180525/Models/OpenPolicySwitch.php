@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnforcementAction(string $EnforcementAction) 设置策略运行模式：dryrun空跑不生效，deny拦截生效
  * @method string getName() 获取策略英文名称
  * @method void setName(string $Name) 设置策略英文名称
- * @method string getKind() 获取策略模版类型
- * @method void setKind(string $Kind) 设置策略模版类型
+ * @method string getKind() 获取策略模板类型
+ * @method void setKind(string $Kind) 设置策略模板类型
  * @method string getEnabledStatus() 获取策略开关状态：open打开，close关闭
  * @method void setEnabledStatus(string $EnabledStatus) 设置策略开关状态：open打开，close关闭
  * @method array getOpenConstraintInfoList() 获取策略关联的实例列表
@@ -44,7 +44,7 @@ class OpenPolicySwitch extends AbstractModel
     public $Name;
 
     /**
-     * @var string 策略模版类型
+     * @var string 策略模板类型
      */
     public $Kind;
 
@@ -61,7 +61,7 @@ class OpenPolicySwitch extends AbstractModel
     /**
      * @param string $EnforcementAction 策略运行模式：dryrun空跑不生效，deny拦截生效
      * @param string $Name 策略英文名称
-     * @param string $Kind 策略模版类型
+     * @param string $Kind 策略模板类型
      * @param string $EnabledStatus 策略开关状态：open打开，close关闭
      * @param array $OpenConstraintInfoList 策略关联的实例列表
      */

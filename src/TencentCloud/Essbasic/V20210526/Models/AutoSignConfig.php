@@ -58,12 +58,10 @@ use TencentCloud\Common\AbstractModel;
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
  * @method string getJumpUrl() 获取开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`
@@ -133,8 +131,7 @@ class AutoSignConfig extends AbstractModel
     /**
      * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
      */
     public $LicenseType;
 
@@ -173,8 +170,7 @@ class AutoSignConfig extends AbstractModel
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
      * @param string $JumpUrl 开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`

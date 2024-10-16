@@ -116,6 +116,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivenessDetail(array $LivenessDetail) 设置本次流程进行的活体一比一流水。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLivenessInfoTag() 获取描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) 设置描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMobile() 获取手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置手机号码。
@@ -302,6 +334,26 @@ class DetectInfoText extends AbstractModel
     public $LivenessDetail;
 
     /**
+     * @var array 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LivenessInfoTag;
+
+    /**
      * @var string 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -400,6 +452,22 @@ class DetectInfoText extends AbstractModel
      * @param string $Extra Auth接口带入额外信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LivenessDetail 本次流程进行的活体一比一流水。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -529,6 +597,10 @@ class DetectInfoText extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LivenessDetail, $obj);
             }
+        }
+
+        if (array_key_exists("LivenessInfoTag",$param) and $param["LivenessInfoTag"] !== null) {
+            $this->LivenessInfoTag = $param["LivenessInfoTag"];
         }
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {

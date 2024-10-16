@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略英文名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKind() 获取策略模版类型
+ * @method string getKind() 获取策略模板类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKind(string $Kind) 设置策略模版类型
+ * @method void setKind(string $Kind) 设置策略模板类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnabledStatus() 获取策略开关状态：open打开，close关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,7 +100,7 @@ class OpenPolicyInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string 策略模版类型
+     * @var string 策略模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
@@ -136,7 +136,7 @@ class OpenPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 策略英文名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Kind 策略模版类型
+     * @param string $Kind 策略模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnabledStatus 策略开关状态：open打开，close关闭
 注意：此字段可能返回 null，表示取不到有效值。

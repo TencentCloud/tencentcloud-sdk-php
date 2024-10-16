@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 
 - 入参时无效。
 - 出参时有效。
+ * @method string getNoticeContentId() 获取通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NoticeReceiver extends AbstractModel
 {
@@ -102,6 +106,12 @@ class NoticeReceiver extends AbstractModel
     public $Index;
 
     /**
+     * @var string 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoticeContentId;
+
+    /**
      * @param string $ReceiverType 接受者类型。可选值：
 -  Uin - 用户ID
 - Group - 用户组ID
@@ -120,6 +130,8 @@ class NoticeReceiver extends AbstractModel
 
 - 入参时无效。
 - 出参时有效。
+     * @param string $NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class NoticeReceiver extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
         }
     }
 }

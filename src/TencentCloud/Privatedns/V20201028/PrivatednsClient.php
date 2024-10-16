@@ -24,6 +24,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
  * @method Models\AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpc(Models\AddSpecifyPrivateZoneVpcRequest $req) 追加与私有域关联的VPC
+ * @method Models\CreateEndPointResponse CreateEndPoint(Models\CreateEndPointRequest $req) 创建终端节点
  * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 创建私有域解析账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录

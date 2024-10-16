@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置不支持透明数据加密原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsSupportManualLogic() 获取是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportManualLogic(string $IsSupportManualLogic) 设置是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ability extends AbstractModel
 {
@@ -88,6 +92,12 @@ class Ability extends AbstractModel
     public $NoSupportTransparentDataEncryptionReason;
 
     /**
+     * @var string 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportManualLogic;
+
+    /**
      * @param string $IsSupportSlaveZone 是否支持从可用区
      * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,6 +109,8 @@ class Ability extends AbstractModel
      * @param string $IsSupportTransparentDataEncryption 是否支持透明数据加密
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsSupportManualLogic 是否支持手动发起逻辑备份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,10 @@ class Ability extends AbstractModel
 
         if (array_key_exists("NoSupportTransparentDataEncryptionReason",$param) and $param["NoSupportTransparentDataEncryptionReason"] !== null) {
             $this->NoSupportTransparentDataEncryptionReason = $param["NoSupportTransparentDataEncryptionReason"];
+        }
+
+        if (array_key_exists("IsSupportManualLogic",$param) and $param["IsSupportManualLogic"] !== null) {
+            $this->IsSupportManualLogic = $param["IsSupportManualLogic"];
         }
     }
 }

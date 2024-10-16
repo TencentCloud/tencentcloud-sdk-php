@@ -25,6 +25,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
 /**
  * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) 接受专用通道申请。
  * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) 申请互联网CIDR地址
+ * @method Models\CreateCloudAttachServiceResponse CreateCloudAttachService(Models\CreateCloudAttachServiceRequest $req) 创建敏捷上云服务
  * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) 申请物理专线接入。
 调用该接口时，请注意：
 账号要进行实名认证，否则不允许申请物理专线；

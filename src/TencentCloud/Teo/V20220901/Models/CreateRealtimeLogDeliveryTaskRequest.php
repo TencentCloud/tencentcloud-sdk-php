@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 <li>overseas：全球（不含中国大陆）。</li>
  * @method array getFields() 获取投递的预设字段列表。
  * @method void setFields(array $Fields) 设置投递的预设字段列表。
- * @method array getCustomFields() 获取投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。
- * @method void setCustomFields(array $CustomFields) 设置投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。
+ * @method array getCustomFields() 获取投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
+ * @method void setCustomFields(array $CustomFields) 设置投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
  * @method array getDeliveryConditions() 获取日志投递的过滤条件，不填表示投递全量日志。
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置日志投递的过滤条件，不填表示投递全量日志。
  * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。
@@ -130,7 +130,7 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Fields;
 
     /**
-     * @var array 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。
+     * @var array 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
      */
     public $CustomFields;
 
@@ -187,7 +187,7 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 <li>mainland：中国大陆境内；</li>
 <li>overseas：全球（不含中国大陆）。</li>
      * @param array $Fields 投递的预设字段列表。
-     * @param array $CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。
+     * @param array $CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
      * @param array $DeliveryConditions 日志投递的过滤条件，不填表示投递全量日志。
      * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。
      * @param LogFormat $LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：

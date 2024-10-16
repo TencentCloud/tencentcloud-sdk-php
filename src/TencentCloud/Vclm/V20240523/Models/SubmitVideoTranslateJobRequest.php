@@ -46,6 +46,8 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
 格式要求：支持 mp3、m4a、acc、wav 格式。
 时长要求：【10~300】秒
 大小要求：不超过 100M。
+ * @method integer getRemoveVocal() 获取是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+ * @method void setRemoveVocal(integer $RemoveVocal) 设置是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
  * @method integer getConfirm() 获取是否需要确认翻译结果0：不需要，1：需要
  * @method void setConfirm(integer $Confirm) 设置是否需要确认翻译结果0：不需要，1：需要
  * @method integer getLipSync() 获取是否开启口型驱动，0：不开启，1：开启。默认开启。
@@ -93,6 +95,11 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
     public $AudioUrl;
 
     /**
+     * @var integer 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+     */
+    public $RemoveVocal;
+
+    /**
      * @var integer 是否需要确认翻译结果0：不需要，1：需要
      */
     public $Confirm;
@@ -125,6 +132,7 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
 格式要求：支持 mp3、m4a、acc、wav 格式。
 时长要求：【10~300】秒
 大小要求：不超过 100M。
+     * @param integer $RemoveVocal 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
      * @param integer $Confirm 是否需要确认翻译结果0：不需要，1：需要
      * @param integer $LipSync 是否开启口型驱动，0：不开启，1：开启。默认开启。
      * @param string $VoiceType 音色种别：一种音色种别对应一种不同区域的音色
@@ -160,6 +168,10 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
 
         if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
             $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("RemoveVocal",$param) and $param["RemoveVocal"] !== null) {
+            $this->RemoveVocal = $param["RemoveVocal"];
         }
 
         if (array_key_exists("Confirm",$param) and $param["Confirm"] !== null) {

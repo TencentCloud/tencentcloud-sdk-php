@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSmsSdkAppId() 获取短信应用ID。在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
  * @method void setSmsSdkAppId(string $SmsSdkAppId) 设置短信应用ID。在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
- * @method string getSerialNo() 获取发送短信返回的流水号。
- * @method void setSerialNo(string $SerialNo) 设置发送短信返回的流水号。
+ * @method string getSerialNo() 获取发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
+ * @method void setSerialNo(string $SerialNo) 设置发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
  * @method integer getConversionTime() 获取用户回填时间，UNIX 时间戳（单位：秒）。
  * @method void setConversionTime(integer $ConversionTime) 设置用户回填时间，UNIX 时间戳（单位：秒）。
  */
@@ -35,7 +35,7 @@ class ReportConversionRequest extends AbstractModel
     public $SmsSdkAppId;
 
     /**
-     * @var string 发送短信返回的流水号。
+     * @var string 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
      */
     public $SerialNo;
 
@@ -46,7 +46,7 @@ class ReportConversionRequest extends AbstractModel
 
     /**
      * @param string $SmsSdkAppId 短信应用ID。在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
-     * @param string $SerialNo 发送短信返回的流水号。
+     * @param string $SerialNo 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
      * @param integer $ConversionTime 用户回填时间，UNIX 时间戳（单位：秒）。
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOrganization请求参数结构体
  *
- * @method string getName() 获取组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
- * @method void setName(string $Name) 设置组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+ * @method string getName() 获取组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
+ * @method void setName(string $Name) 设置组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
  * @method string getParentId() 获取组织父节点 ID（从查询组织接口DescribeOrganization中获取，填0代表根组织）
  * @method void setParentId(string $ParentId) 设置组织父节点 ID（从查询组织接口DescribeOrganization中获取，填0代表根组织）
  */
 class AddOrganizationRequest extends AbstractModel
 {
     /**
-     * @var string 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+     * @var string 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class AddOrganizationRequest extends AbstractModel
     public $ParentId;
 
     /**
-     * @param string $Name 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+     * @param string $Name 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
      * @param string $ParentId 组织父节点 ID（从查询组织接口DescribeOrganization中获取，填0代表根组织）
      */
     function __construct()

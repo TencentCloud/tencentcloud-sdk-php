@@ -43,12 +43,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置后端协议类型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleAlgorithm() 获取调度算法。
-ip_hash_3：3元组对称弹性Hash
-ip_hash_3_consistent：3元组对称一致性Hash
+ip_hash_3：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法。
-ip_hash_3：3元组对称弹性Hash
-ip_hash_3_consistent：3元组对称一致性Hash
+ip_hash_3：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,8 +112,7 @@ class TargetGroupInfo extends AbstractModel
 
     /**
      * @var string 调度算法。
-ip_hash_3：3元组对称弹性Hash
-ip_hash_3_consistent：3元组对称一致性Hash
+ip_hash_3：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleAlgorithm;
@@ -157,8 +154,7 @@ ip_hash_3_consistent：3元组对称一致性Hash
      * @param string $Protocol 后端协议类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleAlgorithm 调度算法。
-ip_hash_3：3元组对称弹性Hash
-ip_hash_3_consistent：3元组对称一致性Hash
+ip_hash_3：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
 注意：此字段可能返回 null，表示取不到有效值。

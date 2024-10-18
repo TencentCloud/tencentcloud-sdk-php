@@ -47,16 +47,16 @@ use TencentCloud\Common\AbstractModel;
 - 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBody() 获取请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndex() 获取序号。
 - 入参无效。
@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndex(integer $Index) 设置序号。
 - 入参无效。
 - 出参有效。
+ * @method string getNoticeContentId() 获取通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWebCallbackId() 获取集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebCallbackId(string $WebCallbackId) 设置集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebCallback extends AbstractModel
 {
@@ -94,14 +102,14 @@ class WebCallback extends AbstractModel
 
     /**
      * @var array 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
      * @var string 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
@@ -112,6 +120,18 @@ class WebCallback extends AbstractModel
 - 出参有效。
      */
     public $Index;
+
+    /**
+     * @var string 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoticeContentId;
+
+    /**
+     * @var string 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebCallbackId;
 
     /**
      * @param string $Url 回调地址。最大支持1024个字节数。
@@ -128,14 +148,18 @@ class WebCallback extends AbstractModel
 - 参数CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 序号。
 - 入参无效。
 - 出参有效。
+     * @param string $NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WebCallbackId 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +196,14 @@ class WebCallback extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
+        }
+
+        if (array_key_exists("WebCallbackId",$param) and $param["WebCallbackId"] !== null) {
+            $this->WebCallbackId = $param["WebCallbackId"];
         }
     }
 }

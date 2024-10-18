@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuery() 获取ES查询条件JSON
  * @method void setQuery(string $Query) 设置ES查询条件JSON
+ * @method array getLogTypes() 获取日志类型列表
+ * @method void setLogTypes(array $LogTypes) 设置日志类型列表
  */
 class DescribeSearchExportListRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeSearchExportListRequest extends AbstractModel
     public $Query;
 
     /**
+     * @var array 日志类型列表
+     */
+    public $LogTypes;
+
+    /**
      * @param string $Query ES查询条件JSON
+     * @param array $LogTypes 日志类型列表
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeSearchExportListRequest extends AbstractModel
         }
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("LogTypes",$param) and $param["LogTypes"] !== null) {
+            $this->LogTypes = $param["LogTypes"];
         }
     }
 }

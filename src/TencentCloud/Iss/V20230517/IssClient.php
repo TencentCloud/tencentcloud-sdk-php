@@ -98,7 +98,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 用于查询批量任务和简单任务列表
  * @method Models\PlayRecordResponse PlayRecord(Models\PlayRecordRequest $req) 用于获取设备本地录像 URL 地址。
  * @method Models\QueryForbidPlayChannelListResponse QueryForbidPlayChannelList(Models\QueryForbidPlayChannelListRequest $req) 查询禁播通道列表
- * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
+ * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
  * @method Models\SetForbidPlayChannelsResponse SetForbidPlayChannels(Models\SetForbidPlayChannelsRequest $req) 禁止主、子账号对视频通道的实况预览
  * @method Models\UpdateAITaskResponse UpdateAITask(Models\UpdateAITaskRequest $req) 更新AI任务
  * @method Models\UpdateAITaskStatusResponse UpdateAITaskStatus(Models\UpdateAITaskStatusRequest $req) 更新 AI 任务状态

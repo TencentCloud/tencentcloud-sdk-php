@@ -44,6 +44,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
  * @method Models\DescribeGlobalConfigResponse DescribeGlobalConfig(Models\DescribeGlobalConfigRequest $req) 查询YARN资源调度的全局配置
  * @method Models\DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(Models\DescribeHBaseTableOverviewRequest $req) 获取Hbase表级监控数据概览接口
+ * @method Models\DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(Models\DescribeHDFSStorageInfoRequest $req) 查询HDFS存储文件信息
  * @method Models\DescribeHiveQueriesResponse DescribeHiveQueries(Models\DescribeHiveQueriesRequest $req) 获取hive查询信息
  * @method Models\DescribeImpalaQueriesResponse DescribeImpalaQueries(Models\DescribeImpalaQueriesRequest $req) DescribeImpalaQueries
  * @method Models\DescribeInsightListResponse DescribeInsightList(Models\DescribeInsightListRequest $req) 获取洞察结果信息
@@ -51,11 +52,14 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询集群实例信息
  * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) 查询集群列表
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
+ * @method Models\DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(Models\DescribeKyuubiQueryInfoRequest $req) 查询Kyuubi查询信息
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
  * @method Models\DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(Models\DescribeResourceScheduleDiffDetailRequest $req) YARN资源调度-变更详情
  * @method Models\DescribeSLInstanceResponse DescribeSLInstance(Models\DescribeSLInstanceRequest $req) 本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
  * @method Models\DescribeSLInstanceListResponse DescribeSLInstanceList(Models\DescribeSLInstanceListRequest $req) 本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
  * @method Models\DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(Models\DescribeServiceNodeInfosRequest $req) 查询服务进程信息
+ * @method Models\DescribeSparkQueriesResponse DescribeSparkQueries(Models\DescribeSparkQueriesRequest $req) 查询Spark查询信息列表
+ * @method Models\DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfo(Models\DescribeStarRocksQueryInfoRequest $req) 查询StarRocks查询信息
  * @method Models\DescribeTrinoQueryInfoResponse DescribeTrinoQueryInfo(Models\DescribeTrinoQueryInfoRequest $req) 获取trino查询结果
  * @method Models\DescribeUsersForUserManagerResponse DescribeUsersForUserManager(Models\DescribeUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 批量导出用户。对于kerberos集群，如果需要kertab文件下载地址，可以将NeedKeytabInfo设置为true；注意SupportDownLoadKeyTab为true，但是DownLoadKeyTabUrl为空字符串，表示keytab文件在后台没有准备好（正在生成）。

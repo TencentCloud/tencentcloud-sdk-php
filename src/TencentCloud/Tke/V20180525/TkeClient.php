@@ -96,6 +96,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) 获取集群可以升级的所有版本
  * @method Models\DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(Models\DescribeAvailableTKEEdgeVersionRequest $req) 边缘计算支持版本和k8s版本
  * @method Models\DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(Models\DescribeBackupStorageLocationsRequest $req) 查询备份仓库信息
+ * @method Models\DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatus(Models\DescribeBatchModifyTagsStatusRequest $req) 查询批量修改标签状态
  * @method Models\DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOption(Models\DescribeClusterAsGroupOptionRequest $req) 集群弹性伸缩配置
  * @method Models\DescribeClusterAsGroupsResponse DescribeClusterAsGroups(Models\DescribeClusterAsGroupsRequest $req) 集群关联的伸缩组列表
  * @method Models\DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptions(Models\DescribeClusterAuthenticationOptionsRequest $req) 查看集群认证配置
@@ -212,6 +213,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(Models\ModifyClusterEndpointSPRequest $req) 修改托管集群外网端口的安全策略（老的方式，仅支持托管集群外网端口）
  * @method Models\ModifyClusterNodePoolResponse ModifyClusterNodePool(Models\ModifyClusterNodePoolRequest $req) 编辑节点池
  * @method Models\ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(Models\ModifyClusterRuntimeConfigRequest $req) 修改集群及节点池纬度运行时配置
+ * @method Models\ModifyClusterTagsResponse ModifyClusterTags(Models\ModifyClusterTagsRequest $req) 修改集群标签
  * @method Models\ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(Models\ModifyClusterVirtualNodePoolRequest $req) 修改超级节点池
  * @method Models\ModifyNodePoolDesiredCapacityAboutAsgResponse ModifyNodePoolDesiredCapacityAboutAsg(Models\ModifyNodePoolDesiredCapacityAboutAsgRequest $req) 修改节点池关联伸缩组的期望实例数
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) 修改节点池的机型配置

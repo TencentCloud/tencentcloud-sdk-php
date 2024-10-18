@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrganizationId() 获取组织ID（从查询组织接口DescribeOrganization中获取）
  * @method void setOrganizationId(string $OrganizationId) 设置组织ID（从查询组织接口DescribeOrganization中获取）
- * @method string getName() 获取组织名称
- * @method void setName(string $Name) 设置组织名称
+ * @method string getName() 获取组织名称，支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复
+ * @method void setName(string $Name) 设置组织名称，支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复
  */
 class UpdateOrganizationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpdateOrganizationRequest extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string 组织名称
+     * @var string 组织名称，支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复
      */
     public $Name;
 
     /**
      * @param string $OrganizationId 组织ID（从查询组织接口DescribeOrganization中获取）
-     * @param string $Name 组织名称
+     * @param string $Name 组织名称，支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复
      */
     function __construct()
     {

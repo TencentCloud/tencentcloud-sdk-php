@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置所属组织名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccessProtocol() 获取通道所属设备的接入协议类型
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置通道所属设备的接入协议类型
  */
 class RecordPlanChannelInfo extends AbstractModel
 {
@@ -68,6 +70,11 @@ class RecordPlanChannelInfo extends AbstractModel
     public $OrganizationName;
 
     /**
+     * @var integer 通道所属设备的接入协议类型
+     */
+    public $AccessProtocol;
+
+    /**
      * @param string $DeviceId 设备通道所属的设备ID
      * @param string $DeviceName 设备通道所属的设备名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,6 +83,7 @@ class RecordPlanChannelInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 所属组织名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccessProtocol 通道所属设备的接入协议类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class RecordPlanChannelInfo extends AbstractModel
 
         if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
             $this->OrganizationName = $param["OrganizationName"];
+        }
+
+        if (array_key_exists("AccessProtocol",$param) and $param["AccessProtocol"] !== null) {
+            $this->AccessProtocol = $param["AccessProtocol"];
         }
     }
 }

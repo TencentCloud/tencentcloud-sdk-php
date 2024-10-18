@@ -144,6 +144,10 @@ CLOSE 关闭
  * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
  * @method integer getReadWriteMode() 获取读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
  * @method void setReadWriteMode(integer $ReadWriteMode) 设置读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+ * @method boolean getEnableScheduleRecoverGroup() 获取是否开启置放群组异步任务
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否开启置放群组异步任务
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组异步任务可维护时间段
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务可维护时间段
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -374,6 +378,16 @@ CLOSE 关闭
     public $ReadWriteMode;
 
     /**
+     * @var boolean 是否开启置放群组异步任务
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration 置放群组异步任务可维护时间段
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -436,6 +450,8 @@ CLOSE 关闭
      * @param integer $ShardAllocationConcurrents 分片迁移并发数
      * @param integer $ShardAllocationBytes 分片迁移并发速度
      * @param integer $ReadWriteMode 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+     * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务可维护时间段
      */
     function __construct()
     {
@@ -633,6 +649,15 @@ CLOSE 关闭
 
         if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
             $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
         }
     }
 }

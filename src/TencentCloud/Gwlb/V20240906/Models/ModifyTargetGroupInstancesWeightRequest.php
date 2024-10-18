@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() 获取目标组ID。
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。
- * @method array getTargetGroupInstances() 获取待修改权重的服务器数组。
- * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待修改权重的服务器数组。
+ * @method array getTargetGroupInstances() 获取实例绑定配置数组。
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置实例绑定配置数组。
  */
 class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array 待修改权重的服务器数组。
+     * @var array 实例绑定配置数组。
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId 目标组ID。
-     * @param array $TargetGroupInstances 待修改权重的服务器数组。
+     * @param array $TargetGroupInstances 实例绑定配置数组。
      */
     function __construct()
     {

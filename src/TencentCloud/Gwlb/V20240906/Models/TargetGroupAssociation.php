@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则与目标组的关联关系。
  *
- * @method string getLoadBalancerId() 获取负载均衡ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID。
+ * @method string getLoadBalancerId() 获取网关负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置网关负载均衡实例ID。
  * @method string getTargetGroupId() 获取目标组ID。
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。
  */
 class TargetGroupAssociation extends AbstractModel
 {
     /**
-     * @var string 负载均衡ID。
+     * @var string 网关负载均衡实例ID。
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class TargetGroupAssociation extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @param string $LoadBalancerId 负载均衡ID。
+     * @param string $LoadBalancerId 网关负载均衡实例ID。
      * @param string $TargetGroupId 目标组ID。
      */
     function __construct()

@@ -101,6 +101,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
 1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+ * @method string getAutoJumpUrl() 获取认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
  */
 class RegistrationOrganizationInfo extends AbstractModel
 {
@@ -198,6 +201,11 @@ p.s. 如果上传授权书 ，需遵循以下条件
     public $PowerOfAttorneys;
 
     /**
+     * @var string 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+     */
+    public $AutoJumpUrl;
+
+    /**
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
@@ -238,6 +246,8 @@ p.s. 如果上传授权书 ，需遵循以下条件
 1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+     * @param string $AutoJumpUrl 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
      */
     function __construct()
     {
@@ -302,6 +312,10 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
         if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
             $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("AutoJumpUrl",$param) and $param["AutoJumpUrl"] !== null) {
+            $this->AutoJumpUrl = $param["AutoJumpUrl"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 图文并茂占位符替换信息
+ * 多媒体占位符替换信息
  *
  * @method string getId() 获取占位符序号
  * @method void setId(string $Id) 设置占位符序号

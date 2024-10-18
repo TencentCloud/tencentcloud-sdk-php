@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestrictState(string $RestrictState) 设置NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNatProductVersion() 获取NAT网关大版本号，传统型=1，标准型=2
+ * @method integer getNatProductVersion() 获取NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关大版本号，传统型=1，标准型=2
+ * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSmartScheduleMode() 获取是否启用根据目的网段选择SNAT使用的EIP功能	
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,7 +196,7 @@ class NatGateway extends AbstractModel
     public $RestrictState;
 
     /**
-     * @var integer NAT网关大版本号，传统型=1，标准型=2
+     * @var integer NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatProductVersion;
@@ -242,7 +242,7 @@ class NatGateway extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+     * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
 注意：此字段可能返回 null，表示取不到有效值。

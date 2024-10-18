@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getList() 获取接入对象列表
  * @method void setList(array $List) 设置接入对象列表
+ * @method integer getRangeType() 获取日志节点范围类型,0自选 1全部
+ * @method void setRangeType(integer $RangeType) 设置日志节点范围类型,0自选 1全部
+ * @method boolean getAutoJoin() 获取新增资产是否自动加入，节点范围为全部时生效
+ * @method void setAutoJoin(boolean $AutoJoin) 设置新增资产是否自动加入，节点范围为全部时生效
+ * @method integer getExcludedCount() 获取剔除节点数
+ * @method void setExcludedCount(integer $ExcludedCount) 设置剔除节点数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +46,21 @@ class DescribeSecLogJoinObjectListResponse extends AbstractModel
     public $List;
 
     /**
+     * @var integer 日志节点范围类型,0自选 1全部
+     */
+    public $RangeType;
+
+    /**
+     * @var boolean 新增资产是否自动加入，节点范围为全部时生效
+     */
+    public $AutoJoin;
+
+    /**
+     * @var integer 剔除节点数
+     */
+    public $ExcludedCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +68,9 @@ class DescribeSecLogJoinObjectListResponse extends AbstractModel
     /**
      * @param integer $TotalCount 总数
      * @param array $List 接入对象列表
+     * @param integer $RangeType 日志节点范围类型,0自选 1全部
+     * @param boolean $AutoJoin 新增资产是否自动加入，节点范围为全部时生效
+     * @param integer $ExcludedCount 剔除节点数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +97,18 @@ class DescribeSecLogJoinObjectListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("RangeType",$param) and $param["RangeType"] !== null) {
+            $this->RangeType = $param["RangeType"];
+        }
+
+        if (array_key_exists("AutoJoin",$param) and $param["AutoJoin"] !== null) {
+            $this->AutoJoin = $param["AutoJoin"];
+        }
+
+        if (array_key_exists("ExcludedCount",$param) and $param["ExcludedCount"] !== null) {
+            $this->ExcludedCount = $param["ExcludedCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

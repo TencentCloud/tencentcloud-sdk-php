@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段，restoreTime-回档时间，startTime-任务开始时间，endTime-任务结束时间，默认按照任务开始时间降序
  * @method string getOrderByType() 获取排序规则（desc-降序，asc-升序），默认desc
  * @method void setOrderByType(string $OrderByType) 设置排序规则（desc-降序，asc-升序），默认desc
+ * @method integer getFlowId() 获取回档异步任务ID
+ * @method void setFlowId(integer $FlowId) 设置回档异步任务ID
  */
 class DescribeRestoreTaskRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeRestoreTaskRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var integer 回档异步任务ID
+     */
+    public $FlowId;
+
+    /**
      * @param string $InstanceId 源实例ID
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
@@ -112,6 +119,7 @@ class DescribeRestoreTaskRequest extends AbstractModel
      * @param integer $Limit 分页返回，页编号，默认值为第0页
      * @param string $OrderBy 排序字段，restoreTime-回档时间，startTime-任务开始时间，endTime-任务结束时间，默认按照任务开始时间降序
      * @param string $OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     * @param integer $FlowId 回档异步任务ID
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeRestoreTaskRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

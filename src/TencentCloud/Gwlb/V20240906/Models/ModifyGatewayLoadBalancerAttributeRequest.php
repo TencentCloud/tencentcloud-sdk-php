@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() 获取网关负载均衡的唯一ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置网关负载均衡的唯一ID。
- * @method string getLoadBalancerName() 获取网关负载均衡名称。
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡名称。
+ * @method string getLoadBalancerName() 获取网关负载均衡实例名称。可支持输入1-60个字符。
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称。可支持输入1-60个字符。
  */
 class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 网关负载均衡名称。
+     * @var string 网关负载均衡实例名称。可支持输入1-60个字符。
      */
     public $LoadBalancerName;
 
     /**
      * @param string $LoadBalancerId 网关负载均衡的唯一ID。
-     * @param string $LoadBalancerName 网关负载均衡名称。
+     * @param string $LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
      */
     function __construct()
     {

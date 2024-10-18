@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置网关负载均衡后端目标设备所属的私有网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
  * @method string getSubnetId() 获取网关负载均衡后端目标设备所属的私有网络的子网ID。
  * @method void setSubnetId(string $SubnetId) 设置网关负载均衡后端目标设备所属的私有网络的子网ID。
- * @method string getLoadBalancerName() 获取网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+ * @method string getLoadBalancerName() 获取网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
  * @method integer getNumber() 获取创建网关负载均衡的个数，默认值为 1。批量创建数量最大支持10个。
  * @method void setNumber(integer $Number) 设置创建网关负载均衡的个数，默认值为 1。批量创建数量最大支持10个。
  * @method array getTags() 获取购买网关负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
@@ -46,7 +46,7 @@ class CreateGatewayLoadBalancerRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+     * @var string 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
      */
     public $LoadBalancerName;
 
@@ -68,7 +68,7 @@ class CreateGatewayLoadBalancerRequest extends AbstractModel
     /**
      * @param string $VpcId 网关负载均衡后端目标设备所属的私有网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
      * @param string $SubnetId 网关负载均衡后端目标设备所属的私有网络的子网ID。
-     * @param string $LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+     * @param string $LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
      * @param integer $Number 创建网关负载均衡的个数，默认值为 1。批量创建数量最大支持10个。
      * @param array $Tags 购买网关负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      * @param string $LBChargeType 网关负载均衡实例计费类型，当前只支持传POSTPAID_BY_HOUR，默认是POSTPAID_BY_HOUR。

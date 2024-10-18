@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAction(boolean $IsNewAction) 设置是否是新动作
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getObjectTypeId() 获取对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectTypeId(integer $ObjectTypeId) 设置对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActionLibraryListResult extends AbstractModel
 {
@@ -185,6 +189,12 @@ class ActionLibraryListResult extends AbstractModel
     public $IsNewAction;
 
     /**
+     * @var integer 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectTypeId;
+
+    /**
      * @param string $ActionName 动作名称
      * @param string $Desc 动作描述
      * @param string $ActionType 动作类型。范围：["平台","自定义"]
@@ -211,6 +221,8 @@ class ActionLibraryListResult extends AbstractModel
      * @param array $MetricIdList 监控指标ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNewAction 是否是新动作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ObjectTypeId 对象类型ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +316,10 @@ class ActionLibraryListResult extends AbstractModel
 
         if (array_key_exists("IsNewAction",$param) and $param["IsNewAction"] !== null) {
             $this->IsNewAction = $param["IsNewAction"];
+        }
+
+        if (array_key_exists("ObjectTypeId",$param) and $param["ObjectTypeId"] !== null) {
+            $this->ObjectTypeId = $param["ObjectTypeId"];
         }
     }
 }

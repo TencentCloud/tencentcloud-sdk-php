@@ -96,6 +96,18 @@ HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicAsyncTaskID() 获取异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMigrationStatus() 获取异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMigrationStatus(integer $MigrationStatus) 设置异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEffectiveDate() 获取异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEffectiveDate(string $EffectiveDate) 设置异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -214,6 +226,24 @@ HotPeriod=0为没有开启日志沉降。
     public $Extends;
 
     /**
+     * @var string 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicAsyncTaskID;
+
+    /**
+     * @var integer 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MigrationStatus;
+
+    /**
+     * @var string 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EffectiveDate;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名称
@@ -251,6 +281,12 @@ HotPeriod=0为没有开启日志沉降。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicExtendInfo $Extends 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicAsyncTaskID 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MigrationStatus 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EffectiveDate 异步迁移完成后，预计生效日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -346,6 +382,18 @@ HotPeriod=0为没有开启日志沉降。
         if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
             $this->Extends = new TopicExtendInfo();
             $this->Extends->deserialize($param["Extends"]);
+        }
+
+        if (array_key_exists("TopicAsyncTaskID",$param) and $param["TopicAsyncTaskID"] !== null) {
+            $this->TopicAsyncTaskID = $param["TopicAsyncTaskID"];
+        }
+
+        if (array_key_exists("MigrationStatus",$param) and $param["MigrationStatus"] !== null) {
+            $this->MigrationStatus = $param["MigrationStatus"];
+        }
+
+        if (array_key_exists("EffectiveDate",$param) and $param["EffectiveDate"] !== null) {
+            $this->EffectiveDate = $param["EffectiveDate"];
         }
     }
 }

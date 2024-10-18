@@ -20,14 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackUpSchedules请求参数结构体
  *
-
+ * @method integer getApplicationType() 获取任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+ * @method void setApplicationType(integer $ApplicationType) 设置任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
  */
 class DescribeBackUpSchedulesRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+     */
+    public $ApplicationType;
 
     /**
-
+     * @param integer $ApplicationType 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
      */
     function __construct()
     {
@@ -42,6 +58,8 @@ class DescribeBackUpSchedulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
+            $this->ApplicationType = $param["ApplicationType"];
+        }
     }
 }

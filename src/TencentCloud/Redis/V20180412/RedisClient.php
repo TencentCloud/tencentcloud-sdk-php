@@ -98,7 +98,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(Models\InquiryPriceUpgradeInstanceRequest $req) 查询实例扩容价格
  * @method Models\KillMasterGroupResponse KillMasterGroup(Models\KillMasterGroupRequest $req) 本接口（KillMasterGroup）模拟故障。
  * @method Models\ManualBackupInstanceResponse ManualBackupInstance(Models\ManualBackupInstanceRequest $req) 本接口（ManualBackupInstance）用于手动备份Redis实例。
- * @method Models\ModfiyInstancePasswordResponse ModfiyInstancePassword(Models\ModfiyInstancePasswordRequest $req) 本接口（ModfiyInstancePassword）用于修改实例访问密码。
+ * @method Models\ModfiyInstancePasswordResponse ModfiyInstancePassword(Models\ModfiyInstancePasswordRequest $req) 本接口（ModfiyInstancePassword）用于修改实例访问密码。鉴于该接口名存在拼写错误，现已更正为（[ModifyInstancePassword](https://cloud.tencent.com/document/product/239/111555)）接口，推荐使用更正后的接口。
  * @method Models\ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(Models\ModifyAutoBackupConfigRequest $req) 本接口（ModifyAutoBackupConfig）用于设置自动备份的配置。
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) 本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载的网络信息与地址。
  * @method Models\ModifyConnectionConfigResponse ModifyConnectionConfig(Models\ModifyConnectionConfigRequest $req) 修改实例的连接配置，包括带宽和最大连接数。

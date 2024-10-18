@@ -121,7 +121,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志主题。
  * @method Models\OpenKafkaConsumerResponse OpenKafkaConsumer(Models\OpenKafkaConsumerRequest $req) 打开Kafka协议消费功能
  * @method Models\PreviewKafkaRechargeResponse PreviewKafkaRecharge(Models\PreviewKafkaRechargeRequest $req) 本接口用于预览Kafka数据订阅任务客户日志信息
- * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值
+ * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值。
+如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
  * @method Models\QueryRangeMetricResponse QueryRangeMetric(Models\QueryRangeMetricRequest $req) 查询指定时间范围内指标的变化趋势
  * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) 重试失败的投递任务
  * @method Models\SearchCosRechargeInfoResponse SearchCosRechargeInfo(Models\SearchCosRechargeInfoRequest $req) 本接口用于预览cos导入信息

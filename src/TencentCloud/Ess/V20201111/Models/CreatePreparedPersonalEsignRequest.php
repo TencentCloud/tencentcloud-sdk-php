@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealImageCompress(boolean $SealImageCompress) 设置是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method string getMobile() 获取手机号码；当需要开通自动签时，该参数必传
  * @method void setMobile(string $Mobile) 设置手机号码；当需要开通自动签时，该参数必传
- * @method boolean getEnableAutoSign() 获取是否开通自动签，该功能需联系运营工作人员开通后使用
- * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置是否开通自动签，该功能需联系运营工作人员开通后使用
+ * @method boolean getEnableAutoSign() 获取此字段已废弃，请勿继续使用。
+ * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置此字段已废弃，请勿继续使用。
  * @method string getSealColor() 获取印章颜色（参数ProcessSeal=true时生效）
 默认值：BLACK黑色
 取值: 
@@ -154,7 +154,7 @@ class CreatePreparedPersonalEsignRequest extends AbstractModel
     public $Mobile;
 
     /**
-     * @var boolean 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * @var boolean 此字段已废弃，请勿继续使用。
      */
     public $EnableAutoSign;
 
@@ -222,7 +222,7 @@ BLUE 蓝色。
 请先通过UploadFiles接口上传文件，获取 FileId
      * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
-     * @param boolean $EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * @param boolean $EnableAutoSign 此字段已废弃，请勿继续使用。
      * @param string $SealColor 印章颜色（参数ProcessSeal=true时生效）
 默认值：BLACK黑色
 取值: 

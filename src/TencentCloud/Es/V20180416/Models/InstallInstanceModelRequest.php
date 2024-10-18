@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getUsrCosModelUrlList() 获取客户上传到自己cos的地址列表
- * @method void setUsrCosModelUrlList(array $UsrCosModelUrlList) 设置客户上传到自己cos的地址列表
+ * @method array getUsrCosModelUrlList() 获取客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
+ * @method void setUsrCosModelUrlList(array $UsrCosModelUrlList) 设置客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
  */
 class InstallInstanceModelRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InstallInstanceModelRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 客户上传到自己cos的地址列表
+     * @var array 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
      */
     public $UsrCosModelUrlList;
 
     /**
      * @param string $InstanceId 实例ID
-     * @param array $UsrCosModelUrlList 客户上传到自己cos的地址列表
+     * @param array $UsrCosModelUrlList 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
      */
     function __construct()
     {

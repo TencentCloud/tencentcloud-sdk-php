@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryApiKey请求参数结构体
  *
- * @method integer getTargetUin() 获取待查询的账号(不填默认查当前账号)
- * @method void setTargetUin(integer $TargetUin) 设置待查询的账号(不填默认查当前账号)
+ * @method integer getTargetUin() 获取待查询的账号uin(不填默认查当前账号uin)
+ * @method void setTargetUin(integer $TargetUin) 设置待查询的账号uin(不填默认查当前账号uin)
  */
 class QueryApiKeyRequest extends AbstractModel
 {
     /**
-     * @var integer 待查询的账号(不填默认查当前账号)
+     * @var integer 待查询的账号uin(不填默认查当前账号uin)
      */
     public $TargetUin;
 
     /**
-     * @param integer $TargetUin 待查询的账号(不填默认查当前账号)
+     * @param integer $TargetUin 待查询的账号uin(不填默认查当前账号uin)
      */
     function __construct()
     {

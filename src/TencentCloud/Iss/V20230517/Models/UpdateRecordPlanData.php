@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDel(array $Del) 设置要删除的设备通道，Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段
  * @method array getOrganizationId() 获取组织目录ID，添加组织目录下所有设备通道，Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量）
  * @method void setOrganizationId(array $OrganizationId) 设置组织目录ID，添加组织目录下所有设备通道，Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量）
+ * @method integer getRepairMode() 获取录像补录模式（0:不启用，1:启用）
+ * @method void setRepairMode(integer $RepairMode) 设置录像补录模式（0:不启用，1:启用）
  */
 class UpdateRecordPlanData extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UpdateRecordPlanData extends AbstractModel
     public $OrganizationId;
 
     /**
+     * @var integer 录像补录模式（0:不启用，1:启用）
+     */
+    public $RepairMode;
+
+    /**
      * @param string $PlanName 上云计划名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段
      * @param string $TemplateId 上云模板ID，不修改模板ID时，不需要该字段
      * @param string $Describe 上云计划描述，仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段
@@ -88,6 +95,7 @@ class UpdateRecordPlanData extends AbstractModel
      * @param array $Add 要新增的设备通道,Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量
      * @param array $Del 要删除的设备通道，Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段
      * @param array $OrganizationId 组织目录ID，添加组织目录下所有设备通道，Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量）
+     * @param integer $RepairMode 录像补录模式（0:不启用，1:启用）
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class UpdateRecordPlanData extends AbstractModel
 
         if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
             $this->OrganizationId = $param["OrganizationId"];
+        }
+
+        if (array_key_exists("RepairMode",$param) and $param["RepairMode"] !== null) {
+            $this->RepairMode = $param["RepairMode"];
         }
     }
 }

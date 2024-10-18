@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) 设置分片迁移并发数
  * @method integer getShardAllocationBytes() 获取分片迁移并发速度
  * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
+ * @method boolean getEnableScheduleRecoverGroup() 获取是否开启置放群组异步任务
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否开启置放群组异步任务
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组异步任务时间段
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务时间段
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class RestartNodesRequest extends AbstractModel
     public $ShardAllocationBytes;
 
     /**
+     * @var boolean 是否开启置放群组异步任务
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration 置放群组异步任务时间段
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $NodeNames 节点名称列表
      * @param boolean $ForceRestart 是否强制重启
@@ -88,6 +102,8 @@ class RestartNodesRequest extends AbstractModel
      * @param integer $CvmDelayOnlineTime cvm延迟上架时间
      * @param integer $ShardAllocationConcurrents 分片迁移并发数
      * @param integer $ShardAllocationBytes 分片迁移并发速度
+     * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务时间段
      */
     function __construct()
     {
@@ -132,6 +148,15 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
             $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
         }
     }
 }

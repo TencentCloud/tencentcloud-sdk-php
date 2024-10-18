@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取集群id
  * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method integer getApplicationType() 获取任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+ * @method void setApplicationType(integer $ApplicationType) 设置任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
  * @method integer getPageSize() 获取分页大小
  * @method void setPageSize(integer $PageSize) 设置分页大小
  * @method integer getPageNum() 获取页号
@@ -39,6 +47,14 @@ class DescribeBackUpJobRequest extends AbstractModel
      * @var string 集群id
      */
     public $InstanceId;
+
+    /**
+     * @var integer 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+     */
+    public $ApplicationType;
 
     /**
      * @var integer 分页大小
@@ -67,6 +83,10 @@ class DescribeBackUpJobRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 集群id
+     * @param integer $ApplicationType 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
      * @param integer $PageSize 分页大小
      * @param integer $PageNum 页号
      * @param string $BeginTime 开始时间
@@ -88,6 +108,10 @@ class DescribeBackUpJobRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
+            $this->ApplicationType = $param["ApplicationType"];
         }
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {

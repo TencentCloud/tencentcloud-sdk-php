@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceId() 获取设备ID（从获取设备列表接口ListDevices中获取）
  * @method void setDeviceId(string $DeviceId) 设置设备ID（从获取设备列表接口ListDevices中获取）
- * @method string getName() 获取设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
- * @method void setName(string $Name) 设置设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+ * @method string getName() 获取设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+ * @method void setName(string $Name) 设置设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
  * @method integer getTransportProtocol() 获取设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
  * @method void setTransportProtocol(integer $TransportProtocol) 设置设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
- * @method string getPassword() 获取设备密码（仅国标，网关设备支持）
- * @method void setPassword(string $Password) 设置设备密码（仅国标，网关设备支持）
- * @method string getDescription() 获取设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
- * @method void setDescription(string $Description) 设置设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+ * @method string getPassword() 获取设备密码（仅国标，网关设备支持，长度不超过 64 位）
+ * @method void setPassword(string $Password) 设置设备密码（仅国标，网关设备支持，长度不超过 64 位）
+ * @method string getDescription() 获取设备描述（长度不超过128位）
+ * @method void setDescription(string $Description) 设置设备描述（长度不超过128位）
  * @method string getIp() 获取设备接入Ip（仅网关接入支持）
  * @method void setIp(string $Ip) 设置设备接入Ip（仅网关接入支持）
  * @method integer getPort() 获取设备Port（仅网关接入支持）
@@ -51,7 +51,7 @@ class UpdateUserDeviceRequest extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var string 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+     * @var string 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
      */
     public $Name;
 
@@ -61,12 +61,12 @@ class UpdateUserDeviceRequest extends AbstractModel
     public $TransportProtocol;
 
     /**
-     * @var string 设备密码（仅国标，网关设备支持）
+     * @var string 设备密码（仅国标，网关设备支持，长度不超过 64 位）
      */
     public $Password;
 
     /**
-     * @var string 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+     * @var string 设备描述（长度不超过128位）
      */
     public $Description;
 
@@ -102,10 +102,10 @@ class UpdateUserDeviceRequest extends AbstractModel
 
     /**
      * @param string $DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
-     * @param string $Name 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+     * @param string $Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
      * @param integer $TransportProtocol 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
-     * @param string $Password 设备密码（仅国标，网关设备支持）
-     * @param string $Description 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+     * @param string $Password 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+     * @param string $Description 设备描述（长度不超过128位）
      * @param string $Ip 设备接入Ip（仅网关接入支持）
      * @param integer $Port 设备Port（仅网关接入支持）
      * @param string $Username 设备用户名（仅网关接入支持）

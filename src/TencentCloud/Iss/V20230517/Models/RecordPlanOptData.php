@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamType(string $StreamType) 设置码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRepairMode() 获取录像补录模式（0:不启用，1:启用）
+ * @method void setRepairMode(integer $RepairMode) 设置录像补录模式（0:不启用，1:启用）
  */
 class RecordPlanOptData extends AbstractModel
 {
@@ -72,6 +74,11 @@ class RecordPlanOptData extends AbstractModel
     public $StreamType;
 
     /**
+     * @var integer 录像补录模式（0:不启用，1:启用）
+     */
+    public $RepairMode;
+
+    /**
      * @param string $PlanId 上云计划ID
      * @param string $PlanName 上云计划名称
      * @param string $TemplateId 上云模板ID
@@ -80,6 +87,7 @@ class RecordPlanOptData extends AbstractModel
      * @param LifeCycleData $LifeCycle 云文件生命周期
      * @param string $StreamType 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RepairMode 录像补录模式（0:不启用，1:启用）
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class RecordPlanOptData extends AbstractModel
 
         if (array_key_exists("StreamType",$param) and $param["StreamType"] !== null) {
             $this->StreamType = $param["StreamType"];
+        }
+
+        if (array_key_exists("RepairMode",$param) and $param["RepairMode"] !== null) {
+            $this->RepairMode = $param["RepairMode"];
         }
     }
 }

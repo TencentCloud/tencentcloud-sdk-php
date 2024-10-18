@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取策略Id
- * @method void setPolicyId(integer $PolicyId) 设置策略Id
+ * @method integer getPolicyId() 获取策略Id。
+ * @method void setPolicyId(integer $PolicyId) 设置策略Id。
  */
 class GetPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略Id
+     * @var integer 策略Id。
      */
     public $PolicyId;
 
     /**
-     * @param integer $PolicyId 策略Id
+     * @param integer $PolicyId 策略Id。
      */
     function __construct()
     {

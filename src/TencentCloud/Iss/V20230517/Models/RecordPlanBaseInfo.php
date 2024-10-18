@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置录像计划状态，1:正常使用中，0:删除中，无法使用
  * @method integer getChannelCount() 获取通道总数
  * @method void setChannelCount(integer $ChannelCount) 设置通道总数
+ * @method integer getRepairMode() 获取录像补录模式（0:不启用，1:启用）
+ * @method void setRepairMode(integer $RepairMode) 设置录像补录模式（0:不启用，1:启用）
  */
 class RecordPlanBaseInfo extends AbstractModel
 {
@@ -86,6 +88,11 @@ class RecordPlanBaseInfo extends AbstractModel
     public $ChannelCount;
 
     /**
+     * @var integer 录像补录模式（0:不启用，1:启用）
+     */
+    public $RepairMode;
+
+    /**
      * @param string $PlanId 上云计划ID
      * @param string $PlanName 上云计划名称
      * @param string $TemplateId 上云模板ID
@@ -96,6 +103,7 @@ class RecordPlanBaseInfo extends AbstractModel
      * @param LifeCycleData $LifeCycle 云文件生命周期
      * @param integer $Status 录像计划状态，1:正常使用中，0:删除中，无法使用
      * @param integer $ChannelCount 通道总数
+     * @param integer $RepairMode 录像补录模式（0:不启用，1:启用）
      */
     function __construct()
     {
@@ -141,6 +149,10 @@ class RecordPlanBaseInfo extends AbstractModel
 
         if (array_key_exists("ChannelCount",$param) and $param["ChannelCount"] !== null) {
             $this->ChannelCount = $param["ChannelCount"];
+        }
+
+        if (array_key_exists("RepairMode",$param) and $param["RepairMode"] !== null) {
+            $this->RepairMode = $param["RepairMode"];
         }
     }
 }

@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubProductCode(string $SubProductCode) 设置子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
  * @method integer getReadWriteMode() 获取读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
  * @method void setReadWriteMode(integer $ReadWriteMode) 设置读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+ * @method boolean getEnableScheduleRecoverGroup() 获取置放群组是否开启异步任务
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置置放群组是否开启异步任务
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组开启异步任务的可维护时间段
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组开启异步任务的可维护时间段
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -314,6 +318,16 @@ class CreateInstanceRequest extends AbstractModel
     public $ReadWriteMode;
 
     /**
+     * @var boolean 置放群组是否开启异步任务
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -360,6 +374,8 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
      * @param string $SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
      * @param integer $ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @param boolean $EnableScheduleRecoverGroup 置放群组是否开启异步任务
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
      */
     function __construct()
     {
@@ -541,6 +557,15 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
             $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
         }
     }
 }

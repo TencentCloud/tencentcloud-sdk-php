@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getHealthSwitch() 获取是否开启健康检查。
  * @method void setHealthSwitch(boolean $HealthSwitch) 设置是否开启健康检查。
- * @method string getProtocol() 获取健康检查使用的协议。支持icmp和tcp，默认为icmp。
- * @method void setProtocol(string $Protocol) 设置健康检查使用的协议。支持icmp和tcp，默认为icmp。
+ * @method string getProtocol() 获取健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
+ * @method void setProtocol(string $Protocol) 设置健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
  * @method integer getPort() 获取健康检查端口，探测协议未tcp时，该参数必填。
 
  * @method void setPort(integer $Port) 设置健康检查端口，探测协议未tcp时，该参数必填。
@@ -45,7 +51,10 @@ class TargetGroupHealthCheck extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var string 健康检查使用的协议。支持icmp和tcp，默认为icmp。
+     * @var string 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
      */
     public $Protocol;
 
@@ -77,7 +86,10 @@ class TargetGroupHealthCheck extends AbstractModel
 
     /**
      * @param boolean $HealthSwitch 是否开启健康检查。
-     * @param string $Protocol 健康检查使用的协议。支持icmp和tcp，默认为icmp。
+     * @param string $Protocol 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
      * @param integer $Port 健康检查端口，探测协议未tcp时，该参数必填。
 
      * @param integer $Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。

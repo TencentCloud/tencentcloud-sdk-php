@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标组关联到的规则
  *
- * @method string getLoadBalancerId() 获取关联到的负载均衡ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置关联到的负载均衡ID
- * @method string getLoadBalancerName() 获取负载均衡名称
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡名称
+ * @method string getLoadBalancerId() 获取关联到的网关负载均衡实例ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置关联到的网关负载均衡实例ID
+ * @method string getLoadBalancerName() 获取网关负载均衡实例名称
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称
  */
 class AssociationItem extends AbstractModel
 {
     /**
-     * @var string 关联到的负载均衡ID
+     * @var string 关联到的网关负载均衡实例ID
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡名称
+     * @var string 网关负载均衡实例名称
      */
     public $LoadBalancerName;
 
     /**
-     * @param string $LoadBalancerId 关联到的负载均衡ID
-     * @param string $LoadBalancerName 负载均衡名称
+     * @param string $LoadBalancerId 关联到的网关负载均衡实例ID
+     * @param string $LoadBalancerName 网关负载均衡实例名称
      */
     function __construct()
     {

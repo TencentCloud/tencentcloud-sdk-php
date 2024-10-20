@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间。默认以当前时间加上半小时作为结束时间。
  * @method integer getPage() 获取分页查询当前页数，从1开始递增
  * @method void setPage(integer $Page) 设置分页查询当前页数，从1开始递增
- * @method integer getLimit() 获取默认是10条
- * @method void setLimit(integer $Limit) 设置默认是10条
+ * @method integer getLimit() 获取默认10条，最大上限为100条
+ * @method void setLimit(integer $Limit) 设置默认10条，最大上限为100条
  * @method array getStatus() 获取课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
  * @method void setStatus(array $Status) 设置课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
  */
@@ -59,7 +59,7 @@ class GetRoomsRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer 默认是10条
+     * @var integer 默认10条，最大上限为100条
      */
     public $Limit;
 
@@ -74,7 +74,7 @@ class GetRoomsRequest extends AbstractModel
      * @param integer $StartTime 开始时间。默认以当前时间减去半小时作为开始时间。
      * @param integer $EndTime 结束时间。默认以当前时间加上半小时作为结束时间。
      * @param integer $Page 分页查询当前页数，从1开始递增
-     * @param integer $Limit 默认是10条
+     * @param integer $Limit 默认10条，最大上限为100条
      * @param array $Status 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
      */
     function __construct()

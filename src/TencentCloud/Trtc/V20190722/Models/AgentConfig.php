@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 机器人参数
  *
  * @method string getUserId() 获取机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserSig() 获取机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserSig(string $UserSig) 设置机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetUserId() 获取机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetUserId(string $TargetUserId) 设置机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxIdleTime() 获取房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWelcomeMessage() 获取机器人的欢迎语
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWelcomeMessage(string $WelcomeMessage) 设置机器人的欢迎语
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInterruptMode() 获取智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterruptMode(integer $InterruptMode) 设置智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInterruptSpeechDuration() 获取InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterruptSpeechDuration(integer $InterruptSpeechDuration) 设置InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentConfig extends AbstractModel
 {
     /**
      * @var string 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserSig;
 
     /**
      * @var string 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetUserId;
 
     /**
      * @var integer 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxIdleTime;
 
     /**
      * @var string 机器人的欢迎语
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WelcomeMessage;
 
     /**
      * @var integer 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterruptMode;
 
     /**
      * @var integer InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterruptSpeechDuration;
 
     /**
      * @param string $UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetUserId 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxIdleTime 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WelcomeMessage 机器人的欢迎语
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InterruptMode 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

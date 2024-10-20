@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method array getTopic() 获取主题属性列表
- * @method void setTopic(array $Topic) 设置主题属性列表
+ * @method array getTopic() 获取主题属性列表 (同一个批次最多支持10个)
+ * @method void setTopic(array $Topic) 设置主题属性列表 (同一个批次最多支持10个)
  */
 class BatchModifyTopicAttributesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class BatchModifyTopicAttributesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 主题属性列表
+     * @var array 主题属性列表 (同一个批次最多支持10个)
      */
     public $Topic;
 
     /**
      * @param string $InstanceId 实例id
-     * @param array $Topic 主题属性列表
+     * @param array $Topic 主题属性列表 (同一个批次最多支持10个)
      */
     function __construct()
     {

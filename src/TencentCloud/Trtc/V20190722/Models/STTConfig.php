@@ -42,10 +42,12 @@ use TencentCloud\Common\AbstractModel;
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanguage(string $Language) 设置语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -68,22 +70,20 @@ use TencentCloud\Common\AbstractModel;
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlternativeLanguage() 获取发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class STTConfig extends AbstractModel
 {
@@ -110,10 +110,12 @@ class STTConfig extends AbstractModel
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Language;
 
@@ -121,13 +123,11 @@ class STTConfig extends AbstractModel
      * @var array 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlternativeLanguage;
 
     /**
      * @var integer 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VadSilenceTime;
 
@@ -154,16 +154,16 @@ class STTConfig extends AbstractModel
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

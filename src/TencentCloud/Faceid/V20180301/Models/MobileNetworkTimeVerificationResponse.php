@@ -28,6 +28,7 @@ use TencentCloud\Common\AbstractModel;
 不收费结果码：
 -1: 手机号格式不正确
 -4: 验证中心服务繁忙
+-5：认证次数超过当日限制，请次日重试
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
 0: 成功
@@ -36,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 不收费结果码：
 -1: 手机号格式不正确
 -4: 验证中心服务繁忙
+-5：认证次数超过当日限制，请次日重试
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRange() 获取在网时长区间。
@@ -56,6 +58,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
 不收费结果码：
 -1: 手机号格式不正确
 -4: 验证中心服务繁忙
+-5：认证次数超过当日限制，请次日重试
      */
     public $Result;
 
@@ -84,6 +87,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
 不收费结果码：
 -1: 手机号格式不正确
 -4: 验证中心服务繁忙
+-5：认证次数超过当日限制，请次日重试
      * @param string $Description 业务结果描述。
      * @param string $Range 在网时长区间。
 格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。

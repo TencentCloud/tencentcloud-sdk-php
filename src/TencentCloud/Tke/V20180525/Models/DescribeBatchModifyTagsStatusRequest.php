@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchModifyTagsStatus请求参数结构体
  *
-
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
  */
 class DescribeBatchModifyTagsStatusRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群id
+     */
+    public $ClusterId;
 
     /**
-
+     * @param string $ClusterId 集群id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeBatchModifyTagsStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
     }
 }

@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
 0：成功
@@ -34,6 +35,7 @@ use TencentCloud\Common\AbstractModel;
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method integer getStatusCode() 获取状态码：
@@ -63,6 +65,7 @@ class MobileStatusResponse extends AbstractModel
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
      */
     public $Result;
 
@@ -95,6 +98,7 @@ class MobileStatusResponse extends AbstractModel
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
      * @param string $Description 业务结果描述。
      * @param integer $StatusCode 状态码：
 0：正常

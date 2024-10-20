@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxRTCMember() 获取最大允许连麦人数
+ * @method integer getMaxRTCMember() 获取最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxRTCMember(integer $MaxRTCMember) 设置最大允许连麦人数
+ * @method void setMaxRTCMember(integer $MaxRTCMember) 设置最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReplayUrl() 获取房间录制地址。已废弃，使用新字段 RecordUrl
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMicNumber() 获取最高房间内人数（不包括老师），0表示不限制，默认为0
+ * @method integer getMaxMicNumber() 获取课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最高房间内人数（不包括老师），0表示不限制，默认为0
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,7 +174,7 @@ class RoomItem extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 最大允许连麦人数
+     * @var integer 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRTCMember;
@@ -192,7 +192,7 @@ class RoomItem extends AbstractModel
     public $RecordUrl;
 
     /**
-     * @var integer 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * @var integer 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMicNumber;
@@ -288,13 +288,13 @@ class RoomItem extends AbstractModel
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxRTCMember 最大允许连麦人数
+     * @param integer $MaxRTCMember 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReplayUrl 房间录制地址。已废弃，使用新字段 RecordUrl
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * @param integer $MaxMicNumber 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。

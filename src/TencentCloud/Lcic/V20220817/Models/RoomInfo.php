@@ -145,6 +145,7 @@ class RoomInfo extends AbstractModel
 
     /**
      * @var integer rtc人数。
+     * @deprecated
      */
     public $RTCAudienceNumber;
 

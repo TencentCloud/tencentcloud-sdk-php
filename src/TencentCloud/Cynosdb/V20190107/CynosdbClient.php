@@ -170,7 +170,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) cynos解绑资源包
  * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 本接口（UpgradeClusterVersion）用于更新内核小版本。
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）用于实例变配。
- * @method Models\UpgradeProxyResponse UpgradeProxy(Models\UpgradeProxyRequest $req) 升级数据库代理配置
+ * @method Models\UpgradeProxyResponse UpgradeProxy(Models\UpgradeProxyRequest $req) 本接口（UpgradeProxy）用于升级数据库代理配置。
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) 升级数据库代理版本
  */
 

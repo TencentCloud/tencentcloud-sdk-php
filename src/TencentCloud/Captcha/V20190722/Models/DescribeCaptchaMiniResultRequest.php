@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaMiniResult请求参数结构体
  *
- * @method integer getCaptchaType() 获取固定填值：9（滑块验证码）
- * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9（滑块验证码）
+ * @method integer getCaptchaType() 获取固定填值：9
+ * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9
  * @method string getTicket() 获取验证码返回给用户的票据
  * @method void setTicket(string $Ticket) 设置验证码返回给用户的票据
  * @method string getUserIp() 获取业务侧获取到的验证码使用者的外网IP
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCaptchaMiniResultRequest extends AbstractModel
 {
     /**
-     * @var integer 固定填值：9（滑块验证码）
+     * @var integer 固定填值：9
      */
     public $CaptchaType;
 
@@ -87,7 +87,7 @@ class DescribeCaptchaMiniResultRequest extends AbstractModel
     public $Imei;
 
     /**
-     * @param integer $CaptchaType 固定填值：9（滑块验证码）
+     * @param integer $CaptchaType 固定填值：9
      * @param string $Ticket 验证码返回给用户的票据
      * @param string $UserIp 业务侧获取到的验证码使用者的外网IP
      * @param integer $CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。

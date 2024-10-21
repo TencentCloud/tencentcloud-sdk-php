@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerLag请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getConsumerGroup() 获取消费组名称
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
  * @method string getNamespace() 获取命名空间，4.x集群必填
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConsumerLagRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeConsumerLagRequest extends AbstractModel
     public $SubscribeTopic;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $ConsumerGroup 消费组名称
      * @param string $Namespace 命名空间，4.x集群必填
      * @param string $SubscribeTopic 订阅主题，不为空则查询订阅了该主题的消费组的堆积

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRole请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getRole() 获取角色名称
  * @method void setRole(string $Role) 设置角色名称
  * @method boolean getPermRead() 获取是否开启消费
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRoleRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class ModifyRoleRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $Role 角色名称
      * @param boolean $PermRead 是否开启消费
      * @param boolean $PermWrite 是否开启生产

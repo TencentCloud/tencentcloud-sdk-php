@@ -36,33 +36,99 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceId(string $SourceId) 设置源规则内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSourceType() 获取源规则类型
+ * @method integer getSourceType() 获取源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceType(integer $SourceType) 设置源规则类型
+ * @method void setSourceType(integer $SourceType) 设置源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetId() 获取目的规则内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetId(string $TargetId) 设置目的规则内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTargetType() 获取目的规则类型
+ * @method integer getTargetType() 获取目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetType(integer $TargetType) 设置目的规则类型
+ * @method void setTargetType(integer $TargetType) 设置目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPort() 获取端口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStrategy() 获取策略，1阻断，2放行
+ * @method integer getStrategy() 获取规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStrategy(integer $Strategy) 设置策略，1阻断，2放行
+ * @method void setStrategy(integer $Strategy) 设置规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取启用状态 ，0未开启，1开启
+ * @method integer getStatus() 获取规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置启用状态 ，0未开启，1开启
+ * @method void setStatus(integer $Status) 设置规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,17 +138,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclTags(string $AclTags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsNew() 获取是否最新一次改动的规则,0否，1是
+ * @method integer getIsNew() 获取规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsNew(integer $IsNew) 设置是否最新一次改动的规则,0否，1是
+ * @method void setIsNew(integer $IsNew) 设置规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsDelay() 获取是否延迟下发
+ * @method integer getIsDelay() 获取是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发
+ * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceTemplateId() 获取服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,13 +208,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBetaList() 获取自动化任务任务信息
+ * @method array getBetaList() 获取自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBetaList(array $BetaList) 设置自动化任务任务信息
+ * @method void setBetaList(array $BetaList) 设置自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取规则id
+ * @method integer getId() 获取规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置规则id
+ * @method void setId(integer $Id) 设置规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
@@ -168,7 +244,19 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $SourceId;
 
     /**
-     * @var integer 源规则类型
+     * @var integer 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
@@ -180,13 +268,28 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $TargetId;
 
     /**
-     * @var integer 目的规则类型
+     * @var integer 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
     /**
      * @var string 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
@@ -198,13 +301,19 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $Port;
 
     /**
-     * @var integer 策略，1阻断，2放行
+     * @var integer 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Strategy;
 
     /**
-     * @var integer 启用状态 ，0未开启，1开启
+     * @var integer 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -222,7 +331,10 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $AclTags;
 
     /**
-     * @var integer 是否最新一次改动的规则,0否，1是
+     * @var integer 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNew;
@@ -234,7 +346,9 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 是否延迟下发
+     * @var integer 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDelay;
@@ -312,13 +426,13 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
     public $ProtocolPortName;
 
     /**
-     * @var array 自动化任务任务信息
+     * @var array 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BetaList;
 
     /**
-     * @var integer 规则id
+     * @var integer 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
@@ -332,29 +446,67 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceId 源规则内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SourceType 源规则类型
+     * @param integer $SourceType 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetId 目的规则内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TargetType 目的规则类型
+     * @param integer $TargetType 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Strategy 策略，1阻断，2放行
+     * @param integer $Strategy 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 启用状态 ，0未开启，1开启
+     * @param integer $Status 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AclTags 标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsNew 是否最新一次改动的规则,0否，1是
+     * @param integer $IsNew 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsDelay 是否延迟下发
+     * @param integer $IsDelay 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -380,9 +532,9 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolPortName 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BetaList 自动化任务任务信息
+     * @param array $BetaList 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id 规则id
+     * @param integer $Id 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

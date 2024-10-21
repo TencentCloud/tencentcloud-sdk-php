@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，分页用
  * @method integer getLimit() 获取条数，分页用
  * @method void setLimit(integer $Limit) 设置条数，分页用
- * @method string getBy() 获取排序字段，取值 'UpdateTime' | 'RulesNum'
- * @method void setBy(string $By) 设置排序字段，取值 'UpdateTime' | 'RulesNum'
- * @method string getOrder() 获取排序，取值 'asc'|'desc'
- * @method void setOrder(string $Order) 设置排序，取值 'asc'|'desc'
+ * @method string getBy() 获取排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+ * @method void setBy(string $By) 设置排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+ * @method string getOrder() 获取排序，取值 ：asc正序，desc逆序
+ * @method void setOrder(string $Order) 设置排序，取值 ：asc正序，desc逆序
  * @method string getSearchValue() 获取搜索值
  * @method void setSearchValue(string $SearchValue) 设置搜索值
  * @method string getUuid() 获取检索地址模板唯一id
  * @method void setUuid(string $Uuid) 设置检索地址模板唯一id
- * @method string getTemplateType() 获取1：ip模板，5：域名模板，6：协议端口模板
- * @method void setTemplateType(string $TemplateType) 设置1：ip模板，5：域名模板，6：协议端口模板
+ * @method string getTemplateType() 获取模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+ * @method void setTemplateType(string $TemplateType) 设置模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
  * @method string getTemplateId() 获取模板Id
  * @method void setTemplateId(string $TemplateId) 设置模板Id
  */
@@ -50,12 +50,12 @@ class DescribeAddressTemplateListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段，取值 'UpdateTime' | 'RulesNum'
+     * @var string 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
      */
     public $By;
 
     /**
-     * @var string 排序，取值 'asc'|'desc'
+     * @var string 排序，取值 ：asc正序，desc逆序
      */
     public $Order;
 
@@ -70,7 +70,7 @@ class DescribeAddressTemplateListRequest extends AbstractModel
     public $Uuid;
 
     /**
-     * @var string 1：ip模板，5：域名模板，6：协议端口模板
+     * @var string 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
      */
     public $TemplateType;
 
@@ -82,11 +82,11 @@ class DescribeAddressTemplateListRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量，分页用
      * @param integer $Limit 条数，分页用
-     * @param string $By 排序字段，取值 'UpdateTime' | 'RulesNum'
-     * @param string $Order 排序，取值 'asc'|'desc'
+     * @param string $By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+     * @param string $Order 排序，取值 ：asc正序，desc逆序
      * @param string $SearchValue 搜索值
      * @param string $Uuid 检索地址模板唯一id
-     * @param string $TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     * @param string $TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
      * @param string $TemplateId 模板Id
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMQTTUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getUsername() 获取用户名
  * @method void setUsername(string $Username) 设置用户名
  * @method boolean getPermRead() 获取是否开启消费
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMQTTUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class ModifyMQTTUserRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $Username 用户名
      * @param boolean $PermRead 是否开启消费
      * @param boolean $PermWrite 是否开启生产

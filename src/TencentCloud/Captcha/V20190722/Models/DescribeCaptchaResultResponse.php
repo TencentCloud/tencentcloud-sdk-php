@@ -58,6 +58,10 @@ EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubmitCaptchaTime() 获取提交验证码时间
  * @method void setSubmitCaptchaTime(integer $SubmitCaptchaTime) 设置提交验证码时间
+ * @method string getDeviceRiskCategory() 获取设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceRiskCategory(string $DeviceRiskCategory) 设置设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -107,6 +111,12 @@ EvilLevel=100 请求有恶意
     public $SubmitCaptchaTime;
 
     /**
+     * @var string 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceRiskCategory;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -131,6 +141,8 @@ EvilLevel=100 请求有恶意
      * @param integer $EvilBitmap 拦截类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubmitCaptchaTime 提交验证码时间
+     * @param string $DeviceRiskCategory 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -168,6 +180,10 @@ EvilLevel=100 请求有恶意
 
         if (array_key_exists("SubmitCaptchaTime",$param) and $param["SubmitCaptchaTime"] !== null) {
             $this->SubmitCaptchaTime = $param["SubmitCaptchaTime"];
+        }
+
+        if (array_key_exists("DeviceRiskCategory",$param) and $param["DeviceRiskCategory"] !== null) {
+            $this->DeviceRiskCategory = $param["DeviceRiskCategory"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getMessageModel() 获取消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+ * @method void setMessageModel(string $MessageModel) 设置消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -92,6 +98,13 @@ class DescribeConsumerGroupResponse extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+     */
+    public $MessageModel;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -107,6 +120,9 @@ class DescribeConsumerGroupResponse extends AbstractModel
      * @param boolean $ConsumeEnable 是否开启消费
      * @param integer $MaxRetryTimes 最大重试次数
      * @param string $Remark 备注
+     * @param string $MessageModel 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -156,6 +172,10 @@ class DescribeConsumerGroupResponse extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MessageModel",$param) and $param["MessageModel"] !== null) {
+            $this->MessageModel = $param["MessageModel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

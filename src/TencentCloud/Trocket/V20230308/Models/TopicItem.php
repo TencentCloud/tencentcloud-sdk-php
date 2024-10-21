@@ -25,13 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
  * @method string getTopicType() 获取主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
  * @method void setTopicType(string $TopicType) 设置主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
  * @method integer getQueueNum() 获取队列数量
  * @method void setQueueNum(integer $QueueNum) 设置队列数量
  * @method string getRemark() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterIdV4() 获取4.x的集群id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIdV4(string $ClusterIdV4) 设置4.x的集群id
@@ -67,6 +73,10 @@ class TopicItem extends AbstractModel
 
     /**
      * @var string 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
      */
     public $TopicType;
 
@@ -77,7 +87,6 @@ class TopicItem extends AbstractModel
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -115,9 +124,12 @@ class TopicItem extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $Topic 主题名称
      * @param string $TopicType 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
      * @param integer $QueueNum 队列数量
      * @param string $Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterIdV4 4.x的集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceV4 4.x的命名空间

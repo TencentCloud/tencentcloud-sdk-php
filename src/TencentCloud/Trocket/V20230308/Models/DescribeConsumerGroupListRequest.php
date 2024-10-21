@@ -20,23 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroupList请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method array getFilters() 获取查询条件列表
+ * @method void setFilters(array $Filters) 设置查询条件列表
  * @method integer getOffset() 获取查询起始位置
  * @method void setOffset(integer $Offset) 设置查询起始位置
  * @method integer getLimit() 获取查询结果限制数量
  * @method void setLimit(integer $Limit) 设置查询结果限制数量
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
  * @method string getFromTopic() 获取查询指定主题下的消费组
  * @method void setFromTopic(string $FromTopic) 设置查询指定主题下的消费组
  */
 class DescribeConsumerGroupListRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
+
+    /**
+     * @var array 查询条件列表
+     */
+    public $Filters;
 
     /**
      * @var integer 查询起始位置
@@ -49,20 +54,15 @@ class DescribeConsumerGroupListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 查询条件列表
-     */
-    public $Filters;
-
-    /**
      * @var string 查询指定主题下的消费组
      */
     public $FromTopic;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
+     * @param array $Filters 查询条件列表
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询结果限制数量
-     * @param array $Filters 查询条件列表
      * @param string $FromTopic 查询指定主题下的消费组
      */
     function __construct()
@@ -82,14 +82,6 @@ class DescribeConsumerGroupListRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -97,6 +89,14 @@ class DescribeConsumerGroupListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("FromTopic",$param) and $param["FromTopic"] !== null) {

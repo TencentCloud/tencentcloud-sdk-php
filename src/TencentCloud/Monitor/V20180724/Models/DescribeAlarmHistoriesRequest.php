@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmLevels(array $AlarmLevels) 设置告警等级,取值范围：Remind、Serious、Warn
  * @method array getConvergenceHistoryIDs() 获取收敛历史的唯一id
  * @method void setConvergenceHistoryIDs(array $ConvergenceHistoryIDs) 设置收敛历史的唯一id
+ * @method array getAlarmTypes() 获取告警类型
+ * @method void setAlarmTypes(array $AlarmTypes) 设置告警类型
  */
 class DescribeAlarmHistoriesRequest extends AbstractModel
 {
@@ -173,6 +175,11 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $ConvergenceHistoryIDs;
 
     /**
+     * @var array 告警类型
+     */
+    public $AlarmTypes;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -196,6 +203,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param array $PolicyIds 根据告警策略 Id 列表搜索
      * @param array $AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
      * @param array $ConvergenceHistoryIDs 收敛历史的唯一id
+     * @param array $AlarmTypes 告警类型
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
 
         if (array_key_exists("ConvergenceHistoryIDs",$param) and $param["ConvergenceHistoryIDs"] !== null) {
             $this->ConvergenceHistoryIDs = $param["ConvergenceHistoryIDs"];
+        }
+
+        if (array_key_exists("AlarmTypes",$param) and $param["AlarmTypes"] !== null) {
+            $this->AlarmTypes = $param["AlarmTypes"];
         }
     }
 }

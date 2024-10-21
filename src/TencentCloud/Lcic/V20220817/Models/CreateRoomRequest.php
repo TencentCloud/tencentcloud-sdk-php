@@ -202,6 +202,7 @@ video 纯视频
 
     /**
      * @var integer rtc人数。
+     * @deprecated
      */
     public $RTCAudienceNumber;
 

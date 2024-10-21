@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIgnoreRule请求参数结构体
  *
- * @method IntrusionDefenseRule getRule() 获取规则
- * @method void setRule(IntrusionDefenseRule $Rule) 设置规则
+ * @method IntrusionDefenseRule getRule() 获取规则列表
+ * @method void setRule(IntrusionDefenseRule $Rule) 设置规则列表
  * @method integer getRuleType() 获取规则类型，1封禁，2放通
  * @method void setRuleType(integer $RuleType) 设置规则类型，1封禁，2放通
  */
 class ModifyBlockIgnoreRuleRequest extends AbstractModel
 {
     /**
-     * @var IntrusionDefenseRule 规则
+     * @var IntrusionDefenseRule 规则列表
      */
     public $Rule;
 
@@ -38,7 +38,7 @@ class ModifyBlockIgnoreRuleRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @param IntrusionDefenseRule $Rule 规则
+     * @param IntrusionDefenseRule $Rule 规则列表
      * @param integer $RuleType 规则类型，1封禁，2放通
      */
     function __construct()

@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
  * @method string getCountryCode() 获取国家（或地区）码。
  * @method void setCountryCode(string $CountryCode) 设置国家（或地区）码。
- * @method string getPhoneNumber() 获取手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+ * @method string getPhoneNumber() 获取手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
+ * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
  * @method string getSignName() 获取短信签名名称。
  * @method void setSignName(string $SignName) 设置短信签名名称。
  * @method string getReplyContent() 获取用户回复的内容。
  * @method void setReplyContent(string $ReplyContent) 设置用户回复的内容。
  * @method integer getReplyTime() 获取回复时间，UNIX 时间戳（单位：秒）。
  * @method void setReplyTime(integer $ReplyTime) 设置回复时间，UNIX 时间戳（单位：秒）。
- * @method string getSubscriberNumber() 获取用户号码，普通格式，示例如：13711112222。
- * @method void setSubscriberNumber(string $SubscriberNumber) 设置用户号码，普通格式，示例如：13711112222。
+ * @method string getSubscriberNumber() 获取用户号码，普通格式，示例如：18501234444。
+ * @method void setSubscriberNumber(string $SubscriberNumber) 设置用户号码，普通格式，示例如：18501234444。
  */
 class PullSmsReplyStatus extends AbstractModel
 {
@@ -48,7 +48,7 @@ class PullSmsReplyStatus extends AbstractModel
     public $CountryCode;
 
     /**
-     * @var string 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @var string 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public $PhoneNumber;
 
@@ -68,18 +68,18 @@ class PullSmsReplyStatus extends AbstractModel
     public $ReplyTime;
 
     /**
-     * @var string 用户号码，普通格式，示例如：13711112222。
+     * @var string 用户号码，普通格式，示例如：18501234444。
      */
     public $SubscriberNumber;
 
     /**
      * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
      * @param string $CountryCode 国家（或地区）码。
-     * @param string $PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @param string $PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      * @param string $SignName 短信签名名称。
      * @param string $ReplyContent 用户回复的内容。
      * @param integer $ReplyTime 回复时间，UNIX 时间戳（单位：秒）。
-     * @param string $SubscriberNumber 用户号码，普通格式，示例如：13711112222。
+     * @param string $SubscriberNumber 用户号码，普通格式，示例如：18501234444。
      */
     function __construct()
     {

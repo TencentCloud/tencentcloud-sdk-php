@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllTotal(integer $AllTotal) 设置规则总数
  * @method array getData() 获取规则列表
  * @method void setData(array $Data) 设置规则列表
- * @method integer getEnable() 获取规则整体启用状态
- * @method void setEnable(integer $Enable) 设置规则整体启用状态
+ * @method integer getEnable() 获取规则列表整体启用状态 
+取值范围 0/1/2
+0.表示没有启用的(可以批量启用)  
+1.表示没有禁用的(可以批量禁用)    
+2 表示混合情况（不可批量操作）
+ * @method void setEnable(integer $Enable) 设置规则列表整体启用状态 
+取值范围 0/1/2
+0.表示没有启用的(可以批量启用)  
+1.表示没有禁用的(可以批量禁用)    
+2 表示混合情况（不可批量操作）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +57,11 @@ class DescribeEnterpriseSecurityGroupRuleListResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 规则整体启用状态
+     * @var integer 规则列表整体启用状态 
+取值范围 0/1/2
+0.表示没有启用的(可以批量启用)  
+1.表示没有禁用的(可以批量禁用)    
+2 表示混合情况（不可批量操作）
      */
     public $Enable;
 
@@ -62,7 +74,11 @@ class DescribeEnterpriseSecurityGroupRuleListResponse extends AbstractModel
      * @param integer $Total 查询结果总数
      * @param integer $AllTotal 规则总数
      * @param array $Data 规则列表
-     * @param integer $Enable 规则整体启用状态
+     * @param integer $Enable 规则列表整体启用状态 
+取值范围 0/1/2
+0.表示没有启用的(可以批量启用)  
+1.表示没有禁用的(可以批量禁用)    
+2 表示混合情况（不可批量操作）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

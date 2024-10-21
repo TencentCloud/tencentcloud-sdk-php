@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMQTTTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题
- * @method void setTopic(string $Topic) 设置主题
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method string getTopic() 获取主题名称
+ * @method void setTopic(string $Topic) 设置主题名称
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  */
 class ModifyMQTTTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
     /**
-     * @var string 主题
+     * @var string 主题名称
      */
     public $Topic;
 
@@ -45,8 +45,8 @@ class ModifyMQTTTopicRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题
+     * @param string $InstanceId 集群ID
+     * @param string $Topic 主题名称
      * @param string $Remark 备注信息
      */
     function __construct()

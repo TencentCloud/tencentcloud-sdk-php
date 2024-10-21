@@ -64,9 +64,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQos(string $Qos) 设置0，1，2
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetain() 获取1、2、3
+ * @method integer getRetain() 获取1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetain(integer $Retain) 设置1、2、3
+ * @method void setRetain(integer $Retain) 设置1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,7 +154,9 @@ class AuthorizationPolicyItem extends AbstractModel
     public $Qos;
 
     /**
-     * @var integer 1、2、3
+     * @var integer 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Retain;
@@ -194,7 +200,9 @@ class AuthorizationPolicyItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qos 0，1，2
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Retain 1、2、3
+     * @param integer $Retain 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 描述
 注意：此字段可能返回 null，表示取不到有效值。

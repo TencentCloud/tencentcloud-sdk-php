@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getConsumerGroup() 获取消费组名称
- * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method integer getMaxRetryTimes() 获取最大重试次数
  * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
  * @method boolean getConsumeEnable() 获取是否开启消费
@@ -32,20 +30,17 @@ use TencentCloud\Common\AbstractModel;
 并发投递：false
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
 并发投递：false
+ * @method string getConsumerGroup() 获取消费组名称
+ * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
-
-    /**
-     * @var string 消费组名称
-     */
-    public $ConsumerGroup;
 
     /**
      * @var integer 最大重试次数
@@ -64,17 +59,22 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $ConsumeMessageOrderly;
 
     /**
+     * @var string 消费组名称
+     */
+    public $ConsumerGroup;
+
+    /**
      * @var string 备注
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ConsumerGroup 消费组名称
+     * @param string $InstanceId 集群ID
      * @param integer $MaxRetryTimes 最大重试次数
      * @param boolean $ConsumeEnable 是否开启消费
      * @param boolean $ConsumeMessageOrderly 顺序投递：true
 并发投递：false
+     * @param string $ConsumerGroup 消费组名称
      * @param string $Remark 备注
      */
     function __construct()
@@ -94,10 +94,6 @@ class CreateConsumerGroupRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("ConsumerGroup",$param) and $param["ConsumerGroup"] !== null) {
-            $this->ConsumerGroup = $param["ConsumerGroup"];
-        }
-
         if (array_key_exists("MaxRetryTimes",$param) and $param["MaxRetryTimes"] !== null) {
             $this->MaxRetryTimes = $param["MaxRetryTimes"];
         }
@@ -108,6 +104,10 @@ class CreateConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("ConsumeMessageOrderly",$param) and $param["ConsumeMessageOrderly"] !== null) {
             $this->ConsumeMessageOrderly = $param["ConsumeMessageOrderly"];
+        }
+
+        if (array_key_exists("ConsumerGroup",$param) and $param["ConsumerGroup"] !== null) {
+            $this->ConsumerGroup = $param["ConsumerGroup"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

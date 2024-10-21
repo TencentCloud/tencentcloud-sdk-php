@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaRceResult请求参数结构体
  *
- * @method integer getCaptchaType() 获取固定填值：9。可在控制台配置不同验证码类型。
- * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。可在控制台配置不同验证码类型。
+ * @method integer getCaptchaType() 获取固定填值：9。
+ * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。
  * @method string getTicket() 获取前端回调函数返回的用户验证票据
  * @method void setTicket(string $Ticket) 设置前端回调函数返回的用户验证票据
  * @method string getUserIp() 获取业务侧获取到的验证码使用者的外网IP
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCaptchaRceResultRequest extends AbstractModel
 {
     /**
-     * @var integer 固定填值：9。可在控制台配置不同验证码类型。
+     * @var integer 固定填值：9。
      */
     public $CaptchaType;
 
@@ -101,7 +101,7 @@ class DescribeCaptchaRceResultRequest extends AbstractModel
     public $NeedGetCaptchaTime;
 
     /**
-     * @param integer $CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
+     * @param integer $CaptchaType 固定填值：9。
      * @param string $Ticket 前端回调函数返回的用户验证票据
      * @param string $UserIp 业务侧获取到的验证码使用者的外网IP
      * @param string $Randstr 前端回调函数返回的随机字符串

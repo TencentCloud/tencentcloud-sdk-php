@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPNum(integer $IPNum) 设置模板包含地址数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIpVersion() 获取IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpVersion(integer $IpVersion) 设置IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListInfo extends AbstractModel
 {
@@ -134,6 +138,12 @@ class TemplateListInfo extends AbstractModel
     public $IPNum;
 
     /**
+     * @var integer IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpVersion;
+
+    /**
      * @param string $Uuid 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 模板名称
@@ -155,6 +165,8 @@ class TemplateListInfo extends AbstractModel
      * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IPNum 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IpVersion IP版本,0,IPv4;1,IPv6
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,10 @@ class TemplateListInfo extends AbstractModel
 
         if (array_key_exists("IPNum",$param) and $param["IPNum"] !== null) {
             $this->IPNum = $param["IPNum"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

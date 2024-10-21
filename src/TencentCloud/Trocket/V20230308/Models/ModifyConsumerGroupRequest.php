@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getConsumerGroup() 获取消费组名称
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
  * @method boolean getConsumeEnable() 获取是否开启消费
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -69,7 +69,7 @@ class ModifyConsumerGroupRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $ConsumerGroup 消费组名称
      * @param boolean $ConsumeEnable 是否开启消费
      * @param boolean $ConsumeMessageOrderly 顺序投递：true

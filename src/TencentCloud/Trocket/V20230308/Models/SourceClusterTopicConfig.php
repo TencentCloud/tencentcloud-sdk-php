@@ -82,6 +82,18 @@ AlreadyExists 已存在，
 Success 成功，
 Failure 失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceV4() 获取4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicNameV4() 获取4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNameV4(string $TopicNameV4) 设置4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullNamespaceV4() 获取4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceClusterTopicConfig extends AbstractModel
 {
@@ -145,6 +157,24 @@ Failure 失败
     public $ImportStatus;
 
     /**
+     * @var string 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceV4;
+
+    /**
+     * @var string 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNameV4;
+
+    /**
+     * @var string 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullNamespaceV4;
+
+    /**
      * @param string $TopicName 主题名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicType 主题类型，
@@ -175,6 +205,12 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicNameV4 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullNamespaceV4 4.x的完整命名空间，出参使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +252,18 @@ Failure 失败
 
         if (array_key_exists("ImportStatus",$param) and $param["ImportStatus"] !== null) {
             $this->ImportStatus = $param["ImportStatus"];
+        }
+
+        if (array_key_exists("NamespaceV4",$param) and $param["NamespaceV4"] !== null) {
+            $this->NamespaceV4 = $param["NamespaceV4"];
+        }
+
+        if (array_key_exists("TopicNameV4",$param) and $param["TopicNameV4"] !== null) {
+            $this->TopicNameV4 = $param["TopicNameV4"];
+        }
+
+        if (array_key_exists("FullNamespaceV4",$param) and $param["FullNamespaceV4"] !== null) {
+            $this->FullNamespaceV4 = $param["FullNamespaceV4"];
         }
     }
 }

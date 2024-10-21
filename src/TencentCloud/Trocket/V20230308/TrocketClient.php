@@ -32,7 +32,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 添加角色
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
- * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例
+ * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除 RocketMQ 5.x 集群。
  * @method Models\DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(Models\DeleteMQTTInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点
  * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 删除MQTT实例
  * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 删除MQTT主题
@@ -45,13 +45,13 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 1. ConsumerGroupName，名称模糊查询
 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
  * @method Models\DescribeConsumerLagResponse DescribeConsumerLag(Models\DescribeConsumerLagRequest $req) 查询指定消费组堆积数。
- * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
+ * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 查询集群列表，支持 4.x 和 5.x 集群，其中 Filters 参数使用说明如下：
 1. InstanceName, 名称模糊查询
-2. InstanceId，实例ID查询
-3. InstanceType, 实例类型查询，支持多选
-4. Version，实例版本查询
+2. InstanceId，集群ID查询
+3. InstanceType, 集群类型查询，支持多选
+4. Version，集群版本查询
 当使用TagFilters查询时，Filters参数失效。
- * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
+ * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询 RocketMQ 5.x 集群信息。
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取集群列表，仅支持 5.x 集群，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，集群ID查询

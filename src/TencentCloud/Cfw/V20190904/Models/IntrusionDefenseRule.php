@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIP(string $IP) 设置规则IP地址，IP与Domain必填其中之一
  * @method string getDomain() 获取规则域名，IP与Domain必填其中之一
  * @method void setDomain(string $Domain) 设置规则域名，IP与Domain必填其中之一
- * @method string getComment() 获取备注信息，长度不能超过50
- * @method void setComment(string $Comment) 设置备注信息，长度不能超过50
  * @method string getStartTime() 获取规则开始时间
  * @method void setStartTime(string $StartTime) 设置规则开始时间
+ * @method string getComment() 获取备注信息，长度不能超过50
+ * @method void setComment(string $Comment) 设置备注信息，长度不能超过50
  */
 class IntrusionDefenseRule extends AbstractModel
 {
@@ -56,22 +56,22 @@ class IntrusionDefenseRule extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 备注信息，长度不能超过50
-     */
-    public $Comment;
-
-    /**
      * @var string 规则开始时间
      */
     public $StartTime;
+
+    /**
+     * @var string 备注信息，长度不能超过50
+     */
+    public $Comment;
 
     /**
      * @param integer $Direction 规则方向，0出站，1入站，3内网间
      * @param string $EndTime 规则结束时间，格式：2006-01-02 15:04:05，必须大于当前时间
      * @param string $IP 规则IP地址，IP与Domain必填其中之一
      * @param string $Domain 规则域名，IP与Domain必填其中之一
-     * @param string $Comment 备注信息，长度不能超过50
      * @param string $StartTime 规则开始时间
+     * @param string $Comment 备注信息，长度不能超过50
      */
     function __construct()
     {
@@ -102,12 +102,12 @@ class IntrusionDefenseRule extends AbstractModel
             $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(integer $Method) 设置检测方式0 - 版本比对, 1 - POC验证
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVulFixSwitch() 获取漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulFixSwitch(integer $VulFixSwitch) 设置漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -260,6 +264,12 @@ class VulInfoList extends AbstractModel
     public $Method;
 
     /**
+     * @var integer 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulFixSwitch;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
      * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
@@ -303,6 +313,8 @@ class VulInfoList extends AbstractModel
      * @param boolean $FixNoNeedRestart 漏洞修复后是否需要重启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Method 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VulFixSwitch 漏洞是否支持修复 0不支持，1支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -420,6 +432,10 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("VulFixSwitch",$param) and $param["VulFixSwitch"] !== null) {
+            $this->VulFixSwitch = $param["VulFixSwitch"];
         }
     }
 }

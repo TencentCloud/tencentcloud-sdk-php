@@ -27,15 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVersion() 获取实例版本
  * @method void setVersion(string $Version) 设置实例版本
  * @method string getInstanceType() 获取实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
  * @method void setInstanceType(string $InstanceType) 设置实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
  * @method string getInstanceStatus() 获取实例状态，
 RUNNING, 运行中
 MAINTAINING，维护中
@@ -104,10 +100,8 @@ class MQTTInstanceItem extends AbstractModel
 
     /**
      * @var string 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
      */
     public $InstanceType;
 
@@ -176,10 +170,8 @@ DELETING，删除中
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
      * @param string $InstanceType 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
      * @param string $InstanceStatus 实例状态，
 RUNNING, 运行中
 MAINTAINING，维护中

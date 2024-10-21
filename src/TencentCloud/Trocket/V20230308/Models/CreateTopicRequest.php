@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题
- * @method void setTopic(string $Topic) 设置主题
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method string getTopic() 获取主题名称
+ * @method void setTopic(string $Topic) 设置主题名称
  * @method string getTopicType() 获取主题类型
 UNSPECIFIED:未指定,
 NORMAL:普通消息,
@@ -46,12 +46,12 @@ TRANSACTION:事务消息
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
     /**
-     * @var string 主题
+     * @var string 主题名称
      */
     public $Topic;
 
@@ -81,8 +81,8 @@ TRANSACTION:事务消息
     public $MsgTTL;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题
+     * @param string $InstanceId 集群ID
+     * @param string $Topic 主题名称
      * @param string $TopicType 主题类型
 UNSPECIFIED:未指定,
 NORMAL:普通消息,

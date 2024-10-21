@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MQTT认证器信息
  *
- * @method string getType() 获取认证器类型
+ * @method string getType() 获取认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置认证器类型
+ * @method void setType(string $Type) 设置认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfig() 获取认证器配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class MQTTAuthenticatorItem extends AbstractModel
 {
     /**
-     * @var string 认证器类型
+     * @var string 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -74,7 +74,7 @@ class MQTTAuthenticatorItem extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $Type 认证器类型
+     * @param string $Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Config 认证器配置
 注意：此字段可能返回 null，表示取不到有效值。

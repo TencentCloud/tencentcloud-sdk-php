@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
  * @method string getSslVpnServerName() 获取SSL-VPN-SERVER 实例名称，长度不超过60个字节。
  * @method void setSslVpnServerName(string $SslVpnServerName) 设置SSL-VPN-SERVER 实例名称，长度不超过60个字节。
- * @method array getLocalAddress() 获取云端地址（CIDR）列表。
- * @method void setLocalAddress(array $LocalAddress) 设置云端地址（CIDR）列表。
  * @method string getRemoteAddress() 获取客户端地址网段。
  * @method void setRemoteAddress(string $RemoteAddress) 设置客户端地址网段。
+ * @method array getLocalAddress() 获取云端地址（CIDR）列表。
+ * @method void setLocalAddress(array $LocalAddress) 设置云端地址（CIDR）列表。
  * @method string getSslVpnProtocol() 获取SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
  * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
  * @method integer getSslVpnPort() 获取SSL VPN服务端监听协议端口，默认1194。
@@ -60,14 +60,14 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     public $SslVpnServerName;
 
     /**
-     * @var array 云端地址（CIDR）列表。
-     */
-    public $LocalAddress;
-
-    /**
      * @var string 客户端地址网段。
      */
     public $RemoteAddress;
+
+    /**
+     * @var array 云端地址（CIDR）列表。
+     */
+    public $LocalAddress;
 
     /**
      * @var string SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
@@ -117,8 +117,8 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
-     * @param array $LocalAddress 云端地址（CIDR）列表。
      * @param string $RemoteAddress 客户端地址网段。
+     * @param array $LocalAddress 云端地址（CIDR）列表。
      * @param string $SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
      * @param integer $SslVpnPort SSL VPN服务端监听协议端口，默认1194。
      * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
@@ -150,12 +150,12 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
             $this->SslVpnServerName = $param["SslVpnServerName"];
         }
 
-        if (array_key_exists("LocalAddress",$param) and $param["LocalAddress"] !== null) {
-            $this->LocalAddress = $param["LocalAddress"];
-        }
-
         if (array_key_exists("RemoteAddress",$param) and $param["RemoteAddress"] !== null) {
             $this->RemoteAddress = $param["RemoteAddress"];
+        }
+
+        if (array_key_exists("LocalAddress",$param) and $param["LocalAddress"] !== null) {
+            $this->LocalAddress = $param["LocalAddress"];
         }
 
         if (array_key_exists("SslVpnProtocol",$param) and $param["SslVpnProtocol"] !== null) {

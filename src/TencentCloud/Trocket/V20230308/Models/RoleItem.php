@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
- * @method string getAccessKey() 获取Access Key
- * @method void setAccessKey(string $AccessKey) 设置Access Key
- * @method string getSecretKey() 获取Secret Key
- * @method void setSecretKey(string $SecretKey) 设置Secret Key
  * @method boolean getPermRead() 获取是否开启消费
  * @method void setPermRead(boolean $PermRead) 设置是否开启消费
  * @method boolean getPermWrite() 获取是否开启生产
  * @method void setPermWrite(boolean $PermWrite) 设置是否开启生产
+ * @method string getAccessKey() 获取Access Key
+ * @method void setAccessKey(string $AccessKey) 设置Access Key
+ * @method string getSecretKey() 获取Secret Key
+ * @method void setSecretKey(string $SecretKey) 设置Secret Key
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method integer getCreatedTime() 获取创建时间，秒为单位
@@ -45,16 +45,6 @@ class RoleItem extends AbstractModel
     public $RoleName;
 
     /**
-     * @var string Access Key
-     */
-    public $AccessKey;
-
-    /**
-     * @var string Secret Key
-     */
-    public $SecretKey;
-
-    /**
      * @var boolean 是否开启消费
      */
     public $PermRead;
@@ -63,6 +53,16 @@ class RoleItem extends AbstractModel
      * @var boolean 是否开启生产
      */
     public $PermWrite;
+
+    /**
+     * @var string Access Key
+     */
+    public $AccessKey;
+
+    /**
+     * @var string Secret Key
+     */
+    public $SecretKey;
 
     /**
      * @var string 备注信息
@@ -81,10 +81,10 @@ class RoleItem extends AbstractModel
 
     /**
      * @param string $RoleName 角色名称
-     * @param string $AccessKey Access Key
-     * @param string $SecretKey Secret Key
      * @param boolean $PermRead 是否开启消费
      * @param boolean $PermWrite 是否开启生产
+     * @param string $AccessKey Access Key
+     * @param string $SecretKey Secret Key
      * @param string $Remark 备注信息
      * @param integer $CreatedTime 创建时间，秒为单位
      * @param integer $ModifiedTime 修改时间，秒为单位
@@ -106,20 +106,20 @@ class RoleItem extends AbstractModel
             $this->RoleName = $param["RoleName"];
         }
 
-        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
-            $this->AccessKey = $param["AccessKey"];
-        }
-
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
-        }
-
         if (array_key_exists("PermRead",$param) and $param["PermRead"] !== null) {
             $this->PermRead = $param["PermRead"];
         }
 
         if (array_key_exists("PermWrite",$param) and $param["PermWrite"] !== null) {
             $this->PermWrite = $param["PermWrite"];
+        }
+
+        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
+            $this->AccessKey = $param["AccessKey"];
+        }
+
+        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
+            $this->SecretKey = $param["SecretKey"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

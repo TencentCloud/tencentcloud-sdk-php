@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题
- * @method void setTopic(string $Topic) 设置主题
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method string getTopic() 获取主题名称
+ * @method void setTopic(string $Topic) 设置主题名称
  * @method integer getQueueNum() 获取队列数量
  * @method void setQueueNum(integer $QueueNum) 设置队列数量
  * @method string getRemark() 获取备注信息
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
     /**
-     * @var string 主题
+     * @var string 主题名称
      */
     public $Topic;
 
@@ -59,8 +59,8 @@ class ModifyTopicRequest extends AbstractModel
     public $MsgTTL;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题
+     * @param string $InstanceId 集群ID
+     * @param string $Topic 主题名称
      * @param integer $QueueNum 队列数量
      * @param string $Remark 备注信息
      * @param integer $MsgTTL 消息保留时长

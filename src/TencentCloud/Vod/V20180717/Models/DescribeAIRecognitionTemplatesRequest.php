@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method array getDefinitions() 获取音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+ * @method string getType() 获取模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+ * @method void setType(string $Type) 设置模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -42,6 +44,11 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     public $Definitions;
 
     /**
+     * @var string 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+     */
+    public $Type;
+
+    /**
      * @var integer 分页偏移量，默认值：0。
      */
     public $Offset;
@@ -54,6 +61,7 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param array $Definitions 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * @param string $Type 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      */
@@ -76,6 +84,10 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
             $this->Definitions = $param["Definitions"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

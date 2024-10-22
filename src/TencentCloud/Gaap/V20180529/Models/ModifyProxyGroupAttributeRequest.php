@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取需要修改的通道组ID。
  * @method void setGroupId(string $GroupId) 设置需要修改的通道组ID。
- * @method string getGroupName() 获取修改后的通道组名称：不超过30个字符，超过部分会被截断。
- * @method void setGroupName(string $GroupName) 设置修改后的通道组名称：不超过30个字符，超过部分会被截断。
+ * @method string getGroupName() 获取修改后的通道组名称：不超过30个字符，否则修改失败。
+ * @method void setGroupName(string $GroupName) 设置修改后的通道组名称：不超过30个字符，否则修改失败。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  */
@@ -35,7 +35,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * @var string 修改后的通道组名称：不超过30个字符，否则修改失败。
      */
     public $GroupName;
 
@@ -46,7 +46,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
 
     /**
      * @param string $GroupId 需要修改的通道组ID。
-     * @param string $GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * @param string $GroupName 修改后的通道组名称：不超过30个字符，否则修改失败。
      * @param integer $ProjectId 项目ID
      */
     function __construct()

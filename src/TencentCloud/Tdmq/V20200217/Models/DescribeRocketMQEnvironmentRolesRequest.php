@@ -22,22 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取必填字段，RocketMQ集群的ID
  * @method void setClusterId(string $ClusterId) 设置必填字段，RocketMQ集群的ID
- * @method string getEnvironmentId() 获取环境（命名空间）名称。
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method string getEnvironmentId() 获取命名空间
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
- * @method array getFilters() 获取* RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
- * @method void setFilters(array $Filters) 设置* RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+ * @method array getFilters() 获取RoleName按照角色名进行过滤，精确查询。类型：String必选：否
+ * @method void setFilters(array $Filters) 设置RoleName按照角色名进行过滤，精确查询。类型：String必选：否
  */
 class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
 {
@@ -47,7 +41,7 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 环境（命名空间）名称。
+     * @var string 命名空间
      */
     public $EnvironmentId;
 
@@ -67,23 +61,17 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @var array * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * @var array RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     public $Filters;
 
     /**
      * @param string $ClusterId 必填字段，RocketMQ集群的ID
-     * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param string $EnvironmentId 命名空间
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $RoleName 角色名称
-     * @param array $Filters * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * @param array $Filters RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     function __construct()
     {

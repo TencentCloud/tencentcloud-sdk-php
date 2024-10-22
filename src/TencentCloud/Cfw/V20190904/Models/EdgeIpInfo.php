@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPublicIp() 获取公网IP
  * @method void setPublicIp(string $PublicIp) 设置公网IP
- * @method integer getPublicIpType() 获取公网 IP 类型
+ * @method integer getPublicIpType() 获取公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicIpType(integer $PublicIpType) 设置公网 IP 类型
+ * @method void setPublicIpType(integer $PublicIpType) 设置公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,7 +147,7 @@ class EdgeIpInfo extends AbstractModel
     public $PublicIp;
 
     /**
-     * @var integer 公网 IP 类型
+     * @var integer 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpType;
@@ -294,7 +294,7 @@ class EdgeIpInfo extends AbstractModel
 
     /**
      * @param string $PublicIp 公网IP
-     * @param integer $PublicIpType 公网 IP 类型
+     * @param integer $PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。

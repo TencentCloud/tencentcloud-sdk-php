@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
  * @method string getRemark() 获取备注信息
@@ -34,13 +34,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长，小时为单位
  * @method boolean getScaledTpsEnabled() 获取是否开启弹性TPS
  * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) 设置是否开启弹性TPS
+ * @method boolean getAclEnabled() 获取是否开启ACL
+ * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL
  * @method integer getMaxTopicNum() 获取最大可创建主题数
  * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
+ * @method string getExtraTopicNum() 获取免费额度之外的主题个数
+ * @method void setExtraTopicNum(string $ExtraTopicNum) 设置免费额度之外的主题个数
  */
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -75,19 +79,31 @@ class ModifyInstanceRequest extends AbstractModel
     public $ScaledTpsEnabled;
 
     /**
+     * @var boolean 是否开启ACL
+     */
+    public $AclEnabled;
+
+    /**
      * @var integer 最大可创建主题数
      */
     public $MaxTopicNum;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @var string 免费额度之外的主题个数
+     */
+    public $ExtraTopicNum;
+
+    /**
+     * @param string $InstanceId 集群ID
      * @param string $Name 实例名称
      * @param string $Remark 备注信息
      * @param float $SendReceiveRatio 消息发送和接收的比例
      * @param string $SkuCode 调整实例规格的商品代号
      * @param integer $MessageRetention 消息保留时长，小时为单位
      * @param boolean $ScaledTpsEnabled 是否开启弹性TPS
+     * @param boolean $AclEnabled 是否开启ACL
      * @param integer $MaxTopicNum 最大可创建主题数
+     * @param string $ExtraTopicNum 免费额度之外的主题个数
      */
     function __construct()
     {
@@ -130,8 +146,16 @@ class ModifyInstanceRequest extends AbstractModel
             $this->ScaledTpsEnabled = $param["ScaledTpsEnabled"];
         }
 
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
         if (array_key_exists("MaxTopicNum",$param) and $param["MaxTopicNum"] !== null) {
             $this->MaxTopicNum = $param["MaxTopicNum"];
+        }
+
+        if (array_key_exists("ExtraTopicNum",$param) and $param["ExtraTopicNum"] !== null) {
+            $this->ExtraTopicNum = $param["ExtraTopicNum"];
         }
     }
 }

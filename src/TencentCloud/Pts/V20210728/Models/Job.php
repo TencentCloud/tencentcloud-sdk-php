@@ -196,6 +196,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScenarioName(string $ScenarioName) 设置test-scenario
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayMode() 获取付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(integer $PayMode) 设置付费类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -460,6 +464,12 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $ScenarioName;
 
     /**
+     * @var integer 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
@@ -547,6 +557,8 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param string $ProjectName test-project
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioName test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PayMode 付费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -770,6 +782,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 
         if (array_key_exists("ScenarioName",$param) and $param["ScenarioName"] !== null) {
             $this->ScenarioName = $param["ScenarioName"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

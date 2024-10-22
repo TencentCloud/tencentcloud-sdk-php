@@ -150,8 +150,12 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAttackEventInfoResponse DescribeAttackEventInfo(Models\DescribeAttackEventInfoRequest $req) 网络攻击事件详情
  * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) 按分页形式展示网络攻击检测事件列表
  * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
- * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) 查询攻击溯源
- * @method Models\DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(Models\DescribeAttackSourceEventsRequest $req) 查询攻击溯源事件
+ * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) 已废弃
+
+查询攻击溯源
+ * @method Models\DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(Models\DescribeAttackSourceEventsRequest $req) 已废弃
+
+查询攻击溯源事件
  * @method Models\DescribeAttackStatisticsResponse DescribeAttackStatistics(Models\DescribeAttackStatisticsRequest $req) 网络攻击数据统计
  * @method Models\DescribeAttackTopResponse DescribeAttackTop(Models\DescribeAttackTopRequest $req) 网络攻击top5数据列表
  * @method Models\DescribeAttackTrendsResponse DescribeAttackTrends(Models\DescribeAttackTrendsRequest $req) 网络攻击趋势数据

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginDate(string $BeginDate) 设置筛选发布日期：开始时间
  * @method string getEndDate() 获取筛选发布日期：结束时间
  * @method void setEndDate(string $EndDate) 设置筛选发布日期：结束时间
- * @method string getBroadcastType() 获取过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布
- * @method void setBroadcastType(string $BroadcastType) 设置过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布
+ * @method string getBroadcastType() 获取过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
+ * @method void setBroadcastType(string $BroadcastType) 设置过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
  */
 class DescribeSecurityBroadcastsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeSecurityBroadcastsRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @var string 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布
+     * @var string 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
      */
     public $BroadcastType;
 
@@ -63,7 +63,7 @@ class DescribeSecurityBroadcastsRequest extends AbstractModel
      * @param integer $Limit 需要返回的数量，默认为10 ，0=全部
      * @param string $BeginDate 筛选发布日期：开始时间
      * @param string $EndDate 筛选发布日期：结束时间
-     * @param string $BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布
+     * @param string $BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
      */
     function __construct()
     {

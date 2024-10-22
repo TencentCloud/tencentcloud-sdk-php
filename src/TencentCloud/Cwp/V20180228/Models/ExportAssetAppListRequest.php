@@ -22,38 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuuid() 获取查询指定Quuid主机的信息
  * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
- * @method array getFilters() 获取过滤条件。
-<li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IP - String - 是否必填：否 - 主机ip</li>
-<li>MachineName - String - 是否必填：否 - 主机名称</li>
-<li>InstanceID - string - 是否必填：否 - 实例ID</li>
-<li>Type - int - 是否必填：否 - 类型	: 仅linux
-0: 全部
-1: 运维
-2 : 数据库
-3 : 安全
-4 : 可疑应用
-5 : 系统架构
-6 : 系统应用
-7 : WEB服务
-99:其他</li>
-<li>OsType - uint64 - 是否必填：否 - windows/linux</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IP - String - 是否必填：否 - 主机ip</li>
-<li>MachineName - String - 是否必填：否 - 主机名称</li>
-<li>InstanceID - string - 是否必填：否 - 实例ID</li>
-<li>Type - int - 是否必填：否 - 类型	: 仅linux
-0: 全部
-1: 运维
-2 : 数据库
-3 : 安全
-4 : 可疑应用
-5 : 系统架构
-6 : 系统应用
-7 : WEB服务
-99:其他</li>
-<li>OsType - uint64 - 是否必填：否 - windows/linux</li>
+ * @method array getFilters() 获取过滤条件。<li>AppName- string - 是否必填：否 - 应用名搜索</li><li>IP - String - 是否必填：否 - 主机ip</li><li>MachineName - String - 是否必填：否 - 主机名称</li><li>InstanceID - string - 是否必填：否 - 实例ID</li><li>Type - int - 是否必填：否 - 类型	: 仅linux0: 全部1: 运维2 : 数据库3 : 安全4 : 可疑应用5 : 系统架构6 : 系统应用7 : WEB服务99:其他</li><li>OsType - uint64 - 是否必填：否 - Windows/Linux</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。<li>AppName- string - 是否必填：否 - 应用名搜索</li><li>IP - String - 是否必填：否 - 主机ip</li><li>MachineName - String - 是否必填：否 - 主机名称</li><li>InstanceID - string - 是否必填：否 - 实例ID</li><li>Type - int - 是否必填：否 - 类型	: 仅linux0: 全部1: 运维2 : 数据库3 : 安全4 : 可疑应用5 : 系统架构6 : 系统应用7 : WEB服务99:其他</li><li>OsType - uint64 - 是否必填：否 - Windows/Linux</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
  * @method string getBy() 获取排序方式：[FirstTime|ProcessCount]
@@ -67,22 +37,7 @@ class ExportAssetAppListRequest extends AbstractModel
     public $Quuid;
 
     /**
-     * @var array 过滤条件。
-<li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IP - String - 是否必填：否 - 主机ip</li>
-<li>MachineName - String - 是否必填：否 - 主机名称</li>
-<li>InstanceID - string - 是否必填：否 - 实例ID</li>
-<li>Type - int - 是否必填：否 - 类型	: 仅linux
-0: 全部
-1: 运维
-2 : 数据库
-3 : 安全
-4 : 可疑应用
-5 : 系统架构
-6 : 系统应用
-7 : WEB服务
-99:其他</li>
-<li>OsType - uint64 - 是否必填：否 - windows/linux</li>
+     * @var array 过滤条件。<li>AppName- string - 是否必填：否 - 应用名搜索</li><li>IP - String - 是否必填：否 - 主机ip</li><li>MachineName - String - 是否必填：否 - 主机名称</li><li>InstanceID - string - 是否必填：否 - 实例ID</li><li>Type - int - 是否必填：否 - 类型	: 仅linux0: 全部1: 运维2 : 数据库3 : 安全4 : 可疑应用5 : 系统架构6 : 系统应用7 : WEB服务99:其他</li><li>OsType - uint64 - 是否必填：否 - Windows/Linux</li>
      */
     public $Filters;
 
@@ -98,22 +53,7 @@ class ExportAssetAppListRequest extends AbstractModel
 
     /**
      * @param string $Quuid 查询指定Quuid主机的信息
-     * @param array $Filters 过滤条件。
-<li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IP - String - 是否必填：否 - 主机ip</li>
-<li>MachineName - String - 是否必填：否 - 主机名称</li>
-<li>InstanceID - string - 是否必填：否 - 实例ID</li>
-<li>Type - int - 是否必填：否 - 类型	: 仅linux
-0: 全部
-1: 运维
-2 : 数据库
-3 : 安全
-4 : 可疑应用
-5 : 系统架构
-6 : 系统应用
-7 : WEB服务
-99:其他</li>
-<li>OsType - uint64 - 是否必填：否 - windows/linux</li>
+     * @param array $Filters 过滤条件。<li>AppName- string - 是否必填：否 - 应用名搜索</li><li>IP - String - 是否必填：否 - 主机ip</li><li>MachineName - String - 是否必填：否 - 主机名称</li><li>InstanceID - string - 是否必填：否 - 实例ID</li><li>Type - int - 是否必填：否 - 类型	: 仅linux0: 全部1: 运维2 : 数据库3 : 安全4 : 可疑应用5 : 系统架构6 : 系统应用7 : WEB服务99:其他</li><li>OsType - uint64 - 是否必填：否 - Windows/Linux</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 排序方式：[FirstTime|ProcessCount]
      */

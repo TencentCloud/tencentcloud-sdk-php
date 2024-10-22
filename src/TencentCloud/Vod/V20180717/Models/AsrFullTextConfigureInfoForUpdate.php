@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>en：英语；</li>
 <li>ja：日语；</li>
 <li>zh-ca：粤语。</li>
+ * @method string getSubtitleName() 获取指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+ * @method void setSubtitleName(string $SubtitleName) 设置指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -79,6 +81,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SrcLanguage;
 
     /**
+     * @var string 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+     */
+    public $SubtitleName;
+
+    /**
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
@@ -92,6 +99,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>en：英语；</li>
 <li>ja：日语；</li>
 <li>zh-ca：粤语。</li>
+     * @param string $SubtitleName 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
             $this->SrcLanguage = $param["SrcLanguage"];
+        }
+
+        if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
+            $this->SubtitleName = $param["SubtitleName"];
         }
     }
 }

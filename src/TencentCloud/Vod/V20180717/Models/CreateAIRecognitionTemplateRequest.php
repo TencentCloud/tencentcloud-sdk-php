@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() 获取语音翻译控制参数。
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) 设置语音翻译控制参数。
  * @method ObjectConfigureInfo getObjectConfigure() 获取物体识别控制参数。
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) 设置物体识别控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
@@ -98,6 +100,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
+     * @var AsrTranslateConfigureInfo 语音翻译控制参数。
+     */
+    public $AsrTranslateConfigure;
+
+    /**
      * @var ObjectConfigureInfo 物体识别控制参数。
      */
     public $ObjectConfigure;
@@ -118,6 +125,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure 语音翻译控制参数。
      * @param ObjectConfigureInfo $ObjectConfigure 物体识别控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */
@@ -179,6 +187,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("AsrTranslateConfigure",$param) and $param["AsrTranslateConfigure"] !== null) {
+            $this->AsrTranslateConfigure = new AsrTranslateConfigureInfo();
+            $this->AsrTranslateConfigure->deserialize($param["AsrTranslateConfigure"]);
         }
 
         if (array_key_exists("ObjectConfigure",$param) and $param["ObjectConfigure"] !== null) {

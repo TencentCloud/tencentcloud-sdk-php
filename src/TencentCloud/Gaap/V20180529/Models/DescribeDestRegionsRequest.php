@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDestRegions请求参数结构体
  *
-
+ * @method integer getQualityType() 获取通道质量:0表示金牌，1表示银牌。默认不传该参数，表示金牌。本参数确定查询指定通道质量的源站区域
+ * @method void setQualityType(integer $QualityType) 设置通道质量:0表示金牌，1表示银牌。默认不传该参数，表示金牌。本参数确定查询指定通道质量的源站区域
  */
 class DescribeDestRegionsRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 通道质量:0表示金牌，1表示银牌。默认不传该参数，表示金牌。本参数确定查询指定通道质量的源站区域
+     */
+    public $QualityType;
 
     /**
-
+     * @param integer $QualityType 通道质量:0表示金牌，1表示银牌。默认不传该参数，表示金牌。本参数确定查询指定通道质量的源站区域
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeDestRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("QualityType",$param) and $param["QualityType"] !== null) {
+            $this->QualityType = $param["QualityType"];
+        }
     }
 }

@@ -79,8 +79,12 @@ DeadLetter 死信
  * @method void setIsOnline(boolean $IsOnline) 设置是否在线
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsumeType() 获取消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumeType(integer $ConsumeType) 设置消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsistency() 获取订阅一致性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,6 +180,8 @@ DeadLetter 死信
 
     /**
      * @var integer 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumeType;
@@ -241,6 +247,8 @@ DeadLetter 死信
      * @param boolean $IsOnline 是否在线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsumeType 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Consistency 订阅一致性
 注意：此字段可能返回 null，表示取不到有效值。

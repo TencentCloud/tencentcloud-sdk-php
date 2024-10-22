@@ -119,7 +119,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\ModifyProxiesAttributeResponse ModifyProxiesAttribute(Models\ModifyProxiesAttributeRequest $req) 本接口（ModifyProxiesAttribute）用于修改实例的属性（目前只支持修改通道的名称）。
  * @method Models\ModifyProxiesProjectResponse ModifyProxiesProject(Models\ModifyProxiesProjectRequest $req) 本接口（ModifyProxiesProject）用于修改通道所属项目。
  * @method Models\ModifyProxyConfigurationResponse ModifyProxyConfiguration(Models\ModifyProxyConfigurationRequest $req) 本接口（ModifyProxyConfiguration）用于修改通道的配置。根据当前业务的容量需求，扩容或缩容相关通道的配置。仅支持Scalarable为1的通道,Scalarable可通过接口DescribeProxies获取。
- * @method Models\ModifyProxyGroupAttributeResponse ModifyProxyGroupAttribute(Models\ModifyProxyGroupAttributeRequest $req) 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称。
+ * @method Models\ModifyProxyGroupAttributeResponse ModifyProxyGroupAttribute(Models\ModifyProxyGroupAttributeRequest $req) 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称与项目ID。
  * @method Models\ModifyRealServerNameResponse ModifyRealServerName(Models\ModifyRealServerNameRequest $req) 本接口（ModifyRealServerName）用于修改源站的名称
  * @method Models\ModifyRuleAttributeResponse ModifyRuleAttribute(Models\ModifyRuleAttributeRequest $req) 本接口（ModifyRuleAttribute）用于修改转发规则的信息，包括健康检查的配置以及转发策略。
  * @method Models\ModifySecurityRuleResponse ModifySecurityRule(Models\ModifySecurityRuleRequest $req) 修改安全策略规则名

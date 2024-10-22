@@ -25,6 +25,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -33,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -66,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) 设置语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() 获取语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult $AsrTranslateTask) 设置语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() 获取文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,6 +99,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -135,6 +142,12 @@ class AiRecognitionResult extends AbstractModel
     public $AsrFullTextTask;
 
     /**
+     * @var AiRecognitionTaskAsrTranslateResult 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsrTranslateTask;
+
+    /**
      * @var AiRecognitionTaskOcrWordsResult 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,6 +174,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -178,6 +192,8 @@ class AiRecognitionResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionTaskAsrTranslateResult $AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
@@ -229,6 +245,11 @@ class AiRecognitionResult extends AbstractModel
         if (array_key_exists("AsrFullTextTask",$param) and $param["AsrFullTextTask"] !== null) {
             $this->AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult();
             $this->AsrFullTextTask->deserialize($param["AsrFullTextTask"]);
+        }
+
+        if (array_key_exists("AsrTranslateTask",$param) and $param["AsrTranslateTask"] !== null) {
+            $this->AsrTranslateTask = new AiRecognitionTaskAsrTranslateResult();
+            $this->AsrTranslateTask->deserialize($param["AsrTranslateTask"]);
         }
 
         if (array_key_exists("OcrWordsTask",$param) and $param["OcrWordsTask"] !== null) {

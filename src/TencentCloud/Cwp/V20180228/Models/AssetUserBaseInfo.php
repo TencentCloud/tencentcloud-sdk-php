@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置账号名称
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
- * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method integer getIsDomain() 获取是否域账号：0否， 1是，2否, 999为空  仅windows
- * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是，2否, 999为空  仅windows
+ * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method integer getIsDomain() 获取是否域账号：0否， 1是，2否, 999为空  仅Windows
+ * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是，2否, 999为空  仅Windows
  * @method integer getIsSudo() 获取是否有sudo权限，1是，0否, 999为空, 仅linux
  * @method void setIsSudo(integer $IsSudo) 设置是否有sudo权限，1是，0否, 999为空, 仅linux
  * @method integer getIsSshLogin() 获取是否允许ssh登录，1是，0否, 999为空, 仅linux
@@ -158,12 +158,12 @@ class AssetUserBaseInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public $UserType;
 
     /**
-     * @var integer 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * @var integer 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public $IsDomain;
 
@@ -250,8 +250,8 @@ class AssetUserBaseInfo extends AbstractModel
      * @param string $LastLoginTime 上次登录时间
      * @param string $Name 账号名称
      * @param integer $ProjectId 主机业务组ID
-     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param integer $IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param integer $IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      * @param integer $IsSudo 是否有sudo权限，1是，0否, 999为空, 仅linux
      * @param integer $IsSshLogin 是否允许ssh登录，1是，0否, 999为空, 仅linux
      * @param string $HomePath Home目录

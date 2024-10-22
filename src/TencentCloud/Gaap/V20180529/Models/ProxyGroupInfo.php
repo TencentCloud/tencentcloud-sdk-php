@@ -40,6 +40,7 @@ RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
 MOVING表示通道迁移中；
+CLOSED表示已关闭；
 CHANGING表示部分部署中。
  * @method void setStatus(string $Status) 设置通道组状态。
 其中，
@@ -47,6 +48,7 @@ RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
 MOVING表示通道迁移中；
+CLOSED表示已关闭；
 CHANGING表示部分部署中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
@@ -133,6 +135,7 @@ RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
 MOVING表示通道迁移中；
+CLOSED表示已关闭；
 CHANGING表示部分部署中。
      */
     public $Status;
@@ -199,6 +202,7 @@ RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
 MOVING表示通道迁移中；
+CLOSED表示已关闭；
 CHANGING表示部分部署中。
      * @param array $TagSet 标签列表。
      * @param string $Version 通道组版本

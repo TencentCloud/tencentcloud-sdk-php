@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastLoginTime(string $LastLoginTime) 设置上次登录时间
  * @method string getName() 获取账号名称
  * @method void setName(string $Name) 设置账号名称
- * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method integer getIsDomain() 获取是否域账号：0否， 1是, 999为空  仅windows
- * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是, 999为空  仅windows
+ * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method integer getIsDomain() 获取是否域账号：0否， 1是, 999为空  仅Windows
+ * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是, 999为空  仅Windows
  * @method integer getIsSshLogin() 获取是否允许ssh登录，1是，0否, 999为空, 仅linux
  * @method void setIsSshLogin(integer $IsSshLogin) 设置是否允许ssh登录，1是，0否, 999为空, 仅linux
  * @method string getHomePath() 获取Home目录
@@ -136,12 +136,12 @@ class AssetUserDetail extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public $UserType;
 
     /**
-     * @var integer 是否域账号：0否， 1是, 999为空  仅windows
+     * @var integer 是否域账号：0否， 1是, 999为空  仅Windows
      */
     public $IsDomain;
 
@@ -243,8 +243,8 @@ class AssetUserDetail extends AbstractModel
      * @param integer $IsRoot 是否有root权限：0-否；1是，999为空: 仅linux
      * @param string $LastLoginTime 上次登录时间
      * @param string $Name 账号名称
-     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param integer $IsDomain 是否域账号：0否， 1是, 999为空  仅windows
+     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param integer $IsDomain 是否域账号：0否， 1是, 999为空  仅Windows
      * @param integer $IsSshLogin 是否允许ssh登录，1是，0否, 999为空, 仅linux
      * @param string $HomePath Home目录
      * @param string $Shell Shell路径  仅linux

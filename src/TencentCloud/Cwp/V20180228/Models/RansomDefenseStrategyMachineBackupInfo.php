@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSuccessCount(integer $BackupSuccessCount) 设置备份成功次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 {
@@ -212,6 +216,12 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
     public $BackupSuccessCount;
 
     /**
+     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostVersion;
+
+    /**
      * @param string $Uuid 主机Uuid
      * @param string $Quuid 主机Quuid
      * @param string $MachineName 主机名称
@@ -247,6 +257,8 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
      * @param integer $RollBackStatus 最近一次回滚状态：0进行中，1成功，2失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupSuccessCount 备份成功次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -351,6 +363,10 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 
         if (array_key_exists("BackupSuccessCount",$param) and $param["BackupSuccessCount"] !== null) {
             $this->BackupSuccessCount = $param["BackupSuccessCount"];
+        }
+
+        if (array_key_exists("HostVersion",$param) and $param["HostVersion"] !== null) {
+            $this->HostVersion = $param["HostVersion"];
         }
     }
 }

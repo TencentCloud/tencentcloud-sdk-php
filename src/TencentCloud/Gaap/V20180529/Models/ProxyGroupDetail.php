@@ -114,11 +114,11 @@ use TencentCloud\Common\AbstractModel;
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsSupportTLSChoice() 获取是否支持设置TSL设置
+ * @method integer getIsSupportTLSChoice() 获取是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsSupportTLSChoice(integer $IsSupportTLSChoice) 设置是否支持设置TSL设置
+ * @method void setIsSupportTLSChoice(integer $IsSupportTLSChoice) 设置是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -253,7 +253,7 @@ class ProxyGroupDetail extends AbstractModel
     public $FeatureBitmap;
 
     /**
-     * @var integer 是否支持设置TSL设置
+     * @var integer 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -308,7 +308,7 @@ class ProxyGroupDetail extends AbstractModel
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsSupportTLSChoice 是否支持设置TSL设置
+     * @param integer $IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。

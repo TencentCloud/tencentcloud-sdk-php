@@ -68,8 +68,12 @@ use TencentCloud\Common\AbstractModel;
 - 0：默认状态（手动续费）。
 - 1：自动续费。
 - 2：到期不续费。
- * @method array getSecurityGroupIdList() 获取安全组 ID 数组。请通过[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)接口获取实例的安全组 ID。
- * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组 ID 数组。请通过[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)接口获取实例的安全组 ID。
+ * @method array getSecurityGroupIdList() 获取安全组 ID 数组。
+- 安全组是一种虚拟防火墙，对云数据库实例的网络访问进行控制。创建实例时，建议绑定相应的安全组。
+- 请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+ * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组 ID 数组。
+- 安全组是一种虚拟防火墙，对云数据库实例的网络访问进行控制。创建实例时，建议绑定相应的安全组。
+- 请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
  * @method integer getVPort() 获取用户自定义的网络端口。默认为6379，范围为 [1024,65535]。
  * @method void setVPort(integer $VPort) 设置用户自定义的网络端口。默认为6379，范围为 [1024,65535]。
  * @method integer getRedisShardNum() 获取实例分片数量。
@@ -210,7 +214,9 @@ class CreateInstancesRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @var array 安全组 ID 数组。请通过[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)接口获取实例的安全组 ID。
+     * @var array 安全组 ID 数组。
+- 安全组是一种虚拟防火墙，对云数据库实例的网络访问进行控制。创建实例时，建议绑定相应的安全组。
+- 请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      */
     public $SecurityGroupIdList;
 
@@ -329,7 +335,9 @@ class CreateInstancesRequest extends AbstractModel
 - 0：默认状态（手动续费）。
 - 1：自动续费。
 - 2：到期不续费。
-     * @param array $SecurityGroupIdList 安全组 ID 数组。请通过[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)接口获取实例的安全组 ID。
+     * @param array $SecurityGroupIdList 安全组 ID 数组。
+- 安全组是一种虚拟防火墙，对云数据库实例的网络访问进行控制。创建实例时，建议绑定相应的安全组。
+- 请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      * @param integer $VPort 用户自定义的网络端口。默认为6379，范围为 [1024,65535]。
      * @param integer $RedisShardNum 实例分片数量。
 - 标准版实例无需配置该参数。

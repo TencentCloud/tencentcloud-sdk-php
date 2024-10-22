@@ -28,14 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置必填字段，集群Id
  * @method string getRoleName() 获取角色名称，模糊查询
  * @method void setRoleName(string $RoleName) 设置角色名称，模糊查询
- * @method array getFilters() 获取* RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
- * @method void setFilters(array $Filters) 设置* RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+ * @method array getFilters() 获取RoleName按照角色名进行过滤，精确查询。类型：String必选：否
+ * @method void setFilters(array $Filters) 设置RoleName按照角色名进行过滤，精确查询。类型：String必选：否
  */
 class DescribeRocketMQRolesRequest extends AbstractModel
 {
@@ -60,10 +54,7 @@ class DescribeRocketMQRolesRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @var array * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * @var array RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     public $Filters;
 
@@ -72,10 +63,7 @@ class DescribeRocketMQRolesRequest extends AbstractModel
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $ClusterId 必填字段，集群Id
      * @param string $RoleName 角色名称，模糊查询
-     * @param array $Filters * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * @param array $Filters RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     function __construct()
     {

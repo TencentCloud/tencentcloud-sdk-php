@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgId(string $MsgId) 设置消息id
  * @method string getClientId() 获取客户端ID
  * @method void setClientId(string $ClientId) 设置客户端ID
- * @method string getTopicName() 获取topic名称
- * @method void setTopicName(string $TopicName) 设置topic名称
+ * @method string getTopicName() 获取主题名称
+ * @method void setTopicName(string $TopicName) 设置主题名称
  */
 class VerifyRocketMQConsumeRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class VerifyRocketMQConsumeRequest extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string topic名称
+     * @var string 主题名称
      */
     public $TopicName;
 
@@ -71,7 +71,7 @@ class VerifyRocketMQConsumeRequest extends AbstractModel
      * @param string $GroupId 消费组ID
      * @param string $MsgId 消息id
      * @param string $ClientId 客户端ID
-     * @param string $TopicName topic名称
+     * @param string $TopicName 主题名称
      */
     function __construct()
     {

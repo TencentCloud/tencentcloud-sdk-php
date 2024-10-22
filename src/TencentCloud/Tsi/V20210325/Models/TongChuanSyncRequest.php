@@ -58,6 +58,8 @@ yue：粤语
  * @method void setTranslateTime(integer $TranslateTime) 设置翻译时机，0-不翻译 2-句子实时翻译
  * @method string getData() 获取语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
  * @method void setData(string $Data) 设置语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
+ * @method TTS getTTS() 获取TTS播报控制参数
+ * @method void setTTS(TTS $TTS) 设置TTS播报控制参数
  */
 class TongChuanSyncRequest extends AbstractModel
 {
@@ -117,6 +119,11 @@ yue：粤语
     public $Data;
 
     /**
+     * @var TTS TTS播报控制参数
+     */
+    public $TTS;
+
+    /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
      * @param string $Source 源语言，支持：
 zh：中文
@@ -136,6 +143,7 @@ yue：粤语
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
      * @param integer $TranslateTime 翻译时机，0-不翻译 2-句子实时翻译
      * @param string $Data 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
+     * @param TTS $TTS TTS播报控制参数
      */
     function __construct()
     {
@@ -184,6 +192,11 @@ yue：粤语
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("TTS",$param) and $param["TTS"] !== null) {
+            $this->TTS = new TTS();
+            $this->TTS->deserialize($param["TTS"]);
         }
     }
 }

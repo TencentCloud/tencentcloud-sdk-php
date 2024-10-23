@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置用户名
  * @method string getClientId() 获取客户端
  * @method void setClientId(string $ClientId) 设置客户端
- * @method string getIp() 获取ip
- * @method void setIp(string $Ip) 设置ip
+ * @method string getIp() 获取IP地址
+ * @method void setIp(string $Ip) 设置IP地址
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  */
@@ -105,7 +105,7 @@ class CreateAuthorizationPolicyRequest extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string ip
+     * @var string IP地址
      */
     public $Ip;
 
@@ -126,7 +126,7 @@ class CreateAuthorizationPolicyRequest extends AbstractModel
      * @param string $Resources 资源
      * @param string $Username 用户名
      * @param string $ClientId 客户端
-     * @param string $Ip ip
+     * @param string $Ip IP地址
      * @param string $Remark 备注信息
      */
     function __construct()

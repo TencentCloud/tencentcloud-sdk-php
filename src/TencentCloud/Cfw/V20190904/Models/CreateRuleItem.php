@@ -29,7 +29,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetType() 获取访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
  * @method void setTargetType(string $TargetType) 设置访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
  * @method string getProtocol() 获取协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
  * @method void setProtocol(string $Protocol) 设置协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
  * @method string getRuleAction() 获取访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
  * @method void setRuleAction(string $RuleAction) 设置访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
  * @method string getPort() 获取访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
@@ -77,6 +89,12 @@ class CreateRuleItem extends AbstractModel
 
     /**
      * @var string 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
      */
     public $Protocol;
 
@@ -141,6 +159,12 @@ class CreateRuleItem extends AbstractModel
      * @param string $TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
      * @param string $TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
      * @param string $Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
      * @param string $RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
      * @param string $Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
      * @param integer $Direction 规则方向：1，入站；0，出站

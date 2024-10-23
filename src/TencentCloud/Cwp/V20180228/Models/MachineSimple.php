@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(array $Tag) 设置标签信息
  * @method RegionInfo getRegionInfo() 获取地域信息
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
- * @method string getInstanceState() 获取实例状态 TERMINATED_PRO_VERSION 已销毁
- * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
+ * @method string getInstanceState() 获取实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
+ * @method void setInstanceState(string $InstanceState) 设置实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
@@ -128,7 +130,8 @@ class MachineSimple extends AbstractModel
     public $RegionInfo;
 
     /**
-     * @var string 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @var string 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public $InstanceState;
 
@@ -185,7 +188,8 @@ class MachineSimple extends AbstractModel
 <li>PREPAY: 表示预付费，即包年包月</li>
      * @param array $Tag 标签信息
      * @param RegionInfo $RegionInfo 地域信息
-     * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @param string $InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      * @param integer $ProjectId 项目ID
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本

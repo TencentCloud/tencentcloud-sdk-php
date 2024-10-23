@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayStrategy(string $DisplayStrategy) 设置默认空，容器版传"native"
  * @method array getUserGroupList() 获取用户组
  * @method void setUserGroupList(array $UserGroupList) 设置用户组
+ * @method boolean getDeleteHomeDir() 获取是否删除家目录，只针对cvm集群
+ * @method void setDeleteHomeDir(boolean $DeleteHomeDir) 设置是否删除家目录，只针对cvm集群
  */
 class DeleteUserManagerUserListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeleteUserManagerUserListRequest extends AbstractModel
     public $UserGroupList;
 
     /**
+     * @var boolean 是否删除家目录，只针对cvm集群
+     */
+    public $DeleteHomeDir;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $UserNameList 集群用户名列表
      * @param string $TkeClusterId tke/eks集群id，容器集群传
      * @param string $DisplayStrategy 默认空，容器版传"native"
      * @param array $UserGroupList 用户组
+     * @param boolean $DeleteHomeDir 是否删除家目录，只针对cvm集群
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DeleteUserManagerUserListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("DeleteHomeDir",$param) and $param["DeleteHomeDir"] !== null) {
+            $this->DeleteHomeDir = $param["DeleteHomeDir"];
         }
     }
 }

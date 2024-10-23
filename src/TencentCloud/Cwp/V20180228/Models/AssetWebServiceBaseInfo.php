@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取数据库名
- * @method void setName(string $Name) 设置数据库名
+ * @method string getName() 获取服务名
+ * @method void setName(string $Name) 设置服务名
  * @method string getVersion() 获取版本
  * @method void setVersion(string $Version) 设置版本
  * @method string getBinPath() 获取二进制路径
@@ -108,7 +108,7 @@ class AssetWebServiceBaseInfo extends AbstractModel
     public $Tag;
 
     /**
-     * @var string 数据库名
+     * @var string 服务名
      */
     public $Name;
 
@@ -188,7 +188,7 @@ class AssetWebServiceBaseInfo extends AbstractModel
      * @param integer $ProjectId 主机业务组ID
      * @param array $Tag 主机标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 数据库名
+     * @param string $Name 服务名
      * @param string $Version 版本
      * @param string $BinPath 二进制路径
      * @param string $User 启动用户

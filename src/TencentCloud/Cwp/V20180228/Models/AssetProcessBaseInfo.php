@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcessName(string $ParentProcessName) 设置父进程名称
  * @method string getStatus() 获取进程状态
  * @method void setStatus(string $Status) 设置进程状态
- * @method integer getHasSign() 获取数字签名:0无，1有， 999 空，仅windows
- * @method void setHasSign(integer $HasSign) 设置数字签名:0无，1有， 999 空，仅windows
+ * @method integer getHasSign() 获取数字签名:0无，1有， 999 空，仅Windows
+ * @method void setHasSign(integer $HasSign) 设置数字签名:0无，1有， 999 空，仅Windows
  * @method integer getInstallByPackage() 获取是否通过安装包安装：:0否，1是， 999 空，仅linux
  * @method void setInstallByPackage(integer $InstallByPackage) 设置是否通过安装包安装：:0否，1是， 999 空，仅linux
  * @method string getPackageName() 获取软件包名
@@ -198,7 +198,7 @@ class AssetProcessBaseInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 数字签名:0无，1有， 999 空，仅windows
+     * @var integer 数字签名:0无，1有， 999 空，仅Windows
      */
     public $HasSign;
 
@@ -264,7 +264,7 @@ class AssetProcessBaseInfo extends AbstractModel
      * @param string $Ppid 父进程ID
      * @param string $ParentProcessName 父进程名称
      * @param string $Status 进程状态
-     * @param integer $HasSign 数字签名:0无，1有， 999 空，仅windows
+     * @param integer $HasSign 数字签名:0无，1有， 999 空，仅Windows
      * @param integer $InstallByPackage 是否通过安装包安装：:0否，1是， 999 空，仅linux
      * @param string $PackageName 软件包名
      * @param string $MachineName 主机名称

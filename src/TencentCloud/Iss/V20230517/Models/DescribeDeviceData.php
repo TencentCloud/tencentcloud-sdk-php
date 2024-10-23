@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamName(string $StreamName) 设置RTMP推流地址自定义streamName
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSilentFrameSwitch() 获取是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSilentFrameSwitch(integer $SilentFrameSwitch) 设置是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceData extends AbstractModel
 {
@@ -327,6 +331,12 @@ class DescribeDeviceData extends AbstractModel
     public $StreamName;
 
     /**
+     * @var integer 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SilentFrameSwitch;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
@@ -387,6 +397,8 @@ class DescribeDeviceData extends AbstractModel
      * @param string $AppName RTMP推流地址自定义appName
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StreamName RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -520,6 +532,10 @@ class DescribeDeviceData extends AbstractModel
 
         if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
             $this->StreamName = $param["StreamName"];
+        }
+
+        if (array_key_exists("SilentFrameSwitch",$param) and $param["SilentFrameSwitch"] !== null) {
+            $this->SilentFrameSwitch = $param["SilentFrameSwitch"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRandomZone(string $IsRandomZone) 设置是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
  * @method string getZone() 获取指定该节点分布在哪个可用区。
  * @method void setZone(string $Zone) 设置指定该节点分布在哪个可用区。
+ * @method string getNodeId() 获取升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+ * @method void setNodeId(string $NodeId) 设置升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
  */
 class ReadonlyNode extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ReadonlyNode extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     */
+    public $NodeId;
+
+    /**
      * @param string $IsRandomZone 是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
      * @param string $Zone 指定该节点分布在哪个可用区。
+     * @param string $NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ReadonlyNode extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
 <li>sslcert：配置 SSL 托管服务端证书；</li>
 不填写表示服务端证书保持原有配置。
- * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
- * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+ * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+ * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
  * @method string getApplyType() 获取托管类型，取值有：
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
@@ -44,10 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
- * @method MutualTLS getClientCertInfo() 获取边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
- * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+ * @method MutualTLS getClientCertInfo() 获取在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -71,7 +69,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var array SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * @var array SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      */
     public $ServerCertInfo;
 
@@ -85,8 +83,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ApplyType;
 
     /**
-     * @var MutualTLS 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+     * @var MutualTLS 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
      */
     public $ClientCertInfo;
 
@@ -98,13 +95,12 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
 <li>sslcert：配置 SSL 托管服务端证书；</li>
 不填写表示服务端证书保持原有配置。
-     * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      * @param string $ApplyType 托管类型，取值有：
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
-     * @param MutualTLS $ClientCertInfo 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+     * @param MutualTLS $ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
      */
     function __construct()
     {

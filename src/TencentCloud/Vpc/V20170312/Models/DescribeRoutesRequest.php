@@ -20,14 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoutes请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+ * @method array getFilters() 获取<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>dest-cidr - String - （过滤条件）目的端地址，支持模糊左匹配。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+ * @method void setFilters(array $Filters) 设置<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
@@ -40,8 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRoutesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @var array <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
@@ -60,8 +57,7 @@ class DescribeRoutesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @param array $Filters <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>

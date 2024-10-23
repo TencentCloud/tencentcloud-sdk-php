@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupCosInfo(BackupCosInfo $BackupCosInfo) 设置备份实例中关于cos的信息	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsUserDefineBucket() 获取是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsUserDefineBucket(boolean $IsUserDefineBucket) 设置是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -126,6 +130,12 @@ class BackUpJobDisplay extends AbstractModel
     public $BackupCosInfo;
 
     /**
+     * @var boolean 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsUserDefineBucket;
+
+    /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
@@ -143,6 +153,8 @@ class BackUpJobDisplay extends AbstractModel
      * @param integer $JobStatusNum 实例状态对应的数值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupCosInfo $BackupCosInfo 备份实例中关于cos的信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsUserDefineBucket 是否使用的自定义桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -206,6 +218,10 @@ class BackUpJobDisplay extends AbstractModel
         if (array_key_exists("BackupCosInfo",$param) and $param["BackupCosInfo"] !== null) {
             $this->BackupCosInfo = new BackupCosInfo();
             $this->BackupCosInfo->deserialize($param["BackupCosInfo"]);
+        }
+
+        if (array_key_exists("IsUserDefineBucket",$param) and $param["IsUserDefineBucket"] !== null) {
+            $this->IsUserDefineBucket = $param["IsUserDefineBucket"];
         }
     }
 }

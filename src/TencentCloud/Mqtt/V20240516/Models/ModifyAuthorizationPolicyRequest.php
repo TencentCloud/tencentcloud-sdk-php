@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetain(integer $Retain) 设置1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
  * @method string getClientId() 获取客户端
  * @method void setClientId(string $ClientId) 设置客户端
- * @method string getIp() 获取ip
- * @method void setIp(string $Ip) 设置ip
+ * @method string getIp() 获取IP
+ * @method void setIp(string $Ip) 设置IP
  * @method string getQos() 获取0、1、2
  * @method void setQos(string $Qos) 设置0、1、2
  * @method string getRemark() 获取备注信息
@@ -107,7 +107,7 @@ class ModifyAuthorizationPolicyRequest extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string ip
+     * @var string IP
      */
     public $Ip;
 
@@ -133,7 +133,7 @@ class ModifyAuthorizationPolicyRequest extends AbstractModel
      * @param string $Username 用户名
      * @param integer $Retain 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
      * @param string $ClientId 客户端
-     * @param string $Ip ip
+     * @param string $Ip IP
      * @param string $Qos 0、1、2
      * @param string $Remark 备注信息
      */

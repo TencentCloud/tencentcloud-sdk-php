@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioSwitch(integer $AudioSwitch) 设置音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
  * @method integer getSubscribeSwitch() 获取订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
  * @method void setSubscribeSwitch(integer $SubscribeSwitch) 设置订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+ * @method integer getSilentFrameSwitch() 获取是否开启静音帧（0：关闭；1 开启）
+ * @method void setSilentFrameSwitch(integer $SilentFrameSwitch) 设置是否开启静音帧（0：关闭；1 开启）
  */
 class UpdateUserDeviceRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateUserDeviceRequest extends AbstractModel
     public $SubscribeSwitch;
 
     /**
+     * @var integer 是否开启静音帧（0：关闭；1 开启）
+     */
+    public $SilentFrameSwitch;
+
+    /**
      * @param string $DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      * @param string $Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
      * @param integer $TransportProtocol 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
@@ -112,6 +119,7 @@ class UpdateUserDeviceRequest extends AbstractModel
      * @param integer $ProtocolType 网关设备接入协议（仅网关接入支持）
      * @param integer $AudioSwitch 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
      * @param integer $SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     * @param integer $SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class UpdateUserDeviceRequest extends AbstractModel
 
         if (array_key_exists("SubscribeSwitch",$param) and $param["SubscribeSwitch"] !== null) {
             $this->SubscribeSwitch = $param["SubscribeSwitch"];
+        }
+
+        if (array_key_exists("SilentFrameSwitch",$param) and $param["SilentFrameSwitch"] !== null) {
+            $this->SilentFrameSwitch = $param["SilentFrameSwitch"];
         }
     }
 }

@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+ * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+ * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
+ * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,13 +95,13 @@ class SecurityGroupPolicy extends AbstractModel
     public $ServiceTemplate;
 
     /**
-     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CidrBlock;
 
     /**
-     * @var string 网段或IPv6(互斥)。
+     * @var string 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6CidrBlock;
@@ -146,9 +146,9 @@ class SecurityGroupPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
+     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
 注意：此字段可能返回 null，表示取不到有效值。

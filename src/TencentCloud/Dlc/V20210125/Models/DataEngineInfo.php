@@ -206,6 +206,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineNetworkName(string $EngineNetworkName) 设置引擎所在网络名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsPoolMode() 获取是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsPoolMode(string $IsPoolMode) 设置是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -515,6 +519,12 @@ class DataEngineInfo extends AbstractModel
     public $EngineNetworkName;
 
     /**
+     * @var string 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsPoolMode;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -607,6 +617,8 @@ class DataEngineInfo extends AbstractModel
      * @param array $AccessInfos 引擎的访问信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineNetworkName 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsPoolMode 是否使用预留池
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -849,6 +861,10 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("EngineNetworkName",$param) and $param["EngineNetworkName"] !== null) {
             $this->EngineNetworkName = $param["EngineNetworkName"];
+        }
+
+        if (array_key_exists("IsPoolMode",$param) and $param["IsPoolMode"] !== null) {
+            $this->IsPoolMode = $param["IsPoolMode"];
         }
     }
 }

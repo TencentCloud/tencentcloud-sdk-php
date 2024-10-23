@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyId(integer $CompanyId) 设置预填写的公司ID。
  * @method string getVerifyType() 获取验证方式
  * @method void setVerifyType(string $VerifyType) 设置验证方式
+ * @method string getPriceKey() 获取询价参数
+ * @method void setPriceKey(string $PriceKey) 设置询价参数
  */
 class CreateCertificateByPackageRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateCertificateByPackageRequest extends AbstractModel
     public $VerifyType;
 
     /**
+     * @var string 询价参数
+     */
+    public $PriceKey;
+
+    /**
      * @param integer $ProductPid 证书产品PID。
      * @param array $PackageIds 要消耗的权益包ID。
      * @param string $DomainCount 证书域名数量。
@@ -160,6 +167,7 @@ class CreateCertificateByPackageRequest extends AbstractModel
      * @param integer $ManagerId 预填写的管理人ID。
      * @param integer $CompanyId 预填写的公司ID。
      * @param string $VerifyType 验证方式
+     * @param string $PriceKey 询价参数
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class CreateCertificateByPackageRequest extends AbstractModel
 
         if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
             $this->VerifyType = $param["VerifyType"];
+        }
+
+        if (array_key_exists("PriceKey",$param) and $param["PriceKey"] !== null) {
+            $this->PriceKey = $param["PriceKey"];
         }
     }
 }

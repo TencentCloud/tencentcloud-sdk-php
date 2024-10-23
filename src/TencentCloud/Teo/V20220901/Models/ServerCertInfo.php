@@ -20,9 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * https 服务端证书配置
  *
- * @method string getCertId() 获取服务器证书 ID。
+ * @method string getCertId() 获取服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertId(string $CertId) 设置服务器证书 ID。
+ * @method void setCertId(string $CertId) 设置服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +60,8 @@ use TencentCloud\Common\AbstractModel;
 class ServerCertInfo extends AbstractModel
 {
     /**
-     * @var string 服务器证书 ID。
+     * @var string 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
@@ -103,7 +106,8 @@ class ServerCertInfo extends AbstractModel
     public $CommonName;
 
     /**
-     * @param string $CertId 服务器证书 ID。
+     * @param string $CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEventPattern() 获取参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
  * @method void setEventPattern(string $EventPattern) 设置参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
- * @method string getEventBusId() 获取事件集ID。
- * @method void setEventBusId(string $EventBusId) 设置事件集ID。
- * @method string getRuleName() 获取事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method void setRuleName(string $RuleName) 设置事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+ * @method string getEventBusId() 获取事件集ID
+ * @method void setEventBusId(string $EventBusId) 设置事件集ID
+ * @method string getRuleName() 获取事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+ * @method void setRuleName(string $RuleName) 设置事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
  * @method boolean getEnable() 获取使能开关。
  * @method void setEnable(boolean $Enable) 设置使能开关。
- * @method string getDescription() 获取事件集描述，不限字符类型，200字符描述以内
- * @method void setDescription(string $Description) 设置事件集描述，不限字符类型，200字符描述以内
+ * @method string getDescription() 获取事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+ * @method void setDescription(string $Description) 设置事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -39,12 +39,12 @@ class CreateRuleRequest extends AbstractModel
     public $EventPattern;
 
     /**
-     * @var string 事件集ID。
+     * @var string 事件集ID
      */
     public $EventBusId;
 
     /**
-     * @var string 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @var string 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     public $RuleName;
 
@@ -54,16 +54,16 @@ class CreateRuleRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 事件集描述，不限字符类型，200字符描述以内
+     * @var string 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public $Description;
 
     /**
      * @param string $EventPattern 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
-     * @param string $EventBusId 事件集ID。
-     * @param string $RuleName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @param string $EventBusId 事件集ID
+     * @param string $RuleName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      * @param boolean $Enable 使能开关。
-     * @param string $Description 事件集描述，不限字符类型，200字符描述以内
+     * @param string $Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     function __construct()
     {

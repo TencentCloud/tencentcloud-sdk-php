@@ -39,9 +39,9 @@ azure
  * @method string getAPIKey() 获取API密钥
  * @method void setAPIKey(string $APIKey) 设置API密钥
  * @method string getAPIUrl() 获取API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
  * @method void setAPIUrl(string $APIUrl) 设置API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
  * @method string getVoiceType() 获取音色，目前仅支持以下音色:
 汉语：
 ZhiMei：智美，客服女声
@@ -379,7 +379,7 @@ azure
 
     /**
      * @var string API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
      */
     public $APIUrl;
 
@@ -597,7 +597,7 @@ azure
      * @param string $Model 模型（当前仅支持openai协议的模型）
      * @param string $APIKey API密钥
      * @param string $APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
      * @param string $VoiceType 音色，目前仅支持以下音色:
 汉语：
 ZhiMei：智美，客服女声

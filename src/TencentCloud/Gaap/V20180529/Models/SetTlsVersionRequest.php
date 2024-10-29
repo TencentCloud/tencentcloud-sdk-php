@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
- * @method array getTLSSupportVersion() 获取TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
- * @method void setTLSSupportVersion(array $TLSSupportVersion) 设置TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+ * @method array getTLSSupportVersion() 获取TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
+ * @method void setTLSSupportVersion(array $TLSSupportVersion) 设置TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
  * @method string getTLSCiphers() 获取密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
  * @method void setTLSCiphers(string $TLSCiphers) 设置密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
  */
@@ -35,7 +35,7 @@ class SetTlsVersionRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+     * @var array TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      */
     public $TLSSupportVersion;
 
@@ -46,7 +46,7 @@ class SetTlsVersionRequest extends AbstractModel
 
     /**
      * @param string $ListenerId 监听器ID
-     * @param array $TLSSupportVersion TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+     * @param array $TLSSupportVersion TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      * @param string $TLSCiphers 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
      */
     function __construct()

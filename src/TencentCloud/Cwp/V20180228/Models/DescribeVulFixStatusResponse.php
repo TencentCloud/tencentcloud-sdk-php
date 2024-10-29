@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixFailCnt() 获取修复失败的主机数
  * @method void setFixFailCnt(integer $FixFailCnt) 设置修复失败的主机数
- * @method integer getHostCnt() 获取主机总是
- * @method void setHostCnt(integer $HostCnt) 设置主机总是
+ * @method integer getHostCnt() 获取主机总数
+ * @method void setHostCnt(integer $HostCnt) 设置主机总数
  * @method integer getFixId() 获取修复的任务id
  * @method void setFixId(integer $FixId) 设置修复的任务id
  * @method array getSnapshotList() 获取修复快照状态列表
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSnapshotProgress() 获取快照创建进度0-100
  * @method void setSnapshotProgress(integer $SnapshotProgress) 设置快照创建进度0-100
- * @method integer getFixProgress() 获取修复精度 0-100
- * @method void setFixProgress(integer $FixProgress) 设置修复精度 0-100
+ * @method integer getFixProgress() 获取修复进度 0-100
+ * @method void setFixProgress(integer $FixProgress) 设置修复进度 0-100
  * @method integer getRemainingTime() 获取预计剩余时间（单位秒）
  * @method void setRemainingTime(integer $RemainingTime) 设置预计剩余时间（单位秒）
  * @method integer getIsRetrySnapshot() 获取快照是否是重试状态 0=非重试  1=重试
@@ -91,7 +91,7 @@ class DescribeVulFixStatusResponse extends AbstractModel
     public $FixFailCnt;
 
     /**
-     * @var integer 主机总是
+     * @var integer 主机总数
      */
     public $HostCnt;
 
@@ -118,7 +118,7 @@ class DescribeVulFixStatusResponse extends AbstractModel
     public $SnapshotProgress;
 
     /**
-     * @var integer 修复精度 0-100
+     * @var integer 修复进度 0-100
      */
     public $FixProgress;
 
@@ -157,14 +157,14 @@ class DescribeVulFixStatusResponse extends AbstractModel
      * @param integer $FixSuccessCnt 修复成功的主机数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixFailCnt 修复失败的主机数
-     * @param integer $HostCnt 主机总是
+     * @param integer $HostCnt 主机总数
      * @param integer $FixId 修复的任务id
      * @param array $SnapshotList 修复快照状态列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VulFixList 修复漏洞详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SnapshotProgress 快照创建进度0-100
-     * @param integer $FixProgress 修复精度 0-100
+     * @param integer $FixProgress 修复进度 0-100
      * @param integer $RemainingTime 预计剩余时间（单位秒）
      * @param integer $IsRetrySnapshot 快照是否是重试状态 0=非重试  1=重试
      * @param integer $SnapshotFailCnt 快照创建失败数

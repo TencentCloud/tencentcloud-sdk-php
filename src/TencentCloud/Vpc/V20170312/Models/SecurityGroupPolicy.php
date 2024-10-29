@@ -58,9 +58,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPolicyDescription() 获取安全组规则描述。
+ * @method string getPolicyDescription() 获取安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
+ * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取安全组最近修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,7 +125,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $Action;
 
     /**
-     * @var string 安全组规则描述。
+     * @var string 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDescription;
@@ -156,7 +156,7 @@ class SecurityGroupPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Action ACCEPT 或 DROP。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PolicyDescription 安全组规则描述。
+     * @param string $PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 安全组最近修改时间。
 注意：此字段可能返回 null，表示取不到有效值。

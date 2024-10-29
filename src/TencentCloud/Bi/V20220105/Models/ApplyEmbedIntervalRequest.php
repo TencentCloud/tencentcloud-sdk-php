@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() 获取分享项目id，必选
  * @method void setProjectId(integer $ProjectId) 设置分享项目id，必选
- * @method integer getPageId() 获取分享页面id，嵌出看板时此为空值0
- * @method void setPageId(integer $PageId) 设置分享页面id，嵌出看板时此为空值0
+ * @method integer getPageId() 获取分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
+ * @method void setPageId(integer $PageId) 设置分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
  * @method string getBIToken() 获取需要申请延期的Token
  * @method void setBIToken(string $BIToken) 设置需要申请延期的Token
  * @method string getExtraParam() 获取备用字段
  * @method void setExtraParam(string $ExtraParam) 设置备用字段
- * @method string getScope() 获取panel,看板；page，页面
- * @method void setScope(string $Scope) 设置panel,看板；page，页面
+ * @method string getIntention() 获取embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+ * @method void setIntention(string $Intention) 设置embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+ * @method string getScope() 获取panel, 看板；page，页面
+project，ChatBI嵌出时
+ * @method void setScope(string $Scope) 设置panel, 看板；page，页面
+project，ChatBI嵌出时
  */
 class ApplyEmbedIntervalRequest extends AbstractModel
 {
@@ -39,7 +47,8 @@ class ApplyEmbedIntervalRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 分享页面id，嵌出看板时此为空值0
+     * @var integer 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
      */
     public $PageId;
 
@@ -54,16 +63,27 @@ class ApplyEmbedIntervalRequest extends AbstractModel
     public $ExtraParam;
 
     /**
-     * @var string panel,看板；page，页面
+     * @var string embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+     */
+    public $Intention;
+
+    /**
+     * @var string panel, 看板；page，页面
+project，ChatBI嵌出时
      */
     public $Scope;
 
     /**
      * @param integer $ProjectId 分享项目id，必选
-     * @param integer $PageId 分享页面id，嵌出看板时此为空值0
+     * @param integer $PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
      * @param string $BIToken 需要申请延期的Token
      * @param string $ExtraParam 备用字段
-     * @param string $Scope panel,看板；page，页面
+     * @param string $Intention embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+     * @param string $Scope panel, 看板；page，页面
+project，ChatBI嵌出时
      */
     function __construct()
     {
@@ -92,6 +112,10 @@ class ApplyEmbedIntervalRequest extends AbstractModel
 
         if (array_key_exists("ExtraParam",$param) and $param["ExtraParam"] !== null) {
             $this->ExtraParam = $param["ExtraParam"];
+        }
+
+        if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
+            $this->Intention = $param["Intention"];
         }
 
         if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {

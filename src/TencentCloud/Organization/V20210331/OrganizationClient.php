@@ -48,6 +48,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 创建一个特殊类型的策略，您可以关联到企业组织Root节点、企业部门节点或者企业的成员账号。
  * @method Models\CreateRoleAssignmentResponse CreateRoleAssignment(Models\CreateRoleAssignmentRequest $req) 在成员账号上授权
  * @method Models\CreateRoleConfigurationResponse CreateRoleConfiguration(Models\CreateRoleConfigurationRequest $req) 创建权限配置
+ * @method Models\CreateSCIMCredentialResponse CreateSCIMCredential(Models\CreateSCIMCredentialRequest $req) 创建SCIM密钥
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateUserSyncProvisioningResponse CreateUserSyncProvisioning(Models\CreateUserSyncProvisioningRequest $req) 创建子用户同步任务
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 删除成员账号
@@ -62,6 +63,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 删除策略
  * @method Models\DeleteRoleAssignmentResponse DeleteRoleAssignment(Models\DeleteRoleAssignmentRequest $req) 移除成员账号上的授权
  * @method Models\DeleteRoleConfigurationResponse DeleteRoleConfiguration(Models\DeleteRoleConfigurationRequest $req) 删除权限配置信息
+ * @method Models\DeleteSCIMCredentialResponse DeleteSCIMCredential(Models\DeleteSCIMCredentialRequest $req) 删除SCIM密钥
  * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) 删除共享单元。
  * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) 删除共享单元成员
  * @method Models\DeleteShareUnitResourcesResponse DeleteShareUnitResources(Models\DeleteShareUnitResourcesRequest $req) 删除共享单元资源
@@ -94,6 +96,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组信息
  * @method Models\GetProvisioningTaskStatusResponse GetProvisioningTaskStatus(Models\GetProvisioningTaskStatusRequest $req) 查询用户同步异步任务的状态
  * @method Models\GetRoleConfigurationResponse GetRoleConfiguration(Models\GetRoleConfigurationRequest $req) 查询权限配置信息
+ * @method Models\GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatus(Models\GetSCIMSynchronizationStatusRequest $req) 获取SCIM同步状态
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) 查询异步任务的状态
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) 查询用户信息
  * @method Models\GetUserSyncProvisioningResponse GetUserSyncProvisioning(Models\GetUserSyncProvisioningRequest $req) 查询CAM用户同步
@@ -114,6 +117,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListRoleAssignmentsResponse ListRoleAssignments(Models\ListRoleAssignmentsRequest $req) 查询授权列表
  * @method Models\ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisionings(Models\ListRoleConfigurationProvisioningsRequest $req) 查询权限配置部署列表
  * @method Models\ListRoleConfigurationsResponse ListRoleConfigurations(Models\ListRoleConfigurationsRequest $req) 查询权限配置列表
+ * @method Models\ListSCIMCredentialsResponse ListSCIMCredentials(Models\ListSCIMCredentialsRequest $req) 查询用户SCIM密钥列表
  * @method Models\ListTargetsForPolicyResponse ListTargetsForPolicy(Models\ListTargetsForPolicyRequest $req) 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 查询异步任务列表
  * @method Models\ListUserSyncProvisioningsResponse ListUserSyncProvisionings(Models\ListUserSyncProvisioningsRequest $req) 查询CAM用户同步列表
@@ -136,6 +140,8 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\UpdateOrganizationNodeResponse UpdateOrganizationNode(Models\UpdateOrganizationNodeRequest $req) 更新企业组织节点
  * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) 编辑策略
  * @method Models\UpdateRoleConfigurationResponse UpdateRoleConfiguration(Models\UpdateRoleConfigurationRequest $req) 修改权限配置信息
+ * @method Models\UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatus(Models\UpdateSCIMCredentialStatusRequest $req) 启用/禁用SCIM密钥
+ * @method Models\UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(Models\UpdateSCIMSynchronizationStatusRequest $req) 启用/禁用用户SCIM同步
  * @method Models\UpdateShareUnitResponse UpdateShareUnit(Models\UpdateShareUnitRequest $req) 更新共享单元。
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 修改用户信息
  * @method Models\UpdateUserStatusResponse UpdateUserStatus(Models\UpdateUserStatusRequest $req) 修改用户状态

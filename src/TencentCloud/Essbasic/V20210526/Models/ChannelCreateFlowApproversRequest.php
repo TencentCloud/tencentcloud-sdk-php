@@ -48,8 +48,14 @@ use TencentCloud\Common\AbstractModel;
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
 
 - 如果不指定，则使用姓名和手机号进行补充。
- * @method string getFlowId() 获取合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
- * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。 
+- 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+- 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+- <font color="red">不建议继续使用</font>，请使用<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId指定合同
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。 
+- 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+- 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+- <font color="red">不建议继续使用</font>，请使用<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId指定合同
  * @method integer getFillApproverType() 获取签署人信息补充方式
 
 <ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
@@ -86,7 +92,10 @@ class ChannelCreateFlowApproversRequest extends AbstractModel
     public $Approvers;
 
     /**
-     * @var string 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @var string 合同流程ID，为32位字符串。 
+- 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+- 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+- <font color="red">不建议继续使用</font>，请使用<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId指定合同
      */
     public $FlowId;
 
@@ -122,7 +131,10 @@ class ChannelCreateFlowApproversRequest extends AbstractModel
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
 
 - 如果不指定，则使用姓名和手机号进行补充。
-     * @param string $FlowId 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param string $FlowId 合同流程ID，为32位字符串。 
+- 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+- 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+- <font color="red">不建议继续使用</font>，请使用<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId指定合同
      * @param integer $FillApproverType 签署人信息补充方式
 
 <ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>

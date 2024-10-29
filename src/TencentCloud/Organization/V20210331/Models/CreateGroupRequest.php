@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置用户组的名称。  格式：允许英文字母、数字和特殊字符-。 长度：最大 128 个字符。
  * @method string getDescription() 获取用户组的描述。  长度：最大 1024 个字符。
  * @method void setDescription(string $Description) 设置用户组的描述。  长度：最大 1024 个字符。
+ * @method string getGroupType() 获取用户组类型  Manual：手动创建，Synchronized：外部导入
+ * @method void setGroupType(string $GroupType) 设置用户组类型  Manual：手动创建，Synchronized：外部导入
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateGroupRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 用户组类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public $GroupType;
+
+    /**
      * @param string $ZoneId 空间 ID。
      * @param string $GroupName 用户组的名称。  格式：允许英文字母、数字和特殊字符-。 长度：最大 128 个字符。
      * @param string $Description 用户组的描述。  长度：最大 1024 个字符。
+     * @param string $GroupType 用户组类型  Manual：手动创建，Synchronized：外部导入
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateGroupRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
         }
     }
 }

@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 登录地信息
  *
  * @method integer getCityId() 获取城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCityId(integer $CityId) 设置城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProvinceId() 获取省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvinceId(integer $ProvinceId) 设置省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCountryId() 获取国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountryId(integer $CountryId) 设置国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取位置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置位置名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Place extends AbstractModel
 {
     /**
      * @var integer 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CityId;
 
     /**
      * @var integer 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProvinceId;
 
     /**
      * @var integer 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CountryId;
 
     /**
      * @var string 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @param integer $CityId 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProvinceId 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CountryId 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

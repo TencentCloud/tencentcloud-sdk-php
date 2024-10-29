@@ -91,6 +91,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
  * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口
+ * @method Models\DescribeDataServicePublishedApiDetailResponse DescribeDataServicePublishedApiDetail(Models\DescribeDataServicePublishedApiDetailRequest $req) 查询数据服务API的发布态信息
+ * @method Models\DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiList(Models\DescribeDataServicePublishedApiListRequest $req) 获取数据服务API的发布态信息列表
  * @method Models\DescribeDataSourceInfoListResponse DescribeDataSourceInfoList(Models\DescribeDataSourceInfoListRequest $req) 获取数据源信息-数据源分页列表
  * @method Models\DescribeDataSourceListResponse DescribeDataSourceList(Models\DescribeDataSourceListRequest $req) 数据源详情
  * @method Models\DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(Models\DescribeDatabaseInfoListRequest $req) 获取数据库信息

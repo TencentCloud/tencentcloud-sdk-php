@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) 设置排序的字段，目前只支持CreateTime，默认是CreateTime字段
  * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
  * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+ * @method integer getOffset() 获取翻页offset. 不要与NextToken同时使用，优先使用NextToken
+ * @method void setOffset(integer $Offset) 设置翻页offset. 不要与NextToken同时使用，优先使用NextToken
  */
 class ListGroupsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ListGroupsRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var integer 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     */
+    public $Offset;
+
+    /**
      * @param string $ZoneId 空间 ID。
      * @param string $NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
      * @param integer $MaxResults 每页的最大数据条数。  取值范围：1~100。  默认值：10。
@@ -88,6 +95,7 @@ class ListGroupsRequest extends AbstractModel
      * @param array $FilterUsers 筛选的用户，该用户关联的用户组会返回IsSelected=1
      * @param string $SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
      * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @param integer $Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ListGroupsRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

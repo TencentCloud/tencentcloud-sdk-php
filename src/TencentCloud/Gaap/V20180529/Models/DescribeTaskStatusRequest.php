@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskStatus请求参数结构体
  *
- * @method string getTaskId() 获取任务ID，值为异步接口返回的RequestId
- * @method void setTaskId(string $TaskId) 设置任务ID，值为异步接口返回的RequestId
+ * @method string getTaskId() 获取任务ID，值为异步接口返回的RequestId，此参数不能传空值。
+ * @method void setTaskId(string $TaskId) 设置任务ID，值为异步接口返回的RequestId，此参数不能传空值。
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，值为异步接口返回的RequestId
+     * @var string 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID，值为异步接口返回的RequestId
+     * @param string $TaskId 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
      */
     function __construct()
     {

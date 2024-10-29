@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDepartmentId(string $DepartmentId) 设置资产所属的部门ID
  * @method array getIpPortSet() 获取资产多节点：字段ip和端口
  * @method void setIpPortSet(array $IpPortSet) 设置资产多节点：字段ip和端口
+ * @method integer getEnableSSL() 获取是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+ * @method void setEnableSSL(integer $EnableSSL) 设置是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+ * @method string getSSLCert() 获取SSL证书，EnableSSL时必填
+ * @method void setSSLCert(string $SSLCert) 设置SSL证书，EnableSSL时必填
+ * @method string getSSLCertName() 获取SSL证书名称，EnableSSL时必填
+ * @method void setSSLCertName(string $SSLCertName) 设置SSL证书名称，EnableSSL时必填
  */
 class ExternalDevice extends AbstractModel
 {
@@ -66,12 +72,30 @@ class ExternalDevice extends AbstractModel
     public $IpPortSet;
 
     /**
+     * @var integer 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+     */
+    public $EnableSSL;
+
+    /**
+     * @var string SSL证书，EnableSSL时必填
+     */
+    public $SSLCert;
+
+    /**
+     * @var string SSL证书名称，EnableSSL时必填
+     */
+    public $SSLCertName;
+
+    /**
      * @param string $OsName 操作系统名称，只能是Linux、Windows或MySQL
      * @param string $Ip IP地址
      * @param integer $Port 管理端口
      * @param string $Name 主机名，可为空
      * @param string $DepartmentId 资产所属的部门ID
      * @param array $IpPortSet 资产多节点：字段ip和端口
+     * @param integer $EnableSSL 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+     * @param string $SSLCert SSL证书，EnableSSL时必填
+     * @param string $SSLCertName SSL证书名称，EnableSSL时必填
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class ExternalDevice extends AbstractModel
 
         if (array_key_exists("IpPortSet",$param) and $param["IpPortSet"] !== null) {
             $this->IpPortSet = $param["IpPortSet"];
+        }
+
+        if (array_key_exists("EnableSSL",$param) and $param["EnableSSL"] !== null) {
+            $this->EnableSSL = $param["EnableSSL"];
+        }
+
+        if (array_key_exists("SSLCert",$param) and $param["SSLCert"] !== null) {
+            $this->SSLCert = $param["SSLCert"];
+        }
+
+        if (array_key_exists("SSLCertName",$param) and $param["SSLCertName"] !== null) {
+            $this->SSLCertName = $param["SSLCertName"];
         }
     }
 }

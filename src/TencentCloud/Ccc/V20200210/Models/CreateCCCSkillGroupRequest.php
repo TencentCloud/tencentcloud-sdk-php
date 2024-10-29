@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCCCSkillGroup请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填）
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填）
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getSkillGroupName() 获取技能组名称
  * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
  * @method integer getSkillGroupType() 获取技能组类型0-电话，1-在线，3-音频，4-视频
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCCCSkillGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填）
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -55,7 +55,7 @@ class CreateCCCSkillGroupRequest extends AbstractModel
     public $MaxConcurrency;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填）
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $SkillGroupName 技能组名称
      * @param integer $SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频
      * @param integer $MaxConcurrency 技能组接待人数上限（该技能组中1个座席可接待的人数上限）默认为1。1、若技能组类型为在线，则接待上限可设置为1及以上

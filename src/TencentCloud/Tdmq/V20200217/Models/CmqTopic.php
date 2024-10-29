@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+ * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+ * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQps() 获取每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,7 +114,7 @@ class CmqTopic extends AbstractModel
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * @var integer 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMsgSize;
@@ -206,7 +206,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Qps 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。

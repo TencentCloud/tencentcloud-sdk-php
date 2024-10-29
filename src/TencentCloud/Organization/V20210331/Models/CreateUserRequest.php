@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) 设置用户的电子邮箱。目录内必须唯一。  长度：最大 128 个字符。
  * @method string getUserStatus() 获取用户的状态。取值：  Enabled（默认值）：启用。 Disabled：禁用。
  * @method void setUserStatus(string $UserStatus) 设置用户的状态。取值：  Enabled（默认值）：启用。 Disabled：禁用。
+ * @method string getUserType() 获取用户类型  Manual：手动创建，Synchronized：外部导入
+ * @method void setUserType(string $UserType) 设置用户类型  Manual：手动创建，Synchronized：外部导入
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateUserRequest extends AbstractModel
     public $UserStatus;
 
     /**
+     * @var string 用户类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public $UserType;
+
+    /**
      * @param string $ZoneId 空间 ID。
      * @param string $UserName 用户名称。空间内必须唯一。不支持修改。  格式：包含数字、英文字母和特殊符号+ = , . @ - _ 。  长度：最大 64 个字符
      * @param string $FirstName 用户的姓。  长度：最大 64 个字符。
@@ -88,6 +95,7 @@ class CreateUserRequest extends AbstractModel
      * @param string $Description 用户的描述。  长度：最大 1024 个字符。
      * @param string $Email 用户的电子邮箱。目录内必须唯一。  长度：最大 128 个字符。
      * @param string $UserStatus 用户的状态。取值：  Enabled（默认值）：启用。 Disabled：禁用。
+     * @param string $UserType 用户类型  Manual：手动创建，Synchronized：外部导入
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateUserRequest extends AbstractModel
 
         if (array_key_exists("UserStatus",$param) and $param["UserStatus"] !== null) {
             $this->UserStatus = $param["UserStatus"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

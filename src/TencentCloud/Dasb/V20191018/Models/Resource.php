@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrial(integer $Trial) 设置0 非试用版，1 试用版
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcClusterId() 获取cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcClusterId(string $CdcClusterId) 设置cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogDelivery() 获取日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeployModel() 获取部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployModel(integer $DeployModel) 设置部署模式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -270,6 +282,24 @@ class Resource extends AbstractModel
     public $Trial;
 
     /**
+     * @var string cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcClusterId;
+
+    /**
+     * @var string 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogDelivery;
+
+    /**
+     * @var integer 部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployModel;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -307,6 +337,12 @@ class Resource extends AbstractModel
      * @param integer $UsedDomainCount 已使用网络域个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Trial 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdcClusterId cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogDelivery 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeployModel 部署模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -457,6 +493,18 @@ class Resource extends AbstractModel
 
         if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
             $this->Trial = $param["Trial"];
+        }
+
+        if (array_key_exists("CdcClusterId",$param) and $param["CdcClusterId"] !== null) {
+            $this->CdcClusterId = $param["CdcClusterId"];
+        }
+
+        if (array_key_exists("LogDelivery",$param) and $param["LogDelivery"] !== null) {
+            $this->LogDelivery = $param["LogDelivery"];
+        }
+
+        if (array_key_exists("DeployModel",$param) and $param["DeployModel"] !== null) {
+            $this->DeployModel = $param["DeployModel"];
         }
     }
 }

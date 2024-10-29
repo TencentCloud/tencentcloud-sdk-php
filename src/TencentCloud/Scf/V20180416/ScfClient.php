@@ -32,10 +32,12 @@ use TencentCloud\Scf\V20180416\Models as Models;
 如有需要，您可以在复制后手动配置新函数。
  * @method Models\CreateAliasResponse CreateAlias(Models\CreateAliasRequest $req) 为某个函数版本创建一个别名，您可以使用别名来标记特定的函数版本，如DEV/RELEASE版本，也可以随时修改别名指向的版本。
 一个别名必须指向一个主版本，此外还可以同时指向一个附加版本。调用函数时指定特定的别名，则请求会被发送到别名指向的版本上，您可以配置请求发送到主版本和附加版本的比例。
+ * @method Models\CreateCustomDomainResponse CreateCustomDomain(Models\CreateCustomDomainRequest $req) 创建自定义域名
  * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) 该接口根据传入参数创建新的函数。
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 该接口根据传入的参数创建命名空间。
  * @method Models\CreateTriggerResponse CreateTrigger(Models\CreateTriggerRequest $req) 该接口根据参数输入设置新的触发方式。
  * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) 删除一个函数版本的别名
+ * @method Models\DeleteCustomDomainResponse DeleteCustomDomain(Models\DeleteCustomDomainRequest $req) 删除自定义域名
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 该接口根据传入参数删除函数。
  * @method Models\DeleteLayerVersionResponse DeleteLayerVersion(Models\DeleteLayerVersionRequest $req) 删除指定层的指定版本，被删除的版本无法再关联到函数上，但不会影响正在引用这个层的函数。
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 该接口根据传入的参数删除命名空间。
@@ -45,6 +47,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\GetAccountResponse GetAccount(Models\GetAccountRequest $req) 获取账户信息
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) 获取别名的详细信息，包括名称、描述、版本、路由信息等。
  * @method Models\GetAsyncEventStatusResponse GetAsyncEventStatus(Models\GetAsyncEventStatusRequest $req) 获取函数异步执行事件状态，事件状态保留 3 * 24 小时（从事件完成开始计时）。
+ * @method Models\GetCustomDomainResponse GetCustomDomain(Models\GetCustomDomainRequest $req) 查看云函数自定义域名详情
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) 该接口用于获取函数代码包的下载地址。
  * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) 获取函数异步重试配置，包括重试次数和消息保留时间
@@ -57,6 +60,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\InvokeFunctionResponse InvokeFunction(Models\InvokeFunctionRequest $req) SCF同步调用函数接口。
  * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) 返回一个函数下的全部别名，可以根据特定函数版本过滤。
  * @method Models\ListAsyncEventsResponse ListAsyncEvents(Models\ListAsyncEventsRequest $req) 拉取函数异步事件列表
+ * @method Models\ListCustomDomainsResponse ListCustomDomains(Models\ListCustomDomainsRequest $req) 遍历域名列表信息
  * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) 该接口根据传入的查询参数返回相关函数信息。
  * @method Models\ListLayerVersionsResponse ListLayerVersions(Models\ListLayerVersionsRequest $req) 返回指定层的全部版本的信息
  * @method Models\ListLayersResponse ListLayers(Models\ListLayersRequest $req) 返回全部层的列表，其中包含了每个层最新版本的信息，可以通过适配运行时进行过滤。
@@ -70,6 +74,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(Models\PutTotalConcurrencyConfigRequest $req) 修改账号并发限制配额
  * @method Models\TerminateAsyncEventResponse TerminateAsyncEvent(Models\TerminateAsyncEventRequest $req) 终止正在运行中的函数异步事件
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 更新别名的配置
+ * @method Models\UpdateCustomDomainResponse UpdateCustomDomain(Models\UpdateCustomDomainRequest $req) 更新自定义域名相关配置
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) 该接口根据传入参数更新函数代码。
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) 更新函数的异步重试配置，包括重试次数和消息保留时间

@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUID(string $UUID) 设置UUID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceNode extends AbstractModel
 {
@@ -113,6 +117,12 @@ class InstanceNode extends AbstractModel
     public $UUID;
 
     /**
+     * @var string 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param string $Ip IP地址
      * @param string $Spec 机型，如 S1
      * @param integer $Core cpu核数
@@ -127,6 +137,8 @@ class InstanceNode extends AbstractModel
      * @param string $FeRole FE节点角色
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUID UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +196,10 @@ class InstanceNode extends AbstractModel
 
         if (array_key_exists("UUID",$param) and $param["UUID"] !== null) {
             $this->UUID = $param["UUID"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobalParam(string $GlobalParam) 设置全局参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIntention() 获取embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntention(string $Intention) 设置embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -174,6 +178,12 @@ class EmbedTokenInfo extends AbstractModel
     public $GlobalParam;
 
     /**
+     * @var string embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Intention;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -203,6 +213,8 @@ class EmbedTokenInfo extends AbstractModel
      * @param integer $TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GlobalParam 全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,10 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("GlobalParam",$param) and $param["GlobalParam"] !== null) {
             $this->GlobalParam = $param["GlobalParam"];
+        }
+
+        if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
+            $this->Intention = $param["Intention"];
         }
     }
 }

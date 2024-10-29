@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBps(integer $Bps) 设置带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxDelaySeconds() 获取飞行消息最大保留时间。
+ * @method integer getMaxDelaySeconds() 获取飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxDelaySeconds(integer $MaxDelaySeconds) 设置飞行消息最大保留时间。
+ * @method void setMaxDelaySeconds(integer $MaxDelaySeconds) 设置飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMsgHeapNum() 获取最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
  * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) 设置最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
@@ -164,7 +164,7 @@ class CmqQueue extends AbstractModel
     public $Bps;
 
     /**
-     * @var integer 飞行消息最大保留时间。
+     * @var integer 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDelaySeconds;
@@ -331,7 +331,7 @@ class CmqQueue extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bps 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxDelaySeconds 飞行消息最大保留时间。
+     * @param integer $MaxDelaySeconds 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
      * @param integer $PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。

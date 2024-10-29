@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIpProtocol() 获取网络协议，可选值：`TCP`、`UDP`。
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，可选值：`TCP`、`UDP`。
- * @method string getPublicIpAddress() 获取弹性IP。
- * @method void setPublicIpAddress(string $PublicIpAddress) 设置弹性IP。
+ * @method string getPublicIpAddress() 获取弹性公网IP。
+ * @method void setPublicIpAddress(string $PublicIpAddress) 设置弹性公网IP。
  * @method integer getPublicPort() 获取公网端口。
  * @method void setPublicPort(integer $PublicPort) 设置公网端口。
  * @method string getPrivateIpAddress() 获取内网地址。
@@ -53,7 +53,7 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     public $IpProtocol;
 
     /**
-     * @var string 弹性IP。
+     * @var string 弹性公网IP。
      */
     public $PublicIpAddress;
 
@@ -97,7 +97,7 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
      * @param string $IpProtocol 网络协议，可选值：`TCP`、`UDP`。
-     * @param string $PublicIpAddress 弹性IP。
+     * @param string $PublicIpAddress 弹性公网IP。
      * @param integer $PublicPort 公网端口。
      * @param string $PrivateIpAddress 内网地址。
      * @param integer $PrivatePort 内网端口。

@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 调度信息
  *
- * @method string getEffectivePeriod() 获取生效时间
+ * @method string getEffectivePeriod() 获取生效周期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEffectivePeriod(string $EffectivePeriod) 设置生效时间
+ * @method void setEffectivePeriod(string $EffectivePeriod) 设置生效周期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleType() 获取调度类型：
+ * @method string getScheduleType() 获取调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleType(string $ScheduleType) 设置调度类型：
+ * @method void setScheduleType(string $ScheduleType) 设置调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleData() 获取执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期
@@ -68,17 +70,18 @@ Table-按表
 class ScheduleInfo extends AbstractModel
 {
     /**
-     * @var string 生效时间
+     * @var string 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectivePeriod;
 
     /**
-     * @var string 调度类型：
+     * @var string 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleType;
@@ -118,13 +121,14 @@ Table-按表
     public $BackupDatabase;
 
     /**
-     * @param string $EffectivePeriod 生效时间
+     * @param string $EffectivePeriod 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleType 调度类型：
+     * @param string $ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleData 执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期

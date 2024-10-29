@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterQueue(string $DeadLetterQueue) 设置死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPolicy() 获取死信队列策略。
+ * @method integer getPolicy() 获取死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicy(integer $Policy) 设置死信队列策略。
+ * @method void setPolicy(integer $Policy) 设置死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxTimeToLive() 获取最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTimeToLive(integer $MaxTimeToLive) 设置最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxReceiveCount() 获取最大接收次数。
+ * @method integer getMaxReceiveCount() 获取最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxReceiveCount(integer $MaxReceiveCount) 设置最大接收次数。
+ * @method void setMaxReceiveCount(integer $MaxReceiveCount) 设置最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmqDeadLetterPolicy extends AbstractModel
@@ -46,7 +46,7 @@ class CmqDeadLetterPolicy extends AbstractModel
     public $DeadLetterQueue;
 
     /**
-     * @var integer 死信队列策略。
+     * @var integer 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policy;
@@ -58,7 +58,7 @@ class CmqDeadLetterPolicy extends AbstractModel
     public $MaxTimeToLive;
 
     /**
-     * @var integer 最大接收次数。
+     * @var integer 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReceiveCount;
@@ -66,11 +66,11 @@ class CmqDeadLetterPolicy extends AbstractModel
     /**
      * @param string $DeadLetterQueue 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Policy 死信队列策略。
+     * @param integer $Policy 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTimeToLive 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxReceiveCount 最大接收次数。
+     * @param integer $MaxReceiveCount 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

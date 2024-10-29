@@ -164,8 +164,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopNavigationStatus(string $TopNavigationStatus) 设置是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
 
 <a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
- * @method boolean getAutoActive() 获取是否自动激活子客
- * @method void setAutoActive(boolean $AutoActive) 设置是否自动激活子客
+ * @method boolean getAutoActive() 获取是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+ * @method void setAutoActive(boolean $AutoActive) 设置是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -303,7 +317,14 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $TopNavigationStatus;
 
     /**
-     * @var boolean 是否自动激活子客
+     * @var boolean 是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
      */
     public $AutoActive;
 
@@ -380,7 +401,14 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
 
 <a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
-     * @param boolean $AutoActive 是否自动激活子客
+     * @param boolean $AutoActive 是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
      */
     function __construct()
     {

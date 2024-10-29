@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -75,7 +75,7 @@ class ApproverOption extends AbstractModel
     /**
      * @var integer 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -100,7 +100,7 @@ class ApproverOption extends AbstractModel
      * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`

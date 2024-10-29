@@ -73,6 +73,8 @@ use TencentCloud\Common\AbstractModel;
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(integer $BanStatus) 设置0 -不阻断(客户端版本不支持)
 1 -已阻断
@@ -85,6 +87,8 @@ use TencentCloud\Common\AbstractModel;
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventType() 获取事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,6 +230,8 @@ class BruteAttackInfo extends AbstractModel
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
@@ -353,6 +359,8 @@ class BruteAttackInfo extends AbstractModel
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。

@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStandardDebug(StandardDebug $StandardDebug) 设置标准 Debug 配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method JITVideoProcess getJITVideoProcess() 获取视频即时处理配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJITVideoProcess(JITVideoProcess $JITVideoProcess) 设置视频即时处理配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSetting extends AbstractModel
 {
@@ -254,6 +258,12 @@ class ZoneSetting extends AbstractModel
     public $StandardDebug;
 
     /**
+     * @var JITVideoProcess 视频即时处理配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JITVideoProcess;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Area 站点加速区域信息，取值有：
 <li> mainland：中国境内加速；</li>
@@ -299,6 +309,8 @@ class ZoneSetting extends AbstractModel
      * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StandardDebug $StandardDebug 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JITVideoProcess $JITVideoProcess 视频即时处理配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -425,6 +437,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
             $this->StandardDebug = new StandardDebug();
             $this->StandardDebug->deserialize($param["StandardDebug"]);
+        }
+
+        if (array_key_exists("JITVideoProcess",$param) and $param["JITVideoProcess"] !== null) {
+            $this->JITVideoProcess = new JITVideoProcess();
+            $this->JITVideoProcess->deserialize($param["JITVideoProcess"]);
         }
     }
 }

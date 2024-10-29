@@ -194,6 +194,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentConfig(string $ComponentConfig) 设置配置描述：对应资源下各组件名称及用量（如组件为用量累加型计费则为合计用量）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSPDeduction() 获取SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSPDeduction(string $SPDeduction) 设置SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillMonth() 获取账单月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillMonth(string $BillMonth) 设置账单月
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationSummaryByResource extends AbstractModel
 {
@@ -455,6 +463,18 @@ class AllocationSummaryByResource extends AbstractModel
     public $ComponentConfig;
 
     /**
+     * @var string SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillMonth;
+
+    /**
      * @param string $TreeNodeUniqKey 分账单元唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKeyName 分账单元名称
@@ -541,6 +561,10 @@ class AllocationSummaryByResource extends AbstractModel
      * @param string $RegionTypeName 国内国际：资源所属区域类型（国内、国际）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentConfig 配置描述：对应资源下各组件名称及用量（如组件为用量累加型计费则为合计用量）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillMonth 账单月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -727,6 +751,14 @@ class AllocationSummaryByResource extends AbstractModel
 
         if (array_key_exists("ComponentConfig",$param) and $param["ComponentConfig"] !== null) {
             $this->ComponentConfig = $param["ComponentConfig"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
         }
     }
 }

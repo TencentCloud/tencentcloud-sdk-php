@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCarrierPrivilegeNumberApplicant请求参数结构体
  *
- * @method integer getSdkAppId() 获取SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置SdkAppId
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method array getCallers() 获取主叫号码，必须为实例中存在的号码，格式为0086xxxx（暂时只支持国内号码）
  * @method void setCallers(array $Callers) 设置主叫号码，必须为实例中存在的号码，格式为0086xxxx（暂时只支持国内号码）
  * @method array getCallees() 获取被叫号码，必须为实例中坐席绑定的手机号码，格式为0086xxxx（暂时只支持国内号码）
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCarrierPrivilegeNumberApplicantRequest extends AbstractModel
 {
     /**
-     * @var integer SdkAppId
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -52,7 +52,7 @@ class CreateCarrierPrivilegeNumberApplicantRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param integer $SdkAppId SdkAppId
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $Callers 主叫号码，必须为实例中存在的号码，格式为0086xxxx（暂时只支持国内号码）
      * @param array $Callees 被叫号码，必须为实例中坐席绑定的手机号码，格式为0086xxxx（暂时只支持国内号码）
      * @param string $Description 描述

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境 Id
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境 Id
- * @method string getResourceType() 获取资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
- * @method void setResourceType(string $ResourceType) 设置资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+ * @method string getResourceType() 获取资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
+ * @method void setResourceType(string $ResourceType) 设置资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
  * @method string getResourceId() 获取资源 Id
  * @method void setResourceId(string $ResourceId) 设置资源 Id
  * @method integer getSourceChannel() 获取来源渠道
@@ -41,7 +41,7 @@ class CreateResourceRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var string 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+     * @var string 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
      */
     public $ResourceType;
 
@@ -67,7 +67,7 @@ class CreateResourceRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 环境 Id
-     * @param string $ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+     * @param string $ResourceType 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
      * @param string $ResourceId 资源 Id
      * @param integer $SourceChannel 来源渠道
      * @param string $ResourceFrom 资源来源，目前支持：existing，已有资源；creating，自动创建

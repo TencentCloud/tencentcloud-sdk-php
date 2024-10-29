@@ -399,7 +399,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\EditBashRulesResponse EditBashRules(Models\EditBashRulesRequest $req) 新增或修改高危命令规则
  * @method Models\EditPrivilegeRulesResponse EditPrivilegeRules(Models\EditPrivilegeRulesRequest $req) 新增或修改本地提权规则（支持多服务器选择）
  * @method Models\EditReverseShellRulesResponse EditReverseShellRules(Models\EditReverseShellRulesRequest $req) 编辑反弹Shell规则（支持多服务器选择）
-
  * @method Models\EditTagsResponse EditTags(Models\EditTagsRequest $req) 新增或编辑标签
  * @method Models\ExportAssetAppListResponse ExportAssetAppList(Models\ExportAssetAppListRequest $req) 导出资产管理应用列表
  * @method Models\ExportAssetCoreModuleListResponse ExportAssetCoreModuleList(Models\ExportAssetCoreModuleListRequest $req) 导出资产管理内核模块列表

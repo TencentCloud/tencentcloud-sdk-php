@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method integer getInitPodNum() 获取初始化 pod 数
  * @method void setInitPodNum(integer $InitPodNum) 设置初始化 pod 数
- * @method float getCpuSpec() 获取cpu规格
- * @method void setCpuSpec(float $CpuSpec) 设置cpu规格
- * @method float getMemorySpec() 获取内存规格
- * @method void setMemorySpec(float $MemorySpec) 设置内存规格
+ * @method float getCpuSpec() 获取cpu规格 单位：核
+ * @method void setCpuSpec(float $CpuSpec) 设置cpu规格 单位：核
+ * @method float getMemorySpec() 获取内存规格 单位：G
+ * @method void setMemorySpec(float $MemorySpec) 设置内存规格 单位：G
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
  * @method string getImgRepo() 获取镜像仓库
@@ -168,12 +168,12 @@ class DeployApplicationRequest extends AbstractModel
     public $InitPodNum;
 
     /**
-     * @var float cpu规格
+     * @var float cpu规格 单位：核
      */
     public $CpuSpec;
 
     /**
-     * @var float 内存规格
+     * @var float 内存规格 单位：G
      */
     public $MemorySpec;
 
@@ -415,8 +415,8 @@ class DeployApplicationRequest extends AbstractModel
     /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
-     * @param float $CpuSpec cpu规格
-     * @param float $MemorySpec 内存规格
+     * @param float $CpuSpec cpu规格 单位：核
+     * @param float $MemorySpec 内存规格 单位：G
      * @param string $EnvironmentId 环境ID
      * @param string $ImgRepo 镜像仓库
      * @param string $VersionDesc 版本描述信息

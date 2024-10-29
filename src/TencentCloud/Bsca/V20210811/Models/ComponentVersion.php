@@ -18,7 +18,7 @@ namespace TencentCloud\Bsca\V20210811\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述组件的一条版本信息。
+ * 描述一个组件版本。
  *
  * @method PURL getPURL() 获取该组件的PURL
 注意：此字段可能返回 null，表示取不到有效值。
@@ -27,6 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLicenseExpression() 获取该组件版本的许可证表达式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseExpression(string $LicenseExpression) 设置该组件版本的许可证表达式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ComponentVersionInfo getVersionInfo() 获取组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionInfo(ComponentVersionInfo $VersionInfo) 设置组件的版本信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComponentVersion extends AbstractModel
@@ -44,9 +48,17 @@ class ComponentVersion extends AbstractModel
     public $LicenseExpression;
 
     /**
+     * @var ComponentVersionInfo 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionInfo;
+
+    /**
      * @param PURL $PURL 该组件的PURL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseExpression 该组件版本的许可证表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComponentVersionInfo $VersionInfo 组件的版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,11 @@ class ComponentVersion extends AbstractModel
 
         if (array_key_exists("LicenseExpression",$param) and $param["LicenseExpression"] !== null) {
             $this->LicenseExpression = $param["LicenseExpression"];
+        }
+
+        if (array_key_exists("VersionInfo",$param) and $param["VersionInfo"] !== null) {
+            $this->VersionInfo = new ComponentVersionInfo();
+            $this->VersionInfo->deserialize($param["VersionInfo"]);
         }
     }
 }

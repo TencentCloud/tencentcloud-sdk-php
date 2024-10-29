@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 场景详情。
  *
  * @method string getSceneId() 获取场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneId(string $SceneId) 设置场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSceneName() 获取场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneName(string $SceneName) 设置场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedBy() 获取场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedBy(string $CreatedBy) 设置场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedTime() 获取更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Scene extends AbstractModel
 {
     /**
      * @var string 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneId;
 
     /**
      * @var string 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneName;
 
     /**
      * @var string 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedBy;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var string 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
     /**
      * @param string $SceneId 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SceneName 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedBy 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 端口映射详细信息结构体
  *
- * @method string getType() 获取服务类型
+ * @method string getType() 获取服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置服务类型
+ * @method void setType(string $Type) 设置服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取服务名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ use TencentCloud\Common\AbstractModel;
 class ServicePortMapping extends AbstractModel
 {
     /**
-     * @var string 服务类型
+     * @var string 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -134,7 +134,7 @@ class ServicePortMapping extends AbstractModel
     public $ExternalDomain;
 
     /**
-     * @param string $Type 服务类型
+     * @param string $Type 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务名称
 注意：此字段可能返回 null，表示取不到有效值。

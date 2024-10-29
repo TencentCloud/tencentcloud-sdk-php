@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCanEditApprover(boolean $CanEditApprover) 设置允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -93,7 +93,7 @@ class ApproverOption extends AbstractModel
     /**
      * @var integer 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -124,7 +124,7 @@ class ApproverOption extends AbstractModel
      * @param boolean $CanEditApprover 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`

@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置实例所应用的规则模板。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliver() 获取是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliver(string $Deliver) 设置是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeliverSummary() 获取日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliverSummary(array $DeliverSummary) 设置日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAuditStatus extends AbstractModel
 {
@@ -148,6 +156,18 @@ class InstanceAuditStatus extends AbstractModel
     public $RuleTemplateIds;
 
     /**
+     * @var string 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deliver;
+
+    /**
+     * @var array 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliverSummary;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭。
      * @param integer $LogExpireDay 日志保留时长。
@@ -171,6 +191,10 @@ class InstanceAuditStatus extends AbstractModel
      * @param float $RealStorage 总存储量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleTemplateIds 实例所应用的规则模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deliver 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeliverSummary 日志投递类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -237,6 +261,19 @@ class InstanceAuditStatus extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("Deliver",$param) and $param["Deliver"] !== null) {
+            $this->Deliver = $param["Deliver"];
+        }
+
+        if (array_key_exists("DeliverSummary",$param) and $param["DeliverSummary"] !== null) {
+            $this->DeliverSummary = [];
+            foreach ($param["DeliverSummary"] as $key => $value){
+                $obj = new DeliverSummary();
+                $obj->deserialize($value);
+                array_push($this->DeliverSummary, $obj);
+            }
         }
     }
 }

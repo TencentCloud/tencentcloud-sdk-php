@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStaff请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getEmail() 获取座席账户
  * @method void setEmail(string $Email) 设置座席账户
  * @method string getName() 获取座席名称
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyStaffRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -87,7 +87,7 @@ class ModifyStaffRequest extends AbstractModel
     public $UseMobileAccept;
 
     /**
-     * @param integer $SdkAppId 应用ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Email 座席账户
      * @param string $Name 座席名称
      * @param string $Phone 座席手机号（带0086前缀,示例：008618011111111）

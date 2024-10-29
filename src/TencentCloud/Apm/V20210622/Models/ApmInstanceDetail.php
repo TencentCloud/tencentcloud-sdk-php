@@ -140,6 +140,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFree() 获取是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFree(integer $Free) 设置是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefaultTSF() 获取是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultTSF(integer $DefaultTSF) 设置是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -324,6 +332,18 @@ class ApmInstanceDetail extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var integer 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Free;
+
+    /**
+     * @var integer 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultTSF;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -383,6 +403,10 @@ class ApmInstanceDetail extends AbstractModel
      * @param boolean $PayModeEffective 实例计费模式是否生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultTSF 是否tsf默认业务系统（0=否，1-是）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -521,6 +545,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("Free",$param) and $param["Free"] !== null) {
+            $this->Free = $param["Free"];
+        }
+
+        if (array_key_exists("DefaultTSF",$param) and $param["DefaultTSF"] !== null) {
+            $this->DefaultTSF = $param["DefaultTSF"];
         }
     }
 }

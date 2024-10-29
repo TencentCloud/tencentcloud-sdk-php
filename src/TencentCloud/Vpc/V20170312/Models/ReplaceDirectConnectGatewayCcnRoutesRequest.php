@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：dcg-prpqlmg1
  * @method array getRoutes() 获取需要连通的IDC网段列表
  * @method void setRoutes(array $Routes) 设置需要连通的IDC网段列表
+ * @method string getAddressType() 获取地址类型，支持：IPv4、IPv6。默认IPv4。
+ * @method void setAddressType(string $AddressType) 设置地址类型，支持：IPv4、IPv6。默认IPv4。
  */
 class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     public $Routes;
 
     /**
+     * @var string 地址类型，支持：IPv4、IPv6。默认IPv4。
+     */
+    public $AddressType;
+
+    /**
      * @param string $DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      * @param array $Routes 需要连通的IDC网段列表
+     * @param string $AddressType 地址类型，支持：IPv4、IPv6。默认IPv4。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);
             }
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
     }
 }

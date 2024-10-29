@@ -26,11 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method string getHeaderName() 获取回源时，存放客户端 IP 的请求头名称。
-为空则使用默认值：X-Forwarded-IP。
+ * @method string getHeaderName() 获取回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaderName(string $HeaderName) 设置回源时，存放客户端 IP 的请求头名称。
-为空则使用默认值：X-Forwarded-IP。
+ * @method void setHeaderName(string $HeaderName) 设置回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClientIpHeader extends AbstractModel
@@ -43,8 +41,7 @@ class ClientIpHeader extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 回源时，存放客户端 IP 的请求头名称。
-为空则使用默认值：X-Forwarded-IP。
+     * @var string 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderName;
@@ -53,8 +50,7 @@ class ClientIpHeader extends AbstractModel
      * @param string $Switch 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param string $HeaderName 回源时，存放客户端 IP 的请求头名称。
-为空则使用默认值：X-Forwarded-IP。
+     * @param string $HeaderName 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

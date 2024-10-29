@@ -36,6 +36,8 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
 6 协议端口模板
  * @method string getProtocolType() 获取协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
  * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+ * @method integer getIpVersion() 获取IP版本,0 IPV4;1 IPV6
+ * @method void setIpVersion(integer $IpVersion) 设置IP版本,0 IPV4;1 IPV6
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     public $ProtocolType;
 
     /**
+     * @var integer IP版本,0 IPV4;1 IPV6
+     */
+    public $IpVersion;
+
+    /**
      * @param string $Name 模板名称
      * @param string $Detail 模板描述
      * @param string $IpString Type为1，ip模板eg：1.1.1.1,2.2.2.2；
@@ -76,6 +83,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
 5 域名模板
 6 协议端口模板
      * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+     * @param integer $IpVersion IP版本,0 IPV4;1 IPV6
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
 
         if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
             $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

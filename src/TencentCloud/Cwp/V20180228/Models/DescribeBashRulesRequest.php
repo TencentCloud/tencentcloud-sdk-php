@@ -27,9 +27,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
+<li>Name - String - 是否必填：否 - 规则名称</li>
+<li>Rule - String - 是否必填：否 - 规则内容</li>
+<li>Level - Int - 是否必填：否 - 威胁等级</li>
+<li>White - Int - 是否必填：否 - 白名单类型</li>
+<li>RuleCategory - Int - 是否必填：否 - 策略类型</li>
+<li>BashAction - Int - 是否必填：否 - 操作动作</li>
+<li>Status - Int - 是否必填：否 - 生效状态</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
+<li>Name - String - 是否必填：否 - 规则名称</li>
+<li>Rule - String - 是否必填：否 - 规则内容</li>
+<li>Level - Int - 是否必填：否 - 威胁等级</li>
+<li>White - Int - 是否必填：否 - 白名单类型</li>
+<li>RuleCategory - Int - 是否必填：否 - 策略类型</li>
+<li>BashAction - Int - 是否必填：否 - 操作动作</li>
+<li>Status - Int - 是否必填：否 - 生效状态</li>
  */
 class DescribeBashRulesRequest extends AbstractModel
 {
@@ -50,7 +62,13 @@ class DescribeBashRulesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
+<li>Name - String - 是否必填：否 - 规则名称</li>
+<li>Rule - String - 是否必填：否 - 规则内容</li>
+<li>Level - Int - 是否必填：否 - 威胁等级</li>
+<li>White - Int - 是否必填：否 - 白名单类型</li>
+<li>RuleCategory - Int - 是否必填：否 - 策略类型</li>
+<li>BashAction - Int - 是否必填：否 - 操作动作</li>
+<li>Status - Int - 是否必填：否 - 生效状态</li>
      */
     public $Filters;
 
@@ -59,7 +77,13 @@ class DescribeBashRulesRequest extends AbstractModel
      * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
+<li>Name - String - 是否必填：否 - 规则名称</li>
+<li>Rule - String - 是否必填：否 - 规则内容</li>
+<li>Level - Int - 是否必填：否 - 威胁等级</li>
+<li>White - Int - 是否必填：否 - 白名单类型</li>
+<li>RuleCategory - Int - 是否必填：否 - 策略类型</li>
+<li>BashAction - Int - 是否必填：否 - 操作动作</li>
+<li>Status - Int - 是否必填：否 - 生效状态</li>
      */
     function __construct()
     {

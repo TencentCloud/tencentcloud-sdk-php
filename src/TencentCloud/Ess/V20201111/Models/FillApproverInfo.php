@@ -76,8 +76,12 @@ WEWORKAPP: 企业微信
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 
 注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
- * @method string getFlowId() 获取合同流程ID，补充合同组子合同动态签署人时必传。
- * @method void setFlowId(string $FlowId) 设置合同流程ID，补充合同组子合同动态签署人时必传。
+ * @method string getFlowId() 获取合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充普通合同时，请阅读：<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口</a>的接口使用说明
+ * @method void setFlowId(string $FlowId) 设置合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充普通合同时，请阅读：<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口</a>的接口使用说明
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -140,7 +144,9 @@ WEWORKAPP: 企业微信
     public $ApproverIdCardNumber;
 
     /**
-     * @var string 合同流程ID，补充合同组子合同动态签署人时必传。
+     * @var string 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充普通合同时，请阅读：<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口</a>的接口使用说明
      */
     public $FlowId;
 
@@ -171,7 +177,9 @@ WEWORKAPP: 企业微信
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 
 注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
-     * @param string $FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     * @param string $FlowId 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充普通合同时，请阅读：<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口</a>的接口使用说明
      */
     function __construct()
     {

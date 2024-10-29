@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnRouteType(string $CcnRouteType) 设置云联网路由学习类型，可选值：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置，默认值。</li>
+ * @method string getAddressType() 获取地址类型，支持：IPv4、IPv6。默认IPv4。
+ * @method void setAddressType(string $AddressType) 设置地址类型，支持：IPv4、IPv6。默认IPv4。
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取返回数量。
@@ -48,6 +50,11 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     public $CcnRouteType;
 
     /**
+     * @var string 地址类型，支持：IPv4、IPv6。默认IPv4。
+     */
+    public $AddressType;
+
+    /**
      * @var integer 偏移量。
      */
     public $Offset;
@@ -62,6 +69,7 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @param string $CcnRouteType 云联网路由学习类型，可选值：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置，默认值。</li>
+     * @param string $AddressType 地址类型，支持：IPv4、IPv6。默认IPv4。
      * @param integer $Offset 偏移量。
      * @param integer $Limit 返回数量。
      */
@@ -84,6 +92,10 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 
         if (array_key_exists("CcnRouteType",$param) and $param["CcnRouteType"] !== null) {
             $this->CcnRouteType = $param["CcnRouteType"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

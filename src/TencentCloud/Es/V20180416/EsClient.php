@@ -24,18 +24,21 @@ use TencentCloud\Es\V20180416\Models as Models;
 
 /**
  * @method Models\CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(Models\CheckMigrateIndexMetaDataRequest $req) 检查cos迁移索引元数据
+ * @method Models\CreateClusterSnapshotResponse CreateClusterSnapshot(Models\CreateClusterSnapshotRequest $req) 集群快照手动创建
  * @method Models\CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstance(Models\CreateCosMigrateToServerlessInstanceRequest $req) cos迁移流程
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 创建索引
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建指定规格的ES集群实例
  * @method Models\CreateLogstashInstanceResponse CreateLogstashInstance(Models\CreateLogstashInstanceRequest $req) 用于创建Logstash实例
  * @method Models\CreateServerlessInstanceResponse CreateServerlessInstance(Models\CreateServerlessInstanceRequest $req) 创建Serverless索引
  * @method Models\CreateServerlessSpaceV2Response CreateServerlessSpaceV2(Models\CreateServerlessSpaceV2Request $req) 创建Serverless索引空间
+ * @method Models\DeleteClusterSnapshotResponse DeleteClusterSnapshot(Models\DeleteClusterSnapshotRequest $req) 删除快照仓库里备份的快照
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 删除索引
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例
  * @method Models\DeleteLogstashInstanceResponse DeleteLogstashInstance(Models\DeleteLogstashInstanceRequest $req) 用于删除Logstash实例
  * @method Models\DeleteLogstashPipelinesResponse DeleteLogstashPipelines(Models\DeleteLogstashPipelinesRequest $req) 用于批量删除Logstash管道
  * @method Models\DeleteServerlessInstanceResponse DeleteServerlessInstance(Models\DeleteServerlessInstanceRequest $req) 删除Serverless索引
  * @method Models\DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(Models\DeleteServerlessSpaceUserRequest $req) 删除Serverless空间子用户
+ * @method Models\DescribeClusterSnapshotResponse DescribeClusterSnapshot(Models\DescribeClusterSnapshotRequest $req) 获取快照备份列表
  * @method Models\DescribeDiagnoseResponse DescribeDiagnose(Models\DescribeDiagnoseRequest $req) 查询智能运维诊断结果报告
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
  * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) 获取索引元数据
@@ -65,6 +68,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) 重启Kibana
  * @method Models\RestartLogstashInstanceResponse RestartLogstashInstance(Models\RestartLogstashInstanceRequest $req) 用于重启Logstash实例
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 用于重启集群节点
+ * @method Models\RestoreClusterSnapshotResponse RestoreClusterSnapshot(Models\RestoreClusterSnapshotRequest $req) 快照备份恢复，从仓库中恢复快照到集群中
  * @method Models\SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipeline(Models\SaveAndDeployLogstashPipelineRequest $req) 用于下发并且部署管道
  * @method Models\StartLogstashPipelinesResponse StartLogstashPipelines(Models\StartLogstashPipelinesRequest $req) 用于启动Logstash管道
  * @method Models\StopLogstashPipelinesResponse StopLogstashPipelines(Models\StopLogstashPipelinesRequest $req) 用于批量停止Logstash管道

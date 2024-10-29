@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置时移数据存储时长，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTimeShiftSubStreams() 获取时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeShiftSubStreams(array $TimeShiftSubStreams) 设置时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimeShiftStreamInfo extends AbstractModel
 {
@@ -96,6 +100,12 @@ class TimeShiftStreamInfo extends AbstractModel
     public $Duration;
 
     /**
+     * @var array 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeShiftSubStreams;
+
+    /**
      * @param string $DomainGroup 推流域名所属组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 推流域名。
@@ -107,6 +117,8 @@ class TimeShiftStreamInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StreamType 流类型，取值0为原始流，1为水印流，2为转码流。
      * @param integer $Duration 时移数据存储时长，单位秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TimeShiftSubStreams 时移自适应码率子流列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,15 @@ class TimeShiftStreamInfo extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("TimeShiftSubStreams",$param) and $param["TimeShiftSubStreams"] !== null) {
+            $this->TimeShiftSubStreams = [];
+            foreach ($param["TimeShiftSubStreams"] as $key => $value){
+                $obj = new TimeShiftSubStream();
+                $obj->deserialize($value);
+                array_push($this->TimeShiftSubStreams, $obj);
+            }
         }
     }
 }

@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionResult() 获取日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActionResult(string $ActionResult) 设置日志结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogMessage extends AbstractModel
 {
@@ -200,6 +204,12 @@ class LogMessage extends AbstractModel
     public $Detail;
 
     /**
+     * @var string 日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActionResult;
+
+    /**
      * @param string $LogId 日志标识
      * @param string $TenantId 租户ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,6 +245,8 @@ class LogMessage extends AbstractModel
      * @param string $UserId 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionResult 日志结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -316,6 +328,10 @@ class LogMessage extends AbstractModel
 
         if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
             $this->Detail = $param["Detail"];
+        }
+
+        if (array_key_exists("ActionResult",$param) and $param["ActionResult"] !== null) {
+            $this->ActionResult = $param["ActionResult"];
         }
     }
 }

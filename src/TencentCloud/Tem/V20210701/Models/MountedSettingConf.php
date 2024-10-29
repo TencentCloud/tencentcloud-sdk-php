@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 挂载配置信息
  *
  * @method string getConfigDataName() 获取配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigDataName(string $ConfigDataName) 设置配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountedPath() 获取挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountedPath(string $MountedPath) 设置挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取配置内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置配置内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretDataName() 获取加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretDataName(string $SecretDataName) 设置加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MountedSettingConf extends AbstractModel
 {
     /**
      * @var string 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigDataName;
 
     /**
      * @var string 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountedPath;
 
     /**
      * @var array 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @var string 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretDataName;
 
     /**
      * @param string $ConfigDataName 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountedPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretDataName 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

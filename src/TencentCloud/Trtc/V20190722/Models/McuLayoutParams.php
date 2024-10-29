@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 混流布局参数。
  *
- * @method integer getMixLayoutMode() 获取布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
- * @method void setMixLayoutMode(integer $MixLayoutMode) 设置布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+ * @method integer getMixLayoutMode() 获取布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
+ * @method void setMixLayoutMode(integer $MixLayoutMode) 设置布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
  * @method integer getPureAudioHoldPlaceMode() 获取纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
  * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) 设置纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
- * @method array getMixLayoutList() 获取自定义模板中有效，指定用户视频在混合画面中的位置。
- * @method void setMixLayoutList(array $MixLayoutList) 设置自定义模板中有效，指定用户视频在混合画面中的位置。
+ * @method array getMixLayoutList() 获取自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
+ * @method void setMixLayoutList(array $MixLayoutList) 设置自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
  * @method MaxVideoUser getMaxVideoUser() 获取指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
  * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) 设置指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
  * @method integer getRenderMode() 获取屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class McuLayoutParams extends AbstractModel
 {
     /**
-     * @var integer 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+     * @var integer 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
      */
     public $MixLayoutMode;
 
@@ -44,7 +44,7 @@ class McuLayoutParams extends AbstractModel
     public $PureAudioHoldPlaceMode;
 
     /**
-     * @var array 自定义模板中有效，指定用户视频在混合画面中的位置。
+     * @var array 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
      */
     public $MixLayoutList;
 
@@ -59,9 +59,9 @@ class McuLayoutParams extends AbstractModel
     public $RenderMode;
 
     /**
-     * @param integer $MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+     * @param integer $MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
      * @param integer $PureAudioHoldPlaceMode 纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
-     * @param array $MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置。
+     * @param array $MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
      * @param MaxVideoUser $MaxVideoUser 指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
      * @param integer $RenderMode 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
      */

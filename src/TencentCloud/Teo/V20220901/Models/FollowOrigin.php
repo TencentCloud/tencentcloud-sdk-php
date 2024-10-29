@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 缓存遵循源站配置
+ * 缓存遵循源站配置。
  *
  * @method string getSwitch() 获取遵循源站配置开关，取值有：
 <li>on：开启；</li>
@@ -26,17 +26,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置遵循源站配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method integer getDefaultCacheTime() 获取源站未返回 Cache-Control 头时, 设置默认的缓存时间
+ * @method string getDefaultCache() 获取源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+<li>on：缓存；</li>
+<li>off：不缓存。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultCacheTime(integer $DefaultCacheTime) 设置源站未返回 Cache-Control 头时, 设置默认的缓存时间
+ * @method void setDefaultCache(string $DefaultCache) 设置源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+<li>on：缓存；</li>
+<li>off：不缓存。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDefaultCache() 获取源站未返回 Cache-Control 头时, 设置缓存/不缓存
+ * @method string getDefaultCacheStrategy() 获取源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
+<li>on：使用默认缓存策略；</li>
+<li>off：不使用默认缓存策略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultCache(string $DefaultCache) 设置源站未返回 Cache-Control 头时, 设置缓存/不缓存
+ * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) 设置源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
+<li>on：使用默认缓存策略；</li>
+<li>off：不使用默认缓存策略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDefaultCacheStrategy() 获取源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+ * @method integer getDefaultCacheTime() 获取源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) 设置源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+ * @method void setDefaultCacheTime(integer $DefaultCacheTime) 设置源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FollowOrigin extends AbstractModel
@@ -49,32 +57,40 @@ class FollowOrigin extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer 源站未返回 Cache-Control 头时, 设置默认的缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DefaultCacheTime;
-
-    /**
-     * @var string 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+     * @var string 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+<li>on：缓存；</li>
+<li>off：不缓存。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultCache;
 
     /**
-     * @var string 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+     * @var string 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
+<li>on：使用默认缓存策略；</li>
+<li>off：不使用默认缓存策略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultCacheStrategy;
 
     /**
+     * @var integer 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultCacheTime;
+
+    /**
      * @param string $Switch 遵循源站配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param integer $DefaultCacheTime 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+     * @param string $DefaultCache 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+<li>on：缓存；</li>
+<li>off：不缓存。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DefaultCache 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+     * @param string $DefaultCacheStrategy 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
+<li>on：使用默认缓存策略；</li>
+<li>off：不使用默认缓存策略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DefaultCacheStrategy 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+     * @param integer $DefaultCacheTime 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -94,16 +110,16 @@ class FollowOrigin extends AbstractModel
             $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("DefaultCacheTime",$param) and $param["DefaultCacheTime"] !== null) {
-            $this->DefaultCacheTime = $param["DefaultCacheTime"];
-        }
-
         if (array_key_exists("DefaultCache",$param) and $param["DefaultCache"] !== null) {
             $this->DefaultCache = $param["DefaultCache"];
         }
 
         if (array_key_exists("DefaultCacheStrategy",$param) and $param["DefaultCacheStrategy"] !== null) {
             $this->DefaultCacheStrategy = $param["DefaultCacheStrategy"];
+        }
+
+        if (array_key_exists("DefaultCacheTime",$param) and $param["DefaultCacheTime"] !== null) {
+            $this->DefaultCacheTime = $param["DefaultCacheTime"];
         }
     }
 }

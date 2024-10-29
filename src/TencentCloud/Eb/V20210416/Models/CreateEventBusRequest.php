@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEventBus请求参数结构体
  *
- * @method string getEventBusName() 获取事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method void setEventBusName(string $EventBusName) 设置事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method string getDescription() 获取事件集描述，不限字符类型，200字符描述以内
- * @method void setDescription(string $Description) 设置事件集描述，不限字符类型，200字符描述以内
+ * @method string getEventBusName() 获取事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+ * @method void setEventBusName(string $EventBusName) 设置事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+ * @method string getDescription() 获取事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+ * @method void setDescription(string $Description) 设置事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
  * @method integer getSaveDays() 获取EB存储时长
  * @method void setSaveDays(integer $SaveDays) 设置EB存储时长
  * @method boolean getEnableStore() 获取EB是否开启存储
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateEventBusRequest extends AbstractModel
 {
     /**
-     * @var string 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @var string 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     public $EventBusName;
 
     /**
-     * @var string 事件集描述，不限字符类型，200字符描述以内
+     * @var string 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public $Description;
 
@@ -52,8 +52,8 @@ class CreateEventBusRequest extends AbstractModel
     public $EnableStore;
 
     /**
-     * @param string $EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
-     * @param string $Description 事件集描述，不限字符类型，200字符描述以内
+     * @param string $EventBusName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * @param string $Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      * @param integer $SaveDays EB存储时长
      * @param boolean $EnableStore EB是否开启存储
      */

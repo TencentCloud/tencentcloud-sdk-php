@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getOrganizationName() 获取合同流程签署方的组织机构名称。
-如果名称中包含英文括号()，请使用中文括号（）代替。
- * @method void setOrganizationName(string $OrganizationName) 设置合同流程签署方的组织机构名称。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+ * @method string getOrganizationName() 获取合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
+ * @method void setOrganizationName(string $OrganizationName) 设置合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
  * @method string getName() 获取合同流程里边签署方经办人的姓名。
 
  * @method void setName(string $Name) 设置合同流程里边签署方经办人的姓名。
@@ -120,8 +118,7 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 合同流程签署方的组织机构名称。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @var string 合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
      */
     public $OrganizationName;
 
@@ -221,8 +218,7 @@ class CreateSchemeUrlRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $OrganizationName 合同流程签署方的组织机构名称。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @param string $OrganizationName 合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
      * @param string $Name 合同流程里边签署方经办人的姓名。
 
      * @param string $Mobile 合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。

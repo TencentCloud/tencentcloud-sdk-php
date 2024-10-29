@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 访问协议强制https跳转配置
+ * 访问协议强制 HTTPS 跳转配置。
  *
  * @method string getSwitch() 获取访问强制跳转配置开关，取值有：
 <li>on：开启；</li>

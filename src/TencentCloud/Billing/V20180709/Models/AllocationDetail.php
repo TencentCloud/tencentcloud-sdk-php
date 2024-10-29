@@ -294,6 +294,30 @@ use TencentCloud\Common\AbstractModel;
 1 - 归集
 2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountObject() 获取当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountObject(string $DiscountObject) 设置当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountType() 获取当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountType(string $DiscountType) 设置当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountContent() 获取对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountContent(string $DiscountContent) 设置对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSPDeduction() 获取SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSPDeduction(string $SPDeduction) 设置SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSPDeductionRate() 获取SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSPDeductionRate(string $SPDeductionRate) 设置SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillMonth() 获取账单月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillMonth(string $BillMonth) 设置账单月
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationDetail extends AbstractModel
 {
@@ -701,6 +725,42 @@ class AllocationDetail extends AbstractModel
     public $AllocationType;
 
     /**
+     * @var string 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountObject;
+
+    /**
+     * @var string 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountType;
+
+    /**
+     * @var string 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountContent;
+
+    /**
+     * @var string SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SPDeductionRate;
+
+    /**
+     * @var string 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillMonth;
+
+    /**
      * @param string $TreeNodeUniqKey 分账单元唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKeyName 分账单元名称
@@ -837,6 +897,18 @@ class AllocationDetail extends AbstractModel
 0 - 分摊
 1 - 归集
 2 - 未分配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SPDeductionRate SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillMonth 账单月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1119,6 +1191,30 @@ class AllocationDetail extends AbstractModel
 
         if (array_key_exists("AllocationType",$param) and $param["AllocationType"] !== null) {
             $this->AllocationType = $param["AllocationType"];
+        }
+
+        if (array_key_exists("DiscountObject",$param) and $param["DiscountObject"] !== null) {
+            $this->DiscountObject = $param["DiscountObject"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
+        }
+
+        if (array_key_exists("DiscountContent",$param) and $param["DiscountContent"] !== null) {
+            $this->DiscountContent = $param["DiscountContent"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("SPDeductionRate",$param) and $param["SPDeductionRate"] !== null) {
+            $this->SPDeductionRate = $param["SPDeductionRate"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
         }
     }
 }

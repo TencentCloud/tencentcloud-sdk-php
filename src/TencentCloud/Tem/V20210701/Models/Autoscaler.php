@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinReplicas(integer $MinReplicas) 设置弹性伸缩最小实例数
  * @method integer getMaxReplicas() 获取弹性伸缩最大实例数
  * @method void setMaxReplicas(integer $MaxReplicas) 设置弹性伸缩最大实例数
- * @method array getHorizontalAutoscaler() 获取指标弹性伸缩策略
+ * @method array getHorizontalAutoscaler() 获取指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置指标弹性伸缩策略
+ * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCronHorizontalAutoscaler() 获取定时弹性伸缩策略
+ * @method array getCronHorizontalAutoscaler() 获取定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性伸缩策略
+ * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoscalerId() 获取弹性伸缩ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,13 +74,13 @@ class Autoscaler extends AbstractModel
     public $MaxReplicas;
 
     /**
-     * @var array 指标弹性伸缩策略
+     * @var array 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HorizontalAutoscaler;
 
     /**
-     * @var array 定时弹性伸缩策略
+     * @var array 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronHorizontalAutoscaler;
@@ -130,9 +130,9 @@ class Autoscaler extends AbstractModel
     /**
      * @param integer $MinReplicas 弹性伸缩最小实例数
      * @param integer $MaxReplicas 弹性伸缩最大实例数
-     * @param array $HorizontalAutoscaler 指标弹性伸缩策略
+     * @param array $HorizontalAutoscaler 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CronHorizontalAutoscaler 定时弹性伸缩策略
+     * @param array $CronHorizontalAutoscaler 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalerId 弹性伸缩ID
 注意：此字段可能返回 null，表示取不到有效值。

@@ -44,10 +44,14 @@ use TencentCloud\Common\AbstractModel;
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
- * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`，必填。
- * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`，必填。
- * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`，必填。
- * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。格式：`15:04:05`，必填。
+ * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`。必填
+ * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`。必填
+ * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`。必填
+ * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。格式：`15:04:05`。必填
  * @method integer getIndex() 获取位序。
 
 - 入参时无效。
@@ -56,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 
 - 入参时无效。
 - 出参时有效。
- * @method string getNoticeContentId() 获取通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NoticeReceiver extends AbstractModel
 {
@@ -88,12 +88,18 @@ class NoticeReceiver extends AbstractModel
     public $ReceiverChannels;
 
     /**
-     * @var string 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoticeContentId;
+
+    /**
+     * @var string 允许接收信息的开始时间。格式：`15:04:05`。必填
      */
     public $StartTime;
 
     /**
-     * @var string 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * @var string 允许接收信息的结束时间。格式：`15:04:05`。必填
      */
     public $EndTime;
 
@@ -104,12 +110,6 @@ class NoticeReceiver extends AbstractModel
 - 出参时有效。
      */
     public $Index;
-
-    /**
-     * @var string 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NoticeContentId;
 
     /**
      * @param string $ReceiverType 接受者类型。可选值：
@@ -124,14 +124,14 @@ class NoticeReceiver extends AbstractModel
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
-     * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
-     * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`。必填
+     * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`。必填
      * @param integer $Index 位序。
 
 - 入参时无效。
 - 出参时有效。
-     * @param string $NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -158,6 +158,10 @@ class NoticeReceiver extends AbstractModel
             $this->ReceiverChannels = $param["ReceiverChannels"];
         }
 
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
+        }
+
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -168,10 +172,6 @@ class NoticeReceiver extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
-        }
-
-        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
-            $this->NoticeContentId = $param["NoticeContentId"];
         }
     }
 }

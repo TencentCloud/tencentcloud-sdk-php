@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) 设置事件集ID
  * @method boolean getEnable() 获取使能开关。
  * @method void setEnable(boolean $Enable) 设置使能开关。
- * @method string getDescription() 获取规则描述，不限字符类型，200字符描述以内。
- * @method void setDescription(string $Description) 设置规则描述，不限字符类型，200字符描述以内。
+ * @method string getDescription() 获取规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+ * @method void setDescription(string $Description) 设置规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
  * @method string getEventPattern() 获取参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
  * @method void setEventPattern(string $EventPattern) 设置参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
- * @method string getRuleName() 获取事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method void setRuleName(string $RuleName) 设置事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+ * @method string getRuleName() 获取事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+ * @method void setRuleName(string $RuleName) 设置事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
  */
 class UpdateRuleRequest extends AbstractModel
 {
@@ -51,7 +51,7 @@ class UpdateRuleRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 规则描述，不限字符类型，200字符描述以内。
+     * @var string 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public $Description;
 
@@ -61,7 +61,7 @@ class UpdateRuleRequest extends AbstractModel
     public $EventPattern;
 
     /**
-     * @var string 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @var string 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     public $RuleName;
 
@@ -69,9 +69,9 @@ class UpdateRuleRequest extends AbstractModel
      * @param string $RuleId 事件规则ID
      * @param string $EventBusId 事件集ID
      * @param boolean $Enable 使能开关。
-     * @param string $Description 规则描述，不限字符类型，200字符描述以内。
+     * @param string $Description 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      * @param string $EventPattern 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
-     * @param string $RuleName 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @param string $RuleName 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     function __construct()
     {

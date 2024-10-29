@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMessage(string $ErrMessage) 设置补充失败错误说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FillError extends AbstractModel
 {
@@ -44,9 +48,17 @@ class FillError extends AbstractModel
     public $ErrMessage;
 
     /**
+     * @var string 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlowId;
+
+    /**
      * @param string $RecipientId 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMessage 补充失败错误说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlowId 合同流程ID，为32位字符串。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class FillError extends AbstractModel
 
         if (array_key_exists("ErrMessage",$param) and $param["ErrMessage"] !== null) {
             $this->ErrMessage = $param["ErrMessage"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

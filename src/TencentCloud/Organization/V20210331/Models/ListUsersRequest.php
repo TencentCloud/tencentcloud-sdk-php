@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) 设置排序的字段，目前只支持CreateTime，默认是CreateTime字段
  * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
  * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+ * @method integer getOffset() 获取翻页offset. 不要与NextToken同时使用，优先使用NextToken
+ * @method void setOffset(integer $Offset) 设置翻页offset. 不要与NextToken同时使用，优先使用NextToken
  */
 class ListUsersRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ListUsersRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var integer 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     */
+    public $Offset;
+
+    /**
      * @param string $ZoneId 空间 ID。
      * @param string $UserStatus 用户状态 Enabled：启用， Disabled：禁用。
      * @param string $UserType 用户类型  Manual：手动创建，Synchronized：外部导入。
@@ -96,6 +103,7 @@ class ListUsersRequest extends AbstractModel
      * @param array $FilterGroups 筛选的用户组，该用户组关联的子用户会返回IsSelected=1
      * @param string $SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
      * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @param integer $Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ListUsersRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

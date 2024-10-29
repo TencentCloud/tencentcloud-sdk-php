@@ -84,12 +84,12 @@ log：观察
  * @method void setDescription(string $Description) 设置描述
  * @method integer getOrderIndex() 获取规则顺序，-1表示最低，1表示最高
  * @method void setOrderIndex(integer $OrderIndex) 设置规则顺序，-1表示最低，1表示最高
- * @method integer getUuid() 获取规则对应的唯一id
- * @method void setUuid(integer $Uuid) 设置规则对应的唯一id
  * @method string getEnable() 获取规则状态，true表示启用，false表示禁用
  * @method void setEnable(string $Enable) 设置规则状态，true表示启用，false表示禁用
  * @method string getEdgeId() 获取规则生效的范围，是在哪对vpc之间还是针对所有vpc间生效
  * @method void setEdgeId(string $EdgeId) 设置规则生效的范围，是在哪对vpc之间还是针对所有vpc间生效
+ * @method integer getUuid() 获取规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+ * @method void setUuid(integer $Uuid) 设置规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
  * @method integer getDetectedTimes() 获取规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
  * @method void setDetectedTimes(integer $DetectedTimes) 设置规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
  * @method string getEdgeName() 获取EdgeId对应的这对VPC间防火墙的描述
@@ -125,6 +125,10 @@ log：观察
  * @method string getSourceName() 获取访问源名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceName(string $SourceName) 设置访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIpVersion() 获取Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpVersion(integer $IpVersion) 设置Ip版本，0：IPv4，1：IPv6，默认为IPv4
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcRuleItem extends AbstractModel
@@ -198,11 +202,6 @@ log：观察
     public $OrderIndex;
 
     /**
-     * @var integer 规则对应的唯一id
-     */
-    public $Uuid;
-
-    /**
      * @var string 规则状态，true表示启用，false表示禁用
      */
     public $Enable;
@@ -211,6 +210,11 @@ log：观察
      * @var string 规则生效的范围，是在哪对vpc之间还是针对所有vpc间生效
      */
     public $EdgeId;
+
+    /**
+     * @var integer 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     */
+    public $Uuid;
 
     /**
      * @var integer 规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
@@ -275,6 +279,12 @@ log：观察
     public $SourceName;
 
     /**
+     * @var integer Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpVersion;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型，类型可以为：net
@@ -307,9 +317,9 @@ log：观察
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
      * @param integer $OrderIndex 规则顺序，-1表示最低，1表示最高
-     * @param integer $Uuid 规则对应的唯一id
      * @param string $Enable 规则状态，true表示启用，false表示禁用
      * @param string $EdgeId 规则生效的范围，是在哪对vpc之间还是针对所有vpc间生效
+     * @param integer $Uuid 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
      * @param integer $DetectedTimes 规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
      * @param string $EdgeName EdgeId对应的这对VPC间防火墙的描述
      * @param integer $InternalUuid 内部使用的uuid，一般情况下不会使用到该字段
@@ -327,6 +337,8 @@ log：观察
      * @param string $TargetName 访问目的名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -378,16 +390,16 @@ log：观察
             $this->OrderIndex = $param["OrderIndex"];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
-        }
-
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
         }
 
         if (array_key_exists("EdgeId",$param) and $param["EdgeId"] !== null) {
             $this->EdgeId = $param["EdgeId"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
 
         if (array_key_exists("DetectedTimes",$param) and $param["DetectedTimes"] !== null) {
@@ -437,6 +449,10 @@ log：观察
 
         if (array_key_exists("SourceName",$param) and $param["SourceName"] !== null) {
             $this->SourceName = $param["SourceName"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

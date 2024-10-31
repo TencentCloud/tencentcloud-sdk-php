@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPhoneNumBuyList() 获取号码购买列表
  * @method void setPhoneNumBuyList(array $PhoneNumBuyList) 设置号码购买列表
  * @method integer getSipBuyNum() 获取办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSipBuyNum(integer $SipBuyNum) 设置办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SdkAppIdBuyInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class SdkAppIdBuyInfo extends AbstractModel
 
     /**
      * @var integer 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SipBuyNum;
 
@@ -75,7 +72,6 @@ class SdkAppIdBuyInfo extends AbstractModel
      * @param array $StaffBuyList 座席购买列表 （还在有效期内）
      * @param array $PhoneNumBuyList 号码购买列表
      * @param integer $SipBuyNum 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

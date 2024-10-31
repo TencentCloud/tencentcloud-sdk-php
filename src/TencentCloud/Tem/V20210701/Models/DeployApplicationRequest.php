@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemorySpec(float $MemorySpec) 设置内存规格 单位：G
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
+ * @method string getDeployVersion() 获取部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+ * @method void setDeployVersion(string $DeployVersion) 设置部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
  * @method string getImgRepo() 获取镜像仓库
  * @method void setImgRepo(string $ImgRepo) 设置镜像仓库
  * @method string getVersionDesc() 获取版本描述信息
@@ -54,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 - JAR：通过 jar 包部署
 - WAR：通过 war 包部署
 - IMAGE：通过镜像部署
- * @method string getDeployVersion() 获取部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
- * @method void setDeployVersion(string $DeployVersion) 设置部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
  * @method string getPkgName() 获取传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
 
 如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
@@ -183,6 +183,12 @@ class DeployApplicationRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
+     * @var string 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+     */
+    public $DeployVersion;
+
+    /**
      * @var string 镜像仓库
      */
     public $ImgRepo;
@@ -229,12 +235,6 @@ class DeployApplicationRequest extends AbstractModel
 - IMAGE：通过镜像部署
      */
     public $DeployMode;
-
-    /**
-     * @var string 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     */
-    public $DeployVersion;
 
     /**
      * @var string 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
@@ -418,6 +418,8 @@ class DeployApplicationRequest extends AbstractModel
      * @param float $CpuSpec cpu规格 单位：核
      * @param float $MemorySpec 内存规格 单位：G
      * @param string $EnvironmentId 环境ID
+     * @param string $DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
      * @param string $ImgRepo 镜像仓库
      * @param string $VersionDesc 版本描述信息
      * @param string $JvmOpts 启动参数
@@ -430,8 +432,6 @@ class DeployApplicationRequest extends AbstractModel
 - JAR：通过 jar 包部署
 - WAR：通过 war 包部署
 - IMAGE：通过镜像部署
-     * @param string $DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
      * @param string $PkgName 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
 
 如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
@@ -514,6 +514,10 @@ class DeployApplicationRequest extends AbstractModel
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
+        }
+
         if (array_key_exists("ImgRepo",$param) and $param["ImgRepo"] !== null) {
             $this->ImgRepo = $param["ImgRepo"];
         }
@@ -564,10 +568,6 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
             $this->DeployMode = $param["DeployMode"];
-        }
-
-        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
-            $this->DeployVersion = $param["DeployVersion"];
         }
 
         if (array_key_exists("PkgName",$param) and $param["PkgName"] !== null) {

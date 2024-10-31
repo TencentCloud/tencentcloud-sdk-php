@@ -21,225 +21,153 @@ use TencentCloud\Common\AbstractModel;
  * 参与者信息
  *
  * @method string getMail() 获取座席邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMail(string $Mail) 设置座席邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取座席电话
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置座席电话
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRingTimestamp() 获取振铃时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAcceptTimestamp() 获取接听时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置接听时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndedTimestamp() 获取结束时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndedTimestamp(integer $EndedTimestamp) 设置结束时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordId() 获取录音 ID，能够索引到座席侧的录音
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordId(string $RecordId) 设置录音 ID，能够索引到座席侧的录音
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferFrom() 获取转接来源座席信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferFrom(string $TransferFrom) 设置转接来源座席信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferFromType() 获取转接来源参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferFromType(string $TransferFromType) 设置转接来源参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferTo() 获取转接去向座席信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferTo(string $TransferTo) 设置转接去向座席信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferToType() 获取转接去向参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferToType(string $TransferToType) 设置转接去向参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSkillGroupId() 获取技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndStatusString() 获取结束状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndStatusString(string $EndStatusString) 设置结束状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordURL() 获取录音 URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordURL(string $RecordURL) 设置录音 URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSequence() 获取参与者序号，从 0 开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSequence(integer $Sequence) 设置参与者序号，从 0 开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTimestamp() 获取开始时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimestamp(integer $StartTimestamp) 设置开始时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkillGroupName() 获取技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomRecordURL() 获取录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServeParticipant extends AbstractModel
 {
     /**
      * @var string 座席邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mail;
 
     /**
      * @var string 座席电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var integer 振铃时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RingTimestamp;
 
     /**
      * @var integer 接听时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AcceptTimestamp;
 
     /**
      * @var integer 结束时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndedTimestamp;
 
     /**
      * @var string 录音 ID，能够索引到座席侧的录音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
 
     /**
      * @var string 参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 转接来源座席信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferFrom;
 
     /**
      * @var string 转接来源参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferFromType;
 
     /**
      * @var string 转接去向座席信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferTo;
 
     /**
      * @var string 转接去向参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferToType;
 
     /**
      * @var integer 技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupId;
 
     /**
      * @var string 结束状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndStatusString;
 
     /**
      * @var string 录音 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordURL;
 
     /**
      * @var integer 参与者序号，从 0 开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sequence;
 
     /**
      * @var integer 开始时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimestamp;
 
     /**
      * @var string 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupName;
 
     /**
      * @var string 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomRecordURL;
 
     /**
      * @param string $Mail 座席邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 座席电话
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RingTimestamp 振铃时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AcceptTimestamp 接听时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndedTimestamp 结束时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordId 录音 ID，能够索引到座席侧的录音
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferFrom 转接来源座席信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferFromType 转接来源参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferTo 转接去向座席信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferToType 转接去向参与者类型，取值与 Type 一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SkillGroupId 技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndStatusString 结束状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordURL 录音 URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Sequence 参与者序号，从 0 开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTimestamp 开始时间戳，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillGroupName 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRecordURL 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

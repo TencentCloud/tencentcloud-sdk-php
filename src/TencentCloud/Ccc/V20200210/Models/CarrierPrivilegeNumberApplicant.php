@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getCallees() 获取被叫号码列表
  * @method void setCallees(array $Callees) 设置被叫号码列表
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getState() 获取审批状态:1 待审核、2 通过、3 拒绝
  * @method void setState(integer $State) 设置审批状态:1 待审核、2 通过、3 拒绝
  * @method integer getCreateTime() 获取创建时间，unix时间戳(秒)
@@ -63,7 +61,6 @@ class CarrierPrivilegeNumberApplicant extends AbstractModel
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -88,7 +85,6 @@ class CarrierPrivilegeNumberApplicant extends AbstractModel
      * @param array $Callers 主叫号码列表
      * @param array $Callees 被叫号码列表
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $State 审批状态:1 待审核、2 通过、3 拒绝
      * @param integer $CreateTime 创建时间，unix时间戳(秒)
      * @param integer $UpdateTime 更新时间，unix时间戳(秒)

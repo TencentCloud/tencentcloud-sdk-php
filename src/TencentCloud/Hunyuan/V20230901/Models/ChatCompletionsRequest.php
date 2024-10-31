@@ -150,6 +150,8 @@ use TencentCloud\Common\AbstractModel;
 3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
 4. 未传值时默认关闭。
 5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+ * @method integer getSeed() 获取说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+ * @method void setSeed(integer $Seed) 设置说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -275,6 +277,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableMultimedia;
 
     /**
+     * @var integer 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+     */
+    public $Seed;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -340,6 +347,7 @@ class ChatCompletionsRequest extends AbstractModel
 3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
 4. 未传值时默认关闭。
 5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     * @param integer $Seed 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
      */
     function __construct()
     {
@@ -419,6 +427,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableMultimedia",$param) and $param["EnableMultimedia"] !== null) {
             $this->EnableMultimedia = $param["EnableMultimedia"];
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
     }
 }

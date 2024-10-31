@@ -185,7 +185,6 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <img src="https://qcloudimg.tencent-cloud.cn/raw/a63074a0293c9ff5bf6c0bb74c0d3b20.png"   width="400" />
 
 
-
 ### 1. 适用场景
 
 该接口适用于需要一次性完成多份合同签署的情况，多份合同一般具有关联性，用户以目录的形式查看合同。
@@ -193,7 +192,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 ### 2. 发起方要求和签署方实名要求
 - **发起方要求**：作为合同发起方的第三方子企业A的员工必须进行实名认证。
 - **签署方要求**：签署方可以是多种身份（如第三方子企业的员工、个人、SaaS平台企业员工），其中企业和员工可以不进行实名认证。
+
 **可以作为发起方和签署方的角色列表**
+
 <table>
 <thead>
 <tr>
@@ -250,8 +251,6 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 <img src="https://qcloudimg.tencent-cloud.cn/raw/a63074a0293c9ff5bf6c0bb74c0d3b20.png"   width="400" />
 
-
-
 ### 1. 适用场景
 
 该接口适用于需要一次性完成多份合同签署的情况，多份合同一般具有关联性，用户以目录的形式查看合同。
@@ -259,7 +258,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 ### 2. 发起方要求和签署方实名要求
 - **发起方要求**：作为合同发起方的第三方子企业A的员工必须进行实名认证。
 - **签署方要求**：签署方可以是多种身份（如第三方子企业的员工、个人、SaaS平台企业员工），其中企业和员工可以不进行实名认证。
+
 **可以作为发起方和签署方的角色列表**
+
 <table>
 <thead>
 <tr>

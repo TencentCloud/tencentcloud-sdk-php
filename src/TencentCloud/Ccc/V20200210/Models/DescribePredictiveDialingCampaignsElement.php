@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 查询预测式外呼任务列表元素
  *
  * @method integer getCampaignId() 获取任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCampaignId(integer $CampaignId) 设置任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatusReason() 获取任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusReason(integer $StatusReason) 设置任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCalleeCount() 获取被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalleeCount(integer $CalleeCount) 设置被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFinishedCalleeCount() 获取已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishedCalleeCount(integer $FinishedCalleeCount) 设置已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSkillGroupId() 获取使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupId(integer $SkillGroupId) 设置使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePredictiveDialingCampaignsElement extends AbstractModel
 {
     /**
      * @var integer 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CampaignId;
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusReason;
 
     /**
      * @var integer 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalleeCount;
 
     /**
      * @var integer 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishedCalleeCount;
 
     /**
      * @var integer 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var integer 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupId;
 
     /**
      * @param integer $CampaignId 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StatusReason 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CalleeCount 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FinishedCalleeCount 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SkillGroupId 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

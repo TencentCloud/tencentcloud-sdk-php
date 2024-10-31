@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimestamp() 获取时间戳
  * @method void setTimestamp(integer $Timestamp) 设置时间戳
  * @method integer getStart() 获取句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStart(integer $Start) 设置句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnd() 获取句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnd(integer $End) 设置句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AsrData extends AbstractModel
 {
@@ -55,13 +51,11 @@ class AsrData extends AbstractModel
 
     /**
      * @var integer 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Start;
 
     /**
      * @var integer 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $End;
 
@@ -70,9 +64,7 @@ class AsrData extends AbstractModel
      * @param string $Message 消息内容
      * @param integer $Timestamp 时间戳
      * @param integer $Start 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $End 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

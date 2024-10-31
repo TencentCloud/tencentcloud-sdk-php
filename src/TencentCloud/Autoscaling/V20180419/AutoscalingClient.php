@@ -32,6 +32,8 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
 * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
 * 取消后不允许回滚操作，也不支持恢复操作
+* 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁
+* 进行缩容时，所有实例都已经更新完成，此时无法取消
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) 本接口（CompleteLifecycleAction）用于完成生命周期动作。
 
@@ -185,11 +187,14 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 如果伸缩组处于`DISABLED`状态，删除操作不校验`IN_SERVICE`实例数量和最小值的关系
 * 对于伸缩组配置的 CLB，实例在离开伸缩组时，AS 会进行解挂载动作
  * @method Models\ResumeInstanceRefreshResponse ResumeInstanceRefresh(Models\ResumeInstanceRefreshRequest $req) 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+
+- 使用 MaxSurge 参数时活动可能会处于扩容或缩容失败导致的暂停状态，也可以使用该接口重试扩缩容。
  * @method Models\RollbackInstanceRefreshResponse RollbackInstanceRefresh(Models\RollbackInstanceRefreshRequest $req) 回滚操作会生成一个新的实例刷新活动，该活动也支持分批次刷新以及暂停、恢复、取消操作，接口返回回滚活动的 RefreshActivityId。
 * 原活动中待刷新实例变更为已取消，忽略不存在实例，其他状态实例进入回滚流程
 * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
 * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
 * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+* 回滚活动暂不支持 MaxSurge 参数
  * @method Models\ScaleInInstancesResponse ScaleInInstances(Models\ScaleInInstancesRequest $req) 为伸缩组指定数量缩容实例，返回缩容活动的 ActivityId。
 * 伸缩组需要未处于活动中
 * 伸缩组处于停用状态时，该接口也会生效，可参考[停用伸缩组](https://cloud.tencent.com/document/api/377/20435)文档查看伸缩组停用状态的影响范围
@@ -221,7 +226,8 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 本接口支持批量操作，每次请求关机实例的上限为100
  * @method Models\StopInstanceRefreshResponse StopInstanceRefresh(Models\StopInstanceRefreshRequest $req) 暂停正在执行的实例刷新活动。
 * 暂停状态下，伸缩组也会处于停用中状态
-* 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+* 当前正在更新或扩容的实例不会暂停，待更新的实例会暂停更新
+* 进行缩容时，所有实例都已经更新完成，此时无法暂停
  * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
 
 本接口（UpgradeLaunchConfiguration）用于升级启动配置。

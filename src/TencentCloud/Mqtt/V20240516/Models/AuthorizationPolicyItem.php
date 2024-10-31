@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AuthorizationPolicyItem
  *
- * @method integer getId() 获取规则id
- * @method void setId(integer $Id) 设置规则id
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method integer getId() 获取规则ID
+ * @method void setId(integer $Id) 设置规则ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getPolicyName() 获取规则名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置规则名
@@ -84,12 +84,12 @@ use TencentCloud\Common\AbstractModel;
 class AuthorizationPolicyItem extends AbstractModel
 {
     /**
-     * @var integer 规则id
+     * @var integer 规则ID
      */
     public $Id;
 
     /**
-     * @var string 集群id
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -178,8 +178,8 @@ class AuthorizationPolicyItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Id 规则id
-     * @param string $InstanceId 集群id
+     * @param integer $Id 规则ID
+     * @param string $InstanceId 集群ID
      * @param string $PolicyName 规则名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Version 规则语法版本

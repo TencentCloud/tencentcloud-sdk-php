@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * ivr 按键信息
  *
  * @method string getKey() 获取命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeLabel() 获取节点标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeLabel(string $NodeLabel) 设置节点标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalContent() 获取用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalContent(string $OriginalContent) 设置用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTTSPrompt() 获取TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTTSPrompt(string $TTSPrompt) 设置TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IVRKeyPressedElement extends AbstractModel
 {
     /**
      * @var string 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var integer Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeLabel;
 
     /**
      * @var string 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalContent;
 
     /**
      * @var string TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TTSPrompt;
 
     /**
      * @param string $Key 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeLabel 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalContent 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TTSPrompt TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

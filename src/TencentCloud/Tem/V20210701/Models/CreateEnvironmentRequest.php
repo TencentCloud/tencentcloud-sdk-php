@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setK8sVersion(string $K8sVersion) 设置K8s version
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
- * @method boolean getEnableTswTraceService() 获取是否开启tsw服务
- * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw服务
+ * @method boolean getEnableTswTraceService() 获取是否开启tsw服务。默认值：false
+ * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw服务。默认值：false
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
- * @method string getEnvType() 获取环境类型：test、pre、prod
- * @method void setEnvType(string $EnvType) 设置环境类型：test、pre、prod
+ * @method string getEnvType() 获取环境类型：test、pre、prod。默认值：prod
+ * @method void setEnvType(string $EnvType) 设置环境类型：test、pre、prod。默认值：prod
  * @method string getCreateRegion() 获取创建环境的region
  * @method void setCreateRegion(string $CreateRegion) 设置创建环境的region
- * @method boolean getSetupVpc() 获取是否创建私有网络
- * @method void setSetupVpc(boolean $SetupVpc) 设置是否创建私有网络
- * @method boolean getSetupPrometheus() 获取是否创建 Prometheus 实例
- * @method void setSetupPrometheus(boolean $SetupPrometheus) 设置是否创建 Prometheus 实例
+ * @method boolean getSetupVpc() 获取是否创建私有网络.默认值:true
+ * @method void setSetupVpc(boolean $SetupVpc) 设置是否创建私有网络.默认值:true
+ * @method boolean getSetupPrometheus() 获取是否创建 Prometheus 实例。默认值：false
+ * @method void setSetupPrometheus(boolean $SetupPrometheus) 设置是否创建 Prometheus 实例。默认值：false
  * @method string getPrometheusId() 获取prometheus 实例 id
  * @method void setPrometheusId(string $PrometheusId) 设置prometheus 实例 id
  * @method string getApmId() 获取apm id
@@ -82,7 +82,7 @@ class CreateEnvironmentRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var boolean 是否开启tsw服务
+     * @var boolean 是否开启tsw服务。默认值：false
      */
     public $EnableTswTraceService;
 
@@ -92,7 +92,7 @@ class CreateEnvironmentRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 环境类型：test、pre、prod
+     * @var string 环境类型：test、pre、prod。默认值：prod
      */
     public $EnvType;
 
@@ -102,12 +102,12 @@ class CreateEnvironmentRequest extends AbstractModel
     public $CreateRegion;
 
     /**
-     * @var boolean 是否创建私有网络
+     * @var boolean 是否创建私有网络.默认值:true
      */
     public $SetupVpc;
 
     /**
-     * @var boolean 是否创建 Prometheus 实例
+     * @var boolean 是否创建 Prometheus 实例。默认值：false
      */
     public $SetupPrometheus;
 
@@ -128,12 +128,12 @@ class CreateEnvironmentRequest extends AbstractModel
      * @param array $SubnetIds 子网列表
      * @param string $K8sVersion K8s version
      * @param integer $SourceChannel 来源渠道
-     * @param boolean $EnableTswTraceService 是否开启tsw服务
+     * @param boolean $EnableTswTraceService 是否开启tsw服务。默认值：false
      * @param array $Tags 标签
-     * @param string $EnvType 环境类型：test、pre、prod
+     * @param string $EnvType 环境类型：test、pre、prod。默认值：prod
      * @param string $CreateRegion 创建环境的region
-     * @param boolean $SetupVpc 是否创建私有网络
-     * @param boolean $SetupPrometheus 是否创建 Prometheus 实例
+     * @param boolean $SetupVpc 是否创建私有网络.默认值:true
+     * @param boolean $SetupPrometheus 是否创建 Prometheus 实例。默认值：false
      * @param string $PrometheusId prometheus 实例 id
      * @param string $ApmId apm id
      */

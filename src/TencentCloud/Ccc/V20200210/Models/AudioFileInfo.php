@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 音频文件审核信息
  *
  * @method integer getFileId() 获取文件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(integer $FileId) 设置文件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomFileName() 获取文件别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomFileName(string $CustomFileName) 设置文件别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioFileName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioFileName(string $AudioFileName) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioFileInfo extends AbstractModel
 {
     /**
      * @var integer 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomFileName;
 
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioFileName;
 
     /**
      * @var integer 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param integer $FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomFileName 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioFileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

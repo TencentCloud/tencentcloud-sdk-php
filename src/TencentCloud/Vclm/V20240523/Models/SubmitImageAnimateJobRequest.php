@@ -41,6 +41,21 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableSegment() 获取最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
 
  * @method void setEnableSegment(boolean $EnableSegment) 设置最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+ * @method integer getLogoAdd() 获取为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+ * @method void setLogoAdd(integer $LogoAdd) 设置为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+ * @method LogoParam getLogoParam() 获取标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  */
 class SubmitImageAnimateJobRequest extends AbstractModel
 {
@@ -80,6 +95,21 @@ class SubmitImageAnimateJobRequest extends AbstractModel
     public $EnableSegment;
 
     /**
+     * @var integer 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+     */
+    public $LogoAdd;
+
+    /**
+     * @var LogoParam 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public $LogoParam;
+
+    /**
      * @param string $ImageUrl 图片格式：支持PNG、JPG、JPEG格式；
 图片分辨率：长边分辨率不超过2056；
 图片大小：不超过10M；
@@ -90,6 +120,14 @@ class SubmitImageAnimateJobRequest extends AbstractModel
      * @param boolean $EnableAudio 结果视频是否保留模板音频。默认为true
      * @param boolean $EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
      * @param boolean $EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+     * @param integer $LogoAdd 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+     * @param LogoParam $LogoParam 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      */
     function __construct()
     {
@@ -126,6 +164,15 @@ class SubmitImageAnimateJobRequest extends AbstractModel
 
         if (array_key_exists("EnableSegment",$param) and $param["EnableSegment"] !== null) {
             $this->EnableSegment = $param["EnableSegment"];
+        }
+
+        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
+            $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
+            $this->LogoParam = new LogoParam();
+            $this->LogoParam->deserialize($param["LogoParam"]);
         }
     }
 }

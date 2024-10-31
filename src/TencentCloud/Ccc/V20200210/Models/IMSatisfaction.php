@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * IM满意度
  *
  * @method integer getId() 获取满意度值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置满意度值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IMSatisfaction extends AbstractModel
 {
     /**
      * @var integer 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @param integer $Id 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

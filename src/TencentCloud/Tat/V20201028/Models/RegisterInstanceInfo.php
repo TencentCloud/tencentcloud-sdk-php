@@ -21,97 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * 注册实例信息。
  *
  * @method string getRegisterCodeId() 获取注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisterCodeId(string $RegisterCodeId) 设置注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineId() 获取机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineId(string $MachineId) 设置机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSystemName() 获取系统名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemName(string $SystemName) 设置系统名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalIp() 获取内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalIp(string $LocalIp) 设置内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicKey() 获取公钥。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicKey(string $PublicKey) 设置公钥。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取托管状态。
 返回Online表示实例正在托管，返回Offline表示实例未托管。
  * @method void setStatus(string $Status) 设置托管状态。
 返回Online表示实例正在托管，返回Offline表示实例未托管。
  * @method string getCreatedTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedTime() 获取上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(string $UpdatedTime) 设置上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegisterInstanceInfo extends AbstractModel
 {
     /**
      * @var string 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisterCodeId;
 
     /**
      * @var string 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineId;
 
     /**
      * @var string 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemName;
 
     /**
      * @var string 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalIp;
 
     /**
      * @var string 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicKey;
 
@@ -123,39 +95,27 @@ class RegisterInstanceInfo extends AbstractModel
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var string 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
     /**
      * @param string $RegisterCodeId 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineId 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SystemName 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalIp 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicKey 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 托管状态。
 返回Online表示实例正在托管，返回Offline表示实例未托管。
      * @param string $CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 用户配额信息。
  *
  * @method string getResourceName() 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResourceQuotaUsed() 获取已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceQuotaUsed(integer $ResourceQuotaUsed) 设置已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResourceQuotaTotal() 获取总额度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceQuotaTotal(integer $ResourceQuotaTotal) 设置总额度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GeneralResourceQuotaSet extends AbstractModel
 {
     /**
      * @var string 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var integer 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceQuotaUsed;
 
     /**
      * @var integer 总额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceQuotaTotal;
 
     /**
      * @param string $ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceQuotaUsed 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceQuotaTotal 总额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

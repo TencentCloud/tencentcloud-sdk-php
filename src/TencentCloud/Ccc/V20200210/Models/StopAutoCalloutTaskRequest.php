@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopAutoCalloutTask请求参数结构体
  *
- * @method integer getSdkAppId() 获取呼叫中心实例Id
- * @method void setSdkAppId(integer $SdkAppId) 设置呼叫中心实例Id
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getTaskId() 获取任务Id
  * @method void setTaskId(integer $TaskId) 设置任务Id
  */
 class StopAutoCalloutTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 呼叫中心实例Id
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class StopAutoCalloutTaskRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @param integer $SdkAppId 呼叫中心实例Id
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $TaskId 任务Id
      */
     function __construct()

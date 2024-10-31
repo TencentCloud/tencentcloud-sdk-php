@@ -78,6 +78,12 @@ RESULT_PASSED: 通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机实例id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageRegistryInfo getImageRegistryInfo() 获取镜像仓库信息
+ * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) 设置镜像仓库信息
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class ComplianceAffectedAsset extends AbstractModel
 {
@@ -155,6 +161,21 @@ RESULT_PASSED: 通过
     public $InstanceId;
 
     /**
+     * @var ImageRegistryInfo 镜像仓库信息
+     */
+    public $ImageRegistryInfo;
+
+    /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @param integer $CustomerAssetId 为客户分配的唯一的资产项的ID。
      * @param string $AssetName 资产项的名称。
      * @param string $AssetType 资产项的类型
@@ -184,6 +205,9 @@ RESULT_PASSED: 通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机实例id
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageRegistryInfo $ImageRegistryInfo 镜像仓库信息
+     * @param string $ClusterID 集群id
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -240,6 +264,19 @@ RESULT_PASSED: 通过
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ImageRegistryInfo",$param) and $param["ImageRegistryInfo"] !== null) {
+            $this->ImageRegistryInfo = new ImageRegistryInfo();
+            $this->ImageRegistryInfo->deserialize($param["ImageRegistryInfo"]);
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

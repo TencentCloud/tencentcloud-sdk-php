@@ -60,12 +60,12 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(Models\DescribeAuditRuleTemplatesRequest $req) 本接口（DescribeAuditRuleTemplates）用于查询审计规则模板信息。
  * @method Models\DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(Models\DescribeAuditRuleWithInstanceIdsRequest $req) 获取实例的审计规则
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口（DescribeBackupConfig）用于获取指定集群的备份配置信息，包括全量备份时间段、备份文件保留时间。
- * @method Models\DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(Models\DescribeBackupDownloadUrlRequest $req) 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+ * @method Models\DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(Models\DescribeBackupDownloadUrlRequest $req) 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) 本接口（DescribeBackupList）用于查询集群的备份文件列表。
  * @method Models\DescribeBinlogConfigResponse DescribeBinlogConfig(Models\DescribeBinlogConfigRequest $req) 该接口（DescribeBinlogConfig）用于查询binlog配置
- * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) 此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+ * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
  * @method Models\DescribeBinlogSaveDaysResponse DescribeBinlogSaveDays(Models\DescribeBinlogSaveDaysRequest $req) 此接口（DescribeBinlogSaveDays）用于查询集群的Binlog保留天数。
- * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+ * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 本接口（DescribeBinlogs）用来查询集群 Binlog 日志列表。
  * @method Models\DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgrade(Models\DescribeChangedParamsAfterUpgradeRequest $req) 本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比。
  * @method Models\DescribeClusterDatabasesResponse DescribeClusterDatabases(Models\DescribeClusterDatabasesRequest $req) 本接口（DescribeClusterDatabases）用于获取集群数据库列表。
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 该接口（DescribeClusterDetail）用于显示集群详情。
@@ -75,7 +75,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）用于查询参数修改记录。
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数。
  * @method Models\DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(Models\DescribeClusterPasswordComplexityRequest $req) 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
- * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
+ * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询任务流信息。
  * @method Models\DescribeInstanceCLSLogDeliveryResponse DescribeInstanceCLSLogDelivery(Models\DescribeInstanceCLSLogDeliveryRequest $req) 本接口（DescribeInstanceCLSLogDelivery）用于查询实例日志投递信息。
@@ -101,10 +101,10 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeServerlessStrategyResponse DescribeServerlessStrategy(Models\DescribeServerlessStrategyRequest $req) 查询serverless策略
  * @method Models\DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(Models\DescribeSupportProxyVersionRequest $req) 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询任务列表。
- * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询可售卖地域可用区信息。
+ * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口（DescribeZones）用于查询可售卖地域可用区信息。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口（DisassociateSecurityGroups）用于安全组批量解绑云资源。
  * @method Models\ExportInstanceErrorLogsResponse ExportInstanceErrorLogs(Models\ExportInstanceErrorLogsRequest $req) 此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
- * @method Models\ExportInstanceSlowQueriesResponse ExportInstanceSlowQueries(Models\ExportInstanceSlowQueriesRequest $req) 此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+ * @method Models\ExportInstanceSlowQueriesResponse ExportInstanceSlowQueries(Models\ExportInstanceSlowQueriesRequest $req) 本接口（ExportInstanceSlowQueries）用于导出实例慢日志。
  * @method Models\ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetails(Models\ExportResourcePackageDeductDetailsRequest $req) 资源包使用明细导出
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) 本接口（GrantAccountPrivileges）用于批量授权账号权限。
  * @method Models\InquirePriceCreateResponse InquirePriceCreate(Models\InquirePriceCreateRequest $req) 本接口（InquirePriceCreate）用于新购集群的价格查询。

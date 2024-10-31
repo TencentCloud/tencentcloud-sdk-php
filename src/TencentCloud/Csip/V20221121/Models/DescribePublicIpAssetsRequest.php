@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method Filter getFilter() 获取filte过滤条件
- * @method void setFilter(Filter $Filter) 设置filte过滤条件
+ * @method Filter getFilter() 获取过滤器参数
+ * @method void setFilter(Filter $Filter) 设置过滤器参数
  * @method array getTags() 获取安全中心自定义标签
  * @method void setTags(array $Tags) 设置安全中心自定义标签
  */
@@ -35,7 +35,7 @@ class DescribePublicIpAssetsRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter filte过滤条件
+     * @var Filter 过滤器参数
      */
     public $Filter;
 
@@ -46,7 +46,7 @@ class DescribePublicIpAssetsRequest extends AbstractModel
 
     /**
      * @param array $MemberId 集团账号的成员id
-     * @param Filter $Filter filte过滤条件
+     * @param Filter $Filter 过滤器参数
      * @param array $Tags 安全中心自定义标签
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() 获取服务id
  * @method void setApplicationId(string $ApplicationId) 设置服务id
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method string getEnvironmentId() 获取环境ID/命名空间ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID/命名空间ID
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class RestartApplicationRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class RestartApplicationRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
-
-    /**
      * @var string 环境ID/命名空间ID
      */
     public $EnvironmentId;
 
     /**
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $ApplicationId 服务id
-     * @param integer $SourceChannel 来源渠道
      * @param string $EnvironmentId 环境ID/命名空间ID
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class RestartApplicationRequest extends AbstractModel
             $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishTime(string $PublishTime) 设置发布时间
  * @method integer getVulId() 获取漏洞id
  * @method void setVulId(integer $VulId) 设置漏洞id
+ * @method integer getStatus() 获取状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDefenceRangeDetail extends AbstractModel
 {
@@ -73,6 +77,12 @@ class VulDefenceRangeDetail extends AbstractModel
     public $VulId;
 
     /**
+     * @var integer 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $VulName 漏洞名称
      * @param string $Label 标签
      * @param integer $Level 漏洞级别：  1低危 2中危 3高危 4严重
@@ -80,6 +90,8 @@ class VulDefenceRangeDetail extends AbstractModel
      * @param string $CveId cve id
      * @param string $PublishTime 发布时间
      * @param integer $VulId 漏洞id
+     * @param integer $Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class VulDefenceRangeDetail extends AbstractModel
 
         if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
             $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -21,19 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 修改容器逃逸扫描策略开关信息
  *
  * @method string getType() 获取规则类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
  * @method void setType(string $Type) 设置规则类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
  * @method boolean getIsEnable() 获取是否打开：false否 ，true是
  * @method void setIsEnable(boolean $IsEnable) 设置是否打开：false否 ，true是
  */
@@ -41,12 +43,13 @@ class EscapeRuleEnabled extends AbstractModel
 {
     /**
      * @var string 规则类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      */
     public $Type;
 
@@ -57,12 +60,13 @@ class EscapeRuleEnabled extends AbstractModel
 
     /**
      * @param string $Type 规则类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      * @param boolean $IsEnable 是否打开：false否 ，true是
      */
     function __construct()

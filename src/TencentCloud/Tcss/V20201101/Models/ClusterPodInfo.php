@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostId(string $HostId) 设置主机Id
  * @method string getClusterType() 获取集群类型
  * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getNodeName() 获取abc
- * @method void setNodeName(string $NodeName) 设置abc
+ * @method string getNodeName() 获取节点名称
+ * @method void setNodeName(string $NodeName) 设置节点名称
  * @method string getNodeType() 获取NORMAL：普通节点 SUPER：超级节点
  * @method void setNodeType(string $NodeType) 设置NORMAL：普通节点 SUPER：超级节点
  * @method integer getChargeCoresCnt() 获取计费核数
@@ -212,7 +212,7 @@ class ClusterPodInfo extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var string abc
+     * @var string 节点名称
      */
     public $NodeName;
 
@@ -253,7 +253,7 @@ class ClusterPodInfo extends AbstractModel
      * @param string $HostName 主机名称
      * @param string $HostId 主机Id
      * @param string $ClusterType 集群类型
-     * @param string $NodeName abc
+     * @param string $NodeName 节点名称
      * @param string $NodeType NORMAL：普通节点 SUPER：超级节点
      * @param integer $ChargeCoresCnt 计费核数
      */

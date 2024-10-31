@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) 设置唯一Uuid
  * @method string getQuuid() 获取唯一Quuid
  * @method void setQuuid(string $Quuid) 设置唯一Quuid
- * @method string getStatus() 获取状态码
- * @method void setStatus(string $Status) 设置状态码
+ * @method string getStatus() 获取状态码Scanning、Ok、Fail
+ * @method void setStatus(string $Status) 设置状态码Scanning、Ok、Fail
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method integer getId() 获取id唯一
@@ -94,7 +94,7 @@ class ScanTaskDetails extends AbstractModel
     public $Quuid;
 
     /**
-     * @var string 状态码
+     * @var string 状态码Scanning、Ok、Fail
      */
     public $Status;
 
@@ -133,7 +133,7 @@ class ScanTaskDetails extends AbstractModel
      * @param string $ScanEndTime 扫描结束时间
      * @param string $Uuid 唯一Uuid
      * @param string $Quuid 唯一Quuid
-     * @param string $Status 状态码
+     * @param string $Status 状态码Scanning、Ok、Fail
      * @param string $Description 描述
      * @param integer $Id id唯一
      * @param integer $FailType 失败类型  3离线、4超时、5失败、8agent版本过低

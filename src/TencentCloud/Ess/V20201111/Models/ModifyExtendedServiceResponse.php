@@ -28,7 +28,6 @@ use TencentCloud\Common\AbstractModel;
 
 <ul>
 <li><strong>OPEN_SERVER_SIGN</strong>（企业自动签署）</li>
-<li><strong>OVERSEA_SIGN</strong>（企业与港澳台居民签署合同）</li>
 </ul></li></li>
 </ul>
  * @method void setOperateUrl(string $OperateUrl) 设置操作跳转链接
@@ -39,7 +38,6 @@ use TencentCloud\Common\AbstractModel;
 
 <ul>
 <li><strong>OPEN_SERVER_SIGN</strong>（企业自动签署）</li>
-<li><strong>OVERSEA_SIGN</strong>（企业与港澳台居民签署合同）</li>
 </ul></li></li>
 </ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -56,7 +54,6 @@ class ModifyExtendedServiceResponse extends AbstractModel
 
 <ul>
 <li><strong>OPEN_SERVER_SIGN</strong>（企业自动签署）</li>
-<li><strong>OVERSEA_SIGN</strong>（企业与港澳台居民签署合同）</li>
 </ul></li></li>
 </ul>
      */
@@ -76,7 +73,6 @@ class ModifyExtendedServiceResponse extends AbstractModel
 
 <ul>
 <li><strong>OPEN_SERVER_SIGN</strong>（企业自动签署）</li>
-<li><strong>OVERSEA_SIGN</strong>（企业与港澳台居民签署合同）</li>
 </ul></li></li>
 </ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterNamespace() 获取环境namespace
- * @method void setClusterNamespace(string $ClusterNamespace) 设置环境namespace
  * @method string getAddressIPVersion() 获取ip version
  * @method void setAddressIPVersion(string $AddressIPVersion) 设置ip version
  * @method string getIngressName() 获取ingress name
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbId(string $ClbId) 设置clb ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterNamespace() 获取环境namespace
+ * @method void setClusterNamespace(string $ClusterNamespace) 设置环境namespace
  * @method array getTls() 获取tls 配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTls(array $Tls) 设置tls 配置
@@ -76,11 +76,6 @@ class IngressInfo extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var string 环境namespace
-     */
-    public $ClusterNamespace;
-
-    /**
      * @var string ip version
      */
     public $AddressIPVersion;
@@ -100,6 +95,11 @@ class IngressInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbId;
+
+    /**
+     * @var string 环境namespace
+     */
+    public $ClusterNamespace;
 
     /**
      * @var array tls 配置
@@ -147,12 +147,12 @@ class IngressInfo extends AbstractModel
     /**
      * @param string $EnvironmentId 环境ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterNamespace 环境namespace
      * @param string $AddressIPVersion ip version
      * @param string $IngressName ingress name
      * @param array $Rules rules 配置
      * @param string $ClbId clb ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterNamespace 环境namespace
      * @param array $Tls tls 配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 环境集群ID
@@ -186,10 +186,6 @@ class IngressInfo extends AbstractModel
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
-        if (array_key_exists("ClusterNamespace",$param) and $param["ClusterNamespace"] !== null) {
-            $this->ClusterNamespace = $param["ClusterNamespace"];
-        }
-
         if (array_key_exists("AddressIPVersion",$param) and $param["AddressIPVersion"] !== null) {
             $this->AddressIPVersion = $param["AddressIPVersion"];
         }
@@ -209,6 +205,10 @@ class IngressInfo extends AbstractModel
 
         if (array_key_exists("ClbId",$param) and $param["ClbId"] !== null) {
             $this->ClbId = $param["ClbId"];
+        }
+
+        if (array_key_exists("ClusterNamespace",$param) and $param["ClusterNamespace"] !== null) {
+            $this->ClusterNamespace = $param["ClusterNamespace"];
         }
 
         if (array_key_exists("Tls",$param) and $param["Tls"] !== null) {

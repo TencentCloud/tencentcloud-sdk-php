@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method Filter getFilter() 获取-
- * @method void setFilter(Filter $Filter) 设置-
+ * @method Filter getFilter() 获取过滤器参数
+ * @method void setFilter(Filter $Filter) 设置过滤器参数
  */
 class DescribeListenerListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeListenerListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter -
+     * @var Filter 过滤器参数
      */
     public $Filter;
 
     /**
      * @param array $MemberId 集团账号的成员id
-     * @param Filter $Filter -
+     * @param Filter $Filter 过滤器参数
      */
     function __construct()
     {

@@ -128,6 +128,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护
  * @method Models\PublishConfigFilesResponse PublishConfigFiles(Models\PublishConfigFilesRequest $req) 发布配置文件
+ * @method Models\RestartSREInstanceResponse RestartSREInstance(Models\RestartSREInstanceRequest $req) 重启微服务引擎实例
  * @method Models\RollbackConfigFileReleasesResponse RollbackConfigFileReleases(Models\RollbackConfigFileReleasesRequest $req) 回滚配置发布
  * @method Models\UnbindAutoScalerResourceStrategyFromGroupsResponse UnbindAutoScalerResourceStrategyFromGroups(Models\UnbindAutoScalerResourceStrategyFromGroupsRequest $req) 弹性伸缩策略批量解绑网关分组
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息

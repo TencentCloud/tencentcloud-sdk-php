@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置高危命令模板名称
  * @method string getCmdList() 获取命令列表，命令之间用换行符（"\n"）分隔
  * @method void setCmdList(string $CmdList) 设置命令列表，命令之间用换行符（"\n"）分隔
+ * @method integer getType() 获取命令模板类型 1-内置 2-自定义	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(integer $Type) 设置命令模板类型 1-内置 2-自定义	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmdTemplate extends AbstractModel
 {
@@ -45,9 +49,17 @@ class CmdTemplate extends AbstractModel
     public $CmdList;
 
     /**
+     * @var integer 命令模板类型 1-内置 2-自定义	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
      * @param integer $Id 高危命令模板ID
      * @param string $Name 高危命令模板名称
      * @param string $CmdList 命令列表，命令之间用换行符（"\n"）分隔
+     * @param integer $Type 命令模板类型 1-内置 2-自定义	
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class CmdTemplate extends AbstractModel
 
         if (array_key_exists("CmdList",$param) and $param["CmdList"] !== null) {
             $this->CmdList = $param["CmdList"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

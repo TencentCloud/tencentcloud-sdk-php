@@ -72,9 +72,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalIpList(string $LocalIpList) 设置设备本地IP列表, 包括IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHostId() 获取主机ID(只支持32位)
+ * @method integer getHostId() 获取宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostId(integer $HostId) 设置主机ID(只支持32位)
+ * @method void setHostId(integer $HostId) 设置宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取设备所属分组名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,17 +160,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNGNNewStrategyVer(string $NGNNewStrategyVer) 设置NGN策略新版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostName() 获取主机名称
+ * @method string getHostName() 获取宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostName(string $HostName) 设置主机名称
+ * @method void setHostName(string $HostName) 设置宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBaseBoardSn() 获取主板序列号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaseBoardSn(string $BaseBoardSn) 设置主板序列号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountUsers() 获取绑定账户只有名字
+ * @method string getAccountUsers() 获取绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountUsers(string $AccountUsers) 设置绑定账户只有名字
+ * @method void setAccountUsers(string $AccountUsers) 设置绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityStrategyVer() 获取身份策略版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -274,7 +274,7 @@ class DeviceDetail extends AbstractModel
     public $LocalIpList;
 
     /**
-     * @var integer 主机ID(只支持32位)
+     * @var integer 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostId;
@@ -406,7 +406,7 @@ class DeviceDetail extends AbstractModel
     public $NGNNewStrategyVer;
 
     /**
-     * @var string 主机名称
+     * @var string 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
@@ -418,7 +418,7 @@ class DeviceDetail extends AbstractModel
     public $BaseBoardSn;
 
     /**
-     * @var string 绑定账户只有名字
+     * @var string 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountUsers;
@@ -480,7 +480,7 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalIpList 设备本地IP列表, 包括IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HostId 主机ID(只支持32位)
+     * @param integer $HostId 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备所属分组名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -524,11 +524,11 @@ class DeviceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NGNNewStrategyVer NGN策略新版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostName 主机名称
+     * @param string $HostName 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BaseBoardSn 主板序列号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountUsers 绑定账户只有名字
+     * @param string $AccountUsers 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityStrategyVer 身份策略版本
 注意：此字段可能返回 null，表示取不到有效值。

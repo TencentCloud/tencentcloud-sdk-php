@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取修改集团账号状态，1 开启， 2关闭
  * @method void setStatus(integer $Status) 设置修改集团账号状态，1 开启， 2关闭
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
 class ModifyOrganizationAccountStatusRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ModifyOrganizationAccountStatusRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @param integer $Status 修改集团账号状态，1 开启， 2关闭
+     * @param array $MemberId 集团账号的成员id
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ModifyOrganizationAccountStatusRequest extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

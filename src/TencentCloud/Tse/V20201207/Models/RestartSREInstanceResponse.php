@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeNatSwitchList返回参数结构体
+ * RestartSREInstance返回参数结构体
  *
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getData() 获取NAT边界防火墙开关列表数据
- * @method void setData(array $Data) 设置NAT边界防火墙开关列表数据
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeNatSwitchListResponse extends AbstractModel
+class RestartSREInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var string 任务ID
      */
-    public $Total;
-
-    /**
-     * @var array NAT边界防火墙开关列表数据
-     */
-    public $Data;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeNatSwitchListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
-     * @param array $Data NAT边界防火墙开关列表数据
+     * @param string $TaskId 任务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeNatSwitchListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new NatSwitchListData();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

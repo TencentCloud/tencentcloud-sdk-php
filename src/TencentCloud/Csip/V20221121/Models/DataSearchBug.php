@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCWPFix(integer $CWPFix) 设置0不支持，1支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataSupport() 获取产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSupport(array $DataSupport) 设置产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCveId() 获取cveId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCveId(string $CveId) 设置cveId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSearchBug extends AbstractModel
 {
@@ -101,6 +109,18 @@ class DataSearchBug extends AbstractModel
     public $CWPFix;
 
     /**
+     * @var array 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSupport;
+
+    /**
+     * @var string cveId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CveId;
+
+    /**
      * @param string $StateCode 返回查询状态
      * @param array $DataBug 无
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +135,10 @@ class DataSearchBug extends AbstractModel
      * @param integer $WafPatch 0不支持，1支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CWPFix 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataSupport 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CveId cveId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -170,6 +194,19 @@ class DataSearchBug extends AbstractModel
 
         if (array_key_exists("CWPFix",$param) and $param["CWPFix"] !== null) {
             $this->CWPFix = $param["CWPFix"];
+        }
+
+        if (array_key_exists("DataSupport",$param) and $param["DataSupport"] !== null) {
+            $this->DataSupport = [];
+            foreach ($param["DataSupport"] as $key => $value){
+                $obj = new ProductSupport();
+                $obj->deserialize($value);
+                array_push($this->DataSupport, $obj);
+            }
+        }
+
+        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
+            $this->CveId = $param["CveId"];
         }
     }
 }

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTaskEvent请求参数结构体
  *
- * @method string getAccountId() 获取用户ID
- * @method void setAccountId(string $AccountId) 设置用户ID
- * @method string getDeviceId() 获取设备ID
- * @method void setDeviceId(string $DeviceId) 设置设备ID
- * @method string getOrderId() 获取订单ID
- * @method void setOrderId(string $OrderId) 设置订单ID
- * @method string getCode() 获取任务事件Code
- * @method void setCode(string $Code) 设置任务事件Code
- * @method integer getAsync() 获取同步异步方式：0为同步、1位异步
- * @method void setAsync(integer $Async) 设置同步异步方式：0为同步、1位异步
- * @method integer getProductId() 获取产品ID
- * @method void setProductId(integer $ProductId) 设置产品ID
- * @method string getNotifyURL() 获取回调地址
- * @method void setNotifyURL(string $NotifyURL) 设置回调地址
+ * @method string getAccountId() 获取用户唯一标识，最大长度为64
+ * @method void setAccountId(string $AccountId) 设置用户唯一标识，最大长度为64
+ * @method string getDeviceId() 获取用户设备ID，最大长度为64
+ * @method void setDeviceId(string $DeviceId) 设置用户设备ID，最大长度为64
+ * @method string getOrderId() 获取任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
+ * @method void setOrderId(string $OrderId) 设置任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
+ * @method string getCode() 获取任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
+ * @method void setCode(string $Code) 设置任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
+ * @method integer getAsync() 获取任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
+ * @method void setAsync(integer $Async) 设置任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
+ * @method integer getProductId() 获取产品ID，可在腾讯安心用户运营平台的企业管理中获取
+ * @method void setProductId(integer $ProductId) 设置产品ID，可在腾讯安心用户运营平台的企业管理中获取
+ * @method string getNotifyURL() 获取异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
+ * @method void setNotifyURL(string $NotifyURL) 设置异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
  */
 class SubmitTaskEventRequest extends AbstractModel
 {
     /**
-     * @var string 用户ID
+     * @var string 用户唯一标识，最大长度为64
      */
     public $AccountId;
 
     /**
-     * @var string 设备ID
+     * @var string 用户设备ID，最大长度为64
      */
     public $DeviceId;
 
     /**
-     * @var string 订单ID
+     * @var string 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
      */
     public $OrderId;
 
     /**
-     * @var string 任务事件Code
+     * @var string 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
      */
     public $Code;
 
     /**
-     * @var integer 同步异步方式：0为同步、1位异步
+     * @var integer 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
      */
     public $Async;
 
     /**
-     * @var integer 产品ID
+     * @var integer 产品ID，可在腾讯安心用户运营平台的企业管理中获取
      */
     public $ProductId;
 
     /**
-     * @var string 回调地址
+     * @var string 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
      */
     public $NotifyURL;
 
     /**
-     * @param string $AccountId 用户ID
-     * @param string $DeviceId 设备ID
-     * @param string $OrderId 订单ID
-     * @param string $Code 任务事件Code
-     * @param integer $Async 同步异步方式：0为同步、1位异步
-     * @param integer $ProductId 产品ID
-     * @param string $NotifyURL 回调地址
+     * @param string $AccountId 用户唯一标识，最大长度为64
+     * @param string $DeviceId 用户设备ID，最大长度为64
+     * @param string $OrderId 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
+     * @param string $Code 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
+     * @param integer $Async 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
+     * @param integer $ProductId 产品ID，可在腾讯安心用户运营平台的企业管理中获取
+     * @param string $NotifyURL 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
      */
     function __construct()
     {

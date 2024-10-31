@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群节点数
  * @method string getClusterStatus() 获取集群状态 (Running 运行中 Creating 创建中 Abnormal 异常 )
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Running 运行中 Creating 创建中 Abnormal 异常 )
+ * @method string getClusterSubStatus() 获取集群运行子状态
+ * @method void setClusterSubStatus(string $ClusterSubStatus) 设置集群运行子状态
  * @method string getClusterType() 获取集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
  * @method void setClusterType(string $ClusterType) 设置集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
  * @method string getRegion() 获取集群区域
@@ -109,6 +111,11 @@ class DescribeClusterDetailResponse extends AbstractModel
      * @var string 集群状态 (Running 运行中 Creating 创建中 Abnormal 异常 )
      */
     public $ClusterStatus;
+
+    /**
+     * @var string 集群运行子状态
+     */
+    public $ClusterSubStatus;
 
     /**
      * @var string 集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
@@ -213,6 +220,7 @@ class DescribeClusterDetailResponse extends AbstractModel
      * @param string $ContainerRuntime 运行时组件
      * @param integer $ClusterNodeNum 集群节点数
      * @param string $ClusterStatus 集群状态 (Running 运行中 Creating 创建中 Abnormal 异常 )
+     * @param string $ClusterSubStatus 集群运行子状态
      * @param string $ClusterType 集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
      * @param string $Region 集群区域
      * @param integer $SeriousRiskCount 严重风险检查项的数量
@@ -272,6 +280,10 @@ class DescribeClusterDetailResponse extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("ClusterSubStatus",$param) and $param["ClusterSubStatus"] !== null) {
+            $this->ClusterSubStatus = $param["ClusterSubStatus"];
         }
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {

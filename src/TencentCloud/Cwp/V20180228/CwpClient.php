@@ -149,7 +149,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) 获取Web服务关联进程列表
  * @method Models\DescribeAttackEventInfoResponse DescribeAttackEventInfo(Models\DescribeAttackEventInfoRequest $req) 网络攻击事件详情
  * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) 按分页形式展示网络攻击检测事件列表
- * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
+ * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) DescribeAttackEvents 代替
+
+按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) 已废弃
 
 查询攻击溯源

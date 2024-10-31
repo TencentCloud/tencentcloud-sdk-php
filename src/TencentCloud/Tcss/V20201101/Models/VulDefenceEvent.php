@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getPodName() 获取pod名称
+ * @method void setPodName(string $PodName) 设置pod名称
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -304,6 +308,16 @@ class VulDefenceEvent extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string pod名称
+     */
+    public $PodName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
      * @param string $CVEID 漏洞CVEID
      * @param string $VulName 漏洞名称
      * @param string $PocID 漏洞PocID
@@ -360,6 +374,8 @@ class VulDefenceEvent extends AbstractModel
      * @param string $NodeID 超级节点ID
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
+     * @param string $PodName pod名称
+     * @param string $PodIP pod ip
      */
     function __construct()
     {
@@ -484,6 +500,14 @@ class VulDefenceEvent extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
         }
     }
 }

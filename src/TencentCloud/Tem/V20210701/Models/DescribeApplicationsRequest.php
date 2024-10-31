@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取命名空间ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间ID
- * @method integer getLimit() 获取分页Limit
- * @method void setLimit(integer $Limit) 设置分页Limit
- * @method integer getOffset() 获取分页offset
- * @method void setOffset(integer $Offset) 设置分页offset
+ * @method integer getLimit() 获取分页Limit，默认值：20
+ * @method void setLimit(integer $Limit) 设置分页Limit，默认值：20
+ * @method integer getOffset() 获取分页offset,默认值：0
+ * @method void setOffset(integer $Offset) 设置分页offset,默认值：0
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method string getApplicationId() 获取服务id
@@ -45,12 +45,12 @@ class DescribeApplicationsRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer 分页Limit
+     * @var integer 分页Limit，默认值：20
      */
     public $Limit;
 
     /**
-     * @var integer 分页offset
+     * @var integer 分页offset,默认值：0
      */
     public $Offset;
 
@@ -81,8 +81,8 @@ class DescribeApplicationsRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 命名空间ID
-     * @param integer $Limit 分页Limit
-     * @param integer $Offset 分页offset
+     * @param integer $Limit 分页Limit，默认值：20
+     * @param integer $Offset 分页offset,默认值：0
      * @param integer $SourceChannel 来源渠道
      * @param string $ApplicationId 服务id
      * @param string $Keyword 搜索关键字

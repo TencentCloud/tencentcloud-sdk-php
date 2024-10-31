@@ -20,50 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountGroups请求参数结构体
  *
- * @method integer getDeepin() 获取搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
- * @method void setDeepin(integer $Deepin) 设置搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
- * @method Condition getCondition() 获取滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+ * @method integer getDeepin() 获取搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+ * @method void setDeepin(integer $Deepin) 设置搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+ * @method Condition getCondition() 获取查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
- * @method void setCondition(Condition $Condition) 设置滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
+ * @method void setCondition(Condition $Condition) 设置查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
- * @method integer getParentId() 获取父分组id
- * @method void setParentId(integer $ParentId) 设置父分组id
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
+ * @method integer getParentId() 获取父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
+ * @method void setParentId(integer $ParentId) 设置父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
  */
 class DescribeAccountGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
+     * @var integer 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public $Deepin;
 
     /**
-     * @var Condition 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+     * @var Condition 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
      */
     public $Condition;
 
     /**
-     * @var integer 父分组id
+     * @var integer 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
      */
     public $ParentId;
 
     /**
-     * @param integer $Deepin 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
-     * @param Condition $Condition 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+     * @param integer $Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * @param Condition $Condition 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
-     * @param integer $ParentId 父分组id
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
+     * @param integer $ParentId 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
      */
     function __construct()
     {

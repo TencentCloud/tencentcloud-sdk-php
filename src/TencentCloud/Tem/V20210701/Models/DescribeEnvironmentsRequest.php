@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironments请求参数结构体
  *
- * @method integer getLimit() 获取分页limit
- * @method void setLimit(integer $Limit) 设置分页limit
- * @method integer getOffset() 获取分页下标
- * @method void setOffset(integer $Offset) 设置分页下标
+ * @method integer getLimit() 获取分页limit，默认：20
+ * @method void setLimit(integer $Limit) 设置分页limit，默认：20
+ * @method integer getOffset() 获取分页下标，默认：0
+ * @method void setOffset(integer $Offset) 设置分页下标，默认：0
  * @method integer getSourceChannel() 获取来源source
  * @method void setSourceChannel(integer $SourceChannel) 设置来源source
  * @method array getFilters() 获取查询过滤器
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeEnvironmentsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页limit
+     * @var integer 分页limit，默认：20
      */
     public $Limit;
 
     /**
-     * @var integer 分页下标
+     * @var integer 分页下标，默认：0
      */
     public $Offset;
 
@@ -66,8 +66,8 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @param integer $Limit 分页limit
-     * @param integer $Offset 分页下标
+     * @param integer $Limit 分页limit，默认：20
+     * @param integer $Offset 分页下标，默认：0
      * @param integer $SourceChannel 来源source
      * @param array $Filters 查询过滤器
      * @param SortType $SortInfo 排序字段

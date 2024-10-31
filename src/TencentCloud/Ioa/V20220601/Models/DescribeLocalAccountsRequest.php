@@ -20,31 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLocalAccounts请求参数结构体
  *
- * @method Condition getCondition() 获取滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
- * @method void setCondition(Condition $Condition) 设置滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
- * @method integer getAccountGroupId() 获取获取账号的分组Id，不传默认获取全部(只支持32位)
- * @method void setAccountGroupId(integer $AccountGroupId) 设置获取账号的分组Id，不传默认获取全部(只支持32位)
+ * @method Condition getCondition() 获取查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+ * @method void setCondition(Condition $Condition) 设置查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+ * @method integer getAccountGroupId() 获取获取账号的分组ID，不传默认获取全网根账号组
+ * @method void setAccountGroupId(integer $AccountGroupId) 设置获取账号的分组ID，不传默认获取全网根账号组
  * @method integer getShowFlag() 获取是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
  * @method void setShowFlag(integer $ShowFlag) 设置是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
  */
 class DescribeLocalAccountsRequest extends AbstractModel
 {
     /**
-     * @var Condition 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
+     * @var Condition 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
      */
     public $Condition;
 
     /**
-     * @var integer 获取账号的分组Id，不传默认获取全部(只支持32位)
+     * @var integer 获取账号的分组ID，不传默认获取全网根账号组
      */
     public $AccountGroupId;
 
@@ -54,11 +81,20 @@ class DescribeLocalAccountsRequest extends AbstractModel
     public $ShowFlag;
 
     /**
-     * @param Condition $Condition 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
-     * @param integer $AccountGroupId 获取账号的分组Id，不传默认获取全部(只支持32位)
+     * @param Condition $Condition 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+     * @param integer $AccountGroupId 获取账号的分组ID，不传默认获取全网根账号组
      * @param integer $ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
      */
     function __construct()

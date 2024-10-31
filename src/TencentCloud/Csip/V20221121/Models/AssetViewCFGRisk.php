@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClbId() 获取当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClbId(string $ClbId) 设置当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetViewCFGRisk extends AbstractModel
 {
@@ -170,6 +174,12 @@ class AssetViewCFGRisk extends AbstractModel
     public $Uin;
 
     /**
+     * @var string 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClbId;
+
+    /**
      * @param string $Id 唯一id
      * @param string $CFGName 配置名
      * @param string $CheckType 检查类型
@@ -191,6 +201,8 @@ class AssetViewCFGRisk extends AbstractModel
      * @param string $Nick 用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +296,10 @@ class AssetViewCFGRisk extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("ClbId",$param) and $param["ClbId"] !== null) {
+            $this->ClbId = $param["ClbId"];
         }
     }
 }

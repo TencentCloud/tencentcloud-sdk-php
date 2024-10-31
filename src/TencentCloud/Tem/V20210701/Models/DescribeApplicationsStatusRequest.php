@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationsStatus请求参数结构体
  *
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class DescribeApplicationsStatusRequest extends AbstractModel
 {
-    /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
-
     /**
      * @var string 环境ID
      */
     public $EnvironmentId;
 
     /**
-     * @param integer $SourceChannel 来源渠道
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $EnvironmentId 环境ID
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeApplicationsStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

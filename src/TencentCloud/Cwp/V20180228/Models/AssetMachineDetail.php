@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置专业版到期时间
  * @method string getCoreVersion() 获取内核版本
  * @method void setCoreVersion(string $CoreVersion) 设置内核版本
- * @method string getOsType() 获取linux/windows
- * @method void setOsType(string $OsType) 设置linux/windows
+ * @method string getOsType() 获取Linux/Windows
+ * @method void setOsType(string $OsType) 设置Linux/Windows
  * @method string getAgentVersion() 获取agent版本
  * @method void setAgentVersion(string $AgentVersion) 设置agent版本
  * @method string getInstallTime() 获取安装时间
@@ -212,7 +212,7 @@ class AssetMachineDetail extends AbstractModel
     public $CoreVersion;
 
     /**
-     * @var string linux/windows
+     * @var string Linux/Windows
      */
     public $OsType;
 
@@ -328,7 +328,7 @@ class AssetMachineDetail extends AbstractModel
      * @param string $BuyTime 专业版开通时间
      * @param string $EndTime 专业版到期时间
      * @param string $CoreVersion 内核版本
-     * @param string $OsType linux/windows
+     * @param string $OsType Linux/Windows
      * @param string $AgentVersion agent版本
      * @param string $InstallTime 安装时间
      * @param string $BootTime 系统启动时间

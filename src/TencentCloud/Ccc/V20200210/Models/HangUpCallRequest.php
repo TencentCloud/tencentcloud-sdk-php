@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HangUpCall请求参数结构体
  *
- * @method integer getSdkAppId() 获取TCCC 实例应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getSessionId() 获取会话ID
  * @method void setSessionId(string $SessionId) 设置会话ID
  */
 class HangUpCallRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC 实例应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class HangUpCallRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $SessionId 会话ID
      */
     function __construct()

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 0：否，1：是
  * @method void setEncoding(integer $Encoding) 设置CmdList字段前端是否base64传值。
 0：否，1：是
+ * @method integer getType() 获取命令模板类型 1-内置模板 2-自定义模板
+ * @method void setType(integer $Type) 设置命令模板类型 1-内置模板 2-自定义模板
  */
 class ModifyCmdTemplateRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class ModifyCmdTemplateRequest extends AbstractModel
     public $Encoding;
 
     /**
+     * @var integer 命令模板类型 1-内置模板 2-自定义模板
+     */
+    public $Type;
+
+    /**
      * @param string $Name 模板名，最长32字符，不能包含空白字符
      * @param string $CmdList 命令列表，\n分隔，最长32768字节
      * @param integer $Id 命令模板ID
      * @param integer $Encoding CmdList字段前端是否base64传值。
 0：否，1：是
+     * @param integer $Type 命令模板类型 1-内置模板 2-自定义模板
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class ModifyCmdTemplateRequest extends AbstractModel
 
         if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
             $this->Encoding = $param["Encoding"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

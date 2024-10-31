@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireDate(string $ExpireDate) 设置命令有效期，非腾讯云时必填
  * @method array getTagIds() 获取标签ID列表，IsCloud=false时才会生效
  * @method void setTagIds(array $TagIds) 设置标签ID列表，IsCloud=false时才会生效
+ * @method string getVip() 获取虚拟ip
+ * @method void setVip(string $Vip) 设置虚拟ip
  */
 class DescribeAgentInstallCommandRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
     public $TagIds;
 
     /**
+     * @var string 虚拟ip
+     */
+    public $Vip;
+
+    /**
      * @param boolean $IsCloud 是否是腾讯云
      * @param string $NetType 网络类型：basic-基础网络，private-VPC, public-公网，direct-专线
      * @param string $RegionCode 地域标示, NetType=direct时必填
      * @param string $VpcId VpcId, NetType=direct时必填
      * @param string $ExpireDate 命令有效期，非腾讯云时必填
      * @param array $TagIds 标签ID列表，IsCloud=false时才会生效
+     * @param string $Vip 虚拟ip
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
 
         if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
             $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }

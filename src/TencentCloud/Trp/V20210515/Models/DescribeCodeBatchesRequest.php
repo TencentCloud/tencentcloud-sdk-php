@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchType(string $BatchType) 设置批次类型 0:溯源 1:营销
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
- * @method integer getStatus() 获取批次状态
- * @method void setStatus(integer $Status) 设置批次状态
+ * @method integer getStatus() 获取批次状态 0: 未激活 1: 已激活 -1: 已冻结
+ * @method void setStatus(integer $Status) 设置批次状态 0: 未激活 1: 已激活 -1: 已冻结
  */
 class DescribeCodeBatchesRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeCodeBatchesRequest extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer 批次状态
+     * @var integer 批次状态 0: 未激活 1: 已激活 -1: 已冻结
      */
     public $Status;
 
@@ -87,7 +87,7 @@ class DescribeCodeBatchesRequest extends AbstractModel
      * @param integer $PageNumber 页数
      * @param string $BatchType 批次类型 0:溯源 1:营销
      * @param integer $CorpId 企业ID
-     * @param integer $Status 批次状态
+     * @param integer $Status 批次状态 0: 未激活 1: 已激活 -1: 已冻结
      */
     function __construct()
     {

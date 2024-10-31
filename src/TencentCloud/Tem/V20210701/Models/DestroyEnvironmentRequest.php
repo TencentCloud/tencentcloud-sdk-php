@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取命名空间ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间ID
- * @method integer getSourceChannel() 获取Namespace
- * @method void setSourceChannel(integer $SourceChannel) 设置Namespace
+ * @method integer getSourceChannel() 获取来源渠道 示例值：0
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道 示例值：0
  */
 class DestroyEnvironmentRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DestroyEnvironmentRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer Namespace
+     * @var integer 来源渠道 示例值：0
      */
     public $SourceChannel;
 
     /**
      * @param string $EnvironmentId 命名空间ID
-     * @param integer $SourceChannel Namespace
+     * @param integer $SourceChannel 来源渠道 示例值：0
      */
     function __construct()
     {

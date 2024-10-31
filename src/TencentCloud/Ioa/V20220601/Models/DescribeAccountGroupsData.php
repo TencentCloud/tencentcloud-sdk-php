@@ -18,15 +18,15 @@ namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分组名称
+ * 账号分组信息
  *
- * @method string getNamePath() 获取名称path
+ * @method string getNamePath() 获取账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamePath(string $NamePath) 设置名称path
+ * @method void setNamePath(string $NamePath) 设置账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIdPathArr() 获取id patch数组(只支持32位)
+ * @method array getIdPathArr() 获取账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdPathArr(array $IdPathArr) 设置id patch数组(只支持32位)
+ * @method void setIdPathArr(array $IdPathArr) 设置账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInfo() 获取扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,41 +36,41 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUtime(string $Utime) 设置最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getParentId() 获取父id
+ * @method integer getParentId() 获取父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentId(integer $ParentId) 设置父id
+ * @method void setParentId(integer $ParentId) 设置父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrgId() 获取组织id
+ * @method string getOrgId() 获取源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrgId(string $OrgId) 设置组织id
+ * @method void setOrgId(string $OrgId) 设置源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取账户组名称
+ * @method string getName() 获取分组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置账户组名称
+ * @method void setName(string $Name) 设置分组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取id
+ * @method integer getId() 获取分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置id
+ * @method void setId(integer $Id) 设置分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取分组描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置分组描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSource() 获取同步数据源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(integer $Source) 设置同步数据源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdPath() 获取id path
+ * @method string getIdPath() 获取账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdPath(string $IdPath) 设置id path
+ * @method void setIdPath(string $IdPath) 设置账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItime(string $Itime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentOrgId() 获取父组织id
+ * @method string getParentOrgId() 获取父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentOrgId(string $ParentOrgId) 设置父组织id
+ * @method void setParentOrgId(string $ParentOrgId) 设置父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImportType() 获取导入类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,9 +80,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniIamId(string $MiniIamId) 设置miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUserTotal() 获取该分组下用户总数
+ * @method integer getUserTotal() 获取该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserTotal(integer $UserTotal) 设置该分组下用户总数
+ * @method void setUserTotal(integer $UserTotal) 设置该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsLeaf() 获取是否叶子节点
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,13 +104,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountGroupsData extends AbstractModel
 {
     /**
-     * @var string 名称path
+     * @var string 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamePath;
 
     /**
-     * @var array id patch数组(只支持32位)
+     * @var array 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdPathArr;
@@ -128,31 +128,31 @@ class DescribeAccountGroupsData extends AbstractModel
     public $Utime;
 
     /**
-     * @var integer 父id
+     * @var integer 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
-     * @var string 组织id
+     * @var string 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgId;
 
     /**
-     * @var string 账户组名称
+     * @var string 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var integer id
+     * @var integer 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 描述
+     * @var string 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
@@ -164,7 +164,7 @@ class DescribeAccountGroupsData extends AbstractModel
     public $Source;
 
     /**
-     * @var string id path
+     * @var string 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdPath;
@@ -176,7 +176,7 @@ class DescribeAccountGroupsData extends AbstractModel
     public $Itime;
 
     /**
-     * @var string 父组织id
+     * @var string 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentOrgId;
@@ -194,7 +194,7 @@ class DescribeAccountGroupsData extends AbstractModel
     public $MiniIamId;
 
     /**
-     * @var integer 该分组下用户总数
+     * @var integer 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserTotal;
@@ -224,37 +224,37 @@ class DescribeAccountGroupsData extends AbstractModel
     public $LatestSyncTime;
 
     /**
-     * @param string $NamePath 名称path
+     * @param string $NamePath 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $IdPathArr id patch数组(只支持32位)
+     * @param array $IdPathArr 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInfo 扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Utime 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ParentId 父id
+     * @param integer $ParentId 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrgId 组织id
+     * @param string $OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 账户组名称
+     * @param string $Name 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id id
+     * @param integer $Id 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $Description 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Source 同步数据源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdPath id path
+     * @param string $IdPath 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Itime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentOrgId 父组织id
+     * @param string $ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImportType 导入类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniIamId miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UserTotal 该分组下用户总数
+     * @param integer $UserTotal 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsLeaf 是否叶子节点
 注意：此字段可能返回 null，表示取不到有效值。

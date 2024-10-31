@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeID(string $NodeID) 设置超级节点ID
  * @method string getNodeName() 获取超级节点名称
  * @method void setNodeName(string $NodeName) 设置超级节点名称
+ * @method string getContainerStatus() 获取容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulAffectedContainerInfo extends AbstractModel
 {
@@ -122,6 +126,12 @@ class VulAffectedContainerInfo extends AbstractModel
     public $NodeName;
 
     /**
+     * @var string 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $HostIP 内网IP
      * @param string $ContainerID 容器ID
      * @param string $ContainerName 容器名称
@@ -136,6 +146,8 @@ class VulAffectedContainerInfo extends AbstractModel
      * @param string $NodeUniqueID 超级节点唯一ID
      * @param string $NodeID 超级节点ID
      * @param string $NodeName 超级节点名称
+     * @param string $ContainerStatus 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,10 @@ class VulAffectedContainerInfo extends AbstractModel
 
         if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
             $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

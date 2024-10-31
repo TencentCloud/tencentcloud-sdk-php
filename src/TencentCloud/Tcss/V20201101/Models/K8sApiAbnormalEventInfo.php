@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getClusterRunningStatus() 获取集群运行状态
- * @method void setClusterRunningStatus(string $ClusterRunningStatus) 设置集群运行状态
+ * @method string getClusterRunningStatus() 获取集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+ * @method void setClusterRunningStatus(string $ClusterRunningStatus) 设置集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
  * @method string getFirstCreateTime() 获取初次生成时间
  * @method void setFirstCreateTime(string $FirstCreateTime) 设置初次生成时间
  * @method string getLastCreateTime() 获取最近一次生成时间
@@ -97,7 +97,7 @@ class K8sApiAbnormalEventInfo extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 集群运行状态
+     * @var string 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
      */
     public $ClusterRunningStatus;
 
@@ -177,7 +177,7 @@ class K8sApiAbnormalEventInfo extends AbstractModel
      * @param string $RiskLevel 告警等级
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
-     * @param string $ClusterRunningStatus 集群运行状态
+     * @param string $ClusterRunningStatus 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
      * @param string $FirstCreateTime 初次生成时间
      * @param string $LastCreateTime 最近一次生成时间
      * @param integer $AlarmCount 告警数量

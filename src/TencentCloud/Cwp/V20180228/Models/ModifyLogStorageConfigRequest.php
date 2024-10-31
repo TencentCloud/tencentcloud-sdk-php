@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsModifyPeriod(boolean $IsModifyPeriod) 设置是否修改有效期
  * @method array getType() 获取存储类型，string数组
  * @method void setType(array $Type) 设置存储类型，string数组
- * @method integer getPeriod() 获取日志存储天数，3640表示不限
- * @method void setPeriod(integer $Period) 设置日志存储天数，3640表示不限
+ * @method integer getPeriod() 获取日志存储时长，3640表示不限
+ * @method void setPeriod(integer $Period) 设置日志存储时长，3640表示不限
+ * @method string getGranularity() 获取日志存储时长单位，年year/月month/天day
+ * @method void setGranularity(string $Granularity) 设置日志存储时长单位，年year/月month/天day
  */
 class ModifyLogStorageConfigRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class ModifyLogStorageConfigRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 日志存储天数，3640表示不限
+     * @var integer 日志存储时长，3640表示不限
      */
     public $Period;
 
     /**
+     * @var string 日志存储时长单位，年year/月month/天day
+     */
+    public $Granularity;
+
+    /**
      * @param boolean $IsModifyPeriod 是否修改有效期
      * @param array $Type 存储类型，string数组
-     * @param integer $Period 日志存储天数，3640表示不限
+     * @param integer $Period 日志存储时长，3640表示不限
+     * @param string $Granularity 日志存储时长单位，年year/月month/天day
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyLogStorageConfigRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
+            $this->Granularity = $param["Granularity"];
         }
     }
 }

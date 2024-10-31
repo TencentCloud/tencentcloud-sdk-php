@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageType(string $ImageType) 设置类型
  * @method integer getContainerCnt() 获取关联容器数
  * @method void setContainerCnt(integer $ContainerCnt) 设置关联容器数
+ * @method integer getHostCnt() 获取关联主机数
+ * @method void setHostCnt(integer $HostCnt) 设置关联主机数
  */
 class ImageSimpleInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ImageSimpleInfo extends AbstractModel
     public $ContainerCnt;
 
     /**
+     * @var integer 关联主机数
+     */
+    public $HostCnt;
+
+    /**
      * @param string $ImageID 镜像id
      * @param string $ImageName 镜像名称
      * @param integer $Size 镜像大小
      * @param string $ImageType 类型
      * @param integer $ContainerCnt 关联容器数
+     * @param integer $HostCnt 关联主机数
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ImageSimpleInfo extends AbstractModel
 
         if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
             $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("HostCnt",$param) and $param["HostCnt"] !== null) {
+            $this->HostCnt = $param["HostCnt"];
         }
     }
 }

@@ -80,9 +80,6 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeNatFwInstanceWithRegionResponse DescribeNatFwInstanceWithRegion(Models\DescribeNatFwInstanceWithRegionRequest $req) GetNatFwInstanceWithRegion 获取租户新增运维的NAT实例，带上地域
  * @method Models\DescribeNatFwInstancesInfoResponse DescribeNatFwInstancesInfo(Models\DescribeNatFwInstancesInfoRequest $req) GetNatInstance 获取租户所有NAT实例及实例卡片信息
  * @method Models\DescribeNatFwVpcDnsLstResponse DescribeNatFwVpcDnsLst(Models\DescribeNatFwVpcDnsLstRequest $req) 展示当前natfw 实例对应的vpc dns开关
- * @method Models\DescribeNatSwitchListResponse DescribeNatSwitchList(Models\DescribeNatSwitchListRequest $req) 旧接口，不再维护
-
-查询NAT边界防火墙开关列表
  * @method Models\DescribeResourceGroupResponse DescribeResourceGroup(Models\DescribeResourceGroupRequest $req) DescribeResourceGroup资产中心资产树信息
  * @method Models\DescribeResourceGroupNewResponse DescribeResourceGroupNew(Models\DescribeResourceGroupNewRequest $req) 资产中心资产组数数据信息查询
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况

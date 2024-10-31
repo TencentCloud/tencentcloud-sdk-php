@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMachineState() 获取实例状态：RUNNING,STOPPED,SHUTDOWN...
- * @method void setMachineState(string $MachineState) 设置实例状态：RUNNING,STOPPED,SHUTDOWN...
+ * @method string getMachineState() 获取agent状态：OFFLINE,ONLINE
+ * @method void setMachineState(string $MachineState) 设置agent状态：OFFLINE,ONLINE
  */
 class JavaMemShellDetail extends AbstractModel
 {
@@ -190,7 +190,7 @@ class JavaMemShellDetail extends AbstractModel
     public $MachineExtraInfo;
 
     /**
-     * @var string 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * @var string agent状态：OFFLINE,ONLINE
      */
     public $MachineState;
 
@@ -219,7 +219,7 @@ class JavaMemShellDetail extends AbstractModel
      * @param string $SecurityAdvice 安全建议
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MachineState 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * @param string $MachineState agent状态：OFFLINE,ONLINE
      */
     function __construct()
     {

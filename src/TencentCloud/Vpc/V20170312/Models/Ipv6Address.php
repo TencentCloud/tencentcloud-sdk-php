@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
+ * @method string getPublicIpAddress() 获取如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicIpAddress(string $PublicIpAddress) 设置如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAddressType() 获取`IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddressType(string $AddressType) 设置`IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ipv6Address extends AbstractModel
 {
@@ -78,6 +86,18 @@ class Ipv6Address extends AbstractModel
     public $State;
 
     /**
+     * @var string 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicIpAddress;
+
+    /**
+     * @var string `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddressType;
+
+    /**
      * @param string $Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      * @param boolean $Primary 是否是主`IP`。
      * @param string $AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
@@ -88,6 +108,10 @@ class Ipv6Address extends AbstractModel
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
+     * @param string $PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AddressType `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +148,14 @@ class Ipv6Address extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("PublicIpAddress",$param) and $param["PublicIpAddress"] !== null) {
+            $this->PublicIpAddress = $param["PublicIpAddress"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
     }
 }

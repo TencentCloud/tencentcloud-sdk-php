@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置磁盘容量
  * @method string getUsername() 获取用户名
  * @method void setUsername(string $Username) 设置用户名
- * @method array getDeliverTypeDetails() 获取xx
- * @method void setDeliverTypeDetails(array $DeliverTypeDetails) 设置xx
+ * @method array getDeliverTypeDetails() 获取投递类型细节
+ * @method void setDeliverTypeDetails(array $DeliverTypeDetails) 设置投递类型细节
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -119,7 +119,7 @@ class DescribeLogKafkaDeliverInfoResponse extends AbstractModel
     public $Username;
 
     /**
-     * @var array xx
+     * @var array 投递类型细节
      */
     public $DeliverTypeDetails;
 
@@ -142,7 +142,7 @@ class DescribeLogKafkaDeliverInfoResponse extends AbstractModel
      * @param integer $BandWidth 峰值带宽
      * @param integer $DiskSize 磁盘容量
      * @param string $Username 用户名
-     * @param array $DeliverTypeDetails xx
+     * @param array $DeliverTypeDetails 投递类型细节
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

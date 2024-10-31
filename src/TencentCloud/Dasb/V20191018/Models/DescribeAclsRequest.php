@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的访问权限
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的访问权限
+ * @method array getFilters() 获取过滤数组
+ * @method void setFilters(array $Filters) 设置过滤数组
  */
 class DescribeAclsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeAclsRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var array 过滤数组
+     */
+    public $Filters;
+
+    /**
      * @param array $IdSet 访问权限ID集合
      * @param string $Name 访问权限名称，模糊查询，最长64字符
      * @param integer $Offset 分页偏移位置，默认值为0
@@ -96,6 +103,7 @@ class DescribeAclsRequest extends AbstractModel
      * @param array $AuthorizedDeviceIdSet 有访问权限的资产ID集合
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的访问权限
+     * @param array $Filters 过滤数组
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class DescribeAclsRequest extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

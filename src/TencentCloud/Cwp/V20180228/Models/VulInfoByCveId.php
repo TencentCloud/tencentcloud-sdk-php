@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getVulId() 获取漏洞id
  * @method void setVulId(integer $VulId) 设置漏洞id
- * @method integer getFixSwitch() 获取修复支持情况：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
- * @method void setFixSwitch(integer $FixSwitch) 设置修复支持情况：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+ * @method integer getFixSwitch() 获取修复支持情况：0-Windows/Linux均不支持修复 ;1-Windows/Linux 均支持修复 ;2-仅Linux支持修复;3-仅Windows支持修复
+ * @method void setFixSwitch(integer $FixSwitch) 设置修复支持情况：0-Windows/Linux均不支持修复 ;1-Windows/Linux 均支持修复 ;2-仅Linux支持修复;3-仅Windows支持修复
  */
 class VulInfoByCveId extends AbstractModel
 {
@@ -33,13 +33,13 @@ class VulInfoByCveId extends AbstractModel
     public $VulId;
 
     /**
-     * @var integer 修复支持情况：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+     * @var integer 修复支持情况：0-Windows/Linux均不支持修复 ;1-Windows/Linux 均支持修复 ;2-仅Linux支持修复;3-仅Windows支持修复
      */
     public $FixSwitch;
 
     /**
      * @param integer $VulId 漏洞id
-     * @param integer $FixSwitch 修复支持情况：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+     * @param integer $FixSwitch 修复支持情况：0-Windows/Linux均不支持修复 ;1-Windows/Linux 均支持修复 ;2-仅Linux支持修复;3-仅Windows支持修复
      */
     function __construct()
     {

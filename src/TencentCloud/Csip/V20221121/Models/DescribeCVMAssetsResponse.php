@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCVMAssets返回参数结构体
  *
- * @method integer getTotal() 获取-
+ * @method integer getTotal() 获取总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置-
+ * @method void setTotal(integer $Total) 设置总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取-
+ * @method array getData() 获取机器列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置-
+ * @method void setData(array $Data) 设置机器列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegionList() 获取地域列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,13 +82,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCVMAssetsResponse extends AbstractModel
 {
     /**
-     * @var integer -
+     * @var integer 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var array -
+     * @var array 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -171,9 +171,9 @@ class DescribeCVMAssetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total -
+     * @param integer $Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data -
+     * @param array $Data 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionList 地域列表
 注意：此字段可能返回 null，表示取不到有效值。

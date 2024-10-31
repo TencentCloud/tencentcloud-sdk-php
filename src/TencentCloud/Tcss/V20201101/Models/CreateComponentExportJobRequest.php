@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageID() 获取镜像ID
  * @method void setImageID(string $ImageID) 设置镜像ID
- * @method array getExportField() 获取导出字段
- * @method void setExportField(array $ExportField) 设置导出字段
  * @method integer getLimit() 获取需要返回的数量，默认为10000，最大值为10000
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10000，最大值为10000
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式desc ，asc
  * @method void setOrder(string $Order) 设置排序方式desc ，asc
+ * @method array getExportField() 获取导出字段
+ * @method void setExportField(array $ExportField) 设置导出字段
  */
 class CreateComponentExportJobRequest extends AbstractModel
 {
@@ -43,11 +43,6 @@ class CreateComponentExportJobRequest extends AbstractModel
      * @var string 镜像ID
      */
     public $ImageID;
-
-    /**
-     * @var array 导出字段
-     */
-    public $ExportField;
 
     /**
      * @var integer 需要返回的数量，默认为10000，最大值为10000
@@ -76,14 +71,19 @@ class CreateComponentExportJobRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var array 导出字段
+     */
+    public $ExportField;
+
+    /**
      * @param string $ImageID 镜像ID
-     * @param array $ExportField 导出字段
      * @param integer $Limit 需要返回的数量，默认为10000，最大值为10000
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>ComponentName- String - 是否必填：否 - 镜像组件名称</li><li>ComponentVersion- String - 是否必填：否 - 镜像组件版本</li><li>ComponentType- String - 是否必填：否 - 镜像组件类型</li><li>VulLevel- String - 是否必填：否 - 漏洞威胁等级</li><li>HasVul- String - 是否必填：否 -是否有漏洞；true：是，false，否；不传或ALL ：全部</li>
      * @param string $By 排序字段
      * @param string $Order 排序方式desc ，asc
+     * @param array $ExportField 导出字段
      */
     function __construct()
     {
@@ -100,10 +100,6 @@ class CreateComponentExportJobRequest extends AbstractModel
         }
         if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
             $this->ImageID = $param["ImageID"];
-        }
-
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
@@ -129,6 +125,10 @@ class CreateComponentExportJobRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
     }
 }

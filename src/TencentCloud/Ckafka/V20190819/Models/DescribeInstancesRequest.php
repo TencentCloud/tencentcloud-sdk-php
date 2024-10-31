@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method string getInstanceId() 获取（过滤条件）按照实例ID过滤
- * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例ID过滤
- * @method string getSearchWord() 获取（过滤条件）按照实例名称过滤，支持模糊查询
- * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照实例名称过滤，支持模糊查询
- * @method array getStatus() 获取（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
- * @method void setStatus(array $Status) 设置（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+ * @method string getInstanceId() 获取（查询条件）按照ckafka集群实例Id过滤
+ * @method void setInstanceId(string $InstanceId) 设置（查询条件）按照ckafka集群实例Id过滤
+ * @method string getSearchWord() 获取搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+ * @method void setSearchWord(string $SearchWord) 设置搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+ * @method array getStatus() 获取（查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+ * @method void setStatus(array $Status) 设置（查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
  * @method integer getOffset() 获取偏移量，不填默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
  * @method integer getLimit() 获取返回数量，不填则默认10，最大值100
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值100
  * @method string getTagKey() 获取已废弃。匹配标签key值。
  * @method void setTagKey(string $TagKey) 设置已废弃。匹配标签key值。
- * @method string getVpcId() 获取私有网络Id
- * @method void setVpcId(string $VpcId) 设置私有网络Id
+ * @method string getVpcId() 获取（查询条件）私有网络Id
+ * @method void setVpcId(string $VpcId) 设置（查询条件）私有网络Id
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string （过滤条件）按照实例ID过滤
+     * @var string （查询条件）按照ckafka集群实例Id过滤
      */
     public $InstanceId;
 
     /**
-     * @var string （过滤条件）按照实例名称过滤，支持模糊查询
+     * @var string 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
      */
     public $SearchWord;
 
     /**
-     * @var array （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * @var array （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
      */
     public $Status;
 
@@ -68,18 +68,18 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @var string 私有网络Id
+     * @var string （查询条件）私有网络Id
      */
     public $VpcId;
 
     /**
-     * @param string $InstanceId （过滤条件）按照实例ID过滤
-     * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
-     * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * @param string $InstanceId （查询条件）按照ckafka集群实例Id过滤
+     * @param string $SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+     * @param array $Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认10，最大值100
      * @param string $TagKey 已废弃。匹配标签key值。
-     * @param string $VpcId 私有网络Id
+     * @param string $VpcId （查询条件）私有网络Id
      */
     function __construct()
     {

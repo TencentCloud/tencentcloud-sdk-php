@@ -18,7 +18,7 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * k8s api 异常事件规则配置范围 
+ * k8s api 异常事件规则配置范围
  *
  * @method string getScope() 获取范围
 系统事件:

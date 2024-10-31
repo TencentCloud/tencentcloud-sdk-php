@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainAssets返回参数结构体
  *
- * @method integer getTotal() 获取-
+ * @method integer getTotal() 获取总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置-
+ * @method void setTotal(integer $Total) 设置总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取-
+ * @method array getData() 获取域名列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置-
+ * @method void setData(array $Data) 设置域名列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDefenseStatusList() 获取防护状态列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainAssetsResponse extends AbstractModel
 {
     /**
-     * @var integer -
+     * @var integer 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var array -
+     * @var array 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -91,9 +91,9 @@ class DescribeDomainAssetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total -
+     * @param integer $Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data -
+     * @param array $Data 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DefenseStatusList 防护状态列表
 注意：此字段可能返回 null，表示取不到有效值。

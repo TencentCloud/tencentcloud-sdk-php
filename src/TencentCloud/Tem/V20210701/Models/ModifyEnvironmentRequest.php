@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境id
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境id
- * @method string getEnvironmentName() 获取环境名称
- * @method void setEnvironmentName(string $EnvironmentName) 设置环境名称
+ * @method string getEnvironmentName() 获取环境名称。环境名称不可修改
+ * @method void setEnvironmentName(string $EnvironmentName) 设置环境名称。环境名称不可修改
  * @method string getDescription() 获取环境描述
  * @method void setDescription(string $Description) 设置环境描述
  * @method string getVpc() 获取私有网络名称
@@ -43,7 +43,7 @@ class ModifyEnvironmentRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var string 环境名称
+     * @var string 环境名称。环境名称不可修改
      */
     public $EnvironmentName;
 
@@ -74,7 +74,7 @@ class ModifyEnvironmentRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 环境id
-     * @param string $EnvironmentName 环境名称
+     * @param string $EnvironmentName 环境名称。环境名称不可修改
      * @param string $Description 环境描述
      * @param string $Vpc 私有网络名称
      * @param array $SubnetIds 子网网络

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 3:标记忽略 
 4:取消标记处置
 5:取消标记忽略
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method array getOperatedMemberId() 获取被调用的集团账号的成员id
  * @method void setOperatedMemberId(array $OperatedMemberId) 设置被调用的集团账号的成员id
  */
@@ -55,6 +57,11 @@ class UpdateAlertStatusListRequest extends AbstractModel
     public $OperateType;
 
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @var array 被调用的集团账号的成员id
      */
     public $OperatedMemberId;
@@ -67,6 +74,7 @@ class UpdateAlertStatusListRequest extends AbstractModel
 3:标记忽略 
 4:取消标记处置
 5:取消标记忽略
+     * @param array $MemberId 集团账号的成员id
      * @param array $OperatedMemberId 被调用的集团账号的成员id
      */
     function __construct()
@@ -93,6 +101,10 @@ class UpdateAlertStatusListRequest extends AbstractModel
 
         if (array_key_exists("OperateType",$param) and $param["OperateType"] !== null) {
             $this->OperateType = $param["OperateType"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
 
         if (array_key_exists("OperatedMemberId",$param) and $param["OperatedMemberId"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(integer $RuleId) 设置编辑的规则ID
  * @method string getRuleName() 获取编辑的规则名称
  * @method void setRuleName(string $RuleName) 设置编辑的规则名称
- * @method string getRuleAction() 获取执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
- * @method void setRuleAction(string $RuleAction) 设置执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+ * @method string getRuleAction() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+ * @method void setRuleAction(string $RuleAction) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
  * @method array getStrategies() 获取匹配条件数组
  * @method void setStrategies(array $Strategies) 设置匹配条件数组
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 默认是0
  * @method void setExpireTime(integer $ExpireTime) 设置规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
 默认是0
- * @method string getJobType() 获取定时任务类型
- * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
  * @method string getSource() 获取规则来源，判断是不是小程序的
@@ -75,7 +75,7 @@ class ModifyCustomRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public $RuleAction;
 
@@ -113,7 +113,7 @@ class ModifyCustomRuleRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 定时任务类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -141,7 +141,7 @@ class ModifyCustomRuleRequest extends AbstractModel
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
-     * @param string $RuleAction 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+     * @param string $RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      * @param array $Strategies 匹配条件数组
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
      * @param string $Redirect 动作为重定向的时候重定向URL，默认为"/"
@@ -151,7 +151,7 @@ class ModifyCustomRuleRequest extends AbstractModel
 默认是100
      * @param integer $ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
 默认是0
-     * @param string $JobType 定时任务类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
      * @param string $Source 规则来源，判断是不是小程序的
      * @param integer $Status 开关状态，小程序风控规则的时候传该值

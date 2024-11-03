@@ -57,17 +57,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClbId() 获取当资产类型为LBL的时候，展示该字段，方便定位具体的LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbId(string $ClbId) 设置当资产类型为LBL的时候，展示该字段，方便定位具体的LB
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetViewCFGRisk extends AbstractModel
 {
@@ -163,19 +157,16 @@ class AssetViewCFGRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbId;
 
@@ -199,11 +190,8 @@ class AssetViewCFGRisk extends AbstractModel
      * @param string $Index 前端使用索引
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchIpAccessControl请求参数结构体
  *
- * @method array getFilters() 获取筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类
- * @method void setFilters(array $Filters) 设置筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类
+ * @method array getFilters() 获取筛选条件，支持 ActionType，可选的值为40（白名单）42（黑名单），ValidStatus，可选的值为1（生效）0（过期）
+ * @method void setFilters(array $Filters) 设置筛选条件，支持 ActionType，可选的值为40（白名单）42（黑名单），ValidStatus，可选的值为1（生效）0（过期）
  * @method integer getOffSet() 获取偏移
  * @method void setOffSet(integer $OffSet) 设置偏移
  * @method integer getLimit() 获取限制
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBatchIpAccessControlRequest extends AbstractModel
 {
     /**
-     * @var array 筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类
+     * @var array 筛选条件，支持 ActionType，可选的值为40（白名单）42（黑名单），ValidStatus，可选的值为1（生效）0（过期）
      */
     public $Filters;
 
@@ -52,7 +52,7 @@ class DescribeBatchIpAccessControlRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @param array $Filters 筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类
+     * @param array $Filters 筛选条件，支持 ActionType，可选的值为40（白名单）42（黑名单），ValidStatus，可选的值为1（生效）0（过期）
      * @param integer $OffSet 偏移
      * @param integer $Limit 限制
      * @param string $Sort 排序参数

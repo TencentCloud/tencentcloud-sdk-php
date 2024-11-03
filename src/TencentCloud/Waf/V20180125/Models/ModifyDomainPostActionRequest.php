@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomainPostAction请求参数结构体
  *
- * @method string getDomain() 获取www.tx.com
- * @method void setDomain(string $Domain) 设置www.tx.com
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  * @method integer getPostCLSAction() 获取0-关闭投递，1-开启投递
  * @method void setPostCLSAction(integer $PostCLSAction) 设置0-关闭投递，1-开启投递
  * @method integer getPostCKafkaAction() 获取0-关闭投递，1-开启投递
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDomainPostActionRequest extends AbstractModel
 {
     /**
-     * @var string www.tx.com
+     * @var string 域名
      */
     public $Domain;
 
@@ -45,7 +45,7 @@ class ModifyDomainPostActionRequest extends AbstractModel
     public $PostCKafkaAction;
 
     /**
-     * @param string $Domain www.tx.com
+     * @param string $Domain 域名
      * @param integer $PostCLSAction 0-关闭投递，1-开启投递
      * @param integer $PostCKafkaAction 0-关闭投递，1-开启投递
      */

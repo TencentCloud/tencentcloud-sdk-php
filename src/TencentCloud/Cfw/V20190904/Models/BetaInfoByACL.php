@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 规则关联的beta任务
  *
  * @method integer getTaskId() 获取任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTime() 获取上次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTime(string $LastTime) 设置上次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BetaInfoByACL extends AbstractModel
 {
     /**
      * @var integer 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var string 上次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTime;
 
     /**
      * @param integer $TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTime 上次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

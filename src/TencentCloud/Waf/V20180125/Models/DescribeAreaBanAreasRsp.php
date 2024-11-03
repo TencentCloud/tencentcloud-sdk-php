@@ -23,23 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取状态 "0"：未开启地域封禁 "1"：开启地域封禁
  * @method void setStatus(string $Status) 设置状态 "0"：未开启地域封禁 "1"：开启地域封禁
  * @method string getSource() 获取数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAreas() 获取字符串数据，配置的地域列表
  * @method void setAreas(array $Areas) 设置字符串数据，配置的地域列表
  * @method string getJobType() 获取定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobType(string $JobType) 设置定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method JobDateTime getJobDateTime() 获取定时任务详细配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务详细配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCronType() 获取周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronType(string $CronType) 设置周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAreaBanAreasRsp extends AbstractModel
 {
@@ -50,7 +44,6 @@ class DescribeAreaBanAreasRsp extends AbstractModel
 
     /**
      * @var string 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
@@ -61,7 +54,6 @@ class DescribeAreaBanAreasRsp extends AbstractModel
 
     /**
      * @var string 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobType;
 
@@ -73,21 +65,17 @@ class DescribeAreaBanAreasRsp extends AbstractModel
 
     /**
      * @var string 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronType;
 
     /**
      * @param string $Status 状态 "0"：未开启地域封禁 "1"：开启地域封禁
      * @param string $Source 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Areas 字符串数据，配置的地域列表
      * @param string $JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobDateTime $JobDateTime 定时任务详细配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CronType 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

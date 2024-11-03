@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMatchContent() 获取匹配内容
  * @method void setMatchContent(string $MatchContent) 设置匹配内容
  * @method string getMatchParams() 获取匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchParams(string $MatchParams) 设置匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserWhiteRuleItem extends AbstractModel
 {
@@ -50,7 +48,6 @@ class UserWhiteRuleItem extends AbstractModel
 
     /**
      * @var string 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchParams;
 
@@ -59,7 +56,6 @@ class UserWhiteRuleItem extends AbstractModel
      * @param string $MatchMethod 匹配方法
      * @param string $MatchContent 匹配内容
      * @param string $MatchParams 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

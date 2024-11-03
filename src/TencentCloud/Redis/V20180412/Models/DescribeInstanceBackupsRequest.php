@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
- * @method string getBeginTime() 获取开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
- * @method void setBeginTime(string $BeginTime) 设置开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
- * @method string getEndTime() 获取结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+ * @method string getBeginTime() 获取开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+ * @method void setBeginTime(string $BeginTime) 设置开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+ * @method string getEndTime() 获取结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+ * @method void setEndTime(string $EndTime) 设置结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
  * @method array getStatus() 获取备份任务的状态：
 1：备份在流程中。
 2：备份正常。
@@ -65,12 +65,12 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * @var string 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * @var string 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
      */
     public $EndTime;
 
@@ -94,8 +94,8 @@ class DescribeInstanceBackupsRequest extends AbstractModel
      * @param integer $Limit 每页输出的备份列表大小。默认大小为20，最大值为 100。
      * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
-     * @param string $BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
-     * @param string $EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * @param string $BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * @param string $EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
      * @param array $Status 备份任务的状态：
 1：备份在流程中。
 2：备份正常。

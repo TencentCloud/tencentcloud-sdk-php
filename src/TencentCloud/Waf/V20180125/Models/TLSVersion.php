@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * TLS信息
  *
  * @method integer getVersionId() 获取TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionId(integer $VersionId) 设置TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionName() 获取TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TLSVersion extends AbstractModel
 {
     /**
      * @var integer TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionId;
 
     /**
      * @var string TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @param integer $VersionId TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionName TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

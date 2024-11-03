@@ -63,21 +63,15 @@ drop：拒绝
  * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPort() 获取访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceTemplateId() 获取端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取（入参时无需填写，自动生成）规则对应的唯一id
  * @method void setId(string $Id) 设置（入参时无需填写，自动生成）规则对应的唯一id
  * @method string getEnable() 获取（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
@@ -140,7 +134,6 @@ drop：拒绝
 
     /**
      * @var string 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
@@ -148,13 +141,11 @@ drop：拒绝
      * @var string 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTemplateId;
 
@@ -197,13 +188,10 @@ drop：拒绝
      * @param string $Description 描述
      * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id （入参时无需填写，自动生成）规则对应的唯一id
      * @param string $Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用

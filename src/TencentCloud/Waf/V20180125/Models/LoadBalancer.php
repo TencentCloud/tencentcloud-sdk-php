@@ -39,17 +39,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取负载均衡监听器所在的zone
  * @method void setZone(string $Zone) 设置负载均衡监听器所在的zone
  * @method integer getNumericalVpcId() 获取负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLoadBalancerType() 获取负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoadBalancerType() 获取负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+ * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
  * @method string getLoadBalancerDomain() 获取负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -100,19 +94,16 @@ class LoadBalancer extends AbstractModel
 
     /**
      * @var integer 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumericalVpcId;
 
     /**
-     * @var string 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      */
     public $LoadBalancerType;
 
     /**
      * @var string 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerDomain;
 
@@ -127,11 +118,8 @@ class LoadBalancer extends AbstractModel
      * @param string $Protocol 监听器协议，http、https
      * @param string $Zone 负载均衡监听器所在的zone
      * @param integer $NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LoadBalancerType 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      * @param string $LoadBalancerDomain 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

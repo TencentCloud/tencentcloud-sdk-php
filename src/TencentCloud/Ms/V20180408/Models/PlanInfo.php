@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加固策略信息
  *
+ * @method string getSetFile() 获取Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetFile(string $SetFile) 设置Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApkSizeOpt() 获取apk大小优化，0关闭，1开启
  * @method void setApkSizeOpt(integer $ApkSizeOpt) 设置apk大小优化，0关闭，1开启
  * @method integer getDex() 获取Dex加固，0关闭，1开启
@@ -30,12 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBugly(integer $Bugly) 设置数据收集，0关闭，1开启
  * @method integer getAntiRepack() 获取防止重打包，0关闭，1开启
  * @method void setAntiRepack(integer $AntiRepack) 设置防止重打包，0关闭，1开启
- * @method integer getSeperateDex() 获取Dex分离，0关闭，1开启
- * @method void setSeperateDex(integer $SeperateDex) 设置Dex分离，0关闭，1开启
  * @method integer getDb() 获取内存保护，0关闭，1开启
  * @method void setDb(integer $Db) 设置内存保护，0关闭，1开启
- * @method integer getDexSig() 获取Dex签名校验，0关闭，1开启
- * @method void setDexSig(integer $DexSig) 设置Dex签名校验，0关闭，1开启
  * @method SoInfo getSoInfo() 获取So文件信息
  * @method void setSoInfo(SoInfo $SoInfo) 设置So文件信息
  * @method integer getAntiVMP() 获取vmp，0关闭，1开启
@@ -44,18 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoType(array $SoType) 设置保护so的强度，
  * @method integer getAntiLogLeak() 获取防日志泄漏，0关闭，1开启
  * @method void setAntiLogLeak(integer $AntiLogLeak) 设置防日志泄漏，0关闭，1开启
- * @method integer getAntiQemuRoot() 获取root检测，0关闭，1开启
- * @method void setAntiQemuRoot(integer $AntiQemuRoot) 设置root检测，0关闭，1开启
  * @method integer getAntiAssets() 获取资源防篡改，0关闭，1开启
  * @method void setAntiAssets(integer $AntiAssets) 设置资源防篡改，0关闭，1开启
  * @method integer getAntiScreenshot() 获取防止截屏，0关闭，1开启
  * @method void setAntiScreenshot(integer $AntiScreenshot) 设置防止截屏，0关闭，1开启
  * @method integer getAntiSSL() 获取SSL证书防窃取，0关闭，1开启
  * @method void setAntiSSL(integer $AntiSSL) 设置SSL证书防窃取，0关闭，1开启
- * @method string getSetFile() 获取Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSetFile(string $SetFile) 设置Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileSign() 获取Dex签名校验，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSign(string $FileSign) 设置Dex签名校验，0关闭，1开启
@@ -64,9 +58,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAntiRoot(string $AntiRoot) 设置root检测，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSeperateDex() 获取Dex分离，0关闭，1开启
+ * @method void setSeperateDex(integer $SeperateDex) 设置Dex分离，0关闭，1开启
+ * @method integer getDexSig() 获取Dex签名校验，0关闭，1开启
+ * @method void setDexSig(integer $DexSig) 设置Dex签名校验，0关闭，1开启
+ * @method integer getAntiQemuRoot() 获取root检测，0关闭，1开启
+ * @method void setAntiQemuRoot(integer $AntiQemuRoot) 设置root检测，0关闭，1开启
  */
 class PlanInfo extends AbstractModel
 {
+    /**
+     * @var string Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetFile;
+
     /**
      * @var integer apk大小优化，0关闭，1开启
      */
@@ -93,21 +99,9 @@ class PlanInfo extends AbstractModel
     public $AntiRepack;
 
     /**
-     * @var integer Dex分离，0关闭，1开启
-     * @deprecated
-     */
-    public $SeperateDex;
-
-    /**
      * @var integer 内存保护，0关闭，1开启
      */
     public $Db;
-
-    /**
-     * @var integer Dex签名校验，0关闭，1开启
-     * @deprecated
-     */
-    public $DexSig;
 
     /**
      * @var SoInfo So文件信息
@@ -130,12 +124,6 @@ class PlanInfo extends AbstractModel
     public $AntiLogLeak;
 
     /**
-     * @var integer root检测，0关闭，1开启
-     * @deprecated
-     */
-    public $AntiQemuRoot;
-
-    /**
      * @var integer 资源防篡改，0关闭，1开启
      */
     public $AntiAssets;
@@ -151,12 +139,6 @@ class PlanInfo extends AbstractModel
     public $AntiSSL;
 
     /**
-     * @var string Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SetFile;
-
-    /**
      * @var string Dex签名校验，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,28 +151,46 @@ class PlanInfo extends AbstractModel
     public $AntiRoot;
 
     /**
+     * @var integer Dex分离，0关闭，1开启
+     * @deprecated
+     */
+    public $SeperateDex;
+
+    /**
+     * @var integer Dex签名校验，0关闭，1开启
+     * @deprecated
+     */
+    public $DexSig;
+
+    /**
+     * @var integer root检测，0关闭，1开启
+     * @deprecated
+     */
+    public $AntiQemuRoot;
+
+    /**
+     * @param string $SetFile Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApkSizeOpt apk大小优化，0关闭，1开启
      * @param integer $Dex Dex加固，0关闭，1开启
      * @param integer $So So加固，0关闭，1开启
      * @param integer $Bugly 数据收集，0关闭，1开启
      * @param integer $AntiRepack 防止重打包，0关闭，1开启
-     * @param integer $SeperateDex Dex分离，0关闭，1开启
      * @param integer $Db 内存保护，0关闭，1开启
-     * @param integer $DexSig Dex签名校验，0关闭，1开启
      * @param SoInfo $SoInfo So文件信息
      * @param integer $AntiVMP vmp，0关闭，1开启
      * @param array $SoType 保护so的强度，
      * @param integer $AntiLogLeak 防日志泄漏，0关闭，1开启
-     * @param integer $AntiQemuRoot root检测，0关闭，1开启
      * @param integer $AntiAssets 资源防篡改，0关闭，1开启
      * @param integer $AntiScreenshot 防止截屏，0关闭，1开启
      * @param integer $AntiSSL SSL证书防窃取，0关闭，1开启
-     * @param string $SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSign Dex签名校验，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AntiRoot root检测，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SeperateDex Dex分离，0关闭，1开启
+     * @param integer $DexSig Dex签名校验，0关闭，1开启
+     * @param integer $AntiQemuRoot root检测，0关闭，1开启
      */
     function __construct()
     {
@@ -205,6 +205,10 @@ class PlanInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SetFile",$param) and $param["SetFile"] !== null) {
+            $this->SetFile = $param["SetFile"];
+        }
+
         if (array_key_exists("ApkSizeOpt",$param) and $param["ApkSizeOpt"] !== null) {
             $this->ApkSizeOpt = $param["ApkSizeOpt"];
         }
@@ -225,16 +229,8 @@ class PlanInfo extends AbstractModel
             $this->AntiRepack = $param["AntiRepack"];
         }
 
-        if (array_key_exists("SeperateDex",$param) and $param["SeperateDex"] !== null) {
-            $this->SeperateDex = $param["SeperateDex"];
-        }
-
         if (array_key_exists("Db",$param) and $param["Db"] !== null) {
             $this->Db = $param["Db"];
-        }
-
-        if (array_key_exists("DexSig",$param) and $param["DexSig"] !== null) {
-            $this->DexSig = $param["DexSig"];
         }
 
         if (array_key_exists("SoInfo",$param) and $param["SoInfo"] !== null) {
@@ -254,10 +250,6 @@ class PlanInfo extends AbstractModel
             $this->AntiLogLeak = $param["AntiLogLeak"];
         }
 
-        if (array_key_exists("AntiQemuRoot",$param) and $param["AntiQemuRoot"] !== null) {
-            $this->AntiQemuRoot = $param["AntiQemuRoot"];
-        }
-
         if (array_key_exists("AntiAssets",$param) and $param["AntiAssets"] !== null) {
             $this->AntiAssets = $param["AntiAssets"];
         }
@@ -270,16 +262,24 @@ class PlanInfo extends AbstractModel
             $this->AntiSSL = $param["AntiSSL"];
         }
 
-        if (array_key_exists("SetFile",$param) and $param["SetFile"] !== null) {
-            $this->SetFile = $param["SetFile"];
-        }
-
         if (array_key_exists("FileSign",$param) and $param["FileSign"] !== null) {
             $this->FileSign = $param["FileSign"];
         }
 
         if (array_key_exists("AntiRoot",$param) and $param["AntiRoot"] !== null) {
             $this->AntiRoot = $param["AntiRoot"];
+        }
+
+        if (array_key_exists("SeperateDex",$param) and $param["SeperateDex"] !== null) {
+            $this->SeperateDex = $param["SeperateDex"];
+        }
+
+        if (array_key_exists("DexSig",$param) and $param["DexSig"] !== null) {
+            $this->DexSig = $param["DexSig"];
+        }
+
+        if (array_key_exists("AntiQemuRoot",$param) and $param["AntiQemuRoot"] !== null) {
+            $this->AntiQemuRoot = $param["AntiQemuRoot"];
         }
     }
 }

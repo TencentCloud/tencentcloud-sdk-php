@@ -143,119 +143,73 @@ https：使用https协议回源
  * @method integer getActiveCheck() 获取是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTLSVersion() 获取TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCiphers() 获取自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCiphers(array $Ciphers) 设置自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCipherTemplate() 获取加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyReadTimeout() 获取WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxySendTimeout() 获取WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSniType() 获取WAF回源时的SNI类型。
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSniType(integer $SniType) 设置WAF回源时的SNI类型。
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSniHost() 获取SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSniHost(string $SniHost) 设置SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWeights() 获取回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeights(array $Weights) 设置回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpHeaders() 获取IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getXFFReset() 获取是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取防护规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置防护规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGmType() 获取国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmType(integer $GmType) 设置国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGmCertType() 获取国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmCertType(integer $GmCertType) 设置国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGmCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmCert(string $GmCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGmPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmPrivateKey(string $GmPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGmEncCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmEncCert(string $GmEncCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGmEncPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取域名标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置域名标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -431,19 +385,16 @@ https：使用https协议回源
      * @var integer 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveCheck;
 
     /**
      * @var integer TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TLSVersion;
 
     /**
      * @var array 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ciphers;
 
@@ -453,19 +404,16 @@ https：使用https协议回源
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CipherTemplate;
 
     /**
      * @var integer WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyReadTimeout;
 
     /**
      * @var integer WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxySendTimeout;
 
@@ -475,25 +423,21 @@ https：使用https协议回源
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniType;
 
     /**
      * @var string SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniHost;
 
     /**
      * @var array 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weights;
 
     /**
      * @var array IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpHeaders;
 
@@ -501,79 +445,66 @@ https：使用https协议回源
      * @var integer 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $XFFReset;
 
     /**
      * @var string 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
     /**
      * @var string 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamHost;
 
     /**
      * @var string 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyBuffer;
 
     /**
      * @var integer 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmType;
 
     /**
      * @var integer 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmCertType;
 
     /**
      * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmCert;
 
     /**
      * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmPrivateKey;
 
     /**
      * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmEncCert;
 
     /**
      * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmEncPrivateKey;
 
     /**
      * @var string GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GmSSLId;
 
     /**
      * @var array 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
@@ -641,61 +572,38 @@ https：使用https协议回源
      * @param integer $ActiveCheck 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TLSVersion TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CipherTemplate 加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyReadTimeout WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxySendTimeout WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SniType WAF回源时的SNI类型。
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SniHost SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Weights 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $XFFReset 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

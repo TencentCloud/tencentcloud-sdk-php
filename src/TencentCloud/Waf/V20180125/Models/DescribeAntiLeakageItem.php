@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUri(string $Uri) 设置匹配的URL
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAntiLeakageItem extends AbstractModel
 {
@@ -84,7 +82,6 @@ class DescribeAntiLeakageItem extends AbstractModel
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
@@ -99,7 +96,6 @@ class DescribeAntiLeakageItem extends AbstractModel
      * @param string $Uri 匹配的URL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

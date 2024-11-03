@@ -144,10 +144,10 @@ use TencentCloud\Common\AbstractModel;
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
- * @method string getBeginTime() 获取任务执行的起始时间。格式如：2021-12-30 00:00:00。
- * @method void setBeginTime(string $BeginTime) 设置任务执行的起始时间。格式如：2021-12-30 00:00:00。
- * @method string getEndTime() 获取任务运行的终止时间。格式如：2021-12-30 20:59:35
- * @method void setEndTime(string $EndTime) 设置任务运行的终止时间。格式如：2021-12-30 20:59:35
+ * @method string getBeginTime() 获取任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
+ * @method void setBeginTime(string $BeginTime) 设置任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
+ * @method string getEndTime() 获取任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
+ * @method void setEndTime(string $EndTime) 设置任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
  * @method array getTaskStatus() 获取该参数为内部使用，请忽略。
  * @method void setTaskStatus(array $TaskStatus) 设置该参数为内部使用，请忽略。
  * @method array getResult() 获取任务执行状态。
@@ -254,12 +254,12 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskTypes;
 
     /**
-     * @var string 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+     * @var string 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
      */
     public $BeginTime;
 
     /**
-     * @var string 任务运行的终止时间。格式如：2021-12-30 20:59:35
+     * @var string 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
      */
     public $EndTime;
 
@@ -350,8 +350,8 @@ class DescribeTaskListRequest extends AbstractModel
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-     * @param string $BeginTime 任务执行的起始时间。格式如：2021-12-30 00:00:00。
-     * @param string $EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35
+     * @param string $BeginTime 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
+     * @param string $EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
      * @param array $TaskStatus 该参数为内部使用，请忽略。
      * @param array $Result 任务执行状态。
 - 0：任务初始化。

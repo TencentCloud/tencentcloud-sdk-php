@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取cdc的集群id
  * @method void setId(string $Id) 设置cdc的集群id
  * @method string getName() 获取cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdcCluster extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CdcCluster extends AbstractModel
 
     /**
      * @var string cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Id cdc的集群id
      * @param string $Name cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

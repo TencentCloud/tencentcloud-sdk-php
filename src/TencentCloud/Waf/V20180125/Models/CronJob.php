@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 规则周期执行的数据结构
  *
  * @method array getDays() 获取每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDays(array $Days) 设置每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWDays() 获取每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWDays(array $WDays) 设置每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CronJob extends AbstractModel
 {
     /**
      * @var array 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Days;
 
     /**
      * @var array 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WDays;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param array $Days 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WDays 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

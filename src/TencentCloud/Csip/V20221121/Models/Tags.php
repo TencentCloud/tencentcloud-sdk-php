@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主机标签信息
  *
- * @method string getTagKey() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagKey(string $TagKey) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTagValue() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagValue(string $TagValue) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTagKey() 获取主机标签key
+ * @method void setTagKey(string $TagKey) 设置主机标签key
+ * @method string getTagValue() 获取主机标签value
+ * @method void setTagValue(string $TagValue) 设置主机标签value
  */
 class Tags extends AbstractModel
 {
     /**
-     * @var string 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主机标签key
      */
     public $TagKey;
 
     /**
-     * @var string 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主机标签value
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TagValue 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TagKey 主机标签key
+     * @param string $TagValue 主机标签value
      */
     function __construct()
     {

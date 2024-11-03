@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAccessIndex接口的出参
  *
  * @method boolean getCaseSensitive() 获取是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaseSensitive(boolean $CaseSensitive) 设置是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeyValues() 获取标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyValues(array $KeyValues) 设置标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessRuleTagInfo extends AbstractModel
 {
     /**
      * @var boolean 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaseSensitive;
 
     /**
      * @var array 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KeyValues 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

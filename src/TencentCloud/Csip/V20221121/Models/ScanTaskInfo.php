@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 扫描任务详情
  *
  * @method string getTaskId() 获取任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取任务进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置任务进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskTime() 获取任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskTime(string $TaskTime) 设置任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportId() 获取报告ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportId(string $ReportId) 设置报告ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportName() 获取报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportName(string $ReportName) 设置报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanPlan() 获取扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPlan(integer $ScanPlan) 设置扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAssetCount() 获取关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetCount(integer $AssetCount) 设置关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取APP ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置APP ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUIN() 获取用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUIN(string $UIN) 设置用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanTaskInfo extends AbstractModel
 {
     /**
      * @var string 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var integer 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var string 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTime;
 
     /**
      * @var string 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportId;
 
     /**
      * @var string 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportName;
 
     /**
      * @var integer 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPlan;
 
     /**
      * @var integer 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetCount;
 
     /**
      * @var string APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UIN;
 
     /**
      * @var string 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @param string $TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskTime 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportId 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanPlan 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssetCount 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UIN 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

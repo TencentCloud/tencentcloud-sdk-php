@@ -21,45 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 封禁列表和放通列表结构体
  *
  * @method string getIoc() 获取封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIoc(string $Ioc) 设置封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDirectionList() 获取0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectionList(string $DirectionList) 设置0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleType() 获取规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
  * @method void setRuleType(integer $RuleType) 设置规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
  */
 class BanAndAllowRuleDel extends AbstractModel
 {
     /**
      * @var string 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ioc;
 
     /**
      * @var string 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DirectionList;
 
     /**
      * @var integer 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
      */
     public $RuleType;
 
     /**
      * @param string $Ioc 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
      */
     function __construct()
     {

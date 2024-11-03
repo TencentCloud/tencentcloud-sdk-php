@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getReason() 获取0/1
  * @method void setReason(integer $Reason) 设置0/1
  * @method integer getRiskLevel() 获取1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserSignatureRule extends AbstractModel
 {
@@ -106,7 +104,6 @@ class UserSignatureRule extends AbstractModel
 
     /**
      * @var integer 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
@@ -123,7 +120,6 @@ class UserSignatureRule extends AbstractModel
      * @param string $Description 规则描述
      * @param integer $Reason 0/1
      * @param integer $RiskLevel 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

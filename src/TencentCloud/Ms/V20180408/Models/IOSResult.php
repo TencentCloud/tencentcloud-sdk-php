@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEncryptState() 获取加固状态
+ * @method integer getEncryptState() 获取加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryptState(integer $EncryptState) 设置加固状态
+ * @method void setEncryptState(integer $EncryptState) 设置加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptErrno() 获取业务错误码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,7 +96,7 @@ class IOSResult extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer 加固状态
+     * @var integer 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptState;
@@ -152,7 +152,7 @@ class IOSResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EncryptState 加固状态
+     * @param integer $EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptErrno 业务错误码
 注意：此字段可能返回 null，表示取不到有效值。

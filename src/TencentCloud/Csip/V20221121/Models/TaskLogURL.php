@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 报告pdf下载的临时链接
  *
  * @method string getURL() 获取报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setURL(string $URL) 设置报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogId() 获取任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogId(string $LogId) 设置任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskLogName() 获取任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskLogName(string $TaskLogName) 设置任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取APP ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置APP ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLogURL extends AbstractModel
 {
     /**
      * @var string 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URL;
 
     /**
      * @var string 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogId;
 
     /**
      * @var string 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskLogName;
 
     /**
      * @var string APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @param string $URL 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogId 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskLogName 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

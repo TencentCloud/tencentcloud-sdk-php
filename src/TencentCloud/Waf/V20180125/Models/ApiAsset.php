@@ -27,53 +27,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApiName() 获取api名称
  * @method void setApiName(string $ApiName) 设置api名称
  * @method string getScene() 获取场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabel() 获取数据标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(array $Label) 设置数据标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getActive() 获取过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActive(boolean $Active) 设置过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取最近更新时间
  * @method void setTimestamp(integer $Timestamp) 设置最近更新时间
  * @method integer getInsertTime() 获取api发现时间
  * @method void setInsertTime(integer $InsertTime) 设置api发现时间
  * @method string getMode() 获取资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAuth() 获取是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAuth(integer $IsAuth) 设置是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiRequestRuleId() 获取如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiRequestRuleId(integer $ApiRequestRuleId) 设置如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiLimitRuleId() 获取如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiLimitRuleId(integer $ApiLimitRuleId) 设置如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostList() 获取对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostList(array $HostList) 设置对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiAsset extends AbstractModel
 {
@@ -94,19 +72,16 @@ class ApiAsset extends AbstractModel
 
     /**
      * @var string 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
     /**
      * @var array 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var boolean 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Active;
 
@@ -122,49 +97,41 @@ class ApiAsset extends AbstractModel
 
     /**
      * @var string 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @var string 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var integer 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAuth;
 
     /**
      * @var integer 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiRequestRuleId;
 
     /**
      * @var integer 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiLimitRuleId;
 
     /**
      * @var array 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostList;
 
@@ -173,29 +140,18 @@ class ApiAsset extends AbstractModel
      * @param string $Method 请求方法
      * @param string $ApiName api名称
      * @param string $Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Label 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Active 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 最近更新时间
      * @param integer $InsertTime api发现时间
      * @param string $Mode 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAuth 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiRequestRuleId 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiLimitRuleId 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostList 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

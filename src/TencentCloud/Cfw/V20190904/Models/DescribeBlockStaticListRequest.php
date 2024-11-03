@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockStaticList请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method string getQueryType() 获取列表类型，只能是下面三种之一：port、address、ip
  * @method void setQueryType(string $QueryType) 设置列表类型，只能是下面三种之一：port、address、ip
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
  * @method integer getTop() 获取top数
  * @method void setTop(integer $Top) 设置top数
  * @method string getSearchValue() 获取查询条件
@@ -33,11 +33,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeBlockStaticListRequest extends AbstractModel
 {
-    /**
-     * @var string 开始时间
-     */
-    public $StartTime;
-
     /**
      * @var string 结束时间
      */
@@ -47,6 +42,11 @@ class DescribeBlockStaticListRequest extends AbstractModel
      * @var string 列表类型，只能是下面三种之一：port、address、ip
      */
     public $QueryType;
+
+    /**
+     * @var string 开始时间
+     */
+    public $StartTime;
 
     /**
      * @var integer top数
@@ -59,9 +59,9 @@ class DescribeBlockStaticListRequest extends AbstractModel
     public $SearchValue;
 
     /**
-     * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param string $QueryType 列表类型，只能是下面三种之一：port、address、ip
+     * @param string $StartTime 开始时间
      * @param integer $Top top数
      * @param string $SearchValue 查询条件
      */
@@ -78,16 +78,16 @@ class DescribeBlockStaticListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
             $this->QueryType = $param["QueryType"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("Top",$param) and $param["Top"] !== null) {

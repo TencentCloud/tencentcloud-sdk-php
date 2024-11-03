@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdition(string $Edition) 设置WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method integer getType() 获取0是修改规则引擎状态，1是修改AI的状态
  * @method void setType(integer $Type) 设置0是修改规则引擎状态，1是修改AI的状态
+ * @method string getInstanceID() 获取实例id
+ * @method void setInstanceID(string $InstanceID) 设置实例id
  */
 class ModifySpartaProtectionModeRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class ModifySpartaProtectionModeRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 实例id
+     */
+    public $InstanceID;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Mode 防护状态：
 10：规则观察&&AI关闭模式，11：规则观察&&AI观察模式，12：规则观察&&AI拦截模式
 20：规则拦截&&AI关闭模式，21：规则拦截&&AI观察模式，22：规则拦截&&AI拦截模式
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
      * @param integer $Type 0是修改规则引擎状态，1是修改AI的状态
+     * @param string $InstanceID 实例id
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class ModifySpartaProtectionModeRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
     }
 }

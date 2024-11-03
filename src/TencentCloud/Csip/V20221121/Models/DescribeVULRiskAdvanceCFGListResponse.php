@@ -21,27 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVULRiskAdvanceCFGList返回参数结构体
  *
  * @method array getData() 获取配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getRiskLevelLists() 获取风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelLists(array $RiskLevelLists) 设置风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVULTypeLists() 获取漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVULTypeLists(array $VULTypeLists) 设置漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCheckFromLists() 获取识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckFromLists(array $CheckFromLists) 设置识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVulTagList() 获取漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulTagList(array $VulTagList) 设置漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +39,6 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
 {
     /**
      * @var array 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -60,25 +49,21 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
 
     /**
      * @var array 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevelLists;
 
     /**
      * @var array 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VULTypeLists;
 
     /**
      * @var array 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckFromLists;
 
     /**
      * @var array 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulTagList;
 
@@ -89,16 +74,11 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
 
     /**
      * @param array $Data 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数
      * @param array $RiskLevelLists 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VULTypeLists 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckFromLists 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VulTagList 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

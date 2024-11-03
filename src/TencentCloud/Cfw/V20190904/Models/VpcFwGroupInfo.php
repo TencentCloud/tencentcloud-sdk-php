@@ -21,109 +21,75 @@ use TencentCloud\Common\AbstractModel;
  * VPC防火墙(组)及防火墙实例详情信息
  *
  * @method string getFwGroupId() 获取防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwGroupId(string $FwGroupId) 设置防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwGroupName() 获取防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwGroupName(string $FwGroupName) 设置防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFwSwitchNum() 获取防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwSwitchNum(integer $FwSwitchNum) 设置防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegionLst() 获取防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionLst(array $RegionLst) 设置防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMode() 获取模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(integer $Mode) 设置模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitchMode() 获取防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchMode(integer $SwitchMode) 设置防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFwInstanceLst() 获取VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInstanceLst(array $FwInstanceLst) 设置VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwVpcCidr() 获取auto :自动选择
 如果为网段，则为用户自定义 192.168.0.0/20 
  * @method void setFwVpcCidr(string $FwVpcCidr) 设置auto :自动选择
 如果为网段，则为用户自定义 192.168.0.0/20 
  * @method string getCdcId() 获取cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcName() 获取cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcName(string $CdcName) 设置cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCrossUserMode() 获取跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrossUserMode(string $CrossUserMode) 设置跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNeedSwitchCcnOverlap() 获取云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedSwitchCcnOverlap(integer $NeedSwitchCcnOverlap) 设置云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCcnId() 获取云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(string $CcnId) 设置云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwGroupInfo extends AbstractModel
 {
     /**
      * @var string 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwGroupId;
 
     /**
      * @var string 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwGroupName;
 
     /**
      * @var integer 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwSwitchNum;
 
     /**
      * @var array 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionLst;
 
     /**
      * @var integer 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @var integer 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchMode;
 
     /**
      * @var array VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInstanceLst;
 
     /**
      * @var integer 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -135,63 +101,45 @@ class VpcFwGroupInfo extends AbstractModel
 
     /**
      * @var string cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
      * @var string cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcName;
 
     /**
      * @var string 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrossUserMode;
 
     /**
      * @var integer 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedSwitchCcnOverlap;
 
     /**
      * @var string 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
 
     /**
      * @param string $FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwGroupName 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FwSwitchNum 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionLst 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SwitchMode 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FwInstanceLst VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwVpcCidr auto :自动选择
 如果为网段，则为用户自定义 192.168.0.0/20 
      * @param string $CdcId cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcName cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CrossUserMode 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CcnId 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

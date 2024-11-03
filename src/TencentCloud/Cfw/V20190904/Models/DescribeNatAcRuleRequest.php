@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移值
  * @method string getIndex() 获取需要查询的索引，特定场景使用，可不填
  * @method void setIndex(string $Index) 设置需要查询的索引，特定场景使用，可不填
- * @method array getFilters() 获取过滤条件组合
- * @method void setFilters(array $Filters) 设置过滤条件组合
+ * @method array getFilters() 获取过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
+ * @method void setFilters(array $Filters) 设置过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
  * @method string getStartTime() 获取检索的起始时间，可不传
  * @method void setStartTime(string $StartTime) 设置检索的起始时间，可不传
  * @method string getEndTime() 获取检索的截止时间，可不传
  * @method void setEndTime(string $EndTime) 设置检索的截止时间，可不传
- * @method string getOrder() 获取desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
- * @method void setOrder(string $Order) 设置desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
- * @method string getBy() 获取排序所用到的字段
- * @method void setBy(string $By) 设置排序所用到的字段
+ * @method string getOrder() 获取desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
+ * @method void setOrder(string $Order) 设置desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
+ * @method string getBy() 获取排序所用到的字段，默认为sequence
+ * @method void setBy(string $By) 设置排序所用到的字段，默认为sequence
  */
 class DescribeNatAcRuleRequest extends AbstractModel
 {
@@ -55,7 +55,7 @@ class DescribeNatAcRuleRequest extends AbstractModel
     public $Index;
 
     /**
-     * @var array 过滤条件组合
+     * @var array 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
      */
     public $Filters;
 
@@ -70,12 +70,12 @@ class DescribeNatAcRuleRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * @var string desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
      */
     public $Order;
 
     /**
-     * @var string 排序所用到的字段
+     * @var string 排序所用到的字段，默认为sequence
      */
     public $By;
 
@@ -83,11 +83,11 @@ class DescribeNatAcRuleRequest extends AbstractModel
      * @param integer $Limit 每页条数
      * @param integer $Offset 偏移值
      * @param string $Index 需要查询的索引，特定场景使用，可不填
-     * @param array $Filters 过滤条件组合
+     * @param array $Filters 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
      * @param string $StartTime 检索的起始时间，可不传
      * @param string $EndTime 检索的截止时间，可不传
-     * @param string $Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param string $By 排序所用到的字段
+     * @param string $Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
+     * @param string $By 排序所用到的字段，默认为sequence
      */
     function __construct()
     {

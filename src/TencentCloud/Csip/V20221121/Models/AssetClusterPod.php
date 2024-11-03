@@ -27,69 +27,39 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNick() 获取租户昵称
  * @method void setNick(string $Nick) 设置租户昵称
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetId() 获取pod id
  * @method void setAssetId(string $AssetId) 设置pod id
  * @method string getAssetName() 获取pod名称
  * @method void setAssetName(string $AssetName) 设置pod名称
  * @method string getInstanceCreateTime() 获取pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCreateTime(string $InstanceCreateTime) 设置pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineId() 获取主机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineId(string $MachineId) 设置主机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineName(string $MachineName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodIp() 获取pod ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodIp(string $PodIp) 设置pod ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getServiceCount() 获取关联service数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceCount(integer $ServiceCount) 设置关联service数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getContainerCount() 获取关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerCount(integer $ContainerCount) 设置关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIp() 获取内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIp(string $PrivateIp) 设置内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsCore() 获取是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNewAsset() 获取是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetClusterPod extends AbstractModel
 {
@@ -110,7 +80,6 @@ class AssetClusterPod extends AbstractModel
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -126,85 +95,71 @@ class AssetClusterPod extends AbstractModel
 
     /**
      * @var string pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCreateTime;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineId;
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineName;
 
     /**
      * @var string pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodIp;
 
     /**
      * @var integer 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCount;
 
     /**
      * @var integer 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerCount;
 
     /**
      * @var string 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIp;
 
     /**
      * @var integer 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
     /**
      * @var integer 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAsset;
 
@@ -213,37 +168,22 @@ class AssetClusterPod extends AbstractModel
      * @param string $Uin 租户uin
      * @param string $Nick 租户昵称
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetId pod id
      * @param string $AssetName pod名称
      * @param string $InstanceCreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineId 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ServiceCount 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContainerCount 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsCore 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -59,23 +59,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVULURL() 获取风险点
  * @method void setVULURL(string $VULURL) 设置风险点
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFix() 获取修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFix(string $Fix) 设置修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEMGCVulType() 获取应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEMGCVulType(integer $EMGCVulType) 设置应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULViewVULRisk extends AbstractModel
 {
@@ -176,7 +168,6 @@ class VULViewVULRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
@@ -187,19 +178,16 @@ class VULViewVULRisk extends AbstractModel
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fix;
 
     /**
      * @var integer 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EMGCVulType;
 
@@ -224,14 +212,10 @@ class VULViewVULRisk extends AbstractModel
      * @param string $AppVersion 漏洞影响版本
      * @param string $VULURL 风险点
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户appid
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

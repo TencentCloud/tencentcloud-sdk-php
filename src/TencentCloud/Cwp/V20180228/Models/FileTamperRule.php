@@ -30,12 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileAction(string $FileAction) 设置监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperRule extends AbstractModel
 {
@@ -59,7 +57,6 @@ class FileTamperRule extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileAction;
 
@@ -71,7 +68,6 @@ class FileTamperRule extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartDetail(PartDesc $PartDetail) 设置部位详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPartDetailList() 获取部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPartDetailList(array $PartDetailList) 设置部位详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NormPart extends AbstractModel
 {
@@ -80,8 +84,15 @@ class NormPart extends AbstractModel
     /**
      * @var PartDesc 部位详情
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $PartDetail;
+
+    /**
+     * @var array 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PartDetailList;
 
     /**
      * @param string $Part 部位值
@@ -95,6 +106,8 @@ class NormPart extends AbstractModel
      * @param string $Upper 上级部位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PartDesc $PartDetail 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PartDetailList 部位详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +146,15 @@ class NormPart extends AbstractModel
         if (array_key_exists("PartDetail",$param) and $param["PartDetail"] !== null) {
             $this->PartDetail = new PartDesc();
             $this->PartDetail->deserialize($param["PartDetail"]);
+        }
+
+        if (array_key_exists("PartDetailList",$param) and $param["PartDetailList"] !== null) {
+            $this->PartDetailList = [];
+            foreach ($param["PartDetailList"] as $key => $value){
+                $obj = new PartDesc();
+                $obj->deserialize($value);
+                array_push($this->PartDetailList, $obj);
+            }
         }
     }
 }

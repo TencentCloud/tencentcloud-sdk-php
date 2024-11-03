@@ -22,60 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceName() 获取产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportHandledCount() 获取已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportHandledCount(integer $SupportHandledCount) 设置已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportTotalCount() 获取支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportTotalCount(integer $SupportTotalCount) 设置支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSupport() 获取是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupport(boolean $IsSupport) 设置是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceSupport extends AbstractModel
 {
     /**
      * @var string 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var integer 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportHandledCount;
 
     /**
      * @var integer 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportTotalCount;
 
     /**
      * @var boolean 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupport;
 
     /**
      * @param string $ServiceName 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportHandledCount 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportTotalCount 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupport 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

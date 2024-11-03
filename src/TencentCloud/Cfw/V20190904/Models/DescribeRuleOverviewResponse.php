@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRuleOverview返回参数结构体
  *
  * @method integer getAllTotal() 获取规则总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllTotal(integer $AllTotal) 设置规则总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyNum() 获取阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyNum(integer $StrategyNum) 设置阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartRuleNum() 获取启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartRuleNum(integer $StartRuleNum) 设置启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStopRuleNum() 获取停用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopRuleNum(integer $StopRuleNum) 设置停用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainingNum() 获取剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingNum(integer $RemainingNum) 设置剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeRuleOverviewResponse extends AbstractModel
 {
     /**
      * @var integer 规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllTotal;
 
     /**
      * @var integer 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyNum;
 
     /**
      * @var integer 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartRuleNum;
 
     /**
      * @var integer 停用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopRuleNum;
 
     /**
      * @var integer 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainingNum;
 
@@ -82,15 +67,10 @@ class DescribeRuleOverviewResponse extends AbstractModel
 
     /**
      * @param integer $AllTotal 规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyNum 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartRuleNum 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StopRuleNum 停用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainingNum 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

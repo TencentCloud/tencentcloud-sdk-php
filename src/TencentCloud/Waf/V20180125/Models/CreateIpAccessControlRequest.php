@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
- * @method string getJobType() 获取定时配置类型
- * @method void setJobType(string $JobType) 设置定时配置类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时配置详情
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时配置详情
  */
@@ -63,6 +63,7 @@ class CreateIpAccessControlRequest extends AbstractModel
 
     /**
      * @var integer valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
      */
     public $ValidTS;
 
@@ -87,7 +88,7 @@ class CreateIpAccessControlRequest extends AbstractModel
     public $Note;
 
     /**
-     * @var string 定时配置类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -106,7 +107,7 @@ class CreateIpAccessControlRequest extends AbstractModel
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $SourceType 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
      * @param string $Note 备注
-     * @param string $JobType 定时配置类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时配置详情
      */
     function __construct()

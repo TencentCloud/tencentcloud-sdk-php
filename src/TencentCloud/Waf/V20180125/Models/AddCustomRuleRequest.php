@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getDomain() 获取需要添加策略的域名
  * @method void setDomain(string $Domain) 设置需要添加策略的域名
- * @method string getActionType() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
- * @method void setActionType(string $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+ * @method string getActionType() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+ * @method void setActionType(string $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
  * @method string getRedirect() 获取如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method void setRedirect(string $Redirect) 设置如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
  * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
- * @method string getBypass() 获取放行的详情
- * @method void setBypass(string $Bypass) 设置放行的详情
+ * @method string getBypass() 获取放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
+ * @method void setBypass(string $Bypass) 设置放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
  * @method string getEventId() 获取添加规则的来源，默认为空
  * @method void setEventId(string $EventId) 设置添加规则的来源，默认为空
  * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
@@ -76,7 +76,7 @@ class AddCustomRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public $ActionType;
 
@@ -96,7 +96,7 @@ class AddCustomRuleRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var string 放行的详情
+     * @var string 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      */
     public $Bypass;
 
@@ -140,11 +140,11 @@ class AddCustomRuleRequest extends AbstractModel
      * @param string $SortId 优先级
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
-     * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      * @param string $Redirect 如果动作是重定向，则表示重定向的地址；其他情况可以为空
      * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
-     * @param string $Bypass 放行的详情
+     * @param string $Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      * @param string $EventId 添加规则的来源，默认为空
      * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 规则执行的时间

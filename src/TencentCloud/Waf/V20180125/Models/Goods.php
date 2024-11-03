@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method GoodsDetail getGoodsDetail() 获取商品明细
  * @method void setGoodsDetail(GoodsDetail $GoodsDetail) 设置商品明细
  * @method integer getProjectId() 获取默认为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置默认为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGoodsCategoryId() 获取计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsCategoryId(integer $GoodsCategoryId) 设置计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPlatform() 获取平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlatform(integer $Platform) 设置平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Goods extends AbstractModel
 {
@@ -62,25 +54,21 @@ class Goods extends AbstractModel
 
     /**
      * @var integer 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GoodsCategoryId;
 
     /**
      * @var integer 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Platform;
 
     /**
      * @var integer 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -89,13 +77,9 @@ class Goods extends AbstractModel
      * @param integer $GoodsNum 商品数量
      * @param GoodsDetail $GoodsDetail 商品明细
      * @param integer $ProjectId 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GoodsCategoryId 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Platform 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

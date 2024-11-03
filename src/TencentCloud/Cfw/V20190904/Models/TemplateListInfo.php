@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 地址模板列表数据
  *
  * @method string getUuid() 获取模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpString() 获取IP模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpString(string $IpString) 设置IP模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInsertTime() 获取插入时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsertTime(string $InsertTime) 设置插入时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRulesNum() 获取关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRulesNum(integer $RulesNum) 设置关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateId() 获取模板Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置模板Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocolType() 获取协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIPNum() 获取模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPNum(integer $IPNum) 设置模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpVersion() 获取IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpVersion(integer $IpVersion) 设置IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListInfo extends AbstractModel
 {
     /**
      * @var string 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @var string IP模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpString;
 
     /**
      * @var string 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RulesNum;
 
     /**
      * @var string 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var string 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolType;
 
     /**
      * @var integer 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPNum;
 
     /**
      * @var integer IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpVersion;
 
     /**
      * @param string $Uuid 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpString IP模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InsertTime 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RulesNum 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IPNum 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IpVersion IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

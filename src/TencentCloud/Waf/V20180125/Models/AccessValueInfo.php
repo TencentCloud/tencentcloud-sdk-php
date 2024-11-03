@@ -21,60 +21,44 @@ use TencentCloud\Common\AbstractModel;
  * 用于DescribeAccessIndex接口的出参
  *
  * @method string getType() 获取字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTokenizer() 获取字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenizer(string $Tokenizer) 设置字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSqlFlag() 获取字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSqlFlag(boolean $SqlFlag) 设置字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getContainZH() 获取是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessValueInfo extends AbstractModel
 {
     /**
      * @var string 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tokenizer;
 
     /**
      * @var boolean 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlFlag;
 
     /**
      * @var boolean 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainZH;
 
     /**
      * @param string $Type 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SqlFlag 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

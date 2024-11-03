@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
- * @method string getBeginTime() 获取预查询慢日志的起始时间。
- * @method void setBeginTime(string $BeginTime) 设置预查询慢日志的起始时间。
- * @method string getEndTime() 获取预查询慢日志的结束时间。
- * @method void setEndTime(string $EndTime) 设置预查询慢日志的结束时间。
+ * @method string getBeginTime() 获取预查询慢日志的起始时间，查询时间最大跨度30天。
+ * @method void setBeginTime(string $BeginTime) 设置预查询慢日志的起始时间，查询时间最大跨度30天。
+ * @method string getEndTime() 获取预查询慢日志的结束时间，查询时间最大跨度30天
+ * @method void setEndTime(string $EndTime) 设置预查询慢日志的结束时间，查询时间最大跨度30天
  * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值，单位：毫秒。
  * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值，单位：毫秒。
- * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
- * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+ * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20，最大100。
+ * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20，最大100。
  * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getRole() 获取节点所属角色。
@@ -50,12 +50,12 @@ class DescribeSlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 预查询慢日志的起始时间。
+     * @var string 预查询慢日志的起始时间，查询时间最大跨度30天。
      */
     public $BeginTime;
 
     /**
-     * @var string 预查询慢日志的结束时间。
+     * @var string 预查询慢日志的结束时间，查询时间最大跨度30天
      */
     public $EndTime;
 
@@ -65,7 +65,7 @@ class DescribeSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+     * @var integer 每个页面展示的慢查询条数，默认值为20，最大100。
      */
     public $Limit;
 
@@ -84,10 +84,10 @@ class DescribeSlowLogRequest extends AbstractModel
     /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
-     * @param string $BeginTime 预查询慢日志的起始时间。
-     * @param string $EndTime 预查询慢日志的结束时间。
+     * @param string $BeginTime 预查询慢日志的起始时间，查询时间最大跨度30天。
+     * @param string $EndTime 预查询慢日志的结束时间，查询时间最大跨度30天
      * @param integer $MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
-     * @param integer $Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+     * @param integer $Limit 每个页面展示的慢查询条数，默认值为20，最大100。
      * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $Role 节点所属角色。
 - master：主节点。

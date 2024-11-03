@@ -37,7 +37,6 @@ use TencentCloud\Common\AbstractModel;
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsCategoryId(integer $GoodsCategoryId) 设置订单类型ID，用来唯一标识一个业务的一种场景（总共三种场景：新购、配置变更、续费）
 高级版: 102375(新购),102376(续费),102377(变配)
 企业版 : 102378(新购),102379(续费),102380(变配)
@@ -51,15 +50,12 @@ use TencentCloud\Common\AbstractModel;
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GoodNews extends AbstractModel
 {
@@ -87,7 +83,6 @@ class GoodNews extends AbstractModel
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GoodsCategoryId;
 
@@ -95,7 +90,6 @@ class GoodNews extends AbstractModel
      * @var integer 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -115,11 +109,9 @@ class GoodNews extends AbstractModel
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

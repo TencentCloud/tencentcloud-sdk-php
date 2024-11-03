@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 批量多域名黑白名单列表Ip
  *
  * @method string getId() 获取mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionType() 获取黑名单42或白名单40
  * @method void setActionType(integer $ActionType) 设置黑名单42或白名单40
  * @method string getIp() 获取黑白名单的IP
@@ -39,39 +37,24 @@ use TencentCloud\Common\AbstractModel;
  * @method array getHosts() 获取域名列表
  * @method void setHosts(array $Hosts) 设置域名列表
  * @method integer getRuleId() 获取55101145
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置55101145
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpList() 获取IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpList(array $IpList) 设置IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobType() 获取定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobType(string $JobType) 设置定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCronType() 获取周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronType(string $CronType) 设置周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method JobDateTime getJobDateTime() 获取定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidStatus() 获取生效状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidStatus(integer $ValidStatus) 设置生效状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchIpAccessControlItem extends AbstractModel
 {
     /**
      * @var string mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
@@ -112,49 +95,41 @@ class BatchIpAccessControlItem extends AbstractModel
 
     /**
      * @var integer 55101145
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var array IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpList;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobType;
 
     /**
      * @var string 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronType;
 
     /**
      * @var JobDateTime 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobDateTime;
 
     /**
      * @var integer 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidStatus;
 
     /**
      * @param string $Id mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 黑名单42或白名单40
      * @param string $Ip 黑白名单的IP
      * @param string $Note 备注
@@ -163,19 +138,12 @@ class BatchIpAccessControlItem extends AbstractModel
      * @param integer $ValidTs 超时时间
      * @param array $Hosts 域名列表
      * @param integer $RuleId 55101145
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CronType 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobDateTime $JobDateTime 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidStatus 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

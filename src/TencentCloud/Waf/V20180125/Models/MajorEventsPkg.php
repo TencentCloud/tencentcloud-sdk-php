@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 重保防护资源信息
  *
  * @method string getResourceIds() 获取资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(string $ResourceIds) 设置资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(integer $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInquireNum() 获取申请数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInquireNum(integer $InquireNum) 设置申请数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedNum() 获取使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取续费标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingItem() 获取计费项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItem(string $BillingItem) 设置计费项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHWState() 获取护网包状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHWState(integer $HWState) 设置护网包状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MajorEventsPkg extends AbstractModel
 {
     /**
      * @var string 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 申请数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InquireNum;
 
     /**
      * @var integer 使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedNum;
 
     /**
      * @var integer 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var string 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingItem;
 
     /**
      * @var integer 护网包状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HWState;
 
     /**
      * @param string $ResourceIds 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InquireNum 申请数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedNum 使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HWState 护网包状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

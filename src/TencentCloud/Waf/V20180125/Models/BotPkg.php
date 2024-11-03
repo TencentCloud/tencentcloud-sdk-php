@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * Bot资源信息
  *
  * @method string getResourceIds() 获取资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(string $ResourceIds) 设置资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(integer $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInquireNum() 获取申请数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInquireNum(integer $InquireNum) 设置申请数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedNum() 获取使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取子产品code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置子产品code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取续费标志	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置续费标志	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBotCPWaf() 获取购买页bot6折
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotCPWaf(integer $BotCPWaf) 设置购买页bot6折
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBotNPWaf() 获取控制台买bot5折
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotNPWaf(integer $BotNPWaf) 设置控制台买bot5折
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsBotTrial() 获取7天bot试用标识 1 试用 0 没有试用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBotTrial(integer $IsBotTrial) 设置7天bot试用标识 1 试用 0 没有试用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotPkg extends AbstractModel
 {
     /**
      * @var string 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 申请数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InquireNum;
 
     /**
      * @var integer 使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedNum;
 
     /**
      * @var string 子产品code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 续费标志	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var integer 购买页bot6折
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotCPWaf;
 
     /**
      * @var integer 控制台买bot5折
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotNPWaf;
 
     /**
      * @var integer 7天bot试用标识 1 试用 0 没有试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBotTrial;
 
     /**
      * @param string $ResourceIds 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InquireNum 申请数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedNum 使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 子产品code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 续费标志	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BotCPWaf 购买页bot6折
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BotNPWaf 控制台买bot5折
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsBotTrial 7天bot试用标识 1 试用 0 没有试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Tiga引擎中Mainclass的TypeID和防护模式
  *
  * @method string getTypeID() 获取MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeID(string $TypeID) 设置MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMode() 获取防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(integer $Mode) 设置防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TigaMainClassMode extends AbstractModel
 {
     /**
      * @var string MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TypeID;
 
     /**
      * @var integer 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @param string $TypeID MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mode 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

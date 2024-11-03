@@ -73,9 +73,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCoreVersion() 获取内核版本
  * @method void setCoreVersion(string $CoreVersion) 设置内核版本
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScreenMachine extends AbstractModel
 {
@@ -187,7 +185,6 @@ class ScreenMachine extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -219,7 +216,6 @@ class ScreenMachine extends AbstractModel
      * @param float $MemSize 内存容量 GB
      * @param string $CoreVersion 内核版本
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

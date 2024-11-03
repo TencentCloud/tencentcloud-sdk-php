@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * NAT防火墙Dnat规则列表
  *
  * @method integer getId() 获取id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpProtocol() 获取网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIpAddress() 获取弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublicPort() 获取公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicPort(integer $PublicPort) 设置公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIpAddress() 获取内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPrivatePort() 获取内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivatePort(integer $PrivatePort) 设置内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsReferenced() 获取是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsReferenced(integer $IsReferenced) 设置是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwInsId() 获取所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsId(string $FwInsId) 设置所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNatGwId() 获取关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGwId(string $NatGwId) 设置关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescNatDnatRule extends AbstractModel
 {
     /**
      * @var integer id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpProtocol;
 
     /**
      * @var string 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddress;
 
     /**
      * @var integer 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicPort;
 
     /**
      * @var string 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddress;
 
     /**
      * @var integer 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivatePort;
 
     /**
      * @var string NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsReferenced;
 
     /**
      * @var string 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsId;
 
     /**
      * @var string 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGwId;
 
     /**
      * @param integer $Id id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpProtocol 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIpAddress 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PublicPort 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIpAddress 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PrivatePort 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsReferenced 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwInsId 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NatGwId 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

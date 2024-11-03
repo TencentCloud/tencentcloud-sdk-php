@@ -51,37 +51,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPostCKafkaStatus() 获取kafka投递开关
  * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置kafka投递开关
  * @method string getType() 获取对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取对象地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置对象地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxy() 获取代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxy(integer $Proxy) 设置代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpHeaders() 获取指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBotStatus() 获取bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotStatus(integer $BotStatus) 设置bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiStatus() 获取api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiStatus(integer $ApiStatus) 设置api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getObjectFlowMode() 获取对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbObject extends AbstractModel
 {
@@ -162,49 +146,41 @@ class ClbObject extends AbstractModel
 
     /**
      * @var string 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var integer 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Proxy;
 
     /**
      * @var array 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpHeaders;
 
     /**
      * @var integer bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotStatus;
 
     /**
      * @var integer api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiStatus;
 
     /**
      * @var integer 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectFlowMode;
 
     /**
      * @var integer 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumericalVpcId;
 
@@ -225,21 +201,13 @@ class ClbObject extends AbstractModel
      * @param integer $PostCLSStatus clb投递开关
      * @param integer $PostCKafkaStatus kafka投递开关
      * @param string $Type 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BotStatus bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiStatus api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

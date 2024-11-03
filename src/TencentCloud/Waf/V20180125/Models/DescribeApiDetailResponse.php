@@ -21,53 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * DescribeApiDetail返回参数结构体
  *
  * @method string getLog() 获取请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getParameterList() 获取请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterList(array $ParameterList) 设置请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScene() 获取当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSensitiveFields() 获取敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFields(array $SensitiveFields) 设置敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsActive() 获取7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsActive(boolean $IsActive) 设置7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpCount() 获取访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpCount(integer $IpCount) 设置访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionCount() 获取访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionCount(integer $RegionCount) 设置访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventCount() 获取关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventCount(integer $EventCount) 设置关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveCount() 获取涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveCount(integer $SensitiveCount) 设置涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRspLog() 获取响应体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRspLog(string $RspLog) 设置响应体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxQPS() 获取昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxQPS(integer $MaxQPS) 设置昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApiDetailSampleHistory() 获取历史样例
  * @method void setApiDetailSampleHistory(array $ApiDetailSampleHistory) 设置历史样例
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -77,73 +53,61 @@ class DescribeApiDetailResponse extends AbstractModel
 {
     /**
      * @var string 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Log;
 
     /**
      * @var array 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterList;
 
     /**
      * @var string 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
     /**
      * @var array 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFields;
 
     /**
      * @var boolean 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsActive;
 
     /**
      * @var integer 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpCount;
 
     /**
      * @var integer 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionCount;
 
     /**
      * @var integer 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCount;
 
     /**
      * @var integer 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveCount;
 
     /**
      * @var integer 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RspLog;
 
     /**
      * @var integer 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxQPS;
 
@@ -159,29 +123,17 @@ class DescribeApiDetailResponse extends AbstractModel
 
     /**
      * @param string $Log 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ParameterList 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scene 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SensitiveFields 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsActive 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IpCount 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionCount 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventCount 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveCount 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RspLog 响应体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxQPS 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApiDetailSampleHistory 历史样例
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

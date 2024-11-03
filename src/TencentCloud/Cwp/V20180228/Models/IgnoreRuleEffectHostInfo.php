@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 忽略检测项影响主机信息
  *
  * @method string getHostName() 获取主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(integer $EventId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IgnoreRuleEffectHostInfo extends AbstractModel
 {
     /**
      * @var string 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var integer 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var array 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
      * @var integer 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
 
     /**
      * @var integer 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var string 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @param string $HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -53,13 +53,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrom() 获取识别来源，详细看枚举返回。
  * @method void setFrom(string $From) 设置识别来源，详细看枚举返回。
  */
@@ -147,13 +143,11 @@ class AssetViewPortRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -180,9 +174,7 @@ class AssetViewPortRisk extends AbstractModel
      * @param string $InstanceName 实例名
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $From 识别来源，详细看枚举返回。
      */
     function __construct()

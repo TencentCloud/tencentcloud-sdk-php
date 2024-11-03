@@ -45,7 +45,6 @@ use TencentCloud\Ms\V20180408\Models as Models;
  * @method Models\DescribeResourceInstancesResponse DescribeResourceInstances(Models\DescribeResourceInstancesRequest $req) 获取某个用户的所有资源信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeShieldInstancesResponse DescribeShieldInstances(Models\DescribeShieldInstancesRequest $req) 本接口用于查看app列表。
 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
-
  * @method Models\DescribeShieldPlanInstanceResponse DescribeShieldPlanInstance(Models\DescribeShieldPlanInstanceRequest $req) 查询加固策略。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeShieldResultResponse DescribeShieldResult(Models\DescribeShieldResultRequest $req) 通过唯一标识获取加固的结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(Models\DescribeUrlDetectionResultRequest $req) 移动安全-网址检测服务

@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyTime() 获取修复时间
  * @method void setModifyTime(string $ModifyTime) 设置修复时间
  * @method string getFailReason() 获取修复失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置修复失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulFixStatusHostInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class VulFixStatusHostInfo extends AbstractModel
 
     /**
      * @var string 修复失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
@@ -75,7 +72,6 @@ class VulFixStatusHostInfo extends AbstractModel
      * @param integer $Status 状态：0-初始状态；1-已下发任务（修复中）2-完成（成功）；3-修复失败（失败）4-快照创建失败 导致修复失败（未修复）；
      * @param string $ModifyTime 修复时间
      * @param string $FailReason 修复失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

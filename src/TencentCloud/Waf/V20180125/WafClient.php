@@ -44,9 +44,6 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteCustomRuleResponse DeleteCustomRule(Models\DeleteCustomRuleRequest $req) 删除自定义规则
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) 删除精准白名单规则
  * @method Models\DeleteDomainWhiteRulesResponse DeleteDomainWhiteRules(Models\DeleteDomainWhiteRulesRequest $req) 删除域名规则白名单
- * @method Models\DeleteDownloadRecordResponse DeleteDownloadRecord(Models\DeleteDownloadRecordRequest $req) 废弃接口，无有效调用
-
-删除访问日志下载记录
  * @method Models\DeleteHostResponse DeleteHost(Models\DeleteHostRequest $req) 删除负载均衡型域名，支持批量操作。
  * @method Models\DeleteIpAccessControlResponse DeleteIpAccessControl(Models\DeleteIpAccessControlRequest $req) Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) Waf IP黑白名单最新版本删除接口

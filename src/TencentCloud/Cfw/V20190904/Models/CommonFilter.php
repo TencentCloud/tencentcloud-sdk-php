@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取检索的键值
  * @method void setName(string $Name) 设置检索的键值
- * @method array getValues() 获取检索的值，各检索值间为OR关系
- * @method void setValues(array $Values) 设置检索的值，各检索值间为OR关系
  * @method integer getOperatorType() 获取枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
     //等于
@@ -62,6 +60,8 @@ enum FilterOperatorType {
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
 }
+ * @method array getValues() 获取检索的值，各检索值间为OR关系
+ * @method void setValues(array $Values) 设置检索的值，各检索值间为OR关系
  */
 class CommonFilter extends AbstractModel
 {
@@ -69,11 +69,6 @@ class CommonFilter extends AbstractModel
      * @var string 检索的键值
      */
     public $Name;
-
-    /**
-     * @var array 检索的值，各检索值间为OR关系
-     */
-    public $Values;
 
     /**
      * @var integer 枚举类型，代表Name与Values之间的匹配关系
@@ -99,8 +94,12 @@ enum FilterOperatorType {
     public $OperatorType;
 
     /**
+     * @var array 检索的值，各检索值间为OR关系
+     */
+    public $Values;
+
+    /**
      * @param string $Name 检索的键值
-     * @param array $Values 检索的值，各检索值间为OR关系
      * @param integer $OperatorType 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
     //等于
@@ -120,6 +119,7 @@ enum FilterOperatorType {
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
 }
+     * @param array $Values 检索的值，各检索值间为OR关系
      */
     function __construct()
     {
@@ -138,12 +138,12 @@ enum FilterOperatorType {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
-
         if (array_key_exists("OperatorType",$param) and $param["OperatorType"] !== null) {
             $this->OperatorType = $param["OperatorType"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

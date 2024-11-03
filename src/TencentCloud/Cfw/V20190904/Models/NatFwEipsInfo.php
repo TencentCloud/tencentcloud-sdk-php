@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEip() 获取弹性公网ip
  * @method void setEip(string $Eip) 设置弹性公网ip
  * @method string getNatGatewayId() 获取所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayId(string $NatGatewayId) 设置所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNatGatewayName() 获取Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayName(string $NatGatewayName) 设置Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatFwEipsInfo extends AbstractModel
 {
@@ -40,22 +36,18 @@ class NatFwEipsInfo extends AbstractModel
 
     /**
      * @var string 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGatewayId;
 
     /**
      * @var string Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGatewayName;
 
     /**
      * @param string $Eip 弹性公网ip
      * @param string $NatGatewayId 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NatGatewayName Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

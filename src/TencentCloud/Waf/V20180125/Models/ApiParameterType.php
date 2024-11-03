@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * api请求参数类型
  *
  * @method string getParameterName() 获取参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取参数位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置参数位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabel() 获取数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(array $Label) 设置数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsPan() 获取是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPan(integer $IsPan) 设置是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAuth() 获取是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAuth(integer $IsAuth) 设置是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiParameterType extends AbstractModel
 {
     /**
      * @var string 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
     /**
      * @var string 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var array 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var integer 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var integer 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPan;
 
     /**
      * @var integer 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAuth;
 
     /**
      * @param string $ParameterName 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Label 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsPan 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAuth 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

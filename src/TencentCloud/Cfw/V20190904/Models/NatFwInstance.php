@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNatinsName() 获取nat实例名称
  * @method void setNatinsName(string $NatinsName) 设置nat实例名称
  * @method string getRegion() 获取实例所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置实例所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFwMode() 获取0:新增模式，1:接入模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwMode(integer $FwMode) 设置0:新增模式，1:接入模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取0:正常状态， 1: 正在创建
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0:正常状态， 1: 正在创建
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNatIp() 获取nat公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatIp(string $NatIp) 设置nat公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatFwInstance extends AbstractModel
 {
@@ -55,25 +47,21 @@ class NatFwInstance extends AbstractModel
 
     /**
      * @var string 实例所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var integer 0:新增模式，1:接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwMode;
 
     /**
      * @var integer 0:正常状态， 1: 正在创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string nat公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatIp;
 
@@ -81,13 +69,9 @@ class NatFwInstance extends AbstractModel
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FwMode 0:新增模式，1:接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0:正常状态， 1: 正在创建
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NatIp nat公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

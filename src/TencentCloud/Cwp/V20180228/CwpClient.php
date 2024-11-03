@@ -211,7 +211,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(Models\DescribeCloudProtectServiceOrderListRequest $req) 云护航计费产品已下线
 
 查询云护航服务订单列表
- * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
+ * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 接口已无效
+
+本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) 获取漏洞防御事件详情
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) 获取专线agent安装命令，包含token
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果

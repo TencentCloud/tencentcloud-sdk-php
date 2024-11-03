@@ -19,43 +19,22 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 告警中心概览数据
-
  *
- * @method integer getOutNum() 获取失陷主机
- * @method void setOutNum(integer $OutNum) 设置失陷主机
- * @method integer getHandleNum() 获取待处置告警
- * @method void setHandleNum(integer $HandleNum) 设置待处置告警
- * @method integer getVulNum() 获取漏洞攻击
- * @method void setVulNum(integer $VulNum) 设置漏洞攻击
- * @method integer getNetworkNum() 获取网络探测
- * @method void setNetworkNum(integer $NetworkNum) 设置网络探测
  * @method integer getBanNum() 获取封禁列表
  * @method void setBanNum(integer $BanNum) 设置封禁列表
  * @method integer getBruteForceNum() 获取暴力破解
  * @method void setBruteForceNum(integer $BruteForceNum) 设置暴力破解
+ * @method integer getHandleNum() 获取待处置告警
+ * @method void setHandleNum(integer $HandleNum) 设置待处置告警
+ * @method integer getNetworkNum() 获取网络探测
+ * @method void setNetworkNum(integer $NetworkNum) 设置网络探测
+ * @method integer getOutNum() 获取失陷主机
+ * @method void setOutNum(integer $OutNum) 设置失陷主机
+ * @method integer getVulNum() 获取漏洞攻击
+ * @method void setVulNum(integer $VulNum) 设置漏洞攻击
  */
 class TLogInfo extends AbstractModel
 {
-    /**
-     * @var integer 失陷主机
-     */
-    public $OutNum;
-
-    /**
-     * @var integer 待处置告警
-     */
-    public $HandleNum;
-
-    /**
-     * @var integer 漏洞攻击
-     */
-    public $VulNum;
-
-    /**
-     * @var integer 网络探测
-     */
-    public $NetworkNum;
-
     /**
      * @var integer 封禁列表
      */
@@ -67,12 +46,32 @@ class TLogInfo extends AbstractModel
     public $BruteForceNum;
 
     /**
-     * @param integer $OutNum 失陷主机
-     * @param integer $HandleNum 待处置告警
-     * @param integer $VulNum 漏洞攻击
-     * @param integer $NetworkNum 网络探测
+     * @var integer 待处置告警
+     */
+    public $HandleNum;
+
+    /**
+     * @var integer 网络探测
+     */
+    public $NetworkNum;
+
+    /**
+     * @var integer 失陷主机
+     */
+    public $OutNum;
+
+    /**
+     * @var integer 漏洞攻击
+     */
+    public $VulNum;
+
+    /**
      * @param integer $BanNum 封禁列表
      * @param integer $BruteForceNum 暴力破解
+     * @param integer $HandleNum 待处置告警
+     * @param integer $NetworkNum 网络探测
+     * @param integer $OutNum 失陷主机
+     * @param integer $VulNum 漏洞攻击
      */
     function __construct()
     {
@@ -87,28 +86,28 @@ class TLogInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OutNum",$param) and $param["OutNum"] !== null) {
-            $this->OutNum = $param["OutNum"];
-        }
-
-        if (array_key_exists("HandleNum",$param) and $param["HandleNum"] !== null) {
-            $this->HandleNum = $param["HandleNum"];
-        }
-
-        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
-            $this->VulNum = $param["VulNum"];
-        }
-
-        if (array_key_exists("NetworkNum",$param) and $param["NetworkNum"] !== null) {
-            $this->NetworkNum = $param["NetworkNum"];
-        }
-
         if (array_key_exists("BanNum",$param) and $param["BanNum"] !== null) {
             $this->BanNum = $param["BanNum"];
         }
 
         if (array_key_exists("BruteForceNum",$param) and $param["BruteForceNum"] !== null) {
             $this->BruteForceNum = $param["BruteForceNum"];
+        }
+
+        if (array_key_exists("HandleNum",$param) and $param["HandleNum"] !== null) {
+            $this->HandleNum = $param["HandleNum"];
+        }
+
+        if (array_key_exists("NetworkNum",$param) and $param["NetworkNum"] !== null) {
+            $this->NetworkNum = $param["NetworkNum"];
+        }
+
+        if (array_key_exists("OutNum",$param) and $param["OutNum"] !== null) {
+            $this->OutNum = $param["OutNum"];
+        }
+
+        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
+            $this->VulNum = $param["VulNum"];
         }
     }
 }

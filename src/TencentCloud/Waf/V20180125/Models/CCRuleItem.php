@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cc规则
  *
- * @method integer getActionType() 获取动作
- * @method void setActionType(integer $ActionType) 设置动作
+ * @method integer getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
+ * @method void setActionType(integer $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
  * @method integer getAdvance() 获取高级模式
  * @method void setAdvance(integer $Advance) 设置高级模式
  * @method integer getInterval() 获取时间周期
@@ -47,30 +47,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOptionsArr(string $OptionsArr) 设置高级参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLength() 获取url长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLength(integer $Length) 设置url长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSessionApplied() 获取关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCRuleItem extends AbstractModel
 {
     /**
-     * @var integer 动作
+     * @var integer 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      */
     public $ActionType;
 
@@ -132,36 +122,31 @@ class CCRuleItem extends AbstractModel
 
     /**
      * @var integer url长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Length;
 
     /**
      * @var integer 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var array 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionApplied;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @param integer $ActionType 动作
+     * @param integer $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      * @param integer $Advance 高级模式
      * @param integer $Interval 时间周期
      * @param integer $Limit 限制次数
@@ -175,15 +160,10 @@ class CCRuleItem extends AbstractModel
      * @param string $OptionsArr 高级参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Length url长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SessionApplied 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

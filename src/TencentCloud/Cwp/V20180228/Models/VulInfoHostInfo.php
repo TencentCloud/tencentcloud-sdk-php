@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 批量修复漏洞二次弹窗
  *
  * @method string getHostName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportAutoFix() 获取0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) 设置0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoHostInfo extends AbstractModel
 {
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
     /**
      * @var array 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var integer 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportAutoFix;
 
     /**
      * @var string 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportAutoFix 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

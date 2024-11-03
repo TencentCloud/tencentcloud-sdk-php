@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * waf斯巴达-编辑防护域名中的端口结构
  *
- * @method integer getNginxServerId() 获取nginx Id
- * @method void setNginxServerId(integer $NginxServerId) 设置nginx Id
+ * @method integer getNginxServerId() 获取分配的服务器id
+ * @method void setNginxServerId(integer $NginxServerId) 设置分配的服务器id
  * @method string getPort() 获取端口
  * @method void setPort(string $Port) 设置端口
  * @method string getProtocol() 获取协议
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class SpartaProtectionPort extends AbstractModel
 {
     /**
-     * @var integer nginx Id
+     * @var integer 分配的服务器id
      */
     public $NginxServerId;
 
@@ -59,7 +59,7 @@ class SpartaProtectionPort extends AbstractModel
     public $UpstreamProtocol;
 
     /**
-     * @param integer $NginxServerId nginx Id
+     * @param integer $NginxServerId 分配的服务器id
      * @param string $Port 端口
      * @param string $Protocol 协议
      * @param string $UpstreamPort 后端端口

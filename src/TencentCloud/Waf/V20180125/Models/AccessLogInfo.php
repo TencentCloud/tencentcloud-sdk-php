@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 单条日志数据描述
  *
  * @method integer getTime() 获取日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(integer $Time) 设置日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
@@ -59,7 +57,6 @@ class AccessLogInfo extends AbstractModel
 {
     /**
      * @var integer 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
@@ -108,7 +105,6 @@ class AccessLogInfo extends AbstractModel
 
     /**
      * @param integer $Time 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 日志主题名称

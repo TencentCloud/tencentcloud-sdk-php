@@ -79,91 +79,49 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEdition() 获取clb或saas
  * @method void setEdition(string $Edition) 设置clb或saas
  * @method FraudPkg getFraudPkg() 获取业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFraudPkg(FraudPkg $FraudPkg) 设置业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BotPkg getBotPkg() 获取Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotPkg(BotPkg $BotPkg) 设置Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BotQPS getBotQPS() 获取bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotQPS(BotQPS $BotQPS) 设置bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBilling() 获取qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBilling(integer $ElasticBilling) 设置qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackLogPost() 获取攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLogPost(integer $AttackLogPost) 设置攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxBandwidth() 获取带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxBandwidth(integer $MaxBandwidth) 设置带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAPISecurity() 获取api安全是否购买
  * @method void setAPISecurity(integer $APISecurity) 设置api安全是否购买
  * @method integer getQpsStandard() 获取购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQpsStandard(integer $QpsStandard) 设置购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandwidthStandard() 获取购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthStandard(integer $BandwidthStandard) 设置购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSandboxQps() 获取实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSandboxQps(integer $SandboxQps) 设置实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAPISecurityTrial() 获取是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAPISecurityTrial(integer $IsAPISecurityTrial) 设置是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MajorEventsPkg getMajorEventsPkg() 获取重保包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMajorEventsPkg(MajorEventsPkg $MajorEventsPkg) 设置重保包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HybridPkg getHybridPkg() 获取混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHybridPkg(HybridPkg $HybridPkg) 设置混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ApiPkg getApiPkg() 获取API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiPkg(ApiPkg $ApiPkg) 设置API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MiniPkg getMiniPkg() 获取小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniPkg(MiniPkg $MiniPkg) 设置小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMiniQpsStandard() 获取小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniQpsStandard(integer $MiniQpsStandard) 设置小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMiniMaxQPS() 获取小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniMaxQPS(integer $MiniMaxQPS) 设置小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastQpsExceedTime() 获取最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastQpsExceedTime(string $LastQpsExceedTime) 设置最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MiniExtendPkg getMiniExtendPkg() 获取小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniExtendPkg(MiniExtendPkg $MiniExtendPkg) 设置小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingItem() 获取计费项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItem(string $BillingItem) 设置计费项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFreeDelayFlag() 获取实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -274,37 +232,31 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var FraudPkg 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FraudPkg;
 
     /**
      * @var BotPkg Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotPkg;
 
     /**
      * @var BotQPS bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotQPS;
 
     /**
      * @var integer qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBilling;
 
     /**
      * @var integer 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackLogPost;
 
     /**
      * @var integer 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxBandwidth;
 
@@ -315,91 +267,76 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var integer 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QpsStandard;
 
     /**
      * @var integer 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthStandard;
 
     /**
      * @var integer 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SandboxQps;
 
     /**
      * @var integer 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAPISecurityTrial;
 
     /**
      * @var MajorEventsPkg 重保包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MajorEventsPkg;
 
     /**
      * @var HybridPkg 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HybridPkg;
 
     /**
      * @var ApiPkg API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiPkg;
 
     /**
      * @var MiniPkg 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniPkg;
 
     /**
      * @var integer 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniQpsStandard;
 
     /**
      * @var integer 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniMaxQPS;
 
     /**
      * @var string 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastQpsExceedTime;
 
     /**
      * @var MiniExtendPkg 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniExtendPkg;
 
     /**
      * @var string 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingItem;
 
     /**
      * @var integer 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeDelayFlag;
 
@@ -434,48 +371,27 @@ class InstanceInfo extends AbstractModel
      * @param integer $AppId 用户appid
      * @param string $Edition clb或saas
      * @param FraudPkg $FraudPkg 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotPkg $BotPkg Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotQPS $BotQPS bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBilling qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLogPost 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $APISecurity api安全是否购买
      * @param integer $QpsStandard 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BandwidthStandard 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SandboxQps 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAPISecurityTrial 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MajorEventsPkg $MajorEventsPkg 重保包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HybridPkg $HybridPkg 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiPkg $ApiPkg API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniPkg $MiniPkg 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MiniQpsStandard 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MiniMaxQPS 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastQpsExceedTime 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniExtendPkg $MiniExtendPkg 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FreeDelayFlag 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

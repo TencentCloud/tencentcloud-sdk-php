@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOrganizationUserInfo返回参数结构体
  *
  * @method integer getTotalCount() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getJoinTypeLst() 获取加入方式枚举
  * @method void setJoinTypeLst(array $JoinTypeLst) 设置加入方式枚举
  * @method array getCloudTypeLst() 获取云厂商枚举
@@ -39,13 +35,11 @@ class DescribeOrganizationUserInfoResponse extends AbstractModel
 {
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -66,9 +60,7 @@ class DescribeOrganizationUserInfoResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $JoinTypeLst 加入方式枚举
      * @param array $CloudTypeLst 云厂商枚举
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

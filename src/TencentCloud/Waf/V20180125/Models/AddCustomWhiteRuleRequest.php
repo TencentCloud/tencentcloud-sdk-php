@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置需要添加策略的域名
  * @method string getBypass() 获取放行的详情
  * @method void setBypass(string $Bypass) 设置放行的详情
- * @method string getJobType() 获取定时任务类型
- * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
  */
@@ -70,7 +70,7 @@ class AddCustomWhiteRuleRequest extends AbstractModel
     public $Bypass;
 
     /**
-     * @var string 定时任务类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -86,7 +86,7 @@ class AddCustomWhiteRuleRequest extends AbstractModel
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
      * @param string $Bypass 放行的详情
-     * @param string $JobType 定时任务类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
      */
     function __construct()

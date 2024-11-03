@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 日志KeyValue对
  *
  * @method string getKey() 获取日记Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置日记Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取日志Value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置日志Value
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessLogItem extends AbstractModel
 {
     /**
      * @var string 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

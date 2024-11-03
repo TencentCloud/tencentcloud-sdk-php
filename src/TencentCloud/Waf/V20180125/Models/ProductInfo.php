@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * waf产品
  *
  * @method string getName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductInfo extends AbstractModel
 {
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

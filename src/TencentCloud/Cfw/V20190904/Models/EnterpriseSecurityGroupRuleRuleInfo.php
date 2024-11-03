@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 企业安全组规则列表信息
  *
  * @method integer getOrderIndex() 获取排序
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderIndex(integer $OrderIndex) 设置排序
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleUuid() 获取主键id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleUuid(integer $RuleUuid) 设置主键id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceId() 获取源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceId(string $SourceId) 设置源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSourceType() 获取源规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -49,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(integer $SourceType) 设置源规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -63,11 +54,8 @@ use TencentCloud\Common\AbstractModel;
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetId() 获取目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetId(string $TargetId) 设置目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetType() 获取目的规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -81,7 +69,6 @@ use TencentCloud\Common\AbstractModel;
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(integer $TargetType) 设置目的规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -95,151 +82,100 @@ use TencentCloud\Common\AbstractModel;
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPort() 获取端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategy() 获取规则策略
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategy(integer $Strategy) 设置规则策略
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取规则启用状态 
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则启用状态 
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAclTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclTags(string $AclTags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNew() 获取规则最新一次是否有改动
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNew(integer $IsNew) 设置规则最新一次是否有改动
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsDelay() 获取是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceTemplateId() 获取服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouInstanceName() 获取源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouInstanceName(string $SouInstanceName) 设置源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouPublicIp() 获取源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouPublicIp(string $SouPublicIp) 设置源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouPrivateIp() 获取源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouPrivateIp(string $SouPrivateIp) 设置源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouCidr() 获取源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouCidr(string $SouCidr) 设置源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSouParameterName() 获取源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSouParameterName(string $SouParameterName) 设置源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIp() 获取目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIp(string $PrivateIp) 设置目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCidr() 获取目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterName() 获取目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocolPortName() 获取端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBetaList() 获取自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBetaList(array $BetaList) 设置自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 {
     /**
      * @var integer 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderIndex;
 
     /**
      * @var integer 主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleUuid;
 
     /**
      * @var string 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceId;
 
@@ -257,13 +193,11 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetId;
 
@@ -281,7 +215,6 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
@@ -290,13 +223,11 @@ class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
@@ -305,7 +236,6 @@ ANY:表示所有
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Strategy;
 
@@ -314,19 +244,16 @@ ANY:表示所有
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @var string 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclTags;
 
@@ -335,13 +262,11 @@ ANY:表示所有
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNew;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -349,103 +274,84 @@ ANY:表示所有
      * @var integer 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDelay;
 
     /**
      * @var string 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTemplateId;
 
     /**
      * @var string 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouInstanceName;
 
     /**
      * @var string 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouPublicIp;
 
     /**
      * @var string 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouPrivateIp;
 
     /**
      * @var string 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouCidr;
 
     /**
      * @var string 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SouParameterName;
 
     /**
      * @var string 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIp;
 
     /**
      * @var string 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cidr;
 
     /**
      * @var string 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
     /**
      * @var string 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolPortName;
 
     /**
      * @var array 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BetaList;
 
     /**
      * @var integer 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @param integer $OrderIndex 排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleUuid 主键id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceId 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SourceType 源规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -459,9 +365,7 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetId 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetType 目的规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -475,67 +379,43 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Strategy 规则策略
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规则启用状态 
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AclTags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNew 规则最新一次是否有改动
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsDelay 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouInstanceName 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouPublicIp 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouPrivateIp 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouCidr 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SouParameterName 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIp 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cidr 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterName 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolPortName 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BetaList 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

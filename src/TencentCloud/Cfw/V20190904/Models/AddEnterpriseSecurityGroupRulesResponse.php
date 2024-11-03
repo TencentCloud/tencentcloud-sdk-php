@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取状态值，0：添加成功，非0：添加失败
  * @method void setStatus(integer $Status) 设置状态值，0：添加成功，非0：添加失败
- * @method array getRules() 获取规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRules(array $Rules) 设置规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRules() 获取添加成功的规则详情
+ * @method void setRules(array $Rules) 设置添加成功的规则详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,8 +35,7 @@ class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var array 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 添加成功的规则详情
      */
     public $Rules;
 
@@ -49,8 +46,7 @@ class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel
 
     /**
      * @param integer $Status 状态值，0：添加成功，非0：添加失败
-     * @param array $Rules 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Rules 添加成功的规则详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

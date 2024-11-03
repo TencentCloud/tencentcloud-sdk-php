@@ -21,65 +21,38 @@ use TencentCloud\Common\AbstractModel;
  * 任务报告信息
  *
  * @method string getTaskLogName() 获取报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskLogName(string $TaskLogName) 设置报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskLogId() 获取报告ID
  * @method void setTaskLogId(string $TaskLogId) 设置报告ID
  * @method integer getAssetsNumber() 获取关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetsNumber(integer $AssetsNumber) 设置关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskNumber() 获取安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskNumber(integer $RiskNumber) 设置安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTime() 获取报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskCenterTaskId() 获取任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskCenterTaskId(string $TaskCenterTaskId) 设置任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUIN() 获取主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUIN(string $UIN) 设置主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReportType() 获取报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportType(integer $ReportType) 设置报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTemplateId() 获取报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(integer $TemplateId) 设置报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLogInfo extends AbstractModel
 {
     /**
      * @var string 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskLogName;
 
@@ -90,104 +63,79 @@ class TaskLogInfo extends AbstractModel
 
     /**
      * @var integer 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetsNumber;
 
     /**
      * @var integer 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskNumber;
 
     /**
      * @var string 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var integer 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var string 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCenterTaskId;
 
     /**
      * @var string 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UIN;
 
     /**
      * @var string 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var integer 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportType;
 
     /**
      * @var integer 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @param string $TaskLogName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskLogId 报告ID
      * @param integer $AssetsNumber 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskNumber 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskCenterTaskId 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UIN 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReportType 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TemplateId 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

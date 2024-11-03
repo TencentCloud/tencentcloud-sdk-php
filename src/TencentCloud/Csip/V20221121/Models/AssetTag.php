@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 安全中心资产标签
  *
  * @method string getTagKey() 获取标签的key值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKey(string $TagKey) 设置标签的key值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTagValue() 获取标签的vale值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置标签的vale值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetTag extends AbstractModel
 {
     /**
      * @var string 标签的key值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagKey;
 
     /**
      * @var string 标签的vale值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagValue;
 
     /**
      * @param string $TagKey 标签的key值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagValue 标签的vale值,可以是字母、数字、下划线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

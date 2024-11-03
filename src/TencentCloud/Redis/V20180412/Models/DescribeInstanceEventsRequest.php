@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceEvents请求参数结构体
  *
- * @method string getExecutionStartDate() 获取配置查询事件执行计划的起始日期。
- * @method void setExecutionStartDate(string $ExecutionStartDate) 设置配置查询事件执行计划的起始日期。
- * @method string getExecutionEndDate() 获取配置查询事件执行计划的结束日期。
- * @method void setExecutionEndDate(string $ExecutionEndDate) 设置配置查询事件执行计划的结束日期。
+ * @method string getExecutionStartDate() 获取配置查询事件执行计划的起始日期，查询日期最大跨度30天。
+ * @method void setExecutionStartDate(string $ExecutionStartDate) 设置配置查询事件执行计划的起始日期，查询日期最大跨度30天。
+ * @method string getExecutionEndDate() 获取配置查询事件执行计划的结束日期，查询日期最大跨度30天。
+ * @method void setExecutionEndDate(string $ExecutionEndDate) 设置配置查询事件执行计划的结束日期，查询日期最大跨度30天。
  * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
- * @method integer getPageSize() 获取输出每页显示事件的数量，默认：10。
- * @method void setPageSize(integer $PageSize) 设置输出每页显示事件的数量，默认：10。
+ * @method integer getPageSize() 获取输出每页显示事件的数量，默认：10，最大100。
+ * @method void setPageSize(integer $PageSize) 设置输出每页显示事件的数量，默认：10，最大100。
  * @method integer getPageNo() 获取配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
  * @method void setPageNo(integer $PageNo) 设置配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
  * @method array getStatus() 获取事件当前状态。
@@ -56,12 +56,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceEventsRequest extends AbstractModel
 {
     /**
-     * @var string 配置查询事件执行计划的起始日期。
+     * @var string 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
      */
     public $ExecutionStartDate;
 
     /**
-     * @var string 配置查询事件执行计划的结束日期。
+     * @var string 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
      */
     public $ExecutionEndDate;
 
@@ -71,7 +71,7 @@ class DescribeInstanceEventsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 输出每页显示事件的数量，默认：10。
+     * @var integer 输出每页显示事件的数量，默认：10，最大100。
      */
     public $PageSize;
 
@@ -104,10 +104,10 @@ class DescribeInstanceEventsRequest extends AbstractModel
     public $Grades;
 
     /**
-     * @param string $ExecutionStartDate 配置查询事件执行计划的起始日期。
-     * @param string $ExecutionEndDate 配置查询事件执行计划的结束日期。
+     * @param string $ExecutionStartDate 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
+     * @param string $ExecutionEndDate 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param integer $PageSize 输出每页显示事件的数量，默认：10。
+     * @param integer $PageSize 输出每页显示事件的数量，默认：10，最大100。
      * @param integer $PageNo 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
      * @param array $Status 事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。

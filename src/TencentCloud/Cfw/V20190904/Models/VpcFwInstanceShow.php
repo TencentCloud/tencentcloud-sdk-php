@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFwInsId() 获取VPC防火墙实例ID
  * @method void setFwInsId(string $FwInsId) 设置VPC防火墙实例ID
  * @method string getFwInsName() 获取VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsName(string $FwInsName) 设置VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwInsRegion() 获取网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsRegion(string $FwInsRegion) 设置网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwInstanceShow extends AbstractModel
 {
@@ -40,22 +36,18 @@ class VpcFwInstanceShow extends AbstractModel
 
     /**
      * @var string VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsName;
 
     /**
      * @var string 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsRegion;
 
     /**
      * @param string $FwInsId VPC防火墙实例ID
      * @param string $FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwInsRegion 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

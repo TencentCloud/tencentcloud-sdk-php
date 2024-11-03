@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * api历史样例返回结构体
  *
  * @method string getSampleNme() 获取样例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleNme(string $SampleNme) 设置样例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepLog() 获取请求样例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepLog(string $RepLog) 设置请求样例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRspLog() 获取响应样例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRspLog(string $RspLog) 设置响应样例
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiDetailSampleHistory extends AbstractModel
 {
     /**
      * @var string 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleNme;
 
     /**
      * @var string 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepLog;
 
     /**
      * @var string 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RspLog;
 
     /**
      * @param string $SampleNme 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepLog 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RspLog 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

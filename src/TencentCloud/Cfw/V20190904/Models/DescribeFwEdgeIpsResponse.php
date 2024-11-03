@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeFwEdgeIps返回参数结构体
  *
  * @method array getData() 获取ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegionLst() 获取地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionLst(array $RegionLst) 设置地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypeLst() 获取实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTypeLst(array $InstanceTypeLst) 设置实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeFwEdgeIpsResponse extends AbstractModel
 {
     /**
      * @var array ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @var integer ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var array 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionLst;
 
     /**
      * @var array 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeLst;
 
@@ -72,13 +60,9 @@ class DescribeFwEdgeIpsResponse extends AbstractModel
 
     /**
      * @param array $Data ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionLst 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypeLst 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

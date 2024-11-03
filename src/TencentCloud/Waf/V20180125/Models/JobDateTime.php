@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCron(array $Cron) 设置周期执行的时间参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeTZone() 获取时区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeTZone(string $TimeTZone) 设置时区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobDateTime extends AbstractModel
 {
@@ -49,7 +47,6 @@ class JobDateTime extends AbstractModel
 
     /**
      * @var string 时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeTZone;
 
@@ -59,7 +56,6 @@ class JobDateTime extends AbstractModel
      * @param array $Cron 周期执行的时间参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeTZone 时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -31,23 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDNSEip() 获取外网弹性ip，防火墙 dns解析地址
  * @method void setDNSEip(string $DNSEip) 设置外网弹性ip，防火墙 dns解析地址
  * @method string getNatInsId() 获取nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatInsId(string $NatInsId) 设置nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNatInsName() 获取nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatInsName(string $NatInsName) 设置nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitchStatus() 获取0：开关关闭 ， 1: 开关打开
  * @method void setSwitchStatus(integer $SwitchStatus) 设置0：开关关闭 ， 1: 开关打开
  * @method integer getProtectedStatus() 获取0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectedStatus(integer $ProtectedStatus) 设置0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportDNSFW() 获取是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDNSFW(integer $SupportDNSFW) 设置是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcDnsInfo extends AbstractModel
 {
@@ -78,13 +70,11 @@ class VpcDnsInfo extends AbstractModel
 
     /**
      * @var string nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatInsId;
 
     /**
      * @var string nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatInsName;
 
@@ -95,13 +85,11 @@ class VpcDnsInfo extends AbstractModel
 
     /**
      * @var integer 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtectedStatus;
 
     /**
      * @var integer 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportDNSFW;
 
@@ -112,14 +100,10 @@ class VpcDnsInfo extends AbstractModel
      * @param string $VpcIpv4Cidr vpc ipv4网段范围 CIDR（Classless Inter-Domain Routing，无类域间路由选择）
      * @param string $DNSEip 外网弹性ip，防火墙 dns解析地址
      * @param string $NatInsId nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NatInsName nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SwitchStatus 0：开关关闭 ， 1: 开关打开
      * @param integer $ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

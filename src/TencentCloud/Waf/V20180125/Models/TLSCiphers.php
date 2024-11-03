@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * TLS 加密套件
  *
  * @method integer getVersionId() 获取TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionId(integer $VersionId) 设置TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCipherId() 获取加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCipherId(integer $CipherId) 设置加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCipherName() 获取加密套件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCipherName(string $CipherName) 设置加密套件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TLSCiphers extends AbstractModel
 {
     /**
      * @var integer TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionId;
 
     /**
      * @var integer 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CipherId;
 
     /**
      * @var string 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CipherName;
 
     /**
      * @param integer $VersionId TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CipherId 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CipherName 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

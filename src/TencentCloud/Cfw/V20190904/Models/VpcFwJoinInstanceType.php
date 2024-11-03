@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * VPC防火墙接入的网络实例类型及数量
  *
  * @method string getJoinType() 获取接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinType(string $JoinType) 设置接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNum() 获取接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNum(integer $Num) 设置接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwJoinInstanceType extends AbstractModel
 {
     /**
      * @var string 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinType;
 
     /**
      * @var integer 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Num;
 
     /**
      * @param string $JoinType 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Num 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

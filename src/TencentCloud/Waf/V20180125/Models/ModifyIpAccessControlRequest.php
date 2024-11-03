@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpList(array $IpList) 设置ip参数列表
  * @method integer getActionType() 获取42为黑名单，40为白名单
  * @method void setActionType(integer $ActionType) 设置42为黑名单，40为白名单
- * @method integer getValidTS() 获取valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
- * @method void setValidTS(integer $ValidTS) 设置valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
+ * @method integer getValidTS() 获取valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+ * @method void setValidTS(integer $ValidTS) 设置valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
- * @method string getJobType() 获取定时配置类型
- * @method void setJobType(string $JobType) 设置定时配置类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时配置详情
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时配置详情
  */
@@ -64,14 +64,15 @@ class ModifyIpAccessControlRequest extends AbstractModel
     public $ActionType;
 
     /**
-     * @var integer valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-     */
-    public $ValidTS;
-
-    /**
      * @var integer 规则ID
      */
     public $RuleId;
+
+    /**
+     * @var integer valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
+     */
+    public $ValidTS;
 
     /**
      * @var string 实例Id
@@ -94,7 +95,7 @@ class ModifyIpAccessControlRequest extends AbstractModel
     public $Note;
 
     /**
-     * @var string 定时配置类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -108,13 +109,13 @@ class ModifyIpAccessControlRequest extends AbstractModel
 全局域名为：global
      * @param array $IpList ip参数列表
      * @param integer $ActionType 42为黑名单，40为白名单
-     * @param integer $ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param integer $RuleId 规则ID
+     * @param integer $ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $InstanceId 实例Id
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
      * @param string $Note 备注
-     * @param string $JobType 定时配置类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时配置详情
      */
     function __construct()
@@ -142,12 +143,12 @@ class ModifyIpAccessControlRequest extends AbstractModel
             $this->ActionType = $param["ActionType"];
         }
 
-        if (array_key_exists("ValidTS",$param) and $param["ValidTS"] !== null) {
-            $this->ValidTS = $param["ValidTS"];
-        }
-
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("ValidTS",$param) and $param["ValidTS"] !== null) {
+            $this->ValidTS = $param["ValidTS"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 封禁放通IOC列表
  *
  * @method string getIP() 获取待处置IP地址，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置待处置IP地址，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取只能为0或者1   0代表出站 1代表入站
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirection(integer $Direction) 设置只能为0或者1   0代表出站 1代表入站
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取待处置域名，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置待处置域名，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IocListData extends AbstractModel
 {
     /**
      * @var string 待处置IP地址，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
      * @var integer 只能为0或者1   0代表出站 1代表入站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Direction;
 
     /**
      * @var string 待处置域名，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @param string $IP 待处置IP地址，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 只能为0或者1   0代表出站 1代表入站
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 待处置域名，IP/Domain字段二选一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

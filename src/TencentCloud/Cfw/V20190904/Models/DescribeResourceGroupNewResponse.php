@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getData() 获取返回树形结构
  * @method void setData(string $Data) 设置返回树形结构
- * @method integer getUnResourceNum() 获取未分类实例数量
- * @method void setUnResourceNum(integer $UnResourceNum) 设置未分类实例数量
- * @method string getReturnMsg() 获取接口返回消息
- * @method void setReturnMsg(string $ReturnMsg) 设置接口返回消息
  * @method integer getReturnCode() 获取返回码；0为请求成功
  * @method void setReturnCode(integer $ReturnCode) 设置返回码；0为请求成功
+ * @method string getReturnMsg() 获取接口返回消息
+ * @method void setReturnMsg(string $ReturnMsg) 设置接口返回消息
+ * @method integer getUnResourceNum() 获取未分类实例数量
+ * @method void setUnResourceNum(integer $UnResourceNum) 设置未分类实例数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,9 +39,9 @@ class DescribeResourceGroupNewResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 未分类实例数量
+     * @var integer 返回码；0为请求成功
      */
-    public $UnResourceNum;
+    public $ReturnCode;
 
     /**
      * @var string 接口返回消息
@@ -49,9 +49,9 @@ class DescribeResourceGroupNewResponse extends AbstractModel
     public $ReturnMsg;
 
     /**
-     * @var integer 返回码；0为请求成功
+     * @var integer 未分类实例数量
      */
-    public $ReturnCode;
+    public $UnResourceNum;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,9 +60,9 @@ class DescribeResourceGroupNewResponse extends AbstractModel
 
     /**
      * @param string $Data 返回树形结构
-     * @param integer $UnResourceNum 未分类实例数量
-     * @param string $ReturnMsg 接口返回消息
      * @param integer $ReturnCode 返回码；0为请求成功
+     * @param string $ReturnMsg 接口返回消息
+     * @param integer $UnResourceNum 未分类实例数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -82,16 +82,16 @@ class DescribeResourceGroupNewResponse extends AbstractModel
             $this->Data = $param["Data"];
         }
 
-        if (array_key_exists("UnResourceNum",$param) and $param["UnResourceNum"] !== null) {
-            $this->UnResourceNum = $param["UnResourceNum"];
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
         }
 
         if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
             $this->ReturnMsg = $param["ReturnMsg"];
         }
 
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
+        if (array_key_exists("UnResourceNum",$param) and $param["UnResourceNum"] !== null) {
+            $this->UnResourceNum = $param["UnResourceNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

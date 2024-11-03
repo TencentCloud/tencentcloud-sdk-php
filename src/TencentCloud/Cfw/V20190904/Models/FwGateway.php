@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGatewayId() 获取防火墙网关id
  * @method void setGatewayId(string $GatewayId) 设置防火墙网关id
  * @method string getVpcId() 获取网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpAddress() 获取网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpAddress(string $IpAddress) 设置网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FwGateway extends AbstractModel
 {
@@ -40,22 +36,18 @@ class FwGateway extends AbstractModel
 
     /**
      * @var string 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpAddress;
 
     /**
      * @param string $GatewayId 防火墙网关id
      * @param string $VpcId 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpAddress 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

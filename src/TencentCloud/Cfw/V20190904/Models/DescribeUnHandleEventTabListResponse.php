@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeUnHandleEventTabList返回参数结构体
  *
  * @method UnHandleEvent getData() 获取租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(UnHandleEvent $Data) 设置租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReturnCode() 获取错误码，0成功 非0错误
  * @method void setReturnCode(integer $ReturnCode) 设置错误码，0成功 非0错误
  * @method string getReturnMsg() 获取返回信息 success成功
@@ -35,7 +33,6 @@ class DescribeUnHandleEventTabListResponse extends AbstractModel
 {
     /**
      * @var UnHandleEvent 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -56,7 +53,6 @@ class DescribeUnHandleEventTabListResponse extends AbstractModel
 
     /**
      * @param UnHandleEvent $Data 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnCode 错误码，0成功 非0错误
      * @param string $ReturnMsg 返回信息 success成功
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -91,31 +91,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
  * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
  * @method array getCloudTags() 获取云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAddedOnTheFifteen() 获取是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpList() 获取主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpList(string $IpList) 设置主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取所属网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置所属网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -252,31 +240,26 @@ class Machine extends AbstractModel
 
     /**
      * @var array 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var integer 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAddedOnTheFifteen;
 
     /**
      * @var string 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpList;
 
     /**
      * @var string 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -287,7 +270,6 @@ class Machine extends AbstractModel
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -328,18 +310,12 @@ class Machine extends AbstractModel
      * @param string $KernelVersion 内核版本
      * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      * @param array $CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpList 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

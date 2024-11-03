@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 产品明细
  *
  * @method integer getTimeSpan() 获取时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
 
 Saas 高级版 ：sp_wsm_waf_premium
@@ -42,7 +38,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductCode(string $SubProductCode) 设置子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
 
 Saas 高级版 ：sp_wsm_waf_premium
@@ -57,7 +52,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPid() 获取业务产品申请的pid（对应一个定价公式），通过pid计费查询到定价模型
 高级版 ：1000827
 企业版 ：1000830
@@ -70,7 +64,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(integer $Pid) 设置业务产品申请的pid（对应一个定价公式），通过pid计费查询到定价模型
 高级版 ：1000827
 企业版 ：1000830
@@ -83,19 +76,12 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealRegion() 获取waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealRegion(integer $RealRegion) 设置waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelTypes() 获取计费细项标签数组
 Saas 高级版  sv_wsm_waf_package_premium 
 Saas 企业版  sv_wsm_waf_package_enterprise
@@ -115,7 +101,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelTypes(array $LabelTypes) 设置计费细项标签数组
 Saas 高级版  sv_wsm_waf_package_premium 
 Saas 企业版  sv_wsm_waf_package_enterprise
@@ -135,35 +120,24 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelCounts() 获取计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelCounts(array $LabelCounts) 设置计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurDeadline() 获取变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurDeadline(string $CurDeadline) 设置变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateDealsGoodsDetail extends AbstractModel
 {
     /**
      * @var integer 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
@@ -182,7 +156,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCode;
 
@@ -199,25 +172,21 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
 
     /**
      * @var string waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var integer 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
      * @var integer waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealRegion;
 
@@ -241,39 +210,32 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelTypes;
 
     /**
      * @var array 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelCounts;
 
     /**
      * @var string 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurDeadline;
 
     /**
      * @var string 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @param integer $TimeSpan 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
 
 Saas 高级版 ：sp_wsm_waf_premium
@@ -288,7 +250,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pid 业务产品申请的pid（对应一个定价公式），通过pid计费查询到定价模型
 高级版 ：1000827
 企业版 ：1000830
@@ -301,13 +262,9 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelTypes 计费细项标签数组
 Saas 高级版  sv_wsm_waf_package_premium 
 Saas 企业版  sv_wsm_waf_package_enterprise
@@ -327,15 +284,10 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

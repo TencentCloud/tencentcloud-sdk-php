@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 数据封装
  *
  * @method array getRes() 获取ip黑白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRes(array $Res) 设置ip黑白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取计数
  * @method void setTotalCount(integer $TotalCount) 设置计数
  */
@@ -31,7 +29,6 @@ class IpAccessControlData extends AbstractModel
 {
     /**
      * @var array ip黑白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Res;
 
@@ -42,7 +39,6 @@ class IpAccessControlData extends AbstractModel
 
     /**
      * @param array $Res ip黑白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 计数
      */
     function __construct()

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置检测Url
  * @method integer getMatchFunc() 获取匹配方法，0表示等于，1表示前缀匹配，2表示包含
  * @method void setMatchFunc(integer $MatchFunc) 设置匹配方法，0表示等于，1表示前缀匹配，2表示包含
- * @method string getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
- * @method void setActionType(string $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+ * @method string getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
+ * @method void setActionType(string $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
  * @method integer getValidTime() 获取动作有效时间
@@ -102,7 +102,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $MatchFunc;
 
     /**
-     * @var string 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+     * @var string 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      */
     public $ActionType;
 
@@ -165,7 +165,7 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $Interval CC检测周期
      * @param string $Url 检测Url
      * @param integer $MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含
-     * @param string $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+     * @param string $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      * @param integer $Priority 优先级
      * @param integer $ValidTime 动作有效时间
      * @param string $OptionsArr 附加参数

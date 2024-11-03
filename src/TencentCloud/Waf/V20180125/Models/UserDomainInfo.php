@@ -33,33 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEdition() 获取waf类型
  * @method void setEdition(string $Edition) 设置waf类型
  * @method string getLevel() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWriteConfig() 获取指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteConfig(string $WriteConfig) 设置指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCls() 获取指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCls(integer $Cls) 设置指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudType() 获取标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(string $CloudType) 设置标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlbType() 获取标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlbType(string $AlbType) 设置标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBotStatus() 获取BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotStatus(integer $BotStatus) 设置BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiStatus() 获取API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiStatus(integer $ApiStatus) 设置API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDomainInfo extends AbstractModel
 {
@@ -95,43 +81,36 @@ class UserDomainInfo extends AbstractModel
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteConfig;
 
     /**
      * @var integer 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cls;
 
     /**
      * @var string 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
      * @var string 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbType;
 
     /**
      * @var integer BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotStatus;
 
     /**
      * @var integer API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiStatus;
 
@@ -143,19 +122,12 @@ class UserDomainInfo extends AbstractModel
      * @param string $InstanceName 实例名
      * @param string $Edition waf类型
      * @param string $Level 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WriteConfig 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cls 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbType 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BotStatus BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiStatus API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

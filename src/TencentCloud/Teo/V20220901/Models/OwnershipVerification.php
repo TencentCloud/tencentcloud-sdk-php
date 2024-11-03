@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 该结构体表示各种场景、模式下，用于验证用户对站点域名的归属权内容。
  *
- * @method DnsVerification getDnsVerification() 获取CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+ * @method DnsVerification getDnsVerification() 获取CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDnsVerification(DnsVerification $DnsVerification) 设置CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+ * @method void setDnsVerification(DnsVerification $DnsVerification) 设置CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FileVerification getFileVerification() 获取CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+ * @method FileVerification getFileVerification() 获取CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileVerification(FileVerification $FileVerification) 设置CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+ * @method void setFileVerification(FileVerification $FileVerification) 设置CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method NsVerification getNsVerification() 获取NS 接入，切换 DNS 服务器所需的信息。详情参考 [修改 DNS 服务器](https://cloud.tencent.com/document/product/1552/90452)。
@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
 class OwnershipVerification extends AbstractModel
 {
     /**
-     * @var DnsVerification CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @var DnsVerification CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DnsVerification;
 
     /**
-     * @var FileVerification CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @var FileVerification CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -60,10 +60,10 @@ class OwnershipVerification extends AbstractModel
     public $NsVerification;
 
     /**
-     * @param DnsVerification $DnsVerification CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @param DnsVerification $DnsVerification CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileVerification $FileVerification CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @param FileVerification $FileVerification CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NsVerification $NsVerification NS 接入，切换 DNS 服务器所需的信息。详情参考 [修改 DNS 服务器](https://cloud.tencent.com/document/product/1552/90452)。

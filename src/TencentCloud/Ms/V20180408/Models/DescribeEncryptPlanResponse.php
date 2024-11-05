@@ -35,21 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源id
  * @method void setResourceId(string $ResourceId) 设置资源id
  * @method AndroidPlan getAndroidPlan() 获取上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AppletPlan getAppletPlan() 获取上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppletPlan(AppletPlan $AppletPlan) 设置上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IOSPlan getIOSPlan() 获取上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIOSPlan(IOSPlan $IOSPlan) 设置上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SDKPlan getSDKPlan() 获取上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSDKPlan(SDKPlan $SDKPlan) 设置上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -92,25 +84,21 @@ class DescribeEncryptPlanResponse extends AbstractModel
 
     /**
      * @var AndroidPlan 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidPlan;
 
     /**
      * @var AppletPlan 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppletPlan;
 
     /**
      * @var IOSPlan 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IOSPlan;
 
     /**
      * @var SDKPlan 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SDKPlan;
 
@@ -128,13 +116,9 @@ class DescribeEncryptPlanResponse extends AbstractModel
      * @param string $OrderTypeDesc 订单收费类型描述
      * @param string $ResourceId 资源id
      * @param AndroidPlan $AndroidPlan 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppletPlan $AppletPlan 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IOSPlan $IOSPlan 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SDKPlan $SDKPlan 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -150,6 +150,8 @@ use TencentCloud\Common\AbstractModel;
 3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
 4. 未传值时默认关闭。
 5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+ * @method boolean getEnableDeepSearch() 获取是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+ * @method void setEnableDeepSearch(boolean $EnableDeepSearch) 设置是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
  * @method integer getSeed() 获取说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
  * @method void setSeed(integer $Seed) 设置说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
  */
@@ -277,6 +279,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableMultimedia;
 
     /**
+     * @var boolean 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     */
+    public $EnableDeepSearch;
+
+    /**
      * @var integer 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
      */
     public $Seed;
@@ -347,6 +354,7 @@ class ChatCompletionsRequest extends AbstractModel
 3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
 4. 未传值时默认关闭。
 5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     * @param boolean $EnableDeepSearch 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
      * @param integer $Seed 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
      */
     function __construct()
@@ -427,6 +435,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableMultimedia",$param) and $param["EnableMultimedia"] !== null) {
             $this->EnableMultimedia = $param["EnableMultimedia"];
+        }
+
+        if (array_key_exists("EnableDeepSearch",$param) and $param["EnableDeepSearch"] !== null) {
+            $this->EnableDeepSearch = $param["EnableDeepSearch"];
         }
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {

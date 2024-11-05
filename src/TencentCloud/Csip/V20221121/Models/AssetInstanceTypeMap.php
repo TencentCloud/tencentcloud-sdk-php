@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 资产类型和实例类型的映射
  *
  * @method string getText() 获取资产类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置资产类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取资产类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置资产类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypeList() 获取资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTypeList(array $InstanceTypeList) 设置资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetInstanceTypeMap extends AbstractModel
 {
     /**
      * @var string 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var array 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeList;
 
     /**
      * @param string $Text 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypeList 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

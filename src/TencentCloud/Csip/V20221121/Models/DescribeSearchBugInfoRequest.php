@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSearchBugInfo请求参数结构体
  *
- * @method string getId() 获取无
- * @method void setId(string $Id) 设置无
+ * @method string getId() 获取1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
+ * @method void setId(string $Id) 设置1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
  * @method string getCVEId() 获取id=3时传入该参数
  * @method void setCVEId(string $CVEId) 设置id=3时传入该参数
  */
 class DescribeSearchBugInfoRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class DescribeSearchBugInfoRequest extends AbstractModel
     public $CVEId;
 
     /**
-     * @param string $Id 无
+     * @param string $Id 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
      * @param string $CVEId id=3时传入该参数
      */
     function __construct()

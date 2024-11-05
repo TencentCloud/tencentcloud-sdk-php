@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method array getStrategies() 获取匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategies(array $Strategies) 设置匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUri() 获取匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUri(string $Uri) 设置匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  */
@@ -70,13 +66,11 @@ class DescribeAntiLeakageItem extends AbstractModel
 
     /**
      * @var array 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Strategies;
 
     /**
      * @var string 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uri;
 
@@ -92,9 +86,7 @@ class DescribeAntiLeakageItem extends AbstractModel
      * @param string $Action 动作
      * @param string $CreateTime 创建时间
      * @param array $Strategies 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uri 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
      */
     function __construct()

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSearchBugInfo返回参数结构体
  *
  * @method DataSearchBug getData() 获取漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(DataSearchBug $Data) 设置漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReturnCode() 获取状态值，0：查询成功，非0：查询失败
  * @method void setReturnCode(integer $ReturnCode) 设置状态值，0：查询成功，非0：查询失败
  * @method string getReturnMsg() 获取状态信息，success：查询成功，fail：查询失败
@@ -35,7 +33,6 @@ class DescribeSearchBugInfoResponse extends AbstractModel
 {
     /**
      * @var DataSearchBug 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -56,7 +53,6 @@ class DescribeSearchBugInfoResponse extends AbstractModel
 
     /**
      * @param DataSearchBug $Data 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnCode 状态值，0：查询成功，非0：查询失败
      * @param string $ReturnMsg 状态信息，success：查询成功，fail：查询失败
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

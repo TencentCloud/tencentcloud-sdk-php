@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞信息产品支持状态
  *
  * @method boolean getVSSScan() 获取true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVSSScan(boolean $VSSScan) 设置true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCWPScan() 获取0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCWPScan(string $CWPScan) 设置0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCFWPatch() 获取1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFWPatch(string $CFWPatch) 设置1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWafPatch() 获取0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafPatch(integer $WafPatch) 设置0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCWPFix() 获取0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCWPFix(integer $CWPFix) 设置0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCveId() 获取cveid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCveId(string $CveId) 设置cveid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductSupport extends AbstractModel
 {
     /**
      * @var boolean true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VSSScan;
 
     /**
      * @var string 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CWPScan;
 
     /**
      * @var string 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFWPatch;
 
     /**
      * @var integer 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafPatch;
 
     /**
      * @var integer 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CWPFix;
 
     /**
      * @var string cveid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveId;
 
     /**
      * @param boolean $VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WafPatch 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CWPFix 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CveId cveid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

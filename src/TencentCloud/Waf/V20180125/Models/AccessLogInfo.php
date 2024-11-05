@@ -23,34 +23,20 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTime() 获取日志时间，单位ms
  * @method void setTime(integer $Time) 设置日志时间，单位ms
  * @method string getTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgId() 获取日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgId(string $PkgId) 设置日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgLogId() 获取请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgLogId(string $PkgLogId) 设置请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogJson() 获取日志内容的Json序列化字符串
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogJson(string $LogJson) 设置日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessLogInfo extends AbstractModel
@@ -62,43 +48,36 @@ class AccessLogInfo extends AbstractModel
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgId;
 
     /**
      * @var string 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgLogId;
 
     /**
      * @var string 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogJson;
@@ -106,19 +85,12 @@ class AccessLogInfo extends AbstractModel
     /**
      * @param integer $Time 日志时间，单位ms
      * @param string $TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgId 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgLogId 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogJson 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

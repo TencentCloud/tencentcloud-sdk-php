@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValidTime() 获取策略动作有效时间
  * @method void setValidTime(integer $ValidTime) 设置策略动作有效时间
  * @method string getOptionsArr() 获取高级参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptionsArr(string $OptionsArr) 设置高级参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLength() 获取url长度
  * @method void setLength(integer $Length) 设置url长度
  * @method integer getRuleId() 获取规则ID
@@ -116,7 +114,6 @@ class CCRuleItem extends AbstractModel
 
     /**
      * @var string 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionsArr;
 
@@ -158,7 +155,6 @@ class CCRuleItem extends AbstractModel
      * @param string $Url 匹配url
      * @param integer $ValidTime 策略动作有效时间
      * @param string $OptionsArr 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Length url长度
      * @param integer $RuleId 规则ID
      * @param string $EventId 事件id

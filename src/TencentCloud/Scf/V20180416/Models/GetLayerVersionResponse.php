@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置层中版本文件的下载地址
  * @method string getAddTime() 获取版本的创建时间
  * @method void setAddTime(string $AddTime) 设置版本的创建时间
- * @method string getDescription() 获取版本的描述
- * @method void setDescription(string $Description) 设置版本的描述
+ * @method string getDescription() 获取版本的描述信息
+ * @method void setDescription(string $Description) 设置版本的描述信息
  * @method string getLicenseInfo() 获取许可证信息
  * @method void setLicenseInfo(string $LicenseInfo) 设置许可证信息
  * @method integer getLayerVersion() 获取版本号
@@ -64,7 +64,7 @@ class GetLayerVersionResponse extends AbstractModel
     public $AddTime;
 
     /**
-     * @var string 版本的描述
+     * @var string 版本的描述信息
      */
     public $Description;
 
@@ -98,7 +98,7 @@ class GetLayerVersionResponse extends AbstractModel
      * @param string $CodeSha256 层中版本文件的SHA256编码
      * @param string $Location 层中版本文件的下载地址
      * @param string $AddTime 版本的创建时间
-     * @param string $Description 版本的描述
+     * @param string $Description 版本的描述信息
      * @param string $LicenseInfo 许可证信息
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称

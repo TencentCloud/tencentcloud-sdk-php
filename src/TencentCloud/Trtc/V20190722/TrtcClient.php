@@ -246,9 +246,6 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开 TRTC 房间超过 AgentParams.MaxIdleTime 设置的时间后，任务也会自动停止。
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个输入在线媒体流任务。
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) 停止页面录制任务
- * @method Models\SummarizeTranscriptionResponse SummarizeTranscription(Models\SummarizeTranscriptionRequest $req) 接口不再支持
-
-对转录的文本进行总结。
  * @method Models\UpdateAIConversationResponse UpdateAIConversation(Models\UpdateAIConversationRequest $req) 更新AIConversation参数
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 接口说明：
 成功发起混流转推后，可以使用此接口来更新任务。仅在任务进行时有效，任务退出后更新将会返回错误。更新操作为增量更新模式。

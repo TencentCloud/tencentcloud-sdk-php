@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method array getClusters() 获取该地域对应的集群信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusters(array $Clusters) 设置该地域对应的集群信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdcRegion extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CdcRegion extends AbstractModel
 
     /**
      * @var array 该地域对应的集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Clusters;
 
     /**
      * @param string $Region 地域
      * @param array $Clusters 该地域对应的集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

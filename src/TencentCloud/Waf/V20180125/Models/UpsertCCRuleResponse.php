@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * UpsertCCRule返回参数结构体
  *
  * @method string getData() 获取一般为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置一般为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取操作的RuleId
  * @method void setRuleId(integer $RuleId) 设置操作的RuleId
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class UpsertCCRuleResponse extends AbstractModel
 {
     /**
      * @var string 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -49,7 +46,6 @@ class UpsertCCRuleResponse extends AbstractModel
 
     /**
      * @param string $Data 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 操作的RuleId
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

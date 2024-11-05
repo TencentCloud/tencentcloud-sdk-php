@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总条数
  * @method void setTotalCount(integer $TotalCount) 设置总条数
  * @method array getData() 获取漏洞产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置漏洞产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLevelLists() 获取危险等级列表
  * @method void setLevelLists(array $LevelLists) 设置危险等级列表
  * @method array getFromLists() 获取来源列表
@@ -33,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getVULTypeLists() 获取漏洞类型列表
  * @method void setVULTypeLists(array $VULTypeLists) 设置漏洞类型列表
  * @method array getTags() 获取tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -48,7 +44,6 @@ class DescribeVulViewVulRiskListResponse extends AbstractModel
 
     /**
      * @var array 漏洞产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -69,7 +64,6 @@ class DescribeVulViewVulRiskListResponse extends AbstractModel
 
     /**
      * @var array tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -81,12 +75,10 @@ class DescribeVulViewVulRiskListResponse extends AbstractModel
     /**
      * @param integer $TotalCount 总条数
      * @param array $Data 漏洞产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LevelLists 危险等级列表
      * @param array $FromLists 来源列表
      * @param array $VULTypeLists 漏洞类型列表
      * @param array $Tags tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,153 +21,93 @@ use TencentCloud\Common\AbstractModel;
  * 告警中心全量告警列表数据
  *
  * @method string getID() 获取告警ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置告警ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取告警名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置告警名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取告警来源
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置告警来源
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取告警等级
 1:提示
 2:低危
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置告警等级
 1:提示
 2:低危
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RoleInfo getAttacker() 获取攻击者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttacker(RoleInfo $Attacker) 设置攻击者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RoleInfo getVictim() 获取受害者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVictim(RoleInfo $Victim) 设置受害者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEvidenceData() 获取证据数据(例如攻击内容等，base64编码)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvidenceData(string $EvidenceData) 设置证据数据(例如攻击内容等，base64编码)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEvidenceLocation() 获取证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvidenceLocation(string $EvidenceLocation) 设置证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEvidencePath() 获取证据路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvidencePath(string $EvidencePath) 设置证据路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取告警次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置告警次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrgentSuggestion() 获取紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrgentSuggestion(string $UrgentSuggestion) 设置紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemediationSuggestion() 获取根治建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemediationSuggestion(string $RemediationSuggestion) 设置根治建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessType() 获取告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessType(string $ProcessType) 设置告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取告警大类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置告警大类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubType() 获取告警小类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubType(string $SubType) 设置告警小类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AlertExtraInfo getExtraInfo() 获取下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInfo(AlertExtraInfo $ExtraInfo) 设置下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取告警日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置告警日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppID() 获取appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppID(string $AppID) 设置appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickName() 获取账户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickName(string $NickName) 设置账户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置账户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAction() 获取行为
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(integer $Action) 设置行为
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskInvestigation() 获取风险排查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskInvestigation(string $RiskInvestigation) 设置风险排查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskTreatment() 获取风险处置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskTreatment(string $RiskTreatment) 设置风险处置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取日志类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogType(string $LogType) 设置日志类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogSearch() 获取语句检索
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSearch(string $LogSearch) 设置语句检索
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertInfo extends AbstractModel
 {
     /**
      * @var string 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -177,7 +117,6 @@ CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
@@ -188,230 +127,175 @@ CSIP:云安全中心
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var RoleInfo 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Attacker;
 
     /**
      * @var RoleInfo 受害者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Victim;
 
     /**
      * @var string 证据数据(例如攻击内容等，base64编码)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvidenceData;
 
     /**
      * @var string 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvidenceLocation;
 
     /**
      * @var string 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvidencePath;
 
     /**
      * @var string 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UrgentSuggestion;
 
     /**
      * @var string 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemediationSuggestion;
 
     /**
      * @var integer 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessType;
 
     /**
      * @var string 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
 
     /**
      * @var AlertExtraInfo 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
 
     /**
      * @var string 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @var string appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
 
     /**
      * @var string 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
     /**
      * @var string 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var integer 行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var string 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskInvestigation;
 
     /**
      * @var string 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskTreatment;
 
     /**
      * @var string 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogType;
 
     /**
      * @var string 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSearch;
 
     /**
      * @param string $ID 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 告警来源
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 告警等级
 1:提示
 2:低危
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleInfo $Attacker 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleInfo $Victim 受害者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EvidenceData 证据数据(例如攻击内容等，base64编码)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EvidenceLocation 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EvidencePath 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UrgentSuggestion 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemediationSuggestion 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessType 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubType 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlertExtraInfo $ExtraInfo 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppID appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Action 行为
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskInvestigation 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskTreatment 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogSearch 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

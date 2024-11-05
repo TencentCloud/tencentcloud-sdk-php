@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcName() 获取私有网络名
  * @method void setVpcName(string $VpcName) 设置私有网络名
  * @method array getTag() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutboundPeakBandwidth() 获取出向峰值带宽
  * @method void setOutboundPeakBandwidth(string $OutboundPeakBandwidth) 设置出向峰值带宽
  * @method string getInboundPeakBandwidth() 获取入向峰值带宽
@@ -69,29 +67,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNick() 获取昵称
  * @method void setNick(string $Nick) 设置昵称
  * @method string getAddressIPV6() 获取ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIPV6(string $AddressIPV6) 设置ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsCore() 获取是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskExposure() 获取风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskExposure(integer $RiskExposure) 设置风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNewAsset() 获取是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取网关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置网关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineRegion() 获取TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineRegion(string $EngineRegion) 设置TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GateWayAsset extends AbstractModel
 {
@@ -147,7 +133,6 @@ class GateWayAsset extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -213,37 +198,31 @@ class GateWayAsset extends AbstractModel
 
     /**
      * @var string ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressIPV6;
 
     /**
      * @var integer 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
     /**
      * @var integer 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskExposure;
 
     /**
      * @var integer 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAsset;
 
     /**
      * @var string 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineRegion;
 
@@ -259,7 +238,6 @@ class GateWayAsset extends AbstractModel
      * @param string $VpcId 私有网络id
      * @param string $VpcName 私有网络名
      * @param array $Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutboundPeakBandwidth 出向峰值带宽
      * @param string $InboundPeakBandwidth 入向峰值带宽
      * @param string $OutboundCumulativeFlow 出站累计流量
@@ -273,17 +251,11 @@ class GateWayAsset extends AbstractModel
      * @param string $LastScanTime 最后扫描时间
      * @param string $Nick 昵称
      * @param string $AddressIPV6 ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineRegion TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

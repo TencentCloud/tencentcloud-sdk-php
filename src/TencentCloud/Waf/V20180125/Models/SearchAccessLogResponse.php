@@ -28,9 +28,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnalysis(boolean $Analysis) 设置返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
  * @method array getColNames() 获取如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColNames(array $ColNames) 设置如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResults() 获取日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
@@ -38,10 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值
  * @method array getAnalysisResults() 获取日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysisResults(array $AnalysisResults) 设置日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -65,7 +61,6 @@ class SearchAccessLogResponse extends AbstractModel
     /**
      * @var array 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ColNames;
@@ -79,7 +74,6 @@ class SearchAccessLogResponse extends AbstractModel
     /**
      * @var array 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $AnalysisResults;
@@ -95,12 +89,10 @@ class SearchAccessLogResponse extends AbstractModel
      * @param boolean $Analysis 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
      * @param array $AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

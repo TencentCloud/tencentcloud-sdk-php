@@ -123,7 +123,6 @@ use TencentCloud\Common\AbstractModel;
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrNo(string $ErrNo) 设置应用错误码：0、1-表示正常；                  
 
 2表示System Error(engine analysis error).
@@ -147,7 +146,6 @@ use TencentCloud\Common\AbstractModel;
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResultListItem extends AbstractModel
 {
@@ -288,7 +286,6 @@ class ResultListItem extends AbstractModel
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrNo;
 
@@ -356,7 +353,6 @@ class ResultListItem extends AbstractModel
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

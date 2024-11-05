@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取满足条件的日志条数
  * @method void setTotalCount(integer $TotalCount) 设置满足条件的日志条数
  * @method array getHistogramInfos() 获取注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistogramInfos(array $HistogramInfos) 设置注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class DescribeAccessHistogramResponse extends AbstractModel
 
     /**
      * @var array 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistogramInfos;
 
@@ -58,7 +55,6 @@ class DescribeAccessHistogramResponse extends AbstractModel
      * @param integer $Interval 柱状图间隔时间差，单位ms
      * @param integer $TotalCount 满足条件的日志条数
      * @param array $HistogramInfos 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

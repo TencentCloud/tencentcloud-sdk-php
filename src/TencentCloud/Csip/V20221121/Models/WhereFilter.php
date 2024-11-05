@@ -21,35 +21,26 @@ use TencentCloud\Common\AbstractModel;
  * 过滤条件
  *
  * @method string getName() 获取过滤的项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置过滤的项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取过滤的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置过滤的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOperatorType() 获取中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperatorType(integer $OperatorType) 设置中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WhereFilter extends AbstractModel
 {
     /**
      * @var string 过滤的项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 过滤的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
@@ -58,20 +49,15 @@ class WhereFilter extends AbstractModel
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorType;
 
     /**
      * @param string $Name 过滤的项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 过滤的值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperatorType 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

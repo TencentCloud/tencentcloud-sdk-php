@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getRes() 获取规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRes(array $Res) 设置规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCRuleLists extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CCRuleLists extends AbstractModel
 
     /**
      * @var array 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Res;
 
     /**
      * @param integer $TotalCount 总数
      * @param array $Res 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

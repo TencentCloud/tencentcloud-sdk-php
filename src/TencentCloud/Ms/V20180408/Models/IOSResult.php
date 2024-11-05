@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 渠道合作ios源码混淆加固结果
  *
  * @method string getResultId() 获取加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultId(string $ResultId) 设置加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOpUin() 获取用户uid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpUin(integer $OpUin) 设置用户uid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptType() 获取加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptType(string $EncryptType) 设置加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptState() 获取加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptState(integer $EncryptState) 设置加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptErrno() 获取业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptErrno(integer $EncryptErrno) 设置业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptErrDesc() 获取业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptErrDesc(string $EncryptErrDesc) 设置业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatTime(string $CreatTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCostTime() 获取消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCostTime(integer $CostTime) 设置消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptPkgUrl() 获取加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptPkgUrl(string $EncryptPkgUrl) 设置加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IOSResult extends AbstractModel
 {
     /**
      * @var string 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultId;
 
     /**
      * @var integer 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpUin;
 
     /**
      * @var string 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptType;
 
     /**
      * @var string 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var integer 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptState;
 
     /**
      * @var integer 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptErrno;
 
     /**
      * @var string 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptErrDesc;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatTime;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CostTime;
 
     /**
      * @var string 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptPkgUrl;
 
     /**
      * @param string $ResultId 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OpUin 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptType 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptErrno 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptErrDesc 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CostTime 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptPkgUrl 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

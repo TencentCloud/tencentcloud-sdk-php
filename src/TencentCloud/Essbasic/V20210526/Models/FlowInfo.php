@@ -111,7 +111,15 @@ use TencentCloud\Common\AbstractModel;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工（本企业员工必须已经完成认证并加入企业）。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工（本企业员工必须已经完成认证并加入企业）。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
  * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
 <ul><li> **false**：（默认）不需要审批，直接签署。</li>
 <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
@@ -231,6 +239,10 @@ class FlowInfo extends AbstractModel
 
     /**
      * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工（本企业员工必须已经完成认证并加入企业）。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
      */
     public $CcInfos;
 
@@ -311,6 +323,10 @@ class FlowInfo extends AbstractModel
 ![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工（本企业员工必须已经完成认证并加入企业）。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
      * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
 <ul><li> **false**：（默认）不需要审批，直接签署。</li>
 <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>

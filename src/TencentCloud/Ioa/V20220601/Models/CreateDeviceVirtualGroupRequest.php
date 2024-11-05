@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeviceVirtualGroup请求参数结构体
  *
- * @method string getDeviceVirtualGroupName() 获取终端自定义分组名
- * @method void setDeviceVirtualGroupName(string $DeviceVirtualGroupName) 设置终端自定义分组名
+ * @method string getDeviceVirtualGroupName() 获取必填，终端自定义分组名
+ * @method void setDeviceVirtualGroupName(string $DeviceVirtualGroupName) 设置必填，终端自定义分组名
  * @method string getDescription() 获取详情
  * @method void setDescription(string $Description) 设置详情
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
- * @method integer getTimeType() 获取时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
- * @method void setTimeType(integer $TimeType) 设置时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
- * @method integer getAutoMinute() 获取自动划分时间（单位min）(只支持32位)
- * @method void setAutoMinute(integer $AutoMinute) 设置自动划分时间（单位min）(只支持32位)
- * @method ComplexRule getAutoRules() 获取自动划分规则数据
- * @method void setAutoRules(ComplexRule $AutoRules) 设置自动划分规则数据
+ * @method integer getOsType() 获取必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+ * @method void setOsType(integer $OsType) 设置必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+ * @method integer getTimeType() 获取必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+ * @method void setTimeType(integer $TimeType) 设置必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+ * @method integer getAutoMinute() 获取选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
+ * @method void setAutoMinute(integer $AutoMinute) 设置选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
+ * @method ComplexRule getAutoRules() 获取选填，手动分组不填，自动划分分组的划分规则数据
+ * @method void setAutoRules(ComplexRule $AutoRules) 设置选填，手动分组不填，自动划分分组的划分规则数据
  */
 class CreateDeviceVirtualGroupRequest extends AbstractModel
 {
     /**
-     * @var string 终端自定义分组名
+     * @var string 必填，终端自定义分组名
      */
     public $DeviceVirtualGroupName;
 
@@ -46,32 +46,32 @@ class CreateDeviceVirtualGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
+     * @var integer 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
      */
     public $OsType;
 
     /**
-     * @var integer 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
+     * @var integer 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
      */
     public $TimeType;
 
     /**
-     * @var integer 自动划分时间（单位min）(只支持32位)
+     * @var integer 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
      */
     public $AutoMinute;
 
     /**
-     * @var ComplexRule 自动划分规则数据
+     * @var ComplexRule 选填，手动分组不填，自动划分分组的划分规则数据
      */
     public $AutoRules;
 
     /**
-     * @param string $DeviceVirtualGroupName 终端自定义分组名
+     * @param string $DeviceVirtualGroupName 必填，终端自定义分组名
      * @param string $Description 详情
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
-     * @param integer $TimeType 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
-     * @param integer $AutoMinute 自动划分时间（单位min）(只支持32位)
-     * @param ComplexRule $AutoRules 自动划分规则数据
+     * @param integer $OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+     * @param integer $TimeType 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+     * @param integer $AutoMinute 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
+     * @param ComplexRule $AutoRules 选填，手动分组不填，自动划分分组的划分规则数据
      */
     function __construct()
     {

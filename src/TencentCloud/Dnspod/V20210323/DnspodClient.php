@@ -27,6 +27,8 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CheckSnapshotRollbackResponse CheckSnapshotRollback(Models\CheckSnapshotRollbackRequest $req) 快照回滚前检查
  * @method Models\CreateDealResponse CreateDeal(Models\CreateDealRequest $req) DNSPod商品下单
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加域名
+
+备注：该接口不支持添加子域名。
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) 创建域名别名
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 批量添加域名
  * @method Models\CreateDomainCustomLineResponse CreateDomainCustomLine(Models\CreateDomainCustomLineRequest $req) 创建域名的自定义线路
@@ -36,6 +38,8 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
+ * @method Models\CreateTXTRecordResponse CreateTXTRecord(Models\CreateTXTRecordRequest $req) 添加TXT记录
+备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 删除域名
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
  * @method Models\DeleteDomainBatchResponse DeleteDomainBatch(Models\DeleteDomainBatchRequest $req) 批量删除域名
@@ -103,6 +107,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyRecordToGroupResponse ModifyRecordToGroup(Models\ModifyRecordToGroupRequest $req) 将记录添加到分组
  * @method Models\ModifySnapshotConfigResponse ModifySnapshotConfig(Models\ModifySnapshotConfigRequest $req) 修改快照配置
  * @method Models\ModifySubdomainStatusResponse ModifySubdomainStatus(Models\ModifySubdomainStatusRequest $req) 暂停子域名的解析记录
+ * @method Models\ModifyTXTRecordResponse ModifyTXTRecord(Models\ModifyTXTRecordRequest $req) 修改TXT记录
  * @method Models\ModifyVasAutoRenewStatusResponse ModifyVasAutoRenewStatus(Models\ModifyVasAutoRenewStatusRequest $req) 增值服务自动续费设置
  * @method Models\PayOrderWithBalanceResponse PayOrderWithBalance(Models\PayOrderWithBalanceRequest $req) DNSPod商品余额支付
  * @method Models\RollbackRecordSnapshotResponse RollbackRecordSnapshot(Models\RollbackRecordSnapshotRequest $req) 重新回滚指定解析记录快照

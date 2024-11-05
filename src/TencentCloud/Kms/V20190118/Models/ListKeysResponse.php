@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * ListKeys返回参数结构体
  *
  * @method array getKeys() 获取CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取CMK的总数量
  * @method void setTotalCount(integer $TotalCount) 设置CMK的总数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class ListKeysResponse extends AbstractModel
 {
     /**
      * @var array CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
@@ -49,7 +46,6 @@ class ListKeysResponse extends AbstractModel
 
     /**
      * @param array $Keys CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount CMK的总数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

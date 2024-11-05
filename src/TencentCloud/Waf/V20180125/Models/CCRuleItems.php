@@ -47,15 +47,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
  * @method string getEventId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSessionApplied() 获取关联的Session规则
  * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCRuleItems extends AbstractModel
 {
@@ -126,7 +122,6 @@ class CCRuleItems extends AbstractModel
 
     /**
      * @var string 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
@@ -137,7 +132,6 @@ class CCRuleItems extends AbstractModel
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -156,10 +150,8 @@ class CCRuleItems extends AbstractModel
      * @param string $Options 规则详情
      * @param integer $RuleId 规则ID
      * @param string $EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SessionApplied 关联的Session规则
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

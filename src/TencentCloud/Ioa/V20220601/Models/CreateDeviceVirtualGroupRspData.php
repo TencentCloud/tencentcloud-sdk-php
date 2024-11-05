@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 响应返回的data
  *
  * @method integer getId() 获取返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateDeviceVirtualGroupRspData extends AbstractModel
 {
     /**
      * @var integer 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @param integer $Id 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

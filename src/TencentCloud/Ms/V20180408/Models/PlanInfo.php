@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 加固策略信息
  *
  * @method string getSetFile() 获取Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetFile(string $SetFile) 设置Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApkSizeOpt() 获取apk大小优化，0关闭，1开启
  * @method void setApkSizeOpt(integer $ApkSizeOpt) 设置apk大小优化，0关闭，1开启
  * @method integer getDex() 获取Dex加固，0关闭，1开启
@@ -51,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAntiSSL() 获取SSL证书防窃取，0关闭，1开启
  * @method void setAntiSSL(integer $AntiSSL) 设置SSL证书防窃取，0关闭，1开启
  * @method string getFileSign() 获取Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSign(string $FileSign) 设置Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAntiRoot() 获取root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAntiRoot(string $AntiRoot) 设置root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSeperateDex() 获取Dex分离，0关闭，1开启
  * @method void setSeperateDex(integer $SeperateDex) 设置Dex分离，0关闭，1开启
  * @method integer getDexSig() 获取Dex签名校验，0关闭，1开启
@@ -69,7 +63,6 @@ class PlanInfo extends AbstractModel
 {
     /**
      * @var string Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetFile;
 
@@ -140,13 +133,11 @@ class PlanInfo extends AbstractModel
 
     /**
      * @var string Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSign;
 
     /**
      * @var string root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AntiRoot;
 
@@ -170,7 +161,6 @@ class PlanInfo extends AbstractModel
 
     /**
      * @param string $SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApkSizeOpt apk大小优化，0关闭，1开启
      * @param integer $Dex Dex加固，0关闭，1开启
      * @param integer $So So加固，0关闭，1开启
@@ -185,9 +175,7 @@ class PlanInfo extends AbstractModel
      * @param integer $AntiScreenshot 防止截屏，0关闭，1开启
      * @param integer $AntiSSL SSL证书防窃取，0关闭，1开启
      * @param string $FileSign Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AntiRoot root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SeperateDex Dex分离，0关闭，1开启
      * @param integer $DexSig Dex签名校验，0关闭，1开启
      * @param integer $AntiQemuRoot root检测，0关闭，1开启

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置验签文件id
  * @method string getApplyEmail() 获取验签申请经办人邮箱
  * @method void setApplyEmail(string $ApplyEmail) 设置验签申请经办人邮箱
+ * @method array getCertificateIdentityUsers() 获取证书用户身份及身份鉴别信息
+ * @method void setCertificateIdentityUsers(array $CertificateIdentityUsers) 设置证书用户身份及身份鉴别信息
  */
 class CreateVerifyReportRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateVerifyReportRequest extends AbstractModel
     public $ApplyEmail;
 
     /**
+     * @var array 证书用户身份及身份鉴别信息
+     */
+    public $CertificateIdentityUsers;
+
+    /**
      * @param string $ApplyCustomerType 申请者类型 1:个人，2:企业
      * @param string $ApplyCustomerName 申请企业 or 自然人名称
      * @param string $ApplyName 验签申请经办人姓名
      * @param string $ApplyMobile 验签申请经办人电话
      * @param string $FileId 验签文件id
      * @param string $ApplyEmail 验签申请经办人邮箱
+     * @param array $CertificateIdentityUsers 证书用户身份及身份鉴别信息
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateVerifyReportRequest extends AbstractModel
 
         if (array_key_exists("ApplyEmail",$param) and $param["ApplyEmail"] !== null) {
             $this->ApplyEmail = $param["ApplyEmail"];
+        }
+
+        if (array_key_exists("CertificateIdentityUsers",$param) and $param["CertificateIdentityUsers"] !== null) {
+            $this->CertificateIdentityUsers = [];
+            foreach ($param["CertificateIdentityUsers"] as $key => $value){
+                $obj = new CertificateIdentityUser();
+                $obj->deserialize($value);
+                array_push($this->CertificateIdentityUsers, $obj);
+            }
         }
     }
 }

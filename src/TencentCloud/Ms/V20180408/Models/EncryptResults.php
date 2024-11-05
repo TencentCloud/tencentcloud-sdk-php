@@ -37,21 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOrderId() 获取与当前任务关联的订单Id
  * @method void setOrderId(string $OrderId) 设置与当前任务关联的订单Id
  * @method AndroidResult getAndroidResult() 获取对应PlatformType平台类型值   1-android加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidResult(AndroidResult $AndroidResult) 设置对应PlatformType平台类型值   1-android加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IOSResult getIOSResult() 获取对应PlatformType平台类型值   2-ios源码混淆加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIOSResult(IOSResult $IOSResult) 设置对应PlatformType平台类型值   2-ios源码混淆加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SDKResult getSDKResult() 获取对应PlatformType平台类型值   3-sdk加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSDKResult(SDKResult $SDKResult) 设置对应PlatformType平台类型值   3-sdk加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AppletResult getAppletResult() 获取对应PlatformType平台类型值   4-applet小程序加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppletResult(AppletResult $AppletResult) 设置对应PlatformType平台类型值   4-applet小程序加固结果
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EncryptResults extends AbstractModel
 {
@@ -97,25 +89,21 @@ class EncryptResults extends AbstractModel
 
     /**
      * @var AndroidResult 对应PlatformType平台类型值   1-android加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidResult;
 
     /**
      * @var IOSResult 对应PlatformType平台类型值   2-ios源码混淆加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IOSResult;
 
     /**
      * @var SDKResult 对应PlatformType平台类型值   3-sdk加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SDKResult;
 
     /**
      * @var AppletResult 对应PlatformType平台类型值   4-applet小程序加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppletResult;
 
@@ -129,13 +117,9 @@ class EncryptResults extends AbstractModel
      * @param string $ResourceId 与当前任务关联的资源Id
      * @param string $OrderId 与当前任务关联的订单Id
      * @param AndroidResult $AndroidResult 对应PlatformType平台类型值   1-android加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IOSResult $IOSResult 对应PlatformType平台类型值   2-ios源码混淆加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SDKResult $SDKResult 对应PlatformType平台类型值   3-sdk加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppletResult $AppletResult 对应PlatformType平台类型值   4-applet小程序加固结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

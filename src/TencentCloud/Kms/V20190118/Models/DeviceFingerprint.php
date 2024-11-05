@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdentity() 获取指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
  * @method void setIdentity(string $Identity) 设置指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
  * @method string getDescription() 获取描述信息，如：IP，设备名称等，最大1024字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息，如：IP，设备名称等，最大1024字节
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceFingerprint extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DeviceFingerprint extends AbstractModel
 
     /**
      * @var string 描述信息，如：IP，设备名称等，最大1024字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $Identity 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      * @param string $Description 描述信息，如：IP，设备名称等，最大1024字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

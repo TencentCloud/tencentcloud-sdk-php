@@ -24,9 +24,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+ * @method string getType() 获取剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+ * @method void setType(string $Type) 设置剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaOutputConfig extends AbstractModel
@@ -38,7 +44,10 @@ class EditMediaOutputConfig extends AbstractModel
     public $Container;
 
     /**
-     * @var string 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * @var string 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -46,7 +55,10 @@ class EditMediaOutputConfig extends AbstractModel
     /**
      * @param string $Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * @param string $Type 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

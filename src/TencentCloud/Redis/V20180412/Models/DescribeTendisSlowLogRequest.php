@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id：crs-ngvou0i1
  * @method void setInstanceId(string $InstanceId) 设置实例Id：crs-ngvou0i1
- * @method string getBeginTime() 获取开始时间：2019-09-08 12:12:41
- * @method void setBeginTime(string $BeginTime) 设置开始时间：2019-09-08 12:12:41
- * @method string getEndTime() 获取结束时间：2019-09-09 12:12:41
- * @method void setEndTime(string $EndTime) 设置结束时间：2019-09-09 12:12:41
+ * @method string getBeginTime() 获取开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
+ * @method void setBeginTime(string $BeginTime) 设置开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
+ * @method string getEndTime() 获取结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
+ * @method void setEndTime(string $EndTime) 设置结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
  * @method integer getMinQueryTime() 获取慢查询阈值（毫秒）
  * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值（毫秒）
- * @method integer getLimit() 获取页面大小：默认20
- * @method void setLimit(integer $Limit) 设置页面大小：默认20
- * @method integer getOffset() 获取偏移量，取Limit整数倍
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
+ * @method integer getLimit() 获取页面大小：默认20，最大100。
+ * @method void setLimit(integer $Limit) 设置页面大小：默认20，最大100。
+ * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  */
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
@@ -41,12 +41,12 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 开始时间：2019-09-08 12:12:41
+     * @var string 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间：2019-09-09 12:12:41
+     * @var string 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
      */
     public $EndTime;
 
@@ -56,22 +56,22 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer 页面大小：默认20
+     * @var integer 页面大小：默认20，最大100。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍
+     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
     /**
      * @param string $InstanceId 实例Id：crs-ngvou0i1
-     * @param string $BeginTime 开始时间：2019-09-08 12:12:41
-     * @param string $EndTime 结束时间：2019-09-09 12:12:41
+     * @param string $BeginTime 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
+     * @param string $EndTime 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
      * @param integer $MinQueryTime 慢查询阈值（毫秒）
-     * @param integer $Limit 页面大小：默认20
-     * @param integer $Offset 偏移量，取Limit整数倍
+     * @param integer $Limit 页面大小：默认20，最大100。
+     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     function __construct()
     {

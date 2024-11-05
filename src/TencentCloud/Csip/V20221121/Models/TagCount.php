@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 产品日志条数
  *
  * @method string getName() 获取产品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置产品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取日志条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置日志条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagCount extends AbstractModel
 {
     /**
      * @var string 产品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @param string $Name 产品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

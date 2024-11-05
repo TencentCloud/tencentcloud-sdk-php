@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcName() 获取私有网络名
  * @method void setVpcName(string $VpcName) 设置私有网络名
  * @method array getTag() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutboundPeakBandwidth() 获取出向峰值带宽
  * @method void setOutboundPeakBandwidth(string $OutboundPeakBandwidth) 设置出向峰值带宽
  * @method string getInboundPeakBandwidth() 获取入向峰值带宽
@@ -69,13 +67,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNick() 获取昵称
  * @method void setNick(string $Nick) 设置昵称
  * @method integer getIsCore() 获取是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNewAsset() 获取是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NICAsset extends AbstractModel
 {
@@ -131,7 +125,6 @@ class NICAsset extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -197,13 +190,11 @@ class NICAsset extends AbstractModel
 
     /**
      * @var integer 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
     /**
      * @var integer 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAsset;
 
@@ -219,7 +210,6 @@ class NICAsset extends AbstractModel
      * @param string $VpcId 私有网络id
      * @param string $VpcName 私有网络名
      * @param array $Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutboundPeakBandwidth 出向峰值带宽
      * @param string $InboundPeakBandwidth 入向峰值带宽
      * @param string $OutboundCumulativeFlow 出站累计流量
@@ -233,9 +223,7 @@ class NICAsset extends AbstractModel
      * @param string $LastScanTime 最后扫描时间
      * @param string $Nick 昵称
      * @param integer $IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

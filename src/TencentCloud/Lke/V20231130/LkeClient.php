@@ -25,7 +25,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
 /**
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
- * @method Models\ConvertDocumentResponse ConvertDocument(Models\ConvertDocumentRequest $req) 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
+ * @method Models\ConvertDocumentResponse ConvertDocument(Models\ConvertDocumentRequest $req) 产品规划
+
+接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建属性
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业

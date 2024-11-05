@@ -21,249 +21,169 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞详细信息
  *
  * @method integer getId() 获取漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPatchId() 获取漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPatchId(string $PatchId) 设置漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVULName() 获取漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVULName(string $VULName) 设置漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVSSScore() 获取cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVSSScore(string $CVSSScore) 设置cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVEId() 获取cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVEId(string $CVEId) 设置cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVULCategory() 获取漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVULCategory(integer $VULCategory) 设置漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImpactOs() 获取漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactOs(string $ImpactOs) 设置漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImpactCOMPENT() 获取漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactCOMPENT(string $ImpactCOMPENT) 设置漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImpactVersion() 获取漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactVersion(string $ImpactVersion) 设置漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReference() 获取链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReference(string $Reference) 设置链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVULDescribe() 获取漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVULDescribe(string $VULDescribe) 设置漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFix() 获取修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFix(string $Fix) 设置修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProSupport() 获取产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProSupport(integer $ProSupport) 设置产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsPublish() 获取是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPublish(integer $IsPublish) 设置是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseTime() 获取释放时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseTime(string $ReleaseTime) 设置释放时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubCategory() 获取漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubCategory(string $SubCategory) 设置漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BugInfoDetail extends AbstractModel
 {
     /**
      * @var integer 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PatchId;
 
     /**
      * @var string 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VULName;
 
     /**
      * @var string 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSSScore;
 
     /**
      * @var string cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVEId;
 
     /**
      * @var string 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var integer 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VULCategory;
 
     /**
      * @var string 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImpactOs;
 
     /**
      * @var string 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImpactCOMPENT;
 
     /**
      * @var string 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImpactVersion;
 
     /**
      * @var string 链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reference;
 
     /**
      * @var string 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VULDescribe;
 
     /**
      * @var string 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fix;
 
     /**
      * @var integer 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProSupport;
 
     /**
      * @var integer 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPublish;
 
     /**
      * @var string 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseTime;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubCategory;
 
     /**
      * @param integer $Id 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PatchId 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVSSScore cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVEId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VULCategory 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImpactOs 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImpactCOMPENT 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImpactVersion 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reference 链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProSupport 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsPublish 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseTime 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubCategory 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 风险详情
  *
  * @method string getTitle() 获取标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBody() 获取详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerRiskSuggestion extends AbstractModel
 {
     /**
      * @var string 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var string 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
 
     /**
      * @param string $Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

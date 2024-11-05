@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 获取账号列表响应的分页对象
  *
  * @method Paging getPage() 获取公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(Paging $Page) 设置公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeLocalAccountsPage extends AbstractModel
 {
     /**
      * @var Paging 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @var array 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @param Paging $Page 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

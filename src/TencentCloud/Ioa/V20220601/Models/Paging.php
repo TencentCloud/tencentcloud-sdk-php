@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 页码
  *
- * @method integer getPageSize() 获取每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNum() 获取页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNum(integer $PageNum) 设置页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageCount() 获取总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageCount(integer $PageCount) 设置总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPageSize() 获取每页条数
+ * @method void setPageSize(integer $PageSize) 设置每页条数
+ * @method integer getPageNum() 获取页码
+ * @method void setPageNum(integer $PageNum) 设置页码
+ * @method integer getPageCount() 获取总页数
+ * @method void setPageCount(integer $PageCount) 设置总页数
  * @method integer getTotal() 获取记录总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置记录总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Paging extends AbstractModel
 {
     /**
-     * @var integer 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 每页条数
      */
     public $PageSize;
 
     /**
-     * @var integer 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 页码
      */
     public $PageNum;
 
     /**
-     * @var integer 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总页数
      */
     public $PageCount;
 
     /**
      * @var integer 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @param integer $PageSize 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNum 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageCount 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PageSize 每页条数
+     * @param integer $PageNum 页码
+     * @param integer $PageCount 总页数
      * @param integer $Total 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

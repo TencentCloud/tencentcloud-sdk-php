@@ -76,10 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
 - 若不设置该参数，则为默认项目。
 - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
- * @method string getVpcId() 获取私有网络ID。如果不设置该参数，则默认选择基础网络。
- * @method void setVpcId(string $VpcId) 设置私有网络ID。如果不设置该参数，则默认选择基础网络。
- * @method string getSubnetId() 获取私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
- * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+ * @method string getVpcId() 获取私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
+ * @method string getSubnetId() 获取私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+ * @method void setSubnetId(string $SubnetId) 设置私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
  * @method string getPassword() 获取实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
  * @method void setPassword(string $Password) 设置实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
  * @method array getTags() 获取实例标签信息。
@@ -212,12 +212,12 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 私有网络ID。如果不设置该参数，则默认选择基础网络。
+     * @var string 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+     * @var string 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
      */
     public $SubnetId;
 
@@ -346,8 +346,8 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId 项目ID。
 - 若不设置该参数，则为默认项目。
 - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
-     * @param string $VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
-     * @param string $SubnetId 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+     * @param string $VpcId 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
+     * @param string $SubnetId 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
      * @param string $Password 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
      * @param array $Tags 实例标签信息。
      * @param integer $AutoRenewFlag 自动续费标记。

@@ -54,12 +54,6 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAccessHistogramResponse DescribeAccessHistogram(Models\DescribeAccessHistogramRequest $req) 本接口用于访问日志柱状趋势图
  * @method Models\DescribeAccessIndexResponse DescribeAccessIndex(Models\DescribeAccessIndexRequest $req) 本接口用于获取访问日志索引配置信息
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) 获取防篡改url
- * @method Models\DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(Models\DescribeAntiFakeUrlRequest $req) 废弃接口
-
-获取防篡改url
- * @method Models\DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(Models\DescribeAntiInfoLeakRulesRequest $req) 老接口已经不再使用。
-
-获取信息防泄漏规则列表
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 获取Api请求详情信息
  * @method Models\DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(Models\DescribeApiListVersionTwoRequest $req) api资产列表
@@ -101,6 +95,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 获取Saas型WAF防护端口列表
  * @method Models\DescribeProtectionModesResponse DescribeProtectionModes(Models\DescribeProtectionModesRequest $req) 查询Tiga引擎大类规则及其防护模式
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
+ * @method Models\DescribeScanIpResponse DescribeScanIp(Models\DescribeScanIpRequest $req) 查询扫描ip
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) Waf 会话定义查询接口
  * @method Models\DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfo(Models\DescribeSpartaProtectionInfoRequest $req) waf斯巴达-获取防护域名信息
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) 查询SaaS型WAF支持的TLS版本

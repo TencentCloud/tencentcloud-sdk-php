@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 规则执行的时间结构体
  *
  * @method array getTimed() 获取定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimed(array $Timed) 设置定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCron() 获取周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCron(array $Cron) 设置周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeTZone() 获取时区
  * @method void setTimeTZone(string $TimeTZone) 设置时区
  */
@@ -35,13 +31,11 @@ class JobDateTime extends AbstractModel
 {
     /**
      * @var array 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timed;
 
     /**
      * @var array 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cron;
 
@@ -52,9 +46,7 @@ class JobDateTime extends AbstractModel
 
     /**
      * @param array $Timed 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Cron 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeTZone 时区
      */
     function __construct()

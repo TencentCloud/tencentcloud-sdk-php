@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefenseStatus(integer $DefenseStatus) 设置自动封禁状态
  * @method string getSource() 获取数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHWState() 获取重保护网域名状态
  * @method void setHWState(integer $HWState) 设置重保护网域名状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,7 +62,6 @@ class DescribeWafAutoDenyRulesResponse extends AbstractModel
     /**
      * @var string 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
@@ -85,7 +82,6 @@ class DescribeWafAutoDenyRulesResponse extends AbstractModel
      * @param integer $DefenseStatus 自动封禁状态
      * @param string $Source 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HWState 重保护网域名状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

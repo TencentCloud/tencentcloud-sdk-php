@@ -56,11 +56,9 @@ OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) 设置Prometheus信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWebConsoleDomainEndpoint() 获取http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+ * @method string getWebConsoleDomainEndpoint() 获取公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+ * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
@@ -132,8 +130,7 @@ OFF/ON/CREATING/DELETING
     public $PrometheusEndpointInfo;
 
     /**
-     * @var string http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * @var string 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebConsoleDomainEndpoint;
@@ -157,8 +154,7 @@ OFF/ON/CREATING/DELETING
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrometheusEndpointInfo $PrometheusEndpointInfo Prometheus信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * @param string $WebConsoleDomainEndpoint 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

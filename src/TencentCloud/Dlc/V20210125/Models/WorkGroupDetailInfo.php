@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowFilterInfo(Policys $RowFilterInfo) 设置行过滤信息集合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Policy getCatalogPolicyInfo() 获取数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogPolicyInfo(Policy $CatalogPolicyInfo) 设置数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkGroupDetailInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class WorkGroupDetailInfo extends AbstractModel
     public $RowFilterInfo;
 
     /**
+     * @var Policy 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogPolicyInfo;
+
+    /**
      * @param integer $WorkGroupId 工作组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkGroupName 工作组名称
@@ -119,6 +129,8 @@ class WorkGroupDetailInfo extends AbstractModel
      * @param string $WorkGroupDescription 工作组描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $RowFilterInfo 行过滤信息集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policy $CatalogPolicyInfo 数据目录权限集
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,11 @@ class WorkGroupDetailInfo extends AbstractModel
         if (array_key_exists("RowFilterInfo",$param) and $param["RowFilterInfo"] !== null) {
             $this->RowFilterInfo = new Policys();
             $this->RowFilterInfo->deserialize($param["RowFilterInfo"]);
+        }
+
+        if (array_key_exists("CatalogPolicyInfo",$param) and $param["CatalogPolicyInfo"] !== null) {
+            $this->CatalogPolicyInfo = new Policy();
+            $this->CatalogPolicyInfo->deserialize($param["CatalogPolicyInfo"]);
         }
     }
 }

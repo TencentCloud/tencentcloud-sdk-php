@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNoticeContent请求参数结构体
  *
- * @method string getNoticeContentId() 获取通知内容模版ID。
- * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模版ID。
- * @method string getName() 获取通知内容模版名称。
- * @method void setName(string $Name) 设置通知内容模版名称。
+ * @method string getNoticeContentId() 获取通知内容模板ID。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
+ * @method string getName() 获取通知内容模板名称。
+ * @method void setName(string $Name) 设置通知内容模板名称。
  * @method integer getType() 获取通知内容语言。
 
 0：中文 1：英文
  * @method void setType(integer $Type) 设置通知内容语言。
 
 0：中文 1：英文
- * @method array getNoticeContents() 获取通知内容模版详细信息。
- * @method void setNoticeContents(array $NoticeContents) 设置通知内容模版详细信息。
+ * @method array getNoticeContents() 获取通知内容模板详细信息。
+ * @method void setNoticeContents(array $NoticeContents) 设置通知内容模板详细信息。
  */
 class ModifyNoticeContentRequest extends AbstractModel
 {
     /**
-     * @var string 通知内容模版ID。
+     * @var string 通知内容模板ID。
      */
     public $NoticeContentId;
 
     /**
-     * @var string 通知内容模版名称。
+     * @var string 通知内容模板名称。
      */
     public $Name;
 
@@ -53,17 +53,17 @@ class ModifyNoticeContentRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 通知内容模版详细信息。
+     * @var array 通知内容模板详细信息。
      */
     public $NoticeContents;
 
     /**
-     * @param string $NoticeContentId 通知内容模版ID。
-     * @param string $Name 通知内容模版名称。
+     * @param string $NoticeContentId 通知内容模板ID。
+     * @param string $Name 通知内容模板名称。
      * @param integer $Type 通知内容语言。
 
 0：中文 1：英文
-     * @param array $NoticeContents 通知内容模版详细信息。
+     * @param array $NoticeContents 通知内容模板详细信息。
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述信息，用于详细描述用途等，最大支持2048字节。
  * @method string getKmsKeyId() 获取指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
  * @method void setKmsKeyId(string $KmsKeyId) 设置指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
- * @method integer getSecretType() 获取凭据类型，默认为自定义凭据。
- * @method void setSecretType(integer $SecretType) 设置凭据类型，默认为自定义凭据。
+ * @method integer getSecretType() 获取凭据类型，默认为0自定义凭据。
+ * @method void setSecretType(integer $SecretType) 设置凭据类型，默认为0自定义凭据。
  * @method string getSecretBinary() 获取二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
  * @method void setSecretBinary(string $SecretBinary) 设置二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
  * @method string getSecretString() 获取文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
@@ -62,7 +62,7 @@ class CreateSecretRequest extends AbstractModel
     public $KmsKeyId;
 
     /**
-     * @var integer 凭据类型，默认为自定义凭据。
+     * @var integer 凭据类型，默认为0自定义凭据。
      */
     public $SecretType;
 
@@ -91,7 +91,7 @@ class CreateSecretRequest extends AbstractModel
      * @param string $VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
      * @param string $Description 描述信息，用于详细描述用途等，最大支持2048字节。
      * @param string $KmsKeyId 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
-     * @param integer $SecretType 凭据类型，默认为自定义凭据。
+     * @param integer $SecretType 凭据类型，默认为0自定义凭据。
      * @param string $SecretBinary 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
      * @param string $SecretString 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
      * @param string $AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。

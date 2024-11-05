@@ -74,8 +74,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setLoginNodeCount(integer $LoginNodeCount) 设置指定登录节点的数量。默认取值：0。取值范围：0～10。
  * @method array getTags() 获取创建集群时同时绑定的标签对说明。
  * @method void setTags(array $Tags) 设置创建集群时同时绑定的标签对说明。
- * @method string getAutoScalingType() 获取弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
- * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+ * @method string getAutoScalingType() 获取弹性伸缩类型。默认值：THPC_AS
+ * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。默认值：THPC_AS
  * @method array getInitNodeScripts() 获取节点初始化脚本信息列表。
  * @method void setInitNodeScripts(array $InitNodeScripts) 设置节点初始化脚本信息列表。
  * @method string getHpcClusterId() 获取高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
@@ -187,7 +187,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $Tags;
 
     /**
-     * @var string 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * @var string 弹性伸缩类型。默认值：THPC_AS
      */
     public $AutoScalingType;
 
@@ -229,7 +229,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param LoginNode $LoginNode 指定登录节点。
      * @param integer $LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
      * @param array $Tags 创建集群时同时绑定的标签对说明。
-     * @param string $AutoScalingType 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * @param string $AutoScalingType 弹性伸缩类型。默认值：THPC_AS
      * @param array $InitNodeScripts 节点初始化脚本信息列表。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      */

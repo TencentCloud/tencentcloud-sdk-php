@@ -37,57 +37,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKmsKeyType() 获取用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
  * @method void setKmsKeyType(string $KmsKeyType) 设置用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
  * @method integer getRotationStatus() 获取1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotationStatus(integer $RotationStatus) 设置1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNextRotationTime() 获取下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextRotationTime(integer $NextRotationTime) 设置下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecretType() 获取0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectID() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectID(integer $ProjectID) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetUin() 获取当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRotationFrequency() 获取轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceID() 获取云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceID(string $ResourceID) 设置云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRotationBeginTime() 获取用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotationBeginTime(string $RotationBeginTime) 设置用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecretMetadata extends AbstractModel
 {
@@ -133,13 +113,11 @@ class SecretMetadata extends AbstractModel
 
     /**
      * @var integer 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RotationStatus;
 
     /**
      * @var integer 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextRotationTime;
 
@@ -149,25 +127,21 @@ class SecretMetadata extends AbstractModel
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretType;
 
     /**
      * @var string 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var integer 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectID;
 
@@ -179,25 +153,21 @@ class SecretMetadata extends AbstractModel
 
     /**
      * @var integer 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetUin;
 
     /**
      * @var integer 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RotationFrequency;
 
     /**
      * @var string 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceID;
 
     /**
      * @var string 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RotationBeginTime;
 
@@ -211,31 +181,21 @@ class SecretMetadata extends AbstractModel
      * @param integer $CreateTime 凭据创建时间，unix时间戳
      * @param string $KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
      * @param integer $RotationStatus 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NextRotationTime 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecretType 0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceID 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RotationBeginTime 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

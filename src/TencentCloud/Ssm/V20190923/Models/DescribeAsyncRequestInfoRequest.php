@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo请求参数结构体
  *
- * @method integer getFlowID() 获取异步任务ID号。
- * @method void setFlowID(integer $FlowID) 设置异步任务ID号。
+ * @method integer getFlowID() 获取异步任务ID号
+ * @method void setFlowID(integer $FlowID) 设置异步任务ID号
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 异步任务ID号。
+     * @var integer 异步任务ID号
      */
     public $FlowID;
 
     /**
-     * @param integer $FlowID 异步任务ID号。
+     * @param integer $FlowID 异步任务ID号
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNoticeContent请求参数结构体
  *
- * @method string getNoticeContentId() 获取通知内容模版ID
- * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模版ID
+ * @method string getNoticeContentId() 获取通知内容模板ID
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID
  */
 class DeleteNoticeContentRequest extends AbstractModel
 {
     /**
-     * @var string 通知内容模版ID
+     * @var string 通知内容模板ID
      */
     public $NoticeContentId;
 
     /**
-     * @param string $NoticeContentId 通知内容模版ID
+     * @param string $NoticeContentId 通知内容模板ID
      */
     function __construct()
     {

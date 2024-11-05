@@ -21,23 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeNoticeContents请求参数结构体
  *
  * @method array getFilters() 获取<li> name
-按照【通知内容模版名称】进行过滤。
+按照【通知内容模板名称】进行过滤。
 类型：String
 必选：否
 </li>
 <li> noticeContentId
-按照【通知内容模版ID】进行过滤。
+按照【通知内容模板ID】进行过滤。
 类型：String
 必选：否
 </li>
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置<li> name
-按照【通知内容模版名称】进行过滤。
+按照【通知内容模板名称】进行过滤。
 类型：String
 必选：否
 </li>
 <li> noticeContentId
-按照【通知内容模版ID】进行过滤。
+按照【通知内容模板ID】进行过滤。
 类型：String
 必选：否
 </li>
@@ -51,12 +51,12 @@ class DescribeNoticeContentsRequest extends AbstractModel
 {
     /**
      * @var array <li> name
-按照【通知内容模版名称】进行过滤。
+按照【通知内容模板名称】进行过滤。
 类型：String
 必选：否
 </li>
 <li> noticeContentId
-按照【通知内容模版ID】进行过滤。
+按照【通知内容模板ID】进行过滤。
 类型：String
 必选：否
 </li>
@@ -76,12 +76,12 @@ class DescribeNoticeContentsRequest extends AbstractModel
 
     /**
      * @param array $Filters <li> name
-按照【通知内容模版名称】进行过滤。
+按照【通知内容模板名称】进行过滤。
 类型：String
 必选：否
 </li>
 <li> noticeContentId
-按照【通知内容模版ID】进行过滤。
+按照【通知内容模板ID】进行过滤。
 类型：String
 必选：否
 </li>

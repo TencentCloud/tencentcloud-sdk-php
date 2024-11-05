@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalog(string $Catalog) 设置catalog名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getState() 获取状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setState(string $State) 设置状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataBaseAuditRecord extends AbstractModel
 {
@@ -154,6 +158,12 @@ class DataBaseAuditRecord extends AbstractModel
     public $Catalog;
 
     /**
+     * @var string 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $State;
+
+    /**
      * @param string $OsUser 查询用户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InitialQueryId 查询ID
@@ -179,6 +189,8 @@ class DataBaseAuditRecord extends AbstractModel
      * @param string $SqlType sql类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Catalog catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $State 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class DataBaseAuditRecord extends AbstractModel
 
         if (array_key_exists("Catalog",$param) and $param["Catalog"] !== null) {
             $this->Catalog = $param["Catalog"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

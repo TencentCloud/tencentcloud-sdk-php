@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanIp返回参数结构体
  *
- * @method array getIpList() 获取ip列表,当入参Ip为all时，返回该值
- * @method void setIpList(array $IpList) 设置ip列表,当入参Ip为all时，返回该值
+ * @method array getIpList() 获取ip列表,当入参Ip为all时，返回所有已知ip列表
+ * @method void setIpList(array $IpList) 设置ip列表,当入参Ip为all时，返回所有已知ip列表
  * @method string getBussiness() 获取所属业务
  * @method void setBussiness(string $Bussiness) 设置所属业务
  * @method string getCharacteristic() 获取业务特征
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScanIpResponse extends AbstractModel
 {
     /**
-     * @var array ip列表,当入参Ip为all时，返回该值
+     * @var array ip列表,当入参Ip为all时，返回所有已知ip列表
      */
     public $IpList;
 
@@ -108,7 +108,7 @@ class DescribeScanIpResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $IpList ip列表,当入参Ip为all时，返回该值
+     * @param array $IpList ip列表,当入参Ip为all时，返回所有已知ip列表
      * @param string $Bussiness 所属业务
      * @param string $Characteristic 业务特征
      * @param string $Descibe 扫描说明

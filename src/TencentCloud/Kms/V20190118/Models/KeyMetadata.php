@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
  * @method string getHsmClusterId() 获取HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
  * @method void setHsmClusterId(string $HsmClusterId) 设置HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+ * @method integer getRotateDays() 获取密钥轮转周期（天）
+ * @method void setRotateDays(integer $RotateDays) 设置密钥轮转周期（天）
+ * @method integer getLastRotateTime() 获取上次乱转时间（Unix timestamp）
+ * @method void setLastRotateTime(integer $LastRotateTime) 设置上次乱转时间（Unix timestamp）
  */
 class KeyMetadata extends AbstractModel
 {
@@ -136,6 +140,16 @@ class KeyMetadata extends AbstractModel
     public $HsmClusterId;
 
     /**
+     * @var integer 密钥轮转周期（天）
+     */
+    public $RotateDays;
+
+    /**
+     * @var integer 上次乱转时间（Unix timestamp）
+     */
+    public $LastRotateTime;
+
+    /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
@@ -152,6 +166,8 @@ class KeyMetadata extends AbstractModel
      * @param integer $ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
      * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
      * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * @param integer $RotateDays 密钥轮转周期（天）
+     * @param integer $LastRotateTime 上次乱转时间（Unix timestamp）
      */
     function __construct()
     {
@@ -228,6 +244,14 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
+            $this->RotateDays = $param["RotateDays"];
+        }
+
+        if (array_key_exists("LastRotateTime",$param) and $param["LastRotateTime"] !== null) {
+            $this->LastRotateTime = $param["LastRotateTime"];
         }
     }
 }

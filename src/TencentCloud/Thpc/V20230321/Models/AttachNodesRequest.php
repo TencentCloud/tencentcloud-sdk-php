@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
- * @method array getResourceSet() 获取节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
- * @method void setResourceSet(array $ResourceSet) 设置节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+ * @method array getResourceSet() 获取节点的实例id列表
+ * @method void setResourceSet(array $ResourceSet) 设置节点的实例id列表
  * @method string getQueueName() 获取队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
 SGE默认队列为：all.q。
@@ -43,7 +43,7 @@ class AttachNodesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * @var array 节点的实例id列表
      */
     public $ResourceSet;
 
@@ -66,7 +66,7 @@ SGE默认队列为：all.q。
 
     /**
      * @param string $ClusterId 集群id
-     * @param array $ResourceSet 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * @param array $ResourceSet 节点的实例id列表
      * @param string $QueueName 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
 SGE默认队列为：all.q。

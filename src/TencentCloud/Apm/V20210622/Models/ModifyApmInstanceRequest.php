@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 0为按量付费
  * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
+ * @method integer getIsRelatedDashboard() 获取是否关联dashboard： 0 关 1 开
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联dashboard： 0 关 1 开
+ * @method string getDashboardTopicID() 获取dashboard ID
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置dashboard ID
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -163,6 +167,16 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var integer 是否关联dashboard： 0 关 1 开
+     */
+    public $IsRelatedDashboard;
+
+    /**
+     * @var string dashboard ID
+     */
+    public $DashboardTopicID;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名
      * @param array $Tags 标签列表
@@ -184,6 +198,8 @@ class ModifyApmInstanceRequest extends AbstractModel
 1为预付费
 0为按量付费
      * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
+     * @param integer $IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     * @param string $DashboardTopicID dashboard ID
      */
     function __construct()
     {
@@ -277,6 +293,14 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("IsRelatedDashboard",$param) and $param["IsRelatedDashboard"] !== null) {
+            $this->IsRelatedDashboard = $param["IsRelatedDashboard"];
+        }
+
+        if (array_key_exists("DashboardTopicID",$param) and $param["DashboardTopicID"] !== null) {
+            $this->DashboardTopicID = $param["DashboardTopicID"];
         }
     }
 }

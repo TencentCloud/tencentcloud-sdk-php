@@ -40,7 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -65,7 +66,8 @@ use TencentCloud\Common\AbstractModel;
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -176,6 +178,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersistenceCompleteEvent(PersistenceCompleteTask $PersistenceCompleteEvent) 设置剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingCompleteEvent() 获取自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent) 设置自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -203,7 +209,8 @@ class EventContent extends AbstractModel
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -370,6 +377,12 @@ class EventContent extends AbstractModel
     public $PersistenceCompleteEvent;
 
     /**
+     * @var ComplexAdaptiveDynamicStreamingTask 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComplexAdaptiveDynamicStreamingCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -389,7 +402,8 @@ class EventContent extends AbstractModel
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -447,6 +461,8 @@ class EventContent extends AbstractModel
      * @param MediaCastEvent $MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PersistenceCompleteTask $PersistenceCompleteEvent 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -598,6 +614,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("PersistenceCompleteEvent",$param) and $param["PersistenceCompleteEvent"] !== null) {
             $this->PersistenceCompleteEvent = new PersistenceCompleteTask();
             $this->PersistenceCompleteEvent->deserialize($param["PersistenceCompleteEvent"]);
+        }
+
+        if (array_key_exists("ComplexAdaptiveDynamicStreamingCompleteEvent",$param) and $param["ComplexAdaptiveDynamicStreamingCompleteEvent"] !== null) {
+            $this->ComplexAdaptiveDynamicStreamingCompleteEvent = new ComplexAdaptiveDynamicStreamingTask();
+            $this->ComplexAdaptiveDynamicStreamingCompleteEvent->deserialize($param["ComplexAdaptiveDynamicStreamingCompleteEvent"]);
         }
     }
 }

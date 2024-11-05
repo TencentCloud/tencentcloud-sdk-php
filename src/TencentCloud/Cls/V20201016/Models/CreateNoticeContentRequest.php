@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNoticeContent请求参数结构体
  *
- * @method string getName() 获取模版名称。
- * @method void setName(string $Name) 设置模版名称。
- * @method integer getType() 获取模版内容语言。0：中文1：英文
- * @method void setType(integer $Type) 设置模版内容语言。0：中文1：英文
- * @method array getNoticeContents() 获取模版详细配置。
- * @method void setNoticeContents(array $NoticeContents) 设置模版详细配置。
+ * @method string getName() 获取模板名称。
+ * @method void setName(string $Name) 设置模板名称。
+ * @method integer getType() 获取模板内容语言。0：中文1：英文
+ * @method void setType(integer $Type) 设置模板内容语言。0：中文1：英文
+ * @method array getNoticeContents() 获取模板详细配置。
+ * @method void setNoticeContents(array $NoticeContents) 设置模板详细配置。
  */
 class CreateNoticeContentRequest extends AbstractModel
 {
     /**
-     * @var string 模版名称。
+     * @var string 模板名称。
      */
     public $Name;
 
     /**
-     * @var integer 模版内容语言。0：中文1：英文
+     * @var integer 模板内容语言。0：中文1：英文
      */
     public $Type;
 
     /**
-     * @var array 模版详细配置。
+     * @var array 模板详细配置。
      */
     public $NoticeContents;
 
     /**
-     * @param string $Name 模版名称。
-     * @param integer $Type 模版内容语言。0：中文1：英文
-     * @param array $NoticeContents 模版详细配置。
+     * @param string $Name 模板名称。
+     * @param integer $Type 模板内容语言。0：中文1：英文
+     * @param array $NoticeContents 模板详细配置。
      */
     function __construct()
     {

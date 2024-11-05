@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQQueueDetail返回参数结构体
  *
- * @method string getInstanceId() 获取队列名称
+ * @method string getInstanceId() 获取实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置队列名称
+ * @method void setInstanceId(string $InstanceId) 设置实例名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualHost() 获取Vhost参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,7 +146,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 {
     /**
-     * @var string 队列名称
+     * @var string 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
@@ -331,7 +331,7 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 队列名称
+     * @param string $InstanceId 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualHost Vhost参数
 注意：此字段可能返回 null，表示取不到有效值。

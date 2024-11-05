@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListSecretVersionIds请求参数结构体
  *
- * @method string getSecretName() 获取凭据名称。
- * @method void setSecretName(string $SecretName) 设置凭据名称。
+ * @method string getSecretName() 获取凭据名称
+ * @method void setSecretName(string $SecretName) 设置凭据名称
  */
 class ListSecretVersionIdsRequest extends AbstractModel
 {
     /**
-     * @var string 凭据名称。
+     * @var string 凭据名称
      */
     public $SecretName;
 
     /**
-     * @param string $SecretName 凭据名称。
+     * @param string $SecretName 凭据名称
      */
     function __construct()
     {

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
- * @method MutualTLS getClientCertInfo() 获取在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
- * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
+ * @method MutualTLS getClientCertInfo() 获取在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -83,7 +83,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ApplyType;
 
     /**
-     * @var MutualTLS 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
+     * @var MutualTLS 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
      */
     public $ClientCertInfo;
 
@@ -100,7 +100,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>none：不托管EO；</li>
 <li>apply：托管EO</li>
 不填，默认取值为none。
-     * @param MutualTLS $ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
+     * @param MutualTLS $ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
      */
     function __construct()
     {

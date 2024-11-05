@@ -33,6 +33,8 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 批量添加域名
  * @method Models\CreateDomainCustomLineResponse CreateDomainCustomLine(Models\CreateDomainCustomLineRequest $req) 创建域名的自定义线路
  * @method Models\CreateDomainGroupResponse CreateDomainGroup(Models\CreateDomainGroupRequest $req) 创建域名分组
+ * @method Models\CreateLineGroupResponse CreateLineGroup(Models\CreateLineGroupRequest $req) 创建域名的线路分组
+ * @method Models\CreateLineGroupCopyResponse CreateLineGroupCopy(Models\CreateLineGroupCopyRequest $req) 复制域名的线路分组
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) 添加记录
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
@@ -44,6 +46,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
  * @method Models\DeleteDomainBatchResponse DeleteDomainBatch(Models\DeleteDomainBatchRequest $req) 批量删除域名
  * @method Models\DeleteDomainCustomLineResponse DeleteDomainCustomLine(Models\DeleteDomainCustomLineRequest $req) 删除域名的自定义线路
+ * @method Models\DeleteLineGroupResponse DeleteLineGroup(Models\DeleteLineGroupRequest $req) 删除域名的线路分组
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
  * @method Models\DeleteRecordBatchResponse DeleteRecordBatch(Models\DeleteRecordBatchRequest $req) 批量删除解析记录
 备注：因存储限制， 建议一次批量删除最多2000条
@@ -65,6 +68,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
  * @method Models\DescribeDomainShareUserListResponse DescribeDomainShareUserList(Models\DescribeDomainShareUserListRequest $req) 获取指定域名的已共享列表
  * @method Models\DescribeDomainWhoisResponse DescribeDomainWhois(Models\DescribeDomainWhoisRequest $req) 获取域名Whois信息
+ * @method Models\DescribeLineGroupListResponse DescribeLineGroupList(Models\DescribeLineGroupListRequest $req) 获取域名的线路分组列表
  * @method Models\DescribePackageDetailResponse DescribePackageDetail(Models\DescribePackageDetailRequest $req) 获取各套餐配置详情
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息
  * @method Models\DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNS(Models\DescribeRecordExistExceptDefaultNSRequest $req) 判断是否有除系统默认的@-NS记录之外的记录存在
@@ -97,6 +101,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyDomainToGroupResponse ModifyDomainToGroup(Models\ModifyDomainToGroupRequest $req) 修改域名所属分组
  * @method Models\ModifyDomainUnlockResponse ModifyDomainUnlock(Models\ModifyDomainUnlockRequest $req) 域名锁定解锁
  * @method Models\ModifyDynamicDNSResponse ModifyDynamicDNS(Models\ModifyDynamicDNSRequest $req) 更新动态 DNS 记录
+ * @method Models\ModifyLineGroupResponse ModifyLineGroup(Models\ModifyLineGroupRequest $req) 修改域名的线路分组
  * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req) DNS 解析套餐自动续费设置
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录

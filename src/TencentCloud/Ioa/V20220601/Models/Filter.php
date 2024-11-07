@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Filters 条件过滤
  *
  * @method string getField() 获取过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setField(string $Field) 设置过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperator() 获取过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperator(string $Operator) 设置过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperator() 获取过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
+ * @method void setOperator(string $Operator) 设置过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
  * @method array getValues() 获取过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Field;
 
     /**
-     * @var string 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
      */
     public $Operator;
 
     /**
      * @var array 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param string $Field 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Operator 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Operator 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
      * @param array $Values 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

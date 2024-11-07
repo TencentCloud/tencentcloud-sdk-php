@@ -116,6 +116,10 @@ FAILED：表示操作失败
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
  * @method string getInitInvocationId() 获取创建实例后自动执行TAT命令的调用ID。
  * @method void setInitInvocationId(string $InitInvocationId) 设置创建实例后自动执行TAT命令的调用ID。
+ * @method InstanceViolationDetail getInstanceViolationDetail() 获取实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceViolationDetail(InstanceViolationDetail $InstanceViolationDetail) 设置实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -284,6 +288,12 @@ FAILED：表示操作失败
     public $InitInvocationId;
 
     /**
+     * @var InstanceViolationDetail 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceViolationDetail;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $BundleId 套餐 ID。
      * @param string $BlueprintId 镜像 ID。
@@ -332,6 +342,8 @@ FAILED：表示操作失败
      * @param string $InstanceRestrictState 实例封禁状态。取值范围：
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
      * @param string $InitInvocationId 创建实例后自动执行TAT命令的调用ID。
+     * @param InstanceViolationDetail $InstanceViolationDetail 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -468,6 +480,11 @@ FAILED：表示操作失败
 
         if (array_key_exists("InitInvocationId",$param) and $param["InitInvocationId"] !== null) {
             $this->InitInvocationId = $param["InitInvocationId"];
+        }
+
+        if (array_key_exists("InstanceViolationDetail",$param) and $param["InstanceViolationDetail"] !== null) {
+            $this->InstanceViolationDetail = new InstanceViolationDetail();
+            $this->InstanceViolationDetail->deserialize($param["InstanceViolationDetail"]);
         }
     }
 }

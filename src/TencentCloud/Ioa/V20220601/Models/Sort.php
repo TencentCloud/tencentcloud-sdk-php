@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Sort 排序字段
  *
  * @method string getField() 获取排序字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setField(string $Field) 设置排序字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrder() 获取排序方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrder(string $Order) 设置排序方式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Sort extends AbstractModel
 {
     /**
      * @var string 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Field;
 
     /**
      * @var string 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
      * @param string $Field 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Order 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

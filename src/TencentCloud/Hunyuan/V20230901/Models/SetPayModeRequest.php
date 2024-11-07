@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetPayMode请求参数结构体
  *
- * @method integer getPayMode() 获取设置后付费状态，0：后付费；1：预付费
- * @method void setPayMode(integer $PayMode) 设置设置后付费状态，0：后付费；1：预付费
+ * @method integer getPayMode() 获取设置后付费状态，0：后付费打开；1：后付费关闭
+ * @method void setPayMode(integer $PayMode) 设置设置后付费状态，0：后付费打开；1：后付费关闭
  */
 class SetPayModeRequest extends AbstractModel
 {
     /**
-     * @var integer 设置后付费状态，0：后付费；1：预付费
+     * @var integer 设置后付费状态，0：后付费打开；1：后付费关闭
      */
     public $PayMode;
 
     /**
-     * @param integer $PayMode 设置后付费状态，0：后付费；1：预付费
+     * @param integer $PayMode 设置后付费状态，0：后付费打开；1：后付费关闭
      */
     function __construct()
     {

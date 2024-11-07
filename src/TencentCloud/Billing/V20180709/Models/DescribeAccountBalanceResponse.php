@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAllowArrears(boolean $IsAllowArrears) 设置是否允许欠费消费
  * @method boolean getIsCreditLimited() 获取是否限制信用额度
  * @method void setIsCreditLimited(boolean $IsCreditLimited) 设置是否限制信用额度
- * @method float getCreditAmount() 获取信用额度
- * @method void setCreditAmount(float $CreditAmount) 设置信用额度
- * @method float getCreditBalance() 获取可用信用额度
- * @method void setCreditBalance(float $CreditBalance) 设置可用信用额度
- * @method float getRealCreditBalance() 获取真实可用信用额度
- * @method void setRealCreditBalance(float $RealCreditBalance) 设置真实可用信用额度
+ * @method float getCreditAmount() 获取信用额度,单位 分
+ * @method void setCreditAmount(float $CreditAmount) 设置信用额度,单位 分
+ * @method float getCreditBalance() 获取可用信用额度,单位 分
+ * @method void setCreditBalance(float $CreditBalance) 设置可用信用额度,单位 分
+ * @method float getRealCreditBalance() 获取真实可用信用额度,单位 分
+ * @method void setRealCreditBalance(float $RealCreditBalance) 设置真实可用信用额度,单位 分
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -102,17 +102,17 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $IsCreditLimited;
 
     /**
-     * @var float 信用额度
+     * @var float 信用额度,单位 分
      */
     public $CreditAmount;
 
     /**
-     * @var float 可用信用额度
+     * @var float 可用信用额度,单位 分
      */
     public $CreditBalance;
 
     /**
-     * @var float 真实可用信用额度
+     * @var float 真实可用信用额度,单位 分
      */
     public $RealCreditBalance;
 
@@ -132,9 +132,9 @@ class DescribeAccountBalanceResponse extends AbstractModel
      * @param float $OweAmount 欠费金额,单位 分
      * @param boolean $IsAllowArrears 是否允许欠费消费
      * @param boolean $IsCreditLimited 是否限制信用额度
-     * @param float $CreditAmount 信用额度
-     * @param float $CreditBalance 可用信用额度
-     * @param float $RealCreditBalance 真实可用信用额度
+     * @param float $CreditAmount 信用额度,单位 分
+     * @param float $CreditBalance 可用信用额度,单位 分
+     * @param float $RealCreditBalance 真实可用信用额度,单位 分
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

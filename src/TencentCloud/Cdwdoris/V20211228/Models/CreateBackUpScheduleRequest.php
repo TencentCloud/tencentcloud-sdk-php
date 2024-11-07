@@ -83,12 +83,14 @@ class CreateBackUpScheduleRequest extends AbstractModel
     /**
      * @var string 选择的星期 逗号分隔
 废弃：使用ScheduleInfo
+     * @deprecated
      */
     public $WeekDays;
 
     /**
      * @var integer 执行小时
 废弃：使用ScheduleInfo
+     * @deprecated
      */
     public $ExecuteHour;
 

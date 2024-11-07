@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 自动划分规则数据
  *
  * @method array getSimpleRules() 获取简单规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSimpleRules(array $SimpleRules) 设置简单规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelation() 获取表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelation(string $Relation) 设置表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplexRule extends AbstractModel
 {
     /**
      * @var array 简单规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SimpleRules;
 
     /**
      * @var string 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Relation;
 
     /**
      * @param array $SimpleRules 简单规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Relation 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

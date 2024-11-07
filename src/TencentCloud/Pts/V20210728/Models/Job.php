@@ -200,6 +200,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置付费类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsage() 获取job VUM用量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsage(integer $Usage) 设置job VUM用量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -470,6 +474,12 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $PayMode;
 
     /**
+     * @var integer job VUM用量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Usage;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
@@ -559,6 +569,8 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param string $ScenarioName test-scenario
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Usage job VUM用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -786,6 +798,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = $param["Usage"];
         }
     }
 }

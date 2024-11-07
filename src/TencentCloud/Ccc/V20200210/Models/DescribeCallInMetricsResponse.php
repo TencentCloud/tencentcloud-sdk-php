@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method CallInMetrics getTotalMetrics() 获取总体指标
  * @method void setTotalMetrics(CallInMetrics $TotalMetrics) 设置总体指标
  * @method array getNumberMetrics() 获取线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumberMetrics(array $NumberMetrics) 设置线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSkillGroupMetrics() 获取技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupMetrics(array $SkillGroupMetrics) 设置技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeCallInMetricsResponse extends AbstractModel
 
     /**
      * @var array 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberMetrics;
 
     /**
      * @var array 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupMetrics;
 
@@ -68,9 +62,7 @@ class DescribeCallInMetricsResponse extends AbstractModel
      * @param integer $Timestamp 时间戳
      * @param CallInMetrics $TotalMetrics 总体指标
      * @param array $NumberMetrics 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SkillGroupMetrics 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

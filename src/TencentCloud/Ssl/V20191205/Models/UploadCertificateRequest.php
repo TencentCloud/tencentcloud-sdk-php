@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateUse(string $CertificateUse) 设置证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
- * @method boolean getRepeatable() 获取相同的证书是否允许重复上传
- * @method void setRepeatable(boolean $Repeatable) 设置相同的证书是否允许重复上传
+ * @method boolean getRepeatable() 获取相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
+ * @method void setRepeatable(boolean $Repeatable) 设置相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class UploadCertificateRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var boolean 相同的证书是否允许重复上传
+     * @var boolean 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
      */
     public $Repeatable;
 
@@ -87,7 +87,7 @@ class UploadCertificateRequest extends AbstractModel
      * @param integer $ProjectId 项目 ID。
      * @param string $CertificateUse 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
      * @param array $Tags 标签列表
-     * @param boolean $Repeatable 相同的证书是否允许重复上传
+     * @param boolean $Repeatable 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
      */
     function __construct()
     {

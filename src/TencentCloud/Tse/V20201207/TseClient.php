@@ -94,6 +94,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeGovernanceServiceContractVersionsResponse DescribeGovernanceServiceContractVersions(Models\DescribeGovernanceServiceContractVersionsRequest $req) 查询服务下契约版本列表
  * @method Models\DescribeGovernanceServiceContractsResponse DescribeGovernanceServiceContracts(Models\DescribeGovernanceServiceContractsRequest $req) 查询服务契约定义列表
  * @method Models\DescribeGovernanceServicesResponse DescribeGovernanceServices(Models\DescribeGovernanceServicesRequest $req) 查询治理中心服务列表
+ * @method Models\DescribeInstanceTagInfosResponse DescribeInstanceTagInfos(Models\DescribeInstanceTagInfosRequest $req) 查看实例的标签信息
  * @method Models\DescribeNacosReplicasResponse DescribeNacosReplicas(Models\DescribeNacosReplicasRequest $req) 查询Nacos类型引擎实例副本信息
  * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
  * @method Models\DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroups(Models\DescribeNativeGatewayServerGroupsRequest $req) 查询云原生网关分组信息

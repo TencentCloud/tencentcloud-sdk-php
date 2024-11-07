@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
 排序支持：否
  * @method integer getAccountGroupId() 获取获取账号的分组ID，不传默认获取全网根账号组
  * @method void setAccountGroupId(integer $AccountGroupId) 设置获取账号的分组ID，不传默认获取全网根账号组
- * @method integer getShowFlag() 获取是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
- * @method void setShowFlag(integer $ShowFlag) 设置是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+ * @method integer getShowFlag() 获取是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
+ * @method void setShowFlag(integer $ShowFlag) 设置是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
  */
 class DescribeLocalAccountsRequest extends AbstractModel
 {
@@ -76,7 +76,7 @@ class DescribeLocalAccountsRequest extends AbstractModel
     public $AccountGroupId;
 
     /**
-     * @var integer 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * @var integer 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     public $ShowFlag;
 
@@ -95,7 +95,7 @@ class DescribeLocalAccountsRequest extends AbstractModel
 过滤支持：是，支持eq、like、ilike
 排序支持：否
      * @param integer $AccountGroupId 获取账号的分组ID，不传默认获取全网根账号组
-     * @param integer $ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * @param integer $ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     function __construct()
     {

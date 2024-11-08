@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainCnt(integer $ChainCnt) 设置区块链上链次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRiskCnt() 获取营销风控次数
+ * @method integer getRiskCnt() 获取风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskCnt(integer $RiskCnt) 设置营销风控次数
+ * @method void setRiskCnt(integer $RiskCnt) 设置风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,8 +92,9 @@ class UsageQuota extends AbstractModel
     public $ChainCnt;
 
     /**
-     * @var integer 营销风控次数
+     * @var integer 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $RiskCnt;
 
@@ -116,7 +117,7 @@ class UsageQuota extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChainCnt 区块链上链次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RiskCnt 营销风控次数
+     * @param integer $RiskCnt 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 时间
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,16 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShippers请求参数结构体
  *
- * @method array getFilters() 获取- shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+ * @method array getFilters() 获取- shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置- shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+每次请求的Filters的上限为10，Filter.Values的上限为10。
+ * @method void setFilters(array $Filters) 设置- shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0
  * @method integer getLimit() 获取分页单页的限制数目，默认值为20，最大值100
@@ -40,11 +60,21 @@ use TencentCloud\Common\AbstractModel;
 class DescribeShippersRequest extends AbstractModel
 {
     /**
-     * @var array - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+     * @var array - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
     public $Filters;
 
@@ -64,11 +94,21 @@ class DescribeShippersRequest extends AbstractModel
     public $PreciseSearch;
 
     /**
-     * @param array $Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+     * @param array $Filters - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      * @param integer $Offset 分页的偏移量，默认值为0
      * @param integer $Limit 分页单页的限制数目，默认值为20，最大值100
      * @param integer $PreciseSearch 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配

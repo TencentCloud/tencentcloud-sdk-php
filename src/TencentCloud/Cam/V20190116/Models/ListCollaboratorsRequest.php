@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListCollaborators请求参数结构体
  *
- * @method integer getLimit() 获取分页条数，缺省为20
- * @method void setLimit(integer $Limit) 设置分页条数，缺省为20
- * @method integer getOffset() 获取分页起始值，缺省为0
- * @method void setOffset(integer $Offset) 设置分页起始值，缺省为0
+ * @method integer getLimit() 获取分页的条数，默认是20条。
+ * @method void setLimit(integer $Limit) 设置分页的条数，默认是20条。
+ * @method integer getOffset() 获取分页的起始值，默认从0开始。
+ * @method void setOffset(integer $Offset) 设置分页的起始值，默认从0开始。
  */
 class ListCollaboratorsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页条数，缺省为20
+     * @var integer 分页的条数，默认是20条。
      */
     public $Limit;
 
     /**
-     * @var integer 分页起始值，缺省为0
+     * @var integer 分页的起始值，默认从0开始。
      */
     public $Offset;
 
     /**
-     * @param integer $Limit 分页条数，缺省为20
-     * @param integer $Offset 分页起始值，缺省为0
+     * @param integer $Limit 分页的条数，默认是20条。
+     * @param integer $Offset 分页的起始值，默认从0开始。
      */
     function __construct()
     {

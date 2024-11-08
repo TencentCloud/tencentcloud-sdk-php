@@ -34,6 +34,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\CreateDCDBInstanceResponse CreateDCDBInstance(Models\CreateDCDBInstanceRequest $req) 本接口（CreateDCDBInstance）用于创建包年包月的TDSQL实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
  * @method Models\CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(Models\CreateDedicatedClusterDCDBInstanceRequest $req) 创建TDSQL独享集群实例
  * @method Models\CreateHourDCDBInstanceResponse CreateHourDCDBInstance(Models\CreateHourDCDBInstanceRequest $req) 创建TDSQL按量计费实例
+ * @method Models\CreateOnlineDDLJobResponse CreateOnlineDDLJob(Models\CreateOnlineDDLJobRequest $req) 创建在线DDL任务
  * @method Models\CreateTmpDCDBInstanceResponse CreateTmpDCDBInstance(Models\CreateTmpDCDBInstanceRequest $req) 回档TDSQL实例
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。

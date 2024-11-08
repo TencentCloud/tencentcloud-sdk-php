@@ -18,71 +18,71 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 登录和敏感操作flag
+ * 登录和敏感操作flag（校验方式是单选）
  *
- * @method integer getPhone() 获取手机
- * @method void setPhone(integer $Phone) 设置手机
- * @method integer getToken() 获取硬token
- * @method void setToken(integer $Token) 设置硬token
- * @method integer getStoken() 获取软token
- * @method void setStoken(integer $Stoken) 设置软token
- * @method integer getWechat() 获取微信
- * @method void setWechat(integer $Wechat) 设置微信
- * @method integer getCustom() 获取自定义
- * @method void setCustom(integer $Custom) 设置自定义
- * @method integer getMail() 获取邮箱
- * @method void setMail(integer $Mail) 设置邮箱
- * @method integer getU2FToken() 获取u2f硬件token
+ * @method integer getPhone() 获取0: 非安全手机校验 1: 安全手机校验。
+ * @method void setPhone(integer $Phone) 设置0: 非安全手机校验 1: 安全手机校验。
+ * @method integer getToken() 获取0: 非硬token校验 1: 硬token校验。
+ * @method void setToken(integer $Token) 设置0: 非硬token校验 1: 硬token校验。
+ * @method integer getStoken() 获取0: 非软token校验 1: 软token校验
+ * @method void setStoken(integer $Stoken) 设置0: 非软token校验 1: 软token校验
+ * @method integer getWechat() 获取0: 非微信校验 1: 微信校验
+ * @method void setWechat(integer $Wechat) 设置0: 非微信校验 1: 微信校验
+ * @method integer getCustom() 获取0: 非自定义校验 1: 自定义校验
+ * @method void setCustom(integer $Custom) 设置0: 非自定义校验 1: 自定义校验
+ * @method integer getMail() 获取0: 非邮箱校验 1: 邮箱校验
+ * @method void setMail(integer $Mail) 设置0: 非邮箱校验 1: 邮箱校验
+ * @method integer getU2FToken() 获取0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setU2FToken(integer $U2FToken) 设置u2f硬件token
+ * @method void setU2FToken(integer $U2FToken) 设置0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginActionFlag extends AbstractModel
 {
     /**
-     * @var integer 手机
+     * @var integer 0: 非安全手机校验 1: 安全手机校验。
      */
     public $Phone;
 
     /**
-     * @var integer 硬token
+     * @var integer 0: 非硬token校验 1: 硬token校验。
      */
     public $Token;
 
     /**
-     * @var integer 软token
+     * @var integer 0: 非软token校验 1: 软token校验
      */
     public $Stoken;
 
     /**
-     * @var integer 微信
+     * @var integer 0: 非微信校验 1: 微信校验
      */
     public $Wechat;
 
     /**
-     * @var integer 自定义
+     * @var integer 0: 非自定义校验 1: 自定义校验
      */
     public $Custom;
 
     /**
-     * @var integer 邮箱
+     * @var integer 0: 非邮箱校验 1: 邮箱校验
      */
     public $Mail;
 
     /**
-     * @var integer u2f硬件token
+     * @var integer 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $U2FToken;
 
     /**
-     * @param integer $Phone 手机
-     * @param integer $Token 硬token
-     * @param integer $Stoken 软token
-     * @param integer $Wechat 微信
-     * @param integer $Custom 自定义
-     * @param integer $Mail 邮箱
-     * @param integer $U2FToken u2f硬件token
+     * @param integer $Phone 0: 非安全手机校验 1: 安全手机校验。
+     * @param integer $Token 0: 非硬token校验 1: 硬token校验。
+     * @param integer $Stoken 0: 非软token校验 1: 软token校验
+     * @param integer $Wechat 0: 非微信校验 1: 微信校验
+     * @param integer $Custom 0: 非自定义校验 1: 自定义校验
+     * @param integer $Mail 0: 非邮箱校验 1: 邮箱校验
+     * @param integer $U2FToken 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

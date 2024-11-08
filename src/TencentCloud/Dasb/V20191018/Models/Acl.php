@@ -77,25 +77,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method Department getDepartment() 获取所属部门的信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置所属部门的信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllowAccessCredential() 获取是否允许使用访问串，默认允许
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串，默认允许
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getACTemplateSet() 获取关联的数据库高危命令列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setACTemplateSet(array $ACTemplateSet) 设置关联的数据库高危命令列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWhiteCmds() 获取关联的白命令命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhiteCmds(array $WhiteCmds) 设置关联的白命令命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllowKeyboardLogger() 获取是否允许记录键盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许记录键盘
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Acl extends AbstractModel
 {
@@ -233,31 +223,26 @@ class Acl extends AbstractModel
 
     /**
      * @var Department 所属部门的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var boolean 是否允许使用访问串，默认允许
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowAccessCredential;
 
     /**
      * @var array 关联的数据库高危命令列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ACTemplateSet;
 
     /**
      * @var array 关联的白命令命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhiteCmds;
 
     /**
      * @var boolean 是否允许记录键盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowKeyboardLogger;
 
@@ -291,15 +276,10 @@ class Acl extends AbstractModel
 生效、失效时间不填则访问权限长期有效
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      * @param Department $Department 所属部门的信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowAccessCredential 是否允许使用访问串，默认允许
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ACTemplateSet 关联的数据库高危命令列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WhiteCmds 关联的白命令命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowKeyboardLogger 是否允许记录键盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

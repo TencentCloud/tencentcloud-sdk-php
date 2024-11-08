@@ -643,6 +643,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(Models\RecognizeTravelCardOCRRequest $req) 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
 
 默认接口请求频率限制：20次/秒。
+ * @method Models\RecognizeValidIDCardOCRResponse RecognizeValidIDCardOCR(Models\RecognizeValidIDCardOCRRequest $req) 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
+
+默认接口请求频率限制：20次/秒。
  * @method Models\ReconstructDocumentResponse ReconstructDocument(Models\ReconstructDocumentRequest $req) 服务已迁移至 [文档解析](https://cloud.tencent.com/document/product/1759/107504)，请跳转查看接口文档。该接口支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
  * @method Models\ResidenceBookletOCRResponse ResidenceBookletOCR(Models\ResidenceBookletOCRRequest $req) 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
 

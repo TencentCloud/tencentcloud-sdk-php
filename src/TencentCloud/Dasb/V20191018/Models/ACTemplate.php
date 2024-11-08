@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 权限控制模板对象
  *
  * @method string getTemplateId() 获取模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateName(string $TemplateName) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取模板描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置模板描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ACTemplate extends AbstractModel
 {
     /**
      * @var string 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
 
     /**
      * @var string 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

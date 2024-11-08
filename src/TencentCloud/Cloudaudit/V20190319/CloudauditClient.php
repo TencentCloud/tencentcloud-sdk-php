@@ -33,8 +33,8 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
  * @method Models\GetAttributeKeyResponse GetAttributeKey(Models\GetAttributeKeyRequest $req) 查询AttributeKey的有效取值范围
  * @method Models\InquireAuditCreditResponse InquireAuditCredit(Models\InquireAuditCreditRequest $req) 查询用户可创建跟踪集的数量
  * @method Models\ListAuditsResponse ListAudits(Models\ListAuditsRequest $req) 查询跟踪集概要
- * @method Models\ListCmqEnableRegionResponse ListCmqEnableRegion(Models\ListCmqEnableRegionRequest $req) 查询云审计支持的cmq的可用区
- * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) 查询云审计支持的cos可用区
+ * @method Models\ListCmqEnableRegionResponse ListCmqEnableRegion(Models\ListCmqEnableRegionRequest $req) 查询操作审计支持的cmq的可用区
+ * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) 查询操作审计支持的cos可用区
  * @method Models\ListKeyAliasByRegionResponse ListKeyAliasByRegion(Models\ListKeyAliasByRegionRequest $req) 根据地域获取KMS密钥别名
  * @method Models\LookUpEventsResponse LookUpEvents(Models\LookUpEventsRequest $req) 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
  * @method Models\ModifyAuditTrackResponse ModifyAuditTrack(Models\ModifyAuditTrackRequest $req) 修改操作审计跟踪集

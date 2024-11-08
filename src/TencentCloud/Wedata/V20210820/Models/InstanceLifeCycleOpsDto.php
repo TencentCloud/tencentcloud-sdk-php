@@ -64,6 +64,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置实例状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScheduleRunType() 获取调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutionJobId() 获取统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceRunType() 获取实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceRunType(integer $InstanceRunType) 设置实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLifeCycleOpsDto extends AbstractModel
 {
@@ -134,6 +146,24 @@ class InstanceLifeCycleOpsDto extends AbstractModel
     public $InstanceState;
 
     /**
+     * @var integer 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleRunType;
+
+    /**
+     * @var string 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionJobId;
+
+    /**
+     * @var integer 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceRunType;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
@@ -155,6 +185,12 @@ class InstanceLifeCycleOpsDto extends AbstractModel
      * @param InstanceLogInfo $InstanceLogListOpsDto 实例日志简略信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceState 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceRunType 实例运行类型: 0: 普通运行, 1: 空跑运行
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -218,6 +254,18 @@ class InstanceLifeCycleOpsDto extends AbstractModel
 
         if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
             $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
+            $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("ExecutionJobId",$param) and $param["ExecutionJobId"] !== null) {
+            $this->ExecutionJobId = $param["ExecutionJobId"];
+        }
+
+        if (array_key_exists("InstanceRunType",$param) and $param["InstanceRunType"] !== null) {
+            $this->InstanceRunType = $param["InstanceRunType"];
         }
     }
 }

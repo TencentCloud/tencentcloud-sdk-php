@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BankCard2EVerification请求参数结构体
  *
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
- * @method string getBankCard() 获取银行卡
- * @method void setBankCard(string $BankCard) 设置银行卡
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getName() 获取姓名。
+ * @method void setName(string $Name) 设置姓名。
+ * @method string getBankCard() 获取银行卡。
+ * @method void setBankCard(string $BankCard) 设置银行卡。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class BankCard2EVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 姓名
+     * @var string 姓名。
      */
     public $Name;
 
     /**
-     * @var string 银行卡
+     * @var string 银行卡。
      */
     public $BankCard;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public $Encryption;
 
     /**
-     * @param string $Name 姓名
-     * @param string $BankCard 银行卡
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $Name 姓名。
+     * @param string $BankCard 银行卡。
+     * @param Encryption $Encryption 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {

@@ -20,90 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMqMsgTrace返回参数结构体
  *
- * @method array getResult() 获取[
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
- * @method void setResult(array $Result) 设置[
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+ * @method array getResult() 获取消息内容
+ * @method void setResult(array $Result) 设置消息内容
  * @method string getShowTopicName() 获取消息轨迹页展示的topic名称
  * @method void setShowTopicName(string $ShowTopicName) 设置消息轨迹页展示的topic名称
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -112,48 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMqMsgTraceResponse extends AbstractModel
 {
     /**
-     * @var array [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+     * @var array 消息内容
      */
     public $Result;
 
@@ -168,48 +45,7 @@ class DescribeMqMsgTraceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Result [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+     * @param array $Result 消息内容
      * @param string $ShowTopicName 消息轨迹页展示的topic名称
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

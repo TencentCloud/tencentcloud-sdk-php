@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileCurr() 获取method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
  * @method void setFileCurr(string $FileCurr) 设置method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
  * @method string getFileNew() 获取method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileNew(string $FileNew) 设置method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAction() 获取堡垒机拦截情况, 1-已执行，  2-被阻断
  * @method void setAction(integer $Action) 设置堡垒机拦截情况, 1-已执行，  2-被阻断
  */
@@ -63,13 +59,11 @@ class SearchFileBySidResult extends AbstractModel
 
     /**
      * @var string method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileNew;
 
     /**
      * @var integer method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
@@ -84,9 +78,7 @@ class SearchFileBySidResult extends AbstractModel
      * @param string $Protocol 文件传输协议
      * @param string $FileCurr method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
      * @param string $FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Action 堡垒机拦截情况, 1-已执行，  2-被阻断
      */
     function __construct()

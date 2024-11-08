@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionExecuteTime(integer $TaskGroupActionExecuteTime) 设置动作运行时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskGroupActionStartTime() 获取动作开始执行时间
+ * @method void setTaskGroupActionStartTime(string $TaskGroupActionStartTime) 设置动作开始执行时间
  */
 class TaskGroupAction extends AbstractModel
 {
@@ -197,6 +199,11 @@ class TaskGroupAction extends AbstractModel
     public $TaskGroupActionExecuteTime;
 
     /**
+     * @var string 动作开始执行时间
+     */
+    public $TaskGroupActionStartTime;
+
+    /**
      * @param integer $TaskGroupActionId 任务分组动作ID
      * @param array $TaskGroupInstances 任务分组动作实例列表
      * @param integer $ActionId 动作ID
@@ -228,6 +235,7 @@ class TaskGroupAction extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupActionExecuteTime 动作运行时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskGroupActionStartTime 动作开始执行时间
      */
     function __construct()
     {
@@ -325,6 +333,10 @@ class TaskGroupAction extends AbstractModel
 
         if (array_key_exists("TaskGroupActionExecuteTime",$param) and $param["TaskGroupActionExecuteTime"] !== null) {
             $this->TaskGroupActionExecuteTime = $param["TaskGroupActionExecuteTime"];
+        }
+
+        if (array_key_exists("TaskGroupActionStartTime",$param) and $param["TaskGroupActionStartTime"] !== null) {
+            $this->TaskGroupActionStartTime = $param["TaskGroupActionStartTime"];
         }
     }
 }

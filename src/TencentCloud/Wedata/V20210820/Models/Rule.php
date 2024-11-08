@@ -212,6 +212,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetSchemaName(string $TargetSchemaName) 设置目标模式名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -504,6 +512,18 @@ class Rule extends AbstractModel
     public $TargetSchemaName;
 
     /**
+     * @var string 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -599,6 +619,10 @@ class Rule extends AbstractModel
      * @param string $SchemaName 模式名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetSchemaName 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -808,6 +832,14 @@ class Rule extends AbstractModel
 
         if (array_key_exists("TargetSchemaName",$param) and $param["TargetSchemaName"] !== null) {
             $this->TargetSchemaName = $param["TargetSchemaName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

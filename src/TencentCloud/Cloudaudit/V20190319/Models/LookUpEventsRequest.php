@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) 设置查看更多日志的凭证
  * @method integer getMaxResults() 获取返回日志的最大条数
  * @method void setMaxResults(integer $MaxResults) 设置返回日志的最大条数
- * @method string getMode() 获取云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
- * @method void setMode(string $Mode) 设置云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+ * @method string getMode() 获取操作审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+ * @method void setMode(string $Mode) 设置操作审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
  */
 class LookUpEventsRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class LookUpEventsRequest extends AbstractModel
     public $MaxResults;
 
     /**
-     * @var string 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     * @var string 操作审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
      */
     public $Mode;
 
@@ -71,7 +71,7 @@ class LookUpEventsRequest extends AbstractModel
      * @param array $LookupAttributes 检索条件
      * @param string $NextToken 查看更多日志的凭证
      * @param integer $MaxResults 返回日志的最大条数
-     * @param string $Mode 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     * @param string $Mode 操作审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
      */
     function __construct()
     {

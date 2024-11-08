@@ -21,93 +21,52 @@ use TencentCloud\Common\AbstractModel;
  * 修改密码任务信息
  *
  * @method integer getId() 获取id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperationId() 获取任务id
  * @method void setOperationId(string $OperationId) 设置任务id
  * @method string getTaskName() 获取任务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Department getDepartment() 获取所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChangeMethod() 获取改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChangeMethod(integer $ChangeMethod) 设置改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunAccount() 获取执行账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunAccount(string $RunAccount) 设置执行账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthGenerationStrategy() 获取密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthGenerationStrategy(integer $AuthGenerationStrategy) 设置密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPasswordLength() 获取密码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPasswordLength(integer $PasswordLength) 设置密码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSmallLetter() 获取包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmallLetter(integer $SmallLetter) 设置包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBigLetter() 获取包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigLetter(integer $BigLetter) 设置包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDigit() 获取包含数字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDigit(integer $Digit) 设置包含数字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSymbol() 获取包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymbol(string $Symbol) 设置包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompleteNotify() 获取改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompleteNotify(integer $CompleteNotify) 设置改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNotifyEmails() 获取通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyEmails(array $NotifyEmails) 设置通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFilePassword() 获取加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilePassword(string $FilePassword) 设置加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAccountSet() 获取需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountSet(array $AccountSet) 设置需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeviceSet() 获取需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceSet(array $DeviceSet) 设置需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriod() 获取周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(integer $Period) 设置周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTime(string $FirstTime) 设置首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNextTime() 获取下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextTime(string $NextTime) 设置下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChangePwdTaskInfo extends AbstractModel
 {
     /**
      * @var integer id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
@@ -118,160 +77,121 @@ class ChangePwdTaskInfo extends AbstractModel
 
     /**
      * @var string 任务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var integer 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChangeMethod;
 
     /**
      * @var string 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunAccount;
 
     /**
      * @var integer 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthGenerationStrategy;
 
     /**
      * @var integer 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PasswordLength;
 
     /**
      * @var integer 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmallLetter;
 
     /**
      * @var integer 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigLetter;
 
     /**
      * @var integer 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Digit;
 
     /**
      * @var string 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Symbol;
 
     /**
      * @var integer 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompleteNotify;
 
     /**
      * @var array 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyEmails;
 
     /**
      * @var string 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilePassword;
 
     /**
      * @var array 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountSet;
 
     /**
      * @var array 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceSet;
 
     /**
      * @var integer 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @var string 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTime;
 
     /**
      * @var string 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextTime;
 
     /**
      * @param integer $Id id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperationId 任务id
      * @param string $TaskName 任务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department $Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChangeMethod 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunAccount 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthGenerationStrategy 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PasswordLength 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SmallLetter 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BigLetter 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Digit 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Symbol 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompleteNotify 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NotifyEmails 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilePassword 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AccountSet 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeviceSet 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NextTime 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

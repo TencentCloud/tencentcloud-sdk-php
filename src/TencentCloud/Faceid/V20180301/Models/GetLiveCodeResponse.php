@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetLiveCode返回参数结构体
  *
- * @method string getLiveCode() 获取数字验证码，如：1234
- * @method void setLiveCode(string $LiveCode) 设置数字验证码，如：1234
+ * @method string getLiveCode() 获取数字验证码。
+ * @method void setLiveCode(string $LiveCode) 设置数字验证码。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetLiveCodeResponse extends AbstractModel
 {
     /**
-     * @var string 数字验证码，如：1234
+     * @var string 数字验证码。
      */
     public $LiveCode;
 
@@ -38,7 +38,7 @@ class GetLiveCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LiveCode 数字验证码，如：1234
+     * @param string $LiveCode 数字验证码。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

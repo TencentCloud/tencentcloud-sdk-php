@@ -44,6 +44,8 @@ BACK：无照片的一面（国徽面），
  * @method void setCardSide(string $CardSide) 设置FRONT：有照片的一面（人像面），
 BACK：无照片的一面（国徽面），
 该参数如果不填或填错，将为您自动判断正反面。
+ * @method boolean getCropPortrait() 获取是否返回头像和位置坐标
+ * @method void setCropPortrait(boolean $CropPortrait) 设置是否返回头像和位置坐标
  */
 class HmtResidentPermitOCRRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ BACK：无照片的一面（国徽面），
     public $CardSide;
 
     /**
+     * @var boolean 是否返回头像和位置坐标
+     */
+    public $CropPortrait;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -84,6 +91,7 @@ BACK：无照片的一面（国徽面），
      * @param string $CardSide FRONT：有照片的一面（人像面），
 BACK：无照片的一面（国徽面），
 该参数如果不填或填错，将为您自动判断正反面。
+     * @param boolean $CropPortrait 是否返回头像和位置坐标
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ BACK：无照片的一面（国徽面），
 
         if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
             $this->CardSide = $param["CardSide"];
+        }
+
+        if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
+            $this->CropPortrait = $param["CropPortrait"];
         }
     }
 }

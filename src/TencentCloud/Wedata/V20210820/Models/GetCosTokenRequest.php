@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketName(string $BucketName) 设置桶名
  * @method string getRemotePath() 获取远程地址
  * @method void setRemotePath(string $RemotePath) 设置远程地址
+ * @method string getRemoteRegion() 获取地域
+ * @method void setRemoteRegion(string $RemoteRegion) 设置地域
  */
 class GetCosTokenRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class GetCosTokenRequest extends AbstractModel
     public $RemotePath;
 
     /**
+     * @var string 地域
+     */
+    public $RemoteRegion;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $OriginDomain 请求域名
      * @param boolean $CrossFlag 是否需要跨域
      * @param string $BucketName 桶名
      * @param string $RemotePath 远程地址
+     * @param string $RemoteRegion 地域
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class GetCosTokenRequest extends AbstractModel
 
         if (array_key_exists("RemotePath",$param) and $param["RemotePath"] !== null) {
             $this->RemotePath = $param["RemotePath"];
+        }
+
+        if (array_key_exists("RemoteRegion",$param) and $param["RemoteRegion"] !== null) {
+            $this->RemoteRegion = $param["RemoteRegion"];
         }
     }
 }

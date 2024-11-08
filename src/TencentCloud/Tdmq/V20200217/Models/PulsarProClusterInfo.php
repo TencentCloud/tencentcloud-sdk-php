@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间戳，毫秒级精度。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoCreateTopicStatus() 获取是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) 设置是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefaultPartitionNumber() 获取自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -113,6 +123,19 @@ class PulsarProClusterInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var boolean 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoCreateTopicStatus;
+
+    /**
+     * @var integer 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultPartitionNumber;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -127,6 +150,11 @@ class PulsarProClusterInfo extends AbstractModel
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoCreateTopicStatus 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +217,14 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AutoCreateTopicStatus",$param) and $param["AutoCreateTopicStatus"] !== null) {
+            $this->AutoCreateTopicStatus = $param["AutoCreateTopicStatus"];
+        }
+
+        if (array_key_exists("DefaultPartitionNumber",$param) and $param["DefaultPartitionNumber"] !== null) {
+            $this->DefaultPartitionNumber = $param["DefaultPartitionNumber"];
         }
     }
 }

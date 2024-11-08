@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务；1：前置加工任务。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getKeepFailureLog() 获取保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailureLogKey() 获取失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -125,6 +133,18 @@ class DataTransformTaskInfo extends AbstractModel
     public $DataTransformType;
 
     /**
+     * @var integer 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeepFailureLog;
+
+    /**
+     * @var string 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailureLogKey;
+
+    /**
      * @param string $Name 数据加工任务名称
      * @param string $TaskId 数据加工任务id
      * @param integer $EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
@@ -139,6 +159,10 @@ class DataTransformTaskInfo extends AbstractModel
      * @param array $DstResources 加工任务目的topic_id以及别名
      * @param string $EtlContent 加工逻辑函数。
      * @param integer $DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailureLogKey 失败日志的字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +237,14 @@ class DataTransformTaskInfo extends AbstractModel
 
         if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
             $this->DataTransformType = $param["DataTransformType"];
+        }
+
+        if (array_key_exists("KeepFailureLog",$param) and $param["KeepFailureLog"] !== null) {
+            $this->KeepFailureLog = $param["KeepFailureLog"];
+        }
+
+        if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
+            $this->FailureLogKey = $param["FailureLogKey"];
         }
     }
 }

@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtensionInfo(array $ExtensionInfo) 设置扩展属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutionJobId() 获取统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogInfo extends AbstractModel
 {
@@ -164,6 +168,12 @@ class InstanceLogInfo extends AbstractModel
     public $ExtensionInfo;
 
     /**
+     * @var string 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionJobId;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
@@ -191,6 +201,8 @@ class InstanceLogInfo extends AbstractModel
      * @param string $CodeFileName 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtensionInfo 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutionJobId 统一执行平台，下发执行Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +277,10 @@ class InstanceLogInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtensionInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ExecutionJobId",$param) and $param["ExecutionJobId"] !== null) {
+            $this->ExecutionJobId = $param["ExecutionJobId"];
         }
     }
 }

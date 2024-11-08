@@ -20,56 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PhoneVerification请求参数结构体
  *
- * @method string getIdCard() 获取身份证号
- * @method void setIdCard(string $IdCard) 设置身份证号
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
- * @method string getVerifyMode() 获取验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
-
-枚举值：0（简版），1（详版）。默认值为0。
- * @method void setVerifyMode(string $VerifyMode) 设置验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
-
-枚举值：0（简版），1（详版）。默认值为0。
- * @method string getCiphertextBlob() 获取有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
- * @method void setCiphertextBlob(string $CiphertextBlob) 设置有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
- * @method array getEncryptList() 获取在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
- * @method void setEncryptList(array $EncryptList) 设置在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
+ * @method string getIdCard() 获取身份证号。
+ * @method void setIdCard(string $IdCard) 设置身份证号。
+ * @method string getName() 获取姓名。
+ * @method void setName(string $Name) 设置姓名。
+ * @method string getPhone() 获取手机号。
+ * @method void setPhone(string $Phone) 设置手机号。
+ * @method string getVerifyMode() 获取验证模式（详版/简版）。
+- 简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+- 枚举值：0（简版）；1（详版）。
+- 默认值为0。
+ * @method void setVerifyMode(string $VerifyMode) 设置验证模式（详版/简版）。
+- 简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+- 枚举值：0（简版）；1（详版）。
+- 默认值为0。
+ * @method string getCiphertextBlob() 获取有加密需求的用户，传入kms的CiphertextBlob。关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+ * @method void setCiphertextBlob(string $CiphertextBlob) 设置有加密需求的用户，传入kms的CiphertextBlob。关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+ * @method array getEncryptList() 获取在使用加密服务时，填入要被加密的字段。
+- 本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
+ * @method void setEncryptList(array $EncryptList) 设置在使用加密服务时，填入要被加密的字段。
+- 本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
  * @method string getIv() 获取有加密需求的用户，传入CBC加密的初始向量。
  * @method void setIv(string $Iv) 设置有加密需求的用户，传入CBC加密的初始向量。
  */
 class PhoneVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 身份证号
+     * @var string 身份证号。
      */
     public $IdCard;
 
     /**
-     * @var string 姓名
+     * @var string 姓名。
      */
     public $Name;
 
     /**
-     * @var string 手机号
+     * @var string 手机号。
      */
     public $Phone;
 
     /**
-     * @var string 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
-
-枚举值：0（简版），1（详版）。默认值为0。
+     * @var string 验证模式（详版/简版）。
+- 简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+- 枚举值：0（简版）；1（详版）。
+- 默认值为0。
      */
     public $VerifyMode;
 
     /**
-     * @var string 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @var string 有加密需求的用户，传入kms的CiphertextBlob。关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
      */
     public $CiphertextBlob;
 
     /**
-     * @var array 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
+     * @var array 在使用加密服务时，填入要被加密的字段。
+- 本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
      */
     public $EncryptList;
 
@@ -79,14 +85,16 @@ class PhoneVerificationRequest extends AbstractModel
     public $Iv;
 
     /**
-     * @param string $IdCard 身份证号
-     * @param string $Name 姓名
-     * @param string $Phone 手机号
-     * @param string $VerifyMode 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
-
-枚举值：0（简版），1（详版）。默认值为0。
-     * @param string $CiphertextBlob 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
-     * @param array $EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
+     * @param string $IdCard 身份证号。
+     * @param string $Name 姓名。
+     * @param string $Phone 手机号。
+     * @param string $VerifyMode 验证模式（详版/简版）。
+- 简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+- 枚举值：0（简版）；1（详版）。
+- 默认值为0。
+     * @param string $CiphertextBlob 有加密需求的用户，传入kms的CiphertextBlob。关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @param array $EncryptList 在使用加密服务时，填入要被加密的字段。
+- 本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
      * @param string $Iv 有加密需求的用户，传入CBC加密的初始向量。
      */
     function __construct()

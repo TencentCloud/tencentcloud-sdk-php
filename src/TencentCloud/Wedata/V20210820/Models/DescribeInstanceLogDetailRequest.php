@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getCurRunDate() 获取数据时间
  * @method void setCurRunDate(string $CurRunDate) 设置数据时间
+ * @method string getLogLevelType() 获取日志级别，Info/Debug/Warn/Error/All
+ * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
+ * @method string getExecutionFileType() 获取文件类型,Log/Code
+ * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
+ * @method string getExecutionJobId() 获取统一执行平台执行id
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台执行id
  * @method string getBrokerIp() 获取服务器Ip
  * @method void setBrokerIp(string $BrokerIp) 设置服务器Ip
  * @method string getOriginFileName() 获取文件Name
@@ -34,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartCount(integer $StartCount) 设置起始行
  * @method integer getLineCount() 获取每次查询行数
  * @method void setLineCount(integer $LineCount) 设置每次查询行数
+ * @method string getExtInfo() 获取查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+ * @method void setExtInfo(string $ExtInfo) 设置查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  */
 class DescribeInstanceLogDetailRequest extends AbstractModel
 {
@@ -51,6 +61,21 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
      * @var string 数据时间
      */
     public $CurRunDate;
+
+    /**
+     * @var string 日志级别，Info/Debug/Warn/Error/All
+     */
+    public $LogLevelType;
+
+    /**
+     * @var string 文件类型,Log/Code
+     */
+    public $ExecutionFileType;
+
+    /**
+     * @var string 统一执行平台执行id
+     */
+    public $ExecutionJobId;
 
     /**
      * @var string 服务器Ip
@@ -73,13 +98,28 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
     public $LineCount;
 
     /**
+     * @var string 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     */
+    public $ExtInfo;
+
+    /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务id
      * @param string $CurRunDate 数据时间
+     * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * @param string $ExecutionFileType 文件类型,Log/Code
+     * @param string $ExecutionJobId 统一执行平台执行id
      * @param string $BrokerIp 服务器Ip
      * @param string $OriginFileName 文件Name
      * @param integer $StartCount 起始行
      * @param integer $LineCount 每次查询行数
+     * @param string $ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      */
     function __construct()
     {
@@ -106,6 +146,18 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
             $this->CurRunDate = $param["CurRunDate"];
         }
 
+        if (array_key_exists("LogLevelType",$param) and $param["LogLevelType"] !== null) {
+            $this->LogLevelType = $param["LogLevelType"];
+        }
+
+        if (array_key_exists("ExecutionFileType",$param) and $param["ExecutionFileType"] !== null) {
+            $this->ExecutionFileType = $param["ExecutionFileType"];
+        }
+
+        if (array_key_exists("ExecutionJobId",$param) and $param["ExecutionJobId"] !== null) {
+            $this->ExecutionJobId = $param["ExecutionJobId"];
+        }
+
         if (array_key_exists("BrokerIp",$param) and $param["BrokerIp"] !== null) {
             $this->BrokerIp = $param["BrokerIp"];
         }
@@ -120,6 +172,14 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
 
         if (array_key_exists("LineCount",$param) and $param["LineCount"] !== null) {
             $this->LineCount = $param["LineCount"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
         }
     }
 }

@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectID() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
  * @method void setProjectID(integer $ProjectID) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
  * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetUin() 获取当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
  * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
  * @method string getAdditionalConfig() 获取凭据额外配置
@@ -133,7 +131,6 @@ class DescribeSecretResponse extends AbstractModel
 
     /**
      * @var array 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedInstanceIDs;
 
@@ -168,7 +165,6 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
      * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
      * @param string $AdditionalConfig 凭据额外配置
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

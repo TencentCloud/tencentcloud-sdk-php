@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 支持中国大陆地区护照。
  * @method void setType(string $Type) 设置默认填写CN
 支持中国大陆地区护照。
+ * @method boolean getCropPortrait() 获取是否返回头像和位置坐标
+ * @method void setCropPortrait(boolean $CropPortrait) 设置是否返回头像和位置坐标
  */
 class PassportOCRRequest extends AbstractModel
 {
@@ -54,12 +56,18 @@ class PassportOCRRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var boolean 是否返回头像和位置坐标
+     */
+    public $CropPortrait;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      * @param string $Type 默认填写CN
 支持中国大陆地区护照。
+     * @param boolean $CropPortrait 是否返回头像和位置坐标
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class PassportOCRRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
+            $this->CropPortrait = $param["CropPortrait"];
         }
     }
 }

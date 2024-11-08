@@ -104,6 +104,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestSubmitTime(string $LatestSubmitTime) 设置工作流最近提交时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCalendarOpen() 获取日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCalendarOpen(string $CalendarOpen) 设置日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCalendarName() 获取日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCalendarName(string $CalendarName) 设置日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCalendarId() 获取日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCalendarId(string $CalendarId) 设置日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowScheduleDtoDs extends AbstractModel
 {
@@ -234,6 +246,24 @@ class WorkflowScheduleDtoDs extends AbstractModel
     public $LatestSubmitTime;
 
     /**
+     * @var string 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CalendarOpen;
+
+    /**
+     * @var string 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CalendarName;
+
+    /**
+     * @var string 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CalendarId;
+
+    /**
      * @param string $ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowId 工作流ID
@@ -275,6 +305,12 @@ class WorkflowScheduleDtoDs extends AbstractModel
      * @param string $FirstSubmitTime 工作流首次提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestSubmitTime 工作流最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CalendarOpen 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CalendarName 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CalendarId 日历调度id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +408,18 @@ class WorkflowScheduleDtoDs extends AbstractModel
 
         if (array_key_exists("LatestSubmitTime",$param) and $param["LatestSubmitTime"] !== null) {
             $this->LatestSubmitTime = $param["LatestSubmitTime"];
+        }
+
+        if (array_key_exists("CalendarOpen",$param) and $param["CalendarOpen"] !== null) {
+            $this->CalendarOpen = $param["CalendarOpen"];
+        }
+
+        if (array_key_exists("CalendarName",$param) and $param["CalendarName"] !== null) {
+            $this->CalendarName = $param["CalendarName"];
+        }
+
+        if (array_key_exists("CalendarId",$param) and $param["CalendarId"] !== null) {
+            $this->CalendarId = $param["CalendarId"];
         }
     }
 }

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScheduleInstances请求参数结构体
  *
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  * @method array getInstances() 获取实例列表
  * @method void setInstances(array $Instances) 设置实例列表
  * @method boolean getCheckFather() 获取检查父任务类型, true: 检查父任务; false: 不检查父任务 
@@ -56,9 +58,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestBaseInfo(ProjectBaseInfoOpsRequest $RequestBaseInfo) 设置基础请求信息
  * @method boolean getIsCount() 获取是否计算总数
  * @method void setIsCount(boolean $IsCount) 设置是否计算总数
+ * @method array getProjectIds() 获取项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
  */
 class DescribeScheduleInstancesRequest extends AbstractModel
 {
+    /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
     /**
      * @var array 实例列表
      */
@@ -150,6 +159,12 @@ class DescribeScheduleInstancesRequest extends AbstractModel
     public $IsCount;
 
     /**
+     * @var array 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     */
+    public $ProjectIds;
+
+    /**
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param array $Instances 实例列表
      * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
      * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
@@ -168,6 +183,7 @@ class DescribeScheduleInstancesRequest extends AbstractModel
      * @param integer $Count 数据总数
      * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 基础请求信息
      * @param boolean $IsCount 是否计算总数
+     * @param array $ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
      */
     function __construct()
     {
@@ -182,6 +198,10 @@ class DescribeScheduleInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
+        }
+
         if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
             $this->Instances = [];
             foreach ($param["Instances"] as $key => $value){
@@ -259,6 +279,10 @@ class DescribeScheduleInstancesRequest extends AbstractModel
 
         if (array_key_exists("IsCount",$param) and $param["IsCount"] !== null) {
             $this->IsCount = $param["IsCount"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

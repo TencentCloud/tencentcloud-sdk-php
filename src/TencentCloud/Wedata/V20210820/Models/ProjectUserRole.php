@@ -48,6 +48,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsProjectAdmin(boolean $IsProjectAdmin) 设置是否项目管理员
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPhoneNum() 获取手机号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhoneNum(string $PhoneNum) 设置手机号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEmail() 获取邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmail(string $Email) 设置邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerUin() 获取主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerUin(string $OwnerUin) 设置主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppId() 获取租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置租户iD
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectUserRole extends AbstractModel
 {
@@ -94,6 +110,30 @@ class ProjectUserRole extends AbstractModel
     public $IsProjectAdmin;
 
     /**
+     * @var string 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PhoneNum;
+
+    /**
+     * @var string 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Email;
+
+    /**
+     * @var string 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerUin;
+
+    /**
+     * @var string 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
      * @param array $Roles 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName mc
@@ -107,6 +147,14 @@ class ProjectUserRole extends AbstractModel
      * @param string $DisplayName 显示名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsProjectAdmin 是否项目管理员
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PhoneNum 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Email 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerUin 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppId 租户iD
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +201,22 @@ class ProjectUserRole extends AbstractModel
 
         if (array_key_exists("IsProjectAdmin",$param) and $param["IsProjectAdmin"] !== null) {
             $this->IsProjectAdmin = $param["IsProjectAdmin"];
+        }
+
+        if (array_key_exists("PhoneNum",$param) and $param["PhoneNum"] !== null) {
+            $this->PhoneNum = $param["PhoneNum"];
+        }
+
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

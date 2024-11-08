@@ -43,45 +43,27 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimeOffset() 获取命令执行时间相对于所属会话开始时间的偏移量，单位ms
  * @method void setTimeOffset(integer $TimeOffset) 设置命令执行时间相对于所属会话开始时间的偏移量，单位ms
  * @method string getAccount() 获取账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccount(string $Account) 设置账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFromIp() 获取source ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFromIp(string $FromIp) 设置source ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionTime() 获取该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionTime(string $SessionTime) 设置该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessTime() 获取该命令所属会话的会话开始时间（废弃，使用SessionTime）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间（废弃，使用SessionTime）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfirmTime() 获取复核时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfirmTime(string $ConfirmTime) 设置复核时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserDepartmentId() 获取部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDepartmentId(string $UserDepartmentId) 设置部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserDepartmentName() 获取用户部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDepartmentName(string $UserDepartmentName) 设置用户部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceDepartmentId() 获取设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceDepartmentName() 获取设备部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取会话大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置会话大小
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchCommandResult extends AbstractModel
 {
@@ -142,19 +124,16 @@ class SearchCommandResult extends AbstractModel
 
     /**
      * @var string 账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Account;
 
     /**
      * @var string source ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FromIp;
 
     /**
      * @var string 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionTime;
 
@@ -167,37 +146,31 @@ class SearchCommandResult extends AbstractModel
 
     /**
      * @var string 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfirmTime;
 
     /**
      * @var string 部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDepartmentId;
 
     /**
      * @var string 用户部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDepartmentName;
 
     /**
      * @var string 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceDepartmentId;
 
     /**
      * @var string 设备部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceDepartmentName;
 
     /**
      * @var integer 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
@@ -214,25 +187,16 @@ class SearchCommandResult extends AbstractModel
      * @param string $Sid 命令所属的会话ID
      * @param integer $TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
      * @param string $Account 账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FromIp source ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionTime 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfirmTime 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserDepartmentId 部门id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserDepartmentName 用户部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceDepartmentId 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceDepartmentName 设备部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

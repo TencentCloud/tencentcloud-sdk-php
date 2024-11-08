@@ -444,7 +444,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准
  * @method Models\ChannelDeleteRoleResponse ChannelDeleteRole(Models\ChannelDeleteRoleRequest $req) 此接口（ChannelDeleteRole）用来删除企业自定义角色。
 
-注意：系统角色不可删除。
+注：**系统角色不可删除。**
  * @method Models\ChannelDeleteRoleUsersResponse ChannelDeleteRoleUsers(Models\ChannelDeleteRoleUsersRequest $req) 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
 
 对应控制台的操作如下图
@@ -938,6 +938,7 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
  * @method Models\DescribeUsageResponse DescribeUsage(Models\DescribeUsageRequest $req) 此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
+<font color="red">此接口即将下线， 请使用新接口[查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)</font>
 
 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用户获取合同控制台下载页面链接,  点击链接后会跳转至本企业合同管理控制台(会筛选出传入的合同列表), 点击**下载**按钮后就会下载传入的合同列表, 下载页面如下图

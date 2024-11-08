@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListCmqEnableRegion返回参数结构体
  *
- * @method array getEnableRegions() 获取云审计支持的cmq的可用区
- * @method void setEnableRegions(array $EnableRegions) 设置云审计支持的cmq的可用区
+ * @method array getEnableRegions() 获取操作审计支持的cmq的可用区
+ * @method void setEnableRegions(array $EnableRegions) 设置操作审计支持的cmq的可用区
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListCmqEnableRegionResponse extends AbstractModel
 {
     /**
-     * @var array 云审计支持的cmq的可用区
+     * @var array 操作审计支持的cmq的可用区
      */
     public $EnableRegions;
 
@@ -38,7 +38,7 @@ class ListCmqEnableRegionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $EnableRegions 云审计支持的cmq的可用区
+     * @param array $EnableRegions 操作审计支持的cmq的可用区
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

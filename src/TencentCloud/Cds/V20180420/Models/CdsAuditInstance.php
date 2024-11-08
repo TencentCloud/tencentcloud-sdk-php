@@ -43,23 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取实例过期时间，格式：yyyy-mm-dd HH:ii:ss
  * @method void setExpireTime(string $ExpireTime) 设置实例过期时间，格式：yyyy-mm-dd HH:ii:ss
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIp() 获取实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIp(string $PrivateIp) 设置实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例类型（版本）
  * @method void setInstanceType(string $InstanceType) 设置实例类型（版本）
  * @method string getPdomain() 获取实例域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPdomain(string $Pdomain) 设置实例域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdsAuditInstance extends AbstractModel
 {
@@ -120,19 +112,16 @@ class CdsAuditInstance extends AbstractModel
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIp;
 
@@ -143,7 +132,6 @@ class CdsAuditInstance extends AbstractModel
 
     /**
      * @var string 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pdomain;
 
@@ -160,14 +148,10 @@ class CdsAuditInstance extends AbstractModel
      * @param string $CreateTime 实例创建时间，格式： yyyy-mm-dd HH:ii:ss
      * @param string $ExpireTime 实例过期时间，格式：yyyy-mm-dd HH:ii:ss
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIp 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型（版本）
      * @param string $Pdomain 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

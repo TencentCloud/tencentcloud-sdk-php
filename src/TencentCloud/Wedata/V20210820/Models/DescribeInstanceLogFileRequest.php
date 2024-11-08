@@ -26,10 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getCurRunDate() 获取实例数据时间
  * @method void setCurRunDate(string $CurRunDate) 设置实例数据时间
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  * @method string getBrokerIp() 获取执行机IP
  * @method void setBrokerIp(string $BrokerIp) 设置执行机IP
  * @method string getOriginFileName() 获取日志文件名
  * @method void setOriginFileName(string $OriginFileName) 设置日志文件名
+ * @method string getExecutionJobId() 获取执行平台下发执行id
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置执行平台下发执行id
+ * @method string getLogLevelType() 获取日志级别，Info/Debug/Warn/Error/All
+ * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
+ * @method string getExecutionFileType() 获取文件类型,Log/Code
+ * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
  */
 class DescribeInstanceLogFileRequest extends AbstractModel
 {
@@ -49,6 +57,11 @@ class DescribeInstanceLogFileRequest extends AbstractModel
     public $CurRunDate;
 
     /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
+    /**
      * @var string 执行机IP
      */
     public $BrokerIp;
@@ -59,11 +72,30 @@ class DescribeInstanceLogFileRequest extends AbstractModel
     public $OriginFileName;
 
     /**
+     * @var string 执行平台下发执行id
+     */
+    public $ExecutionJobId;
+
+    /**
+     * @var string 日志级别，Info/Debug/Warn/Error/All
+     */
+    public $LogLevelType;
+
+    /**
+     * @var string 文件类型,Log/Code
+     */
+    public $ExecutionFileType;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务ID
      * @param string $CurRunDate 实例数据时间
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param string $BrokerIp 执行机IP
      * @param string $OriginFileName 日志文件名
+     * @param string $ExecutionJobId 执行平台下发执行id
+     * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * @param string $ExecutionFileType 文件类型,Log/Code
      */
     function __construct()
     {
@@ -90,12 +122,28 @@ class DescribeInstanceLogFileRequest extends AbstractModel
             $this->CurRunDate = $param["CurRunDate"];
         }
 
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
+        }
+
         if (array_key_exists("BrokerIp",$param) and $param["BrokerIp"] !== null) {
             $this->BrokerIp = $param["BrokerIp"];
         }
 
         if (array_key_exists("OriginFileName",$param) and $param["OriginFileName"] !== null) {
             $this->OriginFileName = $param["OriginFileName"];
+        }
+
+        if (array_key_exists("ExecutionJobId",$param) and $param["ExecutionJobId"] !== null) {
+            $this->ExecutionJobId = $param["ExecutionJobId"];
+        }
+
+        if (array_key_exists("LogLevelType",$param) and $param["LogLevelType"] !== null) {
+            $this->LogLevelType = $param["LogLevelType"];
+        }
+
+        if (array_key_exists("ExecutionFileType",$param) and $param["ExecutionFileType"] !== null) {
+            $this->ExecutionFileType = $param["ExecutionFileType"];
         }
     }
 }

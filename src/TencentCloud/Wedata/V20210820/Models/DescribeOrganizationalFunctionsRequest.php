@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 标准模式生产环境：PROD
 简单模式：ALL
 
- * @method Filter getFilters() 获取过滤条件
- * @method void setFilters(Filter $Filters) 设置过滤条件
- * @method OrderField getOrderFields() 获取排序条件
- * @method void setOrderFields(OrderField $OrderFields) 设置排序条件
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getOrderFields() 获取排序条件
+ * @method void setOrderFields(array $OrderFields) 设置排序条件
  */
 class DescribeOrganizationalFunctionsRequest extends AbstractModel
 {
@@ -72,12 +72,12 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
     public $EnvType;
 
     /**
-     * @var Filter 过滤条件
+     * @var array 过滤条件
      */
     public $Filters;
 
     /**
-     * @var OrderField 排序条件
+     * @var array 排序条件
      */
     public $OrderFields;
 
@@ -90,8 +90,8 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
 标准模式生产环境：PROD
 简单模式：ALL
 
-     * @param Filter $Filters 过滤条件
-     * @param OrderField $OrderFields 排序条件
+     * @param array $Filters 过滤条件
+     * @param array $OrderFields 排序条件
      */
     function __construct()
     {
@@ -127,13 +127,21 @@ class DescribeOrganizationalFunctionsRequest extends AbstractModel
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = new Filter();
-            $this->Filters->deserialize($param["Filters"]);
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("OrderFields",$param) and $param["OrderFields"] !== null) {
-            $this->OrderFields = new OrderField();
-            $this->OrderFields->deserialize($param["OrderFields"]);
+            $this->OrderFields = [];
+            foreach ($param["OrderFields"] as $key => $value){
+                $obj = new OrderField();
+                $obj->deserialize($value);
+                array_push($this->OrderFields, $obj);
+            }
         }
     }
 }

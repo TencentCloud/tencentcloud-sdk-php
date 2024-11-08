@@ -117,6 +117,11 @@ Operator 目前支持
 -neq  不等于!=操作符
 -eq  等于=操作符
 -is     in操作符
+
+ * @method integer getTokenType() 获取100 不绑定用户  200 单用户单token  300 单用户多token
+ * @method void setTokenType(integer $TokenType) 设置100 不绑定用户  200 单用户单token  300 单用户多token
+ * @method integer getTokenNum() 获取一次创建的token数
+ * @method void setTokenNum(integer $TokenNum) 设置一次创建的token数
  */
 class CreateEmbedTokenRequest extends AbstractModel
 {
@@ -210,6 +215,16 @@ Operator 目前支持
     public $GlobalParam;
 
     /**
+     * @var integer 100 不绑定用户  200 单用户单token  300 单用户多token
+     */
+    public $TokenType;
+
+    /**
+     * @var integer 一次创建的token数
+     */
+    public $TokenNum;
+
+    /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
      * @param string $Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
@@ -258,6 +273,9 @@ Operator 目前支持
 -neq  不等于!=操作符
 -eq  等于=操作符
 -is     in操作符
+
+     * @param integer $TokenType 100 不绑定用户  200 单用户单token  300 单用户多token
+     * @param integer $TokenNum 一次创建的token数
      */
     function __construct()
     {
@@ -310,6 +328,14 @@ Operator 目前支持
 
         if (array_key_exists("GlobalParam",$param) and $param["GlobalParam"] !== null) {
             $this->GlobalParam = $param["GlobalParam"];
+        }
+
+        if (array_key_exists("TokenType",$param) and $param["TokenType"] !== null) {
+            $this->TokenType = $param["TokenType"];
+        }
+
+        if (array_key_exists("TokenNum",$param) and $param["TokenNum"] !== null) {
+            $this->TokenNum = $param["TokenNum"];
         }
     }
 }

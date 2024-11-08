@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 
 [点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
- * @method array getFlowApprovers() 获取合同流程的参与方列表，最多可支持50个参与方
+ * @method array getFlowApprovers() 获取合同流程的参与方列表，最多可支持50个参与方。对应不同签署人的传参方式可以参考文档 [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver)
 
 注:  
 <font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 
 [点击查看模板参与人顺序定义位置](https://qcloudimg.tencent-cloud.cn/raw/c50e0a204fc5c66aaa2ca70e451ef2d6.png)
 
- * @method void setFlowApprovers(array $FlowApprovers) 设置合同流程的参与方列表，最多可支持50个参与方
+ * @method void setFlowApprovers(array $FlowApprovers) 设置合同流程的参与方列表，最多可支持50个参与方。对应不同签署人的传参方式可以参考文档 [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver)
 
 注:  
 <font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
@@ -175,7 +175,7 @@ class FlowInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var array 合同流程的参与方列表，最多可支持50个参与方
+     * @var array 合同流程的参与方列表，最多可支持50个参与方。对应不同签署人的传参方式可以参考文档 [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver)
 
 注:  
 <font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
@@ -288,7 +288,7 @@ class FlowInfo extends AbstractModel
 
 [点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
-     * @param array $FlowApprovers 合同流程的参与方列表，最多可支持50个参与方
+     * @param array $FlowApprovers 合同流程的参与方列表，最多可支持50个参与方。对应不同签署人的传参方式可以参考文档 [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver)
 
 注:  
 <font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。

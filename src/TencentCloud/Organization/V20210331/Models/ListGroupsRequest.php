@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterUsers(array $FilterUsers) 设置筛选的用户，该用户关联的用户组会返回IsSelected=1
  * @method string getSortField() 获取排序的字段，目前只支持CreateTime，默认是CreateTime字段
  * @method void setSortField(string $SortField) 设置排序的字段，目前只支持CreateTime，默认是CreateTime字段
- * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
- * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+ * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+ * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
  * @method integer getOffset() 获取翻页offset. 不要与NextToken同时使用，优先使用NextToken
  * @method void setOffset(integer $Offset) 设置翻页offset. 不要与NextToken同时使用，优先使用NextToken
  */
@@ -77,7 +77,7 @@ class ListGroupsRequest extends AbstractModel
     public $SortField;
 
     /**
-     * @var string 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @var string 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public $SortType;
 
@@ -94,7 +94,7 @@ class ListGroupsRequest extends AbstractModel
      * @param string $GroupType 用户组的类型  Manual：手动创建，Synchronized：外部导入。
      * @param array $FilterUsers 筛选的用户，该用户关联的用户组会返回IsSelected=1
      * @param string $SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
-     * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      * @param integer $Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
      */
     function __construct()

@@ -45,29 +45,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValidateTime() 获取访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
  * @method void setValidateTime(string $ValidateTime) 设置访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
  * @method Department getDepartment() 获取用户所属部门（用于出参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置用户所属部门（用于出参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartmentId() 获取用户所属部门（用于入参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentId(string $DepartmentId) 设置用户所属部门（用于入参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveStatus() 获取激活状态 0 - 未激活 1 - 激活
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveStatus(integer $ActiveStatus) 设置激活状态 0 - 未激活 1 - 激活
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLockStatus() 获取锁定状态 0 - 未锁定 1 - 锁定
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockStatus(integer $LockStatus) 设置锁定状态 0 - 未锁定 1 - 锁定
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态 与Filter中一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态 与Filter中一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAclVersion() 获取权限版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclVersion(integer $AclVersion) 设置权限版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
@@ -125,37 +113,31 @@ class User extends AbstractModel
 
     /**
      * @var Department 用户所属部门（用于出参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var string 用户所属部门（用于入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentId;
 
     /**
      * @var integer 激活状态 0 - 未激活 1 - 激活
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveStatus;
 
     /**
      * @var integer 锁定状态 0 - 未锁定 1 - 锁定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockStatus;
 
     /**
      * @var string 状态 与Filter中一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 权限版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclVersion;
 
@@ -173,17 +155,11 @@ class User extends AbstractModel
      * @param integer $AuthType 认证方式，0 - 本地，1 - LDAP，2 - OAuth
      * @param string $ValidateTime 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
      * @param Department $Department 用户所属部门（用于出参）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentId 用户所属部门（用于入参）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveStatus 激活状态 0 - 未激活 1 - 激活
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LockStatus 锁定状态 0 - 未锁定 1 - 锁定
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态 与Filter中一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AclVersion 权限版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

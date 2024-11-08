@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRolePolicies(array $RolePolicies) 设置添加的系统策略详情。
  * @method string getCustomPolicyDocument() 获取自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
  * @method void setCustomPolicyDocument(string $CustomPolicyDocument) 设置自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
+ * @method array getCustomPolicyDocuments() 获取自定义策略内容列表（跟RolePolicyNames一一对应）
+ * @method void setCustomPolicyDocuments(array $CustomPolicyDocuments) 设置自定义策略内容列表（跟RolePolicyNames一一对应）
  */
 class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     public $CustomPolicyDocument;
 
     /**
+     * @var array 自定义策略内容列表（跟RolePolicyNames一一对应）
+     */
+    public $CustomPolicyDocuments;
+
+    /**
      * @param string $ZoneId 空间 ID
      * @param string $RoleConfigurationId 权限配置 ID
      * @param string $RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
      * @param array $RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
      * @param array $RolePolicies 添加的系统策略详情。
      * @param string $CustomPolicyDocument 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
+     * @param array $CustomPolicyDocuments 自定义策略内容列表（跟RolePolicyNames一一对应）
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
 
         if (array_key_exists("CustomPolicyDocument",$param) and $param["CustomPolicyDocument"] !== null) {
             $this->CustomPolicyDocument = $param["CustomPolicyDocument"];
+        }
+
+        if (array_key_exists("CustomPolicyDocuments",$param) and $param["CustomPolicyDocuments"] !== null) {
+            $this->CustomPolicyDocuments = $param["CustomPolicyDocuments"];
         }
     }
 }

@@ -104,6 +104,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDsEnvType(string $DsEnvType) 设置数据库所属环境，0.未定义，1.生产 2.开发
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceStatus() 获取实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取实例运行的开始时间
+ * @method void setStartTime(string $StartTime) 设置实例运行的开始时间
+ * @method string getFinishTime() 获取实例运行的结束时间
+ * @method void setFinishTime(string $FinishTime) 设置实例运行的结束时间
  */
 class RuleGroupExecResult extends AbstractModel
 {
@@ -234,6 +250,34 @@ class RuleGroupExecResult extends AbstractModel
     public $DsEnvType;
 
     /**
+     * @var string 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
+     * @var string 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var string 实例运行的开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 实例运行的结束时间
+     */
+    public $FinishTime;
+
+    /**
      * @param integer $RuleGroupExecId 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -276,6 +320,14 @@ class RuleGroupExecResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DsEnvType 数据库所属环境，0.未定义，1.生产 2.开发
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceStatus 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 实例运行的开始时间
+     * @param string $FinishTime 实例运行的结束时间
      */
     function __construct()
     {
@@ -377,6 +429,26 @@ class RuleGroupExecResult extends AbstractModel
 
         if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
             $this->DsEnvType = $param["DsEnvType"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

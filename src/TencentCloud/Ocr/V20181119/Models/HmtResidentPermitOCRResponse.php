@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVisaNum(string $VisaNum) 设置签发次数
  * @method string getPassNo() 获取通行证号码
  * @method void setPassNo(string $PassNo) 设置通行证号码
+ * @method PortraitImageInfo getPortraitImageInfo() 获取头像和坐标信息
+ * @method void setPortraitImageInfo(PortraitImageInfo $PortraitImageInfo) 设置头像和坐标信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,6 +101,11 @@ class HmtResidentPermitOCRResponse extends AbstractModel
     public $PassNo;
 
     /**
+     * @var PortraitImageInfo 头像和坐标信息
+     */
+    public $PortraitImageInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -115,6 +122,7 @@ class HmtResidentPermitOCRResponse extends AbstractModel
      * @param string $Authority 签发机关
      * @param string $VisaNum 签发次数
      * @param string $PassNo 通行证号码
+     * @param PortraitImageInfo $PortraitImageInfo 头像和坐标信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -168,6 +176,11 @@ class HmtResidentPermitOCRResponse extends AbstractModel
 
         if (array_key_exists("PassNo",$param) and $param["PassNo"] !== null) {
             $this->PassNo = $param["PassNo"];
+        }
+
+        if (array_key_exists("PortraitImageInfo",$param) and $param["PortraitImageInfo"] !== null) {
+            $this->PortraitImageInfo = new PortraitImageInfo();
+            $this->PortraitImageInfo->deserialize($param["PortraitImageInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

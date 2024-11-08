@@ -29,29 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置网络域名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWhiteIpSet() 获取ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhiteIpSet(array $WhiteIpSet) 设置ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnabled() 获取是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(integer $Enabled) 设置是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefault() 获取是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefault(integer $Default) 设置是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Domain extends AbstractModel
 {
@@ -73,37 +61,31 @@ class Domain extends AbstractModel
 
     /**
      * @var string 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var array ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhiteIpSet;
 
     /**
      * @var integer 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var integer 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
@@ -113,17 +95,11 @@ class Domain extends AbstractModel
      * @param string $DomainName 网络域名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WhiteIpSet ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Enabled 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Default 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

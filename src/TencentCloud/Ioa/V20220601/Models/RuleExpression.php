@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 规则表达式
  *
  * @method array getItems() 获取规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelation() 获取关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelation(string $Relation) 设置关系
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExpression extends AbstractModel
 {
     /**
      * @var array 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @var string 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Relation;
 
     /**
      * @param array $Items 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * cmq地域信息
  *
  * @method string getCmqRegionName() 获取地域描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmqRegionName(string $CmqRegionName) 设置地域描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCmqRegion() 获取cmq地域
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmqRegion(string $CmqRegion) 设置cmq地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmqRegionInfo extends AbstractModel
 {
     /**
      * @var string 地域描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CmqRegionName;
 
     /**
      * @var string cmq地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CmqRegion;
 
     /**
      * @param string $CmqRegionName 地域描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CmqRegion cmq地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

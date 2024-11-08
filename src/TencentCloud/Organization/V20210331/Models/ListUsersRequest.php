@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterGroups(array $FilterGroups) 设置筛选的用户组，该用户组关联的子用户会返回IsSelected=1
  * @method string getSortField() 获取排序的字段，目前只支持CreateTime，默认是CreateTime字段
  * @method void setSortField(string $SortField) 设置排序的字段，目前只支持CreateTime，默认是CreateTime字段
- * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
- * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+ * @method string getSortType() 获取排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+ * @method void setSortType(string $SortType) 设置排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
  * @method integer getOffset() 获取翻页offset. 不要与NextToken同时使用，优先使用NextToken
  * @method void setOffset(integer $Offset) 设置翻页offset. 不要与NextToken同时使用，优先使用NextToken
  */
@@ -84,7 +84,7 @@ class ListUsersRequest extends AbstractModel
     public $SortField;
 
     /**
-     * @var string 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @var string 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public $SortType;
 
@@ -102,7 +102,7 @@ class ListUsersRequest extends AbstractModel
      * @param string $NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法经过多次查询，直到IsTruncated为false时，表示全部数据查询完毕。
      * @param array $FilterGroups 筛选的用户组，该用户组关联的子用户会返回IsSelected=1
      * @param string $SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
-     * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * @param string $SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      * @param integer $Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
      */
     function __construct()

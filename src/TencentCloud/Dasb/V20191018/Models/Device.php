@@ -47,33 +47,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method Resource getResource() 获取堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(Resource $Resource) 设置堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Department getDepartment() 获取资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpPortSet() 获取数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpPortSet(array $IpPortSet) 设置数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainId() 获取网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainId(string $DomainId) 设置网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainName() 获取网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainName(string $DomainName) 设置网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableSSL() 获取是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableSSL(integer $EnableSSL) 设置是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSSLCertName() 获取已上传的SSL证书名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSSLCertName(string $SSLCertName) 设置已上传的SSL证书名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Device extends AbstractModel
 {
@@ -144,43 +130,36 @@ class Device extends AbstractModel
 
     /**
      * @var Resource 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var Department 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var array 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpPortSet;
 
     /**
      * @var string 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainId;
 
     /**
      * @var string 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainName;
 
     /**
      * @var integer 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableSSL;
 
     /**
      * @var string 已上传的SSL证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSLCertName;
 
@@ -199,19 +178,12 @@ class Device extends AbstractModel
      * @param string $VpcId VPC ID
      * @param string $SubnetId 子网ID
      * @param Resource $Resource 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department $Department 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpPortSet 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainId 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SSLCertName 已上传的SSL证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

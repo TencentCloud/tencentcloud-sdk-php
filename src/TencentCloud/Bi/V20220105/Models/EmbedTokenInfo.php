@@ -84,6 +84,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntention(string $Intention) 设置embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTokenType() 获取100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTokenType(integer $TokenType) 设置100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTokenNum() 获取token 数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTokenNum(integer $TokenNum) 设置token 数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSingleUserMultiToken() 获取是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSingleUserMultiToken(boolean $SingleUserMultiToken) 设置是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -184,6 +200,26 @@ class EmbedTokenInfo extends AbstractModel
     public $Intention;
 
     /**
+     * @var integer 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TokenType;
+
+    /**
+     * @var integer token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TokenNum;
+
+    /**
+     * @var boolean 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SingleUserMultiToken;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -215,6 +251,14 @@ class EmbedTokenInfo extends AbstractModel
      * @param string $GlobalParam 全局参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TokenType 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TokenNum token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SingleUserMultiToken 是否单用户多token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +336,18 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
             $this->Intention = $param["Intention"];
+        }
+
+        if (array_key_exists("TokenType",$param) and $param["TokenType"] !== null) {
+            $this->TokenType = $param["TokenType"];
+        }
+
+        if (array_key_exists("TokenNum",$param) and $param["TokenNum"] !== null) {
+            $this->TokenNum = $param["TokenNum"];
+        }
+
+        if (array_key_exists("SingleUserMultiToken",$param) and $param["SingleUserMultiToken"] !== null) {
+            $this->SingleUserMultiToken = $param["SingleUserMultiToken"];
         }
     }
 }

@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getAddonName() 获取addon名称
  * @method void setAddonName(string $AddonName) 设置addon名称
- * @method string getAddonVersion() 获取addon版本（不传默认不更新）
- * @method void setAddonVersion(string $AddonVersion) 设置addon版本（不传默认不更新）
- * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
- * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+ * @method string getAddonVersion() 获取addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
+ * @method void setAddonVersion(string $AddonVersion) 设置addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
+ * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
+ * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
+ * @method string getUpdateStrategy() 获取addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+ * @method void setUpdateStrategy(string $UpdateStrategy) 设置addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
  */
 class UpdateAddonRequest extends AbstractModel
 {
@@ -42,20 +44,26 @@ class UpdateAddonRequest extends AbstractModel
     public $AddonName;
 
     /**
-     * @var string addon版本（不传默认不更新）
+     * @var string addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
      */
     public $AddonVersion;
 
     /**
-     * @var string addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * @var string addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
      */
     public $RawValues;
 
     /**
+     * @var string addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+     */
+    public $UpdateStrategy;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $AddonName addon名称
-     * @param string $AddonVersion addon版本（不传默认不更新）
-     * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * @param string $AddonVersion addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
+     * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
+     * @param string $UpdateStrategy addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdateAddonRequest extends AbstractModel
 
         if (array_key_exists("RawValues",$param) and $param["RawValues"] !== null) {
             $this->RawValues = $param["RawValues"];
+        }
+
+        if (array_key_exists("UpdateStrategy",$param) and $param["UpdateStrategy"] !== null) {
+            $this->UpdateStrategy = $param["UpdateStrategy"];
         }
     }
 }

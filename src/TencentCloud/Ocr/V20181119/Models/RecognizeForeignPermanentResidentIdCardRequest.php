@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 示例值：1
  * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
 示例值：1
+ * @method boolean getCropPortrait() 获取是否返回头像和位置坐标
+ * @method void setCropPortrait(boolean $CropPortrait) 设置是否返回头像和位置坐标
  */
 class RecognizeForeignPermanentResidentIdCardRequest extends AbstractModel
 {
@@ -85,6 +87,11 @@ class RecognizeForeignPermanentResidentIdCardRequest extends AbstractModel
     public $PdfPageNumber;
 
     /**
+     * @var boolean 是否返回头像和位置坐标
+     */
+    public $CropPortrait;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -100,6 +107,7 @@ class RecognizeForeignPermanentResidentIdCardRequest extends AbstractModel
      * @param boolean $EnablePdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
 示例值：1
+     * @param boolean $CropPortrait 是否返回头像和位置坐标
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class RecognizeForeignPermanentResidentIdCardRequest extends AbstractModel
 
         if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
             $this->PdfPageNumber = $param["PdfPageNumber"];
+        }
+
+        if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
+            $this->CropPortrait = $param["CropPortrait"];
         }
     }
 }

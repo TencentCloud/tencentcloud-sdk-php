@@ -21,29 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * CheckBankCardInformation返回参数结构体
  *
  * @method string getResult() 获取认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
 -4：认证次数超过当日限制，请次日重试
 
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
 -4：认证次数超过当日限制，请次日重试
 
- * @method string getDescription() 获取业务结果描述
- * @method void setDescription(string $Description) 设置业务结果描述
- * @method string getAccountBank() 获取开户行
- * @method void setAccountBank(string $AccountBank) 设置开户行
- * @method integer getAccountType() 获取卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
- * @method void setAccountType(integer $AccountType) 设置卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+ * @method string getDescription() 获取业务结果描述。
+ * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method string getAccountBank() 获取开户行。
+ * @method void setAccountBank(string $AccountBank) 设置开户行。
+ * @method integer getAccountType() 获取卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
+ * @method void setAccountType(integer $AccountType) 设置卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,10 +63,11 @@ class CheckBankCardInformationResponse extends AbstractModel
 {
     /**
      * @var string 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
 -4：认证次数超过当日限制，请次日重试
@@ -63,17 +76,22 @@ class CheckBankCardInformationResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 业务结果描述
+     * @var string 业务结果描述。
      */
     public $Description;
 
     /**
-     * @var string 开户行
+     * @var string 开户行。
      */
     public $AccountBank;
 
     /**
-     * @var integer 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+     * @var integer 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
      */
     public $AccountType;
 
@@ -84,17 +102,23 @@ class CheckBankCardInformationResponse extends AbstractModel
 
     /**
      * @param string $Result 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
 -4：认证次数超过当日限制，请次日重试
 
-     * @param string $Description 业务结果描述
-     * @param string $AccountBank 开户行
-     * @param integer $AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+     * @param string $Description 业务结果描述。
+     * @param string $AccountBank 开户行。
+     * @param integer $AccountType 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

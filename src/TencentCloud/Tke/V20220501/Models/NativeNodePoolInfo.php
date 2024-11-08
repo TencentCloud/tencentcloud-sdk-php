@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisks(array $DataDisks) 设置原生节点池数据盘
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMachineType() 获取原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineType(string $MachineType) 设置原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeNodePoolInfo extends AbstractModel
 {
@@ -219,6 +223,12 @@ class NativeNodePoolInfo extends AbstractModel
     public $DataDisks;
 
     /**
+     * @var string 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineType;
+
+    /**
      * @param MachineSetScaling $Scaling 伸缩配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网列表
@@ -255,6 +265,8 @@ class NativeNodePoolInfo extends AbstractModel
      * @param InternetAccessible $InternetAccessible 公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataDisks 原生节点池数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MachineType 原生节点机型 Native, NativeCVM
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -364,6 +376,10 @@ class NativeNodePoolInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

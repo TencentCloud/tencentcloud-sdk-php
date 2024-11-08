@@ -77,33 +77,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPackageNode() 获取授权点数扩展包个数(50点)
  * @method void setPackageNode(integer $PackageNode) 设置授权点数扩展包个数(50点)
  * @method string getLogDeliveryArgs() 获取日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogDeliveryArgs(string $LogDeliveryArgs) 设置日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClbSet() 获取堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbSet(array $ClbSet) 设置堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDomainCount() 获取网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainCount(integer $DomainCount) 设置网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedDomainCount() 获取已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedDomainCount(integer $UsedDomainCount) 设置已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrial() 获取0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrial(integer $Trial) 设置0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcClusterId() 获取cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcClusterId(string $CdcClusterId) 设置cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogDelivery() 获取日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeployModel() 获取部署模式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployModel(integer $DeployModel) 设置部署模式
@@ -253,43 +239,36 @@ class Resource extends AbstractModel
 
     /**
      * @var string 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogDeliveryArgs;
 
     /**
      * @var array 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbSet;
 
     /**
      * @var integer 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainCount;
 
     /**
      * @var integer 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedDomainCount;
 
     /**
      * @var integer 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trial;
 
     /**
      * @var string cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcClusterId;
 
     /**
      * @var string 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogDelivery;
 
@@ -329,19 +308,12 @@ class Resource extends AbstractModel
      * @param integer $PackageBandwidth 带宽扩展包个数(4M)
      * @param integer $PackageNode 授权点数扩展包个数(50点)
      * @param string $LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Trial 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcClusterId cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogDelivery 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployModel 部署模式
 注意：此字段可能返回 null，表示取不到有效值。
      */

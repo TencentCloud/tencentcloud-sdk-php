@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 规则元数据
  *
  * @method string getKey() 获取字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperate() 获取操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperate(string $Operate) 设置操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleItem extends AbstractModel
 {
     /**
      * @var string 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operate;
 
     /**
      * @var string 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var array 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param string $Key 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operate 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

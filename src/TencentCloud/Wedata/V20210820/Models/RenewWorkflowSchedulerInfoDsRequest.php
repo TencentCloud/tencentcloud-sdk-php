@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置工作流依赖，yes or no
  * @method string getCrontabExpression() 获取CrontabExpression
  * @method void setCrontabExpression(string $CrontabExpression) 设置CrontabExpression
+ * @method string getModifyCycleValue() 获取0：不修改
+1：将任务的上游依赖配置改为默认值 
+ * @method void setModifyCycleValue(string $ModifyCycleValue) 设置0：不修改
+1：将任务的上游依赖配置改为默认值 
+ * @method string getCalendarOpen() 获取是否开启日历调度 1 开启 0关闭
+ * @method void setCalendarOpen(string $CalendarOpen) 设置是否开启日历调度 1 开启 0关闭
+ * @method string getCalendarName() 获取日历名称
+ * @method void setCalendarName(string $CalendarName) 设置日历名称
+ * @method string getCalendarId() 获取日历id
+ * @method void setCalendarId(string $CalendarId) 设置日历id
  */
 class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 {
@@ -129,6 +139,27 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
     public $CrontabExpression;
 
     /**
+     * @var string 0：不修改
+1：将任务的上游依赖配置改为默认值 
+     */
+    public $ModifyCycleValue;
+
+    /**
+     * @var string 是否开启日历调度 1 开启 0关闭
+     */
+    public $CalendarOpen;
+
+    /**
+     * @var string 日历名称
+     */
+    public $CalendarName;
+
+    /**
+     * @var string 日历id
+     */
+    public $CalendarId;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
      * @param integer $DelayTime 延迟时间
@@ -144,6 +175,11 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
      * @param string $InstanceInitStrategy 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
      * @param string $DependencyWorkflow 工作流依赖，yes or no
      * @param string $CrontabExpression CrontabExpression
+     * @param string $ModifyCycleValue 0：不修改
+1：将任务的上游依赖配置改为默认值 
+     * @param string $CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * @param string $CalendarName 日历名称
+     * @param string $CalendarId 日历id
      */
     function __construct()
     {
@@ -216,6 +252,22 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 
         if (array_key_exists("CrontabExpression",$param) and $param["CrontabExpression"] !== null) {
             $this->CrontabExpression = $param["CrontabExpression"];
+        }
+
+        if (array_key_exists("ModifyCycleValue",$param) and $param["ModifyCycleValue"] !== null) {
+            $this->ModifyCycleValue = $param["ModifyCycleValue"];
+        }
+
+        if (array_key_exists("CalendarOpen",$param) and $param["CalendarOpen"] !== null) {
+            $this->CalendarOpen = $param["CalendarOpen"];
+        }
+
+        if (array_key_exists("CalendarName",$param) and $param["CalendarName"] !== null) {
+            $this->CalendarName = $param["CalendarName"];
+        }
+
+        if (array_key_exists("CalendarId",$param) and $param["CalendarId"] !== null) {
+            $this->CalendarId = $param["CalendarId"];
         }
     }
 }

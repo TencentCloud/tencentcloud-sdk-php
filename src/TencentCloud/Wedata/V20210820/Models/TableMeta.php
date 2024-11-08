@@ -246,6 +246,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchema(string $Schema) 设置数据库模式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCollectDatasourceList() 获取关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectDatasourceList(array $CollectDatasourceList) 设置关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobId() 获取采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobId(string $CollectJobId) 设置采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobName() 获取采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobName(string $CollectJobName) 设置采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUrn() 获取数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrn(string $Urn) 设置数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasBizPermission() 获取是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasBizPermission(boolean $HasBizPermission) 设置是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -587,6 +607,36 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $Schema;
 
     /**
+     * @var array 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectDatasourceList;
+
+    /**
+     * @var string 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobId;
+
+    /**
+     * @var string 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobName;
+
+    /**
+     * @var string 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Urn;
+
+    /**
+     * @var boolean 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasBizPermission;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -699,6 +749,16 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $Environment 环境，取值 prod或者 dev
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Schema 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CollectDatasourceList 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Urn 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasBizPermission 是否有修改业务权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -948,6 +1008,31 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 
         if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
             $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("CollectDatasourceList",$param) and $param["CollectDatasourceList"] !== null) {
+            $this->CollectDatasourceList = [];
+            foreach ($param["CollectDatasourceList"] as $key => $value){
+                $obj = new GovDatasourceInfo();
+                $obj->deserialize($value);
+                array_push($this->CollectDatasourceList, $obj);
+            }
+        }
+
+        if (array_key_exists("CollectJobId",$param) and $param["CollectJobId"] !== null) {
+            $this->CollectJobId = $param["CollectJobId"];
+        }
+
+        if (array_key_exists("CollectJobName",$param) and $param["CollectJobName"] !== null) {
+            $this->CollectJobName = $param["CollectJobName"];
+        }
+
+        if (array_key_exists("Urn",$param) and $param["Urn"] !== null) {
+            $this->Urn = $param["Urn"];
+        }
+
+        if (array_key_exists("HasBizPermission",$param) and $param["HasBizPermission"] !== null) {
+            $this->HasBizPermission = $param["HasBizPermission"];
         }
     }
 }

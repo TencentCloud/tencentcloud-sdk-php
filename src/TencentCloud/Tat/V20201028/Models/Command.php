@@ -43,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDefaultParameters() 获取自定义参数的默认取值。
  * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
  * @method array getDefaultParameterConfs() 获取自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScenes() 获取命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScenes(array $Scenes) 设置命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormattedDescription() 获取命令的结构化描述。公共命令有值，用户命令为空字符串。
  * @method void setFormattedDescription(string $FormattedDescription) 设置命令的结构化描述。公共命令有值，用户命令为空字符串。
  * @method string getCreatedBy() 获取命令创建者。TAT 代表公共命令，USER 代表个人命令。
@@ -122,13 +118,11 @@ class Command extends AbstractModel
 
     /**
      * @var array 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultParameterConfs;
 
     /**
      * @var array 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scenes;
 
@@ -175,9 +169,7 @@ class Command extends AbstractModel
      * @param boolean $EnableParameter 是否启用自定义参数功能。
      * @param string $DefaultParameters 自定义参数的默认取值。
      * @param array $DefaultParameterConfs 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Scenes 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
      * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
      * @param array $Tags 命令关联的标签列表。

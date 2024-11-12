@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() 获取要更新成的状态
  * @method void setStatus(string $Status) 设置要更新成的状态
- * @method string getDedicatedClusterOrderId() 获取大订单ID
- * @method void setDedicatedClusterOrderId(string $DedicatedClusterOrderId) 设置大订单ID
- * @method array getSubOrderIds() 获取小订单ID
- * @method void setSubOrderIds(array $SubOrderIds) 设置小订单ID
+ * @method string getDedicatedClusterOrderId() 获取大订单ID，可以在本地专用集群的基础信息页获取大订单ID
+ * @method void setDedicatedClusterOrderId(string $DedicatedClusterOrderId) 设置大订单ID，可以在本地专用集群的基础信息页获取大订单ID
+ * @method array getSubOrderIds() 获取小订单ID，进入大订单的详情页，可以看到小订单ID
+ * @method void setSubOrderIds(array $SubOrderIds) 设置小订单ID，进入大订单的详情页，可以看到小订单ID
  */
 class ModifyOrderStatusRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyOrderStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 大订单ID
+     * @var string 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
      */
     public $DedicatedClusterOrderId;
 
     /**
-     * @var array 小订单ID
+     * @var array 小订单ID，进入大订单的详情页，可以看到小订单ID
      */
     public $SubOrderIds;
 
     /**
      * @param string $Status 要更新成的状态
-     * @param string $DedicatedClusterOrderId 大订单ID
-     * @param array $SubOrderIds 小订单ID
+     * @param string $DedicatedClusterOrderId 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
+     * @param array $SubOrderIds 小订单ID，进入大订单的详情页，可以看到小订单ID
      */
     function __construct()
     {

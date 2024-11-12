@@ -34,20 +34,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置站点描述
  * @method string getNote() 获取注意事项
  * @method void setNote(string $Note) 设置注意事项
- * @method string getFiberType() 获取您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
- * @method void setFiberType(string $FiberType) 设置您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
+ * @method string getFiberType() 获取您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
+ * @method void setFiberType(string $FiberType) 设置您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
  * @method string getOpticalStandard() 获取您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
  * @method void setOpticalStandard(string $OpticalStandard) 设置您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
  * @method string getPowerConnectors() 获取电源连接器类型
  * @method void setPowerConnectors(string $PowerConnectors) 设置电源连接器类型
- * @method string getPowerFeedDrop() 获取从机架上方还是下方供电。
- * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置从机架上方还是下方供电。
+ * @method string getPowerFeedDrop() 获取从机架上方还是下方供电。取值范围：["UP","DOWN"]
+ * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置从机架上方还是下方供电。取值范围：["UP","DOWN"]
  * @method integer getMaxWeight() 获取最大承重(KG)
  * @method void setMaxWeight(integer $MaxWeight) 设置最大承重(KG)
  * @method integer getPowerDrawKva() 获取功耗(KW)
  * @method void setPowerDrawKva(integer $PowerDrawKva) 设置功耗(KW)
- * @method integer getUplinkSpeedGbps() 获取网络到腾讯云Region区域的上行链路速度
- * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置网络到腾讯云Region区域的上行链路速度
+ * @method integer getUplinkSpeedGbps() 获取网络到腾讯云Region区域的上行链路速度(Gbps)
+ * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置网络到腾讯云Region区域的上行链路速度(Gbps)
  * @method integer getUplinkCount() 获取将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
  * @method void setUplinkCount(integer $UplinkCount) 设置将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
  * @method boolean getConditionRequirement() 获取是否满足下面环境条件：
@@ -121,7 +121,7 @@ class CreateSiteRequest extends AbstractModel
     public $Note;
 
     /**
-     * @var string 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
+     * @var string 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
      */
     public $FiberType;
 
@@ -136,7 +136,7 @@ class CreateSiteRequest extends AbstractModel
     public $PowerConnectors;
 
     /**
-     * @var string 从机架上方还是下方供电。
+     * @var string 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public $PowerFeedDrop;
 
@@ -151,7 +151,7 @@ class CreateSiteRequest extends AbstractModel
     public $PowerDrawKva;
 
     /**
-     * @var integer 网络到腾讯云Region区域的上行链路速度
+     * @var integer 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public $UplinkSpeedGbps;
 
@@ -216,13 +216,13 @@ class CreateSiteRequest extends AbstractModel
      * @param string $AddressLine 站点所在地区的详细地址信息
      * @param string $Description 站点描述
      * @param string $Note 注意事项
-     * @param string $FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
+     * @param string $FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
      * @param string $OpticalStandard 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
      * @param string $PowerConnectors 电源连接器类型
-     * @param string $PowerFeedDrop 从机架上方还是下方供电。
+     * @param string $PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      * @param integer $MaxWeight 最大承重(KG)
      * @param integer $PowerDrawKva 功耗(KW)
-     * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      * @param integer $UplinkCount 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
      * @param boolean $ConditionRequirement 是否满足下面环境条件：
 1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。

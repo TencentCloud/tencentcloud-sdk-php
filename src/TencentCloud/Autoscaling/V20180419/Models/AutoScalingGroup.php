@@ -24,28 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method string getAutoScalingGroupName() 获取伸缩组名称
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称
- * @method string getAutoScalingGroupStatus() 获取伸缩组当前状态。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>CVM_ABNORMAL：启动配置异常<br>
-<li>LB_ABNORMAL：负载均衡器异常<br>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
-<li>VPC_ABNORMAL：VPC网络异常<br>
-<li>SUBNET_ABNORMAL：VPC子网异常<br>
-<li>INSUFFICIENT_BALANCE：余额不足<br>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
- * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) 设置伸缩组当前状态。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>CVM_ABNORMAL：启动配置异常<br>
-<li>LB_ABNORMAL：负载均衡器异常<br>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
-<li>VPC_ABNORMAL：VPC网络异常<br>
-<li>SUBNET_ABNORMAL：VPC子网异常<br>
-<li>INSUFFICIENT_BALANCE：余额不足<br>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
+ * @method string getAutoScalingGroupStatus() 获取伸缩组当前状态。取值范围：
+<li>NORMAL：正常</li>
+<li>CVM_ABNORMAL：启动配置异常</li>
+<li>LB_ABNORMAL：负载均衡器异常</li>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
+<li>VPC_ABNORMAL：VPC网络异常</li>
+<li>SUBNET_ABNORMAL：VPC子网异常</li>
+<li>INSUFFICIENT_BALANCE：余额不足</li>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+ * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) 设置伸缩组当前状态。取值范围：
+<li>NORMAL：正常</li>
+<li>CVM_ABNORMAL：启动配置异常</li>
+<li>LB_ABNORMAL：负载均衡器异常</li>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
+<li>VPC_ABNORMAL：VPC网络异常</li>
+<li>SUBNET_ABNORMAL：VPC子网异常</li>
+<li>INSUFFICIENT_BALANCE：余额不足</li>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
  * @method string getCreatedTime() 获取创建时间，采用UTC标准计时
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间，采用UTC标准计时
  * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒
@@ -91,31 +91,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置
  * @method string getMultiZoneSubnetPolicy() 获取多可用区/子网策略。
-<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
-<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
+<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
  * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) 设置多可用区/子网策略。
-<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
-<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
- * @method string getHealthCheckType() 获取伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
- * @method void setHealthCheckType(string $HealthCheckType) 设置伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
+<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+ * @method string getHealthCheckType() 获取伸缩组实例健康检查类型，取值如下：
+<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
+<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+ * @method void setHealthCheckType(string $HealthCheckType) 设置伸缩组实例健康检查类型，取值如下：
+<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
+<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
  * @method integer getLoadBalancerHealthCheckGracePeriod() 获取CLB健康检查宽限期
  * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) 设置CLB健康检查宽限期
  * @method string getInstanceAllocationPolicy() 获取实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
-<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
+<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
  * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) 设置实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
-<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
+<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
  * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() 获取竞价混合模式下，各计费类型实例的分配策略。
 仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
  * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) 设置竞价混合模式下，各计费类型实例的分配策略。
 仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
  * @method boolean getCapacityRebalance() 获取容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
-<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
+<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
  * @method void setCapacityRebalance(boolean $CapacityRebalance) 设置容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
-<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
+<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
  * @method InstanceNameIndexSettings getInstanceNameIndexSettings() 获取实例名称序号相关设置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) 设置实例名称序号相关设置。
@@ -134,17 +138,17 @@ class AutoScalingGroup extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string 伸缩组当前状态。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>CVM_ABNORMAL：启动配置异常<br>
-<li>LB_ABNORMAL：负载均衡器异常<br>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
-<li>VPC_ABNORMAL：VPC网络异常<br>
-<li>SUBNET_ABNORMAL：VPC子网异常<br>
-<li>INSUFFICIENT_BALANCE：余额不足<br>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
+     * @var string 伸缩组当前状态。取值范围：
+<li>NORMAL：正常</li>
+<li>CVM_ABNORMAL：启动配置异常</li>
+<li>LB_ABNORMAL：负载均衡器异常</li>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
+<li>VPC_ABNORMAL：VPC网络异常</li>
+<li>SUBNET_ABNORMAL：VPC子网异常</li>
+<li>INSUFFICIENT_BALANCE：余额不足</li>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
      */
     public $AutoScalingGroupStatus;
 
@@ -260,13 +264,15 @@ class AutoScalingGroup extends AbstractModel
 
     /**
      * @var string 多可用区/子网策略。
-<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
-<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
+<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
      */
     public $MultiZoneSubnetPolicy;
 
     /**
-     * @var string 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * @var string 伸缩组实例健康检查类型，取值如下：
+<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
+<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
      */
     public $HealthCheckType;
 
@@ -277,8 +283,8 @@ class AutoScalingGroup extends AbstractModel
 
     /**
      * @var string 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
-<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
+<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
      */
     public $InstanceAllocationPolicy;
 
@@ -290,8 +296,8 @@ class AutoScalingGroup extends AbstractModel
 
     /**
      * @var boolean 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
-<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
+<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
      */
     public $CapacityRebalance;
 
@@ -304,17 +310,17 @@ class AutoScalingGroup extends AbstractModel
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
-     * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>CVM_ABNORMAL：启动配置异常<br>
-<li>LB_ABNORMAL：负载均衡器异常<br>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
-<li>VPC_ABNORMAL：VPC网络异常<br>
-<li>SUBNET_ABNORMAL：VPC子网异常<br>
-<li>INSUFFICIENT_BALANCE：余额不足<br>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
+     * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：
+<li>NORMAL：正常</li>
+<li>CVM_ABNORMAL：启动配置异常</li>
+<li>LB_ABNORMAL：负载均衡器异常</li>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
+<li>VPC_ABNORMAL：VPC网络异常</li>
+<li>SUBNET_ABNORMAL：VPC子网异常</li>
+<li>INSUFFICIENT_BALANCE：余额不足</li>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
      * @param string $CreatedTime 创建时间，采用UTC标准计时
      * @param integer $DefaultCooldown 默认冷却时间，单位秒
      * @param integer $DesiredCapacity 期望实例数
@@ -338,18 +344,20 @@ class AutoScalingGroup extends AbstractModel
      * @param ServiceSettings $ServiceSettings 服务设置
      * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置
      * @param string $MultiZoneSubnetPolicy 多可用区/子网策略。
-<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
-<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
-     * @param string $HealthCheckType 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
+<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+     * @param string $HealthCheckType 伸缩组实例健康检查类型，取值如下：
+<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
+<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
      * @param integer $LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期
      * @param string $InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
-<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
+<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
      * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
 仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
      * @param boolean $CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
-<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
+<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
      * @param InstanceNameIndexSettings $InstanceNameIndexSettings 实例名称序号相关设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */

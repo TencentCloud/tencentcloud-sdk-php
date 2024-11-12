@@ -34,10 +34,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRefreshMode(string $RefreshMode) 设置刷新模式。
  * @method RefreshSettings getRefreshSettings() 获取实例更新设置参数。
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) 设置实例更新设置参数。
- * @method string getActivityType() 获取刷新活动类型。取值如下：<br><li>NORMAL：正常刷新活动</li><li>ROLLBACK：回滚刷新活动
- * @method void setActivityType(string $ActivityType) 设置刷新活动类型。取值如下：<br><li>NORMAL：正常刷新活动</li><li>ROLLBACK：回滚刷新活动
- * @method string getStatus() 获取刷新活动状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：运行中</li><li>SUCCESSFUL：活动成功</li><li>FAILED_PAUSE：因刷新批次失败暂停</li><li>AUTO_PAUSE：因暂停策略自动暂停</li><li>MANUAL_PAUSE：手动暂停</li><li>CANCELLED：活动取消</li><li>FAILED：活动失败
- * @method void setStatus(string $Status) 设置刷新活动状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：运行中</li><li>SUCCESSFUL：活动成功</li><li>FAILED_PAUSE：因刷新批次失败暂停</li><li>AUTO_PAUSE：因暂停策略自动暂停</li><li>MANUAL_PAUSE：手动暂停</li><li>CANCELLED：活动取消</li><li>FAILED：活动失败
+ * @method string getActivityType() 获取刷新活动类型。取值如下：
+<li>NORMAL：正常刷新活动</li>
+<li>ROLLBACK：回滚刷新活动</li>
+ * @method void setActivityType(string $ActivityType) 设置刷新活动类型。取值如下：
+<li>NORMAL：正常刷新活动</li>
+<li>ROLLBACK：回滚刷新活动</li>
+ * @method string getStatus() 获取刷新活动状态。取值如下：
+<li>INIT：初始化中</li>
+<li>RUNNING：运行中</li>
+<li>SUCCESSFUL：活动成功</li>
+<li>FAILED_PAUSE：因刷新批次失败暂停</li>
+<li>AUTO_PAUSE：因暂停策略自动暂停</li>
+<li>MANUAL_PAUSE：手动暂停</li>
+<li>CANCELLED：活动取消</li>
+<li>FAILED：活动失败</li>
+ * @method void setStatus(string $Status) 设置刷新活动状态。取值如下：
+<li>INIT：初始化中</li>
+<li>RUNNING：运行中</li>
+<li>SUCCESSFUL：活动成功</li>
+<li>FAILED_PAUSE：因刷新批次失败暂停</li>
+<li>AUTO_PAUSE：因暂停策略自动暂停</li>
+<li>MANUAL_PAUSE：手动暂停</li>
+<li>CANCELLED：活动取消</li>
+<li>FAILED：活动失败</li>
  * @method integer getCurrentRefreshBatchNum() 获取当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentRefreshBatchNum(integer $CurrentRefreshBatchNum) 设置当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
@@ -89,12 +109,22 @@ class RefreshActivity extends AbstractModel
     public $RefreshSettings;
 
     /**
-     * @var string 刷新活动类型。取值如下：<br><li>NORMAL：正常刷新活动</li><li>ROLLBACK：回滚刷新活动
+     * @var string 刷新活动类型。取值如下：
+<li>NORMAL：正常刷新活动</li>
+<li>ROLLBACK：回滚刷新活动</li>
      */
     public $ActivityType;
 
     /**
-     * @var string 刷新活动状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：运行中</li><li>SUCCESSFUL：活动成功</li><li>FAILED_PAUSE：因刷新批次失败暂停</li><li>AUTO_PAUSE：因暂停策略自动暂停</li><li>MANUAL_PAUSE：手动暂停</li><li>CANCELLED：活动取消</li><li>FAILED：活动失败
+     * @var string 刷新活动状态。取值如下：
+<li>INIT：初始化中</li>
+<li>RUNNING：运行中</li>
+<li>SUCCESSFUL：活动成功</li>
+<li>FAILED_PAUSE：因刷新批次失败暂停</li>
+<li>AUTO_PAUSE：因暂停策略自动暂停</li>
+<li>MANUAL_PAUSE：手动暂停</li>
+<li>CANCELLED：活动取消</li>
+<li>FAILED：活动失败</li>
      */
     public $Status;
 
@@ -130,8 +160,18 @@ class RefreshActivity extends AbstractModel
      * @param array $RefreshBatchSet 刷新批次信息列表。
      * @param string $RefreshMode 刷新模式。
      * @param RefreshSettings $RefreshSettings 实例更新设置参数。
-     * @param string $ActivityType 刷新活动类型。取值如下：<br><li>NORMAL：正常刷新活动</li><li>ROLLBACK：回滚刷新活动
-     * @param string $Status 刷新活动状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：运行中</li><li>SUCCESSFUL：活动成功</li><li>FAILED_PAUSE：因刷新批次失败暂停</li><li>AUTO_PAUSE：因暂停策略自动暂停</li><li>MANUAL_PAUSE：手动暂停</li><li>CANCELLED：活动取消</li><li>FAILED：活动失败
+     * @param string $ActivityType 刷新活动类型。取值如下：
+<li>NORMAL：正常刷新活动</li>
+<li>ROLLBACK：回滚刷新活动</li>
+     * @param string $Status 刷新活动状态。取值如下：
+<li>INIT：初始化中</li>
+<li>RUNNING：运行中</li>
+<li>SUCCESSFUL：活动成功</li>
+<li>FAILED_PAUSE：因刷新批次失败暂停</li>
+<li>AUTO_PAUSE：因暂停策略自动暂停</li>
+<li>MANUAL_PAUSE：手动暂停</li>
+<li>CANCELLED：活动取消</li>
+<li>FAILED：活动失败</li>
      * @param integer $CurrentRefreshBatchNum 当前刷新批次序号。例如，2 表示当前活动正在刷新第二批次的实例。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 刷新活动开始时间。

@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInvokerIds() 获取执行器ID列表。
  * @method void setInvokerIds(array $InvokerIds) 设置执行器ID列表。
- * @method array getFilters() 获取过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
- * @method void setFilters(array $Filters) 设置过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+ * @method array getFilters() 获取过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -45,11 +37,7 @@ class DescribeInvokersRequest extends AbstractModel
     public $InvokerIds;
 
     /**
-     * @var array 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+     * @var array 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
      */
     public $Filters;
 
@@ -65,11 +53,7 @@ class DescribeInvokersRequest extends AbstractModel
 
     /**
      * @param array $InvokerIds 执行器ID列表。
-     * @param array $Filters 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+     * @param array $Filters 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      */

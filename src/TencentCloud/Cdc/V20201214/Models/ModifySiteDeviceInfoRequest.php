@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpticalStandard(string $OpticalStandard) 设置您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
  * @method string getPowerConnectors() 获取电源连接器类型
  * @method void setPowerConnectors(string $PowerConnectors) 设置电源连接器类型
- * @method string getPowerFeedDrop() 获取从机架上方还是下方供电。
- * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置从机架上方还是下方供电。
+ * @method string getPowerFeedDrop() 获取从机架上方还是下方供电。取值范围：["UP","DOWN"]
+ * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置从机架上方还是下方供电。取值范围：["UP","DOWN"]
  * @method integer getMaxWeight() 获取最大承重(KG)
  * @method void setMaxWeight(integer $MaxWeight) 设置最大承重(KG)
  * @method integer getPowerDrawKva() 获取功耗(KW)
@@ -90,7 +90,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
     public $PowerConnectors;
 
     /**
-     * @var string 从机架上方还是下方供电。
+     * @var string 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public $PowerFeedDrop;
 
@@ -157,7 +157,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
      * @param string $FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
      * @param string $OpticalStandard 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
      * @param string $PowerConnectors 电源连接器类型
-     * @param string $PowerFeedDrop 从机架上方还是下方供电。
+     * @param string $PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      * @param integer $MaxWeight 最大承重(KG)
      * @param integer $PowerDrawKva 功耗(KW)
      * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)

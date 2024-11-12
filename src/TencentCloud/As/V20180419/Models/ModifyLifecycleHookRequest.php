@@ -25,17 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLifecycleHookName() 获取生命周期挂钩名称。
  * @method void setLifecycleHookName(string $LifecycleHookName) 设置生命周期挂钩名称。
  * @method string getLifecycleTransition() 获取进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后
-<li> INSTANCE_TERMINATING：实例销毁前
+<li> INSTANCE_LAUNCHING：实例启动后</li>
+<li> INSTANCE_TERMINATING：实例销毁前</li>
  * @method void setLifecycleTransition(string $LifecycleTransition) 设置进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后
-<li> INSTANCE_TERMINATING：实例销毁前
+<li> INSTANCE_LAUNCHING：实例启动后</li>
+<li> INSTANCE_TERMINATING：实例销毁前</li>
  * @method string getDefaultResult() 获取定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动
-<li> ABANDON：超时后终止伸缩活动
+<li> CONTINUE： 超时后继续伸缩活动</li> 
+<li> ABANDON：超时后终止伸缩活动</li> 
  * @method void setDefaultResult(string $DefaultResult) 设置定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动
-<li> ABANDON：超时后终止伸缩活动
+<li> CONTINUE： 超时后继续伸缩活动</li> 
+<li> ABANDON：超时后终止伸缩活动</li> 
  * @method integer getHeartbeatTimeout() 获取生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从 30 到 7200 秒。
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从 30 到 7200 秒。
  * @method string getNotificationMetadata() 获取弹性伸缩向通知目标发送的附加信息。
@@ -61,15 +61,15 @@ class ModifyLifecycleHookRequest extends AbstractModel
 
     /**
      * @var string 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后
-<li> INSTANCE_TERMINATING：实例销毁前
+<li> INSTANCE_LAUNCHING：实例启动后</li>
+<li> INSTANCE_TERMINATING：实例销毁前</li>
      */
     public $LifecycleTransition;
 
     /**
      * @var string 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动
-<li> ABANDON：超时后终止伸缩活动
+<li> CONTINUE： 超时后继续伸缩活动</li> 
+<li> ABANDON：超时后终止伸缩活动</li> 
      */
     public $DefaultResult;
 
@@ -102,11 +102,11 @@ class ModifyLifecycleHookRequest extends AbstractModel
      * @param string $LifecycleHookId 生命周期挂钩ID。
      * @param string $LifecycleHookName 生命周期挂钩名称。
      * @param string $LifecycleTransition 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后
-<li> INSTANCE_TERMINATING：实例销毁前
+<li> INSTANCE_LAUNCHING：实例启动后</li>
+<li> INSTANCE_TERMINATING：实例销毁前</li>
      * @param string $DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动
-<li> ABANDON：超时后终止伸缩活动
+<li> CONTINUE： 超时后继续伸缩活动</li> 
+<li> ABANDON：超时后终止伸缩活动</li> 
      * @param integer $HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从 30 到 7200 秒。
      * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息。
      * @param string $LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括`NORMAL`和 `EXTENSION`。说明：设置为`EXTENSION`值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为`NORMAL`则不会在这些接口中触发生命周期挂钩。

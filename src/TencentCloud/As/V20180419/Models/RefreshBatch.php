@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRefreshBatchNum() 获取刷新批次序号。例如，2 表示当前批次实例会在第二批次进行实例刷新。
  * @method void setRefreshBatchNum(integer $RefreshBatchNum) 设置刷新批次序号。例如，2 表示当前批次实例会在第二批次进行实例刷新。
- * @method string getRefreshBatchStatus() 获取刷新批次状态。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功
- * @method void setRefreshBatchStatus(string $RefreshBatchStatus) 设置刷新批次状态。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功
+ * @method string getRefreshBatchStatus() 获取刷新批次状态。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li>
+ * @method void setRefreshBatchStatus(string $RefreshBatchStatus) 设置刷新批次状态。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li>
  * @method array getRefreshBatchRelatedInstanceSet() 获取刷新批次关联实例列表。
  * @method void setRefreshBatchRelatedInstanceSet(array $RefreshBatchRelatedInstanceSet) 设置刷新批次关联实例列表。
  * @method string getStartTime() 获取刷新批次开始时间。
@@ -43,7 +43,7 @@ class RefreshBatch extends AbstractModel
     public $RefreshBatchNum;
 
     /**
-     * @var string 刷新批次状态。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功
+     * @var string 刷新批次状态。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li>
      */
     public $RefreshBatchStatus;
 
@@ -66,7 +66,7 @@ class RefreshBatch extends AbstractModel
 
     /**
      * @param integer $RefreshBatchNum 刷新批次序号。例如，2 表示当前批次实例会在第二批次进行实例刷新。
-     * @param string $RefreshBatchStatus 刷新批次状态。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功
+     * @param string $RefreshBatchStatus 刷新批次状态。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li>
      * @param array $RefreshBatchRelatedInstanceSet 刷新批次关联实例列表。
      * @param string $StartTime 刷新批次开始时间。
 注意：此字段可能返回 null，表示取不到有效值。

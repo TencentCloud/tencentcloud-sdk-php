@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getInstanceStatus() 获取实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+ * @method string getInstanceStatus() 获取实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
  */
 class ActivtyRelatedInstance extends AbstractModel
 {
@@ -41,21 +33,13 @@ class ActivtyRelatedInstance extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+     * @var string 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
      */
     public $InstanceStatus;
 
     /**
      * @param string $InstanceId 实例ID。
-     * @param string $InstanceStatus 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+     * @param string $InstanceStatus 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
      */
     function __construct()
     {

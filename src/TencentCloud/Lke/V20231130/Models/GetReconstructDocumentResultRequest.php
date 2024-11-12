@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReconstructDocumentResult请求参数结构体
  *
- * @method string getTaskId() 获取任务唯一id
- * @method void setTaskId(string $TaskId) 设置任务唯一id
+ * @method string getTaskId() 获取任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+ * @method void setTaskId(string $TaskId) 设置任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
  */
 class GetReconstructDocumentResultRequest extends AbstractModel
 {
     /**
-     * @var string 任务唯一id
+     * @var string 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务唯一id
+     * @param string $TaskId 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
      */
     function __construct()
     {

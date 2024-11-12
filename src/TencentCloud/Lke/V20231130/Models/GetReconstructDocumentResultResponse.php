@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReconstructDocumentResult返回参数结构体
  *
- * @method string getStatus() 获取任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
- * @method void setStatus(string $Status) 设置任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
- * @method string getDocumentRecognizeResultUrl() 获取输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
- * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
- * @method array getFailedPages() 获取文档解析失败的页码
- * @method void setFailedPages(array $FailedPages) 设置文档解析失败的页码
+ * @method string getStatus() 获取任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
+ * @method void setStatus(string $Status) 设置任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
+ * @method string getDocumentRecognizeResultUrl() 获取本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
+ * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
+ * @method array getFailedPages() 获取本次文档解析失败的页码信息。
+ * @method void setFailedPages(array $FailedPages) 设置本次文档解析失败的页码信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetReconstructDocumentResultResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
+     * @var string 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
      */
     public $Status;
 
     /**
-     * @var string 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
+     * @var string 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
      */
     public $DocumentRecognizeResultUrl;
 
     /**
-     * @var array 文档解析失败的页码
+     * @var array 本次文档解析失败的页码信息。
      */
     public $FailedPages;
 
@@ -52,9 +52,9 @@ class GetReconstructDocumentResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
-     * @param string $DocumentRecognizeResultUrl 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
-     * @param array $FailedPages 文档解析失败的页码
+     * @param string $Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
+     * @param string $DocumentRecognizeResultUrl 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
+     * @param array $FailedPages 本次文档解析失败的页码信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

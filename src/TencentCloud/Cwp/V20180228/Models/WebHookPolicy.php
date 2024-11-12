@@ -21,129 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 策略
  *
  * @method integer getId() 获取id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEvents() 获取事件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvents(array $Events) 设置事件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostLabels() 获取主机范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostLabels(array $HostLabels) 设置主机范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReceivers() 获取接收人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceivers(array $Receivers) 设置接收人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFormat() 获取格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(integer $Format) 设置格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomFields() 获取自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomFields(array $CustomFields) 设置自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsDisabled() 获取是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDisabled(integer $IsDisabled) 设置是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuuids() 获取主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(array $Quuids) 设置主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostCount() 获取主机数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置主机数目
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExcludedQuuids() 获取需排除的机器列表
+ * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表
  */
 class WebHookPolicy extends AbstractModel
 {
     /**
      * @var integer id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Events;
 
     /**
      * @var array 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostLabels;
 
     /**
      * @var array 接收人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Receivers;
 
     /**
      * @var integer 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
      * @var array 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomFields;
 
     /**
      * @var integer 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDisabled;
 
     /**
      * @var array 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
     /**
      * @var integer 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostCount;
 
     /**
+     * @var array 需排除的机器列表
+     */
+    public $ExcludedQuuids;
+
+    /**
      * @param integer $Id id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Events 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostLabels 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Receivers 接收人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Format 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomFields 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsDisabled 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Quuids 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostCount 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExcludedQuuids 需排除的机器列表
      */
     function __construct()
     {
@@ -216,6 +184,10 @@ class WebHookPolicy extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
+            $this->ExcludedQuuids = $param["ExcludedQuuids"];
         }
     }
 }

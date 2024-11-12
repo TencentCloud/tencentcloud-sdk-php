@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompareYesterdayMachineCnt(integer $CompareYesterdayMachineCnt) 设置比较昨日新增的主机数
  * @method integer getMachineDestroyAfterOfflineHours() 获取自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
  * @method void setMachineDestroyAfterOfflineHours(integer $MachineDestroyAfterOfflineHours) 设置自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+ * @method array getCloudFrom() 获取云服务器类型数组
+ * @method void setCloudFrom(array $CloudFrom) 设置云服务器类型数组
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,26 +72,31 @@ class DescribeMachineGeneralResponse extends AbstractModel
 
     /**
      * @var integer 腾讯云服务商机器数
+     * @deprecated
      */
     public $TencentCloudMachineCnt;
 
     /**
      * @var integer 阿里云服务商机器数
+     * @deprecated
      */
     public $AliCloudMachineCnt;
 
     /**
      * @var integer 百度云服务商机器数
+     * @deprecated
      */
     public $BaiduCloudMachineCnt;
 
     /**
      * @var integer IDC机器数
+     * @deprecated
      */
     public $IDCMachineCnt;
 
     /**
      * @var integer 其他云服务商机器数
+     * @deprecated
      */
     public $OtherCloudMachineCnt;
 
@@ -159,6 +166,11 @@ class DescribeMachineGeneralResponse extends AbstractModel
     public $MachineDestroyAfterOfflineHours;
 
     /**
+     * @var array 云服务器类型数组
+     */
+    public $CloudFrom;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +195,7 @@ class DescribeMachineGeneralResponse extends AbstractModel
      * @param integer $LHGeneralDiscountCnt 已防护普惠版机器数（Lighthouse机器）
      * @param integer $CompareYesterdayMachineCnt 比较昨日新增的主机数
      * @param integer $MachineDestroyAfterOfflineHours 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+     * @param array $CloudFrom 云服务器类型数组
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -272,6 +285,15 @@ class DescribeMachineGeneralResponse extends AbstractModel
 
         if (array_key_exists("MachineDestroyAfterOfflineHours",$param) and $param["MachineDestroyAfterOfflineHours"] !== null) {
             $this->MachineDestroyAfterOfflineHours = $param["MachineDestroyAfterOfflineHours"];
+        }
+
+        if (array_key_exists("CloudFrom",$param) and $param["CloudFrom"] !== null) {
+            $this->CloudFrom = [];
+            foreach ($param["CloudFrom"] as $key => $value){
+                $obj = new CloudFromCnt();
+                $obj->deserialize($value);
+                array_push($this->CloudFrom, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

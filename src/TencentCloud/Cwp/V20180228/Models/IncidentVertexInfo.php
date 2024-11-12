@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 事件点信息
  *
  * @method string getIncidentId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncidentId(string $IncidentId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVertex() 获取节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVertex(array $Vertex) 设置节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVertexCount() 获取节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVertexCount(integer $VertexCount) 设置节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IncidentVertexInfo extends AbstractModel
 {
     /**
      * @var string 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncidentId;
 
     /**
      * @var string 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var array 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vertex;
 
     /**
      * @var integer 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VertexCount;
 
     /**
      * @param string $IncidentId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vertex 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VertexCount 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

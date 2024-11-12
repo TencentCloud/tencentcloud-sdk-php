@@ -45,65 +45,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() 获取主机名
  * @method void setMachineName(string $MachineName) 设置主机名
  * @method string getExe() 获取进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExe(string $Exe) 设置进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCategory() 获取规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleCategory(integer $RuleCategory) 设置规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegexBashCmd() 获取自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexBashCmd(string $RegexBashCmd) 设置自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPsTree() 获取进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPsTree(string $PsTree) 设置进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestScheme() 获取建议方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestScheme(string $SuggestScheme) 设置建议方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHarmDescribe() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHarmDescribe(string $HarmDescribe) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReferences() 获取参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferences(array $References) 设置参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineWanIp() 获取主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineWanIp(string $MachineWanIp) 设置主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineStatus() 获取主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取登录用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置登录用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPid() 获取进程号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(string $Pid) 设置进程号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMachineType() 获取0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineType(integer $MachineType) 设置0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDetectBy() 获取检测来源 0:bash日志 1:实时监控
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectBy(integer $DetectBy) 设置检测来源 0:bash日志 1:实时监控
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashEventsInfoNew extends AbstractModel
 {
@@ -169,91 +139,76 @@ class BashEventsInfoNew extends AbstractModel
 
     /**
      * @var string 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exe;
 
     /**
      * @var string 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var integer 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleCategory;
 
     /**
      * @var string 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegexBashCmd;
 
     /**
      * @var string 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PsTree;
 
     /**
      * @var string 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuggestScheme;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HarmDescribe;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var array 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $References;
 
     /**
      * @var string 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineWanIp;
 
     /**
      * @var string 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineStatus;
 
     /**
      * @var string 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string 进程号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
 
     /**
      * @var integer 0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineType;
 
     /**
      * @var integer 检测来源 0:bash日志 1:实时监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectBy;
 
@@ -271,35 +226,20 @@ class BashEventsInfoNew extends AbstractModel
      * @param string $CreateTime 发生时间
      * @param string $MachineName 主机名
      * @param string $Exe 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCategory 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegexBashCmd 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HarmDescribe 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $References 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineWanIp 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pid 进程号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MachineType 0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DetectBy 检测来源 0:bash日志 1:实时监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

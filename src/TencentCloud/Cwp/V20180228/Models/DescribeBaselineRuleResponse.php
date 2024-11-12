@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取分页查询记录总数
  * @method void setTotalCount(integer $TotalCount) 设置分页查询记录总数
  * @method array getBaselineRuleList() 获取基线检测项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineRuleList(array $BaselineRuleList) 设置基线检测项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getShowRuleRemark() 获取是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShowRuleRemark(boolean $ShowRuleRemark) 设置是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class DescribeBaselineRuleResponse extends AbstractModel
 
     /**
      * @var array 基线检测项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaselineRuleList;
 
     /**
      * @var boolean 是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShowRuleRemark;
 
@@ -60,9 +54,7 @@ class DescribeBaselineRuleResponse extends AbstractModel
     /**
      * @param integer $TotalCount 分页查询记录总数
      * @param array $BaselineRuleList 基线检测项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ShowRuleRemark 是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

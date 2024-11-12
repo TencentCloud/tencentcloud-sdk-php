@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
 80%～100%
 ]
  * @method array getTop5() 获取负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTop5(array $Top5) 设置负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetLoadSummary extends AbstractModel
 {
@@ -57,7 +55,6 @@ class AssetLoadSummary extends AbstractModel
 
     /**
      * @var array 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Top5;
 
@@ -71,7 +68,6 @@ class AssetLoadSummary extends AbstractModel
 80%～100%
 ]
      * @param array $Top5 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

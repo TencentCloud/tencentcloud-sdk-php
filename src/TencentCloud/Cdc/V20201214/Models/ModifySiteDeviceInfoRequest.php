@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxWeight(integer $MaxWeight) 设置最大承重(KG)
  * @method integer getPowerDrawKva() 获取功耗(KW)
  * @method void setPowerDrawKva(integer $PowerDrawKva) 设置功耗(KW)
- * @method integer getUplinkSpeedGbps() 获取网络到腾讯云Region区域的上行链路速度
- * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置网络到腾讯云Region区域的上行链路速度
+ * @method integer getUplinkSpeedGbps() 获取网络到腾讯云Region区域的上行链路速度(Gbps)
+ * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置网络到腾讯云Region区域的上行链路速度(Gbps)
  * @method integer getUplinkCount() 获取将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
  * @method void setUplinkCount(integer $UplinkCount) 设置将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
  * @method boolean getConditionRequirement() 获取是否满足下面环境条件：
@@ -105,7 +105,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
     public $PowerDrawKva;
 
     /**
-     * @var integer 网络到腾讯云Region区域的上行链路速度
+     * @var integer 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public $UplinkSpeedGbps;
 
@@ -160,7 +160,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
      * @param string $PowerFeedDrop 从机架上方还是下方供电。
      * @param integer $MaxWeight 最大承重(KG)
      * @param integer $PowerDrawKva 功耗(KW)
-     * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      * @param integer $UplinkCount 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
      * @param boolean $ConditionRequirement 是否满足下面环境条件：
 1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。

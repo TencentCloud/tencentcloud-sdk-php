@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIgnoreHostAndItemConfig请求参数结构体
  *
- * @method array getFilters() 获取<li>ItemId - int64 - 是否必填：否 - 项Id</i>
+ * @method array getFilters() 获取<li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
 <li>HostId - string - 是否必填：否 - 主机Id</li>
- * @method void setFilters(array $Filters) 设置<li>ItemId - int64 - 是否必填：否 - 项Id</i>
+ * @method void setFilters(array $Filters) 设置<li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
 <li>HostId - string - 是否必填：否 - 主机Id</li>
  */
 class DescribeIgnoreHostAndItemConfigRequest extends AbstractModel
 {
     /**
-     * @var array <li>ItemId - int64 - 是否必填：否 - 项Id</i>
+     * @var array <li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
 <li>HostId - string - 是否必填：否 - 主机Id</li>
      */
     public $Filters;
 
     /**
-     * @param array $Filters <li>ItemId - int64 - 是否必填：否 - 项Id</i>
+     * @param array $Filters <li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
 <li>HostId - string - 是否必填：否 - 主机Id</li>
      */

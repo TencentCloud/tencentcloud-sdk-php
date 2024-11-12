@@ -69,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostStatus() 获取主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
  * @method void setHostStatus(string $HostStatus) 设置主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOsType() 获取[1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
  * @method void setOsType(integer $OsType) 设置[1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
  */
@@ -199,7 +197,6 @@ class RiskDnsEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -234,7 +231,6 @@ class RiskDnsEvent extends AbstractModel
      * @param string $LastTime 最近访问时间
      * @param string $HostStatus 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OsType [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
      */
     function __construct()

@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置自动加购订单是否自动续费 ,true 开启, false 关闭
  * @method integer getDestroyOrderNum() 获取已销毁订单数
  * @method void setDestroyOrderNum(integer $DestroyOrderNum) 设置已销毁订单数
- * @method boolean getRepurchaseRenewSwitch() 获取是否自动续费开关,true 开启,false 关闭
- * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置是否自动续费开关,true 开启,false 关闭
+ * @method boolean getRepurchaseRenewSwitch() 获取自动加购是否自动续费开关,true 开启,false 关闭
+ * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置自动加购是否自动续费开关,true 开启,false 关闭
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -154,7 +154,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $DestroyOrderNum;
 
     /**
-     * @var boolean 是否自动续费开关,true 开启,false 关闭
+     * @var boolean 自动加购是否自动续费开关,true 开启,false 关闭
      */
     public $RepurchaseRenewSwitch;
 
@@ -182,7 +182,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
      * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
      * @param integer $DestroyOrderNum 已销毁订单数
-     * @param boolean $RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     * @param boolean $RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

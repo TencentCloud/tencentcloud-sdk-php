@@ -23,13 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cdb\V20170320\Models as Models;
 
 /**
- * @method Models\AddTimeWindowResponse AddTimeWindow(Models\AddTimeWindowRequest $req) 本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+ * @method Models\AddTimeWindowResponse AddTimeWindow(Models\AddTimeWindowRequest $req) 本接口（AddTimeWindow）用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
  * @method Models\AdjustCdbProxyResponse AdjustCdbProxy(Models\AdjustCdbProxyRequest $req) 调整数据库代理配置
  * @method Models\AdjustCdbProxyAddressResponse AdjustCdbProxyAddress(Models\AdjustCdbProxyAddressRequest $req) 本接口（AdjustCdbProxyAddress）用于调整数据库代理地址配置。
  * @method Models\AnalyzeAuditLogsResponse AnalyzeAuditLogs(Models\AnalyzeAuditLogsRequest $req) 在不同过滤条件下的审计日志结果集中，选定特定的数据列进行聚合统计。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
  * @method Models\BalanceRoGroupLoadResponse BalanceRoGroupLoad(Models\BalanceRoGroupLoadRequest $req) 本接口(BalanceRoGroupLoad)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
- * @method Models\CheckMigrateClusterResponse CheckMigrateCluster(Models\CheckMigrateClusterRequest $req) 高可用实例一键迁移到集群版校验
+ * @method Models\CheckMigrateClusterResponse CheckMigrateCluster(Models\CheckMigrateClusterRequest $req) 本接口（CheckMigrateCluster）用于高可用实例一键迁移到集群版校验。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 实例关闭审计服务
  * @method Models\CloseCDBProxyResponse CloseCDBProxy(Models\CloseCDBProxyRequest $req) 关闭数据库代理
  * @method Models\CloseCdbProxyAddressResponse CloseCdbProxyAddress(Models\CloseCdbProxyAddressRequest $req) 请求关闭数据库代理地址
@@ -105,18 +105,18 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(Models\DescribeCdbProxyInfoRequest $req) 查询数据库代理详情信息
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
- * @method Models\DescribeClusterInfoResponse DescribeClusterInfo(Models\DescribeClusterInfoRequest $req) 本接口(DescribeClusterInfo)用于查询集群版实例信息。
+ * @method Models\DescribeClusterInfoResponse DescribeClusterInfo(Models\DescribeClusterInfoRequest $req) 本接口（DescribeClusterInfo）用于查询集群版实例信息。
  * @method Models\DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(Models\DescribeCpuExpandStrategyRequest $req) 通过该 API 可以查询实例的 CPU 弹性扩容策略
- * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+ * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) 本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。
  * @method Models\DescribeDBInstanceConfigResponse DescribeDBInstanceConfig(Models\DescribeDBInstanceConfigRequest $req) 本接口(DescribeDBInstanceConfig)用于云数据库实例的配置信息，包括同步模式，部署模式等。
  * @method Models\DescribeDBInstanceGTIDResponse DescribeDBInstanceGTID(Models\DescribeDBInstanceGTIDRequest $req) 本接口(DescribeDBInstanceGTID)用于查询云数据库实例是否开通了 GTID，不支持版本为 5.5 以及以下的实例。
- * @method Models\DescribeDBInstanceInfoResponse DescribeDBInstanceInfo(Models\DescribeDBInstanceInfoRequest $req) 查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+ * @method Models\DescribeDBInstanceInfoResponse DescribeDBInstanceInfo(Models\DescribeDBInstanceInfoRequest $req) 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
  * @method Models\DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLS(Models\DescribeDBInstanceLogToCLSRequest $req) 本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过AppId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
- * @method Models\DescribeDBInstanceRebootTimeResponse DescribeDBInstanceRebootTime(Models\DescribeDBInstanceRebootTimeRequest $req) 本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
+ * @method Models\DescribeDBInstanceRebootTimeResponse DescribeDBInstanceRebootTime(Models\DescribeDBInstanceRebootTimeRequest $req) 本接口（DescribeDBInstanceRebootTime）用于查询云数据库实例重启预计所需的时间。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
- * @method Models\DescribeDBPriceResponse DescribeDBPrice(Models\DescribeDBPriceRequest $req) 本接口(DescribeDBPrice)用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
+ * @method Models\DescribeDBPriceResponse DescribeDBPrice(Models\DescribeDBPriceRequest $req) 本接口（DescribeDBPrice）用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
 
 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照 <a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a> 文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
@@ -128,11 +128,11 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeDeviceMonitorInfoResponse DescribeDeviceMonitorInfo(Models\DescribeDeviceMonitorInfoRequest $req) 本接口（DescribeDeviceMonitorInfo）用于查询云数据库物理机当天的监控信息，暂只支持内存488G、硬盘6T的实例查询。
  * @method Models\DescribeErrorLogDataResponse DescribeErrorLogData(Models\DescribeErrorLogDataRequest $req) 根据检索条件查询实例错误日志详情。只能查询一个月之内的错误日志。
 使用时需要注意：可能存在单条错误日志太大，导致整个http请求的回包太大，进而引发接口超时。一旦发生超时，建议您缩小查询时的Limit参数值，从而降低包的大小，让接口能够及时返回内容。
- * @method Models\DescribeInstanceAlarmEventsResponse DescribeInstanceAlarmEvents(Models\DescribeInstanceAlarmEventsRequest $req) 查询实例发生的事件信息
+ * @method Models\DescribeInstanceAlarmEventsResponse DescribeInstanceAlarmEvents(Models\DescribeInstanceAlarmEventsRequest $req) 本接口（DescribeInstanceAlarmEvents）用于查询实例发生的事件信息。
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
  * @method Models\DescribeInstanceUpgradeCheckJobResponse DescribeInstanceUpgradeCheckJob(Models\DescribeInstanceUpgradeCheckJobRequest $req) 该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
- * @method Models\DescribeInstanceUpgradeTypeResponse DescribeInstanceUpgradeType(Models\DescribeInstanceUpgradeTypeRequest $req) 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+ * @method Models\DescribeInstanceUpgradeTypeResponse DescribeInstanceUpgradeType(Models\DescribeInstanceUpgradeTypeRequest $req) 本接口（DescribeInstanceUpgradeType）用于查询数据库实例升级类型。
  * @method Models\DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfig(Models\DescribeLocalBinlogConfigRequest $req) 该接口用于查询实例本地binlog保留策略。
  * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) 该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
@@ -140,7 +140,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeProxyCustomConfResponse DescribeProxyCustomConf(Models\DescribeProxyCustomConfRequest $req) 查询代理规格配置
  * @method Models\DescribeProxySupportParamResponse DescribeProxySupportParam(Models\DescribeProxySupportParamRequest $req) 查询实例支持代理版本和参数
  * @method Models\DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfig(Models\DescribeRemoteBackupConfigRequest $req) 本接口(DescribeRemoteBackupConfig)用于查询数据库异地备份配置信息。
- * @method Models\DescribeRoGroupsResponse DescribeRoGroups(Models\DescribeRoGroupsRequest $req) 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+ * @method Models\DescribeRoGroupsResponse DescribeRoGroups(Models\DescribeRoGroupsRequest $req) 本接口（DescribeRoGroups）用于查询云数据库实例的所有的 RO 组的信息。
  * @method Models\DescribeRoMinScaleResponse DescribeRoMinScale(Models\DescribeRoMinScaleRequest $req) 本接口(DescribeRoMinScale)用于获取只读实例购买、升级时的最小规格。
  * @method Models\DescribeRollbackRangeTimeResponse DescribeRollbackRangeTime(Models\DescribeRollbackRangeTimeRequest $req) 本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
  * @method Models\DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetail(Models\DescribeRollbackTaskDetailRequest $req) 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
@@ -169,7 +169,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyAuditRuleResponse ModifyAuditRule(Models\ModifyAuditRuleRequest $req) 本接口(ModifyAuditRule)用于修改用户的审计规则。
  * @method Models\ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(Models\ModifyAuditRuleTemplatesRequest $req) 修改审计规则模板
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置
- * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+ * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) 本接口(ModifyBackupConfig)用于修改数据库备份配置信息。
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
  * @method Models\ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(Models\ModifyBackupEncryptionStatusRequest $req) 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。
@@ -179,6 +179,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(Models\ModifyDBInstanceLogToCLSRequest $req) 开启/关闭CDB慢日志、错误日志投递CLS
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口(ModifyDBInstanceName)用于修改云数据库实例的名称。
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) 本接口(ModifyDBInstanceProject)用于修改云数据库实例的所属项目。
+ * @method Models\ModifyDBInstanceReadOnlyStatusResponse ModifyDBInstanceReadOnlyStatus(Models\ModifyDBInstanceReadOnlyStatusRequest $req) 本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(Models\ModifyDBInstanceVipVportRequest $req) 本接口(ModifyDBInstanceVipVport)用于修改云数据库实例的IP和端口号，也可进行基础网络转 VPC 网络和 VPC 网络下的子网变更。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
@@ -196,7 +197,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 
 注意，实例下线后，相关资源和数据将无法找回，请谨慎操作。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) CDB实例开通审计服务
- * @method Models\OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(Models\OpenDBInstanceEncryptionRequest $req) 本接口(OpenDBInstanceEncryption)用于启用实例数据存储加密功能，支持用户指定自定义密钥。
+ * @method Models\OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(Models\OpenDBInstanceEncryptionRequest $req) 本接口（OpenDBInstanceEncryption）用于启用实例数据存储加密功能，支持用户指定自定义密钥。
 
 注意，启用实例数据存储加密之前，需要进行以下操作：
 
@@ -217,22 +218,22 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，支持付费模式为包年包月的实例。按量计费实例可通过该接口续费为包年包月的实例。
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 手动刷新轮转密码
  * @method Models\ResetRootAccountResponse ResetRootAccount(Models\ResetRootAccountRequest $req) 重置实例ROOT账号，初始化账号权限
- * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口(RestartDBInstances)用于重启云数据库实例。
+ * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口（RestartDBInstances）用于重启云数据库实例。
 
 注意：
-1、本接口只支持主实例进行重启操作；
+1、本接口支持主实例、只读实例、灾备实例进行重启操作。
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
  * @method Models\StartCpuExpandResponse StartCpuExpand(Models\StartCpuExpandRequest $req) 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
- * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) 开启 RO 复制，从主实例同步数据。
+ * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) 本接口（StartReplication）用于开启 RO 复制，从主实例同步数据。
  * @method Models\StopCpuExpandResponse StopCpuExpand(Models\StopCpuExpandRequest $req) 通过该API，可以关闭 CPU 弹性扩容。
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口(StopDBImportJob)用于终止数据导入任务。
- * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) 停止 RO 复制，中断从主实例同步数据。
+ * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) 本接口（StopReplication）用于停止 RO 复制，中断从主实例同步数据。
  * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeAsyncRequestInfo 查询任务的执行情况。
  * @method Models\SubmitInstanceUpgradeCheckJobResponse SubmitInstanceUpgradeCheckJob(Models\SubmitInstanceUpgradeCheckJobRequest $req) 该接口（SubmitInstanceUpgradeCheckJob）提交实例版本升级校验任务。
  * @method Models\SwitchCDBProxyResponse SwitchCDBProxy(Models\SwitchCDBProxyRequest $req) 数据库代理配置变更或则升级版本后手动发起立即切换
  * @method Models\SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(Models\SwitchDBInstanceMasterSlaveRequest $req) 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
- * @method Models\SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(Models\SwitchDrInstanceToMasterRequest $req) 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+ * @method Models\SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(Models\SwitchDrInstanceToMasterRequest $req) 本接口（SwitchDrInstanceToMaster）用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
  * @method Models\SwitchForUpgradeResponse SwitchForUpgrade(Models\SwitchForUpgradeRequest $req) 本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
  * @method Models\UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersion(Models\UpgradeCDBProxyVersionRequest $req) 升级数据库代理版本
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口(UpgradeDBInstance)用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。

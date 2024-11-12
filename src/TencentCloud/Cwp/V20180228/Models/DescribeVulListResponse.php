@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulList返回参数结构体
  *
  * @method array getVulInfoList() 获取漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulInfoList(array $VulInfoList) 设置漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFollowVulCount() 获取重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFollowVulCount(integer $FollowVulCount) 设置重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeVulListResponse extends AbstractModel
 {
     /**
      * @var array 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulInfoList;
 
     /**
      * @var integer 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var integer 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FollowVulCount;
 
@@ -62,11 +53,8 @@ class DescribeVulListResponse extends AbstractModel
 
     /**
      * @param array $VulInfoList 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FollowVulCount 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

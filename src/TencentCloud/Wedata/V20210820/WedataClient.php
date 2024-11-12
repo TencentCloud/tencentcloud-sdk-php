@@ -48,6 +48,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
  * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
+ * @method Models\CreateDataModelResponse CreateDataModel(Models\CreateDataModelRequest $req) 创建数据建模，提供给云应用使用，实现“Wedata数据建模”的下单发货
  * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) 创建数据源
  * @method Models\CreateDsFolderResponse CreateDsFolder(Models\CreateDsFolderRequest $req) 编排空间-创建文件夹
  * @method Models\CreateHiveTableResponse CreateHiveTable(Models\CreateHiveTableRequest $req) 建hive表
@@ -65,6 +66,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例
  * @method Models\DeleteCustomFunctionResponse DeleteCustomFunction(Models\DeleteCustomFunctionRequest $req) 删除用户自定义函数
+ * @method Models\DeleteDataModelResponse DeleteDataModel(Models\DeleteDataModelRequest $req) 销毁数据建模，提供给云应用使用，实现“Wedata数据建模”的销毁
  * @method Models\DeleteDataSourcesResponse DeleteDataSources(Models\DeleteDataSourcesRequest $req) 删除数据源
  * @method Models\DeleteDsFolderResponse DeleteDsFolder(Models\DeleteDsFolderRequest $req) 编排空间-删除文件夹
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 删除文件
@@ -267,6 +269,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 触发事件
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
+ * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
  * @method Models\UploadResourceResponse UploadResource(Models\UploadResourceRequest $req) 资源管理-上传资源

@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineWanIp() 获取外网ip
  * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanTaskDetails extends AbstractModel
 {
@@ -120,7 +118,6 @@ class ScanTaskDetails extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -139,7 +136,6 @@ class ScanTaskDetails extends AbstractModel
      * @param integer $FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      * @param string $MachineWanIp 外网ip
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,43 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * 查看漏洞修复详情
  *
  * @method integer getVulId() 获取漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulId(integer $VulId) 设置漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulName() 获取漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulName(string $VulName) 设置漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取漏洞修复进度 1-100；
  * @method void setProgress(integer $Progress) 设置漏洞修复进度 1-100；
  * @method array getHostList() 获取漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostList(array $HostList) 设置漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailCnt() 获取漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailCnt(integer $FailCnt) 设置漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixSuccessCnt() 获取修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixSuccessCnt(integer $FixSuccessCnt) 设置修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixMethod() 获取修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixMethod(integer $FixMethod) 设置修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulFixStatusInfo extends AbstractModel
 {
     /**
      * @var integer 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulId;
 
     /**
      * @var string 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulName;
 
@@ -68,42 +54,32 @@ class VulFixStatusInfo extends AbstractModel
 
     /**
      * @var array 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostList;
 
     /**
      * @var integer 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailCnt;
 
     /**
      * @var integer 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixSuccessCnt;
 
     /**
      * @var integer 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixMethod;
 
     /**
      * @param integer $VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 漏洞修复进度 1-100；
      * @param array $HostList 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailCnt 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixSuccessCnt 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -38,7 +38,7 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
  * @method Models\FilesDeletionsResponse FilesDeletions(Models\FilesDeletionsRequest $req) 删除文件。
  * @method Models\FilesListResponse FilesList(Models\FilesListRequest $req) 文件列表。
- * @method Models\FilesUploadsResponse FilesUploads(Models\FilesUploadsRequest $req) 上传用于不同用途的的文件。
+ * @method Models\FilesUploadsResponse FilesUploads(Models\FilesUploadsRequest $req) 上传用于不同用途的文件。
 当前用途仅支持 hunyuan 等模型的文档理解。
  * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
  * @method Models\GetThreadResponse GetThread(Models\GetThreadRequest $req) 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。

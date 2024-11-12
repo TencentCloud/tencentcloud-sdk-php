@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicenseType() 获取授权类型,0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
  * @method void setLicenseType(integer $LicenseType) 设置授权类型,0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
  * @method integer getLicenseStatus() 获取授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseStatus(integer $LicenseStatus) 设置授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseCnt() 获取总授权数
  * @method void setLicenseCnt(integer $LicenseCnt) 设置总授权数
  * @method integer getUsedLicenseCnt() 获取已使用授权数
@@ -51,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAlias() 获取资源别名
  * @method void setAlias(string $Alias) 设置资源别名
  * @method array getTags() 获取平台标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置平台标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFreezeNum() 获取冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreezeNum(integer $FreezeNum) 设置冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseDetail extends AbstractModel
 {
@@ -73,7 +67,6 @@ class LicenseDetail extends AbstractModel
 
     /**
      * @var integer 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseStatus;
 
@@ -134,13 +127,11 @@ class LicenseDetail extends AbstractModel
 
     /**
      * @var array 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var integer 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreezeNum;
 
@@ -148,7 +139,6 @@ class LicenseDetail extends AbstractModel
      * @param integer $LicenseId 授权ID
      * @param integer $LicenseType 授权类型,0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
      * @param integer $LicenseStatus 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseCnt 总授权数
      * @param integer $UsedLicenseCnt 已使用授权数
      * @param integer $OrderStatus 订单状态 1 正常 2隔离, 3销毁
@@ -161,9 +151,7 @@ class LicenseDetail extends AbstractModel
      * @param integer $SourceType 是否试用订单.
      * @param string $Alias 资源别名
      * @param array $Tags 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

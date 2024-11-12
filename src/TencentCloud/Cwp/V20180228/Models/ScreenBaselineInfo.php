@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 大屏基线信息
  *
  * @method string getName() 获取基线名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBaselineFailCount() 获取基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineFailCount(integer $BaselineFailCount) 设置基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScreenBaselineInfo extends AbstractModel
 {
     /**
      * @var string 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var string 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
 
     /**
      * @var integer 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaselineFailCount;
 
     /**
      * @var string 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @param string $Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

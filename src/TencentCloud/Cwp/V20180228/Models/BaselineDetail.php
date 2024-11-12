@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 基线详情
  *
  * @method string getDescription() 获取基线描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置基线描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取危害等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置危害等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取package名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置package名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParentId() 获取父级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(integer $ParentId) 设置父级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取基线名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineDetail extends AbstractModel
 {
     /**
      * @var string 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string package名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
     /**
      * @var integer 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @var string 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Description 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName package名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ParentId 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

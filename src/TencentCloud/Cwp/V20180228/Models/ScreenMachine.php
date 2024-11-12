@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+ * @method string getUuid() 获取主机安全Uuid，若客户端长时间不在线将返回空字符。
+ * @method void setUuid(string $Uuid) 设置主机安全Uuid，若客户端长时间不在线将返回空字符。
  * @method integer getMachineStatus() 获取大屏主机状态 0：未安装agent，1：离线状态，2:离线-风险，3：离线-严重
 4：安装设备-正常，5：安装设备-正常 且是专业版或旗舰版，6：安装设备-风险（网络攻击事件>0） ，
  7：安装设备-风险（网络攻击事件>0 且是专业版或旗舰版，8：安装设备-严重（入侵检测事件>0），
@@ -88,7 +88,7 @@ class ScreenMachine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @var string 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public $Uuid;
 
@@ -191,7 +191,7 @@ class ScreenMachine extends AbstractModel
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @param string $Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      * @param integer $MachineStatus 大屏主机状态 0：未安装agent，1：离线状态，2:离线-风险，3：离线-严重
 4：安装设备-正常，5：安装设备-正常 且是专业版或旗舰版，6：安装设备-风险（网络攻击事件>0） ，
  7：安装设备-风险（网络攻击事件>0 且是专业版或旗舰版，8：安装设备-严重（入侵检测事件>0），

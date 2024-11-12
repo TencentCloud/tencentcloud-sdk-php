@@ -25,21 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScope() 获取影响范围：1 全网旗舰版主机，0 quuid列表主机
  * @method void setScope(integer $Scope) 设置影响范围：1 全网旗舰版主机，0 quuid列表主机
  * @method array getQuuids() 获取影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(array $Quuids) 设置影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlagshipCount() 获取当前旗舰版主机数量
  * @method void setFlagshipCount(integer $FlagshipCount) 设置当前旗舰版主机数量
  * @method array getInstanceIds() 获取影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoInclude() 获取新增旗舰版主机自动加入;1是，0否 
  * @method void setAutoInclude(integer $AutoInclude) 设置新增旗舰版主机自动加入;1是，0否 
  * @method array getExcludeInstanceIds() 获取排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) 设置排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,7 +51,6 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
     /**
      * @var array 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
@@ -68,7 +61,6 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
     /**
      * @var array 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
@@ -79,7 +71,6 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
     /**
      * @var array 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeInstanceIds;
 
@@ -92,13 +83,10 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
      * @param integer $Enable 防御开关，0 关闭 1 开启
      * @param integer $Scope 影响范围：1 全网旗舰版主机，0 quuid列表主机
      * @param array $Quuids 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlagshipCount 当前旗舰版主机数量
      * @param array $InstanceIds 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoInclude 新增旗舰版主机自动加入;1是，0否 
      * @param array $ExcludeInstanceIds 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

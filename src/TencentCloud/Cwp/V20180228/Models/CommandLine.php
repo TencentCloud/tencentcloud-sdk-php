@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 命令行内容
  *
  * @method string getExe() 获取路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExe(string $Exe) 设置路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCmdline() 获取命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmdline(string $Cmdline) 设置命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommandLine extends AbstractModel
 {
     /**
      * @var string 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exe;
 
     /**
      * @var string 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cmdline;
 
     /**
      * @param string $Exe 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cmdline 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
  * @method string getDiskInfo() 获取指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskInfo(string $DiskInfo) 设置指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RansomDefenseStrategyMachineInfo extends AbstractModel
 {
@@ -36,14 +34,12 @@ class RansomDefenseStrategyMachineInfo extends AbstractModel
 
     /**
      * @var string 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskInfo;
 
     /**
      * @param string $Uuid 主机uuid
      * @param string $DiskInfo 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

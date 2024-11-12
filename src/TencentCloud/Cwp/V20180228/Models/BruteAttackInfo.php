@@ -23,45 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取唯一Id
  * @method void setId(integer $Id) 设置唯一Id
  * @method string getUuid() 获取主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineIp() 获取主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineIp(string $MachineIp) 设置主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineName(string $MachineName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcIp() 获取来源ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIp(string $SrcIp) 设置来源ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCountry() 获取国家id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountry(integer $Country) 设置国家id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCity() 获取城市id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(integer $City) 设置城市id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProvince() 获取省份id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvince(integer $Province) 设置省份id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBanStatus() 获取0 -不阻断(客户端版本不支持)
 1 -已阻断
 2 -阻断失败(程序异常)
@@ -75,7 +55,6 @@ use TencentCloud\Common\AbstractModel;
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(integer $BanStatus) 设置0 -不阻断(客户端版本不支持)
 1 -已阻断
 2 -阻断失败(程序异常)
@@ -89,67 +68,36 @@ use TencentCloud\Common\AbstractModel;
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEventType() 获取事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventType(integer $EventType) 设置事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEventType() 获取事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
+ * @method void setEventType(integer $EventType) 设置事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
  * @method integer getCount() 获取发生次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置发生次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsProVersion() 获取是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsProVersion(boolean $IsProVersion) 设置是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataStatus() 获取0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataStatus(integer $DataStatus) 设置0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevel() 获取威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataFrom() 获取事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataFrom(integer $DataFrom) 设置事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttackStatusDesc() 获取破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackStatusDesc(string $AttackStatusDesc) 设置破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanExpiredTime() 获取阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanExpiredTime(string $BanExpiredTime) 设置阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BruteAttackInfo extends AbstractModel
 {
@@ -160,61 +108,51 @@ class BruteAttackInfo extends AbstractModel
 
     /**
      * @var string 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineIp;
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineName;
 
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcIp;
 
     /**
      * @var string SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Country;
 
     /**
      * @var integer 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
     /**
      * @var integer 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Province;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -232,122 +170,96 @@ class BruteAttackInfo extends AbstractModel
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
 
     /**
-     * @var integer 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
      */
     public $EventType;
 
     /**
      * @var integer 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var boolean 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsProVersion;
 
     /**
      * @var string 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var integer 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var integer 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataStatus;
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var integer 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var integer 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataFrom;
 
     /**
      * @var string 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackStatusDesc;
 
     /**
      * @var string 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanExpiredTime;
 
     /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BanStatus 0 -不阻断(客户端版本不支持)
 1 -已阻断
 2 -阻断失败(程序异常)
@@ -361,37 +273,21 @@ class BruteAttackInfo extends AbstractModel
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
      * @param integer $Count 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsProVersion 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataFrom 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttackStatusDesc 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanExpiredTime 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,9 +36,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateBanWhiteListResponse CreateBanWhiteList(Models\CreateBanWhiteListRequest $req) 添加阻断白名单列表
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateBuyBindTaskResponse CreateBuyBindTask(Models\CreateBuyBindTaskRequest $req) 新购授权自动绑定任务
- * @method Models\CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecord(Models\CreateCloudProtectServiceOrderRecordRequest $req) 云护航计费产品已下线
-
-云护航服务使用完成后，该接口可以确认收货
  * @method Models\CreateEmergencyVulScanResponse CreateEmergencyVulScan(Models\CreateEmergencyVulScanRequest $req) 创建应急漏洞扫描任务
  * @method Models\CreateIncidentBacktrackingResponse CreateIncidentBacktracking(Models\CreateIncidentBacktrackingRequest $req) 对旗舰版机器单次触发事件调查及告警回溯
  * @method Models\CreateLicenseOrderResponse CreateLicenseOrder(Models\CreateLicenseOrderRequest $req) CreateLicenseOrder 该接口可以创建专业版/旗舰版订单

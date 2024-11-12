@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取事件ID
  * @method void setId(integer $Id) 设置事件ID
  * @method string getAlias() 获取服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取内存马类型  0:Filter型 1:Listener型 2:Servlet型 3:Interceptors型 4:Agent型 5:其他
  * @method void setType(integer $Type) 设置内存马类型  0:Filter型 1:Listener型 2:Servlet型 3:Interceptors型 4:Agent型 5:其他
  * @method string getDescription() 获取说明
@@ -43,33 +39,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() 获取服务器quuid
  * @method void setQuuid(string $Quuid) 设置服务器quuid
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClassName() 获取类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassName(string $ClassName) 设置类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuperClassName() 获取父类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperClassName(string $SuperClassName) 设置父类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInterfaces() 获取继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterfaces(string $Interfaces) 设置继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAnnotations() 获取注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnnotations(string $Annotations) 设置注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoaderClassName() 获取所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoaderClassName(string $LoaderClassName) 设置所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class JavaMemShellInfo extends AbstractModel
 {
@@ -80,13 +62,11 @@ class JavaMemShellInfo extends AbstractModel
 
     /**
      * @var string 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
      * @var string 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
@@ -122,52 +102,43 @@ class JavaMemShellInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassName;
 
     /**
      * @var string 父类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuperClassName;
 
     /**
      * @var string 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interfaces;
 
     /**
      * @var string 注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Annotations;
 
     /**
      * @var string 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoaderClassName;
 
     /**
      * @param integer $Id 事件ID
      * @param string $Alias 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 内存马类型  0:Filter型 1:Listener型 2:Servlet型 3:Interceptors型 4:Agent型 5:其他
      * @param string $Description 说明
      * @param string $CreateTime 首次发现时间
@@ -175,19 +146,12 @@ class JavaMemShellInfo extends AbstractModel
      * @param integer $Status 处理状态  0 -- 待处理 1 -- 已加白 2 -- 已删除 3 - 已忽略  4 - 已手动处理
      * @param string $Quuid 服务器quuid
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClassName 类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuperClassName 父类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Interfaces 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Annotations 注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoaderClassName 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

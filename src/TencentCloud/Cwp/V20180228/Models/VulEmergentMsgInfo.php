@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishTime(string $PublishTime) 设置漏洞纰漏时间
  * @method string getName() 获取漏洞名
  * @method void setName(string $Name) 设置漏洞名
+ * @method string getNameEn() 获取漏洞名,英文描述
+ * @method void setNameEn(string $NameEn) 设置漏洞名,英文描述
  */
 class VulEmergentMsgInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class VulEmergentMsgInfo extends AbstractModel
     public $Name;
 
     /**
+     * @var string 漏洞名,英文描述
+     */
+    public $NameEn;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param string $PublishTime 漏洞纰漏时间
      * @param string $Name 漏洞名
+     * @param string $NameEn 漏洞名,英文描述
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class VulEmergentMsgInfo extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("NameEn",$param) and $param["NameEn"] !== null) {
+            $this->NameEn = $param["NameEn"];
         }
     }
 }

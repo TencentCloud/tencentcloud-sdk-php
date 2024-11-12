@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitInstanceUpgradeCheckJob请求参数结构体
  *
- * @method string getInstanceId() 获取实例D
- * @method void setInstanceId(string $InstanceId) 设置实例D
- * @method string getDstMysqlVersion() 获取目标数据库版本
- * @method void setDstMysqlVersion(string $DstMysqlVersion) 设置目标数据库版本
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getDstMysqlVersion() 获取目标数据库版本。
+ * @method void setDstMysqlVersion(string $DstMysqlVersion) 设置目标数据库版本。
  */
 class SubmitInstanceUpgradeCheckJobRequest extends AbstractModel
 {
     /**
-     * @var string 实例D
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 目标数据库版本
+     * @var string 目标数据库版本。
      */
     public $DstMysqlVersion;
 
     /**
-     * @param string $InstanceId 实例D
-     * @param string $DstMysqlVersion 目标数据库版本
+     * @param string $InstanceId 实例 ID。
+     * @param string $DstMysqlVersion 目标数据库版本。
      */
     function __construct()
     {

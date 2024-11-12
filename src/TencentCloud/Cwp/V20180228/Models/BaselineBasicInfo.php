@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 基线基础信息
  *
  * @method string getName() 获取基线名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBaselineId() 获取基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineId(integer $BaselineId) 设置基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParentId() 获取父级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(integer $ParentId) 设置父级id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineBasicInfo extends AbstractModel
 {
     /**
      * @var string 基线名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaselineId;
 
     /**
      * @var integer 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @param string $Name 基线名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BaselineId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ParentId 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

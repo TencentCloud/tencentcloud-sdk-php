@@ -21,17 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLogStorageConfig返回参数结构体
  *
  * @method array getType() 获取存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(array $Type) 设置存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriod() 获取日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriod(integer $Period) 设置日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPeriod() 获取日志存储时长，3640表示不限
+ * @method void setPeriod(integer $Period) 设置日志存储时长，3640表示不限
  * @method integer getPeriodModifyCount() 获取本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriodModifyCount(integer $PeriodModifyCount) 设置本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGranularity() 获取日志存储时长单位，年year/月month/天day
+ * @method void setGranularity(string $Granularity) 设置日志存储时长单位，年year/月month/天day
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,21 +35,23 @@ class DescribeLogStorageConfigResponse extends AbstractModel
 {
     /**
      * @var array 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var integer 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 日志存储时长，3640表示不限
      */
     public $Period;
 
     /**
      * @var integer 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodModifyCount;
+
+    /**
+     * @var string 日志存储时长单位，年year/月month/天day
+     */
+    public $Granularity;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,11 +60,9 @@ class DescribeLogStorageConfigResponse extends AbstractModel
 
     /**
      * @param array $Type 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Period 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Period 日志存储时长，3640表示不限
      * @param integer $PeriodModifyCount 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Granularity 日志存储时长单位，年year/月month/天day
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +88,10 @@ class DescribeLogStorageConfigResponse extends AbstractModel
 
         if (array_key_exists("PeriodModifyCount",$param) and $param["PeriodModifyCount"] !== null) {
             $this->PeriodModifyCount = $param["PeriodModifyCount"];
+        }
+
+        if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
+            $this->Granularity = $param["Granularity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

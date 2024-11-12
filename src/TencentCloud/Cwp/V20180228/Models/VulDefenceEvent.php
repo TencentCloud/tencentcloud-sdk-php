@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -162,7 +160,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -187,7 +184,6 @@ class VulDefenceEvent extends AbstractModel
      * @param integer $FixType 0 不支持修复，1 支持修复
      * @param string $Uuid 主机uuid
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

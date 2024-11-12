@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterInfo请求参数结构体
  *
- * @method string getInstanceId() 获取实例id。
- * @method void setInstanceId(string $InstanceId) 设置实例id。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  */
 class DescribeClusterInfoRequest extends AbstractModel
 {
     /**
-     * @var string 实例id。
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例id。
+     * @param string $InstanceId 实例 ID。
      */
     function __construct()
     {

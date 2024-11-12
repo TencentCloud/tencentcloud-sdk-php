@@ -41,25 +41,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getScanContent() 获取扫描内容
  * @method void setScanContent(array $ScanContent) 设置扫描内容
  * @method array getVulInfo() 获取漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulInfo(array $VulInfo) 设置漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskEventCount() 获取风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskEventCount(integer $RiskEventCount) 设置风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStoppingAll() 获取任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppingAll(boolean $StoppingAll) 设置任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCount() 获取扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCount(integer $VulCount) 设置扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,31 +107,26 @@ class DescribeScanTaskDetailsResponse extends AbstractModel
 
     /**
      * @var array 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulInfo;
 
     /**
      * @var integer 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskEventCount;
 
     /**
      * @var integer 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var boolean 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StoppingAll;
 
     /**
      * @var integer 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCount;
 
@@ -162,15 +147,10 @@ class DescribeScanTaskDetailsResponse extends AbstractModel
      * @param integer $ScanLeftTime 扫描剩余时间
      * @param array $ScanContent 扫描内容
      * @param array $VulInfo 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskEventCount 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StoppingAll 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCount 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

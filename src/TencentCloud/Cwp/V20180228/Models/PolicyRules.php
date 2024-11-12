@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 策略规则表达式
  *
  * @method CommandLine getProcess() 获取进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(CommandLine $Process) 设置进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CommandLine getPProcess() 获取父进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPProcess(CommandLine $PProcess) 设置父进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CommandLine getAProcess() 获取祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAProcess(CommandLine $AProcess) 设置祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyRules extends AbstractModel
 {
     /**
      * @var CommandLine 进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
     /**
      * @var CommandLine 父进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PProcess;
 
     /**
      * @var CommandLine 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AProcess;
 
     /**
      * @param CommandLine $Process 进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommandLine $PProcess 父进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommandLine $AProcess 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

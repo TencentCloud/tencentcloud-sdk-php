@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+ * @method string getUuid() 获取主机安全uuid，若客户端长时间不在线将返回空字符。
+ * @method void setUuid(string $Uuid) 设置主机安全uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
  * @method void setQuuid(string $Quuid) 设置CVM或BM机器唯一Uuid。
  * @method string getMachineIp() 获取主机IP。
@@ -61,17 +61,11 @@ https://cloud.tencent.com/document/api/213/15753#Instance
  * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
  * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
  * @method LicenseOrder getLicenseOrder() 获取授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseOrder(LicenseOrder $LicenseOrder) 设置授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCloudTags() 获取云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MachineSimple extends AbstractModel
 {
@@ -86,7 +80,7 @@ class MachineSimple extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @var string 主机安全uuid，若客户端长时间不在线将返回空字符。
      */
     public $Uuid;
 
@@ -157,26 +151,23 @@ https://cloud.tencent.com/document/api/213/15753#Instance
 
     /**
      * @var LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseOrder;
 
     /**
      * @var array 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @param string $Uuid 主机安全uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param string $MachineIp 主机IP。
      * @param boolean $IsProVersion 是否是专业版。
@@ -195,11 +186,8 @@ https://cloud.tencent.com/document/api/213/15753#Instance
      * @param string $KernelVersion 内核版本
      * @param string $ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
      * @param LicenseOrder $LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimeoutCount() 获取失败主机数
  * @method void setTimeoutCount(integer $TimeoutCount) 设置失败主机数
  * @method integer getPolicyDetectStatus() 获取1:检测中 2:检测完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDetectStatus(integer $PolicyDetectStatus) 设置1:检测中 2:检测完成
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselinePolicyDetect extends AbstractModel
 {
@@ -92,7 +90,6 @@ class BaselinePolicyDetect extends AbstractModel
 
     /**
      * @var integer 1:检测中 2:检测完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDetectStatus;
 
@@ -107,7 +104,6 @@ class BaselinePolicyDetect extends AbstractModel
      * @param integer $FailedCount 失败主技数
      * @param integer $TimeoutCount 失败主机数
      * @param integer $PolicyDetectStatus 1:检测中 2:检测完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

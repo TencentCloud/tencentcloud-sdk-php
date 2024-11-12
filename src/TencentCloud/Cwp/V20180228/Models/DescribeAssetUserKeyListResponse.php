@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetUserKeyList返回参数结构体
  *
  * @method array getKeys() 获取公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取分区总数
  * @method void setTotal(integer $Total) 设置分区总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeAssetUserKeyListResponse extends AbstractModel
 {
     /**
      * @var array 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
@@ -49,7 +46,6 @@ class DescribeAssetUserKeyListResponse extends AbstractModel
 
     /**
      * @param array $Keys 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 分区总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

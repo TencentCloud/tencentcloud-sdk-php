@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method RegionInfo getRegionInfo() 获取可用区信息
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置可用区信息
  * @method string getInstanceId() 获取主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RansomDefenseRollbackTask extends AbstractModel
 {
@@ -99,7 +97,6 @@ class RansomDefenseRollbackTask extends AbstractModel
 
     /**
      * @var string 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -115,7 +112,6 @@ class RansomDefenseRollbackTask extends AbstractModel
      * @param string $ModifyTime Status!=0时为完成时间
      * @param RegionInfo $RegionInfo 可用区信息
      * @param string $InstanceId 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

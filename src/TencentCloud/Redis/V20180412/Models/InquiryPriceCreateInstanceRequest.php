@@ -56,14 +56,10 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 1：包年包月。
  * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method integer getRedisShardNum() 获取实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
- * @method integer getRedisReplicasNum() 获取实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+ * @method integer getRedisShardNum() 获取实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+ * @method integer getRedisReplicasNum() 获取实例副本数量。2.8 标准架构无需配置副本数量。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。2.8 标准架构无需配置副本数量。
  * @method boolean getReplicasReadonly() 获取是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
 - true：无需支持副本只读。
 - false：需支持。
@@ -126,14 +122,12 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ZoneId;
 
     /**
-     * @var integer 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+     * @var integer 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+     * @var integer 实例副本数量。2.8 标准架构无需配置副本数量。
      */
     public $RedisReplicasNum;
 
@@ -176,10 +170,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 0：按量计费。
 - 1：包年包月。
      * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param integer $RedisShardNum 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
-     * @param integer $RedisReplicasNum 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+     * @param integer $RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+     * @param integer $RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
      * @param boolean $ReplicasReadonly 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
 - true：无需支持副本只读。
 - false：需支持。

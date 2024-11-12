@@ -85,29 +85,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceVersion() 获取设备型号
  * @method void setDeviceVersion(string $DeviceVersion) 设置设备型号
  * @method string getOfflineTime() 获取离线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTime(string $OfflineTime) 设置离线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCpuLoadVul() 获取CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuLoadVul(string $CpuLoadVul) 设置CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTime(string $FirstTime) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineDetail extends AbstractModel
 {
@@ -273,37 +261,31 @@ class AssetMachineDetail extends AbstractModel
 
     /**
      * @var string 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineTime;
 
     /**
      * @var string 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuLoadVul;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTime;
 
@@ -341,17 +323,11 @@ class AssetMachineDetail extends AbstractModel
      * @param integer $ProjectId 业务组ID
      * @param string $DeviceVersion 设备型号
      * @param string $OfflineTime 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CpuLoadVul CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

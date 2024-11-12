@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取记录ID
  * @method void setId(integer $Id) 设置记录ID
- * @method string getUuid() 获取云镜客户端ID
- * @method void setUuid(string $Uuid) 设置云镜客户端ID
+ * @method string getUuid() 获取主机安全uuid
+ * @method void setUuid(string $Uuid) 设置主机安全uuid
  * @method array getPlaces() 获取白名单地域
  * @method void setPlaces(array $Places) 设置白名单地域
  * @method string getUserName() 获取白名单用户（多个用户逗号隔开）
@@ -53,7 +53,7 @@ class LoginWhiteLists extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜客户端ID
+     * @var string 主机安全uuid
      */
     public $Uuid;
 
@@ -109,7 +109,7 @@ class LoginWhiteLists extends AbstractModel
 
     /**
      * @param integer $Id 记录ID
-     * @param string $Uuid 云镜客户端ID
+     * @param string $Uuid 主机安全uuid
      * @param array $Places 白名单地域
      * @param string $UserName 白名单用户（多个用户逗号隔开）
      * @param string $SrcIp 白名单IP（多个IP逗号隔开）

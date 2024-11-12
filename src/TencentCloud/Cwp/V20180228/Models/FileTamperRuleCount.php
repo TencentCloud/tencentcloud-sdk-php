@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCount() 获取关联规则的数量
  * @method void setCount(integer $Count) 设置关联规则的数量
  * @method string getName() 获取关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperRuleCount extends AbstractModel
 {
@@ -43,7 +41,6 @@ class FileTamperRuleCount extends AbstractModel
 
     /**
      * @var string 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -51,7 +48,6 @@ class FileTamperRuleCount extends AbstractModel
      * @param string $Uuid 主机uuid
      * @param integer $Count 关联规则的数量
      * @param string $Name 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

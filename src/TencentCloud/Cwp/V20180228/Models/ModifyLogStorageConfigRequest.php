@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLogStorageConfig请求参数结构体
  *
- * @method boolean getIsModifyPeriod() 获取是否修改有效期
- * @method void setIsModifyPeriod(boolean $IsModifyPeriod) 设置是否修改有效期
+ * @method boolean getIsModifyPeriod() 获取是否修改有效期（已废弃）
+ * @method void setIsModifyPeriod(boolean $IsModifyPeriod) 设置是否修改有效期（已废弃）
  * @method array getType() 获取存储类型，string数组
  * @method void setType(array $Type) 设置存储类型，string数组
  * @method integer getPeriod() 获取日志存储时长，3640表示不限
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLogStorageConfigRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否修改有效期
+     * @var boolean 是否修改有效期（已废弃）
      */
     public $IsModifyPeriod;
 
@@ -52,7 +52,7 @@ class ModifyLogStorageConfigRequest extends AbstractModel
     public $Granularity;
 
     /**
-     * @param boolean $IsModifyPeriod 是否修改有效期
+     * @param boolean $IsModifyPeriod 是否修改有效期（已废弃）
      * @param array $Type 存储类型，string数组
      * @param integer $Period 日志存储时长，3640表示不限
      * @param string $Granularity 日志存储时长单位，年year/月month/天day

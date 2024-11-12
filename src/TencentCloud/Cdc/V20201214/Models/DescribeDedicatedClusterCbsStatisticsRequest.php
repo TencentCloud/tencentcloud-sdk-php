@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getPeriod() 获取时间范围精度，1分钟/5分钟
- * @method void setPeriod(string $Period) 设置时间范围精度，1分钟/5分钟
+ * @method string getPeriod() 获取时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
+ * @method void setPeriod(string $Period) 设置时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20
@@ -58,7 +58,7 @@ class DescribeDedicatedClusterCbsStatisticsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 时间范围精度，1分钟/5分钟
+     * @var string 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      */
     public $Period;
 
@@ -77,7 +77,7 @@ class DescribeDedicatedClusterCbsStatisticsRequest extends AbstractModel
      * @param string $SetId 云硬盘仓库id
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param string $Period 时间范围精度，1分钟/5分钟
+     * @param string $Period 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20
      */

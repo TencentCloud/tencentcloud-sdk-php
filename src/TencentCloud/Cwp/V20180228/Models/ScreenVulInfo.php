@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:提示
  * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:提示
  * @method integer getCategory() 获取漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(integer $Category) 设置漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScreenVulInfo extends AbstractModel
 {
@@ -68,13 +64,11 @@ class ScreenVulInfo extends AbstractModel
 
     /**
      * @var integer 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
     /**
      * @var string 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
@@ -85,9 +79,7 @@ class ScreenVulInfo extends AbstractModel
      * @param string $LastTime 最后检测时间
      * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:提示
      * @param integer $Category 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

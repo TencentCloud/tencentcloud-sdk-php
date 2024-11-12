@@ -37,21 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取策略ID
  * @method void setId(integer $Id) 设置策略ID
  * @method string getDescript() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescript(string $Descript) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventId() 获取事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(integer $EventId) 设置事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDealOldEvents() 获取是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuuids() 获取生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(array $Quuids) 设置生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategory() 获取策略类型，0:系统  1:用户
  * @method void setCategory(integer $Category) 设置策略类型，0:系统  1:用户
  * @method string getCreateTime() 获取创建时间
@@ -61,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getUuids() 获取老版本兼容可能会用到
  * @method void setUuids(array $Uuids) 设置老版本兼容可能会用到
  * @method PolicyRules getRules() 获取规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(PolicyRules $Rules) 设置规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashPolicy extends AbstractModel
 {
@@ -109,25 +99,21 @@ class BashPolicy extends AbstractModel
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Descript;
 
     /**
      * @var integer 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var integer 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOldEvents;
 
     /**
      * @var array 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
@@ -153,7 +139,6 @@ class BashPolicy extends AbstractModel
 
     /**
      * @var PolicyRules 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
@@ -167,19 +152,14 @@ class BashPolicy extends AbstractModel
      * @param integer $Scope 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
      * @param integer $Id 策略ID
      * @param string $Descript 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Quuids 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Category 策略类型，0:系统  1:用户
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 修改时间
      * @param array $Uuids 老版本兼容可能会用到
      * @param PolicyRules $Rules 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

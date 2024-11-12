@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 攻击溯源
  *
  * @method array getNodes() 获取攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodes(array $Nodes) 设置攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEdges() 获取攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEdges(array $Edges) 设置攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventInfoParam() 获取请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventInfoParam(string $EventInfoParam) 设置请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttackSource extends AbstractModel
 {
     /**
      * @var array 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nodes;
 
     /**
      * @var array 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Edges;
 
     /**
      * @var string 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventInfoParam;
 
     /**
      * @param array $Nodes 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Edges 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventInfoParam 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

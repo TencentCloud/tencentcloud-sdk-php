@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 展示登录审计白名单时的主机信息实体
  *
- * @method string getQuuid() 获取云镜客户端ID
- * @method void setQuuid(string $Quuid) 设置云镜客户端ID
- * @method string getUuid() 获取主机ID
- * @method void setUuid(string $Uuid) 设置主机ID
+ * @method string getQuuid() 获取机器uuid
+ * @method void setQuuid(string $Quuid) 设置机器uuid
+ * @method string getUuid() 获取主机安全uuid
+ * @method void setUuid(string $Uuid) 设置主机安全uuid
  * @method string getMachineName() 获取机器名
  * @method void setMachineName(string $MachineName) 设置机器名
  * @method string getMachineIp() 获取机器IP:已销毁的服务器IP为空
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class HostDesc extends AbstractModel
 {
     /**
-     * @var string 云镜客户端ID
+     * @var string 机器uuid
      */
     public $Quuid;
 
     /**
-     * @var string 主机ID
+     * @var string 主机安全uuid
      */
     public $Uuid;
 
@@ -66,8 +66,8 @@ class HostDesc extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Quuid 云镜客户端ID
-     * @param string $Uuid 主机ID
+     * @param string $Quuid 机器uuid
+     * @param string $Uuid 主机安全uuid
      * @param string $MachineName 机器名
      * @param string $MachineIp 机器IP:已销毁的服务器IP为空
      * @param string $MachineWanIp 公网IP:已销毁的服务器IP为空

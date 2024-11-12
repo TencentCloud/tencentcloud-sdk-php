@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(float $Discount) 设置折扣
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeUnit() 获取单位：时
+ * @method string getChargeUnit() 获取单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeUnit(string $ChargeUnit) 设置单位：时
+ * @method void setChargeUnit(string $ChargeUnit) 设置单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAmount() 获取商品数量
@@ -64,7 +64,7 @@ class ItemPrice extends AbstractModel
     public $Discount;
 
     /**
-     * @var string 单位：时
+     * @var string 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -83,7 +83,7 @@ class ItemPrice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Discount 折扣
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeUnit 单位：时
+     * @param string $ChargeUnit 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Amount 商品数量

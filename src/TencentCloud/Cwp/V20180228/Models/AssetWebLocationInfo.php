@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIp() 获取绑定IP
  * @method void setIp(string $Ip) 设置绑定IP
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetWebLocationInfo extends AbstractModel
 {
@@ -92,7 +90,6 @@ class AssetWebLocationInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -107,7 +104,6 @@ class AssetWebLocationInfo extends AbstractModel
      * @param string $Command 启动命令
      * @param string $Ip 绑定IP
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

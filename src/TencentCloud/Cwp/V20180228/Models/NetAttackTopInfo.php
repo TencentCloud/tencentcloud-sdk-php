@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 网络攻击top统计数据
  *
  * @method array getAgent() 获取网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgent(array $Agent) 设置网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSrcIp() 获取网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIp(array $SrcIp) 设置网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDstPort() 获取网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstPort(array $DstPort) 设置网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVul() 获取网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVul(array $Vul) 设置网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAttackTopInfo extends AbstractModel
 {
     /**
      * @var array 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Agent;
 
     /**
      * @var array 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcIp;
 
     /**
      * @var array 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstPort;
 
     /**
      * @var array 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vul;
 
     /**
      * @param array $Agent 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SrcIp 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DstPort 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vul 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

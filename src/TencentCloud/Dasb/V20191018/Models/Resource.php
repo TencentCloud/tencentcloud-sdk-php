@@ -91,9 +91,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLogDelivery() 获取日志投递规格信息
  * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
  * @method integer getDeployModel() 获取部署模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployModel(integer $DeployModel) 设置部署模式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -274,7 +272,6 @@ class Resource extends AbstractModel
 
     /**
      * @var integer 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployModel;
 
@@ -315,7 +312,6 @@ class Resource extends AbstractModel
      * @param string $CdcClusterId cdc集群id
      * @param string $LogDelivery 日志投递规格信息
      * @param integer $DeployModel 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

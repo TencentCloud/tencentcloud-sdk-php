@@ -57,13 +57,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() 获取机器名
  * @method void setMachineName(string $MachineName) 设置机器名
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPid() 获取进程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(integer $Pid) 设置进程id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivilegeEscalationProcess extends AbstractModel
 {
@@ -159,13 +155,11 @@ class PrivilegeEscalationProcess extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var integer 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
 
@@ -189,9 +183,7 @@ class PrivilegeEscalationProcess extends AbstractModel
      * @param string $CreateTime 发生时间
      * @param string $MachineName 机器名
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pid 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

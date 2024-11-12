@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 需要修改的人员库自定义描述字段key-value
  *
- * @method integer getGroupExDescriptionIndex() 获取人员库自定义描述字段Index，从0开始
- * @method void setGroupExDescriptionIndex(integer $GroupExDescriptionIndex) 设置人员库自定义描述字段Index，从0开始
- * @method string getGroupExDescription() 获取需要更新的人员库自定义描述字段内容
- * @method void setGroupExDescription(string $GroupExDescription) 设置需要更新的人员库自定义描述字段内容
+ * @method integer getGroupExDescriptionIndex() 获取人员库自定义描述字段Index，从0开始。
+ * @method void setGroupExDescriptionIndex(integer $GroupExDescriptionIndex) 设置人员库自定义描述字段Index，从0开始。
+ * @method string getGroupExDescription() 获取需要更新的人员库自定义描述字段内容。
+ * @method void setGroupExDescription(string $GroupExDescription) 设置需要更新的人员库自定义描述字段内容。
  */
 class GroupExDescriptionInfo extends AbstractModel
 {
     /**
-     * @var integer 人员库自定义描述字段Index，从0开始
+     * @var integer 人员库自定义描述字段Index，从0开始。
      */
     public $GroupExDescriptionIndex;
 
     /**
-     * @var string 需要更新的人员库自定义描述字段内容
+     * @var string 需要更新的人员库自定义描述字段内容。
      */
     public $GroupExDescription;
 
     /**
-     * @param integer $GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
-     * @param string $GroupExDescription 需要更新的人员库自定义描述字段内容
+     * @param integer $GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始。
+     * @param string $GroupExDescription 需要更新的人员库自定义描述字段内容。
      */
     function __construct()
     {

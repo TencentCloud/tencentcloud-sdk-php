@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCloudProtectServiceOrderRecord返回参数结构体
+ * CreateDataModel返回参数结构体
  *
- * @method array getSuccess() 获取成功收货的资源ID
- * @method void setSuccess(array $Success) 设置成功收货的资源ID
+ * @method string getData() 获取“Wedata数据建模”的实例id
+ * @method void setData(string $Data) 设置“Wedata数据建模”的实例id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel
+class CreateDataModelResponse extends AbstractModel
 {
     /**
-     * @var array 成功收货的资源ID
+     * @var string “Wedata数据建模”的实例id
      */
-    public $Success;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Success 成功收货的资源ID
+     * @param string $Data “Wedata数据建模”的实例id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Success",$param) and $param["Success"] !== null) {
-            $this->Success = $param["Success"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

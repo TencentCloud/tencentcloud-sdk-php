@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
  * @method array getTag() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取服务名
  * @method void setName(string $Name) 设置服务名
  * @method string getVersion() 获取版本
@@ -57,17 +55,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDesc() 获取描述
  * @method void setDesc(string $Desc) 设置描述
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method MachineExtraInfo getMachineExtraInfo() 获取 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetWebServiceBaseInfo extends AbstractModel
 {
@@ -103,7 +97,6 @@ class AssetWebServiceBaseInfo extends AbstractModel
 
     /**
      * @var array 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -159,7 +152,6 @@ class AssetWebServiceBaseInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -175,7 +167,6 @@ class AssetWebServiceBaseInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -187,7 +178,6 @@ class AssetWebServiceBaseInfo extends AbstractModel
      * @param string $OsInfo 操作系统信息
      * @param integer $ProjectId 主机业务组ID
      * @param array $Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名
      * @param string $Version 版本
      * @param string $BinPath 二进制路径
@@ -199,11 +189,9 @@ class AssetWebServiceBaseInfo extends AbstractModel
      * @param string $MachineName 主机名称
      * @param string $Desc 描述
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

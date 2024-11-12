@@ -26,14 +26,12 @@ LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineType(string $MachineType) 设置机器类型
 CVM 腾讯云云服务器
 LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCloudFrom() 获取0 腾讯云
 1 IDC机房
 2 阿里云
@@ -43,7 +41,6 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudFrom(integer $CloudFrom) 设置0 腾讯云
 1 IDC机房
 2 阿里云
@@ -53,11 +50,8 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegionList() 获取地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionList(array $RegionList) 设置地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionListDetail extends AbstractModel
 {
@@ -68,7 +62,6 @@ LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineType;
 
@@ -82,13 +75,11 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudFrom;
 
     /**
      * @var array 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionList;
 
@@ -99,7 +90,6 @@ LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CloudFrom 0 腾讯云
 1 IDC机房
 2 阿里云
@@ -109,9 +99,7 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

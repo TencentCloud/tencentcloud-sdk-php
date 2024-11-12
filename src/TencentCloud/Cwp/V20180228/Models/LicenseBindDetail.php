@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsSwitchBind() 获取是否允许换绑,false 不允许换绑
  * @method void setIsSwitchBind(boolean $IsSwitchBind) 设置是否允许换绑,false 不允许换绑
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseBindDetail extends AbstractModel
 {
@@ -92,7 +90,6 @@ class LicenseBindDetail extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -107,7 +104,6 @@ class LicenseBindDetail extends AbstractModel
      * @param boolean $IsUnBind 是否允许解绑,false 不允许解绑
      * @param boolean $IsSwitchBind 是否允许换绑,false 不允许换绑
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

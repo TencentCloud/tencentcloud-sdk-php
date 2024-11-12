@@ -55,9 +55,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOnlineStatus() 获取主机在线状态
  * @method void setOnlineStatus(integer $OnlineStatus) 设置主机在线状态
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
  */
@@ -150,7 +148,6 @@ class RiskProcessEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -178,7 +175,6 @@ class RiskProcessEvent extends AbstractModel
      * @param integer $HandleStatus 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
      * @param integer $OnlineStatus 主机在线状态
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机uuid
      */
     function __construct()

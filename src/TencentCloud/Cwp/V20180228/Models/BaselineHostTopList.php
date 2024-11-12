@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 基线影响服务器列表数据
  *
  * @method array getEventLevelList() 获取事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventLevelList(array $EventLevelList) 设置事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineHostTopList extends AbstractModel
 {
     /**
      * @var array 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventLevelList;
 
     /**
      * @var string 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var integer 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @param array $EventLevelList 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

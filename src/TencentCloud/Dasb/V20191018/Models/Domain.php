@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomainId() 获取网络域id
  * @method void setDomainId(string $DomainId) 设置网络域id
  * @method string getDomainName() 获取网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainName(string $DomainName) 设置网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取堡垒机id
  * @method void setResourceId(string $ResourceId) 设置堡垒机id
  * @method array getWhiteIpSet() 获取ip，网段
@@ -55,7 +53,6 @@ class Domain extends AbstractModel
 
     /**
      * @var string 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainName;
 
@@ -93,7 +90,6 @@ class Domain extends AbstractModel
      * @param integer $Id 自增id
      * @param string $DomainId 网络域id
      * @param string $DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 堡垒机id
      * @param array $WhiteIpSet ip，网段
      * @param integer $Enabled 是否启用  默认 1启用 0禁用

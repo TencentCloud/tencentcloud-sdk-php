@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudDiskPrice(ItemPrice $CloudDiskPrice) 设置云盘价格信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPriceDetailSet() 获取分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPriceDetailSet(array $PriceDetailSet) 设置分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Price extends AbstractModel
 {
@@ -44,9 +48,17 @@ class Price extends AbstractModel
     public $CloudDiskPrice;
 
     /**
+     * @var array 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PriceDetailSet;
+
+    /**
      * @param ItemPrice $InstancePrice 实例价格信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemPrice $CloudDiskPrice 云盘价格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PriceDetailSet 分实例价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,15 @@ class Price extends AbstractModel
         if (array_key_exists("CloudDiskPrice",$param) and $param["CloudDiskPrice"] !== null) {
             $this->CloudDiskPrice = new ItemPrice();
             $this->CloudDiskPrice->deserialize($param["CloudDiskPrice"]);
+        }
+
+        if (array_key_exists("PriceDetailSet",$param) and $param["PriceDetailSet"] !== null) {
+            $this->PriceDetailSet = [];
+            foreach ($param["PriceDetailSet"] as $key => $value){
+                $obj = new ItemPriceDetail();
+                $obj->deserialize($value);
+                array_push($this->PriceDetailSet, $obj);
+            }
         }
     }
 }

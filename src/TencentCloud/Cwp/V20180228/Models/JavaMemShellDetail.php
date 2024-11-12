@@ -65,9 +65,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSecurityAdvice() 获取安全建议
  * @method void setSecurityAdvice(string $SecurityAdvice) 设置安全建议
  * @method MachineExtraInfo getMachineExtraInfo() 获取 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineState() 获取agent状态：OFFLINE,ONLINE
  * @method void setMachineState(string $MachineState) 设置agent状态：OFFLINE,ONLINE
  */
@@ -185,7 +183,6 @@ class JavaMemShellDetail extends AbstractModel
 
     /**
      * @var MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -218,7 +215,6 @@ class JavaMemShellDetail extends AbstractModel
      * @param string $EventDescription 事件描述
      * @param string $SecurityAdvice 安全建议
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineState agent状态：OFFLINE,ONLINE
      */
     function __construct()

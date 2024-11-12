@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSessionTime() 获取该命令所属会话的会话开始时间
  * @method void setSessionTime(string $SessionTime) 设置该命令所属会话的会话开始时间
  * @method string getSessTime() 获取该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfirmTime() 获取复核时间
  * @method void setConfirmTime(string $ConfirmTime) 设置复核时间
  * @method string getUserDepartmentId() 获取部门id
@@ -139,7 +137,6 @@ class SearchCommandResult extends AbstractModel
 
     /**
      * @var string 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $SessTime;
@@ -190,7 +187,6 @@ class SearchCommandResult extends AbstractModel
      * @param string $FromIp source ip
      * @param string $SessionTime 该命令所属会话的会话开始时间
      * @param string $SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfirmTime 复核时间
      * @param string $UserDepartmentId 部门id
      * @param string $UserDepartmentName 用户部门名称

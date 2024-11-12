@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型签署人</li>
 <li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
  * @method void setReleasedApprovers(array $ReleasedApprovers) 设置指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
@@ -61,7 +61,7 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型签署人</li>
 <li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
  * @method string getCallbackUrl() 获取签署完回调url，最大长度1000个字符
@@ -119,7 +119,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型签署人</li>
 <li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      */
@@ -178,7 +178,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型签署人</li>
 <li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符

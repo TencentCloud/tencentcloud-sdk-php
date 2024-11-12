@@ -539,6 +539,7 @@ LimitTypes取值范围：
  * @method Models\ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(Models\ModifyAddressesRenewFlagRequest $req) 调整EIP续费标识
  * @method Models\ModifyAssistantCidrResponse ModifyAssistantCidr(Models\ModifyAssistantCidrRequest $req) 本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
  * @method Models\ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(Models\ModifyBandwidthPackageAttributeRequest $req) 接口用于修改带宽包属性，包括带宽包名字等
+ * @method Models\ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(Models\ModifyBandwidthPackageBandwidthRequest $req) 接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
  * @method Models\ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(Models\ModifyCcnAttachedInstancesAttributeRequest $req) 修改CCN关联实例属性，目前仅修改备注description
  * @method Models\ModifyCcnAttributeResponse ModifyCcnAttribute(Models\ModifyCcnAttributeRequest $req) 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
  * @method Models\ModifyCcnRegionBandwidthLimitsTypeResponse ModifyCcnRegionBandwidthLimitsType(Models\ModifyCcnRegionBandwidthLimitsTypeRequest $req) 本接口（ModifyCcnRegionBandwidthLimitsType）用于修改后付费云联网实例修改带宽限速策略。

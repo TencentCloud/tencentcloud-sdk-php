@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScope() 获取1 全部旗舰版主机，0 InstanceIds列表主机
  * @method void setScope(integer $Scope) 设置1 全部旗舰版主机，0 InstanceIds列表主机
  * @method array getInstanceIds() 获取自选主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置自选主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludeInstanceIds() 获取自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) 设置自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoInclude() 获取新增资产自动包含 0 不包含 1包含
  * @method void setAutoInclude(integer $AutoInclude) 设置新增资产自动包含 0 不包含 1包含
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,13 +54,11 @@ class DescribeNetAttackSettingResponse extends AbstractModel
 
     /**
      * @var array 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
     /**
      * @var array 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeInstanceIds;
 
@@ -83,9 +77,7 @@ class DescribeNetAttackSettingResponse extends AbstractModel
      * @param integer $NetAttackAlarmStatus 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
      * @param integer $Scope 1 全部旗舰版主机，0 InstanceIds列表主机
      * @param array $InstanceIds 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeInstanceIds 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoInclude 新增资产自动包含 0 不包含 1包含
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

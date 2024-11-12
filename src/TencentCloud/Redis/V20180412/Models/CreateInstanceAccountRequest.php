@@ -29,12 +29,12 @@ use TencentCloud\Common\AbstractModel;
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
  * @method string getAccountPassword() 获取设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,32]。
+- 字符个数为[8,64]。
 - 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
 - 不能以"/"开头。
 
  * @method void setAccountPassword(string $AccountPassword) 设置设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,32]。
+- 字符个数为[8,64]。
 - 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
 - 不能以"/"开头。
 
@@ -69,7 +69,7 @@ class CreateInstanceAccountRequest extends AbstractModel
 
     /**
      * @var string 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,32]。
+- 字符个数为[8,64]。
 - 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
 - 不能以"/"开头。
 
@@ -101,7 +101,7 @@ class CreateInstanceAccountRequest extends AbstractModel
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
      * @param string $AccountPassword 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,32]。
+- 字符个数为[8,64]。
 - 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
 - 不能以"/"开头。
 

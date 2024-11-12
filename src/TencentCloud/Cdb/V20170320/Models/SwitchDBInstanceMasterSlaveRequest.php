@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceSwitch(boolean $ForceSwitch) 设置是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
  * @method boolean getWaitSwitch() 获取是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
  * @method void setWaitSwitch(boolean $WaitSwitch) 设置是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
- * @method string getDstNodeId() 获取集群版实例指定节点id发起主从切换。
- * @method void setDstNodeId(string $DstNodeId) 设置集群版实例指定节点id发起主从切换。
+ * @method string getDstNodeId() 获取集群版实例指定节点 ID 发起主从切换。
+ * @method void setDstNodeId(string $DstNodeId) 设置集群版实例指定节点 ID 发起主从切换。
  */
 class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
-     * @var string 集群版实例指定节点id发起主从切换。
+     * @var string 集群版实例指定节点 ID 发起主从切换。
      */
     public $DstNodeId;
 
@@ -63,7 +63,7 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
      * @param string $DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
      * @param boolean $ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
      * @param boolean $WaitSwitch 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
-     * @param string $DstNodeId 集群版实例指定节点id发起主从切换。
+     * @param string $DstNodeId 集群版实例指定节点 ID 发起主从切换。
      */
     function __construct()
     {

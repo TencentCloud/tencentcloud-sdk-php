@@ -40,7 +40,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\CreateReplicationGroupResponse CreateReplicationGroup(Models\CreateReplicationGroupRequest $req) 该接口（CreateReplicationGroup）用于创建复制组。
  * @method Models\DeleteInstanceAccountResponse DeleteInstanceAccount(Models\DeleteInstanceAccountRequest $req) 删除实例子账号
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 删除参数模板
- * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 移除复制组成员 注：接口下线中，请使用 RemoveReplicationInstance
+ * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 本接口（DescribeAutoBackupConfig）用于获取自动备份配置规则。
  * @method Models\DescribeBackupDetailResponse DescribeBackupDetail(Models\DescribeBackupDetailRequest $req) 本接口（DescribeBackupDetail）用于查询实例的备份信息详情。
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) 本接口（DescribeBackupDownloadRestriction）用于查询当前地域数据库备份文件的下载地址。

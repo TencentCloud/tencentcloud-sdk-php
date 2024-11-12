@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCity() 获取攻击源ip地址所在城市
  * @method void setCity(string $City) 设置攻击源ip地址所在城市
  * @method array getSourcePort() 获取攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourcePort(array $SourcePort) 设置攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建事件时间
  * @method void setCreateTime(string $CreateTime) 设置创建事件时间
  * @method string getMergeTime() 获取更新事件时间
@@ -71,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExceptionPstree() 获取主机失陷事件进程树(json格式 WeDetect特有)
  * @method void setExceptionPstree(string $ExceptionPstree) 设置主机失陷事件进程树(json格式 WeDetect特有)
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -129,7 +125,6 @@ class VulDefenceEventDetail extends AbstractModel
 
     /**
      * @var array 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourcePort;
 
@@ -200,7 +195,6 @@ class VulDefenceEventDetail extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -216,7 +210,6 @@ class VulDefenceEventDetail extends AbstractModel
      * @param string $SourceIp 攻击源ip
      * @param string $City 攻击源ip地址所在城市
      * @param array $SourcePort 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建事件时间
      * @param string $MergeTime 更新事件时间
      * @param integer $Count 事件发生次数
@@ -231,7 +224,6 @@ class VulDefenceEventDetail extends AbstractModel
      * @param string $EventDetail 漏洞ID相关的事件详情(json array格式 rasp特有)
      * @param string $ExceptionPstree 主机失陷事件进程树(json格式 WeDetect特有)
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 批量添加白名单：重复情况重复列表实体
  *
  * @method string getQuuid() 获取Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取Id
  * @method void setId(integer $Id) 设置Id
  */
@@ -35,13 +31,11 @@ class DuplicateHosts extends AbstractModel
 {
     /**
      * @var string Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var string Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
@@ -52,9 +46,7 @@ class DuplicateHosts extends AbstractModel
 
     /**
      * @param string $Quuid Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id Id
      */
     function __construct()

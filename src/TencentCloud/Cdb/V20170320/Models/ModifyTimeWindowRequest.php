@@ -23,9 +23,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getTimeRanges() 获取修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
  * @method void setTimeRanges(array $TimeRanges) 设置修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
- * @method array getWeekdays() 获取指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
- * @method void setWeekdays(array $Weekdays) 设置指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+ * @method array getWeekdays() 获取指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
+ * @method void setWeekdays(array $Weekdays) 设置指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
  * @method integer getMaxDelayTime() 获取数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
  */
@@ -38,11 +58,21 @@ class ModifyTimeWindowRequest extends AbstractModel
 
     /**
      * @var array 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public $TimeRanges;
 
     /**
-     * @var array 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * @var array 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public $Weekdays;
 
@@ -54,7 +84,17 @@ class ModifyTimeWindowRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $TimeRanges 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
-     * @param array $Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+     * @param array $Weekdays 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
      * @param integer $MaxDelayTime 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
      */
     function __construct()

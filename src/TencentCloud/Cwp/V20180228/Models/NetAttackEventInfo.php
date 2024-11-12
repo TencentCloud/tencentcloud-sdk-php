@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取事件id
  * @method void setId(integer $Id) 设置事件id
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDstPort() 获取目标端口
  * @method void setDstPort(integer $DstPort) 设置目标端口
  * @method integer getCount() 获取攻击次数
@@ -59,25 +57,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPayVersion() 获取机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
  * @method void setPayVersion(integer $PayVersion) 设置机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
  * @method string getQuuid() 获取cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMergeTime() 获取攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMergeTime(string $MergeTime) 设置攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostOpType() 获取0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostOpType(integer $HostOpType) 设置0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostOpProcessTree() 获取进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostOpProcessTree(string $HostOpProcessTree) 设置进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAttackEventInfo extends AbstractModel
 {
@@ -153,7 +141,6 @@ class NetAttackEventInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -174,31 +161,26 @@ class NetAttackEventInfo extends AbstractModel
 
     /**
      * @var string cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var string 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MergeTime;
 
     /**
      * @var integer 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostOpType;
 
     /**
      * @var string 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostOpProcessTree;
 
@@ -218,20 +200,14 @@ class NetAttackEventInfo extends AbstractModel
      * @param string $Uuid 主机uuid
      * @param integer $Id 事件id
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DstPort 目标端口
      * @param integer $Count 攻击次数
      * @param integer $PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
      * @param string $Quuid cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MergeTime 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostOpType 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostOpProcessTree 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

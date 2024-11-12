@@ -23,33 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() 获取cvm id
  * @method void setQuuid(string $Quuid) 设置cvm id
  * @method string getHostName() 获取主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotName() 获取快照名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotId() 获取快照id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotId(string $SnapshotId) 设置快照id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取记录唯一id
  * @method void setId(integer $Id) 设置记录唯一id
  * @method integer getStatus() 获取快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
  * @method void setStatus(integer $Status) 设置快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
  * @method string getFailReason() 获取快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulFixStatusSnapshotInfo extends AbstractModel
 {
@@ -60,31 +48,26 @@ class VulFixStatusSnapshotInfo extends AbstractModel
 
     /**
      * @var string 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
     /**
      * @var string 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotName;
 
     /**
      * @var string 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 快照id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotId;
 
@@ -100,26 +83,19 @@ class VulFixStatusSnapshotInfo extends AbstractModel
 
     /**
      * @var string 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
     /**
      * @param string $Quuid cvm id
      * @param string $HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotName 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotId 快照id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 记录唯一id
      * @param integer $Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
      * @param string $FailReason 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

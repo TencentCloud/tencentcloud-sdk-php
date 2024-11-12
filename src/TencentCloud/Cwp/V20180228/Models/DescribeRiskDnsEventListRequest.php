@@ -20,7 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskDnsEventList请求参数结构体
  *
- * @method array getFilters() 获取<li>IpOrName - String - 是否必填：否 - 主机Ip或别名筛选</li>
+ * @method array getFilters() 获取<li>MachineName  主机名称
+
+
+
+InstanceID  实例ID  
+
+ 
+
+IP   内网IP或公网IP- 是否必填：否 - 主机Ip或别名筛选</li>
 <li>HostId - String - 是否必填：否 - 主机Id</li>
 <li>AgentId - String - 是否必填：否 - 客户端Id</li>
 <li>PolicyType - String - 是否必填：否 - 策略类型,0:系统策略1:用户自定义策略</li>
@@ -28,7 +36,15 @@ use TencentCloud\Common\AbstractModel;
 <li>HandleStatus - String - 是否必填：否 - 状态筛选0:待处理；2:信任；3:不信任</li>
 <li>BeginTime - String - 是否必填：否 - 最近访问开始时间</li>
 <li>EndTime - String - 是否必填：否 - 最近访问结束时间</li>
- * @method void setFilters(array $Filters) 设置<li>IpOrName - String - 是否必填：否 - 主机Ip或别名筛选</li>
+ * @method void setFilters(array $Filters) 设置<li>MachineName  主机名称
+
+
+
+InstanceID  实例ID  
+
+ 
+
+IP   内网IP或公网IP- 是否必填：否 - 主机Ip或别名筛选</li>
 <li>HostId - String - 是否必填：否 - 主机Id</li>
 <li>AgentId - String - 是否必填：否 - 客户端Id</li>
 <li>PolicyType - String - 是否必填：否 - 策略类型,0:系统策略1:用户自定义策略</li>
@@ -48,7 +64,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRiskDnsEventListRequest extends AbstractModel
 {
     /**
-     * @var array <li>IpOrName - String - 是否必填：否 - 主机Ip或别名筛选</li>
+     * @var array <li>MachineName  主机名称
+
+
+
+InstanceID  实例ID  
+
+ 
+
+IP   内网IP或公网IP- 是否必填：否 - 主机Ip或别名筛选</li>
 <li>HostId - String - 是否必填：否 - 主机Id</li>
 <li>AgentId - String - 是否必填：否 - 客户端Id</li>
 <li>PolicyType - String - 是否必填：否 - 策略类型,0:系统策略1:用户自定义策略</li>
@@ -80,7 +104,15 @@ class DescribeRiskDnsEventListRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $Filters <li>IpOrName - String - 是否必填：否 - 主机Ip或别名筛选</li>
+     * @param array $Filters <li>MachineName  主机名称
+
+
+
+InstanceID  实例ID  
+
+ 
+
+IP   内网IP或公网IP- 是否必填：否 - 主机Ip或别名筛选</li>
 <li>HostId - String - 是否必填：否 - 主机Id</li>
 <li>AgentId - String - 是否必填：否 - 客户端Id</li>
 <li>PolicyType - String - 是否必填：否 - 策略类型,0:系统策略1:用户自定义策略</li>

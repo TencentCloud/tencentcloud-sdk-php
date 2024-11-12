@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
  * @method array getTag() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取应用名称
  * @method void setName(string $Name) 设置应用名称
  * @method integer getType() 获取应用类型	
@@ -71,17 +69,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetAppBaseInfo extends AbstractModel
 {
@@ -117,7 +109,6 @@ class AssetAppBaseInfo extends AbstractModel
 
     /**
      * @var array 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -176,19 +167,16 @@ class AssetAppBaseInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 是否新增[0:否|1:是]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNew;
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -200,7 +188,6 @@ class AssetAppBaseInfo extends AbstractModel
      * @param string $Quuid 主机Quuid
      * @param integer $ProjectId 主机业务组ID
      * @param array $Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 应用名称
      * @param integer $Type 应用类型	
 1: 运维
@@ -219,11 +206,8 @@ class AssetAppBaseInfo extends AbstractModel
      * @param string $ConfigPath 配置文件路径
      * @param string $FirstTime 首次采集时间
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNew 是否新增[0:否|1:是]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

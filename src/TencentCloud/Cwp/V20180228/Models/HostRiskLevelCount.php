@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostId() 获取主机ID
  * @method void setHostId(string $HostId) 设置主机ID
  * @method string getHostName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSeriousCount() 获取严重个数
  * @method void setSeriousCount(integer $SeriousCount) 设置严重个数
  * @method integer getHighCount() 获取高危个数
@@ -44,7 +42,6 @@ class HostRiskLevelCount extends AbstractModel
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
@@ -71,7 +68,6 @@ class HostRiskLevelCount extends AbstractModel
     /**
      * @param string $HostId 主机ID
      * @param string $HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SeriousCount 严重个数
      * @param integer $HighCount 高危个数
      * @param integer $MediumCount 中危个数

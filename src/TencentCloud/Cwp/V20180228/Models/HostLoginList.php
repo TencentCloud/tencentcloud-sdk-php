@@ -22,96 +22,56 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取记录Id
  * @method void setId(integer $Id) 设置记录Id
- * @method string getUuid() 获取Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUuid(string $Uuid) 设置Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUuid() 获取主机Uuid
+ * @method void setUuid(string $Uuid) 设置主机Uuid
  * @method string getMachineIp() 获取主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineIp(string $MachineIp) 设置主机ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineName(string $MachineName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcIp() 获取来源ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIp(string $SrcIp) 设置来源ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
  * @method void setStatus(integer $Status) 设置1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
  * @method integer getCountry() 获取国家id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountry(integer $Country) 设置国家id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCity() 获取城市id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(integer $City) 设置城市id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProvince() 获取省份id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvince(integer $Province) 设置省份id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoginTime() 获取登录时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoginTime(string $LoginTime) 设置登录时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRiskArea() 获取是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRiskArea(integer $IsRiskArea) 设置是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRiskUser() 获取是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRiskUser(integer $IsRiskUser) 设置是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRiskTime() 获取是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRiskTime(integer $IsRiskTime) 设置是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRiskSrcIp() 获取是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRiskSrcIp(integer $IsRiskSrcIp) 设置是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevel() 获取危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取位置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置位置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostLoginList extends AbstractModel
 {
@@ -121,32 +81,27 @@ class HostLoginList extends AbstractModel
     public $Id;
 
     /**
-     * @var string Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主机Uuid
      */
     public $Uuid;
 
     /**
      * @var string 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineIp;
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineName;
 
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcIp;
 
@@ -157,55 +112,46 @@ class HostLoginList extends AbstractModel
 
     /**
      * @var integer 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Country;
 
     /**
      * @var integer 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
     /**
      * @var integer 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Province;
 
     /**
      * @var string 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoginTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var integer 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRiskArea;
 
     /**
      * @var integer 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRiskUser;
 
     /**
      * @var integer 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRiskTime;
 
     /**
      * @var integer 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRiskSrcIp;
 
@@ -213,19 +159,16 @@ class HostLoginList extends AbstractModel
      * @var integer 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var string 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
@@ -233,69 +176,46 @@ class HostLoginList extends AbstractModel
      * @var string 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var integer 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @param integer $Id 记录Id
-     * @param string $Uuid Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uuid 主机Uuid
      * @param string $MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
      * @param integer $Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoginTime 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

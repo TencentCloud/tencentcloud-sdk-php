@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getParam() 获取启动参数
  * @method void setParam(string $Param) 设置启动参数
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetDatabaseDetail extends AbstractModel
 {
@@ -162,7 +160,6 @@ class AssetDatabaseDetail extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -187,7 +184,6 @@ class AssetDatabaseDetail extends AbstractModel
      * @param string $BinPath 二进制路径
      * @param string $Param 启动参数
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

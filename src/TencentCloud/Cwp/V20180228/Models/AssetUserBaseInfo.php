@@ -71,19 +71,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPasswordStatus() 获取密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
  * @method void setPasswordStatus(integer $PasswordStatus) 设置密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method MachineExtraInfo getMachineExtraInfo() 获取
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetUserBaseInfo extends AbstractModel
 {
@@ -214,7 +210,6 @@ class AssetUserBaseInfo extends AbstractModel
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -231,7 +226,6 @@ class AssetUserBaseInfo extends AbstractModel
     /**
      * @var MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -262,12 +256,10 @@ class AssetUserBaseInfo extends AbstractModel
      * @param integer $PasswordLockDays 密码锁定时间：单位天, -1为永不锁定 999为空，仅linux
      * @param integer $PasswordStatus 密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

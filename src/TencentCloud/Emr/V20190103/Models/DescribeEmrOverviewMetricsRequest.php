@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getEnd() 获取结束时间
  * @method void setEnd(integer $End) 设置结束时间
- * @method string getMetric() 获取指标名
- * @method void setMetric(string $Metric) 设置指标名
+ * @method string getMetric() 获取指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
+ * @method void setMetric(string $Metric) 设置指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
  * @method string getInstanceId() 获取集群id
  * @method void setInstanceId(string $InstanceId) 设置集群id
  * @method string getDownsample() 获取粒度 30s-max 1m-max 1h-max等
@@ -43,7 +43,7 @@ class DescribeEmrOverviewMetricsRequest extends AbstractModel
     public $End;
 
     /**
-     * @var string 指标名
+     * @var string 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
      */
     public $Metric;
 
@@ -74,7 +74,7 @@ class DescribeEmrOverviewMetricsRequest extends AbstractModel
 
     /**
      * @param integer $End 结束时间
-     * @param string $Metric 指标名
+     * @param string $Metric 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
      * @param string $InstanceId 集群id
      * @param string $Downsample 粒度 30s-max 1m-max 1h-max等
      * @param integer $Start 起始时间，画饼状图时不传

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取ID 主键
  * @method void setId(integer $Id) 设置ID 主键
- * @method string getUuid() 获取云镜UUID
- * @method void setUuid(string $Uuid) 设置云镜UUID
- * @method string getQuuid() 获取主机ID
- * @method void setQuuid(string $Quuid) 设置主机ID
+ * @method string getUuid() 获取主机安全uuid
+ * @method void setUuid(string $Uuid) 设置主机安全uuid
+ * @method string getQuuid() 获取主机uuid
+ * @method void setQuuid(string $Quuid) 设置主机uuid
  * @method string getHostIp() 获取主机内网IP
  * @method void setHostIp(string $HostIp) 设置主机内网IP
  * @method string getDstIp() 获取目标IP
@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDetectBy() 获取检测方法
  * @method void setDetectBy(integer $DetectBy) 设置检测方法
  * @method string getPsTree() 获取进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPsTree(string $PsTree) 设置进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestScheme() 获取建议方案
  * @method void setSuggestScheme(string $SuggestScheme) 设置建议方案
  * @method string getHarmDescribe() 获取描述
@@ -85,12 +83,12 @@ class ReverseShellEventInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜UUID
+     * @var string 主机安全uuid
      */
     public $Uuid;
 
     /**
-     * @var string 主机ID
+     * @var string 主机uuid
      */
     public $Quuid;
 
@@ -176,7 +174,6 @@ class ReverseShellEventInfo extends AbstractModel
 
     /**
      * @var string 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PsTree;
 
@@ -217,8 +214,8 @@ class ReverseShellEventInfo extends AbstractModel
 
     /**
      * @param integer $Id ID 主键
-     * @param string $Uuid 云镜UUID
-     * @param string $Quuid 主机ID
+     * @param string $Uuid 主机安全uuid
+     * @param string $Quuid 主机uuid
      * @param string $HostIp 主机内网IP
      * @param string $DstIp 目标IP
      * @param integer $DstPort 目标端口
@@ -236,7 +233,6 @@ class ReverseShellEventInfo extends AbstractModel
      * @param string $MachineName 主机名
      * @param integer $DetectBy 检测方法
      * @param string $PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuggestScheme 建议方案
      * @param string $HarmDescribe 描述
      * @param array $Tags 标签

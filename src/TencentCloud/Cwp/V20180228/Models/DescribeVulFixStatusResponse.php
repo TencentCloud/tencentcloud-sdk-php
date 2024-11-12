@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulFixStatus返回参数结构体
  *
  * @method string getFixStartTime() 获取开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixStartTime(string $FixStartTime) 设置开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFixEndTime() 获取修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixEndTime(string $FixEndTime) 设置修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixSuccessCnt() 获取修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixSuccessCnt(integer $FixSuccessCnt) 设置修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixFailCnt() 获取修复失败的主机数
  * @method void setFixFailCnt(integer $FixFailCnt) 设置修复失败的主机数
  * @method integer getHostCnt() 获取主机总数
@@ -39,13 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFixId() 获取修复的任务id
  * @method void setFixId(integer $FixId) 设置修复的任务id
  * @method array getSnapshotList() 获取修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotList(array $SnapshotList) 设置修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVulFixList() 获取修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulFixList(array $VulFixList) 设置修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSnapshotProgress() 获取快照创建进度0-100
  * @method void setSnapshotProgress(integer $SnapshotProgress) 设置快照创建进度0-100
  * @method integer getFixProgress() 获取修复进度 0-100
@@ -55,13 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsRetrySnapshot() 获取快照是否是重试状态 0=非重试  1=重试
  * @method void setIsRetrySnapshot(integer $IsRetrySnapshot) 设置快照是否是重试状态 0=非重试  1=重试
  * @method integer getSnapshotFailCnt() 获取快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotFailCnt(integer $SnapshotFailCnt) 设置快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAllowRetry() 获取是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowRetry(integer $IsAllowRetry) 设置是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -69,19 +55,16 @@ class DescribeVulFixStatusResponse extends AbstractModel
 {
     /**
      * @var string 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixStartTime;
 
     /**
      * @var string 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixEndTime;
 
     /**
      * @var integer 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixSuccessCnt;
 
@@ -102,13 +85,11 @@ class DescribeVulFixStatusResponse extends AbstractModel
 
     /**
      * @var array 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotList;
 
     /**
      * @var array 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulFixList;
 
@@ -134,13 +115,11 @@ class DescribeVulFixStatusResponse extends AbstractModel
 
     /**
      * @var integer 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotFailCnt;
 
     /**
      * @var integer 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAllowRetry;
 
@@ -151,26 +130,19 @@ class DescribeVulFixStatusResponse extends AbstractModel
 
     /**
      * @param string $FixStartTime 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixEndTime 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixSuccessCnt 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixFailCnt 修复失败的主机数
      * @param integer $HostCnt 主机总数
      * @param integer $FixId 修复的任务id
      * @param array $SnapshotList 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VulFixList 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SnapshotProgress 快照创建进度0-100
      * @param integer $FixProgress 修复进度 0-100
      * @param integer $RemainingTime 预计剩余时间（单位秒）
      * @param integer $IsRetrySnapshot 快照是否是重试状态 0=非重试  1=重试
      * @param integer $SnapshotFailCnt 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAllowRetry 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

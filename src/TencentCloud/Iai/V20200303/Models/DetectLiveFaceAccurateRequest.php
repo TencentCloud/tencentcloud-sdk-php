@@ -20,52 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectLiveFaceAccurate请求参数结构体
  *
- * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getImage() 获取图片 base64 数据。
+- base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method void setImage(string $Image) 设置图片 base64 数据。
+- base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getUrl() 获取图片的 Url 。
+- 对应图片 base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
+- Url、Image必须提供一个，如果都提供，只使用 Url。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method void setUrl(string $Url) 设置图片的 Url 。
+- 对应图片 base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
+- Url、Image必须提供一个，如果都提供，只使用 Url。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
  */
 class DetectLiveFaceAccurateRequest extends AbstractModel
 {
     /**
-     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var string 图片 base64 数据。
+- base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var string 图片的 Url 。
+- 对应图片 base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
+- Url、Image必须提供一个，如果都提供，只使用 Url。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
 
@@ -75,18 +81,20 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $FaceModelVersion;
 
     /**
-     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片的宽高比请接近 3:4，手机拍摄比例最佳。
-人脸尺寸大于100X100像素。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $Image 图片 base64 数据。
+- base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $Url 图片的 Url 。
+- 对应图片 base64 编码后大小不可超过5M。
+- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
+- Url、Image必须提供一个，如果都提供，只使用 Url。 
+- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
+- 人脸尺寸大于100X100像素。
+- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
      */
     function __construct()

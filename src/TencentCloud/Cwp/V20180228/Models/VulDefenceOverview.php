@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getExceptionCount() 获取插件异常数
  * @method void setExceptionCount(integer $ExceptionCount) 设置插件异常数
  * @method array getAttackCounts() 获取每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackCounts(array $AttackCounts) 设置每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDefendCounts() 获取每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefendCounts(array $DefendCounts) 设置每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDate() 获取日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(array $Date) 设置日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDefenceOverview extends AbstractModel
 {
@@ -58,19 +52,16 @@ class VulDefenceOverview extends AbstractModel
 
     /**
      * @var array 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackCounts;
 
     /**
      * @var array 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefendCounts;
 
     /**
      * @var array 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
@@ -79,11 +70,8 @@ class VulDefenceOverview extends AbstractModel
      * @param integer $DefendHostCount 已开启防御主机数
      * @param integer $ExceptionCount 插件异常数
      * @param array $AttackCounts 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DefendCounts 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

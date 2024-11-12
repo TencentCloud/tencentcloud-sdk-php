@@ -18,20 +18,28 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCloudProtectServiceOrderRecord请求参数结构体
+ * 云服务器类型机器数量
  *
- * @method array getResourceIds() 获取对应云护航服务的资源ID
- * @method void setResourceIds(array $ResourceIds) 设置对应云护航服务的资源ID
+ * @method integer getCloudFrom() 获取云服务器类型
+ * @method void setCloudFrom(integer $CloudFrom) 设置云服务器类型
+ * @method integer getMachineCnt() 获取机器数量
+ * @method void setMachineCnt(integer $MachineCnt) 设置机器数量
  */
-class CreateCloudProtectServiceOrderRecordRequest extends AbstractModel
+class CloudFromCnt extends AbstractModel
 {
     /**
-     * @var array 对应云护航服务的资源ID
+     * @var integer 云服务器类型
      */
-    public $ResourceIds;
+    public $CloudFrom;
 
     /**
-     * @param array $ResourceIds 对应云护航服务的资源ID
+     * @var integer 机器数量
+     */
+    public $MachineCnt;
+
+    /**
+     * @param integer $CloudFrom 云服务器类型
+     * @param integer $MachineCnt 机器数量
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class CreateCloudProtectServiceOrderRecordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists("CloudFrom",$param) and $param["CloudFrom"] !== null) {
+            $this->CloudFrom = $param["CloudFrom"];
+        }
+
+        if (array_key_exists("MachineCnt",$param) and $param["MachineCnt"] !== null) {
+            $this->MachineCnt = $param["MachineCnt"];
         }
     }
 }

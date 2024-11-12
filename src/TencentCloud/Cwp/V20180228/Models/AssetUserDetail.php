@@ -75,13 +75,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPasswordChangeType() 获取密码修改设置：0-不可修改，1-可修改
  * @method void setPasswordChangeType(integer $PasswordChangeType) 设置密码修改设置：0-不可修改，1-可修改
  * @method array getKeys() 获取用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetUserDetail extends AbstractModel
 {
@@ -222,13 +218,11 @@ class AssetUserDetail extends AbstractModel
 
     /**
      * @var array 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -261,9 +255,7 @@ class AssetUserDetail extends AbstractModel
      * @param integer $PasswordWarnDays 密码过期提醒：单位天
      * @param integer $PasswordChangeType 密码修改设置：0-不可修改，1-可修改
      * @param array $Keys 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

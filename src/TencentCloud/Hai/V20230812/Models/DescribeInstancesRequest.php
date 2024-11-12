@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例元组
  * @method void setInstanceIds(array $InstanceIds) 设置实例元组
- * @method array getFilters() 获取描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
- * @method void setFilters(array $Filters) 设置描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
+ * @method array getFilters() 获取描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+ * @method void setFilters(array $Filters) 设置描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
  * @method integer getOffset() 获取偏移量，默认为0
 
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
@@ -39,7 +39,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
+     * @var array 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
      */
     public $Filters;
 
@@ -56,7 +56,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 实例元组
-     * @param array $Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
+     * @param array $Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
      * @param integer $Offset 偏移量，默认为0
 
      * @param integer $Limit 返回量，默认为20

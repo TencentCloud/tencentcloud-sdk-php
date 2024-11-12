@@ -33,53 +33,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleName() 获取所属规则
  * @method void setRuleName(string $RuleName) 设置所属规则
  * @method string getDetectResultDesc() 获取检测结果描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectResultDesc(string $DetectResultDesc) 设置检测结果描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取危险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置危险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDetectStatus() 获取检测状态：0 未通过，1：忽略，3：通过，5：检测中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectStatus(integer $DetectStatus) 设置检测状态：0 未通过，1：忽略，3：通过，5：检测中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostId() 获取主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostId(string $HostId) 设置主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanIp() 获取外网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanIp(string $WanIp) 设置外网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取第一次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTime(string $FirstTime) 设置第一次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTime() 获取最近出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTime(string $LastTime) 设置最近出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCanBeFixed() 获取是否可以修复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanBeFixed(integer $CanBeFixed) 设置是否可以修复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机安全uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机安全uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineItem extends AbstractModel
 {
@@ -115,73 +91,61 @@ class BaselineItem extends AbstractModel
 
     /**
      * @var string 检测结果描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectResultDesc;
 
     /**
      * @var integer 危险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 检测状态：0 未通过，1：忽略，3：通过，5：检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectStatus;
 
     /**
      * @var string 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostId;
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
     /**
      * @var string 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanIp;
 
     /**
      * @var string 第一次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTime;
 
     /**
      * @var string 最近出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTime;
 
     /**
      * @var integer 是否可以修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanBeFixed;
 
     /**
      * @var string 主机安全uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -193,29 +157,17 @@ class BaselineItem extends AbstractModel
      * @param string $FixMethod 修复方法
      * @param string $RuleName 所属规则
      * @param string $DetectResultDesc 检测结果描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 危险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DetectStatus 检测状态：0 未通过，1：忽略，3：通过，5：检测中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostId 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanIp 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 第一次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTime 最近出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CanBeFixed 是否可以修复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机安全uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

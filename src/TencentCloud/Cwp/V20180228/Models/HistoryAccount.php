@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineIp(string $MachineIp) 设置主机内网IP。
  * @method string getMachineName() 获取主机名。
  * @method void setMachineName(string $MachineName) 设置主机名。
- * @method string getUsername() 获取帐号名。
- * @method void setUsername(string $Username) 设置帐号名。
- * @method string getModifyType() 获取帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
- * @method void setModifyType(string $ModifyType) 设置帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+ * @method string getUsername() 获取账号名。
+ * @method void setUsername(string $Username) 设置账号名。
+ * @method string getModifyType() 获取账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
+ * @method void setModifyType(string $ModifyType) 设置账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
  * @method string getModifyTime() 获取变更时间。
  * @method void setModifyTime(string $ModifyTime) 设置变更时间。
  */
@@ -64,15 +64,15 @@ class HistoryAccount extends AbstractModel
     public $MachineName;
 
     /**
-     * @var string 帐号名。
+     * @var string 账号名。
      */
     public $Username;
 
     /**
-     * @var string 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+     * @var string 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
      */
     public $ModifyType;
 
@@ -86,11 +86,11 @@ class HistoryAccount extends AbstractModel
      * @param string $Uuid 主机安全客户端唯一Uuid。
      * @param string $MachineIp 主机内网IP。
      * @param string $MachineName 主机名。
-     * @param string $Username 帐号名。
-     * @param string $ModifyType 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+     * @param string $Username 账号名。
+     * @param string $ModifyType 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
      * @param string $ModifyTime 变更时间。
      */
     function __construct()

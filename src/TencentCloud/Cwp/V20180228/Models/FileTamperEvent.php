@@ -79,13 +79,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetPermission() 获取目标文件权限
  * @method void setTargetPermission(string $TargetPermission) 设置目标文件权限
  * @method string getTargetModifyTime() 获取目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetModifyTime(string $TargetModifyTime) 设置目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetCreatTime() 获取目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetCreatTime(string $TargetCreatTime) 设置目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExePid() 获取进程pid
  * @method void setExePid(integer $ExePid) 设置进程pid
  * @method string getTargetName() 获取文件名称
@@ -95,21 +91,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取风险等级 0：无， 1: 高危， 2:中危， 3: 低危
  * @method void setLevel(integer $Level) 设置风险等级 0：无， 1: 高危， 2:中危， 3: 低危
  * @method string getExeName() 获取进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExeName(string $ExeName) 设置进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileAction() 获取文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileAction(string $FileAction) 设置文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperEvent extends AbstractModel
 {
@@ -260,13 +250,11 @@ class FileTamperEvent extends AbstractModel
 
     /**
      * @var string 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetModifyTime;
 
     /**
      * @var string 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetCreatTime;
 
@@ -292,13 +280,11 @@ class FileTamperEvent extends AbstractModel
 
     /**
      * @var string 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExeName;
 
     /**
      * @var MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -306,7 +292,6 @@ class FileTamperEvent extends AbstractModel
      * @var string 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileAction;
 
@@ -341,21 +326,16 @@ class FileTamperEvent extends AbstractModel
      * @param integer $TargetSize 目标文件大小
      * @param string $TargetPermission 目标文件权限
      * @param string $TargetModifyTime 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetCreatTime 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExePid 进程pid
      * @param string $TargetName 文件名称
      * @param string $Reference 参考链接
      * @param integer $Level 风险等级 0：无， 1: 高危， 2:中危， 3: 低危
      * @param string $ExeName 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileAction 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

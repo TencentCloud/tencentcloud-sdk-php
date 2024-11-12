@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFail() 获取扫描失败
  * @method void setFail(string $Fail) 设置扫描失败
  * @method string getStop() 获取扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStop(string $Stop) 设置扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskStatus extends AbstractModel
 {
@@ -50,7 +48,6 @@ class TaskStatus extends AbstractModel
 
     /**
      * @var string 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stop;
 
@@ -59,7 +56,6 @@ class TaskStatus extends AbstractModel
      * @param string $Ok 扫描终止（包含终止中）
      * @param string $Fail 扫描失败
      * @param string $Stop 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

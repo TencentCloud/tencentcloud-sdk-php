@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 服务器风险top5实体
  *
  * @method string getHostName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVulLevelList() 获取漏洞等级与数量统计列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulLevelList(array $VulLevelList) 设置漏洞等级与数量统计列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取top评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置top评分
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulHostTopInfo extends AbstractModel
 {
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var array 漏洞等级与数量统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulLevelList;
 
     /**
      * @var string 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var integer top评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @param string $HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VulLevelList 漏洞等级与数量统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score top评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

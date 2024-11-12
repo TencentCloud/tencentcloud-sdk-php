@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 基线检测项top5
  *
  * @method integer getItemId() 获取检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemId(integer $ItemId) 设置检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemName() 获取检测项名字
  * @method void setItemName(string $ItemName) 设置检测项名字
  * @method integer getLevel() 获取风险等级
@@ -35,7 +33,6 @@ class BaselineRiskItem extends AbstractModel
 {
     /**
      * @var integer 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemId;
 
@@ -56,7 +53,6 @@ class BaselineRiskItem extends AbstractModel
 
     /**
      * @param integer $ItemId 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemName 检测项名字
      * @param integer $Level 风险等级
      * @param integer $HostCount 影响服务器数

@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModules() 获取被依赖模块
  * @method void setModules(string $Modules) 设置被依赖模块
  * @method array getParams() 获取参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParams(array $Params) 设置参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetCoreModuleDetail extends AbstractModel
 {
@@ -82,13 +78,11 @@ class AssetCoreModuleDetail extends AbstractModel
 
     /**
      * @var array 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -101,9 +95,7 @@ class AssetCoreModuleDetail extends AbstractModel
      * @param string $Processes 依赖进程
      * @param string $Modules 被依赖模块
      * @param array $Params 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

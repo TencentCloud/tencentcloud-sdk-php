@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNginxCommand() 获取Nginx安装命令
  * @method void setNginxCommand(string $NginxCommand) 设置Nginx安装命令
  * @method string getKeepAliveCommand() 获取Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepAliveCommand(string $KeepAliveCommand) 设置Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribePublicProxyInstallCommandResponse extends AbstractModel
 
     /**
      * @var string Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepAliveCommand;
 
@@ -50,7 +47,6 @@ class DescribePublicProxyInstallCommandResponse extends AbstractModel
     /**
      * @param string $NginxCommand Nginx安装命令
      * @param string $KeepAliveCommand Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

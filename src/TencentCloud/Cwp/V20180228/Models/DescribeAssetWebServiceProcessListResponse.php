@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetWebServiceProcessList返回参数结构体
  *
  * @method array getProcess() 获取进程列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(array $Process) 设置进程列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数
  * @method void setTotal(integer $Total) 设置总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeAssetWebServiceProcessListResponse extends AbstractModel
 {
     /**
      * @var array 进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
@@ -49,7 +46,6 @@ class DescribeAssetWebServiceProcessListResponse extends AbstractModel
 
     /**
      * @param array $Process 进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

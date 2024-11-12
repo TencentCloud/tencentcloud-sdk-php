@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRiskDnsList返回参数结构体
  *
  * @method array getRiskDnsList() 获取恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDnsList(array $RiskDnsList) 设置恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数量
  * @method void setTotalCount(integer $TotalCount) 设置总数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeRiskDnsListResponse extends AbstractModel
 {
     /**
      * @var array 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDnsList;
 
@@ -49,7 +46,6 @@ class DescribeRiskDnsListResponse extends AbstractModel
 
     /**
      * @param array $RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

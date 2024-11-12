@@ -23,25 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostId() 获取主机Id
  * @method void setHostId(string $HostId) 设置主机Id
  * @method string getHostName() 获取主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostTag() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostTag(string $HostTag) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanIp() 获取外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanIp(string $WanIp) 设置外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineHost extends AbstractModel
 {
@@ -52,46 +42,36 @@ class BaselineHost extends AbstractModel
 
     /**
      * @var string 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostTag;
 
     /**
      * @var string 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
     /**
      * @var string 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanIp;
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @param string $HostId 主机Id
      * @param string $HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostTag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanIp 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

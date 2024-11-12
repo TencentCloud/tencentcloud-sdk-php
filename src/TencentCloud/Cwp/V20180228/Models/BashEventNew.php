@@ -47,37 +47,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() 获取主机名
  * @method void setMachineName(string $MachineName) 设置主机名
  * @method integer getDetectBy() 获取0: bash日志 1: 实时监控(雷霆版)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectBy(integer $DetectBy) 设置0: bash日志 1: 实时监控(雷霆版)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPid() 获取进程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(string $Pid) 设置进程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExe() 获取进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExe(string $Exe) 设置进程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCategory() 获取规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleCategory(integer $RuleCategory) 设置规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegexBashCmd() 获取自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexBashCmd(string $RegexBashCmd) 设置自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMachineType() 获取0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineType(integer $MachineType) 设置0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashEventNew extends AbstractModel
 {
@@ -148,49 +132,41 @@ class BashEventNew extends AbstractModel
 
     /**
      * @var integer 0: bash日志 1: 实时监控(雷霆版)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectBy;
 
     /**
      * @var string 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
 
     /**
      * @var string 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exe;
 
     /**
      * @var string 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var integer 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleCategory;
 
     /**
      * @var string 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegexBashCmd;
 
     /**
      * @var integer 0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineType;
 
     /**
      * @var MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -209,21 +185,13 @@ class BashEventNew extends AbstractModel
      * @param string $CreateTime 发生时间
      * @param string $MachineName 主机名
      * @param integer $DetectBy 0: bash日志 1: 实时监控(雷霆版)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pid 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Exe 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCategory 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegexBashCmd 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MachineType 0:普通 1:专业版 2:旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

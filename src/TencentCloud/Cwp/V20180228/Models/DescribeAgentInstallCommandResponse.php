@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getWindowsDownloadUrl() 获取windows版agent下载链接
  * @method void setWindowsDownloadUrl(string $WindowsDownloadUrl) 设置windows版agent下载链接
  * @method string getARMCommand() 获取Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setARMCommand(string $ARMCommand) 设置Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -66,7 +64,6 @@ class DescribeAgentInstallCommandResponse extends AbstractModel
 
     /**
      * @var string Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ARMCommand;
 
@@ -82,7 +79,6 @@ class DescribeAgentInstallCommandResponse extends AbstractModel
      * @param string $WindowsStepTwo windows系统安装命令第二步（windows2003）
      * @param string $WindowsDownloadUrl windows版agent下载链接
      * @param string $ARMCommand Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHostRange() 获取告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
  * @method void setHostRange(integer $HostRange) 设置告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
  * @method array getItemLabels() 获取项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemLabels(array $ItemLabels) 设置项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuuids() 获取机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(array $Quuids) 设置机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItemLabelIds() 获取项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemLabelIds(array $ItemLabelIds) 设置项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludedQuuids() 获取需排除的机器列表
  * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,25 +44,21 @@ class DescribeWarningHostConfigResponse extends AbstractModel
 
     /**
      * @var array 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemLabels;
 
     /**
      * @var array 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
     /**
      * @var integer 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemLabelIds;
 
@@ -87,13 +75,9 @@ class DescribeWarningHostConfigResponse extends AbstractModel
     /**
      * @param integer $HostRange 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
      * @param array $ItemLabels 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Quuids 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ItemLabelIds 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludedQuuids 需排除的机器列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

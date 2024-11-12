@@ -37,81 +37,43 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:严重
  * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:严重
  * @method integer getFrom() 获取废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrom(integer $From) 设置废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescript() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescript(string $Descript) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublishTimeWisteria() 获取废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishTimeWisteria(string $PublishTimeWisteria) 设置废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameWisteria() 获取废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameWisteria(string $NameWisteria) 设置废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescriptWisteria() 获取废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescriptWisteria(string $DescriptWisteria) 设置废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusStr() 获取聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusStr(string $StatusStr) 设置聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCveId() 获取cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCveId(string $CveId) 设置cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCvssScore() 获取CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvssScore(float $CvssScore) 设置CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabels() 获取漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFixSwitch() 获取是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixSwitch(integer $FixSwitch) 设置是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskId() 获取最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportDefense() 获取是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportDefense(integer $IsSupportDefense) 设置是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefenseAttackCount() 获取已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstAppearTime() 获取首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstAppearTime(string $FirstAppearTime) 设置首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCategory() 获取漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCategory(integer $VulCategory) 设置漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackLevel() 获取攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFixNoNeedRestart() 获取漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixNoNeedRestart(boolean $FixNoNeedRestart) 设置漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMethod() 获取检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(integer $Method) 设置检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulFixSwitch() 获取漏洞是否支持修复 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulFixSwitch(integer $VulFixSwitch) 设置漏洞是否支持修复 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -157,115 +119,96 @@ class VulInfoList extends AbstractModel
 
     /**
      * @var integer 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $From;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Descript;
 
     /**
      * @var string 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishTimeWisteria;
 
     /**
      * @var string 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameWisteria;
 
     /**
      * @var string 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DescriptWisteria;
 
     /**
      * @var string 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusStr;
 
     /**
      * @var string cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveId;
 
     /**
      * @var float CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvssScore;
 
     /**
      * @var string 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var integer 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixSwitch;
 
     /**
      * @var integer 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var integer 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportDefense;
 
     /**
      * @var integer 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenseAttackCount;
 
     /**
      * @var string 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstAppearTime;
 
     /**
      * @var integer 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCategory;
 
     /**
      * @var integer 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackLevel;
 
     /**
      * @var boolean 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixNoNeedRestart;
 
     /**
      * @var integer 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var integer 漏洞是否支持修复 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulFixSwitch;
 
@@ -279,43 +222,24 @@ class VulInfoList extends AbstractModel
      * @param integer $HostCount 影响主机数
      * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:严重
      * @param integer $From 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Descript 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublishTimeWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DescriptWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusStr 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CveId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CvssScore CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstAppearTime 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLevel 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FixNoNeedRestart 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Method 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulFixSwitch 漏洞是否支持修复 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * ExportVulList返回参数结构体
  *
  * @method string getDownloadUrl() 获取导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取导出文件Id 可通过ExportTasks接口下载
  * @method void setTaskId(string $TaskId) 设置导出文件Id 可通过ExportTasks接口下载
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class ExportVulListResponse extends AbstractModel
 {
     /**
      * @var string 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
@@ -49,7 +46,6 @@ class ExportVulListResponse extends AbstractModel
 
     /**
      * @param string $DownloadUrl 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 导出文件Id 可通过ExportTasks接口下载
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

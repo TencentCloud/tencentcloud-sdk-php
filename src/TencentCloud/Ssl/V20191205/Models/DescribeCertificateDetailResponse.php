@@ -184,6 +184,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDvRevokeAuthDetail(array $DvRevokeAuthDetail) 设置DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCertChainInfo() 获取证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertChainInfo(array $CertChainInfo) 设置证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -436,6 +440,12 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $DvRevokeAuthDetail;
 
     /**
+     * @var array 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertChainInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -522,6 +532,8 @@ class DescribeCertificateDetailResponse extends AbstractModel
      * @param string $EncryptAlgorithm 证书算法
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DvRevokeAuthDetail DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CertChainInfo 证书链信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -713,6 +725,15 @@ class DescribeCertificateDetailResponse extends AbstractModel
                 $obj = new DvAuths();
                 $obj->deserialize($value);
                 array_push($this->DvRevokeAuthDetail, $obj);
+            }
+        }
+
+        if (array_key_exists("CertChainInfo",$param) and $param["CertChainInfo"] !== null) {
+            $this->CertChainInfo = [];
+            foreach ($param["CertChainInfo"] as $key => $value){
+                $obj = new CertBasicInfo();
+                $obj->deserialize($value);
+                array_push($this->CertChainInfo, $obj);
             }
         }
 

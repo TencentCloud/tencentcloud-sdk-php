@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetLoadInfo返回参数结构体
  *
  * @method AssetLoadSummary getCpuLoad() 获取系统负载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuLoad(AssetLoadSummary $CpuLoad) 设置系统负载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AssetLoadSummary getMemLoad() 获取内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemLoad(AssetLoadSummary $MemLoad) 设置内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AssetLoadSummary getDiskLoad() 获取硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskLoad(AssetLoadSummary $DiskLoad) 设置硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeAssetLoadInfoResponse extends AbstractModel
 {
     /**
      * @var AssetLoadSummary 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuLoad;
 
     /**
      * @var AssetLoadSummary 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemLoad;
 
     /**
      * @var AssetLoadSummary 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskLoad;
 
@@ -62,11 +53,8 @@ class DescribeAssetLoadInfoResponse extends AbstractModel
 
     /**
      * @param AssetLoadSummary $CpuLoad 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetLoadSummary $MemLoad 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetLoadSummary $DiskLoad 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

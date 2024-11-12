@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 攻击趋势统计数据
  *
  * @method string getDateTime() 获取时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDateTime(string $DateTime) 设置时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackCount() 获取攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackCount(integer $AttackCount) 设置攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTryAttackCount() 获取尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTryAttackCount(integer $TryAttackCount) 设置尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuccAttackCount() 获取攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccAttackCount(integer $SuccAttackCount) 设置攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAttackTrend extends AbstractModel
 {
     /**
      * @var string 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DateTime;
 
     /**
      * @var integer 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackCount;
 
     /**
      * @var integer 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TryAttackCount;
 
     /**
      * @var integer 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccAttackCount;
 
     /**
      * @param string $DateTime 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackCount 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TryAttackCount 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccAttackCount 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

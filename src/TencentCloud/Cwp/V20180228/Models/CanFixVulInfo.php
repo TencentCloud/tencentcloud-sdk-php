@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 批量修复漏洞二次弹窗 漏洞主机信息
  *
  * @method integer getVulId() 获取漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulId(integer $VulId) 设置漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulName() 获取漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulName(string $VulName) 设置漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostList() 获取该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostList(array $HostList) 设置该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFixTag() 获取修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixTag(array $FixTag) 设置修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCategory() 获取漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCategory(integer $VulCategory) 设置漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CanFixVulInfo extends AbstractModel
 {
     /**
      * @var integer 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulId;
 
     /**
      * @var string 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulName;
 
     /**
      * @var array 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostList;
 
     /**
      * @var array 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixTag;
 
     /**
      * @var integer 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCategory;
 
     /**
      * @param integer $VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostList 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FixTag 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

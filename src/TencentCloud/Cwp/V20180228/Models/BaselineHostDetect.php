@@ -41,13 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLastTime() 获取最后检测时间
  * @method void setLastTime(string $LastTime) 设置最后检测时间
  * @method string getUuid() 获取主机安全UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机安全UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineHostDetect extends AbstractModel
 {
@@ -103,13 +99,11 @@ class BaselineHostDetect extends AbstractModel
 
     /**
      * @var string 主机安全UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -125,9 +119,7 @@ class BaselineHostDetect extends AbstractModel
      * @param string $FirstTime 首次检测时间
      * @param string $LastTime 最后检测时间
      * @param string $Uuid 主机安全UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

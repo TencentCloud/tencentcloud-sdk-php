@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 眼睛信息
  *
  * @method AttributeItem getGlass() 获取识别是否佩戴眼镜。
-AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
+- AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
  * @method void setGlass(AttributeItem $Glass) 设置识别是否佩戴眼镜。
-AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
+- AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
  * @method AttributeItem getEyeOpen() 获取识别眼睛的睁开、闭合状态。
-AttributeItem对应的Type为 —— 0：睁开，1：闭眼
+- AttributeItem对应的Type为 —— 0：睁开，1：闭眼
  * @method void setEyeOpen(AttributeItem $EyeOpen) 设置识别眼睛的睁开、闭合状态。
-AttributeItem对应的Type为 —— 0：睁开，1：闭眼
+- AttributeItem对应的Type为 —— 0：睁开，1：闭眼
  * @method AttributeItem getEyelidType() 获取识别是否双眼皮。
-AttributeItem对应的Type为 —— 0：无，1：有。
+- AttributeItem对应的Type为 —— 0：无，1：有。
  * @method void setEyelidType(AttributeItem $EyelidType) 设置识别是否双眼皮。
-AttributeItem对应的Type为 —— 0：无，1：有。
+- AttributeItem对应的Type为 —— 0：无，1：有。
  * @method AttributeItem getEyeSize() 获取眼睛大小。
-AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
+- AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
  * @method void setEyeSize(AttributeItem $EyeSize) 设置眼睛大小。
-AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
+- AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
  */
 class Eye extends AbstractModel
 {
     /**
      * @var AttributeItem 识别是否佩戴眼镜。
-AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
+- AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
      */
     public $Glass;
 
     /**
      * @var AttributeItem 识别眼睛的睁开、闭合状态。
-AttributeItem对应的Type为 —— 0：睁开，1：闭眼
+- AttributeItem对应的Type为 —— 0：睁开，1：闭眼
      */
     public $EyeOpen;
 
     /**
      * @var AttributeItem 识别是否双眼皮。
-AttributeItem对应的Type为 —— 0：无，1：有。
+- AttributeItem对应的Type为 —— 0：无，1：有。
      */
     public $EyelidType;
 
     /**
      * @var AttributeItem 眼睛大小。
-AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
+- AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
      */
     public $EyeSize;
 
     /**
      * @param AttributeItem $Glass 识别是否佩戴眼镜。
-AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
+- AttributeItem对应的Type为 —— 0：无眼镜，1：普通眼镜，2：墨镜
      * @param AttributeItem $EyeOpen 识别眼睛的睁开、闭合状态。
-AttributeItem对应的Type为 —— 0：睁开，1：闭眼
+- AttributeItem对应的Type为 —— 0：睁开，1：闭眼
      * @param AttributeItem $EyelidType 识别是否双眼皮。
-AttributeItem对应的Type为 —— 0：无，1：有。
+- AttributeItem对应的Type为 —— 0：无，1：有。
      * @param AttributeItem $EyeSize 眼睛大小。
-AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
+- AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大眼睛。
      */
     function __construct()
     {

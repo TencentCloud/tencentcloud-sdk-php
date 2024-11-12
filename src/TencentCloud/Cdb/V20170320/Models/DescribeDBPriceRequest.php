@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。InstanceId为空时该参数为必填项。
  * @method integer getGoodsNum() 获取实例数量，默认值为 1，最小值 1，最大值为 100。InstanceId为空时该参数为必填项。
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为 1，最小值 1，最大值为 100。InstanceId为空时该参数为必填项。
- * @method integer getMemory() 获取实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
- * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
- * @method integer getVolume() 获取实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
- * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+ * @method integer getMemory() 获取实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
+ * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
+ * @method integer getVolume() 获取实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
+ * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
  * @method string getInstanceRole() 获取实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。InstanceId为空时该参数为必填项。
  * @method void setInstanceRole(string $InstanceRole) 设置实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。InstanceId为空时该参数为必填项。
  * @method string getPayType() 获取付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。InstanceId为空时该参数为必填项。
@@ -65,12 +65,12 @@ class DescribeDBPriceRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var integer 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+     * @var integer 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
      */
     public $Memory;
 
     /**
-     * @var integer 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+     * @var integer 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
      */
     public $Volume;
 
@@ -118,8 +118,8 @@ class DescribeDBPriceRequest extends AbstractModel
      * @param integer $Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      * @param string $Zone 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。InstanceId为空时该参数为必填项。
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。InstanceId为空时该参数为必填项。
-     * @param integer $Memory 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
-     * @param integer $Volume 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+     * @param integer $Memory 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
+     * @param integer $Volume 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。InstanceId为空时该参数为必填项。
      * @param string $PayType 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。InstanceId为空时该参数为必填项。
      * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。

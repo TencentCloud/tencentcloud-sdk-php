@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 安全播报文章详情
  *
  * @method string getTitle() 获取文章名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置文章名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGotoType() 获取跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGotoType(integer $GotoType) 设置跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubtitle() 获取副标题
  * @method void setSubtitle(string $Subtitle) 设置副标题
  * @method string getCreateTime() 获取发布时间
@@ -43,13 +39,11 @@ class BroadcastInfo extends AbstractModel
 {
     /**
      * @var string 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var integer 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GotoType;
 
@@ -80,9 +74,7 @@ class BroadcastInfo extends AbstractModel
 
     /**
      * @param string $Title 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GotoType 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Subtitle 副标题
      * @param string $CreateTime 发布时间
      * @param string $Content 富文本内容信息

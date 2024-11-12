@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 批量导入机器信息.
  *
  * @method string getMachineName() 获取机器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineName(string $MachineName) 设置机器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachinePublicIp() 获取机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachinePublicIp(string $MachinePublicIp) 设置机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachinePrivateIp() 获取机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachinePrivateIp(string $MachinePrivateIp) 设置机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMachineTag() 获取机器标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineTag(array $MachineTag) 设置机器标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUuid() 获取云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUuid(string $Uuid) 设置云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUuid() 获取主机Uuid
+ * @method void setUuid(string $Uuid) 设置主机Uuid
  * @method string getKernelVersion() 获取内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineStatus() 获取在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineStatus(string $MachineStatus) 设置在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LicenseOrder getLicenseOrder() 获取授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseOrder(LicenseOrder $LicenseOrder) 设置授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulNum() 获取漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulNum(integer $VulNum) 设置漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCloudTags() 获取云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceID() 获取机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EffectiveMachineInfo extends AbstractModel
 {
     /**
      * @var string 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineName;
 
     /**
      * @var string 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachinePublicIp;
 
     /**
      * @var string 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachinePrivateIp;
 
     /**
      * @var array 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineTag;
 
     /**
      * @var string 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
-     * @var string 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主机Uuid
      */
     public $Uuid;
 
     /**
      * @var string 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KernelVersion;
 
     /**
      * @var string 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineStatus;
 
     /**
      * @var LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseOrder;
 
     /**
      * @var integer 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulNum;
 
     /**
      * @var array 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var string 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
     /**
      * @param string $MachineName 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePublicIp 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePrivateIp 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MachineTag 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uuid 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uuid 主机Uuid
      * @param string $KernelVersion 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineStatus 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseOrder $LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulNum 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceID 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

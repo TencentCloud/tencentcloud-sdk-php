@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地址信息
  *
- * @method string getAddressTemplateId() 获取ipm-xxxxxxxx
- * @method void setAddressTemplateId(string $AddressTemplateId) 设置ipm-xxxxxxxx
+ * @method string getAddressTemplateId() 获取IP地址模板ID
+ * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板ID
  * @method string getAddressTemplateName() 获取IP模板名称
  * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP模板名称
  * @method string getFrom() 获取废弃字段
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AddressTemplateItem extends AbstractModel
 {
     /**
-     * @var string ipm-xxxxxxxx
+     * @var string IP地址模板ID
      */
     public $AddressTemplateId;
 
@@ -52,7 +52,7 @@ class AddressTemplateItem extends AbstractModel
     public $To;
 
     /**
-     * @param string $AddressTemplateId ipm-xxxxxxxx
+     * @param string $AddressTemplateId IP地址模板ID
      * @param string $AddressTemplateName IP模板名称
      * @param string $From 废弃字段
      * @param string $To 废弃字段

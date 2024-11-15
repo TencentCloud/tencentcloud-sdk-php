@@ -49,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置实例所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstNodeId() 获取实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstNodeId(string $InstNodeId) 设置实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstNodeRole() 获取节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstNodeRole(string $InstNodeRole) 设置节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInst extends AbstractModel
 {
@@ -103,13 +99,11 @@ class ProxyInst extends AbstractModel
 
     /**
      * @var string 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstNodeId;
 
     /**
      * @var string 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstNodeRole;
 
@@ -129,9 +123,7 @@ class ProxyInst extends AbstractModel
      * @param string $Zone 实例所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstNodeId 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstNodeRole 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

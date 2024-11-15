@@ -62,10 +62,16 @@ use TencentCloud\Common\AbstractModel;
 0为按量付费
  * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
+ * @method integer getFree() 获取（0=付费版；1=tsf受限免费版；2=免费版）
+ * @method void setFree(integer $Free) 设置（0=付费版；1=tsf受限免费版；2=免费版）
  * @method integer getIsRelatedDashboard() 获取是否关联dashboard： 0 关 1 开
  * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联dashboard： 0 关 1 开
  * @method string getDashboardTopicID() 获取dashboard ID
  * @method void setDashboardTopicID(string $DashboardTopicID) 设置dashboard ID
+ * @method integer getIsSqlInjectionAnalysis() 获取是否开启SQL注入检测
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启SQL注入检测
+ * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -167,6 +173,11 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var integer （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public $Free;
+
+    /**
      * @var integer 是否关联dashboard： 0 关 1 开
      */
     public $IsRelatedDashboard;
@@ -175,6 +186,16 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @var string dashboard ID
      */
     public $DashboardTopicID;
+
+    /**
+     * @var integer 是否开启SQL注入检测
+     */
+    public $IsSqlInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启组件漏洞检测
+     */
+    public $IsInstrumentationVulnerabilityScan;
 
     /**
      * @param string $InstanceId 实例ID
@@ -198,8 +219,11 @@ class ModifyApmInstanceRequest extends AbstractModel
 1为预付费
 0为按量付费
      * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
+     * @param integer $Free （0=付费版；1=tsf受限免费版；2=免费版）
      * @param integer $IsRelatedDashboard 是否关联dashboard： 0 关 1 开
      * @param string $DashboardTopicID dashboard ID
+     * @param integer $IsSqlInjectionAnalysis 是否开启SQL注入检测
+     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
      */
     function __construct()
     {
@@ -295,12 +319,24 @@ class ModifyApmInstanceRequest extends AbstractModel
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
         }
 
+        if (array_key_exists("Free",$param) and $param["Free"] !== null) {
+            $this->Free = $param["Free"];
+        }
+
         if (array_key_exists("IsRelatedDashboard",$param) and $param["IsRelatedDashboard"] !== null) {
             $this->IsRelatedDashboard = $param["IsRelatedDashboard"];
         }
 
         if (array_key_exists("DashboardTopicID",$param) and $param["DashboardTopicID"] !== null) {
             $this->DashboardTopicID = $param["DashboardTopicID"];
+        }
+
+        if (array_key_exists("IsSqlInjectionAnalysis",$param) and $param["IsSqlInjectionAnalysis"] !== null) {
+            $this->IsSqlInjectionAnalysis = $param["IsSqlInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsInstrumentationVulnerabilityScan",$param) and $param["IsInstrumentationVulnerabilityScan"] !== null) {
+            $this->IsInstrumentationVulnerabilityScan = $param["IsInstrumentationVulnerabilityScan"];
         }
     }
 }

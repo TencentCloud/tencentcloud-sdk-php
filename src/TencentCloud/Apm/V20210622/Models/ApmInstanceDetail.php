@@ -148,6 +148,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultTSF(integer $DefaultTSF) 设置是否tsf默认业务系统（0=否，1-是）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsRelatedDashboard() 获取是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDashboardTopicID() 获取dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSqlInjectionAnalysis() 获取是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -344,6 +360,30 @@ class ApmInstanceDetail extends AbstractModel
     public $DefaultTSF;
 
     /**
+     * @var integer 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsRelatedDashboard;
+
+    /**
+     * @var string dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DashboardTopicID;
+
+    /**
+     * @var integer 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsInstrumentationVulnerabilityScan;
+
+    /**
+     * @var integer 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSqlInjectionAnalysis;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -407,6 +447,14 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultTSF 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DashboardTopicID dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSqlInjectionAnalysis 是否开启SQL注入分析
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -553,6 +601,22 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("DefaultTSF",$param) and $param["DefaultTSF"] !== null) {
             $this->DefaultTSF = $param["DefaultTSF"];
+        }
+
+        if (array_key_exists("IsRelatedDashboard",$param) and $param["IsRelatedDashboard"] !== null) {
+            $this->IsRelatedDashboard = $param["IsRelatedDashboard"];
+        }
+
+        if (array_key_exists("DashboardTopicID",$param) and $param["DashboardTopicID"] !== null) {
+            $this->DashboardTopicID = $param["DashboardTopicID"];
+        }
+
+        if (array_key_exists("IsInstrumentationVulnerabilityScan",$param) and $param["IsInstrumentationVulnerabilityScan"] !== null) {
+            $this->IsInstrumentationVulnerabilityScan = $param["IsInstrumentationVulnerabilityScan"];
+        }
+
+        if (array_key_exists("IsSqlInjectionAnalysis",$param) and $param["IsSqlInjectionAnalysis"] !== null) {
+            $this->IsSqlInjectionAnalysis = $param["IsSqlInjectionAnalysis"];
         }
     }
 }

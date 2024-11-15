@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
+ * @method string getCustomParam() 获取自定义参数，联系后台使用
+
+ * @method void setCustomParam(string $CustomParam) 设置自定义参数，联系后台使用
+
  * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
  * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
  */
@@ -127,6 +131,12 @@ class STTConfig extends AbstractModel
     public $AlternativeLanguage;
 
     /**
+     * @var string 自定义参数，联系后台使用
+
+     */
+    public $CustomParam;
+
+    /**
      * @var integer 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
      */
     public $VadSilenceTime;
@@ -163,6 +173,8 @@ class STTConfig extends AbstractModel
      * @param array $AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
+     * @param string $CustomParam 自定义参数，联系后台使用
+
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
      */
     function __construct()
@@ -184,6 +196,10 @@ class STTConfig extends AbstractModel
 
         if (array_key_exists("AlternativeLanguage",$param) and $param["AlternativeLanguage"] !== null) {
             $this->AlternativeLanguage = $param["AlternativeLanguage"];
+        }
+
+        if (array_key_exists("CustomParam",$param) and $param["CustomParam"] !== null) {
+            $this->CustomParam = $param["CustomParam"];
         }
 
         if (array_key_exists("VadSilenceTime",$param) and $param["VadSilenceTime"] !== null) {

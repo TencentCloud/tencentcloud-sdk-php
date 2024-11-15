@@ -20,14 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudProductLogTasks请求参数结构体
  *
-
+ * @method integer getOffset() 获取分页的偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
+ * @method integer getLimit() 获取分页单页限制数目，默认值为100，最大值100。
+ * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为100，最大值100。
+ * @method array getFilters() 获取- assumerName
+  - 按照【云产品标识】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
+- logType
+  - 按照【日志类型】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+- instanceId
+  - 按照【实例ID】进行过滤。
+  - 类型：String
+  - 必选：否
+ * @method void setFilters(array $Filters) 设置- assumerName
+  - 按照【云产品标识】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
+- logType
+  - 按照【日志类型】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+- instanceId
+  - 按照【实例ID】进行过滤。
+  - 类型：String
+  - 必选：否
  */
 class DescribeCloudProductLogTasksRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 分页的偏移量，默认值为0。
+     */
+    public $Offset;
 
     /**
+     * @var integer 分页单页限制数目，默认值为100，最大值100。
+     */
+    public $Limit;
 
+    /**
+     * @var array - assumerName
+  - 按照【云产品标识】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
+- logType
+  - 按照【日志类型】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+- instanceId
+  - 按照【实例ID】进行过滤。
+  - 类型：String
+  - 必选：否
+     */
+    public $Filters;
+
+    /**
+     * @param integer $Offset 分页的偏移量，默认值为0。
+     * @param integer $Limit 分页单页限制数目，默认值为100，最大值100。
+     * @param array $Filters - assumerName
+  - 按照【云产品标识】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
+- logType
+  - 按照【日志类型】进行过滤。
+  - 类型：String
+  - 必选：否
+  - 枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+- instanceId
+  - 按照【实例ID】进行过滤。
+  - 类型：String
+  - 必选：否
      */
     function __construct()
     {
@@ -42,6 +114,21 @@ class DescribeCloudProductLogTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

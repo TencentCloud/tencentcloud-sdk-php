@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度值，默认赋值为0表示不限制上报额度
  * @method integer getPayMode() 获取实例的计费模式
  * @method void setPayMode(integer $PayMode) 设置实例的计费模式
+ * @method integer getFree() 获取（0=付费版；1=tsf受限免费版；2=免费版）
+ * @method void setFree(integer $Free) 设置（0=付费版；1=tsf受限免费版；2=免费版）
  */
 class CreateApmInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateApmInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public $Free;
+
+    /**
      * @param string $Name 实例名
      * @param string $Description 实例描述信息
      * @param integer $TraceDuration Trace数据保存时长，单位为天默认存储为3天
      * @param array $Tags 标签列表
      * @param integer $SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
      * @param integer $PayMode 实例的计费模式
+     * @param integer $Free （0=付费版；1=tsf受限免费版；2=免费版）
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Free",$param) and $param["Free"] !== null) {
+            $this->Free = $param["Free"];
         }
     }
 }

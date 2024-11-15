@@ -92,6 +92,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
  * @method integer getDeployModel() 获取部署模式
  * @method void setDeployModel(integer $DeployModel) 设置部署模式
+ * @method integer getIntranetAccess() 获取0 默认值，非内网访问，1 内网访问
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置0 默认值，非内网访问，1 内网访问
+ * @method array getIntranetPrivateIpSet() 获取内网访问的ip
+ * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置内网访问的ip
+ * @method string getIntranetVpcId() 获取开通内网访问的vpc
+ * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
+ * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
+ * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
  */
 class Resource extends AbstractModel
 {
@@ -276,6 +284,26 @@ class Resource extends AbstractModel
     public $DeployModel;
 
     /**
+     * @var integer 0 默认值，非内网访问，1 内网访问
+     */
+    public $IntranetAccess;
+
+    /**
+     * @var array 内网访问的ip
+     */
+    public $IntranetPrivateIpSet;
+
+    /**
+     * @var string 开通内网访问的vpc
+     */
+    public $IntranetVpcId;
+
+    /**
+     * @var string 开通内网访问vpc的网段
+     */
+    public $IntranetVpcCidr;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -312,6 +340,10 @@ class Resource extends AbstractModel
      * @param string $CdcClusterId cdc集群id
      * @param string $LogDelivery 日志投递规格信息
      * @param integer $DeployModel 部署模式
+     * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问
+     * @param array $IntranetPrivateIpSet 内网访问的ip
+     * @param string $IntranetVpcId 开通内网访问的vpc
+     * @param string $IntranetVpcCidr 开通内网访问vpc的网段
      */
     function __construct()
     {
@@ -473,6 +505,22 @@ class Resource extends AbstractModel
 
         if (array_key_exists("DeployModel",$param) and $param["DeployModel"] !== null) {
             $this->DeployModel = $param["DeployModel"];
+        }
+
+        if (array_key_exists("IntranetAccess",$param) and $param["IntranetAccess"] !== null) {
+            $this->IntranetAccess = $param["IntranetAccess"];
+        }
+
+        if (array_key_exists("IntranetPrivateIpSet",$param) and $param["IntranetPrivateIpSet"] !== null) {
+            $this->IntranetPrivateIpSet = $param["IntranetPrivateIpSet"];
+        }
+
+        if (array_key_exists("IntranetVpcId",$param) and $param["IntranetVpcId"] !== null) {
+            $this->IntranetVpcId = $param["IntranetVpcId"];
+        }
+
+        if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {
+            $this->IntranetVpcCidr = $param["IntranetVpcCidr"];
         }
     }
 }

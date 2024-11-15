@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EMR Lite HBase 实例信息
+ * Serverless HBase 实例信息
  *
  * @method string getClusterId() 获取集群实例字符串ID
  * @method void setClusterId(string $ClusterId) 设置集群实例字符串ID
@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenewFlag() 获取自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+ * @method string getIsolateTime() 获取隔离时间，未隔离返回0000-00-00 00:00:00。
+ * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，未隔离返回0000-00-00 00:00:00。
+ * @method string getExpireTime() 获取过期时间，后付费返回0000-00-00 00:00:00
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间，后付费返回0000-00-00 00:00:00
  */
 class SLInstanceInfo extends AbstractModel
 {
@@ -135,6 +141,21 @@ class SLInstanceInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+     */
+    public $AutoRenewFlag;
+
+    /**
+     * @var string 隔离时间，未隔离返回0000-00-00 00:00:00。
+     */
+    public $IsolateTime;
+
+    /**
+     * @var string 过期时间，后付费返回0000-00-00 00:00:00
+     */
+    public $ExpireTime;
+
+    /**
      * @param string $ClusterId 集群实例字符串ID
      * @param integer $Id 集群实例数字ID
      * @param string $StatusDesc 状态描述
@@ -152,6 +173,9 @@ class SLInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 实例标签
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenewFlag 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+     * @param string $IsolateTime 隔离时间，未隔离返回0000-00-00 00:00:00。
+     * @param string $ExpireTime 过期时间，后付费返回0000-00-00 00:00:00
      */
     function __construct()
     {
@@ -234,6 +258,18 @@ class SLInstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

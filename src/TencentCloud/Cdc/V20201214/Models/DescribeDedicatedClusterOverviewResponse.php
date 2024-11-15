@@ -41,17 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnConnectionBandwidthData(array $VpnConnectionBandwidthData) 设置vpn网关通道监控数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostDetailInfo() 获取宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostDetailInfo(array $HostDetailInfo) 设置宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostStandbyCount() 获取热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostStandbyCount(integer $HostStandbyCount) 设置热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostNormalCount() 获取普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostNormalCount(integer $HostNormalCount) 设置普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -93,19 +87,16 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
 
     /**
      * @var array 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostDetailInfo;
 
     /**
      * @var integer 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostStandbyCount;
 
     /**
      * @var integer 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostNormalCount;
 
@@ -126,11 +117,8 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
      * @param array $VpnConnectionBandwidthData vpn网关通道监控数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostDetailInfo 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostStandbyCount 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostNormalCount 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

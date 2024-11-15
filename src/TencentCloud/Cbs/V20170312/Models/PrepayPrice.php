@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘或快照预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+ * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+ * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnitPriceHigh() 获取高精度后付费云盘原单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,7 +70,7 @@ class PrepayPrice extends AbstractModel
     public $DiscountPrice;
 
     /**
-     * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
@@ -126,7 +126,7 @@ class PrepayPrice extends AbstractModel
     /**
      * @param float $DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnitPriceHigh 高精度后付费云盘原单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。

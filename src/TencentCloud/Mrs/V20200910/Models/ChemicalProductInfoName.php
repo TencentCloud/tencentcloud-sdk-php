@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPinyin(string $Pinyin) 设置拼音
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBrandName() 获取品牌名
+ * @method void setBrandName(string $BrandName) 设置品牌名
  */
 class ChemicalProductInfoName extends AbstractModel
 {
@@ -58,6 +60,7 @@ class ChemicalProductInfoName extends AbstractModel
     /**
      * @var string 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $BarndName;
 
@@ -74,6 +77,11 @@ class ChemicalProductInfoName extends AbstractModel
     public $Pinyin;
 
     /**
+     * @var string 品牌名
+     */
+    public $BrandName;
+
+    /**
      * @param string $Text 文本内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GenericName 通用名
@@ -84,6 +92,7 @@ class ChemicalProductInfoName extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pinyin 拼音
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BrandName 品牌名
      */
     function __construct()
     {
@@ -116,6 +125,10 @@ class ChemicalProductInfoName extends AbstractModel
 
         if (array_key_exists("Pinyin",$param) and $param["Pinyin"] !== null) {
             $this->Pinyin = $param["Pinyin"];
+        }
+
+        if (array_key_exists("BrandName",$param) and $param["BrandName"] !== null) {
+            $this->BrandName = $param["BrandName"];
         }
     }
 }

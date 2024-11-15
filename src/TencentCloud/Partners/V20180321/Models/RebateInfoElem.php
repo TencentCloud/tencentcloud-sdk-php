@@ -21,57 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 返佣信息定义
  *
  * @method string getUin() 获取代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRebateMonth() 获取返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebateMonth(string $RebateMonth) 设置返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAmt() 获取返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmt(integer $Amt) 设置返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonthSales() 获取月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonthSales(integer $MonthSales) 设置月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQuarterSales() 获取季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuarterSales(integer $QuarterSales) 设置季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExceptionFlag() 获取NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptionFlag(string $ExceptionFlag) 设置NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RebateInfoElem extends AbstractModel
 {
     /**
      * @var string 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RebateMonth;
 
     /**
      * @var integer 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amt;
 
     /**
      * @var integer 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonthSales;
 
     /**
      * @var integer 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuarterSales;
 
     /**
      * @var string NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptionFlag;
 
     /**
      * @param string $Uin 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RebateMonth 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Amt 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonthSales 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QuarterSales 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExceptionFlag NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

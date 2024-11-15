@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取证书ID
  * @method void setCertificateId(string $CertificateId) 设置证书ID
- * @method string getServiceType() 获取下载的服务类型: nginx tomcat apache iis jks other root
- * @method void setServiceType(string $ServiceType) 设置下载的服务类型: nginx tomcat apache iis jks other root
+ * @method string getServiceType() 获取必填选项，下载的服务类型: nginx tomcat apache iis jks other root
+ * @method void setServiceType(string $ServiceType) 设置必填选项，下载的服务类型: nginx tomcat apache iis jks other root
  */
 class DescribeDownloadCertificateUrlRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDownloadCertificateUrlRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string 下载的服务类型: nginx tomcat apache iis jks other root
+     * @var string 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
      */
     public $ServiceType;
 
     /**
      * @param string $CertificateId 证书ID
-     * @param string $ServiceType 下载的服务类型: nginx tomcat apache iis jks other root
+     * @param string $ServiceType 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
      */
     function __construct()
     {

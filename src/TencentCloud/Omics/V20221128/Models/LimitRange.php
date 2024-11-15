@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 资源限制范围。
  *
  * @method string getMaxCPU() 获取最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxCPU(string $MaxCPU) 设置最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMaxMemory() 获取最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMemory(string $MaxMemory) 设置最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LimitRange extends AbstractModel
 {
     /**
      * @var string 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxCPU;
 
     /**
      * @var string 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMemory;
 
     /**
      * @param string $MaxCPU 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MaxMemory 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

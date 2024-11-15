@@ -20,67 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdToken请求参数结构体
  *
- * @method string getCompareLib() 获取本地上传照片(LOCAL)、商业库(BUSINESS)
- * @method void setCompareLib(string $CompareLib) 设置本地上传照片(LOCAL)、商业库(BUSINESS)
- * @method string getIdCard() 获取CompareLib为商业库时必传。
- * @method void setIdCard(string $IdCard) 设置CompareLib为商业库时必传。
- * @method string getName() 获取CompareLib为商业库时必传。
- * @method void setName(string $Name) 设置CompareLib为商业库时必传。
- * @method string getImageBase64() 获取CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method void setImageBase64(string $ImageBase64) 设置CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method string getMeta() 获取SDK中生成的Meta字符串
- * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串
- * @method string getExtra() 获取透传参数 1000长度字符串
- * @method void setExtra(string $Extra) 设置透传参数 1000长度字符串
- * @method boolean getUseCos() 获取默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
- * @method void setUseCos(boolean $UseCos) 设置默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+ * @method string getCompareLib() 获取比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
+ * @method void setCompareLib(string $CompareLib) 设置比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
+ * @method string getIdCard() 获取身份证。
+- CompareLib为商业库时必传。
+ * @method void setIdCard(string $IdCard) 设置身份证。
+- CompareLib为商业库时必传。
+ * @method string getName() 获取姓名。
+- CompareLib为商业库时必传。
+ * @method void setName(string $Name) 设置姓名。
+- CompareLib为商业库时必传。
+ * @method string getImageBase64() 获取图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setImageBase64(string $ImageBase64) 设置图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method string getMeta() 获取SDK中生成的Meta字符串。
+ * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串。
+ * @method string getExtra() 获取透传参数。
+- 1000长度字符串
+ * @method void setExtra(string $Extra) 设置透传参数。
+- 1000长度字符串
+ * @method boolean getUseCos() 获取是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+ * @method void setUseCos(boolean $UseCos) 设置是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method string getRuleId() 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
- * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+ * @method string getRuleId() 获取用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+ * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
  */
 class GetFaceIdTokenRequest extends AbstractModel
 {
     /**
-     * @var string 本地上传照片(LOCAL)、商业库(BUSINESS)
+     * @var string 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
      */
     public $CompareLib;
 
     /**
-     * @var string CompareLib为商业库时必传。
+     * @var string 身份证。
+- CompareLib为商业库时必传。
      */
     public $IdCard;
 
     /**
-     * @var string CompareLib为商业库时必传。
+     * @var string 姓名。
+- CompareLib为商业库时必传。
      */
     public $Name;
 
     /**
-     * @var string CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @var string 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $ImageBase64;
 
     /**
-     * @var string SDK中生成的Meta字符串
+     * @var string SDK中生成的Meta字符串。
      */
     public $Meta;
 
     /**
-     * @var string 透传参数 1000长度字符串
+     * @var string 透传参数。
+- 1000长度字符串
      */
     public $Extra;
 
     /**
-     * @var boolean 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * @var boolean 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      */
     public $UseCos;
 
@@ -90,24 +125,37 @@ class GetFaceIdTokenRequest extends AbstractModel
     public $Encryption;
 
     /**
-     * @var string 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+     * @var string 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
      */
     public $RuleId;
 
     /**
-     * @param string $CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
-     * @param string $IdCard CompareLib为商业库时必传。
-     * @param string $Name CompareLib为商业库时必传。
-     * @param string $ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param string $Meta SDK中生成的Meta字符串
-     * @param string $Extra 透传参数 1000长度字符串
-     * @param boolean $UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * @param string $CompareLib 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
+     * @param string $IdCard 身份证。
+- CompareLib为商业库时必传。
+     * @param string $Name 姓名。
+- CompareLib为商业库时必传。
+     * @param string $ImageBase64 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param string $Meta SDK中生成的Meta字符串。
+     * @param string $Extra 透传参数。
+- 1000长度字符串
+     * @param boolean $UseCos 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+     * @param string $RuleId 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
      */
     function __construct()
     {

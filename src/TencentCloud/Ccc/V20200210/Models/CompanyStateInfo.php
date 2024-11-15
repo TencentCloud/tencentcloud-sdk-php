@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessId(string $BusinessId) 设置公司统一社会信用代码
  * @method integer getModifyTime() 获取修改时间
  * @method void setModifyTime(integer $ModifyTime) 设置修改时间
+ * @method string getContractNo() 获取合同编号
+ * @method void setContractNo(string $ContractNo) 设置合同编号
  */
 class CompanyStateInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CompanyStateInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 合同编号
+     */
+    public $ContractNo;
+
+    /**
      * @param integer $Id 申请单ID
      * @param string $CompanyName 公司名称
      * @param integer $CreateTime 创建时间
@@ -88,6 +95,7 @@ class CompanyStateInfo extends AbstractModel
      * @param integer $State 审核状态，1-待审核，2-审核通过，3-驳回
      * @param string $BusinessId 公司统一社会信用代码
      * @param integer $ModifyTime 修改时间
+     * @param string $ContractNo 合同编号
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CompanyStateInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ContractNo",$param) and $param["ContractNo"] !== null) {
+            $this->ContractNo = $param["ContractNo"];
         }
     }
 }

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 多网的网卡状态信息
  *
  * @method integer getNetId() 获取网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetId(integer $NetId) 设置网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetIp() 获取网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetIp(string $NetIp) 设置网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRtt() 获取时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRtt(array $Rtt) 设置时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLost() 获取丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLost(array $Lost) 设置丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSendBps() 获取发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendBps(array $SendBps) 设置发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRecvBps() 获取接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecvBps(array $RecvBps) 设置接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MultiNet extends AbstractModel
 {
     /**
      * @var integer 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetId;
 
     /**
      * @var string 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetIp;
 
     /**
      * @var array 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rtt;
 
     /**
      * @var array 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lost;
 
     /**
      * @var array 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendBps;
 
     /**
      * @var array 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecvBps;
 
     /**
      * @param integer $NetId 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetIp 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rtt 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Lost 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SendBps 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RecvBps 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

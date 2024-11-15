@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置域名 QUIC 配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IPFilterPolicy getIPFilterPolicy() 获取IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -107,6 +111,12 @@ class DomainDetailInfo extends AbstractModel
     public $QUICConfig;
 
     /**
+     * @var IPFilterPolicy IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPFilterPolicy;
+
+    /**
      * @param string $Domain 域名名称。
      * @param array $AccelerateAreaInfos 加速地区信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,6 +133,8 @@ class DomainDetailInfo extends AbstractModel
      * @param string $CreateTime 域名添加到腾讯云点播系统中的时间。
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      * @param DomainQUICConfig $QUICConfig 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPFilterPolicy $IPFilterPolicy IP 访问限制配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +189,11 @@ class DomainDetailInfo extends AbstractModel
         if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
             $this->QUICConfig = new DomainQUICConfig();
             $this->QUICConfig->deserialize($param["QUICConfig"]);
+        }
+
+        if (array_key_exists("IPFilterPolicy",$param) and $param["IPFilterPolicy"] !== null) {
+            $this->IPFilterPolicy = new IPFilterPolicy();
+            $this->IPFilterPolicy->deserialize($param["IPFilterPolicy"]);
         }
     }
 }

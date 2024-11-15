@@ -18,60 +18,44 @@ namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 输入框
+ * 水印图输入框
  *
- * @method integer getX() 获取左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setX(integer $X) 设置左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getY() 获取左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setY(integer $Y) 设置左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取方框高度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置方框高度
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getX() 获取水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+ * @method void setX(integer $X) 设置水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+ * @method integer getY() 获取水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+ * @method void setY(integer $Y) 设置水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+ * @method integer getWidth() 获取水印图框宽度。
+ * @method void setWidth(integer $Width) 设置水印图框宽度。
+ * @method integer getHeight() 获取水印图框高度。
+ * @method void setHeight(integer $Height) 设置水印图框高度。
  */
 class LogoRect extends AbstractModel
 {
     /**
-     * @var integer 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
      */
     public $X;
 
     /**
-     * @var integer 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
      */
     public $Y;
 
     /**
-     * @var integer 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 水印图框宽度。
      */
     public $Width;
 
     /**
-     * @var integer 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 水印图框高度。
      */
     public $Height;
 
     /**
-     * @param integer $X 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Y 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $X 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+     * @param integer $Y 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+     * @param integer $Width 水印图框宽度。
+     * @param integer $Height 水印图框高度。
      */
     function __construct()
     {

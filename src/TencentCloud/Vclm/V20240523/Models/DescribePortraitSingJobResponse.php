@@ -34,14 +34,12 @@ use TencentCloud\Common\AbstractModel;
 —DONE：处理完成
  * @method string getStatusMsg() 获取任务状态信息
  * @method void setStatusMsg(string $StatusMsg) 设置任务状态信息
- * @method string getErrorCode() 获取错误码
- * @method void setErrorCode(string $ErrorCode) 设置错误码
- * @method string getErrorMessage() 获取错误信息
- * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
- * @method string getResultVideoUrl() 获取生成视频的URL地址
-有效期24小时
- * @method void setResultVideoUrl(string $ResultVideoUrl) 设置生成视频的URL地址
-有效期24小时
+ * @method string getErrorCode() 获取任务执行错误码。当任务状态不为FAIL时，该值为""。
+ * @method void setErrorCode(string $ErrorCode) 设置任务执行错误码。当任务状态不为FAIL时，该值为""。
+ * @method string getErrorMessage() 获取任务执行错误信息。当任务状态不为FAIL时，该值为""。
+ * @method void setErrorMessage(string $ErrorMessage) 设置任务执行错误信息。当任务状态不为FAIL时，该值为""。
+ * @method string getResultVideoUrl() 获取生成视频的URL地址。有效期24小时。
+ * @method void setResultVideoUrl(string $ResultVideoUrl) 设置生成视频的URL地址。有效期24小时。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,18 +65,17 @@ class DescribePortraitSingJobResponse extends AbstractModel
     public $StatusMsg;
 
     /**
-     * @var string 错误码
+     * @var string 任务执行错误码。当任务状态不为FAIL时，该值为""。
      */
     public $ErrorCode;
 
     /**
-     * @var string 错误信息
+     * @var string 任务执行错误信息。当任务状态不为FAIL时，该值为""。
      */
     public $ErrorMessage;
 
     /**
-     * @var string 生成视频的URL地址
-有效期24小时
+     * @var string 生成视频的URL地址。有效期24小时。
      */
     public $ResultVideoUrl;
 
@@ -95,10 +92,9 @@ class DescribePortraitSingJobResponse extends AbstractModel
 —STOP：处理终止
 —DONE：处理完成
      * @param string $StatusMsg 任务状态信息
-     * @param string $ErrorCode 错误码
-     * @param string $ErrorMessage 错误信息
-     * @param string $ResultVideoUrl 生成视频的URL地址
-有效期24小时
+     * @param string $ErrorCode 任务执行错误码。当任务状态不为FAIL时，该值为""。
+     * @param string $ErrorMessage 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+     * @param string $ResultVideoUrl 生成视频的URL地址。有效期24小时。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFpga(integer $Fpga) 设置实例的FPGA数量。
  * @method string getRemark() 获取机型描述
  * @method void setRemark(string $Remark) 设置机型描述
- * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
- * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+ * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
+ * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
  */
 class DedicatedClusterInstanceType extends AbstractModel
 {
@@ -124,7 +124,7 @@ class DedicatedClusterInstanceType extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * @var string 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      */
     public $Status;
 
@@ -143,7 +143,7 @@ class DedicatedClusterInstanceType extends AbstractModel
      * @param integer $Gpu 实例的GPU数量。
      * @param integer $Fpga 实例的FPGA数量。
      * @param string $Remark 机型描述
-     * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      */
     function __construct()
     {

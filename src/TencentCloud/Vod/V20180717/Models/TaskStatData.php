@@ -34,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
  * @method void setTaskType(string $TaskType) 设置任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -48,6 +49,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
  * @method array getSummary() 获取任务数统计数据概览，用量单位为秒。
  * @method void setSummary(array $Summary) 设置任务数统计数据概览，用量单位为秒。
  * @method array getDetails() 获取不同规格任务统计数据详情。
@@ -174,6 +176,7 @@ class TaskStatData extends AbstractModel
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      */
     public $TaskType;
 
@@ -254,6 +257,7 @@ class TaskStatData extends AbstractModel
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      * @param array $Summary 任务数统计数据概览，用量单位为秒。
      * @param array $Details 不同规格任务统计数据详情。
 转码规格：

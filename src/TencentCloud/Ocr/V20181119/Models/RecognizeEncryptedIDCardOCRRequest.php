@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeEncryptedIDCardOCR请求参数结构体
  *
- * @method string getEncryptedBody() 获取请求体被加密后的密文，本接口只支持加密传输
- * @method void setEncryptedBody(string $EncryptedBody) 设置请求体被加密后的密文，本接口只支持加密传输
+ * @method string getEncryptedBody() 获取请求体被加密后的密文（Base64编码），本接口只支持加密传输
+ * @method void setEncryptedBody(string $EncryptedBody) 设置请求体被加密后的密文（Base64编码），本接口只支持加密传输
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -84,7 +84,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
 class RecognizeEncryptedIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var string 请求体被加密后的密文，本接口只支持加密传输
+     * @var string 请求体被加密后的密文（Base64编码），本接口只支持加密传输
      */
     public $EncryptedBody;
 
@@ -146,7 +146,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     public $EnableReflectDetail;
 
     /**
-     * @param string $EncryptedBody 请求体被加密后的密文，本接口只支持加密传输
+     * @param string $EncryptedBody 请求体被加密后的密文（Base64编码），本接口只支持加密传输
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息有加密需求的用户可使用此参数，详情请点击左侧链接。
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。

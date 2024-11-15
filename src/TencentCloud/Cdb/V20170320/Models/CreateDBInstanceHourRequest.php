@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
  * @method string getDiskType() 获取磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
  * @method void setDiskType(string $DiskType) 设置磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+ * @method string getClusterType() 获取集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -322,6 +324,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $DiskType;
 
     /**
+     * @var string 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+     */
+    public $ClusterType;
+
+    /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
@@ -368,6 +375,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
      * @param string $DiskType 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+     * @param string $ClusterType 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
      */
     function __construct()
     {
@@ -552,6 +560,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

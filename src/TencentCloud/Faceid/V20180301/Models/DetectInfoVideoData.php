@@ -18,23 +18,23 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 核身视频信息
+ * 核身视频信息。
  *
- * @method string getLivenessVideo() 获取活体视频的base64编码
+ * @method string getLivenessVideo() 获取活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessVideo(string $LivenessVideo) 设置活体视频的base64编码
+ * @method void setLivenessVideo(string $LivenessVideo) 设置活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoVideoData extends AbstractModel
 {
     /**
-     * @var string 活体视频的base64编码
+     * @var string 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessVideo;
 
     /**
-     * @param string $LivenessVideo 活体视频的base64编码
+     * @param string $LivenessVideo 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

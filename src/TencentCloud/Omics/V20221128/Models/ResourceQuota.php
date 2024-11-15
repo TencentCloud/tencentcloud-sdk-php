@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 资源配额。
  *
  * @method string getCPULimit() 获取CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCPULimit(string $CPULimit) 设置CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemoryLimit() 获取内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemoryLimit(string $MemoryLimit) 设置内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPods() 获取Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPods(string $Pods) 设置Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceQuota extends AbstractModel
 {
     /**
      * @var string CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CPULimit;
 
     /**
      * @var string 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemoryLimit;
 
     /**
      * @var string Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pods;
 
     /**
      * @param string $CPULimit CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemoryLimit 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pods Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

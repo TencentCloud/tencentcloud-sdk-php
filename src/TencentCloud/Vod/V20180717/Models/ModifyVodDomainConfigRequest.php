@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置[Key 防盗链](/document/product/266/14047)规则。
  * @method DomainQUICConfig getQUICConfig() 获取QUIC 配置。
  * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置QUIC 配置。
+ * @method IPFilterPolicy getIPFilterPolicy() 获取IP 访问限制规则。
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置IP 访问限制规则。
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyVodDomainConfigRequest extends AbstractModel
     public $QUICConfig;
 
     /**
+     * @var IPFilterPolicy IP 访问限制规则。
+     */
+    public $IPFilterPolicy;
+
+    /**
      * @param string $Domain 域名。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param RefererAuthPolicy $RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
      * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
      * @param DomainQUICConfig $QUICConfig QUIC 配置。
+     * @param IPFilterPolicy $IPFilterPolicy IP 访问限制规则。
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class ModifyVodDomainConfigRequest extends AbstractModel
         if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
             $this->QUICConfig = new DomainQUICConfig();
             $this->QUICConfig->deserialize($param["QUICConfig"]);
+        }
+
+        if (array_key_exists("IPFilterPolicy",$param) and $param["IPFilterPolicy"] !== null) {
+            $this->IPFilterPolicy = new IPFilterPolicy();
+            $this->IPFilterPolicy->deserialize($param["IPFilterPolicy"]);
         }
     }
 }

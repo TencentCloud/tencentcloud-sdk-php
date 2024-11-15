@@ -781,14 +781,19 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
- * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
-该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+ * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建一个用于他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权操作。
 
+如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务
 
 
 注: 
 1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
 2. 已经在授权中或者授权成功的企业，无法重复授权
+3. 授权企业和被授权企业必须都是已认证企业
+4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
+
+**该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权**
+![image](https://qcloudimg.tencent-cloud.cn/raw/091823fd4f02af7dda416fa10ca65f2d.png)
  * @method Models\CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(Models\CreatePersonAuthCertificateImageRequest $req) 获取个人用户认证证书图片下载URL
 
 个人用户认证证书图片样式如下图
@@ -938,7 +943,8 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
  * @method Models\DescribeUsageResponse DescribeUsage(Models\DescribeUsageRequest $req) 此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
-<font color="red">此接口即将下线， 请使用新接口[查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)</font>
+
+<font color="red">此接口即将下线， 请使用新接口</font>  [查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)
 
 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用户获取合同控制台下载页面链接,  点击链接后会跳转至本企业合同管理控制台(会筛选出传入的合同列表), 点击**下载**按钮后就会下载传入的合同列表, 下载页面如下图

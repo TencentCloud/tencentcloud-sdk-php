@@ -21,75 +21,54 @@ use TencentCloud\Common\AbstractModel;
  * 云资源ID。
  *
  * @method string getVPCId() 获取私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVPCId(string $VPCId) 设置私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroupId() 获取安全组ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTDSQLCId() 获取TDSQL-C Mysql版数据库ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTDSQLCId(string $TDSQLCId) 设置TDSQL-C Mysql版数据库ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCFSId() 获取文件存储ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFSId(string $CFSId) 设置文件存储ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCFSStorageType() 获取文件存储类型：取值范围：
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFSStorageType(string $CFSStorageType) 设置文件存储类型：取值范围：
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVMId() 获取云服务器ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVMId(string $CVMId) 设置云服务器ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEKSId() 获取弹性容器集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEKSId(string $EKSId) 设置弹性容器集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceIds extends AbstractModel
 {
     /**
      * @var string 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VPCId;
 
     /**
      * @var string 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 安全组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupId;
 
     /**
      * @var string TDSQL-C Mysql版数据库ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TDSQLCId;
 
     /**
      * @var string 文件存储ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSId;
 
@@ -99,43 +78,32 @@ class ResourceIds extends AbstractModel
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSStorageType;
 
     /**
      * @var string 云服务器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVMId;
 
     /**
      * @var string 弹性容器集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EKSId;
 
     /**
      * @param string $VPCId 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroupId 安全组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TDSQLCId TDSQL-C Mysql版数据库ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CFSId 文件存储ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CFSStorageType 文件存储类型：取值范围：
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVMId 云服务器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EKSId 弹性容器集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

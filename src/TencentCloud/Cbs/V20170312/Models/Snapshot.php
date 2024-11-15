@@ -22,12 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Placement getPlacement() 获取快照所在的位置。
  * @method void setPlacement(Placement $Placement) 设置快照所在的位置。
- * @method boolean getCopyFromRemote() 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
- * @method void setCopyFromRemote(boolean $CopyFromRemote) 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
- * @method string getSnapshotState() 获取快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
- * @method void setSnapshotState(string $SnapshotState) 设置快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
- * @method boolean getIsPermanent() 获取是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
- * @method void setIsPermanent(boolean $IsPermanent) 设置是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+ * @method boolean getCopyFromRemote() 获取是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
+ * @method void setCopyFromRemote(boolean $CopyFromRemote) 设置是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
+ * @method string getSnapshotState() 获取快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
+ * @method void setSnapshotState(string $SnapshotState) 设置快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
+ * @method boolean getIsPermanent() 获取是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
+ * @method void setIsPermanent(boolean $IsPermanent) 设置是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
  * @method string getSnapshotName() 获取快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
  * @method string getDeadlineTime() 获取快照到期时间。如果快照为永久保留，此字段为空。
@@ -46,14 +78,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) 设置创建此快照的云硬盘ID。
  * @method array getCopyingToRegions() 获取快照正在跨地域复制的目的地域，默认取值为[]。
  * @method void setCopyingToRegions(array $CopyingToRegions) 设置快照正在跨地域复制的目的地域，默认取值为[]。
- * @method boolean getEncrypt() 获取是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
- * @method void setEncrypt(boolean $Encrypt) 设置是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+ * @method boolean getEncrypt() 获取是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
+ * @method void setEncrypt(boolean $Encrypt) 设置是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
  * @method string getCreateTime() 获取快照的创建时间。
  * @method void setCreateTime(string $CreateTime) 设置快照的创建时间。
  * @method integer getImageCount() 获取快照关联的镜像个数。
  * @method void setImageCount(integer $ImageCount) 设置快照关联的镜像个数。
- * @method string getDiskUsage() 获取创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
- * @method void setDiskUsage(string $DiskUsage) 设置创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+ * @method string getDiskUsage() 获取创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
+ * @method void setDiskUsage(string $DiskUsage) 设置创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
  * @method string getSnapshotId() 获取快照ID。
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID。
  * @method string getTimeStartShare() 获取快照开始共享的时间。
@@ -69,17 +119,33 @@ class Snapshot extends AbstractModel
     public $Placement;
 
     /**
-     * @var boolean 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * @var boolean 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
      */
     public $CopyFromRemote;
 
     /**
-     * @var string 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+     * @var string 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
      */
     public $SnapshotState;
 
     /**
-     * @var boolean 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * @var boolean 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
      */
     public $IsPermanent;
 
@@ -129,7 +195,11 @@ class Snapshot extends AbstractModel
     public $CopyingToRegions;
 
     /**
-     * @var boolean 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * @var boolean 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
      */
     public $Encrypt;
 
@@ -144,7 +214,12 @@ class Snapshot extends AbstractModel
     public $ImageCount;
 
     /**
-     * @var string 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * @var string 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
      */
     public $DiskUsage;
 
@@ -165,9 +240,25 @@ class Snapshot extends AbstractModel
 
     /**
      * @param Placement $Placement 快照所在的位置。
-     * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     * @param string $SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
-     * @param boolean $IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
+     * @param string $SnapshotState 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
+     * @param boolean $IsPermanent 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
      * @param string $SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
      * @param string $DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
      * @param integer $Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
@@ -177,10 +268,19 @@ class Snapshot extends AbstractModel
      * @param integer $DiskSize 创建此快照的云硬盘大小，单位GB。
      * @param string $DiskId 创建此快照的云硬盘ID。
      * @param array $CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
-     * @param boolean $Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * @param boolean $Encrypt 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
      * @param string $CreateTime 快照的创建时间。
      * @param integer $ImageCount 快照关联的镜像个数。
-     * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
      * @param string $SnapshotId 快照ID。
      * @param string $TimeStartShare 快照开始共享的时间。
      * @param array $Tags 快照绑定的标签列表。

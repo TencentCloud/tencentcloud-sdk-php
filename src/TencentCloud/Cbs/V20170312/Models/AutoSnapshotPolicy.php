@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIdSet(array $DiskIdSet) 设置已绑定当前定期快照策略的云盘ID列表。
  * @method boolean getIsActivated() 获取定期快照策略是否激活。
  * @method void setIsActivated(boolean $IsActivated) 设置定期快照策略是否激活。
- * @method string getAutoSnapshotPolicyState() 获取定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
- * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) 设置定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+ * @method string getAutoSnapshotPolicyState() 获取定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
+ * @method void setAutoSnapshotPolicyState(string $AutoSnapshotPolicyState) 设置定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
  * @method integer getIsCopyToRemote() 获取是否是跨账号复制快照快照, 1：是, 0: 不是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCopyToRemote(integer $IsCopyToRemote) 设置是否是跨账号复制快照快照, 1：是, 0: 不是
@@ -86,7 +94,11 @@ class AutoSnapshotPolicy extends AbstractModel
     public $IsActivated;
 
     /**
-     * @var string 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * @var string 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
      */
     public $AutoSnapshotPolicyState;
 
@@ -176,7 +188,11 @@ class AutoSnapshotPolicy extends AbstractModel
     /**
      * @param array $DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      * @param boolean $IsActivated 定期快照策略是否激活。
-     * @param string $AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * @param string $AutoSnapshotPolicyState 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
      * @param integer $IsCopyToRemote 是否是跨账号复制快照快照, 1：是, 0: 不是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPermanent 使用该定期快照策略创建出来的快照是否永久保留。

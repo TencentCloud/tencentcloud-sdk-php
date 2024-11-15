@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneSettings(array $ZoneSettings) 设置实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
  * @method array getTags() 获取实例要绑定的标签列表。
  * @method void setTags(array $Tags) 设置实例要绑定的标签列表。
+ * @method PrePaySetting getPrePaySetting() 获取预付费参数
+ * @method void setPrePaySetting(PrePaySetting $PrePaySetting) 设置预付费参数
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateSLInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var PrePaySetting 预付费参数
+     */
+    public $PrePaySetting;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费。
      * @param string $DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
@@ -80,6 +87,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param string $NodeType 实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
      * @param array $ZoneSettings 实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
      * @param array $Tags 实例要绑定的标签列表。
+     * @param PrePaySetting $PrePaySetting 预付费参数
      */
     function __construct()
     {
@@ -130,6 +138,11 @@ class CreateSLInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PrePaySetting",$param) and $param["PrePaySetting"] !== null) {
+            $this->PrePaySetting = new PrePaySetting();
+            $this->PrePaySetting->deserialize($param["PrePaySetting"]);
         }
     }
 }

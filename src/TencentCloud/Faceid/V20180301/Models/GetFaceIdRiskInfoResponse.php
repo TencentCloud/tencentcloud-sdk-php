@@ -20,29 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdRiskInfo返回参数结构体
  *
- * @method string getDeviceInfoTag() 获取描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+ * @method string getDeviceInfoTag() 获取描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceInfoTag(string $DeviceInfoTag) 设置描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+ * @method void setDeviceInfoTag(string $DeviceInfoTag) 设置描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeviceInfoLevel() 获取描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+ * @method integer getDeviceInfoLevel() 获取描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceInfoLevel(integer $DeviceInfoLevel) 设置描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+ * @method void setDeviceInfoLevel(integer $DeviceInfoLevel) 设置描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOpenId() 获取设备id标识
+ * @method string getOpenId() 获取设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpenId(string $OpenId) 设置设备id标识
+ * @method void setOpenId(string $OpenId) 设置设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCameraInfoLevel() 获取描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+ * @method integer getCameraInfoLevel() 获取描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCameraInfoLevel(integer $CameraInfoLevel) 设置描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+ * @method void setCameraInfoLevel(integer $CameraInfoLevel) 设置描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCameraInfoTag() 获取描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+ * @method string getCameraInfoTag() 获取描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCameraInfoTag(string $CameraInfoTag) 设置描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+ * @method void setCameraInfoTag(string $CameraInfoTag) 设置描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取获取token时透传的信息	
+ * @method string getExtra() 获取获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置获取token时透传的信息	
+ * @method void setExtra(string $Extra) 设置获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,37 +106,65 @@ use TencentCloud\Common\AbstractModel;
 class GetFaceIdRiskInfoResponse extends AbstractModel
 {
     /**
-     * @var string 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * @var string 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceInfoTag;
 
     /**
-     * @var integer 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @var integer 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceInfoLevel;
 
     /**
-     * @var string 设备id标识
+     * @var string 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
     /**
-     * @var integer 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @var integer 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CameraInfoLevel;
 
     /**
-     * @var string 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * @var string 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CameraInfoTag;
 
     /**
-     * @var string 获取token时透传的信息	
+     * @var string 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
@@ -91,17 +175,45 @@ class GetFaceIdRiskInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeviceInfoTag 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * @param string $DeviceInfoTag 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @param integer $DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OpenId 设备id标识
+     * @param string $OpenId 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @param integer $CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CameraInfoTag 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * @param string $CameraInfoTag 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 获取token时透传的信息	
+     * @param string $Extra 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

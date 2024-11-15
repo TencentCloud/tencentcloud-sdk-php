@@ -32,6 +32,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternals(Externals $Externals) 设置扩展数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionTimerId() 获取定时器ID。
+ * @method void setActionTimerId(string $ActionTimerId) 设置定时器ID。
+ * @method string getStatus() 获取定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+ * @method void setStatus(string $Status) 设置定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+ * @method string getInstanceId() 获取定时器对应的实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置定时器对应的实例ID。
  */
 class ActionTimer extends AbstractModel
 {
@@ -54,12 +70,40 @@ class ActionTimer extends AbstractModel
     public $Externals;
 
     /**
+     * @var string 定时器ID。
+     */
+    public $ActionTimerId;
+
+    /**
+     * @var string 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+     */
+    public $Status;
+
+    /**
+     * @var string 定时器对应的实例ID。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $TimerAction 定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTime 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Externals $Externals 扩展数据
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionTimerId 定时器ID。
+     * @param string $Status 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+     * @param string $InstanceId 定时器对应的实例ID。
      */
     function __construct()
     {
@@ -85,6 +129,18 @@ class ActionTimer extends AbstractModel
         if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
             $this->Externals = new Externals();
             $this->Externals->deserialize($param["Externals"]);
+        }
+
+        if (array_key_exists("ActionTimerId",$param) and $param["ActionTimerId"] !== null) {
+            $this->ActionTimerId = $param["ActionTimerId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

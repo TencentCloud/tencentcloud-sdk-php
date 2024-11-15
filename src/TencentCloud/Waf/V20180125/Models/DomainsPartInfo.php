@@ -210,6 +210,8 @@ https：使用https协议回源
  * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method array getLabels() 获取域名标签
  * @method void setLabels(array $Labels) 设置域名标签
+ * @method integer getProbeStatus() 获取拨测状态。 0: 禁用拨测, 1: 启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置拨测状态。 0: 禁用拨测, 1: 启用拨测
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -509,6 +511,11 @@ https：使用https协议回源
     public $Labels;
 
     /**
+     * @var integer 拨测状态。 0: 禁用拨测, 1: 启用拨测
+     */
+    public $ProbeStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -604,6 +611,7 @@ https：使用https协议回源
      * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      * @param array $Labels 域名标签
+     * @param integer $ProbeStatus 拨测状态。 0: 禁用拨测, 1: 启用拨测
      */
     function __construct()
     {
@@ -821,6 +829,10 @@ https：使用https协议回源
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
+            $this->ProbeStatus = $param["ProbeStatus"];
         }
     }
 }

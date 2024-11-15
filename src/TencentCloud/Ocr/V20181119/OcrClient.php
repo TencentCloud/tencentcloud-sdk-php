@@ -615,6 +615,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(Models\RecognizeIndonesiaIDCardOCRRequest $req) 印尼身份证识别
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(Models\RecognizeKoreanDrivingLicenseOCRRequest $req) 韩国驾驶证识别
+ * @method Models\RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(Models\RecognizeKoreanIDCardOCRRequest $req) 韩国身份证识别
  * @method Models\RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(Models\RecognizeMedicalInvoiceOCRRequest $req) 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
 
 默认接口请求频率限制：5次/秒。
@@ -622,6 +624,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) 菲律宾驾驶证识别
+
+默认接口请求频率限制：20次/秒。
  * @method Models\RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(Models\RecognizePhilippinesSssIDOCRRequest $req) 菲律宾SSSID/UMID识别
  * @method Models\RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(Models\RecognizePhilippinesTinIDOCRRequest $req) 菲律宾TinID识别
  * @method Models\RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(Models\RecognizePhilippinesUMIDOCRRequest $req) 菲律宾UMID识别

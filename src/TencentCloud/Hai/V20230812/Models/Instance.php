@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
+ARREARS：表示欠费隔离
 TERMINATING：表示销毁中。
 TERMINATED：表示已销毁
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ TERMINATED：表示已销毁
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
+ARREARS：表示欠费隔离
 TERMINATING：表示销毁中。
 TERMINATED：表示已销毁
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ class Instance extends AbstractModel
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
+ARREARS：表示欠费隔离
 TERMINATING：表示销毁中。
 TERMINATED：表示已销毁
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,7 +297,7 @@ FAILED：表示操作失败
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
+ARREARS：表示欠费隔离
 TERMINATING：表示销毁中。
 TERMINATED：表示已销毁
 注意：此字段可能返回 null，表示取不到有效值。

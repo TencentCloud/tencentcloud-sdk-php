@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
  * @method void setAnycastZone(string $AnycastZone) 设置Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+ * @method array getVipCluster() 获取指定IP地址申请EIP，每个账户每个月只有三次配额
+ * @method void setVipCluster(array $VipCluster) 设置指定IP地址申请EIP，每个账户每个月只有三次配额
  * @method boolean getApplicableForCLB() 获取<b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -146,6 +148,11 @@ class AllocateAddressesRequest extends AbstractModel
     public $AnycastZone;
 
     /**
+     * @var array 指定IP地址申请EIP，每个账户每个月只有三次配额
+     */
+    public $VipCluster;
+
+    /**
      * @var boolean <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -213,6 +220,7 @@ AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      * @param string $AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * @param array $VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
      * @param boolean $ApplicableForCLB <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -265,6 +273,10 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("AnycastZone",$param) and $param["AnycastZone"] !== null) {
             $this->AnycastZone = $param["AnycastZone"];
+        }
+
+        if (array_key_exists("VipCluster",$param) and $param["VipCluster"] !== null) {
+            $this->VipCluster = $param["VipCluster"];
         }
 
         if (array_key_exists("ApplicableForCLB",$param) and $param["ApplicableForCLB"] !== null) {

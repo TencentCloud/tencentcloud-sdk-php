@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置源IP/网段
  * @method array getPublicIpAddresses() 获取弹性IP地址池
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置弹性IP地址池
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getDescription() 获取规则描述
+ * @method void setDescription(string $Description) 设置规则描述
  * @method string getNatGatewaySnatId() 获取Snat规则ID
  * @method void setNatGatewaySnatId(string $NatGatewaySnatId) 设置Snat规则ID
  * @method string getNatGatewayId() 获取NAT网关的ID。
@@ -71,7 +71,7 @@ class SourceIpTranslationNatRule extends AbstractModel
     public $PublicIpAddresses;
 
     /**
-     * @var string 描述
+     * @var string 规则描述
      */
     public $Description;
 
@@ -104,7 +104,7 @@ class SourceIpTranslationNatRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIpAddress 源IP/网段
      * @param array $PublicIpAddresses 弹性IP地址池
-     * @param string $Description 描述
+     * @param string $Description 规则描述
      * @param string $NatGatewaySnatId Snat规则ID
      * @param string $NatGatewayId NAT网关的ID。
 注意：此字段可能返回 null，表示取不到有效值。

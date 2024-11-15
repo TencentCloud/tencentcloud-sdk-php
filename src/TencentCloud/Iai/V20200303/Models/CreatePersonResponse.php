@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框的位置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSimilarPersonId() 获取疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
  * @method void setSimilarPersonId(string $SimilarPersonId) 设置疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
  * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,7 +50,7 @@ class CreatePersonResponse extends AbstractModel
 
     /**
      * @var string 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      */
     public $SimilarPersonId;
 
@@ -69,7 +69,7 @@ class CreatePersonResponse extends AbstractModel
      * @param FaceRect $FaceRect 检测出的人脸框的位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SimilarPersonId 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

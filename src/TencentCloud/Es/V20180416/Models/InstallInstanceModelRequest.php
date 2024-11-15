@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getUsrCosModelUrlList() 获取客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
  * @method void setUsrCosModelUrlList(array $UsrCosModelUrlList) 设置客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
+ * @method array getModelNames() 获取客户指定安装的模型名称，可为空，默认为模型文件名
+ * @method void setModelNames(array $ModelNames) 设置客户指定安装的模型名称，可为空，默认为模型文件名
+ * @method array getTaskTypes() 获取模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+ * @method void setTaskTypes(array $TaskTypes) 设置模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
  */
 class InstallInstanceModelRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class InstallInstanceModelRequest extends AbstractModel
     public $UsrCosModelUrlList;
 
     /**
+     * @var array 客户指定安装的模型名称，可为空，默认为模型文件名
+     */
+    public $ModelNames;
+
+    /**
+     * @var array 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+     */
+    public $TaskTypes;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $UsrCosModelUrlList 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
+     * @param array $ModelNames 客户指定安装的模型名称，可为空，默认为模型文件名
+     * @param array $TaskTypes 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class InstallInstanceModelRequest extends AbstractModel
 
         if (array_key_exists("UsrCosModelUrlList",$param) and $param["UsrCosModelUrlList"] !== null) {
             $this->UsrCosModelUrlList = $param["UsrCosModelUrlList"];
+        }
+
+        if (array_key_exists("ModelNames",$param) and $param["ModelNames"] !== null) {
+            $this->ModelNames = $param["ModelNames"];
+        }
+
+        if (array_key_exists("TaskTypes",$param) and $param["TaskTypes"] !== null) {
+            $this->TaskTypes = $param["TaskTypes"];
         }
     }
 }

@@ -79,33 +79,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderType(string $OrderType) 设置订单类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckStatus() 获取验收状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckStatus(string $CheckStatus) 设置验收状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeliverExpectTime() 获取交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeliverExpectTime(string $DeliverExpectTime) 设置交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeliverFinishTime() 获取交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeliverFinishTime(string $DeliverFinishTime) 设置交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckExpectTime() 获取验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckExpectTime(string $CheckExpectTime) 设置验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckFinishTime() 获取验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckFinishTime(string $CheckFinishTime) 设置验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderSLA() 获取订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderSLA(string $OrderSLA) 设置订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderPayPlan() 获取订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderPayPlan(string $OrderPayPlan) 设置订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrder extends AbstractModel
 {
@@ -220,43 +206,36 @@ class DedicatedClusterOrder extends AbstractModel
 
     /**
      * @var string 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckStatus;
 
     /**
      * @var string 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeliverExpectTime;
 
     /**
      * @var string 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeliverFinishTime;
 
     /**
      * @var string 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckExpectTime;
 
     /**
      * @var string 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckFinishTime;
 
     /**
      * @var string 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderSLA;
 
     /**
      * @var string 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderPayPlan;
 
@@ -291,19 +270,12 @@ class DedicatedClusterOrder extends AbstractModel
      * @param string $OrderType 订单类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckStatus 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeliverExpectTime 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeliverFinishTime 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckExpectTime 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckFinishTime 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderSLA 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderPayPlan 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

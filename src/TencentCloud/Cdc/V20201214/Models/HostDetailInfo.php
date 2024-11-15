@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 宿主机资源的概览详细信息。
  *
  * @method string getHostTypeFamily() 获取类型族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostTypeFamily(string $HostTypeFamily) 设置类型族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCpuTotal() 获取总CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuTotal(float $CpuTotal) 设置总CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCpuAvailable() 获取可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuAvailable(float $CpuAvailable) 设置可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemTotal() 获取总内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemTotal(float $MemTotal) 设置总内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemAvailable() 获取可用内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemAvailable(float $MemAvailable) 设置可用内存
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostDetailInfo extends AbstractModel
 {
     /**
      * @var string 类型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostTypeFamily;
 
     /**
      * @var float 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuTotal;
 
     /**
      * @var float 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuAvailable;
 
     /**
      * @var float 总内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemTotal;
 
     /**
      * @var float 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemAvailable;
 
     /**
      * @param string $HostTypeFamily 类型族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CpuTotal 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CpuAvailable 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemTotal 总内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemAvailable 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

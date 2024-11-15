@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReconstructDocumentFlow返回参数结构体
  *
- * @method string getTaskId() 获取任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
- * @method void setTaskId(string $TaskId) 设置任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+ * @method string getTaskId() 获取任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+ * @method void setTaskId(string $TaskId) 设置任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateReconstructDocumentFlowResponse extends AbstractModel
 {
     /**
-     * @var string 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+     * @var string 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class CreateReconstructDocumentFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+     * @param string $TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置`HAVIP`所在弹性网卡`ID`。
  * @method boolean getCheckAssociate() 获取是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
  * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateHaVipRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateHaVipRequest extends AbstractModel
     public $CheckAssociate;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId `HAVIP`所在私有网络`ID`。
      * @param string $HaVipName `HAVIP`名称。
      * @param string $SubnetId `HAVIP`所在子网`ID`。
      * @param string $Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      * @param string $NetworkInterfaceId `HAVIP`所在弹性网卡`ID`。
      * @param boolean $CheckAssociate 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateHaVipRequest extends AbstractModel
 
         if (array_key_exists("CheckAssociate",$param) and $param["CheckAssociate"] !== null) {
             $this->CheckAssociate = $param["CheckAssociate"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

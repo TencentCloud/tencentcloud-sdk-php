@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ActivateTWeCallLicense请求参数结构体
  *
- * @method integer getPkgType() 获取TWecall类型： 0-测试激活码； 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
- * @method void setPkgType(integer $PkgType) 设置TWecall类型： 0-测试激活码； 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
+ * @method integer getPkgType() 获取TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
+ * @method void setPkgType(integer $PkgType) 设置TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
  * @method string getMiniProgramAppId() 获取appId
  * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置appId
  * @method array getDeviceList() 获取设备列表
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ActivateTWeCallLicenseRequest extends AbstractModel
 {
     /**
-     * @var integer TWecall类型： 0-测试激活码； 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
+     * @var integer TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
      */
     public $PkgType;
 
@@ -45,7 +45,7 @@ class ActivateTWeCallLicenseRequest extends AbstractModel
     public $DeviceList;
 
     /**
-     * @param integer $PkgType TWecall类型： 0-测试激活码； 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
+     * @param integer $PkgType TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
      * @param string $MiniProgramAppId appId
      * @param array $DeviceList 设备列表
      */

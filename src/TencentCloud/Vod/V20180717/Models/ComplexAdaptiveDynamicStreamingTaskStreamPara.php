@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自适应码流任务的流参数。
  *
- * @method integer getDefinition() 获取自适应码流模版 ID。
- * @method void setDefinition(integer $Definition) 设置自适应码流模版 ID。
+ * @method integer getDefinition() 获取自适应码流模板 ID。
+ * @method void setDefinition(integer $Definition) 设置自适应码流模板 ID。
  */
 class ComplexAdaptiveDynamicStreamingTaskStreamPara extends AbstractModel
 {
     /**
-     * @var integer 自适应码流模版 ID。
+     * @var integer 自适应码流模板 ID。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 自适应码流模版 ID。
+     * @param integer $Definition 自适应码流模板 ID。
      */
     function __construct()
     {

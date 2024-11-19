@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getUseErrorOnHold() 获取是否使用错误挂起功能。
  * @method void setUseErrorOnHold(boolean $UseErrorOnHold) 设置是否使用错误挂起功能。
  * @method string getFinalWorkflowOutputsDir() 获取输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinalWorkflowOutputsDir(string $FinalWorkflowOutputsDir) 设置输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseRelativeOutputPaths() 获取是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseRelativeOutputPaths(boolean $UseRelativeOutputPaths) 设置是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAddRunInfoToOutputDir() 获取是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddRunInfoToOutputDir(boolean $AddRunInfoToOutputDir) 设置是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunOption extends AbstractModel
 {
@@ -64,19 +58,16 @@ class RunOption extends AbstractModel
 
     /**
      * @var string 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinalWorkflowOutputsDir;
 
     /**
      * @var boolean 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseRelativeOutputPaths;
 
     /**
      * @var boolean 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddRunInfoToOutputDir;
 
@@ -87,11 +78,8 @@ class RunOption extends AbstractModel
      * @param boolean $UseCallCache 是否使用Call-Caching功能。
      * @param boolean $UseErrorOnHold 是否使用错误挂起功能。
      * @param string $FinalWorkflowOutputsDir 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseRelativeOutputPaths 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AddRunInfoToOutputDir 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

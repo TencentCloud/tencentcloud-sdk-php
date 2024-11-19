@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置具体操作内容
  * @method integer getResult() 获取操作结果，1-成功，2-失败
  * @method void setResult(integer $Result) 设置操作结果，1-成功，2-失败
+ * @method string getSignValue() 获取签名值
+ * @method void setSignValue(string $SignValue) 设置签名值
  */
 class OperationEvent extends AbstractModel
 {
@@ -73,6 +75,11 @@ class OperationEvent extends AbstractModel
     public $Result;
 
     /**
+     * @var string 签名值
+     */
+    public $SignValue;
+
+    /**
      * @param string $UserName 用户名
      * @param string $RealName 姓名
      * @param string $Time 操作时间
@@ -80,6 +87,7 @@ class OperationEvent extends AbstractModel
      * @param integer $Kind 操作类型
      * @param string $Operation 具体操作内容
      * @param integer $Result 操作结果，1-成功，2-失败
+     * @param string $SignValue 签名值
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class OperationEvent extends AbstractModel
 
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("SignValue",$param) and $param["SignValue"] !== null) {
+            $this->SignValue = $param["SignValue"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 缓存信息。
  *
  * @method integer getCacheClearDelay() 获取缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheClearDelay(integer $CacheClearDelay) 设置缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCacheClearTime() 获取缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheClearTime(string $CacheClearTime) 设置缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCacheCleared() 获取缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheCleared(boolean $CacheCleared) 设置缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheInfo extends AbstractModel
 {
     /**
      * @var integer 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheClearDelay;
 
     /**
      * @var string 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheClearTime;
 
     /**
      * @var boolean 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheCleared;
 
     /**
      * @param integer $CacheClearDelay 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CacheClearTime 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CacheCleared 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

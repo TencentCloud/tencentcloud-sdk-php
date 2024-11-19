@@ -25,10 +25,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerName() 获取负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称。
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取负载均衡实例的状态，包括
 0：创建中，1：正常运行。
@@ -205,7 +205,7 @@ class LoadBalancerDetail extends AbstractModel
 
     /**
      * @var string 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerType;
@@ -450,7 +450,7 @@ OPEN：公网属性，INTERNAL：内网属性。
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  * @method boolean getForbidPersonalMultipleSign() 获取禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
  * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+ * @method boolean getFlowNameAppendScannerInfo() 获取合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+ * @method void setFlowNameAppendScannerInfo(boolean $FlowNameAppendScannerInfo) 设置合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -141,6 +143,11 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $ForbidPersonalMultipleSign;
 
     /**
+     * @var boolean 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     */
+    public $FlowNameAppendScannerInfo;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -163,6 +170,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param UserInfo $Operator 暂未开放
      * @param boolean $ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     * @param boolean $FlowNameAppendScannerInfo 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
      */
     function __construct()
     {
@@ -236,6 +244,10 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("ForbidPersonalMultipleSign",$param) and $param["ForbidPersonalMultipleSign"] !== null) {
             $this->ForbidPersonalMultipleSign = $param["ForbidPersonalMultipleSign"];
+        }
+
+        if (array_key_exists("FlowNameAppendScannerInfo",$param) and $param["FlowNameAppendScannerInfo"] !== null) {
+            $this->FlowNameAppendScannerInfo = $param["FlowNameAppendScannerInfo"];
         }
     }
 }

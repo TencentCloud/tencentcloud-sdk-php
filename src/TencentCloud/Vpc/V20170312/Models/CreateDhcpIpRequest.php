@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDhcpIpName(string $DhcpIpName) 设置`DhcpIp`名称。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateDhcpIpRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDhcpIpRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId 私有网络`ID`。
      * @param string $SubnetId 子网`ID`。
      * @param string $DhcpIpName `DhcpIp`名称。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateDhcpIpRequest extends AbstractModel
 
         if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
             $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 设备激活结果数据
  *
- * @method string getModelId() 获取模版ID
+ * @method string getModelId() 获取模板ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelId(string $ModelId) 设置模版ID
+ * @method void setModelId(string $ModelId) 设置模板ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSn() 获取SN信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DeviceActiveResult extends AbstractModel
 {
     /**
-     * @var string 模版ID
+     * @var string 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelId;
@@ -64,7 +64,7 @@ class DeviceActiveResult extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @param string $ModelId 模版ID
+     * @param string $ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn SN信息
 注意：此字段可能返回 null，表示取不到有效值。

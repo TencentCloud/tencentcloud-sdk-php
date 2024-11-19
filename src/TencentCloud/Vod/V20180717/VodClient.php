@@ -54,7 +54,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 分类层次不可超过 4 层。
 * 每个分类的子类数量不可超过 500 个。
  * @method Models\CreateComplexAdaptiveDynamicStreamingTaskResponse CreateComplexAdaptiveDynamicStreamingTask(Models\CreateComplexAdaptiveDynamicStreamingTaskRequest $req) 发起复杂自适应码流处理任务，功能包括：
-1. 按指定的自适应码流模版输出 HLS、DASH 自适应码流；
+1. 按指定的自适应码流模板输出 HLS、DASH 自适应码流；
 2. 自适应码流的内容保护方案可选择无加密、Widevine 或 FairPlay；
 3. 支持添加片头片尾；
 4. 输出的自适应码流可包含多语言音频流，每种语言分别来自不同的媒体文件；

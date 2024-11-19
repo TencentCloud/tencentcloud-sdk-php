@@ -20,28 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupUrl请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getBackupId() 获取备份 ID，可通过 [DescribeInstanceBackups ](https://cloud.tencent.com/document/product/239/20011)接口返回的参数 RedisBackupSet 获取。
  * @method void setBackupId(string $BackupId) 设置备份 ID，可通过 [DescribeInstanceBackups ](https://cloud.tencent.com/document/product/239/20011)接口返回的参数 RedisBackupSet 获取。
  * @method string getLimitType() 获取下载备份文件的网络限制类型，如果不配置该参数，则使用用户自定义的配置。
-
 - NoLimit：不限制，腾讯云内外网均可以下载备份文件。
 -  LimitOnlyIntranet：仅腾讯云自动分配的内网地址可下载备份文件。
 - Customize：指用户自定义的私有网络可下载备份文件。
  * @method void setLimitType(string $LimitType) 设置下载备份文件的网络限制类型，如果不配置该参数，则使用用户自定义的配置。
-
 - NoLimit：不限制，腾讯云内外网均可以下载备份文件。
 -  LimitOnlyIntranet：仅腾讯云自动分配的内网地址可下载备份文件。
 - Customize：指用户自定义的私有网络可下载备份文件。
  * @method string getVpcComparisonSymbol() 获取该参数仅支持输入 In，表示自定义的**LimitVpc**可以下载备份文件。
  * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) 设置该参数仅支持输入 In，表示自定义的**LimitVpc**可以下载备份文件。
  * @method string getIpComparisonSymbol() 获取标识自定义的 LimitIp 地址是否可下载备份文件。
-
 - In: 自定义的 IP 地址可以下载。默认为 In。
 - NotIn: 自定义的 IP 不可以下载。
  * @method void setIpComparisonSymbol(string $IpComparisonSymbol) 设置标识自定义的 LimitIp 地址是否可下载备份文件。
-
 - In: 自定义的 IP 地址可以下载。默认为 In。
 - NotIn: 自定义的 IP 不可以下载。
  * @method array getLimitVpc() 获取自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，需配置该参数。
@@ -52,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupUrlRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -63,7 +59,6 @@ class DescribeBackupUrlRequest extends AbstractModel
 
     /**
      * @var string 下载备份文件的网络限制类型，如果不配置该参数，则使用用户自定义的配置。
-
 - NoLimit：不限制，腾讯云内外网均可以下载备份文件。
 -  LimitOnlyIntranet：仅腾讯云自动分配的内网地址可下载备份文件。
 - Customize：指用户自定义的私有网络可下载备份文件。
@@ -77,7 +72,6 @@ class DescribeBackupUrlRequest extends AbstractModel
 
     /**
      * @var string 标识自定义的 LimitIp 地址是否可下载备份文件。
-
 - In: 自定义的 IP 地址可以下载。默认为 In。
 - NotIn: 自定义的 IP 不可以下载。
      */
@@ -94,16 +88,14 @@ class DescribeBackupUrlRequest extends AbstractModel
     public $LimitIp;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $BackupId 备份 ID，可通过 [DescribeInstanceBackups ](https://cloud.tencent.com/document/product/239/20011)接口返回的参数 RedisBackupSet 获取。
      * @param string $LimitType 下载备份文件的网络限制类型，如果不配置该参数，则使用用户自定义的配置。
-
 - NoLimit：不限制，腾讯云内外网均可以下载备份文件。
 -  LimitOnlyIntranet：仅腾讯云自动分配的内网地址可下载备份文件。
 - Customize：指用户自定义的私有网络可下载备份文件。
      * @param string $VpcComparisonSymbol 该参数仅支持输入 In，表示自定义的**LimitVpc**可以下载备份文件。
      * @param string $IpComparisonSymbol 标识自定义的 LimitIp 地址是否可下载备份文件。
-
 - In: 自定义的 IP 地址可以下载。默认为 In。
 - NotIn: 自定义的 IP 不可以下载。
      * @param array $LimitVpc 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，需配置该参数。

@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -178,6 +180,11 @@ class RabbitMQVipInstance extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 实例类型，0 专享版、1 Serverless 版
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -204,6 +211,7 @@ class RabbitMQVipInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，毫秒为单位
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
      */
     function __construct()
     {
@@ -297,6 +305,10 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

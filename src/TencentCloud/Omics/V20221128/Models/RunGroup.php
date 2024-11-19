@@ -33,25 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApplicationType() 获取应用类型。
  * @method void setApplicationType(string $ApplicationType) 设置应用类型。
  * @method ApplicationVersion getApplicationVersion() 获取应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationVersion(ApplicationVersion $ApplicationVersion) 设置应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessMode() 获取应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessMode(string $AccessMode) 设置应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvironmentId() 获取环境ID。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID。
  * @method string getEnvironmentName() 获取环境名称。
  * @method void setEnvironmentName(string $EnvironmentName) 设置环境名称。
  * @method string getTableId() 获取表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableId(string $TableId) 设置表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取任务名称。
  * @method void setName(string $Name) 设置任务名称。
  * @method string getDescription() 获取任务描述。
@@ -61,45 +55,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkDir() 获取工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkDir(string $WorkDir) 设置工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInput() 获取任务输入。
  * @method void setInput(string $Input) 设置任务输入。
  * @method string getInputType() 获取任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputType(string $InputType) 设置任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputCosUri() 获取输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputCosUri(string $InputCosUri) 设置输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputTemplateId() 获取输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputTemplateId(string $InputTemplateId) 设置输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RunOption getOption() 获取WDL运行选项。
  * @method void setOption(RunOption $Option) 设置WDL运行选项。
  * @method NFOption getNFOption() 获取Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNFOption(NFOption $NFOption) 设置Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVolumes() 获取使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumes(array $Volumes) 设置使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalRun() 获取任务总数量。
  * @method void setTotalRun(integer $TotalRun) 设置任务总数量。
  * @method array getRunStatusCounts() 获取各状态任务的数量。
@@ -109,21 +89,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getErrorMessage() 获取错误信息。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。
  * @method string getResultNotify() 获取运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultNotify(string $ResultNotify) 设置运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
  * @method string getCreator() 获取创建者。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置创建者。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorId() 获取创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorId(string $CreatorId) 设置创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunGroup extends AbstractModel
 {
@@ -159,7 +133,6 @@ class RunGroup extends AbstractModel
 
     /**
      * @var ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationVersion;
 
@@ -167,7 +140,6 @@ class RunGroup extends AbstractModel
      * @var string 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessMode;
 
@@ -183,7 +155,6 @@ class RunGroup extends AbstractModel
 
     /**
      * @var string 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableId;
 
@@ -206,13 +177,11 @@ class RunGroup extends AbstractModel
      * @var string 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkDir;
 
@@ -226,19 +195,16 @@ class RunGroup extends AbstractModel
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputType;
 
     /**
      * @var string 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputCosUri;
 
     /**
      * @var string 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputTemplateId;
 
@@ -249,13 +215,11 @@ class RunGroup extends AbstractModel
 
     /**
      * @var NFOption Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NFOption;
 
     /**
      * @var array 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volumes;
 
@@ -281,7 +245,6 @@ class RunGroup extends AbstractModel
 
     /**
      * @var string 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultNotify;
 
@@ -297,13 +260,11 @@ class RunGroup extends AbstractModel
 
     /**
      * @var string 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
     /**
      * @var string 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorId;
 
@@ -315,51 +276,38 @@ class RunGroup extends AbstractModel
      * @param string $ApplicationName 应用名称。
      * @param string $ApplicationType 应用类型。
      * @param ApplicationVersion $ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessMode 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvironmentId 环境ID。
      * @param string $EnvironmentName 环境名称。
      * @param string $TableId 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 任务名称。
      * @param string $Description 任务描述。
      * @param string $Status 任务状态。
      * @param string $Type 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkDir 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Input 任务输入。
      * @param string $InputType 任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputCosUri 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputTemplateId 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunOption $Option WDL运行选项。
      * @param NFOption $NFOption Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Volumes 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRun 任务总数量。
      * @param array $RunStatusCounts 各状态任务的数量。
      * @param ExecutionTime $ExecutionTime 执行时间。
      * @param string $ErrorMessage 错误信息。
      * @param string $ResultNotify 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
      * @param string $Creator 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

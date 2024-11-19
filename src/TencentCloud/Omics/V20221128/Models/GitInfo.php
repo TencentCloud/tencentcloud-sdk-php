@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Git信息。
  *
  * @method string getGitHttpPath() 获取Git地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitHttpPath(string $GitHttpPath) 设置Git地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGitUserName() 获取Git用户名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitUserName(string $GitUserName) 设置Git用户名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGitTokenOrPassword() 获取Git密码或者Token。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitTokenOrPassword(string $GitTokenOrPassword) 设置Git密码或者Token。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBranch() 获取分支。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBranch(string $Branch) 设置分支。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GitInfo extends AbstractModel
 {
     /**
      * @var string Git地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GitHttpPath;
 
     /**
      * @var string Git用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GitUserName;
 
     /**
      * @var string Git密码或者Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GitTokenOrPassword;
 
     /**
      * @var string 分支。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Branch;
 
     /**
      * @var string 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @param string $GitHttpPath Git地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GitUserName Git用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GitTokenOrPassword Git密码或者Token。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Branch 分支。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

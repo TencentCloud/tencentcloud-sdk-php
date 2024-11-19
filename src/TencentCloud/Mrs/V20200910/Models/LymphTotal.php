@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTransferNum() 获取转移数量
+ * @method integer getTransferNum() 获取转移数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransferNum(string $TransferNum) 设置转移数量
+ * @method void setTransferNum(integer $TransferNum) 设置转移数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTotal() 获取总数量
+ * @method integer getTotal() 获取总数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(string $Total) 设置总数量
+ * @method void setTotal(integer $Total) 设置总数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,13 +54,13 @@ class LymphTotal extends AbstractModel
     public $Name;
 
     /**
-     * @var string 转移数量
+     * @var integer 转移数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferNum;
 
     /**
-     * @var string 总数量
+     * @var integer 总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
@@ -86,9 +86,9 @@ class LymphTotal extends AbstractModel
     /**
      * @param string $Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TransferNum 转移数量
+     * @param integer $TransferNum 转移数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Total 总数量
+     * @param integer $Total 总数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
 注意：此字段可能返回 null，表示取不到有效值。

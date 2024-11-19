@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
  * @method integer getAction() 获取堡垒机拦截情况, 1-已执行，  2-被阻断
  * @method void setAction(integer $Action) 设置堡垒机拦截情况, 1-已执行，  2-被阻断
+ * @method string getSignValue() 获取签名值
+ * @method void setSignValue(string $SignValue) 设置签名值
  */
 class SearchFileBySidResult extends AbstractModel
 {
@@ -73,6 +75,11 @@ class SearchFileBySidResult extends AbstractModel
     public $Action;
 
     /**
+     * @var string 签名值
+     */
+    public $SignValue;
+
+    /**
      * @param string $Time 文件操作时间
      * @param integer $Method 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
      * @param string $Protocol 文件传输协议
@@ -80,6 +87,7 @@ class SearchFileBySidResult extends AbstractModel
      * @param string $FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
      * @param integer $Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
      * @param integer $Action 堡垒机拦截情况, 1-已执行，  2-被阻断
+     * @param string $SignValue 签名值
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class SearchFileBySidResult extends AbstractModel
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("SignValue",$param) and $param["SignValue"] !== null) {
+            $this->SignValue = $param["SignValue"];
         }
     }
 }

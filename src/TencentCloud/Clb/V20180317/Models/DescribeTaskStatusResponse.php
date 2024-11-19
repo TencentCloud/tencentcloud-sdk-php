@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置由负载均衡实例唯一 ID 组成的数组。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取辅助描述信息，如失败原因等。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置辅助描述信息，如失败原因等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +47,12 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $LoadBalancerIds;
 
     /**
+     * @var string 辅助描述信息，如失败原因等。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -50,6 +60,8 @@ class DescribeTaskStatusResponse extends AbstractModel
     /**
      * @param integer $Status 任务的当前状态。 0：成功，1：失败，2：进行中。
      * @param array $LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 辅助描述信息，如失败原因等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -72,6 +84,10 @@ class DescribeTaskStatusResponse extends AbstractModel
 
         if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
             $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

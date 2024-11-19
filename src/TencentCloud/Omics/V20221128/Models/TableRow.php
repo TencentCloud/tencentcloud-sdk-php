@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 表格行。
  *
  * @method string getTableRowUuid() 获取表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableRowUuid(string $TableRowUuid) 设置表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableRow extends AbstractModel
 {
     /**
      * @var string 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableRowUuid;
 
     /**
      * @var array 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param string $TableRowUuid 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

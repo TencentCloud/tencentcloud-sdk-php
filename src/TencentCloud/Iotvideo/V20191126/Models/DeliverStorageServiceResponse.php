@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
 3：已过期。查询不到设备保存在云端的数据。
 4：等待服务生效。
- * @method array getData() 获取新增的云存定单列表
- * @method void setData(array $Data) 设置新增的云存定单列表
+ * @method array getData() 获取新增的云存订单列表
+ * @method void setData(array $Data) 设置新增的云存订单列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,7 +103,7 @@ class DeliverStorageServiceResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var array 新增的云存定单列表
+     * @var array 新增的云存订单列表
      */
     public $Data;
 
@@ -126,7 +126,7 @@ class DeliverStorageServiceResponse extends AbstractModel
 2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
 3：已过期。查询不到设备保存在云端的数据。
 4：等待服务生效。
-     * @param array $Data 新增的云存定单列表
+     * @param array $Data 新增的云存订单列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

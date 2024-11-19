@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置计费模式，0-后付费，1-预付费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -209,6 +211,11 @@ class RabbitMQClusterInfo extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 实例类型，0 专享版、1 Serverless 版
+     */
+    public $InstanceType;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -240,6 +247,7 @@ class RabbitMQClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 计费模式，0-后付费，1-预付费
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
      */
     function __construct()
     {
@@ -349,6 +357,10 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

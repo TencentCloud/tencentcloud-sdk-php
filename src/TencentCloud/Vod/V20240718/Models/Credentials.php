@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20240718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 临时证书。
+ * 临时访问凭证。
  *
- * @method string getAccessKeyId() 获取秘钥 ID。
- * @method void setAccessKeyId(string $AccessKeyId) 设置秘钥 ID。
- * @method string getSecretAccessKey() 获取秘钥 Key。
- * @method void setSecretAccessKey(string $SecretAccessKey) 设置秘钥 Key。
- * @method string getSessionToken() 获取token。token长度和绑定的策略有关，最长不超过4096字节。
- * @method void setSessionToken(string $SessionToken) 设置token。token长度和绑定的策略有关，最长不超过4096字节。
- * @method string getExpiration() 获取凭据的过期时间。
- * @method void setExpiration(string $Expiration) 设置凭据的过期时间。
+ * @method string getAccessKeyId() 获取访问凭证 ID。
+ * @method void setAccessKeyId(string $AccessKeyId) 设置访问凭证 ID。
+ * @method string getSecretAccessKey() 获取访问凭证 Key。
+ * @method void setSecretAccessKey(string $SecretAccessKey) 设置访问凭证 Key。
+ * @method string getSessionToken() 获取访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+ * @method void setSessionToken(string $SessionToken) 设置访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+ * @method string getExpiration() 获取访问凭证的过期时间。
+ * @method void setExpiration(string $Expiration) 设置访问凭证的过期时间。
  */
 class Credentials extends AbstractModel
 {
     /**
-     * @var string 秘钥 ID。
+     * @var string 访问凭证 ID。
      */
     public $AccessKeyId;
 
     /**
-     * @var string 秘钥 Key。
+     * @var string 访问凭证 Key。
      */
     public $SecretAccessKey;
 
     /**
-     * @var string token。token长度和绑定的策略有关，最长不超过4096字节。
+     * @var string 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
      */
     public $SessionToken;
 
     /**
-     * @var string 凭据的过期时间。
+     * @var string 访问凭证的过期时间。
      */
     public $Expiration;
 
     /**
-     * @param string $AccessKeyId 秘钥 ID。
-     * @param string $SecretAccessKey 秘钥 Key。
-     * @param string $SessionToken token。token长度和绑定的策略有关，最长不超过4096字节。
-     * @param string $Expiration 凭据的过期时间。
+     * @param string $AccessKeyId 访问凭证 ID。
+     * @param string $SecretAccessKey 访问凭证 Key。
+     * @param string $SessionToken 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+     * @param string $Expiration 访问凭证的过期时间。
      */
     function __construct()
     {

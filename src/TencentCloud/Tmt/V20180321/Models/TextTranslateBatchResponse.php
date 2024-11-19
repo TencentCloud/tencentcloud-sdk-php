@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) 设置目标语言，详见入参Target
  * @method array getTargetTextList() 获取翻译后的文本列表
  * @method void setTargetTextList(array $TargetTextList) 设置翻译后的文本列表
+ * @method integer getUsedAmount() 获取本次翻译消耗的字符数
+ * @method void setUsedAmount(integer $UsedAmount) 设置本次翻译消耗的字符数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class TextTranslateBatchResponse extends AbstractModel
     public $TargetTextList;
 
     /**
+     * @var integer 本次翻译消耗的字符数
+     */
+    public $UsedAmount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class TextTranslateBatchResponse extends AbstractModel
      * @param string $Source 源语言，详见入参Source
      * @param string $Target 目标语言，详见入参Target
      * @param array $TargetTextList 翻译后的文本列表
+     * @param integer $UsedAmount 本次翻译消耗的字符数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,10 @@ class TextTranslateBatchResponse extends AbstractModel
 
         if (array_key_exists("TargetTextList",$param) and $param["TargetTextList"] !== null) {
             $this->TargetTextList = $param["TargetTextList"];
+        }
+
+        if (array_key_exists("UsedAmount",$param) and $param["UsedAmount"] !== null) {
+            $this->UsedAmount = $param["UsedAmount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

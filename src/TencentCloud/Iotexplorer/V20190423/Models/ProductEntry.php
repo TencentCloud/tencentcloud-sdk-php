@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method integer getCategoryId() 获取产品分组模板ID
  * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID
- * @method string getEncryptionType() 获取加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+ * @method string getEncryptionType() 获取加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+ * @method void setEncryptionType(string $EncryptionType) 设置加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
  * @method string getNetType() 获取连接类型。如：
 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
  * @method void setNetType(string $NetType) 设置连接类型。如：
@@ -97,7 +97,7 @@ class ProductEntry extends AbstractModel
     public $CategoryId;
 
     /**
-     * @var string 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @var string 加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public $EncryptionType;
 
@@ -198,7 +198,7 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $CategoryId 产品分组模板ID
-     * @param string $EncryptionType 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @param string $EncryptionType 加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      * @param string $NetType 连接类型。如：
 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义类型)

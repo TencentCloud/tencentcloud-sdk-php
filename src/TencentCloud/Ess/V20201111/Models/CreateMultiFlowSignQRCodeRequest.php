@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
  * @method boolean getForbidPersonalMultipleSign() 获取禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
  * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+ * @method boolean getFlowNameAppendScannerInfo() 获取合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
+例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+ * @method void setFlowNameAppendScannerInfo(boolean $FlowNameAppendScannerInfo) 设置合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
+例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
  */
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -159,6 +163,12 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $ForbidPersonalMultipleSign;
 
     /**
+     * @var boolean 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
+例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     */
+    public $FlowNameAppendScannerInfo;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $TemplateId 合同模板ID，为32位字符串。
@@ -186,6 +196,8 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param array $ApproverComponentLimitTypes 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
      * @param boolean $ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     * @param boolean $FlowNameAppendScannerInfo 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
+例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
      */
     function __construct()
     {
@@ -263,6 +275,10 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("ForbidPersonalMultipleSign",$param) and $param["ForbidPersonalMultipleSign"] !== null) {
             $this->ForbidPersonalMultipleSign = $param["ForbidPersonalMultipleSign"];
+        }
+
+        if (array_key_exists("FlowNameAppendScannerInfo",$param) and $param["FlowNameAppendScannerInfo"] !== null) {
+            $this->FlowNameAppendScannerInfo = $param["FlowNameAppendScannerInfo"];
         }
     }
 }

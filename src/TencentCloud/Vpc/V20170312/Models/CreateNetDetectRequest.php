@@ -62,6 +62,8 @@ NONEXTHOP：无下一跳；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
  * @method string getNetDetectDescription() 获取网络探测描述。
  * @method void setNetDetectDescription(string $NetDetectDescription) 设置网络探测描述。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateNetDetectRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ NONEXTHOP：无下一跳；
     public $NetDetectDescription;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`。
      * @param string $SubnetId 子网实例ID。形如：subnet-12345678。
      * @param string $NetDetectName 网络探测名称，最大长度不能超过60个字节。
@@ -136,6 +143,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      * @param string $NetDetectDescription 网络探测描述。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -176,6 +184,15 @@ NONEXTHOP：无下一跳；
 
         if (array_key_exists("NetDetectDescription",$param) and $param["NetDetectDescription"] !== null) {
             $this->NetDetectDescription = $param["NetDetectDescription"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
+配额数查询：[DescribeVpcLimits](https://cloud.tencent.com/document/api/215/42942)。
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
+配额数查询：[DescribeVpcLimits](https://cloud.tencent.com/document/api/215/42942)。
  * @method string getQosLevel() 获取IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
  * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
  * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如：['sg-1dd51d']。
@@ -67,6 +69,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
 
     /**
      * @var integer 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
+配额数查询：[DescribeVpcLimits](https://cloud.tencent.com/document/api/215/42942)。
      */
     public $SecondaryPrivateIpAddressCount;
 
@@ -106,6 +109,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
+配额数查询：[DescribeVpcLimits](https://cloud.tencent.com/document/api/215/42942)。
      * @param string $QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。

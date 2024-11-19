@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+ * @method string getInstanceId() 获取ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNameInstanceIdMapping() 获取订单和购买实例对应映射列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ class CreateInstancePreData extends AbstractModel
     public $DealNames;
 
     /**
-     * @var string 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * @var string ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
@@ -68,7 +68,7 @@ class CreateInstancePreData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * @param string $InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNameInstanceIdMapping 订单和购买实例对应映射列表
 注意：此字段可能返回 null，表示取不到有效值。

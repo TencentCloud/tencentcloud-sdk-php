@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取本地专用集群 ID。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群 ID。
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -263,6 +265,11 @@ class LaunchConfiguration extends AbstractModel
     public $ImageFamily;
 
     /**
+     * @var string 本地专用集群 ID。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $LaunchConfigurationName 启动配置名称。
@@ -300,6 +307,7 @@ class LaunchConfiguration extends AbstractModel
      * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      * @param string $ImageFamily 镜像族名称。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DedicatedClusterId 本地专用集群 ID。
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
             $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

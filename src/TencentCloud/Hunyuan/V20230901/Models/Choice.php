@@ -36,6 +36,8 @@ tool_calls 标识函数调用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(Message $Message) 设置返回值，非流式调用时使用该字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIndex() 获取索引值，流式调用时使用该字段。
+ * @method void setIndex(integer $Index) 设置索引值，流式调用时使用该字段。
  */
 class Choice extends AbstractModel
 {
@@ -60,6 +62,11 @@ tool_calls 标识函数调用。
     public $Message;
 
     /**
+     * @var integer 索引值，流式调用时使用该字段。
+     */
+    public $Index;
+
+    /**
      * @param string $FinishReason 结束标志位，可能为 stop、 sensitive或者tool_calls。
 stop 表示输出正常结束。
 sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
@@ -68,6 +75,7 @@ tool_calls 标识函数调用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message $Message 返回值，非流式调用时使用该字段。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Index 索引值，流式调用时使用该字段。
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ tool_calls 标识函数调用。
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = new Message();
             $this->Message->deserialize($param["Message"]);
+        }
+
+        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
+            $this->Index = $param["Index"];
         }
     }
 }

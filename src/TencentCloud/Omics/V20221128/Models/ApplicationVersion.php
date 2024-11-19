@@ -21,130 +21,98 @@ use TencentCloud\Common\AbstractModel;
  * 应用版本。
  *
  * @method string getType() 获取版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationVersionId() 获取版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationVersionId(string $ApplicationVersionId) 设置版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEntrypoint() 获取入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntrypoint(string $Entrypoint) 设置入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorName() 获取创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorName(string $CreatorName) 设置创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorId() 获取创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorId(string $CreatorId) 设置创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGitInfo() 获取Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitInfo(string $GitInfo) 设置Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GitInfo getGitSource() 获取Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGitSource(GitInfo $GitSource) 设置Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method CosFileInfo getCosSource() 获取COS信息。
+ * @method void setCosSource(CosFileInfo $CosSource) 设置COS信息。
  */
 class ApplicationVersion extends AbstractModel
 {
     /**
      * @var string 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationVersionId;
 
     /**
      * @var string 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Entrypoint;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorName;
 
     /**
      * @var string 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorId;
 
     /**
      * @var string Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $GitInfo;
 
     /**
      * @var GitInfo Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GitSource;
 
     /**
+     * @var CosFileInfo COS信息。
+     */
+    public $CosSource;
+
+    /**
      * @param string $Type 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationVersionId 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Entrypoint 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorName 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GitInfo Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GitInfo $GitSource Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosFileInfo $CosSource COS信息。
      */
     function __construct()
     {
@@ -198,6 +166,11 @@ class ApplicationVersion extends AbstractModel
         if (array_key_exists("GitSource",$param) and $param["GitSource"] !== null) {
             $this->GitSource = new GitInfo();
             $this->GitSource->deserialize($param["GitSource"]);
+        }
+
+        if (array_key_exists("CosSource",$param) and $param["CosSource"] !== null) {
+            $this->CosSource = new CosFileInfo();
+            $this->CosSource->deserialize($param["CosSource"]);
         }
     }
 }

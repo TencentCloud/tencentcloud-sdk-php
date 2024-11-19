@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 缓存卷信息。
  *
  * @method string getVolumeId() 获取缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeId(string $VolumeId) 设置缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountPath() 获取挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountPath(string $MountPath) 设置挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VolumeInfo extends AbstractModel
 {
     /**
      * @var string 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeId;
 
     /**
      * @var string 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountPath;
 
     /**
      * @param string $VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountPath 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

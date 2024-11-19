@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVirtualHost() 获取vhost参数
+ * @method string getVirtualHost() 获取vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualHost(string $VirtualHost) 设置vhost参数
+ * @method void setVirtualHost(string $VirtualHost) 设置vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBindingId() 获取路由关系Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ class CreateRabbitMQBindingResponse extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string vhost参数
+     * @var string vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHost;
@@ -63,7 +63,7 @@ class CreateRabbitMQBindingResponse extends AbstractModel
     /**
      * @param string $InstanceId 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VirtualHost vhost参数
+     * @param string $VirtualHost vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BindingId 路由关系Id
 注意：此字段可能返回 null，表示取不到有效值。

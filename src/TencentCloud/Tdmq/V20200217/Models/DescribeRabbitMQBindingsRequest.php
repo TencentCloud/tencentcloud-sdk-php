@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
+ * @method string getVirtualHost() 获取Vhost名称
+ * @method void setVirtualHost(string $VirtualHost) 设置Vhost名称
  * @method integer getOffset() 获取分页offset
  * @method void setOffset(integer $Offset) 设置分页offset
  * @method integer getLimit() 获取分页limit
@@ -45,7 +45,7 @@ class DescribeRabbitMQBindingsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Vhost参数
+     * @var string Vhost名称
      */
     public $VirtualHost;
 
@@ -81,7 +81,7 @@ class DescribeRabbitMQBindingsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost参数
+     * @param string $VirtualHost Vhost名称
      * @param integer $Offset 分页offset
      * @param integer $Limit 分页limit
      * @param string $SearchWord 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索

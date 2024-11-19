@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExtranet(boolean $IsExtranet) 设置是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
  * @method string getDomain() 获取设置域名
  * @method void setDomain(string $Domain) 设置设置域名
- * @method string getSecurityGroup() 获取使用的安全组，只有外网访问需要传递（开启外网访问时必传）
- * @method void setSecurityGroup(string $SecurityGroup) 设置使用的安全组，只有外网访问需要传递（开启外网访问时必传）
+ * @method string getSecurityGroup() 获取使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
+ * @method void setSecurityGroup(string $SecurityGroup) 设置使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
  * @method string getExtensiveParameters() 获取创建lb参数，只有外网访问需要设置，是一个json格式化后的字符串：{"InternetAccessible":{"InternetChargeType":"TRAFFIC_POSTPAID_BY_HOUR","InternetMaxBandwidthOut":200},"VipIsp":"","BandwidthPackageId":""}。
 各个参数意义：
 InternetAccessible.InternetChargeType含义：TRAFFIC_POSTPAID_BY_HOUR按流量按小时后计费;BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;InternetAccessible.BANDWIDTH_PACKAGE 按带宽包计费。
@@ -66,7 +66,7 @@ class CreateClusterEndpointRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
+     * @var string 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
      */
     public $SecurityGroup;
 
@@ -85,7 +85,7 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
      * @param string $SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
      * @param boolean $IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
      * @param string $Domain 设置域名
-     * @param string $SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
+     * @param string $SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
      * @param string $ExtensiveParameters 创建lb参数，只有外网访问需要设置，是一个json格式化后的字符串：{"InternetAccessible":{"InternetChargeType":"TRAFFIC_POSTPAID_BY_HOUR","InternetMaxBandwidthOut":200},"VipIsp":"","BandwidthPackageId":""}。
 各个参数意义：
 InternetAccessible.InternetChargeType含义：TRAFFIC_POSTPAID_BY_HOUR按流量按小时后计费;BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;InternetAccessible.BANDWIDTH_PACKAGE 按带宽包计费。

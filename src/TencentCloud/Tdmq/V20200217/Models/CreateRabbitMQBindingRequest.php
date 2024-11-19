@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
+ * @method string getVirtualHost() 获取Vhost名称
+ * @method void setVirtualHost(string $VirtualHost) 设置Vhost名称
  * @method string getSource() 获取源exchange
  * @method void setSource(string $Source) 设置源exchange
  * @method string getDestinationType() 获取目标类型,取值queue或exchange
  * @method void setDestinationType(string $DestinationType) 设置目标类型,取值queue或exchange
  * @method string getDestination() 获取目标
  * @method void setDestination(string $Destination) 设置目标
- * @method string getRoutingKey() 获取绑定key
- * @method void setRoutingKey(string $RoutingKey) 设置绑定key
+ * @method string getRoutingKey() 获取路由键
+ * @method void setRoutingKey(string $RoutingKey) 设置路由键
  */
 class CreateRabbitMQBindingRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class CreateRabbitMQBindingRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Vhost参数
+     * @var string Vhost名称
      */
     public $VirtualHost;
 
@@ -61,17 +61,17 @@ class CreateRabbitMQBindingRequest extends AbstractModel
     public $Destination;
 
     /**
-     * @var string 绑定key
+     * @var string 路由键
      */
     public $RoutingKey;
 
     /**
      * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost参数
+     * @param string $VirtualHost Vhost名称
      * @param string $Source 源exchange
      * @param string $DestinationType 目标类型,取值queue或exchange
      * @param string $Destination 目标
-     * @param string $RoutingKey 绑定key
+     * @param string $RoutingKey 路由键
      */
     function __construct()
     {

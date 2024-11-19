@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 表格列。
  *
  * @method string getHeader() 获取列名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeader(string $Header) 设置列名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataType() 获取列数据类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataType(string $DataType) 设置列数据类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableColumn extends AbstractModel
 {
     /**
      * @var string 列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Header;
 
     /**
      * @var string 列数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataType;
 
     /**
      * @param string $Header 列名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataType 列数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

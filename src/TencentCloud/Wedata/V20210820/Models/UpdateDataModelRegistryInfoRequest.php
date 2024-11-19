@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudappId(string $CloudappId) 设置云应用的实例id
  * @method string getAppCamRole() 获取数语的CAM角色
  * @method void setAppCamRole(string $AppCamRole) 设置数语的CAM角色
- * @method string getVip() 获取数语的ip
- * @method void setVip(string $Vip) 设置数语的ip
- * @method integer getVport() 获取数语的端口
- * @method void setVport(integer $Vport) 设置数语的端口
+ * @method string getIp() 获取数语的ip
+ * @method void setIp(string $Ip) 设置数语的ip
+ * @method integer getPort() 获取数语的端口
+ * @method void setPort(integer $Port) 设置数语的端口
  * @method string getAppCamRoleId() 获取数语的CAM角色id
  * @method void setAppCamRoleId(string $AppCamRoleId) 设置数语的CAM角色id
  * @method string getProvider() 获取服务提供方
@@ -52,12 +52,12 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
     /**
      * @var string 数语的ip
      */
-    public $Vip;
+    public $Ip;
 
     /**
      * @var integer 数语的端口
      */
-    public $Vport;
+    public $Port;
 
     /**
      * @var string 数语的CAM角色id
@@ -82,8 +82,8 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
     /**
      * @param string $CloudappId 云应用的实例id
      * @param string $AppCamRole 数语的CAM角色
-     * @param string $Vip 数语的ip
-     * @param integer $Vport 数语的端口
+     * @param string $Ip 数语的ip
+     * @param integer $Port 数语的端口
      * @param string $AppCamRoleId 数语的CAM角色id
      * @param string $Provider 服务提供方
      * @param string $TenantId 租户id
@@ -110,12 +110,12 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
             $this->AppCamRole = $param["AppCamRole"];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
 
         if (array_key_exists("AppCamRoleId",$param) and $param["AppCamRoleId"] !== null) {

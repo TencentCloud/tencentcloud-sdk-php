@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置（精确匹配）统一社会信用代码。
  * @method string getLegalPerson() 获取（模糊查询）法定代表人。
  * @method void setLegalPerson(string $LegalPerson) 设置（模糊查询）法定代表人。
+ * @method string getLegalPersonId() 获取（精确查询）法人身份证号。
+ * @method void setLegalPersonId(string $LegalPersonId) 设置（精确查询）法人身份证号。
  * @method string getIssuingAuthority() 获取（模糊查询）发证机关。
  * @method void setIssuingAuthority(string $IssuingAuthority) 设置（模糊查询）发证机关。
  * @method string getBusinessAddress() 获取（模糊查询）营业执照住所。
@@ -83,6 +85,11 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @var string （模糊查询）法定代表人。
      */
     public $LegalPerson;
+
+    /**
+     * @var string （精确查询）法人身份证号。
+     */
+    public $LegalPersonId;
 
     /**
      * @var string （模糊查询）发证机关。
@@ -155,6 +162,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $Company （模糊查询）公司名称。
      * @param string $UniformSocialCreditCode （精确匹配）统一社会信用代码。
      * @param string $LegalPerson （模糊查询）法定代表人。
+     * @param string $LegalPersonId （精确查询）法人身份证号。
      * @param string $IssuingAuthority （模糊查询）发证机关。
      * @param string $BusinessAddress （模糊查询）营业执照住所。
      * @param integer $PostCode （精确匹配）邮编。
@@ -200,6 +208,10 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
 
         if (array_key_exists("LegalPerson",$param) and $param["LegalPerson"] !== null) {
             $this->LegalPerson = $param["LegalPerson"];
+        }
+
+        if (array_key_exists("LegalPersonId",$param) and $param["LegalPersonId"] !== null) {
+            $this->LegalPersonId = $param["LegalPersonId"];
         }
 
         if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {

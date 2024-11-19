@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSNTicket(string $SNTicket) 设置票据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelId() 获取模版ID
+ * @method string getModelId() 获取模板ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelId(string $ModelId) 设置模版ID
+ * @method void setModelId(string $ModelId) 设置模板ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WXIoTDeviceInfo extends AbstractModel
@@ -48,7 +48,7 @@ class WXIoTDeviceInfo extends AbstractModel
     public $SNTicket;
 
     /**
-     * @var string 模版ID
+     * @var string 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelId;
@@ -58,7 +58,7 @@ class WXIoTDeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SNTicket 票据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelId 模版ID
+     * @param string $ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

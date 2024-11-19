@@ -92,8 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
  * @method integer getDeployModel() 获取部署模式
  * @method void setDeployModel(integer $DeployModel) 设置部署模式
- * @method integer getIntranetAccess() 获取0 默认值，非内网访问，1 内网访问
- * @method void setIntranetAccess(integer $IntranetAccess) 设置0 默认值，非内网访问，1 内网访问
+ * @method integer getIntranetAccess() 获取0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
  * @method array getIntranetPrivateIpSet() 获取内网访问的ip
  * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置内网访问的ip
  * @method string getIntranetVpcId() 获取开通内网访问的vpc
@@ -284,7 +284,7 @@ class Resource extends AbstractModel
     public $DeployModel;
 
     /**
-     * @var integer 0 默认值，非内网访问，1 内网访问
+     * @var integer 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
      */
     public $IntranetAccess;
 
@@ -340,7 +340,7 @@ class Resource extends AbstractModel
      * @param string $CdcClusterId cdc集群id
      * @param string $LogDelivery 日志投递规格信息
      * @param integer $DeployModel 部署模式
-     * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问
+     * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
      * @param array $IntranetPrivateIpSet 内网访问的ip
      * @param string $IntranetVpcId 开通内网访问的vpc
      * @param string $IntranetVpcCidr 开通内网访问vpc的网段

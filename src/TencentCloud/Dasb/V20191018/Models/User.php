@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActiveStatus(integer $ActiveStatus) 设置激活状态 0 - 未激活 1 - 激活
  * @method integer getLockStatus() 获取锁定状态 0 - 未锁定 1 - 锁定
  * @method void setLockStatus(integer $LockStatus) 设置锁定状态 0 - 未锁定 1 - 锁定
+ * @method integer getUKeyStatus() 获取ukey绑定状态 0 - 未绑定 1 - 已绑定
+ * @method void setUKeyStatus(integer $UKeyStatus) 设置ukey绑定状态 0 - 未绑定 1 - 已绑定
  * @method string getStatus() 获取状态 与Filter中一致
  * @method void setStatus(string $Status) 设置状态 与Filter中一致
  * @method integer getAclVersion() 获取权限版本
@@ -132,6 +134,11 @@ class User extends AbstractModel
     public $LockStatus;
 
     /**
+     * @var integer ukey绑定状态 0 - 未绑定 1 - 已绑定
+     */
+    public $UKeyStatus;
+
+    /**
      * @var string 状态 与Filter中一致
      */
     public $Status;
@@ -158,6 +165,7 @@ class User extends AbstractModel
      * @param string $DepartmentId 用户所属部门（用于入参）
      * @param integer $ActiveStatus 激活状态 0 - 未激活 1 - 激活
      * @param integer $LockStatus 锁定状态 0 - 未锁定 1 - 锁定
+     * @param integer $UKeyStatus ukey绑定状态 0 - 未绑定 1 - 已绑定
      * @param string $Status 状态 与Filter中一致
      * @param integer $AclVersion 权限版本
      */
@@ -234,6 +242,10 @@ class User extends AbstractModel
 
         if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
             $this->LockStatus = $param["LockStatus"];
+        }
+
+        if (array_key_exists("UKeyStatus",$param) and $param["UKeyStatus"] !== null) {
+            $this->UKeyStatus = $param["UKeyStatus"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

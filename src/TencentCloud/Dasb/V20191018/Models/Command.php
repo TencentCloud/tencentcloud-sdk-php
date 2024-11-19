@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门name
  * @method integer getSize() 获取会话大小
  * @method void setSize(integer $Size) 设置会话大小
+ * @method string getSignValue() 获取签名值
+ * @method void setSignValue(string $SignValue) 设置签名值
  */
 class Command extends AbstractModel
 {
@@ -144,6 +146,11 @@ class Command extends AbstractModel
     public $Size;
 
     /**
+     * @var string 签名值
+     */
+    public $SignValue;
+
+    /**
      * @param string $Cmd 命令
      * @param string $Time 命令输入的时间
      * @param integer $TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
@@ -161,6 +168,7 @@ class Command extends AbstractModel
      * @param string $DeviceDepartmentId 设备部门id
      * @param string $DeviceDepartmentName 设备部门name
      * @param integer $Size 会话大小
+     * @param string $SignValue 签名值
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class Command extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("SignValue",$param) and $param["SignValue"] !== null) {
+            $this->SignValue = $param["SignValue"];
         }
     }
 }

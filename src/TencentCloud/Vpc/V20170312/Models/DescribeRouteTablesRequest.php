@@ -68,6 +68,8 @@ LOCAL_GATEWAY：本地网关。
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method boolean getNeedRouterInfo() 获取是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+ * @method void setNeedRouterInfo(boolean $NeedRouterInfo) 设置是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -112,6 +114,11 @@ LOCAL_GATEWAY：本地网关。
     public $Limit;
 
     /**
+     * @var boolean 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     */
+    public $NeedRouterInfo;
+
+    /**
      * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -136,6 +143,7 @@ LOCAL_GATEWAY：本地网关。
      * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $Offset 偏移量。
      * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param boolean $NeedRouterInfo 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ LOCAL_GATEWAY：本地网关。
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("NeedRouterInfo",$param) and $param["NeedRouterInfo"] !== null) {
+            $this->NeedRouterInfo = $param["NeedRouterInfo"];
         }
     }
 }

@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 路由表关联关系
  *
  * @method string getSubnetId() 获取子网实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteTableId() 获取路由表实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteTableAssociation extends AbstractModel
 {
     /**
      * @var string 子网实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 路由表实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableId;
 
     /**
      * @param string $SubnetId 子网实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteTableId 路由表实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

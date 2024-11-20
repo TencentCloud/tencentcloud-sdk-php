@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置实例计费模式，0表示后付费，即按量计费。
  * @method string getDiskType() 获取实例存储类型，填写CLOUD_HSSD，表示性能云存储。
  * @method void setDiskType(string $DiskType) 设置实例存储类型，填写CLOUD_HSSD，表示性能云存储。
- * @method integer getDiskSize() 获取实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
- * @method void setDiskSize(integer $DiskSize) 设置实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+ * @method integer getDiskSize() 获取实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
+ * @method void setDiskSize(integer $DiskSize) 设置实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
  * @method string getNodeType() 获取实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
  * @method void setNodeType(string $NodeType) 设置实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
  * @method array getZoneSettings() 获取实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
@@ -55,7 +55,7 @@ class CreateSLInstanceRequest extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+     * @var integer 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
      */
     public $DiskSize;
 
@@ -83,7 +83,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费。
      * @param string $DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
-     * @param integer $DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+     * @param integer $DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
      * @param string $NodeType 实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
      * @param array $ZoneSettings 实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
      * @param array $Tags 实例要绑定的标签列表。

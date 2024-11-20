@@ -24,54 +24,44 @@ use TencentCloud\Common\AbstractModel;
 取值范围：0-1之间。默认取值0.7。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarpRadio(float $WarpRadio) 设置拉脸强度。主要用于调整生成结果人脸脸型更像素材模板还是用户人脸。取值越大越像用户人脸。
 取值范围：0-1之间。默认取值0.7。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEnhanceRadio() 获取人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnhanceRadio(float $EnhanceRadio) 设置人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMpRadio() 获取磨皮强度。当生成脸的图像面部显脏时，可进行设置。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMpRadio(float $MpRadio) 设置磨皮强度。当生成脸的图像面部显脏时，可进行设置。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBlurRadio() 获取人脸模糊开关（暂不支持）
 当生成人脸比较清晰时，将人脸模糊到接近模板的清晰度的程度
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlurRadio(float $BlurRadio) 设置人脸模糊开关（暂不支持）
 当生成人脸比较清晰时，将人脸模糊到接近模板的清晰度的程度
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTeethEnhanceRadio() 获取牙齿增强开关，默认取值为1
 牙齿增强，修复牙齿。当生成牙齿不好（如牙齿裂开）可以打开此开关
 0：牙齿增强关闭
 1：牙齿增强打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTeethEnhanceRadio(float $TeethEnhanceRadio) 设置牙齿增强开关，默认取值为1
 牙齿增强，修复牙齿。当生成牙齿不好（如牙齿裂开）可以打开此开关
 0：牙齿增强关闭
 1：牙齿增强打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FusionUltraParam extends AbstractModel
 {
@@ -80,7 +70,6 @@ class FusionUltraParam extends AbstractModel
 取值范围：0-1之间。默认取值0.7。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarpRadio;
 
@@ -89,7 +78,6 @@ class FusionUltraParam extends AbstractModel
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceRadio;
 
@@ -98,7 +86,6 @@ class FusionUltraParam extends AbstractModel
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MpRadio;
 
@@ -107,7 +94,6 @@ class FusionUltraParam extends AbstractModel
 当生成人脸比较清晰时，将人脸模糊到接近模板的清晰度的程度
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlurRadio;
 
@@ -117,7 +103,6 @@ class FusionUltraParam extends AbstractModel
 0：牙齿增强关闭
 1：牙齿增强打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeethEnhanceRadio;
 
@@ -126,28 +111,23 @@ class FusionUltraParam extends AbstractModel
 取值范围：0-1之间。默认取值0.7。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EnhanceRadio 人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MpRadio 磨皮强度。当生成脸的图像面部显脏时，可进行设置。
 取值范围：0-1之间。默认取值1。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BlurRadio 人脸模糊开关（暂不支持）
 当生成人脸比较清晰时，将人脸模糊到接近模板的清晰度的程度
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TeethEnhanceRadio 牙齿增强开关，默认取值为1
 牙齿增强，修复牙齿。当生成牙齿不好（如牙齿裂开）可以打开此开关
 0：牙齿增强关闭
 1：牙齿增强打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getOperation() 获取指预修改网络的类别，包括：
 - changeVip：指切换私有网络，包含其内网IPv4地址及端口。
 - changeVpc：指切换私有网络所属子网。
@@ -34,19 +34,27 @@ use TencentCloud\Common\AbstractModel;
 - changeVPort：指仅修改实例网络端口。
  * @method string getVip() 获取指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
  * @method void setVip(string $Vip) 设置指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
- * @method string getVpcId() 获取指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
- * @method void setVpcId(string $VpcId) 设置指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
- * @method string getSubnetId() 获取指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
- * @method void setSubnetId(string $SubnetId) 设置指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+ * @method string getVpcId() 获取指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
+ * @method void setVpcId(string $VpcId) 设置指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
+ * @method string getSubnetId() 获取指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
+ * @method void setSubnetId(string $SubnetId) 设置指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
  * @method integer getRecycle() 获取原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
  * @method void setRecycle(integer $Recycle) 设置原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
  * @method integer getVPort() 获取指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
  * @method void setVPort(integer $VPort) 设置指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
@@ -54,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNetworkConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -73,12 +81,17 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @var string 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * @var string 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
      */
     public $VpcId;
 
     /**
-     * @var string 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * @var string 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
      */
     public $SubnetId;
 
@@ -86,7 +99,6 @@ class ModifyNetworkConfigRequest extends AbstractModel
      * @var integer 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      */
     public $Recycle;
@@ -97,19 +109,23 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $VPort;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $Operation 指预修改网络的类别，包括：
 - changeVip：指切换私有网络，包含其内网IPv4地址及端口。
 - changeVpc：指切换私有网络所属子网。
 - changeBaseToVpc：指基础网络切换为私有网络。
 - changeVPort：指仅修改实例网络端口。
      * @param string $Vip 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
-     * @param string $VpcId 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
-     * @param string $SubnetId 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * @param string $VpcId 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
+     * @param string $SubnetId 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
      * @param integer $Recycle 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      * @param integer $VPort 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
      */

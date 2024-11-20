@@ -141,6 +141,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播播放带宽和流量数据查询。
  * @method Models\DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(Models\DescribeCallbackRecordsListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 用于查询回调事件。
+ * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
+ * @method Models\DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(Models\DescribeCasterTransitionTypesRequest $req) 该接口用来获取所有的转场名称及其对应的素材url。
+ * @method Models\DescribeCasterUserStatusResponse DescribeCasterUserStatus(Models\DescribeCasterUserStatusRequest $req) 本接口用来查询当前APPID导播台业务状态
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) 查询并发录制路数，对慢直播和普通直播适用。
  * @method Models\DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(Models\DescribeDeliverBandwidthListRequest $req) 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
  * @method Models\DescribeDeliverLogDownListResponse DescribeDeliverLogDownList(Models\DescribeDeliverLogDownListRequest $req) 批量获取转推日志的URL。

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReplicationGroup请求参数结构体
  *
- * @method string getGroupId() 获取复制组字符串ID
- * @method void setGroupId(string $GroupId) 设置复制组字符串ID
- * @method string getGroupName() 获取复制组名称
- * @method void setGroupName(string $GroupName) 设置复制组名称
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getGroupId() 获取复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+ * @method void setGroupId(string $GroupId) 设置复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+ * @method string getGroupName() 获取修改后的复制组名称。
+ * @method void setGroupName(string $GroupName) 设置修改后的复制组名称。
+ * @method string getRemark() 获取备注描述。
+ * @method void setRemark(string $Remark) 设置备注描述。
  */
 class ModifyReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string 复制组字符串ID
+     * @var string 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
      */
     public $GroupId;
 
     /**
-     * @var string 复制组名称
+     * @var string 修改后的复制组名称。
      */
     public $GroupName;
 
     /**
-     * @var string 备注
+     * @var string 备注描述。
      */
     public $Remark;
 
     /**
-     * @param string $GroupId 复制组字符串ID
-     * @param string $GroupName 复制组名称
-     * @param string $Remark 备注
+     * @param string $GroupId 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+     * @param string $GroupName 修改后的复制组名称。
+     * @param string $Remark 备注描述。
      */
     function __construct()
     {

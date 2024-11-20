@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDefaultSecurityGroup请求参数结构体
  *
- * @method string getProjectId() 获取项目ID，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+ * @method string getProjectId() 获取项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
+ * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
  */
 class CreateDefaultSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     public $ProjectId;
 
     /**
-     * @param string $ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * @param string $ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     function __construct()
     {

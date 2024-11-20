@@ -115,6 +115,15 @@ use TencentCloud\Common\AbstractModel;
 <li><b>H5</b>：适用于H5页面的认证链接</li>
 <li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
 </ul>
+
+ * @method array getInitialization() 获取指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+ * @method void setInitialization(array $Initialization) 设置指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -243,6 +252,14 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     public $Endpoint;
 
     /**
+     * @var array 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     */
+    public $Initialization;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
@@ -290,6 +307,11 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
 <li><b>H5</b>：适用于H5页面的认证链接</li>
 <li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
 </ul>
+
+     * @param array $Initialization 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
      */
     function __construct()
     {
@@ -379,6 +401,10 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
 
         if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
             $this->Endpoint = $param["Endpoint"];
+        }
+
+        if (array_key_exists("Initialization",$param) and $param["Initialization"] !== null) {
+            $this->Initialization = $param["Initialization"];
         }
     }
 }

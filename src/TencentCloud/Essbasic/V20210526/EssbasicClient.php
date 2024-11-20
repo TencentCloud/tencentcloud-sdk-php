@@ -67,11 +67,10 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 - 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
 - <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
 - 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
- * @method Models\ChannelCreateBatchQuickSignUrlResponse ChannelCreateBatchQuickSignUrl(Models\ChannelCreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量待办链接, 暂时不支持企业端签署。
+ * @method Models\ChannelCreateBatchQuickSignUrlResponse ChannelCreateBatchQuickSignUrl(Models\ChannelCreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人/企业用户的批量待办链接。
 **注意：**
-1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=1)。
-2. 该接口可生成C端签署人的批量签署/查看链接，**签署控件仅支持手写签名(控件类型为SIGN_SIGNATURE)和时间类型的签署控件** 。
-3. 该签署链接**有效期为30分钟**，过期后将失效，如需签署可重新创建批量签署链接 。
+1. 该接口可生成签署人的批量、合同组签署/查看链接 。
+2. 该签署链接**有效期为30分钟**，过期后将失效，如需签署可重新创建批量签署链接 。
 4. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，**不支持微信小程序嵌入**。
 跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
 6. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。

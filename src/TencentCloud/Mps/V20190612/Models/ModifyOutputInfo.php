@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出的名称。
  * @method string getDescription() 获取输出的描述。
  * @method void setDescription(string $Description) 设置输出的描述。
- * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP。
- * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP。
+ * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+ * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
  * @method CreateOutputSRTSettings getSRTSettings() 获取转推SRT的配置。
  * @method void setSRTSettings(CreateOutputSRTSettings $SRTSettings) 设置转推SRT的配置。
  * @method CreateOutputInfoRTPSettings getRTPSettings() 获取转推RTP的配置。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组 ID。 仅支持关联一组安全组。	
  * @method array getZones() 获取可用区
  * @method void setZones(array $Zones) 设置可用区
+ * @method CreateOutputRistSettings getRISTSettings() 获取转推RIST的配置。
+ * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置转推RIST的配置。
  */
 class ModifyOutputInfo extends AbstractModel
 {
@@ -63,7 +65,7 @@ class ModifyOutputInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 输出的转推协议，支持SRT|RTP|RTMP。
+     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public $Protocol;
 
@@ -104,10 +106,15 @@ class ModifyOutputInfo extends AbstractModel
     public $Zones;
 
     /**
+     * @var CreateOutputRistSettings 转推RIST的配置。
+     */
+    public $RISTSettings;
+
+    /**
      * @param string $OutputId 需要修改的Output的Id。
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出的描述。
-     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP。
+     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      * @param CreateOutputSRTSettings $SRTSettings 转推SRT的配置。
      * @param CreateOutputInfoRTPSettings $RTPSettings 转推RTP的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 转推RTMP的配置。
@@ -116,6 +123,7 @@ class ModifyOutputInfo extends AbstractModel
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
      * @param array $SecurityGroupIds 绑定的安全组 ID。 仅支持关联一组安全组。	
      * @param array $Zones 可用区
+     * @param CreateOutputRistSettings $RISTSettings 转推RIST的配置。
      */
     function __construct()
     {
@@ -175,6 +183,11 @@ class ModifyOutputInfo extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateOutputRistSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
         }
     }
 }

@@ -64,20 +64,8 @@ use TencentCloud\Common\AbstractModel;
 "-4"代表未探测
  * @method string getServiceName() 获取服务组件名称，都是大写例如YARN
  * @method void setServiceName(string $ServiceName) 设置服务组件名称，都是大写例如YARN
- * @method string getNodeTypeName() 获取节点名称
-master
-core
-task
-common
-router
-
- * @method void setNodeTypeName(string $NodeTypeName) 设置节点名称
-master
-core
-task
-common
-router
-
+ * @method string getNodeTypeName() 获取节点名称master,core,task,common,router
+ * @method void setNodeTypeName(string $NodeTypeName) 设置节点名称master,core,task,common,router
  * @method integer getDataNodeMaintenanceId() 获取过滤条件：dn是否处于维护状态
 0代表所有状态
 1代表处于维护状态
@@ -148,13 +136,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
     public $ServiceName;
 
     /**
-     * @var string 节点名称
-master
-core
-task
-common
-router
-
+     * @var string 节点名称master,core,task,common,router
      */
     public $NodeTypeName;
 
@@ -193,13 +175,7 @@ router
 "-3"代表存在隐患
 "-4"代表未探测
      * @param string $ServiceName 服务组件名称，都是大写例如YARN
-     * @param string $NodeTypeName 节点名称
-master
-core
-task
-common
-router
-
+     * @param string $NodeTypeName 节点名称master,core,task,common,router
      * @param integer $DataNodeMaintenanceId 过滤条件：dn是否处于维护状态
 0代表所有状态
 1代表处于维护状态

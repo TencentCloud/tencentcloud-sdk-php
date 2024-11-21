@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputName() 获取输入名称，可填大小写、数字和下划线，长度为[1, 32]。
  * @method void setInputName(string $InputName) 设置输入名称，可填大小写、数字和下划线，长度为[1, 32]。
- * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
- * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+ * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
+ * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
  * @method string getDescription() 获取输入描述，长度为[0, 255]。
  * @method void setDescription(string $Description) 设置输入描述，长度为[0, 255]。
  * @method array getAllowIpList() 获取输入的IP白名单，格式为CIDR。
@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
  * @method array getZones() 获取可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
  * @method void setZones(array $Zones) 设置可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+ * @method CreateInputRISTSettings getRISTSettings() 获取输入的RIST配置信息。
+ * @method void setRISTSettings(CreateInputRISTSettings $RISTSettings) 设置输入的RIST配置信息。
+ * @method string getInputRegion() 获取输入节点的地区
+ * @method void setInputRegion(string $InputRegion) 设置输入节点的地区
  */
 class CreateInput extends AbstractModel
 {
@@ -55,7 +59,7 @@ class CreateInput extends AbstractModel
     public $InputName;
 
     /**
-     * @var string 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * @var string 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
      */
     public $Protocol;
 
@@ -115,8 +119,18 @@ class CreateInput extends AbstractModel
     public $Zones;
 
     /**
+     * @var CreateInputRISTSettings 输入的RIST配置信息。
+     */
+    public $RISTSettings;
+
+    /**
+     * @var string 输入节点的地区
+     */
+    public $InputRegion;
+
+    /**
      * @param string $InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
-     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
      * @param string $Description 输入描述，长度为[0, 255]。
      * @param array $AllowIpList 输入的IP白名单，格式为CIDR。
      * @param CreateInputSRTSettings $SRTSettings 输入的SRT配置信息。
@@ -128,6 +142,8 @@ class CreateInput extends AbstractModel
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      * @param array $Zones 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+     * @param CreateInputRISTSettings $RISTSettings 输入的RIST配置信息。
+     * @param string $InputRegion 输入节点的地区
      */
     function __construct()
     {
@@ -198,6 +214,15 @@ class CreateInput extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateInputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
         }
     }
 }

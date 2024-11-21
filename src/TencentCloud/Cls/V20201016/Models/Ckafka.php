@@ -20,21 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CKafka的描述-需要投递到的kafka信息
  *
+ * @method string getInstanceId() 获取Ckafka 的 InstanceId
+ * @method void setInstanceId(string $InstanceId) 设置Ckafka 的 InstanceId
+ * @method string getTopicName() 获取Ckafka 的 TopicName
+ * @method void setTopicName(string $TopicName) 设置Ckafka 的 TopicName
  * @method string getVip() 获取Ckafka 的 Vip
  * @method void setVip(string $Vip) 设置Ckafka 的 Vip
  * @method string getVport() 获取Ckafka 的 Vport
  * @method void setVport(string $Vport) 设置Ckafka 的 Vport
- * @method string getInstanceId() 获取Ckafka 的 InstanceId
- * @method void setInstanceId(string $InstanceId) 设置Ckafka 的 InstanceId
  * @method string getInstanceName() 获取Ckafka 的 InstanceName
  * @method void setInstanceName(string $InstanceName) 设置Ckafka 的 InstanceName
  * @method string getTopicId() 获取Ckafka 的 TopicId
  * @method void setTopicId(string $TopicId) 设置Ckafka 的 TopicId
- * @method string getTopicName() 获取Ckafka 的 TopicName
- * @method void setTopicName(string $TopicName) 设置Ckafka 的 TopicName
  */
 class Ckafka extends AbstractModel
 {
+    /**
+     * @var string Ckafka 的 InstanceId
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Ckafka 的 TopicName
+     */
+    public $TopicName;
+
     /**
      * @var string Ckafka 的 Vip
      */
@@ -44,11 +54,6 @@ class Ckafka extends AbstractModel
      * @var string Ckafka 的 Vport
      */
     public $Vport;
-
-    /**
-     * @var string Ckafka 的 InstanceId
-     */
-    public $InstanceId;
 
     /**
      * @var string Ckafka 的 InstanceName
@@ -61,17 +66,12 @@ class Ckafka extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string Ckafka 的 TopicName
-     */
-    public $TopicName;
-
-    /**
+     * @param string $InstanceId Ckafka 的 InstanceId
+     * @param string $TopicName Ckafka 的 TopicName
      * @param string $Vip Ckafka 的 Vip
      * @param string $Vport Ckafka 的 Vport
-     * @param string $InstanceId Ckafka 的 InstanceId
      * @param string $InstanceName Ckafka 的 InstanceName
      * @param string $TopicId Ckafka 的 TopicId
-     * @param string $TopicName Ckafka 的 TopicName
      */
     function __construct()
     {
@@ -86,6 +86,14 @@ class Ckafka extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
+        }
+
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
         }
@@ -94,20 +102,12 @@ class Ckafka extends AbstractModel
             $this->Vport = $param["Vport"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
         }
 
         if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
             $this->TopicId = $param["TopicId"];
-        }
-
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
         }
     }
 }

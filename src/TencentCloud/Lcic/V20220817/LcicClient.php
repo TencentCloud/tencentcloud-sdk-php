@@ -58,6 +58,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
+ * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 查询录制信息
  * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 录制流查询
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间配置信息
  * @method Models\DescribeRoomForbiddenUserResponse DescribeRoomForbiddenUser(Models\DescribeRoomForbiddenUserRequest $req) 根据房间ID获取群组中被禁言的用户列表。
@@ -86,7 +87,9 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\SendRoomNotificationMessageResponse SendRoomNotificationMessage(Models\SendRoomNotificationMessageRequest $req) App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
+ * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开始录制
  * @method Models\StartRoomResponse StartRoom(Models\StartRoomRequest $req) 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
+ * @method Models\StopRecordResponse StopRecord(Models\StopRecordRequest $req) 停止录制
  * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) 文档从房间解绑
  * @method Models\UnblockKickedUserResponse UnblockKickedUser(Models\UnblockKickedUserRequest $req) 解禁从房间里面踢出的用户
  */

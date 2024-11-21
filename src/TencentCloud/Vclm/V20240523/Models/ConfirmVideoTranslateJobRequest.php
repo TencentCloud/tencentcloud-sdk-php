@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfirmVideoTranslateJob请求参数结构体
  *
- * @method string getJobId() 获取视频翻译任务 ID
- * @method void setJobId(string $JobId) 设置视频翻译任务 ID
+ * @method string getJobId() 获取视频转译任务 ID
+ * @method void setJobId(string $JobId) 设置视频转译任务 ID
  * @method array getTranslateResults() 获取待确认文本
  * @method void setTranslateResults(array $TranslateResults) 设置待确认文本
  */
 class ConfirmVideoTranslateJobRequest extends AbstractModel
 {
     /**
-     * @var string 视频翻译任务 ID
+     * @var string 视频转译任务 ID
      */
     public $JobId;
 
@@ -38,7 +38,7 @@ class ConfirmVideoTranslateJobRequest extends AbstractModel
     public $TranslateResults;
 
     /**
-     * @param string $JobId 视频翻译任务 ID
+     * @param string $JobId 视频转译任务 ID
      * @param array $TranslateResults 待确认文本
      */
     function __construct()

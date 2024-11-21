@@ -39,11 +39,11 @@ fps 要求：【15-60】fps
  * @method void setSrcLang(string $SrcLang) 设置输入视频中音频语种
 目前支持语种范围：zh(中文), en(英文)
  * @method string getAudioUrl() 获取当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
-格式要求：支持 mp3、m4a、acc、wav 格式。
+格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
 大小要求：不超过 100Mb。
  * @method void setAudioUrl(string $AudioUrl) 设置当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
-格式要求：支持 mp3、m4a、acc、wav 格式。
+格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
 大小要求：不超过 100Mb。
  * @method string getDstLang() 获取输出视频中翻译语种
@@ -94,7 +94,7 @@ fps 要求：【15-60】fps
 
     /**
      * @var string 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
-格式要求：支持 mp3、m4a、acc、wav 格式。
+格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
 大小要求：不超过 100Mb。
      */
@@ -148,7 +148,7 @@ fps 要求：【15-60】fps
      * @param string $SrcLang 输入视频中音频语种
 目前支持语种范围：zh(中文), en(英文)
      * @param string $AudioUrl 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
-格式要求：支持 mp3、m4a、acc、wav 格式。
+格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
 大小要求：不超过 100Mb。
      * @param string $DstLang 输出视频中翻译语种

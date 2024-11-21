@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsRemoteRo() 获取是否为异地只读实例。
  * @method void setIsRemoteRo(boolean $IsRemoteRo) 设置是否为异地只读实例。
  * @method string getMasterRegion() 获取主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
  * @method void setMasterRegion(string $MasterRegion) 设置主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
  * @method boolean getIsSupportUpdateSubVersion() 获取是否支持小版本升级。
  * @method void setIsSupportUpdateSubVersion(boolean $IsSupportUpdateSubVersion) 设置是否支持小版本升级。
  * @method string getCurrentSubVersion() 获取当前内核版本。
@@ -70,6 +72,7 @@ class DescribeDBFeaturesResponse extends AbstractModel
 
     /**
      * @var string 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
      */
     public $MasterRegion;
 
@@ -100,6 +103,7 @@ class DescribeDBFeaturesResponse extends AbstractModel
      * @param boolean $EncryptionNeedUpgrade 开启加密是否需要升级内核版本。
      * @param boolean $IsRemoteRo 是否为异地只读实例。
      * @param string $MasterRegion 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
      * @param boolean $IsSupportUpdateSubVersion 是否支持小版本升级。
      * @param string $CurrentSubVersion 当前内核版本。
      * @param string $TargetSubVersion 可供升级的内核版本。

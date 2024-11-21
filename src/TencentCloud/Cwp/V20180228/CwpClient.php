@@ -344,7 +344,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件动态消息数据。
  * @method Models\DescribeSecurityEventStatResponse DescribeSecurityEventStat(Models\DescribeSecurityEventStatRequest $req) 获取安全事件统计
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 获取安全概览相关事件统计数据接口
- * @method Models\DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(Models\DescribeSecurityProtectionStatRequest $req) 获取安全防护状态汇总
+ * @method Models\DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(Models\DescribeSecurityProtectionStatRequest $req) 接口已无效
+
+获取安全防护状态汇总
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
  * @method Models\DescribeServerRelatedDirInfoResponse DescribeServerRelatedDirInfo(Models\DescribeServerRelatedDirInfoRequest $req) 查询服务区关联目录详情
  * @method Models\DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfo(Models\DescribeServersAndRiskAndFirstInfoRequest $req) 获取待处理风险文件数+影响服务器数+是否试用检测+最近检测时间

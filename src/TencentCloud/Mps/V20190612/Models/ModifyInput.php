@@ -32,11 +32,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSRTSettings(CreateInputSRTSettings $SRTSettings) 设置SRT的配置信息。
  * @method CreateInputRTPSettings getRTPSettings() 获取RTP的配置信息。
  * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) 设置RTP的配置信息。
- * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP]。
+ * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
- * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP]。
+ * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 仅支持关联一组安全组。
  * @method array getZones() 获取可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
  * @method void setZones(array $Zones) 设置可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+ * @method CreateInputRISTSettings getRISTSettings() 获取RIST的配置信息。
+ * @method void setRISTSettings(CreateInputRISTSettings $RISTSettings) 设置RIST的配置信息。
+ * @method string getInputRegion() 获取输入节点的地区
+ * @method void setInputRegion(string $InputRegion) 设置输入节点的地区
  */
 class ModifyInput extends AbstractModel
 {
@@ -88,7 +92,7 @@ class ModifyInput extends AbstractModel
     public $RTPSettings;
 
     /**
-     * @var string 输入的协议，可选[SRT|RTP|RTMP]。
+     * @var string 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -131,13 +135,23 @@ class ModifyInput extends AbstractModel
     public $Zones;
 
     /**
+     * @var CreateInputRISTSettings RIST的配置信息。
+     */
+    public $RISTSettings;
+
+    /**
+     * @var string 输入节点的地区
+     */
+    public $InputRegion;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
      * @param array $AllowIpList 允许的推流的IP，CIDR格式。
      * @param CreateInputSRTSettings $SRTSettings SRT的配置信息。
      * @param CreateInputRTPSettings $RTPSettings RTP的配置信息。
-     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP]。
+     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -148,6 +162,8 @@ class ModifyInput extends AbstractModel
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 仅支持关联一组安全组。
      * @param array $Zones 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+     * @param CreateInputRISTSettings $RISTSettings RIST的配置信息。
+     * @param string $InputRegion 输入节点的地区
      */
     function __construct()
     {
@@ -222,6 +238,15 @@ class ModifyInput extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateInputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
         }
     }
 }

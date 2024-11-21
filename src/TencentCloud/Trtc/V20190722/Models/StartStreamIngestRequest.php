@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getMaxDuration() 获取循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
  * @method void setMaxDuration(integer $MaxDuration) 设置循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+ * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
+ * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
  */
 class StartStreamIngestRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class StartStreamIngestRequest extends AbstractModel
     public $MaxDuration;
 
     /**
+     * @var integer 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public $Volume;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType TRTC房间号的类型。
@@ -163,6 +170,7 @@ class StartStreamIngestRequest extends AbstractModel
  - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
 
      * @param integer $MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+     * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class StartStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("MaxDuration",$param) and $param["MaxDuration"] !== null) {
             $this->MaxDuration = $param["MaxDuration"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

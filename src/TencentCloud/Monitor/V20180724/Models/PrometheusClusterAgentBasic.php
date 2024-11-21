@@ -24,18 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getClusterType() 获取集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
  * @method void setClusterType(string $ClusterType) 设置集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method boolean getEnableExternal() 获取是否开启公网CLB
- * @method void setEnableExternal(boolean $EnableExternal) 设置是否开启公网CLB
- * @method PrometheusClusterAgentPodConfig getInClusterPodConfig() 获取集群内部署组件的pod配置
- * @method void setInClusterPodConfig(PrometheusClusterAgentPodConfig $InClusterPodConfig) 设置集群内部署组件的pod配置
+ * @method string getClusterId() 获取集群 ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID
+ * @method boolean getEnableExternal() 获取是否开启公网 CLB
+ * @method void setEnableExternal(boolean $EnableExternal) 设置是否开启公网 CLB
+ * @method PrometheusClusterAgentPodConfig getInClusterPodConfig() 获取集群内部署组件的pod 配置
+ * @method void setInClusterPodConfig(PrometheusClusterAgentPodConfig $InClusterPodConfig) 设置集群内部署组件的pod 配置
  * @method array getExternalLabels() 获取该集群采集的所有指标都会带上这些labels
  * @method void setExternalLabels(array $ExternalLabels) 设置该集群采集的所有指标都会带上这些labels
- * @method boolean getNotInstallBasicScrape() 获取是否安装默认采集配置
- * @method void setNotInstallBasicScrape(boolean $NotInstallBasicScrape) 设置是否安装默认采集配置
- * @method boolean getNotScrape() 获取是否采集指标，true代表drop所有指标，false代表采集默认指标
- * @method void setNotScrape(boolean $NotScrape) 设置是否采集指标，true代表drop所有指标，false代表采集默认指标
+ * @method boolean getNotInstallBasicScrape() 获取是否安装默认采集 exporter 和采集配置
+ * @method void setNotInstallBasicScrape(boolean $NotInstallBasicScrape) 设置是否安装默认采集 exporter 和采集配置
+ * @method boolean getNotScrape() 获取是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+ * @method void setNotScrape(boolean $NotScrape) 设置是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+ * @method boolean getDropAll() 获取是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+ * @method void setDropAll(boolean $DropAll) 设置是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
  * @method boolean getOpenDefaultRecord() 获取是否开启默认预聚合规则
  * @method void setOpenDefaultRecord(boolean $OpenDefaultRecord) 设置是否开启默认预聚合规则
  */
@@ -52,17 +54,17 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var string 集群ID
+     * @var string 集群 ID
      */
     public $ClusterId;
 
     /**
-     * @var boolean 是否开启公网CLB
+     * @var boolean 是否开启公网 CLB
      */
     public $EnableExternal;
 
     /**
-     * @var PrometheusClusterAgentPodConfig 集群内部署组件的pod配置
+     * @var PrometheusClusterAgentPodConfig 集群内部署组件的pod 配置
      */
     public $InClusterPodConfig;
 
@@ -72,14 +74,19 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $ExternalLabels;
 
     /**
-     * @var boolean 是否安装默认采集配置
+     * @var boolean 是否安装默认采集 exporter 和采集配置
      */
     public $NotInstallBasicScrape;
 
     /**
-     * @var boolean 是否采集指标，true代表drop所有指标，false代表采集默认指标
+     * @var boolean 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
      */
     public $NotScrape;
+
+    /**
+     * @var boolean 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     */
+    public $DropAll;
 
     /**
      * @var boolean 是否开启默认预聚合规则
@@ -89,12 +96,13 @@ class PrometheusClusterAgentBasic extends AbstractModel
     /**
      * @param string $Region 地域
      * @param string $ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
-     * @param string $ClusterId 集群ID
-     * @param boolean $EnableExternal 是否开启公网CLB
-     * @param PrometheusClusterAgentPodConfig $InClusterPodConfig 集群内部署组件的pod配置
+     * @param string $ClusterId 集群 ID
+     * @param boolean $EnableExternal 是否开启公网 CLB
+     * @param PrometheusClusterAgentPodConfig $InClusterPodConfig 集群内部署组件的pod 配置
      * @param array $ExternalLabels 该集群采集的所有指标都会带上这些labels
-     * @param boolean $NotInstallBasicScrape 是否安装默认采集配置
-     * @param boolean $NotScrape 是否采集指标，true代表drop所有指标，false代表采集默认指标
+     * @param boolean $NotInstallBasicScrape 是否安装默认采集 exporter 和采集配置
+     * @param boolean $NotScrape 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+     * @param boolean $DropAll 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
      * @param boolean $OpenDefaultRecord 是否开启默认预聚合规则
      */
     function __construct()
@@ -146,6 +154,10 @@ class PrometheusClusterAgentBasic extends AbstractModel
 
         if (array_key_exists("NotScrape",$param) and $param["NotScrape"] !== null) {
             $this->NotScrape = $param["NotScrape"];
+        }
+
+        if (array_key_exists("DropAll",$param) and $param["DropAll"] !== null) {
+            $this->DropAll = $param["DropAll"];
         }
 
         if (array_key_exists("OpenDefaultRecord",$param) and $param["OpenDefaultRecord"] !== null) {

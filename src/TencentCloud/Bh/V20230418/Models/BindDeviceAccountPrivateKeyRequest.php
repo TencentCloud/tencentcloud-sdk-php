@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取主机账号ID
  * @method void setId(integer $Id) 设置主机账号ID
- * @method string getPrivateKey() 获取主机账号私钥，最新长度128字节，最大长度8192字节
- * @method void setPrivateKey(string $PrivateKey) 设置主机账号私钥，最新长度128字节，最大长度8192字节
+ * @method string getPrivateKey() 获取主机账号私钥，最小长度128字节，最大长度8192字节
+ * @method void setPrivateKey(string $PrivateKey) 设置主机账号私钥，最小长度128字节，最大长度8192字节
  * @method string getPrivateKeyPassword() 获取主机账号私钥口令，最大长度256字节
  * @method void setPrivateKeyPassword(string $PrivateKeyPassword) 设置主机账号私钥口令，最大长度256字节
  */
@@ -35,7 +35,7 @@ class BindDeviceAccountPrivateKeyRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string 主机账号私钥，最新长度128字节，最大长度8192字节
+     * @var string 主机账号私钥，最小长度128字节，最大长度8192字节
      */
     public $PrivateKey;
 
@@ -46,7 +46,7 @@ class BindDeviceAccountPrivateKeyRequest extends AbstractModel
 
     /**
      * @param integer $Id 主机账号ID
-     * @param string $PrivateKey 主机账号私钥，最新长度128字节，最大长度8192字节
+     * @param string $PrivateKey 主机账号私钥，最小长度128字节，最大长度8192字节
      * @param string $PrivateKeyPassword 主机账号私钥口令，最大长度256字节
      */
     function __construct()

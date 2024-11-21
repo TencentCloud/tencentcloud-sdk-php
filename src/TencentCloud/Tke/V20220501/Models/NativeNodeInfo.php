@@ -82,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsImage(string $OsImage) 设置OS的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取**原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置**原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeNodeInfo extends AbstractModel
 {
@@ -205,6 +215,15 @@ class NativeNodeInfo extends AbstractModel
     public $OsImage;
 
     /**
+     * @var string **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $MachineName 节点名称
      * @param string $MachineState Machine 状态
      * @param string $Zone Machine 所在可用区
@@ -235,6 +254,11 @@ class NativeNodeInfo extends AbstractModel
      * @param string $SubnetId 子网唯一 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsImage OS的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -337,6 +361,10 @@ class NativeNodeInfo extends AbstractModel
 
         if (array_key_exists("OsImage",$param) and $param["OsImage"] !== null) {
             $this->OsImage = $param["OsImage"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

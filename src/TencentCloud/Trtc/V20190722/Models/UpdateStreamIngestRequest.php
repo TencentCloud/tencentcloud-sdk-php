@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同
  * @method string getTaskId() 获取任务的唯一Id，在启动任务成功后会返回。
  * @method void setTaskId(string $TaskId) 设置任务的唯一Id，在启动任务成功后会返回。
- * @method string getStreamUrl() 获取源流URL【必填】。
- * @method void setStreamUrl(string $StreamUrl) 设置源流URL【必填】。
+ * @method string getStreamUrl() 获取源流URL。
+ * @method void setStreamUrl(string $StreamUrl) 设置源流URL。
+ * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
+ * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
  */
 class UpdateStreamIngestRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class UpdateStreamIngestRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 源流URL【必填】。
+     * @var string 源流URL。
      */
     public $StreamUrl;
 
     /**
+     * @var integer 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public $Volume;
+
+    /**
      * @param integer $SdkAppId TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同
      * @param string $TaskId 任务的唯一Id，在启动任务成功后会返回。
-     * @param string $StreamUrl 源流URL【必填】。
+     * @param string $StreamUrl 源流URL。
+     * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpdateStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("StreamUrl",$param) and $param["StreamUrl"] !== null) {
             $this->StreamUrl = $param["StreamUrl"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

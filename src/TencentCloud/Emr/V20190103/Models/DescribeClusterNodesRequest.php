@@ -56,10 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型:支持all/host/pod，默认为all
  * @method array getSearchFields() 获取支持搜索的字段
  * @method void setSearchFields(array $SearchFields) 设置支持搜索的字段
- * @method string getOrderField() 获取无
- * @method void setOrderField(string $OrderField) 设置无
- * @method integer getAsc() 获取无
- * @method void setAsc(integer $Asc) 设置无
+ * @method string getOrderField() 获取排序字段
+ * @method void setOrderField(string $OrderField) 设置排序字段
+ * @method integer getAsc() 获取是否升序，1:升序，0:降序
+ * @method void setAsc(integer $Asc) 设置是否升序，1:升序，0:降序
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -110,12 +110,12 @@ class DescribeClusterNodesRequest extends AbstractModel
     public $SearchFields;
 
     /**
-     * @var string 无
+     * @var string 排序字段
      */
     public $OrderField;
 
     /**
-     * @var integer 无
+     * @var integer 是否升序，1:升序，0:降序
      */
     public $Asc;
 
@@ -138,8 +138,8 @@ class DescribeClusterNodesRequest extends AbstractModel
 如果offset和limit都不填，或者都填0，则返回全部数据
      * @param string $HardwareResourceType 资源类型:支持all/host/pod，默认为all
      * @param array $SearchFields 支持搜索的字段
-     * @param string $OrderField 无
-     * @param integer $Asc 无
+     * @param string $OrderField 排序字段
+     * @param integer $Asc 是否升序，1:升序，0:降序
      */
     function __construct()
     {

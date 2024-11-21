@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZones() 获取可用区，output目前最多只支持一个。	
  * @method void setZones(array $Zones) 设置可用区，output目前最多只支持一个。	
+ * @method DescribeOutputRISTSettings getRISTSettings() 获取输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) 设置输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeOutput extends AbstractModel
 {
@@ -176,6 +180,12 @@ class DescribeOutput extends AbstractModel
     public $Zones;
 
     /**
+     * @var DescribeOutputRISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RISTSettings;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
@@ -204,6 +214,8 @@ class DescribeOutput extends AbstractModel
      * @param array $SecurityGroupIds 绑定的安全组 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 可用区，output目前最多只支持一个。	
+     * @param DescribeOutputRISTSettings $RISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -295,6 +307,11 @@ class DescribeOutput extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new DescribeOutputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
         }
     }
 }

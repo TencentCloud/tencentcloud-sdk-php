@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出的名称。
  * @method string getDescription() 获取输出描述。
  * @method void setDescription(string $Description) 设置输出描述。
- * @method string getProtocol() 获取输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
- * @method void setProtocol(string $Protocol) 设置输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+ * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+ * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
  * @method string getOutputRegion() 获取输出地区。
  * @method void setOutputRegion(string $OutputRegion) 设置输出地区。
  * @method CreateOutputSRTSettings getSRTSettings() 获取输出的SRT的配置。
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
  * @method array getZones() 获取可用区，output最多只支持输入一个可用区。	
  * @method void setZones(array $Zones) 设置可用区，output最多只支持输入一个可用区。	
+ * @method string getOutputType() 获取输出类型：Internet/TencentCSS/StreamLive
+ * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS/StreamLive
+ * @method CreateOutputRistSettings getRISTSettings() 获取输出的RIST的配置。
+ * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置输出的RIST的配置。
  */
 class CreateOutputInfo extends AbstractModel
 {
@@ -58,7 +62,7 @@ class CreateOutputInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public $Protocol;
 
@@ -104,9 +108,19 @@ class CreateOutputInfo extends AbstractModel
     public $Zones;
 
     /**
+     * @var string 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public $OutputType;
+
+    /**
+     * @var CreateOutputRistSettings 输出的RIST的配置。
+     */
+    public $RISTSettings;
+
+    /**
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出描述。
-     * @param string $Protocol 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      * @param string $OutputRegion 输出地区。
      * @param CreateOutputSRTSettings $SRTSettings 输出的SRT的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 输出的RTMP的配置。
@@ -116,6 +130,8 @@ class CreateOutputInfo extends AbstractModel
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      * @param array $Zones 可用区，output最多只支持输入一个可用区。	
+     * @param string $OutputType 输出类型：Internet/TencentCSS/StreamLive
+     * @param CreateOutputRistSettings $RISTSettings 输出的RIST的配置。
      */
     function __construct()
     {
@@ -175,6 +191,15 @@ class CreateOutputInfo extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("OutputType",$param) and $param["OutputType"] !== null) {
+            $this->OutputType = $param["OutputType"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateOutputRistSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
         }
     }
 }

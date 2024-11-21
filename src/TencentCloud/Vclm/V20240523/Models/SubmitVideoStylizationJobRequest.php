@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitVideoStylizationJob请求参数结构体
  *
- * @method string getStyleId() 获取风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
- * @method void setStyleId(string $StyleId) 设置风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+ * @method string getStyleId() 获取风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
+ * @method void setStyleId(string $StyleId) 设置风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
  * @method string getVideoUrl() 获取输入视频URL。视频要求：
 - 视频格式：mp4、mov；
 - 视频时长：1～60秒；
@@ -34,17 +42,25 @@ use TencentCloud\Common\AbstractModel;
 - 视频分辨率：540P~2056P，即长宽像素数均在540px～2056px范围内；
 - 视频大小：不超过200M；
 - 视频FPS：15～60fps。
- * @method string getStyleStrength() 获取风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
- * @method void setStyleStrength(string $StyleStrength) 设置风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+ * @method string getStyleStrength() 获取风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
+ * @method void setStyleStrength(string $StyleStrength) 设置风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
  */
 class SubmitVideoStylizationJobRequest extends AbstractModel
 {
     /**
-     * @var string 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+     * @var string 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
      */
     public $StyleId;
 
@@ -59,23 +75,31 @@ class SubmitVideoStylizationJobRequest extends AbstractModel
     public $VideoUrl;
 
     /**
-     * @var string 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+     * @var string 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
      */
     public $StyleStrength;
 
     /**
-     * @param string $StyleId 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+     * @param string $StyleId 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
      * @param string $VideoUrl 输入视频URL。视频要求：
 - 视频格式：mp4、mov；
 - 视频时长：1～60秒；
 - 视频分辨率：540P~2056P，即长宽像素数均在540px～2056px范围内；
 - 视频大小：不超过200M；
 - 视频FPS：15～60fps。
-     * @param string $StyleStrength 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+     * @param string $StyleStrength 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
      */
     function __construct()
     {

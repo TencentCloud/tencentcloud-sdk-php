@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置TSE实例id
  * @method string getGroup() 获取组名
  * @method void setGroup(string $Group) 设置组名
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取配置文件名称
+ * @method void setName(string $Name) 设置配置文件名称
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。	
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。	
  * @method integer getOffset() 获取偏移量，默认为0。	
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。	
+ * @method string getId() 获取配置文件ID
+ * @method void setId(string $Id) 设置配置文件ID
  */
 class DescribeConfigFilesRequest extends AbstractModel
 {
@@ -53,7 +55,7 @@ class DescribeConfigFilesRequest extends AbstractModel
     public $Group;
 
     /**
-     * @var string 名称
+     * @var string 配置文件名称
      */
     public $Name;
 
@@ -73,13 +75,19 @@ class DescribeConfigFilesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 配置文件ID
+     */
+    public $Id;
+
+    /**
      * @param string $Namespace 命名空间名称
      * @param string $InstanceId TSE实例id
      * @param string $Group 组名
-     * @param string $Name 名称
+     * @param string $Name 配置文件名称
      * @param array $Tags 标签列表
      * @param integer $Limit 返回数量，默认为20，最大值为100。	
      * @param integer $Offset 偏移量，默认为0。	
+     * @param string $Id 配置文件ID
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeConfigFilesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

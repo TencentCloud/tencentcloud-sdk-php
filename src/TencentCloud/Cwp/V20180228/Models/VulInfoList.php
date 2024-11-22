@@ -53,7 +53,23 @@ use TencentCloud\Common\AbstractModel;
  * @method float getCvssScore() 获取CVSS评分
  * @method void setCvssScore(float $CvssScore) 设置CVSS评分
  * @method string getLabels() 获取漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
  * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
  * @method integer getFixSwitch() 获取是否能自动修复且包含能自动修复的主机， 0=否  1=是
  * @method void setFixSwitch(integer $FixSwitch) 设置是否能自动修复且包含能自动修复的主机， 0=否  1=是
  * @method integer getTaskId() 获取最后扫描任务的id
@@ -159,6 +175,14 @@ class VulInfoList extends AbstractModel
 
     /**
      * @var string 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
      */
     public $Labels;
 
@@ -230,6 +254,14 @@ class VulInfoList extends AbstractModel
      * @param string $CveId cve编号
      * @param float $CvssScore CVSS评分
      * @param string $Labels 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
      * @param integer $FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
      * @param integer $TaskId 最后扫描任务的id
      * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持

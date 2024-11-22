@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceReadOnly请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInputMode() 获取实例输入模式，0：读写 1：只读
- * @method void setInputMode(string $InputMode) 设置实例输入模式，0：读写 1：只读
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getInputMode() 获取实例输入模式。
+- 0：读写。
+- 1：只读。
+ * @method void setInputMode(string $InputMode) 设置实例输入模式。
+- 0：读写。
+- 1：只读。
  */
 class ModifyInstanceReadOnlyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例输入模式，0：读写 1：只读
+     * @var string 实例输入模式。
+- 0：读写。
+- 1：只读。
      */
     public $InputMode;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InputMode 实例输入模式，0：读写 1：只读
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $InputMode 实例输入模式。
+- 0：读写。
+- 1：只读。
      */
     function __construct()
     {

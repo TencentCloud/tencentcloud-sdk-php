@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method ConfigFilePublishInfo getConfigFilePublishInfo() 获取配置文件列表详情	
  * @method void setConfigFilePublishInfo(ConfigFilePublishInfo $ConfigFilePublishInfo) 设置配置文件列表详情	
+ * @method boolean getStrictEnable() 获取控制开启校验配置版本是否已经存在
+ * @method void setStrictEnable(boolean $StrictEnable) 设置控制开启校验配置版本是否已经存在
  */
 class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel
     public $ConfigFilePublishInfo;
 
     /**
+     * @var boolean 控制开启校验配置版本是否已经存在
+     */
+    public $StrictEnable;
+
+    /**
      * @param string $InstanceId 实例id
      * @param ConfigFilePublishInfo $ConfigFilePublishInfo 配置文件列表详情	
+     * @param boolean $StrictEnable 控制开启校验配置版本是否已经存在
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel
         if (array_key_exists("ConfigFilePublishInfo",$param) and $param["ConfigFilePublishInfo"] !== null) {
             $this->ConfigFilePublishInfo = new ConfigFilePublishInfo();
             $this->ConfigFilePublishInfo->deserialize($param["ConfigFilePublishInfo"]);
+        }
+
+        if (array_key_exists("StrictEnable",$param) and $param["StrictEnable"] !== null) {
+            $this->StrictEnable = $param["StrictEnable"];
         }
     }
 }

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
  * @method string getRemoteRegion() 获取源Region,跨地域克隆安全组时，需要传入源安全组所属地域信息，例如：克隆广州的安全组到上海，则这里需要传入广州安全的地域信息：ap-guangzhou。
  * @method void setRemoteRegion(string $RemoteRegion) 设置源Region,跨地域克隆安全组时，需要传入源安全组所属地域信息，例如：克隆广州的安全组到上海，则这里需要传入广州安全的地域信息：ap-guangzhou。
+ * @method Tag getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
+ * @method void setTags(Tag $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
  */
 class CloneSecurityGroupRequest extends AbstractModel
 {
@@ -59,11 +63,19 @@ class CloneSecurityGroupRequest extends AbstractModel
     public $RemoteRegion;
 
     /**
+     * @var Tag 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。未提供参数时，克隆后的安全组名称和SecurityGroupId对应的安全组名称相同。
      * @param string $GroupDescription 安全组备注，最多100个字符。未提供参数时，克隆后的安全组备注和SecurityGroupId对应的安全组备注相同。
      * @param string $ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      * @param string $RemoteRegion 源Region,跨地域克隆安全组时，需要传入源安全组所属地域信息，例如：克隆广州的安全组到上海，则这里需要传入广州安全的地域信息：ap-guangzhou。
+     * @param Tag $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
      */
     function __construct()
     {
@@ -96,6 +108,11 @@ class CloneSecurityGroupRequest extends AbstractModel
 
         if (array_key_exists("RemoteRegion",$param) and $param["RemoteRegion"] !== null) {
             $this->RemoteRegion = $param["RemoteRegion"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = new Tag();
+            $this->Tags->deserialize($param["Tags"]);
         }
     }
 }

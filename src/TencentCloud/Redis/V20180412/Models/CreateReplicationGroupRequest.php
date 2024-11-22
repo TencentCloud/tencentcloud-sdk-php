@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReplicationGroup请求参数结构体
  *
- * @method string getInstanceId() 获取指定复制组中的主实例ID。
- * @method void setInstanceId(string $InstanceId) 设置指定复制组中的主实例ID。
- * @method string getGroupName() 获取复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
- * @method void setGroupName(string $GroupName) 设置复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+ * @method string getInstanceId() 获取指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method string getGroupName() 获取配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+ * @method void setGroupName(string $GroupName) 设置配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
  * @method string getRemark() 获取备注信息。
  * @method void setRemark(string $Remark) 设置备注信息。
  */
 class CreateReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string 指定复制组中的主实例ID。
+     * @var string 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * @var string 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public $GroupName;
 
@@ -45,8 +45,8 @@ class CreateReplicationGroupRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 指定复制组中的主实例ID。
-     * @param string $GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * @param string $InstanceId 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param string $GroupName 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      * @param string $Remark 备注信息。
      */
     function __construct()

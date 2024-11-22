@@ -20,36 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchInstanceVip请求参数结构体
  *
- * @method string getSrcInstanceId() 获取源实例ID
- * @method void setSrcInstanceId(string $SrcInstanceId) 设置源实例ID
- * @method string getDstInstanceId() 获取目标实例ID
- * @method void setDstInstanceId(string $DstInstanceId) 设置目标实例ID
- * @method integer getTimeDelay() 获取单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
- * @method void setTimeDelay(integer $TimeDelay) 设置单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
- * @method integer getForceSwitch() 获取在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
- * @method void setForceSwitch(integer $ForceSwitch) 设置在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+ * @method string getSrcInstanceId() 获取源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setSrcInstanceId(string $SrcInstanceId) 设置源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getDstInstanceId() 获取目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setDstInstanceId(string $DstInstanceId) 设置目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method integer getTimeDelay() 获取单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+ * @method void setTimeDelay(integer $TimeDelay) 设置单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+ * @method integer getForceSwitch() 获取在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
+ * @method void setForceSwitch(integer $ForceSwitch) 设置在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
  * @method string getSwitchTime() 获取now: 立即切换，syncComplete：等待同步完成后切换
  * @method void setSwitchTime(string $SwitchTime) 设置now: 立即切换，syncComplete：等待同步完成后切换
  */
 class SwitchInstanceVipRequest extends AbstractModel
 {
     /**
-     * @var string 源实例ID
+     * @var string 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $SrcInstanceId;
 
     /**
-     * @var string 目标实例ID
+     * @var string 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $DstInstanceId;
 
     /**
-     * @var integer 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * @var integer 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
     public $TimeDelay;
 
     /**
-     * @var integer 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * @var integer 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
      */
     public $ForceSwitch;
 
@@ -59,10 +65,12 @@ class SwitchInstanceVipRequest extends AbstractModel
     public $SwitchTime;
 
     /**
-     * @param string $SrcInstanceId 源实例ID
-     * @param string $DstInstanceId 目标实例ID
-     * @param integer $TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
-     * @param integer $ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * @param string $SrcInstanceId 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $DstInstanceId 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param integer $TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * @param integer $ForceSwitch 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
      * @param string $SwitchTime now: 立即切换，syncComplete：等待同步完成后切换
      */
     function __construct()

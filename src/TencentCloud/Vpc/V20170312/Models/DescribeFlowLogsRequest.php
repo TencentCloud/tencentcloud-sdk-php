@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID。
  * @method string getCloudLogState() 获取流日志存储ID状态。
  * @method void setCloudLogState(string $CloudLogState) 设置流日志存储ID状态。
- * @method string getOrderField() 获取按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
- * @method void setOrderField(string $OrderField) 设置按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
- * @method string getOrderDirection() 获取升序（asc）还是降序（desc）,默认：desc。
- * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc）,默认：desc。
+ * @method string getOrderField() 获取按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+ * @method void setOrderField(string $OrderField) 设置按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+ * @method string getOrderDirection() 获取升序（ASC）还是降序（DESC）,默认：DESC。
+ * @method void setOrderDirection(string $OrderDirection) 设置升序（ASC）还是降序（DESC）,默认：DESC。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取每页行数，默认为10。
@@ -96,12 +96,12 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $CloudLogState;
 
     /**
-     * @var string 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+     * @var string 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
      */
     public $OrderField;
 
     /**
-     * @var string 升序（asc）还是降序（desc）,默认：desc。
+     * @var string 升序（ASC）还是降序（DESC）,默认：DESC。
      */
     public $OrderDirection;
 
@@ -136,8 +136,8 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      * @param string $CloudLogId 流日志存储ID。
      * @param string $CloudLogState 流日志存储ID状态。
-     * @param string $OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
-     * @param string $OrderDirection 升序（asc）还是降序（desc）,默认：desc。
+     * @param string $OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+     * @param string $OrderDirection 升序（ASC）还是降序（DESC）,默认：DESC。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 每页行数，默认为10。
      * @param Filter $Filters 过滤条件，参数不支持同时指定FlowLogId和Filters。

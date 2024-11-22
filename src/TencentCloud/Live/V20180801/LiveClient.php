@@ -30,6 +30,8 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。 水印数量上限 100，超过后需要先删除，再添加。
  * @method Models\AuthenticateDomainOwnerResponse AuthenticateDomainOwner(Models\AuthenticateDomainOwnerRequest $req) 验证用户是否拥有特定直播域名。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
+ * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
+ * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -105,6 +107,8 @@ use TencentCloud\Live\V20180801\Models as Models;
 3. 创建的截图任务记录在平台侧只保留3个月。
 4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
+ * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
+注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) 删除回调模板。
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) 删除已添加的直播域名
@@ -141,7 +145,10 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播播放带宽和流量数据查询。
  * @method Models\DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(Models\DescribeCallbackRecordsListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 用于查询回调事件。
+ * @method Models\DescribeCasterResponse DescribeCaster(Models\DescribeCasterRequest $req) 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
+ * @method Models\DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfo(Models\DescribeCasterDisplayInfoRequest $req) 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
  * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
+ * @method Models\DescribeCasterPlayUrlResponse DescribeCasterPlayUrl(Models\DescribeCasterPlayUrlRequest $req) 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
  * @method Models\DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(Models\DescribeCasterTransitionTypesRequest $req) 该接口用来获取所有的转场名称及其对应的素材url。
  * @method Models\DescribeCasterUserStatusResponse DescribeCasterUserStatus(Models\DescribeCasterUserStatusRequest $req) 本接口用来查询当前APPID导播台业务状态
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) 查询并发录制路数，对慢直播和普通直播适用。
@@ -215,6 +222,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(Models\DescribeLiveTimeShiftBillInfoListRequest $req) 提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
  * @method Models\DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(Models\DescribeLiveTimeShiftRulesRequest $req) 获取直播时移规则列表。
  * @method Models\DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(Models\DescribeLiveTimeShiftTemplatesRequest $req) 获取直播时移模板。
+ * @method Models\DescribeLiveTimeShiftWriteSizeInfoListResponse DescribeLiveTimeShiftWriteSizeInfoList(Models\DescribeLiveTimeShiftWriteSizeInfoListRequest $req) 支持直播时移写入量数据查询。
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) 获取转码规则列表
@@ -276,6 +284,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 1. 默认只要流名称正确，禁推就会生效。
 2. 如需要推流域名+推流路径+流名称 强匹配生效禁推，需提单联系售后开启配置。
 3. 如果配置了域名分组，需填写准确推流域名，才可断掉当前推流。
+ * @method Models\ModifyCasterResponse ModifyCaster(Models\ModifyCasterRequest $req) 该接口用来设置导播台的描述、名称、录制模板id等参数。
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) 修改回调模板。
  * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) 批量绑定证书对应的播放域名，并更新启用状态。
 新建自有证书将自动上传至腾讯云ssl。

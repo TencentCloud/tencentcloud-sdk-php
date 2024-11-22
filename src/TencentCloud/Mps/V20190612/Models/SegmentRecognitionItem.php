@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentUrl(string $SegmentUrl) 设置拆条片段URL。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCovImgUrl() 获取拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCovImgUrl(string $CovImgUrl) 设置拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTitle() 获取分段标题。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置分段标题。
@@ -38,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(string $Summary) 设置分段概要。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKeywords() 获取分段关键词。
+ * @method void setKeywords(array $Keywords) 设置分段关键词。
  * @method string getBeginTime() 获取直播切片对应直播起始时间点，采用 ISO 日期格式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。
@@ -71,6 +77,12 @@ class SegmentRecognitionItem extends AbstractModel
     public $SegmentUrl;
 
     /**
+     * @var string 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CovImgUrl;
+
+    /**
      * @var string 分段标题。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,6 +93,11 @@ class SegmentRecognitionItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Summary;
+
+    /**
+     * @var array 分段关键词。
+     */
+    public $Keywords;
 
     /**
      * @var string 直播切片对应直播起始时间点，采用 ISO 日期格式。
@@ -100,10 +117,13 @@ class SegmentRecognitionItem extends AbstractModel
      * @param float $EndTimeOffset 片段结束时间偏移。
      * @param string $SegmentUrl 拆条片段URL。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CovImgUrl 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 分段标题。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Summary 分段概要。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Keywords 分段关键词。
      * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
@@ -138,12 +158,20 @@ class SegmentRecognitionItem extends AbstractModel
             $this->SegmentUrl = $param["SegmentUrl"];
         }
 
+        if (array_key_exists("CovImgUrl",$param) and $param["CovImgUrl"] !== null) {
+            $this->CovImgUrl = $param["CovImgUrl"];
+        }
+
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
         }
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {

@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableReplicaReadonly请求参数结构体
  *
- * @method string getInstanceId() 获取实例序号ID
- * @method void setInstanceId(string $InstanceId) 设置实例序号ID
- * @method array getReadonlyPolicy() 获取账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method array getReadonlyPolicy() 获取只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
     /**
-     * @var string 实例序号ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * @var array 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
      */
     public $ReadonlyPolicy;
 
     /**
-     * @param string $InstanceId 实例序号ID
-     * @param array $ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param array $ReadonlyPolicy 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
      */
     function __construct()
     {

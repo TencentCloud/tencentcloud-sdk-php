@@ -96,7 +96,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CheckDefaultSubnetResponse CheckDefaultSubnet(Models\CheckDefaultSubnetRequest $req) 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口（CheckNetDetectState）用于验证网络探测。
  * @method Models\ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPolicies(Models\ClearRouteTableSelectionPoliciesRequest $req) 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
- * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+ * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。默认仅克隆安全组及其规则信息，可通过入参开启克隆安全组标签信息。
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 本接口（CreateAddressTemplate）用于创建IP地址模板。
  * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合。
  * @method Models\CreateAndAttachNetworkInterfaceResponse CreateAndAttachNetworkInterface(Models\CreateAndAttachNetworkInterfaceRequest $req) 本接口（CreateAndAttachNetworkInterface）用于创建弹性网卡并绑定云服务器。
@@ -160,6 +160,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse CreatePrivateNatGatewayDestinationIpPortTranslationNatRule(Models\CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest $req) 本接口（CreatePrivateNatGatewayDestinationIpPortTranslationNatRule）用于创建私网NAT网关目的端口转换规则
  * @method Models\CreatePrivateNatGatewayTranslationAclRuleResponse CreatePrivateNatGatewayTranslationAclRule(Models\CreatePrivateNatGatewayTranslationAclRuleRequest $req) 本接口（ CreatePrivateNatGatewayTranslationAclRule）用于创建私网NAT网关源端转换访问控制规则
  * @method Models\CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRule(Models\CreatePrivateNatGatewayTranslationNatRuleRequest $req) 本接口（CreatePrivateNatGatewayTranslationNatRule）用于创建私网NAT网关源端转换规则。
+ * @method Models\CreateReserveIpAddressesResponse CreateReserveIpAddresses(Models\CreateReserveIpAddressesRequest $req) 创建内网保留IP
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) 本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -282,6 +283,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse DeletePrivateNatGatewayDestinationIpPortTranslationNatRule(Models\DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest $req) 本接口（DeletePrivateNatGatewayDestinationIpPortTranslationNatRule）用于删除私网NAT网关目的端口转换规则
  * @method Models\DeletePrivateNatGatewayTranslationAclRuleResponse DeletePrivateNatGatewayTranslationAclRule(Models\DeletePrivateNatGatewayTranslationAclRuleRequest $req) 本接口（DeletePrivateNatGatewayTranslationAclRule）用于删除私网NAT网关源端转换访问控制规则
  * @method Models\DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRule(Models\DeletePrivateNatGatewayTranslationNatRuleRequest $req) 本接口（DeletePrivateNatGatewayTranslationNatRule）用于删除私网NAT网关源端转换规则
+ * @method Models\DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(Models\DeleteReserveIpAddressesRequest $req) 删除内网保留IP
  * @method Models\DeleteRouteTableResponse DeleteRouteTable(Models\DeleteRouteTableRequest $req) 本接口（DeleteRouteTable）用于删除路由表。
  * @method Models\DeleteRoutesResponse DeleteRoutes(Models\DeleteRoutesRequest $req) 本接口(DeleteRoutes)用于对某个路由表批量删除路由策略（Route）。
  * @method Models\DeleteSecurityGroupResponse DeleteSecurityGroup(Models\DeleteSecurityGroupRequest $req) 本接口（DeleteSecurityGroup）用于删除安全组（SecurityGroup）。
@@ -384,6 +386,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribePrivateNatGatewayTranslationNatRulesResponse DescribePrivateNatGatewayTranslationNatRules(Models\DescribePrivateNatGatewayTranslationNatRulesRequest $req) 本接口（DescribePrivateNatGatewayTranslationNatRules）用于查询私网NAT网关源端转换规则
  * @method Models\DescribePrivateNatGatewaysResponse DescribePrivateNatGateways(Models\DescribePrivateNatGatewaysRequest $req) 本接口（DescribePrivateNatGateways）用于查询私网NAT网关
  * @method Models\DescribeProductQuotaResponse DescribeProductQuota(Models\DescribeProductQuotaRequest $req) 本接口（DescribeProductQuota）用于查询网络产品的配额信息。
+ * @method Models\DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(Models\DescribeReserveIpAddressesRequest $req) 查询内网保留 IP
  * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
  * @method Models\DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstances(Models\DescribeRouteTableAssociatedInstancesRequest $req) 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
  * @method Models\DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPolicies(Models\DescribeRouteTableSelectionPoliciesRequest $req) 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
@@ -582,6 +585,7 @@ LimitTypes取值范围：
  * @method Models\ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule(Models\ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest $req) 本接口（ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule）用于修改私网NAT网关目的端口转换规则
  * @method Models\ModifyPrivateNatGatewayTranslationAclRuleResponse ModifyPrivateNatGatewayTranslationAclRule(Models\ModifyPrivateNatGatewayTranslationAclRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
  * @method Models\ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRule(Models\ModifyPrivateNatGatewayTranslationNatRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
+ * @method Models\ModifyReserveIpAddressResponse ModifyReserveIpAddress(Models\ModifyReserveIpAddressRequest $req) 修改内网保留 IP
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) 本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
  * @method Models\ModifyRouteTableSelectionPoliciesResponse ModifyRouteTableSelectionPolicies(Models\ModifyRouteTableSelectionPoliciesRequest $req) 该接口用于编辑云联网路由表选择策略
  * @method Models\ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(Models\ModifySecurityGroupAttributeRequest $req) 本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。

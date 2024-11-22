@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceLogDelivery请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getLogType() 获取日志类型。当前仅支持设置为slowlog，指慢查询日志。
  * @method void setLogType(string $LogType) 设置日志类型。当前仅支持设置为slowlog，指慢查询日志。
  * @method boolean getEnabled() 获取日志投递开启状态。
@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) 设置日志投递开启状态。
 - true：开启。
 - false：关闭。
- * @method string getLogsetId() 获取投递的日志集ID。
- * @method void setLogsetId(string $LogsetId) 设置投递的日志集ID。
- * @method string getTopicId() 获取投递的日志主题ID。
- * @method void setTopicId(string $TopicId) 设置投递的日志主题ID。
+ * @method string getLogsetId() 获取投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+ * @method void setLogsetId(string $LogsetId) 设置投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+ * @method string getTopicId() 获取投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+ * @method void setTopicId(string $TopicId) 设置投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
  * @method string getLogsetName() 获取日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
  * @method void setLogsetName(string $LogsetName) 设置日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
  * @method string getTopicName() 获取日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceLogDeliveryRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -65,12 +65,12 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
     public $Enabled;
 
     /**
-     * @var string 投递的日志集ID。
+     * @var string 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
      */
     public $LogsetId;
 
     /**
-     * @var string 投递的日志主题ID。
+     * @var string 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
      */
     public $TopicId;
 
@@ -100,13 +100,13 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
     public $CreateIndex;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $LogType 日志类型。当前仅支持设置为slowlog，指慢查询日志。
      * @param boolean $Enabled 日志投递开启状态。
 - true：开启。
 - false：关闭。
-     * @param string $LogsetId 投递的日志集ID。
-     * @param string $TopicId 投递的日志主题ID。
+     * @param string $LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+     * @param string $TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
      * @param string $LogsetName 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
      * @param string $TopicName 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
      * @param string $LogRegion 日志集所在地域，不传默认使用实例所在地域。

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigFileId() 获取配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigFileRelease extends AbstractModel
 {
@@ -184,6 +188,12 @@ class ConfigFileRelease extends AbstractModel
     public $Format;
 
     /**
+     * @var string 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigFileId;
+
+    /**
      * @param integer $Id 配置文件发布id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置文件发布名称
@@ -215,6 +225,8 @@ class ConfigFileRelease extends AbstractModel
      * @param boolean $Active 是否生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigFileId 配置文件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +304,10 @@ class ConfigFileRelease extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("ConfigFileId",$param) and $param["ConfigFileId"] !== null) {
+            $this->ConfigFileId = $param["ConfigFileId"];
         }
     }
 }

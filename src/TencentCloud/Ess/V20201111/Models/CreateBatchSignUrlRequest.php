@@ -110,6 +110,20 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method FlowBatchUrlInfo getFlowBatchUrlInfo() 获取批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
  * @method void setFlowBatchUrlInfo(FlowBatchUrlInfo $FlowBatchUrlInfo) 设置批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+ * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+ * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
  */
 class CreateBatchSignUrlRequest extends AbstractModel
 {
@@ -203,6 +217,17 @@ class CreateBatchSignUrlRequest extends AbstractModel
     public $FlowBatchUrlInfo;
 
     /**
+     * @var boolean 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+     */
+    public $AutoJumpBack;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $Name 签署方经办人的姓名。
@@ -248,6 +273,13 @@ class CreateBatchSignUrlRequest extends AbstractModel
 <li>**true**: 跳过合同流程列表, 直接进入合同内容页面进行签署</li>
 </ul>
      * @param FlowBatchUrlInfo $FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     * @param boolean $AutoJumpBack 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      */
     function __construct()
     {
@@ -307,6 +339,10 @@ class CreateBatchSignUrlRequest extends AbstractModel
         if (array_key_exists("FlowBatchUrlInfo",$param) and $param["FlowBatchUrlInfo"] !== null) {
             $this->FlowBatchUrlInfo = new FlowBatchUrlInfo();
             $this->FlowBatchUrlInfo->deserialize($param["FlowBatchUrlInfo"]);
+        }
+
+        if (array_key_exists("AutoJumpBack",$param) and $param["AutoJumpBack"] !== null) {
+            $this->AutoJumpBack = $param["AutoJumpBack"];
         }
     }
 }

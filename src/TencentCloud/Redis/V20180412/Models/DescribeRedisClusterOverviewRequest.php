@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRedisClusterOverview请求参数结构体
  *
- * @method string getDedicatedClusterId() 获取本地专用集群id
- * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群id
+ * @method string getDedicatedClusterId() 获取本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
  */
 class DescribeRedisClusterOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 本地专用集群id
+     * @var string 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     public $DedicatedClusterId;
 
     /**
-     * @param string $DedicatedClusterId 本地专用集群id
+     * @param string $DedicatedClusterId 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     function __construct()
     {

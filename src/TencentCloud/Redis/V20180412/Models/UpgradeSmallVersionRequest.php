@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeSmallVersion请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getCurrentRedisVersion() 获取当前redis版本
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置当前redis版本
- * @method string getUpgradeRedisVersion() 获取可升级的redis版本
- * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置可升级的redis版本
- * @method integer getInstanceTypeUpgradeNow() 获取1-立即升级   0-维护时间窗口升级
- * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) 设置1-立即升级   0-维护时间窗口升级
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getCurrentRedisVersion() 获取当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+ * @method string getUpgradeRedisVersion() 获取升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+ * @method integer getInstanceTypeUpgradeNow() 获取指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
+ * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) 设置指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
  */
 class UpgradeSmallVersionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 当前redis版本
+     * @var string 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public $CurrentRedisVersion;
 
     /**
-     * @var string 可升级的redis版本
+     * @var string 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public $UpgradeRedisVersion;
 
     /**
-     * @var integer 1-立即升级   0-维护时间窗口升级
+     * @var integer 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     public $InstanceTypeUpgradeNow;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $CurrentRedisVersion 当前redis版本
-     * @param string $UpgradeRedisVersion 可升级的redis版本
-     * @param integer $InstanceTypeUpgradeNow 1-立即升级   0-维护时间窗口升级
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $CurrentRedisVersion 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+     * @param string $UpgradeRedisVersion 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+     * @param integer $InstanceTypeUpgradeNow 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     function __construct()
     {

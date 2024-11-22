@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceAccount请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method string getAccountName() 获取自定义访问数据库的名称。
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method string getAccountName() 获取自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
- * @method void setAccountName(string $AccountName) 设置自定义访问数据库的名称。
+ * @method void setAccountName(string $AccountName) 设置自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
  * @method string getAccountPassword() 获取设置自定义账号的密码。密码复杂度要求如下：
@@ -56,12 +56,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 自定义访问数据库的名称。
+     * @var string 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
      */
@@ -96,8 +96,8 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param string $AccountName 自定义访问数据库的名称。
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param string $AccountName 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
      * @param string $AccountPassword 设置自定义账号的密码。密码复杂度要求如下：

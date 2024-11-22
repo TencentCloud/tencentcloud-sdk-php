@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 ，默认version
  * @method string getOrderDesc() 获取排序，asc/desc，默认 desc
  * @method void setOrderDesc(string $OrderDesc) 设置排序，asc/desc，默认 desc
+ * @method string getId() 获取配置发布ID
+ * @method void setId(string $Id) 设置配置发布ID
  */
 class DescribeConfigFileReleasesRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class DescribeConfigFileReleasesRequest extends AbstractModel
     public $OrderDesc;
 
     /**
+     * @var string 配置发布ID
+     */
+    public $Id;
+
+    /**
      * @param string $InstanceId 实例id
      * @param integer $Limit 条数
      * @param integer $Offset 偏移量
@@ -108,6 +115,7 @@ class DescribeConfigFileReleasesRequest extends AbstractModel
      * @param string $OrderField 排序字段，mtime/version/name
 ，默认version
      * @param string $OrderDesc 排序，asc/desc，默认 desc
+     * @param string $Id 配置发布ID
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class DescribeConfigFileReleasesRequest extends AbstractModel
 
         if (array_key_exists("OrderDesc",$param) and $param["OrderDesc"] !== null) {
             $this->OrderDesc = $param["OrderDesc"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTendisSlowLog请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id：crs-ngvou0i1
- * @method void setInstanceId(string $InstanceId) 设置实例Id：crs-ngvou0i1
+ * @method string getInstanceId() 获取实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
  * @method string getBeginTime() 获取开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
  * @method void setBeginTime(string $BeginTime) 设置开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
  * @method string getEndTime() 获取结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id：crs-ngvou0i1
+     * @var string 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例Id：crs-ngvou0i1
+     * @param string $InstanceId 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
      * @param string $BeginTime 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
      * @param string $EndTime 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
      * @param integer $MinQueryTime 慢查询阈值（毫秒）

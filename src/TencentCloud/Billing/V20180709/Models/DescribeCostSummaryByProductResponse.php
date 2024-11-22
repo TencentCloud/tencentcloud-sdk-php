@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置消耗按产品汇总详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRecordNum() 获取记录数量，NeedRecordNum为0是返回null
+ * @method integer getRecordNum() 获取记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordNum(integer $RecordNum) 设置记录数量，NeedRecordNum为0是返回null
+ * @method void setRecordNum(integer $RecordNum) 设置记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +54,7 @@ class DescribeCostSummaryByProductResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 记录数量，NeedRecordNum为0是返回null
+     * @var integer 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordNum;
@@ -69,7 +69,7 @@ class DescribeCostSummaryByProductResponse extends AbstractModel
      * @param ConsumptionSummaryTotal $Total 消耗详情
      * @param array $Data 消耗按产品汇总详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RecordNum 记录数量，NeedRecordNum为0是返回null
+     * @param integer $RecordNum 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

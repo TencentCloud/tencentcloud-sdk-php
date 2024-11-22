@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 - 长度8-30位,推荐使用12位以上的密码
 - 不能以"/"开头
 - 至少包含小写字母a-z、大写字母A-Z、数字0-9及其 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
- * @method array getShardIds() 获取分片集群的分片 ID。
- * @method void setShardIds(array $ShardIds) 设置分片集群的分片 ID。
+ * @method array getShardIds() 获取分片集群的分片 ID。请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603) 的返回参数 **Redis** 中的 **ClusterId** 获取。
+ * @method void setShardIds(array $ShardIds) 设置分片集群的分片 ID。请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603) 的返回参数 **Redis** 中的 **ClusterId** 获取。
  */
 class KillMasterGroupRequest extends AbstractModel
 {
@@ -49,7 +49,7 @@ class KillMasterGroupRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var array 分片集群的分片 ID。
+     * @var array 分片集群的分片 ID。请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603) 的返回参数 **Redis** 中的 **ClusterId** 获取。
      */
     public $ShardIds;
 
@@ -59,7 +59,7 @@ class KillMasterGroupRequest extends AbstractModel
 - 长度8-30位,推荐使用12位以上的密码
 - 不能以"/"开头
 - 至少包含小写字母a-z、大写字母A-Z、数字0-9及其 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
-     * @param array $ShardIds 分片集群的分片 ID。
+     * @param array $ShardIds 分片集群的分片 ID。请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603) 的返回参数 **Redis** 中的 **ClusterId** 获取。
      */
     function __construct()
     {

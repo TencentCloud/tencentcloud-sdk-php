@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳（秒）。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
- * @method integer getResolution() 获取分辨率。可以有如下取值：
+ * @method integer getResolution() 获取头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
- * @method void setResolution(integer $Resolution) 设置分辨率。可以有如下取值：
+ * @method void setResolution(integer $Resolution) 设置头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -142,7 +142,7 @@ class CreateRoomRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 分辨率。可以有如下取值：
+     * @var integer 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -297,7 +297,7 @@ video 纯视频
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
-     * @param integer $Resolution 分辨率。可以有如下取值：
+     * @param integer $Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMaintenanceWindow请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getStartTime() 获取维护时间窗起始时间，如：17:00
- * @method void setStartTime(string $StartTime) 设置维护时间窗起始时间，如：17:00
- * @method string getEndTime() 获取维护时间窗结束时间，如：19:00
- * @method void setEndTime(string $EndTime) 设置维护时间窗结束时间，如：19:00
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getStartTime() 获取维护时间窗起始时间，如：17:00。
+ * @method void setStartTime(string $StartTime) 设置维护时间窗起始时间，如：17:00。
+ * @method string getEndTime() 获取维护时间窗结束时间，如：19:00。
+ * @method void setEndTime(string $EndTime) 设置维护时间窗结束时间，如：19:00。
  */
 class ModifyMaintenanceWindowRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 维护时间窗起始时间，如：17:00
+     * @var string 维护时间窗起始时间，如：17:00。
      */
     public $StartTime;
 
     /**
-     * @var string 维护时间窗结束时间，如：19:00
+     * @var string 维护时间窗结束时间，如：19:00。
      */
     public $EndTime;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $StartTime 维护时间窗起始时间，如：17:00
-     * @param string $EndTime 维护时间窗结束时间，如：19:00
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $StartTime 维护时间窗起始时间，如：17:00。
+     * @param string $EndTime 维护时间窗结束时间，如：19:00。
      */
     function __construct()
     {

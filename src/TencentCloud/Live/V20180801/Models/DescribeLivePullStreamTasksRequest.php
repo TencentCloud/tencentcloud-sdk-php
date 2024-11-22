@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 取值范围：1~20 之前的任意整数。
  * @method void setPageSize(integer $PageSize) 设置分页大小，默认值：10。
 取值范围：1~20 之前的任意整数。
+ * @method string getSpecifyTaskId() 获取使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+ * @method void setSpecifyTaskId(string $SpecifyTaskId) 设置使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
  */
 class DescribeLivePullStreamTasksRequest extends AbstractModel
 {
@@ -54,12 +58,20 @@ class DescribeLivePullStreamTasksRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+     */
+    public $SpecifyTaskId;
+
+    /**
      * @param string $TaskId 任务 ID。 
 来源：调用 CreateLivePullStreamTask 接口时返回。
 不填默认查询所有任务，按更新时间倒序排序。
      * @param integer $PageNum 取得第几页，默认值：1。
      * @param integer $PageSize 分页大小，默认值：10。
 取值范围：1~20 之前的任意整数。
+     * @param string $SpecifyTaskId 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class DescribeLivePullStreamTasksRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("SpecifyTaskId",$param) and $param["SpecifyTaskId"] !== null) {
+            $this->SpecifyTaskId = $param["SpecifyTaskId"];
         }
     }
 }

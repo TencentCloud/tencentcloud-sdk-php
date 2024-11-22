@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddReplicationInstance请求参数结构体
  *
- * @method string getGroupId() 获取复制组ID。
- * @method void setGroupId(string $GroupId) 设置复制组ID。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getGroupId() 获取复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+ * @method void setGroupId(string $GroupId) 设置复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+ * @method string getInstanceId() 获取实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getInstanceRole() 获取给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
  * @method void setInstanceRole(string $InstanceRole) 设置给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
  */
 class AddReplicationInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 复制组ID。
+     * @var string 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
      */
     public $GroupId;
 
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -45,8 +45,8 @@ class AddReplicationInstanceRequest extends AbstractModel
     public $InstanceRole;
 
     /**
-     * @param string $GroupId 复制组ID。
-     * @param string $InstanceId 实例ID。
+     * @param string $GroupId 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+     * @param string $InstanceId 实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $InstanceRole 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     function __construct()

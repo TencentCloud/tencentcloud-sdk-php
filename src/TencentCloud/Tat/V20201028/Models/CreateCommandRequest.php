@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 默认值：false。
- * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+ * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
- * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+ * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
 自定义参数最多20个。
@@ -111,7 +111,7 @@ class CreateCommandRequest extends AbstractModel
     public $EnableParameter;
 
     /**
-     * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
 自定义参数最多20个。
@@ -160,7 +160,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * @param boolean $EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 默认值：false。
-     * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
 自定义参数最多20个。

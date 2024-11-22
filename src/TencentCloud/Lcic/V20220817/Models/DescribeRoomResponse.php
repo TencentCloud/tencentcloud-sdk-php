@@ -32,11 +32,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
  * @method integer getAudienceType() 获取观看类型。互动观看 （默认）	
  * @method void setAudienceType(integer $AudienceType) 设置观看类型。互动观看 （默认）	
- * @method integer getResolution() 获取分辨率。可以有如下取值：
+ * @method integer getResolution() 获取头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
- * @method void setResolution(integer $Resolution) 设置分辨率。可以有如下取值：
+ * @method void setResolution(integer $Resolution) 设置头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -158,7 +158,7 @@ class DescribeRoomResponse extends AbstractModel
     public $AudienceType;
 
     /**
-     * @var integer 分辨率。可以有如下取值：
+     * @var integer 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -318,7 +318,7 @@ video 纯视频
      * @param string $TeacherId 老师的UserId。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $AudienceType 观看类型。互动观看 （默认）	
-     * @param integer $Resolution 分辨率。可以有如下取值：
+     * @param integer $Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清

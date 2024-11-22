@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseVersion(string $ReleaseVersion) 设置发布版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getId() 获取配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(integer $Id) 设置配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigFileReleaseDeletion extends AbstractModel
 {
@@ -64,6 +68,12 @@ class ConfigFileReleaseDeletion extends AbstractModel
     public $ReleaseVersion;
 
     /**
+     * @var integer 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
      * @param string $Namespace 命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Group 配置分组
@@ -71,6 +81,8 @@ class ConfigFileReleaseDeletion extends AbstractModel
      * @param string $FileName 文件名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseVersion 发布版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Id 配置发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class ConfigFileReleaseDeletion extends AbstractModel
 
         if (array_key_exists("ReleaseVersion",$param) and $param["ReleaseVersion"] !== null) {
             $this->ReleaseVersion = $param["ReleaseVersion"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

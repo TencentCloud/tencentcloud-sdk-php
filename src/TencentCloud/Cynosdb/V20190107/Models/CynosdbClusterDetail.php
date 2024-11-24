@@ -80,9 +80,9 @@ pausing
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getDbType() 获取数据库类型
  * @method void setDbType(string $DbType) 设置数据库类型
- * @method string getDbMode() 获取数据库类型，normal，serverless
+ * @method string getDbMode() 获取Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDbMode(string $DbMode) 设置数据库类型，normal，serverless
+ * @method void setDbMode(string $DbMode) 设置Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersion() 获取数据库版本
  * @method void setDbVersion(string $DbVersion) 设置数据库版本
@@ -294,7 +294,7 @@ pausing
     public $DbType;
 
     /**
-     * @var string 数据库类型，normal，serverless
+     * @var string Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbMode;
@@ -494,7 +494,7 @@ pausing
      * @param string $Charset 字符集
      * @param string $CreateTime 创建时间
      * @param string $DbType 数据库类型
-     * @param string $DbMode 数据库类型，normal，serverless
+     * @param string $DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersion 数据库版本
      * @param integer $StorageLimit 存储空间上限

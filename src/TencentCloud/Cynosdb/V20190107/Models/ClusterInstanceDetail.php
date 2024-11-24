@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbMode() 获取数据库类型
+ * @method void setDbMode(string $DbMode) 设置数据库类型
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -157,6 +159,11 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceStorageType;
 
     /**
+     * @var string 数据库类型
+     */
+    public $DbMode;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -180,6 +187,7 @@ class ClusterInstanceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStorageType 实例存储类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbMode 数据库类型
      */
     function __construct()
     {
@@ -261,6 +269,10 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
             $this->InstanceStorageType = $param["InstanceStorageType"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
         }
     }
 }

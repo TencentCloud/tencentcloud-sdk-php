@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method RefreshSettings getRefreshSettings() 获取刷新设置。
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) 设置刷新设置。
- * @method string getRefreshMode() 获取刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
- * @method void setRefreshMode(string $RefreshMode) 设置刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+ * @method string getRefreshMode() 获取刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
+ * @method void setRefreshMode(string $RefreshMode) 设置刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
  */
 class StartInstanceRefreshRequest extends AbstractModel
 {
@@ -40,14 +44,18 @@ class StartInstanceRefreshRequest extends AbstractModel
     public $RefreshSettings;
 
     /**
-     * @var string 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * @var string 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     public $RefreshMode;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param RefreshSettings $RefreshSettings 刷新设置。
-     * @param string $RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * @param string $RefreshMode 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     function __construct()
     {

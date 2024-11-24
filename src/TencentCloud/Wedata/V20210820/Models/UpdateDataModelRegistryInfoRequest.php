@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudappId(string $CloudappId) 设置云应用的实例id
  * @method string getAppCamRole() 获取数语的CAM角色
  * @method void setAppCamRole(string $AppCamRole) 设置数语的CAM角色
- * @method string getIp() 获取数语的ip
- * @method void setIp(string $Ip) 设置数语的ip
- * @method integer getPort() 获取数语的端口
- * @method void setPort(integer $Port) 设置数语的端口
+ * @method string getIp() 获取数语的公网访问ip
+ * @method void setIp(string $Ip) 设置数语的公网访问ip
+ * @method integer getPort() 获取数语的公网访问端口
+ * @method void setPort(integer $Port) 设置数语的公网访问端口
  * @method string getAppCamRoleId() 获取数语的CAM角色id
  * @method void setAppCamRoleId(string $AppCamRoleId) 设置数语的CAM角色id
  * @method string getProvider() 获取服务提供方
@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTenantId(string $TenantId) 设置租户id
  * @method string getOwnId() 获取主账号id
  * @method void setOwnId(string $OwnId) 设置主账号id
+ * @method string getVpcId() 获取VpcId
+ * @method void setVpcId(string $VpcId) 设置VpcId
+ * @method string getVpcRegion() 获取Vpc地域
+ * @method void setVpcRegion(string $VpcRegion) 设置Vpc地域
+ * @method string getPip() 获取数语的内网访问ip
+ * @method void setPip(string $Pip) 设置数语的内网访问ip
+ * @method integer getPport() 获取数语的内网访问端口
+ * @method void setPport(integer $Pport) 设置数语的内网访问端口
+ * @method integer getIsPublic() 获取是否开放公网访问数语, 1:是，0:否，默认1开放
+ * @method void setIsPublic(integer $IsPublic) 设置是否开放公网访问数语, 1:是，0:否，默认1开放
  */
 class UpdateDataModelRegistryInfoRequest extends AbstractModel
 {
@@ -50,12 +60,12 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
     public $AppCamRole;
 
     /**
-     * @var string 数语的ip
+     * @var string 数语的公网访问ip
      */
     public $Ip;
 
     /**
-     * @var integer 数语的端口
+     * @var integer 数语的公网访问端口
      */
     public $Port;
 
@@ -80,14 +90,44 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
     public $OwnId;
 
     /**
+     * @var string VpcId
+     */
+    public $VpcId;
+
+    /**
+     * @var string Vpc地域
+     */
+    public $VpcRegion;
+
+    /**
+     * @var string 数语的内网访问ip
+     */
+    public $Pip;
+
+    /**
+     * @var integer 数语的内网访问端口
+     */
+    public $Pport;
+
+    /**
+     * @var integer 是否开放公网访问数语, 1:是，0:否，默认1开放
+     */
+    public $IsPublic;
+
+    /**
      * @param string $CloudappId 云应用的实例id
      * @param string $AppCamRole 数语的CAM角色
-     * @param string $Ip 数语的ip
-     * @param integer $Port 数语的端口
+     * @param string $Ip 数语的公网访问ip
+     * @param integer $Port 数语的公网访问端口
      * @param string $AppCamRoleId 数语的CAM角色id
      * @param string $Provider 服务提供方
      * @param string $TenantId 租户id
      * @param string $OwnId 主账号id
+     * @param string $VpcId VpcId
+     * @param string $VpcRegion Vpc地域
+     * @param string $Pip 数语的内网访问ip
+     * @param integer $Pport 数语的内网访问端口
+     * @param integer $IsPublic 是否开放公网访问数语, 1:是，0:否，默认1开放
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class UpdateDataModelRegistryInfoRequest extends AbstractModel
 
         if (array_key_exists("OwnId",$param) and $param["OwnId"] !== null) {
             $this->OwnId = $param["OwnId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("VpcRegion",$param) and $param["VpcRegion"] !== null) {
+            $this->VpcRegion = $param["VpcRegion"];
+        }
+
+        if (array_key_exists("Pip",$param) and $param["Pip"] !== null) {
+            $this->Pip = $param["Pip"];
+        }
+
+        if (array_key_exists("Pport",$param) and $param["Pport"] !== null) {
+            $this->Pport = $param["Pport"];
+        }
+
+        if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
+            $this->IsPublic = $param["IsPublic"];
         }
     }
 }

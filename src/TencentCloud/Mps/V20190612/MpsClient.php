@@ -169,6 +169,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 中的解析实现事件通知的解析。
  * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) 从 CMQ 获取到消息后，从消息的 msgBody 字段中解析出 MPS 事件通知的内容。
 该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 中的解析函数，实现事件通知的解析。
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) 发起图片处理，功能包括：
+1. 格式转换；
+2. 图像增强；
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) 对直播流媒体发起处理任务，功能包括：
 
 * 智能内容审核（画面鉴黄、敏感信息检测、声音鉴黄）；

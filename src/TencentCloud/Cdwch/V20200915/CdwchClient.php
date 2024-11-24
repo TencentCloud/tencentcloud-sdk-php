@@ -48,6 +48,7 @@ use TencentCloud\Cdwch\V20200915\Models as Models;
  * @method Models\OpenBackUpResponse OpenBackUp(Models\OpenBackUpRequest $req) 开启或者关闭策略
  * @method Models\RecoverBackUpJobResponse RecoverBackUpJob(Models\RecoverBackUpJobRequest $req) 备份恢复
  * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) 扩容磁盘，包含扩容数据节点，zk节点
+ * @method Models\ScaleCNOutUpInstanceResponse ScaleCNOutUpInstance(Models\ScaleCNOutUpInstanceRequest $req) open-api接口提供弹性伸缩云原生集群能力
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 调整clickhouse节点数量
  * @method Models\ScaleUpInstanceResponse ScaleUpInstance(Models\ScaleUpInstanceRequest $req) 垂直扩缩容节点规格，修改节点cvm的规格cpu，内存。 规格变化阶段，服务不可用。
  */

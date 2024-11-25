@@ -118,6 +118,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 发布暂停后重试
+ * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 重排序
  * @method Models\SaveDocResponse SaveDoc(Models\SaveDocRequest $req) 保存文档
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签

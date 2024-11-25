@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method DataBaseAuditRecord getSlowQueryRecords() 获取记录列表
  * @method void setSlowQueryRecords(DataBaseAuditRecord $SlowQueryRecords) 设置记录列表
+ * @method array getRecords() 获取记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecords(array $Records) 设置记录列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
@@ -44,6 +48,12 @@ class DescribeDatabaseAuditRecordsResponse extends AbstractModel
     public $SlowQueryRecords;
 
     /**
+     * @var array 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Records;
+
+    /**
      * @var string 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,6 +67,8 @@ class DescribeDatabaseAuditRecordsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 总数
      * @param DataBaseAuditRecord $SlowQueryRecords 记录列表
+     * @param array $Records 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -81,6 +93,15 @@ class DescribeDatabaseAuditRecordsResponse extends AbstractModel
         if (array_key_exists("SlowQueryRecords",$param) and $param["SlowQueryRecords"] !== null) {
             $this->SlowQueryRecords = new DataBaseAuditRecord();
             $this->SlowQueryRecords->deserialize($param["SlowQueryRecords"]);
+        }
+
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
+                $obj = new DataBaseAuditRecord();
+                $obj->deserialize($value);
+                array_push($this->Records, $obj);
+            }
         }
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {

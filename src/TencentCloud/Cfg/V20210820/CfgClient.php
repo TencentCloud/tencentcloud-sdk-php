@@ -24,6 +24,7 @@ use TencentCloud\Cfg\V20210820\Models as Models;
 
 /**
  * @method Models\CreateTaskFromActionResponse CreateTaskFromAction(Models\CreateTaskFromActionRequest $req) 从动作创建演练
+ * @method Models\CreateTaskFromMultiActionResponse CreateTaskFromMultiAction(Models\CreateTaskFromMultiActionRequest $req) 以多个动作创建演练
  * @method Models\CreateTaskFromTemplateResponse CreateTaskFromTemplate(Models\CreateTaskFromTemplateRequest $req) 从经验库创建演练
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
  * @method Models\DescribeActionFieldConfigListResponse DescribeActionFieldConfigList(Models\DescribeActionFieldConfigListRequest $req) 根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。

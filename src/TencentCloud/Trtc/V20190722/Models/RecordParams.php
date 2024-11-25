@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordMode(integer $RecordMode) 设置录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
- * @method integer getMaxIdleTime() 获取房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
- * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+ * @method integer getMaxIdleTime() 获取房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+ * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
  * @method integer getStreamType() 获取录制的媒体流类型：
 0：录制音频+视频流（默认）;
 1：仅录制音频流；
@@ -65,7 +65,7 @@ class RecordParams extends AbstractModel
     public $RecordMode;
 
     /**
-     * @var integer 房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+     * @var integer 房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
      */
     public $MaxIdleTime;
 
@@ -114,7 +114,7 @@ Hls 格式录制此参数不生效。
      * @param integer $RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
-     * @param integer $MaxIdleTime 房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+     * @param integer $MaxIdleTime 房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
      * @param integer $StreamType 录制的媒体流类型：
 0：录制音频+视频流（默认）;
 1：仅录制音频流；

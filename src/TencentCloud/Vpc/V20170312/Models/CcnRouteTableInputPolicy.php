@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取策略描述。
  * @method void setDescription(string $Description) 设置策略描述。
  * @method string getOperateAsPath() 获取as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateAsPath(string $OperateAsPath) 设置as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsPathOperateMode() 获取as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsPathOperateMode(string $AsPathOperateMode) 设置as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnRouteTableInputPolicy extends AbstractModel
 {
@@ -54,13 +50,11 @@ class CcnRouteTableInputPolicy extends AbstractModel
 
     /**
      * @var string as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateAsPath;
 
     /**
      * @var string as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsPathOperateMode;
 
@@ -69,9 +63,7 @@ class CcnRouteTableInputPolicy extends AbstractModel
      * @param string $Action 路由行为，`accept` 允许，`drop` 拒绝。
      * @param string $Description 策略描述。
      * @param string $OperateAsPath as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsPathOperateMode as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

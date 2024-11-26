@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(KnowledgeQaOutput $Output) 设置知识管理输出配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method KnowledgeWorkflow getWorkflow() 获取工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflow(KnowledgeWorkflow $Workflow) 设置工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SearchRange getSearchRange() 获取检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSearchRange(SearchRange $SearchRange) 设置检索范围
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaConfig extends AbstractModel
 {
@@ -74,6 +82,18 @@ class KnowledgeQaConfig extends AbstractModel
     public $Output;
 
     /**
+     * @var KnowledgeWorkflow 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Workflow;
+
+    /**
+     * @var SearchRange 检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SearchRange;
+
+    /**
      * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleDescription 角色描述，300字符以内
@@ -83,6 +103,10 @@ class KnowledgeQaConfig extends AbstractModel
      * @param array $Search 知识搜索配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeQaOutput $Output 知识管理输出配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeWorkflow $Workflow 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchRange $SearchRange 检索范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -123,6 +147,16 @@ class KnowledgeQaConfig extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new KnowledgeQaOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Workflow",$param) and $param["Workflow"] !== null) {
+            $this->Workflow = new KnowledgeWorkflow();
+            $this->Workflow->deserialize($param["Workflow"]);
+        }
+
+        if (array_key_exists("SearchRange",$param) and $param["SearchRange"] !== null) {
+            $this->SearchRange = new SearchRange();
+            $this->SearchRange->deserialize($param["SearchRange"]);
         }
     }
 }

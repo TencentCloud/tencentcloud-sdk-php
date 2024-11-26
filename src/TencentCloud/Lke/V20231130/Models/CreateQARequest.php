@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestion(string $Question) 设置问题
  * @method string getAnswer() 获取答案
  * @method void setAnswer(string $Answer) 设置答案
- * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件
+ * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件
  * @method string getCustomParam() 获取自定义参数
  * @method void setCustomParam(string $CustomParam) 设置自定义参数
- * @method array getAttrLabels() 获取属性标签引用
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签引用
+ * @method array getAttrLabels() 获取标签引用
+ * @method void setAttrLabels(array $AttrLabels) 设置标签引用
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method string getCateBizId() 获取分类ID
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method array getSimilarQuestions() 获取相似问内容
  * @method void setSimilarQuestions(array $SimilarQuestions) 设置相似问内容
+ * @method string getQuestionDesc() 获取问题描述
+ * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
  */
 class CreateQARequest extends AbstractModel
 {
@@ -61,7 +63,7 @@ class CreateQARequest extends AbstractModel
     public $Answer;
 
     /**
-     * @var integer 属性标签适用范围 1：全部，2：按条件
+     * @var integer 标签适用范围 1：全部，2：按条件
      */
     public $AttrRange;
 
@@ -71,7 +73,7 @@ class CreateQARequest extends AbstractModel
     public $CustomParam;
 
     /**
-     * @var array 属性标签引用
+     * @var array 标签引用
      */
     public $AttrLabels;
 
@@ -101,17 +103,23 @@ class CreateQARequest extends AbstractModel
     public $SimilarQuestions;
 
     /**
+     * @var string 问题描述
+     */
+    public $QuestionDesc;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $Question 问题
      * @param string $Answer 答案
-     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
+     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
      * @param string $CustomParam 自定义参数
-     * @param array $AttrLabels 属性标签引用
+     * @param array $AttrLabels 标签引用
      * @param string $DocBizId 文档ID
      * @param string $CateBizId 分类ID
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param array $SimilarQuestions 相似问内容
+     * @param string $QuestionDesc 问题描述
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateQARequest extends AbstractModel
 
         if (array_key_exists("SimilarQuestions",$param) and $param["SimilarQuestions"] !== null) {
             $this->SimilarQuestions = $param["SimilarQuestions"];
+        }
+
+        if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
+            $this->QuestionDesc = $param["QuestionDesc"];
         }
     }
 }

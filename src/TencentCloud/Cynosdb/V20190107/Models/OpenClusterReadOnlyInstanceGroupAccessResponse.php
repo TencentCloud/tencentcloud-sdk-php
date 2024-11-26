@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenClusterReadOnlyInstanceGroupAccess返回参数结构体
  *
- * @method string getFlowId() 获取开启流程ID
- * @method void setFlowId(string $FlowId) 设置开启流程ID
+ * @method integer getFlowId() 获取开启流程ID
+ * @method void setFlowId(integer $FlowId) 设置开启流程ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractModel
 {
     /**
-     * @var string 开启流程ID
+     * @var integer 开启流程ID
      */
     public $FlowId;
 
@@ -38,7 +38,7 @@ class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 开启流程ID
+     * @param integer $FlowId 开启流程ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

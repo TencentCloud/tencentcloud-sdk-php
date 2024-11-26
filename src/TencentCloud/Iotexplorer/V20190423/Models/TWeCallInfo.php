@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeCall信息
  *
- * @method string getModelId() 获取小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelId(string $ModelId) 设置小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSn() 获取Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSn(string $Sn) 设置Sn信息，SN格式：产品ID_设备名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelId() 获取小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelId(string $ModelId) 设置小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveNum() 获取激活数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
 class TWeCallInfo extends AbstractModel
 {
     /**
-     * @var string 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ModelId;
-
-    /**
      * @var string Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sn;
+
+    /**
+     * @var string 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelId;
 
     /**
      * @var integer 激活数
@@ -54,9 +54,9 @@ class TWeCallInfo extends AbstractModel
     public $ActiveNum;
 
     /**
-     * @param string $ModelId 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn Sn信息，SN格式：产品ID_设备名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelId 小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveNum 激活数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,12 +74,12 @@ class TWeCallInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
-        }
-
         if (array_key_exists("Sn",$param) and $param["Sn"] !== null) {
             $this->Sn = $param["Sn"];
+        }
+
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
         }
 
         if (array_key_exists("ActiveNum",$param) and $param["ActiveNum"] !== null) {

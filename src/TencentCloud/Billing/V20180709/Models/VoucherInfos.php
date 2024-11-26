@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取有效期截止时间
  * @method void setEndTime(string $EndTime) 设置有效期截止时间
  * @method ApplicableProducts getApplicableProducts() 获取适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicableProducts(ApplicableProducts $ApplicableProducts) 设置适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludedProducts() 获取不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludedProducts(array $ExcludedProducts) 设置不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VoucherInfos extends AbstractModel
 {
@@ -96,13 +92,11 @@ class VoucherInfos extends AbstractModel
 
     /**
      * @var ApplicableProducts 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicableProducts;
 
     /**
      * @var array 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludedProducts;
 
@@ -117,9 +111,7 @@ class VoucherInfos extends AbstractModel
      * @param string $BeginTime 有效期生效时间
      * @param string $EndTime 有效期截止时间
      * @param ApplicableProducts $ApplicableProducts 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludedProducts 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

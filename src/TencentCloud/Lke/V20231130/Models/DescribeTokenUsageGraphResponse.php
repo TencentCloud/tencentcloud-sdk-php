@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTokenUsageGraph返回参数结构体
  *
- * @method array getTotal() 获取总消耗
- * @method void setTotal(array $Total) 设置总消耗
- * @method array getInput() 获取输入消耗
- * @method void setInput(array $Input) 设置输入消耗
- * @method array getOutput() 获取输出消耗
- * @method void setOutput(array $Output) 设置输出消耗
+ * @method array getTotal() 获取Token消耗总量
+ * @method void setTotal(array $Total) 设置Token消耗总量
+ * @method array getInput() 获取输入Token消耗量
+ * @method void setInput(array $Input) 设置输入Token消耗量
+ * @method array getOutput() 获取输出Token消耗量
+ * @method void setOutput(array $Output) 设置输出Token消耗量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTokenUsageGraphResponse extends AbstractModel
 {
     /**
-     * @var array 总消耗
+     * @var array Token消耗总量
      */
     public $Total;
 
     /**
-     * @var array 输入消耗
+     * @var array 输入Token消耗量
      */
     public $Input;
 
     /**
-     * @var array 输出消耗
+     * @var array 输出Token消耗量
      */
     public $Output;
 
@@ -52,9 +52,9 @@ class DescribeTokenUsageGraphResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Total 总消耗
-     * @param array $Input 输入消耗
-     * @param array $Output 输出消耗
+     * @param array $Total Token消耗总量
+     * @param array $Input 输入Token消耗量
+     * @param array $Output 输出Token消耗量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuestion(string $Question) 设置相似问内容
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAuditStatus() 获取相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuditStatus(integer $AuditStatus) 设置相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SimilarQuestion extends AbstractModel
 {
@@ -44,9 +48,17 @@ class SimilarQuestion extends AbstractModel
     public $Question;
 
     /**
+     * @var integer 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AuditStatus;
+
+    /**
      * @param string $SimBizId 相似问ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Question 相似问内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AuditStatus 相似问审核状态，1审核失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class SimilarQuestion extends AbstractModel
 
         if (array_key_exists("Question",$param) and $param["Question"] !== null) {
             $this->Question = $param["Question"];
+        }
+
+        if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
+            $this->AuditStatus = $param["AuditStatus"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method array getSegBizId() 获取文档ID
- * @method void setSegBizId(array $SegBizId) 设置文档ID
+ * @method array getSegBizId() 获取文档片段ID
+ * @method void setSegBizId(array $SegBizId) 设置文档片段ID
  */
 class DescribeSegmentsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeSegmentsRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var array 文档ID
+     * @var array 文档片段ID
      */
     public $SegBizId;
 
     /**
      * @param string $BotBizId 应用ID
-     * @param array $SegBizId 文档ID
+     * @param array $SegBizId 文档片段ID
      */
     function __construct()
     {

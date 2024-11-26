@@ -94,18 +94,24 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setOrgData(string $OrgData) 设置分片内容
 
- * @method integer getAttrRange() 获取属性标签适用范围
-
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围
-
- * @method array getAttrLabels() 获取属性标签
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签
+ * @method integer getAttrRange() 获取标签适用范围
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围
+ * @method array getAttrLabels() 获取标签
+ * @method void setAttrLabels(array $AttrLabels) 设置标签
  * @method string getExpireStart() 获取有效开始时间，unix时间戳
  * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method array getSimilarQuestions() 获取相似问列表信息
  * @method void setSimilarQuestions(array $SimilarQuestions) 设置相似问列表信息
+ * @method integer getQaAuditStatus() 获取问题和答案文本审核状态 1审核失败
+ * @method void setQaAuditStatus(integer $QaAuditStatus) 设置问题和答案文本审核状态 1审核失败
+ * @method integer getPicAuditStatus() 获取答案中的图片审核状态 1审核失败
+ * @method void setPicAuditStatus(integer $PicAuditStatus) 设置答案中的图片审核状态 1审核失败
+ * @method integer getVideoAuditStatus() 获取答案中的视频审核状态 1审核失败
+ * @method void setVideoAuditStatus(integer $VideoAuditStatus) 设置答案中的视频审核状态 1审核失败
+ * @method string getQuestionDesc() 获取问题描述
+ * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -229,13 +235,12 @@ class DescribeQAResponse extends AbstractModel
     public $OrgData;
 
     /**
-     * @var integer 属性标签适用范围
-
+     * @var integer 标签适用范围
      */
     public $AttrRange;
 
     /**
-     * @var array 属性标签
+     * @var array 标签
      */
     public $AttrLabels;
 
@@ -253,6 +258,26 @@ class DescribeQAResponse extends AbstractModel
      * @var array 相似问列表信息
      */
     public $SimilarQuestions;
+
+    /**
+     * @var integer 问题和答案文本审核状态 1审核失败
+     */
+    public $QaAuditStatus;
+
+    /**
+     * @var integer 答案中的图片审核状态 1审核失败
+     */
+    public $PicAuditStatus;
+
+    /**
+     * @var integer 答案中的视频审核状态 1审核失败
+     */
+    public $VideoAuditStatus;
+
+    /**
+     * @var string 问题描述
+     */
+    public $QuestionDesc;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -297,12 +322,15 @@ class DescribeQAResponse extends AbstractModel
      * @param array $Highlights 分片高亮内容
      * @param string $OrgData 分片内容
 
-     * @param integer $AttrRange 属性标签适用范围
-
-     * @param array $AttrLabels 属性标签
+     * @param integer $AttrRange 标签适用范围
+     * @param array $AttrLabels 标签
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param array $SimilarQuestions 相似问列表信息
+     * @param integer $QaAuditStatus 问题和答案文本审核状态 1审核失败
+     * @param integer $PicAuditStatus 答案中的图片审核状态 1审核失败
+     * @param integer $VideoAuditStatus 答案中的视频审核状态 1审核失败
+     * @param string $QuestionDesc 问题描述
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -431,6 +459,22 @@ class DescribeQAResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SimilarQuestions, $obj);
             }
+        }
+
+        if (array_key_exists("QaAuditStatus",$param) and $param["QaAuditStatus"] !== null) {
+            $this->QaAuditStatus = $param["QaAuditStatus"];
+        }
+
+        if (array_key_exists("PicAuditStatus",$param) and $param["PicAuditStatus"] !== null) {
+            $this->PicAuditStatus = $param["PicAuditStatus"];
+        }
+
+        if (array_key_exists("VideoAuditStatus",$param) and $param["VideoAuditStatus"] !== null) {
+            $this->VideoAuditStatus = $param["VideoAuditStatus"];
+        }
+
+        if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
+            $this->QuestionDesc = $param["QuestionDesc"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

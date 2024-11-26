@@ -86,8 +86,50 @@ use TencentCloud\Common\AbstractModel;
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
  * @method string getModel() 获取目前已不支持
  * @method void setModel(string $Model) 设置目前已不支持
- * @method string getTranslationLanguage() 获取目前已不支持
- * @method void setTranslationLanguage(string $TranslationLanguage) 设置目前已不支持
+ * @method string getTranslationLanguage() 获取填写则翻译，目前支持的语言：
+中文: zh
+英语: en
+越南语: vi
+日语: ja
+韩语: ko
+印度尼西亚语: id
+泰语: th
+葡萄牙语: pt
+土耳其语: tr
+阿拉伯语: ar
+西班牙语: es
+印地语: hi
+法语: fr
+马来语: ms
+菲律宾语: fil
+德语: de
+意大利语: it
+俄语: ru
+瑞典语: sv
+挪威语: no
+丹麦语: da
+ * @method void setTranslationLanguage(string $TranslationLanguage) 设置填写则翻译，目前支持的语言：
+中文: zh
+英语: en
+越南语: vi
+日语: ja
+韩语: ko
+印度尼西亚语: id
+泰语: th
+葡萄牙语: pt
+土耳其语: tr
+阿拉伯语: ar
+西班牙语: es
+印地语: hi
+法语: fr
+马来语: ms
+菲律宾语: fil
+德语: de
+意大利语: it
+俄语: ru
+瑞典语: sv
+挪威语: no
+丹麦语: da
  */
 class RecognizeConfig extends AbstractModel
 {
@@ -138,7 +180,28 @@ class RecognizeConfig extends AbstractModel
     public $Model;
 
     /**
-     * @var string 目前已不支持
+     * @var string 填写则翻译，目前支持的语言：
+中文: zh
+英语: en
+越南语: vi
+日语: ja
+韩语: ko
+印度尼西亚语: id
+泰语: th
+葡萄牙语: pt
+土耳其语: tr
+阿拉伯语: ar
+西班牙语: es
+印地语: hi
+法语: fr
+马来语: ms
+菲律宾语: fil
+德语: de
+意大利语: it
+俄语: ru
+瑞典语: sv
+挪威语: no
+丹麦语: da
      * @deprecated
      */
     public $TranslationLanguage;
@@ -177,7 +240,28 @@ class RecognizeConfig extends AbstractModel
      * @param array $AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型。
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
      * @param string $Model 目前已不支持
-     * @param string $TranslationLanguage 目前已不支持
+     * @param string $TranslationLanguage 填写则翻译，目前支持的语言：
+中文: zh
+英语: en
+越南语: vi
+日语: ja
+韩语: ko
+印度尼西亚语: id
+泰语: th
+葡萄牙语: pt
+土耳其语: tr
+阿拉伯语: ar
+西班牙语: es
+印地语: hi
+法语: fr
+马来语: ms
+菲律宾语: fil
+德语: de
+意大利语: it
+俄语: ru
+瑞典语: sv
+挪威语: no
+丹麦语: da
      */
     function __construct()
     {

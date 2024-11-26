@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 知识库容量饼图详情
  *
- * @method string getAppName() 获取应用名称
+ * @method string getAppName() 获取当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppName(string $AppName) 设置应用名称
+ * @method void setAppName(string $AppName) 设置当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUsedCharSize() 获取应用使用的字符数
+ * @method string getUsedCharSize() 获取当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsedCharSize(string $UsedCharSize) 设置应用使用的字符数
+ * @method void setUsedCharSize(string $UsedCharSize) 设置当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getProportion() 获取应用占比
+ * @method float getProportion() 获取当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProportion(float $Proportion) 设置应用占比
+ * @method void setProportion(float $Proportion) 设置当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeCapacityPieGraphDetail extends AbstractModel
 {
     /**
-     * @var string 应用名称
+     * @var string 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
     /**
-     * @var string 应用使用的字符数
+     * @var string 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedCharSize;
 
     /**
-     * @var float 应用占比
+     * @var float 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Proportion;
 
     /**
-     * @param string $AppName 应用名称
+     * @param string $AppName 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UsedCharSize 应用使用的字符数
+     * @param string $UsedCharSize 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Proportion 应用占比
+     * @param float $Proportion 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

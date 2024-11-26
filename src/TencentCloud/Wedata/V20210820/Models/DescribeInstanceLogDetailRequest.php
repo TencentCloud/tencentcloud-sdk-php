@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
  * @method string getExecutionFileType() 获取文件类型,Log/Code
  * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
- * @method string getExecutionJobId() 获取统一执行平台执行id
- * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台执行id
- * @method string getBrokerIp() 获取服务器Ip
- * @method void setBrokerIp(string $BrokerIp) 设置服务器Ip
- * @method string getOriginFileName() 获取文件Name
- * @method void setOriginFileName(string $OriginFileName) 设置文件Name
+ * @method string getExecutionJobId() 获取统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+ * @method string getBrokerIp() 获取服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+ * @method void setBrokerIp(string $BrokerIp) 设置服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+ * @method string getOriginFileName() 获取文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+ * @method void setOriginFileName(string $OriginFileName) 设置文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
  * @method integer getStartCount() 获取起始行
  * @method void setStartCount(integer $StartCount) 设置起始行
  * @method integer getLineCount() 获取每次查询行数
@@ -73,17 +73,17 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
     public $ExecutionFileType;
 
     /**
-     * @var string 统一执行平台执行id
+     * @var string 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
      */
     public $ExecutionJobId;
 
     /**
-     * @var string 服务器Ip
+     * @var string 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public $BrokerIp;
 
     /**
-     * @var string 文件Name
+     * @var string 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public $OriginFileName;
 
@@ -113,9 +113,9 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
      * @param string $CurRunDate 数据时间
      * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
      * @param string $ExecutionFileType 文件类型,Log/Code
-     * @param string $ExecutionJobId 统一执行平台执行id
-     * @param string $BrokerIp 服务器Ip
-     * @param string $OriginFileName 文件Name
+     * @param string $ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+     * @param string $BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * @param string $OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      * @param integer $StartCount 起始行
      * @param integer $LineCount 每次查询行数
      * @param string $ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null

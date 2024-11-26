@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) 设置知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间戳, 单位为秒
+ * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒
+ * @method string getEndTime() 获取结束时间戳, 单位为秒
+ * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
  */
@@ -51,12 +51,12 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间戳, 单位为秒
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间戳, 单位为秒
      */
     public $EndTime;
 
@@ -69,8 +69,8 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
      * @param array $UinAccount 腾讯云主账号
      * @param string $SubBizType 知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间戳, 单位为秒
+     * @param string $EndTime 结束时间戳, 单位为秒
      * @param array $AppBizIds 应用id列表
      */
     function __construct()

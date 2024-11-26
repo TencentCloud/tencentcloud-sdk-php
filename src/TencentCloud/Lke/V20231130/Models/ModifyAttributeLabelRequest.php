@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getAttributeBizId() 获取属性ID
- * @method void setAttributeBizId(string $AttributeBizId) 设置属性ID
- * @method string getAttrKey() 获取属性标识
- * @method void setAttrKey(string $AttrKey) 设置属性标识
- * @method string getAttrName() 获取属性名称
- * @method void setAttrName(string $AttrName) 设置属性名称
+ * @method string getAttributeBizId() 获取标签ID
+ * @method void setAttributeBizId(string $AttributeBizId) 设置标签ID
+ * @method string getAttrName() 获取标签名称
+ * @method void setAttrName(string $AttrName) 设置标签名称
+ * @method string getAttrKey() 获取标签标识 （已作废）
+ * @method void setAttrKey(string $AttrKey) 设置标签标识 （已作废）
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method array getDeleteLabelBizIds() 获取删除的属性标签
- * @method void setDeleteLabelBizIds(array $DeleteLabelBizIds) 设置删除的属性标签
- * @method array getLabels() 获取新增或编辑的属性标签
- * @method void setLabels(array $Labels) 设置新增或编辑的属性标签
+ * @method array getDeleteLabelBizIds() 获取删除的标签值
+ * @method void setDeleteLabelBizIds(array $DeleteLabelBizIds) 设置删除的标签值
+ * @method array getLabels() 获取新增或编辑的标签
+ * @method void setLabels(array $Labels) 设置新增或编辑的标签
  */
 class ModifyAttributeLabelRequest extends AbstractModel
 {
@@ -45,19 +45,19 @@ class ModifyAttributeLabelRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var string 属性ID
+     * @var string 标签ID
      */
     public $AttributeBizId;
 
     /**
-     * @var string 属性标识
-     */
-    public $AttrKey;
-
-    /**
-     * @var string 属性名称
+     * @var string 标签名称
      */
     public $AttrName;
+
+    /**
+     * @var string 标签标识 （已作废）
+     */
+    public $AttrKey;
 
     /**
      * @var string 登录用户主账号(集成商模式必填)
@@ -70,24 +70,24 @@ class ModifyAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var array 删除的属性标签
+     * @var array 删除的标签值
      */
     public $DeleteLabelBizIds;
 
     /**
-     * @var array 新增或编辑的属性标签
+     * @var array 新增或编辑的标签
      */
     public $Labels;
 
     /**
      * @param string $BotBizId 应用ID
-     * @param string $AttributeBizId 属性ID
-     * @param string $AttrKey 属性标识
-     * @param string $AttrName 属性名称
+     * @param string $AttributeBizId 标签ID
+     * @param string $AttrName 标签名称
+     * @param string $AttrKey 标签标识 （已作废）
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param array $DeleteLabelBizIds 删除的属性标签
-     * @param array $Labels 新增或编辑的属性标签
+     * @param array $DeleteLabelBizIds 删除的标签值
+     * @param array $Labels 新增或编辑的标签
      */
     function __construct()
     {
@@ -110,12 +110,12 @@ class ModifyAttributeLabelRequest extends AbstractModel
             $this->AttributeBizId = $param["AttributeBizId"];
         }
 
-        if (array_key_exists("AttrKey",$param) and $param["AttrKey"] !== null) {
-            $this->AttrKey = $param["AttrKey"];
-        }
-
         if (array_key_exists("AttrName",$param) and $param["AttrName"] !== null) {
             $this->AttrName = $param["AttrName"];
+        }
+
+        if (array_key_exists("AttrKey",$param) and $param["AttrKey"] !== null) {
+            $this->AttrKey = $param["AttrKey"];
         }
 
         if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {

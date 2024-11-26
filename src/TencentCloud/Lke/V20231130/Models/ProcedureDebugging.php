@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskFlow(TaskFlowSummary $TaskFlow) 设置任务流程
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WorkFlowSummary getWorkFlow() 获取工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkFlow(WorkFlowSummary $WorkFlow) 设置工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcedureDebugging extends AbstractModel
 {
@@ -74,6 +78,12 @@ class ProcedureDebugging extends AbstractModel
     public $TaskFlow;
 
     /**
+     * @var WorkFlowSummary 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkFlow;
+
+    /**
      * @param string $Content 检索query
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $System 系统prompt
@@ -83,6 +93,8 @@ class ProcedureDebugging extends AbstractModel
      * @param array $Knowledge 检索知识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskFlowSummary $TaskFlow 任务流程
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkFlowSummary $WorkFlow 工作流调试信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -127,6 +139,11 @@ class ProcedureDebugging extends AbstractModel
         if (array_key_exists("TaskFlow",$param) and $param["TaskFlow"] !== null) {
             $this->TaskFlow = new TaskFlowSummary();
             $this->TaskFlow->deserialize($param["TaskFlow"]);
+        }
+
+        if (array_key_exists("WorkFlow",$param) and $param["WorkFlow"] !== null) {
+            $this->WorkFlow = new WorkFlowSummary();
+            $this->WorkFlow->deserialize($param["WorkFlow"]);
         }
     }
 }

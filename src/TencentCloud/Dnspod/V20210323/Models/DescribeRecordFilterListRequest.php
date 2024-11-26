@@ -56,8 +56,8 @@ UPDATED_ON：解析记录更新时间
 
  * @method string getSortType() 获取排序方式，升序：ASC，降序：DESC。默认值为ASC。
  * @method void setSortType(string $SortType) 设置排序方式，升序：ASC，降序：DESC。默认值为ASC。
- * @method integer getOffset() 获取偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
+ * @method integer getOffset() 获取偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
  * @method integer getLimit() 获取限制数量，当前Limit最大支持3000。默认值为100。
  * @method void setLimit(integer $Limit) 设置限制数量，当前Limit最大支持3000。默认值为100。
  * @method string getRecordValue() 获取根据解析记录的值获取解析记录
@@ -148,7 +148,7 @@ UPDATED_ON：解析记录更新时间
     public $SortType;
 
     /**
-     * @var integer 偏移量，默认值为0。
+     * @var integer 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
      */
     public $Offset;
 
@@ -243,7 +243,7 @@ TTL：解析记录缓存时间
 UPDATED_ON：解析记录更新时间
 
      * @param string $SortType 排序方式，升序：ASC，降序：DESC。默认值为ASC。
-     * @param integer $Offset 偏移量，默认值为0。
+     * @param integer $Offset 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
      * @param integer $Limit 限制数量，当前Limit最大支持3000。默认值为100。
      * @param string $RecordValue 根据解析记录的值获取解析记录
      * @param array $RecordStatus 根据解析记录的状态获取解析记录。可取值为 ENABLE，DISABLE。

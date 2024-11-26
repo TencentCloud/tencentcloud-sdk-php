@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigrateDBInstances请求参数结构体
  *
- * @method string getDatabaseType() 获取数据库类型，如mysql
- * @method void setDatabaseType(string $DatabaseType) 设置数据库类型，如mysql
+ * @method string getDatabaseType() 获取数据库类型，如mysql,redis等
+ * @method void setDatabaseType(string $DatabaseType) 设置数据库类型，如mysql,redis等
  * @method string getMigrateRole() 获取实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
  * @method void setMigrateRole(string $MigrateRole) 设置实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
  * @method string getInstanceId() 获取云数据库实例ID
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMigrateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 数据库类型，如mysql
+     * @var string 数据库类型，如mysql,redis等
      */
     public $DatabaseType;
 
@@ -94,7 +94,7 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
     public $TmpToken;
 
     /**
-     * @param string $DatabaseType 数据库类型，如mysql
+     * @param string $DatabaseType 数据库类型，如mysql,redis等
      * @param string $MigrateRole 实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
      * @param string $InstanceId 云数据库实例ID
      * @param string $InstanceName 云数据库名称

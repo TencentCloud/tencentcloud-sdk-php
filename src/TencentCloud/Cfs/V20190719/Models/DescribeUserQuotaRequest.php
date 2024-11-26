@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
  * @method array getFilters() 获取过滤条件。
-<br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
-<br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
+UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
  * @method void setFilters(array $Filters) 设置过滤条件。
-<br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
-<br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
+UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
  * @method integer getOffset() 获取Offset 分页码
  * @method void setOffset(integer $Offset) 设置Offset 分页码
  * @method integer getLimit() 获取Limit 页面大小，可填范围为大于0的整数
@@ -42,8 +42,8 @@ class DescribeUserQuotaRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
-<br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
+UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
      */
     public $Filters;
 
@@ -60,8 +60,8 @@ class DescribeUserQuotaRequest extends AbstractModel
     /**
      * @param string $FileSystemId 文件系统 ID
      * @param array $Filters 过滤条件。
-<br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
-<br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
+UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
      * @param integer $Offset Offset 分页码
      * @param integer $Limit Limit 页面大小，可填范围为大于0的整数
      */

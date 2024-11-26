@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnswer(string $Answer) 设置答案
  * @method string getCustomParam() 获取自定义参数
  * @method void setCustomParam(string $CustomParam) 设置自定义参数
- * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件
- * @method array getAttrLabels() 获取属性标签引用
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签引用
+ * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件
+ * @method array getAttrLabels() 获取标签引用
+ * @method void setAttrLabels(array $AttrLabels) 设置标签引用
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method string getCateBizId() 获取分类ID
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method SimilarQuestionModify getSimilarQuestionModify() 获取相似问修改信息(相似问没有修改则不传)
  * @method void setSimilarQuestionModify(SimilarQuestionModify $SimilarQuestionModify) 设置相似问修改信息(相似问没有修改则不传)
+ * @method string getQuestionDesc() 获取问题描述
+ * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
  */
 class ModifyQARequest extends AbstractModel
 {
@@ -73,12 +75,12 @@ class ModifyQARequest extends AbstractModel
     public $CustomParam;
 
     /**
-     * @var integer 属性标签适用范围 1：全部，2：按条件
+     * @var integer 标签适用范围 1：全部，2：按条件
      */
     public $AttrRange;
 
     /**
-     * @var array 属性标签引用
+     * @var array 标签引用
      */
     public $AttrLabels;
 
@@ -108,18 +110,24 @@ class ModifyQARequest extends AbstractModel
     public $SimilarQuestionModify;
 
     /**
+     * @var string 问题描述
+     */
+    public $QuestionDesc;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
      * @param string $CustomParam 自定义参数
-     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
-     * @param array $AttrLabels 属性标签引用
+     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
+     * @param array $AttrLabels 标签引用
      * @param string $DocBizId 文档ID
      * @param string $CateBizId 分类ID
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param SimilarQuestionModify $SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
+     * @param string $QuestionDesc 问题描述
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class ModifyQARequest extends AbstractModel
         if (array_key_exists("SimilarQuestionModify",$param) and $param["SimilarQuestionModify"] !== null) {
             $this->SimilarQuestionModify = new SimilarQuestionModify();
             $this->SimilarQuestionModify->deserialize($param["SimilarQuestionModify"]);
+        }
+
+        if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
+            $this->QuestionDesc = $param["QuestionDesc"];
         }
     }
 }

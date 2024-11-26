@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) 设置子业务类型
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间戳, 单位为秒
+ * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒
+ * @method string getEndTime() 获取结束时间戳, 单位为秒
+ * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
+ * @method array getSubScenes() 获取筛选子场景(文档解析场景使用)
+ * @method void setSubScenes(array $SubScenes) 设置筛选子场景(文档解析场景使用)
  */
 class DescribeCallStatsGraphRequest extends AbstractModel
 {
@@ -65,12 +67,12 @@ class DescribeCallStatsGraphRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间戳, 单位为秒
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间戳, 单位为秒
      */
     public $EndTime;
 
@@ -80,14 +82,20 @@ class DescribeCallStatsGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var array 筛选子场景(文档解析场景使用)
+     */
+    public $SubScenes;
+
+    /**
      * @param array $UinAccount uin
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $SubBizType 子业务类型
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间戳, 单位为秒
+     * @param string $EndTime 结束时间戳, 单位为秒
      * @param array $AppBizIds 应用id列表
+     * @param array $SubScenes 筛选子场景(文档解析场景使用)
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeCallStatsGraphRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
+            $this->SubScenes = $param["SubScenes"];
         }
     }
 }

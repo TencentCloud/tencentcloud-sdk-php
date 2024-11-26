@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryAnswer(string $QueryAnswer) 设置查询答案
  * @method array getQaBizIds() 获取QA业务ID列表
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
+ * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
+ * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
  */
 class ListQARequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ListQARequest extends AbstractModel
     public $QaBizIds;
 
     /**
+     * @var string 查询类型 filename 名称、 attribute 标签
+     */
+    public $QueryType;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页大小
@@ -104,6 +111,7 @@ class ListQARequest extends AbstractModel
      * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
      * @param string $QueryAnswer 查询答案
      * @param array $QaBizIds QA业务ID列表
+     * @param string $QueryType 查询类型 filename 名称、 attribute 标签
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ListQARequest extends AbstractModel
 
         if (array_key_exists("QaBizIds",$param) and $param["QaBizIds"] !== null) {
             $this->QaBizIds = $param["QaBizIds"];
+        }
+
+        if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
+            $this->QueryType = $param["QueryType"];
         }
     }
 }

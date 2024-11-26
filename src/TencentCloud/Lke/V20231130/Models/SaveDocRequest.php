@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosHash(string $CosHash) 设置cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
  * @method string getSize() 获取文件大小
  * @method void setSize(string $Size) 设置文件大小
- * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件范围
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件范围
+ * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件范围
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件范围
  * @method integer getSource() 获取来源(0 源文件导入 1 网页导入)
  * @method void setSource(integer $Source) 设置来源(0 源文件导入 1 网页导入)
  * @method string getWebUrl() 获取网页(或自定义链接)地址
  * @method void setWebUrl(string $WebUrl) 设置网页(或自定义链接)地址
- * @method array getAttrLabels() 获取属性标签引用
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签引用
+ * @method array getAttrLabels() 获取标签引用
+ * @method void setAttrLabels(array $AttrLabels) 设置标签引用
  * @method integer getReferUrlType() 获取外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。
  * @method void setReferUrlType(integer $ReferUrlType) 设置外部引用链接类型 0：系统链接 1：自定义链接
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRefer(boolean $IsRefer) 设置是否引用链接
  * @method integer getOpt() 获取文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
  * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+ * @method string getCateBizId() 获取分类ID
+ * @method void setCateBizId(string $CateBizId) 设置分类ID
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -93,7 +95,7 @@ class SaveDocRequest extends AbstractModel
     public $Size;
 
     /**
-     * @var integer 属性标签适用范围 1：全部，2：按条件范围
+     * @var integer 标签适用范围 1：全部，2：按条件范围
      */
     public $AttrRange;
 
@@ -108,7 +110,7 @@ class SaveDocRequest extends AbstractModel
     public $WebUrl;
 
     /**
-     * @var array 属性标签引用
+     * @var array 标签引用
      */
     public $AttrLabels;
 
@@ -139,6 +141,11 @@ class SaveDocRequest extends AbstractModel
     public $Opt;
 
     /**
+     * @var string 分类ID
+     */
+    public $CateBizId;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
      * @param string $FileType 文件类型(md|txt|docx|pdf|xlsx)
@@ -146,16 +153,17 @@ class SaveDocRequest extends AbstractModel
      * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
      * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
      * @param string $Size 文件大小
-     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件范围
+     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件范围
      * @param integer $Source 来源(0 源文件导入 1 网页导入)
      * @param string $WebUrl 网页(或自定义链接)地址
-     * @param array $AttrLabels 属性标签引用
+     * @param array $AttrLabels 标签引用
      * @param integer $ReferUrlType 外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param boolean $IsRefer 是否引用链接
      * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * @param string $CateBizId 分类ID
      */
     function __construct()
     {
@@ -237,6 +245,10 @@ class SaveDocRequest extends AbstractModel
 
         if (array_key_exists("Opt",$param) and $param["Opt"] !== null) {
             $this->Opt = $param["Opt"];
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
         }
     }
 }

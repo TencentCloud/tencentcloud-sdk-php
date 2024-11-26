@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConcurrencyUsageGraph返回参数结构体
  *
- * @method array getX() 获取统计信息
- * @method void setX(array $X) 设置统计信息
+ * @method array getX() 获取X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
+ * @method void setX(array $X) 设置X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
  * @method array getAvailableY() 获取可用并发y轴坐标
  * @method void setAvailableY(array $AvailableY) 设置可用并发y轴坐标
  * @method array getSuccessCallY() 获取成功调用并发y轴坐标
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConcurrencyUsageGraphResponse extends AbstractModel
 {
     /**
-     * @var array 统计信息
+     * @var array X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
      */
     public $X;
 
@@ -52,7 +52,7 @@ class DescribeConcurrencyUsageGraphResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $X 统计信息
+     * @param array $X X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
      * @param array $AvailableY 可用并发y轴坐标
      * @param array $SuccessCallY 成功调用并发y轴坐标
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

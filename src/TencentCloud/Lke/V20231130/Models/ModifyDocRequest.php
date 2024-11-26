@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method boolean getIsRefer() 获取是否引用链接
  * @method void setIsRefer(boolean $IsRefer) 设置是否引用链接
- * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件
+ * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method array getAttrLabels() 获取适用范围，关联的属性标签
- * @method void setAttrLabels(array $AttrLabels) 设置适用范围，关联的属性标签
+ * @method array getAttrLabels() 获取关联的标签
+ * @method void setAttrLabels(array $AttrLabels) 设置关联的标签
  * @method string getWebUrl() 获取网页(或自定义链接)地址
  * @method void setWebUrl(string $WebUrl) 设置网页(或自定义链接)地址
  * @method integer getReferUrlType() 获取外部引用链接类型 0：系统链接 1：自定义链接
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method string getCateBizId() 获取分类ID
+ * @method void setCateBizId(string $CateBizId) 设置分类ID
  */
 class ModifyDocRequest extends AbstractModel
 {
@@ -63,7 +65,7 @@ class ModifyDocRequest extends AbstractModel
     public $IsRefer;
 
     /**
-     * @var integer 属性标签适用范围 1：全部，2：按条件
+     * @var integer 标签适用范围 1：全部，2：按条件
      */
     public $AttrRange;
 
@@ -78,7 +80,7 @@ class ModifyDocRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var array 适用范围，关联的属性标签
+     * @var array 关联的标签
      */
     public $AttrLabels;
 
@@ -104,18 +106,24 @@ class ModifyDocRequest extends AbstractModel
     public $ExpireEnd;
 
     /**
+     * @var string 分类ID
+     */
+    public $CateBizId;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
-     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
+     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param array $AttrLabels 适用范围，关联的属性标签
+     * @param array $AttrLabels 关联的标签
      * @param string $WebUrl 网页(或自定义链接)地址
      * @param integer $ReferUrlType 外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param string $CateBizId 分类ID
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class ModifyDocRequest extends AbstractModel
 
         if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
             $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
         }
     }
 }

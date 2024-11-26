@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Live\V20180801\Models as Models;
 
 /**
+ * @method Models\AddCasterInputInfoResponse AddCasterInputInfo(Models\AddCasterInputInfoRequest $req) 该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
+ * @method Models\AddCasterLayoutInfoResponse AddCasterLayoutInfo(Models\AddCasterLayoutInfoRequest $req) 该接口用来增加导播台的布局参数。
+ * @method Models\AddCasterOutputInfoResponse AddCasterOutputInfo(Models\AddCasterOutputInfoRequest $req) 该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
  * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 针对大型活动直播，通过对直播流设置延时来控制现场与观众播放画面的时间间隔，避免突发状况造成影响。
 
 注意：如果在推流前设置延播，需要提前5分钟设置，目前该接口只支持流粒度。
@@ -32,6 +35,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
  * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
+ * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -109,6 +113,10 @@ use TencentCloud\Live\V20180801\Models as Models;
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
  * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
+ * @method Models\DeleteCasterInputInfoResponse DeleteCasterInputInfo(Models\DeleteCasterInputInfoRequest $req) 该接口用来删除导播台中的输入源信息。
+ * @method Models\DeleteCasterLayoutInfoResponse DeleteCasterLayoutInfo(Models\DeleteCasterLayoutInfoRequest $req) 该接口用来将布局信息从导播台中删除
+ * @method Models\DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(Models\DeleteCasterOutputInfoRequest $req) 该接口用来删除导播台的推流信息。
+注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) 删除回调模板。
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) 删除已添加的直播域名
@@ -147,7 +155,10 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 用于查询回调事件。
  * @method Models\DescribeCasterResponse DescribeCaster(Models\DescribeCasterRequest $req) 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
  * @method Models\DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfo(Models\DescribeCasterDisplayInfoRequest $req) 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+ * @method Models\DescribeCasterInputInfosResponse DescribeCasterInputInfos(Models\DescribeCasterInputInfosRequest $req) 该接口用来查询导播台的输入源信息列表。
+ * @method Models\DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfos(Models\DescribeCasterLayoutInfosRequest $req) 该接口用来查询某个导播台的布局列表
  * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
+ * @method Models\DescribeCasterOutputInfosResponse DescribeCasterOutputInfos(Models\DescribeCasterOutputInfosRequest $req) 该接口用来查询某个导播台的推流信息列表。
  * @method Models\DescribeCasterPlayUrlResponse DescribeCasterPlayUrl(Models\DescribeCasterPlayUrlRequest $req) 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
  * @method Models\DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(Models\DescribeCasterTransitionTypesRequest $req) 该接口用来获取所有的转场名称及其对应的素材url。
  * @method Models\DescribeCasterUserStatusResponse DescribeCasterUserStatus(Models\DescribeCasterUserStatusRequest $req) 本接口用来查询当前APPID导播台业务状态
@@ -285,6 +296,11 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 2. 如需要推流域名+推流路径+流名称 强匹配生效禁推，需提单联系售后开启配置。
 3. 如果配置了域名分组，需填写准确推流域名，才可断掉当前推流。
  * @method Models\ModifyCasterResponse ModifyCaster(Models\ModifyCasterRequest $req) 该接口用来设置导播台的描述、名称、录制模板id等参数。
+ * @method Models\ModifyCasterInputInfoResponse ModifyCasterInputInfo(Models\ModifyCasterInputInfoRequest $req) 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
+设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
+ * @method Models\ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfo(Models\ModifyCasterLayoutInfoRequest $req) 该接口用来修改布局参数
+ * @method Models\ModifyCasterOutputInfoResponse ModifyCasterOutputInfo(Models\ModifyCasterOutputInfoRequest $req) 该接口用来修改导播台的推流信息。
+注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) 修改回调模板。
  * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) 批量绑定证书对应的播放域名，并更新启用状态。
 新建自有证书将自动上传至腾讯云ssl。

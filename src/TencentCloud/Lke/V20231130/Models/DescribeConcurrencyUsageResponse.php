@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConcurrencyUsage返回参数结构体
  *
- * @method integer getAvailableConcurrency() 获取可用并发数
- * @method void setAvailableConcurrency(integer $AvailableConcurrency) 设置可用并发数
+ * @method integer getAvailableConcurrency() 获取可用并发数上限
+ * @method void setAvailableConcurrency(integer $AvailableConcurrency) 设置可用并发数上限
  * @method integer getConcurrencyPeak() 获取并发峰值
  * @method void setConcurrencyPeak(integer $ConcurrencyPeak) 设置并发峰值
- * @method integer getExceedUsageTime() 获取调用超可用次数
- * @method void setExceedUsageTime(integer $ExceedUsageTime) 设置调用超可用次数
+ * @method integer getExceedUsageTime() 获取超出可用并发数上限的次数
+ * @method void setExceedUsageTime(integer $ExceedUsageTime) 设置超出可用并发数上限的次数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeConcurrencyUsageResponse extends AbstractModel
 {
     /**
-     * @var integer 可用并发数
+     * @var integer 可用并发数上限
      */
     public $AvailableConcurrency;
 
@@ -42,7 +42,7 @@ class DescribeConcurrencyUsageResponse extends AbstractModel
     public $ConcurrencyPeak;
 
     /**
-     * @var integer 调用超可用次数
+     * @var integer 超出可用并发数上限的次数
      */
     public $ExceedUsageTime;
 
@@ -52,9 +52,9 @@ class DescribeConcurrencyUsageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AvailableConcurrency 可用并发数
+     * @param integer $AvailableConcurrency 可用并发数上限
      * @param integer $ConcurrencyPeak 并发峰值
-     * @param integer $ExceedUsageTime 调用超可用次数
+     * @param integer $ExceedUsageTime 超出可用并发数上限的次数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

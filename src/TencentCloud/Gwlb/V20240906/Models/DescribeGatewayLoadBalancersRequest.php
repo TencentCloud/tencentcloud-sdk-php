@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置返回网关负载均衡实例列表的起始偏移量，默认0。
  * @method array getFilters() 获取查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
 Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- name - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例名称过滤，如“gwlb-xxxx”。
 - VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
+- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
 
  * @method void setFilters(array $Filters) 设置查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
 Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- name - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例名称过滤，如“gwlb-xxxx”。
 - VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
+- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
 
  * @method string getSearchKey() 获取搜索字段，模糊匹配名称、VIP。
  * @method void setSearchKey(string $SearchKey) 设置搜索字段，模糊匹配名称、VIP。
@@ -59,8 +59,8 @@ class DescribeGatewayLoadBalancersRequest extends AbstractModel
     /**
      * @var array 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
 Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- name - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例名称过滤，如“gwlb-xxxx”。
 - VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
+- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
 
      */
     public $Filters;
@@ -76,8 +76,8 @@ Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
      * @param integer $Offset 返回网关负载均衡实例列表的起始偏移量，默认0。
      * @param array $Filters 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
 Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- name - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例名称过滤，如“gwlb-xxxx”。
 - VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
+- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
 
      * @param string $SearchKey 搜索字段，模糊匹配名称、VIP。
      */

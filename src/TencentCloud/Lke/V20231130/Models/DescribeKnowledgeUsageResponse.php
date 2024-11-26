@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKnowledgeUsage返回参数结构体
  *
- * @method string getAvailableCharSize() 获取可用字符数
- * @method void setAvailableCharSize(string $AvailableCharSize) 设置可用字符数
- * @method string getExceedCharSize() 获取超量字符数
- * @method void setExceedCharSize(string $ExceedCharSize) 设置超量字符数
+ * @method string getAvailableCharSize() 获取可用字符数上限
+ * @method void setAvailableCharSize(string $AvailableCharSize) 设置可用字符数上限
+ * @method string getExceedCharSize() 获取超过可用字符数上限的字符数
+ * @method void setExceedCharSize(string $ExceedCharSize) 设置超过可用字符数上限的字符数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeKnowledgeUsageResponse extends AbstractModel
 {
     /**
-     * @var string 可用字符数
+     * @var string 可用字符数上限
      */
     public $AvailableCharSize;
 
     /**
-     * @var string 超量字符数
+     * @var string 超过可用字符数上限的字符数
      */
     public $ExceedCharSize;
 
@@ -45,8 +45,8 @@ class DescribeKnowledgeUsageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AvailableCharSize 可用字符数
-     * @param string $ExceedCharSize 超量字符数
+     * @param string $AvailableCharSize 可用字符数上限
+     * @param string $ExceedCharSize 超过可用字符数上限的字符数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

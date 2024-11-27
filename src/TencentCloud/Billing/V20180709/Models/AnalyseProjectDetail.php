@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析项目返回复杂类型
  *
  * @method string getProjectId() 获取项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取默认项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置默认项目
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseProjectDetail extends AbstractModel
 {
     /**
      * @var string 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
      * @param string $ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

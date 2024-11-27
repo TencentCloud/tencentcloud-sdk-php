@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析可用区复杂类型
  *
  * @method string getZoneId() 获取可用区id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(string $ZoneId) 设置可用区id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取可用区Name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区Name
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseZoneDetail extends AbstractModel
 {
     /**
      * @var string 可用区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string 可用区Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @param string $ZoneId 可用区id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

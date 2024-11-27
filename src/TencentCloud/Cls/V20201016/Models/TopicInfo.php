@@ -55,8 +55,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启自动分裂的话，该主题能够允许的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageType() 获取主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +180,9 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var string 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
@@ -262,6 +271,9 @@ HotPeriod=0为没有开启日志沉降。
      * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageType 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。

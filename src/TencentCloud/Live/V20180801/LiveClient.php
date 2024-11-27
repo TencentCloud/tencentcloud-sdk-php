@@ -36,6 +36,10 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
+ * @method Models\CreateCasterPgmResponse CreateCasterPgm(Models\CreateCasterPgmRequest $req) 该接口用来启动主监任务，并将获取主监画面的播放地址。
+ * @method Models\CreateCasterPgmFromPvwResponse CreateCasterPgmFromPvw(Models\CreateCasterPgmFromPvwRequest $req) 该接口用来将预监画面的布局、水印、字幕等配置，复制到主监画面中。
+该接口使用时，预监任务需处于运行状态。
+ * @method Models\CreateCasterPvwResponse CreateCasterPvw(Models\CreateCasterPvwRequest $req) 该接口用来启动预监任务，并将获取预监画面的播放地址。
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -319,6 +323,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(Models\ModifyLiveTranscodeTemplateRequest $req) 修改转码模板配置。
  * @method Models\ModifyPullStreamConfigResponse ModifyPullStreamConfig(Models\ModifyPullStreamConfigRequest $req) 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
  * @method Models\ModifyPullStreamStatusResponse ModifyPullStreamStatus(Models\ModifyPullStreamStatusRequest $req) 修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
+ * @method Models\ReleaseCasterResponse ReleaseCaster(Models\ReleaseCasterRequest $req) 调用该接口，释放导播台实例，但保留所有的配置。
+执行该接口，预监与主监画面停止，第三方推流停止。
+点播文件与直播地址将停止展示，客户自行推到导播台的流需要手动停止。
  * @method Models\RestartLivePullStreamTaskResponse RestartLivePullStreamTask(Models\RestartLivePullStreamTaskRequest $req) 将正在运行的拉流转推任务进行重启。
 注意：
 1. 重启任务会造成推流中断。
@@ -326,6 +333,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) 取消直播流设置的延时配置，恢复实时直播画面。
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) 恢复某条流的推流。
  * @method Models\StartLiveStreamMonitorResponse StartLiveStreamMonitor(Models\StartLiveStreamMonitorRequest $req) 该接口用来启动直播流监播任务。
+ * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
+停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
+ * @method Models\StopCasterPvwResponse StopCasterPvw(Models\StopCasterPvwRequest $req) 该接口用来停止导播台的预监任务。
  * @method Models\StopLivePadProcessorResponse StopLivePadProcessor(Models\StopLivePadProcessorRequest $req) 使用该接口停止垫片流。
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。

@@ -40,6 +40,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
+ * @method Models\CreateSubdomainValidateTXTValueResponse CreateSubdomainValidateTXTValue(Models\CreateSubdomainValidateTXTValueRequest $req) 创建添加子域名 Zone 域解析时所需要的 TXT 记录值
  * @method Models\CreateTXTRecordResponse CreateTXTRecord(Models\CreateTXTRecordRequest $req) 添加TXT记录
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 删除域名
@@ -90,6 +91,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeSnapshotRollbackResultResponse DescribeSnapshotRollbackResult(Models\DescribeSnapshotRollbackResultRequest $req) 查询快照回滚结果
  * @method Models\DescribeSnapshotRollbackTaskResponse DescribeSnapshotRollbackTask(Models\DescribeSnapshotRollbackTaskRequest $req) 查询最近一次回滚
  * @method Models\DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(Models\DescribeSubdomainAnalyticsRequest $req) 统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
+ * @method Models\DescribeSubdomainValidateStatusResponse DescribeSubdomainValidateStatus(Models\DescribeSubdomainValidateStatusRequest $req) 查看添加子域名 Zone 域解析 TXT 记录值验证状态
  * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取账户信息
  * @method Models\DescribeVASStatisticResponse DescribeVASStatistic(Models\DescribeVASStatisticRequest $req) 获取域名增值服务用量
  * @method Models\DownloadSnapshotResponse DownloadSnapshot(Models\DownloadSnapshotRequest $req) 下载快照

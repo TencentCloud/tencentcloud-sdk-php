@@ -18,7 +18,7 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 属性标签详情
+ * 标签详情
  *
  * @method string getAttrBizId() 获取属性ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -39,6 +39,14 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsUpdating() 获取属性标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdating(boolean $IsUpdating) 设置属性标签是否在更新中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatusDesc() 获取状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusDesc(string $StatusDesc) 设置状态描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttrLabelDetail extends AbstractModel
@@ -74,6 +82,18 @@ class AttrLabelDetail extends AbstractModel
     public $IsUpdating;
 
     /**
+     * @var integer 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusDesc;
+
+    /**
      * @param string $AttrBizId 属性ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttrKey 属性标识
@@ -83,6 +103,10 @@ class AttrLabelDetail extends AbstractModel
      * @param array $LabelNames 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdating 属性标签是否在更新中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +140,14 @@ class AttrLabelDetail extends AbstractModel
 
         if (array_key_exists("IsUpdating",$param) and $param["IsUpdating"] !== null) {
             $this->IsUpdating = $param["IsUpdating"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
         }
     }
 }

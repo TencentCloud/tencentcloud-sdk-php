@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSegmentSet() 获取智能拆条子片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置智能拆条子片段列表。
+ * @method string getAbstract() 获取视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAbstract(string $Abstract) 设置视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskSegmentOutput extends AbstractModel
 {
@@ -31,7 +35,15 @@ class AiAnalysisTaskSegmentOutput extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Abstract;
+
+    /**
      * @param array $SegmentSet 智能拆条子片段列表。
+     * @param string $Abstract 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -53,6 +65,10 @@ class AiAnalysisTaskSegmentOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("Abstract",$param) and $param["Abstract"] !== null) {
+            $this->Abstract = $param["Abstract"];
         }
     }
 }

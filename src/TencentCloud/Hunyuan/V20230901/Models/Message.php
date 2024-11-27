@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFileIDs() 获取文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileIDs(array $FileIDs) 设置文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Message extends AbstractModel
 {
@@ -68,6 +72,12 @@ class Message extends AbstractModel
     public $ToolCalls;
 
     /**
+     * @var array 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileIDs;
+
+    /**
      * @param string $Role 角色，可选值包括 system、user、assistant、 tool。
      * @param string $Content 文本内容
      * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
@@ -75,6 +85,8 @@ class Message extends AbstractModel
      * @param string $ToolCallId 当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ToolCalls 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FileIDs 文件标识符。单次最大 50 个文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,6 +130,10 @@ class Message extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ToolCalls, $obj);
             }
+        }
+
+        if (array_key_exists("FileIDs",$param) and $param["FileIDs"] !== null) {
+            $this->FileIDs = $param["FileIDs"];
         }
     }
 }

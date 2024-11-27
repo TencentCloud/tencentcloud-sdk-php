@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置IP 访问限制配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+ * @method void setType(string $Type) 设置域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -117,6 +119,11 @@ class DomainDetailInfo extends AbstractModel
     public $IPFilterPolicy;
 
     /**
+     * @var string 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     */
+    public $Type;
+
+    /**
      * @param string $Domain 域名名称。
      * @param array $AccelerateAreaInfos 加速地区信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,6 +143,7 @@ class DomainDetailInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IPFilterPolicy $IPFilterPolicy IP 访问限制配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ class DomainDetailInfo extends AbstractModel
         if (array_key_exists("IPFilterPolicy",$param) and $param["IPFilterPolicy"] !== null) {
             $this->IPFilterPolicy = new IPFilterPolicy();
             $this->IPFilterPolicy->deserialize($param["IPFilterPolicy"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

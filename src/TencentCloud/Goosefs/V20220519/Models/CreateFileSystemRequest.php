@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGooseFSxBuildElements(GooseFSxBuildElement $GooseFSxBuildElements) 设置GooseFSx构建时要传递的参数
  * @method string getSecurityGroupId() 获取客户端集群所属的安全组
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置客户端集群所属的安全组
+ * @method integer getClusterPort() 获取集群ssh通信端口，默认是22
+ * @method void setClusterPort(integer $ClusterPort) 设置集群ssh通信端口，默认是22
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateFileSystemRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
+     * @var integer 集群ssh通信端口，默认是22
+     */
+    public $ClusterPort;
+
+    /**
      * @param string $Type 文件系统类型, 可填goosefs和goosefsx
      * @param string $Name 文件系统名
      * @param string $Description 文件系统备注描述
@@ -96,6 +103,7 @@ class CreateFileSystemRequest extends AbstractModel
      * @param array $Tag 文件系统关联的tag
      * @param GooseFSxBuildElement $GooseFSxBuildElements GooseFSx构建时要传递的参数
      * @param string $SecurityGroupId 客户端集群所属的安全组
+     * @param integer $ClusterPort 集群ssh通信端口，默认是22
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
             $this->SecurityGroupId = $param["SecurityGroupId"];
+        }
+
+        if (array_key_exists("ClusterPort",$param) and $param["ClusterPort"] !== null) {
+            $this->ClusterPort = $param["ClusterPort"];
         }
     }
 }

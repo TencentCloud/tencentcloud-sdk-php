@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuelType(string $FuelType) 设置燃料种类
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAddressElectronic() 获取住址
+ * @method void setAddressElectronic(string $AddressElectronic) 设置住址
+ * @method string getIssueAuthorityElectronic() 获取发证机关
+ * @method void setIssueAuthorityElectronic(string $IssueAuthorityElectronic) 设置发证机关
  */
 class TextVehicleBack extends AbstractModel
 {
@@ -147,6 +151,16 @@ class TextVehicleBack extends AbstractModel
     public $FuelType;
 
     /**
+     * @var string 住址
+     */
+    public $AddressElectronic;
+
+    /**
+     * @var string 发证机关
+     */
+    public $IssueAuthorityElectronic;
+
+    /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileNo 档案编号
@@ -172,6 +186,8 @@ class TextVehicleBack extends AbstractModel
      * @param string $FuelType 燃料种类
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AddressElectronic 住址
+     * @param string $IssueAuthorityElectronic 发证机关
      */
     function __construct()
     {
@@ -232,6 +248,14 @@ class TextVehicleBack extends AbstractModel
 
         if (array_key_exists("FuelType",$param) and $param["FuelType"] !== null) {
             $this->FuelType = $param["FuelType"];
+        }
+
+        if (array_key_exists("AddressElectronic",$param) and $param["AddressElectronic"] !== null) {
+            $this->AddressElectronic = $param["AddressElectronic"];
+        }
+
+        if (array_key_exists("IssueAuthorityElectronic",$param) and $param["IssueAuthorityElectronic"] !== null) {
+            $this->IssueAuthorityElectronic = $param["IssueAuthorityElectronic"];
         }
     }
 }

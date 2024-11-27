@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分返回值复杂类型
  *
  * @method string getTime() 获取日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMoney() 获取金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMoney(string $Money) 设置金额
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseTimeDetail extends AbstractModel
 {
     /**
      * @var string 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var string 金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Money;
 
     /**
      * @param string $Time 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Money 金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,9 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
  *
- * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："cluster"
+ * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："cluster"
+ * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签对列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string 标签绑定的资源类型，当前支持类型："cluster"
+     * @var string 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
@@ -44,7 +50,9 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType 标签绑定的资源类型，当前支持类型："cluster"
+     * @param string $ResourceType 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签对列表
 注意：此字段可能返回 null，表示取不到有效值。

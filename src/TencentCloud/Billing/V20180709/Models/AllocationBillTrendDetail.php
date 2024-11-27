@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 分账趋势图详情数据
  *
  * @method string getMonth() 获取账单月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonth(string $Month) 设置账单月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealTotalCost() 获取合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalCost(string $RealTotalCost) 设置合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationBillTrendDetail extends AbstractModel
 {
     /**
      * @var string 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Month;
 
     /**
      * @var string 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCost;
 
     /**
      * @param string $Month 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalCost 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

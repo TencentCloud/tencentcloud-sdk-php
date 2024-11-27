@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Outside Chinese Mainland: 中国境外。</li>
 <li>Global: 全球范围。</li>
 如果没有设置 AccelerateArea， 点播会根据用户在腾讯云设置的地域信息自动开通中国境内或者中国境外的 CDN 加速。开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+ * @method string getType() 获取域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+ * @method void setType(string $Type) 设置域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
  */
 class CreateVodDomainRequest extends AbstractModel
 {
@@ -57,6 +59,11 @@ class CreateVodDomainRequest extends AbstractModel
     public $AccelerateArea;
 
     /**
+     * @var string 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+     */
+    public $Type;
+
+    /**
      * @param string $Domain 需要接入点播的加速域名。注意：不支持填写泛域名。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $AccelerateArea 需要开启 CDN 加速的区域：
@@ -64,6 +71,7 @@ class CreateVodDomainRequest extends AbstractModel
 <li>Outside Chinese Mainland: 中国境外。</li>
 <li>Global: 全球范围。</li>
 如果没有设置 AccelerateArea， 点播会根据用户在腾讯云设置的地域信息自动开通中国境内或者中国境外的 CDN 加速。开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+     * @param string $Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class CreateVodDomainRequest extends AbstractModel
 
         if (array_key_exists("AccelerateArea",$param) and $param["AccelerateArea"] !== null) {
             $this->AccelerateArea = $param["AccelerateArea"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

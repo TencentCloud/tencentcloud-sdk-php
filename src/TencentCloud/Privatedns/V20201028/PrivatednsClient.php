@@ -24,14 +24,9 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
  * @method Models\AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpc(Models\AddSpecifyPrivateZoneVpcRequest $req) 追加与私有域关联的VPC
- * @method Models\CreateEndPointResponse CreateEndPoint(Models\CreateEndPointRequest $req) 创建终端节点
- * @method Models\CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(Models\CreateEndPointAndEndPointServiceRequest $req) 同时创建终端节点和终端节点服务
- * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建自定义转发规则
  * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 创建私有域解析账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录
- * @method Models\DeleteEndPointResponse DeleteEndPoint(Models\DeleteEndPointRequest $req) 删除终端节点
- * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则并停止转发
  * @method Models\DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(Models\DeletePrivateDNSAccountRequest $req) 删除私有域解析账号
  * @method Models\DeletePrivateZoneResponse DeletePrivateZone(Models\DeletePrivateZoneRequest $req) 删除私有域并停止解析
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) 删除私有域解析记录
@@ -39,10 +34,6 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) 获取私有域解析账号的VPC列表
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) 获取操作日志列表
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) 获取私有域解析概览
- * @method Models\DescribeEndPointListResponse DescribeEndPointList(Models\DescribeEndPointListRequest $req) 获取终端节点列表
- * @method Models\DescribeEndPointRegionResponse DescribeEndPointRegion(Models\DescribeEndPointRegionRequest $req) 查询终端节点已经启用了的地域
- * @method Models\DescribeForwardRuleResponse DescribeForwardRule(Models\DescribeForwardRuleRequest $req) 查询转发规则
- * @method Models\DescribeForwardRuleListResponse DescribeForwardRuleList(Models\DescribeForwardRuleListRequest $req) 查询转发规则列表
  * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) 获取私有域解析账号列表
  * @method Models\DescribePrivateZoneResponse DescribePrivateZone(Models\DescribePrivateZoneRequest $req) 获取私有域信息
  * @method Models\DescribePrivateZoneListResponse DescribePrivateZoneList(Models\DescribePrivateZoneListRequest $req) 获取私有域列表
@@ -50,7 +41,6 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribePrivateZoneServiceResponse DescribePrivateZoneService(Models\DescribePrivateZoneServiceRequest $req) 查询私有域解析开通状态
  * @method Models\DescribeQuotaUsageResponse DescribeQuotaUsage(Models\DescribeQuotaUsageRequest $req) 查询额度使用情况
  * @method Models\DescribeRequestDataResponse DescribeRequestData(Models\DescribeRequestDataRequest $req) 获取私有域解析请求量
- * @method Models\ModifyForwardRuleResponse ModifyForwardRule(Models\ModifyForwardRuleRequest $req) 修改转发规则
  * @method Models\ModifyPrivateZoneResponse ModifyPrivateZone(Models\ModifyPrivateZoneRequest $req) 修改私有域信息
  * @method Models\ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(Models\ModifyPrivateZoneRecordRequest $req) 修改私有域解析记录
  * @method Models\ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(Models\ModifyPrivateZoneVpcRequest $req) 修改私有域关联的VPC

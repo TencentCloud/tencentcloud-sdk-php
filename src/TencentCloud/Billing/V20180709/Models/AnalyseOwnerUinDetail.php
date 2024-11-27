@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析使用者uin复杂类型
  *
  * @method string getOwnerUin() 获取使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseOwnerUinDetail extends AbstractModel
 {
     /**
      * @var string 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @param string $OwnerUin 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

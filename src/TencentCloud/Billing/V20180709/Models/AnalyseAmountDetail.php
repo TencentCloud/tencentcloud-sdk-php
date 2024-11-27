@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析金额返回数据模型
  *
  * @method string getKey() 获取费用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置费用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDisplay() 获取是否展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisplay(integer $Display) 设置是否展示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseAmountDetail extends AbstractModel
 {
     /**
      * @var string 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Display;
 
     /**
      * @param string $Key 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Display 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

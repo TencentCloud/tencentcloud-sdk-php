@@ -162,22 +162,26 @@ use TencentCloud\Common\AbstractModel;
 <li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li>
 <li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li>
 </ul>
- * @method boolean getApproverNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+ * @method boolean getApproverNeedSignReview() 获取此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
  * @method array getSignComponents() 获取签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 
 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
@@ -474,14 +478,16 @@ class FlowCreateApprover extends AbstractModel
     public $SignId;
 
     /**
-     * @var boolean 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @var boolean 此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      */
     public $ApproverNeedSignReview;
 
@@ -661,14 +667,16 @@ class FlowCreateApprover extends AbstractModel
 <li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li>
 <li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li>
 </ul>
-     * @param boolean $ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @param boolean $ApproverNeedSignReview 此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      * @param array $SignComponents 签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 
 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体

@@ -204,22 +204,26 @@ use TencentCloud\Common\AbstractModel;
 2. 运营商三要素认证方式对手机号运营商及前缀有限制,可以参考[运营商支持列表类](https://qian.tencent.com/developers/company/mobile_support)得到具体的支持说明
 3. 校验方式不允许只包含<font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>，至少需要再增加一种其他校验方式。
 4. <font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>只支持小程序使用，其他端暂不支持。
- * @method boolean getApproverNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+ * @method boolean getApproverNeedSignReview() 获取此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
  * @method array getAddSignComponentsLimits() 获取[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
@@ -240,7 +244,7 @@ use TencentCloud\Common\AbstractModel;
 <li>勾选框控件</li>
 <li>数字控件</li>
 <li>图片控件</li>
-<li>数据表格等填写控件</li></ul>
+</ul>
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
@@ -251,7 +255,7 @@ use TencentCloud\Common\AbstractModel;
 <li>勾选框控件</li>
 <li>数字控件</li>
 <li>图片控件</li>
-<li>数据表格等填写控件</li></ul>
+</ul>
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
@@ -424,14 +428,16 @@ class ApproverInfo extends AbstractModel
     public $ApproverSignTypes;
 
     /**
-     * @var boolean 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @var boolean 此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      */
     public $ApproverNeedSignReview;
 
@@ -461,7 +467,7 @@ class ApproverInfo extends AbstractModel
 <li>勾选框控件</li>
 <li>数字控件</li>
 <li>图片控件</li>
-<li>数据表格等填写控件</li></ul>
+</ul>
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
@@ -562,14 +568,16 @@ class ApproverInfo extends AbstractModel
 2. 运营商三要素认证方式对手机号运营商及前缀有限制,可以参考[运营商支持列表类](https://qian.tencent.com/developers/company/mobile_support)得到具体的支持说明
 3. 校验方式不允许只包含<font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>，至少需要再增加一种其他校验方式。
 4. <font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>只支持小程序使用，其他端暂不支持。
-     * @param boolean $ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @param boolean $ApproverNeedSignReview 此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      * @param array $AddSignComponentsLimits [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
@@ -583,7 +591,7 @@ class ApproverInfo extends AbstractModel
 <li>勾选框控件</li>
 <li>数字控件</li>
 <li>图片控件</li>
-<li>数据表格等填写控件</li></ul>
+</ul>
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 

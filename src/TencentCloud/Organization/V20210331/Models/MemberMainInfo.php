@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成员主要信息
  *
  * @method integer getMemberUin() 获取成员uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberUin(integer $MemberUin) 设置成员uin
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemberName() 获取成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemberName(string $MemberName) 设置成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMemberName() 获取成员名称
+ * @method void setMemberName(string $MemberName) 设置成员名称
  */
 class MemberMainInfo extends AbstractModel
 {
     /**
      * @var integer 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberUin;
 
     /**
-     * @var string 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 成员名称
      */
     public $MemberName;
 
     /**
      * @param integer $MemberUin 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MemberName 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MemberName 成员名称
      */
     function __construct()
     {

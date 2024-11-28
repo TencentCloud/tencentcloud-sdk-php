@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionFlag(LoginActionFlag $ActionFlag) 设置敏感操作保护设置
  * @method OffsiteFlag getOffsiteFlag() 获取异地登录保护设置
  * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) 设置异地登录保护设置
- * @method integer getPromptTrust() 获取1: 提示7天信任设备 0: 不提示
- * @method void setPromptTrust(integer $PromptTrust) 设置1: 提示7天信任设备 0: 不提示
+ * @method integer getPromptTrust() 获取是否提示信任设备：1: 提示  0: 不提示
+ * @method void setPromptTrust(integer $PromptTrust) 设置是否提示信任设备：1: 提示  0: 不提示
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +49,7 @@ class DescribeSafeAuthFlagResponse extends AbstractModel
     public $OffsiteFlag;
 
     /**
-     * @var integer 1: 提示7天信任设备 0: 不提示
+     * @var integer 是否提示信任设备：1: 提示  0: 不提示
      */
     public $PromptTrust;
 
@@ -62,7 +62,7 @@ class DescribeSafeAuthFlagResponse extends AbstractModel
      * @param LoginActionFlag $LoginFlag 登录保护设置
      * @param LoginActionFlag $ActionFlag 敏感操作保护设置
      * @param OffsiteFlag $OffsiteFlag 异地登录保护设置
-     * @param integer $PromptTrust 1: 提示7天信任设备 0: 不提示
+     * @param integer $PromptTrust 是否提示信任设备：1: 提示  0: 不提示
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

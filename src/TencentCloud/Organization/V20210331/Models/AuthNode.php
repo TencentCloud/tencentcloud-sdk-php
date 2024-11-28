@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 互信主体主要信息
  *
  * @method integer getRelationId() 获取互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelationId(integer $RelationId) 设置互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthName() 获取互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthName(string $AuthName) 设置互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MemberMainInfo getManager() 获取主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManager(MemberMainInfo $Manager) 设置主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthNode extends AbstractModel
 {
     /**
      * @var integer 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelationId;
 
     /**
      * @var string 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthName;
 
     /**
      * @var MemberMainInfo 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manager;
 
     /**
      * @param integer $RelationId 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthName 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberMainInfo $Manager 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

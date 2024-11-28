@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 标签合规信息
  *
  * @method boolean getComplianceStatus() 获取合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceStatus(boolean $ComplianceStatus) 设置合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeysWithNonCompliantValues() 获取值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeysWithNonCompliantValues(array $KeysWithNonCompliantValues) 设置值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNonCompliantKeys() 获取键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonCompliantKeys(array $NonCompliantKeys) 设置键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagComplianceDetails extends AbstractModel
 {
     /**
      * @var boolean 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceStatus;
 
     /**
      * @var array 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeysWithNonCompliantValues;
 
     /**
      * @var array 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NonCompliantKeys;
 
     /**
      * @param boolean $ComplianceStatus 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KeysWithNonCompliantValues 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NonCompliantKeys 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

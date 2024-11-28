@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOrganizationMemberEmailBind返回参数结构体
  *
  * @method integer getBindId() 获取绑定ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindId(integer $BindId) 设置绑定ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplyTime() 获取申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyTime(string $ApplyTime) 设置申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEmail() 获取邮箱地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置邮箱地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取安全手机号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置安全手机号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBindStatus() 获取绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindStatus(string $BindStatus) 设置绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBindTime() 获取绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindTime(string $BindTime) 设置绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取失败说明。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置失败说明。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPhoneBind() 获取安全手机绑定状态 。 未绑定：0，已绑定：1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhoneBind(integer $PhoneBind) 设置安全手机绑定状态 。 未绑定：0，已绑定：1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCountryCode() 获取国际区号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountryCode(string $CountryCode) 设置国际区号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,55 +45,46 @@ class DescribeOrganizationMemberEmailBindResponse extends AbstractModel
 {
     /**
      * @var integer 绑定ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindId;
 
     /**
      * @var string 申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyTime;
 
     /**
      * @var string 邮箱地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
      * @var string 安全手机号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var string 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindStatus;
 
     /**
      * @var string 绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindTime;
 
     /**
      * @var string 失败说明。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 安全手机绑定状态 。 未绑定：0，已绑定：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneBind;
 
     /**
      * @var string 国际区号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CountryCode;
 
@@ -122,23 +95,14 @@ class DescribeOrganizationMemberEmailBindResponse extends AbstractModel
 
     /**
      * @param integer $BindId 绑定ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplyTime 申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Email 邮箱地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 安全手机号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BindStatus 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BindTime 绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 失败说明。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PhoneBind 安全手机绑定状态 。 未绑定：0，已绑定：1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CountryCode 国际区号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

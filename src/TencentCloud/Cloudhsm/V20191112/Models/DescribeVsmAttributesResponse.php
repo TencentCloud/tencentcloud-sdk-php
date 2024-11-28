@@ -42,54 +42,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置区域Id，返回腾讯云每个地域的可用区代码
  * @method integer getExpireTime() 获取资源过期时间，以时间戳形式展示。
  * @method void setExpireTime(integer $ExpireTime) 设置资源过期时间，以时间戳形式展示。
- * @method array getSgList() 获取安全组详情信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSgList(array $SgList) 设置安全组详情信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSgList() 获取安全组详情信息,如果未配置字段返回null
+ * @method void setSgList(array $SgList) 设置安全组详情信息,如果未配置字段返回null
  * @method string getSubnetName() 获取子网名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置子网名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取区域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置区域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpired() 获取实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpired(boolean $Expired) 设置实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainSeconds() 获取为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainSeconds(integer $RemainSeconds) 设置为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取私有虚拟网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置私有虚拟网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcCidrBlock() 获取VPC的IPv4 CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置VPC的IPv4 CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetCidrBlock() 获取子网的CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置子网的CIDR
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取资源所关联的Tag
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置资源所关联的Tag
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取资源所关联的标签Tag
+ * @method void setTags(array $Tags) 设置资源所关联的标签Tag
  * @method integer getRenewFlag() 获取资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManufacturer() 获取厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(string $Manufacturer) 设置厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -151,74 +127,62 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var array 安全组详情信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 安全组详情信息,如果未配置字段返回null
      */
     public $SgList;
 
     /**
      * @var string 子网名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetName;
 
     /**
      * @var string 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var string 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @var boolean 实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expired;
 
     /**
      * @var integer 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainSeconds;
 
     /**
      * @var string 私有虚拟网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string VPC的IPv4 CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcCidrBlock;
 
     /**
      * @var string 子网的CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetCidrBlock;
 
     /**
-     * @var array 资源所关联的Tag
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 资源所关联的标签Tag
      */
     public $Tags;
 
     /**
      * @var integer 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var string 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manufacturer;
 
@@ -239,30 +203,18 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param integer $RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
      * @param integer $ZoneId 区域Id，返回腾讯云每个地域的可用区代码
      * @param integer $ExpireTime 资源过期时间，以时间戳形式展示。
-     * @param array $SgList 安全组详情信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SgList 安全组详情信息,如果未配置字段返回null
      * @param string $SubnetName 子网名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Expired 实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainSeconds 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName 私有虚拟网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcCidrBlock VPC的IPv4 CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetCidrBlock 子网的CIDR
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 资源所关联的Tag
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 资源所关联的标签Tag
      * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

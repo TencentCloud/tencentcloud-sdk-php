@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。偏移量最小为0。
  * @method string getVpcId() 获取查询指定VpcId下的子网信息。
  * @method void setVpcId(string $VpcId) 设置查询指定VpcId下的子网信息。
- * @method string getSearchWord() 获取查找关键字
- * @method void setSearchWord(string $SearchWord) 设置查找关键字
+ * @method string getSearchWord() 获取过滤条件
+ * @method void setSearchWord(string $SearchWord) 设置过滤条件
  */
 class DescribeSubnetRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeSubnetRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 查找关键字
+     * @var string 过滤条件
      */
     public $SearchWord;
 
@@ -55,7 +55,7 @@ class DescribeSubnetRequest extends AbstractModel
      * @param integer $Limit 返回数量。Limit需要在[1, 100]之间。
      * @param integer $Offset 偏移量。偏移量最小为0。
      * @param string $VpcId 查询指定VpcId下的子网信息。
-     * @param string $SearchWord 查找关键字
+     * @param string $SearchWord 过滤条件
      */
     function __construct()
     {

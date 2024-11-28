@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 组织成员可授权的身份
  *
  * @method integer getIdentityId() 获取身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityId(integer $IdentityId) 设置身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityRoleName() 获取身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityRoleName(string $IdentityRoleName) 设置身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityRoleAliasName() 获取身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) 设置身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentityType() 获取身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityType(integer $IdentityType) 设置身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemberUin() 获取成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemberName() 获取成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberName(string $MemberName) 设置成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMemberAuthIdentity extends AbstractModel
 {
     /**
      * @var integer 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityId;
 
     /**
      * @var string 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleName;
 
     /**
      * @var string 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleAliasName;
 
     /**
      * @var string 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityType;
 
     /**
      * @var integer 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberUin;
 
     /**
      * @var string 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberName;
 
     /**
      * @param integer $IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityRoleName 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityRoleAliasName 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentityType 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

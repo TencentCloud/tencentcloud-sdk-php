@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置角色，可选值包括 system、user、assistant、 tool。
  * @method string getContent() 获取文本内容
  * @method void setContent(string $Content) 设置文本内容
- * @method array getContents() 获取多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+ * @method array getContents() 获取多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContents(array $Contents) 设置多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+ * @method void setContents(array $Contents) 设置多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getToolCallId() 获取当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,7 +54,7 @@ class Message extends AbstractModel
     public $Content;
 
     /**
-     * @var array 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+     * @var array 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contents;
@@ -80,7 +80,7 @@ class Message extends AbstractModel
     /**
      * @param string $Role 角色，可选值包括 system、user、assistant、 tool。
      * @param string $Content 文本内容
-     * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+     * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ToolCallId 当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。

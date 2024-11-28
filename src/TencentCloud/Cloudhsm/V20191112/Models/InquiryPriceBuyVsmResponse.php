@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * InquiryPriceBuyVsm返回参数结构体
  *
  * @method float getTotalCost() 获取原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(float $TotalCost) 设置原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGoodsNum() 获取购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsNum(integer $GoodsNum) 设置购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeSpan() 获取商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(string $TimeSpan) 设置商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalCost() 获取应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(float $OriginalCost) 设置应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class InquiryPriceBuyVsmResponse extends AbstractModel
 {
     /**
      * @var float 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var integer 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GoodsNum;
 
     /**
      * @var string 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @var float 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
@@ -82,15 +67,10 @@ class InquiryPriceBuyVsmResponse extends AbstractModel
 
     /**
      * @param float $TotalCost 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GoodsNum 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

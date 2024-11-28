@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 安全组规则详情
  *
  * @method array getInBound() 获取入站规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInBound(array $InBound) 设置入站规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutBound() 获取出站规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutBound(array $OutBound) 设置出站规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgId() 获取安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgId(string $SgId) 设置安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgName() 获取安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgName(string $SgName) 设置安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgRemark(string $SgRemark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsgRuleDetail extends AbstractModel
 {
     /**
      * @var array 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InBound;
 
     /**
      * @var array 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutBound;
 
     /**
      * @var string 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgId;
 
     /**
      * @var string 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgName;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgRemark;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @param array $InBound 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OutBound 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

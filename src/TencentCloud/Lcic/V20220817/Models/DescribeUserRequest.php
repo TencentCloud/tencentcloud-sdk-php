@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUser请求参数结构体
  *
- * @method string getUserId() 获取用户Id。
- * @method void setUserId(string $UserId) 设置用户Id。
- * @method string getOriginId() 获取客户端用户 id,如果未指定则为用户 id。
- * @method void setOriginId(string $OriginId) 设置客户端用户 id,如果未指定则为用户 id。
+ * @method string getUserId() 获取用户id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询。
+ * @method void setUserId(string $UserId) 设置用户id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询。
+ * @method string getOriginId() 获取用户在客户系统的Id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询（UserId不为空时，OriginId不生效）。
+ * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询（UserId不为空时，OriginId不生效）。
  */
 class DescribeUserRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id。
+     * @var string 用户id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询。
      */
     public $UserId;
 
     /**
-     * @var string 客户端用户 id,如果未指定则为用户 id。
+     * @var string 用户在客户系统的Id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询（UserId不为空时，OriginId不生效）。
      */
     public $OriginId;
 
     /**
-     * @param string $UserId 用户Id。
-     * @param string $OriginId 客户端用户 id,如果未指定则为用户 id。
+     * @param string $UserId 用户id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询。
+     * @param string $OriginId 用户在客户系统的Id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询（UserId不为空时，OriginId不生效）。
      */
     function __construct()
     {

@@ -21,225 +21,153 @@ use TencentCloud\Common\AbstractModel;
  * 企业组织成员
  *
  * @method integer getMemberUin() 获取成员Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取成员名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置成员名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemberType() 获取成员类型，邀请：Invite， 创建：Create
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberType(string $MemberType) 设置成员类型，邀请：Invite， 创建：Create
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrgPolicyType() 获取关系策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPolicyType(string $OrgPolicyType) 设置关系策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrgPolicyName() 获取关系策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPolicyName(string $OrgPolicyName) 设置关系策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOrgPermission() 获取关系策略权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPermission(array $OrgPermission) 设置关系策略权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNodeId() 获取所属节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(integer $NodeId) 设置所属节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeName() 获取所属节点名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置所属节点名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsAllowQuit() 获取是否允许成员退出。允许：Allow，不允许：Denied。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置是否允许成员退出。允许：Allow，不允许：Denied。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayUin() 获取代付者Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayUin(string $PayUin) 设置代付者Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayName() 获取代付者名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayName(string $PayName) 设置代付者名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOrgIdentity() 获取管理身份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgIdentity(array $OrgIdentity) 设置管理身份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBindStatus() 获取安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindStatus(string $BindStatus) 设置安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPermissionStatus() 获取成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionStatus(string $PermissionStatus) 设置成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMember extends AbstractModel
 {
     /**
      * @var integer 成员Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberUin;
 
     /**
      * @var string 成员名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 成员类型，邀请：Invite， 创建：Create
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberType;
 
     /**
      * @var string 关系策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPolicyType;
 
     /**
      * @var string 关系策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPolicyName;
 
     /**
      * @var array 关系策略权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPermission;
 
     /**
      * @var integer 所属节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @var string 所属节点名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 是否允许成员退出。允许：Allow，不允许：Denied。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAllowQuit;
 
     /**
      * @var string 代付者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayUin;
 
     /**
      * @var string 代付者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayName;
 
     /**
      * @var array 管理身份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgIdentity;
 
     /**
      * @var string 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindStatus;
 
     /**
      * @var string 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PermissionStatus;
 
     /**
      * @var array 成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param integer $MemberUin 成员Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 成员名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemberType 成员类型，邀请：Invite， 创建：Create
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgPolicyType 关系策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgPolicyName 关系策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OrgPermission 关系策略权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeId 所属节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeName 所属节点名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsAllowQuit 是否允许成员退出。允许：Allow，不允许：Denied。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayUin 代付者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayName 代付者名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OrgIdentity 管理身份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PermissionStatus 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

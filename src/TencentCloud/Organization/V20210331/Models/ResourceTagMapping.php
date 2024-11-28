@@ -22,48 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResource() 获取资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TagComplianceDetails getComplianceDetails() 获取合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceDetails(TagComplianceDetails $ComplianceDetails) 设置合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceTagMapping extends AbstractModel
 {
     /**
      * @var string 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var TagComplianceDetails 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceDetails;
 
     /**
      * @var array 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $Resource 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagComplianceDetails $ComplianceDetails 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

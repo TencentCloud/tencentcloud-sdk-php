@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * VPC对象
  *
  * @method string getVpcName() 获取Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取VpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefault() 获取是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vpc extends AbstractModel
 {
     /**
      * @var string Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var boolean 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @param string $VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefault 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

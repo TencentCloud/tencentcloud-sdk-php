@@ -30,11 +30,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
- * @method integer getSyntaxRule() 获取检索语法规则，默认值为0，推荐使用1 (CQL语法)。
-0：Lucene语法，1：CQL语法。
+ * @method integer getSyntaxRule() 获取检索语法规则，默认值为0，推荐使用1 。
+
+- 0：Lucene语法
+- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
- * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0，推荐使用1 (CQL语法)。
-0：Lucene语法，1：CQL语法。
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0，推荐使用1 。
+
+- 0：Lucene语法
+- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
  * @method string getTopicId() 获取- 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
@@ -129,8 +135,11 @@ class SearchLogRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 检索语法规则，默认值为0，推荐使用1 (CQL语法)。
-0：Lucene语法，1：CQL语法。
+     * @var integer 检索语法规则，默认值为0，推荐使用1 。
+
+- 0：Lucene语法
+- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
      */
     public $SyntaxRule;
@@ -209,8 +218,11 @@ class SearchLogRequest extends AbstractModel
      * @param string $Query 检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
-     * @param integer $SyntaxRule 检索语法规则，默认值为0，推荐使用1 (CQL语法)。
-0：Lucene语法，1：CQL语法。
+     * @param integer $SyntaxRule 检索语法规则，默认值为0，推荐使用1 。
+
+- 0：Lucene语法
+- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
      * @param string $TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。

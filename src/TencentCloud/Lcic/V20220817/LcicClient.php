@@ -57,6 +57,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 此接口用于获取群组详情
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
+ * @method Models\DescribeMarqueeResponse DescribeMarquee(Models\DescribeMarqueeRequest $req) 查询跑马灯配置
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 查询录制信息
  * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 录制流查询
@@ -86,6 +87,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\SendRoomNormalMessageResponse SendRoomNormalMessage(Models\SendRoomNormalMessageRequest $req) 1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
  * @method Models\SendRoomNotificationMessageResponse SendRoomNotificationMessage(Models\SendRoomNotificationMessageRequest $req) App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+ * @method Models\SetMarqueeResponse SetMarquee(Models\SetMarqueeRequest $req) 设置跑马灯参数设置
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
  * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开始录制
  * @method Models\StartRoomResponse StartRoom(Models\StartRoomRequest $req) 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 组织成员财务信息。
  *
  * @method integer getMemberUin() 获取成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemberName() 获取成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberName(string $MemberName) 设置成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalCost() 获取消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(float $TotalCost) 设置消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRatio() 获取占比%。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRatio(string $Ratio) 设置占比%。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMemberFinancial extends AbstractModel
 {
     /**
      * @var integer 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberUin;
 
     /**
      * @var string 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberName;
 
     /**
      * @var float 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var string 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ratio;
 
     /**
      * @param integer $MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalCost 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -610,24 +610,11 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 本接口支持北京、上海、广东、江苏、吉林、黑龙江、天津、辽宁、浙江、河南、四川、贵州、山东、安徽、福建、江西、湖北、湖南等省份健康码的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，疫苗接种信息，八个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(Models\RecognizeIndonesiaIDCardOCRRequest $req) 印尼身份证识别
-
-默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(Models\RecognizeKoreanDrivingLicenseOCRRequest $req) 韩国驾驶证识别
- * @method Models\RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(Models\RecognizeKoreanIDCardOCRRequest $req) 韩国身份证识别
  * @method Models\RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(Models\RecognizeMedicalInvoiceOCRRequest $req) 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(Models\RecognizeOnlineTaxiItineraryOCRRequest $req) 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
-
-默认接口请求频率限制：20次/秒。
- * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) 菲律宾驾驶证识别
-
-默认接口请求频率限制：20次/秒。
- * @method Models\RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(Models\RecognizePhilippinesSssIDOCRRequest $req) 菲律宾SSSID/UMID识别
- * @method Models\RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(Models\RecognizePhilippinesTinIDOCRRequest $req) 菲律宾TinID识别
- * @method Models\RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(Models\RecognizePhilippinesUMIDOCRRequest $req) 菲律宾UMID识别
- * @method Models\RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(Models\RecognizePhilippinesVoteIDOCRRequest $req) 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeStoreNameResponse RecognizeStoreName(Models\RecognizeStoreNameRequest $req) 本接口用于识别门头照文字识别结果以及对应分类标签信息

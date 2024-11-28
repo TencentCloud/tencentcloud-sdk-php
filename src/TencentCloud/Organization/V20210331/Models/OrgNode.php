@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 企业组织单元
  *
  * @method integer getNodeId() 获取组织节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(integer $NodeId) 设置组织节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParentNodeId() 获取父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentNodeId(integer $ParentNodeId) 设置父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgNode extends AbstractModel
 {
     /**
      * @var integer 组织节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentNodeId;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var array 成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param integer $NodeId 组织节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ParentNodeId 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 成员标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

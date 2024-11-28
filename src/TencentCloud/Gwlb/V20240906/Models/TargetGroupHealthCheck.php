@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 
 - PING: icmp
 - TCP: tcp
- * @method integer getPort() 获取健康检查端口，探测协议未tcp时，该参数必填。
+ * @method integer getPort() 获取健康检查端口，探测协议为tcp时，该参数必填。
 
- * @method void setPort(integer $Port) 设置健康检查端口，探测协议未tcp时，该参数必填。
+ * @method void setPort(integer $Port) 设置健康检查端口，探测协议为tcp时，该参数必填。
 
  * @method integer getTimeout() 获取健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
  * @method void setTimeout(integer $Timeout) 设置健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
@@ -59,7 +59,7 @@ class TargetGroupHealthCheck extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 健康检查端口，探测协议未tcp时，该参数必填。
+     * @var integer 健康检查端口，探测协议为tcp时，该参数必填。
 
      */
     public $Port;
@@ -90,7 +90,7 @@ class TargetGroupHealthCheck extends AbstractModel
 
 - PING: icmp
 - TCP: tcp
-     * @param integer $Port 健康检查端口，探测协议未tcp时，该参数必填。
+     * @param integer $Port 健康检查端口，探测协议为tcp时，该参数必填。
 
      * @param integer $Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
      * @param integer $IntervalTime 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。

@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 集团服务委派成员信息
  *
  * @method integer getServiceId() 获取集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceId(integer $ServiceId) 设置集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemberUin() 获取委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberUin(integer $MemberUin) 设置委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemberName() 获取委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberName(string $MemberName) 设置委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsageStatus() 获取启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsageStatus(integer $UsageStatus) 设置启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getManagementScope() 获取委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagementScope(integer $ManagementScope) 设置委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getManagementScopeMembers() 获取管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagementScopeMembers(array $ManagementScopeMembers) 设置管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getManagementScopeNodes() 获取管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagementScopeNodes(array $ManagementScopeNodes) 设置管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrganizationServiceAssignMember extends AbstractModel
 {
     /**
      * @var integer 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceId;
 
     /**
      * @var string 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var integer 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberUin;
 
     /**
      * @var string 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberName;
 
     /**
      * @var integer 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsageStatus;
 
     /**
      * @var string 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagementScope;
 
     /**
      * @var array 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagementScopeMembers;
 
     /**
      * @var array 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagementScopeNodes;
 
     /**
      * @param integer $ServiceId 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemberUin 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemberName 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsageStatus 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ManagementScope 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManagementScopeMembers 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManagementScopeNodes 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

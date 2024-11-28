@@ -45,13 +45,13 @@ use TencentCloud\Common\AbstractModel;
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
  * @method void setPredefinedMetricType(string $PredefinedMetricType) 设置预定义监控项，仅适用于目标追踪策略。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
  * @method integer getTargetValue() 获取目标值，仅适用于目标追踪策略。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
@@ -123,7 +123,7 @@ class CreateScalingPolicyRequest extends AbstractModel
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
      */
     public $PredefinedMetricType;
 
@@ -171,7 +171,7 @@ class CreateScalingPolicyRequest extends AbstractModel
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
      * @param integer $TargetValue 目标值，仅适用于目标追踪策略。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>

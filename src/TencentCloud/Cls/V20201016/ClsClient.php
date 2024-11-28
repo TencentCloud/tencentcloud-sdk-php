@@ -140,7 +140,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\SearchDashboardSubscribeResponse SearchDashboardSubscribe(Models\SearchDashboardSubscribeRequest $req) 此接口用于预览仪表盘订阅
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于检索分析日志，使用该接口时请注意如下事项：
 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
-2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+2. 检索语法建议使用日志服务专用检索语法CQL，请使用SyntaxRule参数，将值设置为1，控制台默认也使用该语法规则。
 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
  * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\UploadLogResponse UploadLog(Models\UploadLogRequest $req) ## 提示

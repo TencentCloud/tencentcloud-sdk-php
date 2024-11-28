@@ -118,7 +118,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 发布暂停后重试
- * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 重排序
+ * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
  * @method Models\SaveDocResponse SaveDoc(Models\SaveDocRequest $req) 保存文档
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签

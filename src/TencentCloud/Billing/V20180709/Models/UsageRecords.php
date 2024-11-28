@@ -25,23 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUsedTime() 获取使用时间
  * @method void setUsedTime(string $UsedTime) 设置使用时间
  * @method array getUsageDetails() 获取使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsageDetails(array $UsageDetails) 设置使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取付费模式
  * @method void setPayMode(string $PayMode) 设置付费模式
  * @method string getVoucherId() 获取查询的券id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoucherId(string $VoucherId) 设置查询的券id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayScene() 获取交易场景：（adjust：调账、common：正常交易场景）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayScene(string $PayScene) 设置交易场景：（adjust：调账、common：正常交易场景）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSeqId() 获取唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeqId(string $SeqId) 设置唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsageRecords extends AbstractModel
 {
@@ -57,7 +49,6 @@ class UsageRecords extends AbstractModel
 
     /**
      * @var array 使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsageDetails;
 
@@ -68,19 +59,16 @@ class UsageRecords extends AbstractModel
 
     /**
      * @var string 查询的券id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoucherId;
 
     /**
      * @var string 交易场景：（adjust：调账、common：正常交易场景）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayScene;
 
     /**
      * @var string 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SeqId;
 
@@ -88,14 +76,10 @@ class UsageRecords extends AbstractModel
      * @param integer $UsedAmount 使用金额（微分）
      * @param string $UsedTime 使用时间
      * @param array $UsageDetails 使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 付费模式
      * @param string $VoucherId 查询的券id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayScene 交易场景：（adjust：调账、common：正常交易场景）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SeqId 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

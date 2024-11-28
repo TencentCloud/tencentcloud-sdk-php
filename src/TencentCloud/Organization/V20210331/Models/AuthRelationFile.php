@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 野鹤实名互信申请证明文件
  *
  * @method string getName() 获取文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthRelationFile extends AbstractModel
 {
     /**
      * @var string 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @param string $Name 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 产品级联筛选值
  *
+ * @method string getBusinessCode() 获取产品编码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品编码
+ * @method string getBusinessCodeName() 获取产品名称
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
  * @method array getChildren() 获取子产品
  * @method void setChildren(array $Children) 设置子产品
  */
 class BillBusinessLink extends AbstractModel
 {
     /**
+     * @var string 产品编码
+     */
+    public $BusinessCode;
+
+    /**
+     * @var string 产品名称
+     */
+    public $BusinessCodeName;
+
+    /**
      * @var array 子产品
      */
     public $Children;
 
     /**
+     * @param string $BusinessCode 产品编码
+     * @param string $BusinessCodeName 产品名称
      * @param array $Children 子产品
      */
     function __construct()
@@ -46,6 +62,14 @@ class BillBusinessLink extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
+            $this->BusinessCodeName = $param["BusinessCodeName"];
+        }
+
         if (array_key_exists("Children",$param) and $param["Children"] !== null) {
             $this->Children = [];
             foreach ($param["Children"] as $key => $value){

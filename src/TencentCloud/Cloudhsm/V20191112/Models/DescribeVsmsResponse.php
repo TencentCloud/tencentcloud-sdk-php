@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取获取实例的总个数
  * @method void setTotalCount(integer $TotalCount) 设置获取实例的总个数
  * @method array getVsmList() 获取资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVsmList(array $VsmList) 设置资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeVsmsResponse extends AbstractModel
 
     /**
      * @var array 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VsmList;
 
@@ -50,7 +47,6 @@ class DescribeVsmsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 获取实例的总个数
      * @param array $VsmList 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

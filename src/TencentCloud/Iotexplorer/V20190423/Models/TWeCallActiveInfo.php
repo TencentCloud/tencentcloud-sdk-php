@@ -38,6 +38,7 @@ class TWeCallActiveInfo extends AbstractModel
     /**
      * @var string 小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModelId;
 

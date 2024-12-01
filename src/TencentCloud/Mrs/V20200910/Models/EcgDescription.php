@@ -21,249 +21,169 @@ use TencentCloud\Common\AbstractModel;
  * 心电图详情
  *
  * @method EcgItem getHeartRate() 获取心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeartRate(EcgItem $HeartRate) 设置心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getAuricularRate() 获取心房率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuricularRate(EcgItem $AuricularRate) 设置心房率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getVentricularRate() 获取心室率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVentricularRate(EcgItem $VentricularRate) 设置心室率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRhythm() 获取节律
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRhythm(EcgItem $Rhythm) 设置节律
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPDuration() 获取P波时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPDuration(EcgItem $PDuration) 设置P波时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getQrsDuration() 获取QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQrsDuration(EcgItem $QrsDuration) 设置QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getQrsAxis() 获取QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQrsAxis(EcgItem $QrsAxis) 设置QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPRInterval() 获取P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPRInterval(EcgItem $PRInterval) 设置P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPPInterval() 获取P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPPInterval(EcgItem $PPInterval) 设置P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRRInterval() 获取R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRRInterval(EcgItem $RRInterval) 设置R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPJInterval() 获取P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPJInterval(EcgItem $PJInterval) 设置P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getQTInterval() 获取Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQTInterval(EcgItem $QTInterval) 设置Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getQTCInterval() 获取qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQTCInterval(EcgItem $QTCInterval) 设置qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRv5SV1Amplitude() 获取RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRv5SV1Amplitude(EcgItem $Rv5SV1Amplitude) 设置RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRv5AddSV1Amplitude() 获取RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRv5AddSV1Amplitude(EcgItem $Rv5AddSV1Amplitude) 设置RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPRTAxis() 获取PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPRTAxis(EcgItem $PRTAxis) 设置PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRv5Amplitude() 获取RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRv5Amplitude(EcgItem $Rv5Amplitude) 设置RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getSV1Amplitude() 获取SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSV1Amplitude(EcgItem $SV1Amplitude) 设置SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getRV6SV2() 获取RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRV6SV2(EcgItem $RV6SV2) 设置RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EcgItem getPQRSTAxis() 获取P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPQRSTAxis(EcgItem $PQRSTAxis) 设置P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EcgDescription extends AbstractModel
 {
     /**
      * @var EcgItem 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartRate;
 
     /**
      * @var EcgItem 心房率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuricularRate;
 
     /**
      * @var EcgItem 心室率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VentricularRate;
 
     /**
      * @var EcgItem 节律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rhythm;
 
     /**
      * @var EcgItem P波时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PDuration;
 
     /**
      * @var EcgItem QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QrsDuration;
 
     /**
      * @var EcgItem QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QrsAxis;
 
     /**
      * @var EcgItem P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PRInterval;
 
     /**
      * @var EcgItem P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PPInterval;
 
     /**
      * @var EcgItem R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RRInterval;
 
     /**
      * @var EcgItem P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PJInterval;
 
     /**
      * @var EcgItem Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QTInterval;
 
     /**
      * @var EcgItem qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QTCInterval;
 
     /**
      * @var EcgItem RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rv5SV1Amplitude;
 
     /**
      * @var EcgItem RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rv5AddSV1Amplitude;
 
     /**
      * @var EcgItem PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PRTAxis;
 
     /**
      * @var EcgItem RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rv5Amplitude;
 
     /**
      * @var EcgItem SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SV1Amplitude;
 
     /**
      * @var EcgItem RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RV6SV2;
 
     /**
      * @var EcgItem P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PQRSTAxis;
 
     /**
      * @param EcgItem $HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $AuricularRate 心房率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $VentricularRate 心室率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $Rhythm 节律
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PDuration P波时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $QrsDuration QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $QrsAxis QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PRInterval P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PPInterval P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $RRInterval R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PJInterval P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $QTInterval Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $QTCInterval qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $Rv5SV1Amplitude RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $Rv5AddSV1Amplitude RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PRTAxis PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $Rv5Amplitude RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $SV1Amplitude SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $RV6SV2 RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgItem $PQRSTAxis P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

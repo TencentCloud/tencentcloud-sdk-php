@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 淋巴
  *
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Part getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(Part $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTransferNum() 获取转移数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferNum(integer $TransferNum) 设置转移数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Lymph extends AbstractModel
 {
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var integer 转移数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferNum;
 
     /**
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Part $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TransferNum 转移数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

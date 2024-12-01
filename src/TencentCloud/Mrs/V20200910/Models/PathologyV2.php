@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 病理报告v2
  *
  * @method Report getPathologicalReportType() 获取报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathologicalReportType(Report $PathologicalReportType) 设置报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DescInfo getDesc() 获取描述段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(DescInfo $Desc) 设置描述段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SummaryInfo getSummary() 获取诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(SummaryInfo $Summary) 设置诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportText() 获取报告全文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportText(string $ReportText) 设置报告全文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLymphTotal() 获取淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLymphTotal(array $LymphTotal) 设置淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLymphNodes() 获取单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLymphNodes(array $LymphNodes) 设置单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIhc() 获取ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIhc(array $Ihc) 设置ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getClinical() 获取临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClinical(BaseInfo $Clinical) 设置临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HistologyClass getPrecancer() 获取是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrecancer(HistologyClass $Precancer) 设置是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HistologyClass getMalignant() 获取是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMalignant(HistologyClass $Malignant) 设置是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HistologyClass getBenigntumor() 获取是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBenigntumor(HistologyClass $Benigntumor) 设置是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getSampleType() 获取送检材料
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleType(BaseInfo $SampleType) 设置送检材料
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLymphSize() 获取淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLymphSize(array $LymphSize) 设置淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMolecular() 获取分子病理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMolecular(array $Molecular) 设置分子病理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathologyV2 extends AbstractModel
 {
     /**
      * @var Report 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologicalReportType;
 
     /**
      * @var DescInfo 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var SummaryInfo 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Summary;
 
     /**
      * @var string 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportText;
 
     /**
      * @var array 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphTotal;
 
     /**
      * @var array 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphNodes;
 
     /**
      * @var array ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ihc;
 
     /**
      * @var BaseInfo 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Clinical;
 
     /**
      * @var HistologyClass 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Precancer;
 
     /**
      * @var HistologyClass 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Malignant;
 
     /**
      * @var HistologyClass 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Benigntumor;
 
     /**
      * @var BaseInfo 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleType;
 
     /**
      * @var array 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphSize;
 
     /**
      * @var array 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Molecular;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param Report $PathologicalReportType 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescInfo $Desc 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SummaryInfo $Summary 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportText 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LymphTotal 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LymphNodes 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ihc ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $Clinical 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyClass $Precancer 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyClass $Malignant 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyClass $Benigntumor 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $SampleType 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LymphSize 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Molecular 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

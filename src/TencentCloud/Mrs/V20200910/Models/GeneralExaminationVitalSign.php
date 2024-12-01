@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 生命体征
  *
  * @method ValueUnitItem getText() 获取生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(ValueUnitItem $Text) 设置生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getBodyTemperature() 获取体温
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyTemperature(ValueUnitItem $BodyTemperature) 设置体温
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getPulse() 获取脉率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPulse(ValueUnitItem $Pulse) 设置脉率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getHeartRate() 获取心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeartRate(ValueUnitItem $HeartRate) 设置心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getBreathingRate() 获取呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBreathingRate(ValueUnitItem $BreathingRate) 设置呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getBodyHeight() 获取身高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyHeight(ValueUnitItem $BodyHeight) 设置身高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getBodyWeight() 获取体重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyWeight(ValueUnitItem $BodyWeight) 设置体重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getBodyMassIndex() 获取体质指数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyMassIndex(ValueUnitItem $BodyMassIndex) 设置体质指数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getWaistline() 获取腰围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaistline(ValueUnitItem $Waistline) 设置腰围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GeneralExaminationVitalSignBloodPressure getBloodPressure() 获取血压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBloodPressure(GeneralExaminationVitalSignBloodPressure $BloodPressure) 设置血压
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GeneralExaminationVitalSign extends AbstractModel
 {
     /**
      * @var ValueUnitItem 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var ValueUnitItem 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyTemperature;
 
     /**
      * @var ValueUnitItem 脉率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pulse;
 
     /**
      * @var ValueUnitItem 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartRate;
 
     /**
      * @var ValueUnitItem 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BreathingRate;
 
     /**
      * @var ValueUnitItem 身高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyHeight;
 
     /**
      * @var ValueUnitItem 体重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyWeight;
 
     /**
      * @var ValueUnitItem 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyMassIndex;
 
     /**
      * @var ValueUnitItem 腰围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Waistline;
 
     /**
      * @var GeneralExaminationVitalSignBloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BloodPressure;
 
     /**
      * @param ValueUnitItem $Text 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $Pulse 脉率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $BreathingRate 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $BodyHeight 身高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $BodyWeight 体重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $BodyMassIndex 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $Waistline 腰围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralExaminationVitalSignBloodPressure $BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

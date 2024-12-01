@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-耳鼻喉科
  *
  * @method OtolaryngologyEar getEar() 获取耳朵
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEar(OtolaryngologyEar $Ear) 设置耳朵
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OtolaryngologyNose getNose() 获取鼻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNose(OtolaryngologyNose $Nose) 设置鼻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OtolaryngologyLarynx getLarynx() 获取喉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLarynx(OtolaryngologyLarynx $Larynx) 设置喉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OtolaryngologyBriefSummary getBriefSummary() 获取小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(OtolaryngologyBriefSummary $BriefSummary) 设置小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OtolaryngologyBaseItem extends AbstractModel
 {
     /**
      * @var OtolaryngologyEar 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ear;
 
     /**
      * @var OtolaryngologyNose 鼻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nose;
 
     /**
      * @var OtolaryngologyLarynx 喉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Larynx;
 
     /**
      * @var array 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var OtolaryngologyBriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param OtolaryngologyEar $Ear 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtolaryngologyNose $Nose 鼻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtolaryngologyLarynx $Larynx 喉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtolaryngologyBriefSummary $BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

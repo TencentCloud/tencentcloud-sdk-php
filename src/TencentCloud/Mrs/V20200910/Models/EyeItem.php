@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 眼科结构体
  *
  * @method EyeChildItem getLeft() 获取左眼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeft(EyeChildItem $Left) 设置左眼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EyeChildItem getRight() 获取右眼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRight(EyeChildItem $Right) 设置右眼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem2 getPd() 获取瞳距
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPd(BaseItem2 $Pd) 设置瞳距
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EyeItem extends AbstractModel
 {
     /**
      * @var EyeChildItem 左眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Left;
 
     /**
      * @var EyeChildItem 右眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Right;
 
     /**
      * @var BaseItem2 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pd;
 
     /**
      * @param EyeChildItem $Left 左眼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EyeChildItem $Right 右眼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem2 $Pd 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 内窥部位
  *
  * @method Part getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(Part $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPartAlias() 获取部位别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartAlias(string $PartAlias) 设置部位别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSymDescList() 获取症状描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymDescList(array $SymDescList) 设置症状描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndoscopyOrgan extends AbstractModel
 {
     /**
      * @var Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 部位别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartAlias;
 
     /**
      * @var array 症状描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SymDescList;
 
     /**
      * @var array 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param Part $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PartAlias 部位别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SymDescList 症状描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

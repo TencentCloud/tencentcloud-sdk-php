@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科
  *
  * @method InternalMedicineAbdomen getAbdomen() 获取体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbdomen(InternalMedicineAbdomen $Abdomen) 设置体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineHeart getHeart() 获取体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeart(InternalMedicineHeart $Heart) 设置体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineVessel getVessel() 获取体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVessel(InternalMedicineVessel $Vessel) 设置体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineRespiratorySystem getRespiratorySystem() 获取体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRespiratorySystem(InternalMedicineRespiratorySystem $RespiratorySystem) 设置体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineBriefSummary getBriefSummary() 获取体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(InternalMedicineBriefSummary $BriefSummary) 设置体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineBaseItem extends AbstractModel
 {
     /**
      * @var InternalMedicineAbdomen 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Abdomen;
 
     /**
      * @var InternalMedicineHeart 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Heart;
 
     /**
      * @var InternalMedicineVessel 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vessel;
 
     /**
      * @var InternalMedicineRespiratorySystem 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RespiratorySystem;
 
     /**
      * @var array 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var InternalMedicineBriefSummary 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param InternalMedicineAbdomen $Abdomen 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineHeart $Heart 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineVessel $Vessel 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineRespiratorySystem $RespiratorySystem 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineBriefSummary $BriefSummary 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

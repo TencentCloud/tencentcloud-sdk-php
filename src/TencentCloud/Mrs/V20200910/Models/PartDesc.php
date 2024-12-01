@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 部位描述
  *
  * @method string getMainDir() 获取主要部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainDir(string $MainDir) 设置主要部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(string $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecondaryDir() 获取次要部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryDir(string $SecondaryDir) 设置次要部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PartDesc extends AbstractModel
 {
     /**
      * @var string 主要部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainDir;
 
     /**
      * @var string 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var string 次要部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondaryDir;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $MainDir 主要部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecondaryDir 次要部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 结论信息
  *
  * @method BaseInfo getText() 获取段落文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(BaseInfo $Text) 设置段落文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取结论详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置结论详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResultInfo extends AbstractModel
 {
     /**
      * @var BaseInfo 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param BaseInfo $Text 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

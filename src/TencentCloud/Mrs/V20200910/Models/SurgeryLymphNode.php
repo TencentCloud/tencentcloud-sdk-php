@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科-浅表淋巴结
  *
  * @method KeyValueItem getText() 获取浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryLymphNode extends AbstractModel
 {
     /**
      * @var KeyValueItem 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

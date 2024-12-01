@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 诊断证明项
  *
  * @method string getText() 获取文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(array $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagCertItem extends AbstractModel
 {
     /**
      * @var string 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var array 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

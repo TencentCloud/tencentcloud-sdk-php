@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * PTNM分期
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPTNMM() 获取PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPTNMM(string $PTNMM) 设置PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPTNMN() 获取PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPTNMN(string $PTNMN) 设置PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPTNMT() 获取PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPTNMT(string $PTNMT) 设置PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PTNMBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNMM;
 
     /**
      * @var string PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNMN;
 
     /**
      * @var string PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNMT;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PTNMM PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PTNMN PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PTNMT PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

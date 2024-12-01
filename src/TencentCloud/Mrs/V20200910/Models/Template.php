@@ -21,357 +21,241 @@ use TencentCloud\Common\AbstractModel;
  * 报告模板
  *
  * @method PatientInfo getPatientInfo() 获取患者信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPatientInfo(PatientInfo $PatientInfo) 设置患者信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ReportInfo getReportInfo() 获取报告信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportInfo(ReportInfo $ReportInfo) 设置报告信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Check getCheck() 获取检查报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheck(Check $Check) 设置检查报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PathologyReport getPathology() 获取病理报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathology(PathologyReport $Pathology) 设置病理报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MedDoc getMedDoc() 获取出院报告，入院报告，门诊病历
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedDoc(MedDoc $MedDoc) 设置出院报告，入院报告，门诊病历
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiagCert getDiagCert() 获取诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagCert(DiagCert $DiagCert) 设置诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FirstPage getFirstPage() 获取病案首页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstPage(FirstPage $FirstPage) 设置病案首页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Indicator getIndicator() 获取检验报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndicator(Indicator $Indicator) 设置检验报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportType() 获取报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportType(string $ReportType) 设置报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MedicalRecordInfo getMedicalRecordInfo() 获取门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalRecordInfo(MedicalRecordInfo $MedicalRecordInfo) 设置门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Hospitalization getHospitalization() 获取出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHospitalization(Hospitalization $Hospitalization) 设置出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Surgery getSurgery() 获取手术记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgery(Surgery $Surgery) 设置手术记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Electrocardiogram getElectrocardiogram() 获取心电图报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElectrocardiogram(Electrocardiogram $Electrocardiogram) 设置心电图报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Endoscopy getEndoscopy() 获取内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndoscopy(Endoscopy $Endoscopy) 设置内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Prescription getPrescription() 获取处方单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrescription(Prescription $Prescription) 设置处方单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VaccineCertificate getVaccineCertificate() 获取疫苗接种凭证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVaccineCertificate(VaccineCertificate $VaccineCertificate) 设置疫苗接种凭证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOcrText() 获取OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrText(string $OcrText) 设置OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOcrResult() 获取OCR拼接后文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrResult(string $OcrResult) 设置OCR拼接后文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportTypeDesc() 获取报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportTypeDesc(string $ReportTypeDesc) 设置报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PathologyV2 getPathologyV2() 获取病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathologyV2(PathologyV2 $PathologyV2) 设置病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Indicator getC14() 获取碳14尿素呼气试验
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setC14(Indicator $C14) 设置碳14尿素呼气试验
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Exame getExame() 获取体检结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExame(Exame $Exame) 设置体检结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DischargeInfoBlock getMedDocV2() 获取出院报告v2，入院报告v2，门诊病历v2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedDocV2(DischargeInfoBlock $MedDocV2) 设置出院报告v2，入院报告v2，门诊病历v2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IndicatorV3 getIndicatorV3() 获取检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndicatorV3(IndicatorV3 $IndicatorV3) 设置检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CovidItemsInfo getCovid() 获取核酸报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCovid(CovidItemsInfo $Covid) 设置核酸报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Maternity getMaternity() 获取孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaternity(Maternity $Maternity) 设置孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EyeItemsInfo getEye() 获取眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEye(EyeItemsInfo $Eye) 设置眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BirthCert getBirthCert() 获取出生证明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthCert(BirthCert $BirthCert) 设置出生证明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TimelineInformation getTimeline() 获取时间轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeline(TimelineInformation $Timeline) 设置时间轴
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
     /**
      * @var PatientInfo 患者信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PatientInfo;
 
     /**
      * @var ReportInfo 报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportInfo;
 
     /**
      * @var Check 检查报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Check;
 
     /**
      * @var PathologyReport 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pathology;
 
     /**
      * @var MedDoc 出院报告，入院报告，门诊病历
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedDoc;
 
     /**
      * @var DiagCert 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiagCert;
 
     /**
      * @var FirstPage 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstPage;
 
     /**
      * @var Indicator 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Indicator;
 
     /**
      * @var string 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportType;
 
     /**
      * @var MedicalRecordInfo 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicalRecordInfo;
 
     /**
      * @var Hospitalization 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hospitalization;
 
     /**
      * @var Surgery 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Surgery;
 
     /**
      * @var Electrocardiogram 心电图报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Electrocardiogram;
 
     /**
      * @var Endoscopy 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Endoscopy;
 
     /**
      * @var Prescription 处方单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Prescription;
 
     /**
      * @var VaccineCertificate 疫苗接种凭证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VaccineCertificate;
 
     /**
      * @var string OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrText;
 
     /**
      * @var string OCR拼接后文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrResult;
 
     /**
      * @var string 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportTypeDesc;
 
     /**
      * @var PathologyV2 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologyV2;
 
     /**
      * @var Indicator 碳14尿素呼气试验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $C14;
 
     /**
      * @var Exame 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exame;
 
     /**
      * @var DischargeInfoBlock 出院报告v2，入院报告v2，门诊病历v2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedDocV2;
 
     /**
      * @var IndicatorV3 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndicatorV3;
 
     /**
      * @var CovidItemsInfo 核酸报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Covid;
 
     /**
      * @var Maternity 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Maternity;
 
     /**
      * @var EyeItemsInfo 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Eye;
 
     /**
      * @var BirthCert 出生证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthCert;
 
     /**
      * @var TimelineInformation 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timeline;
 
     /**
      * @param PatientInfo $PatientInfo 患者信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Check $Check 检查报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologyReport $Pathology 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedDoc $MedDoc 出院报告，入院报告，门诊病历
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagCert $DiagCert 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstPage $FirstPage 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indicator $Indicator 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportType 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedicalRecordInfo $MedicalRecordInfo 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hospitalization $Hospitalization 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Surgery $Surgery 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Electrocardiogram $Electrocardiogram 心电图报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endoscopy $Endoscopy 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Prescription $Prescription 处方单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VaccineCertificate $VaccineCertificate 疫苗接种凭证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrText OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrResult OCR拼接后文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportTypeDesc 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologyV2 $PathologyV2 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indicator $C14 碳14尿素呼气试验
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exame $Exame 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeInfoBlock $MedDocV2 出院报告v2，入院报告v2，门诊病历v2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndicatorV3 $IndicatorV3 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CovidItemsInfo $Covid 核酸报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Maternity $Maternity 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EyeItemsInfo $Eye 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthCert $BirthCert 出生证明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimelineInformation $Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

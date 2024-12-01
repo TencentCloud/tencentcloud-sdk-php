@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-其他项
  *
  * @method KeyValueItem getCountenance() 获取面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountenance(KeyValueItem $Countenance) 设置面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getMentalStatus() 获取精神状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMentalStatus(KeyValueItem $MentalStatus) 设置精神状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getDevelopmentCondition() 获取发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevelopmentCondition(KeyValueItem $DevelopmentCondition) 设置发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getMemory() 获取记忆力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(KeyValueItem $Memory) 设置记忆力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getHipline() 获取臀围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHipline(ValueUnitItem $Hipline) 设置臀围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getWaistHipRatio() 获取腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaistHipRatio(ValueUnitItem $WaistHipRatio) 设置腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getAddiction() 获取生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddiction(KeyValueItem $Addiction) 设置生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getAbilityOfLifeADL() 获取生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbilityOfLifeADL(KeyValueItem $AbilityOfLifeADL) 设置生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ChestCircumferenceItem getChestCircumference() 获取胸围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChestCircumference(ChestCircumferenceItem $ChestCircumference) 设置胸围
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GeneralExaminationOthers extends AbstractModel
 {
     /**
      * @var KeyValueItem 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Countenance;
 
     /**
      * @var KeyValueItem 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MentalStatus;
 
     /**
      * @var KeyValueItem 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevelopmentCondition;
 
     /**
      * @var KeyValueItem 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var ValueUnitItem 臀围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hipline;
 
     /**
      * @var ValueUnitItem 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaistHipRatio;
 
     /**
      * @var KeyValueItem 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Addiction;
 
     /**
      * @var KeyValueItem 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbilityOfLifeADL;
 
     /**
      * @var array 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var ChestCircumferenceItem 胸围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChestCircumference;
 
     /**
      * @param KeyValueItem $Countenance 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $MentalStatus 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $DevelopmentCondition 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Memory 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $Hipline 臀围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $WaistHipRatio 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Addiction 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $AbilityOfLifeADL 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChestCircumferenceItem $ChestCircumference 胸围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-心脏
  *
  * @method KeyValueItem getText() 获取心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getHeartRhythm() 获取心律
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeartRhythm(KeyValueItem $HeartRhythm) 设置心律
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueUnitItem getHeartRate() 获取心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeartRate(ValueUnitItem $HeartRate) 设置心率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getHeartAuscultation() 获取心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeartAuscultation(KeyValueItem $HeartAuscultation) 设置心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineHeart extends AbstractModel
 {
     /**
      * @var KeyValueItem 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 心律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartRhythm;
 
     /**
      * @var ValueUnitItem 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartRate;
 
     /**
      * @var KeyValueItem 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartAuscultation;
 
     /**
      * @param KeyValueItem $Text 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $HeartRhythm 心律
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueUnitItem $HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $HeartAuscultation 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

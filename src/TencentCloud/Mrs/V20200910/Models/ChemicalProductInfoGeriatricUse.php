@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 老年用药
  *
  * @method string getText() 获取文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChemicalProductInfoGeriatricUse extends AbstractModel
 {
     /**
      * @var string 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param string $Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

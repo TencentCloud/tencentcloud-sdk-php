@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 母亲或父亲信息
  *
  * @method string getName() 获取名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAge() 获取年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAge(string $Age) 设置年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdCard() 获取证件号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCard(string $IdCard) 设置证件号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEthnicity() 获取民族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEthnicity(string $Ethnicity) 设置民族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNationality() 获取国籍
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNationality(string $Nationality) 设置国籍
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParentInfo extends AbstractModel
 {
     /**
      * @var string 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Age;
 
     /**
      * @var string 证件号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCard;
 
     /**
      * @var string 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ethnicity;
 
     /**
      * @var string 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nationality;
 
     /**
      * @var string 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @param string $Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Age 年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCard 证件号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

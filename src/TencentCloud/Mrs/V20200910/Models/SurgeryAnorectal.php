@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科-肛门直肠
  *
  * @method KeyValueItem getText() 获取肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getDigitalRectalExamination() 获取直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDigitalRectalExamination(KeyValueItem $DigitalRectalExamination) 设置直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getHemorrhoid() 获取痔疮
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHemorrhoid(KeyValueItem $Hemorrhoid) 设置痔疮
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryAnorectal extends AbstractModel
 {
     /**
      * @var KeyValueItem 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DigitalRectalExamination;
 
     /**
      * @var KeyValueItem 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hemorrhoid;
 
     /**
      * @param KeyValueItem $Text 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $DigitalRectalExamination 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Hemorrhoid 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

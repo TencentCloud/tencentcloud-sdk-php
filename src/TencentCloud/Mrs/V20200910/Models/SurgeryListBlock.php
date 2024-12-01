@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 手术列表
  *
  * @method string getTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeType(string $TimeType) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(array $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(string $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryListBlock extends AbstractModel
 {
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeType;
 
     /**
      * @var array 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @param string $Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

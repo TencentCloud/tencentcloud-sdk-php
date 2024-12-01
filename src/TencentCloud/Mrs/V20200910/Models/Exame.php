@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 体检结论
  *
  * @method array getOverView() 获取结论段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverView(array $OverView) 设置结论段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAbnormality() 获取异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbnormality(array $Abnormality) 设置异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Exame extends AbstractModel
 {
     /**
      * @var array 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OverView;
 
     /**
      * @var array 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Abnormality;
 
     /**
      * @param array $OverView 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Abnormality 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

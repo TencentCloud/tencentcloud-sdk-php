@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 时间轴
  *
  * @method array getTimeline() 获取时间轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeline(array $Timeline) 设置时间轴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimelineInformation extends AbstractModel
 {
     /**
      * @var array 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timeline;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param array $Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 签发信息
  *
  * @method string getCertNumber() 获取编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertNumber(string $CertNumber) 设置编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIssuedAuthority() 获取签发机构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssuedAuthority(string $IssuedAuthority) 设置签发机构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIssuedDate() 获取签发日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssuedDate(string $IssuedDate) 设置签发日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IssueInfo extends AbstractModel
 {
     /**
      * @var string 编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertNumber;
 
     /**
      * @var string 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssuedAuthority;
 
     /**
      * @var string 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssuedDate;
 
     /**
      * @param string $CertNumber 编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IssuedAuthority 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IssuedDate 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

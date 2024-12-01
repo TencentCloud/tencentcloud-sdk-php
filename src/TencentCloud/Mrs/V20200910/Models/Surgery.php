@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 手术记录
  *
  * @method SurgeryHistory getSurgeryHistory() 获取手术史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryHistory(SurgeryHistory $SurgeryHistory) 设置手术史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OtherInfo getOtherInfo() 获取其他信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherInfo(OtherInfo $OtherInfo) 设置其他信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Surgery extends AbstractModel
 {
     /**
      * @var SurgeryHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryHistory;
 
     /**
      * @var OtherInfo 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherInfo;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param SurgeryHistory $SurgeryHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherInfo $OtherInfo 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

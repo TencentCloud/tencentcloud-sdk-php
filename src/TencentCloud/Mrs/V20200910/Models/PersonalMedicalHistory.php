@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 个人史
  *
  * @method string getBirthPlace() 获取出生史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthPlace(string $BirthPlace) 设置出生史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLivePlace() 获取居住史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivePlace(string $LivePlace) 设置居住史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJob() 获取工作史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJob(string $Job) 设置工作史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSmokeHistory() 获取吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmokeHistory(string $SmokeHistory) 设置吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlcoholicHistory() 获取饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlcoholicHistory(string $AlcoholicHistory) 设置饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PersonalMedicalHistory extends AbstractModel
 {
     /**
      * @var string 出生史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthPlace;
 
     /**
      * @var string 居住史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivePlace;
 
     /**
      * @var string 工作史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Job;
 
     /**
      * @var string 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmokeHistory;
 
     /**
      * @var string 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlcoholicHistory;
 
     /**
      * @param string $BirthPlace 出生史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LivePlace 居住史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Job 工作史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SmokeHistory 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlcoholicHistory 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,333 +21,225 @@ use TencentCloud\Common\AbstractModel;
  * 胎儿数据结构
  *
  * @method FieldInfo getBPD() 获取双顶径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBPD(FieldInfo $BPD) 设置双顶径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getAPTD() 获取腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAPTD(FieldInfo $APTD) 设置腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getTTD() 获取腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTTD(FieldInfo $TTD) 设置腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getCRL() 获取头臀径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCRL(FieldInfo $CRL) 设置头臀径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getHC() 获取头围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHC(FieldInfo $HC) 设置头围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getAC() 获取腹围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAC(FieldInfo $AC) 设置腹围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getFL() 获取股骨长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFL(FieldInfo $FL) 设置股骨长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getHL() 获取肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHL(FieldInfo $HL) 设置肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getWeight() 获取胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(FieldInfo $Weight) 设置胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getNT() 获取颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNT(FieldInfo $NT) 设置颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getUmbilicalCord() 获取脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUmbilicalCord(FieldInfo $UmbilicalCord) 设置脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getWaterDeep() 获取羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterDeep(FieldInfo $WaterDeep) 设置羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getWaterQuad() 获取羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterQuad(FieldInfo $WaterQuad) 设置羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getAFI() 获取羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAFI(FieldInfo $AFI) 设置羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getFHR() 获取胎心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFHR(FieldInfo $FHR) 设置胎心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getMovement() 获取胎动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMovement(FieldInfo $Movement) 设置胎动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getNum() 获取胎数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNum(FieldInfo $Num) 设置胎数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getPosition() 获取胎位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPosition(FieldInfo $Position) 设置胎位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getAlive() 获取是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlive(FieldInfo $Alive) 设置是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getPlacentaLocation() 获取胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlacentaLocation(FieldInfo $PlacentaLocation) 设置胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getPlacentaThickness() 获取胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlacentaThickness(FieldInfo $PlacentaThickness) 设置胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getPlacentaGrade() 获取胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlacentaGrade(FieldInfo $PlacentaGrade) 设置胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getGestationTime() 获取妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGestationTime(FieldInfo $GestationTime) 设置妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getGestationPeriod() 获取妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGestationPeriod(FieldInfo $GestationPeriod) 设置妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getAroundNeck() 获取绕颈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAroundNeck(FieldInfo $AroundNeck) 设置绕颈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSym() 获取病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSym(array $Sym) 设置病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Fetus extends AbstractModel
 {
     /**
      * @var FieldInfo 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BPD;
 
     /**
      * @var FieldInfo 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $APTD;
 
     /**
      * @var FieldInfo 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TTD;
 
     /**
      * @var FieldInfo 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CRL;
 
     /**
      * @var FieldInfo 头围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HC;
 
     /**
      * @var FieldInfo 腹围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AC;
 
     /**
      * @var FieldInfo 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FL;
 
     /**
      * @var FieldInfo 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HL;
 
     /**
      * @var FieldInfo 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var FieldInfo 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NT;
 
     /**
      * @var FieldInfo 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UmbilicalCord;
 
     /**
      * @var FieldInfo 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterDeep;
 
     /**
      * @var FieldInfo 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterQuad;
 
     /**
      * @var FieldInfo 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AFI;
 
     /**
      * @var FieldInfo 胎心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FHR;
 
     /**
      * @var FieldInfo 胎动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Movement;
 
     /**
      * @var FieldInfo 胎数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Num;
 
     /**
      * @var FieldInfo 胎位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
 
     /**
      * @var FieldInfo 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alive;
 
     /**
      * @var FieldInfo 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlacentaLocation;
 
     /**
      * @var FieldInfo 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlacentaThickness;
 
     /**
      * @var FieldInfo 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlacentaGrade;
 
     /**
      * @var FieldInfo 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GestationTime;
 
     /**
      * @var FieldInfo 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GestationPeriod;
 
     /**
      * @var FieldInfo 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AroundNeck;
 
     /**
      * @var array 病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sym;
 
     /**
      * @var string 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @param FieldInfo $BPD 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $APTD 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $TTD 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $CRL 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $HC 头围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $AC 腹围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $FL 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $HL 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $Weight 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $NT 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $UmbilicalCord 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $WaterDeep 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $WaterQuad 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $AFI 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $FHR 胎心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $Movement 胎动
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $Num 胎数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $Position 胎位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $Alive 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $PlacentaLocation 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $PlacentaThickness 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $PlacentaGrade 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $GestationTime 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $GestationPeriod 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $AroundNeck 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Sym 病变
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

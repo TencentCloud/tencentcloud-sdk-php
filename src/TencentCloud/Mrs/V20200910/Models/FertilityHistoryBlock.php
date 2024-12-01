@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 婚育史
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNorm() 获取归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNorm(string $Norm) 设置归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPregCount() 获取妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPregCount(string $PregCount) 设置妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProduCount() 获取生产次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProduCount(string $ProduCount) 设置生产次数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FertilityHistoryBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Norm;
 
     /**
      * @var string 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PregCount;
 
     /**
      * @var string 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProduCount;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PregCount 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProduCount 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

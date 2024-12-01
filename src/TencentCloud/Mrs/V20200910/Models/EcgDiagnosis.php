@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 心电图诊断
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(array $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EcgDiagnosis extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

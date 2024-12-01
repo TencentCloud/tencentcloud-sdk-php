@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 组织学等级
  *
  * @method string getGrade() 获取等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrade(string $Grade) 设置等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HistologyLevel extends AbstractModel
 {
     /**
      * @var string 等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Grade;
 
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @param string $Grade 等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

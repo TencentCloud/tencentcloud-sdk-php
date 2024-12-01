@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数值结构体
  *
  * @method string getNum() 获取数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNum(string $Num) 设置数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NumValue extends AbstractModel
 {
     /**
      * @var string 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Num;
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @param string $Num 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 位置坐标
  *
  * @method integer getX() 获取x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(integer $X) 设置x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getY() 获取y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(integer $Y) 设置y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getW() 获取宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setW(integer $W) 设置宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getH() 获取高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setH(integer $H) 设置高
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rectangle extends AbstractModel
 {
     /**
      * @var integer x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var integer y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @var integer 宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $W;
 
     /**
      * @var integer 高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $H;
 
     /**
      * @param integer $X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $W 宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $H 高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

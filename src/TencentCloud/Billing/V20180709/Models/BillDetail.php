@@ -118,6 +118,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveDetail(string $ReserveDetail) 设置备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountObject() 获取优惠对象
+ * @method void setDiscountObject(string $DiscountObject) 设置优惠对象
+ * @method string getDiscountType() 获取优惠类型
+ * @method void setDiscountType(string $DiscountType) 设置优惠类型
+ * @method string getDiscountContent() 获取优惠内容
+ * @method void setDiscountContent(string $DiscountContent) 设置优惠内容
  */
 class BillDetail extends AbstractModel
 {
@@ -307,6 +313,21 @@ class BillDetail extends AbstractModel
     public $ReserveDetail;
 
     /**
+     * @var string 优惠对象
+     */
+    public $DiscountObject;
+
+    /**
+     * @var string 优惠类型
+     */
+    public $DiscountType;
+
+    /**
+     * @var string 优惠内容
+     */
+    public $DiscountContent;
+
+    /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
@@ -356,6 +377,9 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountObject 优惠对象
+     * @param string $DiscountType 优惠类型
+     * @param string $DiscountContent 优惠内容
      */
     function __construct()
     {
@@ -515,6 +539,18 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("ReserveDetail",$param) and $param["ReserveDetail"] !== null) {
             $this->ReserveDetail = $param["ReserveDetail"];
+        }
+
+        if (array_key_exists("DiscountObject",$param) and $param["DiscountObject"] !== null) {
+            $this->DiscountObject = $param["DiscountObject"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
+        }
+
+        if (array_key_exists("DiscountContent",$param) and $param["DiscountContent"] !== null) {
+            $this->DiscountContent = $param["DiscountContent"];
         }
     }
 }

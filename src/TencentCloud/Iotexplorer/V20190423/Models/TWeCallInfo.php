@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSn(string $Sn) 设置Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelId() 获取小程序ID
+ * @method string getModelId() 获取小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelId(string $ModelId) 设置小程序ID
+ * @method void setModelId(string $ModelId) 设置小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveNum() 获取激活数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,21 +42,23 @@ class TWeCallInfo extends AbstractModel
     public $Sn;
 
     /**
-     * @var string 小程序ID
+     * @var string 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModelId;
 
     /**
      * @var integer 激活数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ActiveNum;
 
     /**
      * @param string $Sn Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelId 小程序ID
+     * @param string $ModelId 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveNum 激活数
 注意：此字段可能返回 null，表示取不到有效值。

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-胸围信息
  *
  * @method string getName() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getItem() 获取项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItem(PhysicalBaseItem $Item) 设置项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getResult() 获取数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(PhysicalBaseItem $Result) 设置数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(PhysicalBaseItem $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getState() 获取呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(PhysicalBaseItem $State) 设置呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChestCircumferenceItem extends AbstractModel
 {
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var PhysicalBaseItem 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Item;
 
     /**
      * @var PhysicalBaseItem 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var PhysicalBaseItem 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var PhysicalBaseItem 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @param string $Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Result 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $State 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

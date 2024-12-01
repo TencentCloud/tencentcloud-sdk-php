@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科-泌尿生殖系统
  *
  * @method KeyValueItem getText() 获取泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getProstate() 获取前列腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProstate(KeyValueItem $Prostate) 设置前列腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getExternalReproductiveOrgans() 获取外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalReproductiveOrgans(KeyValueItem $ExternalReproductiveOrgans) 设置外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryUrogenitalSystem extends AbstractModel
 {
     /**
      * @var KeyValueItem 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Prostate;
 
     /**
      * @var KeyValueItem 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalReproductiveOrgans;
 
     /**
      * @param KeyValueItem $Text 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Prostate 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $ExternalReproductiveOrgans 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

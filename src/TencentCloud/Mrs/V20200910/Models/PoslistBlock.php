@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 肯定列表
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PoslistBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

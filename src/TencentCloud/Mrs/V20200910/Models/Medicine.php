@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 药品
  *
  * @method string getName() 获取药品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置药品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTradeName() 获取商品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeName(string $TradeName) 设置商品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirm() 获取厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirm(string $Firm) 设置厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategory() 获取医保类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置医保类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecification() 获取规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecification(string $Specification) 设置规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMinQuantity() 获取最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinQuantity(string $MinQuantity) 设置最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDosageUnit() 获取最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageUnit(string $DosageUnit) 设置最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackingUnit() 获取最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackingUnit(string $PackingUnit) 设置最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Medicine extends AbstractModel
 {
     /**
      * @var string 药品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TradeName;
 
     /**
      * @var string 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Firm;
 
     /**
      * @var string 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
     /**
      * @var string 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Specification;
 
     /**
      * @var string 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinQuantity;
 
     /**
      * @var string 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageUnit;
 
     /**
      * @var string 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackingUnit;
 
     /**
      * @param string $Name 药品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TradeName 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Firm 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Category 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Specification 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MinQuantity 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DosageUnit 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackingUnit 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 月经史
  *
  * @method LastMenstrualPeriodBlock getLastMenstrualPeriod() 获取末次月经
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastMenstrualPeriod(LastMenstrualPeriodBlock $LastMenstrualPeriod) 设置末次月经
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MenstrualFlowBlock getMenstrualFlow() 获取月经量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstrualFlow(MenstrualFlowBlock $MenstrualFlow) 设置月经量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LastMenstrualPeriodBlock getMenarcheAge() 获取初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenarcheAge(LastMenstrualPeriodBlock $MenarcheAge) 设置初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MenstruationOrNotBlock getMenstruationOrNot() 获取是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstruationOrNot(MenstruationOrNotBlock $MenstruationOrNot) 设置是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LastMenstrualPeriodBlock getMenstrualCycles() 获取月经周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstrualCycles(LastMenstrualPeriodBlock $MenstrualCycles) 设置月经周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MenstrualPeriodBlock getMenstrualPeriod() 获取月经经期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstrualPeriod(MenstrualPeriodBlock $MenstrualPeriod) 设置月经经期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MenstrualHistoryBlock extends AbstractModel
 {
     /**
      * @var LastMenstrualPeriodBlock 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastMenstrualPeriod;
 
     /**
      * @var MenstrualFlowBlock 月经量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualFlow;
 
     /**
      * @var LastMenstrualPeriodBlock 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenarcheAge;
 
     /**
      * @var MenstruationOrNotBlock 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstruationOrNot;
 
     /**
      * @var LastMenstrualPeriodBlock 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualCycles;
 
     /**
      * @var MenstrualPeriodBlock 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualPeriod;
 
     /**
      * @param LastMenstrualPeriodBlock $LastMenstrualPeriod 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualFlowBlock $MenstrualFlow 月经量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastMenstrualPeriodBlock $MenarcheAge 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstruationOrNotBlock $MenstruationOrNot 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastMenstrualPeriodBlock $MenstrualCycles 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualPeriodBlock $MenstrualPeriod 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

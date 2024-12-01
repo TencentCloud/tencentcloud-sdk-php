@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 检验指标项
  *
  * @method string getCode() 获取英文缩写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置英文缩写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScode() 获取标准缩写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScode(string $Scode) 设置标准缩写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSname() 获取标准名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSname(string $Sname) 设置标准名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResult() 获取结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRange() 获取参考范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRange(string $Range) 设置参考范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArrow() 获取上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArrow(string $Arrow) 设置上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNormal() 获取是否正常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormal(boolean $Normal) 设置是否正常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemString() 获取项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemString(string $ItemString) 设置项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取指标项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置指标项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Coordinate getCoords() 获取指标项坐标位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(Coordinate $Coords) 设置指标项坐标位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInferNormal() 获取推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorItem extends AbstractModel
 {
     /**
      * @var string 英文缩写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 标准缩写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scode;
 
     /**
      * @var string 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 标准名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sname;
 
     /**
      * @var string 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var string 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Range;
 
     /**
      * @var string 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arrow;
 
     /**
      * @var boolean 是否正常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Normal;
 
     /**
      * @var string 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemString;
 
     /**
      * @var integer 指标项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var Coordinate 指标项坐标位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @var string 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InferNormal;
 
     /**
      * @param string $Code 英文缩写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scode 标准缩写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sname 标准名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Range 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arrow 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Normal 是否正常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemString 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 指标项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coordinate $Coords 指标项坐标位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InferNormal 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

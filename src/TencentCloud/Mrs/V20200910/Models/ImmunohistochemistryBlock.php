@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 免疫组化
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValue() 获取免疫组化详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(array $Value) 设置免疫组化详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImmunohistochemistryBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 免疫组化详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Value 免疫组化详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

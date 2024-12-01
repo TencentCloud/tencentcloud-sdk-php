@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-眼科-矫正视力
  *
  * @method KeyValueItem getLeftEyeVisual() 获取左眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeftEyeVisual(KeyValueItem $LeftEyeVisual) 设置左眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getText() 获取矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getRightEyeVisual() 获取右眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRightEyeVisual(KeyValueItem $RightEyeVisual) 设置右眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OphthalmologyCorrectedVisualAcuity extends AbstractModel
 {
     /**
      * @var KeyValueItem 左眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftEyeVisual;
 
     /**
      * @var KeyValueItem 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 右眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RightEyeVisual;
 
     /**
      * @param KeyValueItem $LeftEyeVisual 左眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Text 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $RightEyeVisual 右眼矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-妇科-外阴
  *
  * @method KeyValueItem getText() 获取外阴总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置外阴总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GynaecologyVulva extends AbstractModel
 {
     /**
      * @var KeyValueItem 外阴总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 外阴总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

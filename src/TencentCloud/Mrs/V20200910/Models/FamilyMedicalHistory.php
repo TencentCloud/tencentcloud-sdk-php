@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 家族疾病史
  *
  * @method string getRelativeHistory() 获取家族成员史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelativeHistory(string $RelativeHistory) 设置家族成员史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelativeCancerHistory() 获取家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelativeCancerHistory(string $RelativeCancerHistory) 设置家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGeneticHistory() 获取家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGeneticHistory(string $GeneticHistory) 设置家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FamilyMedicalHistory extends AbstractModel
 {
     /**
      * @var string 家族成员史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelativeHistory;
 
     /**
      * @var string 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelativeCancerHistory;
 
     /**
      * @var string 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GeneticHistory;
 
     /**
      * @param string $RelativeHistory 家族成员史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RelativeCancerHistory 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GeneticHistory 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

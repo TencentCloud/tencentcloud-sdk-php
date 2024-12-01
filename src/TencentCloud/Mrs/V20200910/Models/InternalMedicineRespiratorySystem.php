@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-呼吸系统
  *
  * @method KeyValueItem getText() 获取呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getThoracic() 获取胸廓
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThoracic(KeyValueItem $Thoracic) 设置胸廓
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getSputum() 获取痰量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSputum(KeyValueItem $Sputum) 设置痰量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getLungPercussion() 获取肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLungPercussion(KeyValueItem $LungPercussion) 设置肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLungAuscultation() 获取肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLungAuscultation(array $LungAuscultation) 设置肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineRespiratorySystem extends AbstractModel
 {
     /**
      * @var KeyValueItem 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Thoracic;
 
     /**
      * @var KeyValueItem 痰量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sputum;
 
     /**
      * @var KeyValueItem 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LungPercussion;
 
     /**
      * @var array 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LungAuscultation;
 
     /**
      * @param KeyValueItem $Text 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Thoracic 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Sputum 痰量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $LungPercussion 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LungAuscultation 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

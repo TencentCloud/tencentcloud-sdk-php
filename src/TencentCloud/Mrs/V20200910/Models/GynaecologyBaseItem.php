@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-妇科
  *
  * @method GynaecologyVulva getVulva() 获取外阴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulva(GynaecologyVulva $Vulva) 设置外阴
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyVagina getVagina() 获取阴道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVagina(GynaecologyVagina $Vagina) 设置阴道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyCervix getCervix() 获取子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCervix(GynaecologyCervix $Cervix) 设置子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyUterus getUterus() 获取子宫
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUterus(GynaecologyUterus $Uterus) 设置子宫
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyAdnexal getAdnexal() 获取子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdnexal(GynaecologyAdnexal $Adnexal) 设置子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyPelvicCavity getPelvicCavity() 获取盆腔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPelvicCavity(GynaecologyPelvicCavity $PelvicCavity) 设置盆腔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyMenstrualHistory getMenstrualHistory() 获取月经史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstrualHistory(GynaecologyMenstrualHistory $MenstrualHistory) 设置月经史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyBriefSummary getBriefSummary() 获取小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(GynaecologyBriefSummary $BriefSummary) 设置小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GynaecologyBaseItem extends AbstractModel
 {
     /**
      * @var GynaecologyVulva 外阴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vulva;
 
     /**
      * @var GynaecologyVagina 阴道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vagina;
 
     /**
      * @var GynaecologyCervix 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cervix;
 
     /**
      * @var GynaecologyUterus 子宫
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uterus;
 
     /**
      * @var GynaecologyAdnexal 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Adnexal;
 
     /**
      * @var GynaecologyPelvicCavity 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PelvicCavity;
 
     /**
      * @var array 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var GynaecologyMenstrualHistory 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualHistory;
 
     /**
      * @var GynaecologyBriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param GynaecologyVulva $Vulva 外阴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyVagina $Vagina 阴道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyCervix $Cervix 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyUterus $Uterus 子宫
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyAdnexal $Adnexal 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyPelvicCavity $PelvicCavity 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyMenstrualHistory $MenstrualHistory 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyBriefSummary $BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

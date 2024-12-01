@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableIndictors(array $TableIndictors) 设置检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTableIndicators() 获取检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableIndicators(array $TableIndicators) 设置检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorV3 extends AbstractModel
 {
@@ -48,19 +42,16 @@ class IndicatorV3 extends AbstractModel
 
     /**
      * @var string 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var array 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableIndicators;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
@@ -68,11 +59,8 @@ class IndicatorV3 extends AbstractModel
      * @param array $TableIndictors 检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableIndicators 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

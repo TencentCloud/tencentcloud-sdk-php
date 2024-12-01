@@ -25,6 +25,8 @@ use TencentCloud\Live\V20180801\Models as Models;
 /**
  * @method Models\AddCasterInputInfoResponse AddCasterInputInfo(Models\AddCasterInputInfoRequest $req) 该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
  * @method Models\AddCasterLayoutInfoResponse AddCasterLayoutInfo(Models\AddCasterLayoutInfoRequest $req) 该接口用来增加导播台的布局参数。
+ * @method Models\AddCasterMarkPicInfoResponse AddCasterMarkPicInfo(Models\AddCasterMarkPicInfoRequest $req) 该接口用来新增图片水印。
+ * @method Models\AddCasterMarkWordInfoResponse AddCasterMarkWordInfo(Models\AddCasterMarkWordInfoRequest $req) 为导播台添加文本配置。
  * @method Models\AddCasterOutputInfoResponse AddCasterOutputInfo(Models\AddCasterOutputInfoRequest $req) 该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
  * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 针对大型活动直播，通过对直播流设置延时来控制现场与观众播放画面的时间间隔，避免突发状况造成影响。
 
@@ -119,6 +121,8 @@ use TencentCloud\Live\V20180801\Models as Models;
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
  * @method Models\DeleteCasterInputInfoResponse DeleteCasterInputInfo(Models\DeleteCasterInputInfoRequest $req) 该接口用来删除导播台中的输入源信息。
  * @method Models\DeleteCasterLayoutInfoResponse DeleteCasterLayoutInfo(Models\DeleteCasterLayoutInfoRequest $req) 该接口用来将布局信息从导播台中删除
+ * @method Models\DeleteCasterMarkPicInfoResponse DeleteCasterMarkPicInfo(Models\DeleteCasterMarkPicInfoRequest $req) 该接口用来删除导播台某个Index对应的水印。
+ * @method Models\DeleteCasterMarkWordInfoResponse DeleteCasterMarkWordInfo(Models\DeleteCasterMarkWordInfoRequest $req) 该接口用来删除导播台的文本配置。
  * @method Models\DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(Models\DeleteCasterOutputInfoRequest $req) 该接口用来删除导播台的推流信息。
 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
@@ -162,6 +166,8 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeCasterInputInfosResponse DescribeCasterInputInfos(Models\DescribeCasterInputInfosRequest $req) 该接口用来查询导播台的输入源信息列表。
  * @method Models\DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfos(Models\DescribeCasterLayoutInfosRequest $req) 该接口用来查询某个导播台的布局列表
  * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
+ * @method Models\DescribeCasterMarkPicInfosResponse DescribeCasterMarkPicInfos(Models\DescribeCasterMarkPicInfosRequest $req) 该接口用来查询某个导播台的水印列表。
+ * @method Models\DescribeCasterMarkWordInfosResponse DescribeCasterMarkWordInfos(Models\DescribeCasterMarkWordInfosRequest $req) 该接口用来查询某个导播台的文本列表。
  * @method Models\DescribeCasterOutputInfosResponse DescribeCasterOutputInfos(Models\DescribeCasterOutputInfosRequest $req) 该接口用来查询某个导播台的推流信息列表。
  * @method Models\DescribeCasterPlayUrlResponse DescribeCasterPlayUrl(Models\DescribeCasterPlayUrlRequest $req) 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
  * @method Models\DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(Models\DescribeCasterTransitionTypesRequest $req) 该接口用来获取所有的转场名称及其对应的素材url。
@@ -303,6 +309,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\ModifyCasterInputInfoResponse ModifyCasterInputInfo(Models\ModifyCasterInputInfoRequest $req) 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
 设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
  * @method Models\ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfo(Models\ModifyCasterLayoutInfoRequest $req) 该接口用来修改布局参数
+ * @method Models\ModifyCasterMarkPicInfoResponse ModifyCasterMarkPicInfo(Models\ModifyCasterMarkPicInfoRequest $req) 该接口用来修改导播台水印信息。
+注意，修改的Index对应的水印需已存在
+ * @method Models\ModifyCasterMarkWordInfoResponse ModifyCasterMarkWordInfo(Models\ModifyCasterMarkWordInfoRequest $req) 该接口用来修改导播台文本配置。
  * @method Models\ModifyCasterOutputInfoResponse ModifyCasterOutputInfo(Models\ModifyCasterOutputInfoRequest $req) 该接口用来修改导播台的推流信息。
 注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) 修改回调模板。

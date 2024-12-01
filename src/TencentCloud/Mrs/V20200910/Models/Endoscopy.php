@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 内窥镜报告
  *
  * @method BiopsyPart getBiopsyPart() 获取活检部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBiopsyPart(BiopsyPart $BiopsyPart) 设置活检部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EndoscopyDesc getDesc() 获取可见描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(EndoscopyDesc $Desc) 设置可见描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Summary getSummary() 获取结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(Summary $Summary) 设置结论
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endoscopy extends AbstractModel
 {
     /**
      * @var BiopsyPart 活检部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BiopsyPart;
 
     /**
      * @var EndoscopyDesc 可见描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var Summary 结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Summary;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param BiopsyPart $BiopsyPart 活检部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndoscopyDesc $Desc 可见描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Summary $Summary 结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

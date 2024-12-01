@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 药物用法用量
  *
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSingleMeasurement() 获取单次计量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSingleMeasurement(string $SingleMeasurement) 设置单次计量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrequency() 获取频次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequency(string $Frequency) 设置频次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDrugDeliveryRoute() 获取给药途径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrugDeliveryRoute(string $DrugDeliveryRoute) 设置给药途径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DosageBlock extends AbstractModel
 {
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 单次计量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SingleMeasurement;
 
     /**
      * @var string 频次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Frequency;
 
     /**
      * @var string 给药途径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrugDeliveryRoute;
 
     /**
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SingleMeasurement 单次计量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Frequency 频次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DrugDeliveryRoute 给药途径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

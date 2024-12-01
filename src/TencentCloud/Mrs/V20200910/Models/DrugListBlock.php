@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 药物史
  *
  * @method string getCommonName() 获取通用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonName(string $CommonName) 设置通用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTradeName() 获取商品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeName(string $TradeName) 设置商品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DosageBlock getDosage() 获取用法用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosage(DosageBlock $Dosage) 设置用法用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DrugListBlock extends AbstractModel
 {
     /**
      * @var string 通用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonName;
 
     /**
      * @var string 商品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TradeName;
 
     /**
      * @var DosageBlock 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dosage;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $CommonName 通用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TradeName 商品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageBlock $Dosage 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

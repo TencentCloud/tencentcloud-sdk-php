@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-腹部
  *
  * @method KeyValueItem getText() 获取内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineAbdomenLiver getLiver() 获取肝脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiver(InternalMedicineAbdomenLiver $Liver) 设置肝脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineAbdomenGallBladder getGallBladder() 获取胆囊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGallBladder(InternalMedicineAbdomenGallBladder $GallBladder) 设置胆囊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineAbdomenPancreas getPancreas() 获取胰腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPancreas(InternalMedicineAbdomenPancreas $Pancreas) 设置胰腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineAbdomenSpleen getSpleen() 获取脾脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpleen(InternalMedicineAbdomenSpleen $Spleen) 设置脾脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineAbdomenKidney getKidney() 获取肾脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKidney(InternalMedicineAbdomenKidney $Kidney) 设置肾脏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineAbdomen extends AbstractModel
 {
     /**
      * @var KeyValueItem 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var InternalMedicineAbdomenLiver 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Liver;
 
     /**
      * @var InternalMedicineAbdomenGallBladder 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GallBladder;
 
     /**
      * @var InternalMedicineAbdomenPancreas 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pancreas;
 
     /**
      * @var InternalMedicineAbdomenSpleen 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Spleen;
 
     /**
      * @var InternalMedicineAbdomenKidney 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kidney;
 
     /**
      * @var array 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @param KeyValueItem $Text 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineAbdomenLiver $Liver 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineAbdomenGallBladder $GallBladder 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineAbdomenPancreas $Pancreas 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineAbdomenSpleen $Spleen 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineAbdomenKidney $Kidney 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

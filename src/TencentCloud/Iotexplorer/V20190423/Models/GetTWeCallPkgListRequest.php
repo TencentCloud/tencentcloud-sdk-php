@@ -35,6 +35,7 @@ class GetTWeCallPkgListRequest extends AbstractModel
 {
     /**
      * @var string appId
+     * @deprecated
      */
     public $MiniProgramAppId;
 

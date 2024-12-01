@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 检验指标项结构v2
  *
  * @method BaseItem getItem() 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItem(BaseItem $Item) 设置项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getCode() 获取英文编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(BaseItem $Code) 设置英文编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getResult() 获取结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(BaseItem $Result) 设置结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(BaseItem $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getRange() 获取参考范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRange(BaseItem $Range) 设置参考范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getArrow() 获取上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArrow(BaseItem $Arrow) 设置上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getMethod() 获取检测方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(BaseItem $Method) 设置检测方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNormal() 获取结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormal(boolean $Normal) 设置结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrder() 获取序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrder(integer $Order) 设置序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInferNormal() 获取推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorItemV2 extends AbstractModel
 {
     /**
      * @var BaseItem 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Item;
 
     /**
      * @var BaseItem 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var BaseItem 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var BaseItem 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var BaseItem 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Range;
 
     /**
      * @var BaseItem 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arrow;
 
     /**
      * @var BaseItem 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var boolean 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Normal;
 
     /**
      * @var integer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
      * @var string 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InferNormal;
 
     /**
      * @param BaseItem $Item 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Code 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Range 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Arrow 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Method 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Normal 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Order 序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InferNormal 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 个人史
  *
  * @method BirthPlaceBlock getBirthPlace() 获取出生地
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthPlace(BirthPlaceBlock $BirthPlace) 设置出生地
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BirthPlaceBlock getLivePlace() 获取居住地
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivePlace(BirthPlaceBlock $LivePlace) 设置居住地
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BirthPlaceBlock getJob() 获取职业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJob(BirthPlaceBlock $Job) 设置职业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SmokeHistoryBlock getSmokeHistory() 获取吸烟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmokeHistory(SmokeHistoryBlock $SmokeHistory) 设置吸烟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SmokeHistoryBlock getAlcoholicHistory() 获取喝酒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlcoholicHistory(SmokeHistoryBlock $AlcoholicHistory) 设置喝酒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MenstrualHistoryBlock getMenstrualHistory() 获取月经史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenstrualHistory(MenstrualHistoryBlock $MenstrualHistory) 设置月经史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ObstetricalHistoryBlock getObstericalHistory() 获取婚姻-生育史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObstericalHistory(ObstetricalHistoryBlock $ObstericalHistory) 设置婚姻-生育史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FamilyHistoryBlock getFamilyHistory() 获取家族史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFamilyHistory(FamilyHistoryBlock $FamilyHistory) 设置家族史
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PersonalHistoryBlock extends AbstractModel
 {
     /**
      * @var BirthPlaceBlock 出生地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthPlace;
 
     /**
      * @var BirthPlaceBlock 居住地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivePlace;
 
     /**
      * @var BirthPlaceBlock 职业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Job;
 
     /**
      * @var SmokeHistoryBlock 吸烟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmokeHistory;
 
     /**
      * @var SmokeHistoryBlock 喝酒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlcoholicHistory;
 
     /**
      * @var MenstrualHistoryBlock 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualHistory;
 
     /**
      * @var ObstetricalHistoryBlock 婚姻-生育史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObstericalHistory;
 
     /**
      * @var FamilyHistoryBlock 家族史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FamilyHistory;
 
     /**
      * @param BirthPlaceBlock $BirthPlace 出生地
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthPlaceBlock $LivePlace 居住地
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthPlaceBlock $Job 职业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmokeHistoryBlock $SmokeHistory 吸烟
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmokeHistoryBlock $AlcoholicHistory 喝酒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualHistoryBlock $MenstrualHistory 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObstetricalHistoryBlock $ObstericalHistory 婚姻-生育史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FamilyHistoryBlock $FamilyHistory 家族史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

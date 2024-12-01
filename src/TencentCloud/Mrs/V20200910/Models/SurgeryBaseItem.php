@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科
  *
  * @method SurgeryHeadNeck getHeadNeck() 获取体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadNeck(SurgeryHeadNeck $HeadNeck) 设置体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryThyroid getThyroid() 获取体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThyroid(SurgeryThyroid $Thyroid) 设置体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryBreast getBreast() 获取体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBreast(SurgeryBreast $Breast) 设置体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryLymphNode getLymphNode() 获取体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLymphNode(SurgeryLymphNode $LymphNode) 设置体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgerySpinalExtremities getSpinalExtremities() 获取体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpinalExtremities(SurgerySpinalExtremities $SpinalExtremities) 设置体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgerySkin getSkin() 获取体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkin(SurgerySkin $Skin) 设置体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAnorectal getAnorectal() 获取体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnorectal(SurgeryAnorectal $Anorectal) 设置体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryUrogenitalSystem getUrogenitalSystem() 获取体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrogenitalSystem(SurgeryUrogenitalSystem $UrogenitalSystem) 设置体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryBriefSummary getBriefSummary() 获取体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(SurgeryBriefSummary $BriefSummary) 设置体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryBaseItem extends AbstractModel
 {
     /**
      * @var SurgeryHeadNeck 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadNeck;
 
     /**
      * @var SurgeryThyroid 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Thyroid;
 
     /**
      * @var SurgeryBreast 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Breast;
 
     /**
      * @var SurgeryLymphNode 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphNode;
 
     /**
      * @var SurgerySpinalExtremities 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpinalExtremities;
 
     /**
      * @var SurgerySkin 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Skin;
 
     /**
      * @var SurgeryAnorectal 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Anorectal;
 
     /**
      * @var SurgeryUrogenitalSystem 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UrogenitalSystem;
 
     /**
      * @var array 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var SurgeryBriefSummary 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param SurgeryHeadNeck $HeadNeck 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryThyroid $Thyroid 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryBreast $Breast 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryLymphNode $LymphNode 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgerySpinalExtremities $SpinalExtremities 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgerySkin $Skin 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAnorectal $Anorectal 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryUrogenitalSystem $UrogenitalSystem 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryBriefSummary $BriefSummary 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

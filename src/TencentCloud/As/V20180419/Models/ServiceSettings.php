@@ -42,6 +42,8 @@ RECREATE：重建实例替代原有不健康实例；
 RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
 默认取值：RECREATE
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoUpdateInstanceTags() 获取自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+ * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) 设置自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
  */
 class ServiceSettings extends AbstractModel
 {
@@ -73,6 +75,11 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     public $ReplaceMode;
 
     /**
+     * @var boolean 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     */
+    public $AutoUpdateInstanceTags;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      * @param string $ScalingMode 取值范围： 
 CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
@@ -84,6 +91,7 @@ RECREATE：重建实例替代原有不健康实例；
 RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
 默认取值：RECREATE
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
 
         if (array_key_exists("ReplaceMode",$param) and $param["ReplaceMode"] !== null) {
             $this->ReplaceMode = $param["ReplaceMode"];
+        }
+
+        if (array_key_exists("AutoUpdateInstanceTags",$param) and $param["AutoUpdateInstanceTags"] !== null) {
+            $this->AutoUpdateInstanceTags = $param["AutoUpdateInstanceTags"];
         }
     }
 }

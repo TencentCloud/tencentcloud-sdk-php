@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科-皮肤
  *
  * @method KeyValueItem getText() 获取皮肤总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置皮肤总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgerySkin extends AbstractModel
 {
     /**
      * @var KeyValueItem 皮肤总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 皮肤总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

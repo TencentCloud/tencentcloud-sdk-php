@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 诊断结论
  *
  * @method BaseInfo getText() 获取诊断结论文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(BaseInfo $Text) 设置诊断结论文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInfos() 获取诊断结论详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfos(array $Infos) 设置诊断结论详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SummaryInfo extends AbstractModel
 {
     /**
      * @var BaseInfo 诊断结论文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 诊断结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Infos;
 
     /**
      * @param BaseInfo $Text 诊断结论文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Infos 诊断结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

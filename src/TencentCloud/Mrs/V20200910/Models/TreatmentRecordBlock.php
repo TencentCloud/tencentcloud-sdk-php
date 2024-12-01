@@ -21,621 +21,417 @@ use TencentCloud\Common\AbstractModel;
  * 治疗记录
  *
  * @method ImmunohistochemistryBlock getImmunohistochemistry() 获取免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImmunohistochemistry(ImmunohistochemistryBlock $Immunohistochemistry) 设置免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ChiefComplaintBlock getChiefComplaint() 获取主诉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChiefComplaint(ChiefComplaintBlock $ChiefComplaint) 设置主诉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdmissionConditionBlock getAdmissionCondition() 获取入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionCondition(AdmissionConditionBlock $AdmissionCondition) 设置入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BodyExaminationBlock getBodyExamination() 获取查体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyExamination(BodyExaminationBlock $BodyExamination) 设置查体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdmissionDiagnosisBlock getAdmissionDiagnosis() 获取入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionDiagnosis(AdmissionDiagnosisBlock $AdmissionDiagnosis) 设置入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdmissionDiagnosisBlock getAdmissionTraditionalDiagnosis() 获取入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionTraditionalDiagnosis(AdmissionDiagnosisBlock $AdmissionTraditionalDiagnosis) 设置入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdmissionDiagnosisBlock getAdmissionModernDiagnosis() 获取入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionModernDiagnosis(AdmissionDiagnosisBlock $AdmissionModernDiagnosis) 设置入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PathologicalDiagnosisBlock getPathologicalDiagnosis() 获取病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathologicalDiagnosis(PathologicalDiagnosisBlock $PathologicalDiagnosis) 设置病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getDiseasePresent() 获取现病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiseasePresent(DiseasePresentBlock $DiseasePresent) 设置现病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getSymptomsAndSigns() 获取体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymptomsAndSigns(DiseasePresentBlock $SymptomsAndSigns) 设置体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getAuxiliaryExamination() 获取辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuxiliaryExamination(DiseasePresentBlock $AuxiliaryExamination) 设置辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getSpecialistExamination() 获取特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecialistExamination(DiseasePresentBlock $SpecialistExamination) 设置特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getMentalExamination() 获取精神检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMentalExamination(DiseasePresentBlock $MentalExamination) 设置精神检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getCheckRecord() 获取检查记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckRecord(DiseasePresentBlock $CheckRecord) 设置检查记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getInspectResult() 获取检查结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInspectResult(DiseasePresentBlock $InspectResult) 设置检查结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getCheckAndTreatmentProcess() 获取治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckAndTreatmentProcess(DiseasePresentBlock $CheckAndTreatmentProcess) 设置治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryConditionBlock getSurgeryCondition() 获取手术经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryCondition(SurgeryConditionBlock $SurgeryCondition) 设置手术经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getIncisionHealing() 获取切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncisionHealing(DiseasePresentBlock $IncisionHealing) 设置切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DischargeDiagnosisBlock getDischargeDiagnosis() 获取出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeDiagnosis(DischargeDiagnosisBlock $DischargeDiagnosis) 设置出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getDischargeTraditionalDiagnosis() 获取出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeTraditionalDiagnosis(DiseasePresentBlock $DischargeTraditionalDiagnosis) 设置出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DischargeDiagnosisBlock getDischargeModernDiagnosis() 获取出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeModernDiagnosis(DischargeDiagnosisBlock $DischargeModernDiagnosis) 设置出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DischargeConditionBlock getDischargeCondition() 获取出院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeCondition(DischargeConditionBlock $DischargeCondition) 设置出院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getDischargeInstructions() 获取出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeInstructions(DiseasePresentBlock $DischargeInstructions) 设置出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getTreatmentSuggestion() 获取治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreatmentSuggestion(DiseasePresentBlock $TreatmentSuggestion) 设置治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getFollowUpRequirements() 获取随访
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFollowUpRequirements(DiseasePresentBlock $FollowUpRequirements) 设置随访
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getConditionChanges() 获取治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionChanges(DiseasePresentBlock $ConditionChanges) 设置治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getPulmonaryArterySystolicPressure() 获取收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPulmonaryArterySystolicPressure(DiseasePresentBlock $PulmonaryArterySystolicPressure) 设置收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getBCLC() 获取bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBCLC(DiseasePresentBlock $BCLC) 设置bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PTNMBlock getPTNM() 获取PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPTNM(PTNMBlock $PTNM) 设置PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getECOG() 获取ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setECOG(DiseasePresentBlock $ECOG) 设置ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getNRS() 获取NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNRS(DiseasePresentBlock $NRS) 设置NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseasePresentBlock getKPS() 获取kps评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKPS(DiseasePresentBlock $KPS) 设置kps评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ClinicalStaging getCancerstaging() 获取癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCancerstaging(ClinicalStaging $Cancerstaging) 设置癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DeathDateBlock getDeathDate() 获取死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeathDate(DeathDateBlock $DeathDate) 设置死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RelapseDateBlock getRelapseDate() 获取复发日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelapseDate(RelapseDateBlock $RelapseDate) 设置复发日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DeathDateBlock getObservationDays() 获取观察日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObservationDays(DeathDateBlock $ObservationDays) 设置观察日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncisionHealingText() 获取切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncisionHealingText(string $IncisionHealingText) 设置切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuxiliaryExaminationText() 获取辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuxiliaryExaminationText(string $AuxiliaryExaminationText) 设置辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecialExamText() 获取特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecialExamText(string $SpecialExamText) 设置特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutpatientDiagnosisText() 获取门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutpatientDiagnosisText(string $OutpatientDiagnosisText) 设置门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionConditionText() 获取入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionConditionText(string $AdmissionConditionText) 设置入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckAndTreatmentProcessText() 获取诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckAndTreatmentProcessText(string $CheckAndTreatmentProcessText) 设置诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSymptomsAndSignsText() 获取体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymptomsAndSignsText(string $SymptomsAndSignsText) 设置体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeInstructionsText() 获取出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeInstructionsText(string $DischargeInstructionsText) 设置出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionDiagnosisText() 获取入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionDiagnosisText(string $AdmissionDiagnosisText) 设置入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSurgeryConditionText() 获取手术情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryConditionText(string $SurgeryConditionText) 设置手术情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPathologicalDiagnosisText() 获取病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathologicalDiagnosisText(string $PathologicalDiagnosisText) 设置病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeConditionText() 获取出院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeConditionText(string $DischargeConditionText) 设置出院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckRecordText() 获取检查记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckRecordText(string $CheckRecordText) 设置检查记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChiefComplaintText() 获取主诉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChiefComplaintText(string $ChiefComplaintText) 设置主诉
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeDiagnosisText() 获取出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeDiagnosisText(string $DischargeDiagnosisText) 设置出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TreatmentRecordBlock extends AbstractModel
 {
     /**
      * @var ImmunohistochemistryBlock 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Immunohistochemistry;
 
     /**
      * @var ChiefComplaintBlock 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChiefComplaint;
 
     /**
      * @var AdmissionConditionBlock 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionCondition;
 
     /**
      * @var BodyExaminationBlock 查体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyExamination;
 
     /**
      * @var AdmissionDiagnosisBlock 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionDiagnosis;
 
     /**
      * @var AdmissionDiagnosisBlock 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionTraditionalDiagnosis;
 
     /**
      * @var AdmissionDiagnosisBlock 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionModernDiagnosis;
 
     /**
      * @var PathologicalDiagnosisBlock 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologicalDiagnosis;
 
     /**
      * @var DiseasePresentBlock 现病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiseasePresent;
 
     /**
      * @var DiseasePresentBlock 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SymptomsAndSigns;
 
     /**
      * @var DiseasePresentBlock 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuxiliaryExamination;
 
     /**
      * @var DiseasePresentBlock 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecialistExamination;
 
     /**
      * @var DiseasePresentBlock 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MentalExamination;
 
     /**
      * @var DiseasePresentBlock 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckRecord;
 
     /**
      * @var DiseasePresentBlock 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InspectResult;
 
     /**
      * @var DiseasePresentBlock 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckAndTreatmentProcess;
 
     /**
      * @var SurgeryConditionBlock 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryCondition;
 
     /**
      * @var DiseasePresentBlock 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncisionHealing;
 
     /**
      * @var DischargeDiagnosisBlock 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeDiagnosis;
 
     /**
      * @var DiseasePresentBlock 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeTraditionalDiagnosis;
 
     /**
      * @var DischargeDiagnosisBlock 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeModernDiagnosis;
 
     /**
      * @var DischargeConditionBlock 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeCondition;
 
     /**
      * @var DiseasePresentBlock 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeInstructions;
 
     /**
      * @var DiseasePresentBlock 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreatmentSuggestion;
 
     /**
      * @var DiseasePresentBlock 随访
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FollowUpRequirements;
 
     /**
      * @var DiseasePresentBlock 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionChanges;
 
     /**
      * @var DiseasePresentBlock 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PulmonaryArterySystolicPressure;
 
     /**
      * @var DiseasePresentBlock bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BCLC;
 
     /**
      * @var PTNMBlock PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNM;
 
     /**
      * @var DiseasePresentBlock ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ECOG;
 
     /**
      * @var DiseasePresentBlock NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NRS;
 
     /**
      * @var DiseasePresentBlock kps评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KPS;
 
     /**
      * @var ClinicalStaging 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cancerstaging;
 
     /**
      * @var DeathDateBlock 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeathDate;
 
     /**
      * @var RelapseDateBlock 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelapseDate;
 
     /**
      * @var DeathDateBlock 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObservationDays;
 
     /**
      * @var string 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncisionHealingText;
 
     /**
      * @var string 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuxiliaryExaminationText;
 
     /**
      * @var string 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecialExamText;
 
     /**
      * @var string 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutpatientDiagnosisText;
 
     /**
      * @var string 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionConditionText;
 
     /**
      * @var string 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckAndTreatmentProcessText;
 
     /**
      * @var string 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SymptomsAndSignsText;
 
     /**
      * @var string 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeInstructionsText;
 
     /**
      * @var string 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionDiagnosisText;
 
     /**
      * @var string 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryConditionText;
 
     /**
      * @var string 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologicalDiagnosisText;
 
     /**
      * @var string 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeConditionText;
 
     /**
      * @var string 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckRecordText;
 
     /**
      * @var string 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChiefComplaintText;
 
     /**
      * @var string 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeDiagnosisText;
 
     /**
      * @param ImmunohistochemistryBlock $Immunohistochemistry 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChiefComplaintBlock $ChiefComplaint 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionConditionBlock $AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyExaminationBlock $BodyExamination 查体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosisBlock $AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosisBlock $AdmissionTraditionalDiagnosis 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosisBlock $AdmissionModernDiagnosis 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologicalDiagnosisBlock $PathologicalDiagnosis 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $DiseasePresent 现病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $SymptomsAndSigns 体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $AuxiliaryExamination 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $SpecialistExamination 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $MentalExamination 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $CheckRecord 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $InspectResult 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $CheckAndTreatmentProcess 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryConditionBlock $SurgeryCondition 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $IncisionHealing 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeDiagnosisBlock $DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $DischargeTraditionalDiagnosis 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeDiagnosisBlock $DischargeModernDiagnosis 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeConditionBlock $DischargeCondition 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $DischargeInstructions 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $TreatmentSuggestion 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $FollowUpRequirements 随访
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $ConditionChanges 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $PulmonaryArterySystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $BCLC bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PTNMBlock $PTNM PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $ECOG ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $NRS NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresentBlock $KPS kps评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClinicalStaging $Cancerstaging 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeathDateBlock $DeathDate 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelapseDateBlock $RelapseDate 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeathDateBlock $ObservationDays 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncisionHealingText 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuxiliaryExaminationText 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecialExamText 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutpatientDiagnosisText 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionConditionText 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckAndTreatmentProcessText 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SymptomsAndSignsText 体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeInstructionsText 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionDiagnosisText 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SurgeryConditionText 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PathologicalDiagnosisText 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeConditionText 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckRecordText 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChiefComplaintText 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeDiagnosisText 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 手术史
  *
  * @method SurgeryAttr getSurgeryName() 获取手术名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryName(SurgeryAttr $SurgeryName) 设置手术名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getSurgeryDate() 获取手术日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryDate(SurgeryAttr $SurgeryDate) 设置手术日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getPreoperativePathology() 获取术前诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreoperativePathology(SurgeryAttr $PreoperativePathology) 设置术前诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getIntraoperativePathology() 获取术中诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntraoperativePathology(SurgeryAttr $IntraoperativePathology) 设置术中诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getPostoperativePathology() 获取术后诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostoperativePathology(SurgeryAttr $PostoperativePathology) 设置术后诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getDischargeDiagnosis() 获取出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeDiagnosis(SurgeryAttr $DischargeDiagnosis) 设置出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgeryHistory extends AbstractModel
 {
     /**
      * @var SurgeryAttr 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryName;
 
     /**
      * @var SurgeryAttr 手术日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryDate;
 
     /**
      * @var SurgeryAttr 术前诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreoperativePathology;
 
     /**
      * @var SurgeryAttr 术中诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntraoperativePathology;
 
     /**
      * @var SurgeryAttr 术后诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostoperativePathology;
 
     /**
      * @var SurgeryAttr 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeDiagnosis;
 
     /**
      * @param SurgeryAttr $SurgeryName 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $SurgeryDate 手术日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $PreoperativePathology 术前诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $IntraoperativePathology 术中诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $PostoperativePathology 术后诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

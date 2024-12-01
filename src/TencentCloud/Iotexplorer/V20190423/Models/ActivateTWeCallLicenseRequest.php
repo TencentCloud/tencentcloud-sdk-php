@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPkgType() 获取TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
  * @method void setPkgType(integer $PkgType) 设置TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
- * @method string getMiniProgramAppId() 获取appId
- * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置appId
+ * @method string getMiniProgramAppId() 获取参数已弃用，不用传参
+ * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置参数已弃用，不用传参
  * @method array getDeviceList() 获取设备列表
  * @method void setDeviceList(array $DeviceList) 设置设备列表
  */
@@ -35,7 +35,8 @@ class ActivateTWeCallLicenseRequest extends AbstractModel
     public $PkgType;
 
     /**
-     * @var string appId
+     * @var string 参数已弃用，不用传参
+     * @deprecated
      */
     public $MiniProgramAppId;
 
@@ -46,7 +47,7 @@ class ActivateTWeCallLicenseRequest extends AbstractModel
 
     /**
      * @param integer $PkgType TWecall类型：1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
-     * @param string $MiniProgramAppId appId
+     * @param string $MiniProgramAppId 参数已弃用，不用传参
      * @param array $DeviceList 设备列表
      */
     function __construct()

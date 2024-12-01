@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 块标题
  *
  * @method string getName() 获取name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取src
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置src
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置value
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlockTitle extends AbstractModel
 {
     /**
      * @var string name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string src
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src src
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

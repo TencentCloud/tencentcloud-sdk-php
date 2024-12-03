@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详情
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceName() 获取ckafka集群实例名称
+ * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例名称
  * @method string getVip() 获取访问实例的vip 信息
  * @method void setVip(string $Vip) 设置访问实例的vip 信息
  * @method string getVport() 获取访问实例的端口信息
  * @method void setVport(string $Vport) 设置访问实例的端口信息
  * @method array getVipList() 获取虚拟IP列表
  * @method void setVipList(array $VipList) 设置虚拟IP列表
- * @method integer getStatus() 获取实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
- * @method void setStatus(integer $Status) 设置实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+ * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+ * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method integer getBandwidth() 获取实例带宽，单位Mbps
  * @method void setBandwidth(integer $Bandwidth) 设置实例带宽，单位Mbps
- * @method integer getDiskSize() 获取实例的存储大小，单位GB
- * @method void setDiskSize(integer $DiskSize) 设置实例的存储大小，单位GB
+ * @method integer getDiskSize() 获取ckafka集群实例磁盘大小，单位G
+ * @method void setDiskSize(integer $DiskSize) 设置ckafka集群实例磁盘大小，单位G
  * @method integer getZoneId() 获取可用区域ID
  * @method void setZoneId(integer $ZoneId) 设置可用区域ID
  * @method string getVpcId() 获取vpcId，如果为空，说明是基础网络
@@ -70,13 +70,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置ckafka售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取ckafka实例类型
+ * @method string getInstanceType() 获取ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置ckafka实例类型
+ * @method void setInstanceType(string $InstanceType) 设置ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskType() 获取磁盘类型
+ * @method string getDiskType() 获取ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置磁盘类型
+ * @method void setDiskType(string $DiskType) 设置ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxTopicNumber() 获取当前规格最大Topic数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,17 +94,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionNumber(integer $PartitionNumber) 设置实例当前partition数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicNetworkChargeType() 获取公网带宽类型
+ * @method string getPublicNetworkChargeType() 获取ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置公网带宽类型
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPublicNetwork() 获取公网带宽值
+ * @method integer getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽值
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterType() 获取实例类型
+ * @method string getClusterType() 获取ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(string $ClusterType) 设置实例类型
+ * @method void setClusterType(string $ClusterType) 设置ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFeatures() 获取实例功能列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,12 +114,12 @@ use TencentCloud\Common\AbstractModel;
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例名称
      */
     public $InstanceName;
 
@@ -139,7 +139,7 @@ class InstanceDetail extends AbstractModel
     public $VipList;
 
     /**
-     * @var integer 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public $Status;
 
@@ -149,7 +149,7 @@ class InstanceDetail extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var integer 实例的存储大小，单位GB
+     * @var integer ckafka集群实例磁盘大小，单位G
      */
     public $DiskSize;
 
@@ -227,13 +227,13 @@ class InstanceDetail extends AbstractModel
     public $Cvm;
 
     /**
-     * @var string ckafka实例类型
+     * @var string ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
-     * @var string 磁盘类型
+     * @var string ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
@@ -263,19 +263,19 @@ class InstanceDetail extends AbstractModel
     public $PartitionNumber;
 
     /**
-     * @var string 公网带宽类型
+     * @var string ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer 公网带宽值
+     * @var integer 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
 
     /**
-     * @var string 实例类型
+     * @var string ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
@@ -287,14 +287,14 @@ class InstanceDetail extends AbstractModel
     public $Features;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $InstanceName 实例名称
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceName ckafka集群实例名称
      * @param string $Vip 访问实例的vip 信息
      * @param string $Vport 访问实例的端口信息
      * @param array $VipList 虚拟IP列表
-     * @param integer $Status 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      * @param integer $Bandwidth 实例带宽，单位Mbps
-     * @param integer $DiskSize 实例的存储大小，单位GB
+     * @param integer $DiskSize ckafka集群实例磁盘大小，单位G
      * @param integer $ZoneId 可用区域ID
      * @param string $VpcId vpcId，如果为空，说明是基础网络
      * @param string $SubnetId 子网id
@@ -312,9 +312,9 @@ class InstanceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cvm ckafka售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType ckafka实例类型
+     * @param string $InstanceType ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskType 磁盘类型
+     * @param string $DiskType ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTopicNumber 当前规格最大Topic数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -324,11 +324,11 @@ class InstanceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNumber 实例当前partition数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicNetworkChargeType 公网带宽类型
+     * @param string $PublicNetworkChargeType ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PublicNetwork 公网带宽值
+     * @param integer $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterType 实例类型
+     * @param string $ClusterType ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Features 实例功能列表
 注意：此字段可能返回 null，表示取不到有效值。

@@ -50,17 +50,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhysical(string $Physical) 设置购买物理独占版配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicNetwork() 获取公网带宽
+ * @method string getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽
+ * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicNetworkLimit() 获取公网带宽配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置公网带宽配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取请求ID
+ * @method string getRequestId() 获取请求Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestId(string $RequestId) 设置请求ID
+ * @method void setRequestId(string $RequestId) 设置请求Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,7 +137,7 @@ class ZoneResponse extends AbstractModel
     public $Physical;
 
     /**
-     * @var string 公网带宽
+     * @var string 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
@@ -149,7 +149,7 @@ class ZoneResponse extends AbstractModel
     public $PublicNetworkLimit;
 
     /**
-     * @var string 请求ID
+     * @var string 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestId;
@@ -194,11 +194,11 @@ class ZoneResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Physical 购买物理独占版配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicNetwork 公网带宽
+     * @param string $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicNetworkLimit 公网带宽配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 请求ID
+     * @param string $RequestId 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本
 注意：此字段可能返回 null，表示取不到有效值。

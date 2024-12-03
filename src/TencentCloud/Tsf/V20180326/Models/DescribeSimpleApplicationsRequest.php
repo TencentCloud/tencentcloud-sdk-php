@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
  * @method boolean getDisableProgramAuthCheck() 获取无
  * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
+ * @method array getMicroserviceTypeList() 获取查询指定微服务类型的应用列表
+ * @method void setMicroserviceTypeList(array $MicroserviceTypeList) 设置查询指定微服务类型的应用列表
  */
 class DescribeSimpleApplicationsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $DisableProgramAuthCheck;
 
     /**
+     * @var array 查询指定微服务类型的应用列表
+     */
+    public $MicroserviceTypeList;
+
+    /**
      * @param array $ApplicationIdList 应用ID列表
      * @param string $ApplicationType 应用类型
      * @param integer $Limit 每页条数
@@ -88,6 +95,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @param array $ApplicationResourceTypeList 资源类型数组
      * @param string $SearchWord 通过id和name进行关键词过滤
      * @param boolean $DisableProgramAuthCheck 无
+     * @param array $MicroserviceTypeList 查询指定微服务类型的应用列表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
 
         if (array_key_exists("DisableProgramAuthCheck",$param) and $param["DisableProgramAuthCheck"] !== null) {
             $this->DisableProgramAuthCheck = $param["DisableProgramAuthCheck"];
+        }
+
+        if (array_key_exists("MicroserviceTypeList",$param) and $param["MicroserviceTypeList"] !== null) {
+            $this->MicroserviceTypeList = $param["MicroserviceTypeList"];
         }
     }
 }

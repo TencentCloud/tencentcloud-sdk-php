@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub任务信息
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务Id
+ * @method void setTaskId(string $TaskId) 设置任务Id
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getTaskType() 获取任务类型，SOURCE数据接入，SINK数据流出
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class DatahubTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务Id
      */
     public $TaskId;
 
@@ -132,7 +132,7 @@ class DatahubTaskInfo extends AbstractModel
     public $StepList;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务Id
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
      * @param integer $Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败

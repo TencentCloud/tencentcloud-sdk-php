@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息，HTTPS协议必穿
  * @method WafConf getWafConfig() 获取web 应用防火墙配置
  * @method void setWafConfig(WafConf $WafConfig) 设置web 应用防火墙配置
- * @method array getEndpointsConfig() 获取	路由配置
- * @method void setEndpointsConfig(array $EndpointsConfig) 设置	路由配置
+ * @method array getEndpointsConfig() 获取路由配置
+ * @method void setEndpointsConfig(array $EndpointsConfig) 设置路由配置
  */
 class UpdateCustomDomainRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class UpdateCustomDomainRequest extends AbstractModel
     public $WafConfig;
 
     /**
-     * @var array 	路由配置
+     * @var array 路由配置
      */
     public $EndpointsConfig;
 
@@ -63,7 +63,7 @@ class UpdateCustomDomainRequest extends AbstractModel
      * @param string $Protocol 协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
      * @param CertConf $CertConfig 证书配置信息，HTTPS协议必穿
      * @param WafConf $WafConfig web 应用防火墙配置
-     * @param array $EndpointsConfig 	路由配置
+     * @param array $EndpointsConfig 路由配置
      */
     function __construct()
     {

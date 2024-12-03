@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取视频智能识别模板 ID 。
  * @method void setDefinition(integer $Definition) 设置视频智能识别模板 ID 。
+ * @method string getUserExtPara() 获取用户扩展字段，一般场景不用填。
+ * @method void setUserExtPara(string $UserExtPara) 设置用户扩展字段，一般场景不用填。
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AiRecognitionTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var string 用户扩展字段，一般场景不用填。
+     */
+    public $UserExtPara;
+
+    /**
      * @param integer $Definition 视频智能识别模板 ID 。
+     * @param string $UserExtPara 用户扩展字段，一般场景不用填。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiRecognitionTaskInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("UserExtPara",$param) and $param["UserExtPara"] !== null) {
+            $this->UserExtPara = $param["UserExtPara"];
         }
     }
 }

@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeed(integer $Seed) 设置随机种子，默认随机。
 不传：随机种子生成。
 正数：固定种子生成。
+ * @method string getClarity() 获取超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+ * @method void setClarity(string $Clarity) 设置超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
  * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -115,6 +121,13 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
     public $Seed;
 
     /**
+     * @var string 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+     */
+    public $Clarity;
+
+    /**
      * @var integer prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -153,6 +166,9 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
      * @param integer $Seed 随机种子，默认随机。
 不传：随机种子生成。
 正数：固定种子生成。
+     * @param string $Clarity 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
      * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -200,6 +216,10 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
             $this->Seed = $param["Seed"];
+        }
+
+        if (array_key_exists("Clarity",$param) and $param["Clarity"] !== null) {
+            $this->Clarity = $param["Clarity"];
         }
 
         if (array_key_exists("Revise",$param) and $param["Revise"] !== null) {

@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置忽略创建镜像仓库
  * @method array getProgramIdList() 获取无
  * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method string getApmInstanceId() 获取apm业务系统id
+ * @method void setApmInstanceId(string $ApmInstanceId) 设置apm业务系统id
+ * @method string getProgramLanguage() 获取编程语言
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言
+ * @method string getFrameworkType() 获取开发框架
+ * @method void setFrameworkType(string $FrameworkType) 设置开发框架
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理
+ * @method boolean getCreateSameNameImageRepository() 获取是否创建并关联同名镜像仓库
+ * @method void setCreateSameNameImageRepository(boolean $CreateSameNameImageRepository) 设置是否创建并关联同名镜像仓库
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -101,6 +111,31 @@ class CreateApplicationRequest extends AbstractModel
     public $ProgramIdList;
 
     /**
+     * @var string apm业务系统id
+     */
+    public $ApmInstanceId;
+
+    /**
+     * @var string 编程语言
+     */
+    public $ProgramLanguage;
+
+    /**
+     * @var string 开发框架
+     */
+    public $FrameworkType;
+
+    /**
+     * @var ServiceGovernanceConfig 注册配置治理
+     */
+    public $ServiceGovernanceConfig;
+
+    /**
+     * @var boolean 是否创建并关联同名镜像仓库
+     */
+    public $CreateSameNameImageRepository;
+
+    /**
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
@@ -112,6 +147,11 @@ class CreateApplicationRequest extends AbstractModel
      * @param array $ServiceConfigList 服务配置信息列表
      * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
      * @param array $ProgramIdList 无
+     * @param string $ApmInstanceId apm业务系统id
+     * @param string $ProgramLanguage 编程语言
+     * @param string $FrameworkType 开发框架
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理
+     * @param boolean $CreateSameNameImageRepository 是否创建并关联同名镜像仓库
      */
     function __construct()
     {
@@ -173,6 +213,27 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
             $this->ProgramIdList = $param["ProgramIdList"];
+        }
+
+        if (array_key_exists("ApmInstanceId",$param) and $param["ApmInstanceId"] !== null) {
+            $this->ApmInstanceId = $param["ApmInstanceId"];
+        }
+
+        if (array_key_exists("ProgramLanguage",$param) and $param["ProgramLanguage"] !== null) {
+            $this->ProgramLanguage = $param["ProgramLanguage"];
+        }
+
+        if (array_key_exists("FrameworkType",$param) and $param["FrameworkType"] !== null) {
+            $this->FrameworkType = $param["FrameworkType"];
+        }
+
+        if (array_key_exists("ServiceGovernanceConfig",$param) and $param["ServiceGovernanceConfig"] !== null) {
+            $this->ServiceGovernanceConfig = new ServiceGovernanceConfig();
+            $this->ServiceGovernanceConfig->deserialize($param["ServiceGovernanceConfig"]);
+        }
+
+        if (array_key_exists("CreateSameNameImageRepository",$param) and $param["CreateSameNameImageRepository"] !== null) {
+            $this->CreateSameNameImageRepository = $param["CreateSameNameImageRepository"];
         }
     }
 }

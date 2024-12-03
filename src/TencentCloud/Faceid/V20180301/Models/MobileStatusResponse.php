@@ -45,7 +45,6 @@ use TencentCloud\Common\AbstractModel;
 0：正常。
 1：停机。
 2：销号。
-3：空号。
 4：不在网。
 99：未知状态。
  * @method void setStatusCode(integer $StatusCode) 设置状态码。
@@ -53,7 +52,6 @@ use TencentCloud\Common\AbstractModel;
 0：正常。
 1：停机。
 2：销号。
-3：空号。
 4：不在网。
 99：未知状态。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -85,7 +83,6 @@ class MobileStatusResponse extends AbstractModel
 0：正常。
 1：停机。
 2：销号。
-3：空号。
 4：不在网。
 99：未知状态。
      */
@@ -112,7 +109,6 @@ class MobileStatusResponse extends AbstractModel
 0：正常。
 1：停机。
 2：销号。
-3：空号。
 4：不在网。
 99：未知状态。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

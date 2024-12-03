@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
  * @method array getPodNameList() 获取过滤字段
  * @method void setPodNameList(array $PodNameList) 设置过滤字段
+ * @method string getDeployVersion() 获取新老版本pod批次标识
+ * @method void setDeployVersion(string $DeployVersion) 设置新老版本pod批次标识
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  */
 class DescribePodInstancesRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribePodInstancesRequest extends AbstractModel
     public $PodNameList;
 
     /**
+     * @var string 新老版本pod批次标识
+     */
+    public $DeployVersion;
+
+    /**
+     * @var string 任务ID
+     */
+    public $TaskId;
+
+    /**
      * @param string $GroupId 实例所属groupId
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
      * @param array $PodNameList 过滤字段
+     * @param string $DeployVersion 新老版本pod批次标识
+     * @param string $TaskId 任务ID
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribePodInstancesRequest extends AbstractModel
 
         if (array_key_exists("PodNameList",$param) and $param["PodNameList"] !== null) {
             $this->PodNameList = $param["PodNameList"];
+        }
+
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

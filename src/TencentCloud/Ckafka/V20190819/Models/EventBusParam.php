@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EventBus配置
  *
- * @method string getType() 获取资源类型。EB_COS/EB_ES/EB_CLS
- * @method void setType(string $Type) 设置资源类型。EB_COS/EB_ES/EB_CLS
+ * @method string getType() 获取资源类型。COS/ES/CLS
+ * @method void setType(string $Type) 设置资源类型。COS/ES/CLS
  * @method boolean getSelfBuilt() 获取是否为自建集群
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
  * @method string getResource() 获取实例资源
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class EventBusParam extends AbstractModel
 {
     /**
-     * @var string 资源类型。EB_COS/EB_ES/EB_CLS
+     * @var string 资源类型。COS/ES/CLS
      */
     public $Type;
 
@@ -66,7 +66,7 @@ class EventBusParam extends AbstractModel
     public $Qualifier;
 
     /**
-     * @param string $Type 资源类型。EB_COS/EB_ES/EB_CLS
+     * @param string $Type 资源类型。COS/ES/CLS
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource 实例资源
      * @param string $Namespace SCF云函数命名空间

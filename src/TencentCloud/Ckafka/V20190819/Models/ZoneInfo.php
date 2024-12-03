@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * zone信息实体
  *
- * @method string getZoneId() 获取zone的id
- * @method void setZoneId(string $ZoneId) 设置zone的id
+ * @method string getZoneId() 获取可用区
+ * @method void setZoneId(string $ZoneId) 设置可用区
  * @method integer getIsInternalApp() 获取是否内部APP
  * @method void setIsInternalApp(integer $IsInternalApp) 设置是否内部APP
- * @method integer getAppId() 获取app id
- * @method void setAppId(integer $AppId) 设置app id
+ * @method integer getAppId() 获取应用标识
+ * @method void setAppId(integer $AppId) 设置应用标识
  * @method boolean getFlag() 获取标识
  * @method void setFlag(boolean $Flag) 设置标识
- * @method string getZoneName() 获取zone名称
- * @method void setZoneName(string $ZoneName) 设置zone名称
- * @method integer getZoneStatus() 获取zone状态
- * @method void setZoneStatus(integer $ZoneStatus) 设置zone状态
+ * @method string getZoneName() 获取可用区名称
+ * @method void setZoneName(string $ZoneName) 设置可用区名称
+ * @method integer getZoneStatus() 获取可用区状态
+ * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态
  * @method string getExflag() 获取额外标识
  * @method void setExflag(string $Exflag) 设置额外标识
- * @method string getSoldOut() 获取json对象，key为机型，value true为售罄，false为未售罄
- * @method void setSoldOut(string $SoldOut) 设置json对象，key为机型，value true为售罄，false为未售罄
+ * @method string getSoldOut() 获取true为售罄，false为未售罄
+ * @method void setSoldOut(string $SoldOut) 设置true为售罄，false为未售罄
  * @method array getSalesInfo() 获取标准版售罄信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesInfo(array $SalesInfo) 设置标准版售罄信息
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string zone的id
+     * @var string 可用区
      */
     public $ZoneId;
 
@@ -56,7 +56,7 @@ class ZoneInfo extends AbstractModel
     public $IsInternalApp;
 
     /**
-     * @var integer app id
+     * @var integer 应用标识
      */
     public $AppId;
 
@@ -66,12 +66,12 @@ class ZoneInfo extends AbstractModel
     public $Flag;
 
     /**
-     * @var string zone名称
+     * @var string 可用区名称
      */
     public $ZoneName;
 
     /**
-     * @var integer zone状态
+     * @var integer 可用区状态
      */
     public $ZoneStatus;
 
@@ -82,7 +82,7 @@ class ZoneInfo extends AbstractModel
     public $Exflag;
 
     /**
-     * @var string json对象，key为机型，value true为售罄，false为未售罄
+     * @var string true为售罄，false为未售罄
      */
     public $SoldOut;
 
@@ -98,14 +98,14 @@ class ZoneInfo extends AbstractModel
     public $ExtraFlag;
 
     /**
-     * @param string $ZoneId zone的id
+     * @param string $ZoneId 可用区
      * @param integer $IsInternalApp 是否内部APP
-     * @param integer $AppId app id
+     * @param integer $AppId 应用标识
      * @param boolean $Flag 标识
-     * @param string $ZoneName zone名称
-     * @param integer $ZoneStatus zone状态
+     * @param string $ZoneName 可用区名称
+     * @param integer $ZoneStatus 可用区状态
      * @param string $Exflag 额外标识
-     * @param string $SoldOut json对象，key为机型，value true为售罄，false为未售罄
+     * @param string $SoldOut true为售罄，false为未售罄
      * @param array $SalesInfo 标准版售罄信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraFlag 额外标识

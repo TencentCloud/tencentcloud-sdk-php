@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分区详情
  *
- * @method integer getPartition() 获取Partition ID
- * @method void setPartition(integer $Partition) 设置Partition ID
+ * @method integer getPartition() 获取Partition 分区ID
+ * @method void setPartition(integer $Partition) 设置Partition 分区ID
  * @method integer getLeaderStatus() 获取Leader 运行状态
  * @method void setLeaderStatus(integer $LeaderStatus) 设置Leader 运行状态
  * @method integer getIsrNum() 获取ISR 个数
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class TopicPartitionDO extends AbstractModel
 {
     /**
-     * @var integer Partition ID
+     * @var integer Partition 分区ID
      */
     public $Partition;
 
@@ -52,7 +52,7 @@ class TopicPartitionDO extends AbstractModel
     public $ReplicaNum;
 
     /**
-     * @param integer $Partition Partition ID
+     * @param integer $Partition Partition 分区ID
      * @param integer $LeaderStatus Leader 运行状态
      * @param integer $IsrNum ISR 个数
      * @param integer $ReplicaNum 副本个数

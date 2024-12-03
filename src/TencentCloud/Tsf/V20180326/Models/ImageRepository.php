@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublic(integer $Public) 设置是否公共,1:公有,0:私有
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateMode() 获取创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateMode(string $CreateMode) 设置创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepoName() 获取仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepoName(string $RepoName) 设置仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepository extends AbstractModel
 {
@@ -194,6 +202,18 @@ class ImageRepository extends AbstractModel
     public $Public;
 
     /**
+     * @var string 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateMode;
+
+    /**
+     * @var string 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepoName;
+
+    /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Repotype 仓库类型
@@ -227,6 +247,10 @@ class ImageRepository extends AbstractModel
      * @param string $ApplicationNameReal ApplicationName值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Public 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateMode 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoName 仓库名，等同reponame字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -310,6 +334,14 @@ class ImageRepository extends AbstractModel
 
         if (array_key_exists("Public",$param) and $param["Public"] !== null) {
             $this->Public = $param["Public"];
+        }
+
+        if (array_key_exists("CreateMode",$param) and $param["CreateMode"] !== null) {
+            $this->CreateMode = $param["CreateMode"];
+        }
+
+        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
+            $this->RepoName = $param["RepoName"];
         }
     }
 }

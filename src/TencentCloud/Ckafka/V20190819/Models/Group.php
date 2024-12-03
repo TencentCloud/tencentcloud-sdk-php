@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 组实体
  *
- * @method string getGroupName() 获取组名称
- * @method void setGroupName(string $GroupName) 设置组名称
+ * @method string getGroupName() 获取消费分组名称
+ * @method void setGroupName(string $GroupName) 设置消费分组名称
  */
 class Group extends AbstractModel
 {
     /**
-     * @var string 组名称
+     * @var string 消费分组名称
      */
     public $GroupName;
 
     /**
-     * @param string $GroupName 组名称
+     * @param string $GroupName 消费分组名称
      */
     function __construct()
     {

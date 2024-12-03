@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getSelfBuilt() 获取是否为自建集群
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
- * @method string getResource() 获取实例资源
- * @method void setResource(string $Resource) 设置实例资源
- * @method string getTopic() 获取Topic名称，多个以“,”分隔
- * @method void setTopic(string $Topic) 设置Topic名称，多个以“,”分隔
+ * @method string getResource() 获取ckafka集群实例Id
+ * @method void setResource(string $Resource) 设置ckafka集群实例Id
+ * @method string getTopic() 获取主题名，多个以“,”分隔
+ * @method void setTopic(string $Topic) 设置主题名，多个以“,”分隔
  * @method string getOffsetType() 获取Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetType(string $OffsetType) 设置Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置实例资源名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取Zone ID
+ * @method integer getZoneId() 获取可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置Zone ID
+ * @method void setZoneId(integer $ZoneId) 设置可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取Topic的Id
+ * @method string getTopicId() 获取主题Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置Topic的Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionNum() 获取Topic的分区数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,12 +95,12 @@ class KafkaParam extends AbstractModel
     public $SelfBuilt;
 
     /**
-     * @var string 实例资源
+     * @var string ckafka集群实例Id
      */
     public $Resource;
 
     /**
-     * @var string Topic名称，多个以“,”分隔
+     * @var string 主题名，多个以“,”分隔
      */
     public $Topic;
 
@@ -123,13 +123,13 @@ class KafkaParam extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var integer Zone ID
+     * @var integer 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var string Topic的Id
+     * @var string 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
@@ -196,17 +196,17 @@ class KafkaParam extends AbstractModel
 
     /**
      * @param boolean $SelfBuilt 是否为自建集群
-     * @param string $Resource 实例资源
-     * @param string $Topic Topic名称，多个以“,”分隔
+     * @param string $Resource ckafka集群实例Id
+     * @param string $Topic 主题名，多个以“,”分隔
      * @param string $OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 实例资源名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId Zone ID
+     * @param integer $ZoneId 可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId Topic的Id
+     * @param string $TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNum Topic的分区数
 注意：此字段可能返回 null，表示取不到有效值。

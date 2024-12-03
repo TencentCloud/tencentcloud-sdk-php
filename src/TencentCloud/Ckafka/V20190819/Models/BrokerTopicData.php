@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取主题ID
+ * @method string getTopicId() 获取主题Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置主题ID
+ * @method void setTopicId(string $TopicId) 设置主题Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataSize() 获取主题占用Broker 容量大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class BrokerTopicData extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 主题ID
+     * @var string 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
@@ -56,7 +56,7 @@ class BrokerTopicData extends AbstractModel
     /**
      * @param string $TopicName 主题名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId 主题ID
+     * @param string $TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataSize 主题占用Broker 容量大小
 注意：此字段可能返回 null，表示取不到有效值。

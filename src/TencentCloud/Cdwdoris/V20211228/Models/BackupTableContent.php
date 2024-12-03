@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupErrorMsg(string $BackupErrorMsg) 设置备份的错误信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsOpenCoolDown() 获取改库表是否绑定降冷策略
+ * @method boolean getIsOpenCoolDown() 获取该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsOpenCoolDown(boolean $IsOpenCoolDown) 设置改库表是否绑定降冷策略
+ * @method void setIsOpenCoolDown(boolean $IsOpenCoolDown) 设置该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupTableContent extends AbstractModel
@@ -88,7 +88,7 @@ class BackupTableContent extends AbstractModel
     public $BackupErrorMsg;
 
     /**
-     * @var boolean 改库表是否绑定降冷策略
+     * @var boolean 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOpenCoolDown;
@@ -106,7 +106,7 @@ class BackupTableContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupErrorMsg 备份的错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsOpenCoolDown 改库表是否绑定降冷策略
+     * @param boolean $IsOpenCoolDown 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

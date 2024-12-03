@@ -20,16 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitImageAnimateJob请求参数结构体
  *
- * @method string getImageUrl() 获取图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+ * @method string getImageUrl() 获取图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
- * @method void setImageUrl(string $ImageUrl) 设置图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+ * @method void setImageUrl(string $ImageUrl) 设置图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
- * @method string getImageBase64() 获取图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
- * @method void setImageBase64(string $ImageBase64) 设置图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+ * @method string getImageBase64() 获取图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+ * @method void setImageBase64(string $ImageBase64) 设置图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
  * @method string getTemplateId() 获取动作模板ID。取值说明：ke3 科目三；tuziwu 兔子舞；huajiangwu 划桨舞。
 
  * @method void setTemplateId(string $TemplateId) 设置动作模板ID。取值说明：ke3 科目三；tuziwu 兔子舞；huajiangwu 划桨舞。
@@ -38,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAudio(boolean $EnableAudio) 设置结果视频是否保留模板音频。默认为true
  * @method boolean getEnableBodyJoins() 获取是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
  * @method void setEnableBodyJoins(boolean $EnableBodyJoins) 设置是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
- * @method boolean getEnableSegment() 获取最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+ * @method boolean getEnableSegment() 获取最终视频是否保留原图的背景，默认不保留。
 
- * @method void setEnableSegment(boolean $EnableSegment) 设置最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+ * @method void setEnableSegment(boolean $EnableSegment) 设置最终视频是否保留原图的背景，默认不保留。
 
  * @method integer getLogoAdd() 获取为生成视频添加标识的开关，默认为0。
 1：添加标识。
@@ -60,15 +68,19 @@ use TencentCloud\Common\AbstractModel;
 class SubmitImageAnimateJobRequest extends AbstractModel
 {
     /**
-     * @var string 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * @var string 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
     public $ImageUrl;
 
     /**
-     * @var string 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+     * @var string 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
     public $ImageBase64;
 
@@ -89,7 +101,7 @@ class SubmitImageAnimateJobRequest extends AbstractModel
     public $EnableBodyJoins;
 
     /**
-     * @var boolean 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * @var boolean 最终视频是否保留原图的背景，默认不保留。
 
      */
     public $EnableSegment;
@@ -110,16 +122,20 @@ class SubmitImageAnimateJobRequest extends AbstractModel
     public $LogoParam;
 
     /**
-     * @param string $ImageUrl 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * @param string $ImageUrl 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
-     * @param string $ImageBase64 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+     * @param string $ImageBase64 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      * @param string $TemplateId 动作模板ID。取值说明：ke3 科目三；tuziwu 兔子舞；huajiangwu 划桨舞。
 
      * @param boolean $EnableAudio 结果视频是否保留模板音频。默认为true
      * @param boolean $EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
-     * @param boolean $EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * @param boolean $EnableSegment 最终视频是否保留原图的背景，默认不保留。
 
      * @param integer $LogoAdd 为生成视频添加标识的开关，默认为0。
 1：添加标识。

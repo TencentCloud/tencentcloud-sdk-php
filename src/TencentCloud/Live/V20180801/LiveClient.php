@@ -194,6 +194,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(Models\DescribeLiveDomainRefererRequest $req) 查询直播域名 Referer 黑白名单配置。
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 WebRTC 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息。
+ * @method Models\DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoList(Models\DescribeLiveEnhanceInfoListRequest $req) 查询直播增强用量明细信息。
  * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) 获取禁推流列表。
 
 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
@@ -225,7 +226,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 注意：
 1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
 2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
-
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) 返回已经推过流的流列表。<br>
 注意：分页最多支持查询1万条记录，可通过调整查询时间范围来获取更多数据。
  * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。

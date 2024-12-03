@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
  * @method integer getReplicaNum() 获取副本数
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
- * @method string getTopicTraffic() 获取Topic 流量
- * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量
+ * @method string getTopicTraffic() 获取Topic 流量,单位MB(设置date时以sum方式聚合)
+ * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量,单位MB(设置date时以sum方式聚合)
  * @method integer getMessageHeap() 获取Topic 消息堆积
  * @method void setMessageHeap(integer $MessageHeap) 设置Topic 消息堆积
  */
@@ -56,7 +56,7 @@ class TopicFlowRanking extends AbstractModel
     public $ReplicaNum;
 
     /**
-     * @var string Topic 流量
+     * @var string Topic 流量,单位MB(设置date时以sum方式聚合)
      */
     public $TopicTraffic;
 
@@ -70,7 +70,7 @@ class TopicFlowRanking extends AbstractModel
      * @param string $TopicName 主题名称
      * @param integer $PartitionNum 分区数
      * @param integer $ReplicaNum 副本数
-     * @param string $TopicTraffic Topic 流量
+     * @param string $TopicTraffic Topic 流量,单位MB(设置date时以sum方式聚合)
      * @param integer $MessageHeap Topic 消息堆积
      */
     function __construct()

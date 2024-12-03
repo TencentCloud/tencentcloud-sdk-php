@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
  * @method string getGroupId() 获取当类型是 instance 时需要
  * @method void setGroupId(string $GroupId) 设置当类型是 instance 时需要
+ * @method string getKind() 获取event的资源kind
+ * @method void setKind(string $Kind) 设置event的资源kind
+ * @method string getType() 获取event 的type
+ * @method void setType(string $Type) 设置event 的type
+ * @method string getResourceName() 获取资源名称
+ * @method void setResourceName(string $ResourceName) 设置资源名称
+ * @method string getSearchWord() 获取关键词查询
+ * @method void setSearchWord(string $SearchWord) 设置关键词查询
  */
 class DescribeContainerEventsRequest extends AbstractModel
 {
@@ -59,11 +67,35 @@ class DescribeContainerEventsRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string event的资源kind
+     */
+    public $Kind;
+
+    /**
+     * @var string event 的type
+     */
+    public $Type;
+
+    /**
+     * @var string 资源名称
+     */
+    public $ResourceName;
+
+    /**
+     * @var string 关键词查询
+     */
+    public $SearchWord;
+
+    /**
      * @param string $ResourceType event 的资源类型, group 或者 instance
      * @param string $ResourceId event 的资源 id
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
      * @param string $GroupId 当类型是 instance 时需要
+     * @param string $Kind event的资源kind
+     * @param string $Type event 的type
+     * @param string $ResourceName 资源名称
+     * @param string $SearchWord 关键词查询
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class DescribeContainerEventsRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
+            $this->Kind = $param["Kind"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
     }
 }

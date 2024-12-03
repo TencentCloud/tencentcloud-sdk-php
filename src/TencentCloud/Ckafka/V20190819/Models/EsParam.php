@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Es类型入参
  *
- * @method string getResource() 获取实例资源
+ * @method string getResource() 获取Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResource(string $Resource) 设置实例资源
+ * @method void setResource(string $Resource) 设置Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取Es的连接port
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ use TencentCloud\Common\AbstractModel;
 class EsParam extends AbstractModel
 {
     /**
-     * @var string 实例资源
+     * @var string Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
@@ -224,7 +224,7 @@ class EsParam extends AbstractModel
     public $RecordMappingMode;
 
     /**
-     * @param string $Resource 实例资源
+     * @param string $Resource Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port Es的连接port
 注意：此字段可能返回 null，表示取不到有效值。

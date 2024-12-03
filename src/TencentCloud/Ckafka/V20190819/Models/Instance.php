@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例对象
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getStatus() 获取实例的状态。0：创建中，1：运行中，2：删除中 ， 5 隔离中，-1 创建失败
- * @method void setStatus(integer $Status) 设置实例的状态。0：创建中，1：运行中，2：删除中 ， 5 隔离中，-1 创建失败
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceName() 获取ckafka集群实例Name
+ * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name
+ * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+ * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method boolean getIfCommunity() 获取是否开源实例。开源：true，不开源：false
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfCommunity(boolean $IfCommunity) 设置是否开源实例。开源：true，不开源：false
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class Instance extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例Name
      */
     public $InstanceName;
 
     /**
-     * @var integer 实例的状态。0：创建中，1：运行中，2：删除中 ， 5 隔离中，-1 创建失败
+     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public $Status;
 
@@ -55,9 +55,9 @@ class Instance extends AbstractModel
     public $IfCommunity;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $InstanceName 实例名称
-     * @param integer $Status 实例的状态。0：创建中，1：运行中，2：删除中 ， 5 隔离中，-1 创建失败
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceName ckafka集群实例Name
+     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      * @param boolean $IfCommunity 是否开源实例。开源：true，不开源：false
 注意：此字段可能返回 null，表示取不到有效值。
      */

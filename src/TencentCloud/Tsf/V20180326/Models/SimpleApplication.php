@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置ApplicationRuntimeType
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAmpInstanceId() 获取Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAmpInstanceId(string $AmpInstanceId) 设置Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApmInstanceName() 获取Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApmInstanceName(string $ApmInstanceName) 设置Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SimpleApplication extends AbstractModel
 {
@@ -134,6 +142,18 @@ class SimpleApplication extends AbstractModel
     public $ApplicationRuntimeType;
 
     /**
+     * @var string Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AmpInstanceId;
+
+    /**
+     * @var string Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApmInstanceName;
+
+    /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
@@ -155,6 +175,10 @@ class SimpleApplication extends AbstractModel
      * @param string $ApigatewayServiceId ApigatewayServiceId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationRuntimeType ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AmpInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApmInstanceName Apm业务系统Name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +236,14 @@ class SimpleApplication extends AbstractModel
 
         if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
             $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
+        }
+
+        if (array_key_exists("AmpInstanceId",$param) and $param["AmpInstanceId"] !== null) {
+            $this->AmpInstanceId = $param["AmpInstanceId"];
+        }
+
+        if (array_key_exists("ApmInstanceName",$param) and $param["ApmInstanceName"] !== null) {
+            $this->ApmInstanceName = $param["ApmInstanceName"];
         }
     }
 }

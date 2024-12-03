@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置识别文本。
  * @method string getTrans() 获取翻译文本。
  * @method void setTrans(string $Trans) 设置翻译文本。
+ * @method array getWordlist() 获取字词时间戳信息。
+ * @method void setWordlist(array $Wordlist) 设置字词时间戳信息。
  */
 class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
     public $Trans;
 
     /**
+     * @var array 字词时间戳信息。
+     */
+    public $Wordlist;
+
+    /**
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      * @param string $Text 识别文本。
      * @param string $Trans 翻译文本。
+     * @param array $Wordlist 字词时间戳信息。
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
 
         if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
             $this->Trans = $param["Trans"];
+        }
+
+        if (array_key_exists("Wordlist",$param) and $param["Wordlist"] !== null) {
+            $this->Wordlist = [];
+            foreach ($param["Wordlist"] as $key => $value){
+                $obj = new WordResult();
+                $obj->deserialize($value);
+                array_push($this->Wordlist, $obj);
+            }
         }
     }
 }

@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionCodeV3(string $RegionCodeV3) 设置地域代码（V3版本）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSupport() 获取NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+ * @method string getSupport() 获取NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupport(string $Support) 设置NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+ * @method void setSupport(string $Support) 设置NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv6() 获取是否支持ipv6, 0：表示不支持，1：表示支持
 注意：此字段可能返回 null，表示取不到有效值。
@@ -77,7 +77,7 @@ class Region extends AbstractModel
     public $RegionCodeV3;
 
     /**
-     * @var string NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * @var string NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Support;
@@ -102,7 +102,7 @@ class Region extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionCodeV3 地域代码（V3版本）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Support NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * @param string $Support NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv6 是否支持ipv6, 0：表示不支持，1：表示支持
 注意：此字段可能返回 null，表示取不到有效值。

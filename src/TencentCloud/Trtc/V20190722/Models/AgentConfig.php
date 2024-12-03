@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInterruptMode(integer $InterruptMode) 设置智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
  * @method integer getInterruptSpeechDuration() 获取InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
  * @method void setInterruptSpeechDuration(integer $InterruptSpeechDuration) 设置InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+ * @method integer getTurnDetectionMode() 获取控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+ * @method void setTurnDetectionMode(integer $TurnDetectionMode) 设置控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
  */
 class AgentConfig extends AbstractModel
 {
@@ -73,6 +79,13 @@ class AgentConfig extends AbstractModel
     public $InterruptSpeechDuration;
 
     /**
+     * @var integer 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+     */
+    public $TurnDetectionMode;
+
+    /**
      * @param string $UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      * @param string $UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      * @param string $TargetUserId 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
@@ -80,6 +93,9 @@ class AgentConfig extends AbstractModel
      * @param string $WelcomeMessage 机器人的欢迎语
      * @param integer $InterruptMode 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
      * @param integer $InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+     * @param integer $TurnDetectionMode 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
      */
     function __construct()
     {
@@ -120,6 +136,10 @@ class AgentConfig extends AbstractModel
 
         if (array_key_exists("InterruptSpeechDuration",$param) and $param["InterruptSpeechDuration"] !== null) {
             $this->InterruptSpeechDuration = $param["InterruptSpeechDuration"];
+        }
+
+        if (array_key_exists("TurnDetectionMode",$param) and $param["TurnDetectionMode"] !== null) {
+            $this->TurnDetectionMode = $param["TurnDetectionMode"];
         }
     }
 }

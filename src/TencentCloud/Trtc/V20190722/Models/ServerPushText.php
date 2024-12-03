@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInterrupt(boolean $Interrupt) 设置是否允许该文本打断机器人说话
  * @method boolean getStopAfterPlay() 获取播报完文本后，是否自动关闭对话任务
  * @method void setStopAfterPlay(boolean $StopAfterPlay) 设置播报完文本后，是否自动关闭对话任务
+ * @method string getAudio() 获取服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+ * @method void setAudio(string $Audio) 设置服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
  */
 class ServerPushText extends AbstractModel
 {
@@ -45,9 +51,19 @@ class ServerPushText extends AbstractModel
     public $StopAfterPlay;
 
     /**
+     * @var string 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+     */
+    public $Audio;
+
+    /**
      * @param string $Text 服务端推送播报文本
      * @param boolean $Interrupt 是否允许该文本打断机器人说话
      * @param boolean $StopAfterPlay 播报完文本后，是否自动关闭对话任务
+     * @param string $Audio 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class ServerPushText extends AbstractModel
 
         if (array_key_exists("StopAfterPlay",$param) and $param["StopAfterPlay"] !== null) {
             $this->StopAfterPlay = $param["StopAfterPlay"];
+        }
+
+        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
+            $this->Audio = $param["Audio"];
         }
     }
 }

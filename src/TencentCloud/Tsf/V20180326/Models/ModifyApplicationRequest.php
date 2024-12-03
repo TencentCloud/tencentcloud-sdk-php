@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationRemarkName(string $ApplicationRemarkName) 设置应用备注名
  * @method array getServiceConfigList() 获取服务配置信息列表
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
+ * @method string getMicroserviceType() 获取应用的微服务类型
+ * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理信息
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理信息
+ * @method string getFrameworkType() 获取应用开发框架
+ * @method void setFrameworkType(string $FrameworkType) 设置应用开发框架
  */
 class ModifyApplicationRequest extends AbstractModel
 {
@@ -59,11 +65,29 @@ class ModifyApplicationRequest extends AbstractModel
     public $ServiceConfigList;
 
     /**
+     * @var string 应用的微服务类型
+     */
+    public $MicroserviceType;
+
+    /**
+     * @var ServiceGovernanceConfig 注册配置治理信息
+     */
+    public $ServiceGovernanceConfig;
+
+    /**
+     * @var string 应用开发框架
+     */
+    public $FrameworkType;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationDesc 应用备注
      * @param string $ApplicationRemarkName 应用备注名
      * @param array $ServiceConfigList 服务配置信息列表
+     * @param string $MicroserviceType 应用的微服务类型
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理信息
+     * @param string $FrameworkType 应用开发框架
      */
     function __construct()
     {
@@ -101,6 +125,19 @@ class ModifyApplicationRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServiceConfigList, $obj);
             }
+        }
+
+        if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
+            $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
+        if (array_key_exists("ServiceGovernanceConfig",$param) and $param["ServiceGovernanceConfig"] !== null) {
+            $this->ServiceGovernanceConfig = new ServiceGovernanceConfig();
+            $this->ServiceGovernanceConfig->deserialize($param["ServiceGovernanceConfig"]);
+        }
+
+        if (array_key_exists("FrameworkType",$param) and $param["FrameworkType"] !== null) {
+            $this->FrameworkType = $param["FrameworkType"];
         }
     }
 }

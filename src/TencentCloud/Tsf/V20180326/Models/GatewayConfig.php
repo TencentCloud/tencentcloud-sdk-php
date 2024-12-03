@@ -20,14 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TSF Envoy网关服务配置
  *
-
+ * @method string getName() 获取服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置服务名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayConfig extends AbstractModel
 {
-
+    /**
+     * @var string 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
 
     /**
-
+     * @param string $Name 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +50,8 @@ class GatewayConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
     }
 }

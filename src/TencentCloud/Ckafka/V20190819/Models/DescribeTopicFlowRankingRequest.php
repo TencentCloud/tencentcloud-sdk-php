@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicFlowRanking请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getRankingType() 获取排行类别(PRO-Topic生产流量/CON-Topic消费流量)
- * @method void setRankingType(string $RankingType) 设置排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getRankingType() 获取排行类别，PRO：Topic生产流量；CON：Topic消费流量
+ * @method void setRankingType(string $RankingType) 设置排行类别，PRO：Topic生产流量；CON：Topic消费流量
  * @method string getBeginDate() 获取排行起始日期
  * @method void setBeginDate(string $BeginDate) 设置排行起始日期
  * @method string getEndDate() 获取排行结束日期
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicFlowRankingRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+     * @var string 排行类别，PRO：Topic生产流量；CON：Topic消费流量
      */
     public $RankingType;
 
@@ -59,8 +59,8 @@ class DescribeTopicFlowRankingRequest extends AbstractModel
     public $BrokerIp;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $RankingType 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $RankingType 排行类别，PRO：Topic生产流量；CON：Topic消费流量
      * @param string $BeginDate 排行起始日期
      * @param string $EndDate 排行结束日期
      * @param string $BrokerIp Broker IP 地址

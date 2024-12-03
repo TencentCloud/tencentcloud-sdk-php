@@ -154,6 +154,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDeepSearch(boolean $EnableDeepSearch) 设置是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
  * @method integer getSeed() 获取说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
  * @method void setSeed(integer $Seed) 设置说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+ * @method boolean getForceSearchEnhancement() 获取强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+ * @method void setForceSearchEnhancement(boolean $ForceSearchEnhancement) 设置强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -289,6 +297,14 @@ class ChatCompletionsRequest extends AbstractModel
     public $Seed;
 
     /**
+     * @var boolean 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+     */
+    public $ForceSearchEnhancement;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -356,6 +372,10 @@ class ChatCompletionsRequest extends AbstractModel
 5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
      * @param boolean $EnableDeepSearch 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
      * @param integer $Seed 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+     * @param boolean $ForceSearchEnhancement 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
      */
     function __construct()
     {
@@ -443,6 +463,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
             $this->Seed = $param["Seed"];
+        }
+
+        if (array_key_exists("ForceSearchEnhancement",$param) and $param["ForceSearchEnhancement"] !== null) {
+            $this->ForceSearchEnhancement = $param["ForceSearchEnhancement"];
         }
     }
 }

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置内网访问Port。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPreserveDuration() 获取旧 ip 保留时长，单位天
+ * @method void setPreserveDuration(integer $PreserveDuration) 设置旧 ip 保留时长，单位天
+ * @method string getExpireTime() 获取旧 ip 到期时间
+ * @method void setExpireTime(string $ExpireTime) 设置旧 ip 到期时间
  */
 class Network extends AbstractModel
 {
@@ -64,6 +68,16 @@ class Network extends AbstractModel
     public $Port;
 
     /**
+     * @var integer 旧 ip 保留时长，单位天
+     */
+    public $PreserveDuration;
+
+    /**
+     * @var string 旧 ip 到期时间
+     */
+    public $ExpireTime;
+
+    /**
      * @param string $VpcId VpcId(VPC网络下有效)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网Id(VPC网络下有效)。
@@ -72,6 +86,8 @@ class Network extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 内网访问Port。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PreserveDuration 旧 ip 保留时长，单位天
+     * @param string $ExpireTime 旧 ip 到期时间
      */
     function __construct()
     {
@@ -100,6 +116,14 @@ class Network extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("PreserveDuration",$param) and $param["PreserveDuration"] !== null) {
+            $this->PreserveDuration = $param["PreserveDuration"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AclRule列表接口出参
  *
- * @method string getRuleName() 获取Acl规则名称
+ * @method string getRuleName() 获取ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置Acl规则名称
+ * @method void setRuleName(string $RuleName) 设置ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPatternType() 获取匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+ * @method string getPatternType() 获取ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPatternType(string $PatternType) 设置匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+ * @method void setPatternType(string $PatternType) 设置ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPattern() 获取表示前缀匹配的前缀的值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,19 +76,19 @@ use TencentCloud\Common\AbstractModel;
 class AclRule extends AbstractModel
 {
     /**
-     * @var string Acl规则名称
+     * @var string ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * @var string ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PatternType;
@@ -154,11 +154,11 @@ class AclRule extends AbstractModel
     public $PatternTypeTitle;
 
     /**
-     * @param string $RuleName Acl规则名称
+     * @param string $RuleName ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PatternType 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * @param string $PatternType ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pattern 表示前缀匹配的前缀的值
 注意：此字段可能返回 null，表示取不到有效值。

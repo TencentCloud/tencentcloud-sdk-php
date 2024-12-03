@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置该MySQL在连接管理内的Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSnapshotMode() 获取复制存量信息(schema_only不复制, initial全量)，默认位initial
+ * @method string getSnapshotMode() 获取复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotMode(string $SnapshotMode) 设置复制存量信息(schema_only不复制, initial全量)，默认位initial
+ * @method void setSnapshotMode(string $SnapshotMode) 设置复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDdlTopic() 获取存放MySQL的Ddl信息的Topic，为空则默认不存放
 注意：此字段可能返回 null，表示取不到有效值。
@@ -154,7 +154,7 @@ class MySQLParam extends AbstractModel
     public $Resource;
 
     /**
-     * @var string 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @var string 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotMode;
@@ -310,7 +310,7 @@ class MySQLParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource 该MySQL在连接管理内的Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @param string $SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DdlTopic 存放MySQL的Ddl信息的Topic，为空则默认不存放
 注意：此字段可能返回 null，表示取不到有效值。

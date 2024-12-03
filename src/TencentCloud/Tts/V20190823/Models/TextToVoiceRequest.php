@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 示例值：neutral
  * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
  * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
- * @method string getFastVoiceType() 获取一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
- * @method void setFastVoiceType(string $FastVoiceType) 设置一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+ * @method string getFastVoiceType() 获取一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+ * @method void setFastVoiceType(string $FastVoiceType) 设置一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -142,7 +142,7 @@ class TextToVoiceRequest extends AbstractModel
     public $EmotionIntensity;
 
     /**
-     * @var string 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * @var string 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
      */
     public $FastVoiceType;
 
@@ -167,7 +167,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param string $EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
 示例值：neutral
      * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
-     * @param string $FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * @param string $FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
      */
     function __construct()
     {

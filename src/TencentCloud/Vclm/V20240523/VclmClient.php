@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Vclm\V20240523\Models as Models;
 
 /**
+ * @method Models\CheckAnimateImageJobResponse CheckAnimateImageJob(Models\CheckAnimateImageJobRequest $req) 检查图片跳舞输入图
  * @method Models\ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(Models\ConfirmVideoTranslateJobRequest $req) 确认视频转译结果
  * @method Models\DescribeImageAnimateJobResponse DescribeImageAnimateJob(Models\DescribeImageAnimateJobRequest $req) 用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\DescribePortraitSingJobResponse DescribePortraitSingJob(Models\DescribePortraitSingJobRequest $req) 用于查询图片唱演任务。

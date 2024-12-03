@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumeName(string $VolumeName) 设置数据卷名称
  * @method string getVolumeConfig() 获取数据卷配置
  * @method void setVolumeConfig(string $VolumeConfig) 设置数据卷配置
+ * @method array getConfigMapOptions() 获取-
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigMapOptions(array $ConfigMapOptions) 设置-
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EmptyDirOption getEmptyDirOption() 获取-
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmptyDirOption(EmptyDirOption $EmptyDirOption) 设置-
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VolumeInfo extends AbstractModel
 {
@@ -45,9 +53,25 @@ class VolumeInfo extends AbstractModel
     public $VolumeConfig;
 
     /**
+     * @var array -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigMapOptions;
+
+    /**
+     * @var EmptyDirOption -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmptyDirOption;
+
+    /**
      * @param string $VolumeType 数据卷类型
      * @param string $VolumeName 数据卷名称
      * @param string $VolumeConfig 数据卷配置
+     * @param array $ConfigMapOptions -
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmptyDirOption $EmptyDirOption -
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +96,20 @@ class VolumeInfo extends AbstractModel
 
         if (array_key_exists("VolumeConfig",$param) and $param["VolumeConfig"] !== null) {
             $this->VolumeConfig = $param["VolumeConfig"];
+        }
+
+        if (array_key_exists("ConfigMapOptions",$param) and $param["ConfigMapOptions"] !== null) {
+            $this->ConfigMapOptions = [];
+            foreach ($param["ConfigMapOptions"] as $key => $value){
+                $obj = new ConfigMapOption();
+                $obj->deserialize($value);
+                array_push($this->ConfigMapOptions, $obj);
+            }
+        }
+
+        if (array_key_exists("EmptyDirOption",$param) and $param["EmptyDirOption"] !== null) {
+            $this->EmptyDirOption = new EmptyDirOption();
+            $this->EmptyDirOption->deserialize($param["EmptyDirOption"]);
         }
     }
 }

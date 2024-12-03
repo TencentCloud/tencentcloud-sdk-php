@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeInstanceId(string $NodeInstanceId) 设置节点实例id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpecTotalCount() 获取预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecTotalCount(string $SpecTotalCount) 设置预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupPod extends AbstractModel
 {
@@ -164,6 +168,12 @@ class GroupPod extends AbstractModel
     public $NodeInstanceId;
 
     /**
+     * @var string 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecTotalCount;
+
+    /**
      * @param string $PodName 实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodId 实例ID(对应到kubernetes的pod id)
@@ -191,6 +201,8 @@ class GroupPod extends AbstractModel
      * @param string $InstanceStatus 机器实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeInstanceId 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SpecTotalCount 预期副本数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class GroupPod extends AbstractModel
 
         if (array_key_exists("NodeInstanceId",$param) and $param["NodeInstanceId"] !== null) {
             $this->NodeInstanceId = $param["NodeInstanceId"];
+        }
+
+        if (array_key_exists("SpecTotalCount",$param) and $param["SpecTotalCount"] !== null) {
+            $this->SpecTotalCount = $param["SpecTotalCount"];
         }
     }
 }

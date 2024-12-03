@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例属性返回结果对象
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceName() 获取ckafka集群实例Name
+ * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name
  * @method array getVipList() 获取接入点 VIP 列表信息
  * @method void setVipList(array $VipList) 设置接入点 VIP 列表信息
  * @method string getVip() 获取虚拟IP
  * @method void setVip(string $Vip) 设置虚拟IP
  * @method string getVport() 获取虚拟端口
  * @method void setVport(string $Vport) 设置虚拟端口
- * @method integer getStatus() 获取实例的状态。0：创建中，1：运行中，2：删除中
- * @method void setStatus(integer $Status) 设置实例的状态。0：创建中，1：运行中，2：删除中
+ * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+ * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method integer getBandwidth() 获取实例带宽，单位：Mbps
  * @method void setBandwidth(integer $Bandwidth) 设置实例带宽，单位：Mbps
  * @method integer getDiskSize() 获取实例的存储大小，单位：GB
@@ -68,13 +68,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取跨可用区
+ * @method array getZoneIds() 获取可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置跨可用区
+ * @method void setZoneIds(array $ZoneIds) 设置可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取kafka版本信息
+ * @method string getVersion() 获取ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置kafka版本信息
+ * @method void setVersion(string $Version) 设置ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxGroupNum() 获取最大分组数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,16 +124,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterType() 获取集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterType(string $ClusterType) 设置集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFreePartitionNumber() 获取免费分区数量
+ * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置免费分区数量
+ * @method integer getElasticFloatBandwidth() 获取弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例Name
      */
     public $InstanceName;
 
@@ -153,7 +163,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer 实例的状态。0：创建中，1：运行中，2：删除中
+     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public $Status;
 
@@ -240,13 +250,13 @@ class InstanceAttributesResponse extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var array 跨可用区
+     * @var array 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
     /**
-     * @var string kafka版本信息
+     * @var string ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
@@ -324,12 +334,29 @@ class InstanceAttributesResponse extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
+     * @var string 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterType;
+
+    /**
+     * @var integer 免费分区数量
+     */
+    public $FreePartitionNumber;
+
+    /**
+     * @var integer 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticFloatBandwidth;
+
+    /**
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceName ckafka集群实例Name
      * @param array $VipList 接入点 VIP 列表信息
      * @param string $Vip 虚拟IP
      * @param string $Vport 虚拟端口
-     * @param integer $Status 实例的状态。0：创建中，1：运行中，2：删除中
+     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      * @param integer $Bandwidth 实例带宽，单位：Mbps
      * @param integer $DiskSize 实例的存储大小，单位：GB
      * @param integer $ZoneId 可用区
@@ -348,9 +375,9 @@ class InstanceAttributesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 跨可用区
+     * @param array $ZoneIds 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version kafka版本信息
+     * @param string $Version ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxGroupNum 最大分组数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -375,6 +402,11 @@ class InstanceAttributesResponse extends AbstractModel
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceChargeType 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FreePartitionNumber 免费分区数量
+     * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -545,6 +577,18 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("FreePartitionNumber",$param) and $param["FreePartitionNumber"] !== null) {
+            $this->FreePartitionNumber = $param["FreePartitionNumber"];
+        }
+
+        if (array_key_exists("ElasticFloatBandwidth",$param) and $param["ElasticFloatBandwidth"] !== null) {
+            $this->ElasticFloatBandwidth = $param["ElasticFloatBandwidth"];
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
- * @method integer getRouteId() 获取路由ID
- * @method void setRouteId(integer $RouteId) 设置路由ID
+ * @method integer getRouteId() 获取路由Id
+ * @method void setRouteId(integer $RouteId) 设置路由Id
  * @method integer getVipType() 获取vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
  * @method void setVipType(integer $VipType) 设置vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
  * @method array getVipList() 获取虚拟IP列表
@@ -48,17 +48,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnet() 获取子网信息
+ * @method string getSubnet() 获取子网Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnet(string $Subnet) 设置子网信息
+ * @method void setSubnet(string $Subnet) 设置子网Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBrokerVipList() 获取虚拟IP列表(1对1 broker节点)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerVipList(array $BrokerVipList) 设置虚拟IP列表(1对1 broker节点)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取vpc信息
+ * @method string getVpcId() 获取私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置vpc信息
+ * @method void setVpcId(string $VpcId) 设置私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
@@ -73,7 +73,7 @@ class Route extends AbstractModel
     public $AccessType;
 
     /**
-     * @var integer 路由ID
+     * @var integer 路由Id
      */
     public $RouteId;
 
@@ -106,7 +106,7 @@ class Route extends AbstractModel
     public $DeleteTimestamp;
 
     /**
-     * @var string 子网信息
+     * @var string 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subnet;
@@ -118,7 +118,7 @@ class Route extends AbstractModel
     public $BrokerVipList;
 
     /**
-     * @var string vpc信息
+     * @var string 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
@@ -129,7 +129,7 @@ class Route extends AbstractModel
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-     * @param integer $RouteId 路由ID
+     * @param integer $RouteId 路由Id
      * @param integer $VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
      * @param array $VipList 虚拟IP列表
      * @param string $Domain 域名
@@ -138,11 +138,11 @@ class Route extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeleteTimestamp 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Subnet 子网信息
+     * @param string $Subnet 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerVipList 虚拟IP列表(1对1 broker节点)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId vpc信息
+     * @param string $VpcId 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

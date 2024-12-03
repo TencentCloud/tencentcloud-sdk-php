@@ -76,6 +76,42 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置IgnoreCreateImageRepository
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApmInstanceId() 获取Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApmInstanceId(string $ApmInstanceId) 设置Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApmInstanceName() 获取Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApmInstanceName(string $ApmInstanceName) 设置Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSyncDeleteImageRepository() 获取同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSyncDeleteImageRepository(boolean $SyncDeleteImageRepository) 设置同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMicroserviceSubType() 获取应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMicroserviceSubType(string $MicroserviceSubType) 设置应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProgramLanguage() 获取应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrameworkType() 获取开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrameworkType(string $FrameworkType) 设置开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMicroserviceTypeList() 获取微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMicroserviceTypeList(array $MicroserviceTypeList) 设置微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCreateSameNameImageRepository() 获取是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateSameNameImageRepository(boolean $CreateSameNameImageRepository) 设置是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationForPage extends AbstractModel
 {
@@ -164,6 +200,60 @@ class ApplicationForPage extends AbstractModel
     public $IgnoreCreateImageRepository;
 
     /**
+     * @var string Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApmInstanceId;
+
+    /**
+     * @var string Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApmInstanceName;
+
+    /**
+     * @var boolean 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SyncDeleteImageRepository;
+
+    /**
+     * @var string 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MicroserviceSubType;
+
+    /**
+     * @var string 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProgramLanguage;
+
+    /**
+     * @var string 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrameworkType;
+
+    /**
+     * @var ServiceGovernanceConfig 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceGovernanceConfig;
+
+    /**
+     * @var array 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MicroserviceTypeList;
+
+    /**
+     * @var boolean 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateSameNameImageRepository;
+
+    /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
@@ -191,6 +281,24 @@ class ApplicationForPage extends AbstractModel
      * @param array $ServiceConfigList 服务配置信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IgnoreCreateImageRepository IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApmInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApmInstanceName Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SyncDeleteImageRepository 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MicroserviceSubType 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProgramLanguage 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FrameworkType 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MicroserviceTypeList 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CreateSameNameImageRepository 是否同时创建镜像仓库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +373,43 @@ class ApplicationForPage extends AbstractModel
 
         if (array_key_exists("IgnoreCreateImageRepository",$param) and $param["IgnoreCreateImageRepository"] !== null) {
             $this->IgnoreCreateImageRepository = $param["IgnoreCreateImageRepository"];
+        }
+
+        if (array_key_exists("ApmInstanceId",$param) and $param["ApmInstanceId"] !== null) {
+            $this->ApmInstanceId = $param["ApmInstanceId"];
+        }
+
+        if (array_key_exists("ApmInstanceName",$param) and $param["ApmInstanceName"] !== null) {
+            $this->ApmInstanceName = $param["ApmInstanceName"];
+        }
+
+        if (array_key_exists("SyncDeleteImageRepository",$param) and $param["SyncDeleteImageRepository"] !== null) {
+            $this->SyncDeleteImageRepository = $param["SyncDeleteImageRepository"];
+        }
+
+        if (array_key_exists("MicroserviceSubType",$param) and $param["MicroserviceSubType"] !== null) {
+            $this->MicroserviceSubType = $param["MicroserviceSubType"];
+        }
+
+        if (array_key_exists("ProgramLanguage",$param) and $param["ProgramLanguage"] !== null) {
+            $this->ProgramLanguage = $param["ProgramLanguage"];
+        }
+
+        if (array_key_exists("FrameworkType",$param) and $param["FrameworkType"] !== null) {
+            $this->FrameworkType = $param["FrameworkType"];
+        }
+
+        if (array_key_exists("ServiceGovernanceConfig",$param) and $param["ServiceGovernanceConfig"] !== null) {
+            $this->ServiceGovernanceConfig = new ServiceGovernanceConfig();
+            $this->ServiceGovernanceConfig->deserialize($param["ServiceGovernanceConfig"]);
+        }
+
+        if (array_key_exists("MicroserviceTypeList",$param) and $param["MicroserviceTypeList"] !== null) {
+            $this->MicroserviceTypeList = $param["MicroserviceTypeList"];
+        }
+
+        if (array_key_exists("CreateSameNameImageRepository",$param) and $param["CreateSameNameImageRepository"] !== null) {
+            $this->CreateSameNameImageRepository = $param["CreateSameNameImageRepository"];
         }
     }
 }

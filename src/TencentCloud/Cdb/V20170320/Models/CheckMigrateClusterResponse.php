@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckMigrateCluster返回参数结构体
  *
+ * @method string getCheckResult() 获取校验是否通过，通过为pass，失败为fail
+ * @method void setCheckResult(string $CheckResult) 设置校验是否通过，通过为pass，失败为fail
+ * @method array getItems() 获取校验项
+ * @method void setItems(array $Items) 设置校验项
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckMigrateClusterResponse extends AbstractModel
 {
     /**
+     * @var string 校验是否通过，通过为pass，失败为fail
+     */
+    public $CheckResult;
+
+    /**
+     * @var array 校验项
+     */
+    public $Items;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $CheckResult 校验是否通过，通过为pass，失败为fail
+     * @param array $Items 校验项
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class CheckMigrateClusterResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CheckResult",$param) and $param["CheckResult"] !== null) {
+            $this->CheckResult = $param["CheckResult"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new CheckMigrateResult();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置该MariaDB在连接管理内的Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSnapshotMode() 获取复制存量信息(schema_only不复制, initial全量)，默认位initial
+ * @method string getSnapshotMode() 获取复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotMode(string $SnapshotMode) 设置复制存量信息(schema_only不复制, initial全量)，默认位initial
+ * @method void setSnapshotMode(string $SnapshotMode) 设置复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyColumns() 获取格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,7 +82,7 @@ class MariaDBParam extends AbstractModel
     public $Resource;
 
     /**
-     * @var string 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @var string 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotMode;
@@ -130,7 +130,7 @@ class MariaDBParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource 该MariaDB在连接管理内的Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @param string $SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
 注意：此字段可能返回 null，表示取不到有效值。

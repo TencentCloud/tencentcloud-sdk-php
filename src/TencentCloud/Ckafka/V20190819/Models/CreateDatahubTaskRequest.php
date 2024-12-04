@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaId(string $SchemaId) 设置选择所要绑定的SchemaId
  * @method TransformsParam getTransformsParam() 获取数据处理规则
  * @method void setTransformsParam(TransformsParam $TransformsParam) 设置数据处理规则
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务Id
+ * @method void setTaskId(string $TaskId) 设置任务Id
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  */
@@ -84,7 +84,7 @@ class CreateDatahubTaskRequest extends AbstractModel
     public $TransformsParam;
 
     /**
-     * @var string 任务ID
+     * @var string 任务Id
      */
     public $TaskId;
 
@@ -102,7 +102,7 @@ class CreateDatahubTaskRequest extends AbstractModel
      * @param PrivateLinkParam $PrivateLinkParam 实例连接参数【已废弃】
      * @param string $SchemaId 选择所要绑定的SchemaId
      * @param TransformsParam $TransformsParam 数据处理规则
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务Id
      * @param array $Tags 标签列表
      */
     function __construct()

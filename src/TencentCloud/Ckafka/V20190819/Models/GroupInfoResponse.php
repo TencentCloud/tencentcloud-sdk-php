@@ -40,8 +40,8 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
  * @method void setProtocol(string $Protocol) 设置消费者 partition 分配算法常见的有如下几种(Kafka 消费者 SDK 默认的选择项为 range)：range、 roundrobin、 sticky
  * @method array getMembers() 获取仅当 state 为 Stable 且 protocol_type 为 consumer 时， 该数组才包含信息
  * @method void setMembers(array $Members) 设置仅当 state 为 Stable 且 protocol_type 为 consumer 时， 该数组才包含信息
- * @method string getGroup() 获取Kafka 消费分组
- * @method void setGroup(string $Group) 设置Kafka 消费分组
+ * @method string getGroup() 获取消费分组名称
+ * @method void setGroup(string $Group) 设置消费分组名称
  */
 class GroupInfoResponse extends AbstractModel
 {
@@ -76,7 +76,7 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
     public $Members;
 
     /**
-     * @var string Kafka 消费分组
+     * @var string 消费分组名称
      */
     public $Group;
 
@@ -91,7 +91,7 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
      * @param string $ProtocolType 消费分组选择的协议类型正常的消费者一般为 consumer 但有些系统采用了自己的协议如 kafka-connect 用的就是 connect。只有标准的 consumer 协议，本接口才知道具体的分配方式的格式，才能解析到具体的 partition 的分配情况
      * @param string $Protocol 消费者 partition 分配算法常见的有如下几种(Kafka 消费者 SDK 默认的选择项为 range)：range、 roundrobin、 sticky
      * @param array $Members 仅当 state 为 Stable 且 protocol_type 为 consumer 时， 该数组才包含信息
-     * @param string $Group Kafka 消费分组
+     * @param string $Group 消费分组名称
      */
     function __construct()
     {

@@ -18,47 +18,47 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 属性标签
+ * 标签值
  *
- * @method string getLabelBizId() 获取标签ID
+ * @method string getLabelBizId() 获取标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelBizId(string $LabelBizId) 设置标签ID
+ * @method void setLabelBizId(string $LabelBizId) 设置标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabelName() 获取标签名称
+ * @method string getLabelName() 获取标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelName(string $LabelName) 设置标签名称
+ * @method void setLabelName(string $LabelName) 设置标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSimilarLabels() 获取相似标签名称
+ * @method array getSimilarLabels() 获取同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSimilarLabels(array $SimilarLabels) 设置相似标签名称
+ * @method void setSimilarLabels(array $SimilarLabels) 设置同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttributeLabel extends AbstractModel
 {
     /**
-     * @var string 标签ID
+     * @var string 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelBizId;
 
     /**
-     * @var string 标签名称
+     * @var string 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelName;
 
     /**
-     * @var array 相似标签名称
+     * @var array 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SimilarLabels;
 
     /**
-     * @param string $LabelBizId 标签ID
+     * @param string $LabelBizId 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LabelName 标签名称
+     * @param string $LabelName 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SimilarLabels 相似标签名称
+     * @param array $SimilarLabels 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

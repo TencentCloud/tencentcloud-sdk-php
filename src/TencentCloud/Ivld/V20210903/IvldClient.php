@@ -47,12 +47,10 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 输入人物名称，基本信息，分类信息与人脸图片，创建自定义人物
 
 人脸图片可使用图片数据(base64编码的图片数据)或者图片URL(推荐使用COS以减少下载时间，其他地址也支持)，原始图片优先，也即如果同时指定了图片数据和图片URL，接口将仅使用图片数据
-
  * @method Models\CreateDefaultCategoriesResponse CreateDefaultCategories(Models\CreateDefaultCategoriesRequest $req) 创建默认自定义人物类型
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建智能标签任务。
 
 请注意，本接口为异步接口，**返回TaskId只代表任务创建成功，不代表任务执行成功**。
-
  * @method Models\CreateVideoSummaryTaskResponse CreateVideoSummaryTask(Models\CreateVideoSummaryTaskRequest $req) 创建一个视频缩编任务。
 
 ### 回调事件消息通知协议
@@ -106,8 +104,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 描述智能标签任务进度。
 
 请注意，**此接口仅返回任务执行状态信息，不返回任务执行结果**
-
-
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 描述任务信息，如果任务成功完成，还将返回任务结果
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 依照输入条件，描述命中的任务信息，包括任务创建时间，处理时间信息等。
 

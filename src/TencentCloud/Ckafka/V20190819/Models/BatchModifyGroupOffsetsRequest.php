@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupName() 获取消费分组名称
  * @method void setGroupName(string $GroupName) 设置消费分组名称
- * @method string getInstanceId() 获取实例名称
- * @method void setInstanceId(string $InstanceId) 设置实例名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method array getPartitions() 获取partition信息
  * @method void setPartitions(array $Partitions) 设置partition信息
  * @method array getTopicName() 获取指定topic，默认所有topic
@@ -37,7 +37,7 @@ class BatchModifyGroupOffsetsRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -53,7 +53,7 @@ class BatchModifyGroupOffsetsRequest extends AbstractModel
 
     /**
      * @param string $GroupName 消费分组名称
-     * @param string $InstanceId 实例名称
+     * @param string $InstanceId ckafka集群实例Id
      * @param array $Partitions partition信息
      * @param array $TopicName 指定topic，默认所有topic
      */

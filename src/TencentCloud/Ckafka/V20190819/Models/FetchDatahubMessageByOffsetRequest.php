@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchDatahubMessageByOffset请求参数结构体
  *
- * @method string getName() 获取主题名
- * @method void setName(string $Name) 设置主题名
+ * @method string getName() 获取弹性topic名称
+ * @method void setName(string $Name) 设置弹性topic名称
  * @method integer getPartition() 获取分区id
  * @method void setPartition(integer $Partition) 设置分区id
  * @method integer getOffset() 获取位点信息，必填
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class FetchDatahubMessageByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string 主题名
+     * @var string 弹性topic名称
      */
     public $Name;
 
@@ -45,7 +45,7 @@ class FetchDatahubMessageByOffsetRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $Name 主题名
+     * @param string $Name 弹性topic名称
      * @param integer $Partition 分区id
      * @param integer $Offset 位点信息，必填
      */

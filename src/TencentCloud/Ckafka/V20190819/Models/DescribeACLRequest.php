@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeACL请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method integer getResourceType() 获取Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method string getResourceName() 获取资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeACLRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeACLRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param integer $ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      * @param string $ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      * @param integer $Offset 偏移位置

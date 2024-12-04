@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInstancePost请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  */
 class DeleteInstancePostRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId ckafka集群实例Id
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主题详情
  *
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
- * @method string getTopicId() 获取主题ID
- * @method void setTopicId(string $TopicId) 设置主题ID
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
+ * @method string getTopicId() 获取主题Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
  * @method integer getPartitionNum() 获取分区数
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
- * @method integer getReplicaNum() 获取副本数
- * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
+ * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
+ * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
  * @method string getNote() 获取备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置备注
@@ -66,12 +66,12 @@ use TencentCloud\Common\AbstractModel;
 class TopicDetail extends AbstractModel
 {
     /**
-     * @var string 主题名称
+     * @var string 主题名
      */
     public $TopicName;
 
     /**
-     * @var string 主题ID
+     * @var string 主题Id
      */
     public $TopicId;
 
@@ -81,7 +81,7 @@ class TopicDetail extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @var integer 副本数
+     * @var integer topic副本数  最小值 1,最大值 3
      */
     public $ReplicaNum;
 
@@ -147,10 +147,10 @@ class TopicDetail extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $TopicName 主题名称
-     * @param string $TopicId 主题ID
+     * @param string $TopicName 主题名
+     * @param string $TopicId 主题Id
      * @param integer $PartitionNum 分区数
-     * @param integer $ReplicaNum 副本数
+     * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
      * @param string $Note 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间

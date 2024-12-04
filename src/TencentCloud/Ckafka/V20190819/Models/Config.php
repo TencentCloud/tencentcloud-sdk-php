@@ -54,6 +54,10 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionBytes(integer $RetentionBytes) 设置消息保留文件大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogMsgTimestampType() 获取消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Config extends AbstractModel
 {
@@ -107,6 +111,12 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     public $RetentionBytes;
 
     /**
+     * @var string 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogMsgTimestampType;
+
+    /**
      * @param integer $Retention 消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinInsyncReplicas 最小同步复制数
@@ -123,6 +133,8 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
      * @param integer $MaxMessageBytes 最大消息字节数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetentionBytes 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogMsgTimestampType 消息保存的时间类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,10 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
         if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
             $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

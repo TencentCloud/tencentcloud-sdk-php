@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置目标审核用户id
  * @method integer getRoomIdType() 获取TRTC房间号的类型。【*注意】必须和TRTC的房间所对应的RoomId类型相同:0: 字符串类型的RoomId1: 32位整型的RoomId（默认）
  * @method void setRoomIdType(integer $RoomIdType) 设置TRTC房间号的类型。【*注意】必须和TRTC的房间所对应的RoomId类型相同:0: 字符串类型的RoomId1: 32位整型的RoomId（默认）
+ * @method AuditStorageParams getAuditStorageParams() 获取音频文件上传到云存储的参数
+ * @method void setAuditStorageParams(AuditStorageParams $AuditStorageParams) 设置音频文件上传到云存储的参数
  */
 class CreateBasicModerationRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateBasicModerationRequest extends AbstractModel
     public $RoomIdType;
 
     /**
+     * @var AuditStorageParams 音频文件上传到云存储的参数
+     */
+    public $AuditStorageParams;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，为TRTC房间所对应的RoomId。
      * @param string $UserId 目标审核用户id
      * @param integer $RoomIdType TRTC房间号的类型。【*注意】必须和TRTC的房间所对应的RoomId类型相同:0: 字符串类型的RoomId1: 32位整型的RoomId（默认）
+     * @param AuditStorageParams $AuditStorageParams 音频文件上传到云存储的参数
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class CreateBasicModerationRequest extends AbstractModel
 
         if (array_key_exists("RoomIdType",$param) and $param["RoomIdType"] !== null) {
             $this->RoomIdType = $param["RoomIdType"];
+        }
+
+        if (array_key_exists("AuditStorageParams",$param) and $param["AuditStorageParams"] !== null) {
+            $this->AuditStorageParams = new AuditStorageParams();
+            $this->AuditStorageParams->deserialize($param["AuditStorageParams"]);
         }
     }
 }

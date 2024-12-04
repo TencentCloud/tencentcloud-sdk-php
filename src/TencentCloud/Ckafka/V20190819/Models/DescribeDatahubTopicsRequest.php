@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopics请求参数结构体
  *
- * @method string getSearchWord() 获取查询值
- * @method void setSearchWord(string $SearchWord) 设置查询值
+ * @method string getSearchWord() 获取搜索词
+ * @method void setSearchWord(string $SearchWord) 设置搜索词
  * @method integer getOffset() 获取本次查询的偏移位置，默认为0
  * @method void setOffset(integer $Offset) 设置本次查询的偏移位置，默认为0
  * @method integer getLimit() 获取本次返回结果的最大个数，默认为50，最大值为50
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatahubTopicsRequest extends AbstractModel
 {
     /**
-     * @var string 查询值
+     * @var string 搜索词
      */
     public $SearchWord;
 
@@ -45,7 +45,7 @@ class DescribeDatahubTopicsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $SearchWord 查询值
+     * @param string $SearchWord 搜索词
      * @param integer $Offset 本次查询的偏移位置，默认为0
      * @param integer $Limit 本次返回结果的最大个数，默认为50，最大值为50
      */

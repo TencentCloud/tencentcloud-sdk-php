@@ -134,6 +134,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置弹性带宽上浮值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomCertId() 获取ssl自定义证书id
+ * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -351,6 +353,11 @@ class InstanceAttributesResponse extends AbstractModel
     public $ElasticFloatBandwidth;
 
     /**
+     * @var string ssl自定义证书id
+     */
+    public $CustomCertId;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param string $InstanceName ckafka集群实例Name
      * @param array $VipList 接入点 VIP 列表信息
@@ -408,6 +415,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $FreePartitionNumber 免费分区数量
      * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomCertId ssl自定义证书id
      */
     function __construct()
     {
@@ -589,6 +597,10 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("ElasticFloatBandwidth",$param) and $param["ElasticFloatBandwidth"] !== null) {
             $this->ElasticFloatBandwidth = $param["ElasticFloatBandwidth"];
+        }
+
+        if (array_key_exists("CustomCertId",$param) and $param["CustomCertId"] !== null) {
+            $this->CustomCertId = $param["CustomCertId"];
         }
     }
 }

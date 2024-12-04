@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例缩容应答
  *
- * @method array getDealNames() 获取订单号
+ * @method array getDealNames() 获取订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDealNames(array $DealNames) 设置订单号
+ * @method void setDealNames(array $DealNames) 设置订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScalingDownResp extends AbstractModel
 {
     /**
-     * @var array 订单号
+     * @var array 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
 
     /**
-     * @param array $DealNames 订单号
+     * @param array $DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

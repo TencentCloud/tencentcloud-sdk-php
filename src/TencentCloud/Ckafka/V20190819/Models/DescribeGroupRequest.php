@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取最大返回数量
  * @method void setLimit(integer $Limit) 设置最大返回数量
+ * @method array getFilters() 获取仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+ * @method void setFilters(array $Filters) 设置仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
  */
 class DescribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -52,10 +54,16 @@ class DescribeGroupRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @var array 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     */
+    public $Filters;
+
+    /**
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $SearchWord 搜索关键字
      * @param integer $Offset 偏移量
      * @param integer $Limit 最大返回数量
+     * @param array $Filters 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeGroupRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

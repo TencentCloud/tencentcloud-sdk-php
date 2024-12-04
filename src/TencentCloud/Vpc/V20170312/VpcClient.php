@@ -412,6 +412,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
+ * @method Models\DescribeTrafficQosPolicyResponse DescribeTrafficQosPolicy(Models\DescribeTrafficQosPolicyRequest $req) 查询流量调度规则
  * @method Models\DescribeUsedIpAddressResponse DescribeUsedIpAddress(Models\DescribeUsedIpAddressRequest $req) 本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
 如ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
  * @method Models\DescribeVpcEndPointResponse DescribeVpcEndPoint(Models\DescribeVpcEndPointRequest $req) 本接口（DescribeVpcEndPoint）用于查询终端节点列表。

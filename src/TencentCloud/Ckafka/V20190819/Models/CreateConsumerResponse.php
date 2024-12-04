@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumer返回参数结构体
  *
- * @method JgwOperateResponse getResult() 获取创建group描述
- * @method void setResult(JgwOperateResponse $Result) 设置创建group描述
+ * @method JgwOperateResponse getResult() 获取创建消费者组返回结果
+ * @method void setResult(JgwOperateResponse $Result) 设置创建消费者组返回结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateConsumerResponse extends AbstractModel
 {
     /**
-     * @var JgwOperateResponse 创建group描述
+     * @var JgwOperateResponse 创建消费者组返回结果
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateConsumerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param JgwOperateResponse $Result 创建group描述
+     * @param JgwOperateResponse $Result 创建消费者组返回结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

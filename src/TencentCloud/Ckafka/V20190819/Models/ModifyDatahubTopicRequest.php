@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatahubTopic请求参数结构体
  *
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取弹性topic名称
+ * @method void setName(string $Name) 设置弹性topic名称
  * @method integer getRetentionMs() 获取消息保留时间，单位：ms，当前最小值为60000ms。
  * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位：ms，当前最小值为60000ms。
  * @method string getNote() 获取主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string 名称
+     * @var string 弹性topic名称
      */
     public $Name;
 
@@ -52,7 +52,7 @@ class ModifyDatahubTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name 名称
+     * @param string $Name 弹性topic名称
      * @param integer $RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
      * @param array $Tags 标签列表

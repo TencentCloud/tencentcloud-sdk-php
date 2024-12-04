@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
- * @method integer getElasticBandwidthSwitch() 获取弹性带宽开关 0不开启  1开启（0默认
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置弹性带宽开关 0不开启  1开启（0默认
+ * @method integer getElasticBandwidthSwitch() 获取弹性带宽开关 0不开启  1开启（0默认)
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置弹性带宽开关 0不开启  1开启（0默认)
  */
 class CreatePostPaidInstanceRequest extends AbstractModel
 {
@@ -159,7 +159,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 弹性带宽开关 0不开启  1开启（0默认
+     * @var integer 弹性带宽开关 0不开启  1开启（0默认)
      */
     public $ElasticBandwidthSwitch;
 
@@ -183,7 +183,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
      * @param integer $InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
      * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
      * @param array $Tags 标签
-     * @param integer $ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认
+     * @param integer $ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认)
      */
     function __construct()
     {

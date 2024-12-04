@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaintenanceType(string $MaintenanceType) 设置自动化运维类别
  * @method string getMaintenanceSubtype() 获取INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
  * @method void setMaintenanceSubtype(string $MaintenanceSubtype) 设置INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  * @method integer getConfigureThreshold() 获取任务触发阈值
  * @method void setConfigureThreshold(integer $ConfigureThreshold) 设置任务触发阈值
  * @method integer getConfigureStepSize() 获取任务调整步长
@@ -61,7 +61,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
     public $MaintenanceSubtype;
 
     /**
-     * @var string 主题名称
+     * @var string 主题名
      */
     public $TopicName;
 
@@ -104,7 +104,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
      * @param string $InstanceId 实例id
      * @param string $MaintenanceType 自动化运维类别
      * @param string $MaintenanceSubtype INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
-     * @param string $TopicName 主题名称
+     * @param string $TopicName 主题名
      * @param integer $ConfigureThreshold 任务触发阈值
      * @param integer $ConfigureStepSize 任务调整步长
      * @param integer $ConfigureLimit 任务调整上限

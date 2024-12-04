@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getRuleName() 获取ACL规则名
  * @method void setRuleName(string $RuleName) 设置ACL规则名
  * @method string getPatternType() 获取ACL规则匹配类型
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeAclRuleRequest extends AbstractModel
     public $IsSimplified;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $RuleName ACL规则名
      * @param string $PatternType ACL规则匹配类型
      * @param boolean $IsSimplified 是否读取简略的ACL规则

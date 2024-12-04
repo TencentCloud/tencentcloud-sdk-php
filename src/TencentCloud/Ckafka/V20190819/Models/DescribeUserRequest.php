@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getSearchWord() 获取按照名称过滤
  * @method void setSearchWord(string $SearchWord) 设置按照名称过滤
- * @method integer getOffset() 获取偏移
- * @method void setOffset(integer $Offset) 设置偏移
- * @method integer getLimit() 获取本次返回个数
- * @method void setLimit(integer $Limit) 设置本次返回个数
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取返回数量
+ * @method void setLimit(integer $Limit) 设置返回数量
  */
 class DescribeUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -42,20 +42,20 @@ class DescribeUserRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var integer 偏移
+     * @var integer 偏移量
      */
     public $Offset;
 
     /**
-     * @var integer 本次返回个数
+     * @var integer 返回数量
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $SearchWord 按照名称过滤
-     * @param integer $Offset 偏移
-     * @param integer $Limit 本次返回个数
+     * @param integer $Offset 偏移量
+     * @param integer $Limit 返回数量
      */
     function __construct()
     {

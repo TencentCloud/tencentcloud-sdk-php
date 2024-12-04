@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopicAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method string getTopicName() 获取主题名称。
- * @method void setTopicName(string $TopicName) 设置主题名称。
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  * @method string getNote() 获取主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
  * @method void setNote(string $Note) 设置主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
  * @method integer getEnableWhiteList() 获取IP 白名单开关，1：打开；0：关闭。
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpWhiteList(array $IpWhiteList) 设置Ip白名单列表，配额限制，enableWhileList=1时必选
  * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
- * @method string getAclRuleName() 获取预设ACL规则的名称
- * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
+ * @method string getAclRuleName() 获取ACL规则名
+ * @method void setAclRuleName(string $AclRuleName) 设置ACL规则名
  * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  * @method array getTags() 获取标签列表
@@ -54,18 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s
  * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s
  * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s
- * @method integer getReplicaNum() 获取调整topic副本数
- * @method void setReplicaNum(integer $ReplicaNum) 设置调整topic副本数
+ * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
+ * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称。
+     * @var string 主题名
      */
     public $TopicName;
 
@@ -120,7 +120,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $EnableAclRule;
 
     /**
-     * @var string 预设ACL规则的名称
+     * @var string ACL规则名
      */
     public $AclRuleName;
 
@@ -145,13 +145,13 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $QuotaConsumerByteRate;
 
     /**
-     * @var integer 调整topic副本数
+     * @var integer topic副本数  最小值 1,最大值 3
      */
     public $ReplicaNum;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param string $TopicName 主题名称。
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $TopicName 主题名
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
      * @param integer $EnableWhiteList IP 白名单开关，1：打开；0：关闭。
      * @param integer $MinInsyncReplicas 默认为1。
@@ -162,12 +162,12 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param string $CleanUpPolicy 消息删除策略，可以选择delete 或者compact
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
-     * @param string $AclRuleName 预设ACL规则的名称
+     * @param string $AclRuleName ACL规则名
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
      * @param array $Tags 标签列表
      * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s
      * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s
-     * @param integer $ReplicaNum 调整topic副本数
+     * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
      */
     function __construct()
     {

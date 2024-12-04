@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getSearchWord() 获取过滤条件，按照 topicName 过滤，支持模糊查询
  * @method void setSearchWord(string $SearchWord) 设置过滤条件，按照 topicName 过滤，支持模糊查询
  * @method integer getOffset() 获取偏移量，不填默认为0
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class DescribeTopicRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $SearchWord 过滤条件，按照 topicName 过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认为20，最大值为50

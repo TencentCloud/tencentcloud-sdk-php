@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置媒资文本文件格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShortFormat() 获取封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShortFormat(string $ShortFormat) 设置封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextMetadata extends AbstractModel
 {
@@ -64,6 +68,12 @@ class TextMetadata extends AbstractModel
     public $Format;
 
     /**
+     * @var string 封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShortFormat;
+
+    /**
      * @param integer $FileSize 媒资文本文件大小，单位为字节
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MD5 媒资文本文件MD5
@@ -71,6 +81,8 @@ class TextMetadata extends AbstractModel
      * @param integer $Length 媒资文本文件字符数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 媒资文本文件格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShortFormat 封装格式短后缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class TextMetadata extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("ShortFormat",$param) and $param["ShortFormat"] !== null) {
+            $this->ShortFormat = $param["ShortFormat"];
         }
     }
 }

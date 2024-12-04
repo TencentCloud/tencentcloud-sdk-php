@@ -18,36 +18,36 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 属性标签引用信息
+ * 标签引用信息
  *
- * @method integer getSource() 获取属性标签来源，1：属性标签
- * @method void setSource(integer $Source) 设置属性标签来源，1：属性标签
- * @method string getAttributeBizId() 获取属性ID
- * @method void setAttributeBizId(string $AttributeBizId) 设置属性ID
- * @method array getLabelBizIds() 获取标签ID
- * @method void setLabelBizIds(array $LabelBizIds) 设置标签ID
+ * @method integer getSource() 获取标签来源，1：标签
+ * @method void setSource(integer $Source) 设置标签来源，1：标签
+ * @method string getAttributeBizId() 获取标签ID
+ * @method void setAttributeBizId(string $AttributeBizId) 设置标签ID
+ * @method array getLabelBizIds() 获取标签值ID
+ * @method void setLabelBizIds(array $LabelBizIds) 设置标签值ID
  */
 class AttrLabelRefer extends AbstractModel
 {
     /**
-     * @var integer 属性标签来源，1：属性标签
+     * @var integer 标签来源，1：标签
      */
     public $Source;
 
     /**
-     * @var string 属性ID
+     * @var string 标签ID
      */
     public $AttributeBizId;
 
     /**
-     * @var array 标签ID
+     * @var array 标签值ID
      */
     public $LabelBizIds;
 
     /**
-     * @param integer $Source 属性标签来源，1：属性标签
-     * @param string $AttributeBizId 属性ID
-     * @param array $LabelBizIds 标签ID
+     * @param integer $Source 标签来源，1：标签
+     * @param string $AttributeBizId 标签ID
+     * @param array $LabelBizIds 标签值ID
      */
     function __construct()
     {

@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量修改topic属性结果
  *
- * @method string getInstanceId() 获取实例id
+ * @method string getInstanceId() 获取ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicName() 获取topic名称
+ * @method string getTopicName() 获取主题名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicName(string $TopicName) 设置topic名称
+ * @method void setTopicName(string $TopicName) 设置主题名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReturnCode() 获取状态码
+ * @method string getReturnCode() 获取操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReturnCode(string $ReturnCode) 设置状态码
+ * @method void setReturnCode(string $ReturnCode) 设置操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取状态消息
- * @method void setMessage(string $Message) 设置状态消息
+ * @method string getMessage() 获取操作返回信息
+ * @method void setMessage(string $Message) 设置操作返回信息
  */
 class BatchModifyTopicResultDTO extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string topic名称
+     * @var string 主题名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
-     * @var string 状态码
+     * @var string 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnCode;
 
     /**
-     * @var string 状态消息
+     * @var string 操作返回信息
      */
     public $Message;
 
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicName topic名称
+     * @param string $TopicName 主题名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReturnCode 状态码
+     * @param string $ReturnCode 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 状态消息
+     * @param string $Message 操作返回信息
      */
     function __construct()
     {

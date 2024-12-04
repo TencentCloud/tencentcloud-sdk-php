@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) 设置数据盘列表
  * @method array getKeyIds() 获取ssh公钥id数组
  * @method void setKeyIds(array $KeyIds) 设置ssh公钥id数组
+ * @method array getGPUConfigs() 获取节点池 GPU 配置
+ * @method void setGPUConfigs(array $GPUConfigs) 设置节点池 GPU 配置
  */
 class UpdateNativeNodePoolParam extends AbstractModel
 {
@@ -166,6 +168,11 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var array 节点池 GPU 配置
+     */
+    public $GPUConfigs;
+
+    /**
      * @param MachineSetScaling $Scaling 伸缩配置
      * @param array $SubnetIds 子网列表
      * @param array $SecurityGroupIds 安全组列表
@@ -188,6 +195,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param integer $Replicas 期望节点数
      * @param array $DataDisks 数据盘列表
      * @param array $KeyIds ssh公钥id数组
+     * @param array $GPUConfigs 节点池 GPU 配置
      */
     function __construct()
     {
@@ -287,6 +295,15 @@ class UpdateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("GPUConfigs",$param) and $param["GPUConfigs"] !== null) {
+            $this->GPUConfigs = [];
+            foreach ($param["GPUConfigs"] as $key => $value){
+                $obj = new GPUConfig();
+                $obj->deserialize($value);
+                array_push($this->GPUConfigs, $obj);
+            }
         }
     }
 }

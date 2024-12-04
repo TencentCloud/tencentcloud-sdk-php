@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumer请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getGroupName() 获取group名称
- * @method void setGroupName(string $GroupName) 设置group名称
- * @method string getTopicName() 获取topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
- * @method void setTopicName(string $TopicName) 设置topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
- * @method array getTopicNameList() 获取topic名称数组
- * @method void setTopicNameList(array $TopicNameList) 设置topic名称数组
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getGroupName() 获取消费分组名称
+ * @method void setGroupName(string $GroupName) 设置消费分组名称
+ * @method string getTopicName() 获取主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
+ * @method void setTopicName(string $TopicName) 设置主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
+ * @method array getTopicNameList() 获取主题名列表
+ * @method void setTopicNameList(array $TopicNameList) 设置主题名列表
  */
 class CreateConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string group名称
+     * @var string 消费分组名称
      */
     public $GroupName;
 
     /**
-     * @var string topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+     * @var string 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
      */
     public $TopicName;
 
     /**
-     * @var array topic名称数组
+     * @var array 主题名列表
      */
     public $TopicNameList;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $GroupName group名称
-     * @param string $TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
-     * @param array $TopicNameList topic名称数组
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $GroupName 消费分组名称
+     * @param string $TopicName 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
+     * @param array $TopicNameList 主题名列表
      */
     function __construct()
     {

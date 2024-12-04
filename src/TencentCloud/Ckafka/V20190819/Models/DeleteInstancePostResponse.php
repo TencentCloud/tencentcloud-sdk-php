@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInstancePost返回参数结构体
  *
- * @method InstanceDeleteResponse getResult() 获取返回的结果集
- * @method void setResult(InstanceDeleteResponse $Result) 设置返回的结果集
+ * @method InstanceDeleteResponse getResult() 获取返回结果
+ * @method void setResult(InstanceDeleteResponse $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteInstancePostResponse extends AbstractModel
 {
     /**
-     * @var InstanceDeleteResponse 返回的结果集
+     * @var InstanceDeleteResponse 返回结果
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DeleteInstancePostResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param InstanceDeleteResponse $Result 返回的结果集
+     * @param InstanceDeleteResponse $Result 返回结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

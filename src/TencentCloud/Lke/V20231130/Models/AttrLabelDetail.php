@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 标签详情
  *
- * @method string getAttrBizId() 获取属性ID
+ * @method string getAttrBizId() 获取标签ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrBizId(string $AttrBizId) 设置属性ID
+ * @method void setAttrBizId(string $AttrBizId) 设置标签ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttrKey() 获取属性标识
+ * @method string getAttrKey() 获取标签标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrKey(string $AttrKey) 设置属性标识
+ * @method void setAttrKey(string $AttrKey) 设置标签标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttrName() 获取属性名称
+ * @method string getAttrName() 获取标签名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrName(string $AttrName) 设置属性名称
+ * @method void setAttrName(string $AttrName) 设置标签名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabelNames() 获取标签名称
+ * @method array getLabelNames() 获取标签值名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelNames(array $LabelNames) 设置标签名称
+ * @method void setLabelNames(array $LabelNames) 设置标签值名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsUpdating() 获取属性标签是否在更新中
+ * @method boolean getIsUpdating() 获取标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsUpdating(boolean $IsUpdating) 设置属性标签是否在更新中
+ * @method void setIsUpdating(boolean $IsUpdating) 设置标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,31 +52,31 @@ use TencentCloud\Common\AbstractModel;
 class AttrLabelDetail extends AbstractModel
 {
     /**
-     * @var string 属性ID
+     * @var string 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrBizId;
 
     /**
-     * @var string 属性标识
+     * @var string 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrKey;
 
     /**
-     * @var string 属性名称
+     * @var string 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrName;
 
     /**
-     * @var array 标签名称
+     * @var array 标签值名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelNames;
 
     /**
-     * @var boolean 属性标签是否在更新中
+     * @var boolean 标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdating;
@@ -94,15 +94,15 @@ class AttrLabelDetail extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @param string $AttrBizId 属性ID
+     * @param string $AttrBizId 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttrKey 属性标识
+     * @param string $AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttrName 属性名称
+     * @param string $AttrName 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LabelNames 标签名称
+     * @param array $LabelNames 标签值名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsUpdating 属性标签是否在更新中
+     * @param boolean $IsUpdating 标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
 注意：此字段可能返回 null，表示取不到有效值。

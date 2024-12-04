@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取实例id信息
- * @method void setInstanceId(string $InstanceId) 设置实例id信息
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getResourceType() 获取Acl资源类型,目前只支持Topic,枚举值列表：Topic
  * @method void setResourceType(string $ResourceType) 设置Acl资源类型,目前只支持Topic,枚举值列表：Topic
- * @method string getPatternType() 获取匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
- * @method void setPatternType(string $PatternType) 设置匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+ * @method string getPatternType() 获取ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+ * @method void setPatternType(string $PatternType) 设置ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
  * @method string getRuleName() 获取规则名称
  * @method void setRuleName(string $RuleName) 设置规则名称
  * @method array getRuleList() 获取设置的ACL规则列表
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string 实例id信息
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class CreateAclRuleRequest extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var string 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+     * @var string ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      */
     public $PatternType;
 
@@ -80,9 +80,9 @@ class CreateAclRuleRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $InstanceId 实例id信息
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $ResourceType Acl资源类型,目前只支持Topic,枚举值列表：Topic
-     * @param string $PatternType 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+     * @param string $PatternType ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      * @param string $RuleName 规则名称
      * @param array $RuleList 设置的ACL规则列表
      * @param string $Pattern 表示前缀匹配的前缀的值

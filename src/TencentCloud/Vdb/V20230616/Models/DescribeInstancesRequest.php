@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineNames(array $EngineNames) 设置按照引擎筛选实例。
  * @method array getEngineVersions() 获取按照版本筛选实例。
  * @method void setEngineVersions(array $EngineVersions) 设置按照版本筛选实例。
+ * @method array getApiVersions() 获取按照api版本筛选实例
+ * @method void setApiVersions(array $ApiVersions) 设置按照api版本筛选实例
  * @method string getCreateAt() 获取按照创建时间筛选实例。
  * @method void setCreateAt(string $CreateAt) 设置按照创建时间筛选实例。
  * @method array getZones() 获取按照可用区筛选实例。
@@ -80,6 +82,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $EngineVersions;
 
     /**
+     * @var array 按照api版本筛选实例
+     */
+    public $ApiVersions;
+
+    /**
      * @var string 按照创建时间筛选实例。
      */
     public $CreateAt;
@@ -121,6 +128,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $Status 根据状态获取实例， 为空则获取全部非隔离和非下线的实例。
      * @param array $EngineNames 按照引擎筛选实例。
      * @param array $EngineVersions 按照版本筛选实例。
+     * @param array $ApiVersions 按照api版本筛选实例
      * @param string $CreateAt 按照创建时间筛选实例。
      * @param array $Zones 按照可用区筛选实例。
      * @param string $OrderBy 排序字段。
@@ -164,6 +172,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
             $this->EngineVersions = $param["EngineVersions"];
+        }
+
+        if (array_key_exists("ApiVersions",$param) and $param["ApiVersions"] !== null) {
+            $this->ApiVersions = $param["ApiVersions"];
         }
 
         if (array_key_exists("CreateAt",$param) and $param["CreateAt"] !== null) {

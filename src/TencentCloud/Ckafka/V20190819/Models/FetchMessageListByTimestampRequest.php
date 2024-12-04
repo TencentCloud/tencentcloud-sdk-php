@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageListByTimestamp请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getTopic() 获取主题名
  * @method void setTopic(string $Topic) 设置主题名
  * @method integer getPartition() 获取分区id
  * @method void setPartition(integer $Partition) 设置分区id
  * @method integer getStartTime() 获取查询开始时间，13位时间戳
  * @method void setStartTime(integer $StartTime) 设置查询开始时间，13位时间戳
- * @method integer getSinglePartitionRecordNumber() 获取最大查询条数，默认20，最大20
- * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) 设置最大查询条数，默认20，最大20
+ * @method integer getSinglePartitionRecordNumber() 获取最大查询条数，默认20，最大20, 最小1
+ * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) 设置最大查询条数，默认20，最大20, 最小1
  */
 class FetchMessageListByTimestampRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -54,16 +54,16 @@ class FetchMessageListByTimestampRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer 最大查询条数，默认20，最大20
+     * @var integer 最大查询条数，默认20，最大20, 最小1
      */
     public $SinglePartitionRecordNumber;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $Topic 主题名
      * @param integer $Partition 分区id
      * @param integer $StartTime 查询开始时间，13位时间戳
-     * @param integer $SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * @param integer $SinglePartitionRecordNumber 最大查询条数，默认20，最大20, 最小1
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSubscribeGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  * @method integer getOffset() 获取分页时的起始位置
  * @method void setOffset(integer $Offset) 设置分页时的起始位置
  * @method integer getLimit() 获取分页时的个数
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicSubscribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string 主题名
      */
     public $TopicName;
 
@@ -52,8 +52,8 @@ class DescribeTopicSubscribeGroupRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $TopicName 主题名称
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $TopicName 主题名
      * @param integer $Offset 分页时的起始位置
      * @param integer $Limit 分页时的个数
      */

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getRuleName() 获取ACL策略名
- * @method void setRuleName(string $RuleName) 设置ACL策略名
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getRuleName() 获取ACL规则名
+ * @method void setRuleName(string $RuleName) 设置ACL规则名
  * @method integer getIsApplied() 获取修改预设规则时传入,是否应用到新增的Topic
  * @method void setIsApplied(integer $IsApplied) 设置修改预设规则时传入,是否应用到新增的Topic
  */
 class ModifyAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string ACL策略名
+     * @var string ACL规则名
      */
     public $RuleName;
 
@@ -45,8 +45,8 @@ class ModifyAclRuleRequest extends AbstractModel
     public $IsApplied;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $RuleName ACL策略名
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $RuleName ACL规则名
      * @param integer $IsApplied 修改预设规则时传入,是否应用到新增的Topic
      */
     function __construct()

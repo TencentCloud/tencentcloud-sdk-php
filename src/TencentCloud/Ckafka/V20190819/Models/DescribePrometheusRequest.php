@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheus请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  */
 class DescribePrometheusRequest extends AbstractModel
 {
     /**
-     * @var string ckafka实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ckafka实例Id
+     * @param string $InstanceId ckafka集群实例Id
      */
     function __construct()
     {

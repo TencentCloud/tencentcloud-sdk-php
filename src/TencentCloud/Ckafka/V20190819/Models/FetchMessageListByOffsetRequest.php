@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageListByOffset请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getTopic() 获取主题名
  * @method void setTopic(string $Topic) 设置主题名
  * @method integer getPartition() 获取分区id
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class FetchMessageListByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class FetchMessageListByOffsetRequest extends AbstractModel
     public $SinglePartitionRecordNumber;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $Topic 主题名
      * @param integer $Partition 分区id
      * @param integer $Offset 位点信息

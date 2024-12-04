@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstanceScalingDown请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method integer getUpgradeStrategy() 获取缩容模式  1:稳定变配 
 2.高速变配
  * @method void setUpgradeStrategy(integer $UpgradeStrategy) 设置缩容模式  1:稳定变配 
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceScalingDownRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -62,7 +62,7 @@ class InstanceScalingDownRequest extends AbstractModel
     public $Partition;
 
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId ckafka集群实例Id
      * @param integer $UpgradeStrategy 缩容模式  1:稳定变配 
 2.高速变配
      * @param integer $DiskSize 磁盘大小 单位 GB

@@ -92,12 +92,12 @@ use TencentCloud\Common\AbstractModel;
 客户获得用户授权所依赖的协议地址。
 
 示例值：https://www.*****.com/*
- * @method integer getIsPersonalData() 获取是否是用户个人敏感数据。
+ * @method integer getIsPersonalData() 获取是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
 示例值：1
- * @method void setIsPersonalData(integer $IsPersonalData) 设置是否是用户个人敏感数据。
+ * @method void setIsPersonalData(integer $IsPersonalData) 设置是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
@@ -170,7 +170,7 @@ class DataAuthorizationInfo extends AbstractModel
     public $PrivacyPolicyLink;
 
     /**
-     * @var integer 是否是用户个人敏感数据。
+     * @var integer 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
@@ -215,7 +215,7 @@ class DataAuthorizationInfo extends AbstractModel
 客户获得用户授权所依赖的协议地址。
 
 示例值：https://www.*****.com/*
-     * @param integer $IsPersonalData 是否是用户个人敏感数据。
+     * @param integer $IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 

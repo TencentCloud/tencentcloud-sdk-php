@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMedia请求参数结构体
  *
- * @method string getMediaId() 获取导入媒资返回的媒资ID，最长32B
- * @method void setMediaId(string $MediaId) 设置导入媒资返回的媒资ID，最长32B
+ * @method string getMediaId() 获取导入媒资返回的媒资ID
+ * @method void setMediaId(string $MediaId) 设置导入媒资返回的媒资ID
  */
 class DescribeMediaRequest extends AbstractModel
 {
     /**
-     * @var string 导入媒资返回的媒资ID，最长32B
+     * @var string 导入媒资返回的媒资ID
      */
     public $MediaId;
 
     /**
-     * @param string $MediaId 导入媒资返回的媒资ID，最长32B
+     * @param string $MediaId 导入媒资返回的媒资ID
      */
     function __construct()
     {

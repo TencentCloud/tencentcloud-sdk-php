@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getFileType() 获取文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
  * @method void setFileType(string $FileType) 设置文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
- * @method boolean getIsPublic() 获取IsPublic用于上传文件或图片时选择场景，当上传为对话端图片时IsPublic为true，上传文件（包括文档库文件和对话端文件）时IsPublic为false
- * @method void setIsPublic(boolean $IsPublic) 设置IsPublic用于上传文件或图片时选择场景，当上传为对话端图片时IsPublic为true，上传文件（包括文档库文件和对话端文件）时IsPublic为false
+ * @method boolean getIsPublic() 获取IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
+
+ * @method void setIsPublic(boolean $IsPublic) 设置IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
+
  * @method string getTypeKey() 获取存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
  * @method void setTypeKey(string $TypeKey) 设置存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
  */
@@ -42,7 +44,8 @@ class DescribeStorageCredentialRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var boolean IsPublic用于上传文件或图片时选择场景，当上传为对话端图片时IsPublic为true，上传文件（包括文档库文件和对话端文件）时IsPublic为false
+     * @var boolean IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
+
      */
     public $IsPublic;
 
@@ -54,7 +57,8 @@ class DescribeStorageCredentialRequest extends AbstractModel
     /**
      * @param string $BotBizId 应用ID
      * @param string $FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
-     * @param boolean $IsPublic IsPublic用于上传文件或图片时选择场景，当上传为对话端图片时IsPublic为true，上传文件（包括文档库文件和对话端文件）时IsPublic为false
+     * @param boolean $IsPublic IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
+
      * @param string $TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
      */
     function __construct()

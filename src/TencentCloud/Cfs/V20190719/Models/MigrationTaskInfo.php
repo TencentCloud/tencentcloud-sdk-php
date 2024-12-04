@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketPath(string $BucketPath) 设置源桶路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDirection() 获取迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+ * @method void setDirection(integer $Direction) 设置迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
  */
 class MigrationTaskInfo extends AbstractModel
 {
@@ -247,6 +249,11 @@ class MigrationTaskInfo extends AbstractModel
     public $BucketPath;
 
     /**
+     * @var integer 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     */
+    public $Direction;
+
+    /**
      * @param string $TaskName 迁移任务名称
      * @param string $TaskId 迁移任务id
      * @param integer $MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
@@ -288,6 +295,7 @@ class MigrationTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketPath 源桶路径
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
      */
     function __construct()
     {
@@ -400,6 +408,10 @@ class MigrationTaskInfo extends AbstractModel
 
         if (array_key_exists("BucketPath",$param) and $param["BucketPath"] !== null) {
             $this->BucketPath = $param["BucketPath"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

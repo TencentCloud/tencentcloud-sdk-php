@@ -250,6 +250,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) 设置集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBindFileSystemNum() 获取集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindFileSystemNum(integer $BindFileSystemNum) 设置集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -547,6 +551,12 @@ class ClusterInstancesInfo extends AbstractModel
     public $ConfigDetail;
 
     /**
+     * @var integer 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindFileSystemNum;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -661,6 +671,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $ClusterTitle 标题
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EmrProductConfigDetail $ConfigDetail 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BindFileSystemNum 集群绑定的文件系统数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -867,6 +879,10 @@ class ClusterInstancesInfo extends AbstractModel
         if (array_key_exists("ConfigDetail",$param) and $param["ConfigDetail"] !== null) {
             $this->ConfigDetail = new EmrProductConfigDetail();
             $this->ConfigDetail->deserialize($param["ConfigDetail"]);
+        }
+
+        if (array_key_exists("BindFileSystemNum",$param) and $param["BindFileSystemNum"] !== null) {
+            $this->BindFileSystemNum = $param["BindFileSystemNum"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置目标文件系统名称
  * @method string getBucketPath() 获取源桶路径，默认为/
  * @method void setBucketPath(string $BucketPath) 设置源桶路径，默认为/
+ * @method integer getDirection() 获取迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+ * @method void setDirection(integer $Direction) 设置迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
  */
 class CreateMigrationTaskRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $BucketPath;
 
     /**
+     * @var integer 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     */
+    public $Direction;
+
+    /**
      * @param string $TaskName 迁移任务名称
      * @param integer $MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
      * @param integer $MigrationMode 迁移模式，默认为0。0: 全量迁移
@@ -144,6 +151,7 @@ class CreateMigrationTaskRequest extends AbstractModel
      * @param string $ListAddress 清单地址，迁移方式为清单迁移时必填
      * @param string $FsName 目标文件系统名称
      * @param string $BucketPath 源桶路径，默认为/
+     * @param integer $Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CreateMigrationTaskRequest extends AbstractModel
 
         if (array_key_exists("BucketPath",$param) and $param["BucketPath"] !== null) {
             $this->BucketPath = $param["BucketPath"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

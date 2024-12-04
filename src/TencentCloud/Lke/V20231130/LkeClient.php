@@ -31,6 +31,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建属性
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业
+ * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
  * @method Models\CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(Models\CreateReconstructDocumentFlowRequest $req) 本接口为异步接口的发起请求接口，用于发起文档解析任务。
@@ -42,6 +43,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签
  * @method Models\DeleteDocResponse DeleteDoc(Models\DeleteDocRequest $req) 删除文档
+ * @method Models\DeleteDocCateResponse DeleteDocCate(Models\DeleteDocCateRequest $req) Doc分类删除
  * @method Models\DeleteQAResponse DeleteQA(Models\DeleteQARequest $req) 删除问答
  * @method Models\DeleteQACateResponse DeleteQACate(Models\DeleteQACateRequest $req) 分类删除
  * @method Models\DeleteRejectedQuestionResponse DeleteRejectedQuestion(Models\DeleteRejectedQuestionRequest $req) 删除拒答问题
@@ -80,13 +82,16 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) 获取任务状态
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) 获取ws token
+ * @method Models\GroupDocResponse GroupDoc(Models\GroupDocRequest $req) Doc分组
  * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) QA分组
  * @method Models\IgnoreUnsatisfiedReplyResponse IgnoreUnsatisfiedReply(Models\IgnoreUnsatisfiedReplyRequest $req) 忽略不满意回复
  * @method Models\IsTransferIntentResponse IsTransferIntent(Models\IsTransferIntentRequest $req) 是否意图转人工
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) 获取企业下应用列表
  * @method Models\ListAppCategoryResponse ListAppCategory(Models\ListAppCategoryRequest $req) 应用类型列表
+ * @method Models\ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(Models\ListAppKnowledgeDetailRequest $req) 列表查询知识库容量详情
  * @method Models\ListAttributeLabelResponse ListAttributeLabel(Models\ListAttributeLabelRequest $req) 查询属性标签列表
  * @method Models\ListDocResponse ListDoc(Models\ListDocRequest $req) 文档列表
+ * @method Models\ListDocCateResponse ListDocCate(Models\ListDocCateRequest $req) 获取Doc分类
  * @method Models\ListModelResponse ListModel(Models\ListModelRequest $req) 获取模型列表
  * @method Models\ListQAResponse ListQA(Models\ListQARequest $req) 问答列表
  * @method Models\ListQACateResponse ListQACate(Models\ListQACateRequest $req) 获取QA分类
@@ -98,10 +103,12 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListReleaseQAPreviewResponse ListReleaseQAPreview(Models\ListReleaseQAPreviewRequest $req) 文档列表
  * @method Models\ListSelectDocResponse ListSelectDoc(Models\ListSelectDocRequest $req) 获取账户信息
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
+ * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用请求结构体
  * @method Models\ModifyAttributeLabelResponse ModifyAttributeLabel(Models\ModifyAttributeLabelRequest $req) 编辑属性标签
  * @method Models\ModifyDocResponse ModifyDoc(Models\ModifyDocRequest $req) 修改文档
  * @method Models\ModifyDocAttrRangeResponse ModifyDocAttrRange(Models\ModifyDocAttrRangeRequest $req) 批量修改文档适用范围
+ * @method Models\ModifyDocCateResponse ModifyDocCate(Models\ModifyDocCateRequest $req) 修改Doc分类
  * @method Models\ModifyQAResponse ModifyQA(Models\ModifyQARequest $req) 更新问答
  * @method Models\ModifyQAAttrRangeResponse ModifyQAAttrRange(Models\ModifyQAAttrRangeRequest $req) 批量修改问答适用范围
  * @method Models\ModifyQACateResponse ModifyQACate(Models\ModifyQACateRequest $req) 更新QA分类

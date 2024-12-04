@@ -32,8 +32,8 @@ Type 对应的格式必须为 HLS 格式。
 Type 对应的格式必须为 HLS 格式。
  * @method string getItemId() 获取播放节目的 ID，由系统分配。
  * @method void setItemId(string $ItemId) 设置播放节目的 ID，由系统分配。
- * @method integer getDefinition() 获取指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
- * @method void setDefinition(integer $Definition) 设置指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+ * @method integer getDefinition() 获取指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
+ * @method void setDefinition(integer $Definition) 设置指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
  */
 class RoundPlayListItemInfo extends AbstractModel
 {
@@ -56,7 +56,7 @@ Type 对应的格式必须为 HLS 格式。
     public $ItemId;
 
     /**
-     * @var integer 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * @var integer 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     public $Definition;
 
@@ -67,7 +67,7 @@ Type 对应的格式必须为 HLS 格式。
 <li>Original：原始音视频。</li>
 Type 对应的格式必须为 HLS 格式。
      * @param string $ItemId 播放节目的 ID，由系统分配。
-     * @param integer $Definition 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * @param integer $Definition 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     function __construct()
     {

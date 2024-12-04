@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method array getHaVipAssociationSet() 获取HaVip绑定的子机或网卡。最多支持10个实例。
+ * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置HaVip绑定的子机或网卡。最多支持10个实例。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  */
 class CreateHaVipRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateHaVipRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public $HaVipAssociationSet;
+
+    /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public $ClientToken;
+
+    /**
      * @param string $VpcId `HAVIP`所在私有网络`ID`。
      * @param string $HaVipName `HAVIP`名称。
      * @param string $SubnetId `HAVIP`所在子网`ID`。
@@ -80,6 +94,8 @@ class CreateHaVipRequest extends AbstractModel
      * @param string $NetworkInterfaceId `HAVIP`所在弹性网卡`ID`。
      * @param boolean $CheckAssociate 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param array $HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     function __construct()
     {
@@ -125,6 +141,19 @@ class CreateHaVipRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HaVipAssociationSet",$param) and $param["HaVipAssociationSet"] !== null) {
+            $this->HaVipAssociationSet = [];
+            foreach ($param["HaVipAssociationSet"] as $key => $value){
+                $obj = new HaVipAssociation();
+                $obj->deserialize($value);
+                array_push($this->HaVipAssociationSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
 默认值：Loop。
+ * @method string getRoundPlayId() 获取播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+ * @method void setRoundPlayId(string $RoundPlayId) 设置播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+ * @method string getExpiredTime() 获取过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+ * @method void setExpiredTime(string $ExpiredTime) 设置过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
  */
 class CreateRoundPlayRequest extends AbstractModel
 {
@@ -78,6 +82,16 @@ class CreateRoundPlayRequest extends AbstractModel
     public $PlayBackMode;
 
     /**
+     * @var string 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+     */
+    public $RoundPlayId;
+
+    /**
+     * @var string 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+     */
+    public $ExpiredTime;
+
+    /**
      * @param string $StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param array $RoundPlaylist 轮播列表。
 <li>数组长度限制：100。</li>
@@ -88,6 +102,8 @@ class CreateRoundPlayRequest extends AbstractModel
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
 默认值：Loop。
+     * @param string $RoundPlayId 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+     * @param string $ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
      */
     function __construct()
     {
@@ -129,6 +145,14 @@ class CreateRoundPlayRequest extends AbstractModel
 
         if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
             $this->PlayBackMode = $param["PlayBackMode"];
+        }
+
+        if (array_key_exists("RoundPlayId",$param) and $param["RoundPlayId"] !== null) {
+            $this->RoundPlayId = $param["RoundPlayId"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

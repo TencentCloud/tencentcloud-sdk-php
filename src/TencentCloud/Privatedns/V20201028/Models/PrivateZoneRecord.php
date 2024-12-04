@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(integer $Enabled) 设置0暂停，1启用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateZoneRecord extends AbstractModel
 {
@@ -127,6 +131,12 @@ class PrivateZoneRecord extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param string $RecordId 记录id
      * @param string $ZoneId 私有域id: zone-xxxxxxxx
      * @param string $SubDomain 子域名
@@ -143,6 +153,8 @@ class PrivateZoneRecord extends AbstractModel
      * @param string $Extra 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Enabled 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class PrivateZoneRecord extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

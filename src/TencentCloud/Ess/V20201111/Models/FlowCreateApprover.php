@@ -326,6 +326,10 @@ use TencentCloud\Common\AbstractModel;
 1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
 2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+ * @method array getSignEndpoints() 获取进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+ * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -596,6 +600,12 @@ class FlowCreateApprover extends AbstractModel
     public $Intention;
 
     /**
+     * @var array 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public $SignEndpoints;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：
 
 <ul><li> <b>0</b> :企业B端。</li>
@@ -749,6 +759,8 @@ class FlowCreateApprover extends AbstractModel
 1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
 2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+     * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
      */
     function __construct()
     {
@@ -886,6 +898,10 @@ class FlowCreateApprover extends AbstractModel
         if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
             $this->Intention = new Intention();
             $this->Intention->deserialize($param["Intention"]);
+        }
+
+        if (array_key_exists("SignEndpoints",$param) and $param["SignEndpoints"] !== null) {
+            $this->SignEndpoints = $param["SignEndpoints"];
         }
     }
 }

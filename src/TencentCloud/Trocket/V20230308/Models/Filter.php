@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询过滤器
  *
- * @method string getName() 获取过滤条件名
- * @method void setName(string $Name) 设置过滤条件名
+ * @method string getName() 获取过滤条件参数名
+ * @method void setName(string $Name) 设置过滤条件参数名
  * @method array getValues() 获取过滤条件的值
  * @method void setValues(array $Values) 设置过滤条件的值
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 过滤条件名
+     * @var string 过滤条件参数名
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class Filter extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name 过滤条件名
+     * @param string $Name 过滤条件参数名
      * @param array $Values 过滤条件的值
      */
     function __construct()

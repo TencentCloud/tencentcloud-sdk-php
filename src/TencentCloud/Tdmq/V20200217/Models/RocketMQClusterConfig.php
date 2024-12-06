@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ集群配置
  *
- * @method integer getMaxTpsPerNamespace() 获取单命名空间TPS上线
- * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) 设置单命名空间TPS上线
+ * @method integer getMaxTpsPerNamespace() 获取单命名空间TPS上限
+ * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) 设置单命名空间TPS上限
  * @method integer getMaxNamespaceNum() 获取最大命名空间数量
  * @method void setMaxNamespaceNum(integer $MaxNamespaceNum) 设置最大命名空间数量
  * @method integer getUsedNamespaceNum() 获取已使用命名空间数量
@@ -50,7 +50,8 @@ use TencentCloud\Common\AbstractModel;
 class RocketMQClusterConfig extends AbstractModel
 {
     /**
-     * @var integer 单命名空间TPS上线
+     * @var integer 单命名空间TPS上限
+     * @deprecated
      */
     public $MaxTpsPerNamespace;
 
@@ -107,7 +108,7 @@ class RocketMQClusterConfig extends AbstractModel
     public $TopicDistribution;
 
     /**
-     * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
+     * @param integer $MaxTpsPerNamespace 单命名空间TPS上限
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量

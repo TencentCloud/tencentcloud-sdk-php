@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceList请求参数结构体
  *
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
+ * @method array getFilters() 获取查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
+ * @method void setFilters(array $Filters) 设置查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
  * @method integer getOffset() 获取查询起始位置
  * @method void setOffset(integer $Offset) 设置查询起始位置
  * @method integer getLimit() 获取查询结果限制数量
@@ -32,7 +38,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceListRequest extends AbstractModel
 {
     /**
-     * @var array 查询条件列表
+     * @var array 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
      */
     public $Filters;
 
@@ -52,7 +61,10 @@ class DescribeInstanceListRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param array $Filters 查询条件列表
+     * @param array $Filters 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询结果限制数量
      * @param array $TagFilters 标签过滤器

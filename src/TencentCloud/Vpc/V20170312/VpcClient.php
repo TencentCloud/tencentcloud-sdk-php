@@ -35,7 +35,10 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。
 * 一个腾讯云账户在每个地域能申请的 EIP 最大配额有所限制，可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)，上述配额可通过 DescribeAddressQuota 接口获取。
- * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) 该接口用于给IPv6地址初次分配公网带宽
+ * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
+
+- 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
+- 支持为一个或多个传统弹性公网 IPv6 实例开通公网带宽。
  * @method Models\AssignIpv6AddressesResponse AssignIpv6Addresses(Models\AssignIpv6AddressesRequest $req) 本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
@@ -359,7 +362,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
  * @method Models\DescribeHighPriorityRouteTablesResponse DescribeHighPriorityRouteTables(Models\DescribeHighPriorityRouteTablesRequest $req) 查询高优路由表。
  * @method Models\DescribeHighPriorityRoutesResponse DescribeHighPriorityRoutes(Models\DescribeHighPriorityRoutesRequest $req) 查询高优路由表条目信息。
- * @method Models\DescribeIp6AddressesResponse DescribeIp6Addresses(Models\DescribeIp6AddressesRequest $req) 该接口用于查询IPV6地址信息
+ * @method Models\DescribeIp6AddressesResponse DescribeIp6Addresses(Models\DescribeIp6AddressesRequest $req) 本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
  * @method Models\DescribeIp6TranslatorQuotaResponse DescribeIp6TranslatorQuota(Models\DescribeIp6TranslatorQuotaRequest $req) 查询账户在指定地域IPV6转换实例和规则的配额
  * @method Models\DescribeIp6TranslatorsResponse DescribeIp6Translators(Models\DescribeIp6TranslatorsRequest $req) 1. 该接口用于查询账户下的IPV6转换实例及其绑定的转换规则信息
 2. 支持过滤查询
@@ -526,8 +529,6 @@ LimitTypes取值范围：
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
 
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-
-
  * @method Models\MigrateNetworkInterfaceResponse MigrateNetworkInterface(Models\MigrateNetworkInterfaceRequest $req) 本接口（MigrateNetworkInterface）用于弹性网卡迁移。
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\MigratePrivateIpAddressResponse MigratePrivateIpAddress(Models\MigratePrivateIpAddressRequest $req) 本接口（MigratePrivateIpAddress）用于弹性网卡内网IP迁移。
@@ -565,7 +566,10 @@ LimitTypes取值范围：
  * @method Models\ModifyHighPriorityRouteAttributeResponse ModifyHighPriorityRouteAttribute(Models\ModifyHighPriorityRouteAttributeRequest $req) 修改高优路由表条目属性。
  * @method Models\ModifyHighPriorityRouteECMPAlgorithmResponse ModifyHighPriorityRouteECMPAlgorithm(Models\ModifyHighPriorityRouteECMPAlgorithmRequest $req) 修改高优路由表 HASH 策略。
  * @method Models\ModifyHighPriorityRouteTableAttributeResponse ModifyHighPriorityRouteTableAttribute(Models\ModifyHighPriorityRouteTableAttributeRequest $req) 修改高优路由表属性
- * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) 该接口用于修改IPV6地址访问internet的带宽
+ * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+
+- 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
+- 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
  * @method Models\ModifyIp6RuleResponse ModifyIp6Rule(Models\ModifyIp6RuleRequest $req) 该接口用于修改IPV6转换规则，当前仅支持修改转换规则名称，IPV4地址和IPV4端口号
  * @method Models\ModifyIp6TranslatorResponse ModifyIp6Translator(Models\ModifyIp6TranslatorRequest $req) 该接口用于修改IP6转换实例属性，当前仅支持修改实例名称。
  * @method Models\ModifyIpv6AddressesAttributeResponse ModifyIpv6AddressesAttribute(Models\ModifyIpv6AddressesAttributeRequest $req) 本接口（ModifyIpv6AddressesAttribute）用于修改弹性网卡内网IPv6地址属性。
@@ -634,7 +638,10 @@ LimitTypes取值范围：
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) 本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
 * 只有状态为 UNBIND 的 EIP 才能进行释放操作。
- * @method Models\ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidth(Models\ReleaseIp6AddressesBandwidthRequest $req) 该接口用于给弹性公网IPv6地址释放带宽。
+ * @method Models\ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidth(Models\ReleaseIp6AddressesBandwidthRequest $req) 本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
+
+- 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
+- 如需再次开通 IPv6 公网带宽，请使用 AllocateIp6AddressesBandwidth 接口进行开通。
  * @method Models\RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResources(Models\RemoveBandwidthPackageResourcesRequest $req) 接口用于删除带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
  * @method Models\RemoveIp6RulesResponse RemoveIp6Rules(Models\RemoveIp6RulesRequest $req) 1. 该接口用于删除IPV6转换规则
 2. 支持批量删除同一个转换实例下的多个转换规则

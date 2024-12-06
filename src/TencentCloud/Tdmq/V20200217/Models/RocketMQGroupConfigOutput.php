@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置消费组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getImported() 获取导入状态
+ * @method boolean getImported() 获取是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImported(boolean $Imported) 设置导入状态
+ * @method void setImported(boolean $Imported) 设置是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取remark
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ class RocketMQGroupConfigOutput extends AbstractModel
     public $GroupName;
 
     /**
-     * @var boolean 导入状态
+     * @var boolean 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Imported;
@@ -68,7 +68,7 @@ class RocketMQGroupConfigOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 消费组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Imported 导入状态
+     * @param boolean $Imported 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark remark
 注意：此字段可能返回 null，表示取不到有效值。

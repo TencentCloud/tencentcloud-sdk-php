@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getAlgorithm() 获取算法：hmac-based，public-key
  * @method void setAlgorithm(string $Algorithm) 设置算法：hmac-based，public-key
- * @method string getFrom() 获取设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
- * @method void setFrom(string $From) 设置设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+ * @method string getFrom() 获取设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
+ * @method void setFrom(string $From) 设置设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
  * @method string getSecret() 获取密码
  * @method void setSecret(string $Secret) 设置密码
  * @method string getPublicKey() 获取公钥
@@ -48,7 +52,9 @@ class ModifyJWTAuthenticatorRequest extends AbstractModel
     public $Algorithm;
 
     /**
-     * @var string 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * @var string 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      */
     public $From;
 
@@ -75,7 +81,9 @@ class ModifyJWTAuthenticatorRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $Algorithm 算法：hmac-based，public-key
-     * @param string $From 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * @param string $From 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      * @param string $Secret 密码
      * @param string $PublicKey 公钥
      * @param string $Text JSKS文本

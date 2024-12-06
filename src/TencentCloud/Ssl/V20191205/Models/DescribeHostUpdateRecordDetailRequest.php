@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostUpdateRecordDetail请求参数结构体
  *
- * @method string getDeployRecordId() 获取一键更新记录ID
- * @method void setDeployRecordId(string $DeployRecordId) 设置一键更新记录ID
+ * @method string getDeployRecordId() 获取一键更新记录ID,从接口UpdateCertificateInstance获得
+ * @method void setDeployRecordId(string $DeployRecordId) 设置一键更新记录ID,从接口UpdateCertificateInstance获得
  * @method string getLimit() 获取每页数量，默认10。
  * @method void setLimit(string $Limit) 设置每页数量，默认10。
  * @method string getOffset() 获取分页偏移量，从0开始。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostUpdateRecordDetailRequest extends AbstractModel
 {
     /**
-     * @var string 一键更新记录ID
+     * @var string 一键更新记录ID,从接口UpdateCertificateInstance获得
      */
     public $DeployRecordId;
 
@@ -45,7 +45,7 @@ class DescribeHostUpdateRecordDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $DeployRecordId 一键更新记录ID
+     * @param string $DeployRecordId 一键更新记录ID,从接口UpdateCertificateInstance获得
      * @param string $Limit 每页数量，默认10。
      * @param string $Offset 分页偏移量，从0开始。
      */

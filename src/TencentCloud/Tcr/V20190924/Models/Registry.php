@@ -26,8 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryName(string $RegistryName) 设置实例名称
  * @method string getRegistryType() 获取实例规格
  * @method void setRegistryType(string $RegistryType) 设置实例规格
- * @method string getStatus() 获取实例状态
- * @method void setStatus(string $Status) 设置实例状态
+ * @method string getStatus() 获取实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
+ * @method void setStatus(string $Status) 设置实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
  * @method string getPublicDomain() 获取实例的公共访问地址
  * @method void setPublicDomain(string $PublicDomain) 设置实例的公共访问地址
  * @method string getCreatedAt() 获取实例创建时间
@@ -79,7 +101,18 @@ class Registry extends AbstractModel
     public $RegistryType;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
      */
     public $Status;
 
@@ -151,7 +184,18 @@ class Registry extends AbstractModel
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
-     * @param string $Status 实例状态
+     * @param string $Status 实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
      * @param string $PublicDomain 实例的公共访问地址
      * @param string $CreatedAt 实例创建时间
      * @param string $RegionName 地域名称

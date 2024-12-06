@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
- * @method string getVerifyType() 获取域名验证方式
- * @method void setVerifyType(string $VerifyType) 设置域名验证方式
+ * @method string getVerifyType() 获取域名验证方式，如 DNS,DNS_AUTO,FILE
+ * @method void setVerifyType(string $VerifyType) 设置域名验证方式，如 DNS,DNS_AUTO,FILE
  */
 class CommitCertificateInformationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CommitCertificateInformationRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string 域名验证方式
+     * @var string 域名验证方式，如 DNS,DNS_AUTO,FILE
      */
     public $VerifyType;
 
     /**
      * @param string $CertificateId 证书 ID。
-     * @param string $VerifyType 域名验证方式
+     * @param string $VerifyType 域名验证方式，如 DNS,DNS_AUTO,FILE
      */
     function __construct()
     {

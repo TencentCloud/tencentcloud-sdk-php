@@ -81,31 +81,37 @@ class DescribeVideoTranslateJobResponse extends AbstractModel
 
     /**
      * @var integer 是否需要确认翻译结果。0：不需要，1：需要。	
+     * @deprecated
      */
     public $JobConfirm;
 
     /**
      * @var string 音频任务 ID。	
+     * @deprecated
      */
     public $JobAudioTaskId;
 
     /**
      * @var string 视频审核任务ID。
+     * @deprecated
      */
     public $JobVideoModerationId;
 
     /**
      * @var string 音频审核任务 ID。
+     * @deprecated
      */
     public $JobAudioModerationId;
 
     /**
      * @var string 口型驱动任务 ID。
+     * @deprecated
      */
     public $JobVideoId;
 
     /**
      * @var string 视频素材原始 URL。
+     * @deprecated
      */
     public $OriginalVideoUrl;
 
@@ -116,6 +122,7 @@ class DescribeVideoTranslateJobResponse extends AbstractModel
 
     /**
      * @var string 提交视频转译任务时的 requestId。
+     * @deprecated
      */
     public $JobSubmitReqId;
 

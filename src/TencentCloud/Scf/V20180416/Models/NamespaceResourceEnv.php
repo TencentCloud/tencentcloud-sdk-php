@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTKE(NamespaceResourceEnvTKE $TKE) 设置基于TKE集群的资源池
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getOFFLINE() 获取近离线计算类型的命名空间
+ * @method void setOFFLINE(boolean $OFFLINE) 设置近离线计算类型的命名空间
  */
 class NamespaceResourceEnv extends AbstractModel
 {
@@ -34,8 +36,14 @@ class NamespaceResourceEnv extends AbstractModel
     public $TKE;
 
     /**
+     * @var boolean 近离线计算类型的命名空间
+     */
+    public $OFFLINE;
+
+    /**
      * @param NamespaceResourceEnvTKE $TKE 基于TKE集群的资源池
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $OFFLINE 近离线计算类型的命名空间
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class NamespaceResourceEnv extends AbstractModel
         if (array_key_exists("TKE",$param) and $param["TKE"] !== null) {
             $this->TKE = new NamespaceResourceEnvTKE();
             $this->TKE->deserialize($param["TKE"]);
+        }
+
+        if (array_key_exists("OFFLINE",$param) and $param["OFFLINE"] !== null) {
+            $this->OFFLINE = $param["OFFLINE"];
         }
     }
 }

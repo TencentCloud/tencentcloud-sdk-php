@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人的角色名, 如: 收款人、开具人、见证人等
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignId() 获取签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignId(string $SignId) 设置签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
 {
@@ -171,6 +175,12 @@ class FlowApproverDetail extends AbstractModel
     public $ApproverRoleName;
 
     /**
+     * @var string 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignId;
+
+    /**
      * @param string $ReceiptId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
      * @param string $ProxyOrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,6 +213,8 @@ class FlowApproverDetail extends AbstractModel
 <li> **PERSON** :个人签署人</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverRoleName 自定义签署人的角色名, 如: 收款人、开具人、见证人等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -264,6 +276,10 @@ class FlowApproverDetail extends AbstractModel
 
         if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
             $this->ApproverRoleName = $param["ApproverRoleName"];
+        }
+
+        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
+            $this->SignId = $param["SignId"];
         }
     }
 }

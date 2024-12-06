@@ -120,9 +120,9 @@ ConfigurationItemChangeNotification：变更触发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManageInputParameter(array $ManageInputParameter) 设置参数详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompliancePackName() 获取规则名称
+ * @method string getCompliancePackName() 获取合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompliancePackName(string $CompliancePackName) 设置规则名称
+ * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegionsScope() 获取关联地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -284,7 +284,7 @@ ConfigurationItemChangeNotification：变更触发
     public $ManageInputParameter;
 
     /**
-     * @var string 规则名称
+     * @var string 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompliancePackName;
@@ -383,7 +383,7 @@ ConfigurationItemChangeNotification：变更触发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManageInputParameter 参数详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompliancePackName 规则名称
+     * @param string $CompliancePackName 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionsScope 关联地域
 注意：此字段可能返回 null，表示取不到有效值。

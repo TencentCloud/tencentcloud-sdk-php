@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取分页偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
- * @method integer getLimit() 获取每页数量，默认10。最大1000
- * @method void setLimit(integer $Limit) 设置每页数量，默认10。最大1000
+ * @method integer getLimit() 获取每页数量，默认10。最大值1000，如超过1000按1000处理
+ * @method void setLimit(integer $Limit) 设置每页数量，默认10。最大值1000，如超过1000按1000处理
  * @method string getSearchKey() 获取搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
  * @method void setSearchKey(string $SearchKey) 设置搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
  * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostable(integer $Hostable) 设置是否可托管，可选值：1 = 可托管，0 =  不可托管。
  * @method array getTags() 获取筛选指定标签的证书
  * @method void setTags(array $Tags) 设置筛选指定标签的证书
- * @method integer getIsPendingIssue() 获取//是否筛选等待签发的证书，传1是筛选，0和null不筛选
- * @method void setIsPendingIssue(integer $IsPendingIssue) 设置//是否筛选等待签发的证书，传1是筛选，0和null不筛选
+ * @method integer getIsPendingIssue() 获取是否筛选等待签发的证书，传1是筛选，0和null不筛选
+ * @method void setIsPendingIssue(integer $IsPendingIssue) 设置是否筛选等待签发的证书，传1是筛选，0和null不筛选
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页数量，默认10。最大1000
+     * @var integer 每页数量，默认10。最大值1000，如超过1000按1000处理
      */
     public $Limit;
 
@@ -131,13 +131,13 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @var integer 是否筛选等待签发的证书，传1是筛选，0和null不筛选
      */
     public $IsPendingIssue;
 
     /**
      * @param integer $Offset 分页偏移量，从0开始。
-     * @param integer $Limit 每页数量，默认10。最大1000
+     * @param integer $Limit 每页数量，默认10。最大值1000，如超过1000按1000处理
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
      * @param integer $ProjectId 项目 ID。
@@ -151,7 +151,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param integer $FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
      * @param integer $Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
      * @param array $Tags 筛选指定标签的证书
-     * @param integer $IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @param integer $IsPendingIssue 是否筛选等待签发的证书，传1是筛选，0和null不筛选
      */
     function __construct()
     {

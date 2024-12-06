@@ -76,6 +76,8 @@ Config = {"CropIdCard":true,"CropPortrait":true}
  * @method void setEnableReflectDetail(boolean $EnableReflectDetail) 设置默认值为false。
 
 此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的"ReflectWarn":true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。
+ * @method boolean getEnableDateVerify() 获取用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+ * @method void setEnableDateVerify(boolean $EnableDateVerify) 设置用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
  */
 class IDCardOCRRequest extends AbstractModel
 {
@@ -132,6 +134,11 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     public $EnableReflectDetail;
 
     /**
+     * @var boolean 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     */
+    public $EnableDateVerify;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -160,6 +167,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
      * @param boolean $EnableReflectDetail 默认值为false。
 
 此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的"ReflectWarn":true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。
+     * @param boolean $EnableDateVerify 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ Config = {"CropIdCard":true,"CropPortrait":true}
 
         if (array_key_exists("EnableReflectDetail",$param) and $param["EnableReflectDetail"] !== null) {
             $this->EnableReflectDetail = $param["EnableReflectDetail"];
+        }
+
+        if (array_key_exists("EnableDateVerify",$param) and $param["EnableDateVerify"] !== null) {
+            $this->EnableDateVerify = $param["EnableDateVerify"];
         }
     }
 }

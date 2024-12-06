@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayloadContent() 获取透传SEI的payload内容。
  * @method void setPayloadContent(string $PayloadContent) 设置透传SEI的payload内容。
- * @method integer getPayloadType() 获取SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
- * @method void setPayloadType(integer $PayloadType) 设置SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+ * @method integer getPayloadType() 获取SEI消息的PayloadType，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+注：部分播放器可能不支持PayloadType为5带PayloadUuid的标准类型，建议优先使用其他PayloadType。
+ * @method void setPayloadType(integer $PayloadType) 设置SEI消息的PayloadType，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+注：部分播放器可能不支持PayloadType为5带PayloadUuid的标准类型，建议优先使用其他PayloadType。
  * @method string getPayloadUuid() 获取PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
  * @method void setPayloadUuid(string $PayloadUuid) 设置PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
  * @method integer getInterval() 获取SEI发送间隔，单位毫秒，默认值为1000。
@@ -39,7 +41,8 @@ class McuPassThrough extends AbstractModel
     public $PayloadContent;
 
     /**
-     * @var integer SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+     * @var integer SEI消息的PayloadType，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+注：部分播放器可能不支持PayloadType为5带PayloadUuid的标准类型，建议优先使用其他PayloadType。
      */
     public $PayloadType;
 
@@ -60,7 +63,8 @@ class McuPassThrough extends AbstractModel
 
     /**
      * @param string $PayloadContent 透传SEI的payload内容。
-     * @param integer $PayloadType SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+     * @param integer $PayloadType SEI消息的PayloadType，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
+注：部分播放器可能不支持PayloadType为5带PayloadUuid的标准类型，建议优先使用其他PayloadType。
      * @param string $PayloadUuid PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
      * @param integer $Interval SEI发送间隔，单位毫秒，默认值为1000。
      * @param integer $FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。

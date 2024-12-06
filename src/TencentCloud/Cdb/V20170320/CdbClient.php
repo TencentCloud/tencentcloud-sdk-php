@@ -38,7 +38,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
  * @method Models\CreateAuditPolicyResponse CreateAuditPolicy(Models\CreateAuditPolicyRequest $req) 本接口(CreateAuditPolicy)用于创建云数据库实例的审计策略，即将审计规则绑定到具体的云数据库实例上。
- * @method Models\CreateAuditRuleResponse CreateAuditRule(Models\CreateAuditRuleRequest $req) 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
+ * @method Models\CreateAuditRuleResponse CreateAuditRule(Models\CreateAuditRuleRequest $req) 不再支持审计规则创建
+
+本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
  * @method Models\CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(Models\CreateAuditRuleTemplateRequest $req) 创建审计规则模板
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 本接口(CreateBackup)用于创建数据库备份。
  * @method Models\CreateCdbProxyResponse CreateCdbProxy(Models\CreateCdbProxyRequest $req) 本接口（CreateCdbProxy）用于主实例创建数据库代理。
@@ -72,7 +74,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 本接口(DeleteAccounts)用于删除云数据库的账户。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteAuditPolicyResponse DeleteAuditPolicy(Models\DeleteAuditPolicyRequest $req) 本接口(DeleteAuditPolicy)用于删除用户的审计策略。
- * @method Models\DeleteAuditRuleResponse DeleteAuditRule(Models\DeleteAuditRuleRequest $req) 本接口(DeleteAuditRule)用于删除用户的审计规则。
+ * @method Models\DeleteAuditRuleResponse DeleteAuditRule(Models\DeleteAuditRuleRequest $req) 不再支持审计规则创建
+
+本接口(DeleteAuditRule)用于删除用户的审计规则。
  * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) 删除审计规则模板
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
  * @method Models\DeleteDatabaseResponse DeleteDatabase(Models\DeleteDatabaseRequest $req) 本接口(DeleteDatabase)用于在云数据库实例中删除数据库。
@@ -90,7 +94,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeAuditPoliciesResponse DescribeAuditPolicies(Models\DescribeAuditPoliciesRequest $req) 本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
  * @method Models\DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistory(Models\DescribeAuditRuleTemplateModifyHistoryRequest $req) 查询规则模板变更记录
  * @method Models\DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(Models\DescribeAuditRuleTemplatesRequest $req) 查询审计规则模板信息
- * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
+ * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 不再支持审计规则创建
+
+本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
  * @method Models\DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKey(Models\DescribeBackupDecryptionKeyRequest $req) 本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) 该接口用户查询当前地域用户设置的默认备份下载来源限制。
@@ -164,7 +170,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 注意，修改账号权限时，需要传入该账号下的全量权限信息。用户可以先通过 [查询云数据库账户的权限信息
 ](https://cloud.tencent.com/document/api/236/17500) 查询该账号下的全量权限信息，然后进行权限修改。
  * @method Models\ModifyAuditConfigResponse ModifyAuditConfig(Models\ModifyAuditConfigRequest $req) 本接口(ModifyAuditConfig)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
- * @method Models\ModifyAuditRuleResponse ModifyAuditRule(Models\ModifyAuditRuleRequest $req) 本接口(ModifyAuditRule)用于修改用户的审计规则。
+ * @method Models\ModifyAuditRuleResponse ModifyAuditRule(Models\ModifyAuditRuleRequest $req) 不再支持审计规则创建
+
+本接口(ModifyAuditRule)用于修改用户的审计规则。
  * @method Models\ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(Models\ModifyAuditRuleTemplatesRequest $req) 修改审计规则模板
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。

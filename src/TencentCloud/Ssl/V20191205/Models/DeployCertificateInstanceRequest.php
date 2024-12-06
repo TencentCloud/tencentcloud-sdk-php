@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID
  * @method array getInstanceIdList() 获取需要部署实例列表
  * @method void setInstanceIdList(array $InstanceIdList) 设置需要部署实例列表
- * @method string getResourceType() 获取部署的云资源类型
- * @method void setResourceType(string $ResourceType) 设置部署的云资源类型
+ * @method string getResourceType() 获取部署的云资源类型,如clb，cos
+ * @method void setResourceType(string $ResourceType) 设置部署的云资源类型,如clb，cos
  * @method integer getStatus() 获取部署云资源状态：
 云直播：
 -1：域名未关联证书。
@@ -52,7 +52,7 @@ class DeployCertificateInstanceRequest extends AbstractModel
     public $InstanceIdList;
 
     /**
-     * @var string 部署的云资源类型
+     * @var string 部署的云资源类型,如clb，cos
      */
     public $ResourceType;
 
@@ -73,7 +73,7 @@ class DeployCertificateInstanceRequest extends AbstractModel
     /**
      * @param string $CertificateId 待部署的证书ID
      * @param array $InstanceIdList 需要部署实例列表
-     * @param string $ResourceType 部署的云资源类型
+     * @param string $ResourceType 部署的云资源类型,如clb，cos
      * @param integer $Status 部署云资源状态：
 云直播：
 -1：域名未关联证书。

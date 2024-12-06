@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置音频转译任务 ID。
  * @method string getSessionId() 获取音频转译结果确认 session。	
  * @method void setSessionId(string $SessionId) 设置音频转译结果确认 session。	
- * @method integer getStatus() 获取该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
- * @method void setStatus(integer $Status) 设置该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+ * @method integer getStatus() 获取任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+ * @method void setStatus(integer $Status) 设置任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
  * @method string getMessage() 获取视频转译任务信息。	
  * @method void setMessage(string $Message) 设置视频转译任务信息。	
+ * @method integer getJobStatus() 获取任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+ * @method void setJobStatus(integer $JobStatus) 设置任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,23 +44,32 @@ class ConfirmVideoTranslateJobResponse extends AbstractModel
 
     /**
      * @var string 音频转译任务 ID。
+     * @deprecated
      */
     public $TaskId;
 
     /**
      * @var string 音频转译结果确认 session。	
+     * @deprecated
      */
     public $SessionId;
 
     /**
-     * @var integer 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @var integer 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @deprecated
      */
     public $Status;
 
     /**
      * @var string 视频转译任务信息。	
+     * @deprecated
      */
     public $Message;
+
+    /**
+     * @var integer 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     */
+    public $JobStatus;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -69,8 +80,9 @@ class ConfirmVideoTranslateJobResponse extends AbstractModel
      * @param string $JobId 视频转译任务 ID。
      * @param string $TaskId 音频转译任务 ID。
      * @param string $SessionId 音频转译结果确认 session。	
-     * @param integer $Status 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @param integer $Status 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
      * @param string $Message 视频转译任务信息。	
+     * @param integer $JobStatus 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +116,10 @@ class ConfirmVideoTranslateJobResponse extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
+            $this->JobStatus = $param["JobStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

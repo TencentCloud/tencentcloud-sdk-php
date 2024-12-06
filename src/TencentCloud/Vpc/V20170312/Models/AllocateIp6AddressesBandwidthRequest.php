@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
  * @method string getBandwidthPackageId() 获取带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+ * @method array getTags() 获取需要关联的标签列表。	
+ * @method void setTags(array $Tags) 设置需要关联的标签列表。	
  */
 class AllocateIp6AddressesBandwidthRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
     public $BandwidthPackageId;
 
     /**
+     * @var array 需要关联的标签列表。	
+     */
+    public $Tags;
+
+    /**
      * @param array $Ip6Addresses 需要开通公网访问能力的IPV6地址
      * @param integer $InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
      * @param string $InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
      * @param string $BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     * @param array $Tags 需要关联的标签列表。	
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
 
         if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
             $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

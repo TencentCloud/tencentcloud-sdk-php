@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostCdnInstanceList返回参数结构体
  *
- * @method array getInstanceList() 获取CDN实例列表
+ * @method array getInstanceList() 获取CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceList(array $InstanceList) 设置CDN实例列表
+ * @method void setInstanceList(array $InstanceList) 设置CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取CDN域名总数
+ * @method integer getTotalCount() 获取CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置CDN域名总数
+ * @method void setTotalCount(integer $TotalCount) 设置CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAsyncTotalNum() 获取异步刷新总数	
+ * @method integer getAsyncTotalNum() 获取异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncTotalNum(integer $AsyncTotalNum) 设置异步刷新总数	
+ * @method void setAsyncTotalNum(integer $AsyncTotalNum) 设置异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAsyncOffset() 获取异步刷新当前执行数	
+ * @method integer getAsyncOffset() 获取异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncOffset(integer $AsyncOffset) 设置异步刷新当前执行数	
+ * @method void setAsyncOffset(integer $AsyncOffset) 设置异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncCacheTime() 获取当前缓存读取时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,25 +46,25 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostCdnInstanceListResponse extends AbstractModel
 {
     /**
-     * @var array CDN实例列表
+     * @var array CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
     /**
-     * @var integer CDN域名总数
+     * @var integer CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var integer 异步刷新总数	
+     * @var integer 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncTotalNum;
 
     /**
-     * @var integer 异步刷新当前执行数	
+     * @var integer 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncOffset;
@@ -81,13 +81,13 @@ class DescribeHostCdnInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceList CDN实例列表
+     * @param array $InstanceList CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount CDN域名总数
+     * @param integer $TotalCount CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AsyncTotalNum 异步刷新总数	
+     * @param integer $AsyncTotalNum 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AsyncOffset 异步刷新当前执行数	
+     * @param integer $AsyncOffset 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncCacheTime 当前缓存读取时间
 注意：此字段可能返回 null，表示取不到有效值。

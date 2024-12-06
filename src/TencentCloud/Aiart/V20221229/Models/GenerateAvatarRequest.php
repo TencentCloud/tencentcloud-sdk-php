@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GenerateAvatar请求参数结构体
  *
- * @method string getStyle() 获取头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
- * @method void setStyle(string $Style) 设置头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+ * @method string getStyle() 获取头像风格，仅在人像模式下生效。
+请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
+ * @method void setStyle(string $Style) 设置头像风格，仅在人像模式下生效。
+请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
  * @method string getInputImage() 获取输入图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
@@ -36,13 +38,19 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
  * @method void setInputUrl(string $InputUrl) 设置输入图 Url。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
- * @method integer getFilter() 获取输入图像质量检测开关，默认开启。
+ * @method string getType() 获取图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+ * @method void setType(string $Type) 设置图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+ * @method integer getFilter() 获取输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
 开启后，将增强对输入图像的质量要求，如果输入图像单边分辨率<500、图像中人脸占比较小、存在多人、没有检测到人脸、人脸不完整、人脸遮挡等，将被拦截。
 关闭后，将降低对输入图像的质量要求，如果图像中没有检测到人脸或人脸占比过小等，将被拦截。
- * @method void setFilter(integer $Filter) 设置输入图像质量检测开关，默认开启。
+ * @method void setFilter(integer $Filter) 设置输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -68,8 +76,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 class GenerateAvatarRequest extends AbstractModel
 {
     /**
-     * @var string 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+     * @var string 头像风格，仅在人像模式下生效。
+请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
      */
     public $Style;
 
@@ -88,7 +97,14 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public $InputUrl;
 
     /**
-     * @var integer 输入图像质量检测开关，默认开启。
+     * @var string 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+     */
+    public $Type;
+
+    /**
+     * @var integer 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -118,15 +134,19 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public $RspImgType;
 
     /**
-     * @param string $Style 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+     * @param string $Style 头像风格，仅在人像模式下生效。
+请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
      * @param string $InputImage 输入图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $InputUrl 输入图 Url。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
-     * @param integer $Filter 输入图像质量检测开关，默认开启。
+     * @param string $Type 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+     * @param integer $Filter 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -164,6 +184,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
         if (array_key_exists("InputUrl",$param) and $param["InputUrl"] !== null) {
             $this->InputUrl = $param["InputUrl"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {

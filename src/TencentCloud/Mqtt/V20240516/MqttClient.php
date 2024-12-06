@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mqtt\V20240516\Models as Models;
 
 /**
+ * @method Models\ActivateDeviceCertificateResponse ActivateDeviceCertificate(Models\ActivateDeviceCertificateRequest $req) 生效设备证书
  * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) 创建MQTT实例的性能测试任务
  * @method Models\CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(Models\CreateJWKSAuthenticatorRequest $req) 创建一个jwks的认证
  * @method Models\CreateJWTAuthenticatorResponse CreateJWTAuthenticator(Models\CreateJWTAuthenticatorRequest $req) 创建一个jwks的认证
@@ -32,11 +33,11 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除MQTT主题
  * @method Models\DescribeAuthenticatorResponse DescribeAuthenticator(Models\DescribeAuthenticatorRequest $req) 查询MQTT认证器
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) 查询授权规则
+ * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) 分页查询设备证书
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
-3. InstanceType, 实例类型查询，支持多选
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。

@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateMode() 获取创建来源，1 通过控制台创建, 2 通过策略语法创建。
+ * @method integer getCreateMode() 获取创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateMode(integer $CreateMode) 设置创建来源，1 通过控制台创建, 2 通过策略语法创建。
+ * @method void setCreateMode(integer $CreateMode) 设置创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPolicyType() 获取取值为user和QCS
+ * @method string getPolicyType() 获取取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyType(string $PolicyType) 设置取值为user和QCS
+ * @method void setPolicyType(string $PolicyType) 设置取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取策略备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateUinType() 获取UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+ * @method integer getOperateUinType() 获取取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUinType(integer $OperateUinType) 设置UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+ * @method void setOperateUinType(integer $OperateUinType) 设置取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeactived() 获取是否已下线
+ * @method integer getDeactived() 获取是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeactived(integer $Deactived) 设置是否已下线
+ * @method void setDeactived(integer $Deactived) 设置是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeactivedDetail() 获取已下线的产品列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,13 +83,13 @@ class AttachPolicyInfo extends AbstractModel
     public $AddTime;
 
     /**
-     * @var integer 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * @var integer 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateMode;
 
     /**
-     * @var string 取值为user和QCS
+     * @var string 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyType;
@@ -113,13 +113,13 @@ class AttachPolicyInfo extends AbstractModel
     public $OperateUin;
 
     /**
-     * @var integer UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @var integer 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUinType;
 
     /**
-     * @var integer 是否已下线
+     * @var integer 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deactived;
@@ -136,9 +136,9 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * @param integer $CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PolicyType 取值为user和QCS
+     * @param string $PolicyType 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,9 +146,9 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateUinType UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @param integer $OperateUinType 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Deactived 是否已下线
+     * @param integer $Deactived 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeactivedDetail 已下线的产品列表
 注意：此字段可能返回 null，表示取不到有效值。

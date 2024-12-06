@@ -68,15 +68,14 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) 删除角色，支持批量。
  * @method Models\DeleteSubscriptionsResponse DeleteSubscriptions(Models\DeleteSubscriptionsRequest $req) 删除订阅关系
  * @method Models\DeleteTopicsResponse DeleteTopics(Models\DeleteTopicsRequest $req) 批量删除topics
- * @method Models\DescribeAMQPClustersResponse DescribeAMQPClusters(Models\DescribeAMQPClustersRequest $req) 获取amqp集群列表
+ * @method Models\DescribeAMQPClustersResponse DescribeAMQPClusters(Models\DescribeAMQPClustersRequest $req) 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是DescribeRabbitMQVipInstances。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+
+获取amqp集群列表
  * @method Models\DescribeAllTenantsResponse DescribeAllTenants(Models\DescribeAllTenantsRequest $req) 获取某个租户的虚拟集群列表
  * @method Models\DescribeBindClustersResponse DescribeBindClusters(Models\DescribeBindClustersRequest $req) 获取用户绑定的专享集群列表
  * @method Models\DescribeBindVpcsResponse DescribeBindVpcs(Models\DescribeBindVpcsRequest $req) 获取租户VPC绑定关系
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 获取集群的详细信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 获取集群列表
- * @method Models\DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(Models\DescribeCmqDeadLetterSourceQueuesRequest $req) 接口很久之前已删除，需下线
-
-枚举cmq死信队列源队列
  * @method Models\DescribeCmqQueueDetailResponse DescribeCmqQueueDetail(Models\DescribeCmqQueueDetailRequest $req) 查询cmq队列详情
  * @method Models\DescribeCmqQueuesResponse DescribeCmqQueues(Models\DescribeCmqQueuesRequest $req) 查询cmq全量队列
  * @method Models\DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetail(Models\DescribeCmqSubscriptionDetailRequest $req) 查询cmq订阅详情
@@ -136,7 +135,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(Models\ExportRocketMQMessageDetailRequest $req) 导出RocketMQ消息详情
  * @method Models\ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(Models\ImportRocketMQConsumerGroupsRequest $req) 输入迁移任务id和要导入的Group，导入后台
  * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 导入topic列表
- * @method Models\ModifyAMQPClusterResponse ModifyAMQPCluster(Models\ModifyAMQPClusterRequest $req) 更新Amqp集群信息
+ * @method Models\ModifyAMQPClusterResponse ModifyAMQPCluster(Models\ModifyAMQPClusterRequest $req) 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+
+更新Amqp集群信息
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性

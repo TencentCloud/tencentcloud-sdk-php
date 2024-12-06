@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskResult请求参数结构体
  *
- * @method array getTaskIds() 获取任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
- * @method void setTaskIds(array $TaskIds) 设置任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+ * @method array getTaskIds() 获取任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
+ * @method void setTaskIds(array $TaskIds) 设置任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
  */
 class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel
 {
     /**
-     * @var array 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+     * @var array 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
      */
     public $TaskIds;
 
     /**
-     * @param array $TaskIds 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+     * @param array $TaskIds 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
      */
     function __construct()
     {

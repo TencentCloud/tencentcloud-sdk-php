@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeManagers请求参数结构体
  *
- * @method integer getCompanyId() 获取公司ID
- * @method void setCompanyId(integer $CompanyId) 设置公司ID
+ * @method integer getCompanyId() 获取公司ID,可以从DescribeCompanies接口获取
+ * @method void setCompanyId(integer $CompanyId) 设置公司ID,可以从DescribeCompanies接口获取
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
  * @method integer getLimit() 获取分页每页数量
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeManagersRequest extends AbstractModel
 {
     /**
-     * @var integer 公司ID
+     * @var integer 公司ID,可以从DescribeCompanies接口获取
      */
     public $CompanyId;
 
@@ -94,7 +94,7 @@ class DescribeManagersRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param integer $CompanyId 公司ID
+     * @param integer $CompanyId 公司ID,可以从DescribeCompanies接口获取
      * @param integer $Offset 分页偏移量
      * @param integer $Limit 分页每页数量
      * @param string $ManagerName 管理人姓名（将废弃），请使用SearchKey

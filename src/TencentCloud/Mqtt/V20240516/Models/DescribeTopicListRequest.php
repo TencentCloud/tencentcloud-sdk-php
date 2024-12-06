@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
+ * @method array getFilters() 获取查询条件列表:
+支持TopicName模糊查询
+ * @method void setFilters(array $Filters) 设置查询条件列表:
+支持TopicName模糊查询
  * @method integer getOffset() 获取查询起始位置
  * @method void setOffset(integer $Offset) 设置查询起始位置
  * @method integer getLimit() 获取查询结果限制数量
@@ -37,7 +39,8 @@ class DescribeTopicListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 查询条件列表
+     * @var array 查询条件列表:
+支持TopicName模糊查询
      */
     public $Filters;
 
@@ -53,7 +56,8 @@ class DescribeTopicListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param array $Filters 查询条件列表
+     * @param array $Filters 查询条件列表:
+支持TopicName模糊查询
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询结果限制数量
      */

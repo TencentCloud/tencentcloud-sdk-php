@@ -31,6 +31,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭 TDSQL-C MySQL 实例的数据库审计服务。
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度。
  * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) 本接口（CloseProxy）用于关闭集群的数据库代理服务。
+ * @method Models\CloseProxyEndPointResponse CloseProxyEndPoint(Models\CloseProxyEndPointRequest $req) 关闭数据库代理连接地址
  * @method Models\CloseWanResponse CloseWan(Models\CloseWanRequest $req) 本接口（CloseWan）用于关闭外网。
  * @method Models\CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexity(Models\CopyClusterPasswordComplexityRequest $req) 本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度。
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) 本接口（CreateAccounts）用于创建用户账号。
@@ -86,6 +87,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(Models\DescribeInstanceSlowQueriesRequest $req) 此接口（DescribeInstanceSlowQueries）用于查询实例慢日志详情。
  * @method Models\DescribeInstanceSpecsResponse DescribeInstanceSpecs(Models\DescribeInstanceSpecsRequest $req) 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格。
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口(DescribeInstances)用于查询实例列表。
+ * @method Models\DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(Models\DescribeInstancesWithinSameClusterRequest $req) 本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
  * @method Models\DescribeIsolatedInstancesResponse DescribeIsolatedInstances(Models\DescribeIsolatedInstancesRequest $req) 本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
  * @method Models\DescribeMaintainPeriodResponse DescribeMaintainPeriod(Models\DescribeMaintainPeriodRequest $req) 本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。

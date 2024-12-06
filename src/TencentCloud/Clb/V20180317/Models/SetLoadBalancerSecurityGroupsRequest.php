@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method array getSecurityGroups() 获取安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
- * @method void setSecurityGroups(array $SecurityGroups) 设置安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+ * @method array getSecurityGroups() 获取安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数。
+ * @method void setSecurityGroups(array $SecurityGroups) 设置安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数。
  */
 class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+     * @var array 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数。
      */
     public $SecurityGroups;
 
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $SecurityGroups 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+     * @param array $SecurityGroups 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数。
      */
     function __construct()
     {

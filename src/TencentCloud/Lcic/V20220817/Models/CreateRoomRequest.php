@@ -100,8 +100,8 @@ video 纯视频
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
  * @method void setLiveType(integer $LiveType) 设置直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
- * @method string getRecordLiveUrl() 获取伪直播链接
- * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
+ * @method string getRecordLiveUrl() 获取伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
  * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
@@ -253,7 +253,7 @@ video 纯视频
     public $LiveType;
 
     /**
-     * @var string 伪直播链接
+     * @var string 伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
      */
     public $RecordLiveUrl;
 
@@ -324,7 +324,7 @@ video 纯视频
 注：大班课的布局(layout)只有三分屏
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
-     * @param string $RecordLiveUrl 伪直播链接
+     * @param string $RecordLiveUrl 伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。

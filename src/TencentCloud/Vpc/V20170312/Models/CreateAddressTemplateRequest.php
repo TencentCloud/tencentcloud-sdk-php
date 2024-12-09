@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
  * @method array getAddressesExtra() 获取地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
  * @method void setAddressesExtra(array $AddressesExtra) 设置地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateAddressTemplateRequest extends AbstractModel
     public $AddressesExtra;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $AddressTemplateName IP地址模板名称。
      * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
      * @param array $AddressesExtra 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ class CreateAddressTemplateRequest extends AbstractModel
                 $obj = new AddressInfo();
                 $obj->deserialize($value);
                 array_push($this->AddressesExtra, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

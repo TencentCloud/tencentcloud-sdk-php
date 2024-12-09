@@ -101,6 +101,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpec(Models\DescribeResourcePackageSaleSpecRequest $req) 本接口（DescribeResourcePackageSaleSpec）用于查询资源包规格。
  * @method Models\DescribeResourcesByDealNameResponse DescribeResourcesByDealName(Models\DescribeResourcesByDealNameRequest $req) 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
  * @method Models\DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(Models\DescribeRollbackTimeRangeRequest $req) 本接口（DescribeRollbackTimeRange）用于查询回档时间范围。
+ * @method Models\DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecs(Models\DescribeServerlessInstanceSpecsRequest $req) 查询Serverless实例可选规格
  * @method Models\DescribeServerlessStrategyResponse DescribeServerlessStrategy(Models\DescribeServerlessStrategyRequest $req) 查询serverless策略
  * @method Models\DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(Models\DescribeSupportProxyVersionRequest $req) 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询任务列表。

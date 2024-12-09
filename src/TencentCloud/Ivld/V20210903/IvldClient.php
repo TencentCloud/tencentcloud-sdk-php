@@ -91,8 +91,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
  * @method Models\DescribeCustomGroupResponse DescribeCustomGroup(Models\DescribeCustomGroupRequest $req) 描述自定义人物库信息，当前库大小(库中有多少人脸)，以及库中的存储桶
  * @method Models\DescribeCustomPersonDetailResponse DescribeCustomPersonDetail(Models\DescribeCustomPersonDetailRequest $req) 描述自定义人物详细信息，包括人物信息与人物信息
  * @method Models\DescribeCustomPersonsResponse DescribeCustomPersons(Models\DescribeCustomPersonsRequest $req) 批量描述自定义人物
-
-
  * @method Models\DescribeMediaResponse DescribeMedia(Models\DescribeMediaRequest $req) 描述媒资文件信息，包括媒资状态，分辨率，帧率等。
 
 如果媒资文件未完成导入，本接口将仅输出媒资文件的状态信息；导入完成后，本接口还将输出媒资文件的其他元信息。

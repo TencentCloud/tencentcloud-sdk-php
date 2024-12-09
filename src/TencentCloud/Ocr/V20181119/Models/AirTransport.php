@@ -68,6 +68,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQRCodeMark(integer $QRCodeMark) 设置是否存在二维码（1：有，0：无）
  * @method array getFlightItems() 获取条目
  * @method void setFlightItems(array $FlightItems) 设置条目
+ * @method string getPromptInformation() 获取提示信息
+ * @method void setPromptInformation(string $PromptInformation) 设置提示信息
+ * @method string getBuyerTaxID() 获取统一社会信用代码/纳税人识别号
+ * @method void setBuyerTaxID(string $BuyerTaxID) 设置统一社会信用代码/纳税人识别号
+ * @method string getBuyer() 获取购买方名称
+ * @method void setBuyer(string $Buyer) 设置购买方名称
+ * @method string getReceiptNumber() 获取发票号码
+ * @method void setReceiptNumber(string $ReceiptNumber) 设置发票号码
+ * @method string getInvoiceStatus() 获取开票状态
+ * @method void setInvoiceStatus(string $InvoiceStatus) 设置开票状态
+ * @method string getTaxRate() 获取增值税税率
+ * @method void setTaxRate(string $TaxRate) 设置增值税税率
+ * @method string getTaxAmount() 获取增值税税额
+ * @method void setTaxAmount(string $TaxAmount) 设置增值税税额
  */
 class AirTransport extends AbstractModel
 {
@@ -192,6 +206,41 @@ class AirTransport extends AbstractModel
     public $FlightItems;
 
     /**
+     * @var string 提示信息
+     */
+    public $PromptInformation;
+
+    /**
+     * @var string 统一社会信用代码/纳税人识别号
+     */
+    public $BuyerTaxID;
+
+    /**
+     * @var string 购买方名称
+     */
+    public $Buyer;
+
+    /**
+     * @var string 发票号码
+     */
+    public $ReceiptNumber;
+
+    /**
+     * @var string 开票状态
+     */
+    public $InvoiceStatus;
+
+    /**
+     * @var string 增值税税率
+     */
+    public $TaxRate;
+
+    /**
+     * @var string 增值税税额
+     */
+    public $TaxAmount;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Number 电子客票号码
      * @param string $CheckCode 校验码
@@ -216,6 +265,13 @@ class AirTransport extends AbstractModel
      * @param string $Endorsement 签注
      * @param integer $QRCodeMark 是否存在二维码（1：有，0：无）
      * @param array $FlightItems 条目
+     * @param string $PromptInformation 提示信息
+     * @param string $BuyerTaxID 统一社会信用代码/纳税人识别号
+     * @param string $Buyer 购买方名称
+     * @param string $ReceiptNumber 发票号码
+     * @param string $InvoiceStatus 开票状态
+     * @param string $TaxRate 增值税税率
+     * @param string $TaxAmount 增值税税额
      */
     function __construct()
     {
@@ -329,6 +385,34 @@ class AirTransport extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FlightItems, $obj);
             }
+        }
+
+        if (array_key_exists("PromptInformation",$param) and $param["PromptInformation"] !== null) {
+            $this->PromptInformation = $param["PromptInformation"];
+        }
+
+        if (array_key_exists("BuyerTaxID",$param) and $param["BuyerTaxID"] !== null) {
+            $this->BuyerTaxID = $param["BuyerTaxID"];
+        }
+
+        if (array_key_exists("Buyer",$param) and $param["Buyer"] !== null) {
+            $this->Buyer = $param["Buyer"];
+        }
+
+        if (array_key_exists("ReceiptNumber",$param) and $param["ReceiptNumber"] !== null) {
+            $this->ReceiptNumber = $param["ReceiptNumber"];
+        }
+
+        if (array_key_exists("InvoiceStatus",$param) and $param["InvoiceStatus"] !== null) {
+            $this->InvoiceStatus = $param["InvoiceStatus"];
+        }
+
+        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
+            $this->TaxRate = $param["TaxRate"];
+        }
+
+        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
+            $this->TaxAmount = $param["TaxAmount"];
         }
     }
 }

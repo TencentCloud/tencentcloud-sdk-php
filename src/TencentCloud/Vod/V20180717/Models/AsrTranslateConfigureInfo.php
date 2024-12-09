@@ -18,15 +18,15 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音翻译任务控制参数
+ * 语音翻译识别任务控制参数
  *
- * @method string getSwitch() 获取语音翻译任务开关，可选值：
+ * @method string getSwitch() 获取语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译和 ASR 全文识别功能项。
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
 
- * @method void setSwitch(string $Switch) 设置语音翻译任务开关，可选值：
+ * @method void setSwitch(string $Switch) 设置语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译和 ASR 全文识别功能项。
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
 
  * @method string getSrcLanguage() 获取媒体源语言，当 Switch 为 ON 时，此参数必填。取值范围：
 <li>zh：中文；</li>
@@ -56,7 +56,9 @@ use TencentCloud\Common\AbstractModel;
 <li>es：西班牙语；</li>
 <li>hi：印地语；</li>
 <li>fr：法语。</li>
- * @method string getDstLanguage() 获取翻译目标语言，当 Switch 为 ON 时，此参数必填。
+ * @method string getDstLanguage() 获取翻译目标语言，当 Switch 为 ON 时，此参数有效。
+若此参数不填或者填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -138,7 +140,9 @@ use TencentCloud\Common\AbstractModel;
 <li>tr：土耳其语；</li>
 <li>ru：俄语；</li>
 <li>pt：葡萄牙语。</li>
- * @method void setDstLanguage(string $DstLanguage) 设置翻译目标语言，当 Switch 为 ON 时，此参数必填。
+ * @method void setDstLanguage(string $DstLanguage) 设置翻译目标语言，当 Switch 为 ON 时，此参数有效。
+若此参数不填或者填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -235,9 +239,9 @@ use TencentCloud\Common\AbstractModel;
 class AsrTranslateConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 语音翻译任务开关，可选值：
+     * @var string 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译和 ASR 全文识别功能项。
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
 
      */
     public $Switch;
@@ -261,7 +265,9 @@ class AsrTranslateConfigureInfo extends AbstractModel
     public $SrcLanguage;
 
     /**
-     * @var string 翻译目标语言，当 Switch 为 ON 时，此参数必填。
+     * @var string 翻译目标语言，当 Switch 为 ON 时，此参数有效。
+若此参数不填或者填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -361,9 +367,9 @@ class AsrTranslateConfigureInfo extends AbstractModel
     public $SubtitleName;
 
     /**
-     * @param string $Switch 语音翻译任务开关，可选值：
+     * @param string $Switch 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译和 ASR 全文识别功能项。
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
 
      * @param string $SrcLanguage 媒体源语言，当 Switch 为 ON 时，此参数必填。取值范围：
 <li>zh：中文；</li>
@@ -379,7 +385,9 @@ class AsrTranslateConfigureInfo extends AbstractModel
 <li>es：西班牙语；</li>
 <li>hi：印地语；</li>
 <li>fr：法语。</li>
-     * @param string $DstLanguage 翻译目标语言，当 Switch 为 ON 时，此参数必填。
+     * @param string $DstLanguage 翻译目标语言，当 Switch 为 ON 时，此参数有效。
+若此参数不填或者填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>

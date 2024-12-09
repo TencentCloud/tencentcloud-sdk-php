@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模板集合名称。
  * @method array getAddressTemplateIds() 获取IP地址模板实例ID，例如：ipm-mdunqeb6。
  * @method void setAddressTemplateIds(array $AddressTemplateIds) 设置IP地址模板实例ID，例如：ipm-mdunqeb6。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateAddressTemplateGroupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAddressTemplateGroupRequest extends AbstractModel
     public $AddressTemplateIds;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $AddressTemplateGroupName IP地址模板集合名称。
      * @param array $AddressTemplateIds IP地址模板实例ID，例如：ipm-mdunqeb6。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateAddressTemplateGroupRequest extends AbstractModel
 
         if (array_key_exists("AddressTemplateIds",$param) and $param["AddressTemplateIds"] !== null) {
             $this->AddressTemplateIds = $param["AddressTemplateIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

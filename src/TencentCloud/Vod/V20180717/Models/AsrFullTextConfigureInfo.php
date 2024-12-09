@@ -18,7 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音全文识别任务控制参数
+ * 语音全文识别任务控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font>
  *
  * @method string getSwitch() 获取语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>

@@ -102,7 +102,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(Models\DescribeRabbitMQVipInstanceRequest $req) 获取单个RabbitMQ专享实例信息
  * @method Models\DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(Models\DescribeRabbitMQVipInstancesRequest $req) 查询用户已购的RabbitMQ专享实例列表
  * @method Models\DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(Models\DescribeRabbitMQVirtualHostRequest $req) 查询RabbitMQ vhost列表
- * @method Models\DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(Models\DescribeRabbitMQVirtualHostListRequest $req) RabbitMQ专享版查询虚拟主机列表
+ * @method Models\DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(Models\DescribeRabbitMQVirtualHostListRequest $req) 消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
+
+RabbitMQ专享版查询虚拟主机列表
  * @method Models\DescribeRocketMQClusterResponse DescribeRocketMQCluster(Models\DescribeRocketMQClusterRequest $req) 获取单个RocketMQ集群信息
  * @method Models\DescribeRocketMQClustersResponse DescribeRocketMQClusters(Models\DescribeRocketMQClustersRequest $req) 获取RocketMQ集群列表
  * @method Models\DescribeRocketMQConsumeStatsResponse DescribeRocketMQConsumeStats(Models\DescribeRocketMQConsumeStatsRequest $req) 获取消费详情列表

@@ -26,6 +26,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\AddMetricScaleStrategyResponse AddMetricScaleStrategy(Models\AddMetricScaleStrategyRequest $req) 添加扩缩容规则，按负载和时间
  * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
+ * @method Models\CreateCloudInstanceResponse CreateCloudInstance(Models\CreateCloudInstanceRequest $req) 创建EMR容器集群实例
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
  * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建Serverless HBase实例
@@ -75,6 +76,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则
  * @method Models\ModifyGlobalConfigResponse ModifyGlobalConfig(Models\ModifyGlobalConfigRequest $req) 修改YARN资源调度的全局配置
+ * @method Models\ModifyPodNumResponse ModifyPodNum(Models\ModifyPodNumRequest $req) 调整Pod数量
  * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效。

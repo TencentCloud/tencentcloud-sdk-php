@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音翻译片段。
+ * 语音翻译识别片段。
  *
- * @method float getConfidence() 获取语音翻译片段置信度。取值：0~100。
- * @method void setConfidence(float $Confidence) 设置语音翻译片段置信度。取值：0~100。
- * @method float getStartTimeOffset() 获取语音翻译片段起始的偏移时间，单位：秒。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置语音翻译片段起始的偏移时间，单位：秒。
- * @method float getEndTimeOffset() 获取语音翻译片段终止的偏移时间，单位：秒。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置语音翻译片段终止的偏移时间，单位：秒。
+ * @method float getConfidence() 获取语音翻译识别片段置信度。取值：0~100。
+ * @method void setConfidence(float $Confidence) 设置语音翻译识别片段置信度。取值：0~100。
+ * @method float getStartTimeOffset() 获取语音翻译识别片段起始的偏移时间，单位：秒。
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置语音翻译识别片段起始的偏移时间，单位：秒。
+ * @method float getEndTimeOffset() 获取语音翻译识别片段终止的偏移时间，单位：秒。
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置语音翻译识别片段终止的偏移时间，单位：秒。
  * @method string getText() 获取识别文本。
  * @method void setText(string $Text) 设置识别文本。
  * @method string getTranslation() 获取翻译文本。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel
 {
     /**
-     * @var float 语音翻译片段置信度。取值：0~100。
+     * @var float 语音翻译识别片段置信度。取值：0~100。
      */
     public $Confidence;
 
     /**
-     * @var float 语音翻译片段起始的偏移时间，单位：秒。
+     * @var float 语音翻译识别片段起始的偏移时间，单位：秒。
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 语音翻译片段终止的偏移时间，单位：秒。
+     * @var float 语音翻译识别片段终止的偏移时间，单位：秒。
      */
     public $EndTimeOffset;
 
@@ -59,9 +59,9 @@ class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel
     public $Translation;
 
     /**
-     * @param float $Confidence 语音翻译片段置信度。取值：0~100。
-     * @param float $StartTimeOffset 语音翻译片段起始的偏移时间，单位：秒。
-     * @param float $EndTimeOffset 语音翻译片段终止的偏移时间，单位：秒。
+     * @param float $Confidence 语音翻译识别片段置信度。取值：0~100。
+     * @param float $StartTimeOffset 语音翻译识别片段起始的偏移时间，单位：秒。
+     * @param float $EndTimeOffset 语音翻译识别片段终止的偏移时间，单位：秒。
      * @param string $Text 识别文本。
      * @param string $Translation 翻译文本。
      */

@@ -37,11 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method OcrWordsConfigureInfo getOcrWordsConfigure() 获取文本关键词识别控制参数。
  * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) 设置文本关键词识别控制参数。
  * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() 获取语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
- * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() 获取语音翻译控制参数。
- * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) 设置语音翻译控制参数。
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() 获取语音翻译识别控制参数。
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) 设置语音翻译识别控制参数。
  * @method ObjectConfigureInfo getObjectConfigure() 获取物体识别控制参数。
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) 设置物体识别控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
@@ -91,6 +93,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
 
     /**
      * @var AsrFullTextConfigureInfo 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
      */
     public $AsrFullTextConfigure;
 
@@ -100,7 +103,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
-     * @var AsrTranslateConfigureInfo 语音翻译控制参数。
+     * @var AsrTranslateConfigureInfo 语音翻译识别控制参数。
      */
     public $AsrTranslateConfigure;
 
@@ -124,8 +127,9 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 文本全文识别控制参数。
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
-     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure 语音翻译控制参数。
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure 语音翻译识别控制参数。
      * @param ObjectConfigureInfo $ObjectConfigure 物体识别控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */

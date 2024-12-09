@@ -35,6 +35,11 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。
 * 一个腾讯云账户在每个地域能申请的 EIP 最大配额有所限制，可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)，上述配额可通过 DescribeAddressQuota 接口获取。
+ * @method Models\AllocateIPv6AddressesResponse AllocateIPv6Addresses(Models\AllocateIPv6AddressesRequest $req) 本接口（AllocateIPv6Addresses）用于申请一个或多个弹性公网IPv6（简称EIPv6）实例。
+
+- EIPv6 是您在腾讯云某个地域可以独立申请和持有的，固定不变的公网 IPv6 地址，提供与弹性公网 IPv4 一致的产品体验。
+- 通过弹性公网 IPv6，您可以快速将 EIPv6 实例绑定到云资源的内网 IPv6 地址上，实现为云资源快速开通 IPv6 公网带宽。
+- 您还可以按需将 EIPv6 实例绑定到其他云资源上，从而屏蔽实例故障。
  * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
 
 - 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
@@ -69,6 +74,10 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
+ * @method Models\AssociateIPv6AddressResponse AssociateIPv6Address(Models\AssociateIPv6AddressRequest $req) 本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
+
+- 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
+- 将 EIPv6 绑定到指定网卡的内网 IPv6 时，需确保该内网 IPv6 地址为未绑定状态，才能执行绑定操作。
  * @method Models\AssociateInstancesToCcnRouteTableResponse AssociateInstancesToCcnRouteTable(Models\AssociateInstancesToCcnRouteTableRequest $req) 本接口（AssociateInstancesToCcnRouteTable）用于将指定的云联网实例关联到指定的云联网路由表。
  * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) 本接口（AssociateNetworkAclSubnets）用于网络ACL关联VPC下的子网。
@@ -362,6 +371,10 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
  * @method Models\DescribeHighPriorityRouteTablesResponse DescribeHighPriorityRouteTables(Models\DescribeHighPriorityRouteTablesRequest $req) 查询高优路由表。
  * @method Models\DescribeHighPriorityRoutesResponse DescribeHighPriorityRoutes(Models\DescribeHighPriorityRoutesRequest $req) 查询高优路由表条目信息。
+ * @method Models\DescribeIPv6AddressesResponse DescribeIPv6Addresses(Models\DescribeIPv6AddressesRequest $req) 本接口（DescribeIPv6Addresses）用于查询一个或多个弹性公网 IPv6（简称 EIPv6）实例的详细信息。
+
+- 支持查询您在指定地域的弹性公网 IPv6 和传统弹性公网 IPv6 实例信息
+- 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIPv6。
  * @method Models\DescribeIp6AddressesResponse DescribeIp6Addresses(Models\DescribeIp6AddressesRequest $req) 本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
  * @method Models\DescribeIp6TranslatorQuotaResponse DescribeIp6TranslatorQuota(Models\DescribeIp6TranslatorQuotaRequest $req) 查询账户在指定地域IPV6转换实例和规则的配额
  * @method Models\DescribeIp6TranslatorsResponse DescribeIp6Translators(Models\DescribeIp6TranslatorsRequest $req) 1. 该接口用于查询账户下的IPV6转换实例及其绑定的转换规则信息
@@ -496,6 +509,10 @@ LimitTypes取值范围：
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(Models\DisassociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关解绑，解绑之后，专线网关将不能通过NAT网关访问公网
+ * @method Models\DisassociateIPv6AddressResponse DisassociateIPv6Address(Models\DisassociateIPv6AddressRequest $req) 本接口（DisassociateIPv6Address）用于解绑弹性公网 IPv6（简称EIPv6）实例。
+
+- 支持对 CVM、弹性网卡绑定的 EIPv6 实例进行解绑操作。
+- 只有状态为 BIND 和 BIND_ENI 的 EIPv6 实例才能进行解绑操作。
  * @method Models\DisassociateNatGatewayAddressResponse DisassociateNatGatewayAddress(Models\DisassociateNatGatewayAddressRequest $req) 本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
  * @method Models\DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(Models\DisassociateNetworkAclSubnetsRequest $req) 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联VPC下的子网。
  * @method Models\DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroups(Models\DisassociateNetworkInterfaceSecurityGroupsRequest $req) 本接口（DisassociateNetworkInterfaceSecurityGroups）用于弹性网卡解绑安全组。支持弹性网卡完全解绑安全组。
@@ -566,7 +583,11 @@ LimitTypes取值范围：
  * @method Models\ModifyHighPriorityRouteAttributeResponse ModifyHighPriorityRouteAttribute(Models\ModifyHighPriorityRouteAttributeRequest $req) 修改高优路由表条目属性。
  * @method Models\ModifyHighPriorityRouteECMPAlgorithmResponse ModifyHighPriorityRouteECMPAlgorithm(Models\ModifyHighPriorityRouteECMPAlgorithmRequest $req) 修改高优路由表 HASH 策略。
  * @method Models\ModifyHighPriorityRouteTableAttributeResponse ModifyHighPriorityRouteTableAttribute(Models\ModifyHighPriorityRouteTableAttributeRequest $req) 修改高优路由表属性
- * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+ * @method Models\ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributes(Models\ModifyIPv6AddressesAttributesRequest $req) 本接口（ModifyIPv6AddressesAttributes）用于修改弹性公网 IPv6（简称EIPv6）实例名称。
+
+- 支持对弹性公网 IPv6 和传统弹性公网 IPv6 实例名称进行修改。
+ * @method Models\ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidth(Models\ModifyIPv6AddressesBandwidthRequest $req) 本接口（ModifyIPv6AddressesBandwidth）用于调整弹性公网 IPv6（简称EIPv6）实例的带宽上限。
+ * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) 本接口（ModifyIp6AddressesBandwidth）用于调整传统弹性公网 IPv6 实例的带宽上限。
 
 - 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
 - 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
@@ -638,6 +659,10 @@ LimitTypes取值范围：
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) 本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
 * 只有状态为 UNBIND 的 EIP 才能进行释放操作。
+ * @method Models\ReleaseIPv6AddressesResponse ReleaseIPv6Addresses(Models\ReleaseIPv6AddressesRequest $req) 本接口（ReleaseIPv6Addresses）用于释放一个或多个弹性公网IPv6（简称EIPv6）实例。
+
+- 支持对已申请到的弹性公网 IPv6 实例进行释放操作，如需再次使用，请重新申请。
+- 只有状态为 UNBIND 的 EIPv6 实例才能进行释放操作。
  * @method Models\ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidth(Models\ReleaseIp6AddressesBandwidthRequest $req) 本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
 
 - 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
@@ -697,8 +722,7 @@ LimitTypes取值范围：
  * @method Models\ResetAttachCcnInstancesResponse ResetAttachCcnInstances(Models\ResetAttachCcnInstancesRequest $req) 本接口（ResetAttachCcnInstances）用于跨账号关联实例申请过期时，重新申请关联操作。
  * @method Models\ResetHighPriorityRoutesResponse ResetHighPriorityRoutes(Models\ResetHighPriorityRoutesRequest $req) 重置高优路由表。
  * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
- * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
-注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+ * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) 本接口（ResetVpnConnection）用于重置VPN通道。
  * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（ResetVpnGatewayInternetMaxBandwidth）用于调整VPN网关带宽上限。VPN网关带宽目前仅支持部分带宽范围内升降配，如【5,100】Mbps和【200,1000】Mbps，在各自带宽范围内可提升配额，跨范围提升配额和降配暂不支持，如果是包年包月VPN网关需要在有效期内。
  * @method Models\ResumeSnapshotInstanceResponse ResumeSnapshotInstance(Models\ResumeSnapshotInstanceRequest $req) 本接口（ResumeSnapshotInstance）用于根据备份内容恢复安全组策略。

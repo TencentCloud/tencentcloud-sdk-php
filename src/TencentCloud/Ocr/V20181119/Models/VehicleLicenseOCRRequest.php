@@ -36,6 +36,8 @@ DOUBLE 为行驶证主页正面和副页正面。
 BACK 为行驶证副页正面（有号码号牌的一面），
 DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
+ * @method string getTractorCardSide() 获取FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+ * @method void setTractorCardSide(string $TractorCardSide) 设置FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
  */
 class VehicleLicenseOCRRequest extends AbstractModel
 {
@@ -60,6 +62,11 @@ DOUBLE 为行驶证主页正面和副页正面。
     public $CardSide;
 
     /**
+     * @var string FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+     */
+    public $TractorCardSide;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
@@ -68,6 +75,7 @@ DOUBLE 为行驶证主页正面和副页正面。
 BACK 为行驶证副页正面（有号码号牌的一面），
 DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
+     * @param string $TractorCardSide FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ DOUBLE 为行驶证主页正面和副页正面。
 
         if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
             $this->CardSide = $param["CardSide"];
+        }
+
+        if (array_key_exists("TractorCardSide",$param) and $param["TractorCardSide"] !== null) {
+            $this->TractorCardSide = $param["TractorCardSide"];
         }
     }
 }

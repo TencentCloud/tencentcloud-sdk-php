@@ -28,11 +28,14 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(Models\CreateJWKSAuthenticatorRequest $req) 创建一个jwks的认证
  * @method Models\CreateJWTAuthenticatorResponse CreateJWTAuthenticator(Models\CreateJWTAuthenticatorRequest $req) 创建一个jwks的认证
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
+ * @method Models\DeactivateDeviceCertificateResponse DeactivateDeviceCertificate(Models\DeactivateDeviceCertificateRequest $req) 失效Ca证书
  * @method Models\DeleteAuthenticatorResponse DeleteAuthenticator(Models\DeleteAuthenticatorRequest $req) 根据认证器类型删除一个MQTT认证器
  * @method Models\DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(Models\DeleteAuthorizationPolicyRequest $req) 删除策略规则
+ * @method Models\DeleteDeviceCertificateResponse DeleteDeviceCertificate(Models\DeleteDeviceCertificateRequest $req) 删除设备证书
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除MQTT主题
  * @method Models\DescribeAuthenticatorResponse DescribeAuthenticator(Models\DescribeAuthenticatorRequest $req) 查询MQTT认证器
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) 查询授权规则
+ * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) 查询设备证书详情接口
  * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) 分页查询设备证书
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
@@ -51,6 +54,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\ModifyJWTAuthenticatorResponse ModifyJWTAuthenticator(Models\ModifyJWTAuthenticatorRequest $req) 修改MQTT JWKS 认证器
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书
+ * @method Models\RevokedDeviceCertificateResponse RevokedDeviceCertificate(Models\RevokedDeviceCertificateRequest $req) 吊销设备证书
  * @method Models\UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(Models\UpdateAuthorizationPolicyPriorityRequest $req) 修改策略规则优先级
  */
 

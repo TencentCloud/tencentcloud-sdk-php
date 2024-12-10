@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitle(MediaInputInfo $Subtitle) 设置字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubtitleName() 获取字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubtitleName(string $SubtitleName) 设置字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddOnSubtitle extends AbstractModel
 {
@@ -53,12 +57,20 @@ class AddOnSubtitle extends AbstractModel
     public $Subtitle;
 
     /**
+     * @var string 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubtitleName;
+
+    /**
      * @param string $Type 插入形式，可选值：
 <li>subtitle-stream：插入字幕轨道</li>
 <li>close-caption-708：CEA-708字幕编码到SEI帧</li>
 <li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInputInfo $Subtitle 字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubtitleName 字幕名称	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -81,6 +93,10 @@ class AddOnSubtitle extends AbstractModel
         if (array_key_exists("Subtitle",$param) and $param["Subtitle"] !== null) {
             $this->Subtitle = new MediaInputInfo();
             $this->Subtitle->deserialize($param["Subtitle"]);
+        }
+
+        if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
+            $this->SubtitleName = $param["SubtitleName"];
         }
     }
 }

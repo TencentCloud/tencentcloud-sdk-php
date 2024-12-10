@@ -322,6 +322,18 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadWriteMode(integer $ReadWriteMode) 设置读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableScheduleRecoverGroup() 获取是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnableDestroyProtection() 获取开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -841,6 +853,24 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $ReadWriteMode;
 
     /**
+     * @var boolean 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
+     * @var string 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableDestroyProtection;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -991,6 +1021,12 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param integer $CosBucketStorageSize 存算分离cos用量，单位M
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1406,6 +1442,19 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("ReadWriteMode",$param) and $param["ReadWriteMode"] !== null) {
             $this->ReadWriteMode = $param["ReadWriteMode"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
+            $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
         }
     }
 }

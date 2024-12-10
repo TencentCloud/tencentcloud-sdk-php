@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPassService(boolean $IsPassService) 设置~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
  * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
  * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateVpcEndPointServiceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $ServiceType;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $EndPointServiceName 终端节点服务名称。
      * @param boolean $AutoAcceptFlag 是否自动接受。
      * @param string $ServiceInstanceId 后端服务ID，比如lb-xxx。
      * @param boolean $IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

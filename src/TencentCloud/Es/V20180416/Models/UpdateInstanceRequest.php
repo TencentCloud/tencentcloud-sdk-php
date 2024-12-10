@@ -148,6 +148,8 @@ CLOSE 关闭
  * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否开启置放群组异步任务
  * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组异步任务可维护时间段
  * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务可维护时间段
+ * @method string getEnableDestroyProtection() 获取开启集群保护：OPEN-开启，CLOSE-关闭
+ * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -388,6 +390,11 @@ CLOSE 关闭
     public $EnableScheduleOperationDuration;
 
     /**
+     * @var string 开启集群保护：OPEN-开启，CLOSE-关闭
+     */
+    public $EnableDestroyProtection;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -452,6 +459,7 @@ CLOSE 关闭
      * @param integer $ReadWriteMode 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
      * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
      * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务可维护时间段
+     * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
      */
     function __construct()
     {
@@ -658,6 +666,10 @@ CLOSE 关闭
         if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
             $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
             $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
+            $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
         }
     }
 }

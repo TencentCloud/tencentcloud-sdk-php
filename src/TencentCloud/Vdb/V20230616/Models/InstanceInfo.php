@@ -210,18 +210,21 @@ class InstanceInfo extends AbstractModel
     /**
      * @var float 健康得分。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $HealthScore;
 
     /**
      * @var integer 异常告警。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Warning;
 
     /**
      * @var string 所属项目。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Project;
 

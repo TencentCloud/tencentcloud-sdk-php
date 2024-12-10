@@ -30,6 +30,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSynonym(array $Synonym) 设置同义词词典列表
  * @method string getUpdateType() 获取更新词典类型
  * @method void setUpdateType(string $UpdateType) 设置更新词典类型
+ * @method array getAnsjMain() 获取ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnsjMain(array $AnsjMain) 设置ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAnsjStop() 获取ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnsjStop(array $AnsjStop) 设置ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAnsjAmbiguity() 获取ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnsjAmbiguity(array $AnsjAmbiguity) 设置ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAnsjSynonyms() 获取ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnsjSynonyms(array $AnsjSynonyms) 设置ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EsDictionaryInfo extends AbstractModel
 {
@@ -59,11 +75,43 @@ class EsDictionaryInfo extends AbstractModel
     public $UpdateType;
 
     /**
+     * @var array ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnsjMain;
+
+    /**
+     * @var array ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnsjStop;
+
+    /**
+     * @var array ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnsjAmbiguity;
+
+    /**
+     * @var array ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnsjSynonyms;
+
+    /**
      * @param array $MainDict 启用词词典列表
      * @param array $Stopwords 停用词词典列表
      * @param array $QQDict QQ分词词典列表
      * @param array $Synonym 同义词词典列表
      * @param string $UpdateType 更新词典类型
+     * @param array $AnsjMain ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AnsjStop ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AnsjAmbiguity ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AnsjSynonyms ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -116,6 +164,42 @@ class EsDictionaryInfo extends AbstractModel
 
         if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
             $this->UpdateType = $param["UpdateType"];
+        }
+
+        if (array_key_exists("AnsjMain",$param) and $param["AnsjMain"] !== null) {
+            $this->AnsjMain = [];
+            foreach ($param["AnsjMain"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->AnsjMain, $obj);
+            }
+        }
+
+        if (array_key_exists("AnsjStop",$param) and $param["AnsjStop"] !== null) {
+            $this->AnsjStop = [];
+            foreach ($param["AnsjStop"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->AnsjStop, $obj);
+            }
+        }
+
+        if (array_key_exists("AnsjAmbiguity",$param) and $param["AnsjAmbiguity"] !== null) {
+            $this->AnsjAmbiguity = [];
+            foreach ($param["AnsjAmbiguity"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->AnsjAmbiguity, $obj);
+            }
+        }
+
+        if (array_key_exists("AnsjSynonyms",$param) and $param["AnsjSynonyms"] !== null) {
+            $this->AnsjSynonyms = [];
+            foreach ($param["AnsjSynonyms"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->AnsjSynonyms, $obj);
+            }
         }
     }
 }

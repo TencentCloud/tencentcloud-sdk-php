@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取视频转译任务 ID
  * @method void setJobId(string $JobId) 设置视频转译任务 ID
- * @method array getTranslateResults() 获取待确认文本
- * @method void setTranslateResults(array $TranslateResults) 设置待确认文本
+ * @method array getTranslateResults() 获取待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
+ * @method void setTranslateResults(array $TranslateResults) 设置待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
  */
 class ConfirmVideoTranslateJobRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class ConfirmVideoTranslateJobRequest extends AbstractModel
     public $JobId;
 
     /**
-     * @var array 待确认文本
+     * @var array 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
      */
     public $TranslateResults;
 
     /**
      * @param string $JobId 视频转译任务 ID
-     * @param array $TranslateResults 待确认文本
+     * @param array $TranslateResults 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
      */
     function __construct()
     {

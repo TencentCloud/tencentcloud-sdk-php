@@ -21,23 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * ChatCompletion请求参数结构体
  *
  * @method string getModel() 获取对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
  * @method void setModel(string $Model) 设置对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
  * @method array getMessages() 获取输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
  * @method void setMessages(array $Messages) 设置输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
- * @method float getTemperature() 获取仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
- * @method void setTemperature(float $Temperature) 设置仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+ * @method float getTemperature() 获取仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+ * @method void setTemperature(float $Temperature) 设置仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
  * @method float getTopP() 获取仅当模型为自行部署的开源大模型时生效。核采样，默认值为1，取值范围[0,1]。指的是预先设置一个概率界限 p，然后将所有可能生成的token，根据概率大小从高到低排列，依次选取。当这些选取的token的累积概率大于或等于 p 值时停止，然后从已经选取的token中进行采样，生成下一个token。例如top_p为0.1时意味着模型只考虑累积概率为10%的token。建议仅修改此参数或Temperature，不建议两者都修改。
  * @method void setTopP(float $TopP) 设置仅当模型为自行部署的开源大模型时生效。核采样，默认值为1，取值范围[0,1]。指的是预先设置一个概率界限 p，然后将所有可能生成的token，根据概率大小从高到低排列，依次选取。当这些选取的token的累积概率大于或等于 p 值时停止，然后从已经选取的token中进行采样，生成下一个token。例如top_p为0.1时意味着模型只考虑累积概率为10%的token。建议仅修改此参数或Temperature，不建议两者都修改。
- * @method integer getMaxTokens() 获取仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
- * @method void setMaxTokens(integer $MaxTokens) 设置仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+ * @method integer getMaxTokens() 获取仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
+ * @method void setMaxTokens(integer $MaxTokens) 设置仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
  */
 class ChatCompletionRequest extends AbstractModel
 {
     /**
      * @var string 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
      */
     public $Model;
 
@@ -47,7 +47,7 @@ class ChatCompletionRequest extends AbstractModel
     public $Messages;
 
     /**
-     * @var float 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+     * @var float 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
      */
     public $Temperature;
 
@@ -57,17 +57,17 @@ class ChatCompletionRequest extends AbstractModel
     public $TopP;
 
     /**
-     * @var integer 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+     * @var integer 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
      */
     public $MaxTokens;
 
     /**
      * @param string $Model 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
      * @param array $Messages 输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
-     * @param float $Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+     * @param float $Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
      * @param float $TopP 仅当模型为自行部署的开源大模型时生效。核采样，默认值为1，取值范围[0,1]。指的是预先设置一个概率界限 p，然后将所有可能生成的token，根据概率大小从高到低排列，依次选取。当这些选取的token的累积概率大于或等于 p 值时停止，然后从已经选取的token中进行采样，生成下一个token。例如top_p为0.1时意味着模型只考虑累积概率为10%的token。建议仅修改此参数或Temperature，不建议两者都修改。
-     * @param integer $MaxTokens 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+     * @param integer $MaxTokens 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
      */
     function __construct()
     {

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoginCommand(string $LoginCommand) 设置登录命令
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsAddressChanged() 获取登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAddressChanged(boolean $IsAddressChanged) 设置登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SSHConfig extends AbstractModel
 {
@@ -64,6 +68,12 @@ class SSHConfig extends AbstractModel
     public $LoginCommand;
 
     /**
+     * @var boolean 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAddressChanged;
+
+    /**
      * @param boolean $Enable 是否开启ssh
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicKey 公钥信息
@@ -71,6 +81,8 @@ class SSHConfig extends AbstractModel
      * @param integer $Port 端口号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoginCommand 登录命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsAddressChanged 登录地址是否改变
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class SSHConfig extends AbstractModel
 
         if (array_key_exists("LoginCommand",$param) and $param["LoginCommand"] !== null) {
             $this->LoginCommand = $param["LoginCommand"];
+        }
+
+        if (array_key_exists("IsAddressChanged",$param) and $param["IsAddressChanged"] !== null) {
+            $this->IsAddressChanged = $param["IsAddressChanged"];
         }
     }
 }

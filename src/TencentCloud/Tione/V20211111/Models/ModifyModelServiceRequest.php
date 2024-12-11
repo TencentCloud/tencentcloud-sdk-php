@@ -116,6 +116,8 @@ HYBRID_PAID:
  * @method void setCommandBase64(string $CommandBase64) 设置服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
  * @method integer getServicePort() 获取服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
  * @method void setServicePort(integer $ServicePort) 设置服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+ * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -268,6 +270,11 @@ HYBRID_PAID:
     public $ServicePort;
 
     /**
+     * @var integer 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     */
+    public $InstancePerReplicas;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -316,6 +323,7 @@ HYBRID_PAID:
      * @param ServiceEIP $ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
      * @param string $CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
      */
     function __construct()
     {
@@ -447,6 +455,10 @@ HYBRID_PAID:
 
         if (array_key_exists("ServicePort",$param) and $param["ServicePort"] !== null) {
             $this->ServicePort = $param["ServicePort"];
+        }
+
+        if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
+            $this->InstancePerReplicas = $param["InstancePerReplicas"];
         }
     }
 }

@@ -154,6 +154,18 @@ DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置资源组类别 托管 NORMAL，纳管 SW
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArchiveStatus() 获取服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchiveStatus(string $ArchiveStatus) 设置服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployType() 获取服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployType(string $DeployType) 设置服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstancePerReplicas(string $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -347,6 +359,24 @@ DEFAULT: 其他来源
     public $ResourceGroupSWType;
 
     /**
+     * @var string 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArchiveStatus;
+
+    /**
+     * @var string 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployType;
+
+    /**
+     * @var string 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstancePerReplicas;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -413,6 +443,12 @@ DEFAULT: 其他来源
      * @param string $LatestVersion 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -554,6 +590,18 @@ DEFAULT: 其他来源
 
         if (array_key_exists("ResourceGroupSWType",$param) and $param["ResourceGroupSWType"] !== null) {
             $this->ResourceGroupSWType = $param["ResourceGroupSWType"];
+        }
+
+        if (array_key_exists("ArchiveStatus",$param) and $param["ArchiveStatus"] !== null) {
+            $this->ArchiveStatus = $param["ArchiveStatus"];
+        }
+
+        if (array_key_exists("DeployType",$param) and $param["DeployType"] !== null) {
+            $this->DeployType = $param["DeployType"];
+        }
+
+        if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
+            $this->InstancePerReplicas = $param["InstancePerReplicas"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) 设置节点数
  * @method boolean getNodePermWipeFlag() 获取有调度任务且没有切回的可用区，此标识为true
  * @method void setNodePermWipeFlag(boolean $NodePermWipeFlag) 设置有调度任务且没有切回的可用区，此标识为true
+ * @method string getZoneStatus() 获取可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneStatus(string $ZoneStatus) 设置可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceNodeDistribution extends AbstractModel
 {
@@ -52,10 +56,18 @@ class InstanceNodeDistribution extends AbstractModel
     public $NodePermWipeFlag;
 
     /**
+     * @var string 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneStatus;
+
+    /**
      * @param string $ZoneName 可用区
      * @param string $ZoneId 可用区id
      * @param integer $NodeCount 节点数
      * @param boolean $NodePermWipeFlag 有调度任务且没有切回的可用区，此标识为true
+     * @param string $ZoneStatus 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class InstanceNodeDistribution extends AbstractModel
 
         if (array_key_exists("NodePermWipeFlag",$param) and $param["NodePermWipeFlag"] !== null) {
             $this->NodePermWipeFlag = $param["NodePermWipeFlag"];
+        }
+
+        if (array_key_exists("ZoneStatus",$param) and $param["ZoneStatus"] !== null) {
+            $this->ZoneStatus = $param["ZoneStatus"];
         }
     }
 }

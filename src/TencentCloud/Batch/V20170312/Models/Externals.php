@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseAddress(boolean $ReleaseAddress) 设置释放地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUnsupportNetworks() 获取不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+ * @method array getUnsupportNetworks() 获取不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnsupportNetworks(array $UnsupportNetworks) 设置不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+ * @method void setUnsupportNetworks(array $UnsupportNetworks) 设置不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method StorageBlock getStorageBlockAttr() 获取HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class Externals extends AbstractModel
     public $ReleaseAddress;
 
     /**
-     * @var array 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * @var array 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnsupportNetworks;
@@ -56,7 +56,7 @@ class Externals extends AbstractModel
     /**
      * @param boolean $ReleaseAddress 释放地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * @param array $UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageBlock $StorageBlockAttr HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。

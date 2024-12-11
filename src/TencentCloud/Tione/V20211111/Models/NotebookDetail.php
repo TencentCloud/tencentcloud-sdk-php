@@ -160,6 +160,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubUin() 获取子用户ID
+ * @method void setSubUin(string $SubUin) 设置子用户ID
+ * @method string getResourceGroupInstanceId() 获取调度节点ID
+ * @method void setResourceGroupInstanceId(string $ResourceGroupInstanceId) 设置调度节点ID
+ * @method string getSubUinName() 获取子用户名称
+ * @method void setSubUinName(string $SubUinName) 设置子用户名称
+ * @method string getJobCreateTime() 获取任务实例创建时间
+ * @method void setJobCreateTime(string $JobCreateTime) 设置任务实例创建时间
  */
 class NotebookDetail extends AbstractModel
 {
@@ -390,6 +398,26 @@ class NotebookDetail extends AbstractModel
     public $VolumeSourceGooseFS;
 
     /**
+     * @var string 子用户ID
+     */
+    public $SubUin;
+
+    /**
+     * @var string 调度节点ID
+     */
+    public $ResourceGroupInstanceId;
+
+    /**
+     * @var string 子用户名称
+     */
+    public $SubUinName;
+
+    /**
+     * @var string 任务实例创建时间
+     */
+    public $JobCreateTime;
+
+    /**
      * @param string $Id notebook  ID
      * @param string $Name notebook 名称
      * @param string $LifecycleScriptId 生命周期脚本
@@ -460,6 +488,10 @@ class NotebookDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubUin 子用户ID
+     * @param string $ResourceGroupInstanceId 调度节点ID
+     * @param string $SubUinName 子用户名称
+     * @param string $JobCreateTime 任务实例创建时间
      */
     function __construct()
     {
@@ -644,6 +676,22 @@ class NotebookDetail extends AbstractModel
         if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
             $this->VolumeSourceGooseFS = new GooseFS();
             $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
+        }
+
+        if (array_key_exists("ResourceGroupInstanceId",$param) and $param["ResourceGroupInstanceId"] !== null) {
+            $this->ResourceGroupInstanceId = $param["ResourceGroupInstanceId"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
+        }
+
+        if (array_key_exists("JobCreateTime",$param) and $param["JobCreateTime"] !== null) {
+            $this->JobCreateTime = $param["JobCreateTime"];
         }
     }
 }

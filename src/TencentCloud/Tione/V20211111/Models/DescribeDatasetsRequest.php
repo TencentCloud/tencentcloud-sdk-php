@@ -38,6 +38,10 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
  * @method void setOffset(integer $Offset) 设置偏移值
  * @method integer getLimit() 获取返回数据个数，默认20，最大支持200
  * @method void setLimit(integer $Limit) 设置返回数据个数，默认20，最大支持200
+ * @method boolean getCFSChecking() 获取是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+ * @method void setCFSChecking(boolean $CFSChecking) 设置是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+ * @method boolean getCFSDetail() 获取是否返回CFS详情。
+ * @method void setCFSDetail(boolean $CFSDetail) 设置是否返回CFS详情。
  */
 class DescribeDatasetsRequest extends AbstractModel
 {
@@ -79,6 +83,16 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
     public $Limit;
 
     /**
+     * @var boolean 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     */
+    public $CFSChecking;
+
+    /**
+     * @var boolean 是否返回CFS详情。
+     */
+    public $CFSDetail;
+
+    /**
      * @param array $DatasetIds 数据集id列表
      * @param array $Filters 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
 DatasetName，数据集名称
@@ -88,6 +102,8 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
      * @param string $OrderField 排序字段，支持CreateTime或UpdateTime，默认CreateTime
      * @param integer $Offset 偏移值
      * @param integer $Limit 返回数据个数，默认20，最大支持200
+     * @param boolean $CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     * @param boolean $CFSDetail 是否返回CFS详情。
      */
     function __construct()
     {
@@ -138,6 +154,14 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("CFSChecking",$param) and $param["CFSChecking"] !== null) {
+            $this->CFSChecking = $param["CFSChecking"];
+        }
+
+        if (array_key_exists("CFSDetail",$param) and $param["CFSDetail"] !== null) {
+            $this->CFSDetail = $param["CFSDetail"];
         }
     }
 }

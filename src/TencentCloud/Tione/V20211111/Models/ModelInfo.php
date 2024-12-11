@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPrivateModel(boolean $IsPrivateModel) 设置是否为私有化大模型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelCategory() 获取模型的类别 多模态MultiModal, 文本大模型 LLM
+ * @method void setModelCategory(string $ModelCategory) 设置模型的类别 多模态MultiModal, 文本大模型 LLM
  */
 class ModelInfo extends AbstractModel
 {
@@ -109,6 +111,11 @@ class ModelInfo extends AbstractModel
     public $IsPrivateModel;
 
     /**
+     * @var string 模型的类别 多模态MultiModal, 文本大模型 LLM
+     */
+    public $ModelCategory;
+
+    /**
      * @param string $ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id
      * @param string $ModelId 模型id
@@ -124,6 +131,7 @@ class ModelInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPrivateModel 是否为私有化大模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("IsPrivateModel",$param) and $param["IsPrivateModel"] !== null) {
             $this->IsPrivateModel = $param["IsPrivateModel"];
+        }
+
+        if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
+            $this->ModelCategory = $param["ModelCategory"];
         }
     }
 }

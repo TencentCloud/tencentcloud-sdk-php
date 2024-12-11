@@ -20,25 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletion返回参数结构体
  *
- * @method string getModel() 获取部署好的服务Id
- * @method void setModel(string $Model) 设置部署好的服务Id
+ * @method string getModel() 获取对话的模型服务组ID
+ * @method void setModel(string $Model) 设置对话的模型服务组ID
  * @method array getChoices() 获取本次问答的答案。
  * @method void setChoices(array $Choices) 设置本次问答的答案。
  * @method string getId() 获取会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Usage getUsage() 获取token统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsage(Usage $Usage) 设置token统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChatCompletionResponse extends AbstractModel
 {
     /**
-     * @var string 部署好的服务Id
+     * @var string 对话的模型服务组ID
      */
     public $Model;
 
@@ -49,13 +45,11 @@ class ChatCompletionResponse extends AbstractModel
 
     /**
      * @var string 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var Usage token统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Usage;
 
@@ -65,12 +59,10 @@ class ChatCompletionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Model 部署好的服务Id
+     * @param string $Model 对话的模型服务组ID
      * @param array $Choices 本次问答的答案。
      * @param string $Id 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usage $Usage token统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

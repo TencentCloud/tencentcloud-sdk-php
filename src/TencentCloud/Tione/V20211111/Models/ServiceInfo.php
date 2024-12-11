@@ -102,6 +102,8 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置是否开启模型的热更新。默认不开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceAlias() 获取服务的规格别名
+ * @method void setInstanceAlias(string $InstanceAlias) 设置服务的规格别名
  * @method string getScaleMode() 获取实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -273,6 +275,11 @@ HYBRID_PAID:
     public $ModelHotUpdateEnable;
 
     /**
+     * @var string 服务的规格别名
+     */
+    public $InstanceAlias;
+
+    /**
      * @var string 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -401,6 +408,7 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceAlias 服务的规格别名
      * @param string $ScaleMode 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -522,6 +530,10 @@ HYBRID_PAID:
 
         if (array_key_exists("ModelHotUpdateEnable",$param) and $param["ModelHotUpdateEnable"] !== null) {
             $this->ModelHotUpdateEnable = $param["ModelHotUpdateEnable"];
+        }
+
+        if (array_key_exists("InstanceAlias",$param) and $param["InstanceAlias"] !== null) {
+            $this->InstanceAlias = $param["InstanceAlias"];
         }
 
         if (array_key_exists("ScaleMode",$param) and $param["ScaleMode"] !== null) {

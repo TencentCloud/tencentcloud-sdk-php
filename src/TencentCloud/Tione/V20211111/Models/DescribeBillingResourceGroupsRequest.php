@@ -26,14 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置资源组类型;
 枚举值:
 空: 通用, TRAIN: 训练, INFERENCE: 推理
- * @method array getFilters() 获取Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
- * @method void setFilters(array $Filters) 设置Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+ * @method array getFilters() 获取Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+ * @method void setFilters(array $Filters) 设置Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
  * @method array getTagFilters() 获取标签过滤
  * @method void setTagFilters(array $TagFilters) 设置标签过滤
  * @method integer getOffset() 获取偏移量，默认为0；分页查询起始位置，如：Limit为100，第一页Offset为0，第二页OffSet为100....即每页左边为闭区间
@@ -59,10 +53,7 @@ class DescribeBillingResourceGroupsRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+     * @var array Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      */
     public $Filters;
 
@@ -97,10 +88,7 @@ true: 不展示，false 展示；
      * @param string $Type 资源组类型;
 枚举值:
 空: 通用, TRAIN: 训练, INFERENCE: 推理
-     * @param array $Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+     * @param array $Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      * @param array $TagFilters 标签过滤
      * @param integer $Offset 偏移量，默认为0；分页查询起始位置，如：Limit为100，第一页Offset为0，第二页OffSet为100....即每页左边为闭区间
      * @param integer $Limit 分页查询每页大小，默认20

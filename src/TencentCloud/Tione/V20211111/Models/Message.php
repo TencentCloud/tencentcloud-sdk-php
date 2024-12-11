@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 对话输入内容
  *
  * @method string getRole() 获取角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRole(string $Role) 设置角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiModalContents() 获取多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+ * @method void setMultiModalContents(array $MultiModalContents) 设置多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
  */
 class Message extends AbstractModel
 {
     /**
      * @var string 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
 
     /**
      * @var string 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
+     * @var array 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+     */
+    public $MultiModalContents;
+
+    /**
      * @param string $Role 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiModalContents 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
      */
     function __construct()
     {
@@ -68,6 +68,15 @@ class Message extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("MultiModalContents",$param) and $param["MultiModalContents"] !== null) {
+            $this->MultiModalContents = [];
+            foreach ($param["MultiModalContents"] as $key => $value){
+                $obj = new MultiModalContent();
+                $obj->deserialize($value);
+                array_push($this->MultiModalContents, $obj);
+            }
         }
     }
 }

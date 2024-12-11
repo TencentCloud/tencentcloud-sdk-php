@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置主账号uin
  * @method string getSubUin() 获取子账号uin
  * @method void setSubUin(string $SubUin) 设置子账号uin
+ * @method string getSubUinName() 获取创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubUinName(string $SubUinName) 设置创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method string getFrameworkName() 获取训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
@@ -168,6 +172,12 @@ class TrainingTaskDetail extends AbstractModel
      * @var string 子账号uin
      */
     public $SubUin;
+
+    /**
+     * @var string 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubUinName;
 
     /**
      * @var string 地域
@@ -373,6 +383,8 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $Name 训练任务名称
      * @param string $Uin 主账号uin
      * @param string $SubUin 子账号uin
+     * @param string $SubUinName 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
      * @param string $FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
@@ -460,6 +472,10 @@ class TrainingTaskDetail extends AbstractModel
 
         if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
             $this->SubUin = $param["SubUin"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {

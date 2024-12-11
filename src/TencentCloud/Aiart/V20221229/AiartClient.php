@@ -28,7 +28,7 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\GenerateAvatarResponse GenerateAvatar(Models\GenerateAvatarRequest $req) 百变头像接口将根据输入的人像照片，生成风格百变的头像。
 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
- * @method Models\ImageInpaintingRemovalResponse ImageInpaintingRemoval(Models\ImageInpaintingRemovalRequest $req) 消除补全接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
+ * @method Models\ImageInpaintingRemovalResponse ImageInpaintingRemoval(Models\ImageInpaintingRemovalRequest $req) 局部消除接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
 默认提供1个并发，代表最多能同时处理1个已提交的任务。
  * @method Models\ImageOutpaintingResponse ImageOutpainting(Models\ImageOutpaintingRequest $req) 扩图接口支持对输入图像按指定宽高比实现智能扩图。
 默认提供1个并发，代表最多能同时处理1个已提交的任务。

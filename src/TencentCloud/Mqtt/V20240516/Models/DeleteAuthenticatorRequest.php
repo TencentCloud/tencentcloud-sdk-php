@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getType() 获取认证器类型
- * @method void setType(string $Type) 设置认证器类型
+ * @method string getType() 获取认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
+ * @method void setType(string $Type) 设置认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
  */
 class DeleteAuthenticatorRequest extends AbstractModel
 {
@@ -33,13 +39,19 @@ class DeleteAuthenticatorRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 认证器类型
+     * @var string 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
      */
     public $Type;
 
     /**
      * @param string $InstanceId 实例ID
-     * @param string $Type 认证器类型
+     * @param string $Type 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
      */
     function __construct()
     {

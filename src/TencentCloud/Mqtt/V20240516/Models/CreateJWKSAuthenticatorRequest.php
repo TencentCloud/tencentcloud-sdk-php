@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置认证器是否开启：open-启用；close-关闭
  * @method string getRemark() 获取说明
  * @method void setRemark(string $Remark) 设置说明
- * @method string getFrom() 获取设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
- * @method void setFrom(string $From) 设置设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+ * @method string getFrom() 获取设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
+ * @method void setFrom(string $From) 设置设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
  */
 class CreateJWKSAuthenticatorRequest extends AbstractModel
 {
@@ -68,7 +72,9 @@ class CreateJWKSAuthenticatorRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * @var string 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      */
     public $From;
 
@@ -79,7 +85,9 @@ class CreateJWKSAuthenticatorRequest extends AbstractModel
      * @param string $Text jwks文本
      * @param string $Status 认证器是否开启：open-启用；close-关闭
      * @param string $Remark 说明
-     * @param string $From 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * @param string $From 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      */
     function __construct()
     {

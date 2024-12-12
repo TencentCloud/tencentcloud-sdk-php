@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次取消激活时间
  * @method string getStatus() 获取证书状态
  * @method void setStatus(string $Status) 设置证书状态
- * @method string getCaSn() 获取证书序列号
- * @method void setCaSn(string $CaSn) 设置证书序列号
- * @method string getDeviceCertificateSn() 获取设备证书sn
- * @method void setDeviceCertificateSn(string $DeviceCertificateSn) 设置设备证书sn
- * @method string getDeviceCertificate() 获取证书内容
- * @method void setDeviceCertificate(string $DeviceCertificate) 设置证书内容
- * @method string getDeviceCertificateCn() 获取设备证书cn
- * @method void setDeviceCertificateCn(string $DeviceCertificateCn) 设置设备证书cn
+ * @method string getCaSn() 获取Ca证书序列号
+ * @method void setCaSn(string $CaSn) 设置Ca证书序列号
+ * @method string getDeviceCertificateSn() 获取设备证书序列号
+ * @method void setDeviceCertificateSn(string $DeviceCertificateSn) 设置设备证书序列号
+ * @method string getDeviceCertificate() 获取设备证书内容
+ * @method void setDeviceCertificate(string $DeviceCertificate) 设置设备证书内容
+ * @method string getDeviceCertificateCn() 获取设备证书common name
+ * @method void setDeviceCertificateCn(string $DeviceCertificateCn) 设置设备证书common name
  * @method string getFormat() 获取证书格式
  * @method void setFormat(string $Format) 设置证书格式
  * @method string getClientId() 获取客户端id
@@ -88,22 +88,22 @@ class DescribeDeviceCertificateResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 证书序列号
+     * @var string Ca证书序列号
      */
     public $CaSn;
 
     /**
-     * @var string 设备证书sn
+     * @var string 设备证书序列号
      */
     public $DeviceCertificateSn;
 
     /**
-     * @var string 证书内容
+     * @var string 设备证书内容
      */
     public $DeviceCertificate;
 
     /**
-     * @var string 设备证书cn
+     * @var string 设备证书common name
      */
     public $DeviceCertificateCn;
 
@@ -141,10 +141,10 @@ class DescribeDeviceCertificateResponse extends AbstractModel
      * @param integer $LastActivationTime 上次激活时间
      * @param integer $LastInactivationTime 上次取消激活时间
      * @param string $Status 证书状态
-     * @param string $CaSn 证书序列号
-     * @param string $DeviceCertificateSn 设备证书sn
-     * @param string $DeviceCertificate 证书内容
-     * @param string $DeviceCertificateCn 设备证书cn
+     * @param string $CaSn Ca证书序列号
+     * @param string $DeviceCertificateSn 设备证书序列号
+     * @param string $DeviceCertificate 设备证书内容
+     * @param string $DeviceCertificateCn 设备证书common name
      * @param string $Format 证书格式
      * @param string $ClientId 客户端id
 注意：此字段可能返回 null，表示取不到有效值。

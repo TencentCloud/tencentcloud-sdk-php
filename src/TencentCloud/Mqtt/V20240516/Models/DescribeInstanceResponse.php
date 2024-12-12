@@ -20,16 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance返回参数结构体
  *
- * @method string getInstanceType() 获取实例类型，
-EXPERIMENT 体验版
+ * @method string getInstanceType() 获取实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
- * @method void setInstanceType(string $InstanceType) 设置实例类型，
-EXPERIMENT 体验版
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -54,8 +50,12 @@ PLATINUM 铂金版
  * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数
  * @method integer getClientNumLimit() 获取客户端数量上限
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端数量上限
- * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：JITP，API
- * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置客户端证书注册方式：JITP，API
+ * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
+ * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
  * @method boolean getAutomaticActivation() 获取自动注册设备证书时是否自动激活
  * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册设备证书时是否自动激活
  * @method integer getRenewFlag() 获取是否自动续费
@@ -66,12 +66,8 @@ PLATINUM 铂金版
  * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
  * @method integer getDestroyTime() 获取预销毁时间
  * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
- * @method string getX509Mode() 获取    TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
- * @method void setX509Mode(string $X509Mode) 设置    TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+ * @method string getX509Mode() 获取TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+ * @method void setX509Mode(string $X509Mode) 设置TLS,单向认证    mTLS,双向认证    BYOC;一机一证
  * @method integer getMaxCaNum() 获取最大Ca配额
  * @method void setMaxCaNum(integer $MaxCaNum) 设置最大Ca配额
  * @method string getRegistrationCode() 获取证书注册码
@@ -84,11 +80,9 @@ PLATINUM 铂金版
 class DescribeInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 实例类型，
-EXPERIMENT 体验版
+     * @var string 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
      */
     public $InstanceType;
 
@@ -153,7 +147,9 @@ PLATINUM 铂金版
     public $ClientNumLimit;
 
     /**
-     * @var string 客户端证书注册方式：JITP，API
+     * @var string 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
      */
     public $DeviceCertificateProvisionType;
 
@@ -183,9 +179,7 @@ PLATINUM 铂金版
     public $DestroyTime;
 
     /**
-     * @var string     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+     * @var string TLS,单向认证    mTLS,双向认证    BYOC;一机一证
      */
     public $X509Mode;
 
@@ -210,11 +204,9 @@ PLATINUM 铂金版
     public $RequestId;
 
     /**
-     * @param string $InstanceType 实例类型，
-EXPERIMENT 体验版
+     * @param string $InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $TopicNum 主题数量
@@ -227,15 +219,15 @@ PLATINUM 铂金版
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
      * @param integer $AuthorizationPolicyLimit 授权规则条数
      * @param integer $ClientNumLimit 客户端数量上限
-     * @param string $DeviceCertificateProvisionType 客户端证书注册方式：JITP，API
+     * @param string $DeviceCertificateProvisionType 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
      * @param boolean $AutomaticActivation 自动注册设备证书时是否自动激活
      * @param integer $RenewFlag 是否自动续费
      * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
      * @param integer $ExpiryTime 到期时间，秒为单位
      * @param integer $DestroyTime 预销毁时间
-     * @param string $X509Mode     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+     * @param string $X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
      * @param integer $MaxCaNum 最大Ca配额
      * @param string $RegistrationCode 证书注册码
      * @param integer $MaxSubscription 集群最大订阅数

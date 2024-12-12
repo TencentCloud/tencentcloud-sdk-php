@@ -174,6 +174,17 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
  * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method boolean getNeedPreview() 获取是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+ * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+ * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -337,6 +348,20 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
     public $FlowDisplayType;
 
     /**
+     * @var boolean 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     */
+    public $NeedPreview;
+
+    /**
+     * @var integer 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+     */
+    public $PreviewType;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -414,6 +439,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 注: `个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。`
      * @param UserInfo $Operator 操作者的信息，不用传
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param boolean $NeedPreview 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     * @param integer $PreviewType 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
      */
     function __construct()
     {
@@ -523,6 +553,14 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 
         if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
             $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
+        }
+
+        if (array_key_exists("PreviewType",$param) and $param["PreviewType"] !== null) {
+            $this->PreviewType = $param["PreviewType"];
         }
     }
 }

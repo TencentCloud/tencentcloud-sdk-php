@@ -19,8 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 描述通用资源配额信息。
-
-
  *
  * @method string getResourceName() 获取资源名称。
  * @method void setResourceName(string $ResourceName) 设置资源名称。

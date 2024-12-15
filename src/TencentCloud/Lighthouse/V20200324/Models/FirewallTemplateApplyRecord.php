@@ -27,7 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTemplateRuleSet() 获取模板规则列表。
  * @method void setTemplateRuleSet(array $TemplateRuleSet) 设置模板规则列表。
  * @method string getApplyState() 获取应用模板的执行状态。
+
+- SUCCESS：成功
+- FAILED：失败
  * @method void setApplyState(string $ApplyState) 设置应用模板的执行状态。
+
+- SUCCESS：成功
+- FAILED：失败
  * @method integer getSuccessCount() 获取应用成功的实例数量。
  * @method void setSuccessCount(integer $SuccessCount) 设置应用成功的实例数量。
  * @method integer getFailedCount() 获取应用失败的实例数量。
@@ -56,6 +62,9 @@ class FirewallTemplateApplyRecord extends AbstractModel
 
     /**
      * @var string 应用模板的执行状态。
+
+- SUCCESS：成功
+- FAILED：失败
      */
     public $ApplyState;
 
@@ -84,6 +93,9 @@ class FirewallTemplateApplyRecord extends AbstractModel
      * @param string $ApplyTime 应用模板的时间。
      * @param array $TemplateRuleSet 模板规则列表。
      * @param string $ApplyState 应用模板的执行状态。
+
+- SUCCESS：成功
+- FAILED：失败
      * @param integer $SuccessCount 应用成功的实例数量。
      * @param integer $FailedCount 应用失败的实例数量。
      * @param integer $RunningCount 正在应用中的实例数量。

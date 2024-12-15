@@ -24,7 +24,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
 
 /**
  * @method Models\ActivateTWeCallLicenseResponse ActivateTWeCallLicense(Models\ActivateTWeCallLicenseRequest $req) 激活
- * @method Models\AssignTWeCallLicenseResponse AssignTWeCallLicense(Models\AssignTWeCallLicenseRequest $req) 分配License
+ * @method Models\AssignTWeCallLicenseResponse AssignTWeCallLicense(Models\AssignTWeCallLicenseRequest $req) 微信VOIP功能调整下线
+
+分配License
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备
  * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品
@@ -127,7 +129,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetProjectListResponse GetProjectList(Models\GetProjectListRequest $req) 提供查询用户所创建的项目列表查询功能。
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(Models\GetTWeCallActiveStatusRequest $req) 查询激活状态
- * @method Models\GetTWeCallPkgListResponse GetTWeCallPkgList(Models\GetTWeCallPkgListRequest $req) 查询TWeCall包列表
+ * @method Models\GetTWeCallPkgListResponse GetTWeCallPkgList(Models\GetTWeCallPkgListRequest $req) 微信VOIP功能调整下线
+
+查询TWeCall包列表
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\GetWechatDeviceTicketResponse GetWechatDeviceTicket(Models\GetWechatDeviceTicketRequest $req) 查询微信设备授权票据
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户

@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) 设置知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间戳, 单位为秒
- * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒
- * @method string getEndTime() 获取结束时间戳, 单位为秒
- * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
+ * @method string getStartTime() 获取开始时间戳, 单位为秒(默认值0)
+ * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒(默认值0)
+ * @method string getEndTime() 获取结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
+ * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
  * @method array getSubScenes() 获取筛选子场景(文档解析场景使用)
@@ -67,12 +67,12 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 开始时间戳, 单位为秒
+     * @var string 开始时间戳, 单位为秒(默认值0)
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间戳, 单位为秒
+     * @var string 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
      */
     public $EndTime;
 
@@ -92,8 +92,8 @@ class DescribeTokenUsageRequest extends AbstractModel
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $SubBizType 知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间戳, 单位为秒
-     * @param string $EndTime 结束时间戳, 单位为秒
+     * @param string $StartTime 开始时间戳, 单位为秒(默认值0)
+     * @param string $EndTime 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
      * @param array $AppBizIds 应用id列表
      * @param array $SubScenes 筛选子场景(文档解析场景使用)
      */

@@ -35,24 +35,50 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取模板描述信息
  * @method void setDescription(string $Description) 设置模板描述信息
  * @method array getComponents() 获取模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
  * @method void setComponents(array $Components) 设置模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
  * @method array getRecipients() 获取此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
  * @method void setRecipients(array $Recipients) 设置此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
  * @method array getSignComponents() 获取此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
  * @method void setSignComponents(array $SignComponents) 设置此模板中的签署控件列表
- * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
- * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+ * @method integer getTemplateType() 获取模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人 ,已弃用
  * @method string getCreator() 获取模板的创建者名字
  * @method void setCreator(string $Creator) 设置模板的创建者名字
  * @method integer getCreatedOn() 获取模板创建的时间戳，格式为Unix标准时间戳（秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，格式为Unix标准时间戳（秒）
- * @method string getPreviewUrl() 获取模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+ * @method string getPreviewUrl() 获取模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
@@ -110,21 +136,32 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @var array 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
      */
     public $Components;
 
     /**
      * @var array 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      */
     public $Recipients;
 
     /**
      * @var array 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
      */
     public $SignComponents;
 
     /**
-     * @var integer 模板类型：1-静默签；3-普通模板
+     * @var integer 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public $TemplateType;
 
@@ -145,8 +182,10 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var string 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @var string 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
@@ -198,14 +237,27 @@ class TemplateInfo extends AbstractModel
      * @param string $TemplateName 模板名
      * @param string $Description 模板描述信息
      * @param array $Components 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
      * @param array $Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      * @param array $SignComponents 此模板中的签署控件列表
-     * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     * @param integer $TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者名字
      * @param integer $CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
-     * @param string $PreviewUrl 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @param string $PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PdfUrl 第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回

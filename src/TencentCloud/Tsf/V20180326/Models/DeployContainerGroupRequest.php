@@ -121,6 +121,7 @@ class DeployContainerGroupRequest extends AbstractModel
 
     /**
      * @var string 旧版镜像名，如/tsf/nginx
+     * @deprecated
      */
     public $Reponame;
 

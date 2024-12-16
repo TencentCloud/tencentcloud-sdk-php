@@ -40,14 +40,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
  * @method boolean getIgnoreCreateImageRepository() 获取忽略创建镜像仓库
  * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置忽略创建镜像仓库
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method array getProgramIdList() 获取数据集id列表
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集id列表
  * @method string getApmInstanceId() 获取apm业务系统id
  * @method void setApmInstanceId(string $ApmInstanceId) 设置apm业务系统id
- * @method string getProgramLanguage() 获取编程语言
- * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言
- * @method string getFrameworkType() 获取开发框架
- * @method void setFrameworkType(string $FrameworkType) 设置开发框架
+ * @method string getProgramLanguage() 获取编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
+ * @method string getFrameworkType() 获取开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+ * @method void setFrameworkType(string $FrameworkType) 设置开发框架-SpringCloud/Dubbo/Go-GRPC/Other
  * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理
  * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理
  * @method boolean getCreateSameNameImageRepository() 获取是否创建并关联同名镜像仓库
@@ -106,7 +116,7 @@ class CreateApplicationRequest extends AbstractModel
     public $IgnoreCreateImageRepository;
 
     /**
-     * @var array 无
+     * @var array 数据集id列表
      */
     public $ProgramIdList;
 
@@ -116,12 +126,17 @@ class CreateApplicationRequest extends AbstractModel
     public $ApmInstanceId;
 
     /**
-     * @var string 编程语言
+     * @var string 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
      */
     public $ProgramLanguage;
 
     /**
-     * @var string 开发框架
+     * @var string 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
      */
     public $FrameworkType;
 
@@ -146,10 +161,15 @@ class CreateApplicationRequest extends AbstractModel
      * @param string $ProgramId 需要绑定的数据集ID
      * @param array $ServiceConfigList 服务配置信息列表
      * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
-     * @param array $ProgramIdList 无
+     * @param array $ProgramIdList 数据集id列表
      * @param string $ApmInstanceId apm业务系统id
-     * @param string $ProgramLanguage 编程语言
-     * @param string $FrameworkType 开发框架
+     * @param string $ProgramLanguage 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
+     * @param string $FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
      * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理
      * @param boolean $CreateSameNameImageRepository 是否创建并关联同名镜像仓库
      */

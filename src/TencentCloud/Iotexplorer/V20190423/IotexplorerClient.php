@@ -38,8 +38,10 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateBatchProductionResponse CreateBatchProduction(Models\CreateBatchProductionRequest $req) 用于新建批量生产设备
  * @method Models\CreateCloudStorageAIServiceResponse CreateCloudStorageAIService(Models\CreateCloudStorageAIServiceRequest $req) 开通设备云存AI分析服务
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 创建设备
+ * @method Models\CreateDeviceChannelResponse CreateDeviceChannel(Models\CreateDeviceChannelRequest $req) 创建设备通道
  * @method Models\CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTask(Models\CreateExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
  * @method Models\CreateFenceBindResponse CreateFenceBind(Models\CreateFenceBindRequest $req) 创建围栏绑定信息
+ * @method Models\CreateFreeCloudStorageResponse CreateFreeCloudStorage(Models\CreateFreeCloudStorageRequest $req) 开通免费云存服务
  * @method Models\CreateIotVideoCloudStorageResponse CreateIotVideoCloudStorage(Models\CreateIotVideoCloudStorageRequest $req) 开通云存服务
  * @method Models\CreateLoRaFrequencyResponse CreateLoRaFrequency(Models\CreateLoRaFrequencyRequest $req) 创建 LoRa 自定义频点
  * @method Models\CreateLoRaGatewayResponse CreateLoRaGateway(Models\CreateLoRaGatewayRequest $req) 创建新 LoRa 网关设备接口

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
  * @method string getSearchWord() 获取对id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置对id和name进行关键词过滤
- * @method boolean getDisableProgramAuthCheck() 获取无
- * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
+ * @method boolean getDisableProgramAuthCheck() 获取是否关闭鉴权
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置是否关闭鉴权
  */
 class DescribeSimpleClustersRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeSimpleClustersRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var boolean 无
+     * @var boolean 是否关闭鉴权
      */
     public $DisableProgramAuthCheck;
 
@@ -71,7 +71,7 @@ class DescribeSimpleClustersRequest extends AbstractModel
      * @param integer $Offset 查询偏移量，默认为0
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
      * @param string $SearchWord 对id和name进行关键词过滤
-     * @param boolean $DisableProgramAuthCheck 无
+     * @param boolean $DisableProgramAuthCheck 是否关闭鉴权
      */
     function __construct()
     {

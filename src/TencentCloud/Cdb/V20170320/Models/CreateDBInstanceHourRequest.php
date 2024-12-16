@@ -116,8 +116,10 @@ use TencentCloud\Common\AbstractModel;
 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版节点拓扑配置。
 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
- * @method string getDiskType() 获取磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
- * @method void setDiskType(string $DiskType) 设置磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+ * @method string getDiskType() 获取硬盘类型，单节点（云盘版）或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+说明：单节点（云盘版）、集群版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 [地域和可用区](https://cloud.tencent.com/document/product/236/8458)。
+ * @method void setDiskType(string $DiskType) 设置硬盘类型，单节点（云盘版）或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+说明：单节点（云盘版）、集群版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 [地域和可用区](https://cloud.tencent.com/document/product/236/8458)。
  * @method string getClusterType() 获取集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
  * @method void setClusterType(string $ClusterType) 设置集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
  */
@@ -328,7 +330,8 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ClusterTopology;
 
     /**
-     * @var string 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+     * @var string 硬盘类型，单节点（云盘版）或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+说明：单节点（云盘版）、集群版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 [地域和可用区](https://cloud.tencent.com/document/product/236/8458)。
      */
     public $DiskType;
 
@@ -386,7 +389,8 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $DataProtectVolume 集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
      * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
-     * @param string $DiskType 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+     * @param string $DiskType 硬盘类型，单节点（云盘版）或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+说明：单节点（云盘版）、集群版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 [地域和可用区](https://cloud.tencent.com/document/product/236/8458)。
      * @param string $ClusterType 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
      */
     function __construct()

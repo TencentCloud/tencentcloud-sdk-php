@@ -48,8 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuRequest(string $CpuRequest) 设置初始分配的 CPU 核数，对应 K8S request
  * @method string getMemRequest() 获取初始分配的内存 MiB 数，对应 K8S request
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
- * @method string getGroupResourceType() 获取部署组资源类型
- * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+ * @method string getGroupResourceType() 获取部署组资源类型；
+DEF — 默认资源类型；
+GW — 网关资源类型；
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型；
+DEF — 默认资源类型；
+GW — 网关资源类型；
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getAgentCpuRequest() 获取agent 容器分配的 CPU 核数，对应 K8S 的 request
@@ -142,7 +146,9 @@ class CreateContainGroupRequest extends AbstractModel
     public $MemRequest;
 
     /**
-     * @var string 部署组资源类型
+     * @var string 部署组资源类型；
+DEF — 默认资源类型；
+GW — 网关资源类型；
      */
     public $GroupResourceType;
 
@@ -206,7 +212,9 @@ class CreateContainGroupRequest extends AbstractModel
      * @param integer $UpdateIvl 滚动更新必填，更新间隔
      * @param string $CpuRequest 初始分配的 CPU 核数，对应 K8S request
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
-     * @param string $GroupResourceType 部署组资源类型
+     * @param string $GroupResourceType 部署组资源类型；
+DEF — 默认资源类型；
+GW — 网关资源类型；
      * @param string $SubnetId 子网ID
      * @param string $AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
      * @param string $AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit

@@ -184,6 +184,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalContainerList(array $InternalContainerList) 设置内部容器列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceSettingList() 获取service列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceSettingList(array $ServiceSettingList) 设置service列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -434,6 +438,12 @@ class ContainerGroupDeploy extends AbstractModel
     public $InternalContainerList;
 
     /**
+     * @var array service列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceSettingList;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -515,6 +525,8 @@ class ContainerGroupDeploy extends AbstractModel
      * @param array $AdditionalContainerList 附加容器列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InternalContainerList 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceSettingList service列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -725,6 +737,15 @@ class ContainerGroupDeploy extends AbstractModel
                 $obj = new GroupContainerInfo();
                 $obj->deserialize($value);
                 array_push($this->InternalContainerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ServiceSettingList",$param) and $param["ServiceSettingList"] !== null) {
+            $this->ServiceSettingList = [];
+            foreach ($param["ServiceSettingList"] as $key => $value){
+                $obj = new ServiceSetting();
+                $obj->deserialize($value);
+                array_push($this->ServiceSettingList, $obj);
             }
         }
     }

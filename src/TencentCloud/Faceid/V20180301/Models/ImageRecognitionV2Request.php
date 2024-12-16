@@ -38,6 +38,12 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
 - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getExtra() 获取自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+ * @method void setExtra(string $Extra) 设置自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
  */
 class ImageRecognitionV2Request extends AbstractModel
 {
@@ -71,6 +77,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     public $Encryption;
 
     /**
+     * @var string 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+     */
+    public $Extra;
+
+    /**
      * @param string $IdCard 身份证号。
      * @param string $Name 姓名。
 - 中文请使用UTF-8编码。
@@ -80,6 +93,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param string $Optional 本接口不需要传递此参数。
      * @param Encryption $Encryption 敏感数据加密信息。
 - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $Extra 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
      */
     function __construct()
     {
@@ -113,6 +129,10 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = new Encryption();
             $this->Encryption->deserialize($param["Encryption"]);
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

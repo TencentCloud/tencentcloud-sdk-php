@@ -41,33 +41,21 @@ use TencentCloud\Common\AbstractModel;
 <li>NORMAL：正常可用</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
  * @method boolean getIsAutoDegrade() 获取是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvChannel() 获取环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvChannel(string $EnvChannel) 设置环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefault() 获取是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvType() 获取环境类型：baas, run, hosting, weda,tcbr
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvType(string $EnvType) 设置环境类型：baas, run, hosting, weda,tcbr
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDatabases() 获取数据库列表
  * @method void setDatabases(array $Databases) 设置数据库列表
  * @method array getStorages() 获取存储列表
@@ -75,29 +63,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFunctions() 获取函数列表
  * @method void setFunctions(array $Functions) 设置函数列表
  * @method array getLogServices() 获取云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogServices(array $LogServices) 设置云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStaticStorages() 获取静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaticStorages(array $StaticStorages) 设置静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomLogServices() 获取自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomLogServices(array $CustomLogServices) 设置自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -137,13 +113,11 @@ class EnvInfo extends AbstractModel
 
     /**
      * @var boolean 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAutoDegrade;
 
     /**
      * @var string 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvChannel;
 
@@ -151,25 +125,21 @@ class EnvInfo extends AbstractModel
      * @var string 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var boolean 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @var string 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 环境类型：baas, run, hosting, weda,tcbr
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvType;
 
@@ -190,37 +160,31 @@ class EnvInfo extends AbstractModel
 
     /**
      * @var array 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogServices;
 
     /**
      * @var array 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StaticStorages;
 
     /**
      * @var array 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var array 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomLogServices;
 
     /**
      * @var string tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
      * @var string 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
@@ -236,34 +200,22 @@ class EnvInfo extends AbstractModel
 <li>NORMAL：正常可用</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      * @param boolean $IsAutoDegrade 是否到期自动降为免费版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvChannel 环境渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 支付方式。包含以下取值：
 <li> prepayment：预付费</li>
 <li> postpaid：后付费</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefault 是否为默认环境
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 环境所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvType 环境类型：baas, run, hosting, weda,tcbr
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Databases 数据库列表
      * @param array $Storages 存储列表
      * @param array $Functions 函数列表
      * @param array $LogServices 云日志服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StaticStorages 静态资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomLogServices 自定义日志服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

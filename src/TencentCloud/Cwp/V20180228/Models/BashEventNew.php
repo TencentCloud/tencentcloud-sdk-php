@@ -56,8 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
  * @method integer getRuleCategory() 获取规则类别  0=系统规则，1=用户规则
  * @method void setRuleCategory(integer $RuleCategory) 设置规则类别  0=系统规则，1=用户规则
- * @method string getRegexBashCmd() 获取自动生成的正则表达式
- * @method void setRegexBashCmd(string $RegexBashCmd) 设置自动生成的正则表达式
+ * @method string getRegexBashCmd() 获取转义后的正则表达式
+ * @method void setRegexBashCmd(string $RegexBashCmd) 设置转义后的正则表达式
+ * @method string getRegexExe() 获取转义后的正则表达式
+ * @method void setRegexExe(string $RegexExe) 设置转义后的正则表达式
  * @method integer getMachineType() 获取0:普通 1:专业版 2:旗舰版
  * @method void setMachineType(integer $MachineType) 设置0:普通 1:专业版 2:旗舰版
  * @method MachineExtraInfo getMachineExtraInfo() 获取机器额外信息
@@ -156,9 +158,14 @@ class BashEventNew extends AbstractModel
     public $RuleCategory;
 
     /**
-     * @var string 自动生成的正则表达式
+     * @var string 转义后的正则表达式
      */
     public $RegexBashCmd;
+
+    /**
+     * @var string 转义后的正则表达式
+     */
+    public $RegexExe;
 
     /**
      * @var integer 0:普通 1:专业版 2:旗舰版
@@ -189,7 +196,8 @@ class BashEventNew extends AbstractModel
      * @param string $Exe 进程名称
      * @param string $ModifyTime 处理时间
      * @param integer $RuleCategory 规则类别  0=系统规则，1=用户规则
-     * @param string $RegexBashCmd 自动生成的正则表达式
+     * @param string $RegexBashCmd 转义后的正则表达式
+     * @param string $RegexExe 转义后的正则表达式
      * @param integer $MachineType 0:普通 1:专业版 2:旗舰版
      * @param MachineExtraInfo $MachineExtraInfo 机器额外信息
      */
@@ -280,6 +288,10 @@ class BashEventNew extends AbstractModel
 
         if (array_key_exists("RegexBashCmd",$param) and $param["RegexBashCmd"] !== null) {
             $this->RegexBashCmd = $param["RegexBashCmd"];
+        }
+
+        if (array_key_exists("RegexExe",$param) and $param["RegexExe"] !== null) {
+            $this->RegexExe = $param["RegexExe"];
         }
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {

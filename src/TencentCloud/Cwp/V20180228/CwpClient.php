@@ -81,6 +81,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeletePrivilegeEventsResponse DeletePrivilegeEvents(Models\DeletePrivilegeEventsRequest $req) 根据Ids删除本地提权
  * @method Models\DeletePrivilegeRulesResponse DeletePrivilegeRules(Models\DeletePrivilegeRulesRequest $req) 删除本地提权规则
  * @method Models\DeleteProtectDirResponse DeleteProtectDir(Models\DeleteProtectDirRequest $req) 删除防护网站
+ * @method Models\DeleteRaspRulesResponse DeleteRaspRules(Models\DeleteRaspRulesRequest $req) 删除漏洞防御白名单
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 根据Ids删除反弹Shell事件
  * @method Models\DeleteReverseShellRulesResponse DeleteReverseShellRules(Models\DeleteReverseShellRulesRequest $req) 删除反弹Shell规则
  * @method Models\DeleteRiskDnsEventResponse DeleteRiskDnsEvent(Models\DeleteRiskDnsEventRequest $req) 删除恶意请求事件
@@ -307,6 +308,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeRansomDefenseStrategyListResponse DescribeRansomDefenseStrategyList(Models\DescribeRansomDefenseStrategyListRequest $req) 查询防勒索策略列表
  * @method Models\DescribeRansomDefenseStrategyMachinesResponse DescribeRansomDefenseStrategyMachines(Models\DescribeRansomDefenseStrategyMachinesRequest $req) 查询防勒索策略绑定机器列表
  * @method Models\DescribeRansomDefenseTrendResponse DescribeRansomDefenseTrend(Models\DescribeRansomDefenseTrendRequest $req) 获取全网勒索态势
+ * @method Models\DescribeRaspMaxCpuResponse DescribeRaspMaxCpu(Models\DescribeRaspMaxCpuRequest $req) 查看漏洞防御最大cpu限制
+ * @method Models\DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(Models\DescribeRaspRuleVulsRequest $req) 获取漏洞防御白名单漏洞列表
+ * @method Models\DescribeRaspRulesResponse DescribeRaspRules(Models\DescribeRaspRulesRequest $req) 查询漏洞防御白名单
  * @method Models\DescribeRecommendedProtectCpuResponse DescribeRecommendedProtectCpu(Models\DescribeRecommendedProtectCpuRequest $req) 查询推荐购买防护核数
  * @method Models\DescribeReverseShellEventInfoResponse DescribeReverseShellEventInfo(Models\DescribeReverseShellEventInfoRequest $req) 反弹shell信息详情
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
@@ -505,6 +509,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ModifyOrderAttributeResponse ModifyOrderAttribute(Models\ModifyOrderAttributeRequest $req) 对订单属性编辑
  * @method Models\ModifyRansomDefenseEventsStatusResponse ModifyRansomDefenseEventsStatus(Models\ModifyRansomDefenseEventsStatusRequest $req) 修改防勒索事件状态
  * @method Models\ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatus(Models\ModifyRansomDefenseStrategyStatusRequest $req) 批量修改防勒索策略状态
+ * @method Models\ModifyRaspMaxCpuResponse ModifyRaspMaxCpu(Models\ModifyRaspMaxCpuRequest $req) 编辑漏洞防御最大cpu配置
+ * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) 添加漏洞防御白名单
  * @method Models\ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregation(Models\ModifyReverseShellRulesAggregationRequest $req) 编辑反弹Shell规则（支持多服务器选择）
  * @method Models\ModifyRiskDnsPolicyResponse ModifyRiskDnsPolicy(Models\ModifyRiskDnsPolicyRequest $req) 更改恶意请求策略
  * @method Models\ModifyRiskDnsPolicyStatusResponse ModifyRiskDnsPolicyStatus(Models\ModifyRiskDnsPolicyStatusRequest $req) 更改恶意请求策略状态

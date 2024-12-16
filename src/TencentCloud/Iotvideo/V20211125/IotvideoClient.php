@@ -38,7 +38,9 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\CreateCOSCredentialsResponse CreateCOSCredentials(Models\CreateCOSCredentialsRequest $req) 创建COS上传密钥
  * @method Models\CreateCloudStorageResponse CreateCloudStorage(Models\CreateCloudStorageRequest $req) 开通云存服务
  * @method Models\CreateDataForwardResponse CreateDataForward(Models\CreateDataForwardRequest $req) 创建数据转发
+ * @method Models\CreateDeviceChannelResponse CreateDeviceChannel(Models\CreateDeviceChannelRequest $req) 创建设备通道
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建转发规则
+ * @method Models\CreateFreeCloudStorageResponse CreateFreeCloudStorage(Models\CreateFreeCloudStorageRequest $req) 开通免费云存服务
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
  * @method Models\CreateTaskFileUrlResponse CreateTaskFileUrl(Models\CreateTaskFileUrlRequest $req) 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
  * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件

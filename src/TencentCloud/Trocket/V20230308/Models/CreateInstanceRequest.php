@@ -58,6 +58,8 @@ PLATINUM 铂金版
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月），默认值为1
  * @method integer getMaxTopicNum() 获取最大可创建主题数
  * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
+ * @method array getZoneIds() 获取部署可用区列表
+ * @method void setZoneIds(array $ZoneIds) 设置部署可用区列表
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -141,6 +143,11 @@ PLATINUM 铂金版
     public $MaxTopicNum;
 
     /**
+     * @var array 部署可用区列表
+     */
+    public $ZoneIds;
+
+    /**
      * @param string $InstanceType 实例类型，
 EXPERIMENT 体验版
 BASIC 基础版
@@ -160,6 +167,7 @@ PLATINUM 铂金版
      * @param integer $RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      * @param integer $TimeSpan 购买时长（单位：月），默认值为1
      * @param integer $MaxTopicNum 最大可创建主题数
+     * @param array $ZoneIds 部署可用区列表
      */
     function __construct()
     {
@@ -247,6 +255,10 @@ PLATINUM 铂金版
 
         if (array_key_exists("MaxTopicNum",$param) and $param["MaxTopicNum"] !== null) {
             $this->MaxTopicNum = $param["MaxTopicNum"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

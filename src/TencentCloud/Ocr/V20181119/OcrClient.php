@@ -668,6 +668,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：5次/秒。
  * @method Models\TextDetectResponse TextDetect(Models\TextDetectRequest $req) 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\TollInvoiceOCRResponse TollInvoiceOCR(Models\TollInvoiceOCRRequest $req) 本接口支持过路过桥费发票关键字段的识别，包括发票代码、发票号码、日期、金额、入口、出口、时间、发票消费类型、高速标志等。
 
 默认接口请求频率限制：5次/秒。

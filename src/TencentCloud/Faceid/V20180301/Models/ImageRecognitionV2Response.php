@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 - 错误情况请参考下方错误码 列表中FailedOperation部分
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method string getExtra() 获取调用接口中自定义的描述字段。
+ * @method void setExtra(string $Extra) 设置调用接口中自定义的描述字段。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,6 +61,11 @@ class ImageRecognitionV2Response extends AbstractModel
     public $Description;
 
     /**
+     * @var string 调用接口中自定义的描述字段。
+     */
+    public $Extra;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class ImageRecognitionV2Response extends AbstractModel
 - 成功情况返回Success。
 - 错误情况请参考下方错误码 列表中FailedOperation部分
      * @param string $Description 业务结果描述。
+     * @param string $Extra 调用接口中自定义的描述字段。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +104,10 @@ class ImageRecognitionV2Response extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

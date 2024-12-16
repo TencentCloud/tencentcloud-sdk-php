@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactNumber(string $ContactNumber) 设置联系人手机号码。
  * @method string getContactPosition() 获取联系人职位。
  * @method void setContactPosition(string $ContactPosition) 设置联系人职位。
+ * @method boolean getIsDV() 获取是否DV证书。默认false
+ * @method void setIsDV(boolean $IsDV) 设置是否DV证书。默认false
  */
 class SubmitCertificateInformationRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $ContactPosition;
 
     /**
+     * @var boolean 是否DV证书。默认false
+     */
+    public $IsDV;
+
+    /**
      * @param string $CertificateId 证书 ID。
      * @param string $CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
      * @param string $CsrContent 上传的 CSR 内容。
@@ -232,6 +239,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @param string $ContactEmail 联系人邮箱地址。
      * @param string $ContactNumber 联系人手机号码。
      * @param string $ContactPosition 联系人职位。
+     * @param boolean $IsDV 是否DV证书。默认false
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class SubmitCertificateInformationRequest extends AbstractModel
 
         if (array_key_exists("ContactPosition",$param) and $param["ContactPosition"] !== null) {
             $this->ContactPosition = $param["ContactPosition"];
+        }
+
+        if (array_key_exists("IsDV",$param) and $param["IsDV"] !== null) {
+            $this->IsDV = $param["IsDV"];
         }
     }
 }

@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevelopmentParams(string $DevelopmentParams) 设置同params 内容为开发数据源的数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DataSourceConnectStatus getConnectStatus() 获取数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectStatus(DataSourceConnectStatus $ConnectStatus) 设置数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -364,6 +368,12 @@ class DataSourceInfo extends AbstractModel
     public $DevelopmentParams;
 
     /**
+     * @var DataSourceConnectStatus 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectStatus;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -431,6 +441,8 @@ class DataSourceInfo extends AbstractModel
      * @param integer $DevelopmentId 当前数据源开发源Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DevelopmentParams 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceConnectStatus $ConnectStatus 数据源连接状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -580,6 +592,11 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("DevelopmentParams",$param) and $param["DevelopmentParams"] !== null) {
             $this->DevelopmentParams = $param["DevelopmentParams"];
+        }
+
+        if (array_key_exists("ConnectStatus",$param) and $param["ConnectStatus"] !== null) {
+            $this->ConnectStatus = new DataSourceConnectStatus();
+            $this->ConnectStatus->deserialize($param["ConnectStatus"]);
         }
     }
 }

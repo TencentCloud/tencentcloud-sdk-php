@@ -37,6 +37,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
  * @method Models\CreateBatchProductionResponse CreateBatchProduction(Models\CreateBatchProductionRequest $req) 用于新建批量生产设备
  * @method Models\CreateCloudStorageAIServiceResponse CreateCloudStorageAIService(Models\CreateCloudStorageAIServiceRequest $req) 开通设备云存AI分析服务
+ * @method Models\CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTask(Models\CreateCloudStorageAIServiceTaskRequest $req) 创建设备云存 AI 分析任务
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 创建设备
  * @method Models\CreateDeviceChannelResponse CreateDeviceChannel(Models\CreateDeviceChannelRequest $req) 创建设备通道
  * @method Models\CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTask(Models\CreateExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
@@ -156,10 +157,14 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息 
  * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
- * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息
+ * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+
+发布广播消息
  * @method Models\PublishFirmwareUpdateMessageResponse PublishFirmwareUpdateMessage(Models\PublishFirmwareUpdateMessageRequest $req) 本接口（PublishFirmwareUpdateMessage）用于用户确认升级后，云端向设备发起固件升级请求。
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于使用自定义透传协议进行设备远控
- * @method Models\PublishRRPCMessageResponse PublishRRPCMessage(Models\PublishRRPCMessageRequest $req) 下发RRPC消息
+ * @method Models\PublishRRPCMessageResponse PublishRRPCMessage(Models\PublishRRPCMessageRequest $req) 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+
+下发RRPC消息
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTC(Models\RemoveUserByRoomIdFromTRTCRequest $req) TRTC操作，将用户从房间移出
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务

@@ -41,6 +41,7 @@ use TencentCloud\Vrs\V20200824\Models as Models;
  请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
 • 签名方法参考 公共参数 中签名方法v3。
 • 当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
+ * @method Models\GetVRSVoiceTypeInfoResponse GetVRSVoiceTypeInfo(Models\GetVRSVoiceTypeInfoRequest $req) 该接口用于查询复刻音色详细信息。
  * @method Models\GetVRSVoiceTypesResponse GetVRSVoiceTypes(Models\GetVRSVoiceTypesRequest $req) 查询复刻音色
  */
 

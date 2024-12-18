@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
 1.检测字是否存在多读、 少读、 错读等
 2.检测准确度和流畅度
  *
- * @method float getPronAccuracy() 获取准确度 (<75则认为不合格)
+ * @method float getPronAccuracy() 获取准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPronAccuracy(float $PronAccuracy) 设置准确度 (<75则认为不合格)
+ * @method void setPronAccuracy(float $PronAccuracy) 设置准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getPronFluency() 获取流畅度 (<0.95则认为不合格)
+ * @method float getPronFluency() 获取流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPronFluency(float $PronFluency) 设置流畅度 (<0.95则认为不合格)
+ * @method void setPronFluency(float $PronFluency) 设置流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTag() 获取tag: 
 0: match  匹配
@@ -54,13 +54,13 @@ use TencentCloud\Common\AbstractModel;
 class Words extends AbstractModel
 {
     /**
-     * @var float 准确度 (<75则认为不合格)
+     * @var float 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PronAccuracy;
 
     /**
-     * @var float 流畅度 (<0.95则认为不合格)
+     * @var float 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PronFluency;
@@ -84,9 +84,9 @@ class Words extends AbstractModel
     public $Word;
 
     /**
-     * @param float $PronAccuracy 准确度 (<75则认为不合格)
+     * @param float $PronAccuracy 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $PronFluency 流畅度 (<0.95则认为不合格)
+     * @param float $PronFluency 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Tag tag: 
 0: match  匹配

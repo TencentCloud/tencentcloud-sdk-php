@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID
  * @method integer getPort() 获取后端服务的监听端口
  * @method void setPort(integer $Port) 设置后端服务的监听端口
- * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
- * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method integer getWeight() 获取后端服务的转发权重，取值为0或16
+ * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值为0或16
  * @method array getPublicIpAddresses() 获取后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置后端服务的外网 IP
@@ -78,7 +78,7 @@ class TargetGroupBackend extends AbstractModel
     public $Port;
 
     /**
-     * @var integer 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @var integer 后端服务的转发权重，取值为0或16
      */
     public $Weight;
 
@@ -123,7 +123,7 @@ class TargetGroupBackend extends AbstractModel
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
      * @param string $InstanceId 后端服务的唯一 ID
      * @param integer $Port 后端服务的监听端口
-     * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @param integer $Weight 后端服务的转发权重，取值为0或16
      * @param array $PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 后端服务的内网 IP

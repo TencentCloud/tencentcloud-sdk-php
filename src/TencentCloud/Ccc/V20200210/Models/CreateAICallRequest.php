@@ -234,6 +234,8 @@ HoaiMy
  * @method void setNotifyDuration(integer $NotifyDuration) 设置用户多久没说话提示时长,最小10秒,默认10秒
  * @method string getNotifyMessage() 获取用户NotifyDuration没说话，AI提示的语句，默认是"抱歉，我没听清。您可以重复下吗？"
  * @method void setNotifyMessage(string $NotifyMessage) 设置用户NotifyDuration没说话，AI提示的语句，默认是"抱歉，我没听清。您可以重复下吗？"
+ * @method integer getNotifyMaxCount() 获取最大触发AI提示音次数，默认为不限制
+ * @method void setNotifyMaxCount(integer $NotifyMaxCount) 设置最大触发AI提示音次数，默认为不限制
  * @method string getCustomTTSConfig() 获取<p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
 <ul>
 <li>Tencent TTS<br>
@@ -579,6 +581,11 @@ HoaiMy
     public $NotifyMessage;
 
     /**
+     * @var integer 最大触发AI提示音次数，默认为不限制
+     */
+    public $NotifyMaxCount;
+
+    /**
      * @var string <p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
 <ul>
 <li>Tencent TTS<br>
@@ -769,6 +776,7 @@ HoaiMy
      * @param string $EndFunctionDesc EndFunctionEnable为true时生效；call_end function calling的desc，默认为 "End the call when user has to leave (like says bye) or you are instructed to do so."
      * @param integer $NotifyDuration 用户多久没说话提示时长,最小10秒,默认10秒
      * @param string $NotifyMessage 用户NotifyDuration没说话，AI提示的语句，默认是"抱歉，我没听清。您可以重复下吗？"
+     * @param integer $NotifyMaxCount 最大触发AI提示音次数，默认为不限制
      * @param string $CustomTTSConfig <p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
 <ul>
 <li>Tencent TTS<br>
@@ -936,6 +944,10 @@ HoaiMy
 
         if (array_key_exists("NotifyMessage",$param) and $param["NotifyMessage"] !== null) {
             $this->NotifyMessage = $param["NotifyMessage"];
+        }
+
+        if (array_key_exists("NotifyMaxCount",$param) and $param["NotifyMaxCount"] !== null) {
+            $this->NotifyMaxCount = $param["NotifyMaxCount"];
         }
 
         if (array_key_exists("CustomTTSConfig",$param) and $param["CustomTTSConfig"] !== null) {

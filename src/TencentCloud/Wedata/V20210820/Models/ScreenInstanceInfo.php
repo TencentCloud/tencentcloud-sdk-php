@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedNum(integer $FailedNum) 设置失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSkipRunningNum() 获取跳过运行总数
+ * @method void setSkipRunningNum(integer $SkipRunningNum) 设置跳过运行总数
  */
 class ScreenInstanceInfo extends AbstractModel
 {
@@ -114,6 +116,11 @@ class ScreenInstanceInfo extends AbstractModel
     public $FailedNum;
 
     /**
+     * @var integer 跳过运行总数
+     */
+    public $SkipRunningNum;
+
+    /**
      * @param integer $CountTag 统计标示 0：全部、1：当前天、2：昨天
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalNum 总数
@@ -132,6 +139,7 @@ class ScreenInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedNum 失败
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SkipRunningNum 跳过运行总数
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ScreenInstanceInfo extends AbstractModel
 
         if (array_key_exists("FailedNum",$param) and $param["FailedNum"] !== null) {
             $this->FailedNum = $param["FailedNum"];
+        }
+
+        if (array_key_exists("SkipRunningNum",$param) and $param["SkipRunningNum"] !== null) {
+            $this->SkipRunningNum = $param["SkipRunningNum"];
         }
     }
 }

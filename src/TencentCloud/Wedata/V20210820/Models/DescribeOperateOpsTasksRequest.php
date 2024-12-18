@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitStrategy(string $InitStrategy) 设置实例生成方式
  * @method array getRequestResourceTypes() 获取额外请求的资源类型
  * @method void setRequestResourceTypes(array $RequestResourceTypes) 设置额外请求的资源类型
+ * @method array getProjectIds() 获取项目ID列表
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $RequestResourceTypes;
 
     /**
+     * @var array 项目ID列表
+     */
+    public $ProjectIds;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -224,6 +231,7 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $KeyWord 查询关键字
      * @param string $InitStrategy 实例生成方式
      * @param array $RequestResourceTypes 额外请求的资源类型
+     * @param array $ProjectIds 项目ID列表
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("RequestResourceTypes",$param) and $param["RequestResourceTypes"] !== null) {
             $this->RequestResourceTypes = $param["RequestResourceTypes"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

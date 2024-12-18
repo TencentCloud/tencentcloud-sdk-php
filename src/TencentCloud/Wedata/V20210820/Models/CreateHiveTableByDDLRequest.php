@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncharge(string $Incharge) 设置责任人
  * @method string getSchemaName() 获取schema名称
  * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method boolean getAsync() 获取是否异步建表
+ * @method void setAsync(boolean $Async) 设置是否异步建表
  */
 class CreateHiveTableByDDLRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $SchemaName;
 
     /**
+     * @var boolean 是否异步建表
+     */
+    public $Async;
+
+    /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
      * @param string $DDLSql 建hive表ddl
@@ -88,6 +95,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
      * @param string $Type 目标表类型(HIVE或GBASE)
      * @param string $Incharge 责任人
      * @param string $SchemaName schema名称
+     * @param boolean $Async 是否异步建表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateHiveTableByDDLRequest extends AbstractModel
 
         if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
             $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("Async",$param) and $param["Async"] !== null) {
+            $this->Async = $param["Async"];
         }
     }
 }

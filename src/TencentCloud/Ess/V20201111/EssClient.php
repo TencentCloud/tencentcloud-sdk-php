@@ -831,6 +831,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 注：
 1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
+ * @method Models\DescribeOrganizationVerifyStatusResponse DescribeOrganizationVerifyStatus(Models\DescribeOrganizationVerifyStatusRequest $req) 仅且仅能查询企业本身在电子签的认证状态
  * @method Models\DescribePersonCertificateResponse DescribePersonCertificate(Models\DescribePersonCertificateRequest $req) 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
  * @method Models\DescribeSignFaceVideoResponse DescribeSignFaceVideo(Models\DescribeSignFaceVideoRequest $req) 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
 

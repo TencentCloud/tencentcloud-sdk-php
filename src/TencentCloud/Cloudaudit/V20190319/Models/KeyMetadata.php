@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * CMK属性
  *
  * @method string getAlias() 获取作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyId() 获取CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyMetadata extends AbstractModel
 {
     /**
      * @var string 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
      * @var string CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyId;
 
     /**
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyId CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

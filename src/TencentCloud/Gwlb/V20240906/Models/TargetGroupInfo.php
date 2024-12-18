@@ -38,15 +38,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取后端协议类型。
+ * @method string getProtocol() 获取网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置后端协议类型。
+ * @method void setProtocol(string $Protocol) 设置网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleAlgorithm() 获取调度算法。
-ip_hash_3：弹性哈希
+ * @method string getScheduleAlgorithm() 获取均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法。
-ip_hash_3：弹性哈希
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,14 +109,16 @@ class TargetGroupInfo extends AbstractModel
     public $AssociatedRule;
 
     /**
-     * @var string 后端协议类型。
+     * @var string 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @var string 调度算法。
-ip_hash_3：弹性哈希
+     * @var string 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleAlgorithm;
@@ -151,10 +157,12 @@ ip_hash_3：弹性哈希
      * @param string $UpdatedTime 目标组的修改时间
      * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 后端协议类型。
+     * @param string $Protocol 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleAlgorithm 调度算法。
-ip_hash_3：弹性哈希
+     * @param string $ScheduleAlgorithm 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
 注意：此字段可能返回 null，表示取不到有效值。

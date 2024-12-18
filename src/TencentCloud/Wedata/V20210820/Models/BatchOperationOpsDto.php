@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置批量操作的总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsyncActionId() 获取异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsyncActionId(string $AsyncActionId) 设置异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchOperationOpsDto extends AbstractModel
 {
@@ -54,11 +58,19 @@ class BatchOperationOpsDto extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsyncActionId;
+
+    /**
      * @param integer $SuccessCount 批量操作成功数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedCount 批量操作失败数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 批量操作的总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsyncActionId 异步操作记录的唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class BatchOperationOpsDto extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AsyncActionId",$param) and $param["AsyncActionId"] !== null) {
+            $this->AsyncActionId = $param["AsyncActionId"];
         }
     }
 }

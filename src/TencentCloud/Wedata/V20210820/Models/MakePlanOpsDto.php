@@ -126,6 +126,14 @@ use TencentCloud\Common\AbstractModel;
 <li> ALL: 检查全部上游父任务 </li>
 <li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSameSelfWorkflowDependType() 获取是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSelfWorkflowDependency() 获取工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -283,6 +291,18 @@ class MakePlanOpsDto extends AbstractModel
     public $CheckParentType;
 
     /**
+     * @var boolean 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SameSelfWorkflowDependType;
+
+    /**
+     * @var string 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfWorkflowDependency;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -335,6 +355,10 @@ class MakePlanOpsDto extends AbstractModel
 <li> NONE: 全部不检查 </li>
 <li> ALL: 检查全部上游父任务 </li>
 <li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SelfWorkflowDependency 工作流自依赖类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -458,6 +482,14 @@ class MakePlanOpsDto extends AbstractModel
 
         if (array_key_exists("CheckParentType",$param) and $param["CheckParentType"] !== null) {
             $this->CheckParentType = $param["CheckParentType"];
+        }
+
+        if (array_key_exists("SameSelfWorkflowDependType",$param) and $param["SameSelfWorkflowDependType"] !== null) {
+            $this->SameSelfWorkflowDependType = $param["SameSelfWorkflowDependType"];
+        }
+
+        if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
+            $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
         }
     }
 }

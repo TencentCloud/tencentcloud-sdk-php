@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorDesc(string $ErrorDesc) 设置操作失败描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsyncActionId() 获取异步操作记录id
+ * @method void setAsyncActionId(string $AsyncActionId) 设置异步操作记录id
  */
 class OperationOpsDto extends AbstractModel
 {
@@ -64,6 +66,11 @@ class OperationOpsDto extends AbstractModel
     public $ErrorDesc;
 
     /**
+     * @var string 异步操作记录id
+     */
+    public $AsyncActionId;
+
+    /**
      * @param boolean $Result 操作是否成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultMsg 操作结果详情
@@ -72,6 +79,7 @@ class OperationOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorDesc 操作失败描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsyncActionId 异步操作记录id
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class OperationOpsDto extends AbstractModel
 
         if (array_key_exists("ErrorDesc",$param) and $param["ErrorDesc"] !== null) {
             $this->ErrorDesc = $param["ErrorDesc"];
+        }
+
+        if (array_key_exists("AsyncActionId",$param) and $param["AsyncActionId"] !== null) {
+            $this->AsyncActionId = $param["AsyncActionId"];
         }
     }
 }

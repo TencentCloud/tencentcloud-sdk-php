@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssignProject请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+ * @method array getInstanceIds() 获取实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
  * @method integer getProjectId() 获取项目ID，用户已创建项目的唯一ID,非自定义
  * @method void setProjectId(integer $ProjectId) 设置项目ID，用户已创建项目的唯一ID,非自定义
  */
 class AssignProjectRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var array 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      */
     public $InstanceIds;
 
@@ -38,7 +38,7 @@ class AssignProjectRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      * @param integer $ProjectId 项目ID，用户已创建项目的唯一ID,非自定义
      */
     function __construct()

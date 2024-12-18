@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoRefuse(boolean $NoRefuse) 设置是否可以拒签 默认false-可以拒签 true-不可以拒签
  * @method boolean getNoTransfer() 获取是否可以转发 默认false-可以转发 true-不可以转发
  * @method void setNoTransfer(boolean $NoTransfer) 设置是否可以转发 默认false-可以转发 true-不可以转发
- * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+ * @method boolean getHideOneKeySign() 获取当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
+ * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
@@ -68,7 +74,10 @@ class ApproverOption extends AbstractModel
     public $NoTransfer;
 
     /**
-     * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var boolean 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      */
     public $HideOneKeySign;
 
@@ -97,7 +106,10 @@ class ApproverOption extends AbstractModel
     /**
      * @param boolean $NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
      * @param boolean $NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
-     * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @param boolean $HideOneKeySign 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>

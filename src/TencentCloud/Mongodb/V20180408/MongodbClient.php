@@ -33,8 +33,6 @@ use TencentCloud\Mongodb\V20180408\Models as Models;
  * @method Models\RenameInstanceResponse RenameInstance(Models\RenameInstanceRequest $req) 本接口(RenameInstance)用于修改云数据库实例的名称。
  * @method Models\SetAutoRenewResponse SetAutoRenew(Models\SetAutoRenewRequest $req) 本接口(SetAutoRenew)用于设置包年包月云数据库实例的续费选项。
  * @method Models\SetPasswordResponse SetPassword(Models\SetPasswordRequest $req) 本接口(SetPassword)用于设置（初始化）MongoDB云数据库实例账户密码。
-
-
  * @method Models\TerminateDBInstanceResponse TerminateDBInstance(Models\TerminateDBInstanceRequest $req) 本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例。
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口(UpgradeDBInstance)用于升级包年包月的MongoDB云数据库实例，可以扩容内存、存储以及Oplog
  * @method Models\UpgradeDBInstanceHourResponse UpgradeDBInstanceHour(Models\UpgradeDBInstanceHourRequest $req) 本接口(UpgradeDBInstanceHour)用于升级按量计费的MongoDB云数据库实例，可以扩容内存、存储以及oplog

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getThreadID() 获取会话 ID
  * @method void setThreadID(string $ThreadID) 设置会话 ID
- * @method string getAssistantID() 获取助手 ID
- * @method void setAssistantID(string $AssistantID) 设置助手 ID
+ * @method string getAssistantID() 获取助手 ID（目前未使用，留空）
+ * @method void setAssistantID(string $AssistantID) 设置助手 ID（目前未使用，留空）
  * @method string getModel() 获取模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。注意：不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
  * @method void setModel(string $Model) 设置模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。注意：不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
  * @method array getAdditionalMessages() 获取附加消息
@@ -51,7 +51,7 @@ class RunThreadRequest extends AbstractModel
     public $ThreadID;
 
     /**
-     * @var string 助手 ID
+     * @var string 助手 ID（目前未使用，留空）
      */
     public $AssistantID;
 
@@ -102,7 +102,7 @@ class RunThreadRequest extends AbstractModel
 
     /**
      * @param string $ThreadID 会话 ID
-     * @param string $AssistantID 助手 ID
+     * @param string $AssistantID 助手 ID（目前未使用，留空）
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。注意：不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
      * @param array $AdditionalMessages 附加消息
      * @param float $Temperature 说明：1. 影响模型输出多样性，模型已有默认参数，不传值时使用各模型推荐值，不推荐用户修改。2. 取值区间为 [0.0, 2.0]。较高的数值会使输出更加多样化和不可预测，而较低的数值会使其更加集中和确定。

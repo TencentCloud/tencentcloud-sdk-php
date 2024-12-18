@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getHealthSwitch() 获取是否开启健康检查。
  * @method void setHealthSwitch(boolean $HealthSwitch) 设置是否开启健康检查。
- * @method string getProtocol() 获取健康检查使用的协议。支持ping和tcp，默认为ping。
+ * @method string getProtocol() 获取健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
 
-- PING: icmp
-- TCP: tcp
- * @method void setProtocol(string $Protocol) 设置健康检查使用的协议。支持ping和tcp，默认为ping。
+- icmp: 使用PING的方式进行健康检查
+- tcp: 使用TCP连接的方式进行健康检查
+ * @method void setProtocol(string $Protocol) 设置健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
 
-- PING: icmp
-- TCP: tcp
+- icmp: 使用PING的方式进行健康检查
+- tcp: 使用TCP连接的方式进行健康检查
  * @method integer getPort() 获取健康检查端口，探测协议为tcp时，该参数必填。
 
  * @method void setPort(integer $Port) 设置健康检查端口，探测协议为tcp时，该参数必填。
@@ -51,10 +51,10 @@ class TargetGroupHealthCheck extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var string 健康检查使用的协议。支持ping和tcp，默认为ping。
+     * @var string 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
 
-- PING: icmp
-- TCP: tcp
+- icmp: 使用PING的方式进行健康检查
+- tcp: 使用TCP连接的方式进行健康检查
      */
     public $Protocol;
 
@@ -86,10 +86,10 @@ class TargetGroupHealthCheck extends AbstractModel
 
     /**
      * @param boolean $HealthSwitch 是否开启健康检查。
-     * @param string $Protocol 健康检查使用的协议。支持ping和tcp，默认为ping。
+     * @param string $Protocol 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
 
-- PING: icmp
-- TCP: tcp
+- icmp: 使用PING的方式进行健康检查
+- tcp: 使用TCP连接的方式进行健康检查
      * @param integer $Port 健康检查端口，探测协议为tcp时，该参数必填。
 
      * @param integer $Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。

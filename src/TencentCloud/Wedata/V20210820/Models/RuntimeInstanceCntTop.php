@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaitScheduleTime(integer $WaitScheduleTime) 设置等待调度耗时
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuntimeInstanceCntTop extends AbstractModel
 {
@@ -104,6 +112,18 @@ class RuntimeInstanceCntTop extends AbstractModel
     public $WaitScheduleTime;
 
     /**
+     * @var string 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 1
@@ -119,6 +139,10 @@ class RuntimeInstanceCntTop extends AbstractModel
      * @param string $CurRunTime 实例运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WaitScheduleTime 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class RuntimeInstanceCntTop extends AbstractModel
 
         if (array_key_exists("WaitScheduleTime",$param) and $param["WaitScheduleTime"] !== null) {
             $this->WaitScheduleTime = $param["WaitScheduleTime"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定60个字符。
  * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
  * @method void setVpcId(string $VpcId) 设置目标组的vpcid属性，不填则使用默认vpc
- * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
- * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+ * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+ * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
  * @method string getProtocol() 获取网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
  * @method void setProtocol(string $Protocol) 设置网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
  * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查设置。
  * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查设置。
  * @method string getScheduleAlgorithm() 获取均衡算法。
@@ -56,7 +56,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
      */
     public $Port;
 
@@ -68,7 +68,7 @@ class CreateTargetGroupRequest extends AbstractModel
     /**
      * @var string 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
      */
     public $Protocol;
 
@@ -91,11 +91,11 @@ class CreateTargetGroupRequest extends AbstractModel
     /**
      * @param string $TargetGroupName 目标组名称，限定60个字符。
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
-     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
      * @param string $Protocol 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
      * @param TargetGroupHealthCheck $HealthCheck 健康检查设置。
      * @param string $ScheduleAlgorithm 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希

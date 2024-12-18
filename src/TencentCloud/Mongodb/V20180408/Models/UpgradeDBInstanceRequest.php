@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+ * @method string getInstanceId() 获取实例ID，格式如：cmgo-iga0****。与云数据库控制台页面中显示的实例ID相同
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-iga0****。与云数据库控制台页面中显示的实例ID相同
  * @method integer getMemory() 获取升级后的内存大小，单位：GB
  * @method void setMemory(integer $Memory) 设置升级后的内存大小，单位：GB
  * @method integer getVolume() 获取升级后的硬盘大小，单位：GB
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class UpgradeDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例ID，格式如：cmgo-iga0****。与云数据库控制台页面中显示的实例ID相同
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $OplogSize;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @param string $InstanceId 实例ID，格式如：cmgo-iga0****。与云数据库控制台页面中显示的实例ID相同
      * @param integer $Memory 升级后的内存大小，单位：GB
      * @param integer $Volume 升级后的硬盘大小，单位：GB
      * @param integer $OplogSize 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%

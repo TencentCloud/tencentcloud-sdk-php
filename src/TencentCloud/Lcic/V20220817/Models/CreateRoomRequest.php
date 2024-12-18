@@ -72,8 +72,8 @@ video 纯视频
  * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) 设置rtc人数。
  * @method integer getAudienceType() 获取观看类型。互动观看 （默认）
  * @method void setAudienceType(integer $AudienceType) 设置观看类型。互动观看 （默认）
- * @method integer getRecordLayout() 获取录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
- * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method integer getRecordLayout() 获取录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getGroupId() 获取房间绑定的群组ID,非空时限制组成员进入
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID,非空时限制组成员进入
  * @method integer getEnableDirectControl() 获取是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
@@ -106,8 +106,10 @@ video 纯视频
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
  * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
- * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
- * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+ * @method string getRecordScene() 获取录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method integer getRecordStream() 获取录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
@@ -203,7 +205,7 @@ video 纯视频
     public $AudienceType;
 
     /**
-     * @var integer 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @var integer 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public $RecordLayout;
 
@@ -268,7 +270,8 @@ video 纯视频
     public $RecordBackground;
 
     /**
-     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @var string 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      */
     public $RecordScene;
 
@@ -310,7 +313,7 @@ video 纯视频
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
      * @param integer $RTCAudienceNumber rtc人数。
      * @param integer $AudienceType 观看类型。互动观看 （默认）
-     * @param integer $RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param integer $RecordLayout 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $GroupId 房间绑定的群组ID,非空时限制组成员进入
      * @param integer $EnableDirectControl 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
 0 不允许直接控制（需同意，默认值）
@@ -327,7 +330,8 @@ video 纯视频
      * @param string $RecordLiveUrl 伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @param string $RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      */

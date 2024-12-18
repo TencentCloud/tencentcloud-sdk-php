@@ -93,11 +93,13 @@ class DescribeAccountBalanceResponse extends AbstractModel
 
     /**
      * @var boolean 是否允许欠费消费
+     * @deprecated
      */
     public $IsAllowArrears;
 
     /**
      * @var boolean 是否限制信用额度
+     * @deprecated
      */
     public $IsCreditLimited;
 

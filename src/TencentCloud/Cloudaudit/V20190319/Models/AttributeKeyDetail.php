@@ -21,49 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * AttributeKey值详情
  *
  * @method string getLabelType() 获取输入框类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelType(string $LabelType) 设置输入框类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStarter() 获取初始化展示
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStarter(string $Starter) 设置初始化展示
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrder() 获取展示排序
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrder(integer $Order) 设置展示排序
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取AttributeKey值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置AttributeKey值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取中文标签
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置中文标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttributeKeyDetail extends AbstractModel
 {
     /**
      * @var string 输入框类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelType;
 
     /**
      * @var string 初始化展示
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Starter;
 
     /**
      * @var integer 展示排序
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
      * @var string AttributeKey值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 中文标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @param string $LabelType 输入框类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Starter 初始化展示
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Order 展示排序
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value AttributeKey值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 中文标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

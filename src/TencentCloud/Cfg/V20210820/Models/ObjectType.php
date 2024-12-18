@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectSupportType(integer $ObjectSupportType) 设置1：平台支持的对象 2：应用支持的部分对象
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArchLayer() 获取1.接入层 2.逻辑层 3. 数据层
+ * @method void setArchLayer(integer $ArchLayer) 设置1.接入层 2.逻辑层 3. 数据层
  */
 class ObjectType extends AbstractModel
 {
@@ -92,6 +94,11 @@ class ObjectType extends AbstractModel
     public $ObjectSupportType;
 
     /**
+     * @var integer 1.接入层 2.逻辑层 3. 数据层
+     */
+    public $ArchLayer;
+
+    /**
      * @param integer $ObjectTypeId 对象类型ID
      * @param string $ObjectTypeTitle 对象类型名称
      * @param string $ObjectTypeLevelOne 对象类型第一级
@@ -104,6 +111,7 @@ class ObjectType extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArchLayer 1.接入层 2.逻辑层 3. 数据层
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class ObjectType extends AbstractModel
 
         if (array_key_exists("ObjectSupportType",$param) and $param["ObjectSupportType"] !== null) {
             $this->ObjectSupportType = $param["ObjectSupportType"];
+        }
+
+        if (array_key_exists("ArchLayer",$param) and $param["ArchLayer"] !== null) {
+            $this->ArchLayer = $param["ArchLayer"];
         }
     }
 }

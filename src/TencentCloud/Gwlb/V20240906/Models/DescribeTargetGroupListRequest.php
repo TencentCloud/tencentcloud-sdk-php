@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTargetGroupIds() 获取目标组ID数组。
  * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID数组。
- * @method array getFilters() 获取过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
- * @method void setFilters(array $Filters) 设置过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+ * @method array getFilters() 获取过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
+ * @method void setFilters(array $Filters) 设置过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
  * @method integer getOffset() 获取显示的偏移起始量。
  * @method void setOffset(integer $Offset) 设置显示的偏移起始量。
  * @method integer getLimit() 获取显示条数限制，默认为20。
@@ -37,7 +43,10 @@ class DescribeTargetGroupListRequest extends AbstractModel
     public $TargetGroupIds;
 
     /**
-     * @var array 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+     * @var array 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public $Filters;
 
@@ -53,7 +62,10 @@ class DescribeTargetGroupListRequest extends AbstractModel
 
     /**
      * @param array $TargetGroupIds 目标组ID数组。
-     * @param array $Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+     * @param array $Filters 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      * @param integer $Offset 显示的偏移起始量。
      * @param integer $Limit 显示条数限制，默认为20。
      */

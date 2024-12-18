@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskAction(string $TaskAction) 设置时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
  * @method string getTaskMode() 获取区分画布和表单
  * @method void setTaskMode(string $TaskMode) 设置区分画布和表单
+ * @method TaskImportInfo getTaskImportInfo() 获取导入编排空间配置
+ * @method void setTaskImportInfo(TaskImportInfo $TaskImportInfo) 设置导入编排空间配置
  */
 class CreateOfflineTaskRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateOfflineTaskRequest extends AbstractModel
     public $TaskMode;
 
     /**
+     * @var TaskImportInfo 导入编排空间配置
+     */
+    public $TaskImportInfo;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param integer $CycleStep 间隔，可选，默认1。非空。默认 1
      * @param integer $DelayTime 延时执行时间，单位分钟
@@ -104,6 +111,7 @@ class CreateOfflineTaskRequest extends AbstractModel
      * @param integer $TypeId 跟之前调用调度接口保持一致27
      * @param string $TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
      * @param string $TaskMode 区分画布和表单
+     * @param TaskImportInfo $TaskImportInfo 导入编排空间配置
      */
     function __construct()
     {
@@ -156,6 +164,11 @@ class CreateOfflineTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskMode",$param) and $param["TaskMode"] !== null) {
             $this->TaskMode = $param["TaskMode"];
+        }
+
+        if (array_key_exists("TaskImportInfo",$param) and $param["TaskImportInfo"] !== null) {
+            $this->TaskImportInfo = new TaskImportInfo();
+            $this->TaskImportInfo->deserialize($param["TaskImportInfo"]);
         }
     }
 }

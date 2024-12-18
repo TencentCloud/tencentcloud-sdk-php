@@ -210,6 +210,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTaskStatus(integer $OfflineTaskStatus) 设置离线任务状态区分1.未提交2.已提交3.已导出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskImportInfo getTaskImportInfo() 获取导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskImportInfo(TaskImportInfo $TaskImportInfo) 设置导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBusinessLatency() 获取业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessLatency(integer $BusinessLatency) 设置业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCurrentSyncPosition() 获取当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentSyncPosition(integer $CurrentSyncPosition) 设置当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -505,6 +517,24 @@ class IntegrationTaskInfo extends AbstractModel
     public $OfflineTaskStatus;
 
     /**
+     * @var TaskImportInfo 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskImportInfo;
+
+    /**
+     * @var integer 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessLatency;
+
+    /**
+     * @var integer 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurrentSyncPosition;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -599,6 +629,12 @@ class IntegrationTaskInfo extends AbstractModel
      * @param string $ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskImportInfo $TaskImportInfo 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BusinessLatency 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CurrentSyncPosition 当前同步位点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -834,6 +870,19 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("OfflineTaskStatus",$param) and $param["OfflineTaskStatus"] !== null) {
             $this->OfflineTaskStatus = $param["OfflineTaskStatus"];
+        }
+
+        if (array_key_exists("TaskImportInfo",$param) and $param["TaskImportInfo"] !== null) {
+            $this->TaskImportInfo = new TaskImportInfo();
+            $this->TaskImportInfo->deserialize($param["TaskImportInfo"]);
+        }
+
+        if (array_key_exists("BusinessLatency",$param) and $param["BusinessLatency"] !== null) {
+            $this->BusinessLatency = $param["BusinessLatency"];
+        }
+
+        if (array_key_exists("CurrentSyncPosition",$param) and $param["CurrentSyncPosition"] !== null) {
+            $this->CurrentSyncPosition = $param["CurrentSyncPosition"];
         }
     }
 }

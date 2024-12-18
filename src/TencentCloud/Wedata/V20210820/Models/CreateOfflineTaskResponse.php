@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArrangeSpaceTaskId() 获取导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArrangeSpaceTaskId(string $ArrangeSpaceTaskId) 设置导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取结果
  * @method void setData(string $Data) 设置结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,6 +42,12 @@ class CreateOfflineTaskResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArrangeSpaceTaskId;
+
+    /**
      * @var string 结果
      */
     public $Data;
@@ -49,6 +59,8 @@ class CreateOfflineTaskResponse extends AbstractModel
 
     /**
      * @param string $TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArrangeSpaceTaskId 导入到编排空间的任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -68,6 +80,10 @@ class CreateOfflineTaskResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ArrangeSpaceTaskId",$param) and $param["ArrangeSpaceTaskId"] !== null) {
+            $this->ArrangeSpaceTaskId = $param["ArrangeSpaceTaskId"];
         }
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {

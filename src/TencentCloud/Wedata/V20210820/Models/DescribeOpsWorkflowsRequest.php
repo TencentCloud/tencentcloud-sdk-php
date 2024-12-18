@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortItem(string $SortItem) 设置排序项
  * @method string getSortType() 获取排序方式，DESC或ASC
  * @method void setSortType(string $SortType) 设置排序方式，DESC或ASC
+ * @method array getProjectIds() 获取项目ID列表，用于多项目工作流筛选
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，用于多项目工作流筛选
  */
 class DescribeOpsWorkflowsRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var array 项目ID列表，用于多项目工作流筛选
+     */
+    public $ProjectIds;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $ProductNameList 任务产品类型名称列表，以 ',' 号分割
      * @param string $FolderIdList 文件id列表，以 ',' 号分割
@@ -128,6 +135,7 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
      * @param integer $PageSize 分页大小
      * @param string $SortItem 排序项
      * @param string $SortType 排序方式，DESC或ASC
+     * @param array $ProjectIds 项目ID列表，用于多项目工作流筛选
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

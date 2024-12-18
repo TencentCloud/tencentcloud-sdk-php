@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestBaseInfo(ProjectBaseInfoOpsRequest $RequestBaseInfo) 设置基础请求信息
  * @method boolean getIsCount() 获取是否计算总数
  * @method void setIsCount(boolean $IsCount) 设置是否计算总数
+ * @method boolean getAsyncMode() 获取是否异步模式
+ * @method void setAsyncMode(boolean $AsyncMode) 设置是否异步模式
  */
 class RunForceSucScheduleInstancesRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class RunForceSucScheduleInstancesRequest extends AbstractModel
     public $IsCount;
 
     /**
+     * @var boolean 是否异步模式
+     */
+    public $AsyncMode;
+
+    /**
      * @param array $Instances 实例列表
      * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
      * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
@@ -168,6 +175,7 @@ class RunForceSucScheduleInstancesRequest extends AbstractModel
      * @param integer $Count 数据总数
      * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 基础请求信息
      * @param boolean $IsCount 是否计算总数
+     * @param boolean $AsyncMode 是否异步模式
      */
     function __construct()
     {
@@ -259,6 +267,10 @@ class RunForceSucScheduleInstancesRequest extends AbstractModel
 
         if (array_key_exists("IsCount",$param) and $param["IsCount"] !== null) {
             $this->IsCount = $param["IsCount"];
+        }
+
+        if (array_key_exists("AsyncMode",$param) and $param["AsyncMode"] !== null) {
+            $this->AsyncMode = $param["AsyncMode"];
         }
     }
 }

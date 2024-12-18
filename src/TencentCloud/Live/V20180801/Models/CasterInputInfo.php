@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 导播台输入信息参数
  *
  * @method integer getInputIndex() 获取输入源Index。
-范围[1, 20]
+范围[1, 24]
  * @method void setInputIndex(integer $InputIndex) 设置输入源Index。
-范围[1, 20]
+范围[1, 24]
  * @method integer getInputType() 获取输入源类型。
 范围[0,1,2,3,4]。
 0：推流地址。
@@ -101,7 +101,7 @@ class CasterInputInfo extends AbstractModel
 {
     /**
      * @var integer 输入源Index。
-范围[1, 20]
+范围[1, 24]
      */
     public $InputIndex;
 
@@ -175,7 +175,7 @@ class CasterInputInfo extends AbstractModel
 
     /**
      * @param integer $InputIndex 输入源Index。
-范围[1, 20]
+范围[1, 24]
      * @param integer $InputType 输入源类型。
 范围[0,1,2,3,4]。
 0：推流地址。

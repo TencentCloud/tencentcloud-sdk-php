@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrozenNum(integer $FrozenNum) 设置暂停
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInvalidNum() 获取无效任务数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInvalidNum(integer $InvalidNum) 设置无效任务数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getYearNum() 获取年任务
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYearNum(integer $YearNum) 设置年任务
@@ -105,6 +109,12 @@ class ScreenTaskInfo extends AbstractModel
     public $FrozenNum;
 
     /**
+     * @var integer 无效任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InvalidNum;
+
+    /**
      * @var integer 年任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -151,6 +161,8 @@ class ScreenTaskInfo extends AbstractModel
      * @param integer $StoppedNum 已停止
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FrozenNum 暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InvalidNum 无效任务数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $YearNum 年任务
 注意：此字段可能返回 null，表示取不到有效值。
@@ -200,6 +212,10 @@ class ScreenTaskInfo extends AbstractModel
 
         if (array_key_exists("FrozenNum",$param) and $param["FrozenNum"] !== null) {
             $this->FrozenNum = $param["FrozenNum"];
+        }
+
+        if (array_key_exists("InvalidNum",$param) and $param["InvalidNum"] !== null) {
+            $this->InvalidNum = $param["InvalidNum"];
         }
 
         if (array_key_exists("YearNum",$param) and $param["YearNum"] !== null) {

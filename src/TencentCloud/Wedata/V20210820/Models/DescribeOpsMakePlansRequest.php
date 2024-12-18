@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinCreateTime(string $MinCreateTime) 设置补录计划最小创建时间
  * @method string getMaxCreateTime() 获取补录计划最大创建时间
  * @method void setMaxCreateTime(string $MaxCreateTime) 设置补录计划最大创建时间
+ * @method array getStateList() 获取实例状态过滤条件
+ * @method void setStateList(array $StateList) 设置实例状态过滤条件
+ * @method string getKeyword() 获取模糊查询关键字
+ * @method void setKeyword(string $Keyword) 设置模糊查询关键字
  */
 class DescribeOpsMakePlansRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DescribeOpsMakePlansRequest extends AbstractModel
     public $MaxCreateTime;
 
     /**
+     * @var array 实例状态过滤条件
+     */
+    public $StateList;
+
+    /**
+     * @var string 模糊查询关键字
+     */
+    public $Keyword;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param integer $PageNumber 分页数，默认值1
      * @param integer $PageSize 分页大小，默认值10
@@ -104,6 +118,8 @@ class DescribeOpsMakePlansRequest extends AbstractModel
      * @param string $Creator 补录计划创建者
      * @param string $MinCreateTime 补录计划最小创建时间
      * @param string $MaxCreateTime 补录计划最大创建时间
+     * @param array $StateList 实例状态过滤条件
+     * @param string $Keyword 模糊查询关键字
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class DescribeOpsMakePlansRequest extends AbstractModel
 
         if (array_key_exists("MaxCreateTime",$param) and $param["MaxCreateTime"] !== null) {
             $this->MaxCreateTime = $param["MaxCreateTime"];
+        }
+
+        if (array_key_exists("StateList",$param) and $param["StateList"] !== null) {
+            $this->StateList = $param["StateList"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

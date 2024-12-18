@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCasterId() 获取导播台ID
  * @method void setCasterId(integer $CasterId) 设置导播台ID
  * @method integer getInputIndex() 获取请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
  * @method void setInputIndex(integer $InputIndex) 设置请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
  * @method string getProtocol() 获取生成推流地址协议。
 范围[rtmp,webrtc]。
 注：获取webrtc推流地址时，需配合腾讯云快直播推流sdk才可成功推流。
@@ -42,7 +42,7 @@ class CreateCasterInputPushUrlRequest extends AbstractModel
 
     /**
      * @var integer 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
      */
     public $InputIndex;
 
@@ -56,7 +56,7 @@ class CreateCasterInputPushUrlRequest extends AbstractModel
     /**
      * @param integer $CasterId 导播台ID
      * @param integer $InputIndex 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
      * @param string $Protocol 生成推流地址协议。
 范围[rtmp,webrtc]。
 注：获取webrtc推流地址时，需配合腾讯云快直播推流sdk才可成功推流。

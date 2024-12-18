@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionRisk(string $ActionRisk) 设置动作风险等级，1:低风险 2:中风险 3:高风险
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailurePerformance() 获取故障表现
+ * @method void setFailurePerformance(string $FailurePerformance) 设置故障表现
  */
 class TemplateGroupAction extends AbstractModel
 {
@@ -156,6 +158,11 @@ class TemplateGroupAction extends AbstractModel
     public $ActionRisk;
 
     /**
+     * @var string 故障表现
+     */
+    public $FailurePerformance;
+
+    /**
      * @param integer $TemplateGroupActionId 经验库分组动作ID
      * @param integer $ActionId 动作ID
      * @param integer $Order 分组动作顺序
@@ -180,6 +187,7 @@ class TemplateGroupAction extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailurePerformance 故障表现
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class TemplateGroupAction extends AbstractModel
 
         if (array_key_exists("ActionRisk",$param) and $param["ActionRisk"] !== null) {
             $this->ActionRisk = $param["ActionRisk"];
+        }
+
+        if (array_key_exists("FailurePerformance",$param) and $param["FailurePerformance"] !== null) {
+            $this->FailurePerformance = $param["FailurePerformance"];
         }
     }
 }

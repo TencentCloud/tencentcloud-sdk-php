@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortItem(string $SortItem) 设置排序字段
  * @method string getSortType() 获取升序降序
  * @method void setSortType(string $SortType) 设置升序降序
+ * @method array getProjectIds() 获取项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
  */
 class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var array 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+     */
+    public $ProjectIds;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $CycleUnit 周期类型
      * @param string $TimeUnit 时间单元 eg: 12h
@@ -104,6 +111,7 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
      * @param string $WorkflowId 工作流ID
      * @param string $SortItem 排序字段
      * @param string $SortType 升序降序
+     * @param array $ProjectIds 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

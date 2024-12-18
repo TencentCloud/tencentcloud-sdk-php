@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method boolean getKillInstance() 获取是否终止已生成的实例
  * @method void setKillInstance(boolean $KillInstance) 设置是否终止已生成的实例
+ * @method boolean getAsyncMode() 获取是否异步模式
+ * @method void setAsyncMode(boolean $AsyncMode) 设置是否异步模式
  */
 class BatchStopOpsTasksRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BatchStopOpsTasksRequest extends AbstractModel
     public $KillInstance;
 
     /**
+     * @var boolean 是否异步模式
+     */
+    public $AsyncMode;
+
+    /**
      * @param array $TaskIdList 批量停止任务的TaskId
      * @param string $ProjectId 项目Id
      * @param boolean $KillInstance 是否终止已生成的实例
+     * @param boolean $AsyncMode 是否异步模式
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BatchStopOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("KillInstance",$param) and $param["KillInstance"] !== null) {
             $this->KillInstance = $param["KillInstance"];
+        }
+
+        if (array_key_exists("AsyncMode",$param) and $param["AsyncMode"] !== null) {
+            $this->AsyncMode = $param["AsyncMode"];
         }
     }
 }

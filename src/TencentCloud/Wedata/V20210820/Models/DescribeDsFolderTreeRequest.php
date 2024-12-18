@@ -50,6 +50,10 @@ false 否
 false 否
  * @method void setIncludeTaskFolder(boolean $IncludeTaskFolder) 设置是否包含任务目录 true 是 
 false 否
+ * @method boolean getNewFolderTreeMode() 获取是否使用最新模式展示目录树
+ * @method void setNewFolderTreeMode(boolean $NewFolderTreeMode) 设置是否使用最新模式展示目录树
+ * @method string getTaskNodeId() 获取节点分类ID
+ * @method void setTaskNodeId(string $TaskNodeId) 设置节点分类ID
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -113,6 +117,16 @@ false 否
     public $IncludeTaskFolder;
 
     /**
+     * @var boolean 是否使用最新模式展示目录树
+     */
+    public $NewFolderTreeMode;
+
+    /**
+     * @var string 节点分类ID
+     */
+    public $TaskNodeId;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取 true 是 
 false 否
@@ -128,6 +142,8 @@ false 否
      * @param string $DisplayType classification.分类展示  catalog.目录展示
      * @param boolean $IncludeTaskFolder 是否包含任务目录 true 是 
 false 否
+     * @param boolean $NewFolderTreeMode 是否使用最新模式展示目录树
+     * @param string $TaskNodeId 节点分类ID
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ false 否
 
         if (array_key_exists("IncludeTaskFolder",$param) and $param["IncludeTaskFolder"] !== null) {
             $this->IncludeTaskFolder = $param["IncludeTaskFolder"];
+        }
+
+        if (array_key_exists("NewFolderTreeMode",$param) and $param["NewFolderTreeMode"] !== null) {
+            $this->NewFolderTreeMode = $param["NewFolderTreeMode"];
+        }
+
+        if (array_key_exists("TaskNodeId",$param) and $param["TaskNodeId"] !== null) {
+            $this->TaskNodeId = $param["TaskNodeId"];
         }
     }
 }

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAverageWindowSize(integer $AverageWindowSize) 设置1
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method array getProjectIds() 获取项目ID列表，用于多项目实例趋势筛选，当指定了 ProjectIds 的时候，ProjectId 将只用来鉴权，不做筛选
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，用于多项目实例趋势筛选，当指定了 ProjectIds 的时候，ProjectId 将只用来鉴权，不做筛选
+ * @method integer getTimePoint() 获取指定时间点，当统计时常为整天的时候使用，必须小于 24
+ * @method void setTimePoint(integer $TimePoint) 设置指定时间点，当统计时常为整天的时候使用，必须小于 24
  */
 class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
     public $WorkflowId;
 
     /**
+     * @var array 项目ID列表，用于多项目实例趋势筛选，当指定了 ProjectIds 的时候，ProjectId 将只用来鉴权，不做筛选
+     */
+    public $ProjectIds;
+
+    /**
+     * @var integer 指定时间点，当统计时常为整天的时候使用，必须小于 24
+     */
+    public $TimePoint;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskTypeId 任务类型Id
      * @param string $TimeType 时间类型
@@ -136,6 +150,8 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
      * @param string $AggregationUnit D代表天，H代表小时
      * @param integer $AverageWindowSize 1
      * @param string $WorkflowId 工作流ID
+     * @param array $ProjectIds 项目ID列表，用于多项目实例趋势筛选，当指定了 ProjectIds 的时候，ProjectId 将只用来鉴权，不做筛选
+     * @param integer $TimePoint 指定时间点，当统计时常为整天的时候使用，必须小于 24
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 
         if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
             $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
+        }
+
+        if (array_key_exists("TimePoint",$param) and $param["TimePoint"] !== null) {
+            $this->TimePoint = $param["TimePoint"];
         }
     }
 }

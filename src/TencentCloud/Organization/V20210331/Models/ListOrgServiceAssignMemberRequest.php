@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍，默认值 : 0
  * @method integer getLimit() 获取限制数目。取值范围：1~50，默认值：10
  * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50，默认值：10
- * @method integer getServiceId() 获取集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
- * @method void setServiceId(integer $ServiceId) 设置集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method integer getServiceId() 获取集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method void setServiceId(integer $ServiceId) 设置集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method string getProduct() 获取集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method void setProduct(string $Product) 设置集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
  */
 class ListOrgServiceAssignMemberRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class ListOrgServiceAssignMemberRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @var integer 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      */
     public $ServiceId;
 
     /**
+     * @var string 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public $Product;
+
+    /**
      * @param integer $Offset 偏移量。取值是limit的整数倍，默认值 : 0
      * @param integer $Limit 限制数目。取值范围：1~50，默认值：10
-     * @param integer $ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param integer $ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param string $Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListOrgServiceAssignMemberRequest extends AbstractModel
 
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

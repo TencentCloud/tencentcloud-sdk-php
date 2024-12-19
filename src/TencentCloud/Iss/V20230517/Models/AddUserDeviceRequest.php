@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
  * @method void setName(string $Name) 设置设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
- * @method integer getAccessProtocol() 获取设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
- * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+ * @method integer getAccessProtocol() 获取设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
  * @method integer getType() 获取设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
  * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
  * @method string getOrganizationId() 获取设备所属组织ID，从查询组织接口DescribeOrganization中获取
@@ -61,7 +61,7 @@ class AddUserDeviceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * @var integer 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
      */
     public $AccessProtocol;
 
@@ -137,7 +137,7 @@ class AddUserDeviceRequest extends AbstractModel
 
     /**
      * @param string $Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
-     * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
      * @param integer $Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
      * @param string $OrganizationId 设备所属组织ID，从查询组织接口DescribeOrganization中获取
      * @param string $ClusterId 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）

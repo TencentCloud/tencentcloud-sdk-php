@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 自定义键值对
  *
  * @method string getName() 获取自定义键
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置自定义键
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取自定义值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置自定义值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventVar extends AbstractModel
 {
     /**
      * @var string 自定义键
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 自定义值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 自定义键
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 自定义值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

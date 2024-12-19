@@ -21,7 +21,47 @@ use TencentCloud\Common\AbstractModel;
  * CreateTaskFromMultiAction请求参数结构体
  *
  * @method array getTaskInstances() 获取参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
  * @method void setTaskInstances(array $TaskInstances) 设置参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
  * @method string getTaskTitle() 获取演练名称，不填则默认取动作名称
  * @method void setTaskTitle(string $TaskTitle) 设置演练名称，不填则默认取动作名称
  * @method string getTaskDescription() 获取演练描述，不填则默认取动作描述
@@ -35,6 +75,26 @@ class CreateTaskFromMultiActionRequest extends AbstractModel
 {
     /**
      * @var array 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
      */
     public $TaskInstances;
 
@@ -60,6 +120,26 @@ class CreateTaskFromMultiActionRequest extends AbstractModel
 
     /**
      * @param array $TaskInstances 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
      * @param string $TaskTitle 演练名称，不填则默认取动作名称
      * @param string $TaskDescription 演练描述，不填则默认取动作描述
      * @param integer $TaskPauseDuration 演练自动暂停时间，单位分钟, 不填则默认为60

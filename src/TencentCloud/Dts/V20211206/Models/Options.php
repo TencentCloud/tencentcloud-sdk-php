@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartPosition() 获取同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartPosition(string $StartPosition) 设置同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFilterBeginCommit() 获取同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterBeginCommit(boolean $FilterBeginCommit) 设置同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
@@ -132,6 +136,12 @@ class Options extends AbstractModel
     public $AutoRetryTimeRangeMinutes;
 
     /**
+     * @var string 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartPosition;
+
+    /**
      * @var boolean 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -163,6 +173,8 @@ class Options extends AbstractModel
      * @param RateLimitOption $RateLimitOption 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。
@@ -228,6 +240,10 @@ class Options extends AbstractModel
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
             $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
+        }
+
+        if (array_key_exists("StartPosition",$param) and $param["StartPosition"] !== null) {
+            $this->StartPosition = $param["StartPosition"];
         }
 
         if (array_key_exists("FilterBeginCommit",$param) and $param["FilterBeginCommit"] !== null) {

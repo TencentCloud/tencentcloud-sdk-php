@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 授权认证信息
  *
  * @method string getScene() 获取授权场景，例如COS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置授权场景，例如COS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretId() 获取SecretId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretId(string $SecretId) 设置SecretId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretKey() 获取SecretKey
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretKey(string $SecretKey) 设置SecretKey
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Authentication extends AbstractModel
 {
     /**
      * @var string 授权场景，例如COS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
     /**
      * @var string SecretId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretId;
 
     /**
      * @var string SecretKey
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
 
     /**
      * @param string $Scene 授权场景，例如COS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretId SecretId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretKey SecretKey
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

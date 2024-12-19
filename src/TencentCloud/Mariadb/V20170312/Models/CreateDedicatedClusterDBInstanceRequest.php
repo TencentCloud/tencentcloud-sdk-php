@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置网络Id
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
- * @method string getDbVersionId() 获取db类型，不传默认0
- * @method void setDbVersionId(string $DbVersionId) 设置db类型，不传默认0
+ * @method string getDbVersionId() 获取db类型，不传默认8.0
+ * @method void setDbVersionId(string $DbVersionId) 设置db类型，不传默认8.0
  * @method integer getManual() 获取（废弃）是否手动指定一组服务器分配, 运维使用
  * @method void setManual(integer $Manual) 设置（废弃）是否手动指定一组服务器分配, 运维使用
  * @method string getDeviceNo() 获取（废弃）DeviceNo参数
@@ -126,7 +126,7 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string db类型，不传默认0
+     * @var string db类型，不传默认8.0
      */
     public $DbVersionId;
 
@@ -216,7 +216,7 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
      * @param string $Machine （废弃）机型
      * @param string $VpcId 网络Id
      * @param string $SubnetId 子网Id
-     * @param string $DbVersionId db类型，不传默认0
+     * @param string $DbVersionId db类型，不传默认8.0
      * @param integer $Manual （废弃）是否手动指定一组服务器分配, 运维使用
      * @param string $DeviceNo （废弃）DeviceNo参数
      * @param array $SecurityGroupIds 安全组ID

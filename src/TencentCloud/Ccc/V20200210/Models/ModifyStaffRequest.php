@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseMobileCallOut(boolean $UseMobileCallOut) 设置是否开启手机外呼开关
  * @method integer getUseMobileAccept() 获取手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
  * @method void setUseMobileAccept(integer $UseMobileAccept) 设置手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+ * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
+ * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
  */
 class ModifyStaffRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyStaffRequest extends AbstractModel
     public $UseMobileAccept;
 
     /**
+     * @var string 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public $ExtensionNumber;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Email 座席账户
      * @param string $Name 座席名称
@@ -96,6 +103,7 @@ class ModifyStaffRequest extends AbstractModel
      * @param array $SkillGroupIds 绑定技能组ID列表
      * @param boolean $UseMobileCallOut 是否开启手机外呼开关
      * @param integer $UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+     * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("UseMobileAccept",$param) and $param["UseMobileAccept"] !== null) {
             $this->UseMobileAccept = $param["UseMobileAccept"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

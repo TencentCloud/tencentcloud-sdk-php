@@ -42,6 +42,8 @@ else:自定义角色ID
 2:质检员
 3:普通座席
 else:自定义角色ID
+ * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
+ * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
  */
 class SeatUserInfo extends AbstractModel
 {
@@ -89,6 +91,11 @@ else:自定义角色ID
     public $Role;
 
     /**
+     * @var string 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public $ExtensionNumber;
+
+    /**
      * @param string $Name 座席名称
      * @param string $Mail 座席邮箱
      * @param string $StaffNumber 工号
@@ -100,6 +107,7 @@ else:自定义角色ID
 2:质检员
 3:普通座席
 else:自定义角色ID
+     * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ else:自定义角色ID
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

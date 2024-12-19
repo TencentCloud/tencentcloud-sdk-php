@@ -19,44 +19,59 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 重定向信息
-
  *
- * @method string getStdoutRedirectPath() 获取标准输出重定向路径
- * @method void setStdoutRedirectPath(string $StdoutRedirectPath) 设置标准输出重定向路径
+ * @method string getStdoutRedirectPath() 获取标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStdoutRedirectPath(string $StdoutRedirectPath) 设置标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrRedirectPath() 获取标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrRedirectPath(string $StderrRedirectPath) 设置标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdoutRedirectFileName() 获取标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) 设置标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrRedirectFileName() 获取标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrRedirectFileName(string $StderrRedirectFileName) 设置标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RedirectInfo extends AbstractModel
 {
     /**
-     * @var string 标准输出重定向路径
+     * @var string 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutRedirectPath;
 
     /**
      * @var string 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrRedirectPath;
 
     /**
      * @var string 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutRedirectFileName;
 
     /**
      * @var string 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrRedirectFileName;
 
     /**
-     * @param string $StdoutRedirectPath 标准输出重定向路径
+     * @param string $StdoutRedirectPath 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrRedirectPath 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdoutRedirectFileName 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrRedirectFileName 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

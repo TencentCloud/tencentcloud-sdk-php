@@ -21,73 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 任务实例统计指标
  *
  * @method integer getSubmittedCount() 获取Submitted个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmittedCount(integer $SubmittedCount) 设置Submitted个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPendingCount() 获取Pending个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPendingCount(integer $PendingCount) 设置Pending个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunnableCount() 获取Runnable个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunnableCount(integer $RunnableCount) 设置Runnable个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartingCount() 获取Starting个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartingCount(integer $StartingCount) 设置Starting个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunningCount() 获取Running个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningCount(integer $RunningCount) 设置Running个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSucceedCount() 获取Succeed个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSucceedCount(integer $SucceedCount) 设置Succeed个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailedInterruptedCount() 获取FailedInterrupted个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedInterruptedCount(integer $FailedInterruptedCount) 设置FailedInterrupted个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailedCount() 获取Failed个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedCount(integer $FailedCount) 设置Failed个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInstanceMetrics extends AbstractModel
 {
     /**
      * @var integer Submitted个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubmittedCount;
 
     /**
      * @var integer Pending个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PendingCount;
 
     /**
      * @var integer Runnable个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunnableCount;
 
     /**
      * @var integer Starting个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartingCount;
 
     /**
      * @var integer Running个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCount;
 
     /**
      * @var integer Succeed个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SucceedCount;
 
     /**
      * @var integer FailedInterrupted个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedInterruptedCount;
 
     /**
      * @var integer Failed个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedCount;
 
     /**
      * @param integer $SubmittedCount Submitted个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PendingCount Pending个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunnableCount Runnable个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartingCount Starting个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunningCount Running个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SucceedCount Succeed个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedInterruptedCount FailedInterrupted个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedCount Failed个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

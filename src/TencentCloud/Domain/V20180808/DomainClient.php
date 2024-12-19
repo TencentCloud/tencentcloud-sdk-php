@@ -65,7 +65,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeTldListResponse DescribeTldList(Models\DescribeTldListRequest $req) 用于获取域名注册当前支持注册的后缀
  * @method Models\DescribeUnPreDomainDetailResponse DescribeUnPreDomainDetail(Models\DescribeUnPreDomainDetailRequest $req) 查询预释放未预约域名详情接口
  * @method Models\ModifyCustomDnsHostResponse ModifyCustomDnsHost(Models\ModifyCustomDnsHostRequest $req) 修改自定义DNS Host
- * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
+ * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
  * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
  * @method Models\ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHost(Models\ModifyIntlCustomDnsHostRequest $req) 国际站-修改DNS Host
  * @method Models\ModifyTemplateResponse ModifyTemplate(Models\ModifyTemplateRequest $req) 修改模板信息

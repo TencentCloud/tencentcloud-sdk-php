@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrgServiceAssign请求参数结构体
  *
- * @method integer getServiceId() 获取集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
- * @method void setServiceId(integer $ServiceId) 设置集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
  * @method array getMemberUins() 获取委派管理员Uin列表。 最大长度20个
  * @method void setMemberUins(array $MemberUins) 设置委派管理员Uin列表。 最大长度20个
+ * @method integer getServiceId() 获取集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method void setServiceId(integer $ServiceId) 设置集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method string getProduct() 获取集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+ * @method void setProduct(string $Product) 设置集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
  * @method integer getManagementScope() 获取委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
  * @method void setManagementScope(integer $ManagementScope) 设置委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
  * @method array getManagementScopeUins() 获取管理的成员Uin列表。ManagementScope为2时该参数有效
@@ -34,14 +36,19 @@ use TencentCloud\Common\AbstractModel;
 class CreateOrgServiceAssignRequest extends AbstractModel
 {
     /**
-     * @var integer 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @var array 委派管理员Uin列表。 最大长度20个
+     */
+    public $MemberUins;
+
+    /**
+     * @var integer 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      */
     public $ServiceId;
 
     /**
-     * @var array 委派管理员Uin列表。 最大长度20个
+     * @var string 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      */
-    public $MemberUins;
+    public $Product;
 
     /**
      * @var integer 委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
@@ -59,8 +66,9 @@ class CreateOrgServiceAssignRequest extends AbstractModel
     public $ManagementScopeNodeIds;
 
     /**
-     * @param integer $ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      * @param array $MemberUins 委派管理员Uin列表。 最大长度20个
+     * @param integer $ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param string $Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
      * @param integer $ManagementScope 委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
      * @param array $ManagementScopeUins 管理的成员Uin列表。ManagementScope为2时该参数有效
      * @param array $ManagementScopeNodeIds 管理的部门ID列表。ManagementScope为2时该参数有效
@@ -78,12 +86,16 @@ class CreateOrgServiceAssignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberUins",$param) and $param["MemberUins"] !== null) {
+            $this->MemberUins = $param["MemberUins"];
+        }
+
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
         }
 
-        if (array_key_exists("MemberUins",$param) and $param["MemberUins"] !== null) {
-            $this->MemberUins = $param["MemberUins"];
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
 
         if (array_key_exists("ManagementScope",$param) and $param["ManagementScope"] !== null) {

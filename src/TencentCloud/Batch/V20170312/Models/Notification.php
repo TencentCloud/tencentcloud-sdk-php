@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 通知信息
  *
  * @method string getTopicName() 获取CMQ主题名字，要求主题名有效且关联订阅
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置CMQ主题名字，要求主题名有效且关联订阅
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventConfigs() 获取事件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventConfigs(array $EventConfigs) 设置事件配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Notification extends AbstractModel
 {
     /**
      * @var string CMQ主题名字，要求主题名有效且关联订阅
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var array 事件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventConfigs;
 
     /**
      * @param string $TopicName CMQ主题名字，要求主题名有效且关联订阅
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventConfigs 事件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupList(array $SkillGroupList) 设置所属技能组列表
  * @method integer getLastModifyTimestamp() 获取最后修改时间
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) 设置最后修改时间
+ * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
+ * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
  */
 class StaffInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class StaffInfo extends AbstractModel
     public $LastModifyTimestamp;
 
     /**
+     * @var string 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public $ExtensionNumber;
+
+    /**
      * @param string $Name 座席名称
      * @param string $Mail 座席邮箱
      * @param string $Phone 座席电话号码
@@ -88,6 +95,7 @@ class StaffInfo extends AbstractModel
      * @param integer $RoleId 用户角色id
      * @param array $SkillGroupList 所属技能组列表
      * @param integer $LastModifyTimestamp 最后修改时间
+     * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("LastModifyTimestamp",$param) and $param["LastModifyTimestamp"] !== null) {
             $this->LastModifyTimestamp = $param["LastModifyTimestamp"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

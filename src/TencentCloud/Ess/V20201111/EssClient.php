@@ -561,6 +561,12 @@ use TencentCloud\Ess\V20201111\Models as Models;
 签署码的样式如下图:
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/27317cf5aacb094fb1dc6f94179a5148.png )
+ * @method Models\CreateOrganizationAuthFileResponse CreateOrganizationAuthFile(Models\CreateOrganizationAuthFileRequest $req) 生成合成后的各类企业授权书，包括：
+- 企业认证超管授权书
+- 超管变更授权书
+- 企业注销授权书
+
+注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
  * @method Models\CreateOrganizationAuthUrlResponse CreateOrganizationAuthUrl(Models\CreateOrganizationAuthUrlRequest $req) 本接口（CreateOrganizationAuthUrl）的主要功能是生成合作企业的认证链接。
 
 在生成链接的过程中，可以提供一部分已知信息，以便为对方进行认证流程提供便利。

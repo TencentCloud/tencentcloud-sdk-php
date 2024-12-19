@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 本地重定向信息
  *
  * @method string getStdoutLocalPath() 获取标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutLocalPath(string $StdoutLocalPath) 设置标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrLocalPath() 获取标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrLocalPath(string $StderrLocalPath) 设置标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdoutLocalFileName() 获取标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutLocalFileName(string $StdoutLocalFileName) 设置标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrLocalFileName() 获取标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrLocalFileName(string $StderrLocalFileName) 设置标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RedirectLocalInfo extends AbstractModel
 {
     /**
      * @var string 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutLocalPath;
 
     /**
      * @var string 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrLocalPath;
 
     /**
      * @var string 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutLocalFileName;
 
     /**
      * @var string 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrLocalFileName;
 
     /**
      * @param string $StdoutLocalPath 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrLocalPath 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdoutLocalFileName 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrLocalFileName 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

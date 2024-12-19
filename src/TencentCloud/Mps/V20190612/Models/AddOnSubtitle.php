@@ -34,9 +34,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitle(MediaInputInfo $Subtitle) 设置字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubtitleName() 获取字幕名称	
+ * @method string getSubtitleName() 获取字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitleName(string $SubtitleName) 设置字幕名称	
+ * @method void setSubtitleName(string $SubtitleName) 设置字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddOnSubtitle extends AbstractModel
@@ -57,7 +59,8 @@ class AddOnSubtitle extends AbstractModel
     public $Subtitle;
 
     /**
-     * @var string 字幕名称	
+     * @var string 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleName;
@@ -70,7 +73,8 @@ class AddOnSubtitle extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInputInfo $Subtitle 字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubtitleName 字幕名称	
+     * @param string $SubtitleName 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

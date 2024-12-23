@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DSPA敏感数据扫描数据源条件
  *
  * @method array getRDBInstances() 获取RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRDBInstances(array $RDBInstances) 设置RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCOSInstances() 获取COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSInstances(array $COSInstances) 设置COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNOSQLInstances() 获取Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNOSQLInstances(array $NOSQLInstances) 设置Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getESInstances() 获取ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setESInstances(array $ESInstances) 设置ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiscoveryCondition extends AbstractModel
 {
     /**
      * @var array RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RDBInstances;
 
     /**
      * @var array COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $COSInstances;
 
     /**
      * @var array Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NOSQLInstances;
 
     /**
      * @var array ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ESInstances;
 
     /**
      * @param array $RDBInstances RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $COSInstances COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NOSQLInstances Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ESInstances ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

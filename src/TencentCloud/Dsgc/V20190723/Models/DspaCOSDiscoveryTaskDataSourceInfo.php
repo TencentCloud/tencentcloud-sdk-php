@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDataSourceId() 获取数据源ID
  * @method void setDataSourceId(string $DataSourceId) 设置数据源ID
  * @method array getProxyAddress() 获取代理地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyAddress(array $ProxyAddress) 设置代理地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryTaskCOSCondition getCondition() 获取扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCondition(DspaDiscoveryTaskCOSCondition $Condition) 设置扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel
 {
@@ -48,38 +40,30 @@ class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel
 
     /**
      * @var array 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyAddress;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var DspaDiscoveryTaskCOSCondition 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @param string $DataSourceId 数据源ID
      * @param array $ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryTaskCOSCondition $Condition 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

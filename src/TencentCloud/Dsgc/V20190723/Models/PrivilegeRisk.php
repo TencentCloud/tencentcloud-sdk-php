@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 权限风险详情
  *
  * @method array getAccountName() 获取账户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountName(array $AccountName) 设置账户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置说明
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivilegeRisk extends AbstractModel
 {
     /**
      * @var array 账户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
 
     /**
      * @var string 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param array $AccountName 账户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

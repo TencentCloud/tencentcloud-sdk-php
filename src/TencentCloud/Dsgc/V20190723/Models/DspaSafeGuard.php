@@ -24,22 +24,18 @@ use TencentCloud\Common\AbstractModel;
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncrypt(string $Encrypt) 设置加密状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesensitization() 获取脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesensitization(string $Desensitization) 设置脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaSafeGuard extends AbstractModel
 {
@@ -48,7 +44,6 @@ class DspaSafeGuard extends AbstractModel
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encrypt;
 
@@ -57,7 +52,6 @@ ENABLE 规则设置并启用
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desensitization;
 
@@ -66,12 +60,10 @@ ENABLE 规则设置并启用
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desensitization 脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

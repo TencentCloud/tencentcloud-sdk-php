@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 敏感数据分级信息
  *
  * @method string getLevelGroupName() 获取分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelGroupName(string $LevelGroupName) 设置分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSource() 获取分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(integer $Source) 设置分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevelGroupDesc() 获取分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelGroupDesc(string $LevelGroupDesc) 设置分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLevelDetail() 获取具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelDetail(array $LevelDetail) 设置具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRefComplianceCnt() 获取引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefComplianceCnt(integer $RefComplianceCnt) 设置引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRefCompliance() 获取引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefCompliance(array $RefCompliance) 设置引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelGroupId() 获取分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelGroupId(integer $LevelGroupId) 设置分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryLevelDetail extends AbstractModel
 {
     /**
      * @var string 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelGroupName;
 
     /**
      * @var integer 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelGroupDesc;
 
     /**
      * @var array 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelDetail;
 
     /**
      * @var integer 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefComplianceCnt;
 
     /**
      * @var array 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefCompliance;
 
     /**
      * @var integer 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelGroupId;
 
     /**
      * @param string $LevelGroupName 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Source 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelGroupDesc 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LevelDetail 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RefComplianceCnt 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RefCompliance 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelGroupId 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 合规组中规则信息，用于合规组列表中规则信息展示
  *
  * @method integer getRuleId() 获取敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelId() 获取敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryComplianceGroupRuleInfo extends AbstractModel
 {
     /**
      * @var integer 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var integer 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @param integer $RuleId 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelId 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

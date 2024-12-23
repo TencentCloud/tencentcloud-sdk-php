@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DetectEnvelope返回参数结构体
  *
  * @method array getFirstTags() 获取一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTags(array $FirstTags) 设置一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecondTags() 获取二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondTags(array $SecondTags) 设置二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DetectEnvelopeResponse extends AbstractModel
 {
     /**
      * @var array 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTags;
 
     /**
      * @var array 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondTags;
 
@@ -52,9 +46,7 @@ class DetectEnvelopeResponse extends AbstractModel
 
     /**
      * @param array $FirstTags 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecondTags 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

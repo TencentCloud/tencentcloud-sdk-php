@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DeleteCosMetaResource返回参数结构体
  *
  * @method array getResults() 获取结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDspaId() 获取DSPA实例ID。
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DeleteCosMetaResourceResponse extends AbstractModel
 {
     /**
      * @var array 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
@@ -49,7 +46,6 @@ class DeleteCosMetaResourceResponse extends AbstractModel
 
     /**
      * @param array $Results 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DspaId DSPA实例ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

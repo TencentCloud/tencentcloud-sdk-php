@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cmq订阅返回参数
  *
- * @method string getSubscriptionName() 获取订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+ * @method string getSubscriptionName() 获取订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+ * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubscriptionId() 获取订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,7 +84,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
 class CmqSubscription extends AbstractModel
 {
     /**
-     * @var string 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * @var string 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscriptionName;
@@ -166,7 +166,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
     public $TopicName;
 
     /**
-     * @param string $SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * @param string $SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setCaller(Caller $Caller) 设置执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getFileInfos() 获取上传文件内容数组，最多支持上传20个文件。
- * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持上传20个文件。
+ * @method array getFileInfos() 获取请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
+ * @method void setFileInfos(array $FileInfos) 设置请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
  * @method string getFileType() 获取文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
 可支持的指定类型如下:
 <ul><li>pdf</li>
@@ -98,7 +102,9 @@ class UploadFilesRequest extends AbstractModel
     public $Caller;
 
     /**
-     * @var array 上传文件内容数组，最多支持上传20个文件。
+     * @var array 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      */
     public $FileInfos;
 
@@ -153,7 +159,9 @@ class UploadFilesRequest extends AbstractModel
 <li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
      * @param Caller $Caller 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * @param array $FileInfos 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      * @param string $FileType 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
 可支持的指定类型如下:
 <ul><li>pdf</li>

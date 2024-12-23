@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据资产报告-各种key-value的展示数据结构
  *
  * @method string getKey() 获取通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Note extends AbstractModel
 {
     /**
      * @var string 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

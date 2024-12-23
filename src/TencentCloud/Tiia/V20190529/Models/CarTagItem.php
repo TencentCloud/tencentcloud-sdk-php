@@ -39,25 +39,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlateContent(CarPlateContent $PlateContent) 设置车牌信息，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPlateConfidence() 获取车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateConfidence(integer $PlateConfidence) 设置车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTypeConfidence() 获取车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeConfidence(integer $TypeConfidence) 设置车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getColorConfidence() 获取车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColorConfidence(integer $ColorConfidence) 设置车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrientation() 获取车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrientation(string $Orientation) 设置车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrientationConfidence() 获取车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrientationConfidence(integer $OrientationConfidence) 设置车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarTagItem extends AbstractModel
 {
@@ -104,31 +94,26 @@ class CarTagItem extends AbstractModel
 
     /**
      * @var integer 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlateConfidence;
 
     /**
      * @var integer 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TypeConfidence;
 
     /**
      * @var integer 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColorConfidence;
 
     /**
      * @var string 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Orientation;
 
     /**
      * @var integer 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrientationConfidence;
 
@@ -143,15 +128,10 @@ class CarTagItem extends AbstractModel
      * @param CarPlateContent $PlateContent 车牌信息，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PlateConfidence 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TypeConfidence 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ColorConfidence 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Orientation 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

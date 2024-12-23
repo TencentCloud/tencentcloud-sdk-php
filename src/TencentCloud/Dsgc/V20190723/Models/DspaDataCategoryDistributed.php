@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DSPA数据分类分布
  *
  * @method integer getCategoryId() 获取数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryName() 获取数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryName(string $CategoryName) 设置数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryFullPath() 获取分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDataCategoryDistributed extends AbstractModel
 {
     /**
      * @var integer 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var string 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryName;
 
     /**
      * @var integer 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryFullPath;
 
     /**
      * @param integer $CategoryId 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryName 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

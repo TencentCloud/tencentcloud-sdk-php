@@ -46,8 +46,12 @@ use TencentCloud\Common\AbstractModel;
 文件对应业务类型,可以选择的类型如下
 <ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
 <li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">创建文件转换任务</a>转换后才能使用</li></ul>
- * @method array getFileInfos() 获取上传文件内容数组，最多支持上传20个文件。
- * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持上传20个文件。
+ * @method array getFileInfos() 获取上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
+ * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -75,7 +79,9 @@ class UploadFilesRequest extends AbstractModel
     public $BusinessType;
 
     /**
-     * @var array 上传文件内容数组，最多支持上传20个文件。
+     * @var array 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
      */
     public $FileInfos;
 
@@ -99,7 +105,9 @@ class UploadFilesRequest extends AbstractModel
 文件对应业务类型,可以选择的类型如下
 <ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
 <li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">创建文件转换任务</a>转换后才能使用</li></ul>
-     * @param array $FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * @param array $FileInfos 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()

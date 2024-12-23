@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatagovRuleExtendParameter extends AbstractModel
 {
@@ -39,13 +35,11 @@ class DatagovRuleExtendParameter extends AbstractModel
      * @var string 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -53,9 +47,7 @@ IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"t
      * @param string $Name 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

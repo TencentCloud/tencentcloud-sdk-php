@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCondition() 获取用于传入的数据源的条件，可以选择多个数据库，数据库之间通过逗号分隔，如果为空，默认是全部数据库
  * @method void setCondition(string $Condition) 设置用于传入的数据源的条件，可以选择多个数据库，数据库之间通过逗号分隔，如果为空，默认是全部数据库
  * @method array getProxyAddress() 获取代理地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyAddress(array $ProxyAddress) 设置代理地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceType() 获取数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskDataSource extends AbstractModel
 {
@@ -55,25 +47,21 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
 
     /**
      * @var array 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyAddress;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
 
@@ -81,13 +69,9 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
      * @param string $DataSourceId 数据源ID
      * @param string $Condition 用于传入的数据源的条件，可以选择多个数据库，数据库之间通过逗号分隔，如果为空，默认是全部数据库
      * @param array $ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

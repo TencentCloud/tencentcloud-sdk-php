@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 合规组
  *
  * @method integer getComplianceGroupId() 获取合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceGroupId(integer $ComplianceGroupId) 设置合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComplianceGroupType() 获取合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceGroupType(integer $ComplianceGroupType) 设置合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComplianceGroupRules() 获取合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceGroupRules(array $ComplianceGroupRules) 设置合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelGroupId() 获取合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelGroupId(integer $LevelGroupId) 设置合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryComplianceGroup extends AbstractModel
 {
     /**
      * @var integer 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceGroupId;
 
     /**
      * @var string 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceGroupType;
 
     /**
      * @var array 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceGroupRules;
 
     /**
      * @var integer 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelGroupId;
 
     /**
      * @param integer $ComplianceGroupId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComplianceGroupType 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ComplianceGroupRules 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelGroupId 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

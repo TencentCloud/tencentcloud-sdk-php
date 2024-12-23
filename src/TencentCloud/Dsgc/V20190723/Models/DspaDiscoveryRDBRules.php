@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 分类分级任务RDB数据规则
  *
  * @method integer getStatus() 获取规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchOperator() 获取只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchOperator(string $MatchOperator) 设置只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryDataRules getMetaRule() 获取字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaRule(DspaDiscoveryDataRules $MetaRule) 设置字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryDataRules getContentRule() 获取内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentRule(DspaDiscoveryDataRules $ContentRule) 设置内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryRDBRules extends AbstractModel
 {
     /**
      * @var integer 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchOperator;
 
     /**
      * @var DspaDiscoveryDataRules 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaRule;
 
     /**
      * @var DspaDiscoveryDataRules 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentRule;
 
     /**
      * @param integer $Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchOperator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryDataRules $MetaRule 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryDataRules $ContentRule 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

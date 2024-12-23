@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * AKSK泄漏信息
  *
  * @method string getAK() 获取AK编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAK(string $AK) 设置AK编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSK() 获取SK编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSK(string $SK) 设置SK编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getURL() 获取URL编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setURL(string $URL) 设置URL编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AKSKLeak extends AbstractModel
 {
     /**
      * @var string AK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AK;
 
     /**
      * @var string SK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SK;
 
     /**
      * @var string URL编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URL;
 
     /**
      * @param string $AK AK编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SK SK编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $URL URL编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 建议使用的安全产品
  *
  * @method string getProductName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReferUrl() 获取产品链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferUrl(string $ReferUrl) 设置产品链接
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityProduct extends AbstractModel
 {
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferUrl;
 
     /**
      * @param string $ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReferUrl 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

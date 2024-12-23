@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileBody() 获取Base64编码后的文件内容
  * @method void setFileBody(string $FileBody) 设置Base64编码后的文件内容
- * @method string getFileName() 获取文件名，最大长度不超过200字符
- * @method void setFileName(string $FileName) 设置文件名，最大长度不超过200字符
+ * @method string getFileName() 获取文件的名字。
+文件名的最大长度应不超过200个字符，并且文件名的后缀必须反映其文件类型。
+例如，PDF文件应以“.pdf”结尾，如“XXX.pdf”，而Word文件应以“.doc”或“.docx”结尾，如“XXX.doc”或“XXX.docx”。
+ * @method void setFileName(string $FileName) 设置文件的名字。
+文件名的最大长度应不超过200个字符，并且文件名的后缀必须反映其文件类型。
+例如，PDF文件应以“.pdf”结尾，如“XXX.pdf”，而Word文件应以“.doc”或“.docx”结尾，如“XXX.doc”或“XXX.docx”。
  */
 class UploadFile extends AbstractModel
 {
@@ -33,13 +37,17 @@ class UploadFile extends AbstractModel
     public $FileBody;
 
     /**
-     * @var string 文件名，最大长度不超过200字符
+     * @var string 文件的名字。
+文件名的最大长度应不超过200个字符，并且文件名的后缀必须反映其文件类型。
+例如，PDF文件应以“.pdf”结尾，如“XXX.pdf”，而Word文件应以“.doc”或“.docx”结尾，如“XXX.doc”或“XXX.docx”。
      */
     public $FileName;
 
     /**
      * @param string $FileBody Base64编码后的文件内容
-     * @param string $FileName 文件名，最大长度不超过200字符
+     * @param string $FileName 文件的名字。
+文件名的最大长度应不超过200个字符，并且文件名的后缀必须反映其文件类型。
+例如，PDF文件应以“.pdf”结尾，如“XXX.pdf”，而Word文件应以“.doc”或“.docx”结尾，如“XXX.doc”或“XXX.docx”。
      */
     function __construct()
     {

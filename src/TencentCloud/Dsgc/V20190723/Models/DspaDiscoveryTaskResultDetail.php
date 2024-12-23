@@ -43,13 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevelRiskScore() 获取敏感数据分级分数
  * @method void setLevelRiskScore(integer $LevelRiskScore) 设置敏感数据分级分数
  * @method DspaSafeGuard getSafeGuard() 获取保护措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSafeGuard(DspaSafeGuard $SafeGuard) 设置保护措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryFullPath() 获取分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名
+ * @method void setSchemaName(string $SchemaName) 设置模式名
  */
 class DspaDiscoveryTaskResultDetail extends AbstractModel
 {
@@ -110,15 +108,18 @@ class DspaDiscoveryTaskResultDetail extends AbstractModel
 
     /**
      * @var DspaSafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SafeGuard;
 
     /**
      * @var string 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryFullPath;
+
+    /**
+     * @var string 模式名
+     */
+    public $SchemaName;
 
     /**
      * @param integer $TaskId 任务ID
@@ -133,9 +134,8 @@ class DspaDiscoveryTaskResultDetail extends AbstractModel
      * @param integer $RuleId 规则ID
      * @param integer $LevelRiskScore 敏感数据分级分数
      * @param DspaSafeGuard $SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名
      */
     function __construct()
     {
@@ -201,6 +201,10 @@ class DspaDiscoveryTaskResultDetail extends AbstractModel
 
         if (array_key_exists("CategoryFullPath",$param) and $param["CategoryFullPath"] !== null) {
             $this->CategoryFullPath = $param["CategoryFullPath"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
         }
     }
 }

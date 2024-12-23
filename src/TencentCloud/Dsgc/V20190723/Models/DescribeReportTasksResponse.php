@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeReportTasks返回参数结构体
  *
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItemSet() 获取报表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemSet(array $ItemSet) 设置报表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeReportTasksResponse extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemSet;
 
@@ -52,9 +46,7 @@ class DescribeReportTasksResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ItemSet 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

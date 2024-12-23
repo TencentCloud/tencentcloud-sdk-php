@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据资产报告-涉敏top的资产
  *
  * @method string getLevelName() 获取分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelName(string $LevelName) 设置分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTopStat() 获取top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopStat(array $TopStat) 设置top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopAsset extends AbstractModel
 {
     /**
      * @var string 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelName;
 
     /**
      * @var array top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopStat;
 
     /**
      * @param string $LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TopStat top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

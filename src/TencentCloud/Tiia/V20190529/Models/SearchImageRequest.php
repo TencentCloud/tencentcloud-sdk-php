@@ -78,8 +78,10 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
  * @method string getFilter() 获取标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+最大支持64字符。
  * @method void setFilter(string $Filter) 设置标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+最大支持64字符。
  * @method ImageRect getImageRect() 获取图像主体区域。
 若设置主体区域，提取指定的区域进行检索。
  * @method void setImageRect(ImageRect $ImageRect) 设置图像主体区域。
@@ -170,6 +172,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
     /**
      * @var string 标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+最大支持64字符。
      */
     public $Filter;
 
@@ -232,6 +235,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
      * @param string $Filter 标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+最大支持64字符。
      * @param ImageRect $ImageRect 图像主体区域。
 若设置主体区域，提取指定的区域进行检索。
      * @param boolean $EnableDetect 是否需要启用主体识别，默认为**TRUE** 。

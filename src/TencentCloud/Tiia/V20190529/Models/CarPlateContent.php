@@ -21,51 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 车牌信息
  *
  * @method string getPlate() 获取车牌信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlate(string $Plate) 设置车牌信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getColor() 获取车牌颜色。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColor(string $Color) 设置车牌颜色。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取车牌类型，包含：0普通蓝牌，1双层黄牌，2单层黄牌，3新能源车牌，4使馆车牌，5领馆车牌，6澳门车牌，7香港车牌，8警用车牌，9教练车牌，10武警车牌，11军用车牌   -2遮挡污损模糊车牌/异常   其他无牌
 注意：
 此字段可能返回 null，表示取不到有效值。
 此字段结果遮挡污损模糊车牌/异常：包含PlateStatus参数的“遮挡污损模糊车牌”，针对车牌异常，建议参考此字段，更全面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置车牌类型，包含：0普通蓝牌，1双层黄牌，2单层黄牌，3新能源车牌，4使馆车牌，5领馆车牌，6澳门车牌，7香港车牌，8警用车牌，9教练车牌，10武警车牌，11军用车牌   -2遮挡污损模糊车牌/异常   其他无牌
 注意：
 此字段可能返回 null，表示取不到有效值。
 此字段结果遮挡污损模糊车牌/异常：包含PlateStatus参数的“遮挡污损模糊车牌”，针对车牌异常，建议参考此字段，更全面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPlateLocation() 获取车牌在图片中的坐标信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateLocation(array $PlateLocation) 设置车牌在图片中的坐标信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlateStatus() 获取判断车牌是否遮挡：“遮挡污损模糊车牌”和"正常车牌"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateStatus(string $PlateStatus) 设置判断车牌是否遮挡：“遮挡污损模糊车牌”和"正常车牌"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPlateStatusConfidence() 获取车牌遮挡的置信度，0-100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateStatusConfidence(integer $PlateStatusConfidence) 设置车牌遮挡的置信度，0-100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPlateAngle() 获取车牌角度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateAngle(float $PlateAngle) 设置车牌角度。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarPlateContent extends AbstractModel
 {
     /**
      * @var string 车牌信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Plate;
 
     /**
      * @var string 车牌颜色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Color;
 
@@ -74,7 +60,6 @@ class CarPlateContent extends AbstractModel
 注意：
 此字段可能返回 null，表示取不到有效值。
 此字段结果遮挡污损模糊车牌/异常：包含PlateStatus参数的“遮挡污损模糊车牌”，针对车牌异常，建议参考此字段，更全面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -86,40 +71,31 @@ class CarPlateContent extends AbstractModel
 
     /**
      * @var string 判断车牌是否遮挡：“遮挡污损模糊车牌”和"正常车牌"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlateStatus;
 
     /**
      * @var integer 车牌遮挡的置信度，0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlateStatusConfidence;
 
     /**
      * @var float 车牌角度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlateAngle;
 
     /**
      * @param string $Plate 车牌信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Color 车牌颜色。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 车牌类型，包含：0普通蓝牌，1双层黄牌，2单层黄牌，3新能源车牌，4使馆车牌，5领馆车牌，6澳门车牌，7香港车牌，8警用车牌，9教练车牌，10武警车牌，11军用车牌   -2遮挡污损模糊车牌/异常   其他无牌
 注意：
 此字段可能返回 null，表示取不到有效值。
 此字段结果遮挡污损模糊车牌/异常：包含PlateStatus参数的“遮挡污损模糊车牌”，针对车牌异常，建议参考此字段，更全面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PlateLocation 车牌在图片中的坐标信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PlateStatus 判断车牌是否遮挡：“遮挡污损模糊车牌”和"正常车牌"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PlateStatusConfidence 车牌遮挡的置信度，0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PlateAngle 车牌角度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

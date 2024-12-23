@@ -22,25 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleContent() 获取规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleContent(string $RuleContent) 设置规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsIgnoreCase() 获取是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsIgnoreCase(boolean $IsIgnoreCase) 设置是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryDataContent extends AbstractModel
 {
     /**
      * @var string 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleContent;
 
@@ -48,18 +43,15 @@ class DspaDiscoveryDataContent extends AbstractModel
      * @var boolean 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsIgnoreCase;
 
     /**
      * @param string $RuleContent 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsIgnoreCase 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

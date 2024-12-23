@@ -25,29 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取模板名称
  * @method void setName(string $Name) 设置模板名称
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComplianceGroupType() 获取模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceGroupType(integer $ComplianceGroupType) 设置模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelGroupId() 获取模板分级方案id
  * @method void setLevelGroupId(integer $LevelGroupId) 设置模板分级方案id
  * @method string getLevelGroupName() 获取模板分级方案名称
  * @method void setLevelGroupName(string $LevelGroupName) 设置模板分级方案名称
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAlias() 获取是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAlias(boolean $IsAlias) 设置是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceGroupDetail extends AbstractModel
 {
@@ -63,13 +53,11 @@ class ComplianceGroupDetail extends AbstractModel
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceGroupType;
 
@@ -85,19 +73,16 @@ class ComplianceGroupDetail extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var boolean 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAlias;
 
@@ -105,17 +90,12 @@ class ComplianceGroupDetail extends AbstractModel
      * @param integer $Id 模板id
      * @param string $Name 模板名称
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComplianceGroupType 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelGroupId 模板分级方案id
      * @param string $LevelGroupName 模板分级方案名称
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAlias 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

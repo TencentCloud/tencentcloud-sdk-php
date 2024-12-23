@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 风险面的分布
  *
  * @method Note getAssessmentRiskSide() 获取风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssessmentRiskSide(Note $AssessmentRiskSide) 设置风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssessmentRisk() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssessmentRisk(array $AssessmentRisk) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskSideDistributed extends AbstractModel
 {
     /**
      * @var Note 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssessmentRiskSide;
 
     /**
      * @var array 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssessmentRisk;
 
     /**
      * @param Note $AssessmentRiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssessmentRisk 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

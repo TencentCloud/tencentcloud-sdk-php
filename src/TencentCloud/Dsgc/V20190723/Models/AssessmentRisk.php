@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRiskId() 获取风险项Id
  * @method void setRiskId(string $RiskId) 设置风险项Id
  * @method string getRiskDescription() 获取风险项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDescription(string $RiskDescription) 设置风险项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateId() 获取评估模板Id
  * @method void setTemplateId(string $TemplateId) 设置评估模板Id
  * @method string getTemplateName() 获取评估模板名称
@@ -49,33 +47,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRelatedAsset() 获取风险涉及资产
  * @method void setRelatedAsset(string $RelatedAsset) 设置风险涉及资产
  * @method string getDataSourceId() 获取风险涉及资产id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceId(string $DataSourceId) 设置风险涉及资产id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取风险涉及资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置风险涉及资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetName() 获取资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetName(string $AssetName) 设置资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityProduct() 获取建议使用安全产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityProduct(array $SecurityProduct) 设置建议使用安全产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskSide() 获取风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceType() 获取数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRisk extends AbstractModel
 {
@@ -86,7 +70,6 @@ class AssessmentRisk extends AbstractModel
 
     /**
      * @var string 风险项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDescription;
 
@@ -147,50 +130,42 @@ class AssessmentRisk extends AbstractModel
 
     /**
      * @var string 风险涉及资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceId;
 
     /**
      * @var string 风险涉及资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var string 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetName;
 
     /**
      * @var array 建议使用安全产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityProduct;
 
     /**
      * @var string 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var string 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskSide;
 
     /**
      * @var string 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
 
     /**
      * @param string $RiskId 风险项Id
      * @param string $RiskDescription 风险项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 评估模板Id
      * @param string $TemplateName 评估模板名称
      * @param string $ControlItemId 评估项Id
@@ -203,19 +178,12 @@ class AssessmentRisk extends AbstractModel
      * @param string $RiskOwner 风险负责人
      * @param string $RelatedAsset 风险涉及资产
      * @param string $DataSourceId 风险涉及资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 风险涉及资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityProduct 建议使用安全产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

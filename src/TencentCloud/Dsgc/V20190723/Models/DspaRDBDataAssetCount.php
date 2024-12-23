@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * RDB关系型数据库敏感数据资产统计
  *
  * @method integer getDataAssetType() 获取数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataAssetType(integer $DataAssetType) 设置数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalDbCnt() 获取已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalDbCnt(integer $TotalDbCnt) 设置已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalTableCnt() 获取数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTableCnt(integer $TotalTableCnt) 设置数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveCategoryCnt() 获取敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveCategoryCnt(integer $SensitiveCategoryCnt) 设置敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldCnt() 获取敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldCnt(integer $SensitiveFieldCnt) 设置敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSensitiveLevel() 获取敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevel(array $SensitiveLevel) 设置敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDbCnt() 获取敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDbCnt(integer $SensitiveDbCnt) 设置敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveTableCnt() 获取敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveTableCnt(integer $SensitiveTableCnt) 设置敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalFieldCnt() 获取扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalFieldCnt(integer $TotalFieldCnt) 设置扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCategoryDistributed() 获取数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryDistributed(array $CategoryDistributed) 设置数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaRDBDataAssetCount extends AbstractModel
 {
     /**
      * @var integer 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataAssetType;
 
     /**
      * @var integer 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalDbCnt;
 
     /**
      * @var integer 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTableCnt;
 
     /**
      * @var integer 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveCategoryCnt;
 
     /**
      * @var integer 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldCnt;
 
     /**
      * @var array 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevel;
 
     /**
      * @var integer 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDbCnt;
 
     /**
      * @var integer 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveTableCnt;
 
     /**
      * @var integer 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalFieldCnt;
 
     /**
      * @var array 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryDistributed;
 
     /**
      * @param integer $DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalDbCnt 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTableCnt 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldCnt 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDbCnt 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveTableCnt 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalFieldCnt 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

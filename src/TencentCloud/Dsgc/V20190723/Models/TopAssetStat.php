@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 设敏top资产的信息
  *
  * @method string getDataSourceId() 获取数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceId(string $DataSourceId) 设置数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubData() 获取db_name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubData(string $SubData) 设置db_name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveCnt() 获取敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveCnt(integer $SensitiveCnt) 设置敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopAssetStat extends AbstractModel
 {
     /**
      * @var string 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceId;
 
     /**
      * @var string db_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubData;
 
     /**
      * @var integer 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveCnt;
 
     /**
      * @param string $DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubData db_name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveCnt 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleType() 获取规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleType(string $RuleType) 设置规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleContent() 获取内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleContent(string $RuleContent) 设置内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExtendParameters() 获取该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendParameters(array $ExtendParameters) 设置该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryDataRule extends AbstractModel
 {
@@ -43,19 +37,16 @@ class DspaDiscoveryDataRule extends AbstractModel
      * @var string 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
      * @var string 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleContent;
 
     /**
      * @var array 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtendParameters;
 
@@ -63,11 +54,8 @@ regex 正则
      * @param string $RuleType 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleContent 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtendParameters 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

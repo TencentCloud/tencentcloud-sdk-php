@@ -39,27 +39,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取DB扫描的结束时间，格式如：2006-01-02 15:04:05
  * @method void setEndTime(string $EndTime) 设置DB扫描的结束时间，格式如：2006-01-02 15:04:05
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取DB扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
  * @method void setStatus(integer $Status) 设置DB扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
  * @method string getErrorInfo() 获取DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(string $ErrorInfo) 设置DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveField() 获取敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveField(integer $SensitiveField) 设置敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalField() 获取总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalField(integer $TotalField) 设置总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskDbResult extends AbstractModel
 {
@@ -110,7 +100,6 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
@@ -121,25 +110,21 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
 
     /**
      * @var string DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorInfo;
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var integer 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveField;
 
     /**
      * @var integer 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalField;
 
@@ -154,16 +139,11 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
      * @param integer $SensitiveTables 敏感表数
      * @param string $EndTime DB扫描的结束时间，格式如：2006-01-02 15:04:05
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status DB扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
      * @param string $ErrorInfo DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveField 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalField 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskShardNum(integer $DiskShardNum) 设置3
  * @method integer getDiskReplicasNum() 获取1
  * @method void setDiskReplicasNum(integer $DiskReplicasNum) 设置1
+ * @method string getCompression() 获取数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompression(string $Compression) 设置数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -432,6 +436,12 @@ class InstanceInfo extends AbstractModel
     public $DiskReplicasNum;
 
     /**
+     * @var string 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Compression;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param string $InstanceId 实例 ID。
      * @param integer $Appid 用户的Appid。
@@ -500,6 +510,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $DiskShardSize 单分片磁盘大小，单位：MB
      * @param integer $DiskShardNum 3
      * @param integer $DiskReplicasNum 1
+     * @param string $Compression 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -726,6 +738,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DiskReplicasNum",$param) and $param["DiskReplicasNum"] !== null) {
             $this->DiskReplicasNum = $param["DiskReplicasNum"];
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

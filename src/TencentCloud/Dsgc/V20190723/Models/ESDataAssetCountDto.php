@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * ES的概览页统计数据
  *
  * @method integer getDataAssetType() 获取es
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataAssetType(integer $DataAssetType) 设置es
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveIndexCnt() 获取敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveIndexCnt(integer $SensitiveIndexCnt) 设置敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalIndexCnt() 获取总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalIndexCnt(integer $TotalIndexCnt) 设置总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldCnt() 获取敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldCnt(integer $SensitiveFieldCnt) 设置敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalFieldCnt() 获取总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalFieldCnt(integer $TotalFieldCnt) 设置总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveCategoryCnt() 获取敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveCategoryCnt(integer $SensitiveCategoryCnt) 设置敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSensitiveLevel() 获取敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevel(array $SensitiveLevel) 设置敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCategoryDistributed() 获取敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryDistributed(array $CategoryDistributed) 设置敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ESDataAssetCountDto extends AbstractModel
 {
     /**
      * @var integer es
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataAssetType;
 
     /**
      * @var integer 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveIndexCnt;
 
     /**
      * @var integer 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalIndexCnt;
 
     /**
      * @var integer 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldCnt;
 
     /**
      * @var integer 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalFieldCnt;
 
     /**
      * @var integer 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveCategoryCnt;
 
     /**
      * @var array 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevel;
 
     /**
      * @var array 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryDistributed;
 
     /**
      * @param integer $DataAssetType es
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveIndexCnt 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalIndexCnt 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldCnt 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalFieldCnt 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveCategoryCnt 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SensitiveLevel 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CategoryDistributed 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

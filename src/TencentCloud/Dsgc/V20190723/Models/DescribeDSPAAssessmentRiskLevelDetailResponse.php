@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRiskLevelName() 获取风险级别名称
  * @method void setRiskLevelName(string $RiskLevelName) 设置风险级别名称
  * @method string getRiskLevelDescription() 获取风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelDescription(string $RiskLevelDescription) 设置风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentifyComplianceId() 获取分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentifyComplianceName() 获取分类分级模板名称
  * @method void setIdentifyComplianceName(string $IdentifyComplianceName) 设置分类分级模板名称
  * @method array getRiskLevelMatrix() 获取风险数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelMatrix(array $RiskLevelMatrix) 设置风险数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -48,13 +42,11 @@ class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
      * @var string 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevelDescription;
 
     /**
      * @var integer 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyComplianceId;
 
@@ -65,7 +57,6 @@ class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
      * @var array 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevelMatrix;
 
@@ -77,12 +68,9 @@ class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     /**
      * @param string $RiskLevelName 风险级别名称
      * @param string $RiskLevelDescription 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyComplianceId 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentifyComplianceName 分类分级模板名称
      * @param array $RiskLevelMatrix 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

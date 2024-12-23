@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 分类分级任务COS识别规则
  *
  * @method integer getStatus() 获取规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryCOSDataRule getRegexRule() 获取regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexRule(DspaDiscoveryCOSDataRule $RegexRule) 设置regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryCOSDataRule getKeywordRule() 获取关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordRule(DspaDiscoveryCOSDataRule $KeywordRule) 设置关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryCOSDataRule getIgnoreStringRule() 获取忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreStringRule(DspaDiscoveryCOSDataRule $IgnoreStringRule) 设置忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMatch() 获取最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMatch(integer $MaxMatch) 设置最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryCOSRules extends AbstractModel
 {
     /**
      * @var integer 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var DspaDiscoveryCOSDataRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegexRule;
 
     /**
      * @var DspaDiscoveryCOSDataRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeywordRule;
 
     /**
      * @var DspaDiscoveryCOSDataRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreStringRule;
 
     /**
      * @var integer 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMatch;
 
     /**
      * @param integer $Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryCOSDataRule $RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryCOSDataRule $KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryCOSDataRule $IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMatch 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

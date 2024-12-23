@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResultDescription() 获取结果描述。
  * @method void setResultDescription(string $ResultDescription) 设置结果描述。
  * @method ErrDescription getErrDescription() 获取错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrDescription(ErrDescription $ErrDescription) 设置错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID。
  * @method void setResourceId(string $ResourceId) 设置资源ID。
  * @method string getDbName() 获取database名称。
@@ -47,7 +45,6 @@ class DbTaskResult extends AbstractModel
 
     /**
      * @var ErrDescription 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrDescription;
 
@@ -65,7 +62,6 @@ class DbTaskResult extends AbstractModel
      * @param string $Result 结果类型。
      * @param string $ResultDescription 结果描述。
      * @param ErrDescription $ErrDescription 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID。
      * @param string $DbName database名称。
      */

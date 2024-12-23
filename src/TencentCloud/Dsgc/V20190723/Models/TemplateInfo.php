@@ -18,36 +18,28 @@ namespace TencentCloud\Dsgc\V20190723\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 评估模版的详情数据
+ * 评估模板的详情数据
  *
  * @method integer getTemplateId() 获取模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(integer $TemplateId) 设置模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateName(string $TemplateName) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
     /**
      * @var integer 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
 
     /**
      * @param integer $TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

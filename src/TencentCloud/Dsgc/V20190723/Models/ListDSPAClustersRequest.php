@@ -25,17 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取分页偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0。
  * @method array getFilters() 获取过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
  * @method void setFilters(array $Filters) 设置过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
  * @method string getListMode() 获取展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
  * @method void setListMode(string $ListMode) 设置展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
  */
 class ListDSPAClustersRequest extends AbstractModel
 {
@@ -51,15 +65,22 @@ class ListDSPAClustersRequest extends AbstractModel
 
     /**
      * @var array 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
      */
     public $Filters;
 
     /**
      * @var string 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
      */
     public $ListMode;
 
@@ -67,11 +88,18 @@ Version支持的可选值：trial、official。
      * @param integer $Limit 分页步长，默认为100。
      * @param integer $Offset 分页偏移量，默认为0。
      * @param array $Filters 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
      * @param string $ListMode 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
      */
     function __construct()
     {

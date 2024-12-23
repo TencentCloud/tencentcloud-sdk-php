@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDSPAAssessmentRiskDistributionOverview返回参数结构体
  *
  * @method array getRiskTypeDistribution() 获取风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskTypeDistribution(array $RiskTypeDistribution) 设置风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskDetailDistribution() 获取风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDetailDistribution(array $RiskDetailDistribution) 设置风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskAssetsDistribution() 获取风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskAssetsDistribution(array $RiskAssetsDistribution) 设置风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends AbstractMod
 {
     /**
      * @var array 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskTypeDistribution;
 
     /**
      * @var array 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDetailDistribution;
 
     /**
      * @var array 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskAssetsDistribution;
 
@@ -62,11 +53,8 @@ class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends AbstractMod
 
     /**
      * @param array $RiskTypeDistribution 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskDetailDistribution 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskAssetsDistribution 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPublicNetworkSecurityPolicy请求参数结构体
  *
-
+ * @method string getInstanceId() 获取集群id
+ * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method array getPolicyList() 获取策略列表
+ * @method void setPolicyList(array $PolicyList) 设置策略列表
  */
 class ModifyPublicNetworkSecurityPolicyRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群id
+     */
+    public $InstanceId;
 
     /**
+     * @var array 策略列表
+     */
+    public $PolicyList;
 
+    /**
+     * @param string $InstanceId 集群id
+     * @param array $PolicyList 策略列表
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class ModifyPublicNetworkSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("PolicyList",$param) and $param["PolicyList"] !== null) {
+            $this->PolicyList = [];
+            foreach ($param["PolicyList"] as $key => $value){
+                $obj = new SecurityPolicy();
+                $obj->deserialize($value);
+                array_push($this->PolicyList, $obj);
+            }
+        }
     }
 }

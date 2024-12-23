@@ -87,7 +87,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPAAssessmentRiskLevelListResponse DescribeDSPAAssessmentRiskLevelList(Models\DescribeDSPAAssessmentRiskLevelListRequest $req) 风险项页面----查询风险等级的列表
  * @method Models\DescribeDSPAAssessmentRiskLevelTrendResponse DescribeDSPAAssessmentRiskLevelTrend(Models\DescribeDSPAAssessmentRiskLevelTrendRequest $req) 风险级别趋势统计
  * @method Models\DescribeDSPAAssessmentRiskOverviewResponse DescribeDSPAAssessmentRiskOverview(Models\DescribeDSPAAssessmentRiskOverviewRequest $req) 风险数量概览统计
- * @method Models\DescribeDSPAAssessmentRiskProcessHistoryResponse DescribeDSPAAssessmentRiskProcessHistory(Models\DescribeDSPAAssessmentRiskProcessHistoryRequest $req) 修改最新评估风险项状态
+ * @method Models\DescribeDSPAAssessmentRiskProcessHistoryResponse DescribeDSPAAssessmentRiskProcessHistory(Models\DescribeDSPAAssessmentRiskProcessHistoryRequest $req) 查询风险的处理历史
  * @method Models\DescribeDSPAAssessmentRiskSideDistributedResponse DescribeDSPAAssessmentRiskSideDistributed(Models\DescribeDSPAAssessmentRiskSideDistributedRequest $req) 风险评估概览页，查询风险面的分布
  * @method Models\DescribeDSPAAssessmentRiskSideListResponse DescribeDSPAAssessmentRiskSideList(Models\DescribeDSPAAssessmentRiskSideListRequest $req) 风险评估概览页，查询风险面的分布
  * @method Models\DescribeDSPAAssessmentRiskTemplateDetailResponse DescribeDSPAAssessmentRiskTemplateDetail(Models\DescribeDSPAAssessmentRiskTemplateDetailRequest $req) 风险项页面--查看评估模板详情
@@ -152,8 +152,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DisableDSPAMetaResourceAuthResponse DisableDSPAMetaResourceAuth(Models\DisableDSPAMetaResourceAuthRequest $req) 取消用户云资源授权
  * @method Models\EnableDSPADiscoveryRuleResponse EnableDSPADiscoveryRule(Models\EnableDSPADiscoveryRuleRequest $req) 打开或者关闭分类分级规则
 注：此API同时对该规则下的RDB跟COS规则操作。
-
-
  * @method Models\EnableTrialVersionResponse EnableTrialVersion(Models\EnableTrialVersionRequest $req) 启用版本体验
  * @method Models\ExportAssetDetailDataResponse ExportAssetDetailData(Models\ExportAssetDetailDataRequest $req) 创建敏感数据导出任务
  * @method Models\GetResourceConnectionStatusResponse GetResourceConnectionStatus(Models\GetResourceConnectionStatusRequest $req) 获取授权资源的连接状态
@@ -173,7 +171,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
 2 扫描终止， 
 3 扫描成功，
 4 扫描失败
-
  * @method Models\ModifyDSPACOSTaskResultResponse ModifyDSPACOSTaskResult(Models\ModifyDSPACOSTaskResultRequest $req) 调整COS任务扫描结果
  * @method Models\ModifyDSPACategoryResponse ModifyDSPACategory(Models\ModifyDSPACategoryRequest $req) 修改分类，内置分类不支持修改。
  * @method Models\ModifyDSPACategoryRelationResponse ModifyDSPACategoryRelation(Models\ModifyDSPACategoryRelationRequest $req) 修改分类分级关系
@@ -186,7 +183,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
 2 扫描终止， 
 3 扫描成功，
 4 扫描失败
-
  * @method Models\ModifyDSPAESTaskResultResponse ModifyDSPAESTaskResult(Models\ModifyDSPAESTaskResultRequest $req) 调整ES任务扫描结果
  * @method Models\ModifyDSPATaskResultResponse ModifyDSPATaskResult(Models\ModifyDSPATaskResultRequest $req) 调整任务扫描结果
  * @method Models\ModifyLevelInfoResponse ModifyLevelInfo(Models\ModifyLevelInfoRequest $req) 修改敏感级别信息

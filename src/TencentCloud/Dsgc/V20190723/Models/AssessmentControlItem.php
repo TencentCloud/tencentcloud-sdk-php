@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getItemName() 获取评估项名称
  * @method void setItemName(string $ItemName) 设置评估项名称
  * @method string getDescription() 获取评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取评估项来源，内置/用户自定，取值（system，user）
  * @method void setSource(string $Source) 设置评估项来源，内置/用户自定，取值（system，user）
  * @method string getItemType() 获取评估项类型，问卷/自动化，取值（questionnaire，auto）
@@ -39,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取评估项启用状态，启用/未启用，取值draft / launched
  * @method void setStatus(string $Status) 设置评估项启用状态，启用/未启用，取值draft / launched
  * @method integer getTemplateCount() 获取评估项关联的模板数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateCount(integer $TemplateCount) 设置评估项关联的模板数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentControlItem extends AbstractModel
 {
@@ -57,7 +53,6 @@ class AssessmentControlItem extends AbstractModel
 
     /**
      * @var string 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -88,7 +83,6 @@ class AssessmentControlItem extends AbstractModel
 
     /**
      * @var integer 评估项关联的模板数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateCount;
 
@@ -96,14 +90,12 @@ class AssessmentControlItem extends AbstractModel
      * @param string $ItemId 评估项Id
      * @param string $ItemName 评估项名称
      * @param string $Description 评估项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 评估项来源，内置/用户自定，取值（system，user）
      * @param string $ItemType 评估项类型，问卷/自动化，取值（questionnaire，auto）
      * @param string $ItemSubType 评估项子类型，单选/多选/时间/文本/AKSK等，取值（singlechoice，multichoice，date，text，AKSK……等）
      * @param string $CreatedTime 评估项创建时间
      * @param string $Status 评估项启用状态，启用/未启用，取值draft / launched
      * @param integer $TemplateCount 评估项关联的模板数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

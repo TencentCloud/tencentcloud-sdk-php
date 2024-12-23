@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 分类分级规则数量
  *
  * @method string getName() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取规则值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置规则值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleEffectItem extends AbstractModel
 {
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 规则值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 规则值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

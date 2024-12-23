@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 建议生成的二位矩阵的第二层
  *
  * @method RiskMatrixLevel getSensitiveLevel() 获取分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevel(RiskMatrixLevel $SensitiveLevel) 设置分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RiskMatrixLevel getVulnerabilityLevel() 获取脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulnerabilityLevel(RiskMatrixLevel $VulnerabilityLevel) 设置脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskName() 获取风险名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskName(string $RiskName) 设置风险名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRiskScore() 获取分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskScore(float $RiskScore) 设置分数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SuggestRiskLevelMatrixItem extends AbstractModel
 {
     /**
      * @var RiskMatrixLevel 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevel;
 
     /**
      * @var RiskMatrixLevel 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulnerabilityLevel;
 
     /**
      * @var string 风险名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskName;
 
     /**
      * @var float 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskScore;
 
     /**
      * @param RiskMatrixLevel $SensitiveLevel 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskMatrixLevel $VulnerabilityLevel 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskName 风险名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RiskScore 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

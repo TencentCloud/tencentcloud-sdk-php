@@ -55,17 +55,11 @@ use TencentCloud\Common\AbstractModel;
 1: 开启自动续费
 2: 明确不自动续费
  * @method string getChannel() 获取实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannel(string $Channel) 设置实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInsAuthCount() 获取已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsAuthCount(integer $InsAuthCount) 设置已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInsTotalQuota() 获取已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsTotalQuota(integer $InsTotalQuota) 设置已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaInstance extends AbstractModel
 {
@@ -148,19 +142,16 @@ class DspaInstance extends AbstractModel
 
     /**
      * @var string 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Channel;
 
     /**
      * @var integer 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsAuthCount;
 
     /**
      * @var integer 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsTotalQuota;
 
@@ -183,11 +174,8 @@ class DspaInstance extends AbstractModel
 1: 开启自动续费
 2: 明确不自动续费
      * @param string $Channel 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InsAuthCount 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InsTotalQuota 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

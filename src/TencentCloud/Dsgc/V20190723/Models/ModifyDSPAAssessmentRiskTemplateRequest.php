@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置dspa实例id
  * @method string getTemplateName() 获取模板名称
  * @method void setTemplateName(string $TemplateName) 设置模板名称
- * @method string getTemplateDescription() 获取模板的描述
- * @method void setTemplateDescription(string $TemplateDescription) 设置模板的描述
  * @method integer getTemplateId() 获取模板id
  * @method void setTemplateId(integer $TemplateId) 设置模板id
  * @method integer getRiskLevelId() 获取修改的风险等级id
  * @method void setRiskLevelId(integer $RiskLevelId) 设置修改的风险等级id
+ * @method string getTemplateDescription() 获取模板的描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置模板的描述
  * @method array getRiskIdList() 获取脆弱项列表
  * @method void setRiskIdList(array $RiskIdList) 设置脆弱项列表
  */
@@ -46,11 +46,6 @@ class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string 模板的描述
-     */
-    public $TemplateDescription;
-
-    /**
      * @var integer 模板id
      */
     public $TemplateId;
@@ -61,6 +56,11 @@ class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel
     public $RiskLevelId;
 
     /**
+     * @var string 模板的描述
+     */
+    public $TemplateDescription;
+
+    /**
      * @var array 脆弱项列表
      */
     public $RiskIdList;
@@ -68,9 +68,9 @@ class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel
     /**
      * @param string $DspaId dspa实例id
      * @param string $TemplateName 模板名称
-     * @param string $TemplateDescription 模板的描述
      * @param integer $TemplateId 模板id
      * @param integer $RiskLevelId 修改的风险等级id
+     * @param string $TemplateDescription 模板的描述
      * @param array $RiskIdList 脆弱项列表
      */
     function __construct()
@@ -94,16 +94,16 @@ class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel
             $this->TemplateName = $param["TemplateName"];
         }
 
-        if (array_key_exists("TemplateDescription",$param) and $param["TemplateDescription"] !== null) {
-            $this->TemplateDescription = $param["TemplateDescription"];
-        }
-
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
         }
 
         if (array_key_exists("RiskLevelId",$param) and $param["RiskLevelId"] !== null) {
             $this->RiskLevelId = $param["RiskLevelId"];
+        }
+
+        if (array_key_exists("TemplateDescription",$param) and $param["TemplateDescription"] !== null) {
+            $this->TemplateDescription = $param["TemplateDescription"];
         }
 
         if (array_key_exists("RiskIdList",$param) and $param["RiskIdList"] !== null) {

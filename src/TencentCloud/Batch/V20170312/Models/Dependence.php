@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 依赖关系
  *
  * @method string getStartTask() 获取依赖关系的起点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTask(string $StartTask) 设置依赖关系的起点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTask() 获取依赖关系的终点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTask(string $EndTask) 设置依赖关系的终点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Dependence extends AbstractModel
 {
     /**
      * @var string 依赖关系的起点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTask;
 
     /**
      * @var string 依赖关系的终点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTask;
 
     /**
      * @param string $StartTask 依赖关系的起点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTask 依赖关系的终点任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

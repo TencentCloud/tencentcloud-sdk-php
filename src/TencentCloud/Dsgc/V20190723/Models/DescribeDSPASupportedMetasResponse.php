@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDSPASupportedMetas返回参数结构体
  *
  * @method array getMetas() 获取支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetas(array $Metas) 设置支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDBInstanceLimit() 获取最大支持每批次同步数量
  * @method void setMaxDBInstanceLimit(integer $MaxDBInstanceLimit) 设置最大支持每批次同步数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeDSPASupportedMetasResponse extends AbstractModel
 {
     /**
      * @var array 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metas;
 
@@ -49,7 +46,6 @@ class DescribeDSPASupportedMetasResponse extends AbstractModel
 
     /**
      * @param array $Metas 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDBInstanceLimit 最大支持每批次同步数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

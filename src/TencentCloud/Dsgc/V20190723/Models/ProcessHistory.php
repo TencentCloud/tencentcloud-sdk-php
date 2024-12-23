@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 处理历史
  *
  * @method string getTime() 获取处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHandler() 获取处理人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHandler(string $Handler) 设置处理人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcessHistory extends AbstractModel
 {
     /**
      * @var string 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Handler;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
     /**
      * @param string $Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Handler 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

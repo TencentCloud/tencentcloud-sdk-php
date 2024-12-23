@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DSPA数据源的数据库信息
  *
  * @method string getDbName() 获取数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DSPADataSourceDbInfo extends AbstractModel
 {
     /**
      * @var string 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @param string $DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

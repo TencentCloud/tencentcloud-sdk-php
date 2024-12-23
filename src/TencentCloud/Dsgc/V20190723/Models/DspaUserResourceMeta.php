@@ -59,19 +59,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceAuthAccount() 获取授权账号名
  * @method void setResourceAuthAccount(string $ResourceAuthAccount) 设置授权账号名
  * @method string getInstanceType() 获取实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceValue() 获取实例值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceValue(string $InstanceValue) 设置实例值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGovernAuthStatus() 获取//治理授权状态（0：关闭 1：开启）
  * @method void setGovernAuthStatus(integer $GovernAuthStatus) 设置//治理授权状态（0：关闭 1：开启）
  * @method string getAuthRange() 获取授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthRange(string $AuthRange) 设置授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaUserResourceMeta extends AbstractModel
 {
@@ -172,13 +166,11 @@ class DspaUserResourceMeta extends AbstractModel
 
     /**
      * @var string 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 实例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceValue;
 
@@ -189,7 +181,6 @@ class DspaUserResourceMeta extends AbstractModel
 
     /**
      * @var string 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthRange;
 
@@ -214,12 +205,9 @@ class DspaUserResourceMeta extends AbstractModel
      * @param string $ResourceAuthType 授权方式
      * @param string $ResourceAuthAccount 授权账号名
      * @param string $InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceValue 实例值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GovernAuthStatus //治理授权状态（0：关闭 1：开启）
      * @param string $AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getDescription() 获取任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriod() 获取执行周期，0单次 1每天 2每周 3每月
  * @method void setPeriod(integer $Period) 设置执行周期，0单次 1每天 2每周 3每月
  * @method integer getPlan() 获取执行计划，0立即 1定时
@@ -33,25 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEnable() 获取任务开关；1 打开，0 关闭
  * @method void setEnable(integer $Enable) 设置任务开关；1 打开，0 关闭
  * @method DspaDiscoveryTaskDataSource getDataSourceInfo() 获取元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceInfo(DspaDiscoveryTaskDataSource $DataSourceInfo) 设置元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDefaultComplianceInfo() 获取当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultComplianceInfo(array $DefaultComplianceInfo) 设置当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomComplianceInfo() 获取该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomComplianceInfo(array $CustomComplianceInfo) 设置该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimingStartTime() 获取定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimingStartTime(string $TimingStartTime) 设置定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskDetail extends AbstractModel
 {
@@ -62,7 +50,6 @@ class DspaDiscoveryTaskDetail extends AbstractModel
 
     /**
      * @var string 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -83,51 +70,40 @@ class DspaDiscoveryTaskDetail extends AbstractModel
 
     /**
      * @var DspaDiscoveryTaskDataSource 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceInfo;
 
     /**
      * @var integer 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GeneralRuleSetEnable;
 
     /**
      * @var array 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultComplianceInfo;
 
     /**
      * @var array 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomComplianceInfo;
 
     /**
      * @var string 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimingStartTime;
 
     /**
      * @param string $Name 任务名称
      * @param string $Description 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 执行周期，0单次 1每天 2每周 3每月
      * @param integer $Plan 执行计划，0立即 1定时
      * @param integer $Enable 任务开关；1 打开，0 关闭
      * @param DspaDiscoveryTaskDataSource $DataSourceInfo 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

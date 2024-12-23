@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataSourceId(string $DataSourceId) 设置数据源ID
  * @method integer getEnable() 获取任务开关，0 关闭，1 启用
  * @method void setEnable(integer $Enable) 设置任务开关，0 关闭，1 启用
- * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
- * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method integer getPlan() 获取执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
  * @method void setPlan(integer $Plan) 设置执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
  * @method integer getPeriod() 获取扫描周期，0单次 1每天 2每周 3每月
@@ -52,6 +50,8 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+ * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
+ * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method string getDescription() 获取任务描述，最大长度为1024个字符
  * @method void setDescription(string $Description) 设置任务描述，最大长度为1024个字符
  * @method string getCondition() 获取用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
@@ -92,11 +92,6 @@ class CreateDSPADiscoveryTaskRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var integer 通用规则集开关，0 关闭，1 启用
-     */
-    public $GeneralRuleSetEnable;
-
-    /**
      * @var integer 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
      */
     public $Plan;
@@ -122,6 +117,12 @@ cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
      */
     public $DataSourceType;
+
+    /**
+     * @var integer 通用规则集开关，0 关闭，1 启用
+     * @deprecated
+     */
+    public $GeneralRuleSetEnable;
 
     /**
      * @var string 任务描述，最大长度为1024个字符
@@ -164,7 +165,6 @@ selfbuilt-db 表示自建数据库
      * @param string $Name 任务名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
      * @param string $DataSourceId 数据源ID
      * @param integer $Enable 任务开关，0 关闭，1 启用
-     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param integer $Plan 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
      * @param integer $Period 扫描周期，0单次 1每天 2每周 3每月
      * @param string $ResourceRegion 资源所在地域
@@ -176,6 +176,7 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param string $Description 任务描述，最大长度为1024个字符
      * @param string $Condition 用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
      * @param array $ComplianceGroupIds 合规组ID列表，最多支持添加5个
@@ -214,10 +215,6 @@ selfbuilt-db 表示自建数据库
             $this->Enable = $param["Enable"];
         }
 
-        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
-            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
-        }
-
         if (array_key_exists("Plan",$param) and $param["Plan"] !== null) {
             $this->Plan = $param["Plan"];
         }
@@ -232,6 +229,10 @@ selfbuilt-db 表示自建数据库
 
         if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
             $this->DataSourceType = $param["DataSourceType"];
+        }
+
+        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
+            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

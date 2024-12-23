@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 数据资产报告-cos的敏感资产报告详情
  *
  * @method integer getBucketNums() 获取桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketNums(integer $BucketNums) 设置桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveBucketNums() 获取敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveBucketNums(integer $SensitiveBucketNums) 设置敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileNums() 获取文件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileNums(integer $FileNums) 设置文件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFileNums() 获取敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFileNums(integer $SensitiveFileNums) 设置敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosAsset extends AbstractModel
 {
     /**
      * @var integer 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketNums;
 
     /**
      * @var integer 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveBucketNums;
 
     /**
      * @var integer 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileNums;
 
     /**
      * @var integer 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFileNums;
 
     /**
      * @param integer $BucketNums 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveBucketNums 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFileNums 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -210,6 +210,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPoolMode(string $IsPoolMode) 设置是否使用预留池
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSupportAI() 获取是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportAI(boolean $IsSupportAI) 设置是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayId() 获取网关id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayId(string $GatewayId) 设置网关id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGatewayState() 获取网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayState(integer $GatewayState) 设置网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsAIGateway() 获取是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAIGateway(boolean $IsAIGateway) 设置是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAIEngine() 获取1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAIEngine(integer $IsAIEngine) 设置1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -525,6 +545,36 @@ class DataEngineInfo extends AbstractModel
     public $IsPoolMode;
 
     /**
+     * @var boolean 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportAI;
+
+    /**
+     * @var string 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayId;
+
+    /**
+     * @var integer 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayState;
+
+    /**
+     * @var boolean 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAIGateway;
+
+    /**
+     * @var integer 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAIEngine;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -619,6 +669,16 @@ class DataEngineInfo extends AbstractModel
      * @param string $EngineNetworkName 引擎所在网络名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsPoolMode 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSupportAI 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayId 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GatewayState 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsAIGateway 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAIEngine 1:AI引擎，0:非AI引擎
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -865,6 +925,26 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("IsPoolMode",$param) and $param["IsPoolMode"] !== null) {
             $this->IsPoolMode = $param["IsPoolMode"];
+        }
+
+        if (array_key_exists("IsSupportAI",$param) and $param["IsSupportAI"] !== null) {
+            $this->IsSupportAI = $param["IsSupportAI"];
+        }
+
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
+        }
+
+        if (array_key_exists("GatewayState",$param) and $param["GatewayState"] !== null) {
+            $this->GatewayState = $param["GatewayState"];
+        }
+
+        if (array_key_exists("IsAIGateway",$param) and $param["IsAIGateway"] !== null) {
+            $this->IsAIGateway = $param["IsAIGateway"];
+        }
+
+        if (array_key_exists("IsAIEngine",$param) and $param["IsAIEngine"] !== null) {
+            $this->IsAIEngine = $param["IsAIEngine"];
         }
     }
 }

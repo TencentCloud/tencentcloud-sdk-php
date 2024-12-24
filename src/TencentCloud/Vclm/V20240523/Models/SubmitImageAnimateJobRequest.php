@@ -46,10 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAudio(boolean $EnableAudio) 设置结果视频是否保留模板音频。默认为true
  * @method boolean getEnableBodyJoins() 获取是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
  * @method void setEnableBodyJoins(boolean $EnableBodyJoins) 设置是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
- * @method boolean getEnableSegment() 获取最终视频是否保留原图的背景，默认不保留。
-
- * @method void setEnableSegment(boolean $EnableSegment) 设置最终视频是否保留原图的背景，默认不保留。
-
+ * @method boolean getEnableSegment() 获取是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
+ * @method void setEnableSegment(boolean $EnableSegment) 设置是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
  * @method integer getLogoAdd() 获取为生成视频添加标识的开关，默认为0。
 1：添加标识。
 0：不添加标识。
@@ -101,8 +103,9 @@ class SubmitImageAnimateJobRequest extends AbstractModel
     public $EnableBodyJoins;
 
     /**
-     * @var boolean 最终视频是否保留原图的背景，默认不保留。
-
+     * @var boolean 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
      */
     public $EnableSegment;
 
@@ -135,8 +138,9 @@ class SubmitImageAnimateJobRequest extends AbstractModel
 
      * @param boolean $EnableAudio 结果视频是否保留模板音频。默认为true
      * @param boolean $EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
-     * @param boolean $EnableSegment 最终视频是否保留原图的背景，默认不保留。
-
+     * @param boolean $EnableSegment 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
      * @param integer $LogoAdd 为生成视频添加标识的开关，默认为0。
 1：添加标识。
 0：不添加标识。

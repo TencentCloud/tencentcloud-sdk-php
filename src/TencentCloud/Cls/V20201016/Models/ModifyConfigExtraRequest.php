@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
 - multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
 - multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
- * @method string getLogFormat() 获取日志格式化方式，用于容器采集场景。
+ * @method string getLogFormat() 获取日志格式化方式，用于容器采集场景。目前已经废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
- * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。
+ * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。目前已经废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
  * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
@@ -136,7 +136,7 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $LogType;
 
     /**
-     * @var string 日志格式化方式，用于容器采集场景。
+     * @var string 日志格式化方式，用于容器采集场景。目前已经废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      */
@@ -215,7 +215,7 @@ class ModifyConfigExtraRequest extends AbstractModel
 - multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
 - multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
 - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
-     * @param string $LogFormat 日志格式化方式，用于容器采集场景。
+     * @param string $LogFormat 日志格式化方式，用于容器采集场景。目前已经废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType

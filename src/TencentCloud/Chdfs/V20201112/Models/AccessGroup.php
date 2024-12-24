@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置权限组描述
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getVpcType() 获取VPC网络类型（1：CVM；2：黑石1.0）
- * @method void setVpcType(integer $VpcType) 设置VPC网络类型（1：CVM；2：黑石1.0）
+ * @method integer getVpcType() 获取VPC网络类型（1：CVM）
+ * @method void setVpcType(integer $VpcType) 设置VPC网络类型（1：CVM）
  * @method string getVpcId() 获取VPC网络ID
  * @method void setVpcId(string $VpcId) 设置VPC网络ID
  */
@@ -56,7 +56,7 @@ class AccessGroup extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer VPC网络类型（1：CVM；2：黑石1.0）
+     * @var integer VPC网络类型（1：CVM）
      */
     public $VpcType;
 
@@ -70,7 +70,7 @@ class AccessGroup extends AbstractModel
      * @param string $AccessGroupName 权限组名称
      * @param string $Description 权限组描述
      * @param string $CreateTime 创建时间
-     * @param integer $VpcType VPC网络类型（1：CVM；2：黑石1.0）
+     * @param integer $VpcType VPC网络类型（1：CVM）
      * @param string $VpcId VPC网络ID
      */
     function __construct()

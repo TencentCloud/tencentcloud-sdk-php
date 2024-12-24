@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 最多支持256个 utf-8 字符，支持中、英文。
  * @method void setPrompt(string $Prompt) 设置对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+ * @method string getNegativePrompt() 获取反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+ * @method void setNegativePrompt(string $NegativePrompt) 设置反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
  * @method string getProduct() 获取商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
  * @method void setProduct(string $Product) 设置商品图中的商品主体名称。
@@ -80,6 +84,12 @@ class ReplaceBackgroundRequest extends AbstractModel
     public $Prompt;
 
     /**
+     * @var string 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public $NegativePrompt;
+
+    /**
      * @var string 商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
      */
@@ -126,6 +136,8 @@ class ReplaceBackgroundRequest extends AbstractModel
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $Prompt 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+     * @param string $NegativePrompt 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
      * @param string $Product 商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
      * @param string $MaskUrl 商品 Mask 图 Url，要求背景透明，保留商品主体。
@@ -164,6 +176,10 @@ class ReplaceBackgroundRequest extends AbstractModel
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("NegativePrompt",$param) and $param["NegativePrompt"] !== null) {
+            $this->NegativePrompt = $param["NegativePrompt"];
         }
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {

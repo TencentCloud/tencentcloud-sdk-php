@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudapp\V20220530\Models as Models;
 
 /**
- * @method Models\VerifyLicenseResponse VerifyLicense(Models\VerifyLicenseRequest $req) 通过运行时roleId查询对应的软件 LICENSE
+ * @method Models\VerifyLicenseResponse VerifyLicense(Models\VerifyLicenseRequest $req) 从软件进程读取 LICENSE。
  */
 
 class CloudappClient extends AbstractClient

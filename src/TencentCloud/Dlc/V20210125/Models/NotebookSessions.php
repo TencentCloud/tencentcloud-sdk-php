@@ -50,6 +50,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkUiUrl(string $SparkUiUrl) 设置spark ui地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionType() 获取session类型，group：资源组session independent：独立资源session，不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionType(string $SessionType) 设置session类型，group：资源组session independent：独立资源session，不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataEngineId() 获取引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSessions extends AbstractModel
 {
@@ -113,6 +129,30 @@ class NotebookSessions extends AbstractModel
     public $SparkUiUrl;
 
     /**
+     * @var string session类型，group：资源组session independent：独立资源session，不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionType;
+
+    /**
+     * @var string 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataEngineId;
+
+    /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string 资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $SessionId Session唯一标识
      * @param string $ProxyUser 代理用户，默认为root
@@ -127,6 +167,14 @@ class NotebookSessions extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建者
      * @param string $SparkUiUrl spark ui地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionType session类型，group：资源组session independent：独立资源session，不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataEngineId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +232,22 @@ class NotebookSessions extends AbstractModel
 
         if (array_key_exists("SparkUiUrl",$param) and $param["SparkUiUrl"] !== null) {
             $this->SparkUiUrl = $param["SparkUiUrl"];
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

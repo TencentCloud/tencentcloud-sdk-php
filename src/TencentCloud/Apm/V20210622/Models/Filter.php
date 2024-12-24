@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 查询过滤参数
  *
  * @method string getType() 获取过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Type 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

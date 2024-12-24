@@ -23,6 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Essbasic\V20210526\Models as Models;
 
 /**
+ * @method Models\ArchiveDynamicFlowResponse ArchiveDynamicFlow(Models\ArchiveDynamicFlowRequest $req) 该接口用于结束动态签署方2.0的合同流程。
+
+
+**功能开通**
+- 动态签署方2.0功能的使用需要先<font color="red">联系产品经理开通模块化计费功能</font>，然后到控制台中打开此功能。详细的使用说明请参考<a href="https://qian.tencent.com/developers/company/dynamic_signer_v2" target="_blank">动态签署方2.0</a>文档。
+
+**使用条件**
+- 此接口只能在<font color="red">合同处于非终态且<b>所有的签署方都已经完成签署</b></font>。一旦合同进入终态（例如：过期、拒签、撤销或者调用过此接口成功过），将无法通过此接口结束合同流程。
  * @method Models\ChannelBatchCancelFlowsResponse ChannelBatchCancelFlows(Models\ChannelBatchCancelFlowsRequest $req) 通过合同编号批量撤销合同，单次最多支持撤销100份合同。
 
 适用场景：如果某个合同当前**至少还有一方没有签署**，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
@@ -115,6 +123,14 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注: 
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
+ * @method Models\ChannelCreateDynamicFlowApproverResponse ChannelCreateDynamicFlowApprover(Models\ChannelCreateDynamicFlowApproverRequest $req) 接口（ChannelCreateDynamicFlowApprover）用来补充<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>发起的动态合同的签署人信息
+**注**: 
+<ul>
+<li>此接口需要保证：渠道企业已开启：模块化计费能力，</li>
+<li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
+<li>此接口需要保证：合同发起时指定开启了动态合同</li>
+<li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
+</ul>
  * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建可嵌入web页面的URL（此web页面可以通过iframe方式嵌入到贵方系统的网页中），支持以下类型的Web链接创建：
 1. 创建印章
 2. 创建模板

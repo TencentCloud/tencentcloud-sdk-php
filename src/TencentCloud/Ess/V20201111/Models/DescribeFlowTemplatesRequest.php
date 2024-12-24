@@ -37,9 +37,13 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>**0**：模板列表及详情（默认）</li>
 <li>**1**：仅模板列表</li></ul>
  * @method array getFilters() 获取搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
  * @method void setFilters(array $Filters) 设置搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
  * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`
@@ -95,7 +99,9 @@ class DescribeFlowTemplatesRequest extends AbstractModel
 
     /**
      * @var array 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
      */
     public $Filters;
 
@@ -155,7 +161,9 @@ Key：template-id Values：需要查询的模板Id列表
 <ul><li>**0**：模板列表及详情（默认）</li>
 <li>**1**：仅模板列表</li></ul>
      * @param array $Filters 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
      * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`

@@ -35,65 +35,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQosLevel() 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method string getInstanceChargeType() 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBandwidthLimitType() 获取限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method boolean getRoutePriorityFlag() 获取是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
  * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) 设置是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
  * @method integer getRouteTableCount() 获取实例关联的路由表个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableCount(integer $RouteTableCount) 设置实例关联的路由表个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteTableFlag() 获取是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableFlag(boolean $RouteTableFlag) 设置是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSecurityLock() 获取`true`：实例已被封禁，流量不通，`false`:解封禁。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSecurityLock(boolean $IsSecurityLock) 设置`true`：实例已被封禁，流量不通，`false`:解封禁。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteBroadcastPolicyFlag() 获取是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteBroadcastPolicyFlag(boolean $RouteBroadcastPolicyFlag) 设置是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteECMPFlag() 获取是否开启等价路由功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteECMPFlag(boolean $RouteECMPFlag) 设置是否开启等价路由功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteOverlapFlag() 获取是否开启路由重叠功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteOverlapFlag(boolean $RouteOverlapFlag) 设置是否开启路由重叠功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTrafficMarkingPolicyFlag() 获取是否开启QOS。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficMarkingPolicyFlag(boolean $TrafficMarkingPolicyFlag) 设置是否开启QOS。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteSelectPolicyFlag() 获取是否开启路由表选择策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteSelectPolicyFlag(boolean $RouteSelectPolicyFlag) 设置是否开启路由表选择策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDirectConnectAccelerateChannelFlag() 获取是否开启二层云联网通道。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectConnectAccelerateChannelFlag(boolean $DirectConnectAccelerateChannelFlag) 设置是否开启二层云联网通道。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIpv6Flag() 获取是否支持ipv6路由表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Flag(boolean $Ipv6Flag) 设置是否支持ipv6路由表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMrtbAggregatePolicyFlag() 获取是否支持路由表聚合策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMrtbAggregatePolicyFlag(boolean $MrtbAggregatePolicyFlag) 设置是否支持路由表聚合策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMrtbPolicyValueFlag() 获取是否支持策略值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMrtbPolicyValueFlag(boolean $MrtbPolicyValueFlag) 设置是否支持策略值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -134,13 +106,11 @@ class CCN extends AbstractModel
 
     /**
      * @var string 付费类型，PREPAID为预付费，POSTPAID为后付费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceChargeType;
 
     /**
      * @var string 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimitType;
 
@@ -156,73 +126,61 @@ class CCN extends AbstractModel
 
     /**
      * @var integer 实例关联的路由表个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableCount;
 
     /**
      * @var boolean 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableFlag;
 
     /**
      * @var boolean `true`：实例已被封禁，流量不通，`false`:解封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSecurityLock;
 
     /**
      * @var boolean 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteBroadcastPolicyFlag;
 
     /**
      * @var boolean 是否开启等价路由功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteECMPFlag;
 
     /**
      * @var boolean 是否开启路由重叠功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteOverlapFlag;
 
     /**
      * @var boolean 是否开启QOS。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficMarkingPolicyFlag;
 
     /**
      * @var boolean 是否开启路由表选择策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteSelectPolicyFlag;
 
     /**
      * @var boolean 是否开启二层云联网通道。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DirectConnectAccelerateChannelFlag;
 
     /**
      * @var boolean 是否支持ipv6路由表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6Flag;
 
     /**
      * @var boolean 是否支持路由表聚合策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MrtbAggregatePolicyFlag;
 
     /**
      * @var boolean 是否支持策略值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MrtbPolicyValueFlag;
 
@@ -235,35 +193,21 @@ class CCN extends AbstractModel
      * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      * @param string $InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BandwidthLimitType 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
      * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
      * @param integer $RouteTableCount 实例关联的路由表个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteTableFlag 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSecurityLock `true`：实例已被封禁，流量不通，`false`:解封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteECMPFlag 是否开启等价路由功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteOverlapFlag 是否开启路由重叠功能。`False` 未开启，`True` 开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TrafficMarkingPolicyFlag 是否开启QOS。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteSelectPolicyFlag 是否开启路由表选择策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Ipv6Flag 是否支持ipv6路由表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MrtbAggregatePolicyFlag 是否支持路由表聚合策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MrtbPolicyValueFlag 是否支持策略值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

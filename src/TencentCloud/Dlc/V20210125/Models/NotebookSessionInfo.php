@@ -88,6 +88,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionType() 获取session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionType(string $SessionType) 设置session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataEngineId() 获取引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPodSize() 获取session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodSize(integer $PodSize) 设置session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPodNumbers() 获取pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodNumbers(integer $PodNumbers) 设置pod数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSessionInfo extends AbstractModel
 {
@@ -206,6 +230,42 @@ class NotebookSessionInfo extends AbstractModel
     public $ExecutorMaxNumbers;
 
     /**
+     * @var string session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionType;
+
+    /**
+     * @var string 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataEngineId;
+
+    /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var integer session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodSize;
+
+    /**
+     * @var integer pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodNumbers;
+
+    /**
      * @param string $Name Session名称
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $DataEngineName DLC Spark作业引擎名称
@@ -239,6 +299,18 @@ class NotebookSessionInfo extends AbstractModel
      * @param string $SparkUiUrl Spark ui地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataEngineId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PodSize session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PodNumbers pod数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -342,6 +414,30 @@ class NotebookSessionInfo extends AbstractModel
 
         if (array_key_exists("ExecutorMaxNumbers",$param) and $param["ExecutorMaxNumbers"] !== null) {
             $this->ExecutorMaxNumbers = $param["ExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("PodSize",$param) and $param["PodSize"] !== null) {
+            $this->PodSize = $param["PodSize"];
+        }
+
+        if (array_key_exists("PodNumbers",$param) and $param["PodNumbers"] !== null) {
+            $this->PodNumbers = $param["PodNumbers"];
         }
     }
 }

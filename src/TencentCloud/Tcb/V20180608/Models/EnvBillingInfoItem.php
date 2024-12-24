@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtPackageType(string $ExtPackageType) 设置环境套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvCharged() 获取是否付费期环境，可取值：yes/no。
+ * @method void setEnvCharged(string $EnvCharged) 设置是否付费期环境，可取值：yes/no。
+ * @method string getEnvActivated() 获取是否已激活，可取值：yes/no。
+ * @method void setEnvActivated(string $EnvActivated) 设置是否已激活，可取值：yes/no。
  */
 class EnvBillingInfoItem extends AbstractModel
 {
@@ -165,6 +169,16 @@ class EnvBillingInfoItem extends AbstractModel
     public $ExtPackageType;
 
     /**
+     * @var string 是否付费期环境，可取值：yes/no。
+     */
+    public $EnvCharged;
+
+    /**
+     * @var string 是否已激活，可取值：yes/no。
+     */
+    public $EnvActivated;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
      * @param boolean $IsAutoRenew 自动续费标记
@@ -192,6 +206,8 @@ class EnvBillingInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtPackageType 环境套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvCharged 是否付费期环境，可取值：yes/no。
+     * @param string $EnvActivated 是否已激活，可取值：yes/no。
      */
     function __construct()
     {
@@ -265,6 +281,14 @@ class EnvBillingInfoItem extends AbstractModel
 
         if (array_key_exists("ExtPackageType",$param) and $param["ExtPackageType"] !== null) {
             $this->ExtPackageType = $param["ExtPackageType"];
+        }
+
+        if (array_key_exists("EnvCharged",$param) and $param["EnvCharged"] !== null) {
+            $this->EnvCharged = $param["EnvCharged"];
+        }
+
+        if (array_key_exists("EnvActivated",$param) and $param["EnvActivated"] !== null) {
+            $this->EnvActivated = $param["EnvActivated"];
         }
     }
 }

@@ -69,9 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事物持续时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTemplateInfo() 获取日志命中规则模板的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateInfo(array $TemplateInfo) 设置日志命中规则模板的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTrxId() 获取 事务ID
+ * @method void setTrxId(integer $TrxId) 设置 事务ID
  */
 class AuditLog extends AbstractModel
 {
@@ -173,9 +173,13 @@ class AuditLog extends AbstractModel
 
     /**
      * @var array 日志命中规则模板的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateInfo;
+
+    /**
+     * @var integer  事务ID
+     */
+    public $TrxId;
 
     /**
      * @param integer $AffectRows 影响行数。
@@ -203,7 +207,7 @@ class AuditLog extends AbstractModel
      * @param integer $TrxLivingTime 事物持续时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TemplateInfo 日志命中规则模板的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TrxId  事务ID
      */
     function __construct()
     {
@@ -297,6 +301,10 @@ class AuditLog extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TemplateInfo, $obj);
             }
+        }
+
+        if (array_key_exists("TrxId",$param) and $param["TrxId"] !== null) {
+            $this->TrxId = $param["TrxId"];
         }
     }
 }

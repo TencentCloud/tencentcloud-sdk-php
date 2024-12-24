@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略详情
  *
- * @method string getCosBucketName() 获取备份桶列表
+ * @method string getCosBucketName() 获取备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosBucketName(string $CosBucketName) 设置备份桶列表
+ * @method void setCosBucketName(string $CosBucketName) 设置备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetainDays() 获取备份保留天数
  * @method void setRetainDays(integer $RetainDays) 设置备份保留天数
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ScheduleStrategy extends AbstractModel
 {
     /**
-     * @var string 备份桶列表
+     * @var string 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucketName;
@@ -72,7 +72,7 @@ class ScheduleStrategy extends AbstractModel
     public $NextBackupTime;
 
     /**
-     * @param string $CosBucketName 备份桶列表
+     * @param string $CosBucketName 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetainDays 备份保留天数
      * @param string $WeekDays 备份的天

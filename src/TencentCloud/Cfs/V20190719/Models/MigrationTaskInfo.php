@@ -29,25 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMigrationMode() 获取迁移模式，默认为0。0: 全量迁移
  * @method void setMigrationMode(integer $MigrationMode) 设置迁移模式，默认为0。0: 全量迁移
  * @method string getBucketName() 获取数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketName(string $BucketName) 设置数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketRegion() 获取数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketRegion(string $BucketRegion) 设置数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketAddress() 获取数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketAddress(string $BucketAddress) 设置数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getListAddress() 获取清单地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListAddress(string $ListAddress) 设置清单地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFsName() 获取文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFsName(string $FsName) 设置文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileSystemId() 获取文件系统实例Id
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统实例Id
  * @method string getFsPath() 获取文件系统路径
@@ -57,51 +47,29 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getEndTime() 获取完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取迁移状态。0: 已完成；1: 进行中；2: 已终止
  * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 进行中；2: 已终止
  * @method integer getFileTotalCount() 获取文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTotalCount(integer $FileTotalCount) 设置文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileMigratedCount() 获取已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMigratedCount(integer $FileMigratedCount) 设置已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileFailedCount() 获取迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileFailedCount(integer $FileFailedCount) 设置迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileTotalSize() 获取文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTotalSize(integer $FileTotalSize) 设置文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileMigratedSize() 获取已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMigratedSize(integer $FileMigratedSize) 设置已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileFailedSize() 获取迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileFailedSize(integer $FileFailedSize) 设置迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileTotalList() 获取全部清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTotalList(string $FileTotalList) 设置全部清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileCompletedList() 获取已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileCompletedList(string $FileCompletedList) 设置已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileFailedList() 获取失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileFailedList(string $FileFailedList) 设置失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketPath() 获取源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketPath(string $BucketPath) 设置源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
  * @method void setDirection(integer $Direction) 设置迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
  */
@@ -129,31 +97,26 @@ class MigrationTaskInfo extends AbstractModel
 
     /**
      * @var string 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketName;
 
     /**
      * @var string 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketRegion;
 
     /**
      * @var string 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketAddress;
 
     /**
      * @var string 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListAddress;
 
     /**
      * @var string 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FsName;
 
@@ -179,7 +142,6 @@ class MigrationTaskInfo extends AbstractModel
 
     /**
      * @var integer 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -190,61 +152,51 @@ class MigrationTaskInfo extends AbstractModel
 
     /**
      * @var integer 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTotalCount;
 
     /**
      * @var integer 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMigratedCount;
 
     /**
      * @var integer 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileFailedCount;
 
     /**
      * @var integer 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTotalSize;
 
     /**
      * @var integer 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMigratedSize;
 
     /**
      * @var integer 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileFailedSize;
 
     /**
      * @var string 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTotalList;
 
     /**
      * @var string 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileCompletedList;
 
     /**
      * @var string 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileFailedList;
 
     /**
      * @var string 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketPath;
 
@@ -259,42 +211,26 @@ class MigrationTaskInfo extends AbstractModel
      * @param integer $MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
      * @param integer $MigrationMode 迁移模式，默认为0。0: 全量迁移
      * @param string $BucketName 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketRegion 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketAddress 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListAddress 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FsName 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSystemId 文件系统实例Id
      * @param string $FsPath 文件系统路径
      * @param integer $CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
      * @param integer $CreateTime 创建时间
      * @param integer $EndTime 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
      * @param integer $FileTotalCount 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileMigratedCount 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileFailedCount 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileTotalSize 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileMigratedSize 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileFailedSize 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileTotalList 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileCompletedList 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileFailedList 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketPath 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
      */
     function __construct()

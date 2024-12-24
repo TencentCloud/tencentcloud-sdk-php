@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserVPCId(string $UserVPCId) 设置私有网络
  * @method string getUserSubnetId() 获取子网
  * @method void setUserSubnetId(string $UserSubnetId) 设置子网
- * @method string getProductVersion() 获取版本
- * @method void setProductVersion(string $ProductVersion) 设置版本
+ * @method string getProductVersion() 获取系统版本
+ * @method void setProductVersion(string $ProductVersion) 设置系统版本
  * @method Charge getChargeProperties() 获取计费方式
  * @method void setChargeProperties(Charge $ChargeProperties) 设置计费方式
  * @method string getInstanceName() 获取实例名称
@@ -44,8 +44,8 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
  * @method void setClsLogSetId(string $ClsLogSetId) 设置日志主题ID
  * @method string getCosBucketName() 获取COS桶名称
  * @method void setCosBucketName(string $CosBucketName) 设置COS桶名称
- * @method integer getMountDiskType() 获取是否是裸盘挂载
- * @method void setMountDiskType(integer $MountDiskType) 设置是否是裸盘挂载
+ * @method integer getMountDiskType() 获取是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+ * @method void setMountDiskType(integer $MountDiskType) 设置是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
  * @method boolean getHAZk() 获取是否是ZK高可用
  * @method void setHAZk(boolean $HAZk) 设置是否是ZK高可用
  * @method NodeSpec getCommonSpec() 获取ZK节点
@@ -78,7 +78,7 @@ class CreateInstanceNewRequest extends AbstractModel
     public $UserSubnetId;
 
     /**
-     * @var string 版本
+     * @var string 系统版本
      */
     public $ProductVersion;
 
@@ -115,7 +115,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     public $CosBucketName;
 
     /**
-     * @var integer 是否是裸盘挂载
+     * @var integer 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
      */
     public $MountDiskType;
 
@@ -140,7 +140,7 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
      * @param boolean $HaFlag 是否高可用
      * @param string $UserVPCId 私有网络
      * @param string $UserSubnetId 子网
-     * @param string $ProductVersion 版本
+     * @param string $ProductVersion 系统版本
      * @param Charge $ChargeProperties 计费方式
      * @param string $InstanceName 实例名称
      * @param NodeSpec $DataSpec 数据节点
@@ -148,7 +148,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
      * @param Tag $Tags 标签列表（废弃）
      * @param string $ClsLogSetId 日志主题ID
      * @param string $CosBucketName COS桶名称
-     * @param integer $MountDiskType 是否是裸盘挂载
+     * @param integer $MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
      * @param boolean $HAZk 是否是ZK高可用
      * @param NodeSpec $CommonSpec ZK节点
 SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取

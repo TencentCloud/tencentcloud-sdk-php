@@ -85,17 +85,11 @@ Available:可用
 NotAvailable：不可用
 Available:可用
  * @method TieringDetailInfo getTieringDetail() 获取分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AutoScaleUpRule getAutoScaleUpRule() 获取文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) 设置文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -225,19 +219,16 @@ Available:可用
 
     /**
      * @var TieringDetailInfo 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TieringDetail;
 
     /**
      * @var AutoScaleUpRule 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoScaleUpRule;
 
     /**
      * @var string 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
@@ -275,11 +266,8 @@ Available:可用
 NotAvailable：不可用
 Available:可用
      * @param TieringDetailInfo $TieringDetail 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScaleUpRule $AutoScaleUpRule 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

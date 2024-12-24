@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class NodeInfos extends AbstractModel
 {
@@ -86,6 +88,11 @@ class NodeInfos extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $NodeName 节点名称
      * @param integer $Status 节点状态
      * @param string $Ip 节点ip
@@ -96,6 +103,7 @@ class NodeInfos extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class NodeInfos extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

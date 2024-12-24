@@ -22,40 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAttachKey() 获取升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachKey(string $AttachKey) 设置升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttachValue() 获取升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachValue(string $AttachValue) 设置升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAttachInfo extends AbstractModel
 {
     /**
      * @var string 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachKey;
 
     /**
      * @var string 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachValue;
 
     /**
      * @param string $AttachKey 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttachValue 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

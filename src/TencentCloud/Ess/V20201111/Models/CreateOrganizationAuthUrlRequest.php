@@ -68,13 +68,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置认证人身份证号
  * @method string getAdminIdCardType() 获取认证人证件类型， 支持以下类型
 <ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
-<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method void setAdminIdCardType(string $AdminIdCardType) 设置认证人证件类型， 支持以下类型
 <ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
-<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method boolean getUniformSocialCreditCodeSame() 获取对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
  * @method void setUniformSocialCreditCodeSame(boolean $UniformSocialCreditCodeSame) 设置对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
@@ -193,8 +193,8 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     /**
      * @var string 认证人证件类型， 支持以下类型
 <ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
-<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public $AdminIdCardType;
@@ -285,8 +285,8 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
      * @param string $AdminIdCardNumber 认证人身份证号
      * @param string $AdminIdCardType 认证人证件类型， 支持以下类型
 <ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
-<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      * @param boolean $UniformSocialCreditCodeSame 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      * @param boolean $LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>

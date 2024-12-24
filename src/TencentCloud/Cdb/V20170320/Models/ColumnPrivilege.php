@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 列权限信息
  *
  * @method string getDatabase() 获取数据库名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTable() 获取数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(string $Table) 设置数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getColumn() 获取数据库列名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumn(string $Column) 设置数据库列名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivileges() 获取权限信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivileges(array $Privileges) 设置权限信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnPrivilege extends AbstractModel
 {
     /**
      * @var string 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var string 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @var string 数据库列名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Column;
 
     /**
      * @var array 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privileges;
 
     /**
      * @param string $Database 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Table 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Column 数据库列名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Privileges 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

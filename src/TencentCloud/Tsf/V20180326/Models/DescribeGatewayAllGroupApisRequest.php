@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayDeployGroupId() 获取网关部署组ID
  * @method void setGatewayDeployGroupId(string $GatewayDeployGroupId) 设置网关部署组ID
- * @method string getSearchWord() 获取搜索关键字，支持分组名称或API Path
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字，支持分组名称或API Path
+ * @method string getSearchWord() 获取搜索关键字，支持命名空间名称或服务名称
+ * @method void setSearchWord(string $SearchWord) 设置搜索关键字，支持命名空间名称或服务名称
  */
 class DescribeGatewayAllGroupApisRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeGatewayAllGroupApisRequest extends AbstractModel
     public $GatewayDeployGroupId;
 
     /**
-     * @var string 搜索关键字，支持分组名称或API Path
+     * @var string 搜索关键字，支持命名空间名称或服务名称
      */
     public $SearchWord;
 
     /**
      * @param string $GatewayDeployGroupId 网关部署组ID
-     * @param string $SearchWord 搜索关键字，支持分组名称或API Path
+     * @param string $SearchWord 搜索关键字，支持命名空间名称或服务名称
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 分层存储详细信息
  *
  * @method integer getTieringSizeInBytes() 获取低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) 设置低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecondaryTieringSizeInBytes() 获取冷存储容量
  * @method void setSecondaryTieringSizeInBytes(integer $SecondaryTieringSizeInBytes) 设置冷存储容量
  */
@@ -31,7 +29,6 @@ class TieringDetailInfo extends AbstractModel
 {
     /**
      * @var integer 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TieringSizeInBytes;
 
@@ -42,7 +39,6 @@ class TieringDetailInfo extends AbstractModel
 
     /**
      * @param integer $TieringSizeInBytes 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecondaryTieringSizeInBytes 冷存储容量
      */
     function __construct()

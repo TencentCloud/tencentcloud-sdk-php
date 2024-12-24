@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUniqVpcId() 获取VpcId： vpc-xadsafsdasd
  * @method void setUniqVpcId(string $UniqVpcId) 设置VpcId： vpc-xadsafsdasd
  * @method string getRegion() 获取Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccountVpcInfo extends AbstractModel
 {
@@ -44,30 +38,24 @@ class AccountVpcInfo extends AbstractModel
 
     /**
      * @var string Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @param string $UniqVpcId VpcId： vpc-xadsafsdasd
      * @param string $Region Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

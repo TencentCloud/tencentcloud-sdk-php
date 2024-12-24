@@ -184,6 +184,20 @@ rtmp、rtmps、rtsp、rtp、srt。
 rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+ * @method integer getFileIndex() 获取指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+ * @method void setFileIndex(integer $FileIndex) 设置指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+ * @method integer getOffsetTime() 获取指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+ * @method void setOffsetTime(integer $OffsetTime) 设置指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
  * @method string getBackupSourceType() 获取备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -380,6 +394,21 @@ rtmp、rtmps、rtsp、rtp、srt。
     public $ToUrl;
 
     /**
+     * @var integer 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     */
+    public $FileIndex;
+
+    /**
+     * @var integer 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+     */
+    public $OffsetTime;
+
+    /**
      * @var string 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -511,6 +540,13 @@ https://cloud.tencent.com/document/product/267/56208
 rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+     * @param integer $FileIndex 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     * @param integer $OffsetTime 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
      * @param string $BackupSourceType 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -612,6 +648,14 @@ PullVodPushLive -点播。
 
         if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
             $this->ToUrl = $param["ToUrl"];
+        }
+
+        if (array_key_exists("FileIndex",$param) and $param["FileIndex"] !== null) {
+            $this->FileIndex = $param["FileIndex"];
+        }
+
+        if (array_key_exists("OffsetTime",$param) and $param["OffsetTime"] !== null) {
+            $this->OffsetTime = $param["OffsetTime"];
         }
 
         if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {

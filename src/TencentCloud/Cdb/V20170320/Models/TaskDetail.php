@@ -85,9 +85,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAsyncRequestId() 获取异步任务的请求 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
  * @method array getTaskAttachInfo() 获取任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskAttachInfo(array $TaskAttachInfo) 设置任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
@@ -165,7 +163,6 @@ class TaskDetail extends AbstractModel
 
     /**
      * @var array 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAttachInfo;
 
@@ -203,7 +200,6 @@ class TaskDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncRequestId 异步任务的请求 ID。
      * @param array $TaskAttachInfo 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

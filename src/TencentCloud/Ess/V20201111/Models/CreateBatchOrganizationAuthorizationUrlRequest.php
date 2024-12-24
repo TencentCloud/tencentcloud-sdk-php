@@ -35,14 +35,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSubTaskIds() 获取企业批量认证链接的子任务 SubTaskId，该 SubTaskId 是通过接口 查询企业批量认证链接 DescribeBatchOrganizationRegistrationUrls 获得。此参数需与超管个人三要素（AdminName，AdminMobile，AdminIdCardNumber）配合使用。若 SubTaskId 不属于传入的超级管理员，将进行筛选。
  * @method void setSubTaskIds(array $SubTaskIds) 设置企业批量认证链接的子任务 SubTaskId，该 SubTaskId 是通过接口 查询企业批量认证链接 DescribeBatchOrganizationRegistrationUrls 获得。此参数需与超管个人三要素（AdminName，AdminMobile，AdminIdCardNumber）配合使用。若 SubTaskId 不属于传入的超级管理员，将进行筛选。
  * @method string getAdminIdCardType() 获取组织机构超管证件类型支持以下类型
-- ID_CARD : 居民身份证 (默认值)
--  HONGKONG_AND_MACAO : 港澳居民来往内地通行证
-- HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)
+- ID_CARD : 中国大陆居民身份证 (默认值)
+-  HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)
 此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardType保持一致。
  * @method void setAdminIdCardType(string $AdminIdCardType) 设置组织机构超管证件类型支持以下类型
-- ID_CARD : 居民身份证 (默认值)
--  HONGKONG_AND_MACAO : 港澳居民来往内地通行证
-- HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)
+- ID_CARD : 中国大陆居民身份证 (默认值)
+-  HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)
 此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardType保持一致。
  * @method string getAdminIdCardNumber() 获取组织机构超管证件号。 在注册流程中，必须是超管本人进行操作。此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardNumber保持一致。
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置组织机构超管证件号。 在注册流程中，必须是超管本人进行操作。此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardNumber保持一致。
@@ -80,9 +80,9 @@ class CreateBatchOrganizationAuthorizationUrlRequest extends AbstractModel
 
     /**
      * @var string 组织机构超管证件类型支持以下类型
-- ID_CARD : 居民身份证 (默认值)
--  HONGKONG_AND_MACAO : 港澳居民来往内地通行证
-- HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)
+- ID_CARD : 中国大陆居民身份证 (默认值)
+-  HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)
 此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardType保持一致。
      */
     public $AdminIdCardType;
@@ -106,9 +106,9 @@ class CreateBatchOrganizationAuthorizationUrlRequest extends AbstractModel
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $SubTaskIds 企业批量认证链接的子任务 SubTaskId，该 SubTaskId 是通过接口 查询企业批量认证链接 DescribeBatchOrganizationRegistrationUrls 获得。此参数需与超管个人三要素（AdminName，AdminMobile，AdminIdCardNumber）配合使用。若 SubTaskId 不属于传入的超级管理员，将进行筛选。
      * @param string $AdminIdCardType 组织机构超管证件类型支持以下类型
-- ID_CARD : 居民身份证 (默认值)
--  HONGKONG_AND_MACAO : 港澳居民来往内地通行证
-- HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)
+- ID_CARD : 中国大陆居民身份证 (默认值)
+-  HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)
 此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardType保持一致。
      * @param string $AdminIdCardNumber 组织机构超管证件号。 在注册流程中，必须是超管本人进行操作。此参数需要跟[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)中 AdminIdCardNumber保持一致。
      * @param string $Endpoint 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul>

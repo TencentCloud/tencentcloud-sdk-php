@@ -62,6 +62,16 @@ use TencentCloud\Common\AbstractModel;
 0：牙齿增强关闭
 1：牙齿增强打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
+ * @method float getMakeupTransferRadio() 获取妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+ * @method void setMakeupTransferRadio(float $MakeupTransferRadio) 设置妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
  */
 class FusionUltraParam extends AbstractModel
 {
@@ -107,6 +117,15 @@ class FusionUltraParam extends AbstractModel
     public $TeethEnhanceRadio;
 
     /**
+     * @var float 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+     */
+    public $MakeupTransferRadio;
+
+    /**
      * @param float $WarpRadio 拉脸强度。主要用于调整生成结果人脸脸型更像素材模板还是用户人脸。取值越大越像用户人脸。
 取值范围：0-1之间。默认取值0.7。
 
@@ -127,6 +146,11 @@ class FusionUltraParam extends AbstractModel
 牙齿增强，修复牙齿。当生成牙齿不好（如牙齿裂开）可以打开此开关
 0：牙齿增强关闭
 1：牙齿增强打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+     * @param float $MakeupTransferRadio 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
 该参数仅对SwapModelType（模型类型）取值1-5生效
      */
     function __construct()
@@ -160,6 +184,10 @@ class FusionUltraParam extends AbstractModel
 
         if (array_key_exists("TeethEnhanceRadio",$param) and $param["TeethEnhanceRadio"] !== null) {
             $this->TeethEnhanceRadio = $param["TeethEnhanceRadio"];
+        }
+
+        if (array_key_exists("MakeupTransferRadio",$param) and $param["MakeupTransferRadio"] !== null) {
+            $this->MakeupTransferRadio = $param["MakeupTransferRadio"];
         }
     }
 }

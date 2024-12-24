@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 数据库权限
  *
  * @method array getPrivileges() 获取权限信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivileges(array $Privileges) 设置权限信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabase() 获取数据库名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabasePrivilege extends AbstractModel
 {
     /**
      * @var array 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privileges;
 
     /**
      * @var string 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @param array $Privileges 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Database 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

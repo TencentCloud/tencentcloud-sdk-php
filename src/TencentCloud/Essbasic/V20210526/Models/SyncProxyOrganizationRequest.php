@@ -50,14 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  * @method string getProxyLegalIdCardType() 获取第三方平台子客企业法定代表人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li></ul>
-注: `现在仅支持ID_CARD居民身份证类型`
+注: `现在仅支持ID_CARD中国大陆居民身份证类型`
  * @method void setProxyLegalIdCardType(string $ProxyLegalIdCardType) 设置第三方平台子客企业法定代表人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li></ul>
-注: `现在仅支持ID_CARD居民身份证类型`
+注: `现在仅支持ID_CARD中国大陆居民身份证类型`
  * @method string getProxyLegalIdCardNumber() 获取第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
  * @method void setProxyLegalIdCardNumber(string $ProxyLegalIdCardNumber) 设置第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
  * @method string getProxyAddress() 获取第三方平台子客企业详细住所，最大长度500个字符
 
 注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
@@ -109,13 +109,13 @@ class SyncProxyOrganizationRequest extends AbstractModel
     /**
      * @var string 第三方平台子客企业法定代表人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li></ul>
-注: `现在仅支持ID_CARD居民身份证类型`
+注: `现在仅支持ID_CARD中国大陆居民身份证类型`
      */
     public $ProxyLegalIdCardType;
 
     /**
      * @var string 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      */
     public $ProxyLegalIdCardNumber;
 
@@ -143,9 +143,9 @@ class SyncProxyOrganizationRequest extends AbstractModel
      * @param UserInfo $Operator 暂未开放
      * @param string $ProxyLegalIdCardType 第三方平台子客企业法定代表人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li></ul>
-注: `现在仅支持ID_CARD居民身份证类型`
+注: `现在仅支持ID_CARD中国大陆居民身份证类型`
      * @param string $ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      * @param string $ProxyAddress 第三方平台子客企业详细住所，最大长度500个字符
 
 注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`

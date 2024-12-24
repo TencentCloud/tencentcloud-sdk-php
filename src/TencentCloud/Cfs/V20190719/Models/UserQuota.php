@@ -31,21 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method integer getCapacityUsed() 获取容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapacityUsed(integer $CapacityUsed) 设置容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileUsed() 获取文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUsed(integer $FileUsed) 设置文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDirectoryPath() 获取目录配额的目录绝对路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectoryPath(string $DirectoryPath) 设置目录配额的目录绝对路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserQuota extends AbstractModel
 {
@@ -76,13 +70,11 @@ class UserQuota extends AbstractModel
 
     /**
      * @var integer 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CapacityUsed;
 
     /**
      * @var integer 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUsed;
 
@@ -94,7 +86,6 @@ class UserQuota extends AbstractModel
 
     /**
      * @var string 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -105,13 +96,10 @@ class UserQuota extends AbstractModel
      * @param integer $FileHardLimit 文件硬限制，单位个
      * @param string $FileSystemId 文件系统ID
      * @param integer $CapacityUsed 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileUsed 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DirectoryPath 目录配额的目录绝对路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

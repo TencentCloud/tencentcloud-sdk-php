@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMicroserviceWithDetailResp返回参数结构体
  *
- * @method string getResult() 获取id
- * @method void setResult(string $Result) 设置id
+ * @method string getResult() 获取微服务ID
+ * @method void setResult(string $Result) 设置微服务ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateMicroserviceWithDetailRespResponse extends AbstractModel
 {
     /**
-     * @var string id
+     * @var string 微服务ID
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateMicroserviceWithDetailRespResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result id
+     * @param string $Result 微服务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

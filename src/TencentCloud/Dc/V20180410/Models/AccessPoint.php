@@ -32,26 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLineOperator(array $LineOperator) 设置接入点支持的运营商列表。
  * @method string getRegionId() 获取接入点管理的大区ID。
  * @method void setRegionId(string $RegionId) 设置接入点管理的大区ID。
- * @method array getAvailablePortType() 获取接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailablePortType(array $AvailablePortType) 设置接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
- * @method Coordinate getCoordinate() 获取接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCoordinate(Coordinate $Coordinate) 设置接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCity() 获取接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCity(string $City) 设置接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArea() 获取接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArea(string $Area) 设置接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAvailablePortType() 获取接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
+ * @method void setAvailablePortType(array $AvailablePortType) 设置接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
+ * @method Coordinate getCoordinate() 获取接入点经纬度。
+ * @method void setCoordinate(Coordinate $Coordinate) 设置接入点经纬度。
+ * @method string getCity() 获取接入点所在城市。
+ * @method void setCity(string $City) 设置接入点所在城市。
+ * @method string getArea() 获取接入点地域名称。
+ * @method void setArea(string $Area) 设置接入点地域名称。
  * @method string getAccessPointType() 获取接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointType(string $AccessPointType) 设置接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAvailablePortInfo() 获取端口规格信息。
+ * @method void setAvailablePortInfo(array $AvailablePortInfo) 设置端口规格信息。
  */
 class AccessPoint extends AbstractModel
 {
@@ -86,34 +78,34 @@ class AccessPoint extends AbstractModel
     public $RegionId;
 
     /**
-     * @var array 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
      */
     public $AvailablePortType;
 
     /**
-     * @var Coordinate 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var Coordinate 接入点经纬度。
      */
     public $Coordinate;
 
     /**
-     * @var string 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 接入点所在城市。
      */
     public $City;
 
     /**
-     * @var string 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 接入点地域名称。
      */
     public $Area;
 
     /**
      * @var string 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointType;
+
+    /**
+     * @var array 端口规格信息。
+     */
+    public $AvailablePortInfo;
 
     /**
      * @param string $AccessPointName 接入点的名称。
@@ -122,16 +114,12 @@ class AccessPoint extends AbstractModel
      * @param string $Location 接入点的位置。
      * @param array $LineOperator 接入点支持的运营商列表。
      * @param string $RegionId 接入点管理的大区ID。
-     * @param array $AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Coordinate $Coordinate 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $City 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Area 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
+     * @param Coordinate $Coordinate 接入点经纬度。
+     * @param string $City 接入点所在城市。
+     * @param string $Area 接入点地域名称。
      * @param string $AccessPointType 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AvailablePortInfo 端口规格信息。
      */
     function __construct()
     {
@@ -189,6 +177,15 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
             $this->AccessPointType = $param["AccessPointType"];
+        }
+
+        if (array_key_exists("AvailablePortInfo",$param) and $param["AvailablePortInfo"] !== null) {
+            $this->AvailablePortInfo = [];
+            foreach ($param["AvailablePortInfo"] as $key => $value){
+                $obj = new PortSpecification();
+                $obj->deserialize($value);
+                array_push($this->AvailablePortInfo, $obj);
+            }
         }
     }
 }

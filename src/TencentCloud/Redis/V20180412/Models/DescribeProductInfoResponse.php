@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductInfo返回参数结构体
  *
- * @method array getRegionSet() 获取地域售卖信息。
- * @method void setRegionSet(array $RegionSet) 设置地域售卖信息。
+ * @method array getRegionSet() 获取地域售卖信息。即使指定具体地域，也返回所有地域的售卖信息。
+ * @method void setRegionSet(array $RegionSet) 设置地域售卖信息。即使指定具体地域，也返回所有地域的售卖信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProductInfoResponse extends AbstractModel
 {
     /**
-     * @var array 地域售卖信息。
+     * @var array 地域售卖信息。即使指定具体地域，也返回所有地域的售卖信息。
      */
     public $RegionSet;
 
@@ -38,7 +38,7 @@ class DescribeProductInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RegionSet 地域售卖信息。
+     * @param array $RegionSet 地域售卖信息。即使指定具体地域，也返回所有地域的售卖信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

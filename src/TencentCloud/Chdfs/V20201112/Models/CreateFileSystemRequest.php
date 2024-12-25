@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemName() 获取文件系统名称
  * @method void setFileSystemName(string $FileSystemName) 设置文件系统名称
- * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
- * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
  * @method boolean getPosixAcl() 获取是否校验POSIX ACL
  * @method void setPosixAcl(boolean $PosixAcl) 设置是否校验POSIX ACL
  * @method string getDescription() 获取文件系统描述，默认为空字符串
  * @method void setDescription(string $Description) 设置文件系统描述，默认为空字符串
+ * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
+ * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
  * @method array getSuperUsers() 获取超级用户名列表，默认为空数组
  * @method void setSuperUsers(array $SuperUsers) 设置超级用户名列表，默认为空数组
  * @method string getRootInodeUser() 获取根目录Inode用户名，默认为hadoop
@@ -49,11 +49,6 @@ class CreateFileSystemRequest extends AbstractModel
     public $FileSystemName;
 
     /**
-     * @var integer 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
-     */
-    public $CapacityQuota;
-
-    /**
      * @var boolean 是否校验POSIX ACL
      */
     public $PosixAcl;
@@ -62,6 +57,11 @@ class CreateFileSystemRequest extends AbstractModel
      * @var string 文件系统描述，默认为空字符串
      */
     public $Description;
+
+    /**
+     * @var integer 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
+     */
+    public $CapacityQuota;
 
     /**
      * @var array 超级用户名列表，默认为空数组
@@ -95,9 +95,9 @@ class CreateFileSystemRequest extends AbstractModel
 
     /**
      * @param string $FileSystemName 文件系统名称
-     * @param integer $CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      * @param boolean $PosixAcl 是否校验POSIX ACL
      * @param string $Description 文件系统描述，默认为空字符串
+     * @param integer $CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      * @param array $SuperUsers 超级用户名列表，默认为空数组
      * @param string $RootInodeUser 根目录Inode用户名，默认为hadoop
      * @param string $RootInodeGroup 根目录Inode组名，默认为supergroup
@@ -122,16 +122,16 @@ class CreateFileSystemRequest extends AbstractModel
             $this->FileSystemName = $param["FileSystemName"];
         }
 
-        if (array_key_exists("CapacityQuota",$param) and $param["CapacityQuota"] !== null) {
-            $this->CapacityQuota = $param["CapacityQuota"];
-        }
-
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CapacityQuota",$param) and $param["CapacityQuota"] !== null) {
+            $this->CapacityQuota = $param["CapacityQuota"];
         }
 
         if (array_key_exists("SuperUsers",$param) and $param["SuperUsers"] !== null) {

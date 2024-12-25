@@ -60,9 +60,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartPosition() 获取同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+ * @method string getStartPosition() 获取同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartPosition(string $StartPosition) 设置同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+ * @method void setStartPosition(string $StartPosition) 设置同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFilterBeginCommit() 获取同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,7 +136,7 @@ class Options extends AbstractModel
     public $AutoRetryTimeRangeMinutes;
 
     /**
-     * @var string 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * @var string 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartPosition;
@@ -174,7 +174,7 @@ class Options extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * @param string $StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。

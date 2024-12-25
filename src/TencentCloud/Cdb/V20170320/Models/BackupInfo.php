@@ -63,9 +63,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionFlag(string $EncryptionFlag) 设置备份文件是否加密， on-加密， off-未加密
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutedGTIDSet() 获取备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupInfo extends AbstractModel
 {
@@ -172,7 +170,6 @@ class BackupInfo extends AbstractModel
 
     /**
      * @var string 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutedGTIDSet;
 
@@ -199,7 +196,6 @@ class BackupInfo extends AbstractModel
      * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutedGTIDSet 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

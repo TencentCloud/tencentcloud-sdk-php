@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置该值已废弃
  * @method integer getMaxUserConnections() 获取用户最大可用实例连接数
  * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大可用实例连接数
+ * @method boolean getOpenCam() 获取用户账号是否开启了密码轮转
+ * @method void setOpenCam(boolean $OpenCam) 设置用户账号是否开启了密码轮转
  */
 class AccountInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AccountInfo extends AbstractModel
     public $MaxUserConnections;
 
     /**
+     * @var boolean 用户账号是否开启了密码轮转
+     */
+    public $OpenCam;
+
+    /**
      * @param string $Notes 账号备注信息
      * @param string $Host 账号的域名
      * @param string $User 账号的名称
@@ -80,6 +87,7 @@ class AccountInfo extends AbstractModel
      * @param string $ModifyPasswordTime 修改密码的时间
      * @param string $CreateTime 该值已废弃
      * @param integer $MaxUserConnections 用户最大可用实例连接数
+     * @param boolean $OpenCam 用户账号是否开启了密码轮转
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
             $this->MaxUserConnections = $param["MaxUserConnections"];
+        }
+
+        if (array_key_exists("OpenCam",$param) and $param["OpenCam"] !== null) {
+            $this->OpenCam = $param["OpenCam"];
         }
     }
 }

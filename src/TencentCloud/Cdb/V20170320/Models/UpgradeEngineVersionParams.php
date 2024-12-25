@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 5.7升级8.0指定参数的结构
  *
  * @method string getName() 获取参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置参数值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpgradeEngineVersionParams extends AbstractModel
 {
     /**
      * @var string 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

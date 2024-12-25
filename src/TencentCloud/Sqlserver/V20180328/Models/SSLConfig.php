@@ -44,6 +44,12 @@ wait_doing-等待维护时间内执行
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSSLValidity(integer $SSLValidity) 设置SSL证书有效性，0-无效，1-有效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsKMS() 获取是否是KMS的CMK证书
+ * @method void setIsKMS(integer $IsKMS) 设置是否是KMS的CMK证书
+ * @method string getCMKId() 获取KMS中购买的用户主密钥ID（CMK）
+ * @method void setCMKId(string $CMKId) 设置KMS中购买的用户主密钥ID（CMK）
+ * @method string getCMKRegion() 获取CMK所属的地域，不同地域的CMK数据不互通
+ * @method void setCMKRegion(string $CMKRegion) 设置CMK所属的地域，不同地域的CMK数据不互通
  */
 class SSLConfig extends AbstractModel
 {
@@ -72,6 +78,21 @@ wait_doing-等待维护时间内执行
     public $SSLValidity;
 
     /**
+     * @var integer 是否是KMS的CMK证书
+     */
+    public $IsKMS;
+
+    /**
+     * @var string KMS中购买的用户主密钥ID（CMK）
+     */
+    public $CMKId;
+
+    /**
+     * @var string CMK所属的地域，不同地域的CMK数据不互通
+     */
+    public $CMKRegion;
+
+    /**
      * @param string $Encryption SSL加密状态，
 enable-已开启
 disable-未开启
@@ -84,6 +105,9 @@ wait_doing-等待维护时间内执行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SSLValidity SSL证书有效性，0-无效，1-有效
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsKMS 是否是KMS的CMK证书
+     * @param string $CMKId KMS中购买的用户主密钥ID（CMK）
+     * @param string $CMKRegion CMK所属的地域，不同地域的CMK数据不互通
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ wait_doing-等待维护时间内执行
 
         if (array_key_exists("SSLValidity",$param) and $param["SSLValidity"] !== null) {
             $this->SSLValidity = $param["SSLValidity"];
+        }
+
+        if (array_key_exists("IsKMS",$param) and $param["IsKMS"] !== null) {
+            $this->IsKMS = $param["IsKMS"];
+        }
+
+        if (array_key_exists("CMKId",$param) and $param["CMKId"] !== null) {
+            $this->CMKId = $param["CMKId"];
+        }
+
+        if (array_key_exists("CMKRegion",$param) and $param["CMKRegion"] !== null) {
+            $this->CMKRegion = $param["CMKRegion"];
         }
     }
 }

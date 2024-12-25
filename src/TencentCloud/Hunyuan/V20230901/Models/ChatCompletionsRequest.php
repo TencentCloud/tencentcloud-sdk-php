@@ -164,6 +164,14 @@ use TencentCloud\Common\AbstractModel;
 2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
  * @method array getStop() 获取自定义结束生成字符串
  * @method void setStop(array $Stop) 设置自定义结束生成字符串
+ * @method boolean getEnableRecommendedQuestions() 获取推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+ * @method void setEnableRecommendedQuestions(boolean $EnableRecommendedQuestions) 设置推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -312,6 +320,14 @@ class ChatCompletionsRequest extends AbstractModel
     public $Stop;
 
     /**
+     * @var boolean 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+     */
+    public $EnableRecommendedQuestions;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -384,6 +400,10 @@ class ChatCompletionsRequest extends AbstractModel
 1. 未传值时默认关闭。
 2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
      * @param array $Stop 自定义结束生成字符串
+     * @param boolean $EnableRecommendedQuestions 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
      */
     function __construct()
     {
@@ -479,6 +499,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("Stop",$param) and $param["Stop"] !== null) {
             $this->Stop = $param["Stop"];
+        }
+
+        if (array_key_exists("EnableRecommendedQuestions",$param) and $param["EnableRecommendedQuestions"] !== null) {
+            $this->EnableRecommendedQuestions = $param["EnableRecommendedQuestions"];
         }
     }
 }

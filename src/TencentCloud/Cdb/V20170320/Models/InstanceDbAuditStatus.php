@@ -73,9 +73,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldRule(boolean $OldRule) 设置是否包含审计策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuleTemplateIds() 获取实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDbAuditStatus extends AbstractModel
 {
@@ -163,7 +161,6 @@ class InstanceDbAuditStatus extends AbstractModel
 
     /**
      * @var array 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateIds;
 
@@ -195,7 +192,6 @@ class InstanceDbAuditStatus extends AbstractModel
      * @param boolean $OldRule 是否包含审计策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

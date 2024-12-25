@@ -32,15 +32,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
  * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
@@ -84,8 +84,8 @@ class NeedReviewApproverInfo extends AbstractModel
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
@@ -117,8 +117,8 @@ class NeedReviewApproverInfo extends AbstractModel
      * @param string $ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
      * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同居民身份证)</li>
 <li>OTHER_CARD_TYPE 其他证件</li></ul>
 
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`

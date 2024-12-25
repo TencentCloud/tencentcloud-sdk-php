@@ -42,12 +42,8 @@ use TencentCloud\Common\AbstractModel;
 ●base64 和 url 必须提供一个，如果都提供以 url 为准。
 ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于8000*8000（单边限制）。图片url或者图片 base64 数据，base64 编码后大小不可超过10M（图片编码之后可能会大30%左右，建议合理控制图片大小）
 ●支持图片格式：支持jpg或png
- * @method FusionUltraParam getFusionUltraParam() 获取图片人脸融合（专业版）效果参数。
-可用于设置拉脸、人脸增强、磨皮、牙齿增强等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
-
- * @method void setFusionUltraParam(FusionUltraParam $FusionUltraParam) 设置图片人脸融合（专业版）效果参数。
-可用于设置拉脸、人脸增强、磨皮、牙齿增强等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
-
+ * @method FusionUltraParam getFusionUltraParam() 获取图片人脸融合（专业版）效果参数。可用于设置拉脸、人脸增强、磨皮、牙齿增强、妆容迁移等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
+ * @method void setFusionUltraParam(FusionUltraParam $FusionUltraParam) 设置图片人脸融合（专业版）效果参数。可用于设置拉脸、人脸增强、磨皮、牙齿增强、妆容迁移等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
  * @method integer getLogoAdd() 获取为融合结果图添加合成标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。
@@ -107,9 +103,7 @@ class FuseFaceUltraRequest extends AbstractModel
     public $ModelImage;
 
     /**
-     * @var FusionUltraParam 图片人脸融合（专业版）效果参数。
-可用于设置拉脸、人脸增强、磨皮、牙齿增强等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
-
+     * @var FusionUltraParam 图片人脸融合（专业版）效果参数。可用于设置拉脸、人脸增强、磨皮、牙齿增强、妆容迁移等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
      */
     public $FusionUltraParam;
 
@@ -151,9 +145,7 @@ class FuseFaceUltraRequest extends AbstractModel
 ●base64 和 url 必须提供一个，如果都提供以 url 为准。
 ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于8000*8000（单边限制）。图片url或者图片 base64 数据，base64 编码后大小不可超过10M（图片编码之后可能会大30%左右，建议合理控制图片大小）
 ●支持图片格式：支持jpg或png
-     * @param FusionUltraParam $FusionUltraParam 图片人脸融合（专业版）效果参数。
-可用于设置拉脸、人脸增强、磨皮、牙齿增强等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
-
+     * @param FusionUltraParam $FusionUltraParam 图片人脸融合（专业版）效果参数。可用于设置拉脸、人脸增强、磨皮、牙齿增强、妆容迁移等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
      * @param integer $LogoAdd 为融合结果图添加合成标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。

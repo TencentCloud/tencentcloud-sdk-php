@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 实例可回档时间范围
  *
  * @method integer getCode() 获取查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimes() 获取可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimes(array $Times) 设置可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceRollbackRangeTime extends AbstractModel
 {
     /**
      * @var integer 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var array 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Times;
 
     /**
      * @param integer $Code 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Times 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

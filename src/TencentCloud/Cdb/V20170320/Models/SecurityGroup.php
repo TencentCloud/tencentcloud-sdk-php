@@ -21,65 +21,93 @@ use TencentCloud\Common\AbstractModel;
  * 安全组详情
  *
  * @method integer getProjectId() 获取项目ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInbound() 获取入站规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInbound(array $Inbound) 设置入站规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutbound() 获取出站规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutbound(array $Outbound) 设置出站规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroupId() 获取安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroupName() 获取安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroupRemark() 获取安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroup extends AbstractModel
 {
     /**
      * @var integer 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var array 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Inbound;
 
     /**
      * @var array 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Outbound;
 
     /**
      * @var string 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupId;
 
     /**
      * @var string 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupName;
 
     /**
      * @var string 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupRemark;
 
     /**
      * @param integer $ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Inbound 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Outbound 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroupId 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroupName 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroupRemark 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

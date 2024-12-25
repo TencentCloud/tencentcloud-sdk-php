@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method integer getBackupType() 获取备份方式，0-自动备份，1-手动备份
  * @method void setBackupType(integer $BackupType) 设置备份方式，0-自动备份，1-手动备份
  * @method string getBackupName() 获取备份名称
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
@@ -123,7 +123,7 @@ class BackupInfo extends AbstractModel
     public $BackupRegion;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID。
      * @param integer $BackupType 备份方式，0-自动备份，1-手动备份
      * @param string $BackupName 备份名称
      * @param string $BackupDesc 备份备注

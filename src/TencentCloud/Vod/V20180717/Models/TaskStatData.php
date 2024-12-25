@@ -35,6 +35,7 @@ use TencentCloud\Common\AbstractModel;
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
  * @method void setTaskType(string $TaskType) 设置任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -50,6 +51,7 @@ use TencentCloud\Common\AbstractModel;
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
  * @method array getSummary() 获取任务数统计数据概览，用量单位为秒。
  * @method void setSummary(array $Summary) 设置任务数统计数据概览，用量单位为秒。
  * @method array getDetails() 获取不同规格任务统计数据详情。
@@ -105,6 +107,13 @@ use TencentCloud\Common\AbstractModel;
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
 <li>Audio: 音频</li>
+即时转码规格：
+<li>JITTranscoding.H264.SD: H.264编码方式标清即时转码</li>
+<li>JITTranscoding.H264.HD: H.264编码方式高清即时转码</li>
+<li>JITTranscoding.H264.FHD: H.264编码方式全高清即时转码</li>
+<li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
+<li>JITTranscoding.Audio: 音频即时转码</li>
+<li>JITTranscoding.Copy: 转封装即时转码</li>
  * @method void setDetails(array $Details) 设置不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>
@@ -158,6 +167,13 @@ use TencentCloud\Common\AbstractModel;
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
 <li>Audio: 音频</li>
+即时转码规格：
+<li>JITTranscoding.H264.SD: H.264编码方式标清即时转码</li>
+<li>JITTranscoding.H264.HD: H.264编码方式高清即时转码</li>
+<li>JITTranscoding.H264.FHD: H.264编码方式全高清即时转码</li>
+<li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
+<li>JITTranscoding.Audio: 音频即时转码</li>
+<li>JITTranscoding.Copy: 转封装即时转码</li>
  */
 class TaskStatData extends AbstractModel
 {
@@ -177,6 +193,7 @@ class TaskStatData extends AbstractModel
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
      */
     public $TaskType;
 
@@ -239,6 +256,13 @@ class TaskStatData extends AbstractModel
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
 <li>Audio: 音频</li>
+即时转码规格：
+<li>JITTranscoding.H264.SD: H.264编码方式标清即时转码</li>
+<li>JITTranscoding.H264.HD: H.264编码方式高清即时转码</li>
+<li>JITTranscoding.H264.FHD: H.264编码方式全高清即时转码</li>
+<li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
+<li>JITTranscoding.Audio: 音频即时转码</li>
+<li>JITTranscoding.Copy: 转封装即时转码</li>
      */
     public $Details;
 
@@ -258,6 +282,7 @@ class TaskStatData extends AbstractModel
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
      * @param array $Summary 任务数统计数据概览，用量单位为秒。
      * @param array $Details 不同规格任务统计数据详情。
 转码规格：
@@ -312,6 +337,13 @@ class TaskStatData extends AbstractModel
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
 <li>Audio: 音频</li>
+即时转码规格：
+<li>JITTranscoding.H264.SD: H.264编码方式标清即时转码</li>
+<li>JITTranscoding.H264.HD: H.264编码方式高清即时转码</li>
+<li>JITTranscoding.H264.FHD: H.264编码方式全高清即时转码</li>
+<li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
+<li>JITTranscoding.Audio: 音频即时转码</li>
+<li>JITTranscoding.Copy: 转封装即时转码</li>
      */
     function __construct()
     {

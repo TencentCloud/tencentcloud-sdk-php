@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyOrigin(string $KeyOrigin) 设置密钥来源。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsRegion() 获取kms所在地域。
+ * @method void setKmsRegion(string $KmsRegion) 设置kms所在地域。
  */
 class KMSInfoDetail extends AbstractModel
 {
@@ -84,6 +86,11 @@ class KMSInfoDetail extends AbstractModel
     public $KeyOrigin;
 
     /**
+     * @var string kms所在地域。
+     */
+    public $KmsRegion;
+
+    /**
      * @param string $KeyId 主密钥 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyName 主密钥名称。
@@ -96,6 +103,7 @@ class KMSInfoDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyOrigin 密钥来源。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsRegion kms所在地域。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class KMSInfoDetail extends AbstractModel
 
         if (array_key_exists("KeyOrigin",$param) and $param["KeyOrigin"] !== null) {
             $this->KeyOrigin = $param["KeyOrigin"];
+        }
+
+        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
+            $this->KmsRegion = $param["KmsRegion"];
         }
     }
 }

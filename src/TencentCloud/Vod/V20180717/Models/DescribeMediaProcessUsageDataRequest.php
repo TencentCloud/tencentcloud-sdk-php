@@ -48,6 +48,7 @@ use TencentCloud\Common\AbstractModel;
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
  * @method void setType(string $Type) 设置查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -70,6 +71,7 @@ use TencentCloud\Common\AbstractModel;
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
  */
 class DescribeMediaProcessUsageDataRequest extends AbstractModel
 {
@@ -111,6 +113,7 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
      */
     public $Type;
 
@@ -140,6 +143,7 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
+<li>JITTranscoding: 即时转码</li>
      */
     function __construct()
     {

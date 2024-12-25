@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DB实例慢日志、错误日志投递CLS配置
  *
  * @method string getStatus() 获取投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogSetId() 获取CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSetId(string $LogSetId) 设置CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicId(string $LogTopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClsRegion() 获取CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClsRegion(string $ClsRegion) 设置CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogToCLSConfig extends AbstractModel
 {
     /**
      * @var string 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSetId;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTopicId;
 
     /**
      * @var string CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClsRegion;
 
     /**
      * @param string $Status 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogSetId CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClsRegion CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

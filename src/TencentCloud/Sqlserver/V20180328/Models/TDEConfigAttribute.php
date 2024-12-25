@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuoteUin(string $QuoteUin) 设置开通TDE加密时引用的其他主账号ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCMKId() 获取KMS中购买的用户主密钥ID（CMK）
+ * @method void setCMKId(string $CMKId) 设置KMS中购买的用户主密钥ID（CMK）
+ * @method string getCMKRegion() 获取CMK所属的地域，不同地域的CMK不互通
+ * @method void setCMKRegion(string $CMKRegion) 设置CMK所属的地域，不同地域的CMK不互通
  */
 class TDEConfigAttribute extends AbstractModel
 {
@@ -48,10 +52,22 @@ class TDEConfigAttribute extends AbstractModel
     public $QuoteUin;
 
     /**
+     * @var string KMS中购买的用户主密钥ID（CMK）
+     */
+    public $CMKId;
+
+    /**
+     * @var string CMK所属的地域，不同地域的CMK不互通
+     */
+    public $CMKRegion;
+
+    /**
      * @param string $Encryption 是否已开通TDE加密，enable-已开通，disable-未开通
      * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，none-表示没有证书
      * @param string $QuoteUin 开通TDE加密时引用的其他主账号ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CMKId KMS中购买的用户主密钥ID（CMK）
+     * @param string $CMKRegion CMK所属的地域，不同地域的CMK不互通
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ class TDEConfigAttribute extends AbstractModel
 
         if (array_key_exists("QuoteUin",$param) and $param["QuoteUin"] !== null) {
             $this->QuoteUin = $param["QuoteUin"];
+        }
+
+        if (array_key_exists("CMKId",$param) and $param["CMKId"] !== null) {
+            $this->CMKId = $param["CMKId"];
+        }
+
+        if (array_key_exists("CMKRegion",$param) and $param["CMKRegion"] !== null) {
+            $this->CMKRegion = $param["CMKRegion"];
         }
     }
 }

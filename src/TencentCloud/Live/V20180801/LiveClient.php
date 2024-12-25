@@ -330,7 +330,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitor(Models\ModifyLiveStreamMonitorRequest $req) 该接口用来修改直播流监播任务的配置。
  * @method Models\ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(Models\ModifyLiveTimeShiftTemplateRequest $req) 修改直播时移模板。
  * @method Models\ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(Models\ModifyLiveTranscodeTemplateRequest $req) 修改转码模板配置。
- * @method Models\ModifyPullStreamConfigResponse ModifyPullStreamConfig(Models\ModifyPullStreamConfigRequest $req) 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
+ * @method Models\ModifyPullStreamConfigResponse ModifyPullStreamConfig(Models\ModifyPullStreamConfigRequest $req) 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。
  * @method Models\ModifyPullStreamStatusResponse ModifyPullStreamStatus(Models\ModifyPullStreamStatusRequest $req) 修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
  * @method Models\ReleaseCasterResponse ReleaseCaster(Models\ReleaseCasterRequest $req) 调用该接口，释放导播台实例，但保留所有的配置。
 执行该接口，预监与主监画面停止，第三方推流停止。

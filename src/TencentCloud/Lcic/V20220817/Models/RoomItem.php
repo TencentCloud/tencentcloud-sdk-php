@@ -48,11 +48,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealEndTime(integer $RealEndTime) 设置实际结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResolution() 获取分辨率。1 标清
+ * @method integer getResolution() 获取头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResolution(integer $Resolution) 设置分辨率。1 标清
+ * @method void setResolution(integer $Resolution) 设置头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,7 +168,8 @@ class RoomItem extends AbstractModel
     public $RealEndTime;
 
     /**
-     * @var integer 分辨率。1 标清
+     * @var integer 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
@@ -284,7 +287,8 @@ class RoomItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealEndTime 实际结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Resolution 分辨率。1 标清
+     * @param integer $Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。

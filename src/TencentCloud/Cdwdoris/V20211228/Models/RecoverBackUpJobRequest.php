@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoverScope(string $RecoverScope) 设置恢复粒度：All全量、Database按库、Table按表
  * @method string getRecoverDatabase() 获取恢复库：如果是按库备份，则需要该字段，库之间用","分割
  * @method void setRecoverDatabase(string $RecoverDatabase) 设置恢复库：如果是按库备份，则需要该字段，库之间用","分割
+ * @method integer getReserveStoragePolicy() 获取1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+ * @method void setReserveStoragePolicy(integer $ReserveStoragePolicy) 设置1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
  */
 class RecoverBackUpJobRequest extends AbstractModel
 {
@@ -69,31 +75,37 @@ class RecoverBackUpJobRequest extends AbstractModel
 
     /**
      * @var integer 0默认 1cos恢复
+     * @deprecated
      */
     public $RecoverType;
 
     /**
      * @var CosSourceInfo CosSourceInfo对象
+     * @deprecated
      */
     public $CosSourceInfo;
 
     /**
      * @var integer 0默认 1定期执行
+     * @deprecated
      */
     public $ScheduleType;
 
     /**
      * @var string 年-月-日 时:分:秒
+     * @deprecated
      */
     public $NextTime;
 
     /**
      * @var string 调度名称
+     * @deprecated
      */
     public $ScheduleName;
 
     /**
      * @var string create update
+     * @deprecated
      */
     public $OperationType;
 
@@ -108,6 +120,13 @@ class RecoverBackUpJobRequest extends AbstractModel
     public $RecoverDatabase;
 
     /**
+     * @var integer 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+     */
+    public $ReserveStoragePolicy;
+
+    /**
      * @param string $InstanceId 集群id
      * @param integer $BackUpJobId 任务id
      * @param integer $ReplicationNum 恢复出来的新表副本数
@@ -120,6 +139,9 @@ class RecoverBackUpJobRequest extends AbstractModel
      * @param string $OperationType create update
      * @param string $RecoverScope 恢复粒度：All全量、Database按库、Table按表
      * @param string $RecoverDatabase 恢复库：如果是按库备份，则需要该字段，库之间用","分割
+     * @param integer $ReserveStoragePolicy 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
      */
     function __construct()
     {
@@ -181,6 +203,10 @@ class RecoverBackUpJobRequest extends AbstractModel
 
         if (array_key_exists("RecoverDatabase",$param) and $param["RecoverDatabase"] !== null) {
             $this->RecoverDatabase = $param["RecoverDatabase"];
+        }
+
+        if (array_key_exists("ReserveStoragePolicy",$param) and $param["ReserveStoragePolicy"] !== null) {
+            $this->ReserveStoragePolicy = $param["ReserveStoragePolicy"];
         }
     }
 }

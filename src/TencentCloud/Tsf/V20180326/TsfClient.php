@@ -218,7 +218,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(Models\OperateApplicationTcrBindingRequest $req) 绑定解绑tcr仓库
- * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 重关联业务日志配置
+ * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 后端服务已经删除这个接口,  API 接口下线处理
+
+重关联业务日志配置
  * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
  * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
  * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。

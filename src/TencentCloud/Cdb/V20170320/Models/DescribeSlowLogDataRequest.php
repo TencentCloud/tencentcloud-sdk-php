@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getStartTime() 获取开始时间戳。例如 1585142640 。
- * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640 。
- * @method integer getEndTime() 获取结束时间戳。例如 1585142640 。
- * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640 。
+ * @method integer getStartTime() 获取开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method integer getEndTime() 获取结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
  * @method array getUserHosts() 获取客户端 Host 列表。
  * @method void setUserHosts(array $UserHosts) 设置客户端 Host 列表。
  * @method array getUserNames() 获取客户端 用户名 列表。
@@ -53,12 +57,14 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 开始时间戳。例如 1585142640 。
+     * @var integer 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳。例如 1585142640 。
+     * @var integer 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public $EndTime;
 
@@ -109,8 +115,10 @@ class DescribeSlowLogDataRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID。
-     * @param integer $StartTime 开始时间戳。例如 1585142640 。
-     * @param integer $EndTime 结束时间戳。例如 1585142640 。
+     * @param integer $StartTime 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+     * @param integer $EndTime 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      * @param array $UserHosts 客户端 Host 列表。
      * @param array $UserNames 客户端 用户名 列表。
      * @param array $DataBases 访问的 数据库 列表。

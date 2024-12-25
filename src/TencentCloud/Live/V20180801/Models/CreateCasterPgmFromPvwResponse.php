@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPgmPlayUrl(string $PgmPlayUrl) 设置主监任务的rtmp协议预览地址。 
 注：该地址仅供预览，不可分发。
  * @method string getCdnPlayUrl() 获取注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdnPlayUrl(string $CdnPlayUrl) 设置注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdnStreamId() 获取主监任务在腾讯云直播侧的流ID。
  * @method void setCdnStreamId(string $CdnStreamId) 设置主监任务在腾讯云直播侧的流ID。
  * @method string getPgmWebRTCPlayUrl() 获取主监任务的webrtc协议播放地址。 
@@ -51,7 +49,6 @@ class CreateCasterPgmFromPvwResponse extends AbstractModel
 
     /**
      * @var string 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdnPlayUrl;
 
@@ -77,7 +74,6 @@ class CreateCasterPgmFromPvwResponse extends AbstractModel
      * @param string $PgmPlayUrl 主监任务的rtmp协议预览地址。 
 注：该地址仅供预览，不可分发。
      * @param string $CdnPlayUrl 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdnStreamId 主监任务在腾讯云直播侧的流ID。
      * @param string $PgmWebRTCPlayUrl 主监任务的webrtc协议播放地址。 
 注：

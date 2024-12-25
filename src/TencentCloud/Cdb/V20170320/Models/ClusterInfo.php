@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 集群版节点信息
  *
  * @method string getNodeId() 获取节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRole() 获取节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRole(string $Role) 设置节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
     /**
      * @var string 节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @var string 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @param string $NodeId 节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

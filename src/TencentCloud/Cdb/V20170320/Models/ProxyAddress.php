@@ -77,13 +77,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyAllocation(array $ProxyAllocation) 设置实例读权重分配
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessMode() 获取接入模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessMode(string $AccessMode) 设置接入模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoLoadBalance() 获取是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyAddress extends AbstractModel
 {
@@ -181,13 +177,11 @@ class ProxyAddress extends AbstractModel
 
     /**
      * @var string 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessMode;
 
     /**
      * @var boolean 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoLoadBalance;
 
@@ -221,9 +215,7 @@ class ProxyAddress extends AbstractModel
      * @param array $ProxyAllocation 实例读权重分配
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessMode 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoLoadBalance 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

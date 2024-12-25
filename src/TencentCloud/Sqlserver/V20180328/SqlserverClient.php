@@ -43,7 +43,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) 本接口（CreateMigration）作用是创建一个迁移任务
  * @method Models\CreatePublishSubscribeResponse CreatePublishSubscribe(Models\CreatePublishSubscribeRequest $req) 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
  * @method Models\CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstances(Models\CreateReadOnlyDBInstancesRequest $req) 本接口（CreateReadOnlyDBInstances）用于创建只读实例 (本地盘)。
- * @method Models\CutXEventsResponse CutXEvents(Models\CutXEventsRequest $req) 本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+ * @method Models\CutXEventsResponse CutXEvents(Models\CutXEventsRequest $req) 本接口（CutXEvents）用于手动切割阻塞日志和死锁日志。
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除实例账号。
  * @method Models\DeleteBackupMigrationResponse DeleteBackupMigration(Models\DeleteBackupMigrationRequest $req) 本接口（DeleteBackupMigration）用于删除备份导入任务。
  * @method Models\DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(Models\DeleteBusinessIntelligenceFileRequest $req) 本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
@@ -57,7 +57,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于拉取实例账户列表。
  * @method Models\DescribeBackupByFlowIdResponse DescribeBackupByFlowId(Models\DescribeBackupByFlowIdRequest $req) 本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
  * @method Models\DescribeBackupCommandResponse DescribeBackupCommand(Models\DescribeBackupCommandRequest $req) 本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
- * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于查询单库备份明细
+ * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口（DescribeBackupFiles）用于查询单库备份明细。
  * @method Models\DescribeBackupMigrationResponse DescribeBackupMigration(Models\DescribeBackupMigrationRequest $req) 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
  * @method Models\DescribeBackupMonitorResponse DescribeBackupMonitor(Models\DescribeBackupMonitorRequest $req) 本接口(DescribeBackupMonitor)用于查询备份空间使用详情。
  * @method Models\DescribeBackupStatisticalResponse DescribeBackupStatistical(Models\DescribeBackupStatisticalRequest $req) 本接口(DescribeBackupStatistical)用于查询备份实时统计列表。

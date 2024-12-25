@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProtectMode请求参数结构体
  *
- * @method integer getProtectMode() 获取无
- * @method void setProtectMode(integer $ProtectMode) 设置无
+ * @method integer getProtectMode() 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+ * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  */
 class ModifyProtectModeRequest extends AbstractModel
 {
     /**
-     * @var integer 无
+     * @var integer 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public $ProtectMode;
 
@@ -38,7 +38,7 @@ class ModifyProtectModeRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param integer $ProtectMode 无
+     * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      * @param string $InstanceId 实例ID。
      */
     function __construct()

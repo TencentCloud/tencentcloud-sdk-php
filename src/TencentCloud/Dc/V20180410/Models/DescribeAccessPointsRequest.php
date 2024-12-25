@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getFilters() 获取过滤参数，支持：access-point-id、isp
+ * @method void setFilters(array $Filters) 设置过滤参数，支持：access-point-id、isp
  */
 class DescribeAccessPointsRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class DescribeAccessPointsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 过滤参数，支持：access-point-id、isp
+     */
+    public $Filters;
+
+    /**
      * @param string $RegionId 接入点所在的地域。使用DescribeRegions查询。
 您可以通过调用 DescribeRegions接口获取地域ID。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param array $Filters 过滤参数，支持：access-point-id、isp
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ class DescribeAccessPointsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

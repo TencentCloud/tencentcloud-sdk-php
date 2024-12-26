@@ -18,7 +18,7 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 添加模板参数响应 
+ * 添加模板参数响应
  *
  * @method string getTemplateId() 获取模板参数
  * @method void setTemplateId(string $TemplateId) 设置模板参数

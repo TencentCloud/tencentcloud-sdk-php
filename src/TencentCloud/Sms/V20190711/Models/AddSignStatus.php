@@ -18,7 +18,7 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 添加签名响应 
+ * 添加签名响应
  *
  * @method integer getSignId() 获取签名Id。
  * @method void setSignId(integer $SignId) 设置签名Id。

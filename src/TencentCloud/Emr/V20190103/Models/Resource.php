@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(integer $StorageType) 设置存储类型
 取值范围：
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取磁盘类型
 取值范围：
@@ -104,7 +104,7 @@ class Resource extends AbstractModel
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
@@ -182,7 +182,7 @@ class Resource extends AbstractModel
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 磁盘类型
 取值范围：

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云数据库切换记录
  *
  * @method string getSwitchTime() 获取切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchTime(string $SwitchTime) 设置切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSwitchType() 获取切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchType(string $SwitchType) 设置切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBSwitchInfo extends AbstractModel
 {
     /**
      * @var string 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchTime;
 
     /**
      * @var string 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchType;
 
     /**
      * @param string $SwitchTime 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SwitchType 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

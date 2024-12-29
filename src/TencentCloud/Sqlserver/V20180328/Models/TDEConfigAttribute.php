@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCertificateAttribution() 获取证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，none-表示没有证书
  * @method void setCertificateAttribution(string $CertificateAttribution) 设置证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，none-表示没有证书
  * @method string getQuoteUin() 获取开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuoteUin(string $QuoteUin) 设置开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCMKId() 获取KMS中购买的用户主密钥ID（CMK）
  * @method void setCMKId(string $CMKId) 设置KMS中购买的用户主密钥ID（CMK）
  * @method string getCMKRegion() 获取CMK所属的地域，不同地域的CMK不互通
@@ -47,7 +45,6 @@ class TDEConfigAttribute extends AbstractModel
 
     /**
      * @var string 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuoteUin;
 
@@ -65,7 +62,6 @@ class TDEConfigAttribute extends AbstractModel
      * @param string $Encryption 是否已开通TDE加密，enable-已开通，disable-未开通
      * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，none-表示没有证书
      * @param string $QuoteUin 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CMKId KMS中购买的用户主密钥ID（CMK）
      * @param string $CMKRegion CMK所属的地域，不同地域的CMK不互通
      */

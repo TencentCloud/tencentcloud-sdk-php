@@ -33,6 +33,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加SaaS型WAF防护域名
  * @method Models\BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRules(Models\BatchOperateUserSignatureRulesRequest $req) 批量操作tiga子规则
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
+ * @method Models\CreateAreaBanRuleResponse CreateAreaBanRule(Models\CreateAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) 计费资源购买、续费下单接口
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) clb-waf中添加防护域名
  * @method Models\CreateIpAccessControlResponse CreateIpAccessControl(Models\CreateIpAccessControlRequest $req) Waf IP黑白名单新增接口
@@ -59,6 +60,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 获取Api请求详情信息
  * @method Models\DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(Models\DescribeApiListVersionTwoRequest $req) api资产列表
  * @method Models\DescribeAreaBanAreasResponse DescribeAreaBanAreas(Models\DescribeAreaBanAreasRequest $req) 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
+ * @method Models\DescribeAreaBanRuleResponse DescribeAreaBanRule(Models\DescribeAreaBanRuleRequest $req) 获取地域封禁规则配置
  * @method Models\DescribeAreaBanSupportAreasResponse DescribeAreaBanSupportAreas(Models\DescribeAreaBanSupportAreasRequest $req) 获取WAF地域封禁支持的地域列表
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
@@ -127,6 +129,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatus(Models\ModifyApiAnalyzeStatusRequest $req) api分析页面开关
  * @method Models\ModifyApiSecEventChangeResponse ModifyApiSecEventChange(Models\ModifyApiSecEventChangeRequest $req) api安全状态变更接口
  * @method Models\ModifyAreaBanAreasResponse ModifyAreaBanAreas(Models\ModifyAreaBanAreasRequest $req) 修改地域封禁中的地域信息
+ * @method Models\ModifyAreaBanRuleResponse ModifyAreaBanRule(Models\ModifyAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(Models\ModifyAttackWhiteRuleRequest $req) 供用户控制台调用，修改Tiga规则引擎白名单。
  * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新
@@ -151,7 +154,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) Waf IP黑白名单编辑接口
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
- * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 获取基础安全防护（WAF开关）状态
+ * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 开启、关闭WAF开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 编辑SaaS型WAF域名配置
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) 设置waf防护状态
  * @method Models\ModifyUserLevelResponse ModifyUserLevel(Models\ModifyUserLevelRequest $req) 修改用户防护规则等级

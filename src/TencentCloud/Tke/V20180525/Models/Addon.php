@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置addon失败的原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取addon的创建时间
+ * @method void setCreateTime(string $CreateTime) 设置addon的创建时间
  */
 class Addon extends AbstractModel
 {
@@ -68,6 +70,11 @@ class Addon extends AbstractModel
     public $Reason;
 
     /**
+     * @var string addon的创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon的版本
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串
@@ -76,6 +83,7 @@ class Addon extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason addon失败的原因
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime addon的创建时间
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class Addon extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

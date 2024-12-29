@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * proxy配置
  *
  * @method string getDevice() 获取设备
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevice(string $Device) 设置设备
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(integer $Memory) 设置内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置核数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomConfig extends AbstractModel
 {
     /**
      * @var string 设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Device;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @var integer 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var integer 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @param string $Device 设备
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

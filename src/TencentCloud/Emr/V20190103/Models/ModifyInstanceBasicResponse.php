@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquirePricePurchaseReservedInstancesOffering返回参数结构体
+ * ModifyInstanceBasic返回参数结构体
  *
- * @method ReservedInstancePrice getPrice() 获取该参数表示对应配置预留实例的价格。
- * @method void setPrice(ReservedInstancePrice $Price) 设置该参数表示对应配置预留实例的价格。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class InquirePricePurchaseReservedInstancesOfferingResponse extends AbstractModel
+class ModifyInstanceBasicResponse extends AbstractModel
 {
-    /**
-     * @var ReservedInstancePrice 该参数表示对应配置预留实例的价格。
-     */
-    public $Price;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param ReservedInstancePrice $Price 该参数表示对应配置预留实例的价格。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,11 +46,6 @@ class InquirePricePurchaseReservedInstancesOfferingResponse extends AbstractMode
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = new ReservedInstancePrice();
-            $this->Price->deserialize($param["Price"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

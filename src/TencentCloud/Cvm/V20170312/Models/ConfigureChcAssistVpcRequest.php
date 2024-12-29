@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) 设置部署网络信息。
  * @method array getDeploySecurityGroupIds() 获取部署网络的安全组列表
  * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) 设置部署网络的安全组列表
+ * @method ChcDeployExtraConfig getChcDeployExtraConfig() 获取部署网络的附加参数，用于指定minios类型、bios引导模式等
+ * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) 设置部署网络的附加参数，用于指定minios类型、bios引导模式等
  */
 class ConfigureChcAssistVpcRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
     public $DeploySecurityGroupIds;
 
     /**
+     * @var ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     */
+    public $ChcDeployExtraConfig;
+
+    /**
      * @param array $ChcIds CHC物理服务器的实例Id。
      * @param VirtualPrivateCloud $BmcVirtualPrivateCloud 带外网络信息。
      * @param array $BmcSecurityGroupIds 带外网络的安全组列表
      * @param VirtualPrivateCloud $DeployVirtualPrivateCloud 部署网络信息。
      * @param array $DeploySecurityGroupIds 部署网络的安全组列表
+     * @param ChcDeployExtraConfig $ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
      */
     function __construct()
     {
@@ -98,6 +106,11 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
 
         if (array_key_exists("DeploySecurityGroupIds",$param) and $param["DeploySecurityGroupIds"] !== null) {
             $this->DeploySecurityGroupIds = $param["DeploySecurityGroupIds"];
+        }
+
+        if (array_key_exists("ChcDeployExtraConfig",$param) and $param["ChcDeployExtraConfig"] !== null) {
+            $this->ChcDeployExtraConfig = new ChcDeployExtraConfig();
+            $this->ChcDeployExtraConfig->deserialize($param["ChcDeployExtraConfig"]);
         }
     }
 }

@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlayUrl() 获取播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayUrl(string $PlayUrl) 设置播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebRTCPlayUrl() 获取webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebRTCPlayUrl(string $WebRTCPlayUrl) 设置webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +38,6 @@ class DescribeCasterPlayUrlResponse extends AbstractModel
     /**
      * @var string 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlayUrl;
 
@@ -50,7 +45,6 @@ class DescribeCasterPlayUrlResponse extends AbstractModel
      * @var string webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebRTCPlayUrl;
 
@@ -62,11 +56,9 @@ class DescribeCasterPlayUrlResponse extends AbstractModel
     /**
      * @param string $PlayUrl 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebRTCPlayUrl webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

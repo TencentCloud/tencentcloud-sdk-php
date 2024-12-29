@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIndexList返回参数结构体
+ * AttachDisks返回参数结构体
  *
- * @method string getData() 获取ES 索引信息
- * @method void setData(string $Data) 设置ES 索引信息
+ * @method integer getFlowId() 获取流程id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlowId(integer $FlowId) 设置流程id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeIndexListResponse extends AbstractModel
+class AttachDisksResponse extends AbstractModel
 {
     /**
-     * @var string ES 索引信息
+     * @var integer 流程id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Data;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class DescribeIndexListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data ES 索引信息
+     * @param integer $FlowId 流程id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,8 @@ class DescribeIndexListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

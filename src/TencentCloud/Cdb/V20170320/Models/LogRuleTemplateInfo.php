@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 审计日志命中规则模板的基本信息
  *
  * @method string getRuleTemplateId() 获取模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateId(string $RuleTemplateId) 设置模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleTemplateName() 获取规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(string $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleTemplateStatus() 获取规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateStatus(integer $RuleTemplateStatus) 设置规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogRuleTemplateInfo extends AbstractModel
 {
     /**
      * @var string 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateId;
 
     /**
      * @var string 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateName;
 
     /**
      * @var string 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
 
     /**
      * @var integer 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateStatus;
 
     /**
      * @param string $RuleTemplateId 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleTemplateName 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleTemplateStatus 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

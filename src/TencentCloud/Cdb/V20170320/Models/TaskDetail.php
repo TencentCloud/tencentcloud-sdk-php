@@ -79,9 +79,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取实例任务结束时间。
  * @method void setEndTime(string $EndTime) 设置实例任务结束时间。
  * @method array getInstanceIds() 获取任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncRequestId() 获取异步任务的请求 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
  * @method array getTaskAttachInfo() 获取任务的附加信息。
@@ -152,7 +150,6 @@ class TaskDetail extends AbstractModel
 
     /**
      * @var array 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
@@ -197,7 +194,6 @@ class TaskDetail extends AbstractModel
      * @param string $StartTime 实例任务开始时间。
      * @param string $EndTime 实例任务结束时间。
      * @param array $InstanceIds 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncRequestId 异步任务的请求 ID。
      * @param array $TaskAttachInfo 任务的附加信息。
      */

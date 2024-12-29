@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PurchaseReservedInstancesOffering返回参数结构体
+ * DescribeNodeDataDisks返回参数结构体
  *
- * @method string getReservedInstanceId() 获取已购买预留实例计费ID
- * @method void setReservedInstanceId(string $ReservedInstanceId) 设置已购买预留实例计费ID
+ * @method integer getTotalCount() 获取总数量
+ * @method void setTotalCount(integer $TotalCount) 设置总数量
+ * @method array getCBSList() 获取云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCBSList(array $CBSList) 设置云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class PurchaseReservedInstancesOfferingResponse extends AbstractModel
+class DescribeNodeDataDisksResponse extends AbstractModel
 {
     /**
-     * @var string 已购买预留实例计费ID
+     * @var integer 总数量
      */
-    public $ReservedInstanceId;
+    public $TotalCount;
+
+    /**
+     * @var array 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CBSList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class PurchaseReservedInstancesOfferingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReservedInstanceId 已购买预留实例计费ID
+     * @param integer $TotalCount 总数量
+     * @param array $CBSList 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +66,17 @@ class PurchaseReservedInstancesOfferingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReservedInstanceId",$param) and $param["ReservedInstanceId"] !== null) {
-            $this->ReservedInstanceId = $param["ReservedInstanceId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("CBSList",$param) and $param["CBSList"] !== null) {
+            $this->CBSList = [];
+            foreach ($param["CBSList"] as $key => $value){
+                $obj = new CBSInstance();
+                $obj->deserialize($value);
+                array_push($this->CBSList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 审计日志分析结果
  *
  * @method string getAggregationField() 获取聚合维度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAggregationField(string $AggregationField) 设置聚合维度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBuckets() 获取聚合桶的结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuckets(array $Buckets) 设置聚合桶的结果集
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditLogAggregationResult extends AbstractModel
 {
     /**
      * @var string 聚合维度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AggregationField;
 
     /**
      * @var array 聚合桶的结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Buckets;
 
     /**
      * @param string $AggregationField 聚合维度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Buckets 聚合桶的结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

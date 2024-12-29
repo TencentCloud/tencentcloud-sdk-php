@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInitFlag() 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
  * @method void setInitFlag(integer $InitFlag) 设置初始化标志，可能的返回值为：0-未初始化；1-已初始化
  * @method RoVipInfo getRoVipInfo() 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取内存容量，单位为 MB
  * @method void setMemory(integer $Memory) 设置内存容量，单位为 MB
  * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
@@ -37,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVpcId() 获取私有网络 ID，例如：51102
  * @method void setVpcId(integer $VpcId) 设置私有网络 ID，例如：51102
  * @method SlaveInfo getSlaveInfo() 获取备机信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置备机信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method integer getVolume() 获取硬盘容量，单位为 GB
@@ -49,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProtectMode() 获取数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
  * @method array getRoGroups() 获取只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubnetId() 获取子网 ID，例如：2333
  * @method void setSubnetId(integer $SubnetId) 设置子网 ID，例如：2333
  * @method integer getInstanceType() 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
@@ -67,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskStatus() 获取实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
  * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
  * @method MasterInfo getMasterInfo() 获取主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取实例类型
  * @method void setDeviceType(string $DeviceType) 设置实例类型
  * @method string getEngineVersion() 获取内核版本
@@ -77,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method array getDrInfo() 获取灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrInfo(array $DrInfo) 设置灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanDomain() 获取外网域名
  * @method void setWanDomain(string $WanDomain) 设置外网域名
  * @method integer getWanPort() 获取外网端口号
@@ -107,41 +97,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZoneName() 获取可用区中文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中文名称
  * @method string getDeviceClass() 获取物理机型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置物理机型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployGroupId() 获取置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceNodes() 获取节点数
  * @method void setInstanceNodes(integer $InstanceNodes) 设置节点数
  * @method array getTagList() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineType() 获取引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDelayTime() 获取最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
  * @method void setDiskType(string $DiskType) 设置实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
  * @method integer getExpandCpu() 获取当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpandCpu(integer $ExpandCpu) 设置当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterInfo() 获取实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterInfo(array $ClusterInfo) 设置实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -162,7 +136,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVipInfo;
 
@@ -183,7 +156,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var SlaveInfo 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveInfo;
 
@@ -209,7 +181,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoGroups;
 
@@ -250,7 +221,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var MasterInfo 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterInfo;
 
@@ -271,7 +241,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrInfo;
 
@@ -342,19 +311,16 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceClass;
 
     /**
      * @var string 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployGroupId;
 
     /**
      * @var integer 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
@@ -365,19 +331,16 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
      * @var string 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
     /**
      * @var integer 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDelayTime;
 
@@ -388,13 +351,11 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var integer 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpandCpu;
 
     /**
      * @var array 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterInfo;
 
@@ -403,18 +364,15 @@ class InstanceInfo extends AbstractModel
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存容量，单位为 MB
      * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
      * @param integer $VpcId 私有网络 ID，例如：51102
      * @param SlaveInfo $SlaveInfo 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例 ID
      * @param integer $Volume 硬盘容量，单位为 GB
      * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param integer $ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      * @param array $RoGroups 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetId 子网 ID，例如：2333
      * @param integer $InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      * @param integer $ProjectId 项目 ID
@@ -423,12 +381,10 @@ class InstanceInfo extends AbstractModel
      * @param integer $DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      * @param integer $TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param MasterInfo $MasterInfo 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 实例类型
      * @param string $EngineVersion 内核版本
      * @param string $InstanceName 实例名称
      * @param array $DrInfo 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanDomain 外网域名
      * @param integer $WanPort 外网端口号
      * @param integer $PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
@@ -443,23 +399,15 @@ class InstanceInfo extends AbstractModel
      * @param integer $Qps 每秒查询数量
      * @param string $ZoneName 可用区中文名称
      * @param string $DeviceClass 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployGroupId 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceNodes 节点数
      * @param array $TagList 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDelayTime 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
      * @param integer $ExpandCpu 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterInfo 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

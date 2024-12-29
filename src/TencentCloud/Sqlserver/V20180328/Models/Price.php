@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 参考价格，该价格为CPU、内存规格价格，不包括磁盘用量，实际价格以询价接口为准。
  *
  * @method integer getPrepaidPrice() 获取包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrepaidPrice(integer $PrepaidPrice) 设置包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrepaidPriceUnit() 获取包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrepaidPriceUnit(string $PrepaidPriceUnit) 设置包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostpaidPrice() 获取按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostpaidPrice(integer $PostpaidPrice) 设置按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPostpaidPriceUnit() 获取按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostpaidPriceUnit(string $PostpaidPriceUnit) 设置按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Price extends AbstractModel
 {
     /**
      * @var integer 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrepaidPrice;
 
     /**
      * @var string 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrepaidPriceUnit;
 
     /**
      * @var integer 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostpaidPrice;
 
     /**
      * @var string 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostpaidPriceUnit;
 
     /**
      * @param integer $PrepaidPrice 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrepaidPriceUnit 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostpaidPrice 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PostpaidPriceUnit 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

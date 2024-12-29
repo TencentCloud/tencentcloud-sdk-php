@@ -68,7 +68,9 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyApplicationServiceResponse ModifyApplicationService(Models\ModifyApplicationServiceRequest $req) 修改服务访问方式列表
  * @method Models\ModifyConfigDataResponse ModifyConfigData(Models\ModifyConfigDataRequest $req) 编辑配置
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
- * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
+ * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 此接口没有被使用了
+
+创建或者更新 Ingress 规则
  * @method Models\ModifyLogConfigResponse ModifyLogConfig(Models\ModifyLogConfigRequest $req) 编辑日志收集配置
  * @method Models\RestartApplicationResponse RestartApplication(Models\RestartApplicationRequest $req) 服务重启
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) 重启应用实例

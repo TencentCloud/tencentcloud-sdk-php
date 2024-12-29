@@ -36,14 +36,10 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li>**0**：模板列表及详情（默认）</li>
 <li>**1**：仅模板列表</li></ul>
- * @method array getFilters() 获取搜索条件，本字段用于指定模板Id进行查询。
-- Key：template-id Values：需要查询的模板Id列表
-- Key：template-name Values：需要查询的模板名称列表
-
- * @method void setFilters(array $Filters) 设置搜索条件，本字段用于指定模板Id进行查询。
-- Key：template-id Values：需要查询的模板Id列表
-- Key：template-name Values：需要查询的模板名称列表
-
+ * @method array getFilters() 获取搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。
+<ul><li><strong>模板 ID</strong>：<strong>Key</strong>设置为 <code>template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">模板 ID </a>列表。</li>  <li><strong>主企业模板 ID</strong>：<strong>Key</strong>设置为 <code>share-template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">主企业模板 ID </a>列表。用来查询主企业分享模板到子企业场景下，子企业的模板信息，在此情境下，参数 <strong>Agent.ProxyOrganizationId</strong>（子企业的组织ID）为必填项。</li> <li><strong>模板名称</strong>：<strong>Key</strong>设置为 <code>template-name</code> ，<strong>Values</strong>为您想要查询的<a href="https://qcloudimg.tencent-cloud.cn/raw/03a924ee0a53d86575f8067d1c97876d.png" target="_blank">模板名称</a>列表。</li></ul>
+ * @method void setFilters(array $Filters) 设置搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。
+<ul><li><strong>模板 ID</strong>：<strong>Key</strong>设置为 <code>template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">模板 ID </a>列表。</li>  <li><strong>主企业模板 ID</strong>：<strong>Key</strong>设置为 <code>share-template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">主企业模板 ID </a>列表。用来查询主企业分享模板到子企业场景下，子企业的模板信息，在此情境下，参数 <strong>Agent.ProxyOrganizationId</strong>（子企业的组织ID）为必填项。</li> <li><strong>模板名称</strong>：<strong>Key</strong>设置为 <code>template-name</code> ，<strong>Values</strong>为您想要查询的<a href="https://qcloudimg.tencent-cloud.cn/raw/03a924ee0a53d86575f8067d1c97876d.png" target="_blank">模板名称</a>列表。</li></ul>
  * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`
@@ -58,12 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置指定每页返回的数据条数，和Offset参数配合使用。
 
 注：`1.默认值为20，单页做大值为200。`
- * @method string getApplicationId() 获取指定查询的应用号，指定后查询该应用号下的模板列表。
+ * @method string getApplicationId() 获取通过指定[第三方应用的应用号（ApplicationId）](https://qcloudimg.tencent-cloud.cn/raw/60efa1e9049732e5246b20a268882b1a.png)，您可以查询<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中某个第三方应用下的模板。
 
-注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
- * @method void setApplicationId(string $ApplicationId) 设置指定查询的应用号，指定后查询该应用号下的模板列表。
+<p><strong>注意事项：</strong></p>
+<ul><li>当 <strong>ApplicationId</strong> 为空时（默认），系统将查询<a href="https://qcloudimg.tencent-cloud.cn/raw/376943a1d472393dd5388592f2e85ee5.png" target="_blank">平台企业的所有模板</a>（自建应用使用的模板）。</li><li>当 <strong>ApplicationId</strong> 不为空时，系统将从<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中查询该特定应用下的模板（分享给第三方应用子企业的模板）。</li></ul>
+ * @method void setApplicationId(string $ApplicationId) 设置通过指定[第三方应用的应用号（ApplicationId）](https://qcloudimg.tencent-cloud.cn/raw/60efa1e9049732e5246b20a268882b1a.png)，您可以查询<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中某个第三方应用下的模板。
 
-注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
+<p><strong>注意事项：</strong></p>
+<ul><li>当 <strong>ApplicationId</strong> 为空时（默认），系统将查询<a href="https://qcloudimg.tencent-cloud.cn/raw/376943a1d472393dd5388592f2e85ee5.png" target="_blank">平台企业的所有模板</a>（自建应用使用的模板）。</li><li>当 <strong>ApplicationId</strong> 不为空时，系统将从<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中查询该特定应用下的模板（分享给第三方应用子企业的模板）。</li></ul>
  * @method boolean getIsChannel() 获取默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
  * @method void setIsChannel(boolean $IsChannel) 设置默认为false，查询SaaS模板库列表；
@@ -72,8 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  * @method integer getGenerateSource() 获取暂未开放
  * @method void setGenerateSource(integer $GenerateSource) 设置暂未开放
- * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
- * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
+ * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接。
+
+<ul><li><strong>false</strong>：不获取（默认）</li><li><strong>true</strong>：需要获取</li></ul>
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接, 有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+ * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接。
+
+<ul><li><strong>false</strong>：不获取（默认）</li><li><strong>true</strong>：需要获取</li></ul>
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接, 有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
  */
 class DescribeFlowTemplatesRequest extends AbstractModel
 {
@@ -98,10 +102,8 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $ContentType;
 
     /**
-     * @var array 搜索条件，本字段用于指定模板Id进行查询。
-- Key：template-id Values：需要查询的模板Id列表
-- Key：template-name Values：需要查询的模板名称列表
-
+     * @var array 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。
+<ul><li><strong>模板 ID</strong>：<strong>Key</strong>设置为 <code>template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">模板 ID </a>列表。</li>  <li><strong>主企业模板 ID</strong>：<strong>Key</strong>设置为 <code>share-template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">主企业模板 ID </a>列表。用来查询主企业分享模板到子企业场景下，子企业的模板信息，在此情境下，参数 <strong>Agent.ProxyOrganizationId</strong>（子企业的组织ID）为必填项。</li> <li><strong>模板名称</strong>：<strong>Key</strong>设置为 <code>template-name</code> ，<strong>Values</strong>为您想要查询的<a href="https://qcloudimg.tencent-cloud.cn/raw/03a924ee0a53d86575f8067d1c97876d.png" target="_blank">模板名称</a>列表。</li></ul>
      */
     public $Filters;
 
@@ -121,9 +123,10 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 指定查询的应用号，指定后查询该应用号下的模板列表。
+     * @var string 通过指定[第三方应用的应用号（ApplicationId）](https://qcloudimg.tencent-cloud.cn/raw/60efa1e9049732e5246b20a268882b1a.png)，您可以查询<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中某个第三方应用下的模板。
 
-注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
+<p><strong>注意事项：</strong></p>
+<ul><li>当 <strong>ApplicationId</strong> 为空时（默认），系统将查询<a href="https://qcloudimg.tencent-cloud.cn/raw/376943a1d472393dd5388592f2e85ee5.png" target="_blank">平台企业的所有模板</a>（自建应用使用的模板）。</li><li>当 <strong>ApplicationId</strong> 不为空时，系统将从<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中查询该特定应用下的模板（分享给第三方应用子企业的模板）。</li></ul>
      */
     public $ApplicationId;
 
@@ -147,7 +150,10 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $GenerateSource;
 
     /**
-     * @var boolean 是否获取模板预览链接
+     * @var boolean 是否获取模板预览链接。
+
+<ul><li><strong>false</strong>：不获取（默认）</li><li><strong>true</strong>：需要获取</li></ul>
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接, 有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
      */
     public $WithPreviewUrl;
 
@@ -160,10 +166,8 @@ class DescribeFlowTemplatesRequest extends AbstractModel
 
 <ul><li>**0**：模板列表及详情（默认）</li>
 <li>**1**：仅模板列表</li></ul>
-     * @param array $Filters 搜索条件，本字段用于指定模板Id进行查询。
-- Key：template-id Values：需要查询的模板Id列表
-- Key：template-name Values：需要查询的模板名称列表
-
+     * @param array $Filters 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。
+<ul><li><strong>模板 ID</strong>：<strong>Key</strong>设置为 <code>template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">模板 ID </a>列表。</li>  <li><strong>主企业模板 ID</strong>：<strong>Key</strong>设置为 <code>share-template-id</code> ，<strong>Values</strong>为您想要查询的 <a href="https://qcloudimg.tencent-cloud.cn/raw/5c27b917b2bbe8c341566c78ca6f8782.png" target="_blank">主企业模板 ID </a>列表。用来查询主企业分享模板到子企业场景下，子企业的模板信息，在此情境下，参数 <strong>Agent.ProxyOrganizationId</strong>（子企业的组织ID）为必填项。</li> <li><strong>模板名称</strong>：<strong>Key</strong>设置为 <code>template-name</code> ，<strong>Values</strong>为您想要查询的<a href="https://qcloudimg.tencent-cloud.cn/raw/03a924ee0a53d86575f8067d1c97876d.png" target="_blank">模板名称</a>列表。</li></ul>
      * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
 
 注：`1.offset从0开始，即第一页为0。`
@@ -171,14 +175,18 @@ class DescribeFlowTemplatesRequest extends AbstractModel
      * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用。
 
 注：`1.默认值为20，单页做大值为200。`
-     * @param string $ApplicationId 指定查询的应用号，指定后查询该应用号下的模板列表。
+     * @param string $ApplicationId 通过指定[第三方应用的应用号（ApplicationId）](https://qcloudimg.tencent-cloud.cn/raw/60efa1e9049732e5246b20a268882b1a.png)，您可以查询<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中某个第三方应用下的模板。
 
-注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
+<p><strong>注意事项：</strong></p>
+<ul><li>当 <strong>ApplicationId</strong> 为空时（默认），系统将查询<a href="https://qcloudimg.tencent-cloud.cn/raw/376943a1d472393dd5388592f2e85ee5.png" target="_blank">平台企业的所有模板</a>（自建应用使用的模板）。</li><li>当 <strong>ApplicationId</strong> 不为空时，系统将从<a href="https://qcloudimg.tencent-cloud.cn/raw/18319e5e77f7d47eab493d43d47827d3.png" target="_blank">【应用模板库管理】</a>中查询该特定应用下的模板（分享给第三方应用子企业的模板）。</li></ul>
      * @param boolean $IsChannel 默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
      * @param OrganizationInfo $Organization 暂未开放
      * @param integer $GenerateSource 暂未开放
-     * @param boolean $WithPreviewUrl 是否获取模板预览链接
+     * @param boolean $WithPreviewUrl 是否获取模板预览链接。
+
+<ul><li><strong>false</strong>：不获取（默认）</li><li><strong>true</strong>：需要获取</li></ul>
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接, 有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
      */
     function __construct()
     {

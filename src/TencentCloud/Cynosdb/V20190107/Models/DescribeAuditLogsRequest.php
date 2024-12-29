@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditLogs请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method string getStartTime() 获取开始时间，格式为："2017-07-12 10:29:20"。
  * @method void setStartTime(string $StartTime) 设置开始时间，格式为："2017-07-12 10:29:20"。
  * @method string getEndTime() 获取结束时间，格式为："2017-07-12 10:29:20"。
@@ -41,14 +41,16 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method integer getOffset() 获取分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
  * @method array getLogFilter() 获取过滤条件。多个值之前是且的关系。
  * @method void setLogFilter(array $LogFilter) 设置过滤条件。多个值之前是且的关系。
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
@@ -87,6 +89,7 @@ class DescribeAuditLogsRequest extends AbstractModel
 
     /**
      * @var integer 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
      */
     public $Offset;
 
@@ -96,7 +99,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例 ID。
      * @param string $StartTime 开始时间，格式为："2017-07-12 10:29:20"。
      * @param string $EndTime 结束时间，格式为："2017-07-12 10:29:20"。
      * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
@@ -107,6 +110,7 @@ class DescribeAuditLogsRequest extends AbstractModel
      * @param AuditLogFilter $Filter 已废弃。
      * @param integer $Limit 分页参数，单次返回的数据条数。默认值为100，最大值为100。
      * @param integer $Offset 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
      * @param array $LogFilter 过滤条件。多个值之前是且的关系。
      */
     function __construct()

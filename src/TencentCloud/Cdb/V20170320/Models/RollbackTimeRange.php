@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 可回档时间范围
  *
  * @method string getBegin() 获取实例可回档开始时间，时间格式：2016-10-29 01:06:04
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBegin(string $Begin) 设置实例可回档开始时间，时间格式：2016-10-29 01:06:04
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnd() 获取实例可回档结束时间，时间格式：2016-11-02 11:44:47
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnd(string $End) 设置实例可回档结束时间，时间格式：2016-11-02 11:44:47
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackTimeRange extends AbstractModel
 {
     /**
      * @var string 实例可回档开始时间，时间格式：2016-10-29 01:06:04
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Begin;
 
     /**
      * @var string 实例可回档结束时间，时间格式：2016-11-02 11:44:47
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $End;
 
     /**
      * @param string $Begin 实例可回档开始时间，时间格式：2016-10-29 01:06:04
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $End 实例可回档结束时间，时间格式：2016-11-02 11:44:47
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

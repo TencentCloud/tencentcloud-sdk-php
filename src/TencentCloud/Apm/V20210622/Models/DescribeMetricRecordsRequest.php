@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupBy(array $GroupBy) 设置聚合维度
  * @method OrderBy getOrderBy() 获取排序
  * @method void setOrderBy(OrderBy $OrderBy) 设置排序
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  * @method integer getLimit() 获取每页大小
  * @method void setLimit(integer $Limit) 设置每页大小
  * @method integer getStartTime() 获取开始时间
@@ -72,7 +72,7 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string 实例ID
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
@@ -126,7 +126,7 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
      * @param OrderBy $OrderBy 排序
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 业务系统ID
      * @param integer $Limit 每页大小
      * @param integer $StartTime 开始时间
      * @param integer $Offset 分页起始点

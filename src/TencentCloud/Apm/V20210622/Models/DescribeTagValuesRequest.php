@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTagKey() 获取维度名
  * @method void setTagKey(string $TagKey) 设置维度名
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method array getFilters() 获取过滤条件
@@ -43,7 +43,7 @@ class DescribeTagValuesRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @var string 实例ID
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
@@ -74,7 +74,7 @@ class DescribeTagValuesRequest extends AbstractModel
 
     /**
      * @param string $TagKey 维度名
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 业务系统ID
      * @param integer $EndTime 结束时间
      * @param array $Filters 过滤条件
      * @param integer $StartTime 开始时间

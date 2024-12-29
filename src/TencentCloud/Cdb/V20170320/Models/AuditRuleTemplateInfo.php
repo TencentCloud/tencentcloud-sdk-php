@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRuleFilters() 获取规则模板的过滤条件。
  * @method void setRuleFilters(array $RuleFilters) 设置规则模板的过滤条件。
  * @method string getDescription() 获取规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateAt() 获取规则模板创建时间。
  * @method void setCreateAt(string $CreateAt) 设置规则模板创建时间。
  * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
@@ -62,7 +60,6 @@ class AuditRuleTemplateInfo extends AbstractModel
 
     /**
      * @var string 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -101,7 +98,6 @@ class AuditRuleTemplateInfo extends AbstractModel
      * @param string $RuleTemplateName 规则模板名称。
      * @param array $RuleFilters 规则模板的过滤条件。
      * @param string $Description 规则模板描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateAt 规则模板创建时间。
      * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
      * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。

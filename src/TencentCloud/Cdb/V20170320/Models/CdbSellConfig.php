@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取状态值，0 表示该规格对外售卖
  * @method void setStatus(integer $Status) 设置状态值，0 表示该规格对外售卖
  * @method string getDeviceType() 获取实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型), BASIC_V2 (基础型v2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型), BASIC_V2 (基础型v2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineType() 获取引擎类型描述，可能的取值范围有：Innodb，RocksDB
  * @method void setEngineType(string $EngineType) 设置引擎类型描述，可能的取值范围有：Innodb，RocksDB
  * @method integer getId() 获取售卖规格Id
@@ -89,7 +87,6 @@ class CdbSellConfig extends AbstractModel
 
     /**
      * @var string 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型), BASIC_V2 (基础型v2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
@@ -113,7 +110,6 @@ class CdbSellConfig extends AbstractModel
      * @param string $Info 应用场景描述
      * @param integer $Status 状态值，0 表示该规格对外售卖
      * @param string $DeviceType 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型), BASIC_V2 (基础型v2)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 引擎类型描述，可能的取值范围有：Innodb，RocksDB
      * @param integer $Id 售卖规格Id
      */

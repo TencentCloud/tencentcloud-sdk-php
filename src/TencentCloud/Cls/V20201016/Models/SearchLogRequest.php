@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置- 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
- * @method array getTopics() 获取- 要检索分析的日志主题列表，最大支持20个日志主题。
+ * @method array getTopics() 获取- 要检索分析的日志主题列表，最大支持50个日志主题。
 - 检索单个日志主题时请使用TopicId。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
- * @method void setTopics(array $Topics) 设置- 要检索分析的日志主题列表，最大支持20个日志主题。
+ * @method void setTopics(array $Topics) 设置- 要检索分析的日志主题列表，最大支持50个日志主题。
 - 检索单个日志主题时请使用TopicId。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
  * @method string getSort() 获取原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
@@ -152,7 +152,7 @@ class SearchLogRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var array - 要检索分析的日志主题列表，最大支持20个日志主题。
+     * @var array - 要检索分析的日志主题列表，最大支持50个日志主题。
 - 检索单个日志主题时请使用TopicId。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
      */
@@ -227,7 +227,7 @@ class SearchLogRequest extends AbstractModel
      * @param string $TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
-     * @param array $Topics - 要检索分析的日志主题列表，最大支持20个日志主题。
+     * @param array $Topics - 要检索分析的日志主题列表，最大支持50个日志主题。
 - 检索单个日志主题时请使用TopicId。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
      * @param string $Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc

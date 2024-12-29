@@ -146,6 +146,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlinkVersion(string $FlinkVersion) 设置flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getJobManagerCpu() 获取jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getJobManagerMem() 获取jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobManagerMem(float $JobManagerMem) 设置jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTaskManagerCpu() 获取tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTaskManagerMem() 获取tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method JobConfig getJobConfigItem() 获取运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobConfigItem(JobConfig $JobConfigItem) 设置运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -345,6 +365,36 @@ class JobConfig extends AbstractModel
     public $FlinkVersion;
 
     /**
+     * @var float jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobManagerCpu;
+
+    /**
+     * @var float jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobManagerMem;
+
+    /**
+     * @var float tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskManagerCpu;
+
+    /**
+     * @var float tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskManagerMem;
+
+    /**
+     * @var JobConfig 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobConfigItem;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -407,6 +457,16 @@ class JobConfig extends AbstractModel
      * @param string $WorkspaceName es空间中文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlinkVersion flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $JobManagerCpu jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $JobManagerMem jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TaskManagerCpu tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TaskManagerMem tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobConfig $JobConfigItem 运行中配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -570,6 +630,27 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
             $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("JobManagerCpu",$param) and $param["JobManagerCpu"] !== null) {
+            $this->JobManagerCpu = $param["JobManagerCpu"];
+        }
+
+        if (array_key_exists("JobManagerMem",$param) and $param["JobManagerMem"] !== null) {
+            $this->JobManagerMem = $param["JobManagerMem"];
+        }
+
+        if (array_key_exists("TaskManagerCpu",$param) and $param["TaskManagerCpu"] !== null) {
+            $this->TaskManagerCpu = $param["TaskManagerCpu"];
+        }
+
+        if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
+            $this->TaskManagerMem = $param["TaskManagerMem"];
+        }
+
+        if (array_key_exists("JobConfigItem",$param) and $param["JobConfigItem"] !== null) {
+            $this->JobConfigItem = new JobConfig();
+            $this->JobConfigItem->deserialize($param["JobConfigItem"]);
         }
     }
 }

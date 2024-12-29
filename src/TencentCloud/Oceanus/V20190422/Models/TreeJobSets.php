@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScalingType() 获取0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScalingType(integer $ScalingType) 设置0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRunningCpu() 获取RunningCpu
+ * @method void setRunningCpu(float $RunningCpu) 设置RunningCpu
+ * @method float getRunningMem() 获取RunningMem
+ * @method void setRunningMem(float $RunningMem) 设置RunningMem
  */
 class TreeJobSets extends AbstractModel
 {
@@ -74,6 +84,23 @@ class TreeJobSets extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScalingType;
+
+    /**
+     * @var float RunningCpu
+     */
+    public $RunningCpu;
+
+    /**
+     * @var float RunningMem
+     */
+    public $RunningMem;
+
+    /**
      * @param string $JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 作业名
@@ -84,6 +111,11 @@ class TreeJobSets extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningCpu RunningCpu
+     * @param float $RunningMem RunningMem
      */
     function __construct()
     {
@@ -116,6 +148,18 @@ class TreeJobSets extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ScalingType",$param) and $param["ScalingType"] !== null) {
+            $this->ScalingType = $param["ScalingType"];
+        }
+
+        if (array_key_exists("RunningCpu",$param) and $param["RunningCpu"] !== null) {
+            $this->RunningCpu = $param["RunningCpu"];
+        }
+
+        if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
+            $this->RunningMem = $param["RunningMem"];
         }
     }
 }

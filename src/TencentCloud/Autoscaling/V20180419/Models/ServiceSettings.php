@@ -42,8 +42,14 @@ RECREATE：重建实例替代原有不健康实例；
 RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
 默认取值：RECREATE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoUpdateInstanceTags() 获取自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
- * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) 设置自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+ * @method boolean getAutoUpdateInstanceTags() 获取自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+ * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) 设置自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+ * @method boolean getDesiredCapacitySyncWithMaxMinSize() 获取期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+ * @method void setDesiredCapacitySyncWithMaxMinSize(boolean $DesiredCapacitySyncWithMaxMinSize) 设置期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
  */
 class ServiceSettings extends AbstractModel
 {
@@ -75,9 +81,16 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     public $ReplaceMode;
 
     /**
-     * @var boolean 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * @var boolean 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
      */
     public $AutoUpdateInstanceTags;
+
+    /**
+     * @var boolean 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     */
+    public $DesiredCapacitySyncWithMaxMinSize;
 
     /**
      * @param boolean $ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
@@ -91,7 +104,10 @@ RECREATE：重建实例替代原有不健康实例；
 RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
 默认取值：RECREATE
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * @param boolean $AutoUpdateInstanceTags 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * @param boolean $DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
      */
     function __construct()
     {
@@ -124,6 +140,10 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
 
         if (array_key_exists("AutoUpdateInstanceTags",$param) and $param["AutoUpdateInstanceTags"] !== null) {
             $this->AutoUpdateInstanceTags = $param["AutoUpdateInstanceTags"];
+        }
+
+        if (array_key_exists("DesiredCapacitySyncWithMaxMinSize",$param) and $param["DesiredCapacitySyncWithMaxMinSize"] !== null) {
+            $this->DesiredCapacitySyncWithMaxMinSize = $param["DesiredCapacitySyncWithMaxMinSize"];
         }
     }
 }

@@ -234,6 +234,12 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountType(integer $AccountType) 设置账户类型 0:普通用户 1:CAM用户
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorMode() 获取监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorMode(integer $MonitorMode) 设置监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method NodesSummary getCNSummary() 获取cn节点信息
+ * @method void setCNSummary(NodesSummary $CNSummary) 设置cn节点信息
  */
 class InstanceInfo extends AbstractModel
 {
@@ -546,6 +552,17 @@ Modify 集群变更中；
     public $AccountType;
 
     /**
+     * @var integer 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorMode;
+
+    /**
+     * @var NodesSummary cn节点信息
+     */
+    public $CNSummary;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -653,6 +670,9 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AccountType 账户类型 0:普通用户 1:CAM用户
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorMode 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodesSummary $CNSummary cn节点信息
      */
     function __construct()
     {
@@ -873,6 +893,15 @@ Modify 集群变更中；
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("MonitorMode",$param) and $param["MonitorMode"] !== null) {
+            $this->MonitorMode = $param["MonitorMode"];
+        }
+
+        if (array_key_exists("CNSummary",$param) and $param["CNSummary"] !== null) {
+            $this->CNSummary = new NodesSummary();
+            $this->CNSummary->deserialize($param["CNSummary"]);
         }
     }
 }

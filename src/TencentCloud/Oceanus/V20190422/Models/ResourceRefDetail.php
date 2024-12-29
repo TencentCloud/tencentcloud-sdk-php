@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置1: 主资源
  * @method integer getSystemProvide() 获取1: 系统内置资源
  * @method void setSystemProvide(integer $SystemProvide) 设置1: 系统内置资源
+ * @method string getConnector() 获取Connector
+ * @method void setConnector(string $Connector) 设置Connector
  */
 class ResourceRefDetail extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ResourceRefDetail extends AbstractModel
     public $SystemProvide;
 
     /**
+     * @var string Connector
+     */
+    public $Connector;
+
+    /**
      * @param string $ResourceId 资源id
      * @param integer $Version 资源版本，-1表示使用最新版本
      * @param string $Name 资源名称
      * @param integer $Type 1: 主资源
      * @param integer $SystemProvide 1: 系统内置资源
+     * @param string $Connector Connector
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ResourceRefDetail extends AbstractModel
 
         if (array_key_exists("SystemProvide",$param) and $param["SystemProvide"] !== null) {
             $this->SystemProvide = $param["SystemProvide"];
+        }
+
+        if (array_key_exists("Connector",$param) and $param["Connector"] !== null) {
+            $this->Connector = $param["Connector"];
         }
     }
 }

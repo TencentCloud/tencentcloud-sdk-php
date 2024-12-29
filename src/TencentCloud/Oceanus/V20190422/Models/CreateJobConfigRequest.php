@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es索引空间
  * @method string getFlinkVersion() 获取flink版本
  * @method void setFlinkVersion(string $FlinkVersion) 设置flink版本
+ * @method float getJobManagerCpu() 获取JobManager cpu
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManager cpu
+ * @method float getJobManagerMem() 获取JobManager 内存
+ * @method void setJobManagerMem(float $JobManagerMem) 设置JobManager 内存
+ * @method float getTaskManagerCpu() 获取TaskManager cpu
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManager cpu
+ * @method float getTaskManagerMem() 获取TaskManager 内存
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManager 内存
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -227,6 +235,26 @@ class CreateJobConfigRequest extends AbstractModel
     public $FlinkVersion;
 
     /**
+     * @var float JobManager cpu
+     */
+    public $JobManagerCpu;
+
+    /**
+     * @var float JobManager 内存
+     */
+    public $JobManagerMem;
+
+    /**
+     * @var float TaskManager cpu
+     */
+    public $TaskManagerCpu;
+
+    /**
+     * @var float TaskManager 内存
+     */
+    public $TaskManagerMem;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -256,6 +284,10 @@ class CreateJobConfigRequest extends AbstractModel
      * @param string $EsServerlessIndex es索引名称
      * @param string $EsServerlessSpace es索引空间
      * @param string $FlinkVersion flink版本
+     * @param float $JobManagerCpu JobManager cpu
+     * @param float $JobManagerMem JobManager 内存
+     * @param float $TaskManagerCpu TaskManager cpu
+     * @param float $TaskManagerMem TaskManager 内存
      */
     function __construct()
     {
@@ -402,6 +434,22 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
             $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("JobManagerCpu",$param) and $param["JobManagerCpu"] !== null) {
+            $this->JobManagerCpu = $param["JobManagerCpu"];
+        }
+
+        if (array_key_exists("JobManagerMem",$param) and $param["JobManagerMem"] !== null) {
+            $this->JobManagerMem = $param["JobManagerMem"];
+        }
+
+        if (array_key_exists("TaskManagerCpu",$param) and $param["TaskManagerCpu"] !== null) {
+            $this->TaskManagerCpu = $param["TaskManagerCpu"];
+        }
+
+        if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
+            $this->TaskManagerMem = $param["TaskManagerMem"];
         }
     }
 }

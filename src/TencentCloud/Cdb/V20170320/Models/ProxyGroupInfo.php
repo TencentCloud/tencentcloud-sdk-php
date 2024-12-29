@@ -23,41 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProxyGroupId() 获取代理组ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
  * @method string getProxyVersion() 获取代理版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyVersion(string $ProxyVersion) 设置代理版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSupportUpgradeProxyVersion() 获取代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportUpgradeProxyVersion(string $SupportUpgradeProxyVersion) 设置代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取代理状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置代理状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskStatus() 获取代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(string $TaskStatus) 设置代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyNode() 获取代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyNode(array $ProxyNode) 设置代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyAddress() 获取代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyAddress(array $ProxyAddress) 设置代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnectionPoolLimit() 获取连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportCreateProxyAddress() 获取支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportCreateProxyAddress(boolean $SupportCreateProxyAddress) 设置支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSupportUpgradeProxyMysqlVersion() 获取支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportUpgradeProxyMysqlVersion(string $SupportUpgradeProxyMysqlVersion) 设置支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -68,78 +50,60 @@ class ProxyGroupInfo extends AbstractModel
 
     /**
      * @var string 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyVersion;
 
     /**
      * @var string 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportUpgradeProxyVersion;
 
     /**
      * @var string 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
     /**
      * @var array 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyNode;
 
     /**
      * @var array 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyAddress;
 
     /**
      * @var integer 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionPoolLimit;
 
     /**
      * @var boolean 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportCreateProxyAddress;
 
     /**
      * @var string 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportUpgradeProxyMysqlVersion;
 
     /**
      * @param string $ProxyGroupId 代理组ID
      * @param string $ProxyVersion 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SupportUpgradeProxyVersion 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskStatus 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyNode 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyAddress 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnectionPoolLimit 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportCreateProxyAddress 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SupportUpgradeProxyMysqlVersion 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

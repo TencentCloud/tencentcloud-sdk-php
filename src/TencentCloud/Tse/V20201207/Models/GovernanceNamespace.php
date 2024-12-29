@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以操作此命名空间的用户组ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceExportTo() 获取该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceNamespace extends AbstractModel
 {
@@ -154,6 +158,12 @@ class GovernanceNamespace extends AbstractModel
     public $RemoveGroupIds;
 
     /**
+     * @var array 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceExportTo;
+
+    /**
      * @param string $Name 命名空间名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 命名空间描述信息。
@@ -179,6 +189,8 @@ class GovernanceNamespace extends AbstractModel
      * @param array $RemoveUserIds 移除可以操作此命名空间的用户ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间可见
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class GovernanceNamespace extends AbstractModel
 
         if (array_key_exists("RemoveGroupIds",$param) and $param["RemoveGroupIds"] !== null) {
             $this->RemoveGroupIds = $param["RemoveGroupIds"];
+        }
+
+        if (array_key_exists("ServiceExportTo",$param) and $param["ServiceExportTo"] !== null) {
+            $this->ServiceExportTo = $param["ServiceExportTo"];
         }
     }
 }

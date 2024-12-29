@@ -535,7 +535,10 @@ LimitTypes取值范围：
  * @method Models\HaVipDisassociateAddressIpResponse HaVipDisassociateAddressIp(Models\HaVipDisassociateAddressIpRequest $req) 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGateway(Models\InquirePriceCreateDirectConnectGatewayRequest $req) 本接口（DescribePriceCreateDirectConnectGateway）用于创建专线网关询价。
+ * @method Models\InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddresses(Models\InquiryPriceAllocateAddressesRequest $req) 本接口（InquiryPriceAllocateAddresses）用于新购弹性公网IP询价。
  * @method Models\InquiryPriceCreateVpnGatewayResponse InquiryPriceCreateVpnGateway(Models\InquiryPriceCreateVpnGatewayRequest $req) 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
+ * @method Models\InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidth(Models\InquiryPriceModifyAddressesBandwidthRequest $req) EIP修改带宽询价
+ * @method Models\InquiryPriceRenewAddressesResponse InquiryPriceRenewAddresses(Models\InquiryPriceRenewAddressesRequest $req) 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
  * @method Models\InquiryPriceRenewVpnGatewayResponse InquiryPriceRenewVpnGateway(Models\InquiryPriceRenewVpnGatewayRequest $req) 本接口（InquiryPriceRenewVpnGateway）用于续费VPN网关询价。目前仅支持IPSEC类型网关的询价。
  * @method Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse InquiryPriceResetVpnGatewayInternetMaxBandwidth(Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（InquiryPriceResetVpnGatewayInternetMaxBandwidth）用于调整VPN网关带宽上限询价。
  * @method Models\LockCcnBandwidthsResponse LockCcnBandwidths(Models\LockCcnBandwidthsRequest $req) 本接口（LockCcnBandwidths）用户锁定云联网限速实例。

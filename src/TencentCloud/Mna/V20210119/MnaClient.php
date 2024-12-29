@@ -29,12 +29,18 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\AddHardwareResponse AddHardware(Models\AddHardwareRequest $req) 添加硬件设备，生成未激活的硬件设备，可支持批量添加
  * @method Models\AddL3ConnResponse AddL3Conn(Models\AddL3ConnRequest $req) 新建互通规则
  * @method Models\CreateEncryptedKeyResponse CreateEncryptedKey(Models\CreateEncryptedKeyRequest $req) 通过此接口设置和更新预置密钥
- * @method Models\CreateQosResponse CreateQos(Models\CreateQosRequest $req) 移动网络发起Qos加速过程
+ * @method Models\CreateQosResponse CreateQos(Models\CreateQosRequest $req) 产品下线
+
+移动网络发起Qos加速过程
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备信息
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除分组
  * @method Models\DeleteL3ConnResponse DeleteL3Conn(Models\DeleteL3ConnRequest $req) 删除互通规则
- * @method Models\DeleteQosResponse DeleteQos(Models\DeleteQosRequest $req) 移动网络停止Qos加速过程
- * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 获取Qos加速状态
+ * @method Models\DeleteQosResponse DeleteQos(Models\DeleteQosRequest $req) 产品下线
+
+移动网络停止Qos加速过程
+ * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 产品下线
+
+获取Qos加速状态
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicePayModeResponse GetDevicePayMode(Models\GetDevicePayModeRequest $req) 获取设备付费模式
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 多可用区信息
  *
  * @method array getDeployMode() 获取可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployMode(array $DeployMode) 设置可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMasterZone() 获取主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterZone(array $MasterZone) 设置主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSlaveZone() 获取实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZone(array $SlaveZone) 设置实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupZone() 获取实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupZone(array $BackupZone) 设置实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneConf extends AbstractModel
 {
     /**
      * @var array 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployMode;
 
     /**
      * @var array 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterZone;
 
     /**
      * @var array 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZone;
 
     /**
      * @var array 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupZone;
 
     /**
      * @param array $DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MasterZone 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SlaveZone 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupZone 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

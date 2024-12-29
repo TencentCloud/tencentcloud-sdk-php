@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountType(string $AccountType) 设置账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
  * @method boolean getIsCam() 获取是否开启CAM验证
  * @method void setIsCam(boolean $IsCam) 设置是否开启CAM验证
+ * @method integer getEncryptedVersion() 获取加密密钥版本号，0表示不使用加密
+ * @method void setEncryptedVersion(integer $EncryptedVersion) 设置加密密钥版本号，0表示不使用加密
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AccountCreateInfo extends AbstractModel
     public $IsCam;
 
     /**
+     * @var integer 加密密钥版本号，0表示不使用加密
+     */
+    public $EncryptedVersion;
+
+    /**
      * @param string $UserName 实例用户名
      * @param string $Password 实例密码
      * @param array $DBPrivileges DB权限列表
@@ -88,6 +95,7 @@ class AccountCreateInfo extends AbstractModel
      * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      * @param string $AccountType 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
      * @param boolean $IsCam 是否开启CAM验证
+     * @param integer $EncryptedVersion 加密密钥版本号，0表示不使用加密
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("IsCam",$param) and $param["IsCam"] !== null) {
             $this->IsCam = $param["IsCam"];
+        }
+
+        if (array_key_exists("EncryptedVersion",$param) and $param["EncryptedVersion"] !== null) {
+            $this->EncryptedVersion = $param["EncryptedVersion"];
         }
     }
 }

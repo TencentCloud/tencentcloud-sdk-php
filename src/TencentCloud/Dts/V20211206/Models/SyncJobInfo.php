@@ -152,6 +152,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTime(string $OfflineTime) 设置下线时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOptObjStatus() 获取动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOptObjStatus(string $OptObjStatus) 设置动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试时间段设置
@@ -362,6 +366,12 @@ class SyncJobInfo extends AbstractModel
     public $OfflineTime;
 
     /**
+     * @var string 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OptObjStatus;
+
+    /**
      * @var integer 自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -439,6 +449,8 @@ class SyncJobInfo extends AbstractModel
      * @param integer $AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OfflineTime 下线时间，格式为 yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OptObjStatus 动态修改对象，修改任务的状态等
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -600,6 +612,10 @@ class SyncJobInfo extends AbstractModel
 
         if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
             $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("OptObjStatus",$param) and $param["OptObjStatus"] !== null) {
+            $this->OptObjStatus = $param["OptObjStatus"];
         }
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {

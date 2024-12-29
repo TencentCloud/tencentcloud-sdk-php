@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(OrderBy $OrderBy) 设置排序
  * @method integer getStartTime() 获取span查询开始时间戳（单位:秒）
  * @method void setStartTime(integer $StartTime) 设置span查询开始时间戳（单位:秒）
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  * @method array getFilters() 获取通用过滤参数
  * @method void setFilters(array $Filters) 设置通用过滤参数
  * @method string getBusinessName() 获取业务自身服务名
@@ -60,7 +60,7 @@ class DescribeGeneralSpanListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 实例名
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
@@ -84,7 +84,7 @@ class DescribeGeneralSpanListRequest extends AbstractModel
      * @param integer $Limit 列表项个数
      * @param OrderBy $OrderBy 排序
      * @param integer $StartTime span查询开始时间戳（单位:秒）
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 业务系统ID
      * @param array $Filters 通用过滤参数
      * @param string $BusinessName 业务自身服务名
      * @param integer $EndTime span查询结束时间戳（单位:秒）

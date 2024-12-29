@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <p style="padding-left: 30px;">按照资源名字过滤，支持模糊过滤。传入的过滤名字不超过5个</p><p style="padding-left: 30px;">类型: String</p><p style="padding-left: 30px;">必选: 否</p>
  * @method string getWorkSpaceId() 获取工作空间 SerialId
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method integer getSystemResource() 获取资源类型，0=用户，1系统connector，2=用户自定义connector
+ * @method void setSystemResource(integer $SystemResource) 设置资源类型，0=用户，1系统connector，2=用户自定义connector
  */
 class DescribeResourcesRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class DescribeResourcesRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var integer 资源类型，0=用户，1系统connector，2=用户自定义connector
+     */
+    public $SystemResource;
+
+    /**
      * @param array $ResourceIds 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。
      * @param integer $Offset 偏移量，仅当设置 Limit 参数时有效
      * @param integer $Limit 条数限制。如果不填，默认返回 20 条
      * @param array $Filters <li><strong>ResourceName</strong></li>
 <p style="padding-left: 30px;">按照资源名字过滤，支持模糊过滤。传入的过滤名字不超过5个</p><p style="padding-left: 30px;">类型: String</p><p style="padding-left: 30px;">必选: 否</p>
      * @param string $WorkSpaceId 工作空间 SerialId
+     * @param integer $SystemResource 资源类型，0=用户，1系统connector，2=用户自定义connector
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class DescribeResourcesRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("SystemResource",$param) and $param["SystemResource"] !== null) {
+            $this->SystemResource = $param["SystemResource"];
         }
     }
 }

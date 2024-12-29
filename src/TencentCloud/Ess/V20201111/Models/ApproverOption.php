@@ -66,6 +66,18 @@ use TencentCloud\Common\AbstractModel;
 <li> LimitBottom，阅读合同仅限制必须阅读到底</li>
 <li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
 </ul>
+ * @method boolean getForbidAddSignDate() 获取禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+ * @method void setForbidAddSignDate(boolean $ForbidAddSignDate) 设置禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -113,6 +125,16 @@ class ApproverOption extends AbstractModel
     public $FlowReadLimit;
 
     /**
+     * @var boolean 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+     */
+    public $ForbidAddSignDate;
+
+    /**
      * @param boolean $NoRefuse 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -135,6 +157,12 @@ class ApproverOption extends AbstractModel
 <li> LimitReadTime，阅读合同仅限制阅读时长</li>
 <li> LimitBottom，阅读合同仅限制必须阅读到底</li>
 <li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     * @param boolean $ForbidAddSignDate 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
 </ul>
      */
     function __construct()
@@ -168,6 +196,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("FlowReadLimit",$param) and $param["FlowReadLimit"] !== null) {
             $this->FlowReadLimit = $param["FlowReadLimit"];
+        }
+
+        if (array_key_exists("ForbidAddSignDate",$param) and $param["ForbidAddSignDate"] !== null) {
+            $this->ForbidAddSignDate = $param["ForbidAddSignDate"];
         }
     }
 }

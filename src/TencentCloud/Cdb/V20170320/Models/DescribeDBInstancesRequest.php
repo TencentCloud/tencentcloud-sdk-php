@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayTypes(array $PayTypes) 设置付费类型，可取值：0 - 包年包月，1 - 小时计费。
  * @method array getInstanceNames() 获取实例名称。
  * @method void setInstanceNames(array $InstanceNames) 设置实例名称。
- * @method array getTaskStatus() 获取实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行
- * @method void setTaskStatus(array $TaskStatus) 设置实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行
+ * @method array getTaskStatus() 获取实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
+ * @method void setTaskStatus(array $TaskStatus) 设置实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
  * @method array getEngineVersions() 获取实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
  * @method void setEngineVersions(array $EngineVersions) 设置实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
  * @method array getVpcIds() 获取私有网络的 ID。
@@ -83,7 +83,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getUniqSubnetIds() 获取私有网络字符型subnetId
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络字符型subnetId
  * @method array getTags() 获取标签键值
+请注意，创建中的实例无法查询到标签。
  * @method void setTags(array $Tags) 设置标签键值
+请注意，创建中的实例无法查询到标签。
  * @method array getProxyVips() 获取数据库代理 IP 。
  * @method void setProxyVips(array $ProxyVips) 设置数据库代理 IP 。
  * @method array getProxyIds() 获取数据库代理 ID 。
@@ -141,7 +143,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InstanceNames;
 
     /**
-     * @var array 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行
+     * @var array 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
      */
     public $TaskStatus;
 
@@ -252,6 +254,7 @@ class DescribeDBInstancesRequest extends AbstractModel
 
     /**
      * @var array 标签键值
+请注意，创建中的实例无法查询到标签。
      */
     public $Tags;
 
@@ -285,7 +288,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
      * @param array $PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      * @param array $InstanceNames 实例名称。
-     * @param array $TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行
+     * @param array $TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
      * @param array $EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
      * @param array $VpcIds 私有网络的 ID。
      * @param array $ZoneIds 可用区的 ID。
@@ -308,6 +311,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $UniqueVpcIds 私有网络字符型vpcId
      * @param array $UniqSubnetIds 私有网络字符型subnetId
      * @param array $Tags 标签键值
+请注意，创建中的实例无法查询到标签。
      * @param array $ProxyVips 数据库代理 IP 。
      * @param array $ProxyIds 数据库代理 ID 。
      * @param array $EngineTypes 数据库引擎类型。

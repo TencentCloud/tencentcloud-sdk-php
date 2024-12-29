@@ -64,9 +64,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockWaitTime(integer $LockWaitTime) 设置锁等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTrxLivingTime() 获取事物持续等待时间，微秒。
+ * @method integer getTrxLivingTime() 获取事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事物持续等待时间，微秒。
+ * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNsTime() 获取开始时间，与timestamp构成一个精确到纳秒的时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,7 +178,7 @@ class AuditLog extends AbstractModel
     public $LockWaitTime;
 
     /**
-     * @var integer 事物持续等待时间，微秒。
+     * @var integer 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrxLivingTime;
@@ -224,7 +224,7 @@ class AuditLog extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LockWaitTime 锁等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TrxLivingTime 事物持续等待时间，微秒。
+     * @param integer $TrxLivingTime 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
 注意：此字段可能返回 null，表示取不到有效值。

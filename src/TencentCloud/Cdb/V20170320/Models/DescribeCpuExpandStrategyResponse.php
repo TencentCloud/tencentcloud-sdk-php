@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCpuExpandStrategy返回参数结构体
  *
  * @method string getType() 获取策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpandCpu() 获取手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpandCpu(string $ExpandCpu) 设置手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoStrategy() 获取自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoStrategy(string $AutoStrategy) 设置自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,17 @@ class DescribeCpuExpandStrategyResponse extends AbstractModel
 {
     /**
      * @var string 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpandCpu;
 
     /**
      * @var string 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AutoStrategy;
 
@@ -62,11 +54,8 @@ class DescribeCpuExpandStrategyResponse extends AbstractModel
 
     /**
      * @param string $Type 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoStrategy 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

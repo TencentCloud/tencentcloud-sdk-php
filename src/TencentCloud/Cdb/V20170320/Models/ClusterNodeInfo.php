@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWeight() 获取节点的权重
  * @method void setWeight(integer $Weight) 设置节点的权重
  * @method string getStatus() 获取节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNodeInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class ClusterNodeInfo extends AbstractModel
 
     /**
      * @var string 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -67,7 +64,6 @@ class ClusterNodeInfo extends AbstractModel
      * @param string $Zone 节点所在可用区。
      * @param integer $Weight 节点的权重
      * @param string $Status 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

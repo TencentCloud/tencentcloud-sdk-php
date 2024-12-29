@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 代理节点
  *
  * @method string getProxyId() 获取代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMem() 获取内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMem(integer $Mem) 设置内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取节点状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置节点状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnection() 获取连接数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnection(integer $Connection) 设置连接数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyNode extends AbstractModel
 {
     /**
      * @var string 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
     /**
      * @var integer CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mem;
 
     /**
      * @var string 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var integer 连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Connection;
 
     /**
      * @param string $ProxyId 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mem 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Connection 连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeReservedInstancesOfferings返回参数结构体
+ * DescribeNodeResourceConfigFast返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的预留实例计费数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的预留实例计费数量。
- * @method array getReservedInstancesOfferingsSet() 获取符合条件的预留实例计费列表。
- * @method void setReservedInstancesOfferingsSet(array $ReservedInstancesOfferingsSet) 设置符合条件的预留实例计费列表。
+ * @method array getData() 获取DescribeResourceConfig接口返回值
+ * @method void setData(array $Data) 设置DescribeResourceConfig接口返回值
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeReservedInstancesOfferingsResponse extends AbstractModel
+class DescribeNodeResourceConfigFastResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的预留实例计费数量。
+     * @var array DescribeResourceConfig接口返回值
      */
-    public $TotalCount;
-
-    /**
-     * @var array 符合条件的预留实例计费列表。
-     */
-    public $ReservedInstancesOfferingsSet;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeReservedInstancesOfferingsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的预留实例计费数量。
-     * @param array $ReservedInstancesOfferingsSet 符合条件的预留实例计费列表。
+     * @param array $Data DescribeResourceConfig接口返回值
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeReservedInstancesOfferingsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("ReservedInstancesOfferingsSet",$param) and $param["ReservedInstancesOfferingsSet"] !== null) {
-            $this->ReservedInstancesOfferingsSet = [];
-            foreach ($param["ReservedInstancesOfferingsSet"] as $key => $value){
-                $obj = new ReservedInstancesOffering();
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeResourceConfig();
                 $obj->deserialize($value);
-                array_push($this->ReservedInstancesOfferingsSet, $obj);
+                array_push($this->Data, $obj);
             }
         }
 

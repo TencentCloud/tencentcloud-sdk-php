@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskDetail请求参数结构体
  *
- * @method string getTaskId() 获取任务ID，根据任务ID查询绑定云资源结果
- * @method void setTaskId(string $TaskId) 设置任务ID，根据任务ID查询绑定云资源结果
+ * @method string getTaskId() 获取任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+ * @method void setTaskId(string $TaskId) 设置任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
  * @method string getLimit() 获取每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
  * @method void setLimit(string $Limit) 设置每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
  * @method string getOffset() 获取当前偏移量
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，根据任务ID查询绑定云资源结果
+     * @var string 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
      */
     public $TaskId;
 
@@ -59,7 +59,7 @@ class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel
     public $Regions;
 
     /**
-     * @param string $TaskId 任务ID，根据任务ID查询绑定云资源结果
+     * @param string $TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
      * @param string $Limit 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
      * @param string $Offset 当前偏移量
      * @param array $ResourceTypes 查询资源类型的结果详情， 不传则查询所有

@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAudioUrl() 获取直播拆条用，音频url。
+ * @method void setAudioUrl(string $AudioUrl) 设置直播拆条用，音频url。
+ * @method float getAudioBeginTime() 获取直播拆条用，音频对应起始时间戳；
+ * @method void setAudioBeginTime(float $AudioBeginTime) 设置直播拆条用，音频对应起始时间戳；
+ * @method float getAudioEndTime() 获取直播拆条用，音频对应结束时间戳。
+ * @method void setAudioEndTime(float $AudioEndTime) 设置直播拆条用，音频对应结束时间戳。
+ * @method string getPersonPositionUrl() 获取直播拆条用，人物位置参考信息用于横转竖。
+ * @method void setPersonPositionUrl(string $PersonPositionUrl) 设置直播拆条用，人物位置参考信息用于横转竖。
  */
 class SegmentRecognitionItem extends AbstractModel
 {
@@ -112,6 +120,26 @@ class SegmentRecognitionItem extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 直播拆条用，音频url。
+     */
+    public $AudioUrl;
+
+    /**
+     * @var float 直播拆条用，音频对应起始时间戳；
+     */
+    public $AudioBeginTime;
+
+    /**
+     * @var float 直播拆条用，音频对应结束时间戳。
+     */
+    public $AudioEndTime;
+
+    /**
+     * @var string 直播拆条用，人物位置参考信息用于横转竖。
+     */
+    public $PersonPositionUrl;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
@@ -128,6 +156,10 @@ class SegmentRecognitionItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AudioUrl 直播拆条用，音频url。
+     * @param float $AudioBeginTime 直播拆条用，音频对应起始时间戳；
+     * @param float $AudioEndTime 直播拆条用，音频对应结束时间戳。
+     * @param string $PersonPositionUrl 直播拆条用，人物位置参考信息用于横转竖。
      */
     function __construct()
     {
@@ -180,6 +212,22 @@ class SegmentRecognitionItem extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("AudioBeginTime",$param) and $param["AudioBeginTime"] !== null) {
+            $this->AudioBeginTime = $param["AudioBeginTime"];
+        }
+
+        if (array_key_exists("AudioEndTime",$param) and $param["AudioEndTime"] !== null) {
+            $this->AudioEndTime = $param["AudioEndTime"];
+        }
+
+        if (array_key_exists("PersonPositionUrl",$param) and $param["PersonPositionUrl"] !== null) {
+            $this->PersonPositionUrl = $param["PersonPositionUrl"];
         }
     }
 }

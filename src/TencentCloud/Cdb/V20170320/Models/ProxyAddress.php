@@ -32,50 +32,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVPort(integer $VPort) 设置端口
  * @method string getWeightMode() 获取权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeightMode(string $WeightMode) 设置权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsKickOut() 获取是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsKickOut(boolean $IsKickOut) 设置是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinCount() 获取最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinCount(integer $MinCount) 设置最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDelay() 获取延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDelay(integer $MaxDelay) 设置延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoAddRo() 获取是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoAddRo(boolean $AutoAddRo) 设置是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getReadOnly() 获取是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnly(boolean $ReadOnly) 设置是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTransSplit() 获取是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFailOver() 获取是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailOver(boolean $FailOver) 设置是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getConnectionPool() 获取是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionPool(boolean $ConnectionPool) 设置是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyAllocation() 获取实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyAllocation(array $ProxyAllocation) 设置实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessMode() 获取接入模式
  * @method void setAccessMode(string $AccessMode) 设置接入模式
  * @method boolean getAutoLoadBalance() 获取是否开启自动负载均衡
@@ -111,67 +89,56 @@ class ProxyAddress extends AbstractModel
     /**
      * @var string 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeightMode;
 
     /**
      * @var boolean 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsKickOut;
 
     /**
      * @var integer 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinCount;
 
     /**
      * @var integer 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDelay;
 
     /**
      * @var boolean 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoAddRo;
 
     /**
      * @var boolean 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnly;
 
     /**
      * @var boolean 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransSplit;
 
     /**
      * @var boolean 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailOver;
 
     /**
      * @var boolean 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionPool;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var array 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyAllocation;
 
@@ -193,27 +160,16 @@ class ProxyAddress extends AbstractModel
      * @param integer $VPort 端口
      * @param string $WeightMode 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsKickOut 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinCount 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDelay 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoAddRo 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ReadOnly 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TransSplit 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FailOver 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ConnectionPool 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyAllocation 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessMode 接入模式
      * @param boolean $AutoLoadBalance 是否开启自动负载均衡
      */

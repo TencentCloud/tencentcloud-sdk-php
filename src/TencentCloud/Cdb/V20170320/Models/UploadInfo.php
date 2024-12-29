@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 文件上传描述
  *
  * @method integer getAllSliceNum() 获取文件所有分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllSliceNum(integer $AllSliceNum) 设置文件所有分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompleteNum() 获取已完成分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompleteNum(integer $CompleteNum) 设置已完成分片数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UploadInfo extends AbstractModel
 {
     /**
      * @var integer 文件所有分片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllSliceNum;
 
     /**
      * @var integer 已完成分片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompleteNum;
 
     /**
      * @param integer $AllSliceNum 文件所有分片数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompleteNum 已完成分片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

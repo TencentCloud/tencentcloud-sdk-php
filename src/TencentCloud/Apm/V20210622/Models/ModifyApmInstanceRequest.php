@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getName() 获取实例名
- * @method void setName(string $Name) 设置实例名
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
+ * @method string getName() 获取业务系统名
+ * @method void setName(string $Name) 设置业务系统名
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
- * @method string getDescription() 获取实例详情
- * @method void setDescription(string $Description) 设置实例详情
+ * @method string getDescription() 获取业务系统详情
+ * @method void setDescription(string $Description) 设置业务系统详情
  * @method integer getTraceDuration() 获取Trace数据保存时长
  * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长
  * @method boolean getOpenBilling() 获取是否开启计费
  * @method void setOpenBilling(boolean $OpenBilling) 设置是否开启计费
- * @method integer getSpanDailyCounters() 获取实例上报额度
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度
+ * @method integer getSpanDailyCounters() 获取业务系统上报额度
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度
  * @method integer getErrRateThreshold() 获取错误率阈值
  * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率阈值
  * @method integer getSampleRate() 获取采样率
@@ -76,12 +76,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyApmInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名
+     * @var string 业务系统名
      */
     public $Name;
 
@@ -91,7 +91,7 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 实例详情
+     * @var string 业务系统详情
      */
     public $Description;
 
@@ -106,7 +106,7 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $OpenBilling;
 
     /**
-     * @var integer 实例上报额度
+     * @var integer 业务系统上报额度
      */
     public $SpanDailyCounters;
 
@@ -198,13 +198,13 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsInstrumentationVulnerabilityScan;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Name 实例名
+     * @param string $InstanceId 业务系统ID
+     * @param string $Name 业务系统名
      * @param array $Tags 标签列表
-     * @param string $Description 实例详情
+     * @param string $Description 业务系统详情
      * @param integer $TraceDuration Trace数据保存时长
      * @param boolean $OpenBilling 是否开启计费
-     * @param integer $SpanDailyCounters 实例上报额度
+     * @param integer $SpanDailyCounters 业务系统上报额度
      * @param integer $ErrRateThreshold 错误率阈值
      * @param integer $SampleRate 采样率
      * @param integer $ErrorSample 是否开启错误采样 0 关 1 开

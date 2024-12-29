@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 导入任务记录
  *
  * @method integer getStatus() 获取状态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCode() 获取状态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置状态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCostTime() 获取执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCostTime(integer $CostTime) 设置执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkId() 获取后端任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkId(string $WorkId) 设置后端任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取导入文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置导入文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProcess() 获取执行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(integer $Process) 设置执行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileSize() 获取文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(string $FileSize) 设置文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取任务执行信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务执行信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJobId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobId(integer $JobId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbName() 获取导入库表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置导入库表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncRequestId() 获取异步任务的请求ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImportRecord extends AbstractModel
 {
     /**
      * @var integer 状态值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 状态值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var integer 执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CostTime;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 后端任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkId;
 
     /**
      * @var string 导入文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var integer 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
     /**
      * @var string 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 任务执行信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var integer 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
      * @var string 导入库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var string 异步任务的请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncRequestId;
 
     /**
      * @param integer $Status 状态值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Code 状态值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CostTime 执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkId 后端任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 导入文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Process 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSize 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务执行信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JobId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbName 导入库表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncRequestId 异步任务的请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

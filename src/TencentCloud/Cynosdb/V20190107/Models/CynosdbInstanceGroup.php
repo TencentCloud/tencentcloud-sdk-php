@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
- * @method string getType() 获取实例组类型。ha-ha组；ro-只读组
- * @method void setType(string $Type) 设置实例组类型。ha-ha组；ro-只读组
+ * @method string getType() 获取实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
+ * @method void setType(string $Type) 设置实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
  * @method string getUpdatedTime() 获取更新时间
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
  * @method string getVip() 获取内网IP
@@ -102,7 +102,7 @@ class CynosdbInstanceGroup extends AbstractModel
     public $Status;
 
     /**
-     * @var string 实例组类型。ha-ha组；ro-只读组
+     * @var string 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      */
     public $Type;
 
@@ -186,7 +186,7 @@ class CynosdbInstanceGroup extends AbstractModel
      * @param string $DeletedTime 删除时间
      * @param string $InstanceGroupId 实例组ID
      * @param string $Status 状态
-     * @param string $Type 实例组类型。ha-ha组；ro-只读组
+     * @param string $Type 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      * @param string $UpdatedTime 更新时间
      * @param string $Vip 内网IP
      * @param integer $Vport 内网端口

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicableProducts(ApplicableProducts $ApplicableProducts) 设置适用商品信息
  * @method array getExcludedProducts() 获取不适用商品信息
  * @method void setExcludedProducts(array $ExcludedProducts) 设置不适用商品信息
+ * @method string getPolicyRemark() 获取使用说明/批次备注
+ * @method void setPolicyRemark(string $PolicyRemark) 设置使用说明/批次备注
+ * @method string getCreateTime() 获取发券时间
+ * @method void setCreateTime(string $CreateTime) 设置发券时间
  */
 class VoucherInfos extends AbstractModel
 {
@@ -101,6 +105,16 @@ class VoucherInfos extends AbstractModel
     public $ExcludedProducts;
 
     /**
+     * @var string 使用说明/批次备注
+     */
+    public $PolicyRemark;
+
+    /**
+     * @var string 发券时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $OwnerUin 代金券拥有者
      * @param string $Status 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
      * @param integer $NominalValue 代金券面额（微分）
@@ -112,6 +126,8 @@ class VoucherInfos extends AbstractModel
      * @param string $EndTime 有效期截止时间
      * @param ApplicableProducts $ApplicableProducts 适用商品信息
      * @param array $ExcludedProducts 不适用商品信息
+     * @param string $PolicyRemark 使用说明/批次备注
+     * @param string $CreateTime 发券时间
      */
     function __construct()
     {
@@ -174,6 +190,14 @@ class VoucherInfos extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExcludedProducts, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyRemark",$param) and $param["PolicyRemark"] !== null) {
+            $this->PolicyRemark = $param["PolicyRemark"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

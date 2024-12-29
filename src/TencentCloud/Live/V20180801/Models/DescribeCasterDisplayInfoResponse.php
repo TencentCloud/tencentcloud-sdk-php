@@ -25,25 +25,17 @@ use TencentCloud\Common\AbstractModel;
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置导播台状态
 0：停止状态，无预监，无主监 
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CasterDisplayInfo getPvwDisplayInfo() 获取预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPvwDisplayInfo(CasterDisplayInfo $PvwDisplayInfo) 设置预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CasterDisplayInfo getPgmDisplayInfo() 获取主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPgmDisplayInfo(CasterDisplayInfo $PgmDisplayInfo) 设置主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartLiveTime() 获取启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartLiveTime(integer $StartLiveTime) 设置启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,25 +47,21 @@ class DescribeCasterDisplayInfoResponse extends AbstractModel
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var CasterDisplayInfo 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PvwDisplayInfo;
 
     /**
      * @var CasterDisplayInfo 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PgmDisplayInfo;
 
     /**
      * @var integer 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartLiveTime;
 
@@ -88,13 +76,9 @@ class DescribeCasterDisplayInfoResponse extends AbstractModel
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CasterDisplayInfo $PvwDisplayInfo 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CasterDisplayInfo $PgmDisplayInfo 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartLiveTime 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

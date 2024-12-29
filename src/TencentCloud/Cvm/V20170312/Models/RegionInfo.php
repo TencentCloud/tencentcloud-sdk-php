@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 地域信息
  *
  * @method string getRegion() 获取地域名称，例如，ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域名称，例如，ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域描述，例如，华南地区(广州)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域描述，例如，华南地区(广州)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionState() 获取地域是否可用状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionState(string $RegionState) 设置地域是否可用状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionInfo extends AbstractModel
 {
     /**
      * @var string 地域名称，例如，ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 地域描述，例如，华南地区(广州)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var string 地域是否可用状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionState;
 
     /**
      * @param string $Region 地域名称，例如，ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域描述，例如，华南地区(广州)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionState 地域是否可用状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

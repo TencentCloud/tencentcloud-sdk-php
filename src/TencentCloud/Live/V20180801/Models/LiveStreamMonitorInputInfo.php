@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。256字节以内。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCasterInputIndex() 获取导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+ * @method void setCasterInputIndex(integer $CasterInputIndex) 设置导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+ * @method boolean getNeedMonitor() 获取该输入源是否正在监播
+ * @method void setNeedMonitor(boolean $NeedMonitor) 设置该输入源是否正在监播
  */
 class LiveStreamMonitorInputInfo extends AbstractModel
 {
@@ -74,6 +78,16 @@ class LiveStreamMonitorInputInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+     */
+    public $CasterInputIndex;
+
+    /**
+     * @var boolean 该输入源是否正在监播
+     */
+    public $NeedMonitor;
+
+    /**
      * @param string $InputStreamName 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputDomain 待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
@@ -84,6 +98,8 @@ class LiveStreamMonitorInputInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述。256字节以内。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CasterInputIndex 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+     * @param boolean $NeedMonitor 该输入源是否正在监播
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class LiveStreamMonitorInputInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CasterInputIndex",$param) and $param["CasterInputIndex"] !== null) {
+            $this->CasterInputIndex = $param["CasterInputIndex"];
+        }
+
+        if (array_key_exists("NeedMonitor",$param) and $param["NeedMonitor"] !== null) {
+            $this->NeedMonitor = $param["NeedMonitor"];
         }
     }
 }

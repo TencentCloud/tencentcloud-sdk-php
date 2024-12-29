@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZone(string $SlaveZone) 设置备可用区地域码
  * @method string getSlaveZoneName() 获取备可用区
  * @method void setSlaveZoneName(string $SlaveZoneName) 设置备可用区
+ * @method string getDrInstanceId() 获取备机资源ID
+ * @method void setDrInstanceId(string $DrInstanceId) 设置备机资源ID
  */
 class SlaveZones extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SlaveZones extends AbstractModel
     public $SlaveZoneName;
 
     /**
+     * @var string 备机资源ID
+     */
+    public $DrInstanceId;
+
+    /**
      * @param string $SlaveZone 备可用区地域码
      * @param string $SlaveZoneName 备可用区
+     * @param string $DrInstanceId 备机资源ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SlaveZones extends AbstractModel
 
         if (array_key_exists("SlaveZoneName",$param) and $param["SlaveZoneName"] !== null) {
             $this->SlaveZoneName = $param["SlaveZoneName"];
+        }
+
+        if (array_key_exists("DrInstanceId",$param) and $param["DrInstanceId"] !== null) {
+            $this->DrInstanceId = $param["DrInstanceId"];
         }
     }
 }

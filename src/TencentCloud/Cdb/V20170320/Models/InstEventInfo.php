@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method string getNodeId() 获取节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstEventInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class InstEventInfo extends AbstractModel
 
     /**
      * @var string 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
@@ -67,7 +64,6 @@ class InstEventInfo extends AbstractModel
      * @param string $OccurTime 事件发生时间。
      * @param string $InstanceId 实例ID。
      * @param string $NodeId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

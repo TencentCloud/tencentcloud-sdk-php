@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务步骤详情
  *
- * @method string getStage() 获取步骤id
- * @method void setStage(string $Stage) 设置步骤id
+ * @method string getStage() 获取步骤
+ * @method void setStage(string $Stage) 设置步骤
  * @method string getName() 获取步骤名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置步骤名
@@ -76,7 +76,7 @@ use TencentCloud\Common\AbstractModel;
 class StageInfoDetail extends AbstractModel
 {
     /**
-     * @var string 步骤id
+     * @var string 步骤
      */
     public $Stage;
 
@@ -162,7 +162,7 @@ class StageInfoDetail extends AbstractModel
     public $TimeConsuming;
 
     /**
-     * @param string $Stage 步骤id
+     * @param string $Stage 步骤
      * @param string $Name 步骤名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsShow 是否展示

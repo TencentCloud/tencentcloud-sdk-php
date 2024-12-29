@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstallAddon请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID（仅支持标准tke集群）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（仅支持标准tke集群）
  * @method string getAddonName() 获取addon名称
  * @method void setAddonName(string $AddonName) 设置addon名称
  * @method string getAddonVersion() 获取addon版本（不传默认安装最新版本）
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InstallAddonRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（仅支持标准tke集群）
      */
     public $ClusterId;
 
@@ -52,7 +52,7 @@ class InstallAddonRequest extends AbstractModel
     public $RawValues;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID（仅支持标准tke集群）
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon版本（不传默认安装最新版本）
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）

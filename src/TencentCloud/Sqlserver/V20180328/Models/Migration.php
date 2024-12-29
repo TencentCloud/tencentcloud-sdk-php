@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMigrationId() 获取备份导入任务ID 或 增量导入任务ID
  * @method void setMigrationId(string $MigrationId) 设置备份导入任务ID 或 增量导入任务ID
  * @method string getMigrationName() 获取备份导入名称，增量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigrationName(string $MigrationName) 设置备份导入名称，增量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取应用ID
  * @method void setAppId(integer $AppId) 设置应用ID
  * @method string getRegion() 获取地域
@@ -53,9 +51,7 @@ use TencentCloud\Common\AbstractModel;
  * @method MigrationAction getAction() 获取当前状态允许的操作
  * @method void setAction(MigrationAction $Action) 设置当前状态允许的操作
  * @method string getIsRecovery() 获取是否是最终恢复，全量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecovery(string $IsRecovery) 设置是否是最终恢复，全量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBRename() 获取重命名的数据库名称集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBRename(array $DBRename) 设置重命名的数据库名称集合
@@ -70,7 +66,6 @@ class Migration extends AbstractModel
 
     /**
      * @var string 备份导入名称，增量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MigrationName;
 
@@ -141,7 +136,6 @@ class Migration extends AbstractModel
 
     /**
      * @var string 是否是最终恢复，全量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRecovery;
 
@@ -154,7 +148,6 @@ class Migration extends AbstractModel
     /**
      * @param string $MigrationId 备份导入任务ID 或 增量导入任务ID
      * @param string $MigrationName 备份导入名称，增量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 应用ID
      * @param string $Region 地域
      * @param string $InstanceId 迁移目标实例ID
@@ -169,7 +162,6 @@ class Migration extends AbstractModel
      * @param MigrationDetail $Detail 迁移细节
      * @param MigrationAction $Action 当前状态允许的操作
      * @param string $IsRecovery 是否是最终恢复，全量导入任务该字段为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBRename 重命名的数据库名称集合
 注意：此字段可能返回 null，表示取不到有效值。
      */

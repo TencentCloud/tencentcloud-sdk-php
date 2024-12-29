@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 代理实例
  *
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceType() 获取实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstNodeId() 获取实例节点ID
  * @method void setInstNodeId(string $InstNodeId) 设置实例节点ID
  * @method string getInstNodeRole() 获取节点角色
@@ -57,43 +43,36 @@ class ProxyInst extends AbstractModel
 {
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var integer 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var integer 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var string 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
@@ -109,19 +88,12 @@ class ProxyInst extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstNodeId 实例节点ID
      * @param string $InstNodeRole 节点角色
      */

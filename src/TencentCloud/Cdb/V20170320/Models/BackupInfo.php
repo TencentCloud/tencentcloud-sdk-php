@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getEncryptionFlag() 获取备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptionFlag(string $EncryptionFlag) 设置备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutedGTIDSet() 获取备份GTID点位
  * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置备份GTID点位
  */
@@ -164,7 +162,6 @@ class BackupInfo extends AbstractModel
 
     /**
      * @var string 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptionFlag;
 
@@ -194,7 +191,6 @@ class BackupInfo extends AbstractModel
      * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutedGTIDSet 备份GTID点位
      */
     function __construct()

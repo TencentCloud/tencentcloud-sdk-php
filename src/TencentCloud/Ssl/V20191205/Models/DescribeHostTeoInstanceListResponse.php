@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostTeoInstanceList返回参数结构体
  *
- * @method array getInstanceList() 获取teo实例列表
+ * @method array getInstanceList() 获取teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceList(array $InstanceList) 设置teo实例列表
+ * @method void setInstanceList(array $InstanceList) 设置teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostTeoInstanceListResponse extends AbstractModel
 {
     /**
-     * @var array teo实例列表
+     * @var array teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
@@ -48,7 +48,7 @@ class DescribeHostTeoInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceList teo实例列表
+     * @param array $InstanceList teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

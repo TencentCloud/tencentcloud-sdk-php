@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于回档的数据库名
  *
  * @method string getDatabaseName() 获取回档前的原数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置回档前的原数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewDatabaseName() 获取回档后的新数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewDatabaseName(string $NewDatabaseName) 设置回档后的新数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackDBName extends AbstractModel
 {
     /**
      * @var string 回档前的原数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var string 回档后的新数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewDatabaseName;
 
     /**
      * @param string $DatabaseName 回档前的原数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewDatabaseName 回档后的新数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

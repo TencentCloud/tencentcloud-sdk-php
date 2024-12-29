@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以操作此命名空间的用户ID列表
  * @method array getRemoveGroupIds() 获取移除可以操作此命名空间的用户组ID列表
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以操作此命名空间的用户组ID列表
+ * @method array getServiceExportTo() 获取该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+ * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
  */
 class GovernanceNamespaceInput extends AbstractModel
 {
@@ -66,12 +74,24 @@ class GovernanceNamespaceInput extends AbstractModel
     public $RemoveGroupIds;
 
     /**
+     * @var array 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     */
+    public $ServiceExportTo;
+
+    /**
      * @param string $Name 命名空间名。
      * @param string $Comment 描述信息。
      * @param array $UserIds 新增的可以操作此命名空间的用户ID列表
      * @param array $GroupIds 新增的可以操作此命名空间的用户组ID列表
      * @param array $RemoveUserIds 移除可以操作此命名空间的用户ID列表
      * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+     * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class GovernanceNamespaceInput extends AbstractModel
 
         if (array_key_exists("RemoveGroupIds",$param) and $param["RemoveGroupIds"] !== null) {
             $this->RemoveGroupIds = $param["RemoveGroupIds"];
+        }
+
+        if (array_key_exists("ServiceExportTo",$param) and $param["ServiceExportTo"] !== null) {
+            $this->ServiceExportTo = $param["ServiceExportTo"];
         }
     }
 }

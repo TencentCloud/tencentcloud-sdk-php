@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningCu(float $RunningCu) 设置运行cu
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTotalCpu() 获取总的CPU
+ * @method void setTotalCpu(float $TotalCpu) 设置总的CPU
+ * @method float getTotalMem() 获取总的内存
+ * @method void setTotalMem(float $TotalMem) 设置总的内存
+ * @method float getRunningCpu() 获取运行的CPU
+ * @method void setRunningCpu(float $RunningCpu) 设置运行的CPU
+ * @method float getRunningMem() 获取运行的内存
+ * @method void setRunningMem(float $RunningMem) 设置运行的内存
  */
 class SubEks extends AbstractModel
 {
@@ -74,6 +82,26 @@ class SubEks extends AbstractModel
     public $RunningCu;
 
     /**
+     * @var float 总的CPU
+     */
+    public $TotalCpu;
+
+    /**
+     * @var float 总的内存
+     */
+    public $TotalMem;
+
+    /**
+     * @var float 运行的CPU
+     */
+    public $RunningCpu;
+
+    /**
+     * @var float 运行的内存
+     */
+    public $RunningMem;
+
+    /**
      * @param string $SerialId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CuNum cu数
@@ -84,6 +112,10 @@ class SubEks extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RunningCu 运行cu
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TotalCpu 总的CPU
+     * @param float $TotalMem 总的内存
+     * @param float $RunningCpu 运行的CPU
+     * @param float $RunningMem 运行的内存
      */
     function __construct()
     {
@@ -116,6 +148,22 @@ class SubEks extends AbstractModel
 
         if (array_key_exists("RunningCu",$param) and $param["RunningCu"] !== null) {
             $this->RunningCu = $param["RunningCu"];
+        }
+
+        if (array_key_exists("TotalCpu",$param) and $param["TotalCpu"] !== null) {
+            $this->TotalCpu = $param["TotalCpu"];
+        }
+
+        if (array_key_exists("TotalMem",$param) and $param["TotalMem"] !== null) {
+            $this->TotalMem = $param["TotalMem"];
+        }
+
+        if (array_key_exists("RunningCpu",$param) and $param["RunningCpu"] !== null) {
+            $this->RunningCpu = $param["RunningCpu"];
+        }
+
+        if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
+            $this->RunningMem = $param["RunningMem"];
         }
     }
 }

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperties(array $Properties) 设置配置参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCpu() 获取Cpu
+ * @method void setCpu(float $Cpu) 设置Cpu
+ * @method float getMem() 获取Mem
+ * @method void setMem(float $Mem) 设置Mem
  */
 class SqlGatewayItem extends AbstractModel
 {
@@ -114,6 +118,16 @@ class SqlGatewayItem extends AbstractModel
     public $Properties;
 
     /**
+     * @var float Cpu
+     */
+    public $Cpu;
+
+    /**
+     * @var float Mem
+     */
+    public $Mem;
+
+    /**
      * @param string $SerialId 唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlinkVersion Flink内核版本
@@ -132,6 +146,8 @@ class SqlGatewayItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Properties 配置参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Cpu Cpu
+     * @param float $Mem Mem
      */
     function __construct()
     {
@@ -190,6 +206,14 @@ class SqlGatewayItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Properties, $obj);
             }
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
+            $this->Mem = $param["Mem"];
         }
     }
 }

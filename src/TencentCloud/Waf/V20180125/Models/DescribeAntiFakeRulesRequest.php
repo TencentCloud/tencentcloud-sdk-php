@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤数组,name可以是如下的值： RuleID,ParamName,Url,Action,Method,Source,Status
  * @method string getOrder() 获取asc或者desc
  * @method void setOrder(string $Order) 设置asc或者desc
- * @method string getBy() 获取目前支持根据ts排序
- * @method void setBy(string $By) 设置目前支持根据ts排序
+ * @method string getBy() 获取目前支持根据create_time、modify_time、id排序
+ * @method void setBy(string $By) 设置目前支持根据create_time、modify_time、id排序
  */
 class DescribeAntiFakeRulesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeAntiFakeRulesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 目前支持根据ts排序
+     * @var string 目前支持根据create_time、modify_time、id排序
      */
     public $By;
 
@@ -71,7 +71,7 @@ class DescribeAntiFakeRulesRequest extends AbstractModel
      * @param integer $Limit 容量
      * @param array $Filters 过滤数组,name可以是如下的值： RuleID,ParamName,Url,Action,Method,Source,Status
      * @param string $Order asc或者desc
-     * @param string $By 目前支持根据ts排序
+     * @param string $By 目前支持根据create_time、modify_time、id排序
      */
     function __construct()
     {

@@ -45,29 +45,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getThreadId() 获取线程ID。
  * @method void setThreadId(integer $ThreadId) 设置线程ID。
  * @method integer getCheckRows() 获取扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckRows(integer $CheckRows) 设置扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCpuTime() 获取cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuTime(float $CpuTime) 设置cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIoWaitTime() 获取IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIoWaitTime(integer $IoWaitTime) 设置IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLockWaitTime() 获取锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockWaitTime(integer $LockWaitTime) 设置锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNsTime() 获取开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNsTime(integer $NsTime) 设置开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrxLivingTime() 获取事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTemplateInfo() 获取日志命中规则模板的基本信息
  * @method void setTemplateInfo(array $TemplateInfo) 设置日志命中规则模板的基本信息
  * @method integer getTrxId() 获取 事务ID
@@ -137,37 +125,31 @@ class AuditLog extends AbstractModel
 
     /**
      * @var integer 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckRows;
 
     /**
      * @var float cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuTime;
 
     /**
      * @var integer IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IoWaitTime;
 
     /**
      * @var integer 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockWaitTime;
 
     /**
      * @var integer 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NsTime;
 
     /**
      * @var integer 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrxLivingTime;
 
@@ -195,17 +177,11 @@ class AuditLog extends AbstractModel
      * @param integer $SentRows 返回行数。
      * @param integer $ThreadId 线程ID。
      * @param integer $CheckRows 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CpuTime cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IoWaitTime IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LockWaitTime 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrxLivingTime 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TemplateInfo 日志命中规则模板的基本信息
      * @param integer $TrxId  事务ID
      */

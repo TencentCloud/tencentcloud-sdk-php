@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionName(string $VersionName) 设置实例版本
  * @method integer getRenewFlag() 获取实例续费标记，0-正常续费，1-自动续费，2-到期不续费
  * @method void setRenewFlag(integer $RenewFlag) 设置实例续费标记，0-正常续费，1-自动续费，2-到期不续费
- * @method integer getModel() 获取实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
- * @method void setModel(integer $Model) 设置实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+ * @method integer getModel() 获取实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+ * @method void setModel(integer $Model) 设置实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
  * @method string getRegion() 获取实例所在地域名称，如 ap-guangzhou
  * @method void setRegion(string $Region) 设置实例所在地域名称，如 ap-guangzhou
  * @method string getZone() 获取实例所在可用区名称，如 ap-guangzhou-1
@@ -85,41 +85,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUniqSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
  * @method string getIsolateOperator() 获取实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateOperator(string $IsolateOperator) 设置实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubFlag() 获取发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubFlag(string $SubFlag) 设置发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getROFlag() 获取只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setROFlag(string $ROFlag) 设置只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHAFlag() 获取容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHAFlag(string $HAFlag) 设置容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceTags() 获取实例绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置实例绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupModel() 获取备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupModel(string $BackupModel) 设置备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceNote() 获取实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNote(string $InstanceNote) 设置实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupCycle() 获取备份周期
  * @method void setBackupCycle(array $BackupCycle) 设置备份周期
  * @method string getBackupCycleType() 获取备份周期类型，[daily、weekly、monthly]
  * @method void setBackupCycleType(string $BackupCycleType) 设置备份周期类型，[daily、weekly、monthly]
  * @method integer getBackupSaveDays() 获取数据(日志)备份保留时间
  * @method void setBackupSaveDays(integer $BackupSaveDays) 设置数据(日志)备份保留时间
- * @method string getInstanceType() 获取实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
- * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+ * @method string getInstanceType() 获取实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
+ * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
  * @method array getCrossRegions() 获取跨地域备份目的地域，如果为空，则表示未开启跨地域备份
  * @method void setCrossRegions(array $CrossRegions) 设置跨地域备份目的地域，如果为空，则表示未开启跨地域备份
  * @method string getCrossBackupEnabled() 获取跨地域备份状态 enable-开启，disable-关闭
@@ -136,18 +126,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  * @method boolean getIsDrZone() 获取是否跨AZ
  * @method void setIsDrZone(boolean $IsDrZone) 设置是否跨AZ
- * @method SlaveZones getSlaveZones() 获取备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveZones(SlaveZones $SlaveZones) 设置备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method SlaveZones getSlaveZones() 获取双节点实例备可用区信息
+ * @method void setSlaveZones(SlaveZones $SlaveZones) 设置双节点实例备可用区信息
  * @method string getArchitecture() 获取架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArchitecture(string $Architecture) 设置架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStyle() 获取类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStyle(string $Style) 设置类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiSlaveZones() 获取多节点实例备可用区信息
+ * @method void setMultiSlaveZones(array $MultiSlaveZones) 设置多节点实例备可用区信息
  */
 class DBInstance extends AbstractModel
 {
@@ -252,7 +238,7 @@ class DBInstance extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+     * @var integer 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
      */
     public $Model;
 
@@ -313,25 +299,21 @@ class DBInstance extends AbstractModel
 
     /**
      * @var string 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateOperator;
 
     /**
      * @var string 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubFlag;
 
     /**
      * @var string 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ROFlag;
 
     /**
      * @var string 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HAFlag;
 
@@ -343,13 +325,11 @@ class DBInstance extends AbstractModel
 
     /**
      * @var string 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupModel;
 
     /**
      * @var string 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNote;
 
@@ -369,7 +349,8 @@ class DBInstance extends AbstractModel
     public $BackupSaveDays;
 
     /**
-     * @var string 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @var string 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
      */
     public $InstanceType;
 
@@ -414,22 +395,24 @@ class DBInstance extends AbstractModel
     public $IsDrZone;
 
     /**
-     * @var SlaveZones 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var SlaveZones 双节点实例备可用区信息
      */
     public $SlaveZones;
 
     /**
      * @var string 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Architecture;
 
     /**
      * @var string 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Style;
+
+    /**
+     * @var array 多节点实例备可用区信息
+     */
+    public $MultiSlaveZones;
 
     /**
      * @param string $InstanceId 实例ID
@@ -452,7 +435,7 @@ class DBInstance extends AbstractModel
      * @param integer $Storage 实例存储空间大小，单位G
      * @param string $VersionName 实例版本
      * @param integer $RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
-     * @param integer $Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+     * @param integer $Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
      * @param string $Region 实例所在地域名称，如 ap-guangzhou
      * @param string $Zone 实例所在可用区名称，如 ap-guangzhou-1
      * @param string $BackupTime 备份时间点
@@ -465,23 +448,18 @@ class DBInstance extends AbstractModel
      * @param string $UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
      * @param string $UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
      * @param string $IsolateOperator 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 实例绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceNote 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupCycle 备份周期
      * @param string $BackupCycleType 备份周期类型，[daily、weekly、monthly]
      * @param integer $BackupSaveDays 数据(日志)备份保留时间
-     * @param string $InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @param string $InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
      * @param array $CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
      * @param string $CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
      * @param integer $CrossBackupSaveDays 跨地域备份保留天数，则默认7天
@@ -490,12 +468,10 @@ class DBInstance extends AbstractModel
      * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
      * @param string $TimeZone 系统时区，默认：China Standard Time
      * @param boolean $IsDrZone 是否跨AZ
-     * @param SlaveZones $SlaveZones 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZones $SlaveZones 双节点实例备可用区信息
      * @param string $Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiSlaveZones 多节点实例备可用区信息
      */
     function __construct()
     {
@@ -730,6 +706,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Style",$param) and $param["Style"] !== null) {
             $this->Style = $param["Style"];
+        }
+
+        if (array_key_exists("MultiSlaveZones",$param) and $param["MultiSlaveZones"] !== null) {
+            $this->MultiSlaveZones = [];
+            foreach ($param["MultiSlaveZones"] as $key => $value){
+                $obj = new SlaveZones();
+                $obj->deserialize($value);
+                array_push($this->MultiSlaveZones, $obj);
+            }
         }
     }
 }

@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeReservedInstancesConfigInfos返回参数结构体
+ * AddNodeResourceConfig返回参数结构体
  *
- * @method array getReservedInstanceConfigInfos() 获取预留实例静态配置信息列表。
- * @method void setReservedInstanceConfigInfos(array $ReservedInstanceConfigInfos) 设置预留实例静态配置信息列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeReservedInstancesConfigInfosResponse extends AbstractModel
+class AddNodeResourceConfigResponse extends AbstractModel
 {
-    /**
-     * @var array 预留实例静态配置信息列表。
-     */
-    public $ReservedInstanceConfigInfos;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $ReservedInstanceConfigInfos 预留实例静态配置信息列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeReservedInstancesConfigInfosResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReservedInstanceConfigInfos",$param) and $param["ReservedInstanceConfigInfos"] !== null) {
-            $this->ReservedInstanceConfigInfos = [];
-            foreach ($param["ReservedInstanceConfigInfos"] as $key => $value){
-                $obj = new ReservedInstanceConfigInfoItem();
-                $obj->deserialize($value);
-                array_push($this->ReservedInstanceConfigInfos, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

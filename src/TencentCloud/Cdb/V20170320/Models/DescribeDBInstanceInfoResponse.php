@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEncryption() 获取是否开通加密，YES 已开通，NO 未开通。
  * @method void setEncryption(string $Encryption) 设置是否开通加密，YES 已开通，NO 未开通。
  * @method string getKeyId() 获取加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyId(string $KeyId) 设置加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyRegion() 获取密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyRegion(string $KeyRegion) 设置密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultKmsRegion() 获取当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultKmsRegion(string $DefaultKmsRegion) 设置当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,19 +54,16 @@ class DescribeDBInstanceInfoResponse extends AbstractModel
 
     /**
      * @var string 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyId;
 
     /**
      * @var string 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyRegion;
 
     /**
      * @var string 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultKmsRegion;
 
@@ -86,11 +77,8 @@ class DescribeDBInstanceInfoResponse extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param string $Encryption 是否开通加密，YES 已开通，NO 未开通。
      * @param string $KeyId 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyRegion 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

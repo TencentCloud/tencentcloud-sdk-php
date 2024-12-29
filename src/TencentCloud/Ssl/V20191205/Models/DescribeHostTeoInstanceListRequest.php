@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量，默认10。	
  * @method void setLimit(integer $Limit) 设置每页数量，默认10。	
- * @method integer getAsyncCache() 获取是否异步
- * @method void setAsyncCache(integer $AsyncCache) 设置是否异步
+ * @method integer getAsyncCache() 获取是否异步，1表示是，0表示否，默认为0
+ * @method void setAsyncCache(integer $AsyncCache) 设置是否异步，1表示是，0表示否，默认为0
  */
 class DescribeHostTeoInstanceListRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 是否异步
+     * @var integer 是否异步，1表示是，0表示否，默认为0
      */
     public $AsyncCache;
 
@@ -87,7 +87,7 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
      * @param string $OldCertificateId 已部署的证书ID
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认10。	
-     * @param integer $AsyncCache 是否异步
+     * @param integer $AsyncCache 是否异步，1表示是，0表示否，默认为0
      */
     function __construct()
     {

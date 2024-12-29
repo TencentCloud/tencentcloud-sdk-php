@@ -93,9 +93,7 @@ pause
  * @method float getMaxCpu() 获取serverless实例cpu上限
  * @method void setMaxCpu(float $MaxCpu) 设置serverless实例cpu上限
  * @method string getDbMode() 获取Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbMode(string $DbMode) 设置Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -273,7 +271,6 @@ pause
 
     /**
      * @var string Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbMode;
 
@@ -315,7 +312,6 @@ pause
      * @param float $MinCpu serverless实例cpu下限
      * @param float $MaxCpu serverless实例cpu上限
      * @param string $DbMode Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

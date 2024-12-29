@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiQualityControl(integer $AiQualityControl) 设置是否开启内容质检。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCasterId() 获取导播台监播对应的导播台场次id
+ * @method void setCasterId(string $CasterId) 设置导播台监播对应的导播台场次id
+ * @method string getPullPushTaskId() 获取拉流转推监播对应的拉流转推任务id
+ * @method void setPullPushTaskId(string $PullPushTaskId) 设置拉流转推监播对应的拉流转推任务id
  */
 class LiveStreamMonitorInfo extends AbstractModel
 {
@@ -236,6 +240,16 @@ class LiveStreamMonitorInfo extends AbstractModel
     public $AiQualityControl;
 
     /**
+     * @var string 导播台监播对应的导播台场次id
+     */
+    public $CasterId;
+
+    /**
+     * @var string 拉流转推监播对应的拉流转推任务id
+     */
+    public $PullPushTaskId;
+
+    /**
      * @param string $MonitorId 监播任务ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MonitorName 监播任务名称。128字节以内。
@@ -280,6 +294,8 @@ class LiveStreamMonitorInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AiQualityControl 是否开启内容质检。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CasterId 导播台监播对应的导播台场次id
+     * @param string $PullPushTaskId 拉流转推监播对应的拉流转推任务id
      */
     function __construct()
     {
@@ -379,6 +395,14 @@ class LiveStreamMonitorInfo extends AbstractModel
 
         if (array_key_exists("AiQualityControl",$param) and $param["AiQualityControl"] !== null) {
             $this->AiQualityControl = $param["AiQualityControl"];
+        }
+
+        if (array_key_exists("CasterId",$param) and $param["CasterId"] !== null) {
+            $this->CasterId = $param["CasterId"];
+        }
+
+        if (array_key_exists("PullPushTaskId",$param) and $param["PullPushTaskId"] !== null) {
+            $this->PullPushTaskId = $param["PullPushTaskId"];
         }
     }
 }

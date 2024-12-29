@@ -24,8 +24,10 @@ use TencentCloud\Emr\V20190103\Models as Models;
 
 /**
  * @method Models\AddMetricScaleStrategyResponse AddMetricScaleStrategy(Models\AddMetricScaleStrategyRequest $req) 添加扩缩容规则，按负载和时间
+ * @method Models\AddNodeResourceConfigResponse AddNodeResourceConfig(Models\AddNodeResourceConfigRequest $req) 增加当前集群的节点规格配置
  * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
+ * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 云盘挂载
  * @method Models\CreateCloudInstanceResponse CreateCloudInstance(Models\CreateCloudInstanceRequest $req) 创建EMR容器集群实例
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
@@ -33,6 +35,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 - 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回创建实例的InstaceId和请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
  * @method Models\DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(Models\DeleteAutoScaleStrategyRequest $req) 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
+ * @method Models\DeleteNodeResourceConfigResponse DeleteNodeResourceConfig(Models\DeleteNodeResourceConfigRequest $req) 删除当前集群的节点规格配置
  * @method Models\DeleteUserManagerUserListResponse DeleteUserManagerUserList(Models\DeleteUserManagerUserListRequest $req) 删除用户列表（用户管理）
  * @method Models\DeployYarnConfResponse DeployYarnConf(Models\DeployYarnConfRequest $req) yarn资源调度-部署生效
  * @method Models\DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConf(Models\DescribeAutoScaleGroupGlobalConfRequest $req) 获取自动扩缩容全局配置
@@ -54,6 +57,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) 查询集群列表
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
  * @method Models\DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(Models\DescribeKyuubiQueryInfoRequest $req) 查询Kyuubi查询信息
+ * @method Models\DescribeNodeDataDisksResponse DescribeNodeDataDisks(Models\DescribeNodeDataDisksRequest $req) 查询节点数据盘信息
+ * @method Models\DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFast(Models\DescribeNodeResourceConfigFastRequest $req) 快速获取当前集群的节点规格配置
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
  * @method Models\DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(Models\DescribeResourceScheduleDiffDetailRequest $req) YARN资源调度-变更详情
  * @method Models\DescribeSLInstanceResponse DescribeSLInstance(Models\DescribeSLInstanceRequest $req) 本接口（DescribeSLInstance）用于查询 Serverless HBase实例基本信息
@@ -76,7 +81,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则
  * @method Models\ModifyGlobalConfigResponse ModifyGlobalConfig(Models\ModifyGlobalConfigRequest $req) 修改YARN资源调度的全局配置
+ * @method Models\ModifyInstanceBasicResponse ModifyInstanceBasic(Models\ModifyInstanceBasicRequest $req) 修改集群名称
  * @method Models\ModifyPodNumResponse ModifyPodNum(Models\ModifyPodNumRequest $req) 调整Pod数量
+ * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 变配实例
  * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效。
@@ -88,9 +95,11 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息
  * @method Models\ResetYarnConfigResponse ResetYarnConfig(Models\ResetYarnConfigRequest $req) 修改YARN资源调度的资源配置
+ * @method Models\ResizeDataDisksResponse ResizeDataDisks(Models\ResizeDataDisksRequest $req) 云盘扩容
  * @method Models\RunJobFlowResponse RunJobFlow(Models\RunJobFlowRequest $req) 创建流程作业
  * @method Models\ScaleOutClusterResponse ScaleOutCluster(Models\ScaleOutClusterRequest $req) 扩容集群节点
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 扩容节点
+ * @method Models\SetNodeResourceConfigDefaultResponse SetNodeResourceConfigDefault(Models\SetNodeResourceConfigDefaultRequest $req) 设置当前集群的某个节点规格配置为默认或取消默认
  * @method Models\StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(Models\StartStopServiceOrMonitorRequest $req) 用于启停服务 重启服务等功能
  * @method Models\SyncPodStateResponse SyncPodState(Models\SyncPodStateRequest $req) EMR同步TKE中POD状态
  * @method Models\TerminateClusterNodesResponse TerminateClusterNodes(Models\TerminateClusterNodesRequest $req) 销毁集群节点

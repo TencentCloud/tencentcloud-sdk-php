@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPid() 获取此规格对应的包年包月Pid
  * @method void setPid(integer $Pid) 设置此规格对应的包年包月Pid
  * @method array getPostPid() 获取此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostPid(array $PostPid) 设置此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayModeStatus() 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
  * @method void setPayModeStatus(string $PayModeStatus) 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
  * @method string getInstanceType() 获取购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
@@ -121,7 +119,6 @@ class SpecInfo extends AbstractModel
 
     /**
      * @var array 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostPid;
 
@@ -155,7 +152,6 @@ class SpecInfo extends AbstractModel
      * @param string $SuitInfo 此规格的中文描述信息
      * @param integer $Pid 此规格对应的包年包月Pid
      * @param array $PostPid 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
      * @param string $InstanceType 购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
 示例值：HA

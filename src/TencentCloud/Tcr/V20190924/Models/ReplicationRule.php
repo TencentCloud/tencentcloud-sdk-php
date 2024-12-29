@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOverride(boolean $Override) 设置是否覆盖
  * @method array getFilters() 获取同步过滤条件
  * @method void setFilters(array $Filters) 设置同步过滤条件
+ * @method boolean getDeletion() 获取是否同步删除事件
+ * @method void setDeletion(boolean $Deletion) 设置是否同步删除事件
  */
 class ReplicationRule extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ReplicationRule extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean 是否同步删除事件
+     */
+    public $Deletion;
+
+    /**
      * @param string $Name 同步规则名称
      * @param string $DestNamespace 目标命名空间
      * @param boolean $Override 是否覆盖
      * @param array $Filters 同步过滤条件
+     * @param boolean $Deletion 是否同步删除事件
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class ReplicationRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Deletion",$param) and $param["Deletion"] !== null) {
+            $this->Deletion = $param["Deletion"];
         }
     }
 }

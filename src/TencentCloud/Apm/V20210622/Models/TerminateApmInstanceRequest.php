@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateApmInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取业务系统ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  */
 class TerminateApmInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 业务系统ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 业务系统ID
      */
     function __construct()
     {

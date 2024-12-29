@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getPassword() 获取密码
  * @method void setPassword(string $Password) 设置密码
+ * @method integer getEncryptedVersion() 获取加密密钥版本号，0表示不使用加密
+ * @method void setEncryptedVersion(integer $EncryptedVersion) 设置加密密钥版本号，0表示不使用加密
  */
 class AccountPassword extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AccountPassword extends AbstractModel
     public $Password;
 
     /**
+     * @var integer 加密密钥版本号，0表示不使用加密
+     */
+    public $EncryptedVersion;
+
+    /**
      * @param string $UserName 用户名
      * @param string $Password 密码
+     * @param integer $EncryptedVersion 加密密钥版本号，0表示不使用加密
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AccountPassword extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptedVersion",$param) and $param["EncryptedVersion"] !== null) {
+            $this->EncryptedVersion = $param["EncryptedVersion"];
         }
     }
 }

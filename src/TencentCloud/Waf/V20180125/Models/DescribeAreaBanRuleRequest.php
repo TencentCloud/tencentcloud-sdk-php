@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIndexList请求参数结构体
+ * DescribeAreaBanRule请求参数结构体
  *
-
+ * @method string getDomain() 获取需要查询的域名
+ * @method void setDomain(string $Domain) 设置需要查询的域名
  */
-class DescribeIndexListRequest extends AbstractModel
+class DescribeAreaBanRuleRequest extends AbstractModel
 {
-
+    /**
+     * @var string 需要查询的域名
+     */
+    public $Domain;
 
     /**
-
+     * @param string $Domain 需要查询的域名
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeIndexListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
     }
 }

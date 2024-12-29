@@ -112,10 +112,72 @@ TENANT: 租赁
 HOSTING: 托管
 TENANT: 租赁
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ChcDeployExtraConfig getDeployExtraConfig() 获取chc dhcp选项，用于minios调试
+ * @method ChcDeployExtraConfig getDeployExtraConfig() 获取chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployExtraConfig(ChcDeployExtraConfig $DeployExtraConfig) 设置chc dhcp选项，用于minios调试
+ * @method void setDeployExtraConfig(ChcDeployExtraConfig $DeployExtraConfig) 设置chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGpu() 获取GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpu(string $Gpu) 设置GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetworkCard() 获取网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkCard(string $NetworkCard) 设置网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsPredefinedType() 获取是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsPredefinedType(boolean $IsPredefinedType) 设置是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChcInstanceType() 获取CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChcInstanceType(string $ChcInstanceType) 设置CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChcInstanceFamily() 获取CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChcInstanceFamily(string $ChcInstanceFamily) 设置CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChcInstanceFamilyName() 获取CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChcInstanceFamilyName(string $ChcInstanceFamilyName) 设置CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResaleAppId() 获取转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResaleAppId(string $ResaleAppId) 设置转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResaleAccountId() 获取转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResaleAccountId(string $ResaleAccountId) 设置转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSaleStatus() 获取售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSaleStatus(string $SaleStatus) 设置售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestOperation() 获取最近操作
+ * @method void setLatestOperation(string $LatestOperation) 设置最近操作
+ * @method string getLatestOperationErrorCode() 获取最近操作错误码
+ * @method void setLatestOperationErrorCode(string $LatestOperationErrorCode) 设置最近操作错误码
+ * @method string getLatestOperationErrorMsg() 获取最近操作错误详情和建议项
+ * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) 设置最近操作错误详情和建议项
+ * @method string getLatestOperationName() 获取最近操作名称
+ * @method void setLatestOperationName(string $LatestOperationName) 设置最近操作名称
+ * @method string getLatestOperationState() 获取最近操作状态
+ * @method void setLatestOperationState(string $LatestOperationState) 设置最近操作状态
  */
 class ChcHost extends AbstractModel
 {
@@ -250,10 +312,101 @@ TENANT: 租赁
     public $TenantType;
 
     /**
-     * @var ChcDeployExtraConfig chc dhcp选项，用于minios调试
+     * @var ChcDeployExtraConfig chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployExtraConfig;
+
+    /**
+     * @var string GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Gpu;
+
+    /**
+     * @var string 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkCard;
+
+    /**
+     * @var boolean 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsPredefinedType;
+
+    /**
+     * @var string CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChcInstanceType;
+
+    /**
+     * @var string CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChcInstanceFamily;
+
+    /**
+     * @var string CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChcInstanceFamilyName;
+
+    /**
+     * @var string 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResaleAppId;
+
+    /**
+     * @var string 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResaleAccountId;
+
+    /**
+     * @var string 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SaleStatus;
+
+    /**
+     * @var array CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 最近操作
+     */
+    public $LatestOperation;
+
+    /**
+     * @var string 最近操作错误码
+     */
+    public $LatestOperationErrorCode;
+
+    /**
+     * @var string 最近操作错误详情和建议项
+     */
+    public $LatestOperationErrorMsg;
+
+    /**
+     * @var string 最近操作名称
+     */
+    public $LatestOperationName;
+
+    /**
+     * @var string 最近操作状态
+     */
+    public $LatestOperationState;
 
     /**
      * @param string $ChcId CHC物理服务器ID。
@@ -302,8 +455,39 @@ TENANT: 租赁
 HOSTING: 托管
 TENANT: 租赁
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChcDeployExtraConfig $DeployExtraConfig chc dhcp选项，用于minios调试
+     * @param ChcDeployExtraConfig $DeployExtraConfig chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Gpu GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetworkCard 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsPredefinedType 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChcInstanceType CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChcInstanceFamily CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChcInstanceFamilyName CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResaleAppId 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResaleAccountId 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SaleStatus 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestOperation 最近操作
+     * @param string $LatestOperationErrorCode 最近操作错误码
+     * @param string $LatestOperationErrorMsg 最近操作错误详情和建议项
+     * @param string $LatestOperationName 最近操作名称
+     * @param string $LatestOperationState 最近操作状态
      */
     function __construct()
     {
@@ -408,6 +592,71 @@ TENANT: 租赁
         if (array_key_exists("DeployExtraConfig",$param) and $param["DeployExtraConfig"] !== null) {
             $this->DeployExtraConfig = new ChcDeployExtraConfig();
             $this->DeployExtraConfig->deserialize($param["DeployExtraConfig"]);
+        }
+
+        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
+            $this->Gpu = $param["Gpu"];
+        }
+
+        if (array_key_exists("NetworkCard",$param) and $param["NetworkCard"] !== null) {
+            $this->NetworkCard = $param["NetworkCard"];
+        }
+
+        if (array_key_exists("IsPredefinedType",$param) and $param["IsPredefinedType"] !== null) {
+            $this->IsPredefinedType = $param["IsPredefinedType"];
+        }
+
+        if (array_key_exists("ChcInstanceType",$param) and $param["ChcInstanceType"] !== null) {
+            $this->ChcInstanceType = $param["ChcInstanceType"];
+        }
+
+        if (array_key_exists("ChcInstanceFamily",$param) and $param["ChcInstanceFamily"] !== null) {
+            $this->ChcInstanceFamily = $param["ChcInstanceFamily"];
+        }
+
+        if (array_key_exists("ChcInstanceFamilyName",$param) and $param["ChcInstanceFamilyName"] !== null) {
+            $this->ChcInstanceFamilyName = $param["ChcInstanceFamilyName"];
+        }
+
+        if (array_key_exists("ResaleAppId",$param) and $param["ResaleAppId"] !== null) {
+            $this->ResaleAppId = $param["ResaleAppId"];
+        }
+
+        if (array_key_exists("ResaleAccountId",$param) and $param["ResaleAccountId"] !== null) {
+            $this->ResaleAccountId = $param["ResaleAccountId"];
+        }
+
+        if (array_key_exists("SaleStatus",$param) and $param["SaleStatus"] !== null) {
+            $this->SaleStatus = $param["SaleStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("LatestOperation",$param) and $param["LatestOperation"] !== null) {
+            $this->LatestOperation = $param["LatestOperation"];
+        }
+
+        if (array_key_exists("LatestOperationErrorCode",$param) and $param["LatestOperationErrorCode"] !== null) {
+            $this->LatestOperationErrorCode = $param["LatestOperationErrorCode"];
+        }
+
+        if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
+            $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
+        }
+
+        if (array_key_exists("LatestOperationName",$param) and $param["LatestOperationName"] !== null) {
+            $this->LatestOperationName = $param["LatestOperationName"];
+        }
+
+        if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
+            $this->LatestOperationState = $param["LatestOperationState"];
         }
     }
 }

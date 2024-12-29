@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRecycleTime() 获取ip回收时间
  * @method void setRecycleTime(string $RecycleTime) 设置ip回收时间
  * @method integer getOldIpRetainTime() 获取旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldIpRetainTime(integer $OldIpRetainTime) 设置旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OldVip extends AbstractModel
 {
@@ -43,7 +41,6 @@ class OldVip extends AbstractModel
 
     /**
      * @var integer 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldIpRetainTime;
 
@@ -51,7 +48,6 @@ class OldVip extends AbstractModel
      * @param string $Vip 未回收的旧ip
      * @param string $RecycleTime ip回收时间
      * @param integer $OldIpRetainTime 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -43,25 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVport() 获取只读组的内网端口号。
  * @method void setVport(integer $Vport) 设置只读组的内网端口号。
  * @method string getUniqVpcId() 获取私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqSubnetId() 获取子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoGroupRegion() 获取只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroupRegion(string $RoGroupRegion) 设置只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoGroupZone() 获取只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroupZone(string $RoGroupZone) 设置只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDelayReplicationTime() 获取延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayReplicationTime(integer $DelayReplicationTime) 设置延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoGroup extends AbstractModel
 {
@@ -122,31 +112,26 @@ class RoGroup extends AbstractModel
 
     /**
      * @var string 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqSubnetId;
 
     /**
      * @var string 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoGroupRegion;
 
     /**
      * @var string 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoGroupZone;
 
     /**
      * @var integer 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayReplicationTime;
 
@@ -163,15 +148,10 @@ class RoGroup extends AbstractModel
      * @param string $Vip 只读组的内网 IP。
      * @param integer $Vport 只读组的内网端口号。
      * @param string $UniqVpcId 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqSubnetId 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoGroupRegion 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoGroupZone 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DelayReplicationTime 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 只读vip信息
  *
  * @method integer getRoVipStatus() 获取只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVipStatus(integer $RoVipStatus) 设置只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoSubnetId() 获取只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoSubnetId(integer $RoSubnetId) 设置只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoVpcId() 获取只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVpcId(integer $RoVpcId) 设置只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoVport() 获取只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVport(integer $RoVport) 设置只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoVip() 获取只读vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVip(string $RoVip) 设置只读vip
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoVipInfo extends AbstractModel
 {
     /**
      * @var integer 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVipStatus;
 
     /**
      * @var integer 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoSubnetId;
 
     /**
      * @var integer 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVpcId;
 
     /**
      * @var integer 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVport;
 
     /**
      * @var string 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVip;
 
     /**
      * @param integer $RoVipStatus 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoSubnetId 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoVpcId 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoVport 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoVip 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

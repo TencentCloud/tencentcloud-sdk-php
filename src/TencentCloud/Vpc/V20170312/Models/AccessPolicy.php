@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getRemark() 获取Remark
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置Remark
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessPolicy extends AbstractModel
 {
@@ -64,7 +62,6 @@ class AccessPolicy extends AbstractModel
 
     /**
      * @var string Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -75,7 +72,6 @@ class AccessPolicy extends AbstractModel
      * @param array $UserGroupIds 用户组ID
      * @param string $UpdateTime 更新时间
      * @param string $Remark Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

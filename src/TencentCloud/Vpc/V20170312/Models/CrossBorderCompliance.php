@@ -65,13 +65,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取审批单创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置审批单创建时间。
  * @method string getLegalPersonId() 获取法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLegalPersonId(string $LegalPersonId) 设置法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLegalPersonIdCard() 获取法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLegalPersonIdCard(string $LegalPersonIdCard) 设置法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CrossBorderCompliance extends AbstractModel
 {
@@ -187,13 +183,11 @@ class CrossBorderCompliance extends AbstractModel
 
     /**
      * @var string 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LegalPersonId;
 
     /**
      * @var string 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LegalPersonIdCard;
 
@@ -221,9 +215,7 @@ class CrossBorderCompliance extends AbstractModel
      * @param string $State 状态。待审批：`PENDING`，已通过：`APPROVED`，已拒绝：`DENY`。
      * @param string $CreatedTime 审批单创建时间。
      * @param string $LegalPersonId 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LegalPersonIdCard 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

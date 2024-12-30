@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取总数量
  * @method void setTotalCount(integer $TotalCount) 设置总数量
- * @method array getSpans() 获取Span分页列表
- * @method void setSpans(array $Spans) 设置Span分页列表
+ * @method array getSpans() 获取Span 分页列表
+ * @method void setSpans(array $Spans) 设置Span 分页列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeGeneralSpanListResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Span分页列表
+     * @var array Span 分页列表
      */
     public $Spans;
 
@@ -46,7 +46,7 @@ class DescribeGeneralSpanListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总数量
-     * @param array $Spans Span分页列表
+     * @param array $Spans Span 分页列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

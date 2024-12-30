@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHAType(string $HAType) 设置实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
  * @method string getMultiZones() 获取实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
  * @method void setMultiZones(string $MultiZones) 设置实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+ * @method array getDrZones() 获取多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+ * @method void setDrZones(array $DrZones) 设置多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
  */
 class DescribeUpgradeInstanceCheckRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeUpgradeInstanceCheckRequest extends AbstractModel
     public $MultiZones;
 
     /**
+     * @var array 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public $DrZones;
+
+    /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      * @param integer $Cpu 实例变配后的CPU核心数，不填则不修改
      * @param integer $Memory 实例变配后内存大小，单位GB，不填则不修改
@@ -80,6 +87,7 @@ class DescribeUpgradeInstanceCheckRequest extends AbstractModel
      * @param string $DBVersion 实例版本，不填则不修改
      * @param string $HAType 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
      * @param string $MultiZones 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+     * @param array $DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class DescribeUpgradeInstanceCheckRequest extends AbstractModel
 
         if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
             $this->MultiZones = $param["MultiZones"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = [];
+            foreach ($param["DrZones"] as $key => $value){
+                $obj = new DrZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->DrZones, $obj);
+            }
         }
     }
 }

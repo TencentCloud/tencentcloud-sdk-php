@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 组件
  *
  * @method string getName() 获取组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnable() 获取组件开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnable(boolean $Enable) 设置组件开关
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instrument extends AbstractModel
 {
     /**
      * @var string 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var boolean 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
      * @param string $Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enable 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

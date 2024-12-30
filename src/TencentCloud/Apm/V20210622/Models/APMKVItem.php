@@ -18,36 +18,28 @@ namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Apm通用KV结构
+ * APM 通用 KV 结构
  *
- * @method string getKey() 获取Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKey() 获取Key 值定义
+ * @method void setKey(string $Key) 设置Key 值定义
+ * @method string getValue() 获取Value 值定义
+ * @method void setValue(string $Value) 设置Value 值定义
  */
 class APMKVItem extends AbstractModel
 {
     /**
-     * @var string Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Key 值定义
      */
     public $Key;
 
     /**
-     * @var string Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Value 值定义
      */
     public $Value;
 
     /**
-     * @param string $Key Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Key Key 值定义
+     * @param string $Value Value 值定义
      */
     function __construct()
     {

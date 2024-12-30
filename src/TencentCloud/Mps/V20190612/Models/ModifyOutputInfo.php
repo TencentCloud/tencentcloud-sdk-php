@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) 设置可用区
  * @method CreateOutputRistSettings getRISTSettings() 获取转推RIST的配置。
  * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置转推RIST的配置。
+ * @method string getOutputType() 获取输出类型：Internet/TencentCSS/StreamLive
+ * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS/StreamLive
  */
 class ModifyOutputInfo extends AbstractModel
 {
@@ -111,6 +113,11 @@ class ModifyOutputInfo extends AbstractModel
     public $RISTSettings;
 
     /**
+     * @var string 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public $OutputType;
+
+    /**
      * @param string $OutputId 需要修改的Output的Id。
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出的描述。
@@ -124,6 +131,7 @@ class ModifyOutputInfo extends AbstractModel
      * @param array $SecurityGroupIds 绑定的安全组 ID。 仅支持关联一组安全组。	
      * @param array $Zones 可用区
      * @param CreateOutputRistSettings $RISTSettings 转推RIST的配置。
+     * @param string $OutputType 输出类型：Internet/TencentCSS/StreamLive
      */
     function __construct()
     {
@@ -188,6 +196,10 @@ class ModifyOutputInfo extends AbstractModel
         if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
             $this->RISTSettings = new CreateOutputRistSettings();
             $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("OutputType",$param) and $param["OutputType"] !== null) {
+            $this->OutputType = $param["OutputType"];
         }
     }
 }

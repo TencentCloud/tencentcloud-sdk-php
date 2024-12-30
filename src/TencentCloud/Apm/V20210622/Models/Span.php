@@ -18,156 +18,108 @@ namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Span对象
+ * Span 对象
  *
- * @method string getTraceID() 获取Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTraceID(string $TraceID) 设置Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTraceID() 获取Trace ID
+ * @method void setTraceID(string $TraceID) 设置Trace ID
  * @method array getLogs() 获取日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogs(array $Logs) 设置日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SpanProcess getProcess() 获取上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(SpanProcess $Process) 设置上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperationName() 获取Span名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperationName(string $OperationName) 设置Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperationName() 获取Span 名称
+ * @method void setOperationName(string $OperationName) 设置Span 名称
  * @method array getReferences() 获取关联关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferences(array $References) 设置关联关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSpanID() 获取Span Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpanID(string $SpanID) 设置Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpanID() 获取Span ID
+ * @method void setSpanID(string $SpanID) 设置Span ID
  * @method integer getStartTimeMillis() 获取产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeMillis(integer $StartTimeMillis) 设置产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentSpanID() 获取Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentSpanID(string $ParentSpanID) 设置Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpanID() 获取Parent Span ID
+ * @method void setParentSpanID(string $ParentSpanID) 设置Parent Span ID
  */
 class Span extends AbstractModel
 {
     /**
-     * @var string Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Trace ID
      */
     public $TraceID;
 
     /**
      * @var array 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Logs;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var SpanProcess 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
     /**
      * @var integer 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
-     * @var string Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Span 名称
      */
     public $OperationName;
 
     /**
      * @var array 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $References;
 
     /**
      * @var integer 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @var string Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Span ID
      */
     public $SpanID;
 
     /**
      * @var integer 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeMillis;
 
     /**
-     * @var string Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Parent Span ID
      */
     public $ParentSpanID;
 
     /**
-     * @param string $TraceID Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TraceID Trace ID
      * @param array $Logs 日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpanProcess $Process 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperationName Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperationName Span 名称
      * @param array $References 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SpanID Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SpanID Span ID
      * @param integer $StartTimeMillis 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentSpanID Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpanID Parent Span ID
      */
     function __construct()
     {

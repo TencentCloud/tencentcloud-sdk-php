@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置业务系统名
  * @method string getDescription() 获取业务系统描述信息
  * @method void setDescription(string $Description) 设置业务系统描述信息
- * @method integer getTraceDuration() 获取Trace数据保存时长，单位为天默认存储为3天
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长，单位为天默认存储为3天
+ * @method integer getTraceDuration() 获取Trace 数据保存时长，单位为天默认存储为3天
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长，单位为天默认存储为3天
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  * @method integer getSpanDailyCounters() 获取业务系统上报额度值，默认赋值为0表示不限制上报额度
  * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度值，默认赋值为0表示不限制上报额度
  * @method integer getPayMode() 获取业务系统的计费模式
  * @method void setPayMode(integer $PayMode) 设置业务系统的计费模式
- * @method integer getFree() 获取（0=付费版；1=tsf受限免费版；2=免费版）
- * @method void setFree(integer $Free) 设置（0=付费版；1=tsf受限免费版；2=免费版）
+ * @method integer getFree() 获取（0=付费版；1=tsf 受限免费版；2=免费版）
+ * @method void setFree(integer $Free) 设置（0=付费版；1=tsf 受限免费版；2=免费版）
  */
 class CreateApmInstanceRequest extends AbstractModel
 {
@@ -48,7 +48,7 @@ class CreateApmInstanceRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Trace数据保存时长，单位为天默认存储为3天
+     * @var integer Trace 数据保存时长，单位为天默认存储为3天
      */
     public $TraceDuration;
 
@@ -68,18 +68,18 @@ class CreateApmInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer （0=付费版；1=tsf受限免费版；2=免费版）
+     * @var integer （0=付费版；1=tsf 受限免费版；2=免费版）
      */
     public $Free;
 
     /**
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
-     * @param integer $TraceDuration Trace数据保存时长，单位为天默认存储为3天
+     * @param integer $TraceDuration Trace 数据保存时长，单位为天默认存储为3天
      * @param array $Tags 标签列表
      * @param integer $SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度
      * @param integer $PayMode 业务系统的计费模式
-     * @param integer $Free （0=付费版；1=tsf受限免费版；2=免费版）
+     * @param integer $Free （0=付费版；1=tsf 受限免费版；2=免费版）
      */
     function __construct()
     {

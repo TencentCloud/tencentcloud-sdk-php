@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
  * @method string getRouteTableId() 获取实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableId(string $RouteTableId) 设置实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderType() 获取实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderType(string $OrderType) 设置实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnInstance extends AbstractModel
 {
@@ -73,13 +69,11 @@ class CcnInstance extends AbstractModel
 
     /**
      * @var string 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableId;
 
     /**
      * @var string 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderType;
 
@@ -93,9 +87,7 @@ class CcnInstance extends AbstractModel
 <li>`VPNGW`：VPNGW类型</li>
      * @param string $Description 备注
      * @param string $RouteTableId 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderType 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

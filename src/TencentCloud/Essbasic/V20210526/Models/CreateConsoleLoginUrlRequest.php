@@ -180,6 +180,22 @@ use TencentCloud\Common\AbstractModel;
 
 <b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+ * @method string getBusinessLicense() 获取营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+ * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+ * @method string getProxyAddress() 获取组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+ * @method void setProxyAddress(string $ProxyAddress) 设置组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+ * @method string getProxyLegalName() 获取组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+ * @method void setProxyLegalName(string $ProxyLegalName) 设置组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+ * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+ * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+ * @method OrganizationAuthorizationOptions getOrganizationAuthorizationOptions() 获取企业认证时个性化能力信息
+ * @method void setOrganizationAuthorizationOptions(OrganizationAuthorizationOptions $OrganizationAuthorizationOptions) 设置企业认证时个性化能力信息
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -329,6 +345,34 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $AutoActive;
 
     /**
+     * @var string 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     */
+    public $BusinessLicense;
+
+    /**
+     * @var string 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     */
+    public $ProxyAddress;
+
+    /**
+     * @var string 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     */
+    public $ProxyLegalName;
+
+    /**
+     * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     */
+    public $PowerOfAttorneys;
+
+    /**
+     * @var OrganizationAuthorizationOptions 企业认证时个性化能力信息
+     */
+    public $OrganizationAuthorizationOptions;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -409,6 +453,14 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
 <b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+     * @param string $BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     * @param string $ProxyAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     * @param string $ProxyLegalName 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     * @param OrganizationAuthorizationOptions $OrganizationAuthorizationOptions 企业认证时个性化能力信息
      */
     function __construct()
     {
@@ -487,6 +539,27 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("AutoActive",$param) and $param["AutoActive"] !== null) {
             $this->AutoActive = $param["AutoActive"];
+        }
+
+        if (array_key_exists("BusinessLicense",$param) and $param["BusinessLicense"] !== null) {
+            $this->BusinessLicense = $param["BusinessLicense"];
+        }
+
+        if (array_key_exists("ProxyAddress",$param) and $param["ProxyAddress"] !== null) {
+            $this->ProxyAddress = $param["ProxyAddress"];
+        }
+
+        if (array_key_exists("ProxyLegalName",$param) and $param["ProxyLegalName"] !== null) {
+            $this->ProxyLegalName = $param["ProxyLegalName"];
+        }
+
+        if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
+            $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("OrganizationAuthorizationOptions",$param) and $param["OrganizationAuthorizationOptions"] !== null) {
+            $this->OrganizationAuthorizationOptions = new OrganizationAuthorizationOptions();
+            $this->OrganizationAuthorizationOptions->deserialize($param["OrganizationAuthorizationOptions"]);
         }
     }
 }

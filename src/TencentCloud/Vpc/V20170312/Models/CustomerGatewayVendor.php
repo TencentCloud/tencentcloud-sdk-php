@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 对端网关厂商信息对象。
  *
  * @method string getPlatform() 获取平台。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlatform(string $Platform) 设置平台。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSoftwareVersion() 获取软件版本。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoftwareVersion(string $SoftwareVersion) 设置软件版本。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVendorName() 获取供应商名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVendorName(string $VendorName) 设置供应商名称。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomerGatewayVendor extends AbstractModel
 {
     /**
      * @var string 平台。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Platform;
 
     /**
      * @var string 软件版本。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoftwareVersion;
 
     /**
      * @var string 供应商名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VendorName;
 
     /**
      * @param string $Platform 平台。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SoftwareVersion 软件版本。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VendorName 供应商名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

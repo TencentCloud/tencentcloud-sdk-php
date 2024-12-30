@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(SpacePlacement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。 <b>注：如果您不指定LaunchTemplate参数，则Placement为必选参数。若同时传递Placement和LaunchTemplate，则默认覆盖LaunchTemplate中对应的Placement的值。</b>
  * @method SpaceChargePrepaid getSpaceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setSpaceChargePrepaid(SpaceChargePrepaid $SpaceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method string getSpaceChargeType() 获取工作空间计费类型
- * @method void setSpaceChargeType(string $SpaceChargeType) 设置工作空间计费类型
+ * @method string getSpaceChargeType() 获取工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
+ * @method void setSpaceChargeType(string $SpaceChargeType) 设置工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
  * @method string getSpaceType() 获取工作空间规格
  * @method void setSpaceType(string $SpaceType) 设置工作空间规格
  * @method string getImageId() 获取镜像ID
@@ -83,7 +83,7 @@ class CreateWorkspacesRequest extends AbstractModel
     public $SpaceChargePrepaid;
 
     /**
-     * @var string 工作空间计费类型
+     * @var string 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
      */
     public $SpaceChargeType;
 
@@ -181,7 +181,7 @@ class CreateWorkspacesRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param SpacePlacement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。 <b>注：如果您不指定LaunchTemplate参数，则Placement为必选参数。若同时传递Placement和LaunchTemplate，则默认覆盖LaunchTemplate中对应的Placement的值。</b>
      * @param SpaceChargePrepaid $SpaceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param string $SpaceChargeType 工作空间计费类型
+     * @param string $SpaceChargeType 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
      * @param string $SpaceType 工作空间规格
      * @param string $ImageId 镜像ID
      * @param SpaceSystemDisk $SystemDisk 工作空间系统盘信息

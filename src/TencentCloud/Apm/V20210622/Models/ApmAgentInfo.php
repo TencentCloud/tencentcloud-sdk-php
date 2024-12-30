@@ -18,84 +18,60 @@ namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * apm Agent信息
+ * APM Agent 信息
  *
- * @method string getAgentDownloadURL() 获取Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentDownloadURL(string $AgentDownloadURL) 设置Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCollectorURL() 获取Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCollectorURL(string $CollectorURL) 设置Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getToken() 获取Token信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setToken(string $Token) 设置Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgentDownloadURL() 获取Agent 下载地址
+ * @method void setAgentDownloadURL(string $AgentDownloadURL) 设置Agent 下载地址
+ * @method string getCollectorURL() 获取Collector 上报地址
+ * @method void setCollectorURL(string $CollectorURL) 设置Collector 上报地址
+ * @method string getToken() 获取Token 信息
+ * @method void setToken(string $Token) 设置Token 信息
  * @method string getPublicCollectorURL() 获取外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicCollectorURL(string $PublicCollectorURL) 设置外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInnerCollectorURL() 获取自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerCollectorURL(string $InnerCollectorURL) 设置自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrivateLinkCollectorURL() 获取内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivateLinkCollectorURL(string $PrivateLinkCollectorURL) 设置内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInnerCollectorURL() 获取自研 VPC 上报地址
+ * @method void setInnerCollectorURL(string $InnerCollectorURL) 设置自研 VPC 上报地址
+ * @method string getPrivateLinkCollectorURL() 获取内网上报地址( Private Link 上报地址)
+ * @method void setPrivateLinkCollectorURL(string $PrivateLinkCollectorURL) 设置内网上报地址( Private Link 上报地址)
  */
 class ApmAgentInfo extends AbstractModel
 {
     /**
-     * @var string Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Agent 下载地址
      */
     public $AgentDownloadURL;
 
     /**
-     * @var string Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Collector 上报地址
      */
     public $CollectorURL;
 
     /**
-     * @var string Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Token 信息
      */
     public $Token;
 
     /**
      * @var string 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicCollectorURL;
 
     /**
-     * @var string 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 自研 VPC 上报地址
      */
     public $InnerCollectorURL;
 
     /**
-     * @var string 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 内网上报地址( Private Link 上报地址)
      */
     public $PrivateLinkCollectorURL;
 
     /**
-     * @param string $AgentDownloadURL Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CollectorURL Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Token Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgentDownloadURL Agent 下载地址
+     * @param string $CollectorURL Collector 上报地址
+     * @param string $Token Token 信息
      * @param string $PublicCollectorURL 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InnerCollectorURL 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PrivateLinkCollectorURL 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InnerCollectorURL 自研 VPC 上报地址
+     * @param string $PrivateLinkCollectorURL 内网上报地址( Private Link 上报地址)
      */
     function __construct()
     {

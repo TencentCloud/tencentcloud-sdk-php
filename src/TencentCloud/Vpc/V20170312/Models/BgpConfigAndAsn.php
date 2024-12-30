@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * VPN通道BGP配置
  *
  * @method string getTunnelCidr() 获取BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTunnelCidr(string $TunnelCidr) 设置BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalBgpIp() 获取本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalBgpIp(string $LocalBgpIp) 设置本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteBgpIp() 获取对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteBgpIp(string $RemoteBgpIp) 设置对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalBgpAsn() 获取本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalBgpAsn(string $LocalBgpAsn) 设置本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteBgpAsn() 获取对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteBgpAsn(string $RemoteBgpAsn) 设置对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BgpConfigAndAsn extends AbstractModel
 {
     /**
      * @var string BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TunnelCidr;
 
     /**
      * @var string 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalBgpIp;
 
     /**
      * @var string 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteBgpIp;
 
     /**
      * @var string 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalBgpAsn;
 
     /**
      * @var string 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteBgpAsn;
 
     /**
      * @param string $TunnelCidr BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalBgpIp 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteBgpIp 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalBgpAsn 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteBgpAsn 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

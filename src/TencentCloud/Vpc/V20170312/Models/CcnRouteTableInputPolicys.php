@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 云联网路由接收策略列表
  *
  * @method array getPolicys() 获取策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicys(array $Policys) 设置策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPolicyVersion() 获取版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyVersion(integer $PolicyVersion) 设置版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnRouteTableInputPolicys extends AbstractModel
 {
     /**
      * @var array 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policys;
 
     /**
      * @var integer 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyVersion;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @param array $Policys 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyVersion 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

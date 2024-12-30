@@ -51,11 +51,11 @@ use TencentCloud\Common\AbstractModel;
 <li>2: logsetName精确匹配</li>
 <li>3: topicName 和logsetName 都精确匹配</li></ul>
  * @method integer getBizType() 获取主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
  * @method void setBizType(integer $BizType) 设置主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
  */
 class DescribeTopicsRequest extends AbstractModel
 {
@@ -92,8 +92,8 @@ class DescribeTopicsRequest extends AbstractModel
 
     /**
      * @var integer 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
      */
     public $BizType;
 
@@ -114,8 +114,8 @@ class DescribeTopicsRequest extends AbstractModel
 <li>2: logsetName精确匹配</li>
 <li>3: topicName 和logsetName 都精确匹配</li></ul>
      * @param integer $BizType 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
      */
     function __construct()
     {

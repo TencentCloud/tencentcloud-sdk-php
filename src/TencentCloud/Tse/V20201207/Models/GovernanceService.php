@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRevision(string $Revision) 设置该服务信息摘要签名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
  */
 class GovernanceService extends AbstractModel
 {
@@ -198,6 +200,11 @@ class GovernanceService extends AbstractModel
     public $Revision;
 
     /**
+     * @var boolean 是否开启同步到全局注册中心
+     */
+    public $SyncToGlobalRegistry;
+
+    /**
      * @param string $Name 服务名称。
      * @param string $Namespace 命名空间名称。
      * @param array $Metadatas 元数据信息数组。
@@ -232,6 +239,7 @@ class GovernanceService extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Revision 该服务信息摘要签名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
      */
     function __construct()
     {
@@ -321,6 +329,10 @@ class GovernanceService extends AbstractModel
 
         if (array_key_exists("Revision",$param) and $param["Revision"] !== null) {
             $this->Revision = $param["Revision"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
     }
 }

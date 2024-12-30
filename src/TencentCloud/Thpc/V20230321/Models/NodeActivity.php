@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeInstanceId(string $NodeInstanceId) 设置节点活动所在的实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeActivityStatus() 获取节点活动状态。取值范围：<br><li>RUNNING：运行中<br><li>SUCCESSFUL：活动成功<br><li>FAILED：活动失败
- * @method void setNodeActivityStatus(string $NodeActivityStatus) 设置节点活动状态。取值范围：<br><li>RUNNING：运行中<br><li>SUCCESSFUL：活动成功<br><li>FAILED：活动失败
+ * @method string getNodeActivityStatus() 获取节点活动状态。取值范围：<br><li>RUNNING：运行中</li><br><li>SUCCESSFUL：活动成功</li><br><li>FAILED：活动失败</li>
+ * @method void setNodeActivityStatus(string $NodeActivityStatus) 设置节点活动状态。取值范围：<br><li>RUNNING：运行中</li><br><li>SUCCESSFUL：活动成功</li><br><li>FAILED：活动失败</li>
  * @method string getNodeActivityStatusCode() 获取节点活动状态码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeActivityStatusCode(string $NodeActivityStatusCode) 设置节点活动状态码。
@@ -44,7 +44,7 @@ class NodeActivity extends AbstractModel
     public $NodeInstanceId;
 
     /**
-     * @var string 节点活动状态。取值范围：<br><li>RUNNING：运行中<br><li>SUCCESSFUL：活动成功<br><li>FAILED：活动失败
+     * @var string 节点活动状态。取值范围：<br><li>RUNNING：运行中</li><br><li>SUCCESSFUL：活动成功</li><br><li>FAILED：活动失败</li>
      */
     public $NodeActivityStatus;
 
@@ -63,7 +63,7 @@ class NodeActivity extends AbstractModel
     /**
      * @param string $NodeInstanceId 节点活动所在的实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeActivityStatus 节点活动状态。取值范围：<br><li>RUNNING：运行中<br><li>SUCCESSFUL：活动成功<br><li>FAILED：活动失败
+     * @param string $NodeActivityStatus 节点活动状态。取值范围：<br><li>RUNNING：运行中</li><br><li>SUCCESSFUL：活动成功</li><br><li>FAILED：活动失败</li>
      * @param string $NodeActivityStatusCode 节点活动状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeActivityStatusReason 节点活动状态原因。

@@ -60,10 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerFile(ContainerFileInfo $ContainerFile) 设置容器文件路径类型配置。
  * @method ContainerStdoutInfo getContainerStdout() 获取容器标准输出类型配置。
  * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置容器标准输出类型配置。
- * @method string getLogFormat() 获取日志格式化方式，用于容器采集场景。
+ * @method string getLogFormat() 获取日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
- * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。
+ * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
  * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
@@ -161,7 +161,7 @@ class CreateConfigExtraRequest extends AbstractModel
     public $ContainerStdout;
 
     /**
-     * @var string 日志格式化方式，用于容器采集场景。
+     * @var string 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      */
@@ -230,7 +230,7 @@ class CreateConfigExtraRequest extends AbstractModel
      * @param HostFileInfo $HostFile 节点文件路径类型配置。
      * @param ContainerFileInfo $ContainerFile 容器文件路径类型配置。
      * @param ContainerStdoutInfo $ContainerStdout 容器标准输出类型配置。
-     * @param string $LogFormat 日志格式化方式，用于容器采集场景。
+     * @param string $LogFormat 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType

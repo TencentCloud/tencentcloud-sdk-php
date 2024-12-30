@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsBm() 获取是否黑石地域，默认`false`。
  * @method void setIsBm(boolean $IsBm) 设置是否黑石地域，默认`false`。
  * @method string getDstRegion() 获取目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstRegion(string $DstRegion) 设置目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDstIsBm() 获取目的地域是否为黑石地域，默认`false`。
  * @method void setDstIsBm(boolean $DstIsBm) 设置目的地域是否为黑石地域，默认`false`。
  */
@@ -52,7 +50,6 @@ class CcnRegionBandwidthLimit extends AbstractModel
 
     /**
      * @var string 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstRegion;
 
@@ -66,7 +63,6 @@ class CcnRegionBandwidthLimit extends AbstractModel
      * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
      * @param boolean $IsBm 是否黑石地域，默认`false`。
      * @param string $DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DstIsBm 目的地域是否为黑石地域，默认`false`。
      */
     function __construct()

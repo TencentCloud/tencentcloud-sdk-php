@@ -37,7 +37,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
  * @method string getTargetUserId() 获取TranscriptionMode为1时必填，机器人只会拉该userid的流，忽略房间里其他用户。
  * @method void setTargetUserId(string $TargetUserId) 设置TranscriptionMode为1时必填，机器人只会拉该userid的流，忽略房间里其他用户。
  * @method array getTargetUserIdList() 获取机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
  * @method void setTargetUserIdList(array $TargetUserIdList) 设置机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
  */
 class TranscriptionParams extends AbstractModel
 {
@@ -81,6 +83,7 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
 
     /**
      * @var array 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
      */
     public $TargetUserIdList;
 
@@ -94,6 +97,7 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
      * @param integer $TranscriptionMode 1表示机器人只订阅单个人的流，0表示机器人订阅整个房间的流，如果不填默认订阅整个房间的流。
      * @param string $TargetUserId TranscriptionMode为1时必填，机器人只会拉该userid的流，忽略房间里其他用户。
      * @param array $TargetUserIdList 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
      */
     function __construct()
     {

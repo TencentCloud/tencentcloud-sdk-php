@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置本次查询的偏移位置，默认为0
  * @method integer getLimit() 获取本次返回结果的最大个数，默认为50，最大值为50
  * @method void setLimit(integer $Limit) 设置本次返回结果的最大个数，默认为50，最大值为50
+ * @method boolean getQueryFromConnectResource() 获取是否从连接查询topic列表
+ * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) 设置是否从连接查询topic列表
+ * @method string getConnectResourceId() 获取连接的ID
+ * @method void setConnectResourceId(string $ConnectResourceId) 设置连接的ID
+ * @method string getTopicRegularExpression() 获取topic资源表达式
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置topic资源表达式
  */
 class DescribeDatahubTopicsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeDatahubTopicsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var boolean 是否从连接查询topic列表
+     */
+    public $QueryFromConnectResource;
+
+    /**
+     * @var string 连接的ID
+     */
+    public $ConnectResourceId;
+
+    /**
+     * @var string topic资源表达式
+     */
+    public $TopicRegularExpression;
+
+    /**
      * @param string $SearchWord 搜索词
      * @param integer $Offset 本次查询的偏移位置，默认为0
      * @param integer $Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * @param boolean $QueryFromConnectResource 是否从连接查询topic列表
+     * @param string $ConnectResourceId 连接的ID
+     * @param string $TopicRegularExpression topic资源表达式
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeDatahubTopicsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("QueryFromConnectResource",$param) and $param["QueryFromConnectResource"] !== null) {
+            $this->QueryFromConnectResource = $param["QueryFromConnectResource"];
+        }
+
+        if (array_key_exists("ConnectResourceId",$param) and $param["ConnectResourceId"] !== null) {
+            $this->ConnectResourceId = $param["ConnectResourceId"];
+        }
+
+        if (array_key_exists("TopicRegularExpression",$param) and $param["TopicRegularExpression"] !== null) {
+            $this->TopicRegularExpression = $param["TopicRegularExpression"];
         }
     }
 }

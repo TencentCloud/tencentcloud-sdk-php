@@ -92,13 +92,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
 
  * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
  */
@@ -182,7 +182,7 @@ class RegistrationOrganizationInfo extends AbstractModel
     /**
      * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
 
@@ -227,7 +227,7 @@ p.s. 如果上传授权书 ，需遵循以下条件
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmAgent请求参数结构体
  *
- * @method string getInstanceId() 获取业务系统ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统ID
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
  * @method string getAgentType() 获取接入方式
  * @method void setAgentType(string $AgentType) 设置接入方式
  * @method string getNetworkMode() 获取环境
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeApmAgentRequest extends AbstractModel
 {
     /**
-     * @var string 业务系统ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class DescribeApmAgentRequest extends AbstractModel
     public $ReportMethod;
 
     /**
-     * @param string $InstanceId 业务系统ID
+     * @param string $InstanceId 业务系统 ID
      * @param string $AgentType 接入方式
      * @param string $NetworkMode 环境
      * @param string $LanguageEnvironment 语言

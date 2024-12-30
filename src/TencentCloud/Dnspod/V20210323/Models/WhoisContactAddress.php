@@ -20,83 +20,83 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Whois联系信息地址
  *
- * @method string getCity() 获取无
+ * @method string getCity() 获取城市
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCity(string $City) 设置无
+ * @method void setCity(string $City) 设置城市
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCountry() 获取无
+ * @method string getCountry() 获取国家
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCountry(string $Country) 设置无
+ * @method void setCountry(string $Country) 设置国家
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEmail() 获取无
+ * @method string getEmail() 获取电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置无
+ * @method void setEmail(string $Email) 设置电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFax() 获取无
+ * @method string getFax() 获取传真
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFax(string $Fax) 设置无
+ * @method void setFax(string $Fax) 设置传真
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFaxExt() 获取无
+ * @method string getFaxExt() 获取传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFaxExt(string $FaxExt) 设置无
+ * @method void setFaxExt(string $FaxExt) 设置传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHandle() 获取无
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHandle(string $Handle) 设置无
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取无
+ * @method string getName() 获取名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置无
+ * @method void setName(string $Name) 设置名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganization() 获取无
+ * @method string getOrganization() 获取组织机构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganization(string $Organization) 设置无
+ * @method void setOrganization(string $Organization) 设置组织机构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhone() 获取无
+ * @method string getPhone() 获取电话
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhone(string $Phone) 设置无
+ * @method void setPhone(string $Phone) 设置电话
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPostalCode() 获取无
+ * @method string getPostalCode() 获取邮编
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostalCode(string $PostalCode) 设置无
+ * @method void setPostalCode(string $PostalCode) 设置邮编
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getState() 获取无
+ * @method string getState() 获取省份/州
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(string $State) 设置无
+ * @method void setState(string $State) 设置省份/州
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStreet() 获取无
+ * @method string getStreet() 获取街道地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStreet(string $Street) 设置无
+ * @method void setStreet(string $Street) 设置街道地址
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WhoisContactAddress extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 城市
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
     /**
-     * @var string 无
+     * @var string 国家
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Country;
 
     /**
-     * @var string 无
+     * @var string 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var string 无
+     * @var string 传真
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fax;
 
     /**
-     * @var string 无
+     * @var string 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaxExt;
@@ -108,65 +108,65 @@ class WhoisContactAddress extends AbstractModel
     public $Handle;
 
     /**
-     * @var string 无
+     * @var string 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 无
+     * @var string 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Organization;
 
     /**
-     * @var string 无
+     * @var string 电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
-     * @var string 无
+     * @var string 邮编
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostalCode;
 
     /**
-     * @var string 无
+     * @var string 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
-     * @var string 无
+     * @var string 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Street;
 
     /**
-     * @param string $City 无
+     * @param string $City 城市
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Country 无
+     * @param string $Country 国家
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Email 无
+     * @param string $Email 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Fax 无
+     * @param string $Fax 传真
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FaxExt 无
+     * @param string $FaxExt 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Handle 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 无
+     * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Organization 无
+     * @param string $Organization 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Phone 无
+     * @param string $Phone 电话
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PostalCode 无
+     * @param string $PostalCode 邮编
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $State 无
+     * @param string $State 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Street 无
+     * @param string $Street 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

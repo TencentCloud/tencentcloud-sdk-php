@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceCidrBlock() 获取源端cidr。
  * @method void setSourceCidrBlock(string $SourceCidrBlock) 设置源端cidr。
  * @method string getDescription() 获取路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method string getInstanceUin() 获取关联实例所属UIN（根账号）。
@@ -75,7 +73,6 @@ class RouteSelectionPolicy extends AbstractModel
 
     /**
      * @var string 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -97,7 +94,6 @@ class RouteSelectionPolicy extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param string $SourceCidrBlock 源端cidr。
      * @param string $Description 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID。
      * @param string $InstanceUin 关联实例所属UIN（根账号）。
      */

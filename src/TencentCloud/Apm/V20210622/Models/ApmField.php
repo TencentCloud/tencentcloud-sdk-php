@@ -21,21 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 指标维度信息
  *
  * @method string getCompareVal() 获取昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareVal(string $CompareVal) 设置昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCompareVals() 获取Compare值结果数组，推荐使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareVals(array $CompareVals) 设置Compare值结果数组，推荐使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getValue() 获取指标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(float $Value) 设置指标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取请求数
  * @method void setKey(string $Key) 设置请求数
  * @method array getLastPeriodValue() 获取同环比上周期具体数值
@@ -47,7 +41,6 @@ class ApmField extends AbstractModel
 {
     /**
      * @var string 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareVal;
 
@@ -59,13 +52,11 @@ class ApmField extends AbstractModel
 
     /**
      * @var float 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
@@ -82,13 +73,10 @@ class ApmField extends AbstractModel
 
     /**
      * @param string $CompareVal 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CompareVals Compare值结果数组，推荐使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Value 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 请求数
      * @param array $LastPeriodValue 同环比上周期具体数值
 注意：此字段可能返回 null，表示取不到有效值。

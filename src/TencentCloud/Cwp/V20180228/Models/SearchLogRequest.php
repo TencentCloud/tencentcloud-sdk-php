@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置要检索分析的日志的起始时间，Unix时间戳（毫秒）
  * @method integer getEndTime() 获取要检索分析的日志的结束时间，Unix时间戳（毫秒）
  * @method void setEndTime(integer $EndTime) 设置要检索分析的日志的结束时间，Unix时间戳（毫秒）
- * @method string getQueryString() 获取检索分析语句，最大长度为12KB
- * @method void setQueryString(string $QueryString) 设置检索分析语句，最大长度为12KB
+ * @method string getQueryString() 获取检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
+ * @method void setQueryString(string $QueryString) 设置检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
  * @method integer getCount() 获取表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
  * @method void setCount(integer $Count) 设置表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
  * @method string getSort() 获取原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
@@ -46,7 +46,7 @@ class SearchLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 检索分析语句，最大长度为12KB
+     * @var string 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
      */
     public $QueryString;
 
@@ -68,7 +68,7 @@ class SearchLogRequest extends AbstractModel
     /**
      * @param integer $StartTime 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      * @param integer $EndTime 要检索分析的日志的结束时间，Unix时间戳（毫秒）
-     * @param string $QueryString 检索分析语句，最大长度为12KB
+     * @param string $QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
      * @param integer $Count 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
      * @param string $Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      * @param string $Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时

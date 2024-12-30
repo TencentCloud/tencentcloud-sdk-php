@@ -41,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicensePayMode() 获取license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
  * @method string getGroupName() 获取设备分组名称，非必选，预留参数，需要分组时传入GroupId
  * @method void setGroupName(string $GroupName) 设置设备分组名称，非必选，预留参数，需要分组时传入GroupId
  * @method string getGroupId() 获取设备分组ID，非必选，如果不填写则默认设备无分组
@@ -88,7 +88,7 @@ class AddDeviceRequest extends AbstractModel
      * @var integer license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      */
     public $LicensePayMode;
 
@@ -120,7 +120,7 @@ class AddDeviceRequest extends AbstractModel
      * @param integer $LicensePayMode license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      * @param string $GroupName 设备分组名称，非必选，预留参数，需要分组时传入GroupId
      * @param string $GroupId 设备分组ID，非必选，如果不填写则默认设备无分组
      * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的访问权限
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的访问权限
+ * @method boolean getExactAccount() 获取是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+ * @method void setExactAccount(boolean $ExactAccount) 设置是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
  * @method array getFilters() 获取过滤数组
  * @method void setFilters(array $Filters) 设置过滤数组
  */
@@ -89,6 +91,11 @@ class DescribeAclsRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var boolean 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+     */
+    public $ExactAccount;
+
+    /**
      * @var array 过滤数组
      */
     public $Filters;
@@ -103,6 +110,7 @@ class DescribeAclsRequest extends AbstractModel
      * @param array $AuthorizedDeviceIdSet 有访问权限的资产ID集合
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的访问权限
+     * @param boolean $ExactAccount 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
      * @param array $Filters 过滤数组
      */
     function __construct()
@@ -152,6 +160,10 @@ class DescribeAclsRequest extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("ExactAccount",$param) and $param["ExactAccount"] !== null) {
+            $this->ExactAccount = $param["ExactAccount"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

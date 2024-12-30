@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmInstances请求参数结构体
  *
- * @method array getTags() 获取Tag列表
- * @method void setTags(array $Tags) 设置Tag列表
- * @method string getInstanceName() 获取搜索实例名
- * @method void setInstanceName(string $InstanceName) 设置搜索实例名
- * @method array getInstanceIds() 获取过滤实例ID
- * @method void setInstanceIds(array $InstanceIds) 设置过滤实例ID
- * @method integer getDemoInstanceFlag() 获取是否查询官方demo实例
- * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方demo实例
- * @method integer getAllRegionsFlag() 获取是否查询全地域实例
- * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域实例
+ * @method array getTags() 获取Tag 列表
+ * @method void setTags(array $Tags) 设置Tag 列表
+ * @method string getInstanceName() 获取搜索业务系统名
+ * @method void setInstanceName(string $InstanceName) 设置搜索业务系统名
+ * @method array getInstanceIds() 获取过滤业务系统 ID
+ * @method void setInstanceIds(array $InstanceIds) 设置过滤业务系统 ID
+ * @method integer getDemoInstanceFlag() 获取是否查询官方 Demo 业务系统
+ * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方 Demo 业务系统
+ * @method integer getAllRegionsFlag() 获取是否查询全地域业务系统
+ * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域业务系统
  */
 class DescribeApmInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Tag列表
+     * @var array Tag 列表
      */
     public $Tags;
 
     /**
-     * @var string 搜索实例名
+     * @var string 搜索业务系统名
      */
     public $InstanceName;
 
     /**
-     * @var array 过滤实例ID
+     * @var array 过滤业务系统 ID
      */
     public $InstanceIds;
 
     /**
-     * @var integer 是否查询官方demo实例
+     * @var integer 是否查询官方 Demo 业务系统
      */
     public $DemoInstanceFlag;
 
     /**
-     * @var integer 是否查询全地域实例
+     * @var integer 是否查询全地域业务系统
      */
     public $AllRegionsFlag;
 
     /**
-     * @param array $Tags Tag列表
-     * @param string $InstanceName 搜索实例名
-     * @param array $InstanceIds 过滤实例ID
-     * @param integer $DemoInstanceFlag 是否查询官方demo实例
-     * @param integer $AllRegionsFlag 是否查询全地域实例
+     * @param array $Tags Tag 列表
+     * @param string $InstanceName 搜索业务系统名
+     * @param array $InstanceIds 过滤业务系统 ID
+     * @param integer $DemoInstanceFlag 是否查询官方 Demo 业务系统
+     * @param integer $AllRegionsFlag 是否查询全地域业务系统
      */
     function __construct()
     {

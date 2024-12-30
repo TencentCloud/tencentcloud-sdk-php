@@ -18,444 +18,308 @@ namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * apm实例信息
+ * APM 业务系统信息
  *
- * @method float getAmountOfUsedStorage() 获取存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAmountOfUsedStorage(float $AmountOfUsedStorage) 设置存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取实例名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置实例名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getCreateUin() 获取创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUin(string $CreateUin) 设置创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getServiceCount() 获取该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceCount(integer $ServiceCount) 设置该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCountOfReportSpanPerDay() 获取日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCountOfReportSpanPerDay(integer $CountOfReportSpanPerDay) 设置日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取AppId信息
- * @method void setAppId(integer $AppId) 设置AppId信息
- * @method integer getTraceDuration() 获取Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取实例状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置实例状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSpanDailyCounters() 获取实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBillingInstance() 获取实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInstance(integer $BillingInstance) 设置实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getAmountOfUsedStorage() 获取存储使用量( MB )
+ * @method void setAmountOfUsedStorage(float $AmountOfUsedStorage) 设置存储使用量( MB )
+ * @method string getName() 获取业务系统名
+ * @method void setName(string $Name) 设置业务系统名
+ * @method array getTags() 获取业务系统所属 Tag 列表
+ * @method void setTags(array $Tags) 设置业务系统所属 Tag 列表
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
+ * @method string getCreateUin() 获取创建人 Uin
+ * @method void setCreateUin(string $CreateUin) 设置创建人 Uin
+ * @method integer getServiceCount() 获取该业务系统已上报的服务端应用数量
+ * @method void setServiceCount(integer $ServiceCount) 设置该业务系统已上报的服务端应用数量
+ * @method integer getCountOfReportSpanPerDay() 获取日均上报 Span 数
+ * @method void setCountOfReportSpanPerDay(integer $CountOfReportSpanPerDay) 设置日均上报 Span 数
+ * @method integer getAppId() 获取AppID 信息
+ * @method void setAppId(integer $AppId) 设置AppID 信息
+ * @method integer getTraceDuration() 获取Trace 数据保存时长
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长
+ * @method string getDescription() 获取业务系统描述信息
+ * @method void setDescription(string $Description) 设置业务系统描述信息
+ * @method integer getStatus() 获取业务系统状态
+ * @method void setStatus(integer $Status) 设置业务系统状态
+ * @method string getRegion() 获取业务系统所属地域
+ * @method void setRegion(string $Region) 设置业务系统所属地域
+ * @method integer getSpanDailyCounters() 获取业务系统上报额度
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度
+ * @method integer getBillingInstance() 获取业务系统是否开通计费
+ * @method void setBillingInstance(integer $BillingInstance) 设置业务系统是否开通计费
  * @method integer getErrRateThreshold() 获取错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSampleRate() 获取采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleRate(integer $SampleRate) 设置采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getErrorSample() 获取是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSlowRequestSavedThreshold() 获取慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogRegion() 获取cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogRegion(string $LogRegion) 设置cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogRegion() 获取CLS 日志所在地域
+ * @method void setLogRegion(string $LogRegion) 设置CLS 日志所在地域
  * @method string getLogSource() 获取日志来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSource(string $LogSource) 设置日志来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRelatedLog() 获取日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRelatedLog(integer $IsRelatedLog) 设置日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogTopicID() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicID(string $LogTopicID) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientCount() 获取该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientCount(integer $ClientCount) 设置该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogSet() 获取CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogSet(string $LogSet) 设置CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricDuration() 获取Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricDuration(integer $MetricDuration) 设置Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogSet() 获取CLS 日志集 | ES 集群ID
+ * @method void setLogSet(string $LogSet) 设置CLS 日志集 | ES 集群ID
+ * @method integer getMetricDuration() 获取Metric 数据保存时长
+ * @method void setMetricDuration(integer $MetricDuration) 设置Metric 数据保存时长
  * @method array getCustomShowTags() 获取用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPayMode() 获取实例计费模式
+ * @method integer getPayMode() 获取业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayMode(integer $PayMode) 设置实例计费模式
+ * @method void setPayMode(integer $PayMode) 设置业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getPayModeEffective() 获取实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayModeEffective(boolean $PayModeEffective) 设置实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPayModeEffective() 获取业务系统计费模式是否生效
+ * @method void setPayModeEffective(boolean $PayModeEffective) 设置业务系统计费模式是否生效
  * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFree() 获取是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFree(integer $Free) 设置是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultTSF() 获取是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultTSF(integer $DefaultTSF) 设置是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsRelatedDashboard() 获取是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDashboardTopicID() 获取dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDashboardTopicID(string $DashboardTopicID) 设置dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefaultTSF() 获取是否 tsf 默认业务系统（0=否，1-是）
+ * @method void setDefaultTSF(integer $DefaultTSF) 设置是否 tsf 默认业务系统（0=否，1-是）
+ * @method integer getIsRelatedDashboard() 获取是否关联 Dashboard： 0 关 1 开
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联 Dashboard： 0 关 1 开
+ * @method string getDashboardTopicID() 获取Dashboard ID
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置Dashboard ID
  * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsSqlInjectionAnalysis() 获取是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入分析
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入分析
  */
 class ApmInstanceDetail extends AbstractModel
 {
     /**
-     * @var float 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 存储使用量( MB )
      */
     public $AmountOfUsedStorage;
 
     /**
-     * @var string 实例名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 业务系统名
      */
     public $Name;
 
     /**
-     * @var array 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 业务系统所属 Tag 列表
      */
     public $Tags;
 
     /**
-     * @var string 实例ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 创建人 Uin
      */
     public $CreateUin;
 
     /**
-     * @var integer 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 该业务系统已上报的服务端应用数量
      */
     public $ServiceCount;
 
     /**
-     * @var integer 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 日均上报 Span 数
      */
     public $CountOfReportSpanPerDay;
 
     /**
-     * @var integer AppId信息
+     * @var integer AppID 信息
      */
     public $AppId;
 
     /**
-     * @var integer Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer Trace 数据保存时长
      */
     public $TraceDuration;
 
     /**
-     * @var string 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 业务系统描述信息
      */
     public $Description;
 
     /**
-     * @var integer 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 业务系统状态
      */
     public $Status;
 
     /**
-     * @var string 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 业务系统所属地域
      */
     public $Region;
 
     /**
-     * @var integer 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 业务系统上报额度
      */
     public $SpanDailyCounters;
 
     /**
-     * @var integer 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 业务系统是否开通计费
      */
     public $BillingInstance;
 
     /**
      * @var integer 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrRateThreshold;
 
     /**
      * @var integer 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleRate;
 
     /**
      * @var integer 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorSample;
 
     /**
      * @var integer 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlowRequestSavedThreshold;
 
     /**
-     * @var string cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string CLS 日志所在地域
      */
     public $LogRegion;
 
     /**
      * @var string 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSource;
 
     /**
      * @var integer 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRelatedLog;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTopicID;
 
     /**
      * @var integer 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientCount;
 
     /**
      * @var integer 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var string CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string CLS 日志集 | ES 集群ID
      */
     public $LogSet;
 
     /**
-     * @var integer Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer Metric 数据保存时长
      */
     public $MetricDuration;
 
     /**
      * @var array 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomShowTags;
 
     /**
-     * @var integer 实例计费模式
+     * @var integer 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
-     * @var boolean 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 业务系统计费模式是否生效
      */
     public $PayModeEffective;
 
     /**
      * @var integer 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResponseDurationWarningThreshold;
 
     /**
      * @var integer 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Free;
 
     /**
-     * @var integer 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 是否 tsf 默认业务系统（0=否，1-是）
      */
     public $DefaultTSF;
 
     /**
-     * @var integer 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 是否关联 Dashboard： 0 关 1 开
      */
     public $IsRelatedDashboard;
 
     /**
-     * @var string dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Dashboard ID
      */
     public $DashboardTopicID;
 
     /**
      * @var integer 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsInstrumentationVulnerabilityScan;
 
     /**
-     * @var integer 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 是否开启 SQL 注入分析
      */
     public $IsSqlInjectionAnalysis;
 
     /**
-     * @param float $AmountOfUsedStorage 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 实例名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID
-     * @param string $CreateUin 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ServiceCount 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CountOfReportSpanPerDay 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId AppId信息
-     * @param integer $TraceDuration Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SpanDailyCounters 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BillingInstance 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $AmountOfUsedStorage 存储使用量( MB )
+     * @param string $Name 业务系统名
+     * @param array $Tags 业务系统所属 Tag 列表
+     * @param string $InstanceId 业务系统 ID
+     * @param string $CreateUin 创建人 Uin
+     * @param integer $ServiceCount 该业务系统已上报的服务端应用数量
+     * @param integer $CountOfReportSpanPerDay 日均上报 Span 数
+     * @param integer $AppId AppID 信息
+     * @param integer $TraceDuration Trace 数据保存时长
+     * @param string $Description 业务系统描述信息
+     * @param integer $Status 业务系统状态
+     * @param string $Region 业务系统所属地域
+     * @param integer $SpanDailyCounters 业务系统上报额度
+     * @param integer $BillingInstance 业务系统是否开通计费
      * @param integer $ErrRateThreshold 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SampleRate 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrorSample 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SlowRequestSavedThreshold 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogRegion cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogRegion CLS 日志所在地域
      * @param string $LogSource 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRelatedLog 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogTopicID 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientCount 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogSet CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricDuration Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogSet CLS 日志集 | ES 集群ID
+     * @param integer $MetricDuration Metric 数据保存时长
      * @param array $CustomShowTags 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PayMode 实例计费模式
+     * @param integer $PayMode 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $PayModeEffective 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PayModeEffective 业务系统计费模式是否生效
      * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultTSF 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsRelatedDashboard 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DashboardTopicID dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
+     * @param integer $IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
+     * @param string $DashboardTopicID Dashboard ID
      * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsSqlInjectionAnalysis 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入分析
      */
     function __construct()
     {

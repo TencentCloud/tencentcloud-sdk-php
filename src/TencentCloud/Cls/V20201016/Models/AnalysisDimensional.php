@@ -73,7 +73,6 @@ use TencentCloud\Common\AbstractModel;
     "Key": "SyntaxRule", // 查不到这个字段也是老语法
     "Value": "0"//0:Lucene, 1:CQL
 }
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigInfo(array $ConfigInfo) 设置多维分析配置。
 
 当Analysis的Type字段为query（自定义）时，支持
@@ -115,7 +114,6 @@ use TencentCloud\Common\AbstractModel;
     "Key": "SyntaxRule", // 查不到这个字段也是老语法
     "Value": "0"//0:Lucene, 1:CQL
 }
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalysisDimensional extends AbstractModel
 {
@@ -179,7 +177,6 @@ class AnalysisDimensional extends AbstractModel
     "Key": "SyntaxRule", // 查不到这个字段也是老语法
     "Value": "0"//0:Lucene, 1:CQL
 }
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigInfo;
 
@@ -231,7 +228,6 @@ class AnalysisDimensional extends AbstractModel
     "Key": "SyntaxRule", // 查不到这个字段也是老语法
     "Value": "0"//0:Lucene, 1:CQL
 }
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

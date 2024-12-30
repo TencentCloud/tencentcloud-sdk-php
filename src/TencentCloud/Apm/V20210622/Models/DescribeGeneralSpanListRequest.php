@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置列表项个数
  * @method OrderBy getOrderBy() 获取排序
  * @method void setOrderBy(OrderBy $OrderBy) 设置排序
- * @method integer getStartTime() 获取span查询开始时间戳（单位:秒）
- * @method void setStartTime(integer $StartTime) 设置span查询开始时间戳（单位:秒）
- * @method string getInstanceId() 获取业务系统ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统ID
+ * @method integer getStartTime() 获取Span查询开始时间戳（单位:秒）
+ * @method void setStartTime(integer $StartTime) 设置Span查询开始时间戳（单位:秒）
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
  * @method array getFilters() 获取通用过滤参数
  * @method void setFilters(array $Filters) 设置通用过滤参数
  * @method string getBusinessName() 获取业务自身服务名
  * @method void setBusinessName(string $BusinessName) 设置业务自身服务名
- * @method integer getEndTime() 获取span查询结束时间戳（单位:秒）
- * @method void setEndTime(integer $EndTime) 设置span查询结束时间戳（单位:秒）
+ * @method integer getEndTime() 获取Span查询结束时间戳（单位:秒）
+ * @method void setEndTime(integer $EndTime) 设置Span查询结束时间戳（单位:秒）
  */
 class DescribeGeneralSpanListRequest extends AbstractModel
 {
@@ -55,12 +55,12 @@ class DescribeGeneralSpanListRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var integer span查询开始时间戳（单位:秒）
+     * @var integer Span查询开始时间戳（单位:秒）
      */
     public $StartTime;
 
     /**
-     * @var string 业务系统ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
@@ -75,7 +75,7 @@ class DescribeGeneralSpanListRequest extends AbstractModel
     public $BusinessName;
 
     /**
-     * @var integer span查询结束时间戳（单位:秒）
+     * @var integer Span查询结束时间戳（单位:秒）
      */
     public $EndTime;
 
@@ -83,11 +83,11 @@ class DescribeGeneralSpanListRequest extends AbstractModel
      * @param integer $Offset 分页
      * @param integer $Limit 列表项个数
      * @param OrderBy $OrderBy 排序
-     * @param integer $StartTime span查询开始时间戳（单位:秒）
-     * @param string $InstanceId 业务系统ID
+     * @param integer $StartTime Span查询开始时间戳（单位:秒）
+     * @param string $InstanceId 业务系统 ID
      * @param array $Filters 通用过滤参数
      * @param string $BusinessName 业务自身服务名
-     * @param integer $EndTime span查询结束时间戳（单位:秒）
+     * @param integer $EndTime Span查询结束时间戳（单位:秒）
      */
     function __construct()
     {

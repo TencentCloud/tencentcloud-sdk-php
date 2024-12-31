@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKey() 获取key，用于展示，该配置对应与配置文件中的配置项
  * @method void setKey(string $Key) 设置key，用于展示，该配置对应与配置文件中的配置项
  * @method string getValue() 获取Name对应的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置Name对应的值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DefaultSetting extends AbstractModel
 {
@@ -57,7 +55,6 @@ class DefaultSetting extends AbstractModel
 
     /**
      * @var string Name对应的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -67,7 +64,6 @@ class DefaultSetting extends AbstractModel
      * @param string $Prompt 提示
      * @param string $Key key，用于展示，该配置对应与配置文件中的配置项
      * @param string $Value Name对应的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

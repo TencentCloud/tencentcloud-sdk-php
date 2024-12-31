@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 用于创建集群价格清单-节点组成部分价格
  *
  * @method string getInstanceType() 获取类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPrice() 获取单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrice(float $Price) 设置单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRealCost() 获取单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealCost(float $RealCost) 设置单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRealTotalCost() 获取总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalCost(float $RealTotalCost) 设置总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPolicy() 获取折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicy(float $Policy) 设置折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGoodsNum() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsNum(integer $GoodsNum) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PartDetailPriceItem extends AbstractModel
 {
     /**
      * @var string 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var float 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
 
     /**
      * @var float 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealCost;
 
     /**
      * @var float 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCost;
 
     /**
      * @var float 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policy;
 
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GoodsNum;
 
     /**
      * @param string $InstanceType 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Price 单价（原价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RealCost 单价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RealTotalCost 总价（折扣价）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Policy 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GoodsNum 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

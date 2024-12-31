@@ -21,237 +21,161 @@ use TencentCloud\Common\AbstractModel;
  * trino 查询信息
  *
  * @method string getCatalog() 获取catalog
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalog(string $Catalog) 设置catalog
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientIpAddr() 获取提交IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIpAddr(string $ClientIpAddr) 设置提交IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompletedSplits() 获取切片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompletedSplits(string $CompletedSplits) 设置切片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpuTime() 获取CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuTime(integer $CpuTime) 设置CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCumulativeMemory() 获取累计内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCumulativeMemory(integer $CumulativeMemory) 设置累计内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDurationMillis() 获取执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationMillis(integer $DurationMillis) 设置执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternalNetworkBytes() 获取内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalNetworkBytes(integer $InternalNetworkBytes) 设置内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputBytes() 获取输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputBytes(integer $OutputBytes) 设置输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeakUserMemoryBytes() 获取峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeakUserMemoryBytes(integer $PeakUserMemoryBytes) 设置峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPhysicalInputBytes() 获取物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhysicalInputBytes(integer $PhysicalInputBytes) 设置物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProcessedInputBytes() 获取处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessedInputBytes(integer $ProcessedInputBytes) 设置处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSqlCompileTime() 获取编译时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSqlCompileTime(integer $SqlCompileTime) 设置编译时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatement() 获取执行语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatement(string $Statement) 设置执行语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取提交用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置提交用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWrittenBytes() 获取写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWrittenBytes(integer $WrittenBytes) 设置写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrinoQueryInfo extends AbstractModel
 {
     /**
      * @var string catalog
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalog;
 
     /**
      * @var string 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIpAddr;
 
     /**
      * @var string 切片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompletedSplits;
 
     /**
      * @var integer CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuTime;
 
     /**
      * @var integer 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CumulativeMemory;
 
     /**
      * @var integer 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationMillis;
 
     /**
      * @var integer 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalNetworkBytes;
 
     /**
      * @var integer 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputBytes;
 
     /**
      * @var integer 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeakUserMemoryBytes;
 
     /**
      * @var integer 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhysicalInputBytes;
 
     /**
      * @var integer 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessedInputBytes;
 
     /**
      * @var integer 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlCompileTime;
 
     /**
      * @var integer 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Statement;
 
     /**
      * @var string 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var integer 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WrittenBytes;
 
     /**
      * @param string $Catalog catalog
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIpAddr 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompletedSplits 切片数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CpuTime CPU时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CumulativeMemory 累计内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DurationMillis 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 结束时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternalNetworkBytes 内部传输量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputBytes 输出字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PeakUserMemoryBytes 峰值内存量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PhysicalInputBytes 物理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProcessedInputBytes 处理输入量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SqlCompileTime 编译时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 开始时间 (s)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Statement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WrittenBytes 写入字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

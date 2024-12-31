@@ -21,21 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用户管理列表过滤器
  *
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserType() 获取用户来源
+ * @method void setUserType(string $UserType) 设置用户来源
  */
 class UserManagerFilter extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
+     * @var string 用户来源
+     */
+    public $UserType;
+
+    /**
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserType 用户来源
      */
     function __construct()
     {
@@ -52,6 +56,10 @@ class UserManagerFilter extends AbstractModel
         }
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 弹性扩缩容按天重复任务描述
  *
  * @method string getExecuteAtTimeOfDay() 获取重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) 设置重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStep() 获取每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStep(integer $Step) 设置每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DayRepeatStrategy extends AbstractModel
 {
     /**
      * @var string 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteAtTimeOfDay;
 
     /**
      * @var integer 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Step;
 
     /**
      * @param string $ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Step 每隔Step天执行一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

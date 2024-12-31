@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 采样序列
  *
  * @method string getTimestamp() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(string $Timestamp) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取采样值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置采样值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Dps extends AbstractModel
 {
     /**
      * @var string 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 采样值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 采样值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

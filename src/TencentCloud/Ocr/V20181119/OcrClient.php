@@ -310,7 +310,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 <table style="width:650px">
       <thead>
         <tr>
-       <th width="150">增值能力</th>
+       <th width="150">扩展能力</th>
           <th width="500">能力项</th>
         </tr>
       </thead>
@@ -412,7 +412,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 <table style="width:650px">
       <thead>
         <tr>
-       <th width="150">增值能力</th>
+       <th width="150">扩展能力</th>
           <th width="500">能力项</th>
         </tr>
       </thead>
@@ -658,7 +658,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://cloud.tencent.com/product/smart-ocr)。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\SmartStructuralProResponse SmartStructuralPro(Models\SmartStructuralProRequest $req) 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://cloud.tencent.com/product/smart-ocr)。
+ * @method Models\SmartStructuralProResponse SmartStructuralPro(Models\SmartStructuralProRequest $req) 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) <b>此接口为表格识别的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/49525">新版表格识别</a>。</b>

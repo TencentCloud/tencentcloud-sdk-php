@@ -41,13 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStorageType() 获取磁盘类型
  * @method void setStorageType(integer $StorageType) 设置磁盘类型
  * @method integer getRootSize() 获取系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootSize(integer $RootSize) 设置系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRootStorageType() 获取系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootStorageType(integer $RootStorageType) 设置系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMCMultiDisk() 获取数据盘信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMCMultiDisk(array $MCMultiDisk) 设置数据盘信息
@@ -103,13 +99,11 @@ class RenewInstancesInfo extends AbstractModel
 
     /**
      * @var integer 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootSize;
 
     /**
      * @var integer 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootStorageType;
 
@@ -131,9 +125,7 @@ class RenewInstancesInfo extends AbstractModel
      * @param string $Spec 节点规格
      * @param integer $StorageType 磁盘类型
      * @param integer $RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RootStorageType 系统盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MCMultiDisk 数据盘信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

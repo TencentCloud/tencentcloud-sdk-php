@@ -27,15 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserType() 获取Manager表示管理员、NormalUser表示普通用户
  * @method void setUserType(string $UserType) 设置Manager表示管理员、NormalUser表示普通用户
  * @method string getCreateTime() 获取用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportDownLoadKeyTab() 获取是否可以下载用户对应的keytab文件，对开启kerberos的集群才有意义
  * @method void setSupportDownLoadKeyTab(boolean $SupportDownLoadKeyTab) 设置是否可以下载用户对应的keytab文件，对开启kerberos的集群才有意义
  * @method string getDownLoadKeyTabUrl() 获取keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownLoadKeyTabUrl(string $DownLoadKeyTabUrl) 设置keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserManagerUserBriefInfo extends AbstractModel
 {
@@ -56,7 +52,6 @@ class UserManagerUserBriefInfo extends AbstractModel
 
     /**
      * @var string 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -67,7 +62,6 @@ class UserManagerUserBriefInfo extends AbstractModel
 
     /**
      * @var string keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownLoadKeyTabUrl;
 
@@ -76,10 +70,8 @@ class UserManagerUserBriefInfo extends AbstractModel
      * @param string $UserGroup 用户所属的组
      * @param string $UserType Manager表示管理员、NormalUser表示普通用户
      * @param string $CreateTime 用户创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportDownLoadKeyTab 是否可以下载用户对应的keytab文件，对开启kerberos的集群才有意义
      * @param string $DownLoadKeyTabUrl keytab文件的下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

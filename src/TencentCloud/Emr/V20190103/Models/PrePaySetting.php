@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(Period $Period) 设置时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrePaySetting extends AbstractModel
 {
@@ -39,7 +37,6 @@ class PrePaySetting extends AbstractModel
 
     /**
      * @var integer 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
@@ -47,7 +44,6 @@ class PrePaySetting extends AbstractModel
      * @param Period $Period 时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

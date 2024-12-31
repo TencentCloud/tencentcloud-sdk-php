@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 主机路径
  *
  * @method string getPath() 获取主机路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置主机路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostPathVolumeSource extends AbstractModel
 {
     /**
      * @var string 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 主机路径类型，当前默认DirectoryOrCreate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPKey() 获取参数key
  * @method void setPKey(string $PKey) 设置参数key
  * @method string getPValue() 获取参数value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPValue(string $PValue) 设置参数value
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowParamsDesc extends AbstractModel
 {
@@ -36,14 +34,12 @@ class FlowParamsDesc extends AbstractModel
 
     /**
      * @var string 参数value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PValue;
 
     /**
      * @param string $PKey 参数key
      * @param string $PValue 参数value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

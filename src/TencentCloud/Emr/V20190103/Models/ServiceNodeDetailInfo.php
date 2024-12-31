@@ -49,37 +49,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceDetectionInfo(array $ServiceDetectionInfo) 设置进程探测信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeFlagFilter() 获取节点类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeFlagFilter(string $NodeFlagFilter) 设置节点类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthStatus getHealthStatus() 获取进程健康状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthStatus(HealthStatus $HealthStatus) 设置进程健康状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSupportRoleMonitor() 获取角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportRoleMonitor(boolean $IsSupportRoleMonitor) 设置角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStopPolicies() 获取暂停策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopPolicies(array $StopPolicies) 设置暂停策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHAState() 获取测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHAState(string $HAState) 设置测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameService() 获取NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameService(string $NameService) 设置NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsFederation() 获取是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFederation(boolean $IsFederation) 设置是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataNodeMaintenanceState() 获取datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataNodeMaintenanceState(integer $DataNodeMaintenanceState) 设置datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceNodeDetailInfo extends AbstractModel
 {
@@ -151,7 +139,6 @@ class ServiceNodeDetailInfo extends AbstractModel
 
     /**
      * @var string 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeFlagFilter;
 
@@ -163,7 +150,6 @@ class ServiceNodeDetailInfo extends AbstractModel
 
     /**
      * @var boolean 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportRoleMonitor;
 
@@ -175,25 +161,21 @@ class ServiceNodeDetailInfo extends AbstractModel
 
     /**
      * @var string 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HAState;
 
     /**
      * @var string NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameService;
 
     /**
      * @var boolean 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFederation;
 
     /**
      * @var integer datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataNodeMaintenanceState;
 
@@ -213,21 +195,15 @@ class ServiceNodeDetailInfo extends AbstractModel
      * @param array $ServiceDetectionInfo 进程探测信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeFlagFilter 节点类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthStatus $HealthStatus 进程健康状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportRoleMonitor 角色是否支持监控
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StopPolicies 暂停策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HAState 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameService NameService名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsFederation 是否支持联邦
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataNodeMaintenanceState datanode是否是维护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

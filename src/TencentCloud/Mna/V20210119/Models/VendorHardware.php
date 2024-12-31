@@ -21,39 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 厂商硬件详细信息
  *
  * @method string getHardwareId() 获取硬件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHardwareId(string $HardwareId) 设置硬件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSN() 获取硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSN(string $SN) 设置硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取激活状态， 空：全部； 1:待激活； 2:已激活
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置激活状态， 空：全部； 1:待激活； 2:已激活
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActiveTime() 获取激活时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveTime(string $ActiveTime) 设置激活时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceId() 获取设备id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseChargingMode() 获取license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseChargingMode(integer $LicenseChargingMode) 设置license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastOnlineTime() 获取最后在线时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastOnlineTime(string $LastOnlineTime) 设置最后在线时间
@@ -62,44 +48,36 @@ use TencentCloud\Common\AbstractModel;
 0：月度授权
 1：永久授权
 -1：未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期
 0：月度授权
 1：永久授权
 -1：未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayer() 获取付费方
 0：客户付费
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayer(integer $Payer) 设置付费方
 0：客户付费
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VendorHardware extends AbstractModel
 {
     /**
      * @var string 硬件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HardwareId;
 
     /**
      * @var string 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SN;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 激活状态， 空：全部； 1:待激活； 2:已激活
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -111,20 +89,17 @@ class VendorHardware extends AbstractModel
 
     /**
      * @var string 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var integer license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseChargingMode;
 
@@ -139,7 +114,6 @@ class VendorHardware extends AbstractModel
 0：月度授权
 1：永久授权
 -1：未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicensePayMode;
 
@@ -147,39 +121,29 @@ class VendorHardware extends AbstractModel
      * @var integer 付费方
 0：客户付费
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Payer;
 
     /**
      * @param string $HardwareId 硬件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 激活状态， 空：全部； 1:待激活； 2:已激活
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActiveTime 激活时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastOnlineTime 最后在线时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicensePayMode license授权有效期
 0：月度授权
 1：永久授权
 -1：未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Payer 付费方
 0：客户付费
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

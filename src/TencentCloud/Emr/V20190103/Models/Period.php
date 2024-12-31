@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Serverless HBase包年包月时间
  *
  * @method integer getTimeSpan() 获取时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Period extends AbstractModel
 {
     /**
      * @var integer 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @param integer $TimeSpan 时间跨度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 时间单位，"m"代表月。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

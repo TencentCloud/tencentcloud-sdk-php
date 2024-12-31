@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnFullText(boolean $ReturnFullText) 设置是否开启全文字段识别
  * @method string getConfigId() 获取配置id支持：General -- 通用场景 InvoiceEng -- 海运提单、国际invoice模版 WayBillEng --海运订单模板
  * @method void setConfigId(string $ConfigId) 设置配置id支持：General -- 通用场景 InvoiceEng -- 海运提单、国际invoice模版 WayBillEng --海运订单模板
+ * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
+ * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
  */
 class SmartStructuralProRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SmartStructuralProRequest extends AbstractModel
     public $ConfigId;
 
     /**
+     * @var boolean 是否开启全文字段坐标值的识别
+     */
+    public $EnableCoord;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param string $ImageBase64 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      * @param array $ItemNames 自定义结构化功能需返回的字段名称，例：若客户只想返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"]
      * @param boolean $ReturnFullText 是否开启全文字段识别
      * @param string $ConfigId 配置id支持：General -- 通用场景 InvoiceEng -- 海运提单、国际invoice模版 WayBillEng --海运订单模板
+     * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SmartStructuralProRequest extends AbstractModel
 
         if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
             $this->ConfigId = $param["ConfigId"];
+        }
+
+        if (array_key_exists("EnableCoord",$param) and $param["EnableCoord"] !== null) {
+            $this->EnableCoord = $param["EnableCoord"];
         }
     }
 }

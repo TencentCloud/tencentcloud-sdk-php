@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 进程检测信息
  *
  * @method string getDetectAlert() 获取探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectAlert(string $DetectAlert) 设置探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetetcFunctionKey() 获取探测功能描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetetcFunctionKey(string $DetetcFunctionKey) 设置探测功能描述
@@ -37,23 +35,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetetcTime(string $DetetcTime) 设置探测结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetectFunctionKey() 获取探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectFunctionKey(string $DetectFunctionKey) 设置探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetectFunctionValue() 获取探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectFunctionValue(string $DetectFunctionValue) 设置探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetectTime() 获取探测结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectTime(string $DetectTime) 设置探测结果
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceProcessFunctionInfo extends AbstractModel
 {
     /**
      * @var string 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectAlert;
 
@@ -80,25 +71,21 @@ class ServiceProcessFunctionInfo extends AbstractModel
 
     /**
      * @var string 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectFunctionKey;
 
     /**
      * @var string 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectFunctionValue;
 
     /**
      * @var string 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectTime;
 
     /**
      * @param string $DetectAlert 探测告警级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetetcFunctionKey 探测功能描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetetcFunctionValue 探测功能结果
@@ -106,11 +93,8 @@ class ServiceProcessFunctionInfo extends AbstractModel
      * @param string $DetetcTime 探测结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetectFunctionKey 探测功能描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetectFunctionValue 探测功能结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetectTime 探测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

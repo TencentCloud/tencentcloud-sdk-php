@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupGlobalConf(AutoScaleResourceConf $GroupGlobalConf) 设置伸缩组信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentNodes() 获取当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentNodes(integer $CurrentNodes) 设置当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentPostPaidNodes() 获取当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentPostPaidNodes(integer $CurrentPostPaidNodes) 设置当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentSpotPaidNodes() 获取当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentSpotPaidNodes(integer $CurrentSpotPaidNodes) 设置当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupGlobalConfs extends AbstractModel
 {
@@ -47,19 +41,16 @@ class GroupGlobalConfs extends AbstractModel
 
     /**
      * @var integer 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentNodes;
 
     /**
      * @var integer 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentPostPaidNodes;
 
     /**
      * @var integer 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentSpotPaidNodes;
 
@@ -67,11 +58,8 @@ class GroupGlobalConfs extends AbstractModel
      * @param AutoScaleResourceConf $GroupGlobalConf 伸缩组信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentNodes 当前伸缩组扩容出来的节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentPostPaidNodes 当前伸缩组扩容出来的后付费节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentSpotPaidNodes 当前伸缩组扩容出来的竞价实例节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

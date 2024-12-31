@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Pod PVC存储方式描述
  *
  * @method integer getDiskSize() 获取磁盘大小，单位为GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，单位为GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskNum() 获取磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskNum(integer $DiskNum) 设置磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PersistentVolumeContext extends AbstractModel
 {
     /**
      * @var integer 磁盘大小，单位为GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var string 磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskNum;
 
     /**
      * @param integer $DiskSize 磁盘大小，单位为GB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskNum 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

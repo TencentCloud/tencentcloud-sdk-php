@@ -23,27 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStage() 获取步骤
  * @method void setStage(string $Stage) 设置步骤
  * @method string getName() 获取步骤名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置步骤名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsShow() 获取是否展示
  * @method void setIsShow(boolean $IsShow) 设置是否展示
  * @method boolean getIsSubFlow() 获取是否子流程
  * @method void setIsSubFlow(boolean $IsSubFlow) 设置是否子流程
  * @method string getSubFlowFlag() 获取子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubFlowFlag(string $SubFlowFlag) 设置子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取步骤运行状态：0:未开始 1:进行中 2:已完成 3:部分完成  -1:失败
  * @method void setStatus(integer $Status) 设置步骤运行状态：0:未开始 1:进行中 2:已完成 3:部分完成  -1:失败
  * @method string getDesc() 获取步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取运行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(float $Progress) 设置运行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStarttime() 获取开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStarttime(string $Starttime) 设置开始时间
@@ -53,25 +45,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndtime(string $Endtime) 设置结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHadWoodDetail() 获取是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHadWoodDetail(boolean $HadWoodDetail) 设置是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWoodJobId() 获取Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWoodJobId(integer $WoodJobId) 设置Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLanguageKey() 获取多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanguageKey(string $LanguageKey) 设置多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailedReason() 获取如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedReason(string $FailedReason) 设置如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeConsuming() 获取步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeConsuming(string $TimeConsuming) 设置步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StageInfoDetail extends AbstractModel
 {
@@ -82,7 +64,6 @@ class StageInfoDetail extends AbstractModel
 
     /**
      * @var string 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -98,7 +79,6 @@ class StageInfoDetail extends AbstractModel
 
     /**
      * @var string 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubFlowFlag;
 
@@ -109,13 +89,11 @@ class StageInfoDetail extends AbstractModel
 
     /**
      * @var string 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var float 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
@@ -133,61 +111,47 @@ class StageInfoDetail extends AbstractModel
 
     /**
      * @var boolean 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HadWoodDetail;
 
     /**
      * @var integer Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WoodJobId;
 
     /**
      * @var string 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LanguageKey;
 
     /**
      * @var string 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedReason;
 
     /**
      * @var string 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeConsuming;
 
     /**
      * @param string $Stage 步骤
      * @param string $Name 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsShow 是否展示
      * @param boolean $IsSubFlow 是否子流程
      * @param string $SubFlowFlag 子流程标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 步骤运行状态：0:未开始 1:进行中 2:已完成 3:部分完成  -1:失败
      * @param string $Desc 步骤运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 运行进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Starttime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Endtime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HadWoodDetail 是否有详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WoodJobId Wood子流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LanguageKey 多语言版本Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedReason 如果stage失败，失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeConsuming 步骤耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

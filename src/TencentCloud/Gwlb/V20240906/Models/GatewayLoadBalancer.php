@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerName() 获取网关负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例的名称。
  * @method string getVpcId() 获取网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取网关负载均衡所属子网。
  * @method void setSubnetId(string $SubnetId) 设置网关负载均衡所属子网。
  * @method array getVips() 获取网关负载均衡提供服务的虚拟IP。
@@ -37,31 +35,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置网关负载均衡实例状态。
 0：创建中，1：正常运行，3：删除中。
  * @method string getTargetGroupId() 获取关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupId(string $TargetGroupId) 设置关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteProtect() 获取是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getChargeType() 获取网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(string $ChargeType) 设置网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsolation() 获取0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolatedTime() 获取负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedTime(string $IsolatedTime) 设置负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayLoadBalancer extends AbstractModel
 {
@@ -77,7 +63,6 @@ class GatewayLoadBalancer extends AbstractModel
 
     /**
      * @var string 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
@@ -99,19 +84,16 @@ class GatewayLoadBalancer extends AbstractModel
 
     /**
      * @var string 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetGroupId;
 
     /**
      * @var boolean 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteProtect;
 
     /**
      * @var array 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -122,19 +104,16 @@ class GatewayLoadBalancer extends AbstractModel
 
     /**
      * @var string 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
      * @var integer 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Isolation;
 
     /**
      * @var string 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
 
@@ -142,24 +121,17 @@ class GatewayLoadBalancer extends AbstractModel
      * @param string $LoadBalancerId 网关负载均衡实例 ID。
      * @param string $LoadBalancerName 网关负载均衡实例的名称。
      * @param string $VpcId 网关负载均衡所属私有网络。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 网关负载均衡所属子网。
      * @param array $Vips 网关负载均衡提供服务的虚拟IP。
      * @param integer $Status 网关负载均衡实例状态。
 0：创建中，1：正常运行，3：删除中。
      * @param string $TargetGroupId 关联的目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteProtect 是否开启删除保护功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 负载均衡实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $ChargeType 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedTime 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

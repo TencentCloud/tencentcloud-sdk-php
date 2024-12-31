@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 终端用户登录新增统计
  *
  * @method string getStatisticalType() 获取统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatisticalType(string $StatisticalType) 设置统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatisticalCycle() 获取统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatisticalCycle(string $StatisticalCycle) 设置统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取统计总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置统计总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginStatistic extends AbstractModel
 {
     /**
      * @var string 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatisticalType;
 
     /**
      * @var string 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatisticalCycle;
 
     /**
      * @var integer 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $StatisticalType 统计类型 新增NEWUSER 和登录 LOGIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatisticalCycle 统计周期：日DAY，周WEEK，月MONTH
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 统计总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

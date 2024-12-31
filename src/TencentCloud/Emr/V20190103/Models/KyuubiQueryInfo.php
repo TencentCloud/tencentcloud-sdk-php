@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * Kyuubi查询信息
  *
  * @method string getClientIP() 获取提交IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIP(string $ClientIP) 设置提交IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineID() 获取Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineID(string $EngineID) 设置Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineType() 获取计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionID() 获取Session Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionID(string $SessionID) 设置Session Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBeginTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(integer $BeginTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionState() 获取执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionState(string $ExecutionState) 设置执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionStatement() 获取执行语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionStatement(string $ExecutionStatement) 设置执行语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatementID() 获取Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatementID(string $StatementID) 设置Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取提交用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置提交用户
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KyuubiQueryInfo extends AbstractModel
 {
     /**
      * @var string 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIP;
 
     /**
      * @var integer 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var integer 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineID;
 
     /**
      * @var string 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
     /**
      * @var string ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string Session Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionID;
 
     /**
      * @var integer 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionState;
 
     /**
      * @var string 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionStatement;
 
     /**
      * @var string Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatementID;
 
     /**
      * @var string 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @param string $ClientIP 提交IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineID Engine Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 计算引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionID Session Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionState 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionStatement 执行语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatementID Statement Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 提交用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

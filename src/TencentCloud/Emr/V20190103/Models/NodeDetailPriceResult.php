@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 用于创建集群价格清单 节点价格详情
  *
  * @method string getNodeType() 获取节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeType(string $NodeType) 设置节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPartDetailPrice() 获取节点组成部分价格详情
  * @method void setPartDetailPrice(array $PartDetailPrice) 设置节点组成部分价格详情
  */
@@ -31,7 +29,6 @@ class NodeDetailPriceResult extends AbstractModel
 {
     /**
      * @var string 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
 
@@ -42,7 +39,6 @@ class NodeDetailPriceResult extends AbstractModel
 
     /**
      * @param string $NodeType 节点类型 master core task common router mysql
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartDetailPrice 节点组成部分价格详情
      */
     function __construct()

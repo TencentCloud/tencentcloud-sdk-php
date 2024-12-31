@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 指标tag
  *
  * @method string getUnit() 获取指标单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置指标单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取指标Type
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置指标Type
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricTags extends AbstractModel
 {
     /**
      * @var string 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var string 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $Unit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 指标Type
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

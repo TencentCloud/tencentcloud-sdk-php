@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 容器集群用户组信息
  *
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserGroup() 获取用户组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserGroup(string $UserGroup) 设置用户组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserAndGroup extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroup;
 
     /**
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserGroup 用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

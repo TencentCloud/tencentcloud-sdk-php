@@ -28,7 +28,6 @@ use TencentCloud\Common\AbstractModel;
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpType(integer $OpType) 设置操作类型，可选值：
 
 - 0：新建队列
@@ -37,17 +36,12 @@ use TencentCloud\Common\AbstractModel;
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取队列名称，不支持修改。
  * @method void setName(string $Name) 设置队列名称，不支持修改。
  * @method string getParentId() 获取新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(string $ParentId) 设置新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMyId() 获取编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMyId(string $MyId) 设置编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ItemSeq getBasicParams() 获取基础配置信息。key的取值与**DescribeYarnQueue**返回的字段一致。
 ###### 公平调度器
 key的取值信息如下：
@@ -138,7 +132,6 @@ class ConfigModifyInfoV2 extends AbstractModel
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpType;
 
@@ -149,13 +142,11 @@ class ConfigModifyInfoV2 extends AbstractModel
 
     /**
      * @var string 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @var string 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MyId;
 
@@ -219,12 +210,9 @@ type AclForYarnQueue struct {
 - 3：删除
 - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
 - 6：编辑-增量更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 队列名称，不支持修改。
      * @param string $ParentId 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MyId 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemSeq $BasicParams 基础配置信息。key的取值与**DescribeYarnQueue**返回的字段一致。
 ###### 公平调度器
 key的取值信息如下：

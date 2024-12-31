@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * Pod节点选择项
  *
  * @method string getKey() 获取节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取节点选择项Values值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置节点选择项Values值
@@ -37,13 +33,11 @@ class NodeSelectorRequirement extends AbstractModel
 {
     /**
      * @var string 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
@@ -55,9 +49,7 @@ class NodeSelectorRequirement extends AbstractModel
 
     /**
      * @param string $Key 节点选择项Key值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 节点选择项Operator值，支持In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 节点选择项Values值
 注意：此字段可能返回 null，表示取不到有效值。
      */

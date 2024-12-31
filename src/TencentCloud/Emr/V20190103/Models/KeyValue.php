@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 键值对，主要用来做Filter
  *
  * @method string getKey() 获取键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyValue extends AbstractModel
 {
     /**
      * @var string 键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

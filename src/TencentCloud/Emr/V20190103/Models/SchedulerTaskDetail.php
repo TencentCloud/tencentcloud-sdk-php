@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 调度任务详情
  *
  * @method string getStep() 获取步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStep(string $Step) 设置步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProgress() 获取进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(string $Progress) 设置进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailReason() 获取失败信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置失败信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJobId() 获取用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobId(integer $JobId) 设置用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SchedulerTaskDetail extends AbstractModel
 {
     /**
      * @var string 步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Step;
 
     /**
      * @var string 进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var string 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
     /**
      * @var integer 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
      * @param string $Step 步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Progress 进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailReason 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JobId 用来获取详情的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoftInfo(array $SoftInfo) 设置软件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterNodeSize() 获取Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterNodeSize(integer $MasterNodeSize) 设置Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCoreNodeSize() 获取Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoreNodeSize(integer $CoreNodeSize) 设置Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskNodeSize() 获取Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskNodeSize(integer $TaskNodeSize) 设置Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComNodeSize() 获取Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComNodeSize(integer $ComNodeSize) 设置Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceDetail getMasterResource() 获取Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterResource(ResourceDetail $MasterResource) 设置Master节点资源
@@ -57,45 +49,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComResource(ResourceDetail $ComResource) 设置Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getOnCos() 获取是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnCos(boolean $OnCos) 设置是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChargeType() 获取收费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(integer $ChargeType) 设置收费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRouterNodeSize() 获取Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouterNodeSize(integer $RouterNodeSize) 设置Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportHA() 获取是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportHA(boolean $SupportHA) 设置是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSecurityOn() 获取是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityOn(boolean $SecurityOn) 设置是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroup() 获取安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroup(string $SecurityGroup) 设置安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCbsEncrypt() 获取是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCbsEncrypt(integer $CbsEncrypt) 设置是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationRole() 获取自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRole(string $ApplicationRole) 设置自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroups() 获取安全组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicKeyId() 获取SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicKeyId(string $PublicKeyId) 设置SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrProductConfigDetail extends AbstractModel
 {
@@ -107,25 +81,21 @@ class EmrProductConfigDetail extends AbstractModel
 
     /**
      * @var integer Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterNodeSize;
 
     /**
      * @var integer Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoreNodeSize;
 
     /**
      * @var integer Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskNodeSize;
 
     /**
      * @var integer Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComNodeSize;
 
@@ -155,49 +125,41 @@ class EmrProductConfigDetail extends AbstractModel
 
     /**
      * @var boolean 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnCos;
 
     /**
      * @var integer 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
      * @var integer Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouterNodeSize;
 
     /**
      * @var boolean 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportHA;
 
     /**
      * @var boolean 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityOn;
 
     /**
      * @var string 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroup;
 
     /**
      * @var integer 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CbsEncrypt;
 
     /**
      * @var string 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationRole;
 
@@ -209,7 +171,6 @@ class EmrProductConfigDetail extends AbstractModel
 
     /**
      * @var string SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicKeyId;
 
@@ -217,13 +178,9 @@ class EmrProductConfigDetail extends AbstractModel
      * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterNodeSize Master节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CoreNodeSize Core节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskNodeSize Task节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComNodeSize Common节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDetail $MasterResource Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDetail $CoreResource Core节点资源
@@ -233,25 +190,16 @@ class EmrProductConfigDetail extends AbstractModel
      * @param ResourceDetail $ComResource Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $OnCos 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChargeType 收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RouterNodeSize Router节点个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportHA 是否支持HA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SecurityOn 是否支持安全模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroup 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CbsEncrypt 是否开启Cbs加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationRole 自定义应用角色。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroups 安全组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicKeyId SSH密钥Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

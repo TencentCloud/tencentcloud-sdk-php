@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 拉流地址，只有在推流情况下才有
-
  *
  * @method string getStreamId() 获取流ID
 注意：此字段可能返回 null，表示取不到有效值。

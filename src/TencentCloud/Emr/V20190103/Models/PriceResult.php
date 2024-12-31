@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 询价结果
  *
  * @method float getOriginalCost() 获取原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(float $OriginalCost) 设置原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscountCost() 获取折扣价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountCost(float $DiscountCost) 设置折扣价
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PriceResult extends AbstractModel
 {
     /**
      * @var float 原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
      * @var float 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
     /**
      * @param float $OriginalCost 原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountCost 折扣价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

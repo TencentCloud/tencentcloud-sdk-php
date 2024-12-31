@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 资源调度-配置集信息
  *
  * @method string getConfigSet() 获取配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigSet(string $ConfigSet) 设置配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelParams() 获取容量调度器会使用，里面设置了标签相关的配置。key的取值与**DescribeYarnQueue**返回的字段一致。
 key的取值信息如下：
 - labelName，标签名称，标签管理里的标签。
@@ -93,7 +91,6 @@ class ConfigSetInfo extends AbstractModel
 {
     /**
      * @var string 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigSet;
 
@@ -139,7 +136,6 @@ key的取值信息如下：
 
     /**
      * @param string $ConfigSet 配置集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelParams 容量调度器会使用，里面设置了标签相关的配置。key的取值与**DescribeYarnQueue**返回的字段一致。
 key的取值信息如下：
 - labelName，标签名称，标签管理里的标签。

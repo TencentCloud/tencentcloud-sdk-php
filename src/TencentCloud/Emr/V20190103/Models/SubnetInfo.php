@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 子网信息
  *
  * @method string getSubnetName() 获取子网信息（名字）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置子网信息（名字）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网信息（ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网信息（ID）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubnetInfo extends AbstractModel
 {
     /**
      * @var string 子网信息（名字）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetName;
 
     /**
      * @var string 子网信息（ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @param string $SubnetName 子网信息（名字）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网信息（ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

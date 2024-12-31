@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Pod容忍调度节点选择项
  *
  * @method integer getWeight() 获取权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NodeSelectorTerm getPreference() 获取节点选择表达式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreference(NodeSelectorTerm $Preference) 设置节点选择表达式
@@ -33,7 +31,6 @@ class PreferredSchedulingTerm extends AbstractModel
 {
     /**
      * @var integer 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
@@ -45,7 +42,6 @@ class PreferredSchedulingTerm extends AbstractModel
 
     /**
      * @param integer $Weight 权重，范围1-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeSelectorTerm $Preference 节点选择表达式
 注意：此字段可能返回 null，表示取不到有效值。
      */

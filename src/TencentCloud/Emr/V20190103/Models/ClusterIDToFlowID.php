@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 集群id与流程id的mapping
  *
  * @method string getClusterId() 获取集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowId() 获取流程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置流程id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterIDToFlowID extends AbstractModel
 {
     /**
      * @var string 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var integer 流程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @param string $ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowId 流程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 容器集群外部访问设置
  *
  * @method string getType() 获取外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CLBSetting getCLBServer() 获取CLB设置信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBServer(CLBSetting $CLBServer) 设置CLB设置信息
@@ -33,7 +31,6 @@ class ExternalAccess extends AbstractModel
 {
     /**
      * @var string 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -45,7 +42,6 @@ class ExternalAccess extends AbstractModel
 
     /**
      * @param string $Type 外部访问类型，当前仅支持CLB字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBSetting $CLBServer CLB设置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

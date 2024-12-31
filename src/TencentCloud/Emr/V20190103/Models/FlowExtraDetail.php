@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 流程额外信息
  *
  * @method string getTitle() 获取额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetail() 获取额外信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(array $Detail) 设置额外信息
@@ -33,7 +31,6 @@ class FlowExtraDetail extends AbstractModel
 {
     /**
      * @var string 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
@@ -45,7 +42,6 @@ class FlowExtraDetail extends AbstractModel
 
     /**
      * @param string $Title 额外信息Title
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Detail 额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

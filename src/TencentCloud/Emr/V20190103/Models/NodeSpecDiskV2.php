@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 节点磁盘类型
  *
  * @method integer getCount() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultDiskSize() 获取指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultDiskSize(integer $DefaultDiskSize) 设置指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeSpecDiskV2 extends AbstractModel
 {
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultDiskSize;
 
     /**
      * @param integer $Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultDiskSize 指定磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

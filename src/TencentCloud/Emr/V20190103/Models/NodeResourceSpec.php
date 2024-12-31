@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 资源详情
  *
  * @method string getInstanceType() 获取规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystemDisk() 获取系统盘，系统盘个数不超过1块
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemDisk(array $SystemDisk) 设置系统盘，系统盘个数不超过1块
@@ -45,7 +43,6 @@ class NodeResourceSpec extends AbstractModel
 {
     /**
      * @var string 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
@@ -75,7 +72,6 @@ class NodeResourceSpec extends AbstractModel
 
     /**
      * @param string $InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystemDisk 系统盘，系统盘个数不超过1块
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 需要绑定的标签列表

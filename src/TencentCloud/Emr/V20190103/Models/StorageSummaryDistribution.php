@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * HDFS文件存储详情
  *
  * @method string getMetricItem() 获取数据项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricItem(string $MetricItem) 设置数据项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricName() 获取数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricName(string $MetricName) 设置数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDps() 获取采样值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDps(array $Dps) 设置采样值
@@ -37,13 +33,11 @@ class StorageSummaryDistribution extends AbstractModel
 {
     /**
      * @var string 数据项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricItem;
 
     /**
      * @var string 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
@@ -55,9 +49,7 @@ class StorageSummaryDistribution extends AbstractModel
 
     /**
      * @param string $MetricItem 数据项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricName 数据项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Dps 采样值
 注意：此字段可能返回 null，表示取不到有效值。
      */

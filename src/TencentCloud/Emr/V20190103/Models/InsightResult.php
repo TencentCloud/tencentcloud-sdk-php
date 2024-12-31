@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 洞察结果项
  *
  * @method string getID() 获取当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleID() 获取洞察规则ID
 HIVE-ScanManyMeta:元数据扫描过多
 HIVE-ScanManyPartition:大表扫描
@@ -57,7 +53,6 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleID(string $RuleID) 设置洞察规则ID
 HIVE-ScanManyMeta:元数据扫描过多
 HIVE-ScanManyPartition:大表扫描
@@ -87,55 +82,34 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleExplain() 获取洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleExplain(string $RuleExplain) 设置洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取建议信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置建议信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleTaskExecID() 获取调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTaskExecID(string $ScheduleTaskExecID) 设置调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleFlowName() 获取调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleFlowName(string $ScheduleFlowName) 设置调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleTaskName() 获取调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTaskName(string $ScheduleTaskName) 设置调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobConf() 获取Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobConf(string $JobConf) 设置Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InsightResult extends AbstractModel
 {
     /**
      * @var string 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -169,69 +143,57 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleID;
 
     /**
      * @var string 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var string 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleExplain;
 
     /**
      * @var string 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @var string 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var integer 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTaskExecID;
 
     /**
      * @var string 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleFlowName;
 
     /**
      * @var string 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTaskName;
 
     /**
      * @var string Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobConf;
 
     /**
      * @param string $ID 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleID 洞察规则ID
 HIVE-ScanManyMeta:元数据扫描过多
 HIVE-ScanManyPartition:大表扫描
@@ -261,25 +223,15 @@ TEZ-ReducerDataSkew:Reduce数据倾斜
 TEZ-TezMemWaste:Memory资源浪费
 TEZ-TezSlowTask:慢Task
 TEZ-TezTaskGC:TasksGC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 洞察规则名字，可参考RuleID的说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleExplain 洞察规则解释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 建议信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTaskExecID 调度任务执行ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleFlowName 调度流，DAG
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTaskName 调度flow中的某个task节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobConf Yarn任务的部分核心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

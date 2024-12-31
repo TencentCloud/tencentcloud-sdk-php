@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAggregation(string $Aggregation) 设置聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
  * @method array getFilters() 获取用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
  * @method void setFilters(array $Filters) 设置用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
- * @method array getGroupBy() 获取分组
- * @method void setGroupBy(array $GroupBy) 设置分组
+ * @method array getGroupBy() 获取分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
+ * @method void setGroupBy(array $GroupBy) 设置分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
  */
 class DescribeSampleMatrixQueryRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var array 分组
+     * @var array 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      */
     public $GroupBy;
 
@@ -79,7 +79,7 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
      * @param string $Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      * @param string $Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      * @param array $Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
-     * @param array $GroupBy 分组
+     * @param array $GroupBy 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      */
     function __construct()
     {

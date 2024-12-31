@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
 <li>HOST_PATH表示支持本机路径</li>
 <li>NEW_PVC表示新建PVC</li>
 组件角色支持的数据卷类型可参考 EMR on TKE 集群部署说明：[部署说明](https://cloud.tencent.com/document/product/589/94254)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeType(string $VolumeType) 设置数据卷类型
 <li>HOST_PATH表示支持本机路径</li>
 <li>NEW_PVC表示新建PVC</li>
 组件角色支持的数据卷类型可参考 EMR on TKE 集群部署说明：[部署说明](https://cloud.tencent.com/document/product/589/94254)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HostPathVolumeSource getHostPath() 获取主机路径信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostPath(HostPathVolumeSource $HostPath) 设置主机路径信息
@@ -42,7 +40,6 @@ class VolumeSetting extends AbstractModel
 <li>HOST_PATH表示支持本机路径</li>
 <li>NEW_PVC表示新建PVC</li>
 组件角色支持的数据卷类型可参考 EMR on TKE 集群部署说明：[部署说明](https://cloud.tencent.com/document/product/589/94254)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeType;
 
@@ -57,7 +54,6 @@ class VolumeSetting extends AbstractModel
 <li>HOST_PATH表示支持本机路径</li>
 <li>NEW_PVC表示新建PVC</li>
 组件角色支持的数据卷类型可参考 EMR on TKE 集群部署说明：[部署说明](https://cloud.tencent.com/document/product/589/94254)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostPathVolumeSource $HostPath 主机路径信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

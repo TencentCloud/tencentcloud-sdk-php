@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 容器集群Pod服务CLB设置
  *
  * @method string getCLBType() 获取CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBType(string $CLBType) 设置CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VPCSettings getVPCSettings() 获取Vpc和子网信息设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置Vpc和子网信息设置
@@ -33,7 +31,6 @@ class CLBSetting extends AbstractModel
 {
     /**
      * @var string CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBType;
 
@@ -45,7 +42,6 @@ class CLBSetting extends AbstractModel
 
     /**
      * @param string $CLBType CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VPCSettings $VPCSettings Vpc和子网信息设置
 注意：此字段可能返回 null，表示取不到有效值。
      */

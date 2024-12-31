@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 资源详情
  *
  * @method string getSpec() 获取规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取规格名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecName(string $SpecName) 设置规格名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageType() 获取硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(integer $StorageType) 设置硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRootSize() 获取系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootSize(integer $RootSize) 设置系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemSize() 获取内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(integer $MemSize) 设置内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置规格
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceDetail extends AbstractModel
 {
     /**
      * @var string 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Spec;
 
     /**
      * @var string 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecName;
 
     /**
      * @var integer 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
     /**
      * @var string 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootSize;
 
     /**
      * @var integer 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemSize;
 
     /**
      * @var integer CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var string 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @param string $Spec 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RootSize 系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

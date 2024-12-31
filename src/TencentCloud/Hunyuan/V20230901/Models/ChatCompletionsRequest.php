@@ -167,11 +167,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableRecommendedQuestions() 获取推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
  * @method void setEnableRecommendedQuestions(boolean $EnableRecommendedQuestions) 设置推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -323,7 +323,7 @@ class ChatCompletionsRequest extends AbstractModel
      * @var boolean 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
      */
     public $EnableRecommendedQuestions;
 
@@ -403,7 +403,7 @@ class ChatCompletionsRequest extends AbstractModel
      * @param boolean $EnableRecommendedQuestions 推荐问答开关。
 说明：
 1. 未传值时默认关闭。
-2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
      */
     function __construct()
     {

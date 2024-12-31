@@ -29,49 +29,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取查询ID
  * @method void setId(string $Id) 设置查询ID
  * @method integer getScanPartitionNum() 获取扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPartitionNum(integer $ScanPartitionNum) 设置扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanRowNum() 获取扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRowNum(integer $ScanRowNum) 设置扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanFileNum() 获取扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanFileNum(integer $ScanFileNum) 设置扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanTotalData() 获取查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanTotalData(integer $ScanTotalData) 设置查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApplicationId() 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(array $ApplicationId) 设置应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputRowNum() 获取输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputRowNum(integer $OutputRowNum) 设置输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputFileNum() 获取输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputFileNum(integer $OutputFileNum) 设置输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputPartitionNum() 获取输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputPartitionNum(integer $OutputPartitionNum) 设置输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputTotalData() 获取输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputTotalData(integer $OutputTotalData) 设置输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBeginTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(integer $BeginTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkQuery extends AbstractModel
 {
@@ -97,25 +77,21 @@ class SparkQuery extends AbstractModel
 
     /**
      * @var integer 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPartitionNum;
 
     /**
      * @var integer 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRowNum;
 
     /**
      * @var integer 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanFileNum;
 
     /**
      * @var integer 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTotalData;
 
@@ -127,37 +103,31 @@ class SparkQuery extends AbstractModel
 
     /**
      * @var integer 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputRowNum;
 
     /**
      * @var integer 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputFileNum;
 
     /**
      * @var integer 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputPartitionNum;
 
     /**
      * @var integer 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputTotalData;
 
     /**
      * @var integer 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var integer 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -167,27 +137,17 @@ class SparkQuery extends AbstractModel
      * @param string $Status 执行状态
      * @param string $Id 查询ID
      * @param integer $ScanPartitionNum 扫描分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanRowNum 扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanFileNum 扫描总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanTotalData 查询扫描总数据量(单位B)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputRowNum 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputFileNum 输出总文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputPartitionNum 输出分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputTotalData 输出总数据量（单位B）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BeginTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

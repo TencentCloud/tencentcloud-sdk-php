@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperatorName() 获取操作类型
  * @method void setOperatorName(string $OperatorName) 设置操作类型
  * @method string getCreateTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getState() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(integer $State) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetails() 获取详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置详情
@@ -55,19 +49,16 @@ class SchedulerTaskInfo extends AbstractModel
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
@@ -81,11 +72,8 @@ class SchedulerTaskInfo extends AbstractModel
      * @param string $SchedulerName 调度器类型
      * @param string $OperatorName 操作类型
      * @param string $CreateTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Details 详情
 注意：此字段可能返回 null，表示取不到有效值。
      */

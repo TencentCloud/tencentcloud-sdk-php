@@ -21,137 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * CBS实例信息
  *
  * @method string getDiskId() 获取云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskUsage() 获取云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskUsage(string $DiskUsage) 设置云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskName() 获取云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskName(string $DiskName) 设置云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteWithInstance() 获取是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskChargeType() 获取云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskChargeType(string $DiskChargeType) 设置云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskState() 获取云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskState(string $DiskState) 设置云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRenewFlag() 获取是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeadlineTime() 获取到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadlineTime(string $DeadlineTime) 设置到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAttached() 获取云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttached(boolean $Attached) 设置云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDifferDaysOfDeadline() 获取当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) 设置当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceIdList() 获取该云盘当前被挂载到的CVM实例InstanceId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIdList(array $InstanceIdList) 设置该云盘当前被挂载到的CVM实例InstanceId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getShareable() 获取云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CBSInstance extends AbstractModel
 {
     /**
      * @var string 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskId;
 
     /**
      * @var string 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskUsage;
 
     /**
      * @var string 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskName;
 
     /**
      * @var integer 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var string 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var boolean 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
 
     /**
      * @var string 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskChargeType;
 
     /**
      * @var string 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskState;
 
     /**
      * @var string 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var string 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineTime;
 
     /**
      * @var boolean 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Attached;
 
     /**
      * @var integer 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferDaysOfDeadline;
 
@@ -163,47 +123,31 @@ class CBSInstance extends AbstractModel
 
     /**
      * @var string 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var boolean 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Shareable;
 
     /**
      * @param string $DiskId 云硬盘ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskUsage 云硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskName 云硬盘名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 云硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 云盘介质类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteWithInstance 是否跟随实例删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskChargeType 云硬盘收费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskState 云硬盘运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadlineTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Attached 云盘是否挂载到云主机上
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DifferDaysOfDeadline 当前时间距离盘到期的天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIdList 该云盘当前被挂载到的CVM实例InstanceId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云硬盘挂载的云主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Shareable 云盘是否为共享型云盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

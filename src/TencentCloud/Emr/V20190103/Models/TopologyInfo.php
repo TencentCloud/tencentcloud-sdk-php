@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 集群节点拓扑信息
  *
  * @method integer getZoneId() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetInfoList() 获取子网信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetInfoList(array $SubnetInfoList) 设置子网信息
@@ -41,13 +37,11 @@ class TopologyInfo extends AbstractModel
 {
     /**
      * @var integer 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
@@ -65,9 +59,7 @@ class TopologyInfo extends AbstractModel
 
     /**
      * @param integer $ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetInfoList 子网信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeInfoList 节点信息

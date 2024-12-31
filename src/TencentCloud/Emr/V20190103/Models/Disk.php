@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiskType() 获取数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskCapacity() 获取单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskCapacity(integer $DiskCapacity) 设置单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskNumber() 获取数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskNumber(integer $DiskNumber) 设置数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -43,19 +37,16 @@ class Disk extends AbstractModel
      * @var string 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCapacity;
 
     /**
      * @var integer 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskNumber;
 
@@ -63,11 +54,8 @@ class Disk extends AbstractModel
      * @param string $DiskType 数据盘类型，创建EMR容器集群实例可选
 <li> SSD云盘: CLOUD_SSD</li>
 <li>高效云盘: CLOUD_PREMIUM</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCapacity 单块大小GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskNumber 数据盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 多云盘参数
  *
  * @method integer getCount() 获取该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取磁盘类型
 1  :本地盘
 2  :云硬盘
@@ -37,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置磁盘类型
 1  :本地盘
 2  :云硬盘
@@ -51,21 +48,15 @@ use TencentCloud\Common\AbstractModel;
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSize() 获取磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(string $Size) 设置磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVolume() 获取云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolume(integer $Volume) 设置云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MultiDiskMC extends AbstractModel
 {
     /**
      * @var integer 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
@@ -83,25 +74,21 @@ class MultiDiskMC extends AbstractModel
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var integer 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volume;
 
     /**
      * @param integer $Count 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 磁盘类型
 1  :本地盘
 2  :云硬盘
@@ -115,11 +102,8 @@ class MultiDiskMC extends AbstractModel
 14 : 大数据型云硬盘
 15 : 高IO型云硬盘
 16 : 远端SSD盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Size 磁盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Volume 云盘大小,单位b
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

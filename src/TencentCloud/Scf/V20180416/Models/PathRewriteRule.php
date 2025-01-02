@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 路径路由重写规则
  *
  * @method string getPath() 获取需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRewrite() 获取替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewrite(string $Rewrite) 设置替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathRewriteRule extends AbstractModel
 {
     /**
      * @var string 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rewrite;
 
     /**
      * @param string $Path 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rewrite 替换值：比如/, /$
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

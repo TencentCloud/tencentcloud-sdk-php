@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 后端路由配置信息
  *
  * @method string getNamespace() 获取函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunctionName() 获取函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunctionName(string $FunctionName) 设置函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQualifier() 获取函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualifier(string $Qualifier) 设置函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPathMatch() 获取路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathMatch(string $PathMatch) 设置路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPathRewrite() 获取路径重写策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathRewrite(array $PathRewrite) 设置路径重写策略
@@ -45,25 +37,21 @@ class EndpointsConf extends AbstractModel
 {
     /**
      * @var string 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FunctionName;
 
     /**
      * @var string 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qualifier;
 
     /**
      * @var string 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathMatch;
 
@@ -75,13 +63,9 @@ class EndpointsConf extends AbstractModel
 
     /**
      * @param string $Namespace 函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FunctionName 函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qualifier 函数别名或版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PathMatch 路径,取值规范：/，/*，/xxx，/xxx/a，/xxx/*"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PathRewrite 路径重写策略
 注意：此字段可能返回 null，表示取不到有效值。
      */

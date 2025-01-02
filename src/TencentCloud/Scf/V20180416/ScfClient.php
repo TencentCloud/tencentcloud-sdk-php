@@ -39,6 +39,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) 删除一个函数版本的别名
  * @method Models\DeleteCustomDomainResponse DeleteCustomDomain(Models\DeleteCustomDomainRequest $req) 删除自定义域名
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 该接口根据传入参数删除函数。
+ * @method Models\DeleteFunctionVersionResponse DeleteFunctionVersion(Models\DeleteFunctionVersionRequest $req) 该接口根据传入参数删除函数的指定版本。
  * @method Models\DeleteLayerVersionResponse DeleteLayerVersion(Models\DeleteLayerVersionRequest $req) 删除指定层的指定版本，被删除的版本无法再关联到函数上，但不会影响正在引用这个层的函数。
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 该接口根据传入的参数删除命名空间。
  * @method Models\DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(Models\DeleteProvisionedConcurrencyConfigRequest $req) 删除函数版本的预置并发配置。

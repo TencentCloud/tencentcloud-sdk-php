@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取别名的名称
  * @method void setName(string $Name) 设置别名的名称
  * @method RoutingConfig getRoutingConfig() 获取别名的路由信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutingConfig(RoutingConfig $RoutingConfig) 设置别名的路由信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTime(string $ModTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Alias extends AbstractModel
 {
@@ -55,25 +47,21 @@ class Alias extends AbstractModel
 
     /**
      * @var RoutingConfig 别名的路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutingConfig;
 
     /**
      * @var string 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModTime;
 
@@ -81,13 +69,9 @@ class Alias extends AbstractModel
      * @param string $FunctionVersion 别名指向的主版本
      * @param string $Name 别名的名称
      * @param RoutingConfig $RoutingConfig 别名的路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

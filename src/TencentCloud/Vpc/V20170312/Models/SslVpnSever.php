@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * SSL-VPN-SERVER 出参
  *
  * @method string getVpcId() 获取VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSslVpnServerId() 获取SSL-VPN-SERVER 实例ID。
  * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN-SERVER 实例ID。
  * @method string getVpnGatewayId() 获取VPN 实例ID。
@@ -77,15 +75,12 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAccessPolicy() 获取策略信息
  * @method void setAccessPolicy(array $AccessPolicy) 设置策略信息
  * @method string getSpName() 获取CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpName(string $SpName) 设置CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SslVpnSever extends AbstractModel
 {
     /**
      * @var string VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
@@ -189,13 +184,11 @@ class SslVpnSever extends AbstractModel
 
     /**
      * @var string CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpName;
 
     /**
      * @param string $VpcId VPC实例ID.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
      * @param string $VpnGatewayId VPN 实例ID。
      * @param string $SslVpnServerName SSL-VPN-SERVER name。
@@ -223,7 +216,6 @@ class SslVpnSever extends AbstractModel
      * @param integer $AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
      * @param array $AccessPolicy 策略信息
      * @param string $SpName CAM服务提供商Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

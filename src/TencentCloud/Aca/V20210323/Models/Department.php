@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 科室信息
  *
  * @method string getId() 获取科室ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置科室ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取科室名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置科室名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScope() 获取科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScope(integer $Scope) 设置科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getOutpatientOn() 获取门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutpatientOn(boolean $OutpatientOn) 设置门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getInHospitalOn() 获取住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInHospitalOn(boolean $InHospitalOn) 设置住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Department extends AbstractModel
 {
     /**
      * @var string 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scope;
 
     /**
      * @var boolean 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutpatientOn;
 
     /**
      * @var boolean 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InHospitalOn;
 
     /**
      * @param string $Id 科室ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scope 科室类型 0:门诊  1:住院  2:门诊+住院
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $OutpatientOn 门诊区开关 true:此科室对应的门诊区开启智能审方功能, false:此科室对应的门诊区关闭智能审方功能; 仅对scope为0/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $InHospitalOn 住院区开关 true:此科室对应的住院区开启智能审方功能, false:此科室对应的住院区关闭智能审方功能; 仅对scope为1/2的科室生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

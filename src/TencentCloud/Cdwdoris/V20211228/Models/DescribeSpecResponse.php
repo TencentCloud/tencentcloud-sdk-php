@@ -20,26 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSpec返回参数结构体
  *
- * @method array getMasterSpec() 获取zookeeper节点规格描述
- * @method void setMasterSpec(array $MasterSpec) 设置zookeeper节点规格描述
- * @method array getCoreSpec() 获取数据节点规格描述
- * @method void setCoreSpec(array $CoreSpec) 设置数据节点规格描述
+ * @method array getMasterSpec() 获取fe节点规格描述
+ * @method void setMasterSpec(array $MasterSpec) 设置fe节点规格描述
+ * @method array getCoreSpec() 获取be节点规格描述
+ * @method void setCoreSpec(array $CoreSpec) 设置be节点规格描述
  * @method array getAttachCBSSpec() 获取云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachCBSSpec(array $AttachCBSSpec) 设置云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCNSpec() 获取cn节点列表
+ * @method void setCNSpec(array $CNSpec) 设置cn节点列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSpecResponse extends AbstractModel
 {
     /**
-     * @var array zookeeper节点规格描述
+     * @var array fe节点规格描述
      */
     public $MasterSpec;
 
     /**
-     * @var array 数据节点规格描述
+     * @var array be节点规格描述
      */
     public $CoreSpec;
 
@@ -50,15 +52,21 @@ class DescribeSpecResponse extends AbstractModel
     public $AttachCBSSpec;
 
     /**
+     * @var array cn节点列表
+     */
+    public $CNSpec;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $MasterSpec zookeeper节点规格描述
-     * @param array $CoreSpec 数据节点规格描述
+     * @param array $MasterSpec fe节点规格描述
+     * @param array $CoreSpec be节点规格描述
      * @param array $AttachCBSSpec 云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CNSpec cn节点列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -98,6 +106,15 @@ class DescribeSpecResponse extends AbstractModel
                 $obj = new DiskSpec();
                 $obj->deserialize($value);
                 array_push($this->AttachCBSSpec, $obj);
+            }
+        }
+
+        if (array_key_exists("CNSpec",$param) and $param["CNSpec"] !== null) {
+            $this->CNSpec = [];
+            foreach ($param["CNSpec"] as $key => $value){
+                $obj = new ResourceSpec();
+                $obj->deserialize($value);
+                array_push($this->CNSpec, $obj);
             }
         }
 

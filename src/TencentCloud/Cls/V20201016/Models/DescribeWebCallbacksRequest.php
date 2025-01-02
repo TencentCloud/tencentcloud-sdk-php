@@ -20,29 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebCallbacks请求参数结构体
  *
- * @method array getFilters() 获取<li> name
+ * @method array getFilters() 获取- name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
- * @method void setFilters(array $Filters) 设置<li> name
+ * @method void setFilters(array $Filters) 设置- name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
@@ -56,15 +60,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWebCallbacksRequest extends AbstractModel
 {
     /**
-     * @var array <li> name
+     * @var array - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
@@ -84,15 +90,17 @@ class DescribeWebCallbacksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <li> name
+     * @param array $Filters - name
 按照【告警渠道回调配置名称】进行过滤。
 类型：String
 必选：否
-<li> webCallbackId
+
+- webCallbackId
 按照【告警渠道回调配置ID】进行过滤。
 类型：String
 必选：否
-<li> type
+
+- type
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否

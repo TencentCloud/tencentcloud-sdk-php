@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 证书配置
  *
  * @method string getCertificateId() 获取ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateId(string $CertificateId) 设置ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertConf extends AbstractModel
 {
     /**
      * @var string ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateId;
 
     /**
      * @param string $CertificateId ssl证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

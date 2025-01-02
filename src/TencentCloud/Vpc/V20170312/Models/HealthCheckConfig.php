@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * VPN通道健康检查配置
  *
  * @method string getProbeType() 获取探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProbeType(string $ProbeType) 设置探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProbeInterval() 获取探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProbeInterval(integer $ProbeInterval) 设置探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProbeThreshold() 获取探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProbeThreshold(integer $ProbeThreshold) 设置探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProbeTimeout() 获取探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProbeTimeout(integer $ProbeTimeout) 设置探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheckConfig extends AbstractModel
 {
     /**
      * @var string 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProbeType;
 
     /**
      * @var integer 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProbeInterval;
 
     /**
      * @var integer 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProbeThreshold;
 
     /**
      * @var integer 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProbeTimeout;
 
     /**
      * @param string $ProbeType 探测模式，默认值NQA，不可修改。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProbeInterval 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProbeThreshold 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProbeTimeout 探测超时时间，范围【10-5000】，单位ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

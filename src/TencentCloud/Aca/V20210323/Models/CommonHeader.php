@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHospitalId() 获取机构ID
  * @method void setHospitalId(string $HospitalId) 设置机构ID
- * @method string getToken() 获取合作方ID
- * @method void setToken(string $Token) 设置合作方ID
+ * @method string getToken() 获取token
+ * @method void setToken(string $Token) 设置token
  */
 class CommonHeader extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CommonHeader extends AbstractModel
     public $HospitalId;
 
     /**
-     * @var string 合作方ID
+     * @var string token
      */
     public $Token;
 
     /**
      * @param string $HospitalId 机构ID
-     * @param string $Token 合作方ID
+     * @param string $Token token
      */
     function __construct()
     {

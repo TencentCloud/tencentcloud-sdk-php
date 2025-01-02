@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlreadyInCluster(string $AlreadyInCluster) 设置实例已经所在的集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID形如：ins-xxxxxxxx。
- * @method void setInstanceId(string $InstanceId) 设置实例ID形如：ins-xxxxxxxx。
+ * @method string getInstanceId() 获取实例ID形如：ins-e55paxnt。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID形如：ins-e55paxnt。
  * @method string getInstanceName() 获取实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
@@ -104,7 +104,7 @@ class ExistedInstance extends AbstractModel
     public $AlreadyInCluster;
 
     /**
-     * @var string 实例ID形如：ins-xxxxxxxx。
+     * @var string 实例ID形如：ins-e55paxnt。
      */
     public $InstanceId;
 
@@ -183,7 +183,7 @@ class ExistedInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlreadyInCluster 实例已经所在的集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID形如：ins-xxxxxxxx。
+     * @param string $InstanceId 实例ID形如：ins-e55paxnt。
      * @param string $InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 实例主网卡的内网IP列表。

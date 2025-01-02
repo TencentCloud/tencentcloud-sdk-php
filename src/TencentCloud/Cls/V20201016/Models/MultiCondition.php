@@ -25,10 +25,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCondition(string $Condition) 设置触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-<li> 不填则默认为0。
+
+- 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-<li> 不填则默认为0。
+
+- 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MultiCondition extends AbstractModel
@@ -41,7 +43,8 @@ class MultiCondition extends AbstractModel
 
     /**
      * @var integer 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-<li> 不填则默认为0。
+
+- 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
@@ -50,7 +53,8 @@ class MultiCondition extends AbstractModel
      * @param string $Condition 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-<li> 不填则默认为0。
+
+- 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

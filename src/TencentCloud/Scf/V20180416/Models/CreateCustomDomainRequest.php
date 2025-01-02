@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
  * @method array getEndpointsConfig() 获取路由配置
  * @method void setEndpointsConfig(array $EndpointsConfig) 设置路由配置
- * @method CertConf getCertConfig() 获取证书配置信息，HTTPS协议必穿
- * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息，HTTPS协议必穿
+ * @method CertConf getCertConfig() 获取证书配置信息，有使用HTTPS协议时候必须传
+ * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息，有使用HTTPS协议时候必须传
  * @method WafConf getWafConfig() 获取web 应用防火墙配置
  * @method void setWafConfig(WafConf $WafConfig) 设置web 应用防火墙配置
  */
@@ -49,7 +49,7 @@ class CreateCustomDomainRequest extends AbstractModel
     public $EndpointsConfig;
 
     /**
-     * @var CertConf 证书配置信息，HTTPS协议必穿
+     * @var CertConf 证书配置信息，有使用HTTPS协议时候必须传
      */
     public $CertConfig;
 
@@ -62,7 +62,7 @@ class CreateCustomDomainRequest extends AbstractModel
      * @param string $Domain 域名，不支持泛域名
      * @param string $Protocol 协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
      * @param array $EndpointsConfig 路由配置
-     * @param CertConf $CertConfig 证书配置信息，HTTPS协议必穿
+     * @param CertConf $CertConfig 证书配置信息，有使用HTTPS协议时候必须传
      * @param WafConf $WafConfig web 应用防火墙配置
      */
     function __construct()

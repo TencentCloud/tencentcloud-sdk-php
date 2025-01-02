@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstRegion(string $DstRegion) 设置目标端数据库所在地域,如ap-guangzhou
  * @method string getSpecification() 获取同步任务规格，Standard:标准版
  * @method void setSpecification(string $Specification) 设置同步任务规格，Standard:标准版
+ * @method integer getTimeSpan() 获取购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
  * @method array getTags() 获取标签信息
  * @method void setTags(array $Tags) 设置标签信息
  * @method integer getCount() 获取一次购买的同步任务数量，取值范围为[1, 10]，默认为1
@@ -78,6 +80,11 @@ class CreateSyncJobRequest extends AbstractModel
     public $Specification;
 
     /**
+     * @var integer 购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
+     */
+    public $TimeSpan;
+
+    /**
      * @var array 标签信息
      */
     public $Tags;
@@ -114,6 +121,7 @@ class CreateSyncJobRequest extends AbstractModel
      * @param string $DstDatabaseType 目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
      * @param string $DstRegion 目标端数据库所在地域,如ap-guangzhou
      * @param string $Specification 同步任务规格，Standard:标准版
+     * @param integer $TimeSpan 购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
      * @param array $Tags 标签信息
      * @param integer $Count 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
      * @param integer $AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
@@ -156,6 +164,10 @@ class CreateSyncJobRequest extends AbstractModel
 
         if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
             $this->Specification = $param["Specification"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

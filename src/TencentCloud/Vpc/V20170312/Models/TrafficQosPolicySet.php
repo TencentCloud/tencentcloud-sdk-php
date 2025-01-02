@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 流量调度规则
  *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQosId() 获取qos id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosId(integer $QosId) 设置qos id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQosPolicyDescription() 获取描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosPolicyDescription(string $QosPolicyDescription) 设置描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQosPolicyName() 获取名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosPolicyName(string $QosPolicyName) 设置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandwidth() 获取带宽。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQosPolicyId() 获取流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosPolicyId(string $QosPolicyId) 设置流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficQosPolicySet extends AbstractModel
 {
     /**
      * @var string CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
 
     /**
      * @var integer qos id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosId;
 
     /**
      * @var string 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosPolicyDescription;
 
     /**
      * @var string 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosPolicyName;
 
     /**
      * @var integer 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bandwidth;
 
     /**
      * @var string 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosPolicyId;
 
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QosId qos id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QosPolicyDescription 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QosPolicyName 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bandwidth 带宽。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QosPolicyId 流量调度策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

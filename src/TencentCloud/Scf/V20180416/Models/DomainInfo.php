@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
  * @method void setProtocol(string $Protocol) 设置协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
  * @method array getEndpointsConfig() 获取路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndpointsConfig(array $EndpointsConfig) 设置路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CertConf getCertConfig() 获取证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WafConf getWafConfig() 获取web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafConfig(WafConf $WafConfig) 设置web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -51,19 +45,16 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var array 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndpointsConfig;
 
     /**
      * @var CertConf 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertConfig;
 
     /**
      * @var WafConf web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafConfig;
 
@@ -71,11 +62,8 @@ class DomainInfo extends AbstractModel
      * @param string $Domain 域名，不支持泛域名
      * @param string $Protocol 协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
      * @param array $EndpointsConfig 路由配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertConf $CertConfig 证书配置信息，HTTPS协议必传路由配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafConf $WafConfig web 应用防火墙配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

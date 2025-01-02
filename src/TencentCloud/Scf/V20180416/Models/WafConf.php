@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * web应用防火墙配置信息
  *
  * @method string getWafOpen() 获取web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafOpen(string $WafOpen) 设置web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWafInstanceId() 获取web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafInstanceId(string $WafInstanceId) 设置web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WafConf extends AbstractModel
 {
     /**
      * @var string web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafOpen;
 
     /**
      * @var string web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafInstanceId;
 
     /**
      * @param string $WafOpen web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WafInstanceId web应用防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

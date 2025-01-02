@@ -21,15 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 层版本信息
  *
  * @method array getCompatibleRuntimes() 获取版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) 设置版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取创建时间
  * @method void setAddTime(string $AddTime) 设置创建时间
  * @method string getDescription() 获取版本描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置版本描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseInfo() 获取许可证信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseInfo(string $LicenseInfo) 设置许可证信息
@@ -41,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method string getStamp() 获取Stamp
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStamp(string $Stamp) 设置Stamp
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取返回层绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置返回层绑定的标签信息
@@ -53,7 +47,6 @@ class LayerVersionInfo extends AbstractModel
 {
     /**
      * @var array 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompatibleRuntimes;
 
@@ -64,7 +57,6 @@ class LayerVersionInfo extends AbstractModel
 
     /**
      * @var string 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -91,7 +83,6 @@ class LayerVersionInfo extends AbstractModel
 
     /**
      * @var string Stamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stamp;
 
@@ -103,17 +94,14 @@ class LayerVersionInfo extends AbstractModel
 
     /**
      * @param array $CompatibleRuntimes 版本适用的运行时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
      * @param string $Description 版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseInfo 许可证信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称
      * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $Stamp Stamp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 返回层绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

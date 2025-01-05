@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreatePurgeTask请求参数结构体
  *
  * @method string getZoneId() 获取站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
  * @method string getType() 获取节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
@@ -49,6 +51,7 @@ class CreatePurgeTaskRequest extends AbstractModel
 {
     /**
      * @var string 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
      */
     public $ZoneId;
 
@@ -86,6 +89,7 @@ class CreatePurgeTaskRequest extends AbstractModel
 
     /**
      * @param string $ZoneId 站点 ID。
+若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。
      * @param string $Type 节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>

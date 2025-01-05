@@ -25,21 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method array getMetricNames() 获取指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
  * @method void setMetricNames(array $MetricNames) 设置指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
  * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
  * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
  * @method string getInterval() 获取查询时间粒度，取值有：
@@ -113,13 +117,15 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
 
     /**
      * @var array 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
      */
     public $MetricNames;
 
@@ -172,13 +178,15 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param array $MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求）；</li>
-<li>l7Flow_request: L7 访问请求数。</li>
+<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
+<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
+<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
+<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
+<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
+<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
+<li>l7Flow_request: L7 访问请求数，单位：次；</li>
+<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
+<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
      * @param array $ZoneIds 站点 ID 集合，此参数必填。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min: 1分钟；</li>

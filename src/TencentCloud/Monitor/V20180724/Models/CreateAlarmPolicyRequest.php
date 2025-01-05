@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateFlag(integer $MigrateFlag) 设置迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
  * @method string getEbSubject() 获取事件配置的告警
  * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
+ * @method string getAdditionalAlarmContent() 获取附加告警内容
+ * @method void setAdditionalAlarmContent(string $AdditionalAlarmContent) 设置附加告警内容
+ * @method array getNoticeContentTmplBindInfos() 获取通知模板绑定信息
+ * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置通知模板绑定信息
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -157,6 +161,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $EbSubject;
 
     /**
+     * @var string 附加告警内容
+     */
+    public $AdditionalAlarmContent;
+
+    /**
+     * @var array 通知模板绑定信息
+     */
+    public $NoticeContentTmplBindInfos;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param string $PolicyName 策略名称，不超过60字符
      * @param string $MonitorType 监控类型 MT_QCE=云产品监控
@@ -176,6 +190,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param array $HierarchicalNotices 告警分级通知规则配置
      * @param integer $MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
      * @param string $EbSubject 事件配置的告警
+     * @param string $AdditionalAlarmContent 附加告警内容
+     * @param array $NoticeContentTmplBindInfos 通知模板绑定信息
      */
     function __construct()
     {
@@ -283,6 +299,19 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
             $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("AdditionalAlarmContent",$param) and $param["AdditionalAlarmContent"] !== null) {
+            $this->AdditionalAlarmContent = $param["AdditionalAlarmContent"];
+        }
+
+        if (array_key_exists("NoticeContentTmplBindInfos",$param) and $param["NoticeContentTmplBindInfos"] !== null) {
+            $this->NoticeContentTmplBindInfos = [];
+            foreach ($param["NoticeContentTmplBindInfos"] as $key => $value){
+                $obj = new NoticeContentTmplBindInfo();
+                $obj->deserialize($value);
+                array_push($this->NoticeContentTmplBindInfos, $obj);
+            }
         }
     }
 }

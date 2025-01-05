@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自定义规则的匹配条件结构体
+ * 规则的匹配条件结构体
  *
  * @method string getField() 获取匹配字段
 

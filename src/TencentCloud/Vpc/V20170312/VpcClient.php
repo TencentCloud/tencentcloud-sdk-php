@@ -40,9 +40,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 - EIPv6 是您在腾讯云某个地域可以独立申请和持有的，固定不变的公网 IPv6 地址，提供与弹性公网 IPv4 一致的产品体验。
 - 通过弹性公网 IPv6，您可以快速将 EIPv6 实例绑定到云资源的内网 IPv6 地址上，实现为云资源快速开通 IPv6 公网带宽。
 - 您还可以按需将 EIPv6 实例绑定到其他云资源上，从而屏蔽实例故障。
- * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
+ * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 地址开通 IPv6 公网带宽。
 
-- 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
+- 传统弹性公网 IPv6 地址默认仅具备内网通信能力，需通过控制台或 API 接口为其分配公网带宽后，才能具备 IPv6 公网通信能力、并于传统弹性公网 IPv6 列表页可见。
 - 支持为一个或多个传统弹性公网 IPv6 实例开通公网带宽。
  * @method Models\AssignIpv6AddressesResponse AssignIpv6Addresses(Models\AssignIpv6AddressesRequest $req) 本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。

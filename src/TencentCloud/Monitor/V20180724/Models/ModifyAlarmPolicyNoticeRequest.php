@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIds(array $PolicyIds) 设置告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
  * @method array getHierarchicalNotices() 获取告警分级通知规则配置
  * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置告警分级通知规则配置
+ * @method array getNoticeContentTmplBindInfos() 获取通知内容模板绑定信息
+ * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置通知内容模板绑定信息
  */
 class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
     public $HierarchicalNotices;
 
     /**
+     * @var array 通知内容模板绑定信息
+     */
+    public $NoticeContentTmplBindInfos;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”。
      * @param string $PolicyId 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
      * @param array $NoticeIds 告警通知模板 ID 列表。
      * @param array $PolicyIds 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
      * @param array $HierarchicalNotices 告警分级通知规则配置
+     * @param array $NoticeContentTmplBindInfos 通知内容模板绑定信息
      */
     function __construct()
     {
@@ -100,6 +108,15 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
                 $obj = new AlarmHierarchicalNotice();
                 $obj->deserialize($value);
                 array_push($this->HierarchicalNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("NoticeContentTmplBindInfos",$param) and $param["NoticeContentTmplBindInfos"] !== null) {
+            $this->NoticeContentTmplBindInfos = [];
+            foreach ($param["NoticeContentTmplBindInfos"] as $key => $value){
+                $obj = new NoticeContentTmplBindInfo();
+                $obj->deserialize($value);
+                array_push($this->NoticeContentTmplBindInfos, $obj);
             }
         }
     }

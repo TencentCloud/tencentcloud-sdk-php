@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网列表
  * @method string getK8SVersion() 获取k8s 版本号
  * @method void setK8SVersion(string $K8SVersion) 设置k8s 版本号
- * @method string getStatus() 获取集群状态(running运行中，initializing 初始化中，failed异常)
- * @method void setStatus(string $Status) 设置集群状态(running运行中，initializing 初始化中，failed异常)
+ * @method string getStatus() 获取集群状态(running 运行中，initializing 初始化中，Failed 异常，Idling 空闲中，Activating 激活中，Terminating 删除中)
+ * @method void setStatus(string $Status) 设置集群状态(running 运行中，initializing 初始化中，Failed 异常，Idling 空闲中，Activating 激活中，Terminating 删除中)
  * @method string getClusterDesc() 获取集群描述信息
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述信息
  * @method string getCreatedTime() 获取集群创建时间
@@ -77,7 +77,7 @@ class EksCluster extends AbstractModel
     public $K8SVersion;
 
     /**
-     * @var string 集群状态(running运行中，initializing 初始化中，failed异常)
+     * @var string 集群状态(running 运行中，initializing 初始化中，Failed 异常，Idling 空闲中，Activating 激活中，Terminating 删除中)
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class EksCluster extends AbstractModel
      * @param string $VpcId Vpc Id
      * @param array $SubnetIds 子网列表
      * @param string $K8SVersion k8s 版本号
-     * @param string $Status 集群状态(running运行中，initializing 初始化中，failed异常)
+     * @param string $Status 集群状态(running 运行中，initializing 初始化中，Failed 异常，Idling 空闲中，Activating 激活中，Terminating 删除中)
      * @param string $ClusterDesc 集群描述信息
      * @param string $CreatedTime 集群创建时间
      * @param string $ServiceSubnetId Service 子网Id

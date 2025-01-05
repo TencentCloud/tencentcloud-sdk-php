@@ -76,6 +76,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputedValues(string $ComputedValues) 设置应用参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChartFrom() 获取chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChartFrom(string $ChartFrom) 设置chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChartURL() 获取第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChartURL(string $ChartURL) 设置第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResources() 获取通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResources(string $Resources) 设置通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseDetails extends AbstractModel
 {
@@ -168,6 +180,24 @@ class ReleaseDetails extends AbstractModel
     public $ComputedValues;
 
     /**
+     * @var string chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChartFrom;
+
+    /**
+     * @var string 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChartURL;
+
+    /**
+     * @var string 通过chart 创建的资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Resources;
+
+    /**
      * @param string $Name 应用名称
      * @param string $Namespace 应用所在命名空间
      * @param integer $Version 应用当前版本
@@ -195,6 +225,12 @@ class ReleaseDetails extends AbstractModel
      * @param string $LastDeployedTime 应用最近部署时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComputedValues 应用参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChartFrom chart 的来源， tke-market, others
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChartURL 第三方chart 的安装地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Resources 通过chart 创建的资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +304,18 @@ class ReleaseDetails extends AbstractModel
 
         if (array_key_exists("ComputedValues",$param) and $param["ComputedValues"] !== null) {
             $this->ComputedValues = $param["ComputedValues"];
+        }
+
+        if (array_key_exists("ChartFrom",$param) and $param["ChartFrom"] !== null) {
+            $this->ChartFrom = $param["ChartFrom"];
+        }
+
+        if (array_key_exists("ChartURL",$param) and $param["ChartURL"] !== null) {
+            $this->ChartURL = $param["ChartURL"];
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = $param["Resources"];
         }
     }
 }

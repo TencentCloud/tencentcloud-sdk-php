@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPromInsId(string $PromInsId) 设置prom实例id，自定义指标策略时会用到
  * @method array getReceiverOnCallFormIDs() 获取根据排班表搜索
  * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) 设置根据排班表搜索
+ * @method array getNoticeContentTmplIDs() 获取通知内容模板ID筛选
+ * @method void setNoticeContentTmplIDs(array $NoticeContentTmplIDs) 设置通知内容模板ID筛选
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -233,6 +235,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $ReceiverOnCallFormIDs;
 
     /**
+     * @var array 通知内容模板ID筛选
+     */
+    public $NoticeContentTmplIDs;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -268,6 +275,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $Tags 策略根据标签过滤
      * @param string $PromInsId prom实例id，自定义指标策略时会用到
      * @param array $ReceiverOnCallFormIDs 根据排班表搜索
+     * @param array $NoticeContentTmplIDs 通知内容模板ID筛选
      */
     function __construct()
     {
@@ -394,6 +402,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("ReceiverOnCallFormIDs",$param) and $param["ReceiverOnCallFormIDs"] !== null) {
             $this->ReceiverOnCallFormIDs = $param["ReceiverOnCallFormIDs"];
+        }
+
+        if (array_key_exists("NoticeContentTmplIDs",$param) and $param["NoticeContentTmplIDs"] !== null) {
+            $this->NoticeContentTmplIDs = $param["NoticeContentTmplIDs"];
         }
     }
 }

@@ -182,6 +182,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagOperation(string $TagOperation) 设置多标签交/并集关系
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNoticeTmplBindInfos() 获取通知模板绑定内容模板信息
+ * @method void setNoticeTmplBindInfos(array $NoticeTmplBindInfos) 设置通知模板绑定内容模板信息
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -423,6 +425,11 @@ class AlarmPolicy extends AbstractModel
     public $TagOperation;
 
     /**
+     * @var array 通知模板绑定内容模板信息
+     */
+    public $NoticeTmplBindInfos;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -504,6 +511,7 @@ class AlarmPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagOperation 多标签交/并集关系
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NoticeTmplBindInfos 通知模板绑定内容模板信息
      */
     function __construct()
     {
@@ -701,6 +709,15 @@ class AlarmPolicy extends AbstractModel
 
         if (array_key_exists("TagOperation",$param) and $param["TagOperation"] !== null) {
             $this->TagOperation = $param["TagOperation"];
+        }
+
+        if (array_key_exists("NoticeTmplBindInfos",$param) and $param["NoticeTmplBindInfos"] !== null) {
+            $this->NoticeTmplBindInfos = [];
+            foreach ($param["NoticeTmplBindInfos"] as $key => $value){
+                $obj = new NoticeContentTmplBindInfo();
+                $obj->deserialize($value);
+                array_push($this->NoticeTmplBindInfos, $obj);
+            }
         }
     }
 }

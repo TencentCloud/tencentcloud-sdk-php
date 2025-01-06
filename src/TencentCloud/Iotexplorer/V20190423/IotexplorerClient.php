@@ -157,6 +157,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息 
  * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
+ * @method Models\PauseTWeCallDeviceResponse PauseTWeCallDevice(Models\PauseTWeCallDeviceRequest $req) 暂停设备
  * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
 
 发布广播消息
@@ -170,10 +171,13 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务
  * @method Models\ResetCloudStorageAIServiceResponse ResetCloudStorageAIService(Models\ResetCloudStorageAIServiceRequest $req) 重置指定设备的云存 AI 服务
  * @method Models\ResetCloudStorageEventResponse ResetCloudStorageEvent(Models\ResetCloudStorageEventRequest $req) 重置云存事件
+ * @method Models\ResetTWeCallDeviceResponse ResetTWeCallDevice(Models\ResetTWeCallDeviceRequest $req) 重置设备
+ * @method Models\ResumeWeCallDeviceResponse ResumeWeCallDevice(Models\ResumeWeCallDeviceRequest $req) 恢复设备
  * @method Models\SearchPositionSpaceResponse SearchPositionSpace(Models\SearchPositionSpaceRequest $req) 搜索位置空间
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力
  * @method Models\SearchTopicRuleResponse SearchTopicRule(Models\SearchTopicRuleRequest $req) 搜索规则
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
+ * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备
  * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品
  * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态

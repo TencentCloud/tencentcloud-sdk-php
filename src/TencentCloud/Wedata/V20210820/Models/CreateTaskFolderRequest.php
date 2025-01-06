@@ -28,8 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  * @method string getParentFolderId() 获取父文件夹ID
  * @method void setParentFolderId(string $ParentFolderId) 设置父文件夹ID
- * @method string getTaskNodeType() 获取目录分类
- * @method void setTaskNodeType(string $TaskNodeType) 设置目录分类
+ * @method string getTaskNodeType() 获取目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
+ * @method void setTaskNodeType(string $TaskNodeType) 设置目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
  */
 class CreateTaskFolderRequest extends AbstractModel
 {
@@ -54,7 +72,16 @@ class CreateTaskFolderRequest extends AbstractModel
     public $ParentFolderId;
 
     /**
-     * @var string 目录分类
+     * @var string 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
      */
     public $TaskNodeType;
 
@@ -63,7 +90,16 @@ class CreateTaskFolderRequest extends AbstractModel
      * @param string $FolderName 文件夹名称
      * @param string $WorkflowId 工作流ID
      * @param string $ParentFolderId 父文件夹ID
-     * @param string $TaskNodeType 目录分类
+     * @param string $TaskNodeType 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 新套餐套餐详情
+ * 云开发新套餐详情
  *
  * @method string getPackageName() 获取DAU产品套餐ID
 注意：此字段可能返回 null，表示取不到有效值。

@@ -40,6 +40,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZones(string $MultiZones) 设置修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
  * @method integer getWaitSwitch() 获取执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
  * @method void setWaitSwitch(integer $WaitSwitch) 设置执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+ * @method array getDrZones() 获取多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+
+ * @method void setDrZones(array $DrZones) 设置多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -94,6 +97,12 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
+     * @var array 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+
+     */
+    public $DrZones;
+
+    /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      * @param integer $Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
@@ -104,6 +113,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
      * @param string $MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      * @param integer $WaitSwitch 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+     * @param array $DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
      */
     function __construct()
     {
@@ -156,6 +166,15 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
             $this->WaitSwitch = $param["WaitSwitch"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = [];
+            foreach ($param["DrZones"] as $key => $value){
+                $obj = new DrZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->DrZones, $obj);
+            }
         }
     }
 }

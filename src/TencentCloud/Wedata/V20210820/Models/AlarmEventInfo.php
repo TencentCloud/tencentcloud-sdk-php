@@ -110,6 +110,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmReason(string $AlarmReason) 设置告警原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIndicatorTimeRangeValue() 获取近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorTimeRangeValue(integer $IndicatorTimeRangeValue) 设置近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndicatorTimeRangeUnit() 获取近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorTimeRangeUnit(string $IndicatorTimeRangeUnit) 设置近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSyncType() 获取同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSyncType(integer $SyncType) 设置同步类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmEventInfo extends AbstractModel
 {
@@ -267,6 +279,24 @@ class AlarmEventInfo extends AbstractModel
     public $AlarmReason;
 
     /**
+     * @var integer 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorTimeRangeValue;
+
+    /**
+     * @var string 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorTimeRangeUnit;
+
+    /**
+     * @var integer 同步类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SyncType;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmTime 告警时间
      * @param string $TaskId 任务ID
@@ -311,6 +341,12 @@ class AlarmEventInfo extends AbstractModel
      * @param float $Threshold 指标阈值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmReason 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IndicatorTimeRangeValue 近范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndicatorTimeRangeUnit 近范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SyncType 同步类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -432,6 +468,18 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("AlarmReason",$param) and $param["AlarmReason"] !== null) {
             $this->AlarmReason = $param["AlarmReason"];
+        }
+
+        if (array_key_exists("IndicatorTimeRangeValue",$param) and $param["IndicatorTimeRangeValue"] !== null) {
+            $this->IndicatorTimeRangeValue = $param["IndicatorTimeRangeValue"];
+        }
+
+        if (array_key_exists("IndicatorTimeRangeUnit",$param) and $param["IndicatorTimeRangeUnit"] !== null) {
+            $this->IndicatorTimeRangeUnit = $param["IndicatorTimeRangeUnit"];
+        }
+
+        if (array_key_exists("SyncType",$param) and $param["SyncType"] !== null) {
+            $this->SyncType = $param["SyncType"];
         }
     }
 }

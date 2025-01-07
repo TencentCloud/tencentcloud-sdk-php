@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondaryNum(integer $SecondaryNum) 设置每个副本集内从节点个数，目前只支持从节点数为2
  * @method string getEngineVersion() 获取MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
  * @method void setEngineVersion(string $EngineVersion) 设置MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
- * @method string getMachine() 获取实例类型，GIO：高IO版；TGIO：高IO万兆
- * @method void setMachine(string $Machine) 设置实例类型，GIO：高IO版；TGIO：高IO万兆
+ * @method string getMachine() 获取实例类型，HIO10G：高IO万兆。
+ * @method void setMachine(string $Machine) 设置实例类型，HIO10G：高IO万兆。
  * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为10
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为1, 最小值1，最大值为10
  * @method string getZone() 获取可用区信息，格式如：ap-guangzhou-2
  * @method void setZone(string $Zone) 设置可用区信息，格式如：ap-guangzhou-2
- * @method string getInstanceRole() 获取实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
- * @method void setInstanceRole(string $InstanceRole) 设置实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+ * @method string getInstanceRole() 获取实例角色，默认传MASTER即可
+ * @method void setInstanceRole(string $InstanceRole) 设置实例角色，默认传MASTER即可
  * @method string getInstanceType() 获取实例类型，REPLSET-副本集，SHARD-分片集群
  * @method void setInstanceType(string $InstanceType) 设置实例类型，REPLSET-副本集，SHARD-分片集群
  * @method integer getEncrypt() 获取数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密
@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不填为默认项目
  * @method array getSecurityGroup() 获取安全组参数
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数
+ * @method string getUniqVpcId() 获取私有网络ID，如果不传则默认选择基础网络
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID，如果不传则默认选择基础网络
+ * @method string getUniqSubnetId() 获取私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -79,7 +83,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string 实例类型，GIO：高IO版；TGIO：高IO万兆
+     * @var string 实例类型，HIO10G：高IO万兆。
      */
     public $Machine;
 
@@ -94,7 +98,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+     * @var string 实例角色，默认传MASTER即可
      */
     public $InstanceRole;
 
@@ -129,21 +133,33 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
+     * @var string 私有网络ID，如果不传则默认选择基础网络
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+     */
+    public $UniqSubnetId;
+
+    /**
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param integer $ReplicateSetNum 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
      * @param integer $SecondaryNum 每个副本集内从节点个数，目前只支持从节点数为2
      * @param string $EngineVersion MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
-     * @param string $Machine 实例类型，GIO：高IO版；TGIO：高IO万兆
+     * @param string $Machine 实例类型，HIO10G：高IO万兆。
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      * @param string $Zone 可用区信息，格式如：ap-guangzhou-2
-     * @param string $InstanceRole 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+     * @param string $InstanceRole 实例角色，默认传MASTER即可
      * @param string $InstanceType 实例类型，REPLSET-副本集，SHARD-分片集群
      * @param integer $Encrypt 数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密
      * @param string $VpcId 私有网络ID，如果不传则默认选择基础网络
      * @param string $SubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
      * @param integer $ProjectId 项目ID，不填为默认项目
      * @param array $SecurityGroup 安全组参数
+     * @param string $UniqVpcId 私有网络ID，如果不传则默认选择基础网络
+     * @param string $UniqSubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
         }
     }
 }

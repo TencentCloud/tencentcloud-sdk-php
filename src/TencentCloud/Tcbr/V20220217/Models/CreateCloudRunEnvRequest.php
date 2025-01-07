@@ -38,12 +38,12 @@ Activity：活动来源
  * @method void setSubNetIds(array $SubNetIds) 设置子网列表
  * @method string getReqKey() 获取请求key 用于防重
  * @method void setReqKey(string $ReqKey) 设置请求key 用于防重
- * @method string getSource() 获取来源：wechat | cloud
- * @method void setSource(string $Source) 设置来源：wechat | cloud
- * @method string getChannel() 获取渠道：wechat | cloud
- * @method void setChannel(string $Channel) 设置渠道：wechat | cloud
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
+ * @method string getSource() 获取来源：wechat | cloud | weda
+ * @method void setSource(string $Source) 设置来源：wechat | cloud | weda
+ * @method string getChannel() 获取渠道：wechat | cloud | weda
+ * @method void setChannel(string $Channel) 设置渠道：wechat | cloud | weda
+ * @method string getEnvId() 获取环境ID 云开发平台必填
+ * @method void setEnvId(string $EnvId) 设置环境ID 云开发平台必填
  */
 class CreateCloudRunEnvRequest extends AbstractModel
 {
@@ -85,17 +85,17 @@ Activity：活动来源
     public $ReqKey;
 
     /**
-     * @var string 来源：wechat | cloud
+     * @var string 来源：wechat | cloud | weda
      */
     public $Source;
 
     /**
-     * @var string 渠道：wechat | cloud
+     * @var string 渠道：wechat | cloud | weda
      */
     public $Channel;
 
     /**
-     * @var string 环境ID
+     * @var string 环境ID 云开发平台必填
      */
     public $EnvId;
 
@@ -109,9 +109,9 @@ Activity：活动来源
      * @param string $VpcId 私有网络Id
      * @param array $SubNetIds 子网列表
      * @param string $ReqKey 请求key 用于防重
-     * @param string $Source 来源：wechat | cloud
-     * @param string $Channel 渠道：wechat | cloud
-     * @param string $EnvId 环境ID
+     * @param string $Source 来源：wechat | cloud | weda
+     * @param string $Channel 渠道：wechat | cloud | weda
+     * @param string $EnvId 环境ID 云开发平台必填
      */
     function __construct()
     {

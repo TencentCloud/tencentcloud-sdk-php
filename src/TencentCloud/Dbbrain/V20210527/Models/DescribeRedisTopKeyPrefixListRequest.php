@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDate(string $Date) 设置查询日期，如2021-05-27，最早可为前30天的日期。
  * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
- * @method integer getLimit() 获取查询数目，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大值为100。
+ * @method integer getLimit() 获取查询数目，默认为20，最大值为500。
+ * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大值为500。
+ * @method array getShardIds() 获取分片ID数组。
+ * @method void setShardIds(array $ShardIds) 设置分片ID数组。
  */
 class DescribeRedisTopKeyPrefixListRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class DescribeRedisTopKeyPrefixListRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer 查询数目，默认为20，最大值为100。
+     * @var integer 查询数目，默认为20，最大值为500。
      */
     public $Limit;
+
+    /**
+     * @var array 分片ID数组。
+     */
+    public $ShardIds;
 
     /**
      * @param string $InstanceId 实例ID。
      * @param string $Date 查询日期，如2021-05-27，最早可为前30天的日期。
      * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
-     * @param integer $Limit 查询数目，默认为20，最大值为100。
+     * @param integer $Limit 查询数目，默认为20，最大值为500。
+     * @param array $ShardIds 分片ID数组。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeRedisTopKeyPrefixListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ShardIds",$param) and $param["ShardIds"] !== null) {
+            $this->ShardIds = $param["ShardIds"];
         }
     }
 }

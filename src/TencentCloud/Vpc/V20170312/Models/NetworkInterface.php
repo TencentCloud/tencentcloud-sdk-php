@@ -48,6 +48,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`ATTACHING`：绑定中</li>
 <li>`DETACHING`：解绑中</li>
 <li>`DELETING`：删除中</li>
+ * @method string getNetworkInterfaceState() 获取弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+ * @method void setNetworkInterfaceState(string $NetworkInterfaceState) 设置弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
  * @method array getPrivateIpAddressSet() 获取内网IP信息。
  * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
  * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
@@ -146,6 +160,17 @@ class NetworkInterface extends AbstractModel
     public $State;
 
     /**
+     * @var string 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+     */
+    public $NetworkInterfaceState;
+
+    /**
      * @var array 内网IP信息。
      */
     public $PrivateIpAddressSet;
@@ -230,6 +255,13 @@ class NetworkInterface extends AbstractModel
 <li>`ATTACHING`：绑定中</li>
 <li>`DETACHING`：解绑中</li>
 <li>`DELETING`：删除中</li>
+     * @param string $NetworkInterfaceState 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
      * @param array $PrivateIpAddressSet 内网IP信息。
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -300,6 +332,10 @@ class NetworkInterface extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("NetworkInterfaceState",$param) and $param["NetworkInterfaceState"] !== null) {
+            $this->NetworkInterfaceState = $param["NetworkInterfaceState"];
         }
 
         if (array_key_exists("PrivateIpAddressSet",$param) and $param["PrivateIpAddressSet"] !== null) {

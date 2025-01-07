@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBackupName() 获取备份名称
  * @method void setBackupName(string $BackupName) 设置备份名称
  * @method string getBackupDesc() 获取备份备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupDesc(string $BackupDesc) 设置备份备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackupSize() 获取备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSize(integer $BackupSize) 设置备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取备份状态，1-备份中，2-备份成功
  * @method void setStatus(integer $Status) 设置备份状态，1-备份中，2-备份成功
  * @method integer getBackupMethod() 获取备份方法，0-逻辑备份，1-物理备份
@@ -51,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeleteTime() 获取备份删除时间
  * @method void setDeleteTime(string $DeleteTime) 设置备份删除时间
  * @method string getBackupRegion() 获取异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupRegion(string $BackupRegion) 设置异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupInfo extends AbstractModel
 {
@@ -74,25 +64,21 @@ class BackupInfo extends AbstractModel
 
     /**
      * @var string 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupDesc;
 
     /**
      * @var integer 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSize;
 
     /**
      * @var string 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -118,7 +104,6 @@ class BackupInfo extends AbstractModel
 
     /**
      * @var string 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupRegion;
 
@@ -127,19 +112,14 @@ class BackupInfo extends AbstractModel
      * @param integer $BackupType 备份方式，0-自动备份，1-手动备份
      * @param string $BackupName 备份名称
      * @param string $BackupDesc 备份备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupSize 备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 备份状态，1-备份中，2-备份成功
      * @param integer $BackupMethod 备份方法，0-逻辑备份，1-物理备份
      * @param integer $BackId 备份记录id
      * @param string $DeleteTime 备份删除时间
      * @param string $BackupRegion 异地备份地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

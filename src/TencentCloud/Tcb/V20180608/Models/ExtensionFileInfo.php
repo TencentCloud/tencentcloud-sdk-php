@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeUri(string $CodeUri) 设置模板里使用的地址
  * @method string getUploadUrl() 获取上传文件的临时地址，含签名
  * @method void setUploadUrl(string $UploadUrl) 设置上传文件的临时地址，含签名
- * @method string getCustomKey() 获取自定义密钥。如果为空，则表示不需要加密
- * @method void setCustomKey(string $CustomKey) 设置自定义密钥。如果为空，则表示不需要加密
+ * @method string getCustomKey() 获取自定义密钥。如果为空，则表示不需要加密。
+参考cos预签名url上传https://cloud.tencent.com/document/product/436/36121
+上传的时候要按照 SSE-C 的方式设置header：https://cloud.tencent.com/document/product/436/7728
+ * @method void setCustomKey(string $CustomKey) 设置自定义密钥。如果为空，则表示不需要加密。
+参考cos预签名url上传https://cloud.tencent.com/document/product/436/36121
+上传的时候要按照 SSE-C 的方式设置header：https://cloud.tencent.com/document/product/436/7728
  * @method integer getMaxSize() 获取文件大小限制，单位M，客户端上传前需要主动检查文件大小，超过限制的文件会被删除。
  * @method void setMaxSize(integer $MaxSize) 设置文件大小限制，单位M，客户端上传前需要主动检查文件大小，超过限制的文件会被删除。
  */
@@ -42,7 +46,9 @@ class ExtensionFileInfo extends AbstractModel
     public $UploadUrl;
 
     /**
-     * @var string 自定义密钥。如果为空，则表示不需要加密
+     * @var string 自定义密钥。如果为空，则表示不需要加密。
+参考cos预签名url上传https://cloud.tencent.com/document/product/436/36121
+上传的时候要按照 SSE-C 的方式设置header：https://cloud.tencent.com/document/product/436/7728
      */
     public $CustomKey;
 
@@ -54,7 +60,9 @@ class ExtensionFileInfo extends AbstractModel
     /**
      * @param string $CodeUri 模板里使用的地址
      * @param string $UploadUrl 上传文件的临时地址，含签名
-     * @param string $CustomKey 自定义密钥。如果为空，则表示不需要加密
+     * @param string $CustomKey 自定义密钥。如果为空，则表示不需要加密。
+参考cos预签名url上传https://cloud.tencent.com/document/product/436/36121
+上传的时候要按照 SSE-C 的方式设置header：https://cloud.tencent.com/document/product/436/7728
      * @param integer $MaxSize 文件大小限制，单位M，客户端上传前需要主动检查文件大小，超过限制的文件会被删除。
      */
     function __construct()

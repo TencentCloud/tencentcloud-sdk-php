@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepoLanguage(string $RepoLanguage) 设置语言
  * @method string getUploadFilename() 获取上传文件名
  * @method void setUploadFilename(string $UploadFilename) 设置上传文件名
+ * @method string getLanguageVersion() 获取语言版本
+ * @method void setLanguageVersion(string $LanguageVersion) 设置语言版本
  */
 class BuildPacksInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class BuildPacksInfo extends AbstractModel
     public $UploadFilename;
 
     /**
+     * @var string 语言版本
+     */
+    public $LanguageVersion;
+
+    /**
      * @param string $BaseImage 基础镜像
      * @param string $EntryPoint 启动命令
      * @param string $RepoLanguage 语言
      * @param string $UploadFilename 上传文件名
+     * @param string $LanguageVersion 语言版本
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class BuildPacksInfo extends AbstractModel
 
         if (array_key_exists("UploadFilename",$param) and $param["UploadFilename"] !== null) {
             $this->UploadFilename = $param["UploadFilename"];
+        }
+
+        if (array_key_exists("LanguageVersion",$param) and $param["LanguageVersion"] !== null) {
+            $this->LanguageVersion = $param["LanguageVersion"];
         }
     }
 }

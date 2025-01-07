@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 副本集信息
  *
  * @method array getNodes() 获取节点属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodes(array $Nodes) 设置节点属性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReplicateSetInfo extends AbstractModel
 {
     /**
      * @var array 节点属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nodes;
 
     /**
      * @param array $Nodes 节点属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

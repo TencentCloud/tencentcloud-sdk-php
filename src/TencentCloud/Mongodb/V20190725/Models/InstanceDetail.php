@@ -97,41 +97,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRealInstanceId() 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  * @method array getZoneList() 获取实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneList(array $ZoneList) 设置实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongosNodeNum() 获取mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongosMemory() 获取mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongosMemory(integer $MongosMemory) 设置mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongosCpuNum() 获取mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongosCpuNum(integer $MongosCpuNum) 设置mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigServerNodeNum() 获取Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) 设置Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigServerMemory() 获取Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigServerVolume() 获取Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigServerCpuNum() 获取Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) 设置Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadonlyNodeNum() 获取readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) 设置readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -327,55 +309,46 @@ class InstanceDetail extends AbstractModel
 
     /**
      * @var array 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneList;
 
     /**
      * @var integer mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongosNodeNum;
 
     /**
      * @var integer mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongosMemory;
 
     /**
      * @var integer mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongosCpuNum;
 
     /**
      * @var integer Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigServerNodeNum;
 
     /**
      * @var integer Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigServerMemory;
 
     /**
      * @var integer Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigServerVolume;
 
     /**
      * @var integer Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigServerCpuNum;
 
     /**
      * @var integer readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadonlyNodeNum;
 
@@ -419,23 +392,14 @@ class InstanceDetail extends AbstractModel
      * @param string $InstanceStatusDesc 实例状态描述
      * @param string $RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      * @param array $ZoneList 实例当前可用区信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongosNodeNum mongos节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongosMemory mongos节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongosCpuNum mongos节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigServerNodeNum Config Server节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigServerMemory Config Server节点内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigServerVolume Config Server节点磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigServerCpuNum Config Server节点CPU核数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadonlyNodeNum readonly节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

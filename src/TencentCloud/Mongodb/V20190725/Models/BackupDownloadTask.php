@@ -39,8 +39,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBackupMethod() 获取备份文件备份类型，0-逻辑备份，1-物理备份
  * @method void setBackupMethod(integer $BackupMethod) 设置备份文件备份类型，0-逻辑备份，1-物理备份
  * @method string getBackupDesc() 获取发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupDesc(string $BackupDesc) 设置发起备份时指定的备注信息
+ * @method string getRegion() 获取地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBucket() 获取Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBucket(string $Bucket) 设置Bucket信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupDownloadTask extends AbstractModel
@@ -92,9 +98,20 @@ class BackupDownloadTask extends AbstractModel
 
     /**
      * @var string 发起备份时指定的备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupDesc;
+
+    /**
+     * @var string 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
+     * @var string Bucket信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Bucket;
 
     /**
      * @param string $CreateTime 任务创建时间
@@ -107,6 +124,9 @@ class BackupDownloadTask extends AbstractModel
      * @param string $Url 备份数据下载链接
      * @param integer $BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
      * @param string $BackupDesc 发起备份时指定的备注信息
+     * @param string $Region 地区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Bucket Bucket信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +180,14 @@ class BackupDownloadTask extends AbstractModel
 
         if (array_key_exists("BackupDesc",$param) and $param["BackupDesc"] !== null) {
             $this->BackupDesc = $param["BackupDesc"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
+            $this->Bucket = $param["Bucket"];
         }
     }
 }

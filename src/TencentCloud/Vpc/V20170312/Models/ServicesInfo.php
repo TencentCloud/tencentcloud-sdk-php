@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getService() 获取协议端口。
  * @method void setService(string $Service) 设置协议端口。
  * @method string getDescription() 获取备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServicesInfo extends AbstractModel
 {
@@ -36,14 +34,12 @@ class ServicesInfo extends AbstractModel
 
     /**
      * @var string 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $Service 协议端口。
      * @param string $Description 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * KMS密钥信息
  *
  * @method string getKeyId() 获取主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyId(string $KeyId) 设置主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyName() 获取主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyName(string $KeyName) 设置主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyUsage() 获取密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyUsage(string $KeyUsage) 设置密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyOrigin() 获取密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyOrigin(string $KeyOrigin) 设置密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKmsRegion() 获取kms所在地域。
  * @method void setKmsRegion(string $KmsRegion) 设置kms所在地域。
  */
@@ -51,37 +39,31 @@ class KMSInfoDetail extends AbstractModel
 {
     /**
      * @var string 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyId;
 
     /**
      * @var string 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyName;
 
     /**
      * @var string 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyUsage;
 
     /**
      * @var string 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyOrigin;
 
@@ -92,17 +74,11 @@ class KMSInfoDetail extends AbstractModel
 
     /**
      * @param string $KeyId 主密钥 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyName 主密钥名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 实例与密钥绑定时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 密钥状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyUsage 密钥用途。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyOrigin 密钥来源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KmsRegion kms所在地域。
      */
     function __construct()

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 数据库实例价格
  *
  * @method float getUnitPrice() 获取单价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置单价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalPrice() 获取原价
  * @method void setOriginalPrice(float $OriginalPrice) 设置原价
  * @method float getDiscountPrice() 获取折扣价
@@ -33,7 +31,6 @@ class DBInstancePrice extends AbstractModel
 {
     /**
      * @var float 单价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
 
@@ -49,7 +46,6 @@ class DBInstancePrice extends AbstractModel
 
     /**
      * @param float $UnitPrice 单价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalPrice 原价
      * @param float $DiscountPrice 折扣价
      */

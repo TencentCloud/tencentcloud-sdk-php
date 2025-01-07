@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HaVip绑定的子机/网卡（用于限制HaVip飘移的范围，并不是真正的飘移动作）。
  *
- * @method string getHaVipId() 获取HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHaVipId(string $HaVipId) 设置HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取HaVip绑定的子机或网卡唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置HaVip绑定的子机或网卡唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHaVipId() 获取HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHaVipId(string $HaVipId) 设置HaVip实例唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取HaVip绑定的类型。取值:CVM, ENI。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
 class HaVipAssociation extends AbstractModel
 {
     /**
-     * @var string HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $HaVipId;
-
-    /**
      * @var string HaVip绑定的子机或网卡唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
+    /**
+     * @var string HaVip实例唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HaVipId;
 
     /**
      * @var string HaVip绑定的类型。取值:CVM, ENI。
@@ -54,9 +54,9 @@ class HaVipAssociation extends AbstractModel
     public $InstanceType;
 
     /**
-     * @param string $HaVipId HaVip实例唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId HaVip绑定的子机或网卡唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HaVipId HaVip实例唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType HaVip绑定的类型。取值:CVM, ENI。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,12 +74,12 @@ class HaVipAssociation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
+            $this->HaVipId = $param["HaVipId"];
         }
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {

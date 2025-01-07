@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 - 公网匿名分享：填写clsshare.com
 - datasight内网匿名分享(若开启)：datasight内网域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVerifyCode() 获取验证码
+ * @method string getVerifyCode() 获取分享链接加密访问验证码。支持0-9和a-z(不区分大小写)在内的6个字符，可为空，代表免验证码访问
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVerifyCode(string $VerifyCode) 设置验证码
+ * @method void setVerifyCode(string $VerifyCode) 设置分享链接加密访问验证码。支持0-9和a-z(不区分大小写)在内的6个字符，可为空，代表免验证码访问
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
  * @method void setStartTime(string $StartTime) 设置默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
@@ -92,7 +92,7 @@ class ConsoleSharingConfig extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 验证码
+     * @var string 分享链接加密访问验证码。支持0-9和a-z(不区分大小写)在内的6个字符，可为空，代表免验证码访问
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyCode;
@@ -144,7 +144,7 @@ class ConsoleSharingConfig extends AbstractModel
 - 公网匿名分享：填写clsshare.com
 - datasight内网匿名分享(若开启)：datasight内网域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VerifyCode 验证码
+     * @param string $VerifyCode 分享链接加密访问验证码。支持0-9和a-z(不区分大小写)在内的6个字符，可为空，代表免验证码访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
      * @param string $EndTime 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点

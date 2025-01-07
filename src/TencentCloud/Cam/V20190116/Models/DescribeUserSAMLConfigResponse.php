@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSAMLMetadata() 获取SAML元数据文档
  * @method void setSAMLMetadata(string $SAMLMetadata) 设置SAML元数据文档
- * @method integer getStatus() 获取状态：0:未设置，1:已开启，2:已禁用
- * @method void setStatus(integer $Status) 设置状态：0:未设置，1:已开启，2:已禁用
+ * @method integer getStatus() 获取状态：0:未设置，11:已开启，2:已禁用
+ * @method void setStatus(integer $Status) 设置状态：0:未设置，11:已开启，2:已禁用
  * @method string getAuxiliaryDomain() 获取辅助域名
  * @method void setAuxiliaryDomain(string $AuxiliaryDomain) 设置辅助域名
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
     public $SAMLMetadata;
 
     /**
-     * @var integer 状态：0:未设置，1:已开启，2:已禁用
+     * @var integer 状态：0:未设置，11:已开启，2:已禁用
      */
     public $Status;
 
@@ -53,7 +53,7 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
 
     /**
      * @param string $SAMLMetadata SAML元数据文档
-     * @param integer $Status 状态：0:未设置，1:已开启，2:已禁用
+     * @param integer $Status 状态：0:未设置，11:已开启，2:已禁用
      * @param string $AuxiliaryDomain 辅助域名
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

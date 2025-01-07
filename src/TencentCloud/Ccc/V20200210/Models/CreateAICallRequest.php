@@ -230,6 +230,10 @@ HoaiMy
  * @method void setEndFunctionEnable(boolean $EndFunctionEnable) 设置模型是否支持(或者开启)call_end function calling
  * @method string getEndFunctionDesc() 获取EndFunctionEnable为true时生效；call_end function calling的desc，默认为 "End the call when user has to leave (like says bye) or you are instructed to do so."
  * @method void setEndFunctionDesc(string $EndFunctionDesc) 设置EndFunctionEnable为true时生效；call_end function calling的desc，默认为 "End the call when user has to leave (like says bye) or you are instructed to do so."
+ * @method boolean getTransferFunctionEnable() 获取模型是否支持(或者开启)transfer_to_human function calling
+ * @method void setTransferFunctionEnable(boolean $TransferFunctionEnable) 设置模型是否支持(或者开启)transfer_to_human function calling
+ * @method array getTransferItems() 获取TransferFunctionEnable为true的时候生效: 转人工配置
+ * @method void setTransferItems(array $TransferItems) 设置TransferFunctionEnable为true的时候生效: 转人工配置
  * @method integer getNotifyDuration() 获取用户多久没说话提示时长,最小10秒,默认10秒
  * @method void setNotifyDuration(integer $NotifyDuration) 设置用户多久没说话提示时长,最小10秒,默认10秒
  * @method string getNotifyMessage() 获取用户NotifyDuration没说话，AI提示的语句，默认是"抱歉，我没听清。您可以重复下吗？"
@@ -394,6 +398,8 @@ HoaiMy
 </code></pre>
 
 </div></div>
+ * @method array getPromptVariables() 获取提示词变量
+ * @method void setPromptVariables(array $PromptVariables) 设置提示词变量
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -571,6 +577,16 @@ HoaiMy
     public $EndFunctionDesc;
 
     /**
+     * @var boolean 模型是否支持(或者开启)transfer_to_human function calling
+     */
+    public $TransferFunctionEnable;
+
+    /**
+     * @var array TransferFunctionEnable为true的时候生效: 转人工配置
+     */
+    public $TransferItems;
+
+    /**
      * @var integer 用户多久没说话提示时长,最小10秒,默认10秒
      */
     public $NotifyDuration;
@@ -667,6 +683,11 @@ HoaiMy
 </div></div>
      */
     public $CustomTTSConfig;
+
+    /**
+     * @var array 提示词变量
+     */
+    public $PromptVariables;
 
     /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
@@ -774,6 +795,8 @@ HoaiMy
      * @param integer $InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
      * @param boolean $EndFunctionEnable 模型是否支持(或者开启)call_end function calling
      * @param string $EndFunctionDesc EndFunctionEnable为true时生效；call_end function calling的desc，默认为 "End the call when user has to leave (like says bye) or you are instructed to do so."
+     * @param boolean $TransferFunctionEnable 模型是否支持(或者开启)transfer_to_human function calling
+     * @param array $TransferItems TransferFunctionEnable为true的时候生效: 转人工配置
      * @param integer $NotifyDuration 用户多久没说话提示时长,最小10秒,默认10秒
      * @param string $NotifyMessage 用户NotifyDuration没说话，AI提示的语句，默认是"抱歉，我没听清。您可以重复下吗？"
      * @param integer $NotifyMaxCount 最大触发AI提示音次数，默认为不限制
@@ -856,6 +879,7 @@ HoaiMy
 </code></pre>
 
 </div></div>
+     * @param array $PromptVariables 提示词变量
      */
     function __construct()
     {
@@ -938,6 +962,19 @@ HoaiMy
             $this->EndFunctionDesc = $param["EndFunctionDesc"];
         }
 
+        if (array_key_exists("TransferFunctionEnable",$param) and $param["TransferFunctionEnable"] !== null) {
+            $this->TransferFunctionEnable = $param["TransferFunctionEnable"];
+        }
+
+        if (array_key_exists("TransferItems",$param) and $param["TransferItems"] !== null) {
+            $this->TransferItems = [];
+            foreach ($param["TransferItems"] as $key => $value){
+                $obj = new AITransferItem();
+                $obj->deserialize($value);
+                array_push($this->TransferItems, $obj);
+            }
+        }
+
         if (array_key_exists("NotifyDuration",$param) and $param["NotifyDuration"] !== null) {
             $this->NotifyDuration = $param["NotifyDuration"];
         }
@@ -952,6 +989,15 @@ HoaiMy
 
         if (array_key_exists("CustomTTSConfig",$param) and $param["CustomTTSConfig"] !== null) {
             $this->CustomTTSConfig = $param["CustomTTSConfig"];
+        }
+
+        if (array_key_exists("PromptVariables",$param) and $param["PromptVariables"] !== null) {
+            $this->PromptVariables = [];
+            foreach ($param["PromptVariables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->PromptVariables, $obj);
+            }
         }
     }
 }

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) 设置房间ID。
  * @method string getDocumentId() 获取文档ID。
  * @method void setDocumentId(string $DocumentId) 设置文档ID。
- * @method integer getBindType() 获取绑定类型。后台可透传到客户端，默认为0。客户端可以根据这个字段实现业务逻辑。
- * @method void setBindType(integer $BindType) 设置绑定类型。后台可透传到客户端，默认为0。客户端可以根据这个字段实现业务逻辑。
+ * @method integer getBindType() 获取绑定类型。后台可透传到客户端，默认为0。除以下例值外支持自定义该字段，并在前端实现相应业务逻辑，示例参考：
+示例值：0，仅绑定课件到房间
+示例值：1，绑定课件到房间后，默认展示课件
+ * @method void setBindType(integer $BindType) 设置绑定类型。后台可透传到客户端，默认为0。除以下例值外支持自定义该字段，并在前端实现相应业务逻辑，示例参考：
+示例值：0，仅绑定课件到房间
+示例值：1，绑定课件到房间后，默认展示课件
  */
 class BindDocumentToRoomRequest extends AbstractModel
 {
@@ -40,14 +44,18 @@ class BindDocumentToRoomRequest extends AbstractModel
     public $DocumentId;
 
     /**
-     * @var integer 绑定类型。后台可透传到客户端，默认为0。客户端可以根据这个字段实现业务逻辑。
+     * @var integer 绑定类型。后台可透传到客户端，默认为0。除以下例值外支持自定义该字段，并在前端实现相应业务逻辑，示例参考：
+示例值：0，仅绑定课件到房间
+示例值：1，绑定课件到房间后，默认展示课件
      */
     public $BindType;
 
     /**
      * @param integer $RoomId 房间ID。
      * @param string $DocumentId 文档ID。
-     * @param integer $BindType 绑定类型。后台可透传到客户端，默认为0。客户端可以根据这个字段实现业务逻辑。
+     * @param integer $BindType 绑定类型。后台可透传到客户端，默认为0。除以下例值外支持自定义该字段，并在前端实现相应业务逻辑，示例参考：
+示例值：0，仅绑定课件到房间
+示例值：1，绑定课件到房间后，默认展示课件
      */
     function __construct()
     {

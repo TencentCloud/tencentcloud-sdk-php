@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClassifications() 获取告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClassifications(array $Classifications) 设置告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMultiConditions() 获取多触发条件。与
 Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,6 +181,12 @@ class AlarmInfo extends AbstractModel
     public $AlarmLevel;
 
     /**
+     * @var array 告警附加分类字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Classifications;
+
+    /**
      * @var array 多触发条件。与
 Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -208,6 +218,8 @@ Condition互斥。
      * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Classifications 告警附加分类字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiConditions 多触发条件。与
 Condition互斥。
@@ -308,6 +320,15 @@ Condition互斥。
 
         if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
             $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("Classifications",$param) and $param["Classifications"] !== null) {
+            $this->Classifications = [];
+            foreach ($param["Classifications"] as $key => $value){
+                $obj = new AlarmClassification();
+                $obj->deserialize($value);
+                array_push($this->Classifications, $obj);
+            }
         }
 
         if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {

@@ -168,6 +168,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubUinName(string $SubUinName) 设置子用户名称
  * @method string getJobCreateTime() 获取任务实例创建时间
  * @method void setJobCreateTime(string $JobCreateTime) 设置任务实例创建时间
+ * @method string getAppId() 获取Appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置Appid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookDetail extends AbstractModel
 {
@@ -418,6 +422,12 @@ class NotebookDetail extends AbstractModel
     public $JobCreateTime;
 
     /**
+     * @var string Appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
      * @param string $Id notebook  ID
      * @param string $Name notebook 名称
      * @param string $LifecycleScriptId 生命周期脚本
@@ -492,6 +502,8 @@ class NotebookDetail extends AbstractModel
      * @param string $ResourceGroupInstanceId 调度节点ID
      * @param string $SubUinName 子用户名称
      * @param string $JobCreateTime 任务实例创建时间
+     * @param string $AppId Appid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -692,6 +704,10 @@ class NotebookDetail extends AbstractModel
 
         if (array_key_exists("JobCreateTime",$param) and $param["JobCreateTime"] !== null) {
             $this->JobCreateTime = $param["JobCreateTime"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

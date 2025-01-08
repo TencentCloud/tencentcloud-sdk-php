@@ -122,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) 设置实例日志投递信息
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskProgressInfo getTaskProgressInfo() 获取任务进度信息
+ * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置任务进度信息
  */
 class BizTaskInfo extends AbstractModel
 {
@@ -323,6 +325,11 @@ class BizTaskInfo extends AbstractModel
     public $InstanceCLSDeliveryInfos;
 
     /**
+     * @var TaskProgressInfo 任务进度信息
+     */
+    public $TaskProgressInfo;
+
+    /**
      * @param integer $ID 任务id
      * @param integer $AppId 用户appid
      * @param string $ClusterId 集群id
@@ -374,6 +381,7 @@ class BizTaskInfo extends AbstractModel
      * @param array $InstanceCLSDeliveryInfos 实例日志投递信息
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskProgressInfo $TaskProgressInfo 任务进度信息
      */
     function __construct()
     {
@@ -549,6 +557,11 @@ class BizTaskInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceCLSDeliveryInfos, $obj);
             }
+        }
+
+        if (array_key_exists("TaskProgressInfo",$param) and $param["TaskProgressInfo"] !== null) {
+            $this->TaskProgressInfo = new TaskProgressInfo();
+            $this->TaskProgressInfo->deserialize($param["TaskProgressInfo"]);
         }
     }
 }

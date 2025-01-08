@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimitMemory() 获取内存请求数量最大值
  * @method void setLimitMemory(integer $LimitMemory) 设置内存请求数量最大值
  * @method string getService() 获取服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(string $Service) 设置服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VolumeSetting getVolumeDir() 获取数据卷目录设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeDir(VolumeSetting $VolumeDir) 设置数据卷目录设置
@@ -73,7 +71,6 @@ class CloudResource extends AbstractModel
 
     /**
      * @var string 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
@@ -107,7 +104,6 @@ class CloudResource extends AbstractModel
      * @param integer $LimitCpu Cpu请求数量最大值
      * @param integer $LimitMemory 内存请求数量最大值
      * @param string $Service 服务名称，如HIVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeSetting $VolumeDir 数据卷目录设置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalAccess $ExternalAccess 组件外部访问设置

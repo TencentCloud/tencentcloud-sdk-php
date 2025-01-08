@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataNodeMaintenanceId(integer $DataNodeMaintenanceId) 设置过滤条件：dn是否处于维护状态
 0代表所有状态
 1代表处于维护状态
- * @method array getSearchFields() 获取支持搜索的字段
- * @method void setSearchFields(array $SearchFields) 设置支持搜索的字段
+ * @method array getSearchFields() 获取支持搜索的字段，目前支持 SearchType	：ipv4
+ * @method void setSearchFields(array $SearchFields) 设置支持搜索的字段，目前支持 SearchType	：ipv4
  */
 class DescribeServiceNodeInfosRequest extends AbstractModel
 {
@@ -148,7 +148,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
     public $DataNodeMaintenanceId;
 
     /**
-     * @var array 支持搜索的字段
+     * @var array 支持搜索的字段，目前支持 SearchType	：ipv4
      */
     public $SearchFields;
 
@@ -179,7 +179,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
      * @param integer $DataNodeMaintenanceId 过滤条件：dn是否处于维护状态
 0代表所有状态
 1代表处于维护状态
-     * @param array $SearchFields 支持搜索的字段
+     * @param array $SearchFields 支持搜索的字段，目前支持 SearchType	：ipv4
      */
     function __construct()
     {

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 身份证配置信息
  *
- * @method boolean getCopyWarn() 获取默认为false
- * @method void setCopyWarn(boolean $CopyWarn) 设置默认为false
- * @method boolean getBorderCheckWarn() 获取默认为false
- * @method void setBorderCheckWarn(boolean $BorderCheckWarn) 设置默认为false
- * @method boolean getReshootWarn() 获取默认为false
- * @method void setReshootWarn(boolean $ReshootWarn) 设置默认为false
- * @method boolean getDetectPsWarn() 获取默认为false
- * @method void setDetectPsWarn(boolean $DetectPsWarn) 设置默认为false
- * @method boolean getTempIdWarn() 获取默认为false
- * @method void setTempIdWarn(boolean $TempIdWarn) 设置默认为false
- * @method boolean getInvalidDateWarn() 获取默认为false
- * @method void setInvalidDateWarn(boolean $InvalidDateWarn) 设置默认为false
- * @method boolean getReflectWarn() 获取默认为false
- * @method void setReflectWarn(boolean $ReflectWarn) 设置默认为false
+ * @method boolean getCopyWarn() 获取复印件告警，默认为false
+ * @method void setCopyWarn(boolean $CopyWarn) 设置复印件告警，默认为false
+ * @method boolean getBorderCheckWarn() 获取边框和框内遮挡告警，默认为false
+ * @method void setBorderCheckWarn(boolean $BorderCheckWarn) 设置边框和框内遮挡告警，默认为false
+ * @method boolean getReshootWarn() 获取翻拍告警，默认为false
+ * @method void setReshootWarn(boolean $ReshootWarn) 设置翻拍告警，默认为false
+ * @method boolean getDetectPsWarn() 获取疑似存在PS痕迹告警，默认为false
+ * @method void setDetectPsWarn(boolean $DetectPsWarn) 设置疑似存在PS痕迹告警，默认为false
+ * @method boolean getTempIdWarn() 获取临时身份证告警，默认为false
+ * @method void setTempIdWarn(boolean $TempIdWarn) 设置临时身份证告警，默认为false
+ * @method boolean getInvalidDateWarn() 获取身份证有效日期不合法告警，默认为false
+ * @method void setInvalidDateWarn(boolean $InvalidDateWarn) 设置身份证有效日期不合法告警，默认为false
+ * @method boolean getReflectWarn() 获取是否开启反光检测，默认为false
+ * @method void setReflectWarn(boolean $ReflectWarn) 设置是否开启反光检测，默认为false
  */
 class IDCardConfig extends AbstractModel
 {
     /**
-     * @var boolean 默认为false
+     * @var boolean 复印件告警，默认为false
      */
     public $CopyWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 边框和框内遮挡告警，默认为false
      */
     public $BorderCheckWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 翻拍告警，默认为false
      */
     public $ReshootWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 疑似存在PS痕迹告警，默认为false
      */
     public $DetectPsWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 临时身份证告警，默认为false
      */
     public $TempIdWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 身份证有效日期不合法告警，默认为false
      */
     public $InvalidDateWarn;
 
     /**
-     * @var boolean 默认为false
+     * @var boolean 是否开启反光检测，默认为false
      */
     public $ReflectWarn;
 
     /**
-     * @param boolean $CopyWarn 默认为false
-     * @param boolean $BorderCheckWarn 默认为false
-     * @param boolean $ReshootWarn 默认为false
-     * @param boolean $DetectPsWarn 默认为false
-     * @param boolean $TempIdWarn 默认为false
-     * @param boolean $InvalidDateWarn 默认为false
-     * @param boolean $ReflectWarn 默认为false
+     * @param boolean $CopyWarn 复印件告警，默认为false
+     * @param boolean $BorderCheckWarn 边框和框内遮挡告警，默认为false
+     * @param boolean $ReshootWarn 翻拍告警，默认为false
+     * @param boolean $DetectPsWarn 疑似存在PS痕迹告警，默认为false
+     * @param boolean $TempIdWarn 临时身份证告警，默认为false
+     * @param boolean $InvalidDateWarn 身份证有效日期不合法告警，默认为false
+     * @param boolean $ReflectWarn 是否开启反光检测，默认为false
      */
     function __construct()
     {

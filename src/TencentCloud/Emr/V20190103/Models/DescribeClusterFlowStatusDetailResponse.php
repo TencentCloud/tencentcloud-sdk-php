@@ -29,15 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDesc(array $FlowDesc) 设置任务参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowName(string $FlowName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFlowTotalProgress() 获取总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTotalProgress(float $FlowTotalProgress) 设置总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowTotalStatus() 获取定义流程总状态：
 0:初始化，
 1:运行中，
@@ -45,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTotalStatus(integer $FlowTotalStatus) 设置定义流程总状态：
 0:初始化，
 1:运行中，
@@ -53,7 +48,6 @@ use TencentCloud\Common\AbstractModel;
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFlowExtraDetail() 获取流程额外信息
 NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,14 +73,12 @@ class DescribeClusterFlowStatusDetailResponse extends AbstractModel
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowName;
 
     /**
      * @var float 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTotalProgress;
 
@@ -98,7 +90,6 @@ class DescribeClusterFlowStatusDetailResponse extends AbstractModel
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTotalStatus;
 
@@ -120,10 +111,8 @@ NeedExtraDetail为true时返回
      * @param array $FlowDesc 任务参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FlowTotalProgress 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTotalStatus 定义流程总状态：
 0:初始化，
 1:运行中，
@@ -131,7 +120,6 @@ NeedExtraDetail为true时返回
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FlowExtraDetail 流程额外信息
 NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。

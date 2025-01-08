@@ -53,13 +53,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagSet() 获取资源标签数据。
  * @method void setTagSet(array $TagSet) 设置资源标签数据。
  * @method string getQosLevel() 获取服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosLevel(string $QosLevel) 设置服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDestinationVpcId() 获取对端VPC唯一ID。
+ * @method void setDestinationVpcId(string $DestinationVpcId) 设置对端VPC唯一ID。
  */
 class PeerConnection extends AbstractModel
 {
@@ -145,15 +143,18 @@ class PeerConnection extends AbstractModel
 
     /**
      * @var string 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosLevel;
 
     /**
      * @var string 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
+
+    /**
+     * @var string 对端VPC唯一ID。
+     */
+    public $DestinationVpcId;
 
     /**
      * @param string $SourceVpcId 本端VPC唯一ID。
@@ -173,9 +174,8 @@ class PeerConnection extends AbstractModel
      * @param integer $DestinationUin 对端UIN。
      * @param array $TagSet 资源标签数据。
      * @param string $QosLevel 服务分级：PT、AU、AG。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DestinationVpcId 对端VPC唯一ID。
      */
     function __construct()
     {
@@ -265,6 +265,10 @@ class PeerConnection extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("DestinationVpcId",$param) and $param["DestinationVpcId"] !== null) {
+            $this->DestinationVpcId = $param["DestinationVpcId"];
         }
     }
 }

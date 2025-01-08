@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 1分钱计费详情
  *
  * @method string getReportDate() 获取上报日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportDate(string $ReportDate) 设置上报日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpecialCostItem extends AbstractModel
 {
     /**
      * @var string 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportDate;
 
     /**
      * @var string 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
     /**
      * @var string 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $ReportDate 上报日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 腾讯云uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 资源id:环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 上报任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

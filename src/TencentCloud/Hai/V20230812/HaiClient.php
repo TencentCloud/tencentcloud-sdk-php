@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Hai\V20230812\Models as Models;
 
 /**
+ * @method Models\CreateMuskPromptResponse CreateMuskPrompt(Models\CreateMuskPromptRequest $req) 创建musk prompt 任务
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 查询应用
  * @method Models\DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(Models\DescribeInstanceNetworkStatusRequest $req) 查询实例的网络配置及消耗情况
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例

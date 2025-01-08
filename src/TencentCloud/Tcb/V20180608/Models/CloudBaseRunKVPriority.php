@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * KV参数的优先级
  *
  * @method string getKey() 获取参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取优先级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置优先级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunKVPriority extends AbstractModel
 {
     /**
      * @var string 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var integer 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @param string $Key 参数的Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 参数的Value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

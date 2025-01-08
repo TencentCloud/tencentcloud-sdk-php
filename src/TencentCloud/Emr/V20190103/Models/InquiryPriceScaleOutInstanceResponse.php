@@ -21,21 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * InquiryPriceScaleOutInstance返回参数结构体
  *
  * @method string getOriginalCost() 获取原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(string $OriginalCost) 设置原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscountCost() 获取折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountCost(string $DiscountCost) 设置折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PriceResource getPriceSpec() 获取询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价的节点规格。
@@ -51,13 +45,11 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 {
     /**
      * @var string 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
      * @var string 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
@@ -65,7 +57,6 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
      * @var string 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
@@ -88,13 +79,10 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 
     /**
      * @param string $OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceResource $PriceSpec 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果

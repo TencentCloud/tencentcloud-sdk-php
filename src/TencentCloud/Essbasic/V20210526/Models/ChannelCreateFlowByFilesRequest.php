@@ -193,6 +193,9 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
  * @method void setOpenDynamicFlow(boolean $OpenDynamicFlow) 设置是否开启动态合同（动态签署人2.0）
 <ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
 <li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+ * @method boolean getOpenDynamicSignFlow() 获取是否开启动态合同（动态签署人2.0）<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+ * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置是否开启动态合同（动态签署人2.0）<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -374,8 +377,14 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
 <li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
 
+     * @deprecated
      */
     public $OpenDynamicFlow;
+
+    /**
+     * @var boolean 是否开启动态合同（动态签署人2.0）<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+     */
+    public $OpenDynamicSignFlow;
 
     /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -464,6 +473,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * @param boolean $OpenDynamicFlow 是否开启动态合同（动态签署人2.0）
 <ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
 <li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+     * @param boolean $OpenDynamicSignFlow 是否开启动态合同（动态签署人2.0）<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
      */
     function __construct()
     {
@@ -585,6 +596,10 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 
         if (array_key_exists("OpenDynamicFlow",$param) and $param["OpenDynamicFlow"] !== null) {
             $this->OpenDynamicFlow = $param["OpenDynamicFlow"];
+        }
+
+        if (array_key_exists("OpenDynamicSignFlow",$param) and $param["OpenDynamicSignFlow"] !== null) {
+            $this->OpenDynamicSignFlow = $param["OpenDynamicSignFlow"];
         }
     }
 }

@@ -22,15 +22,21 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getParamKey() 获取售卖参数标识
  * @method void setParamKey(string $ParamKey) 设置售卖参数标识
- * @method string getParamValue() 获取售卖参数值
- * @method void setParamValue(string $ParamValue) 设置售卖参数值
  * @method string getParamKeyName() 获取售卖参数的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamKeyName(string $ParamKeyName) 设置售卖参数的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamValue() 获取售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamValue(string $ParamValue) 设置售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParamValueName() 获取售卖参数值的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamValueName(string $ParamValueName) 设置售卖参数值的展示名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamType() 获取售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamType(string $ParamType) 设置售卖参数的类型，目前支持枚举类Enum/数量类Quant
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SaleParam extends AbstractModel
@@ -41,15 +47,16 @@ class SaleParam extends AbstractModel
     public $ParamKey;
 
     /**
-     * @var string 售卖参数值
-     */
-    public $ParamValue;
-
-    /**
      * @var string 售卖参数的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamKeyName;
+
+    /**
+     * @var string 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamValue;
 
     /**
      * @var string 售卖参数值的展示名称
@@ -58,11 +65,20 @@ class SaleParam extends AbstractModel
     public $ParamValueName;
 
     /**
+     * @var string 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamType;
+
+    /**
      * @param string $ParamKey 售卖参数标识
-     * @param string $ParamValue 售卖参数值
      * @param string $ParamKeyName 售卖参数的展示名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamValue 售卖参数值，当ParamType=Quant时，该值有可能为Null
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParamValueName 售卖参数值的展示名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamType 售卖参数的类型，目前支持枚举类Enum/数量类Quant
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,16 +98,20 @@ class SaleParam extends AbstractModel
             $this->ParamKey = $param["ParamKey"];
         }
 
-        if (array_key_exists("ParamValue",$param) and $param["ParamValue"] !== null) {
-            $this->ParamValue = $param["ParamValue"];
-        }
-
         if (array_key_exists("ParamKeyName",$param) and $param["ParamKeyName"] !== null) {
             $this->ParamKeyName = $param["ParamKeyName"];
         }
 
+        if (array_key_exists("ParamValue",$param) and $param["ParamValue"] !== null) {
+            $this->ParamValue = $param["ParamValue"];
+        }
+
         if (array_key_exists("ParamValueName",$param) and $param["ParamValueName"] !== null) {
             $this->ParamValueName = $param["ParamValueName"];
+        }
+
+        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
+            $this->ParamType = $param["ParamType"];
         }
     }
 }

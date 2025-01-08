@@ -37,7 +37,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
 该接口仅支持version3.0的通道。
  * @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) 定制域名指定错误码的错误响应
- * @method Models\CreateFirstLinkSessionResponse CreateFirstLinkSession(Models\CreateFirstLinkSessionRequest $req) 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
+ * @method Models\CreateFirstLinkSessionResponse CreateFirstLinkSession(Models\CreateFirstLinkSessionRequest $req) 产品功能已下线，对应的api接口下线
+
+本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
  * @method Models\CreateGlobalDomainResponse CreateGlobalDomain(Models\CreateGlobalDomainRequest $req) 用来创建统一域名
  * @method Models\CreateGlobalDomainDnsResponse CreateGlobalDomainDns(Models\CreateGlobalDomainDnsRequest $req) 创建域名解析记录
  * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
@@ -53,7 +55,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 本接口（DeleteDomain）仅适用于7层监听器，用于删除该监听器下对应域名及域名下的所有规则，所有已绑定源站的规则将自动解绑。
  * @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) 删除域名的定制错误
- * @method Models\DeleteFirstLinkSessionResponse DeleteFirstLinkSession(Models\DeleteFirstLinkSessionRequest $req) 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
+ * @method Models\DeleteFirstLinkSessionResponse DeleteFirstLinkSession(Models\DeleteFirstLinkSessionRequest $req) 产品功能已下线，下线对应的api接口
+
+本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
  * @method Models\DeleteGlobalDomainResponse DeleteGlobalDomain(Models\DeleteGlobalDomainRequest $req) 删除统一域名
  * @method Models\DeleteGlobalDomainDnsResponse DeleteGlobalDomainDns(Models\DeleteGlobalDomainDnsRequest $req) 删除域名的某条解析记录
  * @method Models\DeleteListenersResponse DeleteListeners(Models\DeleteListenersRequest $req) 该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
@@ -73,7 +77,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
  * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应
  * @method Models\DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(Models\DescribeDomainErrorPageInfoByIdsRequest $req) 根据定制错误ID查询错误响应
- * @method Models\DescribeFirstLinkSessionResponse DescribeFirstLinkSession(Models\DescribeFirstLinkSessionRequest $req) 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
+ * @method Models\DescribeFirstLinkSessionResponse DescribeFirstLinkSession(Models\DescribeFirstLinkSessionRequest $req) 产品功能已下线，下线对应的api接口
+
+本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
  * @method Models\DescribeGlobalDomainDnsResponse DescribeGlobalDomainDns(Models\DescribeGlobalDomainDnsRequest $req) 查询域名解析列表
  * @method Models\DescribeGlobalDomainsResponse DescribeGlobalDomains(Models\DescribeGlobalDomainsRequest $req) 查询域名列表
  * @method Models\DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(Models\DescribeGroupAndStatisticsProxyRequest $req) 该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息

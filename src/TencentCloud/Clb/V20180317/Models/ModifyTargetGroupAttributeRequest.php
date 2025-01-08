@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
  * @method integer getPort() 获取目标组的新默认端口。
  * @method void setPort(integer $Port) 设置目标组的新默认端口。
+ * @method integer getWeight() 获取后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+ * @method void setWeight(integer $Weight) 设置后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -45,9 +55,23 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $Port;
 
     /**
+     * @var integer 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
+     */
+    public $Weight;
+
+    /**
      * @param string $TargetGroupId 目标组的ID。
      * @param string $TargetGroupName 目标组的新名称。
      * @param integer $Port 目标组的新默认端口。
+     * @param integer $Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+</ul>
      */
     function __construct()
     {
@@ -72,6 +96,10 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOldPassword() 获取实例旧密码。
  * @method void setOldPassword(string $OldPassword) 设置实例旧密码。
  * @method string getPassword() 获取实例新密码。密码复杂度要求如下：
-- 长度8 - 30位, 推荐使用12位以上的密码。
+- 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
  * @method void setPassword(string $Password) 设置实例新密码。密码复杂度要求如下：
-- 长度8 - 30位, 推荐使用12位以上的密码。
+- 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
  */
@@ -47,7 +47,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
 
     /**
      * @var string 实例新密码。密码复杂度要求如下：
-- 长度8 - 30位, 推荐使用12位以上的密码。
+- 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
@@ -57,7 +57,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      * @param string $OldPassword 实例旧密码。
      * @param string $Password 实例新密码。密码复杂度要求如下：
-- 长度8 - 30位, 推荐使用12位以上的密码。
+- 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */

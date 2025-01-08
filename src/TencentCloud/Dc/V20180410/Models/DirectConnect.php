@@ -57,97 +57,53 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPortType() 获取用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
  * @method void setPortType(string $PortType) 设置用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
  * @method string getCircuitCode() 获取运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCircuitCode(string $CircuitCode) 设置运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRedundantDirectConnectId() 获取冗余物理专线的ID。
  * @method void setRedundantDirectConnectId(string $RedundantDirectConnectId) 设置冗余物理专线的ID。
  * @method integer getVlan() 获取物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVlan(integer $Vlan) 设置物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTencentAddress() 获取物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTencentAddress(string $TencentAddress) 设置物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomerAddress() 获取物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomerAddress(string $CustomerAddress) 设置物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomerName() 获取物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomerName(string $CustomerName) 设置物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomerContactMail() 获取物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomerContactMail(string $CustomerContactMail) 设置物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomerContactNumber() 获取物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomerContactNumber(string $CustomerContactNumber) 设置物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredTime() 获取物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredTime(string $ExpiredTime) 设置物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeType() 获取物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(string $ChargeType) 设置物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFaultReportContactPerson() 获取报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessPointType() 获取物理专线的接入点类型。
  * @method void setAccessPointType(string $AccessPointType) 设置物理专线的接入点类型。
  * @method string getIdcCity() 获取IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdcCity(string $IdcCity) 设置IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeState() 获取计费状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeState(string $ChargeState) 设置计费状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSignLaw() 获取物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLocalZone() 获取物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalZone(boolean $LocalZone) 设置物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVlanZeroDirectConnectTunnelCount() 获取该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) 设置该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOtherVlanDirectConnectTunnelCount() 获取该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) 设置该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinBandwidth() 获取物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinBandwidth(integer $MinBandwidth) 设置物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConstruct() 获取建设模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstruct(integer $Construct) 设置建设模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessPointName() 获取物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointName(string $AccessPointName) 设置物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnect extends AbstractModel
 {
@@ -211,7 +167,6 @@ class DirectConnect extends AbstractModel
 
     /**
      * @var string 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CircuitCode;
 
@@ -222,67 +177,56 @@ class DirectConnect extends AbstractModel
 
     /**
      * @var integer 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vlan;
 
     /**
      * @var string 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TencentAddress;
 
     /**
      * @var string 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomerAddress;
 
     /**
      * @var string 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomerName;
 
     /**
      * @var string 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomerContactMail;
 
     /**
      * @var string 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomerContactNumber;
 
     /**
      * @var string 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
      * @var string 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
      * @var string 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaultReportContactPerson;
 
     /**
      * @var string 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaultReportContactNumber;
 
     /**
      * @var array 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -293,61 +237,51 @@ class DirectConnect extends AbstractModel
 
     /**
      * @var string IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdcCity;
 
     /**
      * @var string 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeState;
 
     /**
      * @var string 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var boolean 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignLaw;
 
     /**
      * @var boolean 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalZone;
 
     /**
      * @var integer 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VlanZeroDirectConnectTunnelCount;
 
     /**
      * @var integer 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherVlanDirectConnectTunnelCount;
 
     /**
      * @var integer 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinBandwidth;
 
     /**
      * @var integer 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Construct;
 
     /**
      * @var string 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointName;
 
@@ -371,51 +305,29 @@ class DirectConnect extends AbstractModel
      * @param integer $Bandwidth 物理专线接入接口带宽，单位为Mbps。
      * @param string $PortType 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
      * @param string $CircuitCode 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RedundantDirectConnectId 冗余物理专线的ID。
      * @param integer $Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TencentAddress 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomerAddress 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomerName 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredTime 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FaultReportContactPerson 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FaultReportContactNumber 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointType 物理专线的接入点类型。
      * @param string $IdcCity IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeState 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 物理专线开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SignLaw 物理专线是否已签署用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LocalZone 物理专线是否为LocalZone
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinBandwidth 物理专线最小带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Construct 建设模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointName 物理专线的接入点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

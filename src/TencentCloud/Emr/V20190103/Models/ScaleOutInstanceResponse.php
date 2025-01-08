@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealNames(array $DealNames) 设置订单号。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientToken() 获取客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientToken(string $ClientToken) 设置客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowId() 获取扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillId() 获取大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillId(string $BillId) 设置大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTraceId() 获取扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceId(string $TraceId) 设置扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,25 +52,21 @@ class ScaleOutInstanceResponse extends AbstractModel
 
     /**
      * @var string 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientToken;
 
     /**
      * @var integer 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @var string 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillId;
 
     /**
      * @var string 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TraceId;
 
@@ -92,13 +80,9 @@ class ScaleOutInstanceResponse extends AbstractModel
      * @param array $DealNames 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientToken 客户端Token。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowId 扩容流程ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillId 大订单号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TraceId 扩容TraceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

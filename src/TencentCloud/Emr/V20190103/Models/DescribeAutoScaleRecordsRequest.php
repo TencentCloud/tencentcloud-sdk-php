@@ -22,14 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method array getFilters() 获取记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
- * @method void setFilters(array $Filters) 设置记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ * @method array getFilters() 获取记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
+ * @method void setFilters(array $Filters) 设置记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
  * @method integer getOffset() 获取分页参数。
  * @method void setOffset(integer $Offset) 设置分页参数。
  * @method integer getLimit() 获取分页参数。最大支持100
  * @method void setLimit(integer $Limit) 设置分页参数。最大支持100
  * @method integer getRecordSource() 获取表示是自动(0)还是托管伸缩(1)
  * @method void setRecordSource(integer $RecordSource) 设置表示是自动(0)还是托管伸缩(1)
+ * @method integer getAsc() 获取是否升序，1:升序，0:降序
+ * @method void setAsc(integer $Asc) 设置是否升序，1:升序，0:降序
  */
 class DescribeAutoScaleRecordsRequest extends AbstractModel
 {
@@ -39,7 +49,11 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+     * @var array 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
      */
     public $Filters;
 
@@ -59,11 +73,21 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
     public $RecordSource;
 
     /**
+     * @var integer 是否升序，1:升序，0:降序
+     */
+    public $Asc;
+
+    /**
      * @param string $InstanceId 实例ID。
-     * @param array $Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+     * @param array $Filters 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+ScaleAction：1:扩容  2:缩容
+
      * @param integer $Offset 分页参数。
      * @param integer $Limit 分页参数。最大支持100
      * @param integer $RecordSource 表示是自动(0)还是托管伸缩(1)
+     * @param integer $Asc 是否升序，1:升序，0:降序
      */
     function __construct()
     {
@@ -101,6 +125,10 @@ class DescribeAutoScaleRecordsRequest extends AbstractModel
 
         if (array_key_exists("RecordSource",$param) and $param["RecordSource"] !== null) {
             $this->RecordSource = $param["RecordSource"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
         }
     }
 }

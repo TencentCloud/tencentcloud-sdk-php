@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 负载指标条件
  *
  * @method integer getStatisticPeriod() 获取规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatisticPeriod(integer $StatisticPeriod) 设置规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTriggerThreshold() 获取触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerThreshold(integer $TriggerThreshold) 设置触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadMetrics() 获取扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadMetrics(string $LoadMetrics) 设置扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMetricId() 获取规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricId(integer $MetricId) 设置规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConditions() 获取触发条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditions(array $Conditions) 设置触发条件
@@ -45,25 +37,21 @@ class LoadMetricsCondition extends AbstractModel
 {
     /**
      * @var integer 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatisticPeriod;
 
     /**
      * @var integer 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerThreshold;
 
     /**
      * @var string 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadMetrics;
 
     /**
      * @var integer 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricId;
 
@@ -75,13 +63,9 @@ class LoadMetricsCondition extends AbstractModel
 
     /**
      * @param integer $StatisticPeriod 规则统计周期，提供1min,3min,5min。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadMetrics 扩缩容负载指标。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MetricId 规则元数据记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Conditions 触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      */

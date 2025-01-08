@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取同步任务id，如sync-werwfs23
  * @method void setJobId(string $JobId) 设置同步任务id，如sync-werwfs23
+ * @method array getJobIds() 获取同步任务id列表，如sync-werwfs23
+ * @method void setJobIds(array $JobIds) 设置同步任务id列表，如sync-werwfs23
  * @method string getJobName() 获取同步任务名
  * @method void setJobName(string $JobName) 设置同步任务名
  * @method string getOrder() 获取排序字段，可以取值为CreateTime
@@ -42,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费类型，PrePay：预付费，PostPay：后付费
  * @method array getTagFilters() 获取tag
  * @method void setTagFilters(array $TagFilters) 设置tag
+ * @method string getSrcInfoPattern() 获取源端数据库连接信息，可以输入实例ID或者IP等
+ * @method void setSrcInfoPattern(string $SrcInfoPattern) 设置源端数据库连接信息，可以输入实例ID或者IP等
+ * @method string getDstInfoPattern() 获取目标端数据库连接信息，可以输入实例ID或者IP等
+ * @method void setDstInfoPattern(string $DstInfoPattern) 设置目标端数据库连接信息，可以输入实例ID或者IP等
  */
 class DescribeSyncJobsRequest extends AbstractModel
 {
@@ -49,6 +55,11 @@ class DescribeSyncJobsRequest extends AbstractModel
      * @var string 同步任务id，如sync-werwfs23
      */
     public $JobId;
+
+    /**
+     * @var array 同步任务id列表，如sync-werwfs23
+     */
+    public $JobIds;
 
     /**
      * @var string 同步任务名
@@ -101,7 +112,18 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var string 源端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public $SrcInfoPattern;
+
+    /**
+     * @var string 目标端数据库连接信息，可以输入实例ID或者IP等
+     */
+    public $DstInfoPattern;
+
+    /**
      * @param string $JobId 同步任务id，如sync-werwfs23
+     * @param array $JobIds 同步任务id列表，如sync-werwfs23
      * @param string $JobName 同步任务名
      * @param string $Order 排序字段，可以取值为CreateTime
      * @param string $OrderSeq 排序方式，升序为ASC，降序为DESC，默认为CreateTime降序
@@ -112,6 +134,8 @@ class DescribeSyncJobsRequest extends AbstractModel
      * @param string $JobType 任务类型，如mysql2mysql：msyql同步到mysql
      * @param string $PayMode 付费类型，PrePay：预付费，PostPay：后付费
      * @param array $TagFilters tag
+     * @param string $SrcInfoPattern 源端数据库连接信息，可以输入实例ID或者IP等
+     * @param string $DstInfoPattern 目标端数据库连接信息，可以输入实例ID或者IP等
      */
     function __construct()
     {
@@ -128,6 +152,10 @@ class DescribeSyncJobsRequest extends AbstractModel
         }
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("JobIds",$param) and $param["JobIds"] !== null) {
+            $this->JobIds = $param["JobIds"];
         }
 
         if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
@@ -173,6 +201,14 @@ class DescribeSyncJobsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("SrcInfoPattern",$param) and $param["SrcInfoPattern"] !== null) {
+            $this->SrcInfoPattern = $param["SrcInfoPattern"];
+        }
+
+        if (array_key_exists("DstInfoPattern",$param) and $param["DstInfoPattern"] !== null) {
+            $this->DstInfoPattern = $param["DstInfoPattern"];
         }
     }
 }

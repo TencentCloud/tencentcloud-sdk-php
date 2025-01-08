@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
- * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
- * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
+ * @method string getType() 获取后端服务的类型，可取：CVM、ENI
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI
  * @method string getInstanceId() 获取后端服务的唯一 ID
  * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID
  * @method integer getPort() 获取后端服务的监听端口
@@ -63,7 +63,7 @@ class TargetGroupBackend extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var string 后端服务的类型，可取：CVM、ENI（即将支持）
+     * @var string 后端服务的类型，可取：CVM、ENI
      */
     public $Type;
 
@@ -120,7 +120,7 @@ class TargetGroupBackend extends AbstractModel
 
     /**
      * @param string $TargetGroupId 目标组ID
-     * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
+     * @param string $Type 后端服务的类型，可取：CVM、ENI
      * @param string $InstanceId 后端服务的唯一 ID
      * @param integer $Port 后端服务的监听端口
      * @param integer $Weight 后端服务的转发权重，取值为0或16

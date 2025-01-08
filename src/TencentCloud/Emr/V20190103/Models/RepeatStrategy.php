@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpire(string $Expire) 设置规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取周期性规则开始时间
+ * @method void setStartTime(string $StartTime) 设置周期性规则开始时间
  */
 class RepeatStrategy extends AbstractModel
 {
@@ -81,6 +83,11 @@ class RepeatStrategy extends AbstractModel
     public $Expire;
 
     /**
+     * @var string 周期性规则开始时间
+     */
+    public $StartTime;
+
+    /**
      * @param string $RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      * @param DayRepeatStrategy $DayRepeat 按天重复规则，当RepeatType为"DAY"时有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,6 +99,7 @@ class RepeatStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 周期性规则开始时间
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class RepeatStrategy extends AbstractModel
 
         if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
             $this->Expire = $param["Expire"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

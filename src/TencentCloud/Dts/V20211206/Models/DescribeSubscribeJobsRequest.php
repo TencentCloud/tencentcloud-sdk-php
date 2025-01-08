@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSubscribeId() 获取订阅 ID 筛选，精确匹配
  * @method void setSubscribeId(string $SubscribeId) 设置订阅 ID 筛选，精确匹配
+ * @method array getSubscribeIds() 获取订阅 ID 筛选，精确匹配
+ * @method void setSubscribeIds(array $SubscribeIds) 设置订阅 ID 筛选，精确匹配
  * @method string getSubscribeName() 获取订阅名称，前缀模糊匹配
  * @method void setSubscribeName(string $SubscribeName) 设置订阅名称，前缀模糊匹配
  * @method string getInstanceId() 获取订阅的云上数据库实例的 ID，精确匹配
@@ -51,6 +53,11 @@ class DescribeSubscribeJobsRequest extends AbstractModel
      * @var string 订阅 ID 筛选，精确匹配
      */
     public $SubscribeId;
+
+    /**
+     * @var array 订阅 ID 筛选，精确匹配
+     */
+    public $SubscribeIds;
 
     /**
      * @var string 订阅名称，前缀模糊匹配
@@ -109,6 +116,7 @@ class DescribeSubscribeJobsRequest extends AbstractModel
 
     /**
      * @param string $SubscribeId 订阅 ID 筛选，精确匹配
+     * @param array $SubscribeIds 订阅 ID 筛选，精确匹配
      * @param string $SubscribeName 订阅名称，前缀模糊匹配
      * @param string $InstanceId 订阅的云上数据库实例的 ID，精确匹配
      * @param string $Topic 订阅的topicName
@@ -136,6 +144,10 @@ class DescribeSubscribeJobsRequest extends AbstractModel
         }
         if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
             $this->SubscribeId = $param["SubscribeId"];
+        }
+
+        if (array_key_exists("SubscribeIds",$param) and $param["SubscribeIds"] !== null) {
+            $this->SubscribeIds = $param["SubscribeIds"];
         }
 
         if (array_key_exists("SubscribeName",$param) and $param["SubscribeName"] !== null) {

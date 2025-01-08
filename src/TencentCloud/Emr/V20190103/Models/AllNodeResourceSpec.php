@@ -37,21 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommonResourceSpec(NodeResourceSpec $CommonResourceSpec) 设置描述Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterCount() 获取Master节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterCount(integer $MasterCount) 设置Master节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCoreCount() 获取Corer节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoreCount(integer $CoreCount) 设置Corer节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskCount() 获取Task节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskCount(integer $TaskCount) 设置Task节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCommonCount() 获取Common节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonCount(integer $CommonCount) 设置Common节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllNodeResourceSpec extends AbstractModel
 {
@@ -81,25 +73,21 @@ class AllNodeResourceSpec extends AbstractModel
 
     /**
      * @var integer Master节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterCount;
 
     /**
      * @var integer Corer节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoreCount;
 
     /**
      * @var integer Task节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCount;
 
     /**
      * @var integer Common节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonCount;
 
@@ -113,13 +101,9 @@ class AllNodeResourceSpec extends AbstractModel
      * @param NodeResourceSpec $CommonResourceSpec 描述Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterCount Master节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CoreCount Corer节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskCount Task节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CommonCount Common节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

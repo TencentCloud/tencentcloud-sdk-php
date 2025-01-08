@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
  * @method integer getDiskNum() 获取磁盘数量
  * @method void setDiskNum(integer $DiskNum) 设置磁盘数量
+ * @method integer getExtraPerformance() 获取云盘额外性能
+ * @method void setExtraPerformance(integer $ExtraPerformance) 设置云盘额外性能
  */
 class PersistentVolumeContext extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PersistentVolumeContext extends AbstractModel
     public $DiskNum;
 
     /**
+     * @var integer 云盘额外性能
+     */
+    public $ExtraPerformance;
+
+    /**
      * @param integer $DiskSize 磁盘大小，单位为GB。
      * @param string $DiskType 磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
      * @param integer $DiskNum 磁盘数量
+     * @param integer $ExtraPerformance 云盘额外性能
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PersistentVolumeContext extends AbstractModel
 
         if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
             $this->DiskNum = $param["DiskNum"];
+        }
+
+        if (array_key_exists("ExtraPerformance",$param) and $param["ExtraPerformance"] !== null) {
+            $this->ExtraPerformance = $param["ExtraPerformance"];
         }
     }
 }

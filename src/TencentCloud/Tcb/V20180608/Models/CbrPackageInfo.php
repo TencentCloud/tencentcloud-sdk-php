@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 代码包信息
  *
  * @method string getPackageName() 获取代码包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置代码包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageVersion() 获取代码包版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageVersion(string $PackageVersion) 设置代码包版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CbrPackageInfo extends AbstractModel
 {
     /**
      * @var string 代码包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
     /**
      * @var string 代码包版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageVersion;
 
     /**
      * @param string $PackageName 代码包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageVersion 代码包版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

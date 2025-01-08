@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResource(Resource $Resource) 设置Resource
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsDefault() 获取是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(string $IsDefault) 设置是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxResourceNum() 获取该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxResourceNum(integer $MaxResourceNum) 设置该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrepaidUnderwritePeriods() 获取支持的包销时长
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) 设置支持的包销时长
@@ -62,25 +54,21 @@ class NodeResource extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @var integer 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxResourceNum;
 
@@ -95,13 +83,9 @@ class NodeResource extends AbstractModel
      * @param Resource $Resource Resource
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsDefault 是否默认配置,DEFAULT,BACKUP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxResourceNum 该类型剩余
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrepaidUnderwritePeriods 支持的包销时长
 注意：此字段可能返回 null，表示取不到有效值。
      */

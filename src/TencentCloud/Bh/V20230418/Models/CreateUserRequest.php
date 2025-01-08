@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
  * @method string getRealName() 获取用户姓名，最大长度20个字符，不能包含空白字符
  * @method void setRealName(string $RealName) 设置用户姓名，最大长度20个字符，不能包含空白字符
- * @method string getPhone() 获取大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
- * @method void setPhone(string $Phone) 设置大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
- * @method string getEmail() 获取电子邮件
- * @method void setEmail(string $Email) 设置电子邮件
+ * @method string getPhone() 获取按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
+ * @method void setPhone(string $Phone) 设置按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
+ * @method string getEmail() 获取电子邮件。手机号和邮箱参数至少传一项
+ * @method void setEmail(string $Email) 设置电子邮件。手机号和邮箱参数至少传一项
  * @method string getValidateFrom() 获取用户生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则用户长期有效
  * @method void setValidateFrom(string $ValidateFrom) 设置用户生效时间，如:"2021-09-22T00:00:00+00:00"
@@ -58,12 +58,12 @@ class CreateUserRequest extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @var string 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
      */
     public $Phone;
 
     /**
-     * @var string 电子邮件
+     * @var string 电子邮件。手机号和邮箱参数至少传一项
      */
     public $Email;
 
@@ -102,8 +102,8 @@ class CreateUserRequest extends AbstractModel
     /**
      * @param string $UserName 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名，最大长度20个字符，不能包含空白字符
-     * @param string $Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     * @param string $Email 电子邮件
+     * @param string $Phone 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
+     * @param string $Email 电子邮件。手机号和邮箱参数至少传一项
      * @param string $ValidateFrom 用户生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则用户长期有效
      * @param string $ValidateTo 用户失效时间，如:"2021-09-23T00:00:00+00:00"

@@ -110,8 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrugRoute(string $DrugRoute) 设置给药途径
  * @method string getDrugBasicCode() 获取药品本位码
  * @method void setDrugBasicCode(string $DrugBasicCode) 设置药品本位码
- * @method string getOctTag() 获取OCT标签
- * @method void setOctTag(string $OctTag) 设置OCT标签
+ * @method string getOctTag() 获取OTC标签
+ * @method void setOctTag(string $OctTag) 设置OTC标签
  */
 class SmartDrugInfoResp extends AbstractModel
 {
@@ -341,7 +341,7 @@ class SmartDrugInfoResp extends AbstractModel
     public $DrugBasicCode;
 
     /**
-     * @var string OCT标签
+     * @var string OTC标签
      */
     public $OctTag;
 
@@ -391,7 +391,7 @@ class SmartDrugInfoResp extends AbstractModel
      * @param string $DrugDosageForm 剂型
      * @param string $DrugRoute 给药途径
      * @param string $DrugBasicCode 药品本位码
-     * @param string $OctTag OCT标签
+     * @param string $OctTag OTC标签
      */
     function __construct()
     {

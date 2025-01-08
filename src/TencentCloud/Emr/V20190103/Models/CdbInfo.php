@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 出参
  *
  * @method string getInstanceName() 获取数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemSize() 获取数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(integer $MemSize) 设置数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVolume() 获取数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolume(integer $Volume) 设置数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getService() 获取服务标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(string $Service) 设置服务标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplyTime() 获取申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyTime(string $ApplyTime) 设置申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayType() 获取付费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayType(integer $PayType) 设置付费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpireFlag() 获取过期标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireFlag(boolean $ExpireFlag) 设置过期标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAutoRenew() 获取续费标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAutoRenew(integer $IsAutoRenew) 设置续费标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSerialNo() 获取数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSerialNo(string $SerialNo) 设置数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取RegionId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置RegionId
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdbInfo extends AbstractModel
 {
     /**
      * @var string 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var integer 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemSize;
 
     /**
      * @var integer 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volume;
 
     /**
      * @var string 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyTime;
 
     /**
      * @var integer 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayType;
 
     /**
      * @var boolean 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireFlag;
 
     /**
      * @var integer 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAutoRenew;
 
     /**
      * @var string 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SerialNo;
 
     /**
      * @var integer ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var integer RegionId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @param string $InstanceName 数据库实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip 数据库IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 数据库端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 数据库内存规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Volume 数据库磁盘规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Service 服务标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayType 付费类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ExpireFlag 过期标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 数据库状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAutoRenew 续费标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 数据库字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId RegionId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

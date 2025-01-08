@@ -53,27 +53,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPaymentChannel() 获取付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaymentChannel(string $PaymentChannel) 设置付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OrderInfo getOrderInfo() 获取最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderInfo(OrderInfo $OrderInfo) 设置最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFreeQuota() 获取免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuota(string $FreeQuota) 设置免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableOverrun() 获取是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableOverrun(boolean $EnableOverrun) 设置是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtPackageType() 获取环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtPackageType(string $ExtPackageType) 设置环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvCharged() 获取是否付费期环境，可取值：yes/no。
  * @method void setEnvCharged(string $EnvCharged) 设置是否付费期环境，可取值：yes/no。
  * @method string getEnvActivated() 获取是否已激活，可取值：yes/no。
@@ -140,31 +130,26 @@ class EnvBillingInfoItem extends AbstractModel
      * @var string 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PaymentChannel;
 
     /**
      * @var OrderInfo 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderInfo;
 
     /**
      * @var string 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuota;
 
     /**
      * @var boolean 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableOverrun;
 
     /**
      * @var string 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtPackageType;
 
@@ -197,15 +182,10 @@ class EnvBillingInfoItem extends AbstractModel
      * @param string $PaymentChannel 付费渠道。
 <li> miniapp：小程序</li>
 <li> qcloud：腾讯云</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderInfo $OrderInfo 最新的订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FreeQuota 免费配额信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtPackageType 环境套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvCharged 是否付费期环境，可取值：yes/no。
      * @param string $EnvActivated 是否已激活，可取值：yes/no。
      */

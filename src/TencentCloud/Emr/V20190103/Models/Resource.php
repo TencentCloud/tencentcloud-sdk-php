@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 资源详情
  *
  * @method string getSpec() 获取节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageType() 获取存储类型
 取值范围：
 <li>4：表示云SSD。</li>
@@ -31,7 +29,6 @@ use TencentCloud\Common\AbstractModel;
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(integer $StorageType) 设置存储类型
 取值范围：
 <li>4：表示云SSD。</li>
@@ -39,35 +36,24 @@ use TencentCloud\Common\AbstractModel;
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取磁盘类型
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置磁盘类型
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemSize() 获取内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(integer $MemSize) 设置内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRootSize() 获取系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootSize(integer $RootSize) 设置系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMultiDisks() 获取云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiDisks(array $MultiDisks) 设置云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
@@ -77,23 +63,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置需要绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLocalDiskNum() 获取本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskNum() 获取本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskNum(integer $DiskNum) 设置本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
     /**
      * @var string 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Spec;
 
@@ -105,7 +84,6 @@ class Resource extends AbstractModel
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
@@ -115,31 +93,26 @@ class Resource extends AbstractModel
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemSize;
 
     /**
      * @var integer CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var integer 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootSize;
 
@@ -157,25 +130,21 @@ class Resource extends AbstractModel
 
     /**
      * @var string 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var integer 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDiskNum;
 
     /**
      * @var integer 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskNum;
 
     /**
      * @param string $Spec 节点规格描述，如CVM.SA2。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageType 存储类型
 取值范围：
 <li>4：表示云SSD。</li>
@@ -183,31 +152,22 @@ class Resource extends AbstractModel
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
 <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 磁盘类型
 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_BASIC：表示云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RootSize 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 需要绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 规格类型，如S2.MEDIUM8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LocalDiskNum 本地盘数量，该字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskNum 本地盘数量，如2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

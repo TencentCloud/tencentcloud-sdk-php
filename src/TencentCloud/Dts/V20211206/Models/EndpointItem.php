@@ -80,9 +80,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnOwnerUin(string $CcnOwnerUin) 设置云联网网关所属的主账号uin、跨账号云联网需要。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExtraAttr() 获取为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
+ * @method array getExtraAttr() 获取为业务添加的额外信息。参数名作key，参数值作value。 
+tdpg必填参数：PgDatabase-订阅的库名；
+mongo选填参数：InstanceType-实例类型：replicaset-副本集，cluster-分片集，主要用于控制台跳转到mongo实例页面，如不填不影响任务运行；
+全业务选填参数：EngineVersion-内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
+ * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。 
+tdpg必填参数：PgDatabase-订阅的库名；
+mongo选填参数：InstanceType-实例类型：replicaset-副本集，cluster-分片集，主要用于控制台跳转到mongo实例页面，如不填不影响任务运行；
+全业务选填参数：EngineVersion-内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChildInstanceId() 获取数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,7 +192,10 @@ class EndpointItem extends AbstractModel
     public $CcnOwnerUin;
 
     /**
-     * @var array 为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
+     * @var array 为业务添加的额外信息。参数名作key，参数值作value。 
+tdpg必填参数：PgDatabase-订阅的库名；
+mongo选填参数：InstanceType-实例类型：replicaset-副本集，cluster-分片集，主要用于控制台跳转到mongo实例页面，如不填不影响任务运行；
+全业务选填参数：EngineVersion-内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraAttr;
@@ -234,7 +243,10 @@ class EndpointItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CcnOwnerUin 云联网网关所属的主账号uin、跨账号云联网需要。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。 tdpg必填参数：PgDatabase-订阅的库名。
+     * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。 
+tdpg必填参数：PgDatabase-订阅的库名；
+mongo选填参数：InstanceType-实例类型：replicaset-副本集，cluster-分片集，主要用于控制台跳转到mongo实例页面，如不填不影响任务运行；
+全业务选填参数：EngineVersion-内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
 注意：此字段可能返回 null，表示取不到有效值。

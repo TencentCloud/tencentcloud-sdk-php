@@ -54,7 +54,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(Models\DescribeCloudBaseRunConfForGateWayRequest $req) 独立网关中拉取云托管服务对应的配置信息
  * @method Models\DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(Models\DescribeCloudBaseRunOneClickTaskExternalRequest $req) 查询一键部署任务 （特定接口：外部查询使用）
  * @method Models\DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(Models\DescribeCloudBaseRunOperationTypesRequest $req) 查询服务、版本和操作类型
- * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云应用服务版本容器列表
+ * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云托管服务版本容器列表
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
  * @method Models\DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(Models\DescribeCloudBaseRunResourceForExtendRequest $req) 查看容器托管的集群状态扩展使用
  * @method Models\DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(Models\DescribeCloudBaseRunServerRequest $req) 查询单个服务的详情，版本以及详情

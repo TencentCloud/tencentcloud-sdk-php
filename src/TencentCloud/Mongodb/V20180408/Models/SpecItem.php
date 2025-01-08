@@ -21,261 +21,177 @@ use TencentCloud\Common\AbstractModel;
  * mongodb售卖规格
  *
  * @method string getSpecCode() 获取规格信息标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecCode(string $SpecCode) 设置规格信息标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取规格有效标志，取值：0-停止售卖，1-开放售卖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规格有效标志，取值：0-停止售卖，1-开放售卖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineType() 获取机器类型，取值：0-HIO，4-HIO10G
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineType(string $MachineType) 设置机器类型，取值：0-HIO，4-HIO10G
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取cpu核心数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置cpu核心数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取内存规格，单位为MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(integer $Memory) 设置内存规格，单位为MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultStorage() 获取默认磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultStorage(integer $DefaultStorage) 设置默认磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxStorage() 获取最大磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxStorage(integer $MaxStorage) 设置最大磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinStorage() 获取最小磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinStorage(integer $MinStorage) 设置最小磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQps() 获取可承载qps信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQps(integer $Qps) 设置可承载qps信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConns() 获取连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConns(integer $Conns) 设置连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMongoVersionCode() 获取实例mongodb版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoVersionCode(string $MongoVersionCode) 设置实例mongodb版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongoVersionValue() 获取实例mongodb版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoVersionValue(integer $MongoVersionValue) 设置实例mongodb版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取实例mongodb版本号（短）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置实例mongodb版本号（短）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineName() 获取存储引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineName(string $EngineName) 设置存储引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterType() 获取集群类型，取值：1-分片集群，0-副本集集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterType(integer $ClusterType) 设置集群类型，取值：1-分片集群，0-副本集集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinNodeNum() 获取最小副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinNodeNum(integer $MinNodeNum) 设置最小副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxNodeNum() 获取最大副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxNodeNum(integer $MaxNodeNum) 设置最大副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinReplicateSetNum() 获取最小分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinReplicateSetNum(integer $MinReplicateSetNum) 设置最小分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReplicateSetNum() 获取最大分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicateSetNum(integer $MaxReplicateSetNum) 设置最大分片数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinReplicateSetNodeNum() 获取最小分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinReplicateSetNodeNum(integer $MinReplicateSetNodeNum) 设置最小分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReplicateSetNodeNum() 获取最大分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) 设置最大分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpecItem extends AbstractModel
 {
     /**
      * @var string 规格信息标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecCode;
 
     /**
      * @var integer 规格有效标志，取值：0-停止售卖，1-开放售卖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 机器类型，取值：0-HIO，4-HIO10G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineType;
 
     /**
      * @var integer cpu核心数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer 内存规格，单位为MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var integer 默认磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultStorage;
 
     /**
      * @var integer 最大磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxStorage;
 
     /**
      * @var integer 最小磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinStorage;
 
     /**
      * @var integer 可承载qps信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
 
     /**
      * @var integer 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Conns;
 
     /**
      * @var string 实例mongodb版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoVersionCode;
 
     /**
      * @var integer 实例mongodb版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoVersionValue;
 
     /**
      * @var string 实例mongodb版本号（短）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 存储引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
 
     /**
      * @var integer 集群类型，取值：1-分片集群，0-副本集集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
      * @var integer 最小副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinNodeNum;
 
     /**
      * @var integer 最大副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxNodeNum;
 
     /**
      * @var integer 最小分片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinReplicateSetNum;
 
     /**
      * @var integer 最大分片数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReplicateSetNum;
 
     /**
      * @var integer 最小分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinReplicateSetNodeNum;
 
     /**
      * @var integer 最大分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReplicateSetNodeNum;
 
     /**
      * @param string $SpecCode 规格信息标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规格有效标志，取值：0-停止售卖，1-开放售卖
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineType 机器类型，取值：0-HIO，4-HIO10G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu cpu核心数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存规格，单位为MB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultStorage 默认磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStorage 最大磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinStorage 最小磁盘规格，单位MB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Qps 可承载qps信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Conns 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MongoVersionCode 实例mongodb版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongoVersionValue 实例mongodb版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 实例mongodb版本号（短）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineName 存储引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterType 集群类型，取值：1-分片集群，0-副本集集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinNodeNum 最小副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxNodeNum 最大副本集从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinReplicateSetNum 最小分片数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicateSetNum 最大分片数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinReplicateSetNodeNum 最小分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicateSetNodeNum 最大分片从节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

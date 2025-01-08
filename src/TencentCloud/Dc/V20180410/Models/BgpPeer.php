@@ -18,36 +18,36 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * bgp参数，包括Asn，AuthKey
+ * bgp参数，包括CloudAsn，Asn，AuthKey
  *
+ * @method string getCloudAsn() 获取腾讯侧BGP ASN
+ * @method void setCloudAsn(string $CloudAsn) 设置腾讯侧BGP ASN
  * @method integer getAsn() 获取用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsn(integer $Asn) 设置用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthKey() 获取用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthKey(string $AuthKey) 设置用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BgpPeer extends AbstractModel
 {
     /**
+     * @var string 腾讯侧BGP ASN
+     */
+    public $CloudAsn;
+
+    /**
      * @var integer 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Asn;
 
     /**
      * @var string 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthKey;
 
     /**
+     * @param string $CloudAsn 腾讯侧BGP ASN
      * @param integer $Asn 用户侧BGP ASN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthKey 用户侧BGP密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -62,6 +62,10 @@ class BgpPeer extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CloudAsn",$param) and $param["CloudAsn"] !== null) {
+            $this->CloudAsn = $param["CloudAsn"];
+        }
+
         if (array_key_exists("Asn",$param) and $param["Asn"] !== null) {
             $this->Asn = $param["Asn"];
         }

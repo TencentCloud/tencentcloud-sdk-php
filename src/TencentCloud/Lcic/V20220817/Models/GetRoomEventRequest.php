@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用Id。
  * @method integer getPage() 获取起始页，1开始。keyword为空时有效。
  * @method void setPage(integer $Page) 设置起始页，1开始。keyword为空时有效。
- * @method integer getLimit() 获取每页个数。keyword为空时有效。一次性最多200条。
- * @method void setLimit(integer $Limit) 设置每页个数。keyword为空时有效。一次性最多200条。
+ * @method integer getLimit() 获取每页个数。keyword为空时有效。一次性最多100条。
+ * @method void setLimit(integer $Limit) 设置每页个数。keyword为空时有效。一次性最多100条。
  * @method string getKeyword() 获取搜索事件类型。有以下事件类型:
 RoomStart:房间开始
 RoomEnd:房间结束
@@ -75,7 +75,7 @@ class GetRoomEventRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer 每页个数。keyword为空时有效。一次性最多200条。
+     * @var integer 每页个数。keyword为空时有效。一次性最多100条。
      */
     public $Limit;
 
@@ -101,7 +101,7 @@ VisibleOff: 页面不可见
      * @param integer $RoomId 房间Id。
      * @param integer $SdkAppId 应用Id。
      * @param integer $Page 起始页，1开始。keyword为空时有效。
-     * @param integer $Limit 每页个数。keyword为空时有效。一次性最多200条。
+     * @param integer $Limit 每页个数。keyword为空时有效。一次性最多100条。
      * @param string $Keyword 搜索事件类型。有以下事件类型:
 RoomStart:房间开始
 RoomEnd:房间结束

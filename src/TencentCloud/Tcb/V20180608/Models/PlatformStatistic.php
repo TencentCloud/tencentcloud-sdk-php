@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 终端用户平台统计信息
  *
  * @method string getPlatform() 获取终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlatform(string $Platform) 设置终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlatformStatistic extends AbstractModel
 {
     /**
      * @var string 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Platform;
 
     /**
      * @var integer 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $Platform 终端用户从属平台
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 平台终端用户数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

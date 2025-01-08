@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
  * @method string getOrderByType() 获取排序类型，可选值：asc,desc
  * @method void setOrderByType(string $OrderByType) 设置排序类型，可选值：asc,desc
+ * @method string getSqlText() 获取sql语句
+ * @method void setSqlText(string $SqlText) 设置sql语句
  */
 class DescribeInstanceSlowQueriesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var string sql语句
+     */
+    public $SqlText;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $StartTime 事务开始最早时间
      * @param string $EndTime 事务开始最晚时间
@@ -104,6 +111,7 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
      * @param string $Database 数据库名
      * @param string $OrderBy 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
      * @param string $OrderByType 排序类型，可选值：asc,desc
+     * @param string $SqlText sql语句
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("SqlText",$param) and $param["SqlText"] !== null) {
+            $this->SqlText = $param["SqlText"];
         }
     }
 }

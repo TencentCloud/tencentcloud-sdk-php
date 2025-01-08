@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeName(string $NodeName) 设置节点名称。
  * @method string getAddress() 获取节点访问地址。
  * @method void setAddress(string $Address) 设置节点访问地址。
- * @method string getWanServiceAddress() 获取节点公网访问地址(IP或域名)。
- * @method void setWanServiceAddress(string $WanServiceAddress) 设置节点公网访问地址(IP或域名)。
+ * @method string getWanServiceAddress() 获取节点公网访问外网地址(IP或域名，示例为IP方式)。
+ * @method void setWanServiceAddress(string $WanServiceAddress) 设置节点公网访问外网地址(IP或域名，示例为IP方式)。
  * @method string getRole() 获取角色。
  * @method void setRole(string $Role) 设置角色。
  * @method boolean getHidden() 获取是否为Hidden节点
@@ -63,7 +63,7 @@ class NodeProperty extends AbstractModel
     public $Address;
 
     /**
-     * @var string 节点公网访问地址(IP或域名)。
+     * @var string 节点公网访问外网地址(IP或域名，示例为IP方式)。
      */
     public $WanServiceAddress;
 
@@ -111,7 +111,7 @@ class NodeProperty extends AbstractModel
      * @param string $Zone 节点所在的可用区。
      * @param string $NodeName 节点名称。
      * @param string $Address 节点访问地址。
-     * @param string $WanServiceAddress 节点公网访问地址(IP或域名)。
+     * @param string $WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
      * @param string $Role 角色。
      * @param boolean $Hidden 是否为Hidden节点
      * @param string $Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。

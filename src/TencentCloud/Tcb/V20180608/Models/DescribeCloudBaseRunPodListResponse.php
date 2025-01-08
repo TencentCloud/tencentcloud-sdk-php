@@ -20,17 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudBaseRunPodList返回参数结构体
  *
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取分页大小
+ * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getPodList() 获取容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodList(array $PodList) 设置容器列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudBaseRunPodListResponse extends AbstractModel
 {
     /**
+     * @var integer 偏移量
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页大小
+     */
+    public $Limit;
+
+    /**
+     * @var integer 总数
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $Offset 偏移量
+     * @param integer $Limit 分页大小
+     * @param integer $TotalCount 总数
+     * @param array $PodList 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +82,27 @@ class DescribeCloudBaseRunPodListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = [];
+            foreach ($param["PodList"] as $key => $value){
+                $obj = new CloudBaseRunVersionPod();
+                $obj->deserialize($value);
+                array_push($this->PodList, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

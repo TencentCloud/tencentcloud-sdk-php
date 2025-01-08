@@ -107,33 +107,19 @@ REJECTED:拒绝
  * @method BGPStatus getBgpStatus() 获取BGP状态
  * @method void setBgpStatus(BGPStatus $BgpStatus) 设置BGP状态
  * @method integer getIPv6Enable() 获取是否开启IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPv6Enable(integer $IPv6Enable) 设置是否开启IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTencentIPv6Address() 获取腾讯侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTencentIPv6Address(string $TencentIPv6Address) 设置腾讯侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTencentBackupIPv6Address() 获取腾讯侧备用互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTencentBackupIPv6Address(string $TencentBackupIPv6Address) 设置腾讯侧备用互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BGPStatus getBgpIPv6Status() 获取BGPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBgpIPv6Status(BGPStatus $BgpIPv6Status) 设置BGPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomerIPv6Address() 获取用户侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomerIPv6Address(string $CustomerIPv6Address) 设置用户侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJumboEnable() 获取专用通道是否支持巨帧。1 支持，0 不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJumboEnable(integer $JumboEnable) 设置专用通道是否支持巨帧。1 支持，0 不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHighPrecisionBFDEnable() 获取专用通道是否支持高精度BFD。1支持，0不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighPrecisionBFDEnable(integer $HighPrecisionBFDEnable) 设置专用通道是否支持高精度BFD。1支持，0不支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnelExtra extends AbstractModel
 {
@@ -314,43 +300,36 @@ REJECTED:拒绝
 
     /**
      * @var integer 是否开启IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6Enable;
 
     /**
      * @var string 腾讯侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TencentIPv6Address;
 
     /**
      * @var string 腾讯侧备用互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TencentBackupIPv6Address;
 
     /**
      * @var BGPStatus BGPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BgpIPv6Status;
 
     /**
      * @var string 用户侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomerIPv6Address;
 
     /**
      * @var integer 专用通道是否支持巨帧。1 支持，0 不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JumboEnable;
 
     /**
      * @var integer 专用通道是否支持高精度BFD。1支持，0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighPrecisionBFDEnable;
 
@@ -399,19 +378,12 @@ REJECTED:拒绝
      * @param NQAInfo $NqaInfo NQA配置信息
      * @param BGPStatus $BgpStatus BGP状态
      * @param integer $IPv6Enable 是否开启IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TencentIPv6Address 腾讯侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TencentBackupIPv6Address 腾讯侧备用互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BGPStatus $BgpIPv6Status BGPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomerIPv6Address 用户侧互联IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JumboEnable 专用通道是否支持巨帧。1 支持，0 不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighPrecisionBFDEnable 专用通道是否支持高精度BFD。1支持，0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

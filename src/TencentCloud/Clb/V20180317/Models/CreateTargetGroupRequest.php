@@ -30,6 +30,19 @@ use TencentCloud\Common\AbstractModel;
 
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
+ * @method array getTags() 获取标签。
+ * @method void setTags(array $Tags) 设置标签。
+ * @method integer getWeight() 获取后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+ * @method void setWeight(integer $Weight) 设置后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -55,11 +68,32 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
+     * @var array 标签。
+     */
+    public $Tags;
+
+    /**
+     * @var integer 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
+
+     */
+    public $Weight;
+
+    /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
+     * @param array $Tags 标签。
+     * @param integer $Weight 后端服务默认权重。
+<ul>
+    <li>取值范围[0, 100]</li>
+    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
+</ul>
      */
     function __construct()
     {
@@ -93,6 +127,19 @@ class CreateTargetGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstances, $obj);
             }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

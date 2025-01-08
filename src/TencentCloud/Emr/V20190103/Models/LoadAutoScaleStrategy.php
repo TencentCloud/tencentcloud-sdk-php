@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 自动扩缩容基于负载指标的规则
  *
  * @method integer getStrategyId() 获取规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(integer $StrategyId) 设置规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyName() 获取规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCalmDownTime() 获取规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalmDownTime(integer $CalmDownTime) 设置规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaleAction() 获取扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleAction(integer $ScaleAction) 设置扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaleNum() 获取每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleNum(integer $ScaleNum) 设置每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProcessMethod() 获取指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessMethod(integer $ProcessMethod) 设置指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyStatus() 获取规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyStatus(integer $StrategyStatus) 设置规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getYarnNodeLabel() 获取规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPeriodValid() 获取规则生效的有效时间
  * @method void setPeriodValid(string $PeriodValid) 设置规则生效的有效时间
  * @method boolean getGraceDownFlag() 获取优雅缩容开关
@@ -67,21 +49,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigGroupAssigned() 获取预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigGroupAssigned(string $ConfigGroupAssigned) 设置预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMeasureMethod() 获取扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMeasureMethod(string $MeasureMethod) 设置扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LoadMetricsConditions getLoadMetricsConditions() 获取多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadMetricsConditions(LoadMetricsConditions $LoadMetricsConditions) 设置多指标触发条件
@@ -91,55 +69,46 @@ class LoadAutoScaleStrategy extends AbstractModel
 {
     /**
      * @var integer 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @var string 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
      * @var integer 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalmDownTime;
 
     /**
      * @var integer 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleAction;
 
     /**
      * @var integer 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleNum;
 
     /**
      * @var integer 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessMethod;
 
     /**
      * @var integer 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var integer 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyStatus;
 
     /**
      * @var string 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $YarnNodeLabel;
 
@@ -166,7 +135,6 @@ class LoadAutoScaleStrategy extends AbstractModel
 
     /**
      * @var string 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigGroupAssigned;
 
@@ -176,7 +144,6 @@ class LoadAutoScaleStrategy extends AbstractModel
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MeasureMethod;
 
@@ -188,36 +155,25 @@ class LoadAutoScaleStrategy extends AbstractModel
 
     /**
      * @param integer $StrategyId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CalmDownTime 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleNum 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyStatus 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $YarnNodeLabel 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PeriodValid 规则生效的有效时间
      * @param boolean $GraceDownFlag 优雅缩容开关
      * @param integer $GraceDownTime 优雅缩容等待时间
      * @param array $Tags 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadMetricsConditions $LoadMetricsConditions 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      */

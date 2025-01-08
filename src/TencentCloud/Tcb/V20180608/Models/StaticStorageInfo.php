@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 静态CDN资源信息
  *
  * @method string getStaticDomain() 获取静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaticDomain(string $StaticDomain) 设置静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultDirName() 获取静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultDirName(string $DefaultDirName) 设置静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucket() 获取bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StaticStorageInfo extends AbstractModel
 {
     /**
      * @var string 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StaticDomain;
 
     /**
      * @var string 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultDirName;
 
     /**
      * @var string 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
      * @param string $StaticDomain 静态CDN域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultDirName 静态CDN默认文件夹，当前为根目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 资源状态(process/online/offline/init)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region cos所属区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Bucket bucket信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

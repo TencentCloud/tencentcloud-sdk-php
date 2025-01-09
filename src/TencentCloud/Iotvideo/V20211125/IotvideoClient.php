@@ -89,6 +89,7 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\DescribeFirmwareTaskStatisticsResponse DescribeFirmwareTaskStatistics(Models\DescribeFirmwareTaskStatisticsRequest $req) 本接口用于查询固件升级任务统计信息
  * @method Models\DescribeFirmwareTasksResponse DescribeFirmwareTasks(Models\DescribeFirmwareTasksRequest $req) 本接口用于查询固件升级任务列表
  * @method Models\DescribeForwardRuleResponse DescribeForwardRule(Models\DescribeForwardRuleRequest $req) 获取产品转发规则
+ * @method Models\DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(Models\DescribeFreeCloudStorageNumRequest $req) 查询云存卡套餐信息
  * @method Models\DescribeMessageDataStatsResponse DescribeMessageDataStats(Models\DescribeMessageDataStatsRequest $req) 查询设备消息数量统计
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
  * @method Models\DescribeP2PInfoResponse DescribeP2PInfo(Models\DescribeP2PInfoRequest $req) 拉取设备p2p信息

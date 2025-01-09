@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cmq\V20190304\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSubscribe返回参数结构体
+ * DescribeActivateLicenseService返回参数结构体
  *
- * @method string getSubscriptionId() 获取SubscriptionId
- * @method void setSubscriptionId(string $SubscriptionId) 设置SubscriptionId
+ * @method array getData() 获取增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(array $Data) 设置增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSubscribeResponse extends AbstractModel
+class DescribeActivateLicenseServiceResponse extends AbstractModel
 {
     /**
-     * @var string SubscriptionId
+     * @var array 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SubscriptionId;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class CreateSubscribeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SubscriptionId SubscriptionId
+     * @param array $Data 增值服务激活码信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,13 @@ class CreateSubscribeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscriptionId",$param) and $param["SubscriptionId"] !== null) {
-            $this->SubscriptionId = $param["SubscriptionId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new LicenseServiceNumInfo();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

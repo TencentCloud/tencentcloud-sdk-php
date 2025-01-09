@@ -33,13 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  * @method integer getLicensePayMode() 获取license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayer() 获取付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayer(integer $Payer) 设置付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取设备分组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置设备分组ID
@@ -95,13 +91,11 @@ class DeviceBaseInfo extends AbstractModel
 
     /**
      * @var integer license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicensePayMode;
 
     /**
      * @var integer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Payer;
 
@@ -143,9 +137,7 @@ class DeviceBaseInfo extends AbstractModel
      * @param string $Remark 设备的备注
      * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      * @param integer $LicensePayMode license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Payer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 设备分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备分组名称

@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 激活设备
  *
  * @method string getVendor() 获取厂商名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVendor(string $Vendor) 设置厂商名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSN() 获取设备SN序列号
  * @method void setSN(string $SN) 设置设备SN序列号
  * @method string getDeviceName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataKey() 获取设备密钥
  * @method void setDataKey(string $DataKey) 设置设备密钥
  * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
@@ -44,36 +38,25 @@ use TencentCloud\Common\AbstractModel;
 若不传则默认为月度授权。
 当付费方为厂商时，此参数无效
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicensePayMode(integer $LicensePayMode) 设置当付费方为租户时，可选择租户license付费方式：
 0，月度授权
 1，永久授权
 若不传则默认为月度授权。
 当付费方为厂商时，此参数无效
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取设备分组名称，预留参数，需要分组时传入GroupId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置设备分组名称，预留参数，需要分组时传入GroupId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceId() 获取激活后的设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置激活后的设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivateHardware extends AbstractModel
 {
     /**
      * @var string 厂商名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vendor;
 
@@ -84,13 +67,11 @@ class ActivateHardware extends AbstractModel
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -111,42 +92,34 @@ class ActivateHardware extends AbstractModel
 若不传则默认为月度授权。
 当付费方为厂商时，此参数无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicensePayMode;
 
     /**
      * @var string 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 设备分组名称，预留参数，需要分组时传入GroupId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTrunc;
 
     /**
      * @var string 激活后的设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @param string $Vendor 厂商名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 设备SN序列号
      * @param string $DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataKey 设备密钥
      * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      * @param integer $LicensePayMode 当付费方为租户时，可选择租户license付费方式：
@@ -155,15 +128,10 @@ class ActivateHardware extends AbstractModel
 若不传则默认为月度授权。
 当付费方为厂商时，此参数无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备分组名称，预留参数，需要分组时传入GroupId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 激活后的设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreshold(float $Threshold) 设置指标阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndicatorTimeRangeUnit() 获取时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorTimeRangeUnit(string $IndicatorTimeRangeUnit) 设置时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIndicatorTimeRangeValue() 获取时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorTimeRangeValue(integer $IndicatorTimeRangeValue) 设置时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmIndicatorInfo extends AbstractModel
 {
@@ -125,6 +133,18 @@ class AlarmIndicatorInfo extends AbstractModel
     public $Threshold;
 
     /**
+     * @var string 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorTimeRangeUnit;
+
+    /**
+     * @var integer 时间范围值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorTimeRangeValue;
+
+    /**
      * @param string $Id 指标id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmIndicator 告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
@@ -143,6 +163,10 @@ class AlarmIndicatorInfo extends AbstractModel
      * @param string $DurationUnit 告警周期单位:hour,minute,day
      * @param integer $MaxTimes 周期内最多告警次数
      * @param float $Threshold 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndicatorTimeRangeUnit 时间范围单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IndicatorTimeRangeValue 时间范围值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +224,14 @@ class AlarmIndicatorInfo extends AbstractModel
 
         if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
             $this->Threshold = $param["Threshold"];
+        }
+
+        if (array_key_exists("IndicatorTimeRangeUnit",$param) and $param["IndicatorTimeRangeUnit"] !== null) {
+            $this->IndicatorTimeRangeUnit = $param["IndicatorTimeRangeUnit"];
+        }
+
+        if (array_key_exists("IndicatorTimeRangeValue",$param) and $param["IndicatorTimeRangeValue"] !== null) {
+            $this->IndicatorTimeRangeValue = $param["IndicatorTimeRangeValue"];
         }
     }
 }

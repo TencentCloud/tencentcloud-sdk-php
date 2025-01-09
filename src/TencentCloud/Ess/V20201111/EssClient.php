@@ -147,7 +147,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 
 ### 填充模板中定义的填写控件
-模板中配置的<font color="red">发起人填充控件</font>可以通过本接口的**FormFields数组**字段填充
+模板中配置的<font color="red">发起人填充控件</font>可以通过本接口的**FormFields数组**字段填充。
+
+**<font color="red">填充填写控件需要进行Pdf合成工作，文档合成完成后会收到[文档合成完成后回调通知](https://qian.tencent.com/developers/company/callback_types_file_resources),建议在收到此回调后再调用 [StartFlow](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow) 接口。</font>**
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/37457e0e450fc221effddfcb8b1bad55.png)
 
@@ -792,12 +794,31 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeFlowBriefsResponse DescribeFlowBriefs(Models\DescribeFlowBriefsRequest $req) 查询流程基础信息，主要用于<font color="red">查询合同的状态</font>信息。可以配合回调通知使用。
 
 注: `每个企业限制日调用量限制：100W，当日超过此限制后再调用接口返回错误`
- * @method Models\DescribeFlowComponentsResponse DescribeFlowComponents(Models\DescribeFlowComponentsRequest $req) 可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容，包括填写控件的归属方、填写控件是否已经填写以及填写的具体内容。
+ * @method Models\DescribeFlowComponentsResponse DescribeFlowComponents(Models\DescribeFlowComponentsRequest $req) 您可以通过合同流程ID查询相关的<font color="red"><b>填写控件</b></font>信息及其内容。这包括控件的归属方、控件的填写状态（是否已填写）以及具体的填写内容。
 
-
-如下图模板所示，发起后对方填写后，可以获取红框中用户填写的信息。
+无论是发起方还是签署方填写的控件，均包含在查询结果中。
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/08f6ea50d3ae88b51c280c2b17c2a126.png)
+
+
+### 2.  那些控件会出现在结果里边？ 
+**A.不返回的控件类型：**
+- 动态表格
+- 附件控件
+- 水印控件
+
+**B.返回的控件类型：**
+- 单行文本
+- 多行文本
+- 勾选框控件
+- 数字控件
+- 日期控件
+- 图片控件（图片下载地址）
+- 邮箱控件
+- 地址控件
+- 学历控件
+- 性别控件
+- 省市区控件
  * @method Models\DescribeFlowEvidenceReportResponse DescribeFlowEvidenceReport(Models\DescribeFlowEvidenceReportRequest $req) 获取出证报告任务执行结果，返回报告 URL。
 
 

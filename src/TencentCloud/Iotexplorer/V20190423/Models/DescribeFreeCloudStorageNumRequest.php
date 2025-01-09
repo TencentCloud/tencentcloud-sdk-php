@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cmq\V20190304\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UnbindDeadLetter请求参数结构体
+ * DescribeFreeCloudStorageNum请求参数结构体
  *
- * @method string getQueueName() 获取死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
- * @method void setQueueName(string $QueueName) 设置死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+
  */
-class UnbindDeadLetterRequest extends AbstractModel
+class DescribeFreeCloudStorageNumRequest extends AbstractModel
 {
-    /**
-     * @var string 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
-     */
-    public $QueueName;
+
 
     /**
-     * @param string $QueueName 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class UnbindDeadLetterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
-        }
+
     }
 }

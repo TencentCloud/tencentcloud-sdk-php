@@ -23,44 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cmq\V20190304\Models as Models;
 
 /**
- * @method Models\ClearQueueResponse ClearQueue(Models\ClearQueueRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-清除queue中的所有消息
- * @method Models\ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(Models\ClearSubscriptionFilterTagsRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-清空订阅者消息标签
- * @method Models\CreateQueueResponse CreateQueue(Models\CreateQueueRequest $req) 创建队列接口
-
- * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-创建订阅接口
- * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
- * @method Models\DeleteQueueResponse DeleteQueue(Models\DeleteQueueRequest $req) DeleteQueue
- * @method Models\DeleteSubscribeResponse DeleteSubscribe(Models\DeleteSubscribeRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-删除订阅
- * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-删除主题
- * @method Models\DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(Models\DescribeDeadLetterSourceQueuesRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-枚举死信队列源队列
  * @method Models\DescribeQueueDetailResponse DescribeQueueDetail(Models\DescribeQueueDetailRequest $req) 枚举队列列表
- * @method Models\DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(Models\DescribeSubscriptionDetailRequest $req) 查询订阅详情
  * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) 查询主题详情
- * @method Models\ModifyQueueAttributeResponse ModifyQueueAttribute(Models\ModifyQueueAttributeRequest $req) 修改队列属性
- * @method Models\ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(Models\ModifySubscriptionAttributeRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-修改订阅属性
- * @method Models\ModifyTopicAttributeResponse ModifyTopicAttribute(Models\ModifyTopicAttributeRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-修改主题属性
- * @method Models\RewindQueueResponse RewindQueue(Models\RewindQueueRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-回溯队列
- * @method Models\UnbindDeadLetterResponse UnbindDeadLetter(Models\UnbindDeadLetterRequest $req) 下线老cmq云API 3.0 无调用量接口
-
-解绑死信队列
  */
 
 class CmqClient extends AbstractClient

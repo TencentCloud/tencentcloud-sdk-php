@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPrivateIpAddress() 获取内网IP地址。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置内网IP地址。
  * @method boolean getPrimary() 获取是否是主IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrimary(boolean $Primary) 设置是否是主IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIpAddress() 获取公网IP地址。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置公网IP地址。
  * @method string getAddressId() 获取EIP实例ID，例如：eip-11112222。
@@ -33,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取内网IP描述信息。
  * @method void setDescription(string $Description) 设置内网IP描述信息。
  * @method boolean getIsWanIpBlocked() 获取公网IP是否被封堵。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) 设置公网IP是否被封堵。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取IP状态：
 PENDING：生产中
 MIGRATING：迁移中
@@ -56,7 +52,6 @@ class PrivateIpAddressSpecification extends AbstractModel
 
     /**
      * @var boolean 是否是主IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Primary;
 
@@ -77,7 +72,6 @@ class PrivateIpAddressSpecification extends AbstractModel
 
     /**
      * @var boolean 公网IP是否被封堵。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsWanIpBlocked;
 
@@ -93,12 +87,10 @@ AVAILABLE：可用的
     /**
      * @param string $PrivateIpAddress 内网IP地址。
      * @param boolean $Primary 是否是主IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIpAddress 公网IP地址。
      * @param string $AddressId EIP实例ID，例如：eip-11112222。
      * @param string $Description 内网IP描述信息。
      * @param boolean $IsWanIpBlocked 公网IP是否被封堵。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State IP状态：
 PENDING：生产中
 MIGRATING：迁移中

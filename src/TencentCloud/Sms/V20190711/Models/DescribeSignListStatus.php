@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignName(string $SignName) 设置签名名称。
  * @method integer getCreateTime() 获取提交审核时间，UNIX 时间戳（单位：秒）。
  * @method void setCreateTime(integer $CreateTime) 设置提交审核时间，UNIX 时间戳（单位：秒）。
+ * @method integer getQualificationId() 获取国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+ * @method void setQualificationId(integer $QualificationId) 设置国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+ * @method string getQualificationName() 获取国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+ * @method void setQualificationName(string $QualificationName) 设置国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+ * @method integer getQualificationStatusCode() 获取国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+ * @method void setQualificationStatusCode(integer $QualificationStatusCode) 设置国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
  */
 class DescribeSignListStatus extends AbstractModel
 {
@@ -72,6 +84,24 @@ class DescribeSignListStatus extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+     */
+    public $QualificationId;
+
+    /**
+     * @var string 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+     */
+    public $QualificationName;
+
+    /**
+     * @var integer 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
+     */
+    public $QualificationStatusCode;
+
+    /**
      * @param integer $SignId 签名Id
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
@@ -80,6 +110,12 @@ class DescribeSignListStatus extends AbstractModel
      * @param string $ReviewReply 审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
      * @param string $SignName 签名名称。
      * @param integer $CreateTime 提交审核时间，UNIX 时间戳（单位：秒）。
+     * @param integer $QualificationId 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+注：国际短信不涉及，默认为0。
+     * @param string $QualificationName 国内短信的资质名称。
+注：国际短信不涉及，默认为空。
+     * @param integer $QualificationStatusCode 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+注：国际短信不涉及，默认为0。
      */
     function __construct()
     {
@@ -116,6 +152,18 @@ class DescribeSignListStatus extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("QualificationId",$param) and $param["QualificationId"] !== null) {
+            $this->QualificationId = $param["QualificationId"];
+        }
+
+        if (array_key_exists("QualificationName",$param) and $param["QualificationName"] !== null) {
+            $this->QualificationName = $param["QualificationName"];
+        }
+
+        if (array_key_exists("QualificationStatusCode",$param) and $param["QualificationStatusCode"] !== null) {
+            $this->QualificationStatusCode = $param["QualificationStatusCode"];
         }
     }
 }

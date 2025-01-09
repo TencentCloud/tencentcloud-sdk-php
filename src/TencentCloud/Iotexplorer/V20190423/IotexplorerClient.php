@@ -65,6 +65,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic 
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则
+ * @method Models\DescribeActivateDeviceResponse DescribeActivateDevice(Models\DescribeActivateDeviceRequest $req) 获取设备激活详情
+ * @method Models\DescribeActivateLicenseServiceResponse DescribeActivateLicenseService(Models\DescribeActivateLicenseServiceRequest $req) 获取增值服务激活码详情
  * @method Models\DescribeBatchProductionResponse DescribeBatchProduction(Models\DescribeBatchProductionRequest $req) 获取量产详情信息。
  * @method Models\DescribeBindedProductsResponse DescribeBindedProducts(Models\DescribeBindedProductsRequest $req) 获取网关产品已经绑定的子产品
  * @method Models\DescribeCloudStorageResponse DescribeCloudStorage(Models\DescribeCloudStorageRequest $req) 获取设备云存服务详情
@@ -97,6 +99,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
  * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 查询固件升级任务列表
  * @method Models\DescribeFirmwareUpdateStatusResponse DescribeFirmwareUpdateStatus(Models\DescribeFirmwareUpdateStatusRequest $req) 本接口（DescribeFirmwareUpdateStatus）用于查询设备固件升级状态及进度。
+ * @method Models\DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(Models\DescribeFreeCloudStorageNumRequest $req) 查询云存卡套餐信息
  * @method Models\DescribeGatewayBindDevicesResponse DescribeGatewayBindDevices(Models\DescribeGatewayBindDevicesRequest $req) 获取网关绑定的子设备列表
  * @method Models\DescribeGatewaySubDeviceListResponse DescribeGatewaySubDeviceList(Models\DescribeGatewaySubDeviceListRequest $req) 查询绑定到家庭的网关设备的子设备列表
  * @method Models\DescribeGatewaySubProductsResponse DescribeGatewaySubProducts(Models\DescribeGatewaySubProductsRequest $req) 用于获取网关可绑定或解绑的子产品
@@ -112,6 +115,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeStudioProductResponse DescribeStudioProduct(Models\DescribeStudioProductRequest $req) 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
  * @method Models\DescribeTopicPolicyResponse DescribeTopicPolicy(Models\DescribeTopicPolicyRequest $req) 本接口（DescribeTopicPolicy）用于查看Topic详细信息 
  * @method Models\DescribeTopicRuleResponse DescribeTopicRule(Models\DescribeTopicRuleRequest $req) 获取规则信息
+ * @method Models\DescribeVideoLicenseResponse DescribeVideoLicense(Models\DescribeVideoLicenseRequest $req) 用于查询视频激活码统计概览
  * @method Models\DirectBindDeviceInFamilyResponse DirectBindDeviceInFamily(Models\DirectBindDeviceInFamilyRequest $req) 直接绑定设备和家庭
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 禁用规则
  * @method Models\DismissRoomByStrRoomIdFromTRTCResponse DismissRoomByStrRoomIdFromTRTC(Models\DismissRoomByStrRoomIdFromTRTCRequest $req) 解散TRTC房间

@@ -94,8 +94,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“。
  * @method string getOfflineTime() 获取已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
  * @method void setOfflineTime(string $OfflineTime) 设置已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
- * @method integer getSubStatus() 获取流程中的实例，返回子状态。
- * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态。
+ * @method integer getSubStatus() 获取流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
+ * @method void setSubStatus(integer $SubStatus) 设置流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
  * @method array getTags() 获取反亲和性标签。
  * @method void setTags(array $Tags) 设置反亲和性标签。
  * @method array getInstanceNode() 获取实例节点信息。
@@ -357,7 +361,9 @@ class InstanceSet extends AbstractModel
     public $OfflineTime;
 
     /**
-     * @var integer 流程中的实例，返回子状态。
+     * @var integer 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      */
     public $SubStatus;
 
@@ -601,7 +607,9 @@ class InstanceSet extends AbstractModel
      * @param integer $BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“。
      * @param string $OfflineTime 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
-     * @param integer $SubStatus 流程中的实例，返回子状态。
+     * @param integer $SubStatus 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      * @param array $Tags 反亲和性标签。
      * @param array $InstanceNode 实例节点信息。
      * @param integer $RedisShardSize 分片大小。

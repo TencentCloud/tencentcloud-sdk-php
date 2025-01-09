@@ -95,7 +95,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(Models\DescribeWxCloudBaseRunEnvsRequest $req) 查询微信云托管环境信息
  * @method Models\DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(Models\DescribeWxCloudBaseRunSubNetsRequest $req) 查询微信云托管子网
  * @method Models\DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(Models\DescribeWxGatewayRoutesRequest $req) 查看安全网关路由
-
  * @method Models\DescribeWxGatewaysResponse DescribeWxGateways(Models\DescribeWxGatewaysRequest $req) 查看安全网关
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境
  * @method Models\DestroyStandaloneGatewayResponse DestroyStandaloneGateway(Models\DestroyStandaloneGatewayRequest $req) 本接口（DestroyStandaloneGateway）用于销毁小租户网关。

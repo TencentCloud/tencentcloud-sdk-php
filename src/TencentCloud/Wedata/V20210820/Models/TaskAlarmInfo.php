@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDingDingWebHooks(string $DingDingWebHooks) 设置钉钉群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBusinessType() 获取业务类型, 0-非默认, 1-默认
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessType(integer $BusinessType) 设置业务类型, 0-非默认, 1-默认
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAlarmInfo extends AbstractModel
 {
@@ -330,6 +334,12 @@ class TaskAlarmInfo extends AbstractModel
     public $DingDingWebHooks;
 
     /**
+     * @var integer 业务类型, 0-非默认, 1-默认
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessType;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $RegularStatus 规则状态(0表示关闭，1表示打开)
@@ -387,6 +397,8 @@ class TaskAlarmInfo extends AbstractModel
      * @param string $LarkWebHooks 飞书群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DingDingWebHooks 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BusinessType 业务类型, 0-非默认, 1-默认
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -542,6 +554,10 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("DingDingWebHooks",$param) and $param["DingDingWebHooks"] !== null) {
             $this->DingDingWebHooks = $param["DingDingWebHooks"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
         }
     }
 }

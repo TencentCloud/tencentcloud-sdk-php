@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 标签信息。
  *
  * @method string getKey() 获取标签健。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置标签健。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取标签值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置标签值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
     /**
      * @var string 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 标签健。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 标签值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

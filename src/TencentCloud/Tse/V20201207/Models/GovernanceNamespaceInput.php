@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 1、为空或者不填写，表示仅当前命名空间可见
 2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
 3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+ * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
  */
 class GovernanceNamespaceInput extends AbstractModel
 {
@@ -82,6 +84,11 @@ class GovernanceNamespaceInput extends AbstractModel
     public $ServiceExportTo;
 
     /**
+     * @var boolean 是否开启同步到全局注册中心
+     */
+    public $SyncToGlobalRegistry;
+
+    /**
      * @param string $Name 命名空间名。
      * @param string $Comment 描述信息。
      * @param array $UserIds 新增的可以操作此命名空间的用户ID列表
@@ -92,6 +99,7 @@ class GovernanceNamespaceInput extends AbstractModel
 1、为空或者不填写，表示仅当前命名空间可见
 2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
 3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class GovernanceNamespaceInput extends AbstractModel
 
         if (array_key_exists("ServiceExportTo",$param) and $param["ServiceExportTo"] !== null) {
             $this->ServiceExportTo = $param["ServiceExportTo"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
     }
 }

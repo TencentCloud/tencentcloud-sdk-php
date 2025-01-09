@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeWxGatewayRoutes返回参数结构体
  *
  * @method integer getTotalCount() 获取返回的服务个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置返回的服务个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWxGatewayRouteSet() 获取返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWxGatewayRouteSet(array $WxGatewayRouteSet) 设置返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeWxGatewayRoutesResponse extends AbstractModel
 {
     /**
      * @var integer 返回的服务个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WxGatewayRouteSet;
 
@@ -52,9 +46,7 @@ class DescribeWxGatewayRoutesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 返回的服务个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WxGatewayRouteSet 返回的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

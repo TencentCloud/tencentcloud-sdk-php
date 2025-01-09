@@ -82,8 +82,8 @@ use TencentCloud\Common\AbstractModel;
   <li>**0**： 未激活</li>
   <li>**1**： 已激活</li>
 </ul>
- * @method integer getLicenseExpireTime() 获取账号过期时间，时间戳
- * @method void setLicenseExpireTime(integer $LicenseExpireTime) 设置账号过期时间，时间戳
+ * @method integer getLicenseExpireTime() 获取账号到期时间，时间戳
+ * @method void setLicenseExpireTime(integer $LicenseExpireTime) 设置账号到期时间，时间戳
  */
 class ChannelOrganizationInfo extends AbstractModel
 {
@@ -167,7 +167,7 @@ class ChannelOrganizationInfo extends AbstractModel
     public $ActiveStatus;
 
     /**
-     * @var integer 账号过期时间，时间戳
+     * @var integer 账号到期时间，时间戳
      */
     public $LicenseExpireTime;
 
@@ -203,7 +203,7 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**0**： 未激活</li>
   <li>**1**： 已激活</li>
 </ul>
-     * @param integer $LicenseExpireTime 账号过期时间，时间戳
+     * @param integer $LicenseExpireTime 账号到期时间，时间戳
      */
     function __construct()
     {

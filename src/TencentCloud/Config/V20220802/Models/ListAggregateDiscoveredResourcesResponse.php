@@ -14,23 +14,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cmq\V20190304\Models;
+namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RewindQueue返回参数结构体
+ * ListAggregateDiscoveredResources返回参数结构体
  *
+ * @method array getItems() 获取详情
+ * @method void setItems(array $Items) 设置详情
+ * @method string getNextToken() 获取下一页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextToken(string $NextToken) 设置下一页
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class RewindQueueResponse extends AbstractModel
+class ListAggregateDiscoveredResourcesResponse extends AbstractModel
 {
+    /**
+     * @var array 详情
+     */
+    public $Items;
+
+    /**
+     * @var string 下一页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextToken;
+
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Items 详情
+     * @param string $NextToken 下一页
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +66,19 @@ class RewindQueueResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AggregateResourceInfo();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
+
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

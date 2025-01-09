@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method string getIncharge() 获取责任人
  * @method void setIncharge(string $Incharge) 设置责任人
+ * @method string getDataOptimizationResource() 获取数据优化引擎
+ * @method void setDataOptimizationResource(string $DataOptimizationResource) 设置数据优化引擎
+ * @method string getSmartOptimizerWritten() 获取是否开启数据优化
+ * @method void setSmartOptimizerWritten(string $SmartOptimizerWritten) 设置是否开启数据优化
  */
 class CreateHiveTableRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class CreateHiveTableRequest extends AbstractModel
     public $Incharge;
 
     /**
+     * @var string 数据优化引擎
+     */
+    public $DataOptimizationResource;
+
+    /**
+     * @var string 是否开启数据优化
+     */
+    public $SmartOptimizerWritten;
+
+    /**
      * @param string $DatasourceId 数据源id
      * @param string $Database 数据库名称
      * @param string $DDLSql base64转码之后的建表语句
      * @param integer $Privilege 表权限 ，默认为0:项目共享;1:仅个人与管理员
      * @param string $ProjectId 项目Id
      * @param string $Incharge 责任人
+     * @param string $DataOptimizationResource 数据优化引擎
+     * @param string $SmartOptimizerWritten 是否开启数据优化
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CreateHiveTableRequest extends AbstractModel
 
         if (array_key_exists("Incharge",$param) and $param["Incharge"] !== null) {
             $this->Incharge = $param["Incharge"];
+        }
+
+        if (array_key_exists("DataOptimizationResource",$param) and $param["DataOptimizationResource"] !== null) {
+            $this->DataOptimizationResource = $param["DataOptimizationResource"];
+        }
+
+        if (array_key_exists("SmartOptimizerWritten",$param) and $param["SmartOptimizerWritten"] !== null) {
+            $this->SmartOptimizerWritten = $param["SmartOptimizerWritten"];
         }
     }
 }

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置从可以操作此命名空间的用户组ID列表中被移除的ID列表
  * @method array getExportTo() 获取该服务对哪些命名空间可见
  * @method void setExportTo(array $ExportTo) 设置该服务对哪些命名空间可见
+ * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
  */
 class GovernanceServiceInput extends AbstractModel
 {
@@ -101,6 +103,11 @@ class GovernanceServiceInput extends AbstractModel
     public $ExportTo;
 
     /**
+     * @var boolean 是否开启同步到全局注册中心
+     */
+    public $SyncToGlobalRegistry;
+
+    /**
      * @param string $Name 服务名。
      * @param string $Namespace 服务所属命名空间。
      * @param string $Comment 服务描述信息。
@@ -112,6 +119,7 @@ class GovernanceServiceInput extends AbstractModel
      * @param array $RemoveUserIds 从操作此命名空间的用户组ID列表被移除的ID列表
      * @param array $RemoveGroupIds 从可以操作此命名空间的用户组ID列表中被移除的ID列表
      * @param array $ExportTo 该服务对哪些命名空间可见
+     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class GovernanceServiceInput extends AbstractModel
 
         if (array_key_exists("ExportTo",$param) and $param["ExportTo"] !== null) {
             $this->ExportTo = $param["ExportTo"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
     }
 }

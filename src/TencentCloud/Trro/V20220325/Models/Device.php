@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonthlyRemainTime(integer $MonthlyRemainTime) 设置每月license的限定时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLimitedTime() 获取月封顶时长（分钟)
+ * @method void setLimitedTime(integer $LimitedTime) 设置月封顶时长（分钟)
  */
 class Device extends AbstractModel
 {
@@ -104,6 +106,11 @@ class Device extends AbstractModel
     public $MonthlyRemainTime;
 
     /**
+     * @var integer 月封顶时长（分钟)
+     */
+    public $LimitedTime;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
@@ -120,6 +127,7 @@ class Device extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonthlyRemainTime 每月license的限定时长
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LimitedTime 月封顶时长（分钟)
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("MonthlyRemainTime",$param) and $param["MonthlyRemainTime"] !== null) {
             $this->MonthlyRemainTime = $param["MonthlyRemainTime"];
+        }
+
+        if (array_key_exists("LimitedTime",$param) and $param["LimitedTime"] !== null) {
+            $this->LimitedTime = $param["LimitedTime"];
         }
     }
 }

@@ -41,6 +41,11 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 - 查询生成写真图片任务：根据任务 ID 查询生成图片任务的处理状态、处理结果。
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
+ * @method Models\QueryMemeJobResponse QueryMemeJob(Models\QueryMemeJobRequest $req) 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\QueryTextToImageProJobResponse QueryTextToImageProJob(Models\QueryTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -67,6 +72,12 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 提交生成写真图片任务默认提供1个并发。
+ * @method Models\SubmitMemeJobResponse SubmitMemeJob(Models\SubmitMemeJobRequest $req) 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+
+- 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SubmitTextToImageProJobResponse SubmitTextToImageProJob(Models\SubmitTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。

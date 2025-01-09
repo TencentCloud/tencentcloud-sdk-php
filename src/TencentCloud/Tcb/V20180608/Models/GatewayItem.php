@@ -23,105 +23,55 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUin() 获取用户uin
  * @method void setUin(string $Uin) 设置用户uin
  * @method integer getAppId() 获取用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWxAppId() 获取WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWxAppId(string $WxAppId) 设置WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取环境id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置环境id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayId() 获取Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayName() 获取Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayName(string $GatewayName) 设置Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayType() 获取Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayType(string $GatewayType) 设置Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayDesc() 获取Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayDesc(string $GatewayDesc) 设置Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageVersion() 获取套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageVersion(string $PackageVersion) 设置套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPackageId() 获取套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(integer $PackageId) 设置套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetIds() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取网关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置网关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getL5Addr() 获取l5地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setL5Addr(string $L5Addr) 设置l5地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanRenew() 获取是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanRenew(boolean $CanRenew) 设置是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateTime() 获取隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取变更时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置变更时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanDowngrade() 获取是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanDowngrade(boolean $CanDowngrade) 设置是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAllowUncertified() 获取允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowUncertified(integer $AllowUncertified) 设置允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersionNumLimit() 获取网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionNumLimit(integer $VersionNumLimit) 设置网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLongAccessId() 获取Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLongAccessId(string $LongAccessId) 设置Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessDomain() 获取Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessDomain(string $AccessDomain) 设置Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayItem extends AbstractModel
 {
@@ -132,206 +82,156 @@ class GatewayItem extends AbstractModel
 
     /**
      * @var integer 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WxAppId;
 
     /**
      * @var string 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
     /**
      * @var string Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var string Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayName;
 
     /**
      * @var string Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayType;
 
     /**
      * @var string Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayDesc;
 
     /**
      * @var string 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageVersion;
 
     /**
      * @var integer 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
      * @var string vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var array 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIds;
 
     /**
      * @var string 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string l5地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $L5Addr;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var boolean 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanRenew;
 
     /**
      * @var integer 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
      * @var string 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
     /**
      * @var string 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var boolean 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanDowngrade;
 
     /**
      * @var integer 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowUncertified;
 
     /**
      * @var integer 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionNumLimit;
 
     /**
      * @var string Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LongAccessId;
 
     /**
      * @var string Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessDomain;
 
     /**
      * @param string $Uin 用户uin
      * @param integer $AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WxAppId WxAppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayId Gateway唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayName Gateway名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayType Gateway类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayDesc Gateway描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageVersion 套餐版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PackageId 套餐唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId vpc唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $L5Addr l5地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanRenew 是否可以续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanDowngrade 是否可以降配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AllowUncertified 允许未登录访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VersionNumLimit 网关版本限额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LongAccessId Donut接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessDomain Donut接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

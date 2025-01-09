@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableBaseInfo(TableBaseInfo $TableBaseInfo) 设置dlc表治理信息
  * @method string getSinkSchemaName() 获取目标端schema名称
  * @method void setSinkSchemaName(string $SinkSchemaName) 设置目标端schema名称
+ * @method string getEnv() 获取获取源信息的环境
+ * @method void setEnv(string $Env) 设置获取源信息的环境
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -192,6 +194,11 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $SinkSchemaName;
 
     /**
+     * @var string 获取源信息的环境
+     */
+    public $Env;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
@@ -216,6 +223,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param array $UpsertKeys dlc upsert主键
      * @param TableBaseInfo $TableBaseInfo dlc表治理信息
      * @param string $SinkSchemaName 目标端schema名称
+     * @param string $Env 获取源信息的环境
      */
     function __construct()
     {
@@ -340,6 +348,10 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
 
         if (array_key_exists("SinkSchemaName",$param) and $param["SinkSchemaName"] !== null) {
             $this->SinkSchemaName = $param["SinkSchemaName"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
         }
     }
 }

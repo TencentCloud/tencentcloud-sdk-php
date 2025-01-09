@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
 注：只有 UsedMethod 在选择为 1（他用）时，这个字段才会生效。
  * @method string getRemark() 获取签名的申请备注。
  * @method void setRemark(string $Remark) 设置签名的申请备注。
+ * @method integer getQualificationId() 获取已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+ * @method void setQualificationId(integer $QualificationId) 设置已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
  */
 class ModifySmsSignRequest extends AbstractModel
 {
@@ -159,6 +161,11 @@ class ModifySmsSignRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer 已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+     */
+    public $QualificationId;
+
+    /**
      * @param integer $SignId 待修改的签名 ID。
      * @param string $SignName 签名名称。
      * @param integer $SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
@@ -192,6 +199,7 @@ class ModifySmsSignRequest extends AbstractModel
 图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
 注：只有 UsedMethod 在选择为 1（他用）时，这个字段才会生效。
      * @param string $Remark 签名的申请备注。
+     * @param integer $QualificationId 已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class ModifySmsSignRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("QualificationId",$param) and $param["QualificationId"] !== null) {
+            $this->QualificationId = $param["QualificationId"];
         }
     }
 }

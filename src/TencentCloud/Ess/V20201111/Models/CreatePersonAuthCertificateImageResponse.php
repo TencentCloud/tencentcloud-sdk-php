@@ -26,28 +26,20 @@ use TencentCloud\Common\AbstractModel;
 该编号会合成到个人用户证书证明图片。
 
 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageCertId(string $ImageCertId) 设置个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
 该编号会合成到个人用户证书证明图片。
 
 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSerialNumber() 获取在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSerialNumber(string $SerialNumber) 设置在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidFrom() 获取CA证书颁发时间，格式为Unix标准时间戳（秒）   
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidFrom(integer $ValidFrom) 设置CA证书颁发时间，格式为Unix标准时间戳（秒）   
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidTo() 获取CA证书有效截止时间，格式为Unix标准时间戳（秒）
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidTo(integer $ValidTo) 设置CA证书有效截止时间，格式为Unix标准时间戳（秒）
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,27 +55,23 @@ class CreatePersonAuthCertificateImageResponse extends AbstractModel
 该编号会合成到个人用户证书证明图片。
 
 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCertId;
 
     /**
      * @var string 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SerialNumber;
 
     /**
      * @var integer CA证书颁发时间，格式为Unix标准时间戳（秒）   
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidFrom;
 
     /**
      * @var integer CA证书有效截止时间，格式为Unix标准时间戳（秒）
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidTo;
 
@@ -98,15 +86,11 @@ class CreatePersonAuthCertificateImageResponse extends AbstractModel
 该编号会合成到个人用户证书证明图片。
 
 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
 该时间格式化后会合成到个人用户证书证明图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

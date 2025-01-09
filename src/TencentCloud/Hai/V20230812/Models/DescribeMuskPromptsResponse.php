@@ -14,23 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cmq\V20190304\Models;
+namespace TencentCloud\Hai\V20230812\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyTopicAttribute返回参数结构体
+ * DescribeMuskPrompts返回参数结构体
  *
+ * @method integer getTotalCount() 获取total count
+ * @method void setTotalCount(integer $TotalCount) 设置total count
+ * @method array getMuskPromptInfos() 获取prompt列表详情
+ * @method void setMuskPromptInfos(array $MuskPromptInfos) 设置prompt列表详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyTopicAttributeResponse extends AbstractModel
+class DescribeMuskPromptsResponse extends AbstractModel
 {
+    /**
+     * @var integer total count
+     */
+    public $TotalCount;
+
+    /**
+     * @var array prompt列表详情
+     */
+    public $MuskPromptInfos;
+
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount total count
+     * @param array $MuskPromptInfos prompt列表详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class ModifyTopicAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("MuskPromptInfos",$param) and $param["MuskPromptInfos"] !== null) {
+            $this->MuskPromptInfos = [];
+            foreach ($param["MuskPromptInfos"] as $key => $value){
+                $obj = new MuskPromptInfo();
+                $obj->deserialize($value);
+                array_push($this->MuskPromptInfos, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

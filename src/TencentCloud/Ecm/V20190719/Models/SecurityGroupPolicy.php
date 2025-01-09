@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyDescription() 获取安全组规则描述。
  * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
  * @method string getModifyTime() 获取修改时间，例如 2020-07-22 19：27：23
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间，例如 2020-07-22 19：27：23
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
@@ -96,7 +94,6 @@ class SecurityGroupPolicy extends AbstractModel
 
     /**
      * @var string 修改时间，例如 2020-07-22 19：27：23
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
@@ -117,7 +114,6 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。
      * @param string $ModifyTime 修改时间，例如 2020-07-22 19：27：23
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
 注意：此字段可能返回 null，表示取不到有效值。
      */

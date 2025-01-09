@@ -30,7 +30,7 @@ use TencentCloud\Lkeap\V20240522\Models as Models;
 文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
- * @method Models\CreateSplitDocumentFlowResponse CreateSplitDocumentFlow(Models\CreateSplitDocumentFlowRequest $req) 创建文档拆分任务
+ * @method Models\CreateSplitDocumentFlowResponse CreateSplitDocumentFlow(Models\CreateSplitDocumentFlowRequest $req) 用于创建一个文档拆分任务，支持多种文件类型，具备mllm能力，能够解析并深入理解图表中的信息。
  * @method Models\DeleteAttributeLabelsResponse DeleteAttributeLabels(Models\DeleteAttributeLabelsRequest $req) 用于删除不再需要的属性标签。 使用场景：当某个标签不再使用时，可以将其删除以保持标签系统的整洁。
  * @method Models\DeleteDocsResponse DeleteDocs(Models\DeleteDocsRequest $req) 用于删除已有的文档。 使用场景：当某个文档不再需要时，可以将其删除以保持文档库的整洁。
  * @method Models\DeleteKnowledgeBaseResponse DeleteKnowledgeBase(Models\DeleteKnowledgeBaseRequest $req) 用于从系统中删除一个现有的知识库。删除知识库将移除该知识库及其所有关联的知识条目（如文档、问答对、属性标签等）。该操作是不可逆的，请在执行前确认是否需要删除。**使用场景**：当某个知识库不再需要时，可以使用此接口将其从系统中删除。例如，一个项目结束后，其相关的知识库可能不再需要存储，可以使用该接口进行删除。

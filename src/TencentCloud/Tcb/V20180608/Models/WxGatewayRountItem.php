@@ -33,49 +33,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGatewayRouteCreateTime() 获取安全网关创建时间
  * @method void setGatewayRouteCreateTime(string $GatewayRouteCreateTime) 设置安全网关创建时间
  * @method array getFrequencyLimitConfig() 获取安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequencyLimitConfig(array $FrequencyLimitConfig) 设置安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRouteServerType() 获取ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRouteServerType(string $GatewayRouteServerType) 设置ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRouteServerName() 获取服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRouteServerName(string $GatewayRouteServerName) 设置服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRewriteHost() 获取ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRewriteHost(string $GatewayRewriteHost) 设置ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayVersion() 获取网关版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayVersion(string $GatewayVersion) 设置网关版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRoutePath() 获取请求路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRoutePath(string $GatewayRoutePath) 设置请求路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRouteMethod() 获取请求模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRouteMethod(string $GatewayRouteMethod) 设置请求模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGatewayRoutePort() 获取4层端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRoutePort(integer $GatewayRoutePort) 设置4层端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRouteEnvId() 获取路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRouteEnvId(string $GatewayRouteEnvId) 设置路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayRoutePathMatchType() 获取路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRoutePathMatchType(string $GatewayRoutePathMatchType) 设置路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CustomHeader getCustomHeader() 获取安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomHeader(CustomHeader $CustomHeader) 设置安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WxGatewayRountItem extends AbstractModel
 {
@@ -111,67 +89,56 @@ class WxGatewayRountItem extends AbstractModel
 
     /**
      * @var array 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrequencyLimitConfig;
 
     /**
      * @var string ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRouteServerType;
 
     /**
      * @var string 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRouteServerName;
 
     /**
      * @var string ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRewriteHost;
 
     /**
      * @var string 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayVersion;
 
     /**
      * @var string 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRoutePath;
 
     /**
      * @var string 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRouteMethod;
 
     /**
      * @var integer 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRoutePort;
 
     /**
      * @var string 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRouteEnvId;
 
     /**
      * @var string 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayRoutePathMatchType;
 
     /**
      * @var CustomHeader 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomHeader;
 
@@ -183,27 +150,16 @@ class WxGatewayRountItem extends AbstractModel
      * @param string $GatewayRouteClusterId 安全网关后端集群id，如果是外网服务，该id与GatewayRountName相同
      * @param string $GatewayRouteCreateTime 安全网关创建时间
      * @param array $FrequencyLimitConfig 安全网关路由限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRouteServerType ip代表绑定后端ip。cbr代表云托管服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRouteServerName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRewriteHost ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayVersion 网关版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRoutePath 请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRouteMethod 请求模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GatewayRoutePort 4层端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRouteEnvId 路由环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomHeader $CustomHeader 安全网关自定义头部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

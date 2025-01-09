@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 私有网络和基础网络互通设备
  *
  * @method string getVpcId() 获取VPC实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取云服务器实例唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云服务器实例唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClassicLinkInstance extends AbstractModel
 {
     /**
      * @var string VPC实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 云服务器实例唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $VpcId VPC实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云服务器实例唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

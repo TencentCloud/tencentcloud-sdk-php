@@ -27,6 +27,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 查询应用
  * @method Models\DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(Models\DescribeInstanceNetworkStatusRequest $req) 查询实例的网络配置及消耗情况
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例
+ * @method Models\DescribeMuskPromptsResponse DescribeMuskPrompts(Models\DescribeMuskPromptsRequest $req) 获取prompt任务列表
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 查询地域列表
  * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 查询场景
  * @method Models\DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(Models\DescribeServiceLoginSettingsRequest $req) 查询服务登录配置

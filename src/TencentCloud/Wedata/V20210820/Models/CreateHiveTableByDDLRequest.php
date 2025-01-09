@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaName(string $SchemaName) 设置schema名称
  * @method boolean getAsync() 获取是否异步建表
  * @method void setAsync(boolean $Async) 设置是否异步建表
+ * @method string getDataOptimizationResource() 获取数据优化使用的资源
+ * @method void setDataOptimizationResource(string $DataOptimizationResource) 设置数据优化使用的资源
+ * @method string getSmartOptimizerWritten() 获取是否开启数据优化
+ * @method void setSmartOptimizerWritten(string $SmartOptimizerWritten) 设置是否开启数据优化
  */
 class CreateHiveTableByDDLRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $Async;
 
     /**
+     * @var string 数据优化使用的资源
+     */
+    public $DataOptimizationResource;
+
+    /**
+     * @var string 是否开启数据优化
+     */
+    public $SmartOptimizerWritten;
+
+    /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
      * @param string $DDLSql 建hive表ddl
@@ -96,6 +110,8 @@ class CreateHiveTableByDDLRequest extends AbstractModel
      * @param string $Incharge 责任人
      * @param string $SchemaName schema名称
      * @param boolean $Async 是否异步建表
+     * @param string $DataOptimizationResource 数据优化使用的资源
+     * @param string $SmartOptimizerWritten 是否开启数据优化
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class CreateHiveTableByDDLRequest extends AbstractModel
 
         if (array_key_exists("Async",$param) and $param["Async"] !== null) {
             $this->Async = $param["Async"];
+        }
+
+        if (array_key_exists("DataOptimizationResource",$param) and $param["DataOptimizationResource"] !== null) {
+            $this->DataOptimizationResource = $param["DataOptimizationResource"];
+        }
+
+        if (array_key_exists("SmartOptimizerWritten",$param) and $param["SmartOptimizerWritten"] !== null) {
+            $this->SmartOptimizerWritten = $param["SmartOptimizerWritten"];
         }
     }
 }

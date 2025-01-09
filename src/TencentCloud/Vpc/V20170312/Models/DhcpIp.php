@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DhcpIp extends AbstractModel
 {
@@ -105,7 +103,6 @@ class DhcpIp extends AbstractModel
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -123,7 +120,6 @@ class DhcpIp extends AbstractModel
 <li>`UNBIND`：未绑定</li>
      * @param string $CreatedTime 创建时间。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

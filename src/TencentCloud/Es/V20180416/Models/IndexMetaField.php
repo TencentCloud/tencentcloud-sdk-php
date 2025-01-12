@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexSettingsField(IndexSettingsField $IndexSettingsField) 设置索引配置字段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIndexAliasesField() 获取索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexAliasesField(array $IndexAliasesField) 设置索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置索引所属集群APP ID
@@ -162,6 +166,12 @@ class IndexMetaField extends AbstractModel
     public $IndexSettingsField;
 
     /**
+     * @var array 索引别名字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexAliasesField;
+
+    /**
      * @var integer 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -199,6 +209,8 @@ class IndexMetaField extends AbstractModel
      * @param IndexOptionsField $IndexOptionsField 索引自治字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexSettingsField $IndexSettingsField 索引配置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IndexAliasesField 索引别名字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -276,6 +288,10 @@ class IndexMetaField extends AbstractModel
         if (array_key_exists("IndexSettingsField",$param) and $param["IndexSettingsField"] !== null) {
             $this->IndexSettingsField = new IndexSettingsField();
             $this->IndexSettingsField->deserialize($param["IndexSettingsField"]);
+        }
+
+        if (array_key_exists("IndexAliasesField",$param) and $param["IndexAliasesField"] !== null) {
+            $this->IndexAliasesField = $param["IndexAliasesField"];
         }
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {

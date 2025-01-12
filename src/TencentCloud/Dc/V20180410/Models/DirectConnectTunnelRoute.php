@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNextHop() 获取路由下一跳IP
  * @method void setNextHop(string $NextHop) 设置路由下一跳IP
  * @method string getUpdateTime() 获取路由更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置路由更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getApplyOnTunnelEnable() 获取是否配置在通道上
  * @method void setApplyOnTunnelEnable(boolean $ApplyOnTunnelEnable) 设置是否配置在通道上
  */
@@ -73,7 +71,6 @@ class DirectConnectTunnelRoute extends AbstractModel
 
     /**
      * @var string 路由更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -90,7 +87,6 @@ class DirectConnectTunnelRoute extends AbstractModel
      * @param array $ASPath ASPath信息
      * @param string $NextHop 路由下一跳IP
      * @param string $UpdateTime 路由更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ApplyOnTunnelEnable 是否配置在通道上
      */
     function __construct()

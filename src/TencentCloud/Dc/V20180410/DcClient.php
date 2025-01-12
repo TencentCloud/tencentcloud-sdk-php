@@ -40,7 +40,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) 获取用户互联网公网地址信息
  * @method Models\DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(Models\DescribeInternetAddressQuotaRequest $req) 获取用户互联网公网地址配额
  * @method Models\DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(Models\DescribeInternetAddressStatisticsRequest $req) 获取用户互联网公网地址分配统计信息
- * @method Models\DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(Models\DescribePublicDirectConnectTunnelRoutesRequest $req) 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+ * @method Models\DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(Models\DescribePublicDirectConnectTunnelRoutesRequest $req) 查询互联网通道路由列表。
  * @method Models\DisableInternetAddressResponse DisableInternetAddress(Models\DisableInternetAddressRequest $req) 停用用户申请的公网互联网地址
  * @method Models\EnableInternetAddressResponse EnableInternetAddress(Models\EnableInternetAddressRequest $req) 启用已停用的互联网公网地址
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。

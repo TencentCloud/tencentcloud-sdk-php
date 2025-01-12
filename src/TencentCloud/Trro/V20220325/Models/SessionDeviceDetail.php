@@ -49,93 +49,51 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceId() 获取设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备ID
  * @method string getVer() 获取sdk版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVer(string $Ver) 设置sdk版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSdkMode() 获取模式(p2p/server)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSdkMode(string $SdkMode) 设置模式(p2p/server)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDecodeCost() 获取解码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDecodeCost(array $DecodeCost) 设置解码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRenderConst() 获取【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenderConst(array $RenderConst) 设置【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getK100() 获取卡顿k100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setK100(array $K100) 设置卡顿k100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getK150() 获取卡顿k150
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setK150(array $K150) 设置卡顿k150
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNACK() 获取nack请求数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNACK(array $NACK) 设置nack请求数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBitRateEstimate() 获取服务端调控码率,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitRateEstimate(array $BitRateEstimate) 设置服务端调控码率,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEncodeCost() 获取编码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodeCost(array $EncodeCost) 设置编码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCaptureCost() 获取采集耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptureCost(array $CaptureCost) 设置采集耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRenderCost() 获取渲染耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenderCost(array $RenderCost) 设置渲染耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigWidth() 获取配置宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigWidth(integer $ConfigWidth) 设置配置宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConfigHeight() 获取配置高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigHeight(integer $ConfigHeight) 设置配置高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFrameDelta() 获取平均帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameDelta(array $FrameDelta) 设置平均帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMaxFrameDelta() 获取最大帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxFrameDelta(array $MaxFrameDelta) 设置最大帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTotalBitrateEstimate() 获取总码率评估,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalBitrateEstimate(array $TotalBitrateEstimate) 设置总码率评估,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLag100Duration() 获取帧间隔大于100ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLag100Duration(array $Lag100Duration) 设置帧间隔大于100ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLag150Duration() 获取帧间隔大于150ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLag150Duration(array $Lag150Duration) 设置帧间隔大于150ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMultiMode() 获取是否开启多网：0 单网，1 多网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiMode(integer $MultiMode) 设置是否开启多网：0 单网，1 多网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMultiNet() 获取多网卡信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiNet(array $MultiNet) 设置多网卡信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SessionDeviceDetail extends AbstractModel
 {
@@ -211,19 +169,16 @@ class SessionDeviceDetail extends AbstractModel
 
     /**
      * @var string sdk版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ver;
 
     /**
      * @var string 模式(p2p/server)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SdkMode;
 
     /**
      * @var array 解码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DecodeCost;
 
@@ -236,109 +191,91 @@ class SessionDeviceDetail extends AbstractModel
 
     /**
      * @var array 卡顿k100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $K100;
 
     /**
      * @var array 卡顿k150
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $K150;
 
     /**
      * @var array nack请求数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NACK;
 
     /**
      * @var array 服务端调控码率,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BitRateEstimate;
 
     /**
      * @var integer 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var array 编码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodeCost;
 
     /**
      * @var array 采集耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptureCost;
 
     /**
      * @var array 渲染耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenderCost;
 
     /**
      * @var integer 配置宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigWidth;
 
     /**
      * @var integer 配置高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigHeight;
 
     /**
      * @var array 平均帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameDelta;
 
     /**
      * @var array 最大帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxFrameDelta;
 
     /**
      * @var array 总码率评估,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalBitrateEstimate;
 
     /**
      * @var array 帧间隔大于100ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lag100Duration;
 
     /**
      * @var array 帧间隔大于150ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lag150Duration;
 
     /**
      * @var integer 是否开启多网：0 单网，1 多网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiMode;
 
     /**
      * @var array 多网卡信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiNet;
 
@@ -358,49 +295,28 @@ class SessionDeviceDetail extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param string $DeviceId 设备ID
      * @param string $Ver sdk版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SdkMode 模式(p2p/server)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DecodeCost 解码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RenderConst 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $K100 卡顿k100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $K150 卡顿k150
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NACK nack请求数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BitRateEstimate 服务端调控码率,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EncodeCost 编码耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CaptureCost 采集耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RenderCost 渲染耗时，单位：ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigWidth 配置宽度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigHeight 配置高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FrameDelta 平均帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MaxFrameDelta 最大帧间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TotalBitrateEstimate 总码率评估,单位：kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Lag100Duration 帧间隔大于100ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Lag150Duration 帧间隔大于150ms的卡顿时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MultiMode 是否开启多网：0 单网，1 多网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiNet 多网卡信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

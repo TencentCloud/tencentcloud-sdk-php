@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInternetAddressQuota返回参数结构体
  *
  * @method integer getIpv6PrefixLen() 获取IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6PrefixLen(integer $Ipv6PrefixLen) 设置IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv4BgpQuota() 获取BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv4BgpQuota(integer $Ipv4BgpQuota) 设置BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv4OtherQuota() 获取非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv4OtherQuota(integer $Ipv4OtherQuota) 设置非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv4BgpNum() 获取BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv4BgpNum(integer $Ipv4BgpNum) 设置BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv4OtherNum() 获取非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv4OtherNum(integer $Ipv4OtherNum) 设置非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeInternetAddressQuotaResponse extends AbstractModel
 {
     /**
      * @var integer IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6PrefixLen;
 
     /**
      * @var integer BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv4BgpQuota;
 
     /**
      * @var integer 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv4OtherQuota;
 
     /**
      * @var integer BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv4BgpNum;
 
     /**
      * @var integer 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv4OtherNum;
 
@@ -82,15 +67,10 @@ class DescribeInternetAddressQuotaResponse extends AbstractModel
 
     /**
      * @param integer $Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv4BgpQuota BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv4OtherNum 非BGP类型互联网地址已使用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

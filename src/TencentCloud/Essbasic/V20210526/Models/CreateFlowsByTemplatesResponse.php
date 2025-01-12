@@ -37,9 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPreviewUrls() 获取合同预览链接URL数组。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
+](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
  * @method void setPreviewUrls(array $PreviewUrls) 设置合同预览链接URL数组。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
+](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
  * @method array getTaskInfos() 获取复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
  * @method void setTaskInfos(array $TaskInfos) 设置复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
@@ -74,6 +78,8 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
      * @var array 合同预览链接URL数组。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
+](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
      */
     public $PreviewUrls;
 
@@ -104,6 +110,8 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
      * @param array $PreviewUrls 合同预览链接URL数组。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
+](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
      * @param array $TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
      * @param array $FlowApprovers 签署方信息，如角色ID、角色名称等

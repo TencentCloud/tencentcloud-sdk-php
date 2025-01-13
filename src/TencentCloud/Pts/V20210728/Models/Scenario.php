@@ -25,25 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取场景名
  * @method void setName(string $Name) 设置场景名
  * @method string getDescription() 获取场景描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置场景描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取场景状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置场景状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Load getLoad() 获取施压配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoad(Load $Load) 设置施压配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncodedScripts() 获取deprecated
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodedScripts(string $EncodedScripts) 设置deprecated
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConfigs() 获取deprecated
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigs(array $Configs) 设置deprecated
@@ -57,33 +47,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasets(array $Datasets) 设置测试数据集
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSLAId() 获取SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSLAId(string $SLAId) 设置SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCronId() 获取Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronId(string $CronId) 设置Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取场景创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置场景创建时间
  * @method string getUpdatedAt() 获取场景修改时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置场景修改时间
  * @method string getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTestScripts() 获取测试脚本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTestScripts(array $TestScripts) 设置测试脚本信息
@@ -97,29 +75,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestFiles(array $RequestFiles) 设置请求文件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SLAPolicy getSLAPolicy() 获取SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSLAPolicy(SLAPolicy $SLAPolicy) 设置SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPlugins() 获取扩展包信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlugins(array $Plugins) 设置扩展包信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DomainNameConfig getDomainNameConfig() 获取域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNameConfig(DomainNameConfig $DomainNameConfig) 设置域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNotificationHooks() 获取通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotificationHooks(array $NotificationHooks) 设置通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwner() 获取创建人员
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwner(string $Owner) 设置创建人员
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Scenario extends AbstractModel
 {
@@ -135,31 +105,26 @@ class Scenario extends AbstractModel
 
     /**
      * @var string 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var Load 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Load;
 
     /**
      * @var string deprecated
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodedScripts;
 
@@ -183,13 +148,11 @@ class Scenario extends AbstractModel
 
     /**
      * @var string SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SLAId;
 
     /**
      * @var string Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronId;
 
@@ -205,25 +168,21 @@ class Scenario extends AbstractModel
 
     /**
      * @var string 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
@@ -247,7 +206,6 @@ class Scenario extends AbstractModel
 
     /**
      * @var SLAPolicy SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SLAPolicy;
 
@@ -259,7 +217,6 @@ class Scenario extends AbstractModel
 
     /**
      * @var DomainNameConfig 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainNameConfig;
 
@@ -271,13 +228,11 @@ class Scenario extends AbstractModel
 
     /**
      * @var string 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
      * @var string 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
@@ -285,15 +240,10 @@ class Scenario extends AbstractModel
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 场景状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Load $Load 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncodedScripts deprecated
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Configs deprecated
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Extensions deprecated
@@ -301,19 +251,13 @@ class Scenario extends AbstractModel
      * @param array $Datasets 测试数据集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SLAId SLA规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CronId Cron Job规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 场景创建时间
      * @param string $UpdatedAt 场景修改时间
      * @param string $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 子用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TestScripts 测试脚本信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Protocols 协议文件信息
@@ -321,17 +265,13 @@ class Scenario extends AbstractModel
      * @param array $RequestFiles 请求文件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SLAPolicy $SLAPolicy SLA 策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Plugins 扩展包信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainNameConfig $DomainNameConfig 域名解析配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NotificationHooks 通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 创建人员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 场景所在的项目的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

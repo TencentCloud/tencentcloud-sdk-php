@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 发压host来源
  *
  * @method string getIP() 获取发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodName() 获取发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodName(string $PodName) 设置发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadSource extends AbstractModel
 {
     /**
      * @var string 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
      * @var string 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
     /**
      * @var string 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @param string $IP 发压host的IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodName 发压host所在的pod
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

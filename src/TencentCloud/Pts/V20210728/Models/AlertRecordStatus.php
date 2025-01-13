@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 告警历史项的状态
  *
  * @method integer getAbortJob() 获取停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbortJob(integer $AbortJob) 设置停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSendNotice() 获取发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendNotice(integer $SendNotice) 设置发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertRecordStatus extends AbstractModel
 {
     /**
      * @var integer 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbortJob;
 
     /**
      * @var integer 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendNotice;
 
     /**
      * @param integer $AbortJob 停止压测任务成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SendNotice 发送告警通知成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

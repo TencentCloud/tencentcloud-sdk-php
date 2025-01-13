@@ -21,43 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * OperateChannelTemplate返回参数结构体
  *
  * @method string getAppId() 获取第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateId() 获取合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateResult() 获取描述模板可见性更改的结果。
 <ul>
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateResult(string $OperateResult) 设置描述模板可见性更改的结果。
 <ul>
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthTag() 获取模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthTag(string $AuthTag) 设置模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyOrganizationOpenIds() 获取第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailMessageList() 获取操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailMessageList(array $FailMessageList) 设置操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -65,13 +53,11 @@ class OperateChannelTemplateResponse extends AbstractModel
 {
     /**
      * @var string 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
@@ -82,7 +68,6 @@ class OperateChannelTemplateResponse extends AbstractModel
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateResult;
 
@@ -90,19 +75,16 @@ class OperateChannelTemplateResponse extends AbstractModel
      * @var string 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthTag;
 
     /**
      * @var array 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyOrganizationOpenIds;
 
     /**
      * @var array 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailMessageList;
 
@@ -113,24 +95,18 @@ class OperateChannelTemplateResponse extends AbstractModel
 
     /**
      * @param string $AppId 第三方应用平台的应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 合同模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateResult 描述模板可见性更改的结果。
 <ul>
 <li>all-success: 全部成功</li>
 <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
 <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthTag 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyOrganizationOpenIds 第三方平台子客企业标识列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailMessageList 操作失败信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

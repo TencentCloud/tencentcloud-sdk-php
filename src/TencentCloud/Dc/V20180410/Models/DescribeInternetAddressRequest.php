@@ -24,18 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值100
- * @method array getFilters() 获取过滤条件：
-<li>AddrType, 地址类型。0：BGP 1; 1: 电信， 2：移动， 3：联通</li>
-<li>AddrProto地址类型。0：IPv4 1:IPv6</li>
-<li>Status 地址状态。 0：使用中， 1：已停用， 2：已退还</li>
-<li>Subnet 互联网公网地址，数组</li>
-<InstanceIds>互联网公网地址ID，数组</li>
- * @method void setFilters(array $Filters) 设置过滤条件：
-<li>AddrType, 地址类型。0：BGP 1; 1: 电信， 2：移动， 3：联通</li>
-<li>AddrProto地址类型。0：IPv4 1:IPv6</li>
-<li>Status 地址状态。 0：使用中， 1：已停用， 2：已退还</li>
-<li>Subnet 互联网公网地址，数组</li>
-<InstanceIds>互联网公网地址ID，数组</li>
+ * @method array getFilters() 获取过滤条件： <li>AddrType，地址类型。0：BGP 1；1: 电信；2：移动；3：联通</li> <li>AddrProto，地址类型。0：IPv4；1:IPv6</li> <li>Status，地址状态。 0：使用中；1：已停用； 2：已退还</li> <li>Subnet，互联网公网地址。数组</li> <li>InstanceIds，互联网公网地址ID。数组</li>
+ * @method void setFilters(array $Filters) 设置过滤条件： <li>AddrType，地址类型。0：BGP 1；1: 电信；2：移动；3：联通</li> <li>AddrProto，地址类型。0：IPv4；1:IPv6</li> <li>Status，地址状态。 0：使用中；1：已停用； 2：已退还</li> <li>Subnet，互联网公网地址。数组</li> <li>InstanceIds，互联网公网地址ID。数组</li>
  */
 class DescribeInternetAddressRequest extends AbstractModel
 {
@@ -50,24 +40,14 @@ class DescribeInternetAddressRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件：
-<li>AddrType, 地址类型。0：BGP 1; 1: 电信， 2：移动， 3：联通</li>
-<li>AddrProto地址类型。0：IPv4 1:IPv6</li>
-<li>Status 地址状态。 0：使用中， 1：已停用， 2：已退还</li>
-<li>Subnet 互联网公网地址，数组</li>
-<InstanceIds>互联网公网地址ID，数组</li>
+     * @var array 过滤条件： <li>AddrType，地址类型。0：BGP 1；1: 电信；2：移动；3：联通</li> <li>AddrProto，地址类型。0：IPv4；1:IPv6</li> <li>Status，地址状态。 0：使用中；1：已停用； 2：已退还</li> <li>Subnet，互联网公网地址。数组</li> <li>InstanceIds，互联网公网地址ID。数组</li>
      */
     public $Filters;
 
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值100
-     * @param array $Filters 过滤条件：
-<li>AddrType, 地址类型。0：BGP 1; 1: 电信， 2：移动， 3：联通</li>
-<li>AddrProto地址类型。0：IPv4 1:IPv6</li>
-<li>Status 地址状态。 0：使用中， 1：已停用， 2：已退还</li>
-<li>Subnet 互联网公网地址，数组</li>
-<InstanceIds>互联网公网地址ID，数组</li>
+     * @param array $Filters 过滤条件： <li>AddrType，地址类型。0：BGP 1；1: 电信；2：移动；3：联通</li> <li>AddrProto，地址类型。0：IPv4；1:IPv6</li> <li>Status，地址状态。 0：使用中；1：已停用； 2：已退还</li> <li>Subnet，互联网公网地址。数组</li> <li>InstanceIds，互联网公网地址ID。数组</li>
      */
     function __construct()
     {

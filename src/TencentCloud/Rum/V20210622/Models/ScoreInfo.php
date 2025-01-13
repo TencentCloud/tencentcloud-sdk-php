@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageUv(string $PageUv) 设置uv
  * @method string getApiDuration() 获取请求次数
  * @method void setApiDuration(string $ApiDuration) 设置请求次数
- * @method string getScore() 获取分数
- * @method void setScore(string $Score) 设置分数
+ * @method string getScore() 获取项目总分
+ * @method void setScore(string $Score) 设置项目总分
  * @method string getPageError() 获取error
  * @method void setPageError(string $PageError) 设置error
  * @method string getStaticNum() 获取num
@@ -50,6 +50,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPagePerformanceScore() 获取页面性能评分
+ * @method void setPagePerformanceScore(string $PagePerformanceScore) 设置页面性能评分
+ * @method string getJsErrorScore() 获取js错误评分
+ * @method void setJsErrorScore(string $JsErrorScore) 设置js错误评分
+ * @method string getApiPerformanceScore() 获取API性能评分
+ * @method void setApiPerformanceScore(string $ApiPerformanceScore) 设置API性能评分
+ * @method string getApiAvaliableScore() 获取API可用性评分
+ * @method void setApiAvaliableScore(string $ApiAvaliableScore) 设置API可用性评分
+ * @method string getStaticPerformanceScore() 获取静态资源性能评分
+ * @method void setStaticPerformanceScore(string $StaticPerformanceScore) 设置静态资源性能评分
+ * @method string getStaticAvaliableScore() 获取静态资源可用性评分
+ * @method void setStaticAvaliableScore(string $StaticAvaliableScore) 设置静态资源可用性评分
  */
 class ScoreInfo extends AbstractModel
 {
@@ -94,7 +106,7 @@ class ScoreInfo extends AbstractModel
     public $ApiDuration;
 
     /**
-     * @var string 分数
+     * @var string 项目总分
      */
     public $Score;
 
@@ -125,6 +137,36 @@ class ScoreInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 页面性能评分
+     */
+    public $PagePerformanceScore;
+
+    /**
+     * @var string js错误评分
+     */
+    public $JsErrorScore;
+
+    /**
+     * @var string API性能评分
+     */
+    public $ApiPerformanceScore;
+
+    /**
+     * @var string API可用性评分
+     */
+    public $ApiAvaliableScore;
+
+    /**
+     * @var string 静态资源性能评分
+     */
+    public $StaticPerformanceScore;
+
+    /**
+     * @var string 静态资源可用性评分
+     */
+    public $StaticAvaliableScore;
+
+    /**
      * @param string $StaticDuration duration
      * @param string $PagePv pv
      * @param string $ApiFail 失败
@@ -133,13 +175,19 @@ class ScoreInfo extends AbstractModel
      * @param integer $ProjectID 项目id
      * @param string $PageUv uv
      * @param string $ApiDuration 请求次数
-     * @param string $Score 分数
+     * @param string $Score 项目总分
      * @param string $PageError error
      * @param string $StaticNum num
      * @param integer $RecordNum num
      * @param string $PageDuration Duration
      * @param string $CreateTime 时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PagePerformanceScore 页面性能评分
+     * @param string $JsErrorScore js错误评分
+     * @param string $ApiPerformanceScore API性能评分
+     * @param string $ApiAvaliableScore API可用性评分
+     * @param string $StaticPerformanceScore 静态资源性能评分
+     * @param string $StaticAvaliableScore 静态资源可用性评分
      */
     function __construct()
     {
@@ -208,6 +256,30 @@ class ScoreInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PagePerformanceScore",$param) and $param["PagePerformanceScore"] !== null) {
+            $this->PagePerformanceScore = $param["PagePerformanceScore"];
+        }
+
+        if (array_key_exists("JsErrorScore",$param) and $param["JsErrorScore"] !== null) {
+            $this->JsErrorScore = $param["JsErrorScore"];
+        }
+
+        if (array_key_exists("ApiPerformanceScore",$param) and $param["ApiPerformanceScore"] !== null) {
+            $this->ApiPerformanceScore = $param["ApiPerformanceScore"];
+        }
+
+        if (array_key_exists("ApiAvaliableScore",$param) and $param["ApiAvaliableScore"] !== null) {
+            $this->ApiAvaliableScore = $param["ApiAvaliableScore"];
+        }
+
+        if (array_key_exists("StaticPerformanceScore",$param) and $param["StaticPerformanceScore"] !== null) {
+            $this->StaticPerformanceScore = $param["StaticPerformanceScore"];
+        }
+
+        if (array_key_exists("StaticAvaliableScore",$param) and $param["StaticAvaliableScore"] !== null) {
+            $this->StaticAvaliableScore = $param["StaticAvaliableScore"];
         }
     }
 }

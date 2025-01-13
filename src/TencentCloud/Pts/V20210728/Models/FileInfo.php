@@ -21,43 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * 文件基本信息
  *
  * @method string getName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
 {
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -69,21 +58,16 @@ class FileInfo extends AbstractModel
 
     /**
      * @var string 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @param string $Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

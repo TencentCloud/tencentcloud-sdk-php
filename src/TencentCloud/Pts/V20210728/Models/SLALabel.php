@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * SLA 标签
  *
  * @method string getLabelName() 获取标签名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelName(string $LabelName) 设置标签名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabelValue() 获取标签值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelValue(string $LabelValue) 设置标签值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SLALabel extends AbstractModel
 {
     /**
      * @var string 标签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelName;
 
     /**
      * @var string 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelValue;
 
     /**
      * @param string $LabelName 标签名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LabelValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

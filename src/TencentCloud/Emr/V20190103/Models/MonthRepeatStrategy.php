@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 定时伸缩每月重复任务策略
  *
  * @method string getExecuteAtTimeOfDay() 获取重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteAtTimeOfDay(string $ExecuteAtTimeOfDay) 设置重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDaysOfMonthRange() 获取每月中的天数时间段描述，长度只能为2，例如[2,10]表示每月2-10号。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDaysOfMonthRange(array $DaysOfMonthRange) 设置每月中的天数时间段描述，长度只能为2，例如[2,10]表示每月2-10号。
@@ -33,7 +31,6 @@ class MonthRepeatStrategy extends AbstractModel
 {
     /**
      * @var string 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteAtTimeOfDay;
 
@@ -45,7 +42,6 @@ class MonthRepeatStrategy extends AbstractModel
 
     /**
      * @param string $ExecuteAtTimeOfDay 重复任务执行的具体时刻，例如"01:02:00"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DaysOfMonthRange 每月中的天数时间段描述，长度只能为2，例如[2,10]表示每月2-10号。
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
  * @method void setStatus(integer $Status) 设置当前合同状态,如下是状态码对应的状态。
@@ -59,7 +59,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
  * @method string getQuotaType() 获取查询的套餐类型
@@ -152,7 +152,7 @@ class BillUsageDetail extends AbstractModel
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
      */
@@ -227,7 +227,7 @@ class BillUsageDetail extends AbstractModel
 <li>**7**: 还没有预发起</li>
 <li>**8**: 等待填写</li>
 <li>**9**: 部分填写 </li>
-<li>**10**: 拒填</li>
+<li>**10**: 拒签</li>
 <li>**11**: 已解除</li>
 </ul>
      * @param string $QuotaType 查询的套餐类型

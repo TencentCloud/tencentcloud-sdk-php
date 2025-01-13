@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdatedAt() 获取更新时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
  * @method integer getLineCount() 获取文件行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineCount(integer $LineCount) 设置文件行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeadLines() 获取头部数据行
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadLines(array $HeadLines) 设置头部数据行
@@ -45,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTailLines(array $TailLines) 设置尾部数据行
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHeaderInFile() 获取首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderInFile(boolean $HeaderInFile) 设置首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaderColumns() 获取参数名数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderColumns(array $HeaderColumns) 设置参数名数组
@@ -61,33 +57,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScenarioSet(array $ScenarioSet) 设置关联场景
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取文件状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppID() 获取此字段不再使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppID(integer $AppID) 设置此字段不再使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取用户子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置用户子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户账号的 App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户账号的 App ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class File extends AbstractModel
 {
@@ -123,7 +107,6 @@ class File extends AbstractModel
 
     /**
      * @var integer 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineCount;
 
@@ -141,7 +124,6 @@ class File extends AbstractModel
 
     /**
      * @var boolean 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderInFile;
 
@@ -165,7 +147,6 @@ class File extends AbstractModel
 
     /**
      * @var integer 文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -177,31 +158,26 @@ class File extends AbstractModel
 
     /**
      * @var string 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer 此字段不再使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
 
     /**
      * @var string 用户主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 用户子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @var integer 用户账号的 App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
@@ -213,13 +189,11 @@ class File extends AbstractModel
      * @param string $Type 文件类型
      * @param string $UpdatedAt 更新时间
      * @param integer $LineCount 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HeadLines 头部数据行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TailLines 尾部数据行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HeaderInFile 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HeaderColumns 参数名数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileInfos 文件夹中的文件
@@ -227,19 +201,13 @@ class File extends AbstractModel
      * @param array $ScenarioSet 关联场景
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppID 此字段不再使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 用户子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户账号的 App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

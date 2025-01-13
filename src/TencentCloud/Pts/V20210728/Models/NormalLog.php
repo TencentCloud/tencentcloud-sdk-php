@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 通用日志
  *
  * @method string getTimestamp() 获取毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(string $Timestamp) 设置毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSeverityText() 获取日志级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeverityText(string $SeverityText) 设置日志级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBody() 获取日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NormalLog extends AbstractModel
 {
     /**
      * @var string 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SeverityText;
 
     /**
      * @var string 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
 
     /**
      * @param string $Timestamp 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SeverityText 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 日志输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getValues() 获取指标采样数组
  * @method void setValues(array $Values) 设置指标采样数组
  * @method string getName() 获取指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SampleStream extends AbstractModel
 {
@@ -46,7 +44,6 @@ class SampleStream extends AbstractModel
 
     /**
      * @var string 指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -55,7 +52,6 @@ class SampleStream extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 指标采样数组
      * @param string $Name 指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

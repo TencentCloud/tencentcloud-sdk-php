@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * SLA 规则
  *
  * @method string getMetric() 获取压测指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置压测指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAggregation() 获取压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAggregation(string $Aggregation) 设置压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCondition() 获取压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCondition(string $Condition) 设置压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getValue() 获取阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(float $Value) 设置阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelFilter() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelFilter(array $LabelFilter) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAbortFlag() 获取是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbortFlag(boolean $AbortFlag) 设置是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFor() 获取持续时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFor(string $For) 设置持续时长
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SLARule extends AbstractModel
 {
     /**
      * @var string 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
     /**
      * @var string 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Aggregation;
 
     /**
      * @var string 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
      * @var float 阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -83,31 +67,23 @@ class SLARule extends AbstractModel
 
     /**
      * @var boolean 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbortFlag;
 
     /**
      * @var string 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $For;
 
     /**
      * @param string $Metric 压测指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Aggregation 压测指标聚合方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Condition 压测指标条件判断符号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Value 阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelFilter 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AbortFlag 是否停止压测任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $For 持续时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

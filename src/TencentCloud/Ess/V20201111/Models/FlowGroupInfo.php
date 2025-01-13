@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
  * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method integer getDeadline() 获取签署流程的签署截止时间。
@@ -95,9 +93,9 @@ false：有序签
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
 示例值：true
  * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
  * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
  * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  */
@@ -130,7 +128,6 @@ class FlowGroupInfo extends AbstractModel
 
     /**
      * @var string 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
      */
     public $FlowType;
 
@@ -191,7 +188,7 @@ false：有序签
 
     /**
      * @var string 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
      */
     public $AutoSignScene;
 
@@ -211,7 +208,6 @@ false：有序签
 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-示例值：劳务合同
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param integer $Deadline 签署流程的签署截止时间。
 
@@ -239,7 +235,7 @@ false：有序签
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
 示例值：true
      * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-示例值：E_PRESCRIPTION_AUTO_SIGN
+
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
      */
     function __construct()

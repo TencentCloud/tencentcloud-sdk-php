@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 采样日志附带属性
  *
  * @method string getStatus() 获取采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResult() 获取采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getService() 获取采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(string $Service) 设置采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethod() 获取采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDuration() 获取采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(string $Duration) 设置采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Attributes extends AbstractModel
 {
     /**
      * @var string 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var string 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var string 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var string 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @param string $Status 采用请求返回码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Result 采样请求结果码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Service 采样请求API
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 采样请求调用方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 采样请求延时时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

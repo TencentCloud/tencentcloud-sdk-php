@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置 同步的状态,  全部同步失败接口是接口会直接报错
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedList() 获取同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedList(array $FailedList) 设置同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,13 +40,11 @@ class SyncProxyOrganizationOperatorsResponse extends AbstractModel
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var array 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedList;
 
@@ -64,9 +58,7 @@ class SyncProxyOrganizationOperatorsResponse extends AbstractModel
 
 <ul><li> **1** :全部成功</li>
 <li> **2** :部分成功</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedList 同步失败员工ID及其失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

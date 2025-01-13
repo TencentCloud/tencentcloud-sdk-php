@@ -41,13 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method OrganizationCommonInfo getOrganizationCommonInfo() 获取企业授权书信息参数， 需要自行保证这些参数跟营业执照中的信息一致。
  * @method void setOrganizationCommonInfo(OrganizationCommonInfo $OrganizationCommonInfo) 设置企业授权书信息参数， 需要自行保证这些参数跟营业执照中的信息一致。
  * @method integer getType() 获取授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
  * @method void setType(integer $Type) 设置授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
  */
 class CreateOrganizationAuthFileRequest extends AbstractModel
 {
@@ -71,9 +69,8 @@ class CreateOrganizationAuthFileRequest extends AbstractModel
 
     /**
      * @var integer 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
      */
     public $Type;
 
@@ -89,9 +86,8 @@ class CreateOrganizationAuthFileRequest extends AbstractModel
 第三方平台子客企业和员工必须已经经过实名认证
      * @param OrganizationCommonInfo $OrganizationCommonInfo 企业授权书信息参数， 需要自行保证这些参数跟营业执照中的信息一致。
      * @param integer $Type 授权书类型：
-- 0: 企业认证超管授权书
-- 1: 超管变更授权书
-- 2: 企业注销授权书
+
+<ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
      */
     function __construct()
     {

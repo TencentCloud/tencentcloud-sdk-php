@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUnit() 获取指标对应的单位，当前单位有：s,bytes,bytes/s,reqs,reqs/s,checks,checks/s,iters,iters/s,VUs, %
  * @method void setUnit(string $Unit) 设置指标对应的单位，当前单位有：s,bytes,bytes/s,reqs,reqs/s,checks,checks/s,iters,iters/s,VUs, %
  * @method string getName() 获取指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomSample extends AbstractModel
 {
@@ -77,7 +75,6 @@ class CustomSample extends AbstractModel
 
     /**
      * @var string 指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -91,7 +88,6 @@ class CustomSample extends AbstractModel
 // (1970-01-01 00:00 UTC) excluding leap seconds.
      * @param string $Unit 指标对应的单位，当前单位有：s,bytes,bytes/s,reqs,reqs/s,checks,checks/s,iters,iters/s,VUs, %
      * @param string $Name 指标序列名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

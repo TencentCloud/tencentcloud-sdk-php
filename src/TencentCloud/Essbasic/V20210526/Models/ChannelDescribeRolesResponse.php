@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取查询角色的总数量
  * @method void setTotalCount(integer $TotalCount) 设置查询角色的总数量
  * @method array getChannelRoles() 获取查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelRoles(array $ChannelRoles) 设置查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,7 +50,6 @@ class ChannelDescribeRolesResponse extends AbstractModel
 
     /**
      * @var array 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelRoles;
 
@@ -66,7 +63,6 @@ class ChannelDescribeRolesResponse extends AbstractModel
      * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
      * @param integer $TotalCount 查询角色的总数量
      * @param array $ChannelRoles 查询的角色信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

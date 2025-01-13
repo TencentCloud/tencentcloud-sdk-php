@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置搜索引文链接
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getText() 获取搜索引文站点名
+ * @method void setText(string $Text) 设置搜索引文站点名
+ * @method string getIcon() 获取搜索引文图标
+ * @method void setIcon(string $Icon) 设置搜索引文图标
  */
 class SearchResult extends AbstractModel
 {
@@ -54,12 +58,24 @@ class SearchResult extends AbstractModel
     public $Url;
 
     /**
+     * @var string 搜索引文站点名
+     */
+    public $Text;
+
+    /**
+     * @var string 搜索引文图标
+     */
+    public $Icon;
+
+    /**
      * @param integer $Index 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 搜索引文标题
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 搜索引文链接
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Text 搜索引文站点名
+     * @param string $Icon 搜索引文图标
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class SearchResult extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Icon",$param) and $param["Icon"] !== null) {
+            $this->Icon = $param["Icon"];
         }
     }
 }

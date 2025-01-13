@@ -31,10 +31,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
  * @method string getUrl() 获取H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
  * @method void setUrl(string $Url) 设置H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
  */
 class SuccessUpdateStaffData extends AbstractModel
@@ -57,7 +55,6 @@ class SuccessUpdateStaffData extends AbstractModel
 
     /**
      * @var string H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
      */
     public $Url;
@@ -68,7 +65,6 @@ class SuccessUpdateStaffData extends AbstractModel
      * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      * @param string $Url H5端员工实名链接
-
 只有入参 InvitationNotifyType = H5的时候才会进行返回。
      */
     function __construct()

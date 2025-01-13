@@ -21,55 +21,38 @@ use TencentCloud\Common\AbstractModel;
  * 脚本信息
  *
  * @method string getName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncodedContent() 获取base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodedContent(string $EncodedContent) 设置base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncodedHttpArchive() 获取base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodedHttpArchive(string $EncodedHttpArchive) 设置base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLoadWeight() 获取脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadWeight(integer $LoadWeight) 设置脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScriptInfo extends AbstractModel
 {
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -81,45 +64,34 @@ class ScriptInfo extends AbstractModel
 
     /**
      * @var string base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodedContent;
 
     /**
      * @var string base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodedHttpArchive;
 
     /**
      * @var integer 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadWeight;
 
     /**
      * @var string 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @param string $Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncodedContent base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncodedHttpArchive base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LoadWeight 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

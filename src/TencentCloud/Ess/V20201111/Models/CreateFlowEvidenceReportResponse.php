@@ -26,18 +26,16 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
  * @method void setStatus(string $Status) 设置出证任务执行的状态, 状态含义如下：
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
  * @method string getReportUrl() 获取此字段已经废除,不再使用.
 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportUrl(string $ReportUrl) 设置此字段已经废除,不再使用.
 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,14 +51,13 @@ class CreateFlowEvidenceReportResponse extends AbstractModel
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      */
     public $Status;
 
     /**
      * @var string 此字段已经废除,不再使用.
 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ReportUrl;
@@ -76,10 +73,9 @@ class CreateFlowEvidenceReportResponse extends AbstractModel
 
 <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
 <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+<li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
      * @param string $ReportUrl 此字段已经废除,不再使用.
 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -54,10 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
  * @method string getPreviewUrl() 获取预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -98,7 +96,6 @@ class ChannelGetTaskResultApiResponse extends AbstractModel
     /**
      * @var string 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $PreviewUrl;
@@ -127,7 +124,6 @@ class ChannelGetTaskResultApiResponse extends AbstractModel
      * @param string $ResourceId 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
      * @param string $PreviewUrl 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

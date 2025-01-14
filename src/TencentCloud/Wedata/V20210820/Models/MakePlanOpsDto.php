@@ -134,6 +134,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置工作流自依赖类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMakeDataTimeOrder() 获取补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+ * @method void setMakeDataTimeOrder(string $MakeDataTimeOrder) 设置补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -303,6 +311,14 @@ class MakePlanOpsDto extends AbstractModel
     public $SelfWorkflowDependency;
 
     /**
+     * @var string 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     */
+    public $MakeDataTimeOrder;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -360,6 +376,10 @@ class MakePlanOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelfWorkflowDependency 工作流自依赖类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MakeDataTimeOrder 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
      */
     function __construct()
     {
@@ -490,6 +510,10 @@ class MakePlanOpsDto extends AbstractModel
 
         if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
             $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
+        }
+
+        if (array_key_exists("MakeDataTimeOrder",$param) and $param["MakeDataTimeOrder"] !== null) {
+            $this->MakeDataTimeOrder = $param["MakeDataTimeOrder"];
         }
     }
 }

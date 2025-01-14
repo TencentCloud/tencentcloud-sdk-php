@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTypes(array $SqlTypes) 设置sql类型 （多选）
  * @method array getCatalogs() 获取catalog名称（多选）
  * @method void setCatalogs(array $Catalogs) 设置catalog名称（多选）
+ * @method array getIsQuery() 获取是否是查询 
+ * @method void setIsQuery(array $IsQuery) 设置是否是查询 
  */
 class DescribeDatabaseAuditRecordsRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribeDatabaseAuditRecordsRequest extends AbstractModel
     public $Catalogs;
 
     /**
+     * @var array 是否是查询 
+     */
+    public $IsQuery;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
@@ -136,6 +143,7 @@ class DescribeDatabaseAuditRecordsRequest extends AbstractModel
      * @param array $DbNames 数据库 （多选）
      * @param array $SqlTypes sql类型 （多选）
      * @param array $Catalogs catalog名称（多选）
+     * @param array $IsQuery 是否是查询 
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class DescribeDatabaseAuditRecordsRequest extends AbstractModel
 
         if (array_key_exists("Catalogs",$param) and $param["Catalogs"] !== null) {
             $this->Catalogs = $param["Catalogs"];
+        }
+
+        if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
+            $this->IsQuery = $param["IsQuery"];
         }
     }
 }

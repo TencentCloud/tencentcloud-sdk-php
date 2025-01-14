@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) 设置查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
+ * @method array getInstanceLifeDetailDtoList() 获取生命周期为基础数据进行日志匹配
+ * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置生命周期为基础数据进行日志匹配
+ * @method integer getCurrentLifeRound() 获取当前生命周期
+ * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置当前生命周期
+ * @method integer getMaxLifeRound() 获取生命周期总数
+ * @method void setMaxLifeRound(integer $MaxLifeRound) 设置生命周期总数
+ * @method integer getTries() 获取当前生命周期重试次数
+ * @method void setTries(integer $Tries) 设置当前生命周期重试次数
+ * @method boolean getDynamic() 获取动态加载日志
+ * @method void setDynamic(boolean $Dynamic) 设置动态加载日志
  */
 class DescribeInstanceLogDetailRequest extends AbstractModel
 {
@@ -108,6 +118,31 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
+     * @var array 生命周期为基础数据进行日志匹配
+     */
+    public $InstanceLifeDetailDtoList;
+
+    /**
+     * @var integer 当前生命周期
+     */
+    public $CurrentLifeRound;
+
+    /**
+     * @var integer 生命周期总数
+     */
+    public $MaxLifeRound;
+
+    /**
+     * @var integer 当前生命周期重试次数
+     */
+    public $Tries;
+
+    /**
+     * @var boolean 动态加载日志
+     */
+    public $Dynamic;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务id
      * @param string $CurRunDate 数据时间
@@ -120,6 +155,11 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
      * @param integer $LineCount 每次查询行数
      * @param string $ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     * @param array $InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
+     * @param integer $CurrentLifeRound 当前生命周期
+     * @param integer $MaxLifeRound 生命周期总数
+     * @param integer $Tries 当前生命周期重试次数
+     * @param boolean $Dynamic 动态加载日志
      */
     function __construct()
     {
@@ -180,6 +220,31 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
 
         if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
             $this->RequestFromSource = $param["RequestFromSource"];
+        }
+
+        if (array_key_exists("InstanceLifeDetailDtoList",$param) and $param["InstanceLifeDetailDtoList"] !== null) {
+            $this->InstanceLifeDetailDtoList = [];
+            foreach ($param["InstanceLifeDetailDtoList"] as $key => $value){
+                $obj = new InstanceLifeDetailDto();
+                $obj->deserialize($value);
+                array_push($this->InstanceLifeDetailDtoList, $obj);
+            }
+        }
+
+        if (array_key_exists("CurrentLifeRound",$param) and $param["CurrentLifeRound"] !== null) {
+            $this->CurrentLifeRound = $param["CurrentLifeRound"];
+        }
+
+        if (array_key_exists("MaxLifeRound",$param) and $param["MaxLifeRound"] !== null) {
+            $this->MaxLifeRound = $param["MaxLifeRound"];
+        }
+
+        if (array_key_exists("Tries",$param) and $param["Tries"] !== null) {
+            $this->Tries = $param["Tries"];
+        }
+
+        if (array_key_exists("Dynamic",$param) and $param["Dynamic"] !== null) {
+            $this->Dynamic = $param["Dynamic"];
         }
     }
 }

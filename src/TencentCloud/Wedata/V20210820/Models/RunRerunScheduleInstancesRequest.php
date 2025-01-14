@@ -58,6 +58,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCount(boolean $IsCount) 设置是否计算总数
  * @method boolean getAsyncMode() 获取是否异步模式
  * @method void setAsyncMode(boolean $AsyncMode) 设置是否异步模式
+ * @method string getCheckParentType() 获取是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+ * @method void setCheckParentType(string $CheckParentType) 设置是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+ * @method boolean getSameSelfDependType() 获取任务原有自依赖配置 true（是）、false（否）
+ * @method void setSameSelfDependType(boolean $SameSelfDependType) 设置任务原有自依赖配置 true（是）、false（否）
+ * @method integer getParallelNum() 获取实例运行并发度
+ * @method void setParallelNum(integer $ParallelNum) 设置实例运行并发度
+ * @method boolean getSameSelfWorkflowDependType() 获取任务原有自依赖配置 true（是）、false（否）
+ * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置任务原有自依赖配置 true（是）、false（否）
+ * @method string getSelfWorkflowDependency() 获取代表重新指定 的  是 或者 否  yes、 no
+ * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置代表重新指定 的  是 或者 否  yes、 no
+ * @method integer getDataTimeOrder() 获取运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+ * @method void setDataTimeOrder(integer $DataTimeOrder) 设置运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+ * @method string getReDoParams() 获取重跑参数
+ * @method void setReDoParams(string $ReDoParams) 设置重跑参数
  */
 class RunRerunScheduleInstancesRequest extends AbstractModel
 {
@@ -157,6 +171,41 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
     public $AsyncMode;
 
     /**
+     * @var string 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+     */
+    public $CheckParentType;
+
+    /**
+     * @var boolean 任务原有自依赖配置 true（是）、false（否）
+     */
+    public $SameSelfDependType;
+
+    /**
+     * @var integer 实例运行并发度
+     */
+    public $ParallelNum;
+
+    /**
+     * @var boolean 任务原有自依赖配置 true（是）、false（否）
+     */
+    public $SameSelfWorkflowDependType;
+
+    /**
+     * @var string 代表重新指定 的  是 或者 否  yes、 no
+     */
+    public $SelfWorkflowDependency;
+
+    /**
+     * @var integer 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+     */
+    public $DataTimeOrder;
+
+    /**
+     * @var string 重跑参数
+     */
+    public $ReDoParams;
+
+    /**
      * @param array $Instances 实例列表
      * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
      * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
@@ -176,6 +225,13 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
      * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 基础请求信息
      * @param boolean $IsCount 是否计算总数
      * @param boolean $AsyncMode 是否异步模式
+     * @param string $CheckParentType 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+     * @param boolean $SameSelfDependType 任务原有自依赖配置 true（是）、false（否）
+     * @param integer $ParallelNum 实例运行并发度
+     * @param boolean $SameSelfWorkflowDependType 任务原有自依赖配置 true（是）、false（否）
+     * @param string $SelfWorkflowDependency 代表重新指定 的  是 或者 否  yes、 no
+     * @param integer $DataTimeOrder 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+     * @param string $ReDoParams 重跑参数
      */
     function __construct()
     {
@@ -271,6 +327,34 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
 
         if (array_key_exists("AsyncMode",$param) and $param["AsyncMode"] !== null) {
             $this->AsyncMode = $param["AsyncMode"];
+        }
+
+        if (array_key_exists("CheckParentType",$param) and $param["CheckParentType"] !== null) {
+            $this->CheckParentType = $param["CheckParentType"];
+        }
+
+        if (array_key_exists("SameSelfDependType",$param) and $param["SameSelfDependType"] !== null) {
+            $this->SameSelfDependType = $param["SameSelfDependType"];
+        }
+
+        if (array_key_exists("ParallelNum",$param) and $param["ParallelNum"] !== null) {
+            $this->ParallelNum = $param["ParallelNum"];
+        }
+
+        if (array_key_exists("SameSelfWorkflowDependType",$param) and $param["SameSelfWorkflowDependType"] !== null) {
+            $this->SameSelfWorkflowDependType = $param["SameSelfWorkflowDependType"];
+        }
+
+        if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
+            $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
+        }
+
+        if (array_key_exists("DataTimeOrder",$param) and $param["DataTimeOrder"] !== null) {
+            $this->DataTimeOrder = $param["DataTimeOrder"];
+        }
+
+        if (array_key_exists("ReDoParams",$param) and $param["ReDoParams"] !== null) {
+            $this->ReDoParams = $param["ReDoParams"];
         }
     }
 }

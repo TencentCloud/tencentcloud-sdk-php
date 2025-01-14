@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultWeight(integer $DefaultWeight) 设置分组默认权重
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticNumber() 获取弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticNumber(integer $ElasticNumber) 设置弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeGatewayServerGroup extends AbstractModel
 {
@@ -139,6 +143,12 @@ class NativeGatewayServerGroup extends AbstractModel
     public $DefaultWeight;
 
     /**
+     * @var integer 弹性节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticNumber;
+
+    /**
      * @param string $GroupId 云原生网关分组唯一id
      * @param string $Name 分组名
      * @param string $Description 描述信息
@@ -159,6 +169,8 @@ class NativeGatewayServerGroup extends AbstractModel
      * @param string $SubnetIds 子网id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultWeight 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticNumber 弹性节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -226,6 +238,10 @@ class NativeGatewayServerGroup extends AbstractModel
 
         if (array_key_exists("DefaultWeight",$param) and $param["DefaultWeight"] !== null) {
             $this->DefaultWeight = $param["DefaultWeight"];
+        }
+
+        if (array_key_exists("ElasticNumber",$param) and $param["ElasticNumber"] !== null) {
+            $this->ElasticNumber = $param["ElasticNumber"];
         }
     }
 }

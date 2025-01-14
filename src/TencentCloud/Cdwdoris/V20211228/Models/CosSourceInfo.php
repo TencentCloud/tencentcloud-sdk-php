@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 客户提供cos认证信息。
  *
  * @method string getSecretId() 获取cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretId(string $SecretId) 设置cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretKey() 获取cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretKey(string $SecretKey) 设置cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosPath() 获取cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPath(string $CosPath) 设置cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosSourceInfo extends AbstractModel
 {
     /**
      * @var string cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretId;
 
     /**
      * @var string cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
 
     /**
      * @var string cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPath;
 
     /**
      * @param string $SecretId cos认证中的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretKey cos认证中的key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosPath cos认证中的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

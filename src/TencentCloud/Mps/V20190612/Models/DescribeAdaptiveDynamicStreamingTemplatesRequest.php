@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
  * @method integer getPureAudio() 获取是否为纯音频，0表示视频，1表示纯音频
+默认值：0
  * @method void setPureAudio(integer $PureAudio) 设置是否为纯音频，0表示视频，1表示纯音频
+默认值：0
  * @method string getName() 获取自适应转码模板标识过滤条件，长度限制：64 个字符
  * @method void setName(string $Name) 设置自适应转码模板标识过滤条件，长度限制：64 个字符
  */
@@ -63,6 +65,7 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 
     /**
      * @var integer 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
      */
     public $PureAudio;
 
@@ -79,6 +82,7 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param integer $PureAudio 是否为纯音频，0表示视频，1表示纯音频
+默认值：0
      * @param string $Name 自适应转码模板标识过滤条件，长度限制：64 个字符
      */
     function __construct()

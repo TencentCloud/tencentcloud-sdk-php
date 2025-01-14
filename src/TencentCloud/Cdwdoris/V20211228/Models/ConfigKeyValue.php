@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 返回配置的文件内容（key-value）
  *
  * @method string getKeyName() 获取key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyName(string $KeyName) 设置key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDisplay() 获取1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisplay(integer $Display) 设置1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportHotUpdate() 获取0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportHotUpdate(integer $SupportHotUpdate) 设置0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigKeyValue extends AbstractModel
 {
     /**
      * @var string key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyName;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var integer 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Display;
 
     /**
      * @var integer 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportHotUpdate;
 
     /**
      * @param string $KeyName key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Display 1-只读，2-可修改但不可删除，3-可删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportHotUpdate 0不支持 1支持热更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

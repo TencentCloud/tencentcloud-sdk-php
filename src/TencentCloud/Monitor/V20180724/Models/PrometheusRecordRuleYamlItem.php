@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置实例名称
  * @method string getUpdateTime() 获取最近更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间
- * @method string getTemplateId() 获取Yaml内容
- * @method void setTemplateId(string $TemplateId) 设置Yaml内容
- * @method string getContent() 获取如果该聚合规则来至模板，则TemplateId为模板id
+ * @method string getTemplateId() 获取如果该聚合规则来至模板，则TemplateId为模板id
+ * @method void setTemplateId(string $TemplateId) 设置如果该聚合规则来至模板，则TemplateId为模板id
+ * @method string getContent() 获取Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(string $Content) 设置如果该聚合规则来至模板，则TemplateId为模板id
+ * @method void setContent(string $Content) 设置Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取该聚合规则如果来源于用户集群crd资源定义，则ClusterId为所属集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,12 +60,12 @@ class PrometheusRecordRuleYamlItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string Yaml内容
+     * @var string 如果该聚合规则来至模板，则TemplateId为模板id
      */
     public $TemplateId;
 
     /**
-     * @var string 如果该聚合规则来至模板，则TemplateId为模板id
+     * @var string Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
@@ -97,8 +97,8 @@ class PrometheusRecordRuleYamlItem extends AbstractModel
     /**
      * @param string $Name 实例名称
      * @param string $UpdateTime 最近更新时间
-     * @param string $TemplateId Yaml内容
-     * @param string $Content 如果该聚合规则来至模板，则TemplateId为模板id
+     * @param string $TemplateId 如果该聚合规则来至模板，则TemplateId为模板id
+     * @param string $Content Yaml内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 该聚合规则如果来源于用户集群crd资源定义，则ClusterId为所属集群ID
 注意：此字段可能返回 null，表示取不到有效值。

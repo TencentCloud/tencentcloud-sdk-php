@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 冷热分层策略
  *
  * @method string getPolicyName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCooldownDatetime() 获取cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCooldownDatetime(string $CooldownDatetime) 设置cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCooldownTtl() 获取cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCooldownTtl(string $CooldownTtl) 设置cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CoolDownPolicyInfo extends AbstractModel
 {
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @var string cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CooldownDatetime;
 
     /**
      * @var string cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CooldownTtl;
 
     /**
      * @param string $PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CooldownDatetime cooldown_ttl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CooldownTtl cooldown_datetime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -41,7 +41,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
 - 若待部署的证书和传入域名不匹配， 则不会创建成功
 - 若部署clb实例时， 7层监听器下无规则，则不会创建成功
 - 若部署clb实例时， 7层监听器未开启SNI，该监听器下存在任一域名和证书不匹配， 则不会创建成功
-- 若部署clb实例是，监听器规则为正则表示式， 则不会创建成功
+- 若部署clb实例时，监听器规则为正则表示式， 则不会创建成功
 
 <dx-alert infotype="explain" title="">一个证书ID，相同的资源类型，只能创建一个部署任务，必须等部署任务执行完成，才能创建新的部署任务</dx-alert>
  * @method Models\DeployCertificateRecordRetryResponse DeployCertificateRecordRetry(Models\DeployCertificateRecordRetryRequest $req) 云资源部署重试部署记录

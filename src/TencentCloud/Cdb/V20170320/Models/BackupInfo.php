@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionFlag(string $EncryptionFlag) 设置备份文件是否加密， on-加密， off-未加密
  * @method string getExecutedGTIDSet() 获取备份GTID点位
  * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置备份GTID点位
+ * @method string getMD5() 获取备份文件MD5值
+ * @method void setMD5(string $MD5) 设置备份文件MD5值
  */
 class BackupInfo extends AbstractModel
 {
@@ -171,6 +173,11 @@ class BackupInfo extends AbstractModel
     public $ExecutedGTIDSet;
 
     /**
+     * @var string 备份文件MD5值
+     */
+    public $MD5;
+
+    /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -192,6 +199,7 @@ class BackupInfo extends AbstractModel
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
      * @param string $ExecutedGTIDSet 备份GTID点位
+     * @param string $MD5 备份文件MD5值
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("ExecutedGTIDSet",$param) and $param["ExecutedGTIDSet"] !== null) {
             $this->ExecutedGTIDSet = $param["ExecutedGTIDSet"];
+        }
+
+        if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
+            $this->MD5 = $param["MD5"];
         }
     }
 }

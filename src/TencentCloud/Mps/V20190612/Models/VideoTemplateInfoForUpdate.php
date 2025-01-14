@@ -85,16 +85,20 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGop() 获取关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]。
 当填 0 时，系统将自动设置 gop 长度。
@@ -381,12 +385,14 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
@@ -630,8 +636,10 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+注意：Codec为MV-HEVC时可以支持到7680
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Gop 关键帧 I 帧之间的间隔，允许按帧或秒自定义GOP长度，取值范围：0 和 [1, 100000]。
 当填 0 时，系统将自动设置 gop 长度。

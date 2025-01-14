@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(string $FileSize) 设置文件大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchedBrokerIp() 获取日志匹配节点信息
+ * @method void setMatchedBrokerIp(string $MatchedBrokerIp) 设置日志匹配节点信息
  */
 class InstanceLogInfoOpsDto extends AbstractModel
 {
@@ -114,6 +116,11 @@ class InstanceLogInfoOpsDto extends AbstractModel
     public $FileSize;
 
     /**
+     * @var string 日志匹配节点信息
+     */
+    public $MatchedBrokerIp;
+
+    /**
      * @param string $LogInfo 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $YarnLogInfo 实例运行提交的yarn日志地址
@@ -132,6 +139,7 @@ class InstanceLogInfoOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSize 文件大小
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchedBrokerIp 日志匹配节点信息
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class InstanceLogInfoOpsDto extends AbstractModel
 
         if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
             $this->FileSize = $param["FileSize"];
+        }
+
+        if (array_key_exists("MatchedBrokerIp",$param) and $param["MatchedBrokerIp"] !== null) {
+            $this->MatchedBrokerIp = $param["MatchedBrokerIp"];
         }
     }
 }

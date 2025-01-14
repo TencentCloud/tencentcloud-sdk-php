@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 冷热分层Table数据信息
  *
  * @method string getDatabaseName() 获取列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSize() 获取列：Size
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(string $Size) 设置列：Size
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteSize() 获取列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteSize(string $RemoteSize) 设置列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CoolDownTableDataInfo extends AbstractModel
 {
     /**
      * @var string 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var string 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteSize;
 
     /**
      * @param string $DatabaseName 列：DatabaseName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 列：TableName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Size 列：Size
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteSize 列：RemoteSize
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

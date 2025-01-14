@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOldConfValue() 获取修改前的配置文件内容，base64编码
  * @method void setOldConfValue(string $OldConfValue) 设置修改前的配置文件内容，base64编码
  * @method string getRemark() 获取修改原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置修改原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method string getUserUin() 获取修改子账号id
@@ -54,7 +52,6 @@ class ClusterConfigsHistory extends AbstractModel
 
     /**
      * @var string 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -73,7 +70,6 @@ class ClusterConfigsHistory extends AbstractModel
      * @param string $NewConfValue 修改后的配置文件内容，base64编码
      * @param string $OldConfValue 修改前的配置文件内容，base64编码
      * @param string $Remark 修改原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
      * @param string $UserUin 修改子账号id
      */

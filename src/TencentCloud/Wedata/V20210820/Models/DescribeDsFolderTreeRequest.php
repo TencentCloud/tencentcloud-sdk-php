@@ -54,6 +54,14 @@ false 否
  * @method void setNewFolderTreeMode(boolean $NewFolderTreeMode) 设置是否使用最新模式展示目录树
  * @method string getTaskNodeId() 获取节点分类ID
  * @method void setTaskNodeId(string $TaskNodeId) 设置节点分类ID
+ * @method string getWorkflowType() 获取工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -127,6 +135,14 @@ false 否
     public $TaskNodeId;
 
     /**
+     * @var string 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     */
+    public $WorkflowType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取 true 是 
 false 否
@@ -144,6 +160,10 @@ false 否
 false 否
      * @param boolean $NewFolderTreeMode 是否使用最新模式展示目录树
      * @param string $TaskNodeId 节点分类ID
+     * @param string $WorkflowType 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
      */
     function __construct()
     {
@@ -208,6 +228,10 @@ false 否
 
         if (array_key_exists("TaskNodeId",$param) and $param["TaskNodeId"] !== null) {
             $this->TaskNodeId = $param["TaskNodeId"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
         }
     }
 }

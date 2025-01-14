@@ -21,177 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 数据库审计
  *
  * @method string getOsUser() 获取查询用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsUser(string $OsUser) 设置查询用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInitialQueryId() 获取查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitialQueryId(string $InitialQueryId) 设置查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSql() 获取SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSql(string $Sql) 设置SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueryStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueryStartTime(string $QueryStartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDurationMs() 获取执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationMs(integer $DurationMs) 设置执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadRows() 获取读取行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadRows(integer $ReadRows) 设置读取行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResultRows() 获取读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultRows(integer $ResultRows) 设置读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResultBytes() 获取结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultBytes(integer $ResultBytes) 设置结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemoryUsage() 获取内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemoryUsage(integer $MemoryUsage) 设置内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInitialAddress() 获取初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitialAddress(string $InitialAddress) 设置初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbName() 获取数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSqlType() 获取sql类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSqlType(string $SqlType) 设置sql类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCatalog() 获取catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalog(string $Catalog) 设置catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsQuery() 获取是否是查询
+ * @method void setIsQuery(boolean $IsQuery) 设置是否是查询
  */
 class DataBaseAuditRecord extends AbstractModel
 {
     /**
      * @var string 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsUser;
 
     /**
      * @var string 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialQueryId;
 
     /**
      * @var string SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sql;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryStartTime;
 
     /**
      * @var integer 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationMs;
 
     /**
      * @var integer 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadRows;
 
     /**
      * @var integer 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultRows;
 
     /**
      * @var integer 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultBytes;
 
     /**
      * @var integer 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemoryUsage;
 
     /**
      * @var string 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialAddress;
 
     /**
      * @var string 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var string sql类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlType;
 
     /**
      * @var string catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalog;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
+     * @var boolean 是否是查询
+     */
+    public $IsQuery;
+
+    /**
      * @param string $OsUser 查询用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InitialQueryId 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sql SQL语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueryStartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DurationMs 执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadRows 读取行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResultRows 读取字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResultBytes 结果字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemoryUsage 内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InitialAddress 初始查询IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SqlType sql类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Catalog catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsQuery 是否是查询
      */
     function __construct()
     {
@@ -260,6 +212,10 @@ class DataBaseAuditRecord extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
+            $this->IsQuery = $param["IsQuery"];
         }
     }
 }

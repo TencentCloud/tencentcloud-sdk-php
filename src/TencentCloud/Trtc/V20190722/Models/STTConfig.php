@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
  * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+ * @method string getHotWordList() 获取热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+ * @method void setHotWordList(string $HotWordList) 设置热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
  */
 class STTConfig extends AbstractModel
 {
@@ -142,6 +144,11 @@ class STTConfig extends AbstractModel
     public $VadSilenceTime;
 
     /**
+     * @var string 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     */
+    public $HotWordList;
+
+    /**
      * @param string $Language 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -176,6 +183,7 @@ class STTConfig extends AbstractModel
      * @param string $CustomParam 自定义参数，联系后台使用
 
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     * @param string $HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class STTConfig extends AbstractModel
 
         if (array_key_exists("VadSilenceTime",$param) and $param["VadSilenceTime"] !== null) {
             $this->VadSilenceTime = $param["VadSilenceTime"];
+        }
+
+        if (array_key_exists("HotWordList",$param) and $param["HotWordList"] !== null) {
+            $this->HotWordList = $param["HotWordList"];
         }
     }
 }

@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerId(string $OwnerId) 设置责任人UserId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkflowType() 获取工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowCanvasOpsDto extends AbstractModel
 {
@@ -164,6 +168,12 @@ class WorkflowCanvasOpsDto extends AbstractModel
     public $OwnerId;
 
     /**
+     * @var string 工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowType;
+
+    /**
      * @param string $WorkflowId 工作流id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowDesc 工作流详情描述
@@ -191,6 +201,8 @@ class WorkflowCanvasOpsDto extends AbstractModel
      * @param string $Owner 责任人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerId 责任人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowType 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -270,6 +282,10 @@ class WorkflowCanvasOpsDto extends AbstractModel
 
         if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
             $this->OwnerId = $param["OwnerId"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
         }
     }
 }

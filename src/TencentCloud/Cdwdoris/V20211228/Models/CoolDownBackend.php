@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 冷热分层backend节点信息
  *
  * @method string getHost() 获取字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataUsedCapacity() 获取字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataUsedCapacity(string $DataUsedCapacity) 设置字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCapacity() 获取字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCapacity(string $TotalCapacity) 设置字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteUsedCapacity() 获取字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteUsedCapacity(string $RemoteUsedCapacity) 设置字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CoolDownBackend extends AbstractModel
 {
     /**
      * @var string 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @var string 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataUsedCapacity;
 
     /**
      * @var string 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCapacity;
 
     /**
      * @var string 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteUsedCapacity;
 
     /**
      * @param string $Host 字段：Host
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataUsedCapacity 字段：DataUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCapacity 字段：TotalCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteUsedCapacity 字段：RemoteUsedCapacity
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

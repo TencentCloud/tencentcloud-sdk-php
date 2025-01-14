@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxResults(integer $MaxResults) 设置每页显示数量
  * @method string getAccountGroupId() 获取账号组ID
  * @method void setAccountGroupId(string $AccountGroupId) 设置账号组ID
- * @method array getFilters() 获取resourceName：资源名  resourceId ：资源ID
- * @method void setFilters(array $Filters) 设置resourceName：资源名  resourceId ：资源ID
+ * @method array getFilters() 获取resourceName：资源名  resourceId ：资源ID resourceType：资源类型
+ * @method void setFilters(array $Filters) 设置resourceName：资源名  resourceId ：资源ID resourceType：资源类型
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
  * @method string getNextToken() 获取下一页token
@@ -46,7 +46,7 @@ class ListAggregateDiscoveredResourcesRequest extends AbstractModel
     public $AccountGroupId;
 
     /**
-     * @var array resourceName：资源名  resourceId ：资源ID
+     * @var array resourceName：资源名  resourceId ：资源ID resourceType：资源类型
      */
     public $Filters;
 
@@ -68,7 +68,7 @@ class ListAggregateDiscoveredResourcesRequest extends AbstractModel
     /**
      * @param integer $MaxResults 每页显示数量
      * @param string $AccountGroupId 账号组ID
-     * @param array $Filters resourceName：资源名  resourceId ：资源ID
+     * @param array $Filters resourceName：资源名  resourceId ：资源ID resourceType：资源类型
      * @param array $Tags 标签
      * @param string $NextToken 下一页token
      * @param string $OrderType 排序方式 asc、desc

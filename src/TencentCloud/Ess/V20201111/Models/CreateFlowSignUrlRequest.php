@@ -38,12 +38,24 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method array getFlowApproverInfos() 获取流程签署人列表中，结构体的ApproverName、ApproverMobile和ApproverType为必传字段。如果是企业签署人，还需传递OrganizationName。
 
+此结构体和CreateFlow发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
+1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
+2. ApproverSignTypes: 指定签署方签署时候的认证方式，仅此链接生效。
+3. SignTypeSelector: 可以指定签署方签署合同的认证校验方式的选择模式。
+4. Intention: 指定H5签署视频核身的意图配置，仅视频签署需要使用。
+
 注：
 1. 签署人<b>只能使用手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件</b>，其他类型的签署控件暂时不支持。
 2. 生成发起方预览链接时，该字段（FlowApproverInfos）可以传空或者不传。
 
 
  * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表中，结构体的ApproverName、ApproverMobile和ApproverType为必传字段。如果是企业签署人，还需传递OrganizationName。
+
+此结构体和CreateFlow发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
+1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
+2. ApproverSignTypes: 指定签署方签署时候的认证方式，仅此链接生效。
+3. SignTypeSelector: 可以指定签署方签署合同的认证校验方式的选择模式。
+4. Intention: 指定H5签署视频核身的意图配置，仅视频签署需要使用。
 
 注：
 1. 签署人<b>只能使用手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件</b>，其他类型的签署控件暂时不支持。
@@ -98,6 +110,12 @@ class CreateFlowSignUrlRequest extends AbstractModel
     /**
      * @var array 流程签署人列表中，结构体的ApproverName、ApproverMobile和ApproverType为必传字段。如果是企业签署人，还需传递OrganizationName。
 
+此结构体和CreateFlow发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
+1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
+2. ApproverSignTypes: 指定签署方签署时候的认证方式，仅此链接生效。
+3. SignTypeSelector: 可以指定签署方签署合同的认证校验方式的选择模式。
+4. Intention: 指定H5签署视频核身的意图配置，仅视频签署需要使用。
+
 注：
 1. 签署人<b>只能使用手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件</b>，其他类型的签署控件暂时不支持。
 2. 生成发起方预览链接时，该字段（FlowApproverInfos）可以传空或者不传。
@@ -140,6 +158,12 @@ class CreateFlowSignUrlRequest extends AbstractModel
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param array $FlowApproverInfos 流程签署人列表中，结构体的ApproverName、ApproverMobile和ApproverType为必传字段。如果是企业签署人，还需传递OrganizationName。
+
+此结构体和CreateFlow发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
+1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
+2. ApproverSignTypes: 指定签署方签署时候的认证方式，仅此链接生效。
+3. SignTypeSelector: 可以指定签署方签署合同的认证校验方式的选择模式。
+4. Intention: 指定H5签署视频核身的意图配置，仅视频签署需要使用。
 
 注：
 1. 签署人<b>只能使用手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件</b>，其他类型的签署控件暂时不支持。

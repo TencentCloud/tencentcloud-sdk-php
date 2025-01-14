@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkflowType() 获取工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowExtOpsDto extends AbstractModel
 {
@@ -164,6 +168,12 @@ class WorkflowExtOpsDto extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 工作流类型，周期cycle，手动manual
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowType;
+
+    /**
      * @param integer $TaskCount 任务数量count
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FolderName 文件名
@@ -191,6 +201,8 @@ class WorkflowExtOpsDto extends AbstractModel
      * @param string $CreateTime 工作流创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 最近更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowType 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class WorkflowExtOpsDto extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
         }
     }
 }

@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
  * @method string getExecutionFileType() 获取文件类型,Log/Code
  * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
+ * @method array getInstanceLifeDetailDtoList() 获取生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+ * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+ * @method integer getCurrentLifeRound() 获取当前生命周期数
+ * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置当前生命周期数
+ * @method integer getTries() 获取当前生命周期重试次数
+ * @method void setTries(integer $Tries) 设置当前生命周期重试次数
+ * @method boolean getDynamic() 获取动态获取日志信息标识
+ * @method void setDynamic(boolean $Dynamic) 设置动态获取日志信息标识
  */
 class DescribeInstanceLogFileRequest extends AbstractModel
 {
@@ -87,6 +95,26 @@ class DescribeInstanceLogFileRequest extends AbstractModel
     public $ExecutionFileType;
 
     /**
+     * @var array 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     */
+    public $InstanceLifeDetailDtoList;
+
+    /**
+     * @var integer 当前生命周期数
+     */
+    public $CurrentLifeRound;
+
+    /**
+     * @var integer 当前生命周期重试次数
+     */
+    public $Tries;
+
+    /**
+     * @var boolean 动态获取日志信息标识
+     */
+    public $Dynamic;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务ID
      * @param string $CurRunDate 实例数据时间
@@ -96,6 +124,10 @@ class DescribeInstanceLogFileRequest extends AbstractModel
      * @param string $ExecutionJobId 执行平台下发执行id
      * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
      * @param string $ExecutionFileType 文件类型,Log/Code
+     * @param array $InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     * @param integer $CurrentLifeRound 当前生命周期数
+     * @param integer $Tries 当前生命周期重试次数
+     * @param boolean $Dynamic 动态获取日志信息标识
      */
     function __construct()
     {
@@ -144,6 +176,27 @@ class DescribeInstanceLogFileRequest extends AbstractModel
 
         if (array_key_exists("ExecutionFileType",$param) and $param["ExecutionFileType"] !== null) {
             $this->ExecutionFileType = $param["ExecutionFileType"];
+        }
+
+        if (array_key_exists("InstanceLifeDetailDtoList",$param) and $param["InstanceLifeDetailDtoList"] !== null) {
+            $this->InstanceLifeDetailDtoList = [];
+            foreach ($param["InstanceLifeDetailDtoList"] as $key => $value){
+                $obj = new InstanceLifeDetailDto();
+                $obj->deserialize($value);
+                array_push($this->InstanceLifeDetailDtoList, $obj);
+            }
+        }
+
+        if (array_key_exists("CurrentLifeRound",$param) and $param["CurrentLifeRound"] !== null) {
+            $this->CurrentLifeRound = $param["CurrentLifeRound"];
+        }
+
+        if (array_key_exists("Tries",$param) and $param["Tries"] !== null) {
+            $this->Tries = $param["Tries"];
+        }
+
+        if (array_key_exists("Dynamic",$param) and $param["Dynamic"] !== null) {
+            $this->Dynamic = $param["Dynamic"];
         }
     }
 }

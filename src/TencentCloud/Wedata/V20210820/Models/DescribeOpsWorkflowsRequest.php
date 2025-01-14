@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortType(string $SortType) 设置排序方式，DESC或ASC
  * @method array getProjectIds() 获取项目ID列表，用于多项目工作流筛选
  * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，用于多项目工作流筛选
+ * @method array getWorkflowTypeList() 获取工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+ * @method void setWorkflowTypeList(array $WorkflowTypeList) 设置工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+ * @method string getKeyWord() 获取工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+ * @method void setKeyWord(string $KeyWord) 设置工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
  */
 class DescribeOpsWorkflowsRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
     public $ProjectIds;
 
     /**
+     * @var array 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+     */
+    public $WorkflowTypeList;
+
+    /**
+     * @var string 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+     */
+    public $KeyWord;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $ProductNameList 任务产品类型名称列表，以 ',' 号分割
      * @param string $FolderIdList 文件id列表，以 ',' 号分割
@@ -136,6 +150,8 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
      * @param string $SortItem 排序项
      * @param string $SortType 排序方式，DESC或ASC
      * @param array $ProjectIds 项目ID列表，用于多项目工作流筛选
+     * @param array $WorkflowTypeList 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+     * @param string $KeyWord 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
 
         if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
             $this->ProjectIds = $param["ProjectIds"];
+        }
+
+        if (array_key_exists("WorkflowTypeList",$param) and $param["WorkflowTypeList"] !== null) {
+            $this->WorkflowTypeList = $param["WorkflowTypeList"];
+        }
+
+        if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
+            $this->KeyWord = $param["KeyWord"];
         }
     }
 }

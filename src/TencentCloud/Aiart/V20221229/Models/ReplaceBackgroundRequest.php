@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getPrompt() 获取对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
  * @method void setPrompt(string $Prompt) 设置对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
  * @method string getNegativePrompt() 获取反向提示词。
 最多支持256个 utf-8 字符，支持中、英文。
  * @method void setNegativePrompt(string $NegativePrompt) 设置反向提示词。
@@ -36,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 建议说明商品主体，否则影响生成效果。
  * @method void setProduct(string $Product) 设置商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
+ * @method string getBackgroundTemplate() 获取背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+ * @method void setBackgroundTemplate(string $BackgroundTemplate) 设置背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
  * @method string getMaskUrl() 获取商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -80,6 +86,7 @@ class ReplaceBackgroundRequest extends AbstractModel
     /**
      * @var string 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
      */
     public $Prompt;
 
@@ -94,6 +101,12 @@ class ReplaceBackgroundRequest extends AbstractModel
 建议说明商品主体，否则影响生成效果。
      */
     public $Product;
+
+    /**
+     * @var string 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+     */
+    public $BackgroundTemplate;
 
     /**
      * @var string 商品 Mask 图 Url，要求背景透明，保留商品主体。
@@ -136,10 +149,13 @@ class ReplaceBackgroundRequest extends AbstractModel
 图片限制：单边分辨率小于4000，长宽比在2:5 ~ 5:2之间，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $Prompt 对新背景的文本描述。
 最多支持256个 utf-8 字符，支持中、英文。
+如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
      * @param string $NegativePrompt 反向提示词。
 最多支持256个 utf-8 字符，支持中、英文。
      * @param string $Product 商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
+     * @param string $BackgroundTemplate 背景模板。
+仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
      * @param string $MaskUrl 商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -184,6 +200,10 @@ class ReplaceBackgroundRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("BackgroundTemplate",$param) and $param["BackgroundTemplate"] !== null) {
+            $this->BackgroundTemplate = $param["BackgroundTemplate"];
         }
 
         if (array_key_exists("MaskUrl",$param) and $param["MaskUrl"] !== null) {

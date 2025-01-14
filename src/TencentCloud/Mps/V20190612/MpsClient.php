@@ -53,6 +53,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) 创建媒体传输的传输流配置。
  * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) 创建媒体传输的输入配置。
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) 创建媒体传输流的输出信息。
+ * @method Models\CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroup(Models\CreateStreamLinkSecurityGroupRequest $req) 创建安全组，数量限制5个。
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) 创建用户自定义转码模板，数量上限：1000
  * @method Models\CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(Models\CreateVideoDatabaseEntryTaskRequest $req) 对URL链接或COS中的视频发起入库任务。
 可选在任务完成后向回调方发送任务完成状态信息。
@@ -88,6 +89,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteStreamLinkEventResponse DeleteStreamLinkEvent(Models\DeleteStreamLinkEventRequest $req) 删除媒体传输的事件配置。
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) 删除媒体传输的传输流配置。
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) 删除媒体传输流的输出配置。
+ * @method Models\DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroup(Models\DeleteStreamLinkSecurityGroupRequest $req) 删除安全组。
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) 删除用户自定义转码模板。
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) 删除用户自定义水印模板。
  * @method Models\DeleteWordSamplesResponse DeleteWordSamples(Models\DeleteWordSamplesRequest $req) 该接口用于批量删除关键词样本。
@@ -97,6 +99,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) 查询转自适应码流模板，支持根据条件，分页查询。
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
+ * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
@@ -119,6 +122,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 
  * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) 批量查询媒体输入流的配置信息。
  * @method Models\DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(Models\DescribeStreamLinkRegionsRequest $req) 查询媒体传输所有地区。
+ * @method Models\DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(Models\DescribeStreamLinkSecurityGroupsRequest $req) 批量查询安全组信息。
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * 该接口用于查询任务列表；
 * 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
@@ -131,6 +135,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) 禁用自动化触发编排任务。
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
+ * @method Models\DisassociateSecurityGroupResponse DisassociateSecurityGroup(Models\DisassociateSecurityGroupRequest $req) 批量解绑安全组下面关联的输入输出。
  * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) 对视频进行编辑，生成一个新的视频。编辑的功能包括：
  
 
@@ -166,6 +171,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) 修改媒体传输的传输流配置信息。
  * @method Models\ModifyStreamLinkInputResponse ModifyStreamLinkInput(Models\ModifyStreamLinkInputRequest $req) 修改媒体传输流的输入信息。
  * @method Models\ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(Models\ModifyStreamLinkOutputInfoRequest $req) 修改媒体传输流的输出配置。
+ * @method Models\ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroup(Models\ModifyStreamLinkSecurityGroupRequest $req) 更新安全组。
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) 修改用户自定义转码模板信息。
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。

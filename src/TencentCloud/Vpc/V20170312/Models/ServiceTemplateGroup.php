@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateIdSet(array $ServiceTemplateIdSet) 设置协议端口模板实例ID。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getUpdatedTime() 获取最后更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置最后更新时间。
  * @method array getServiceTemplateSet() 获取协议端口模板实例信息。
  * @method void setServiceTemplateSet(array $ServiceTemplateSet) 设置协议端口模板实例信息。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceTemplateGroup extends AbstractModel
 {
@@ -58,13 +58,17 @@ class ServiceTemplateGroup extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 最后更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
      * @var array 协议端口模板实例信息。
      */
     public $ServiceTemplateSet;
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -73,9 +77,9 @@ class ServiceTemplateGroup extends AbstractModel
      * @param string $ServiceTemplateGroupName 协议端口模板集合名称。
      * @param array $ServiceTemplateIdSet 协议端口模板实例ID。
      * @param string $CreatedTime 创建时间。
+     * @param string $UpdatedTime 最后更新时间。
      * @param array $ServiceTemplateSet 协议端口模板实例信息。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +108,10 @@ class ServiceTemplateGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
 
         if (array_key_exists("ServiceTemplateSet",$param) and $param["ServiceTemplateSet"] !== null) {

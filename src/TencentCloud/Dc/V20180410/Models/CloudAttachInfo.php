@@ -53,9 +53,7 @@ stoped：终止状态
  * @method string getApplyTime() 获取敏捷上云申请的时间
  * @method void setApplyTime(string $ApplyTime) 设置敏捷上云申请的时间
  * @method string getReadyTime() 获取敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadyTime(string $ReadyTime) 设置敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取敏捷上云过期时间
  * @method void setExpireTime(string $ExpireTime) 设置敏捷上云过期时间
  * @method string getRemarks() 获取备注信息
@@ -78,6 +76,8 @@ cross-region：跨地域
  * @method void setCloudAttachServiceGatewaysSupport(boolean $CloudAttachServiceGatewaysSupport) 设置敏捷上云是否支持创建高速上云专线网关
  * @method boolean getBUpdateBandwidth() 获取敏捷上云服务是否处于升降配中
  * @method void setBUpdateBandwidth(boolean $BUpdateBandwidth) 设置敏捷上云服务是否处于升降配中
+ * @method string getArRegion() 获取接入地域
+ * @method void setArRegion(string $ArRegion) 设置接入地域
  */
 class CloudAttachInfo extends AbstractModel
 {
@@ -135,7 +135,6 @@ stoped：终止状态
 
     /**
      * @var string 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadyTime;
 
@@ -187,6 +186,11 @@ cross-region：跨地域
     public $BUpdateBandwidth;
 
     /**
+     * @var string 接入地域
+     */
+    public $ArRegion;
+
+    /**
      * @param string $InstanceId 敏捷上云实例id
      * @param string $Name 敏捷上云名称
      * @param string $IapId 合作伙伴的AppId
@@ -204,7 +208,6 @@ isolate: 隔离状态
 stoped：终止状态
      * @param string $ApplyTime 敏捷上云申请的时间
      * @param string $ReadyTime 敏捷上云建设完成的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 敏捷上云过期时间
      * @param string $Remarks 备注信息
      * @param string $RegionStatus 敏捷上云的地域状态。
@@ -216,6 +219,7 @@ cross-region：跨地域
      * @param string $DirectConnectId 物理专线实例ID
      * @param boolean $CloudAttachServiceGatewaysSupport 敏捷上云是否支持创建高速上云专线网关
      * @param boolean $BUpdateBandwidth 敏捷上云服务是否处于升降配中
+     * @param string $ArRegion 接入地域
      */
     function __construct()
     {
@@ -304,6 +308,10 @@ cross-region：跨地域
 
         if (array_key_exists("BUpdateBandwidth",$param) and $param["BUpdateBandwidth"] !== null) {
             $this->BUpdateBandwidth = $param["BUpdateBandwidth"];
+        }
+
+        if (array_key_exists("ArRegion",$param) and $param["ArRegion"] !== null) {
+            $this->ArRegion = $param["ArRegion"];
         }
     }
 }

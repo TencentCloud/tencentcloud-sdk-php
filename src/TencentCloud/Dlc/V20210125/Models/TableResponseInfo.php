@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeatValue(integer $HeatValue) 设置访问热点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInputFormatShort() 获取InputFormat的缩写
+ * @method void setInputFormatShort(string $InputFormatShort) 设置InputFormat的缩写
  */
 class TableResponseInfo extends AbstractModel
 {
@@ -141,6 +143,11 @@ class TableResponseInfo extends AbstractModel
     public $HeatValue;
 
     /**
+     * @var string InputFormat的缩写
+     */
+    public $InputFormatShort;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo 数据表基本信息。
      * @param array $Columns 数据表列信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -164,6 +171,7 @@ class TableResponseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HeatValue 访问热点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputFormatShort InputFormat的缩写
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class TableResponseInfo extends AbstractModel
 
         if (array_key_exists("HeatValue",$param) and $param["HeatValue"] !== null) {
             $this->HeatValue = $param["HeatValue"];
+        }
+
+        if (array_key_exists("InputFormatShort",$param) and $param["InputFormatShort"] !== null) {
+            $this->InputFormatShort = $param["InputFormatShort"];
         }
     }
 }

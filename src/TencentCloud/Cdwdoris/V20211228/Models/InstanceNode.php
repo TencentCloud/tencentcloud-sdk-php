@@ -35,25 +35,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRole() 获取所属clickhouse cluster名称
  * @method void setRole(string $Role) 设置所属clickhouse cluster名称
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRip() 获取rip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRip(string $Rip) 设置rip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeRole() 获取FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeRole(string $FeRole) 设置FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUUID() 获取UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUID(string $UUID) 设置UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
@@ -96,31 +86,26 @@ class InstanceNode extends AbstractModel
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string rip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rip;
 
     /**
      * @var string FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeRole;
 
     /**
      * @var string UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUID;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
@@ -138,15 +123,10 @@ class InstanceNode extends AbstractModel
      * @param integer $DiskSize 磁盘大小
      * @param string $Role 所属clickhouse cluster名称
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rip rip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeRole FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUID UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      */
     function __construct()

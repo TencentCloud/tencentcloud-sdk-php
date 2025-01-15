@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPVersion(string $IPVersion) 设置IP版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(array $Tag) 设置标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -256,6 +260,12 @@ class Cluster extends AbstractModel
     public $IPVersion;
 
     /**
+     * @var array 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型，如TGW，STGW，VPCGW
@@ -299,6 +309,8 @@ class Cluster extends AbstractModel
      * @param string $Egress 网络出口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPVersion IP版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -413,6 +425,15 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("IPVersion",$param) and $param["IPVersion"] !== null) {
             $this->IPVersion = $param["IPVersion"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

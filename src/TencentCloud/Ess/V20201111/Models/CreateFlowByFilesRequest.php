@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowByFiles请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+ * @method UserInfo getOperator() 获取本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+注： 支持填入集团子公司经办人 userId 代发合同。
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注： 支持填入集团子公司经办人 userId 代发合同。
+
  * @method string getFlowName() 获取自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
 该名称还将用于合同签署完成后文件下载的默认文件名称。
@@ -210,10 +210,10 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowByFilesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * @var UserInfo 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+注： 支持填入集团子公司经办人 userId 代发合同。
+
      */
     public $Operator;
 
@@ -395,10 +395,10 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $OpenDynamicSignFlow;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * @param UserInfo $Operator 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+注： 支持填入集团子公司经办人 userId 代发合同。
+
      * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
 该名称还将用于合同签署完成后文件下载的默认文件名称。

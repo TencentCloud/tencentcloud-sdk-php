@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 外部doris集群的连接信息
  *
  * @method string getHost() 获取doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DorisSourceInfo extends AbstractModel
 {
     /**
      * @var string doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @var integer doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @param string $Host doris集群的fe的ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port doris集群的fe的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User doris集群的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password base64编码的doris集群对应用户的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

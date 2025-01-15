@@ -37,7 +37,9 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> <b>OFFICIAL</b> :  企业公章</li>
 <li> <b>CONTRACT</b> : 合同专用章</li>
 <li> <b>FINANCE</b> : 财务专用章</li>
-<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<li> <b>PERSONNEL</b> : 人事专用章</li>
+<li> <b>OTHER</b> : 其他</li>
+</ul>
 
 **注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`**
 
@@ -58,7 +60,9 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> <b>OFFICIAL</b> :  企业公章</li>
 <li> <b>CONTRACT</b> : 合同专用章</li>
 <li> <b>FINANCE</b> : 财务专用章</li>
-<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<li> <b>PERSONNEL</b> : 人事专用章</li>
+<li> <b>OTHER</b> : 其他</li>
+</ul>
 
 **注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`**
 
@@ -92,7 +96,9 @@ class ComponentLimit extends AbstractModel
 <ul><li> <b>OFFICIAL</b> :  企业公章</li>
 <li> <b>CONTRACT</b> : 合同专用章</li>
 <li> <b>FINANCE</b> : 财务专用章</li>
-<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<li> <b>PERSONNEL</b> : 人事专用章</li>
+<li> <b>OTHER</b> : 其他</li>
+</ul>
 
 **注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`**
 
@@ -122,7 +128,9 @@ class ComponentLimit extends AbstractModel
 <ul><li> <b>OFFICIAL</b> :  企业公章</li>
 <li> <b>CONTRACT</b> : 合同专用章</li>
 <li> <b>FINANCE</b> : 财务专用章</li>
-<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<li> <b>PERSONNEL</b> : 人事专用章</li>
+<li> <b>OTHER</b> : 其他</li>
+</ul>
 
 **注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`**
 

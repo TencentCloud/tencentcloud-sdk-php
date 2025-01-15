@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 产品可用性事件详情列表
  *
  * @method array getEventList() 获取事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventList(array $EventList) 设置事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEventList extends AbstractModel
 {
     /**
      * @var array 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventList;
 
     /**
      * @param array $EventList 事件详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

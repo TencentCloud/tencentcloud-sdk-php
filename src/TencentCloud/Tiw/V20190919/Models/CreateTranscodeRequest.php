@@ -125,6 +125,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
  * @method void setAutoHandleUnsupportedElementTypes(array $AutoHandleUnsupportedElementTypes) 设置此参数仅在`AutoHandleUnsupportedElement`参数为`true`的情况下有效。
 
 指定需要自动处理的不兼容元素类型，默认对所有不兼容的元素进行自动处理。
@@ -168,6 +171,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
  * @method ExcelParam getExcelParam() 获取Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
  * @method void setExcelParam(ExcelParam $ExcelParam) 设置Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
  */
@@ -288,6 +294,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
      */
     public $AutoHandleUnsupportedElementTypes;
 
@@ -371,6 +380,9 @@ false -- 不开启
 
 12: 存在不兼容的多倍行距设置
 -- 自动处理方式： 不支持处理
+
+13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+-- 自动处理方式： a:fld标签替换为普通文本
      * @param ExcelParam $ExcelParam Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
      */
     function __construct()

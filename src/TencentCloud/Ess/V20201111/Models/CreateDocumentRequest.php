@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method UserInfo getOperator() 获取本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
+ * @method void setOperator(UserInfo $Operator) 设置本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
  * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
@@ -76,7 +80,9 @@ use TencentCloud\Common\AbstractModel;
 class CreateDocumentRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @var UserInfo 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      */
     public $Operator;
 
@@ -138,7 +144,9 @@ class CreateDocumentRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @param UserInfo $Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)

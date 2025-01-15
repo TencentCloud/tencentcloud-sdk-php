@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressSet(array $AddressSet) 设置IP地址信息。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getUpdatedTime() 获取最后更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置最后更新时间。
  * @method array getAddressExtraSet() 获取带备注的IP地址信息。
  * @method void setAddressExtraSet(array $AddressExtraSet) 设置带备注的IP地址信息。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddressTemplate extends AbstractModel
 {
@@ -58,13 +58,17 @@ class AddressTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 最后更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
      * @var array 带备注的IP地址信息。
      */
     public $AddressExtraSet;
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -73,9 +77,9 @@ class AddressTemplate extends AbstractModel
      * @param string $AddressTemplateId IP地址模板实例唯一ID。
      * @param array $AddressSet IP地址信息。
      * @param string $CreatedTime 创建时间。
+     * @param string $UpdatedTime 最后更新时间。
      * @param array $AddressExtraSet 带备注的IP地址信息。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +108,10 @@ class AddressTemplate extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
 
         if (array_key_exists("AddressExtraSet",$param) and $param["AddressExtraSet"] !== null) {

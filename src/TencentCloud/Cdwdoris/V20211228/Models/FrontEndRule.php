@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 前端规则描述
  *
  * @method integer getID() 获取id序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置id序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRule() 获取详细规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(string $Rule) 设置详细规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FrontEndRule extends AbstractModel
 {
     /**
      * @var integer id序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rule;
 
     /**
      * @param integer $ID id序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rule 详细规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

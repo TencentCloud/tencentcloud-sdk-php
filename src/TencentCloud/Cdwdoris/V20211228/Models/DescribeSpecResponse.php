@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getCoreSpec() 获取be节点规格描述
  * @method void setCoreSpec(array $CoreSpec) 设置be节点规格描述
  * @method array getAttachCBSSpec() 获取云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachCBSSpec(array $AttachCBSSpec) 设置云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCNSpec() 获取cn节点列表
  * @method void setCNSpec(array $CNSpec) 设置cn节点列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +45,6 @@ class DescribeSpecResponse extends AbstractModel
 
     /**
      * @var array 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachCBSSpec;
 
@@ -65,7 +62,6 @@ class DescribeSpecResponse extends AbstractModel
      * @param array $MasterSpec fe节点规格描述
      * @param array $CoreSpec be节点规格描述
      * @param array $AttachCBSSpec 云盘列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CNSpec cn节点列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSerialNumber(string $SerialNumber) 设置序列号
  * @method string getAddress() 获取地址
  * @method void setAddress(string $Address) 设置地址
+ * @method string getLaserID() 获取背面号码
+ * @method void setLaserID(string $LaserID) 设置背面号码
  * @method string getPortraitImage() 获取证件人像照片抠取
  * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
  * @method array getWarnCardInfos() 获取告警码
@@ -151,6 +153,11 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $Address;
 
     /**
+     * @var string 背面号码
+     */
+    public $LaserID;
+
+    /**
      * @var string 证件人像照片抠取
      */
     public $PortraitImage;
@@ -198,6 +205,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $Religion 宗教信仰
      * @param string $SerialNumber 序列号
      * @param string $Address 地址
+     * @param string $LaserID 背面号码
      * @param string $PortraitImage 证件人像照片抠取
      * @param array $WarnCardInfos 告警码
 -9101 证件边框不完整告警
@@ -280,6 +288,10 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("Address",$param) and $param["Address"] !== null) {
             $this->Address = $param["Address"];
+        }
+
+        if (array_key_exists("LaserID",$param) and $param["LaserID"] !== null) {
+            $this->LaserID = $param["LaserID"];
         }
 
         if (array_key_exists("PortraitImage",$param) and $param["PortraitImage"] !== null) {

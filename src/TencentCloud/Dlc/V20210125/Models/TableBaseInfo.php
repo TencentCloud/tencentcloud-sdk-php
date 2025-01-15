@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartPolicy(SmartPolicy $SmartPolicy) 设置智能数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPrimaryKeys() 获取T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrimaryKeys(array $PrimaryKeys) 设置T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -130,6 +134,12 @@ class TableBaseInfo extends AbstractModel
     public $SmartPolicy;
 
     /**
+     * @var array T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrimaryKeys;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
      * @param string $DatasourceConnectionName 该数据表所属数据源名字
@@ -149,6 +159,8 @@ class TableBaseInfo extends AbstractModel
      * @param string $DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartPolicy $SmartPolicy 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PrimaryKeys T-ICEBERG表的主键
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class TableBaseInfo extends AbstractModel
         if (array_key_exists("SmartPolicy",$param) and $param["SmartPolicy"] !== null) {
             $this->SmartPolicy = new SmartPolicy();
             $this->SmartPolicy->deserialize($param["SmartPolicy"]);
+        }
+
+        if (array_key_exists("PrimaryKeys",$param) and $param["PrimaryKeys"] !== null) {
+            $this->PrimaryKeys = $param["PrimaryKeys"];
         }
     }
 }

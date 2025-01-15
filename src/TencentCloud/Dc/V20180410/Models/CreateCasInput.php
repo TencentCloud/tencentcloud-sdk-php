@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTelephone(string $Telephone) 设置联系电话
  * @method string getRemarks() 获取备注信息
  * @method void setRemarks(string $Remarks) 设置备注信息
+ * @method string getArRegion() 获取接入地域
+ * @method void setArRegion(string $ArRegion) 设置接入地域
  */
 class CreateCasInput extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateCasInput extends AbstractModel
     public $Remarks;
 
     /**
+     * @var string 接入地域
+     */
+    public $ArRegion;
+
+    /**
      * @param string $Name 敏捷上云名称
      * @param string $IdcAddress 需要接入敏捷上云的IDC的地址
      * @param string $IdcType 需要接入敏捷上云的IDC的互联网服务提供商类型
      * @param integer $Bandwidth 敏捷上云的带宽，单位为MB
      * @param string $Telephone 联系电话
      * @param string $Remarks 备注信息
+     * @param string $ArRegion 接入地域
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateCasInput extends AbstractModel
 
         if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
             $this->Remarks = $param["Remarks"];
+        }
+
+        if (array_key_exists("ArRegion",$param) and $param["ArRegion"] !== null) {
+            $this->ArRegion = $param["ArRegion"];
         }
     }
 }

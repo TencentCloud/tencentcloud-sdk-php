@@ -38,6 +38,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssociatedRuleCount() 获取目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) 设置目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegisteredInstancesCount() 获取目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) 设置目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取标签。
+ * @method void setTag(array $Tag) 设置标签。
+ * @method integer getWeight() 获取默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeight(integer $Weight) 设置默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -79,6 +97,35 @@ class TargetGroupInfo extends AbstractModel
     public $AssociatedRule;
 
     /**
+     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetGroupType;
+
+    /**
+     * @var integer 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssociatedRuleCount;
+
+    /**
+     * @var integer 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegisteredInstancesCount;
+
+    /**
+     * @var array 标签。
+     */
+    public $Tag;
+
+    /**
+     * @var integer 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weight;
+
+    /**
      * @param string $TargetGroupId 目标组ID
      * @param string $VpcId 目标组的vpcid
      * @param string $TargetGroupName 目标组的名字
@@ -87,6 +134,15 @@ class TargetGroupInfo extends AbstractModel
      * @param string $CreatedTime 目标组的创建时间
      * @param string $UpdatedTime 目标组的修改时间
      * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssociatedRuleCount 目标组已关联的规则数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegisteredInstancesCount 目标组内的实例数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 标签。
+     * @param integer $Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +189,31 @@ class TargetGroupInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AssociatedRule, $obj);
             }
+        }
+
+        if (array_key_exists("TargetGroupType",$param) and $param["TargetGroupType"] !== null) {
+            $this->TargetGroupType = $param["TargetGroupType"];
+        }
+
+        if (array_key_exists("AssociatedRuleCount",$param) and $param["AssociatedRuleCount"] !== null) {
+            $this->AssociatedRuleCount = $param["AssociatedRuleCount"];
+        }
+
+        if (array_key_exists("RegisteredInstancesCount",$param) and $param["RegisteredInstancesCount"] !== null) {
+            $this->RegisteredInstancesCount = $param["RegisteredInstancesCount"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

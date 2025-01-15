@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(SmartOptimizerIndexPolicy $Index) 设置SmartOptimizerIndexPolicy
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartOptimizerChangeTablePolicy getChangeTable() 获取SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChangeTable(SmartOptimizerChangeTablePolicy $ChangeTable) 设置SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerPolicy extends AbstractModel
 {
@@ -74,6 +78,12 @@ class SmartOptimizerPolicy extends AbstractModel
     public $Index;
 
     /**
+     * @var SmartOptimizerChangeTablePolicy SmartOptimizerChangeTablePolicy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChangeTable;
+
+    /**
      * @param string $Inherit 是否继承
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Resources ResourceInfo
@@ -83,6 +93,8 @@ class SmartOptimizerPolicy extends AbstractModel
      * @param SmartOptimizerLifecyclePolicy $Lifecycle SmartOptimizerLifecyclePolicy
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartOptimizerIndexPolicy $Index SmartOptimizerIndexPolicy
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartOptimizerChangeTablePolicy $ChangeTable SmartOptimizerChangeTablePolicy
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,11 @@ class SmartOptimizerPolicy extends AbstractModel
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = new SmartOptimizerIndexPolicy();
             $this->Index->deserialize($param["Index"]);
+        }
+
+        if (array_key_exists("ChangeTable",$param) and $param["ChangeTable"] !== null) {
+            $this->ChangeTable = new SmartOptimizerChangeTablePolicy();
+            $this->ChangeTable->deserialize($param["ChangeTable"]);
         }
     }
 }

@@ -238,6 +238,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusive(integer $Exclusive) 设置实例类型是否为独占型。1：独占型实例。0：非独占型实例。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTargetCount() 获取已绑定的后端服务数量。
+ * @method void setTargetCount(integer $TargetCount) 设置已绑定的后端服务数量。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -576,6 +578,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $Exclusive;
 
     /**
+     * @var integer 已绑定的后端服务数量。
+     */
+    public $TargetCount;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -685,6 +692,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Exclusive 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetCount 已绑定的后端服务数量。
      */
     function __construct()
     {
@@ -942,6 +950,10 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
         if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
             $this->Exclusive = $param["Exclusive"];
+        }
+
+        if (array_key_exists("TargetCount",$param) and $param["TargetCount"] !== null) {
+            $this->TargetCount = $param["TargetCount"];
         }
     }
 }

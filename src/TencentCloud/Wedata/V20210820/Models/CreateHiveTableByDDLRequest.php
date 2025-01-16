@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
  * @method string getDatabase() 获取数据库
  * @method void setDatabase(string $Database) 设置数据库
- * @method string getDDLSql() 获取建hive表ddl
- * @method void setDDLSql(string $DDLSql) 设置建hive表ddl
+ * @method string getDDLSql() 获取建hive表ddl的base64编码
+ * @method void setDDLSql(string $DDLSql) 设置建hive表ddl的base64编码
  * @method integer getPrivilege() 获取表权限 ，默认为0:项目共享;1:仅个人与管理员
  * @method void setPrivilege(integer $Privilege) 设置表权限 ，默认为0:项目共享;1:仅个人与管理员
  * @method string getProjectId() 获取项目ID
@@ -58,7 +58,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $Database;
 
     /**
-     * @var string 建hive表ddl
+     * @var string 建hive表ddl的base64编码
      */
     public $DDLSql;
 
@@ -110,7 +110,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
-     * @param string $DDLSql 建hive表ddl
+     * @param string $DDLSql 建hive表ddl的base64编码
      * @param integer $Privilege 表权限 ，默认为0:项目共享;1:仅个人与管理员
      * @param string $ProjectId 项目ID
      * @param string $Type 目标表类型(HIVE或GBASE)

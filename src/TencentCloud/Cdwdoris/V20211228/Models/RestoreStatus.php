@@ -63,13 +63,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getReserveDynamicPartitionEnable() 获取是否保持源表中的动态分区
  * @method void setReserveDynamicPartitionEnable(boolean $ReserveDynamicPartitionEnable) 设置是否保持源表中的动态分区
  * @method integer getBackupJobId() 获取备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupJobId(integer $BackupJobId) 设置备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskId() 获取实例对应snapshot的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置实例对应snapshot的id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RestoreStatus extends AbstractModel
 {
@@ -180,13 +176,11 @@ class RestoreStatus extends AbstractModel
 
     /**
      * @var integer 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupJobId;
 
     /**
      * @var integer 实例对应snapshot的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
@@ -213,9 +207,7 @@ class RestoreStatus extends AbstractModel
      * @param boolean $ReserveReplica 是否保持源表中的副本数
      * @param boolean $ReserveDynamicPartitionEnable 是否保持源表中的动态分区
      * @param integer $BackupJobId 备份实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 实例对应snapshot的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

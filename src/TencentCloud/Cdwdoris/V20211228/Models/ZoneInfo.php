@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getZoneId() 获取可用区唯一标记
  * @method void setZoneId(integer $ZoneId) 设置可用区唯一标记
  * @method integer getEncrypt() 获取Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncrypt(integer $Encrypt) 设置Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMain() 获取是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMain(boolean $Main) 设置是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,13 +50,11 @@ class ZoneInfo extends AbstractModel
 
     /**
      * @var integer Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encrypt;
 
     /**
      * @var boolean 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Main;
 
@@ -69,9 +63,7 @@ class ZoneInfo extends AbstractModel
      * @param string $Desc 可用区描述信息，例如“广州一区”
      * @param integer $ZoneId 可用区唯一标记
      * @param integer $Encrypt Encryptid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Main 是否为主力园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

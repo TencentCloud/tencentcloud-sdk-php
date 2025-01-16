@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置网络类型：
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDataEnable() 获取启用/禁用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEnable(boolean $DataEnable) 设置启用/禁用
@@ -112,7 +110,6 @@ class DeviceNetInfo extends AbstractModel
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -210,7 +207,6 @@ class DeviceNetInfo extends AbstractModel
 0:数据
 1:Wi-Fi
 2:有线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DataEnable 启用/禁用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UploadLimit 上行限速

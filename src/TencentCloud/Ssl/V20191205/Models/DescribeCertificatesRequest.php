@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置筛选指定标签的证书
  * @method integer getIsPendingIssue() 获取是否筛选等待签发的证书，传1是筛选，0和null不筛选
  * @method void setIsPendingIssue(integer $IsPendingIssue) 设置是否筛选等待签发的证书，传1是筛选，0和null不筛选
+ * @method array getCertIds() 获取筛选指定证书ID的证书，只支持有权限的证书ID
+ * @method void setCertIds(array $CertIds) 设置筛选指定证书ID的证书，只支持有权限的证书ID
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeCertificatesRequest extends AbstractModel
     public $IsPendingIssue;
 
     /**
+     * @var array 筛选指定证书ID的证书，只支持有权限的证书ID
+     */
+    public $CertIds;
+
+    /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认10。最大值1000，如超过1000按1000处理
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
@@ -152,6 +159,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param integer $Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
      * @param array $Tags 筛选指定标签的证书
      * @param integer $IsPendingIssue 是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @param array $CertIds 筛选指定证书ID的证书，只支持有权限的证书ID
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("IsPendingIssue",$param) and $param["IsPendingIssue"] !== null) {
             $this->IsPendingIssue = $param["IsPendingIssue"];
+        }
+
+        if (array_key_exists("CertIds",$param) and $param["CertIds"] !== null) {
+            $this->CertIds = $param["CertIds"];
         }
     }
 }

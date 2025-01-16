@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用户绑定资源组信息
  *
  * @method string getUserName() 获取test
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置test
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkloadGroupName() 获取normal
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkloadGroupName(string $WorkloadGroupName) 设置normal
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserWorkloadGroup extends AbstractModel
 {
     /**
      * @var string test
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string normal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkloadGroupName;
 
     /**
      * @param string $UserName test
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkloadGroupName normal
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -37,25 +37,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPayer() 获取付费方 0：厂商付费 1：客户付费
  * @method void setPayer(integer $Payer) 设置付费方 0：厂商付费 1：客户付费
  * @method string getGroupId() 获取设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSn() 获取设备sn
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSn(string $Sn) 设置设备sn
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVendor() 获取厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVendor(string $Vendor) 设置厂商
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceBaseInfo extends AbstractModel
 {
@@ -101,31 +91,26 @@ class DeviceBaseInfo extends AbstractModel
 
     /**
      * @var string 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTrunc;
 
     /**
      * @var string 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sn;
 
     /**
      * @var string 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vendor;
 
@@ -139,15 +124,10 @@ class DeviceBaseInfo extends AbstractModel
      * @param integer $LicensePayMode license授权有效期 0：月度授权 1：永久授权
      * @param integer $Payer 付费方 0：厂商付费 1：客户付费
      * @param string $GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn 设备sn
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vendor 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

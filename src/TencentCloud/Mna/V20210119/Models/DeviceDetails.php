@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method DeviceBaseInfo getDeviceBaseInfo() 获取设备基本信息
  * @method void setDeviceBaseInfo(DeviceBaseInfo $DeviceBaseInfo) 设置设备基本信息
  * @method array getDeviceNetInfo() 获取设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceNetInfo(array $DeviceNetInfo) 设置设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewaySite() 获取聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewaySite(string $GatewaySite) 设置聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBusinessDownRate() 获取业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessDownRate(float $BusinessDownRate) 设置业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBusinessUpRate() 获取业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessUpRate(float $BusinessUpRate) 设置业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceDetails extends AbstractModel
 {
@@ -48,38 +40,30 @@ class DeviceDetails extends AbstractModel
 
     /**
      * @var array 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceNetInfo;
 
     /**
      * @var string 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewaySite;
 
     /**
      * @var float 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessDownRate;
 
     /**
      * @var float 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessUpRate;
 
     /**
      * @param DeviceBaseInfo $DeviceBaseInfo 设备基本信息
      * @param array $DeviceNetInfo 设备网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewaySite 聚合服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BusinessDownRate 业务下行速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BusinessUpRate 业务上行速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

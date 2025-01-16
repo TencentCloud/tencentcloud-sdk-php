@@ -29,29 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
  * @method void setType(string $Type) 设置分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
  * @method DiskSpec getSystemDisk() 获取系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemDisk(DiskSpec $SystemDisk) 设置系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiskSpec getDataDisk() 获取数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisk(DiskSpec $DataDisk) 设置数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxNodeSize() 获取最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxNodeSize(integer $MaxNodeSize) 设置最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAvailable() 获取是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailable(boolean $Available) 设置是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComputeSpecDesc() 获取规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeSpecDesc(string $ComputeSpecDesc) 设置规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceQuota() 获取cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceQuota(integer $InstanceQuota) 设置cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceSpec extends AbstractModel
 {
@@ -77,37 +65,31 @@ class ResourceSpec extends AbstractModel
 
     /**
      * @var DiskSpec 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemDisk;
 
     /**
      * @var DiskSpec 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisk;
 
     /**
      * @var integer 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxNodeSize;
 
     /**
      * @var boolean 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Available;
 
     /**
      * @var string 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeSpecDesc;
 
     /**
      * @var integer cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceQuota;
 
@@ -117,17 +99,11 @@ class ResourceSpec extends AbstractModel
      * @param integer $Mem 内存大小，单位G
      * @param string $Type 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
      * @param DiskSpec $SystemDisk 系统盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSpec $DataDisk 数据盘描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxNodeSize 最大节点数目限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Available 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComputeSpecDesc 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceQuota cvm库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

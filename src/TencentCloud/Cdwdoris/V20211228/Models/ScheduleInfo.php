@@ -21,57 +21,42 @@ use TencentCloud\Common\AbstractModel;
  * 调度信息
  *
  * @method string getEffectivePeriod() 获取生效周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectivePeriod(string $EffectivePeriod) 设置生效周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleType() 获取调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleType(string $ScheduleType) 设置调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleData() 获取执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleData(string $ScheduleData) 设置执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScheduleHour() 获取执行时间：时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleHour(integer $ScheduleHour) 设置执行时间：时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScheduleMin() 获取执行时间：分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleMin(integer $ScheduleMin) 设置执行时间：分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupScope() 获取备份粒度：
 All-全量
 Database-按库
 Table-按表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupScope(string $BackupScope) 设置备份粒度：
 All-全量
 Database-按库
 Table-按表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupDatabase() 获取备份库：如果是按库备份，则需要该字段，库之间用英文逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupDatabase(string $BackupDatabase) 设置备份库：如果是按库备份，则需要该字段，库之间用英文逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScheduleInfo extends AbstractModel
 {
     /**
      * @var string 生效周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectivePeriod;
 
@@ -82,26 +67,22 @@ Week-周
 Month-月
 Once-单次
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleType;
 
     /**
      * @var string 执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleData;
 
     /**
      * @var integer 执行时间：时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleHour;
 
     /**
      * @var integer 执行时间：分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleMin;
 
@@ -110,40 +91,31 @@ Once-单次
 All-全量
 Database-按库
 Table-按表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupScope;
 
     /**
      * @var string 备份库：如果是按库备份，则需要该字段，库之间用英文逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupDatabase;
 
     /**
      * @param string $EffectivePeriod 生效周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleData 执行调度的日期。调度类型为周和月时以英文逗号分隔；
 调度类型为单次时，该值是个日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScheduleHour 执行时间：时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScheduleMin 执行时间：分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupScope 备份粒度：
 All-全量
 Database-按库
 Table-按表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupDatabase 备份库：如果是按库备份，则需要该字段，库之间用英文逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
  * @method void setClearInstanceTags(boolean $ClearInstanceTags) 设置是否清空实例标签列表，非必填，默认为 false。
 填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+ * @method boolean getClearMetadata() 获取是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+ * @method void setClearMetadata(boolean $ClearMetadata) 设置是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
     public $ClearInstanceTags;
 
     /**
+     * @var boolean 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     */
+    public $ClearMetadata;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param boolean $ClearDataDisks 是否清空数据盘信息，非必填，默认为 false。
 填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
@@ -92,6 +99,7 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
      * @param boolean $ClearInstanceTags 是否清空实例标签列表，非必填，默认为 false。
 填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     * @param boolean $ClearMetadata 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 
         if (array_key_exists("ClearInstanceTags",$param) and $param["ClearInstanceTags"] !== null) {
             $this->ClearInstanceTags = $param["ClearInstanceTags"];
+        }
+
+        if (array_key_exists("ClearMetadata",$param) and $param["ClearMetadata"] !== null) {
+            $this->ClearMetadata = $param["ClearMetadata"];
         }
     }
 }

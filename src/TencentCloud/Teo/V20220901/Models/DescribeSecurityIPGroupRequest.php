@@ -22,12 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID ，用于指定查询的站点范围。
  * @method void setZoneId(string $ZoneId) 设置站点 ID ，用于指定查询的站点范围。
- * @method array getGroupIds() 获取指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
- * @method void setGroupIds(array $GroupIds) 设置指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+ * @method array getGroupIds() 获取指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+ * @method void setGroupIds(array $GroupIds) 设置指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
  */
 class DescribeSecurityIPGroupRequest extends AbstractModel
 {
@@ -37,17 +33,13 @@ class DescribeSecurityIPGroupRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+     * @var array 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
      */
     public $GroupIds;
 
     /**
      * @param string $ZoneId 站点 ID ，用于指定查询的站点范围。
-     * @param array $GroupIds 指定安全 IP 组 ID。
-<li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-<li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+     * @param array $GroupIds 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
      */
     function __construct()
     {

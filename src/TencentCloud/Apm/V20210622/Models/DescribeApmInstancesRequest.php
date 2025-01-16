@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTags() 获取Tag 列表
  * @method void setTags(array $Tags) 设置Tag 列表
- * @method string getInstanceName() 获取搜索业务系统名
- * @method void setInstanceName(string $InstanceName) 设置搜索业务系统名
- * @method array getInstanceIds() 获取过滤业务系统 ID
- * @method void setInstanceIds(array $InstanceIds) 设置过滤业务系统 ID
- * @method integer getDemoInstanceFlag() 获取是否查询官方 Demo 业务系统
- * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方 Demo 业务系统
- * @method integer getAllRegionsFlag() 获取是否查询全地域业务系统
- * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域业务系统
+ * @method string getInstanceName() 获取按业务系统名过滤
+ * @method void setInstanceName(string $InstanceName) 设置按业务系统名过滤
+ * @method array getInstanceIds() 获取按业务系统 ID 过滤
+ * @method void setInstanceIds(array $InstanceIds) 设置按业务系统 ID 过滤
+ * @method integer getDemoInstanceFlag() 获取是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+ * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+ * @method integer getAllRegionsFlag() 获取是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+ * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
  */
 class DescribeApmInstancesRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeApmInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 搜索业务系统名
+     * @var string 按业务系统名过滤
      */
     public $InstanceName;
 
     /**
-     * @var array 过滤业务系统 ID
+     * @var array 按业务系统 ID 过滤
      */
     public $InstanceIds;
 
     /**
-     * @var integer 是否查询官方 Demo 业务系统
+     * @var integer 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
      */
     public $DemoInstanceFlag;
 
     /**
-     * @var integer 是否查询全地域业务系统
+     * @var integer 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     public $AllRegionsFlag;
 
     /**
      * @param array $Tags Tag 列表
-     * @param string $InstanceName 搜索业务系统名
-     * @param array $InstanceIds 过滤业务系统 ID
-     * @param integer $DemoInstanceFlag 是否查询官方 Demo 业务系统
-     * @param integer $AllRegionsFlag 是否查询全地域业务系统
+     * @param string $InstanceName 按业务系统名过滤
+     * @param array $InstanceIds 按业务系统 ID 过滤
+     * @param integer $DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * @param integer $AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     function __construct()
     {

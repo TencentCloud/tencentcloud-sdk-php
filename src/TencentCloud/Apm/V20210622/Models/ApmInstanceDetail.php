@@ -20,129 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * APM 业务系统信息
  *
- * @method float getAmountOfUsedStorage() 获取存储使用量( MB )
- * @method void setAmountOfUsedStorage(float $AmountOfUsedStorage) 设置存储使用量( MB )
- * @method string getName() 获取业务系统名
- * @method void setName(string $Name) 设置业务系统名
- * @method array getTags() 获取业务系统所属 Tag 列表
- * @method void setTags(array $Tags) 设置业务系统所属 Tag 列表
  * @method string getInstanceId() 获取业务系统 ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method string getCreateUin() 获取创建人 Uin
- * @method void setCreateUin(string $CreateUin) 设置创建人 Uin
- * @method integer getServiceCount() 获取该业务系统已上报的服务端应用数量
- * @method void setServiceCount(integer $ServiceCount) 设置该业务系统已上报的服务端应用数量
- * @method integer getCountOfReportSpanPerDay() 获取日均上报 Span 数
- * @method void setCountOfReportSpanPerDay(integer $CountOfReportSpanPerDay) 设置日均上报 Span 数
- * @method integer getAppId() 获取AppID 信息
- * @method void setAppId(integer $AppId) 设置AppID 信息
- * @method integer getTraceDuration() 获取Trace 数据保存时长
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长
+ * @method string getName() 获取业务系统名
+ * @method void setName(string $Name) 设置业务系统名
  * @method string getDescription() 获取业务系统描述信息
  * @method void setDescription(string $Description) 设置业务系统描述信息
  * @method integer getStatus() 获取业务系统状态
  * @method void setStatus(integer $Status) 设置业务系统状态
  * @method string getRegion() 获取业务系统所属地域
  * @method void setRegion(string $Region) 设置业务系统所属地域
+ * @method array getTags() 获取业务系统 Tag 列表
+ * @method void setTags(array $Tags) 设置业务系统 Tag 列表
+ * @method integer getAppId() 获取AppID 信息
+ * @method void setAppId(integer $AppId) 设置AppID 信息
+ * @method string getCreateUin() 获取创建人 Uin
+ * @method void setCreateUin(string $CreateUin) 设置创建人 Uin
+ * @method float getAmountOfUsedStorage() 获取存储使用量(单位：MB)
+ * @method void setAmountOfUsedStorage(float $AmountOfUsedStorage) 设置存储使用量(单位：MB)
+ * @method integer getServiceCount() 获取该业务系统服务端应用数量
+ * @method void setServiceCount(integer $ServiceCount) 设置该业务系统服务端应用数量
+ * @method integer getCountOfReportSpanPerDay() 获取日均上报 Span 数
+ * @method void setCountOfReportSpanPerDay(integer $CountOfReportSpanPerDay) 设置日均上报 Span 数
+ * @method integer getTraceDuration() 获取Trace 数据保存时长（单位：天）
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长（单位：天）
  * @method integer getSpanDailyCounters() 获取业务系统上报额度
  * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度
- * @method integer getBillingInstance() 获取业务系统是否开通计费
- * @method void setBillingInstance(integer $BillingInstance) 设置业务系统是否开通计费
- * @method integer getErrRateThreshold() 获取错误率阈值
- * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率阈值
- * @method integer getSampleRate() 获取采样率阈值
- * @method void setSampleRate(integer $SampleRate) 设置采样率阈值
- * @method integer getErrorSample() 获取是否开启错误采样 0  关 1 开
- * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样 0  关 1 开
- * @method integer getSlowRequestSavedThreshold() 获取慢调用保存阈值
- * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置慢调用保存阈值
+ * @method integer getBillingInstance() 获取业务系统是否已开通计费（0=未开通，1=已开通）
+ * @method void setBillingInstance(integer $BillingInstance) 设置业务系统是否已开通计费（0=未开通，1=已开通）
+ * @method integer getErrRateThreshold() 获取错误警示线（单位：%）
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误警示线（单位：%）
+ * @method integer getSampleRate() 获取采样率（单位：%）
+ * @method void setSampleRate(integer $SampleRate) 设置采样率（单位：%）
+ * @method integer getErrorSample() 获取是否开启错误采样（0=关, 1=开）
+ * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样（0=关, 1=开）
+ * @method integer getSlowRequestSavedThreshold() 获取采样慢调用保存阈值（单位：ms）
+ * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置采样慢调用保存阈值（单位：ms）
  * @method string getLogRegion() 获取CLS 日志所在地域
  * @method void setLogRegion(string $LogRegion) 设置CLS 日志所在地域
- * @method string getLogSource() 获取日志来源
- * @method void setLogSource(string $LogSource) 设置日志来源
- * @method integer getIsRelatedLog() 获取日志功能开关 0 关 | 1 开
- * @method void setIsRelatedLog(integer $IsRelatedLog) 设置日志功能开关 0 关 | 1 开
- * @method string getLogTopicID() 获取日志主题ID
- * @method void setLogTopicID(string $LogTopicID) 设置日志主题ID
- * @method integer getClientCount() 获取该实例已上报的客户端应用数量
- * @method void setClientCount(integer $ClientCount) 设置该实例已上报的客户端应用数量
- * @method integer getTotalCount() 获取该实例已上报的总应用数量
- * @method void setTotalCount(integer $TotalCount) 设置该实例已上报的总应用数量
- * @method string getLogSet() 获取CLS 日志集 | ES 集群ID
- * @method void setLogSet(string $LogSet) 设置CLS 日志集 | ES 集群ID
- * @method integer getMetricDuration() 获取Metric 数据保存时长
- * @method void setMetricDuration(integer $MetricDuration) 设置Metric 数据保存时长
+ * @method string getLogSource() 获取日志源
+ * @method void setLogSource(string $LogSource) 设置日志源
+ * @method integer getIsRelatedLog() 获取日志功能开关（0=关， 1=开）
+ * @method void setIsRelatedLog(integer $IsRelatedLog) 设置日志功能开关（0=关， 1=开）
+ * @method string getLogTopicID() 获取日志主题 ID
+ * @method void setLogTopicID(string $LogTopicID) 设置日志主题 ID
+ * @method integer getClientCount() 获取该业务系统客户端应用数量
+ * @method void setClientCount(integer $ClientCount) 设置该业务系统客户端应用数量
+ * @method integer getTotalCount() 获取该业务系统最近2天活跃应用数量
+ * @method void setTotalCount(integer $TotalCount) 设置该业务系统最近2天活跃应用数量
+ * @method string getLogSet() 获取CLS 日志集
+ * @method void setLogSet(string $LogSet) 设置CLS 日志集
+ * @method integer getMetricDuration() 获取Metric 数据保存时长（单位：天）
+ * @method void setMetricDuration(integer $MetricDuration) 设置Metric 数据保存时长（单位：天）
  * @method array getCustomShowTags() 获取用户自定义展示标签列表
  * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
- * @method integer getPayMode() 获取业务系统计费模式
-1为预付费
-0为按量付费
- * @method void setPayMode(integer $PayMode) 设置业务系统计费模式
-1为预付费
-0为按量付费
+ * @method integer getPayMode() 获取业务系统计费模式（1为预付费，0为按量付费）
+ * @method void setPayMode(integer $PayMode) 设置业务系统计费模式（1为预付费，0为按量付费）
  * @method boolean getPayModeEffective() 获取业务系统计费模式是否生效
  * @method void setPayModeEffective(boolean $PayModeEffective) 设置业务系统计费模式是否生效
- * @method integer getResponseDurationWarningThreshold() 获取响应时间满意阈值
- * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间满意阈值
+ * @method integer getResponseDurationWarningThreshold() 获取响应时间警示线（单位：ms）
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间警示线（单位：ms）
  * @method integer getFree() 获取是否免费（0=否，1=限额免费，2=完全免费），默认0
  * @method void setFree(integer $Free) 设置是否免费（0=否，1=限额免费，2=完全免费），默认0
- * @method integer getDefaultTSF() 获取是否 tsf 默认业务系统（0=否，1-是）
- * @method void setDefaultTSF(integer $DefaultTSF) 设置是否 tsf 默认业务系统（0=否，1-是）
- * @method integer getIsRelatedDashboard() 获取是否关联 Dashboard： 0 关 1 开
- * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联 Dashboard： 0 关 1 开
- * @method string getDashboardTopicID() 获取Dashboard ID
- * @method void setDashboardTopicID(string $DashboardTopicID) 设置Dashboard ID
- * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测
- * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测
- * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入分析
- * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入分析
+ * @method integer getDefaultTSF() 获取是否 TSF 默认业务系统（0=否，1=是）
+ * @method void setDefaultTSF(integer $DefaultTSF) 设置是否 TSF 默认业务系统（0=否，1=是）
+ * @method integer getIsRelatedDashboard() 获取是否关联 Dashboard（0=关, 1=开）
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联 Dashboard（0=关, 1=开）
+ * @method string getDashboardTopicID() 获取关联的 Dashboard ID
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置关联的 Dashboard ID
+ * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测（0=关， 1=开）
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测（0=关， 1=开）
+ * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入分析（0=关， 1=开）
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入分析（0=关， 1=开）
  */
 class ApmInstanceDetail extends AbstractModel
 {
-    /**
-     * @var float 存储使用量( MB )
-     */
-    public $AmountOfUsedStorage;
-
-    /**
-     * @var string 业务系统名
-     */
-    public $Name;
-
-    /**
-     * @var array 业务系统所属 Tag 列表
-     */
-    public $Tags;
-
     /**
      * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 创建人 Uin
+     * @var string 业务系统名
      */
-    public $CreateUin;
-
-    /**
-     * @var integer 该业务系统已上报的服务端应用数量
-     */
-    public $ServiceCount;
-
-    /**
-     * @var integer 日均上报 Span 数
-     */
-    public $CountOfReportSpanPerDay;
-
-    /**
-     * @var integer AppID 信息
-     */
-    public $AppId;
-
-    /**
-     * @var integer Trace 数据保存时长
-     */
-    public $TraceDuration;
+    public $Name;
 
     /**
      * @var string 业务系统描述信息
@@ -160,32 +121,67 @@ class ApmInstanceDetail extends AbstractModel
     public $Region;
 
     /**
+     * @var array 业务系统 Tag 列表
+     */
+    public $Tags;
+
+    /**
+     * @var integer AppID 信息
+     */
+    public $AppId;
+
+    /**
+     * @var string 创建人 Uin
+     */
+    public $CreateUin;
+
+    /**
+     * @var float 存储使用量(单位：MB)
+     */
+    public $AmountOfUsedStorage;
+
+    /**
+     * @var integer 该业务系统服务端应用数量
+     */
+    public $ServiceCount;
+
+    /**
+     * @var integer 日均上报 Span 数
+     */
+    public $CountOfReportSpanPerDay;
+
+    /**
+     * @var integer Trace 数据保存时长（单位：天）
+     */
+    public $TraceDuration;
+
+    /**
      * @var integer 业务系统上报额度
      */
     public $SpanDailyCounters;
 
     /**
-     * @var integer 业务系统是否开通计费
+     * @var integer 业务系统是否已开通计费（0=未开通，1=已开通）
      */
     public $BillingInstance;
 
     /**
-     * @var integer 错误率阈值
+     * @var integer 错误警示线（单位：%）
      */
     public $ErrRateThreshold;
 
     /**
-     * @var integer 采样率阈值
+     * @var integer 采样率（单位：%）
      */
     public $SampleRate;
 
     /**
-     * @var integer 是否开启错误采样 0  关 1 开
+     * @var integer 是否开启错误采样（0=关, 1=开）
      */
     public $ErrorSample;
 
     /**
-     * @var integer 慢调用保存阈值
+     * @var integer 采样慢调用保存阈值（单位：ms）
      */
     public $SlowRequestSavedThreshold;
 
@@ -195,37 +191,37 @@ class ApmInstanceDetail extends AbstractModel
     public $LogRegion;
 
     /**
-     * @var string 日志来源
+     * @var string 日志源
      */
     public $LogSource;
 
     /**
-     * @var integer 日志功能开关 0 关 | 1 开
+     * @var integer 日志功能开关（0=关， 1=开）
      */
     public $IsRelatedLog;
 
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题 ID
      */
     public $LogTopicID;
 
     /**
-     * @var integer 该实例已上报的客户端应用数量
+     * @var integer 该业务系统客户端应用数量
      */
     public $ClientCount;
 
     /**
-     * @var integer 该实例已上报的总应用数量
+     * @var integer 该业务系统最近2天活跃应用数量
      */
     public $TotalCount;
 
     /**
-     * @var string CLS 日志集 | ES 集群ID
+     * @var string CLS 日志集
      */
     public $LogSet;
 
     /**
-     * @var integer Metric 数据保存时长
+     * @var integer Metric 数据保存时长（单位：天）
      */
     public $MetricDuration;
 
@@ -235,9 +231,7 @@ class ApmInstanceDetail extends AbstractModel
     public $CustomShowTags;
 
     /**
-     * @var integer 业务系统计费模式
-1为预付费
-0为按量付费
+     * @var integer 业务系统计费模式（1为预付费，0为按量付费）
      */
     public $PayMode;
 
@@ -247,7 +241,7 @@ class ApmInstanceDetail extends AbstractModel
     public $PayModeEffective;
 
     /**
-     * @var integer 响应时间满意阈值
+     * @var integer 响应时间警示线（单位：ms）
      */
     public $ResponseDurationWarningThreshold;
 
@@ -257,69 +251,67 @@ class ApmInstanceDetail extends AbstractModel
     public $Free;
 
     /**
-     * @var integer 是否 tsf 默认业务系统（0=否，1-是）
+     * @var integer 是否 TSF 默认业务系统（0=否，1=是）
      */
     public $DefaultTSF;
 
     /**
-     * @var integer 是否关联 Dashboard： 0 关 1 开
+     * @var integer 是否关联 Dashboard（0=关, 1=开）
      */
     public $IsRelatedDashboard;
 
     /**
-     * @var string Dashboard ID
+     * @var string 关联的 Dashboard ID
      */
     public $DashboardTopicID;
 
     /**
-     * @var integer 是否开启组件漏洞检测
+     * @var integer 是否开启组件漏洞检测（0=关， 1=开）
      */
     public $IsInstrumentationVulnerabilityScan;
 
     /**
-     * @var integer 是否开启 SQL 注入分析
+     * @var integer 是否开启 SQL 注入分析（0=关， 1=开）
      */
     public $IsSqlInjectionAnalysis;
 
     /**
-     * @param float $AmountOfUsedStorage 存储使用量( MB )
-     * @param string $Name 业务系统名
-     * @param array $Tags 业务系统所属 Tag 列表
      * @param string $InstanceId 业务系统 ID
-     * @param string $CreateUin 创建人 Uin
-     * @param integer $ServiceCount 该业务系统已上报的服务端应用数量
-     * @param integer $CountOfReportSpanPerDay 日均上报 Span 数
-     * @param integer $AppId AppID 信息
-     * @param integer $TraceDuration Trace 数据保存时长
+     * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
      * @param integer $Status 业务系统状态
      * @param string $Region 业务系统所属地域
+     * @param array $Tags 业务系统 Tag 列表
+     * @param integer $AppId AppID 信息
+     * @param string $CreateUin 创建人 Uin
+     * @param float $AmountOfUsedStorage 存储使用量(单位：MB)
+     * @param integer $ServiceCount 该业务系统服务端应用数量
+     * @param integer $CountOfReportSpanPerDay 日均上报 Span 数
+     * @param integer $TraceDuration Trace 数据保存时长（单位：天）
      * @param integer $SpanDailyCounters 业务系统上报额度
-     * @param integer $BillingInstance 业务系统是否开通计费
-     * @param integer $ErrRateThreshold 错误率阈值
-     * @param integer $SampleRate 采样率阈值
-     * @param integer $ErrorSample 是否开启错误采样 0  关 1 开
-     * @param integer $SlowRequestSavedThreshold 慢调用保存阈值
+     * @param integer $BillingInstance 业务系统是否已开通计费（0=未开通，1=已开通）
+     * @param integer $ErrRateThreshold 错误警示线（单位：%）
+     * @param integer $SampleRate 采样率（单位：%）
+     * @param integer $ErrorSample 是否开启错误采样（0=关, 1=开）
+     * @param integer $SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
      * @param string $LogRegion CLS 日志所在地域
-     * @param string $LogSource 日志来源
-     * @param integer $IsRelatedLog 日志功能开关 0 关 | 1 开
-     * @param string $LogTopicID 日志主题ID
-     * @param integer $ClientCount 该实例已上报的客户端应用数量
-     * @param integer $TotalCount 该实例已上报的总应用数量
-     * @param string $LogSet CLS 日志集 | ES 集群ID
-     * @param integer $MetricDuration Metric 数据保存时长
+     * @param string $LogSource 日志源
+     * @param integer $IsRelatedLog 日志功能开关（0=关， 1=开）
+     * @param string $LogTopicID 日志主题 ID
+     * @param integer $ClientCount 该业务系统客户端应用数量
+     * @param integer $TotalCount 该业务系统最近2天活跃应用数量
+     * @param string $LogSet CLS 日志集
+     * @param integer $MetricDuration Metric 数据保存时长（单位：天）
      * @param array $CustomShowTags 用户自定义展示标签列表
-     * @param integer $PayMode 业务系统计费模式
-1为预付费
-0为按量付费
+     * @param integer $PayMode 业务系统计费模式（1为预付费，0为按量付费）
      * @param boolean $PayModeEffective 业务系统计费模式是否生效
-     * @param integer $ResponseDurationWarningThreshold 响应时间满意阈值
+     * @param integer $ResponseDurationWarningThreshold 响应时间警示线（单位：ms）
      * @param integer $Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
-     * @param integer $DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
-     * @param integer $IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
-     * @param string $DashboardTopicID Dashboard ID
-     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
-     * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入分析
+     * @param integer $DefaultTSF 是否 TSF 默认业务系统（0=否，1=是）
+     * @param integer $IsRelatedDashboard 是否关联 Dashboard（0=关, 1=开）
+     * @param string $DashboardTopicID 关联的 Dashboard ID
+     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
+     * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
      */
     function __construct()
     {
@@ -334,45 +326,12 @@ class ApmInstanceDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AmountOfUsedStorage",$param) and $param["AmountOfUsedStorage"] !== null) {
-            $this->AmountOfUsedStorage = $param["AmountOfUsedStorage"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new ApmTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
-        }
-
-        if (array_key_exists("ServiceCount",$param) and $param["ServiceCount"] !== null) {
-            $this->ServiceCount = $param["ServiceCount"];
-        }
-
-        if (array_key_exists("CountOfReportSpanPerDay",$param) and $param["CountOfReportSpanPerDay"] !== null) {
-            $this->CountOfReportSpanPerDay = $param["CountOfReportSpanPerDay"];
-        }
-
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
-        }
-
-        if (array_key_exists("TraceDuration",$param) and $param["TraceDuration"] !== null) {
-            $this->TraceDuration = $param["TraceDuration"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
@@ -385,6 +344,39 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ApmTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
+            $this->CreateUin = $param["CreateUin"];
+        }
+
+        if (array_key_exists("AmountOfUsedStorage",$param) and $param["AmountOfUsedStorage"] !== null) {
+            $this->AmountOfUsedStorage = $param["AmountOfUsedStorage"];
+        }
+
+        if (array_key_exists("ServiceCount",$param) and $param["ServiceCount"] !== null) {
+            $this->ServiceCount = $param["ServiceCount"];
+        }
+
+        if (array_key_exists("CountOfReportSpanPerDay",$param) and $param["CountOfReportSpanPerDay"] !== null) {
+            $this->CountOfReportSpanPerDay = $param["CountOfReportSpanPerDay"];
+        }
+
+        if (array_key_exists("TraceDuration",$param) and $param["TraceDuration"] !== null) {
+            $this->TraceDuration = $param["TraceDuration"];
         }
 
         if (array_key_exists("SpanDailyCounters",$param) and $param["SpanDailyCounters"] !== null) {

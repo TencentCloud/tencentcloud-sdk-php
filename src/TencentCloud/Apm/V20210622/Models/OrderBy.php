@@ -18,28 +18,28 @@ namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * sql排序字段
+ * 排序字段
  *
- * @method string getKey() 获取需要排序的字段
- * @method void setKey(string $Key) 设置需要排序的字段
- * @method string getValue() 获取顺序排序/倒序排序
- * @method void setValue(string $Value) 设置顺序排序/倒序排序
+ * @method string getKey() 获取需要排序的字段，现支持 startTIme, endTime, duration
+ * @method void setKey(string $Key) 设置需要排序的字段，现支持 startTIme, endTime, duration
+ * @method string getValue() 获取asc 顺序排序 / desc 倒序排序
+ * @method void setValue(string $Value) 设置asc 顺序排序 / desc 倒序排序
  */
 class OrderBy extends AbstractModel
 {
     /**
-     * @var string 需要排序的字段
+     * @var string 需要排序的字段，现支持 startTIme, endTime, duration
      */
     public $Key;
 
     /**
-     * @var string 顺序排序/倒序排序
+     * @var string asc 顺序排序 / desc 倒序排序
      */
     public $Value;
 
     /**
-     * @param string $Key 需要排序的字段
-     * @param string $Value 顺序排序/倒序排序
+     * @param string $Key 需要排序的字段，现支持 startTIme, endTime, duration
+     * @param string $Value asc 顺序排序 / desc 倒序排序
      */
     function __construct()
     {

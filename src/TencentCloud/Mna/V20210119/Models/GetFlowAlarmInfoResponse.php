@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * GetFlowAlarmInfo返回参数结构体
  *
  * @method integer getAlarmValue() 获取流量包的告警阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmValue(integer $AlarmValue) 设置流量包的告警阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNotifyUrl() 获取告警通知回调url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyUrl(string $NotifyUrl) 设置告警通知回调url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCallbackKey() 获取告警通知回调key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackKey(string $CallbackKey) 设置告警通知回调key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class GetFlowAlarmInfoResponse extends AbstractModel
 {
     /**
      * @var integer 流量包的告警阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmValue;
 
     /**
      * @var string 告警通知回调url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyUrl;
 
     /**
      * @var string 告警通知回调key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallbackKey;
 
@@ -62,11 +53,8 @@ class GetFlowAlarmInfoResponse extends AbstractModel
 
     /**
      * @param integer $AlarmValue 流量包的告警阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotifyUrl 告警通知回调url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackKey 告警通知回调key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

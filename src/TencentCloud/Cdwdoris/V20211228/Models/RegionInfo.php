@@ -27,19 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRegionId() 获取地域唯一标记
  * @method void setRegionId(integer $RegionId) 设置地域唯一标记
  * @method array getZones() 获取地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZones(array $Zones) 设置地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取该地域下集群数目
  * @method void setCount(integer $Count) 设置该地域下集群数目
  * @method integer getIsInternationalSite() 获取0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsInternationalSite(integer $IsInternationalSite) 设置0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucket() 获取桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置桶
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionInfo extends AbstractModel
 {
@@ -60,7 +54,6 @@ class RegionInfo extends AbstractModel
 
     /**
      * @var array 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zones;
 
@@ -71,13 +64,11 @@ class RegionInfo extends AbstractModel
 
     /**
      * @var integer 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsInternationalSite;
 
     /**
      * @var string 桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
@@ -86,12 +77,9 @@ class RegionInfo extends AbstractModel
      * @param string $Desc 地域描述，例如"广州”
      * @param integer $RegionId 地域唯一标记
      * @param array $Zones 地域下所有可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 该地域下集群数目
      * @param integer $IsInternationalSite 0代表是国际站 1代表不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Bucket 桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

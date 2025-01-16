@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 资源组相关配置
  *
  * @method string getWorkloadGroupName() 获取资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkloadGroupName(string $WorkloadGroupName) 设置资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpuShare() 获取CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuShare(integer $CpuShare) 设置CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemoryLimit() 获取内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemoryLimit(integer $MemoryLimit) 设置内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableMemoryOverCommit() 获取是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableMemoryOverCommit(boolean $EnableMemoryOverCommit) 设置是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCpuHardLimit() 获取cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuHardLimit(string $CpuHardLimit) 设置cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkloadGroupConfig extends AbstractModel
 {
     /**
      * @var string 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkloadGroupName;
 
     /**
      * @var integer CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuShare;
 
     /**
      * @var integer 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemoryLimit;
 
     /**
      * @var boolean 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableMemoryOverCommit;
 
     /**
      * @var string cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuHardLimit;
 
     /**
      * @param string $WorkloadGroupName 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CpuShare CPU权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemoryLimit 内存限制，所有资源组的内存限制值之和应该小于等于100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableMemoryOverCommit 是否允许超配分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CpuHardLimit cpu硬限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

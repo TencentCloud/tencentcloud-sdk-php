@@ -122,12 +122,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckMRTD() 获取旅行证件类的核验结果。
 - JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+{"result_issuer ":"签发者证书合法性验证结果 ","result_paper":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
 - 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckMRTD(string $CheckMRTD) 设置旅行证件类的核验结果。
 - JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+{"result_issuer ":"签发者证书合法性验证结果 ","result_paper":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
 - 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageA() 获取身份证照片面合成图片。
@@ -264,7 +264,7 @@ class ParseNfcDataResponse extends AbstractModel
     /**
      * @var string 旅行证件类的核验结果。
 - JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+{"result_issuer ":"签发者证书合法性验证结果 ","result_paper":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
 - 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -346,7 +346,7 @@ class ParseNfcDataResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckMRTD 旅行证件类的核验结果。
 - JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+{"result_issuer ":"签发者证书合法性验证结果 ","result_paper":"证件安全对象合法性验证结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
 - 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageA 身份证照片面合成图片。

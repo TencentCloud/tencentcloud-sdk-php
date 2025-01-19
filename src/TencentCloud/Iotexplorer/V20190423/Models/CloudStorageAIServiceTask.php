@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可能取值：
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method integer getStartTime() 获取对应云存视频的起始时间
  * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间
  * @method integer getEndTime() 获取对应云存视频的结束时间
@@ -80,6 +82,7 @@ class CloudStorageAIServiceTask extends AbstractModel
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public $ServiceType;
 
@@ -132,6 +135,7 @@ class CloudStorageAIServiceTask extends AbstractModel
 
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      * @param integer $StartTime 对应云存视频的起始时间
      * @param integer $EndTime 对应云存视频的结束时间
      * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）

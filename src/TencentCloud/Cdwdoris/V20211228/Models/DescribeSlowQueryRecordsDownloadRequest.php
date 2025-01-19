@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(array $DbName) 设置数据库名称
  * @method array getCatalogName() 获取catalog名称
  * @method void setCatalogName(array $CatalogName) 设置catalog名称
+ * @method string getSortField() 获取排序字段
+ * @method void setSortField(string $SortField) 设置排序字段
+ * @method string getSortOrder() 获取排序方式
+ * @method void setSortOrder(string $SortOrder) 设置排序方式
  */
 class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
     public $CatalogName;
 
     /**
+     * @var string 排序字段
+     */
+    public $SortField;
+
+    /**
+     * @var string 排序方式
+     */
+    public $SortOrder;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -120,6 +134,8 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
      * @param integer $IsQuery IsQuery条件
      * @param array $DbName 数据库名称
      * @param array $CatalogName catalog名称
+     * @param string $SortField 排序字段
+     * @param string $SortOrder 排序方式
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("SortField",$param) and $param["SortField"] !== null) {
+            $this->SortField = $param["SortField"];
+        }
+
+        if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
+            $this->SortOrder = $param["SortOrder"];
         }
     }
 }

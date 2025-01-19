@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method integer getLimit() 获取分页拉取数量
  * @method void setLimit(integer $Limit) 设置分页拉取数量
  * @method integer getOffset() 获取分页拉取偏移
@@ -67,6 +69,7 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
      * @var string 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public $ServiceType;
 
@@ -106,6 +109,7 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
      * @param string $ServiceType 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      * @param integer $Limit 分页拉取数量
      * @param integer $Offset 分页拉取偏移
      * @param integer $Status 任务状态。可选值：

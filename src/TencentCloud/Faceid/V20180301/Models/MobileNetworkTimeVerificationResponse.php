@@ -43,10 +43,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRange() 获取在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
  * @method void setRange(string $Range) 设置在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -74,7 +74,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
 
     /**
      * @var string 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
      */
     public $Range;
@@ -97,7 +97,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
 -5：认证次数超过当日限制，请次日重试。
      * @param string $Description 业务结果描述。
      * @param string $Range 在网时长区间。
-- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
 - 若b为+时表示没有上限。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

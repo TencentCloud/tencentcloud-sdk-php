@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 资源组绑定的用户信息，需要username和host信息进行授权
  *
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHost() 获取主机信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置主机信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindUser extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Host 主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

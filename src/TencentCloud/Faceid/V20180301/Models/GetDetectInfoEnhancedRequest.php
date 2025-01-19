@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDetectInfoEnhanced请求参数结构体
  *
- * @method string getBizToken() 获取人脸核身流程的标识，调用DetectAuth接口时生成。
- * @method void setBizToken(string $BizToken) 设置人脸核身流程的标识，调用DetectAuth接口时生成。
+ * @method string getBizToken() 获取人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
+ * @method void setBizToken(string $BizToken) 设置人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
  * @method string getRuleId() 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
  * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
  * @method string getInfoType() 获取指定拉取的结果信息。
@@ -66,7 +66,7 @@ use TencentCloud\Common\AbstractModel;
 class GetDetectInfoEnhancedRequest extends AbstractModel
 {
     /**
-     * @var string 人脸核身流程的标识，调用DetectAuth接口时生成。
+     * @var string 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      */
     public $BizToken;
 
@@ -123,7 +123,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
     public $IsEncryptResponse;
 
     /**
-     * @param string $BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
+     * @param string $BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      * @param string $InfoType 指定拉取的结果信息。
 - 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidToken请求参数结构体
  *
- * @method string getMerchantId() 获取EID商户id。
+ * @method string getMerchantId() 获取EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
- * @method void setMerchantId(string $MerchantId) 设置EID商户id。
+ * @method void setMerchantId(string $MerchantId) 设置EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
  * @method string getIdCard() 获取身份标识。
 - 未使用OCR服务时，必须传入。
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class GetEidTokenRequest extends AbstractModel
 {
     /**
-     * @var string EID商户id。
+     * @var string EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
      */
     public $MerchantId;
@@ -106,7 +106,7 @@ class GetEidTokenRequest extends AbstractModel
     public $Encryption;
 
     /**
-     * @param string $MerchantId EID商户id。
+     * @param string $MerchantId EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
 - 字段长度最长50位。
      * @param string $IdCard 身份标识。
 - 未使用OCR服务时，必须传入。

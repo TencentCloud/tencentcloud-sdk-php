@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputName() 获取输入名称，可填大小写、数字和下划线，长度为[1, 32]。
  * @method void setInputName(string $InputName) 设置输入名称，可填大小写、数字和下划线，长度为[1, 32]。
- * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
- * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
+ * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。
+ * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。
  * @method string getDescription() 获取输入描述，长度为[0, 255]。
  * @method void setDescription(string $Description) 设置输入描述，长度为[0, 255]。
  * @method array getAllowIpList() 获取输入的IP白名单，格式为CIDR。
@@ -59,7 +59,7 @@ class CreateInput extends AbstractModel
     public $InputName;
 
     /**
-     * @var string 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
+     * @var string 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。
      */
     public $Protocol;
 
@@ -130,7 +130,7 @@ class CreateInput extends AbstractModel
 
     /**
      * @param string $InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
-     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
+     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。
      * @param string $Description 输入描述，长度为[0, 255]。
      * @param array $AllowIpList 输入的IP白名单，格式为CIDR。
      * @param CreateInputSRTSettings $SRTSettings 输入的SRT配置信息。

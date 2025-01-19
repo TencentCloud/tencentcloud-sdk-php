@@ -66,6 +66,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 数组最多支持10个元素。
  * @method Command getInitCommand() 获取创建实例后自动执行的命令。
  * @method void setInitCommand(Command $InitCommand) 设置创建实例后自动执行的命令。
+ * @method string getDomainName() 获取主域名。
+ * @method void setDomainName(string $DomainName) 设置主域名。
+ * @method string getSubdomain() 获取子域名。
+ * @method void setSubdomain(string $Subdomain) 设置子域名。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -149,6 +153,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $InitCommand;
 
     /**
+     * @var string 主域名。
+     */
+    public $DomainName;
+
+    /**
+     * @var string 子域名。
+     */
+    public $Subdomain;
+
+    /**
      * @param string $BundleId 套餐ID。可以通过调用 [DescribeBundles](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      * @param string $BlueprintId 镜像ID。可以通过调用 [DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
@@ -172,6 +186,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 如果标签不存在会为您自动创建标签。
 数组最多支持10个元素。
      * @param Command $InitCommand 创建实例后自动执行的命令。
+     * @param string $DomainName 主域名。
+     * @param string $Subdomain 子域名。
      */
     function __construct()
     {
@@ -253,6 +269,14 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (array_key_exists("InitCommand",$param) and $param["InitCommand"] !== null) {
             $this->InitCommand = new Command();
             $this->InitCommand->deserialize($param["InitCommand"]);
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Subdomain",$param) and $param["Subdomain"] !== null) {
+            $this->Subdomain = $param["Subdomain"];
         }
     }
 }

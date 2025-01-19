@@ -38,9 +38,11 @@ TDE：支持数据加密。
 TDE：支持数据加密。
  * @method string getStatus() 获取数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
  * @method void setStatus(string $Status) 设置数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
  * @method array getAvailableUpgradeTarget() 获取该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
  * @method void setAvailableUpgradeTarget(array $AvailableUpgradeTarget) 设置该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
@@ -78,6 +80,7 @@ TDE：支持数据加密。
     /**
      * @var string 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
      */
     public $Status;
@@ -98,6 +101,7 @@ DEPRECATED：已弃用。
 TDE：支持数据加密。
      * @param string $Status 数据库版本状态，包括：
 AVAILABLE：可用；
+UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
 DEPRECATED：已弃用。
      * @param array $AvailableUpgradeTarget 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
      */

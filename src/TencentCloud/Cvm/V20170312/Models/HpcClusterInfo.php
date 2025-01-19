@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHpcClusterNetMode() 获取高性能计算集群网络模式
+ * @method void setHpcClusterNetMode(integer $HpcClusterNetMode) 设置高性能计算集群网络模式
+ * @method array getTags() 获取高性能计算集群关联的标签列表
+ * @method void setTags(array $Tags) 设置高性能计算集群关联的标签列表
  */
 class HpcClusterInfo extends AbstractModel
 {
@@ -112,6 +116,16 @@ class HpcClusterInfo extends AbstractModel
     public $HpcClusterBusinessId;
 
     /**
+     * @var integer 高性能计算集群网络模式
+     */
+    public $HpcClusterNetMode;
+
+    /**
+     * @var array 高性能计算集群关联的标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $HpcClusterId 高性能计算集群ID
      * @param string $Name 高性能计算集群名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,6 +142,8 @@ class HpcClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HpcClusterNetMode 高性能计算集群网络模式
+     * @param array $Tags 高性能计算集群关联的标签列表
      */
     function __construct()
     {
@@ -180,6 +196,19 @@ class HpcClusterInfo extends AbstractModel
 
         if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
             $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
+        }
+
+        if (array_key_exists("HpcClusterNetMode",$param) and $param["HpcClusterNetMode"] !== null) {
+            $this->HpcClusterNetMode = $param["HpcClusterNetMode"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

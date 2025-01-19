@@ -76,6 +76,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeCloudStorageAIServiceTasksResponse DescribeCloudStorageAIServiceTasks(Models\DescribeCloudStorageAIServiceTasksRequest $req) 查询指定设备的云存 AI 分析任务列表
  * @method Models\DescribeCloudStorageDateResponse DescribeCloudStorageDate(Models\DescribeCloudStorageDateRequest $req) 获取具有云存的日期
  * @method Models\DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(Models\DescribeCloudStorageEventsRequest $req) 拉取云存事件列表
+ * @method Models\DescribeCloudStorageEventsWithAITasksResponse DescribeCloudStorageEventsWithAITasks(Models\DescribeCloudStorageEventsWithAITasksRequest $req) 拉取云存事件列表
  * @method Models\DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnail(Models\DescribeCloudStorageMultiThumbnailRequest $req) 拉取多个云存事件缩略图
  * @method Models\DescribeCloudStorageOrderResponse DescribeCloudStorageOrder(Models\DescribeCloudStorageOrderRequest $req) 查询云存服务详情
  * @method Models\DescribeCloudStoragePackageConsumeDetailsResponse DescribeCloudStoragePackageConsumeDetails(Models\DescribeCloudStoragePackageConsumeDetailsRequest $req) 获取云存套餐包消耗详细记录

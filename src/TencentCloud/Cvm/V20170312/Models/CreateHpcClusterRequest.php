@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHpcClusterType(string $HpcClusterType) 设置高性能计算集群类型。
  * @method string getHpcClusterBusinessId() 获取高性能计算集群对应的业务场景标识，当前只支持CDC。
  * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
  */
 class CreateHpcClusterRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateHpcClusterRequest extends AbstractModel
     public $HpcClusterBusinessId;
 
     /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $Zone 可用区。
      * @param string $Name 高性能计算集群名称。
      * @param string $Remark 高性能计算集群备注。
      * @param string $HpcClusterType 高性能计算集群类型。
      * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateHpcClusterRequest extends AbstractModel
 
         if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
             $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdRiskInfo请求参数结构体
  *
- * @method string getFaceIdToken() 获取SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
- * @method void setFaceIdToken(string $FaceIdToken) 设置SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+ * @method string getFaceIdToken() 获取SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
+ * @method void setFaceIdToken(string $FaceIdToken) 设置SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
  */
 class GetFaceIdRiskInfoRequest extends AbstractModel
 {
     /**
-     * @var string SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+     * @var string SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
      */
     public $FaceIdToken;
 
     /**
-     * @param string $FaceIdToken SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+     * @param string $FaceIdToken SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckEidTokenStatus请求参数结构体
  *
- * @method string getEidToken() 获取E证通流程的唯一标识，调用GetEidToken接口时生成。
- * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用GetEidToken接口时生成。
+ * @method string getEidToken() 获取E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
+ * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
  */
 class CheckEidTokenStatusRequest extends AbstractModel
 {
     /**
-     * @var string E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * @var string E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      */
     public $EidToken;
 
     /**
-     * @param string $EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * @param string $EidToken E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      */
     function __construct()
     {

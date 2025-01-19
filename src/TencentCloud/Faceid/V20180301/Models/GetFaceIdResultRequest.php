@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * GetFaceIdResult请求参数结构体
  *
  * @method string getFaceIdToken() 获取SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
  * @method void setFaceIdToken(string $FaceIdToken) 设置SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
  * @method boolean getIsNeedVideo() 获取是否需要拉取视频。
 - 默认false：不需要。
  * @method void setIsNeedVideo(boolean $IsNeedVideo) 设置是否需要拉取视频。
@@ -37,7 +37,7 @@ class GetFaceIdResultRequest extends AbstractModel
 {
     /**
      * @var string SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      */
     public $FaceIdToken;
 
@@ -55,7 +55,7 @@ class GetFaceIdResultRequest extends AbstractModel
 
     /**
      * @param string $FaceIdToken SDK人脸核身流程的标识。
-- 调用GetFaceIdToken接口时生成。
+- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      * @param boolean $IsNeedVideo 是否需要拉取视频。
 - 默认false：不需要。
      * @param boolean $IsNeedBestFrame 是否需要拉取截帧。

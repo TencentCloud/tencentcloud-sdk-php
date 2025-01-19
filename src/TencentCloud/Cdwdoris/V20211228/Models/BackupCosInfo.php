@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 备份实例中关于cos的信息
  *
  * @method string getCosBucket() 获取备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosBucket(string $CosBucket) 设置备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosPath() 获取备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPath(string $CosPath) 设置备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapShotPath() 获取备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapShotPath(string $SnapShotPath) 设置备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupCosInfo extends AbstractModel
 {
     /**
      * @var string 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucket;
 
     /**
      * @var string 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPath;
 
     /**
      * @var string 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapShotPath;
 
     /**
      * @param string $CosBucket 备份文件所在的cos桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosPath 备份文件所在的完整cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapShotPath 备份文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

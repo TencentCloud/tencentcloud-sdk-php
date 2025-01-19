@@ -24,6 +24,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
 
 /**
  * @method Models\BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(Models\BindAutoSnapshotPolicyRequest $req) 文件系统绑定快照策略，可以同时绑定多个fs，一个fs 只能跟一个策略绑定
+ * @method Models\CreateAccessCertResponse CreateAccessCert(Models\CreateAccessCertRequest $req) 创建用于访问文件系统的凭证
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) 创建定期快照策略
  * @method Models\CreateCfsFileSystemResponse CreateCfsFileSystem(Models\CreateCfsFileSystemRequest $req) 用于添加新文件系统
  * @method Models\CreateCfsPGroupResponse CreateCfsPGroup(Models\CreateCfsPGroupRequest $req) 本接口（CreateCfsPGroup）用于创建权限组

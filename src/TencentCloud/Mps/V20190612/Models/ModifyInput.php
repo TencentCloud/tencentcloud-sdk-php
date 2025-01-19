@@ -32,14 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSRTSettings(CreateInputSRTSettings $SRTSettings) 设置SRT的配置信息。
  * @method CreateInputRTPSettings getRTPSettings() 获取RTP的配置信息。
  * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) 设置RTP的配置信息。
- * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
- * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+ * @method string getProtocol() 获取输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
+ * @method void setProtocol(string $Protocol) 设置输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
  * @method string getFailOver() 获取输入的主备开关，可选[OPEN|CLOSE]。
  * @method void setFailOver(string $FailOver) 设置输入的主备开关，可选[OPEN|CLOSE]。
  * @method CreateInputRTMPPullSettings getRTMPPullSettings() 获取RTMP_PULL的配置信息。
@@ -92,10 +86,7 @@ class ModifyInput extends AbstractModel
     public $RTPSettings;
 
     /**
-     * @var string 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+     * @var string 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
      */
     public $Protocol;
 
@@ -151,10 +142,7 @@ class ModifyInput extends AbstractModel
      * @param array $AllowIpList 允许的推流的IP，CIDR格式。
      * @param CreateInputSRTSettings $SRTSettings SRT的配置信息。
      * @param CreateInputRTPSettings $RTPSettings RTP的配置信息。
-     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
-当输出包含RTP时，输入只能是RTP。
-当输出包含RTMP时，输入可以是SRT/RTMP。
-当输出包含SRT时，输入只能是SRT。
+     * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP_PUSH|RTMP_PULL|RTSP_PULL|RIST]。	-
      * @param string $FailOver 输入的主备开关，可选[OPEN|CLOSE]。
      * @param CreateInputRTMPPullSettings $RTMPPullSettings RTMP_PULL的配置信息。
      * @param CreateInputRTSPPullSettings $RTSPPullSettings RTSP_PULL的配置信息。

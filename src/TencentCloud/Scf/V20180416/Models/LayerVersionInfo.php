@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayerVersion(integer $LayerVersion) 设置版本号
  * @method string getLayerName() 获取层名称
  * @method void setLayerName(string $LayerName) 设置层名称
- * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
- * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method string getStamp() 获取Stamp
  * @method void setStamp(string $Stamp) 设置Stamp
  * @method array getTags() 获取返回层绑定的标签信息
@@ -77,7 +77,7 @@ class LayerVersionInfo extends AbstractModel
     public $LayerName;
 
     /**
-     * @var string 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @var string 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public $Status;
 
@@ -100,7 +100,7 @@ class LayerVersionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称
-     * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $Stamp Stamp
      * @param array $Tags 返回层绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。

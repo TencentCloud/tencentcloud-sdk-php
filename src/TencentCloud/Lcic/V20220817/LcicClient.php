@@ -82,7 +82,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 此接口修改群组信息
  * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间
- * @method Models\ModifyUserProfileResponse ModifyUserProfile(Models\ModifyUserProfileRequest $req) 此接口用于修改用户配置，如头像，昵称/用户名等。
+ * @method Models\ModifyUserProfileResponse ModifyUserProfile(Models\ModifyUserProfileRequest $req) 此接口用于修改用户信息，例如头像、昵称（用户名）等。注意，课中的用户信息不会立即同步修改，需待下次上课时，修改后的信息才会更新显示。
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户
  * @method Models\SendRoomNormalMessageResponse SendRoomNormalMessage(Models\SendRoomNormalMessageRequest $req) 1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
  * @method Models\SendRoomNotificationMessageResponse SendRoomNotificationMessage(Models\SendRoomNotificationMessageRequest $req) App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。

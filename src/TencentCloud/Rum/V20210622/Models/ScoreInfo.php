@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPageDuration() 获取Duration
  * @method void setPageDuration(string $PageDuration) 设置Duration
  * @method string getCreateTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPagePerformanceScore() 获取页面性能评分
  * @method void setPagePerformanceScore(string $PagePerformanceScore) 设置页面性能评分
  * @method string getJsErrorScore() 获取js错误评分
@@ -132,7 +130,6 @@ class ScoreInfo extends AbstractModel
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -181,7 +178,6 @@ class ScoreInfo extends AbstractModel
      * @param integer $RecordNum num
      * @param string $PageDuration Duration
      * @param string $CreateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PagePerformanceScore 页面性能评分
      * @param string $JsErrorScore js错误评分
      * @param string $ApiPerformanceScore API性能评分

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置字段类型
  * @method string getComment() 获取字段描述
  * @method void setComment(string $Comment) 设置字段描述
- * @method string getPartitionType() 获取分区类型
- * @method void setPartitionType(string $PartitionType) 设置分区类型
- * @method string getPartitionFormat() 获取分区格式
- * @method void setPartitionFormat(string $PartitionFormat) 设置分区格式
- * @method integer getPartitionDot() 获取分区分隔数
- * @method void setPartitionDot(integer $PartitionDot) 设置分区分隔数
+ * @method string getPartitionType() 获取分区类型（已废弃）
+ * @method void setPartitionType(string $PartitionType) 设置分区类型（已废弃）
+ * @method string getPartitionFormat() 获取分区格式（已废弃）
+ * @method void setPartitionFormat(string $PartitionFormat) 设置分区格式（已废弃）
+ * @method integer getPartitionDot() 获取分区分隔数（已废弃）
+ * @method void setPartitionDot(integer $PartitionDot) 设置分区分隔数（已废弃）
  * @method string getTransform() 获取分区转换策略
  * @method void setTransform(string $Transform) 设置分区转换策略
  * @method array getTransformArgs() 获取策略参数
@@ -55,17 +55,17 @@ class TPartition extends AbstractModel
     public $Comment;
 
     /**
-     * @var string 分区类型
+     * @var string 分区类型（已废弃）
      */
     public $PartitionType;
 
     /**
-     * @var string 分区格式
+     * @var string 分区格式（已废弃）
      */
     public $PartitionFormat;
 
     /**
-     * @var integer 分区分隔数
+     * @var integer 分区分隔数（已废弃）
      */
     public $PartitionDot;
 
@@ -83,9 +83,9 @@ class TPartition extends AbstractModel
      * @param string $Name 字段名称
      * @param string $Type 字段类型
      * @param string $Comment 字段描述
-     * @param string $PartitionType 分区类型
-     * @param string $PartitionFormat 分区格式
-     * @param integer $PartitionDot 分区分隔数
+     * @param string $PartitionType 分区类型（已废弃）
+     * @param string $PartitionFormat 分区格式（已废弃）
+     * @param integer $PartitionDot 分区分隔数（已废弃）
      * @param string $Transform 分区转换策略
      * @param array $TransformArgs 策略参数
      */

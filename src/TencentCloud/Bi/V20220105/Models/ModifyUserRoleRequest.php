@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppUserId(string $AppUserId) 设置企业微信应用用户id
  * @method integer getLoginSecurityStatus() 获取是否开启手机验证码登录（0 关闭，1 开启）
  * @method void setLoginSecurityStatus(integer $LoginSecurityStatus) 设置是否开启手机验证码登录（0 关闭，1 开启）
+ * @method integer getResetPassWordTip() 获取是否开启密码过期提醒（0 关闭，1 开启
+ * @method void setResetPassWordTip(integer $ResetPassWordTip) 设置是否开启密码过期提醒（0 关闭，1 开启
+ * @method integer getForceResetPassWord() 获取强制修改密码（0 关闭，1 开启）
+ * @method void setForceResetPassWord(integer $ForceResetPassWord) 设置强制修改密码（0 关闭，1 开启）
+ * @method integer getPasswordExpired() 获取密码过期提醒时间，30、60、90（默认）、180天
+ * @method void setPasswordExpired(integer $PasswordExpired) 设置密码过期提醒时间，30、60、90（默认）、180天
  */
 class ModifyUserRoleRequest extends AbstractModel
 {
@@ -80,6 +86,21 @@ class ModifyUserRoleRequest extends AbstractModel
     public $LoginSecurityStatus;
 
     /**
+     * @var integer 是否开启密码过期提醒（0 关闭，1 开启
+     */
+    public $ResetPassWordTip;
+
+    /**
+     * @var integer 强制修改密码（0 关闭，1 开启）
+     */
+    public $ForceResetPassWord;
+
+    /**
+     * @var integer 密码过期提醒时间，30、60、90（默认）、180天
+     */
+    public $PasswordExpired;
+
+    /**
      * @param string $UserId 用户ID
      * @param array $RoleIdList 角色ID 列表
      * @param string $Email 邮箱
@@ -88,6 +109,9 @@ class ModifyUserRoleRequest extends AbstractModel
      * @param string $AreaCode 手机区号
      * @param string $AppUserId 企业微信应用用户id
      * @param integer $LoginSecurityStatus 是否开启手机验证码登录（0 关闭，1 开启）
+     * @param integer $ResetPassWordTip 是否开启密码过期提醒（0 关闭，1 开启
+     * @param integer $ForceResetPassWord 强制修改密码（0 关闭，1 开启）
+     * @param integer $PasswordExpired 密码过期提醒时间，30、60、90（默认）、180天
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class ModifyUserRoleRequest extends AbstractModel
 
         if (array_key_exists("LoginSecurityStatus",$param) and $param["LoginSecurityStatus"] !== null) {
             $this->LoginSecurityStatus = $param["LoginSecurityStatus"];
+        }
+
+        if (array_key_exists("ResetPassWordTip",$param) and $param["ResetPassWordTip"] !== null) {
+            $this->ResetPassWordTip = $param["ResetPassWordTip"];
+        }
+
+        if (array_key_exists("ForceResetPassWord",$param) and $param["ForceResetPassWord"] !== null) {
+            $this->ForceResetPassWord = $param["ForceResetPassWord"];
+        }
+
+        if (array_key_exists("PasswordExpired",$param) and $param["PasswordExpired"] !== null) {
+            $this->PasswordExpired = $param["PasswordExpired"];
         }
     }
 }

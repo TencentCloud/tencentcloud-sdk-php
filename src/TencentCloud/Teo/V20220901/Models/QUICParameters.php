@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 攻击溯源路线描述
+ * QUIC 配置项。
  *
- * @method string getFrom() 获取出发节点
- * @method void setFrom(string $From) 设置出发节点
- * @method string getTo() 获取目标节点
- * @method void setTo(string $To) 设置目标节点
+ * @method string getSwitch() 获取QUIC 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置QUIC 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
  */
-class AttackSourceEdge extends AbstractModel
+class QUICParameters extends AbstractModel
 {
     /**
-     * @var string 出发节点
+     * @var string QUIC 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public $From;
+    public $Switch;
 
     /**
-     * @var string 目标节点
-     */
-    public $To;
-
-    /**
-     * @param string $From 出发节点
-     * @param string $To 目标节点
+     * @param string $Switch QUIC 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     function __construct()
     {
@@ -54,12 +54,8 @@ class AttackSourceEdge extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("From",$param) and $param["From"] !== null) {
-            $this->From = $param["From"];
-        }
-
-        if (array_key_exists("To",$param) and $param["To"] !== null) {
-            $this->To = $param["To"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

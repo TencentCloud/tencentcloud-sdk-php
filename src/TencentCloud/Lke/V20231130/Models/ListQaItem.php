@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttrLabels(array $AttrLabels) 设置属性标签
  * @method integer getSimilarQuestionNum() 获取相似问个数
  * @method void setSimilarQuestionNum(integer $SimilarQuestionNum) 设置相似问个数
+ * @method string getSimilarQuestionTips() 获取返回问答关联的相似问,联动搜索,仅展示一条
+ * @method void setSimilarQuestionTips(string $SimilarQuestionTips) 设置返回问答关联的相似问,联动搜索,仅展示一条
  */
 class ListQaItem extends AbstractModel
 {
@@ -171,6 +173,11 @@ class ListQaItem extends AbstractModel
     public $SimilarQuestionNum;
 
     /**
+     * @var string 返回问答关联的相似问,联动搜索,仅展示一条
+     */
+    public $SimilarQuestionTips;
+
+    /**
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
@@ -192,6 +199,7 @@ class ListQaItem extends AbstractModel
      * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
      * @param array $AttrLabels 属性标签
      * @param integer $SimilarQuestionNum 相似问个数
+     * @param string $SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("SimilarQuestionNum",$param) and $param["SimilarQuestionNum"] !== null) {
             $this->SimilarQuestionNum = $param["SimilarQuestionNum"];
+        }
+
+        if (array_key_exists("SimilarQuestionTips",$param) and $param["SimilarQuestionTips"] !== null) {
+            $this->SimilarQuestionTips = $param["SimilarQuestionTips"];
         }
     }
 }

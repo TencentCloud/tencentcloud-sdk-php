@@ -92,6 +92,7 @@ class ChatCompletionsResponse extends AbstractModel
 
     /**
      * @var string 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @deprecated
      */
     public $ModerationLevel;
 

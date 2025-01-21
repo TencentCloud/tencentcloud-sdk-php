@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getItems() 获取地域列表
  * @method void setItems(array $Items) 设置地域列表
  * @method array getFrontEndRules() 获取前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrontEndRules(array $FrontEndRules) 设置前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAvailableWhiteListNames() 获取返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableWhiteListNames(array $AvailableWhiteListNames) 设置返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class DescribeAreaRegionResponse extends AbstractModel
 
     /**
      * @var array 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrontEndRules;
 
     /**
      * @var array 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableWhiteListNames;
 
@@ -60,9 +54,7 @@ class DescribeAreaRegionResponse extends AbstractModel
     /**
      * @param array $Items 地域列表
      * @param array $FrontEndRules 前端规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AvailableWhiteListNames 返回可用的白名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

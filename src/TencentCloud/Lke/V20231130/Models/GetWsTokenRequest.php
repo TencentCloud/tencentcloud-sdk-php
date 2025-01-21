@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
  * @method string getVisitorBizId() 获取访客ID（外部输入，建议唯一，标识当前接入会话的用户）
  * @method void setVisitorBizId(string $VisitorBizId) 设置访客ID（外部输入，建议唯一，标识当前接入会话的用户）
- * @method array getVisitorLabels() 获取知识标签（用于知识库中知识的检索过滤）
- * @method void setVisitorLabels(array $VisitorLabels) 设置知识标签（用于知识库中知识的检索过滤）
+ * @method array getVisitorLabels() 获取知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
+ * @method void setVisitorLabels(array $VisitorLabels) 设置知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
  */
 class GetWsTokenRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class GetWsTokenRequest extends AbstractModel
     public $VisitorBizId;
 
     /**
-     * @var array 知识标签（用于知识库中知识的检索过滤）
+     * @var array 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */
     public $VisitorLabels;
 
@@ -55,7 +55,7 @@ class GetWsTokenRequest extends AbstractModel
      * @param integer $Type 接入类型
      * @param string $BotAppKey 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
      * @param string $VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
-     * @param array $VisitorLabels 知识标签（用于知识库中知识的检索过滤）
+     * @param array $VisitorLabels 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */
     function __construct()
     {

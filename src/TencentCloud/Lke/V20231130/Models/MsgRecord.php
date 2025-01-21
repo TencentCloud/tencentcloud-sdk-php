@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuoteInfos(array $QuoteInfos) 设置参考来源引用位置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AgentThought getAgentThought() 获取Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentThought(AgentThought $AgentThought) 设置Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -254,6 +258,12 @@ class MsgRecord extends AbstractModel
     public $QuoteInfos;
 
     /**
+     * @var AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentThought;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,6 +309,8 @@ class MsgRecord extends AbstractModel
      * @param array $FileInfos 用户传入的文件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QuoteInfos 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentThought $AgentThought Agent的思考过程信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -421,6 +433,11 @@ class MsgRecord extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QuoteInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AgentThought",$param) and $param["AgentThought"] !== null) {
+            $this->AgentThought = new AgentThought();
+            $this->AgentThought->deserialize($param["AgentThought"]);
         }
     }
 }

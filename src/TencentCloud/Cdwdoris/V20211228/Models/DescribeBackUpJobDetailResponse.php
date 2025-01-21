@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeBackUpJobDetail返回参数结构体
  *
  * @method array getTableContents() 获取备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableContents(array $TableContents) 设置备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorMsg() 获取错误信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
+ * @method boolean getIsUnknownVersion() 获取是否是未知版本
+ * @method void setIsUnknownVersion(boolean $IsUnknownVersion) 设置是否是未知版本
+ * @method string getMsg() 获取返回对象用字符串表示
+ * @method void setMsg(string $Msg) 设置返回对象用字符串表示
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,9 +35,23 @@ class DescribeBackUpJobDetailResponse extends AbstractModel
 {
     /**
      * @var array 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableContents;
+
+    /**
+     * @var string 错误信息
+     */
+    public $ErrorMsg;
+
+    /**
+     * @var boolean 是否是未知版本
+     */
+    public $IsUnknownVersion;
+
+    /**
+     * @var string 返回对象用字符串表示
+     */
+    public $Msg;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +60,9 @@ class DescribeBackUpJobDetailResponse extends AbstractModel
 
     /**
      * @param array $TableContents 备份表详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorMsg 错误信息
+     * @param boolean $IsUnknownVersion 是否是未知版本
+     * @param string $Msg 返回对象用字符串表示
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -65,6 +85,18 @@ class DescribeBackUpJobDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TableContents, $obj);
             }
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("IsUnknownVersion",$param) and $param["IsUnknownVersion"] !== null) {
+            $this->IsUnknownVersion = $param["IsUnknownVersion"];
+        }
+
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

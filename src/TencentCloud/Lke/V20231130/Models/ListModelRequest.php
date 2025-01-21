@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
  * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+ * @method string getPattern() 获取应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+ * @method void setPattern(string $Pattern) 设置应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+ * @method string getModelCategory() 获取模型类别 generate：生成模型，thought：思考模型
+ * @method void setModelCategory(string $ModelCategory) 设置模型类别 generate：生成模型，thought：思考模型
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)	
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)	
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)	
@@ -35,6 +39,16 @@ class ListModelRequest extends AbstractModel
     public $AppType;
 
     /**
+     * @var string 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public $Pattern;
+
+    /**
+     * @var string 模型类别 generate：生成模型，thought：思考模型
+     */
+    public $ModelCategory;
+
+    /**
      * @var string 登录用户主账号(集成商模式必填)	
      */
     public $LoginUin;
@@ -46,6 +60,8 @@ class ListModelRequest extends AbstractModel
 
     /**
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @param string $Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @param string $ModelCategory 模型类别 generate：生成模型，thought：思考模型
      * @param string $LoginUin 登录用户主账号(集成商模式必填)	
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	
      */
@@ -64,6 +80,14 @@ class ListModelRequest extends AbstractModel
         }
         if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
             $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
+            $this->ModelCategory = $param["ModelCategory"];
         }
 
         if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {

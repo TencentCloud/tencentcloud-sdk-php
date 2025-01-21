@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatusType(integer $TaskStatusType) 设置状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArchId() 获取架构ID
+ * @method void setArchId(string $ArchId) 设置架构ID
+ * @method string getArchName() 获取架构名称
+ * @method void setArchName(string $ArchName) 设置架构名称
  */
 class TaskListItem extends AbstractModel
 {
@@ -146,6 +150,16 @@ class TaskListItem extends AbstractModel
     public $TaskStatusType;
 
     /**
+     * @var string 架构ID
+     */
+    public $ArchId;
+
+    /**
+     * @var string 架构名称
+     */
+    public $ArchName;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -168,6 +182,8 @@ class TaskListItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArchId 架构ID
+     * @param string $ArchName 架构名称
      */
     function __construct()
     {
@@ -236,6 +252,14 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskStatusType",$param) and $param["TaskStatusType"] !== null) {
             $this->TaskStatusType = $param["TaskStatusType"];
+        }
+
+        if (array_key_exists("ArchId",$param) and $param["ArchId"] !== null) {
+            $this->ArchId = $param["ArchId"];
+        }
+
+        if (array_key_exists("ArchName",$param) and $param["ArchName"] !== null) {
+            $this->ArchName = $param["ArchName"];
         }
     }
 }

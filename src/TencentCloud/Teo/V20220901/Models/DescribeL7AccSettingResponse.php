@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAttackSourceEvents返回参数结构体
+ * DescribeL7AccSetting返回参数结构体
  *
- * @method integer getTotalCount() 获取总条数
- * @method void setTotalCount(integer $TotalCount) 设置总条数
- * @method array getList() 获取攻击溯源事件列表
- * @method void setList(array $List) 设置攻击溯源事件列表
+ * @method ZoneConfigParameters getZoneSetting() 获取站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneSetting(ZoneConfigParameters $ZoneSetting) 设置站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAttackSourceEventsResponse extends AbstractModel
+class DescribeL7AccSettingResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var ZoneConfigParameters 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 攻击溯源事件列表
-     */
-    public $List;
+    public $ZoneSetting;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class DescribeAttackSourceEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总条数
-     * @param array $List 攻击溯源事件列表
+     * @param ZoneConfigParameters $ZoneSetting 站点加速全局配置。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +58,9 @@ class DescribeAttackSourceEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new AttackSourceEvent();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
+        if (array_key_exists("ZoneSetting",$param) and $param["ZoneSetting"] !== null) {
+            $this->ZoneSetting = new ZoneConfigParameters();
+            $this->ZoneSetting->deserialize($param["ZoneSetting"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

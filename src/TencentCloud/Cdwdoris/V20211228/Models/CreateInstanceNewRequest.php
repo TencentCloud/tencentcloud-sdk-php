@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMultiZones(boolean $EnableMultiZones) 设置是否开启多可用区
  * @method NetworkInfo getUserMultiZoneInfos() 获取开启多可用区后，用户的所有可用区和子网信息
  * @method void setUserMultiZoneInfos(NetworkInfo $UserMultiZoneInfos) 设置开启多可用区后，用户的所有可用区和子网信息
+ * @method array getUserMultiZoneInfoArr() 获取开启多可用区后，用户的所有可用区和子网信息
+ * @method void setUserMultiZoneInfoArr(array $UserMultiZoneInfoArr) 设置开启多可用区后，用户的所有可用区和子网信息
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -134,8 +136,14 @@ class CreateInstanceNewRequest extends AbstractModel
 
     /**
      * @var NetworkInfo 开启多可用区后，用户的所有可用区和子网信息
+     * @deprecated
      */
     public $UserMultiZoneInfos;
+
+    /**
+     * @var array 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public $UserMultiZoneInfoArr;
 
     /**
      * @param string $Zone 可用区
@@ -156,6 +164,7 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param integer $CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
      * @param boolean $EnableMultiZones 是否开启多可用区
      * @param NetworkInfo $UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     * @param array $UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
      */
     function __construct()
     {
@@ -237,6 +246,15 @@ class CreateInstanceNewRequest extends AbstractModel
         if (array_key_exists("UserMultiZoneInfos",$param) and $param["UserMultiZoneInfos"] !== null) {
             $this->UserMultiZoneInfos = new NetworkInfo();
             $this->UserMultiZoneInfos->deserialize($param["UserMultiZoneInfos"]);
+        }
+
+        if (array_key_exists("UserMultiZoneInfoArr",$param) and $param["UserMultiZoneInfoArr"] !== null) {
+            $this->UserMultiZoneInfoArr = [];
+            foreach ($param["UserMultiZoneInfoArr"] as $key => $value){
+                $obj = new NetworkInfo();
+                $obj->deserialize($value);
+                array_push($this->UserMultiZoneInfoArr, $obj);
+            }
         }
     }
 }

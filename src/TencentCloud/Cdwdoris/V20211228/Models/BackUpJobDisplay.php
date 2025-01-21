@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBackUpSize() 获取备份数据量
  * @method void setBackUpSize(integer $BackUpSize) 设置备份数据量
  * @method integer getBackUpSingleSize() 获取备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackUpSingleSize(integer $BackUpSingleSize) 设置备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackUpTime() 获取实例创建时间
  * @method void setBackUpTime(string $BackUpTime) 设置实例创建时间
  * @method string getExpireTime() 获取实例过期时间
@@ -37,29 +35,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getJobStatus() 获取实例状态
  * @method void setJobStatus(string $JobStatus) 设置实例状态
  * @method integer getBackupType() 获取0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupType(integer $BackupType) 设置0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackupTimeType() 获取0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupTimeType(integer $BackupTimeType) 设置0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DorisSourceInfo getDorisSourceInfo() 获取远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDorisSourceInfo(DorisSourceInfo $DorisSourceInfo) 设置远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJobStatusNum() 获取实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobStatusNum(integer $JobStatusNum) 设置实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BackupCosInfo getBackupCosInfo() 获取备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupCosInfo(BackupCosInfo $BackupCosInfo) 设置备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUserDefineBucket() 获取是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUserDefineBucket(boolean $IsUserDefineBucket) 设置是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorReason() 获取错误原因
+ * @method void setErrorReason(string $ErrorReason) 设置错误原因
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -80,7 +68,6 @@ class BackUpJobDisplay extends AbstractModel
 
     /**
      * @var integer 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackUpSingleSize;
 
@@ -101,61 +88,54 @@ class BackUpJobDisplay extends AbstractModel
 
     /**
      * @var integer 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupType;
 
     /**
      * @var integer 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupTimeType;
 
     /**
      * @var DorisSourceInfo 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DorisSourceInfo;
 
     /**
      * @var integer 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobStatusNum;
 
     /**
      * @var BackupCosInfo 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupCosInfo;
 
     /**
      * @var boolean 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUserDefineBucket;
+
+    /**
+     * @var string 错误原因
+     */
+    public $ErrorReason;
 
     /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
      * @param integer $BackUpSingleSize 备份单副本数据量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackUpTime 实例创建时间
      * @param string $ExpireTime 实例过期时间
      * @param string $JobStatus 实例状态
      * @param integer $BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupTimeType 0为默认。1时是立即备份。2时是迁移
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DorisSourceInfo $DorisSourceInfo 远端doris的连接信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JobStatusNum 实例状态对应的数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupCosInfo $BackupCosInfo 备份实例中关于cos的信息	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUserDefineBucket 是否使用的自定义桶
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorReason 错误原因
      */
     function __construct()
     {
@@ -222,6 +202,10 @@ class BackUpJobDisplay extends AbstractModel
 
         if (array_key_exists("IsUserDefineBucket",$param) and $param["IsUserDefineBucket"] !== null) {
             $this->IsUserDefineBucket = $param["IsUserDefineBucket"];
+        }
+
+        if (array_key_exists("ErrorReason",$param) and $param["ErrorReason"] !== null) {
+            $this->ErrorReason = $param["ErrorReason"];
         }
     }
 }

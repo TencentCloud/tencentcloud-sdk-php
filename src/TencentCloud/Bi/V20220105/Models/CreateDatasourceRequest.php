@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置腾讯云私有网络标识
  * @method array getOperationAuthLimit() 获取操作权限限制
  * @method void setOperationAuthLimit(array $OperationAuthLimit) 设置操作权限限制
+ * @method boolean getUseVPC() 获取开启vpc
+ * @method void setUseVPC(boolean $UseVPC) 设置开启vpc
+ * @method string getRegionId() 获取地域
+ * @method void setRegionId(string $RegionId) 设置地域
  */
 class CreateDatasourceRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateDatasourceRequest extends AbstractModel
     public $OperationAuthLimit;
 
     /**
+     * @var boolean 开启vpc
+     */
+    public $UseVPC;
+
+    /**
+     * @var string 地域
+     */
+    public $RegionId;
+
+    /**
      * @param string $DbHost HOST
      * @param integer $DbPort 端口
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
@@ -184,6 +198,8 @@ class CreateDatasourceRequest extends AbstractModel
      * @param string $Vport 私有网络端口
      * @param string $VpcId 腾讯云私有网络标识
      * @param array $OperationAuthLimit 操作权限限制
+     * @param boolean $UseVPC 开启vpc
+     * @param string $RegionId 地域
      */
     function __construct()
     {
@@ -276,6 +292,14 @@ class CreateDatasourceRequest extends AbstractModel
 
         if (array_key_exists("OperationAuthLimit",$param) and $param["OperationAuthLimit"] !== null) {
             $this->OperationAuthLimit = $param["OperationAuthLimit"];
+        }
+
+        if (array_key_exists("UseVPC",$param) and $param["UseVPC"] !== null) {
+            $this->UseVPC = $param["UseVPC"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

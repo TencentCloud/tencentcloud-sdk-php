@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAvailableTables() 获取可备份表列表
  * @method void setAvailableTables(array $AvailableTables) 设置可备份表列表
  * @method string getMsg() 获取msg
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置msg
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUnknownVersion() 获取未知version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUnknownVersion(boolean $IsUnknownVersion) 设置未知version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,19 +40,16 @@ class DescribeBackUpTablesResponse extends AbstractModel
 
     /**
      * @var string msg
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
      * @var boolean 未知version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnknownVersion;
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
@@ -70,11 +61,8 @@ class DescribeBackUpTablesResponse extends AbstractModel
     /**
      * @param array $AvailableTables 可备份表列表
      * @param string $Msg msg
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUnknownVersion 未知version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

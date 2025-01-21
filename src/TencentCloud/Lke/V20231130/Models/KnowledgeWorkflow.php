@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEnabled(boolean $IsEnabled) 设置是否启用工作流
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUsePdl() 获取是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsePdl(boolean $UsePdl) 设置是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeWorkflow extends AbstractModel
 {
@@ -34,7 +38,15 @@ class KnowledgeWorkflow extends AbstractModel
     public $IsEnabled;
 
     /**
+     * @var boolean 是否启用PDL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsePdl;
+
+    /**
      * @param boolean $IsEnabled 是否启用工作流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UsePdl 是否启用PDL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class KnowledgeWorkflow extends AbstractModel
         }
         if (array_key_exists("IsEnabled",$param) and $param["IsEnabled"] !== null) {
             $this->IsEnabled = $param["IsEnabled"];
+        }
+
+        if (array_key_exists("UsePdl",$param) and $param["UsePdl"] !== null) {
+            $this->UsePdl = $param["UsePdl"];
         }
     }
 }

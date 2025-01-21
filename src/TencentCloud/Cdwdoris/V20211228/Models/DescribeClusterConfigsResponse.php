@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBuildVersion() 获取返回当前内核版本 如果不存在则返回空字符串
  * @method void setBuildVersion(string $BuildVersion) 设置返回当前内核版本 如果不存在则返回空字符串
  * @method string getErrorMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasCN() 获取是否包含CN节点
  * @method void setHasCN(boolean $HasCN) 设置是否包含CN节点
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +45,6 @@ class DescribeClusterConfigsResponse extends AbstractModel
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
@@ -65,7 +62,6 @@ class DescribeClusterConfigsResponse extends AbstractModel
      * @param array $ClusterConfList 返回实例的配置文件相关的信息
      * @param string $BuildVersion 返回当前内核版本 如果不存在则返回空字符串
      * @param string $ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasCN 是否包含CN节点
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

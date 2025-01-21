@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNewName() 获取重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+ * @method void setNewName(string $NewName) 设置重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
  * @method string getFileType() 获取文件类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型
@@ -148,6 +150,11 @@ class ListDocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
+
+    /**
+     * @var string 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+     */
+    public $NewName;
 
     /**
      * @var string 文件类型
@@ -311,6 +318,7 @@ class ListDocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewName 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
      * @param string $FileType 文件类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosUrl cos路径
@@ -384,6 +392,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("NewName",$param) and $param["NewName"] !== null) {
+            $this->NewName = $param["NewName"];
         }
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {

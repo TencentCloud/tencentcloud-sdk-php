@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置函数绑定的角色
  * @method string getInstallDependency() 获取是否自动安装依赖
  * @method void setInstallDependency(string $InstallDependency) 设置是否自动安装依赖
- * @method string getStatus() 获取函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
- * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+ * @method string getStatus() 获取函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
+ * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getClsLogsetId() 获取日志投递到的Cls日志集
@@ -235,7 +235,7 @@ class GetFunctionResponse extends AbstractModel
     public $InstallDependency;
 
     /**
-     * @var string 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * @var string 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      */
     public $Status;
 
@@ -402,7 +402,7 @@ class GetFunctionResponse extends AbstractModel
      * @param string $Namespace 函数的命名空间
      * @param string $Role 函数绑定的角色
      * @param string $InstallDependency 是否自动安装依赖
-     * @param string $Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * @param string $Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      * @param string $StatusDesc 状态描述
      * @param string $ClsLogsetId 日志投递到的Cls日志集
      * @param string $ClsTopicId 日志投递到的Cls Topic

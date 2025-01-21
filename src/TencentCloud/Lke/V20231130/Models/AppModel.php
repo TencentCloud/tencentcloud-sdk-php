@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsageType(string $UsageType) 设置使用类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemperature() 获取模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemperature(string $Temperature) 设置模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopP() 获取模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopP(string $TopP) 设置模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModel extends AbstractModel
 {
@@ -104,6 +112,18 @@ class AppModel extends AbstractModel
     public $UsageType;
 
     /**
+     * @var string 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Temperature;
+
+    /**
+     * @var string 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopP;
+
+    /**
      * @param string $Name 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 模型描述
@@ -119,6 +139,10 @@ class AppModel extends AbstractModel
      * @param integer $HistoryLimit 上下文记忆轮数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsageType 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Temperature 模型温度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopP 模型TopP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class AppModel extends AbstractModel
 
         if (array_key_exists("UsageType",$param) and $param["UsageType"] !== null) {
             $this->UsageType = $param["UsageType"];
+        }
+
+        if (array_key_exists("Temperature",$param) and $param["Temperature"] !== null) {
+            $this->Temperature = $param["Temperature"];
+        }
+
+        if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
+            $this->TopP = $param["TopP"];
         }
     }
 }

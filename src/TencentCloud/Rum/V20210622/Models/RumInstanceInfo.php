@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedAt() 获取创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method integer getInstanceType() 获取实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RumInstanceInfo extends AbstractModel
 {
@@ -113,7 +111,6 @@ class RumInstanceInfo extends AbstractModel
 
     /**
      * @var integer 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
@@ -131,7 +128,6 @@ class RumInstanceInfo extends AbstractModel
      * @param string $InstanceName 实例名称
      * @param string $CreatedAt 创建时间
      * @param integer $InstanceType 实例类型 1:原web相关类型 2:app端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

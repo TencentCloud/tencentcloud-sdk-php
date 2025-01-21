@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群实例Id
  * @method string getUser() 获取用户名，登录时使用
  * @method void setUser(string $User) 设置用户名，登录时使用
- * @method string getVirtualHost() 获取vhost名
- * @method void setVirtualHost(string $VirtualHost) 设置vhost名
+ * @method string getVirtualHost() 获取vhost名称
+ * @method void setVirtualHost(string $VirtualHost) 设置vhost名称
  */
 class DeleteRabbitMQPermissionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteRabbitMQPermissionRequest extends AbstractModel
     public $User;
 
     /**
-     * @var string vhost名
+     * @var string vhost名称
      */
     public $VirtualHost;
 
     /**
      * @param string $InstanceId 集群实例Id
      * @param string $User 用户名，登录时使用
-     * @param string $VirtualHost vhost名
+     * @param string $VirtualHost vhost名称
      */
     function __construct()
     {

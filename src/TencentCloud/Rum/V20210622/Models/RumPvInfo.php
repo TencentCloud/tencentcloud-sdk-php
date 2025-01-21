@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getPv() 获取pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPv(string $Pv) 设置pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取时间
  * @method void setCreateTime(string $CreateTime) 设置时间
  */
@@ -38,7 +36,6 @@ class RumPvInfo extends AbstractModel
 
     /**
      * @var string pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pv;
 
@@ -50,7 +47,6 @@ class RumPvInfo extends AbstractModel
     /**
      * @param integer $ProjectId 项目ID
      * @param string $Pv pv访问量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 时间
      */
     function __construct()

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(string $Vport) 设置私有网络端口
  * @method string getVpcId() 获取腾讯云私有网络标识
  * @method void setVpcId(string $VpcId) 设置腾讯云私有网络标识
+ * @method boolean getUseVPC() 获取开启vpc	
+ * @method void setUseVPC(boolean $UseVPC) 设置开启vpc	
+ * @method string getRegionId() 获取地域
+ * @method void setRegionId(string $RegionId) 设置地域
  */
 class ModifyDatasourceRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class ModifyDatasourceRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var boolean 开启vpc	
+     */
+    public $UseVPC;
+
+    /**
+     * @var string 地域
+     */
+    public $RegionId;
+
+    /**
      * @param string $DbHost HOST
      * @param integer $DbPort 端口
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
@@ -184,6 +198,8 @@ class ModifyDatasourceRequest extends AbstractModel
      * @param string $Vip 私有网络ip
      * @param string $Vport 私有网络端口
      * @param string $VpcId 腾讯云私有网络标识
+     * @param boolean $UseVPC 开启vpc	
+     * @param string $RegionId 地域
      */
     function __construct()
     {
@@ -276,6 +292,14 @@ class ModifyDatasourceRequest extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("UseVPC",$param) and $param["UseVPC"] !== null) {
+            $this->UseVPC = $param["UseVPC"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

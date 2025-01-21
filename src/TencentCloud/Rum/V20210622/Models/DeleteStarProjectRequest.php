@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteStarProject请求参数结构体
  *
- * @method string getInstanceID() 获取实例ID：taw-123
- * @method void setInstanceID(string $InstanceID) 设置实例ID：taw-123
+ * @method string getInstanceID() 获取实例ID：****-1792
+ * @method void setInstanceID(string $InstanceID) 设置实例ID：****-1792
  * @method integer getID() 获取项目ID
  * @method void setID(integer $ID) 设置项目ID
  */
 class DeleteStarProjectRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID：taw-123
+     * @var string 实例ID：****-1792
      */
     public $InstanceID;
 
@@ -38,7 +38,7 @@ class DeleteStarProjectRequest extends AbstractModel
     public $ID;
 
     /**
-     * @param string $InstanceID 实例ID：taw-123
+     * @param string $InstanceID 实例ID：****-1792
      * @param integer $ID 项目ID
      */
     function __construct()

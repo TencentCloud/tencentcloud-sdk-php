@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCoolDownPolicies返回参数结构体
  *
  * @method string getErrorMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getList() 获取冷热分层策略列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置冷热分层策略列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeCoolDownPoliciesResponse extends AbstractModel
 {
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
     /**
      * @var array 冷热分层策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
@@ -52,9 +46,7 @@ class DescribeCoolDownPoliciesResponse extends AbstractModel
 
     /**
      * @param string $ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 冷热分层策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

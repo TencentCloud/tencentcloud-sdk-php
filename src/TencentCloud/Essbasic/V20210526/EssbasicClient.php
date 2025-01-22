@@ -574,6 +574,12 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 2. 通过此接口生成的链接在小程序端进行操作时，操作人需要是<font  color="red">所有企业的超管或法人</font>。
 3. 批量操作的企业，需要是本方第三方应用下的企业。
 4. <font  color="red">操作链接过期时间默认为生成链接后7天。</font>
+ * @method Models\CreateBatchOrganizationAuthorizationUrlResponse CreateBatchOrganizationAuthorizationUrl(Models\CreateBatchOrganizationAuthorizationUrlRequest $req) 此接口用于获取企业批量认证链接-单链接包含多条认证流。
+
+前提条件：已调用 [CreateBatchOrganizationRegistrationTasks创建子企业批量认证链接任务接口](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks) 和[查询子企业批量认证链接DescribeBatchOrganizationRegistrationUrls](https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls) 确保认证任务已经完成。
+
+异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间。
+此链接包含多条认证流程，使用该链接可以批量的对企业进行认证。
  * @method Models\CreateBatchOrganizationRegistrationTasksResponse CreateBatchOrganizationRegistrationTasks(Models\CreateBatchOrganizationRegistrationTasksRequest $req) 该接口用于批量创建企业认证链接， 可以支持PC浏览器，H5和小程序三种途径。
 此接口为异步提交任务接口，需要与[查询子企业批量认证链接](https://qcloudimg.tencent-cloud.cn/raw/1d3737991b2a3be78002bd78a47d6917.png)配合使用，整体流程如下图。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/654aa2a72ab7d42f06464ea33c50c3bb.png)

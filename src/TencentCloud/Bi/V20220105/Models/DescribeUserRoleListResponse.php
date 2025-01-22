@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取扩展
+ * @method string getExtra() 获取扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置扩展
+ * @method void setExtra(string $Extra) 设置扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method UserRoleListData getData() 获取数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,7 +48,7 @@ class DescribeUserRoleListResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var string 扩展
+     * @var string 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
@@ -73,7 +73,7 @@ class DescribeUserRoleListResponse extends AbstractModel
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 扩展
+     * @param string $Extra 扩展描述信息(提供更多异常信息,用于辅助判断)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserRoleListData $Data 数据
 注意：此字段可能返回 null，表示取不到有效值。

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNodeIds(array $InstanceNodeIds) 设置Redis 节点数组。
  * @method integer getLimit() 获取top 数目，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置top 数目，默认为20，最大值为100。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  */
 class DescribeRedisTopHotKeysRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeRedisTopHotKeysRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 偏移量，默认为0。
+     */
+    public $Offset;
+
+    /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间，如“2024-09-22T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
      * @param string $EndTime 结束时间，如“2024-09-22T01:00:00+00:00”，0天 < 结束时间 - 开始时间 <= 10天。
      * @param string $Product 服务产品类型，仅仅支持值 "redis" - 云数据库 Redis。
      * @param array $InstanceNodeIds Redis 节点数组。
      * @param integer $Limit top 数目，默认为20，最大值为100。
+     * @param integer $Offset 偏移量，默认为0。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeRedisTopHotKeysRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

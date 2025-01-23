@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidResult请求参数结构体
  *
- * @method string getEidToken() 获取E证通流程的唯一标识，调用GetEidToken接口时生成。
- * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用GetEidToken接口时生成。
+ * @method string getEidToken() 获取E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
+ * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
  * @method string getInfoType() 获取指定拉取的结果信息。
 - 取值范围：
      0：全部。
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class GetEidResultRequest extends AbstractModel
 {
     /**
-     * @var string E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * @var string E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      */
     public $EidToken;
 
@@ -104,7 +104,7 @@ class GetEidResultRequest extends AbstractModel
     public $IsNeedIdCardAvatar;
 
     /**
-     * @param string $EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * @param string $EidToken E证通流程的唯一标识，调用[GetEidToken](https://cloud.tencent.com/document/product/1007/54089)接口时生成。
      * @param string $InfoType 指定拉取的结果信息。
 - 取值范围：
      0：全部。

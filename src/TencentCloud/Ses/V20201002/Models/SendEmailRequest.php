@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method array getCc() 获取抄送人邮箱地址，最多支持抄送20人。
  * @method void setCc(array $Cc) 设置抄送人邮箱地址，最多支持抄送20人。
- * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人。
- * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人。
+ * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
+ * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
  * @method Template getTemplate() 获取使用模板发送时，填写模板相关参数。
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写模板相关参数。
@@ -79,7 +79,7 @@ class SendEmailRequest extends AbstractModel
     public $Cc;
 
     /**
-     * @var array 密送人邮箱地址，最多支持抄送20人。
+     * @var array 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      */
     public $Bcc;
 
@@ -126,7 +126,7 @@ class SendEmailRequest extends AbstractModel
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
-     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人。
+     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      * @param Template $Template 使用模板发送时，填写模板相关参数。
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
      * @param Simple $Simple 已废弃

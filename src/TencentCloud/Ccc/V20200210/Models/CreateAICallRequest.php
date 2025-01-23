@@ -172,6 +172,8 @@ HoaiMy
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
  * @method void setWelcomeType(integer $WelcomeType) 设置0：使用welcomeMessage(为空时，被叫先说话；不为空时，机器人先说话)
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
+ * @method integer getWelcomeMessagePriority() 获取0: 默认可打断， 1：高优先不可打断
+ * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) 设置0: 默认可打断， 1：高优先不可打断
  * @method integer getMaxDuration() 获取最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
  * @method void setMaxDuration(integer $MaxDuration) 设置最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
  * @method array getLanguages() 获取语音识别支持的语言, 默认是"zh" 中文,
@@ -222,8 +224,8 @@ HoaiMy
 18. German = "de" # 德语
 19. Italian = "it" # 意大利语
 20. Russian = "ru" # 俄语
- * @method integer getInterruptMode() 获取打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
- * @method void setInterruptMode(integer $InterruptMode) 设置打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+ * @method integer getInterruptMode() 获取打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
+ * @method void setInterruptMode(integer $InterruptMode) 设置打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
  * @method integer getInterruptSpeechDuration() 获取InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
  * @method void setInterruptSpeechDuration(integer $InterruptSpeechDuration) 设置InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
  * @method boolean getEndFunctionEnable() 获取模型是否支持(或者开启)call_end function calling
@@ -402,6 +404,8 @@ HoaiMy
  * @method void setPromptVariables(array $PromptVariables) 设置提示词变量
  * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
  * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+ * @method array getExtractConfig() 获取通话内容提取配置
+ * @method void setExtractConfig(array $ExtractConfig) 设置通话内容提取配置
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -526,6 +530,11 @@ HoaiMy
     public $WelcomeType;
 
     /**
+     * @var integer 0: 默认可打断， 1：高优先不可打断
+     */
+    public $WelcomeMessagePriority;
+
+    /**
      * @var integer 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
      */
     public $MaxDuration;
@@ -559,7 +568,7 @@ HoaiMy
     public $Languages;
 
     /**
-     * @var integer 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+     * @var integer 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
      */
     public $InterruptMode;
 
@@ -697,6 +706,11 @@ HoaiMy
     public $VadSilenceTime;
 
     /**
+     * @var array 通话内容提取配置
+     */
+    public $ExtractConfig;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫号码
      * @param string $SystemPrompt 用于设定AI人设、说话规则、任务等的全局提示词。示例：## 人设您是人民医院友善、和蔼的随访医生李医生，正在给患者小明的家长打电话，原因是医院要求小明2024-08-08回院复查手术恢复情况，但小明没有来。您需要按照任务流程对小明家长进行电话随访调查。## 要求简洁回复：使用简练语言，每次最多询问一个问题，不要在一个回复中询问多个问题。富有变化：尽量使表达富有变化，表达机械重复。自然亲切：使用日常语言，尽量显得专业并亲切。提到时间时使用口语表述，如下周三、6月18日。积极主动：尝试引导对话，每个回复通常以问题或下一步建议来结尾。询问清楚：如果对方部分回答了您的问题，或者回答很模糊，请通过追问来确保回答的完整明确。遵循任务：当对方的回答偏离了您的任务时，及时引导对方回到任务中。不要从头开始重复，从偏离的地方继续询问。诚实可靠：对于客户的提问，如果不确定请务必不要编造，礼貌告知对方不清楚。不要捏造患者未提及的症状史、用药史、治疗史。其他注意点：避免提到病情恶化、恢复不理想或疾病名称等使用会使患者感到紧张的表述。不要问患者已经直接或间接回答过的问题，例如患者已经说没有不适症状，那就不要再问手术部位是否有红肿疼痛症状的问题。##任务： 1.自我介绍您是人民医院负责随访的李医生，并说明致电的目的。2.询问被叫方是否是小明家长。 - 如果不是小明家长，请礼貌表达歉意，并使用 call_end 挂断电话。- 如果小明家长没空，请礼貌告诉对方稍后会重新致电，并使用 end_call 挂断电话。3.询问小明出院后水肿情况如何，较出院时是否有变化。- 如果水肿变严重，直接跳转步骤7。4.询问出院后是否给小朋友量过体温，是否出现过发烧情况。- 如果没有量过体温，请礼貌告诉家长出院后三个月内需要每天观察体温。- 如果出现过发烧，请直接跳转步骤7。5.询问出院后是否给小朋友按时服药。- 如果没有按时服药，请友善提醒家长严格按医嘱服用药物，避免影响手术效果。6.询问小朋友在饮食上是否做到低盐低脂，适量吃优质蛋白如鸡蛋、牛奶、瘦肉等。- 如果没有做到，请友善提醒家长低盐低脂和优质蛋白有助小朋友尽快恢复。7.告知家长医生要求6月18日回院复查，但没看到有相关复诊记录。提醒家长尽快前往医院体检复查血化验、尿常规。8.询问家长是否有问题需要咨询，如果没有请礼貌道别并用call_end挂断电话。
@@ -773,6 +787,7 @@ HoaiMy
      * @param string $WelcomeMessage 用于设定AI座席欢迎语。
      * @param integer $WelcomeType 0：使用welcomeMessage(为空时，被叫先说话；不为空时，机器人先说话)
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
+     * @param integer $WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
      * @param integer $MaxDuration 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
      * @param array $Languages 语音识别支持的语言, 默认是"zh" 中文,
 填写数组,最长4个语言，第一个语言为主要识别语言，后面为可选语言，
@@ -798,7 +813,7 @@ HoaiMy
 18. German = "de" # 德语
 19. Italian = "it" # 意大利语
 20. Russian = "ru" # 俄语
-     * @param integer $InterruptMode 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+     * @param integer $InterruptMode 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
      * @param integer $InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
      * @param boolean $EndFunctionEnable 模型是否支持(或者开启)call_end function calling
      * @param string $EndFunctionDesc EndFunctionEnable为true时生效；call_end function calling的desc，默认为 "End the call when user has to leave (like says bye) or you are instructed to do so."
@@ -888,6 +903,7 @@ HoaiMy
 </div></div>
      * @param array $PromptVariables 提示词变量
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     * @param array $ExtractConfig 通话内容提取配置
      */
     function __construct()
     {
@@ -944,6 +960,10 @@ HoaiMy
 
         if (array_key_exists("WelcomeType",$param) and $param["WelcomeType"] !== null) {
             $this->WelcomeType = $param["WelcomeType"];
+        }
+
+        if (array_key_exists("WelcomeMessagePriority",$param) and $param["WelcomeMessagePriority"] !== null) {
+            $this->WelcomeMessagePriority = $param["WelcomeMessagePriority"];
         }
 
         if (array_key_exists("MaxDuration",$param) and $param["MaxDuration"] !== null) {
@@ -1010,6 +1030,15 @@ HoaiMy
 
         if (array_key_exists("VadSilenceTime",$param) and $param["VadSilenceTime"] !== null) {
             $this->VadSilenceTime = $param["VadSilenceTime"];
+        }
+
+        if (array_key_exists("ExtractConfig",$param) and $param["ExtractConfig"] !== null) {
+            $this->ExtractConfig = [];
+            foreach ($param["ExtractConfig"] as $key => $value){
+                $obj = new AICallExtractConfigElement();
+                $obj->deserialize($value);
+                array_push($this->ExtractConfig, $obj);
+            }
         }
     }
 }

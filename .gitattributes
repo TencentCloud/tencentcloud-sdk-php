@@ -1,2 +1,6 @@
 vendor/ export-ignore
+examples/ export-ignore
+tests/ export-ignore
+CHANGELOG.md export-ignore
+SERVICE_CHANGELOG.md export-ignore
 .gitattributes export-ignore

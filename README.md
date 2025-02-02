@@ -35,7 +35,7 @@ composer require tencentcloud/tencentcloud-sdk-php
 ### 注意事项
 - 安装全产品 SDK 和安装指定产品的 SDK 两种方式只能选择其中一种。
 - 如果同时安装多个产品的包，建议多个产品的包和 common 包保持在同一个版本。
-- 无法使用官方源的的用户设置腾讯云镜像源：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
+- 无法使用官方源的的用户可以设置镜像源，例如：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
 - 推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/cvm=xx.yy.zz`。如果不需要 phpunit 等开发依赖，可以指定 `--update-no-dev` 选项。
 - 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
     

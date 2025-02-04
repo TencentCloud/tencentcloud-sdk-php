@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lkeap\V20240522\Models as Models;
 
 /**
+ * @method Models\ChatCompletionsResponse ChatCompletions(Models\ChatCompletionsRequest $req) 对话
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 用于为问答对创建属性标签，以便对内容进行分类和管理。 使用场景：当需要为问答对添加分类标签和属性标记时使用，比如为问答对添加“售后”标签。
  * @method Models\CreateKnowledgeBaseResponse CreateKnowledgeBase(Models\CreateKnowledgeBaseRequest $req) 用于在系统中创建一个新的知识库。知识库是一个用于存储和管理知识条目的集合，可以包括文档、问答对、属性标签等。创建知识库后，可以向其中添加各种知识条目，以便在后续的知识检索中使用。 使用场景：当需要在系统中建立一个新的知识库以存储和管理特定领域或项目的知识条目时使用。例如，一个用户可能需要创建一个知识库，以存储用户指南、常见问题解答和技术文档。
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 用于创建新的问答对。问答对可以在SearchKnowledge接口知识检索时提供匹配的答案。 使用场景：当需要添加新的知识点和对应的问答对时使用，比如为产品添加新的常见问题解答。

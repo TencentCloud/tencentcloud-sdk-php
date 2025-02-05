@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateData() 获取模板参数
  * @method void setTemplateData(string $TemplateData) 设置模板参数
  * @method string getReason() 获取无效原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置无效原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEmailId() 获取收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmailId(integer $EmailId) 设置收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReceiverDetail extends AbstractModel
 {
@@ -58,19 +52,16 @@ class ReceiverDetail extends AbstractModel
 
     /**
      * @var string 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var integer 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmailId;
 
@@ -79,11 +70,8 @@ class ReceiverDetail extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $TemplateData 模板参数
      * @param string $Reason 无效原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 1:有效，2:无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EmailId 收件人地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

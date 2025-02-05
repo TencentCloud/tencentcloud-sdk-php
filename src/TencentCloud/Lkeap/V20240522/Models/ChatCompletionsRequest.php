@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessages(array $Messages) 设置会话列表
  * @method boolean getStream() 获取是否流式输出
  * @method void setStream(boolean $Stream) 设置是否流式输出
+ * @method float getTemperature() 获取控制生成的随机性，较高的值会产生更多样化的输出。
+ * @method void setTemperature(float $Temperature) 设置控制生成的随机性，较高的值会产生更多样化的输出。
+ * @method integer getMaxTokens() 获取最大生成的token数量
+ * @method void setMaxTokens(integer $MaxTokens) 设置最大生成的token数量
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ChatCompletionsRequest extends AbstractModel
     public $Stream;
 
     /**
+     * @var float 控制生成的随机性，较高的值会产生更多样化的输出。
+     */
+    public $Temperature;
+
+    /**
+     * @var integer 最大生成的token数量
+     */
+    public $MaxTokens;
+
+    /**
      * @param string $Model 模型名称
      * @param array $Messages 会话列表
      * @param boolean $Stream 是否流式输出
+     * @param float $Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
+     * @param integer $MaxTokens 最大生成的token数量
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("Stream",$param) and $param["Stream"] !== null) {
             $this->Stream = $param["Stream"];
+        }
+
+        if (array_key_exists("Temperature",$param) and $param["Temperature"] !== null) {
+            $this->Temperature = $param["Temperature"];
+        }
+
+        if (array_key_exists("MaxTokens",$param) and $param["MaxTokens"] !== null) {
+            $this->MaxTokens = $param["MaxTokens"];
         }
     }
 }

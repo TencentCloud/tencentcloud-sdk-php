@@ -80,8 +80,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
  * @method string getSubnetId() 获取私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
  * @method void setSubnetId(string $SubnetId) 设置私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
- * @method string getPassword() 获取实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
- * @method void setPassword(string $Password) 设置实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+ * @method string getPassword() 获取实例密码。设置要求如下：
+- 字符个数为[8,32]。
+- 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
+- 可输入的特殊字符包括：感叹号“!”，at“@”，警号“#“、百分号”%”、插入号“^”、星号“*”、括号“()”、下划线“_”。
+- 不能设置单一的字母或者数字。
+ * @method void setPassword(string $Password) 设置实例密码。设置要求如下：
+- 字符个数为[8,32]。
+- 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
+- 可输入的特殊字符包括：感叹号“!”，at“@”，警号“#“、百分号”%”、插入号“^”、星号“*”、括号“()”、下划线“_”。
+- 不能设置单一的字母或者数字。
  * @method array getTags() 获取实例标签信息。
  * @method void setTags(array $Tags) 设置实例标签信息。
  * @method integer getAutoRenewFlag() 获取自动续费标记。
@@ -222,7 +230,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * @var string 实例密码。设置要求如下：
+- 字符个数为[8,32]。
+- 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
+- 可输入的特殊字符包括：感叹号“!”，at“@”，警号“#“、百分号”%”、插入号“^”、星号“*”、括号“()”、下划线“_”。
+- 不能设置单一的字母或者数字。
      */
     public $Password;
 
@@ -348,7 +360,11 @@ class CreateDBInstanceRequest extends AbstractModel
 - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
      * @param string $VpcId 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
      * @param string $SubnetId 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
-     * @param string $Password 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * @param string $Password 实例密码。设置要求如下：
+- 字符个数为[8,32]。
+- 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
+- 可输入的特殊字符包括：感叹号“!”，at“@”，警号“#“、百分号”%”、插入号“^”、星号“*”、括号“()”、下划线“_”。
+- 不能设置单一的字母或者数字。
      * @param array $Tags 实例标签信息。
      * @param integer $AutoRenewFlag 自动续费标记。
 - 0：不自动续费。

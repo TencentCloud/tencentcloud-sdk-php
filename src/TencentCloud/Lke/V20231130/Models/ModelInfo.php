@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTokens(ModelParameter $MaxTokens) 设置最多能生成的token数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSource() 获取模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+ * @method void setSource(string $Source) 设置模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+ * @method string getIcon() 获取模型图标
+ * @method void setIcon(string $Icon) 设置模型图标
+ * @method boolean getIsFree() 获取是否免费
+ * @method void setIsFree(boolean $IsFree) 设置是否免费
  */
 class ModelInfo extends AbstractModel
 {
@@ -104,6 +110,21 @@ class ModelInfo extends AbstractModel
     public $MaxTokens;
 
     /**
+     * @var string 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     */
+    public $Source;
+
+    /**
+     * @var string 模型图标
+     */
+    public $Icon;
+
+    /**
+     * @var boolean 是否免费
+     */
+    public $IsFree;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -120,6 +141,9 @@ class ModelInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelParameter $MaxTokens 最多能生成的token数量
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * @param string $Icon 模型图标
+     * @param boolean $IsFree 是否免费
      */
     function __construct()
     {
@@ -167,6 +191,18 @@ class ModelInfo extends AbstractModel
         if (array_key_exists("MaxTokens",$param) and $param["MaxTokens"] !== null) {
             $this->MaxTokens = new ModelParameter();
             $this->MaxTokens->deserialize($param["MaxTokens"]);
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Icon",$param) and $param["Icon"] !== null) {
+            $this->Icon = $param["Icon"];
+        }
+
+        if (array_key_exists("IsFree",$param) and $param["IsFree"] !== null) {
+            $this->IsFree = $param["IsFree"];
         }
     }
 }

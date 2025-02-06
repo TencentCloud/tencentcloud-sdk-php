@@ -20,17 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Tcc数据目录连接配置
  *
- * @method string getEndpointServiceId() 获取终端节点服务Id
- * @method void setEndpointServiceId(string $EndpointServiceId) 设置终端节点服务Id
+ * @method string getEndpointServiceId() 获取引擎终端节点服务Id
+ * @method void setEndpointServiceId(string $EndpointServiceId) 设置引擎终端节点服务Id
  * @method string getMetaStoreUrl() 获取元数据连接串
  * @method void setMetaStoreUrl(string $MetaStoreUrl) 设置元数据连接串
- * @method NetWork getNetWork() 获取	网络信息
- * @method void setNetWork(NetWork $NetWork) 设置	网络信息
+ * @method NetWork getNetWork() 获取网络信息
+ * @method void setNetWork(NetWork $NetWork) 设置网络信息
+ * @method string getHiveVersion() 获取hive版本
+ * @method void setHiveVersion(string $HiveVersion) 设置hive版本
+ * @method string getLocation() 获取hive location
+ * @method void setLocation(string $Location) 设置hive location
+ * @method string getHmsEndpointServiceId() 获取HMS终端节点服务
+ * @method void setHmsEndpointServiceId(string $HmsEndpointServiceId) 设置HMS终端节点服务
  */
 class TccConnection extends AbstractModel
 {
     /**
-     * @var string 终端节点服务Id
+     * @var string 引擎终端节点服务Id
      */
     public $EndpointServiceId;
 
@@ -40,14 +46,32 @@ class TccConnection extends AbstractModel
     public $MetaStoreUrl;
 
     /**
-     * @var NetWork 	网络信息
+     * @var NetWork 网络信息
      */
     public $NetWork;
 
     /**
-     * @param string $EndpointServiceId 终端节点服务Id
+     * @var string hive版本
+     */
+    public $HiveVersion;
+
+    /**
+     * @var string hive location
+     */
+    public $Location;
+
+    /**
+     * @var string HMS终端节点服务
+     */
+    public $HmsEndpointServiceId;
+
+    /**
+     * @param string $EndpointServiceId 引擎终端节点服务Id
      * @param string $MetaStoreUrl 元数据连接串
-     * @param NetWork $NetWork 	网络信息
+     * @param NetWork $NetWork 网络信息
+     * @param string $HiveVersion hive版本
+     * @param string $Location hive location
+     * @param string $HmsEndpointServiceId HMS终端节点服务
      */
     function __construct()
     {
@@ -73,6 +97,18 @@ class TccConnection extends AbstractModel
         if (array_key_exists("NetWork",$param) and $param["NetWork"] !== null) {
             $this->NetWork = new NetWork();
             $this->NetWork->deserialize($param["NetWork"]);
+        }
+
+        if (array_key_exists("HiveVersion",$param) and $param["HiveVersion"] !== null) {
+            $this->HiveVersion = $param["HiveVersion"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("HmsEndpointServiceId",$param) and $param["HmsEndpointServiceId"] !== null) {
+            $this->HmsEndpointServiceId = $param["HmsEndpointServiceId"];
         }
     }
 }

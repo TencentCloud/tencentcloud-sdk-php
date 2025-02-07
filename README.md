@@ -217,5 +217,14 @@ cURL error 0: The cURL request was retried 3 times and did not succeed. The most
 
 目前已知在 PHP 7.x 版本中，由于关键字冲突，弹性伸缩产品对应的 As 模块可能无法使用。可以考虑升级到 SDK 3.0.362 版本，使用 Autoscaling 模块。或者升级到 PHP 8 版本。
 
+## 内存上涨问题
+如果使用 SDK 对接口进行持续调用，如：
+```
+while (true) {
+    $resp = $client->DescribeInstances($req);
+}
+```
+可以看到进程占用的内存持续上涨，这是 SDK 依赖的 GuzzleHttp 库存在内存上涨的问题，目前官方还并未修复，因此现在 SDK 在循环调用的场景下会存在内存上涨的风险。
+
 # 旧版SDK
-新版SDK兼容旧版SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。
+新版 SDK 兼容旧版 SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。

@@ -29,67 +29,47 @@ use TencentCloud\Common\AbstractModel;
 1:Wi-Fi
 2:有线
  * @method boolean getDataEnable() 获取启用/禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEnable(boolean $DataEnable) 设置启用/禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUploadLimit() 获取上行限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadLimit(string $UploadLimit) 设置上行限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadLimit() 获取下行限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadLimit(string $DownloadLimit) 设置下行限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataRx() 获取接收实时速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataRx(integer $DataRx) 设置接收实时速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataTx() 获取发送实时速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataTx(integer $DataTx) 设置发送实时速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVendor() 获取运营商类型：
 1: 中国移动；
 2: 中国电信; 
 3: 中国联通
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVendor(integer $Vendor) 设置运营商类型：
 1: 中国移动；
 2: 中国电信; 
 3: 中国联通
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getState() 获取连接状态：
 0:无连接
 1:连接中
 2:已连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(integer $State) 设置连接状态：
 0:无连接
 1:连接中
 2:已连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSignalStrength() 获取信号强度/单位：dbm
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignalStrength(integer $SignalStrength) 设置信号强度/单位：dbm
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRat() 获取数据网络类型：
 -1 ：无效值   
 2：2G 
 3：3G 
 4：4G 
 5：5G
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRat(integer $Rat) 设置数据网络类型：
 -1 ：无效值   
 2：2G 
 3：3G 
 4：4G 
 5：5G
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetInfoName() 获取网卡名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetInfoName(string $NetInfoName) 设置网卡名
@@ -115,31 +95,26 @@ class DeviceNetInfo extends AbstractModel
 
     /**
      * @var boolean 启用/禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEnable;
 
     /**
      * @var string 上行限速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadLimit;
 
     /**
      * @var string 下行限速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadLimit;
 
     /**
      * @var integer 接收实时速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataRx;
 
     /**
      * @var integer 发送实时速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataTx;
 
@@ -148,7 +123,6 @@ class DeviceNetInfo extends AbstractModel
 1: 中国移动；
 2: 中国电信; 
 3: 中国联通
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vendor;
 
@@ -157,19 +131,16 @@ class DeviceNetInfo extends AbstractModel
 0:无连接
 1:连接中
 2:已连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var integer 信号强度/单位：dbm
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignalStrength;
 
@@ -180,7 +151,6 @@ class DeviceNetInfo extends AbstractModel
 3：3G 
 4：4G 
 5：5G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rat;
 
@@ -208,36 +178,26 @@ class DeviceNetInfo extends AbstractModel
 1:Wi-Fi
 2:有线
      * @param boolean $DataEnable 启用/禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UploadLimit 上行限速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadLimit 下行限速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataRx 接收实时速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataTx 发送实时速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vendor 运营商类型：
 1: 中国移动；
 2: 中国电信; 
 3: 中国联通
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $State 连接状态：
 0:无连接
 1:连接中
 2:已连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SignalStrength 信号强度/单位：dbm
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Rat 数据网络类型：
 -1 ：无效值   
 2：2G 
 3：3G 
 4：4G 
 5：5G
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetInfoName 网卡名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）

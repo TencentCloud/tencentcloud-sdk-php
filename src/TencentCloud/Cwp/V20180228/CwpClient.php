@@ -147,9 +147,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) 获取Web服务关联进程列表
  * @method Models\DescribeAttackEventInfoResponse DescribeAttackEventInfo(Models\DescribeAttackEventInfoRequest $req) 网络攻击事件详情
  * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) 按分页形式展示网络攻击检测事件列表
- * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) DescribeAttackEvents 代替
-
-按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackStatisticsResponse DescribeAttackStatistics(Models\DescribeAttackStatisticsRequest $req) 网络攻击数据统计
  * @method Models\DescribeAttackTopResponse DescribeAttackTop(Models\DescribeAttackTopRequest $req) 网络攻击top5数据列表
  * @method Models\DescribeAttackTrendsResponse DescribeAttackTrends(Models\DescribeAttackTrendsRequest $req) 网络攻击趋势数据
@@ -200,9 +197,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeCanFixVulMachineResponse DescribeCanFixVulMachine(Models\DescribeCanFixVulMachineRequest $req) 漏洞修护-查询可修护主机信息
  * @method Models\DescribeCanNotSeparateMachineResponse DescribeCanNotSeparateMachine(Models\DescribeCanNotSeparateMachineRequest $req) 获取木马不可隔离的主机
  * @method Models\DescribeClientExceptionResponse DescribeClientException(Models\DescribeClientExceptionRequest $req) 获取客户端异常事件
- * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 接口已无效
-
-本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) 获取漏洞防御事件详情
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) 获取专线agent安装命令，包含token
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果

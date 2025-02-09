@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网实例id
  * @method string getSubnetCidrBlock() 获取子网网段
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置子网网段
+ * @method string getClbIp() 获取服务clbip
+ * @method void setClbIp(string $ClbIp) 设置服务clbip
+ * @method string getClbPort() 获取服务clbPort
+ * @method void setClbPort(string $ClbPort) 设置服务clbPort
  */
 class NetWork extends AbstractModel
 {
@@ -52,10 +56,22 @@ class NetWork extends AbstractModel
     public $SubnetCidrBlock;
 
     /**
+     * @var string 服务clbip
+     */
+    public $ClbIp;
+
+    /**
+     * @var string 服务clbPort
+     */
+    public $ClbPort;
+
+    /**
      * @param string $VpcId vpc实例id
      * @param string $VpcCidrBlock vpc网段
      * @param string $SubnetId 子网实例id
      * @param string $SubnetCidrBlock 子网网段
+     * @param string $ClbIp 服务clbip
+     * @param string $ClbPort 服务clbPort
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class NetWork extends AbstractModel
 
         if (array_key_exists("SubnetCidrBlock",$param) and $param["SubnetCidrBlock"] !== null) {
             $this->SubnetCidrBlock = $param["SubnetCidrBlock"];
+        }
+
+        if (array_key_exists("ClbIp",$param) and $param["ClbIp"] !== null) {
+            $this->ClbIp = $param["ClbIp"];
+        }
+
+        if (array_key_exists("ClbPort",$param) and $param["ClbPort"] !== null) {
+            $this->ClbPort = $param["ClbPort"];
         }
     }
 }

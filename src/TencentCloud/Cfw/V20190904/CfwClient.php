@@ -23,9 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
- * @method Models\AddAcRuleResponse AddAcRule(Models\AddAcRuleRequest $req) 接口不再使用，已有新接口AddAclRule
-
-添加互联网边界规则
  * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) 添加互联网边界访问控制规则
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) 创建新企业安全组规则
  * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) 添加nat访问控制规则

@@ -22,8 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModel() 获取模型名称
  * @method void setModel(string $Model) 设置模型名称
- * @method array getMessages() 获取会话列表
- * @method void setMessages(array $Messages) 设置会话列表
+ * @method array getMessages() 获取聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
+ * @method void setMessages(array $Messages) 设置聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
  * @method boolean getStream() 获取是否流式输出
  * @method void setStream(boolean $Stream) 设置是否流式输出
  * @method float getTemperature() 获取控制生成的随机性，较高的值会产生更多样化的输出。
@@ -39,7 +49,12 @@ class ChatCompletionsRequest extends AbstractModel
     public $Model;
 
     /**
-     * @var array 会话列表
+     * @var array 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
      */
     public $Messages;
 
@@ -60,7 +75,12 @@ class ChatCompletionsRequest extends AbstractModel
 
     /**
      * @param string $Model 模型名称
-     * @param array $Messages 会话列表
+     * @param array $Messages 聊天上下文信息。
+说明：
+1. 长度最多为 40，按对话时间从旧到新在数组中排列。
+2. Message.Role 可选值：system、user、assistant。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
+
      * @param boolean $Stream 是否流式输出
      * @param float $Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
      * @param integer $MaxTokens 最大生成的token数量

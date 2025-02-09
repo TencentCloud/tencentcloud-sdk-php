@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
 建议格式：线稿中的主体对象+画面场景+配色/材质/元素/风格等
  * @method string getInputImage() 获取线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputImage(string $InputImage) 设置线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getInputUrl() 获取线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method void setInputUrl(string $InputUrl) 设置线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method integer getLogoAdd() 获取为生成结果图添加标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。
@@ -67,14 +67,14 @@ class SketchToImageRequest extends AbstractModel
     /**
      * @var string 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputImage;
 
     /**
      * @var string 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
     public $InputUrl;
 
@@ -104,10 +104,10 @@ Base64 和 Url 必须提供一个，如果都提供以Url 为准。
 建议格式：线稿中的主体对象+画面场景+配色/材质/元素/风格等
      * @param string $InputImage 线稿图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $InputUrl 线稿图 Url。
 Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-图片限制：黑白线稿图片，单边分辨率小于5000且大于512（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param integer $LogoAdd 为生成结果图添加标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。

@@ -36,6 +36,8 @@ UserName和Password必须同时填写或同时为空。
 UserName和Password必须同时填写或同时为空。
  * @method string getAuthRange() 获取授权范围：all 授权全部  manual：手动指定
  * @method void setAuthRange(string $AuthRange) 设置授权范围：all 授权全部  manual：手动指定
+ * @method string getResourceName() 获取自建数据资产的名称，支持修改
+ * @method void setResourceName(string $ResourceName) 设置自建数据资产的名称，支持修改
  */
 class UpdateDSPASelfBuildResourceRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ UserName和Password必须同时填写或同时为空。
     public $AuthRange;
 
     /**
+     * @var string 自建数据资产的名称，支持修改
+     */
+    public $ResourceName;
+
+    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $ResourceId 云资源名称，如果是通过CVM访问则填写CVM的资源ID，如果是通过LB访问则填写LB的资源ID。
      * @param integer $ResourceVPort 资源绑定的端口，为0则表示不更新。
@@ -80,6 +87,7 @@ UserName和Password必须同时填写或同时为空。
      * @param string $Password 账户密码，为空则表示不更新。
 UserName和Password必须同时填写或同时为空。
      * @param string $AuthRange 授权范围：all 授权全部  manual：手动指定
+     * @param string $ResourceName 自建数据资产的名称，支持修改
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ UserName和Password必须同时填写或同时为空。
 
         if (array_key_exists("AuthRange",$param) and $param["AuthRange"] !== null) {
             $this->AuthRange = $param["AuthRange"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
     }
 }

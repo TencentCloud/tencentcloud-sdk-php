@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 示例值：0.0.0.0/0。
 
 和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
+ * @method string getIpv6CidrBlock() 获取IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
  * @method string getAction() 获取取值：ACCEPT，DROP。默认为 ACCEPT。
  * @method void setAction(string $Action) 设置取值：ACCEPT，DROP。默认为 ACCEPT。
  * @method string getFirewallRuleDescription() 获取防火墙规则描述。
@@ -65,6 +73,14 @@ class FirewallRuleInfo extends AbstractModel
     public $CidrBlock;
 
     /**
+     * @var string IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+     */
+    public $Ipv6CidrBlock;
+
+    /**
      * @var string 取值：ACCEPT，DROP。默认为 ACCEPT。
      */
     public $Action;
@@ -82,6 +98,10 @@ class FirewallRuleInfo extends AbstractModel
 示例值：0.0.0.0/0。
 
 和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
+     * @param string $Ipv6CidrBlock IPv6网段或IPv6地址(互斥)。
+示例值：::/0。
+
+和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
      * @param string $Action 取值：ACCEPT，DROP。默认为 ACCEPT。
      * @param string $FirewallRuleDescription 防火墙规则描述。
      */
@@ -112,6 +132,10 @@ class FirewallRuleInfo extends AbstractModel
 
         if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
             $this->CidrBlock = $param["CidrBlock"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
+            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
         }
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {

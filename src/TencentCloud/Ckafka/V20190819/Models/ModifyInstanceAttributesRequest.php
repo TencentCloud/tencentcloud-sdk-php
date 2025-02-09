@@ -30,14 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) 设置实例配置
  * @method DynamicRetentionTime getDynamicRetentionConfig() 获取动态消息保留策略配置
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) 设置动态消息保留策略配置
- * @method integer getRebalanceTime() 获取升配Rebalance时间 参数已废弃,忽略不填!!!
- * @method void setRebalanceTime(integer $RebalanceTime) 设置升配Rebalance时间 参数已废弃,忽略不填!!!
+ * @method integer getRebalanceTime() 获取用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
+ * @method void setRebalanceTime(integer $RebalanceTime) 设置用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
  * @method integer getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略配置
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略配置
  * @method integer getMaxMessageByte() 获取实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
  * @method void setMaxMessageByte(integer $MaxMessageByte) 设置实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
+ * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -67,7 +69,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DynamicRetentionConfig;
 
     /**
-     * @var integer 升配Rebalance时间 参数已废弃,忽略不填!!!
+     * @var integer 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
      */
     public $RebalanceTime;
 
@@ -88,15 +90,21 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $MaxMessageByte;
 
     /**
+     * @var integer 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     */
+    public $UncleanLeaderElectionEnable;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
      * @param string $InstanceName ckafka集群实例Name
      * @param ModifyInstanceAttributesConfig $Config 实例配置
      * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
-     * @param integer $RebalanceTime 升配Rebalance时间 参数已废弃,忽略不填!!!
+     * @param integer $RebalanceTime 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
      * @param integer $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略配置
      * @param integer $MaxMessageByte 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
+     * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ModifyInstanceAttributesRequest extends AbstractModel
 
         if (array_key_exists("MaxMessageByte",$param) and $param["MaxMessageByte"] !== null) {
             $this->MaxMessageByte = $param["MaxMessageByte"];
+        }
+
+        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
+            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
         }
     }
 }

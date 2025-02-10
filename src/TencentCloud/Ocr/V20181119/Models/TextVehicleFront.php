@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeal(string $Seal) 设置印章
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStateElectronic() 获取状态
+ * @method void setStateElectronic(string $StateElectronic) 设置状态
+ * @method string getInspectionValidityTimeElectronic() 获取检验有效期
+ * @method void setInspectionValidityTimeElectronic(string $InspectionValidityTimeElectronic) 设置检验有效期
+ * @method string getGenerationTimeElectronic() 获取生成时间
+ * @method void setGenerationTimeElectronic(string $GenerationTimeElectronic) 设置生成时间
  */
 class TextVehicleFront extends AbstractModel
 {
@@ -134,6 +140,21 @@ class TextVehicleFront extends AbstractModel
     public $Seal;
 
     /**
+     * @var string 状态
+     */
+    public $StateElectronic;
+
+    /**
+     * @var string 检验有效期
+     */
+    public $InspectionValidityTimeElectronic;
+
+    /**
+     * @var string 生成时间
+     */
+    public $GenerationTimeElectronic;
+
+    /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VehicleType 车辆类型
@@ -156,6 +177,9 @@ class TextVehicleFront extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Seal 印章
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StateElectronic 状态
+     * @param string $InspectionValidityTimeElectronic 检验有效期
+     * @param string $GenerationTimeElectronic 生成时间
      */
     function __construct()
     {
@@ -212,6 +236,18 @@ class TextVehicleFront extends AbstractModel
 
         if (array_key_exists("Seal",$param) and $param["Seal"] !== null) {
             $this->Seal = $param["Seal"];
+        }
+
+        if (array_key_exists("StateElectronic",$param) and $param["StateElectronic"] !== null) {
+            $this->StateElectronic = $param["StateElectronic"];
+        }
+
+        if (array_key_exists("InspectionValidityTimeElectronic",$param) and $param["InspectionValidityTimeElectronic"] !== null) {
+            $this->InspectionValidityTimeElectronic = $param["InspectionValidityTimeElectronic"];
+        }
+
+        if (array_key_exists("GenerationTimeElectronic",$param) and $param["GenerationTimeElectronic"] !== null) {
+            $this->GenerationTimeElectronic = $param["GenerationTimeElectronic"];
         }
     }
 }

@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) 设置输出的RIST配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
  */
 class DescribeOutput extends AbstractModel
 {
@@ -186,6 +188,11 @@ class DescribeOutput extends AbstractModel
     public $RISTSettings;
 
     /**
+     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public $PidSelector;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
@@ -216,6 +223,7 @@ class DescribeOutput extends AbstractModel
      * @param array $Zones 可用区，output目前最多只支持一个。	
      * @param DescribeOutputRISTSettings $RISTSettings 输出的RIST配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      */
     function __construct()
     {
@@ -312,6 +320,11 @@ class DescribeOutput extends AbstractModel
         if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
             $this->RISTSettings = new DescribeOutputRISTSettings();
             $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
+            $this->PidSelector = new PidSelector();
+            $this->PidSelector->deserialize($param["PidSelector"]);
         }
     }
 }

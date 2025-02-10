@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
  * @method string getPeerId() 获取对端Id,为空时表示上行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerId(string $PeerId) 设置对端Id,为空时表示上行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataType() 获取数据类型
  * @method void setDataType(string $DataType) 设置数据类型
  */
@@ -45,7 +43,6 @@ class QualityData extends AbstractModel
 
     /**
      * @var string 对端Id,为空时表示上行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerId;
 
@@ -58,7 +55,6 @@ class QualityData extends AbstractModel
      * @param array $Content 数据内容
      * @param string $UserId 用户ID
      * @param string $PeerId 对端Id,为空时表示上行数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataType 数据类型
      */
     function __construct()

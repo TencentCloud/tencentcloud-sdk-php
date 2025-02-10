@@ -71,17 +71,11 @@ use TencentCloud\Common\AbstractModel;
 4：4G 
 5：5G
  * @method string getNetInfoName() 获取网卡名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetInfoName(string $NetInfoName) 设置网卡名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDownRate() 获取下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownRate(float $DownRate) 设置下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUpRate() 获取上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpRate(float $UpRate) 设置上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceNetInfo extends AbstractModel
 {
@@ -156,19 +150,16 @@ class DeviceNetInfo extends AbstractModel
 
     /**
      * @var string 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetInfoName;
 
     /**
      * @var float 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownRate;
 
     /**
      * @var float 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpRate;
 
@@ -199,11 +190,8 @@ class DeviceNetInfo extends AbstractModel
 4：4G 
 5：5G
      * @param string $NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UpRate 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

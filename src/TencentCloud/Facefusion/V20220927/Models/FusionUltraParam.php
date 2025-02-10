@@ -29,19 +29,19 @@ use TencentCloud\Common\AbstractModel;
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
  * @method float getEnhanceRadio() 获取人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
  * @method void setEnhanceRadio(float $EnhanceRadio) 设置人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
  * @method float getMpRadio() 获取磨皮强度。当生成脸的图像面部显脏时，可进行设置。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
  * @method void setMpRadio(float $MpRadio) 设置磨皮强度。当生成脸的图像面部显脏时，可进行设置。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
  * @method float getBlurRadio() 获取人脸模糊开关（暂不支持）
@@ -85,7 +85,7 @@ class FusionUltraParam extends AbstractModel
 
     /**
      * @var float 人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
      */
@@ -93,7 +93,7 @@ class FusionUltraParam extends AbstractModel
 
     /**
      * @var float 磨皮强度。当生成脸的图像面部显脏时，可进行设置。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
      */
@@ -131,11 +131,11 @@ class FusionUltraParam extends AbstractModel
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
      * @param float $EnhanceRadio 人脸增强强度。对整个人脸进行增强，增加清晰度，改善质量。当生成的人脸不够清晰，质感不够好的时候可以设置。取值越大增强强度越大。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
      * @param float $MpRadio 磨皮强度。当生成脸的图像面部显脏时，可进行设置。
-取值范围：0-1之间。默认取值1。
+取值范围：0-1之间。默认取值0.5。
 
 该参数仅对SwapModelType（模型类型）取值1-5生效
      * @param float $BlurRadio 人脸模糊开关（暂不支持）

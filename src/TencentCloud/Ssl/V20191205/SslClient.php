@@ -26,6 +26,8 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\ApplyCertificateResponse ApplyCertificate(Models\ApplyCertificateRequest $req) 本接口（ApplyCertificate）用于免费证书申请。
  * @method Models\CancelAuditCertificateResponse CancelAuditCertificate(Models\CancelAuditCertificateRequest $req) 取消证书审核
  * @method Models\CancelCertificateOrderResponse CancelCertificateOrder(Models\CancelCertificateOrderRequest $req) 取消证书订单。
+ * @method Models\CertificateInfoSubmitResponse CertificateInfoSubmit(Models\CertificateInfoSubmitRequest $req) 付费提交证书资料
+ * @method Models\CertificateOrderSubmitResponse CertificateOrderSubmit(Models\CertificateOrderSubmitRequest $req) 提交付费证书订单
  * @method Models\CheckCertificateChainResponse CheckCertificateChain(Models\CheckCertificateChainRequest $req) 本接口（CheckCertificateChain）用于检查证书链是否完整。
  * @method Models\CheckCertificateDomainVerificationResponse CheckCertificateDomainVerification(Models\CheckCertificateDomainVerificationRequest $req) 检查证书域名验证
  * @method Models\CheckCertificateExistResponse CheckCertificateExist(Models\CheckCertificateExistRequest $req) 根据证书内容检测当前账号下是否存在一致的证书， 存在则返回证书ID， 不存在则返回空

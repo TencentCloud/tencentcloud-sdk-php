@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 设备流量信息
  *
  * @method array getNetDetails() 获取流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetDetails(array $NetDetails) 设置流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMaxValue() 获取流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxValue(float $MaxValue) 设置流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getAvgValue() 获取流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvgValue(float $AvgValue) 设置流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalValue() 获取流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalValue(float $TotalValue) 设置流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowDetails extends AbstractModel
 {
     /**
      * @var array 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetDetails;
 
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var float 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxValue;
 
     /**
      * @var float 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvgValue;
 
     /**
      * @var float 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalValue;
 
     /**
      * @param array $NetDetails 流量数据点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MaxValue 流量最大值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $AvgValue 流量平均值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalValue 流量总值（单位：bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

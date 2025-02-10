@@ -35,6 +35,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
  * @method void setSource(string $Source) 设置源语言，支持
 zh：简体中文
@@ -51,6 +53,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
  * @method string getTarget() 获取目标语言，各源语言的目标语言支持列表如下
 zh（简体中文）：en（英语）、ar（阿拉伯语）、de（德语）、es（西班牙语）、fr（法语）、it（意大利语）、ja（日语）、pt（葡萄牙语）、ru（俄语）、ko（韩语）、tr（土耳其语）、vi（越南语）、th（泰语）
@@ -119,6 +123,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
      */
     public $Source;
@@ -191,6 +197,8 @@ ja：日语
 pt：葡萄牙语
 ru：俄语
 ko：韩语
+tr：土耳其语
+vi：越南语
 th：泰语
      * @param string $Target 目标语言，各源语言的目标语言支持列表如下
 zh（简体中文）：en（英语）、ar（阿拉伯语）、de（德语）、es（西班牙语）、fr（法语）、it（意大利语）、ja（日语）、pt（葡萄牙语）、ru（俄语）、ko（韩语）、tr（土耳其语）、vi（越南语）、th（泰语）

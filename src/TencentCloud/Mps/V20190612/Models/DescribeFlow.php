@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) 设置该Flow关联的媒体传输事件EventId。
  * @method string getRegion() 获取媒体传输输入流所属的区域，取值和InputRegion相同。
  * @method void setRegion(string $Region) 设置媒体传输输入流所属的区域，取值和InputRegion相同。
+ * @method array getAllowedInputProtocols() 获取该Flow允许创建的输入协议
+ * @method void setAllowedInputProtocols(array $AllowedInputProtocols) 设置该Flow允许创建的输入协议
+ * @method array getAllowedOutputProtocols() 获取该Flow允许创建的输出协议
+ * @method void setAllowedOutputProtocols(array $AllowedOutputProtocols) 设置该Flow允许创建的输出协议
  */
 class DescribeFlow extends AbstractModel
 {
@@ -83,6 +87,16 @@ class DescribeFlow extends AbstractModel
     public $Region;
 
     /**
+     * @var array 该Flow允许创建的输入协议
+     */
+    public $AllowedInputProtocols;
+
+    /**
+     * @var array 该Flow允许创建的输出协议
+     */
+    public $AllowedOutputProtocols;
+
+    /**
      * @param string $FlowId 流Id。
      * @param string $FlowName 流名称。
      * @param string $State 流状态，目前有IDLE/RUNNING。
@@ -92,6 +106,8 @@ class DescribeFlow extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventId 该Flow关联的媒体传输事件EventId。
      * @param string $Region 媒体传输输入流所属的区域，取值和InputRegion相同。
+     * @param array $AllowedInputProtocols 该Flow允许创建的输入协议
+     * @param array $AllowedOutputProtocols 该Flow允许创建的输出协议
      */
     function __construct()
     {
@@ -146,6 +162,14 @@ class DescribeFlow extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("AllowedInputProtocols",$param) and $param["AllowedInputProtocols"] !== null) {
+            $this->AllowedInputProtocols = $param["AllowedInputProtocols"];
+        }
+
+        if (array_key_exists("AllowedOutputProtocols",$param) and $param["AllowedOutputProtocols"] !== null) {
+            $this->AllowedOutputProtocols = $param["AllowedOutputProtocols"];
         }
     }
 }

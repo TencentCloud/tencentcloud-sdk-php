@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhiteCmds(array $WhiteCmds) 设置关联的白命令命令
  * @method boolean getAllowKeyboardLogger() 获取是否允许记录键盘
  * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许记录键盘
+ * @method array getAppAssetSet() 获取关联的应用资产列表
+ * @method void setAppAssetSet(array $AppAssetSet) 设置关联的应用资产列表
  */
 class Acl extends AbstractModel
 {
@@ -247,6 +249,11 @@ class Acl extends AbstractModel
     public $AllowKeyboardLogger;
 
     /**
+     * @var array 关联的应用资产列表
+     */
+    public $AppAssetSet;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -280,6 +287,7 @@ class Acl extends AbstractModel
      * @param array $ACTemplateSet 关联的数据库高危命令列表
      * @param array $WhiteCmds 关联的白命令命令
      * @param boolean $AllowKeyboardLogger 是否允许记录键盘
+     * @param array $AppAssetSet 关联的应用资产列表
      */
     function __construct()
     {
@@ -447,6 +455,15 @@ class Acl extends AbstractModel
 
         if (array_key_exists("AllowKeyboardLogger",$param) and $param["AllowKeyboardLogger"] !== null) {
             $this->AllowKeyboardLogger = $param["AllowKeyboardLogger"];
+        }
+
+        if (array_key_exists("AppAssetSet",$param) and $param["AppAssetSet"] !== null) {
+            $this->AppAssetSet = [];
+            foreach ($param["AppAssetSet"] as $key => $value){
+                $obj = new AppAsset();
+                $obj->deserialize($value);
+                array_push($this->AppAssetSet, $obj);
+            }
         }
     }
 }

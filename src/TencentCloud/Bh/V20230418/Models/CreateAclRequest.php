@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserGroupIdSet(array $UserGroupIdSet) 设置关联的用户组ID
  * @method array getDeviceIdSet() 获取关联的资产ID集合
  * @method void setDeviceIdSet(array $DeviceIdSet) 设置关联的资产ID集合
+ * @method array getAppAssetIdSet() 获取关联的应用资产ID集合
+ * @method void setAppAssetIdSet(array $AppAssetIdSet) 设置关联的应用资产ID集合
  * @method array getDeviceGroupIdSet() 获取关联的资产组ID
  * @method void setDeviceGroupIdSet(array $DeviceGroupIdSet) 设置关联的资产组ID
  * @method array getAccountSet() 获取关联的账号
@@ -154,6 +156,11 @@ class CreateAclRequest extends AbstractModel
     public $DeviceIdSet;
 
     /**
+     * @var array 关联的应用资产ID集合
+     */
+    public $AppAssetIdSet;
+
+    /**
      * @var array 关联的资产组ID
      */
     public $DeviceGroupIdSet;
@@ -240,6 +247,7 @@ class CreateAclRequest extends AbstractModel
      * @param array $UserIdSet 关联的用户ID集合
      * @param array $UserGroupIdSet 关联的用户组ID
      * @param array $DeviceIdSet 关联的资产ID集合
+     * @param array $AppAssetIdSet 关联的应用资产ID集合
      * @param array $DeviceGroupIdSet 关联的资产组ID
      * @param array $AccountSet 关联的账号
      * @param array $CmdTemplateIdSet 关联的高危命令模板ID
@@ -324,6 +332,10 @@ class CreateAclRequest extends AbstractModel
 
         if (array_key_exists("DeviceIdSet",$param) and $param["DeviceIdSet"] !== null) {
             $this->DeviceIdSet = $param["DeviceIdSet"];
+        }
+
+        if (array_key_exists("AppAssetIdSet",$param) and $param["AppAssetIdSet"] !== null) {
+            $this->AppAssetIdSet = $param["AppAssetIdSet"];
         }
 
         if (array_key_exists("DeviceGroupIdSet",$param) and $param["DeviceGroupIdSet"] !== null) {

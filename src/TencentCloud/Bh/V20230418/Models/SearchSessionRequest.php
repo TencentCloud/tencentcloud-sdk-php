@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态，1为活跃，2为结束，3为强制离线，4为其他错误
  * @method string getId() 获取若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
  * @method void setId(string $Id) 设置若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+ * @method array getAppAssetKindSet() 获取应用资产类型, 1-web
+ * @method void setAppAssetKindSet(array $AppAssetKindSet) 设置应用资产类型, 1-web
+ * @method string getAppAssetUrl() 获取应用资产Url
+ * @method void setAppAssetUrl(string $AppAssetUrl) 设置应用资产Url
  */
 class SearchSessionRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class SearchSessionRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var array 应用资产类型, 1-web
+     */
+    public $AppAssetKindSet;
+
+    /**
+     * @var string 应用资产Url
+     */
+    public $AppAssetUrl;
+
+    /**
      * @param string $PrivateIp 内部Ip
      * @param string $PublicIp 外部Ip
      * @param string $UserName 用户名，长度不超过20
@@ -136,6 +150,8 @@ class SearchSessionRequest extends AbstractModel
      * @param string $DeviceName 主机名，长度不超过64
      * @param integer $Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误
      * @param string $Id 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+     * @param array $AppAssetKindSet 应用资产类型, 1-web
+     * @param string $AppAssetUrl 应用资产Url
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class SearchSessionRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("AppAssetKindSet",$param) and $param["AppAssetKindSet"] !== null) {
+            $this->AppAssetKindSet = $param["AppAssetKindSet"];
+        }
+
+        if (array_key_exists("AppAssetUrl",$param) and $param["AppAssetUrl"] !== null) {
+            $this->AppAssetUrl = $param["AppAssetUrl"];
         }
     }
 }

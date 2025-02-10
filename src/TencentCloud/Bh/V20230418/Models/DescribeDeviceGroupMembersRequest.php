@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页条目数，默认20, 最大500
  * @method integer getKind() 获取资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
  * @method void setKind(integer $Kind) 设置资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+ * @method array getKindSet() 获取资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+ * @method void setKindSet(array $KindSet) 设置资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
  * @method string getDepartmentId() 获取所属部门ID
  * @method void setDepartmentId(string $DepartmentId) 设置所属部门ID
  * @method array getTagFilters() 获取过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
@@ -77,6 +79,11 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
     public $Kind;
 
     /**
+     * @var array 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     */
+    public $KindSet;
+
+    /**
      * @var string 所属部门ID
      */
     public $DepartmentId;
@@ -94,6 +101,7 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数，默认20, 最大500
      * @param integer $Kind 资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     * @param array $KindSet 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
      * @param string $DepartmentId 所属部门ID
      * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      */
@@ -136,6 +144,10 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
 
         if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
             $this->Kind = $param["Kind"];
+        }
+
+        if (array_key_exists("KindSet",$param) and $param["KindSet"] !== null) {
+            $this->KindSet = $param["KindSet"];
         }
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {

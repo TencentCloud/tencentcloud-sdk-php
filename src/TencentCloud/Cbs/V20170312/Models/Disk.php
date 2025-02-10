@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) 设置云硬盘的到期时间。
  * @method boolean getAttached() 获取云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载</li><li>true:表示已挂载。</li>
  * @method void setAttached(boolean $Attached) 设置云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载</li><li>true:表示已挂载。</li>
- * @method integer getDiskSize() 获取云硬盘大小，单位GB。
- * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GB。
+ * @method integer getDiskSize() 获取云硬盘大小，单位GiB。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GiB。
  * @method integer getMigratePercent() 获取云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigratePercent(integer $MigratePercent) 设置云盘类型变更的迁移进度，取值0到100。
@@ -135,6 +135,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getBurstPerformance() 获取云盘是否开启性能突发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBurstPerformance(boolean $BurstPerformance) 设置云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptType() 获取云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptType(string $EncryptType) 设置云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
@@ -264,7 +268,7 @@ class Disk extends AbstractModel
     public $Attached;
 
     /**
-     * @var integer 云硬盘大小，单位GB。
+     * @var integer 云硬盘大小，单位GiB。
      */
     public $DiskSize;
 
@@ -366,6 +370,12 @@ class Disk extends AbstractModel
     public $BurstPerformance;
 
     /**
+     * @var string 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptType;
+
+    /**
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
@@ -398,7 +408,7 @@ class Disk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadlineTime 云硬盘的到期时间。
      * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载</li><li>true:表示已挂载。</li>
-     * @param integer $DiskSize 云硬盘大小，单位GB。
+     * @param integer $DiskSize 云硬盘大小，单位GiB。
      * @param integer $MigratePercent 云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘</li><li>DATA_DISK：数据盘。</li>
@@ -423,6 +433,8 @@ class Disk extends AbstractModel
      * @param string $ErrorPrompt 云硬盘最后一次操作错误提示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BurstPerformance 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -610,6 +622,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
             $this->BurstPerformance = $param["BurstPerformance"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
         }
     }
 }

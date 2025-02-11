@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDocs请求参数结构体
  *
-
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method array getDocIds() 获取文档ID列表。支持批量删除，数量不超过100
+ * @method void setDocIds(array $DocIds) 设置文档ID列表。支持批量删除，数量不超过100
  */
 class DeleteDocsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
 
     /**
+     * @var array 文档ID列表。支持批量删除，数量不超过100
+     */
+    public $DocIds;
 
+    /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param array $DocIds 文档ID列表。支持批量删除，数量不超过100
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteDocsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
 
+        if (array_key_exists("DocIds",$param) and $param["DocIds"] !== null) {
+            $this->DocIds = $param["DocIds"];
+        }
     }
 }

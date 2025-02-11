@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListQAs返回参数结构体
  *
+ * @method integer getTotalCount() 获取问答对总数量
+ * @method void setTotalCount(integer $TotalCount) 设置问答对总数量
  * @method array getList() 获取问答对信息
  * @method void setList(array $List) 设置问答对信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ListQAsResponse extends AbstractModel
 {
+    /**
+     * @var integer 问答对总数量
+     */
+    public $TotalCount;
+
     /**
      * @var array 问答对信息
      */
@@ -38,6 +45,7 @@ class ListQAsResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 问答对总数量
      * @param array $List 问答对信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -54,6 +62,10 @@ class ListQAsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("List",$param) and $param["List"] !== null) {
             $this->List = [];
             foreach ($param["List"] as $key => $value){

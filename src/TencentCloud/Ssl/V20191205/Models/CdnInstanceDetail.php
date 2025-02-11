@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getCertId() 获取已部署证书ID
  * @method void setCertId(string $CertId) 设置已部署证书ID
- * @method string getStatus() 获取域名状态
- * @method void setStatus(string $Status) 设置域名状态
+ * @method string getStatus() 获取域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
+ * @method void setStatus(string $Status) 设置域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
  * @method string getHttpsBillingSwitch() 获取域名计费状态
  * @method void setHttpsBillingSwitch(string $HttpsBillingSwitch) 设置域名计费状态
  */
@@ -42,7 +42,7 @@ class CdnInstanceDetail extends AbstractModel
     public $CertId;
 
     /**
-     * @var string 域名状态
+     * @var string 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
      */
     public $Status;
 
@@ -54,7 +54,7 @@ class CdnInstanceDetail extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param string $CertId 已部署证书ID
-     * @param string $Status 域名状态
+     * @param string $Status 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
      * @param string $HttpsBillingSwitch 域名计费状态
      */
     function __construct()

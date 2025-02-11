@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAttributeLabels请求参数结构体
  *
-
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method array getAttributeIds() 获取属性ID
+ * @method void setAttributeIds(array $AttributeIds) 设置属性ID
  */
 class DeleteAttributeLabelsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
 
     /**
+     * @var array 属性ID
+     */
+    public $AttributeIds;
 
+    /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param array $AttributeIds 属性ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteAttributeLabelsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
 
+        if (array_key_exists("AttributeIds",$param) and $param["AttributeIds"] !== null) {
+            $this->AttributeIds = $param["AttributeIds"];
+        }
     }
 }

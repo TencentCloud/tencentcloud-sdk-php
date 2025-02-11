@@ -73,6 +73,7 @@ class DescribeTawInstancesRequest extends AbstractModel
 
     /**
      * @var array 实例Id, 该参数已废弃，请在Filters内注明
+     * @deprecated
      */
     public $InstanceIds;
 
@@ -83,6 +84,7 @@ class DescribeTawInstancesRequest extends AbstractModel
 
     /**
      * @var integer 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
     public $IsDemo;
 

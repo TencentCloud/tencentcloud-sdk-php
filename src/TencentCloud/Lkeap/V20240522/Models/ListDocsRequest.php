@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDocs请求参数结构体
  *
-
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method integer getPageNumber() 获取页码，默认1
+ * @method void setPageNumber(integer $PageNumber) 设置页码，默认1
+ * @method integer getPageSize() 获取每页数目，最大50，默认20
+ * @method void setPageSize(integer $PageSize) 设置每页数目，最大50，默认20
  */
 class ListDocsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
 
     /**
+     * @var integer 页码，默认1
+     */
+    public $PageNumber;
 
+    /**
+     * @var integer 每页数目，最大50，默认20
+     */
+    public $PageSize;
+
+    /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param integer $PageNumber 页码，默认1
+     * @param integer $PageSize 每页数目，最大50，默认20
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class ListDocsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
 
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
     }
 }

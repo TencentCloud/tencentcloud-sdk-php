@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
  * @method string getUpdateStrategy() 获取addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
  * @method void setUpdateStrategy(string $UpdateStrategy) 设置addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+ * @method boolean getDryRun() 获取是否仅做更新检查，设置为true时仅做检查，不会更新组件
+ * @method void setDryRun(boolean $DryRun) 设置是否仅做更新检查，设置为true时仅做检查，不会更新组件
  */
 class UpdateAddonRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdateAddonRequest extends AbstractModel
     public $UpdateStrategy;
 
     /**
+     * @var boolean 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+     */
+    public $DryRun;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
      * @param string $UpdateStrategy addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+     * @param boolean $DryRun 是否仅做更新检查，设置为true时仅做检查，不会更新组件
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdateAddonRequest extends AbstractModel
 
         if (array_key_exists("UpdateStrategy",$param) and $param["UpdateStrategy"] !== null) {
             $this->UpdateStrategy = $param["UpdateStrategy"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

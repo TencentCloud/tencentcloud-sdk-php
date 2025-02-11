@@ -48,6 +48,7 @@ class DescribeProjectsRequest extends AbstractModel
 
     /**
      * @var integer 该参数已废弃，demo模式请在Filters内注明
+     * @deprecated
      */
     public $IsDemo;
 

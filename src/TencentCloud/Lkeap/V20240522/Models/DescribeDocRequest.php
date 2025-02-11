@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDoc请求参数结构体
  *
-
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method string getDocId() 获取文档ID
+ * @method void setDocId(string $DocId) 设置文档ID
  */
 class DescribeDocRequest extends AbstractModel
 {
-
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
 
     /**
+     * @var string 文档ID
+     */
+    public $DocId;
 
+    /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param string $DocId 文档ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeDocRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
 
+        if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
+            $this->DocId = $param["DocId"];
+        }
     }
 }

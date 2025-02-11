@@ -26,6 +26,7 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取 状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -35,6 +36,7 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置 状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -66,6 +68,7 @@ class DocItem extends AbstractModel
     /**
      * @var string  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  
@@ -99,6 +102,7 @@ class DocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status  状态，
 - Uploading  上传中  
+- Auditing 审核中
 - Parsing 解析中  
 - ParseFailed 解析失败
 - Indexing 创建索引中  

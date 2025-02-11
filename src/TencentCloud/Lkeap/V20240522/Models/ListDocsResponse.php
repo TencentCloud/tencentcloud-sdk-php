@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDocs返回参数结构体
  *
+ * @method integer getTotalCount() 获取文档总数
+ * @method void setTotalCount(integer $TotalCount) 设置文档总数
  * @method array getList() 获取文档信息
  * @method void setList(array $List) 设置文档信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ListDocsResponse extends AbstractModel
 {
+    /**
+     * @var integer 文档总数
+     */
+    public $TotalCount;
+
     /**
      * @var array 文档信息
      */
@@ -38,6 +45,7 @@ class ListDocsResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 文档总数
      * @param array $List 文档信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -54,6 +62,10 @@ class ListDocsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("List",$param) and $param["List"] !== null) {
             $this->List = [];
             foreach ($param["List"] as $key => $value){

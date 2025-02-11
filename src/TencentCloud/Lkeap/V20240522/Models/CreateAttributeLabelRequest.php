@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAttributeLabel请求参数结构体
  *
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method string getAttributeKey() 获取属性标识，最大40个英文字符，如style
+ * @method void setAttributeKey(string $AttributeKey) 设置属性标识，最大40个英文字符，如style
+ * @method string getAttributeName() 获取属性名称，最大80个英文字符，如风格
+ * @method void setAttributeName(string $AttributeName) 设置属性名称，最大80个英文字符，如风格
  * @method array getLabels() 获取属性标签信息
  * @method void setLabels(array $Labels) 设置属性标签信息
  */
 class CreateAttributeLabelRequest extends AbstractModel
 {
     /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
+
+    /**
+     * @var string 属性标识，最大40个英文字符，如style
+     */
+    public $AttributeKey;
+
+    /**
+     * @var string 属性名称，最大80个英文字符，如风格
+     */
+    public $AttributeName;
+
+    /**
      * @var array 属性标签信息
      */
     public $Labels;
 
     /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param string $AttributeKey 属性标识，最大40个英文字符，如style
+     * @param string $AttributeName 属性名称，最大80个英文字符，如风格
      * @param array $Labels 属性标签信息
      */
     function __construct()
@@ -46,6 +70,18 @@ class CreateAttributeLabelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
+
+        if (array_key_exists("AttributeKey",$param) and $param["AttributeKey"] !== null) {
+            $this->AttributeKey = $param["AttributeKey"];
+        }
+
+        if (array_key_exists("AttributeName",$param) and $param["AttributeName"] !== null) {
+            $this->AttributeName = $param["AttributeName"];
+        }
+
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = [];
             foreach ($param["Labels"] as $key => $value){

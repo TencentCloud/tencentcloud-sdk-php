@@ -48,6 +48,7 @@ class DescribeScoresRequest extends AbstractModel
 
     /**
      * @var integer 该参数已废弃
+     * @deprecated
      */
     public $IsDemo;
 

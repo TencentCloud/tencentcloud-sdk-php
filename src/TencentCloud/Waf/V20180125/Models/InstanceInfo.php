@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingItem(string $BillingItem) 设置计费项
  * @method integer getFreeDelayFlag() 获取实例延期释放标识
  * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置实例延期释放标识
+ * @method integer getLast3MaxQPS() 获取最近3天最大qps
+ * @method void setLast3MaxQPS(integer $Last3MaxQPS) 设置最近3天最大qps
+ * @method integer getLast3MaxBandwidth() 获取最近3天最大带宽
+ * @method void setLast3MaxBandwidth(integer $Last3MaxBandwidth) 设置最近3天最大带宽
  */
 class InstanceInfo extends AbstractModel
 {
@@ -341,6 +345,16 @@ class InstanceInfo extends AbstractModel
     public $FreeDelayFlag;
 
     /**
+     * @var integer 最近3天最大qps
+     */
+    public $Last3MaxQPS;
+
+    /**
+     * @var integer 最近3天最大带宽
+     */
+    public $Last3MaxBandwidth;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -392,6 +406,8 @@ class InstanceInfo extends AbstractModel
      * @param MiniExtendPkg $MiniExtendPkg 小程序安全接入ID数量扩张包
      * @param string $BillingItem 计费项
      * @param integer $FreeDelayFlag 实例延期释放标识
+     * @param integer $Last3MaxQPS 最近3天最大qps
+     * @param integer $Last3MaxBandwidth 最近3天最大带宽
      */
     function __construct()
     {
@@ -578,6 +594,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("FreeDelayFlag",$param) and $param["FreeDelayFlag"] !== null) {
             $this->FreeDelayFlag = $param["FreeDelayFlag"];
+        }
+
+        if (array_key_exists("Last3MaxQPS",$param) and $param["Last3MaxQPS"] !== null) {
+            $this->Last3MaxQPS = $param["Last3MaxQPS"];
+        }
+
+        if (array_key_exists("Last3MaxBandwidth",$param) and $param["Last3MaxBandwidth"] !== null) {
+            $this->Last3MaxBandwidth = $param["Last3MaxBandwidth"];
         }
     }
 }

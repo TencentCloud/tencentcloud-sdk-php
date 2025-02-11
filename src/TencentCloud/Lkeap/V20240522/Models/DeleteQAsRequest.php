@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteQAs请求参数结构体
  *
-
+ * @method string getKnowledgeBaseId() 获取知识库ID
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
+ * @method array getQaIds() 获取问答对ID列表。支持批量删除，数量不超过100
+ * @method void setQaIds(array $QaIds) 设置问答对ID列表。支持批量删除，数量不超过100
  */
 class DeleteQAsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBaseId;
 
     /**
+     * @var array 问答对ID列表。支持批量删除，数量不超过100
+     */
+    public $QaIds;
 
+    /**
+     * @param string $KnowledgeBaseId 知识库ID
+     * @param array $QaIds 问答对ID列表。支持批量删除，数量不超过100
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteQAsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        }
 
+        if (array_key_exists("QaIds",$param) and $param["QaIds"] !== null) {
+            $this->QaIds = $param["QaIds"];
+        }
     }
 }

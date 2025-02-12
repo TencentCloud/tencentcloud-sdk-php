@@ -223,6 +223,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 该接口作用和电子签控制台 企业设置-扩展服务-企业自动签署和批量签署授权 两个模块功能相同，可通过该接口授权给企业员工。
 
 注：“企业自动签授权”支持集团代子企业操作，请联系运营开通此功能。
+ * @method Models\CreateFileCounterSignResponse CreateFileCounterSign(Models\CreateFileCounterSignRequest $req) 此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
+
+**注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
  * @method Models\CreateFlowResponse CreateFlow(Models\CreateFlowRequest $req) 通过模板创建签署流程<br/>
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
 <table>
@@ -777,6 +780,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/7d79746ecca1c5fe878a2ec36ed69c23.jpg)
 
 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId需要传递超管或者法人的UserId)
+ * @method Models\DescribeFileCounterSignResultResponse DescribeFileCounterSignResult(Models\DescribeFileCounterSignResultRequest $req) 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
+
+注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`
  * @method Models\DescribeFileUrlsResponse DescribeFileUrls(Models\DescribeFileUrlsRequest $req) 本接口（DescribeFileUrls）用于查询文件的下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
 
@@ -1009,6 +1015,7 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
 
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/ess_uploadfiles.mp4" target="_blank">上传用于合同发起的PDF文件代码编写示例</a><br>
+ * @method Models\VerifyDigitFileResponse VerifyDigitFile(Models\VerifyDigitFileRequest $req) 对加签后的文件进行数字签名验证，判断数字签名是否有效。
  * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
 
 

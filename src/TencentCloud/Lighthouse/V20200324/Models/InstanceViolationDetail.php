@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 实例违规详情。
  *
  * @method string getSource() 获取 来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置 来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取违规类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置违规类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceViolationDetail extends AbstractModel
 {
     /**
      * @var string  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var string 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param string $Source  来源：RESTRICT：封禁、FREEZW：冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 是否允许自助解封：1是，2否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 违规类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 违规内容（URL、关联域名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

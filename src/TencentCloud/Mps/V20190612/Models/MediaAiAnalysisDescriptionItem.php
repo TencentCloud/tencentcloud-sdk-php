@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置智能描述。
  * @method float getConfidence() 获取智能描述的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置智能描述的可信度，取值范围是 0 到 100。
+ * @method string getTitle() 获取智能描述标题
+ * @method void setTitle(string $Title) 设置智能描述标题
+ * @method array getKeywords() 获取智能描述关键词
+ * @method void setKeywords(array $Keywords) 设置智能描述关键词
  * @method array getParagraphs() 获取分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParagraphs(array $Paragraphs) 设置分段结果。
@@ -42,6 +46,16 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $Confidence;
 
     /**
+     * @var string 智能描述标题
+     */
+    public $Title;
+
+    /**
+     * @var array 智能描述关键词
+     */
+    public $Keywords;
+
+    /**
      * @var array 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -50,6 +64,8 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     /**
      * @param string $Description 智能描述。
      * @param float $Confidence 智能描述的可信度，取值范围是 0 到 100。
+     * @param string $Title 智能描述标题
+     * @param array $Keywords 智能描述关键词
      * @param array $Paragraphs 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,6 +88,14 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("Paragraphs",$param) and $param["Paragraphs"] !== null) {

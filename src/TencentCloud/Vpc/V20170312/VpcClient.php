@@ -107,6 +107,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
  * @method Models\CheckDefaultSubnetResponse CheckDefaultSubnet(Models\CheckDefaultSubnetRequest $req) 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口（CheckNetDetectState）用于验证网络探测。
+ * @method Models\CheckTrafficMirrorResponse CheckTrafficMirror(Models\CheckTrafficMirrorRequest $req) 检查流量镜像的采集端接收端（公网IP类型）
  * @method Models\ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPolicies(Models\ClearRouteTableSelectionPoliciesRequest $req) 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
  * @method Models\CloneSecurityGroupResponse CloneSecurityGroup(Models\CloneSecurityGroupRequest $req) 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。默认仅克隆安全组及其规则信息，可通过入参开启克隆安全组标签信息。
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 本接口（CreateAddressTemplate）用于创建IP地址模板。
@@ -229,6 +230,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 同一个VPC内，多个子网的网段不能重叠。
 * 子网创建后会自动关联到默认路由表。
 * 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+ * @method Models\CreateTrafficMirrorResponse CreateTrafficMirror(Models\CreateTrafficMirrorRequest $req) 本接口（CreateTrafficMirror）用于创建流量镜像实例。
  * @method Models\CreateTrafficPackagesResponse CreateTrafficPackages(Models\CreateTrafficPackagesRequest $req) 本接口 (CreateTrafficPackages) 用于创建共享流量包。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 本接口（CreateVpc）用于创建私有网络（VPC）。
 * 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
@@ -314,6 +316,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) 本接口（DeleteSubnet）用于删除子网（Subnet）。
 * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、NoSQL、弹性网卡等资源。
  * @method Models\DeleteTemplateMemberResponse DeleteTemplateMember(Models\DeleteTemplateMemberRequest $req) 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。
+ * @method Models\DeleteTrafficMirrorResponse DeleteTrafficMirror(Models\DeleteTrafficMirrorRequest $req) 本接口（DeleteTrafficMirror）用于删除流量镜像实例。
  * @method Models\DeleteTrafficPackagesResponse DeleteTrafficPackages(Models\DeleteTrafficPackagesRequest $req) 删除共享带宽包（仅非活动状态的流量包可删除）。
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) 本接口（DeleteVpc）用于删除私有网络。
 * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
@@ -428,6 +431,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeTenantCcnsResponse DescribeTenantCcns(Models\DescribeTenantCcnsRequest $req) 本接口（DescribeTenantCcns）用于获取要锁定的云联网实例列表。
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
+ * @method Models\DescribeTrafficMirrorsResponse DescribeTrafficMirrors(Models\DescribeTrafficMirrorsRequest $req) 本接口（DescribeTrafficMirrors）用于查询流量镜像实例信息。
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
  * @method Models\DescribeTrafficQosPolicyResponse DescribeTrafficQosPolicy(Models\DescribeTrafficQosPolicyRequest $req) 查询流量调度规则
  * @method Models\DescribeUsedIpAddressResponse DescribeUsedIpAddress(Models\DescribeUsedIpAddressRequest $req) 本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
@@ -644,6 +648,8 @@ LimitTypes取值范围：
  * @method Models\ModifySnapshotPoliciesResponse ModifySnapshotPolicies(Models\ModifySnapshotPoliciesRequest $req) 本接口（ModifySnapshotPolicies）用于修改快照策略。
  * @method Models\ModifySubnetAttributeResponse ModifySubnetAttribute(Models\ModifySubnetAttributeRequest $req) 本接口（ModifySubnetAttribute）用于修改子网属性。
  * @method Models\ModifyTemplateMemberResponse ModifyTemplateMember(Models\ModifyTemplateMemberRequest $req) 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。
+ * @method Models\ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(Models\ModifyTrafficMirrorAttributeRequest $req) 本接口（ModifyTrafficMirrorAttribute）用于修改流量镜像实例属性。
+注意：只支持修改名字和描述信息
  * @method Models\ModifyVpcAttributeResponse ModifyVpcAttribute(Models\ModifyVpcAttributeRequest $req) 本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
  * @method Models\ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(Models\ModifyVpcEndPointAttributeRequest $req) 本接口（ModifyVpcEndPointAttribute）用于修改终端节点属性。
  * @method Models\ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttribute(Models\ModifyVpcEndPointServiceAttributeRequest $req) 本接口（ModifyVpcEndPointServiceAttribute）用于修改终端节点服务属性。
@@ -727,6 +733,10 @@ LimitTypes取值范围：
  * @method Models\ResetHighPriorityRoutesResponse ResetHighPriorityRoutes(Models\ResetHighPriorityRoutesRequest $req) 重置高优路由表。
  * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+ * @method Models\ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilter(Models\ResetTrafficMirrorFilterRequest $req) 本接口（ResetTrafficMirrorFilter）用于更新流量镜像实例过滤规则。
+注意：每一个流量镜像实例，不能同时支持按nat网关和五元组两种规则过滤
+ * @method Models\ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcs(Models\ResetTrafficMirrorSrcsRequest $req) 本接口（ResetTrafficMirrorSrcs）用于重置流量镜像实例采集对象。
+ * @method Models\ResetTrafficMirrorTargetResponse ResetTrafficMirrorTarget(Models\ResetTrafficMirrorTargetRequest $req) 本接口（ResetTrafficMirrorTarget）用于更新流量镜像实例的接收目的信息。
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) 本接口（ResetVpnConnection）用于重置VPN通道。
  * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（ResetVpnGatewayInternetMaxBandwidth）用于调整VPN网关带宽上限。VPN网关带宽目前仅支持部分带宽范围内升降配，如【5,100】Mbps和【200,1000】Mbps，在各自带宽范围内可提升配额，跨范围提升配额和降配暂不支持，如果是包年包月VPN网关需要在有效期内。
  * @method Models\ResumeSnapshotInstanceResponse ResumeSnapshotInstance(Models\ResumeSnapshotInstanceRequest $req) 本接口（ResumeSnapshotInstance）用于根据备份内容恢复安全组策略。
@@ -734,6 +744,8 @@ LimitTypes取值范围：
 为完善公网IP的访问管理功能，此接口于2022年12月15日升级优化鉴权功能，升级后子用户调用此接口需向主账号申请CAM策略授权，否则可能调用失败。您可以提前为子账号配置操作授权，详情见[授权指南](https://cloud.tencent.com/document/product/598/34545)。
  * @method Models\SetCcnRegionBandwidthLimitsResponse SetCcnRegionBandwidthLimits(Models\SetCcnRegionBandwidthLimitsRequest $req) 本接口（SetCcnRegionBandwidthLimits）用于设置云联网（CCN）各地域出带宽上限，或者地域间带宽上限。
  * @method Models\SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(Models\SetVpnGatewaysRenewFlagRequest $req) 本接口（SetVpnGatewaysRenewFlag）用于设置VPNGW续费标记。
+ * @method Models\StartTrafficMirrorResponse StartTrafficMirror(Models\StartTrafficMirrorRequest $req) 本接口（StartTrafficMirror）用于开启流量镜像实例。
+ * @method Models\StopTrafficMirrorResponse StopTrafficMirror(Models\StopTrafficMirrorRequest $req) 本接口（StopTrafficMirror）用于关闭流量镜像实例。
  * @method Models\TransformAddressResponse TransformAddress(Models\TransformAddressRequest $req) 本接口 (TransformAddress) 用于将实例的普通公网 IP 转换为[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 平台对用户每地域每日解绑 EIP 重新分配普通公网 IP 次数有所限制（可参见 [EIP 产品简介](/document/product/213/1941)）。上述配额可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。
  * @method Models\UnassignIpv6AddressesResponse UnassignIpv6Addresses(Models\UnassignIpv6AddressesRequest $req) 本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
@@ -754,6 +766,8 @@ LimitTypes取值范围：
 该接口一般用来解封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间解封禁, 只能按更粗的云联网实例粒度解封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度解封禁（UnlockCcnBandwidths）
 
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+ * @method Models\UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilter(Models\UpdateTrafficMirrorAllFilterRequest $req) 本接口（UpdateTrafficMirrorAllFilter）用于更新流量镜像实例的过滤规则或者采集对象。
+ * @method Models\UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirection(Models\UpdateTrafficMirrorDirectionRequest $req) 本接口（UpdateTrafficMirrorDirection）用于更新流量镜像实例的采集方向。
  * @method Models\WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(Models\WithdrawNotifyRoutesRequest $req) 本接口（WithdrawNotifyRoutes）用于撤销已发布到云联网的路由。路由表列表页操作增加“从云联网撤销”。
  */
 

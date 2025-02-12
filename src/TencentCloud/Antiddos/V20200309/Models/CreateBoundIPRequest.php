@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnBoundDevList(array $UnBoundDevList) 设置与资源实例解绑的IP数组，当资源实例为高防包(独享包)时，数组只允许填1个IP；当没有要解绑的IP时可以为空数组；但是BoundDevList和UnBoundDevList至少有一个不为空；
  * @method string getCopyPolicy() 获取已弃用，不填
  * @method void setCopyPolicy(string $CopyPolicy) 设置已弃用，不填
- * @method string getFilterRegion() 获取如果该资源实例为域名化资产则，该参数必填
- * @method void setFilterRegion(string $FilterRegion) 设置如果该资源实例为域名化资产则，该参数必填
+ * @method string getFilterRegion() 获取如果该资源实例为域名化资产以及跨地域绑定则，该参数必填
+ * @method void setFilterRegion(string $FilterRegion) 设置如果该资源实例为域名化资产以及跨地域绑定则，该参数必填
  */
 class CreateBoundIPRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateBoundIPRequest extends AbstractModel
     public $CopyPolicy;
 
     /**
-     * @var string 如果该资源实例为域名化资产则，该参数必填
+     * @var string 如果该资源实例为域名化资产以及跨地域绑定则，该参数必填
      */
     public $FilterRegion;
 
@@ -71,7 +71,7 @@ class CreateBoundIPRequest extends AbstractModel
      * @param array $BoundDevList 绑定到资源实例的IP数组，当资源实例为高防包(独享包)时，数组只允许填1个IP；当没有要绑定的IP时可以为空数组；但是BoundDevList和UnBoundDevList至少有一个不为空；
      * @param array $UnBoundDevList 与资源实例解绑的IP数组，当资源实例为高防包(独享包)时，数组只允许填1个IP；当没有要解绑的IP时可以为空数组；但是BoundDevList和UnBoundDevList至少有一个不为空；
      * @param string $CopyPolicy 已弃用，不填
-     * @param string $FilterRegion 如果该资源实例为域名化资产则，该参数必填
+     * @param string $FilterRegion 如果该资源实例为域名化资产以及跨地域绑定则，该参数必填
      */
     function __construct()
     {

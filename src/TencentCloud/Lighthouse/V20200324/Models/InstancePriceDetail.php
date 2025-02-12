@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstancePrice(InstancePrice $InstancePrice) 设置询价信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDiscountDetail() 获取折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountDetail(array $DiscountDetail) 设置折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstancePriceDetail extends AbstractModel
 {
@@ -49,7 +47,6 @@ class InstancePriceDetail extends AbstractModel
 
     /**
      * @var array 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountDetail;
 
@@ -59,7 +56,6 @@ class InstancePriceDetail extends AbstractModel
      * @param InstancePrice $InstancePrice 询价信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

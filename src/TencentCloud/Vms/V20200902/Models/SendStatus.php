@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCallId() 获取标识本次发送 ID，标识一次下发记录。
  * @method void setCallId(string $CallId) 设置标识本次发送 ID，标识一次下发记录。
  * @method string getSessionContext() 获取用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SendStatus extends AbstractModel
 {
@@ -36,14 +34,12 @@ class SendStatus extends AbstractModel
 
     /**
      * @var string 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionContext;
 
     /**
      * @param string $CallId 标识本次发送 ID，标识一次下发记录。
      * @param string $SessionContext 用户的 session 内容，腾讯 server 回包中会原样返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

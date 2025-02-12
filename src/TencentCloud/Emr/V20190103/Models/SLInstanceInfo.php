@@ -18,7 +18,7 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Serverless HBase 实例信息
+ * Serverless HBase实例信息
  *
  * @method string getClusterId() 获取集群实例字符串ID
  * @method void setClusterId(string $ClusterId) 设置集群实例字符串ID
@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置集群实例数字ID
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method string getHealthStatus() 获取健康状态
+ * @method void setHealthStatus(string $HealthStatus) 设置健康状态
  * @method string getClusterName() 获取实例名称
  * @method void setClusterName(string $ClusterName) 设置实例名称
  * @method integer getRegionId() 获取地域ID
@@ -77,6 +79,11 @@ class SLInstanceInfo extends AbstractModel
      * @var string 状态描述
      */
     public $StatusDesc;
+
+    /**
+     * @var string 健康状态
+     */
+    public $HealthStatus;
 
     /**
      * @var string 实例名称
@@ -159,6 +166,7 @@ class SLInstanceInfo extends AbstractModel
      * @param string $ClusterId 集群实例字符串ID
      * @param integer $Id 集群实例数字ID
      * @param string $StatusDesc 状态描述
+     * @param string $HealthStatus 健康状态
      * @param string $ClusterName 实例名称
      * @param integer $RegionId 地域ID
      * @param integer $ZoneId 主可用区ID
@@ -200,6 +208,10 @@ class SLInstanceInfo extends AbstractModel
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
         }
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {

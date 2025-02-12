@@ -266,6 +266,18 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasBizPermission(boolean $HasBizPermission) 设置是否有修改业务权限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerByEngine() 获取引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerByEngine(string $OwnerByEngine) 设置引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorTips() 获取用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorTips(string $ErrorTips) 设置用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CreateAndDDLSupport getIfSupportCreateAndDDL() 获取是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIfSupportCreateAndDDL(CreateAndDDLSupport $IfSupportCreateAndDDL) 设置是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -637,6 +649,24 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $HasBizPermission;
 
     /**
+     * @var string 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerByEngine;
+
+    /**
+     * @var string 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorTips;
+
+    /**
+     * @var CreateAndDDLSupport 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IfSupportCreateAndDDL;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -759,6 +789,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $Urn 数据源urn
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasBizPermission 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerByEngine 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateAndDDLSupport $IfSupportCreateAndDDL 是否支持select or ddl
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1033,6 +1069,19 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 
         if (array_key_exists("HasBizPermission",$param) and $param["HasBizPermission"] !== null) {
             $this->HasBizPermission = $param["HasBizPermission"];
+        }
+
+        if (array_key_exists("OwnerByEngine",$param) and $param["OwnerByEngine"] !== null) {
+            $this->OwnerByEngine = $param["OwnerByEngine"];
+        }
+
+        if (array_key_exists("ErrorTips",$param) and $param["ErrorTips"] !== null) {
+            $this->ErrorTips = $param["ErrorTips"];
+        }
+
+        if (array_key_exists("IfSupportCreateAndDDL",$param) and $param["IfSupportCreateAndDDL"] !== null) {
+            $this->IfSupportCreateAndDDL = new CreateAndDDLSupport();
+            $this->IfSupportCreateAndDDL->deserialize($param["IfSupportCreateAndDDL"]);
         }
     }
 }

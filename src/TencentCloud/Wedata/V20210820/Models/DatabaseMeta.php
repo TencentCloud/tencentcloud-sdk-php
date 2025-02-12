@@ -120,6 +120,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModifiedTimeByTables() 获取库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifiedTimeByTables(integer $ModifiedTimeByTables) 设置库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastAccessTimeByTables() 获取库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastAccessTimeByTables(integer $LastAccessTimeByTables) 设置库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseMeta extends AbstractModel
 {
@@ -274,6 +282,18 @@ class DatabaseMeta extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var integer 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifiedTimeByTables;
+
+    /**
+     * @var integer 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastAccessTimeByTables;
+
+    /**
      * @param string $ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetastoreType 技术类型
@@ -323,6 +343,10 @@ class DatabaseMeta extends AbstractModel
      * @param string $ClusterId 引擎id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModifiedTimeByTables 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastAccessTimeByTables 库下表的最新访问时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +465,14 @@ class DatabaseMeta extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ModifiedTimeByTables",$param) and $param["ModifiedTimeByTables"] !== null) {
+            $this->ModifiedTimeByTables = $param["ModifiedTimeByTables"];
+        }
+
+        if (array_key_exists("LastAccessTimeByTables",$param) and $param["LastAccessTimeByTables"] !== null) {
+            $this->LastAccessTimeByTables = $param["LastAccessTimeByTables"];
         }
     }
 }

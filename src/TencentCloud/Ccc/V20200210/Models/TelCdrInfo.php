@@ -89,7 +89,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
  * @method void setEndStatus(integer $EndStatus) 设置EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -143,7 +143,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
  * @method string getSkillGroup() 获取技能组名称
  * @method void setSkillGroup(string $SkillGroup) 设置技能组名称
  * @method string getCallerLocation() 获取主叫归属地
@@ -217,7 +217,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
  * @method void setEndStatusString(string $EndStatusString) 设置EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -271,7 +271,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
  * @method integer getStartTimestamp() 获取会话开始时间戳，UNIX 秒级时间戳
  * @method void setStartTimestamp(integer $StartTimestamp) 设置会话开始时间戳，UNIX 秒级时间戳
  * @method integer getQueuedTimestamp() 获取进入排队时间，Unix 秒级时间戳
@@ -415,7 +415,7 @@ class TelCdrInfo extends AbstractModel
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public $EndStatus;
 
@@ -523,7 +523,7 @@ class TelCdrInfo extends AbstractModel
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      */
     public $EndStatusString;
 
@@ -681,7 +681,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      * @param string $SkillGroup 技能组名称
      * @param string $CallerLocation 主叫归属地
      * @param integer $IVRDuration IVR 阶段耗时
@@ -745,7 +745,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
+电话呼出        212     carrierBlocked      运营商拦截
      * @param integer $StartTimestamp 会话开始时间戳，UNIX 秒级时间戳
      * @param integer $QueuedTimestamp 进入排队时间，Unix 秒级时间戳
      * @param array $PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）

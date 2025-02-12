@@ -23,14 +23,42 @@ use TencentCloud\Common\AbstractModel;
 'VoiceMessage','语音消息',
 'GMECloudApi':'GME云API接口'
  *
-
+ * @method string getSceneId() 获取'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+ * @method void setSceneId(string $SceneId) 设置'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+ * @method boolean getStatus() 获取开关状态，true开启/false关闭
+ * @method void setStatus(boolean $Status) 设置开关状态，true开启/false关闭
+ * @method string getCallbackUrl() 获取用户回调地址
+ * @method void setCallbackUrl(string $CallbackUrl) 设置用户回调地址
  */
 class SceneInfo extends AbstractModel
 {
-
+    /**
+     * @var string 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+     */
+    public $SceneId;
 
     /**
+     * @var boolean 开关状态，true开启/false关闭
+     */
+    public $Status;
 
+    /**
+     * @var string 用户回调地址
+     */
+    public $CallbackUrl;
+
+    /**
+     * @param string $SceneId 'RealTime','实时语音分析',
+'VoiceMessage','语音消息',
+'GMECloudApi':'GME云API接口'
+     * @param boolean $Status 开关状态，true开启/false关闭
+     * @param string $CallbackUrl 用户回调地址
      */
     function __construct()
     {
@@ -45,6 +73,16 @@ class SceneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
+            $this->SceneId = $param["SceneId"];
+        }
 
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
     }
 }

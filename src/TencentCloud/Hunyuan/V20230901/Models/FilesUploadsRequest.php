@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取文件名。
  * @method void setName(string $Name) 设置文件名。
- * @method string getURL() 获取文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
- * @method void setURL(string $URL) 设置文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+ * @method string getURL() 获取文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
+ * @method void setURL(string $URL) 设置文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
  */
 class FilesUploadsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FilesUploadsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+     * @var string 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
      */
     public $URL;
 
     /**
      * @param string $Name 文件名。
-     * @param string $URL 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+     * @param string $URL 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
      */
     function __construct()
     {

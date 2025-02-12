@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletions请求参数结构体
  *
- * @method string getModel() 获取模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision、 hunyuan-standard-vision。
+ * @method string getModel() 获取模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
- * @method void setModel(string $Model) 设置模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision、 hunyuan-standard-vision。
+ * @method void setModel(string $Model) 设置模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -106,18 +106,10 @@ use TencentCloud\Common\AbstractModel;
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
- * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
- * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
- * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。
-说明：
-1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
-2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
-3. 未设置时，默认值为auto
- * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。
-说明：
-1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
-2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
-3. 未设置时，默认值为auto
+ * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+ * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+ * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+ * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
  * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  * @method void setCustomTool(Tool $CustomTool) 设置强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  * @method boolean getSearchInfo() 获取默认是false，在值为true且命中搜索时，接口会返回SearchInfo
@@ -190,7 +182,7 @@ use TencentCloud\Common\AbstractModel;
 class ChatCompletionsRequest extends AbstractModel
 {
     /**
-     * @var string 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision、 hunyuan-standard-vision。
+     * @var string 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -261,16 +253,12 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableEnhancement;
 
     /**
-     * @var array 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * @var array 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
      */
     public $Tools;
 
     /**
-     * @var string 工具使用选项，可选值包括 none、auto、custom。
-说明：
-1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
-2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
-3. 未设置时，默认值为auto
+     * @var string 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
      */
     public $ToolChoice;
 
@@ -349,7 +337,7 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableRecommendedQuestions;
 
     /**
-     * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision、 hunyuan-standard-vision。
+     * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -392,12 +380,8 @@ class ChatCompletionsRequest extends AbstractModel
 2. 未传值时默认打开开关。
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
-     * @param array $Tools 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
-     * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。
-说明：
-1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
-2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
-3. 未设置时，默认值为auto
+     * @param array $Tools 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
      * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
      * @param boolean $SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
      * @param boolean $Citation 搜索引文角标开关。

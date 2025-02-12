@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMemberRecords() 获取成员记录列表。
  * @method void setMemberRecords(array $MemberRecords) 设置成员记录列表。
  * @method integer getRealStartTime() 获取秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealStartTime(integer $RealStartTime) 设置秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealEndTime() 获取秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealEndTime(integer $RealEndTime) 设置秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageCount() 获取房间消息总数。
  * @method void setMessageCount(integer $MessageCount) 设置房间消息总数。
  * @method integer getMicCount() 获取房间连麦总数。
@@ -67,13 +63,11 @@ class DescribeRoomStatisticsResponse extends AbstractModel
 
     /**
      * @var integer 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealStartTime;
 
     /**
      * @var integer 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealEndTime;
 
@@ -98,9 +92,7 @@ class DescribeRoomStatisticsResponse extends AbstractModel
      * @param integer $Total 记录总数。包含进入房间或者应到未到的。
      * @param array $MemberRecords 成员记录列表。
      * @param integer $RealStartTime 秒级unix时间戳，实际房间开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealEndTime 秒级unix时间戳，实际房间结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageCount 房间消息总数。
      * @param integer $MicCount 房间连麦总数。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

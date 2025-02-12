@@ -31,7 +31,27 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\BatchDeleteRecordResponse BatchDeleteRecord(Models\BatchDeleteRecordRequest $req) 批量删除多个房间的录制文件
  * @method Models\BatchDescribeDocumentResponse BatchDescribeDocument(Models\BatchDescribeDocumentRequest $req) 批量获取文档详情
  * @method Models\BatchRegisterResponse BatchRegister(Models\BatchRegisterRequest $req) 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
- * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) 绑定文档到房间
+ * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) 功能概述
+本接口提供教学场景下的课程文档预绑定能力，支持将课件课堂ID进行关联映射，实现课件的自动化预加载。
+
+应用场景建议
+
+绑定时机
+推荐在创建课堂预约阶段同步完成文档绑定操作，确保课件资源在课堂开始前完成上传。
+
+接口限制与频控策略
+
+频控维度
+开发者账号维度限频
+默认频控阈值为20 QPS（每秒请求次数）
+
+最佳实践建议
+
+重试策略
+当触发限频错误时，建议采用以下策略：
+启用退避重试机制（建议使用指数退避算法）
+初始重试间隔不低于500ms
+最大重试次数不超过3次
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建房间内可以使用的文档。
  * @method Models\CreateGroupWithMembersResponse CreateGroupWithMembers(Models\CreateGroupWithMembersRequest $req) 此接口根据成员列表创建群组
  * @method Models\CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(Models\CreateGroupWithSubGroupRequest $req) 此接口会聚合子群组创建联合群组

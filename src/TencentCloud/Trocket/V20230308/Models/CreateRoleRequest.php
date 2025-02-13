@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getRole() 获取角色名称
  * @method void setRole(string $Role) 设置角色名称
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
  * @method boolean getPermWrite() 获取是否开启生产权限
  * @method void setPermWrite(boolean $PermWrite) 设置是否开启生产权限
  * @method boolean getPermRead() 获取是否开启消费权限
  * @method void setPermRead(boolean $PermRead) 设置是否开启消费权限
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
+ * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+ * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+ * @method array getDetailedPerms() 获取Topic&Group维度权限配置
+ * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置
  */
 class CreateRoleRequest extends AbstractModel
 {
@@ -44,11 +48,6 @@ class CreateRoleRequest extends AbstractModel
     public $Role;
 
     /**
-     * @var string 备注
-     */
-    public $Remark;
-
-    /**
      * @var boolean 是否开启生产权限
      */
     public $PermWrite;
@@ -59,11 +58,28 @@ class CreateRoleRequest extends AbstractModel
     public $PermRead;
 
     /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
+     * @var string 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public $PermType;
+
+    /**
+     * @var array Topic&Group维度权限配置
+     */
+    public $DetailedPerms;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param string $Role 角色名称
-     * @param string $Remark 备注
      * @param boolean $PermWrite 是否开启生产权限
      * @param boolean $PermRead 是否开启消费权限
+     * @param string $Remark 备注
+     * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     * @param array $DetailedPerms Topic&Group维度权限配置
      */
     function __construct()
     {
@@ -86,16 +102,29 @@ class CreateRoleRequest extends AbstractModel
             $this->Role = $param["Role"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("PermWrite",$param) and $param["PermWrite"] !== null) {
             $this->PermWrite = $param["PermWrite"];
         }
 
         if (array_key_exists("PermRead",$param) and $param["PermRead"] !== null) {
             $this->PermRead = $param["PermRead"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
+            $this->PermType = $param["PermType"];
+        }
+
+        if (array_key_exists("DetailedPerms",$param) and $param["DetailedPerms"] !== null) {
+            $this->DetailedPerms = [];
+            foreach ($param["DetailedPerms"] as $key => $value){
+                $obj = new DetailedRolePerm();
+                $obj->deserialize($value);
+                array_push($this->DetailedPerms, $obj);
+            }
         }
     }
 }

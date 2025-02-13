@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VpcId, NetType=direct时必填
  * @method array getTagIds() 获取标签ID列表，IsCloud=false时才会生效
  * @method void setTagIds(array $TagIds) 设置标签ID列表，IsCloud=false时才会生效
- * @method string getExpireDate() 获取命令有效期，非腾讯云时必填
- * @method void setExpireDate(string $ExpireDate) 设置命令有效期，非腾讯云时必填
+ * @method string getExpireDate() 获取命令有效期，非腾讯云时必填（已废弃，命令永久生效）
+ * @method void setExpireDate(string $ExpireDate) 设置命令有效期，非腾讯云时必填（已废弃，命令永久生效）
  * @method string getVip() 获取代理方式接入的vip
  * @method void setVip(string $Vip) 设置代理方式接入的vip
  */
@@ -63,7 +63,7 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
     public $TagIds;
 
     /**
-     * @var string 命令有效期，非腾讯云时必填
+     * @var string 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
      */
     public $ExpireDate;
 
@@ -78,7 +78,7 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
      * @param string $RegionCode 地域标示, NetType=direct时必填
      * @param string $VpcId VpcId, NetType=direct时必填
      * @param array $TagIds 标签ID列表，IsCloud=false时才会生效
-     * @param string $ExpireDate 命令有效期，非腾讯云时必填
+     * @param string $ExpireDate 命令有效期，非腾讯云时必填（已废弃，命令永久生效）
      * @param string $Vip 代理方式接入的vip
      */
     function __construct()

@@ -90,6 +90,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
 
 1. RoleName，角色名称模糊搜索
+2. AccessKey，AccessKey模糊搜索
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
 
 ConsumerGroup，消费组名称过滤

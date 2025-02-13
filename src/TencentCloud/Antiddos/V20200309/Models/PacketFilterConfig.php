@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
  * @method void setAction(string $Action) 设置动作，取值[
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
  * @method string getMatchBegin() 获取检测位置，取值[
@@ -64,78 +64,50 @@ no_match(不匹配)
 ]
  * @method string getMatchType() 获取检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
  * @method void setMatchType(string $MatchType) 设置检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
- * @method string getStr() 获取检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
- * @method void setStr(string $Str) 设置检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+ * @method string getStr() 获取检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
+ * @method void setStr(string $Str) 设置检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
  * @method integer getDepth() 获取从检测位置开始的检测深度，取值[0,1500]
  * @method void setDepth(integer $Depth) 设置从检测位置开始的检测深度，取值[0,1500]
  * @method integer getOffset() 获取从检测位置开始的偏移量，取值范围[0,Depth]
  * @method void setOffset(integer $Offset) 设置从检测位置开始的偏移量，取值范围[0,Depth]
  * @method integer getIsNot() 获取是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
  * @method void setIsNot(integer $IsNot) 设置是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
- * @method string getMatchLogic() 获取当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+ * @method string getMatchLogic() 获取
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
- * @method void setMatchLogic(string $MatchLogic) 设置当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+ * @method void setMatchLogic(string $MatchLogic) 设置
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
- * @method string getMatchBegin2() 获取第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
- * @method void setMatchBegin2(string $MatchBegin2) 设置第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
- * @method string getMatchType2() 获取第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
- * @method void setMatchType2(string $MatchType2) 设置第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
- * @method string getStr2() 获取第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
- * @method void setStr2(string $Str2) 设置第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
- * @method integer getDepth2() 获取从第二个检测位置开始的第二个检测深度，取值[0,1500]
- * @method void setDepth2(integer $Depth2) 设置从第二个检测位置开始的第二个检测深度，取值[0,1500]
- * @method integer getOffset2() 获取从第二个检测位置开始的偏移量，取值范围[0,Depth2]
- * @method void setOffset2(integer $Offset2) 设置从第二个检测位置开始的偏移量，取值范围[0,Depth2]
- * @method integer getIsNot2() 获取第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
- * @method void setIsNot2(integer $IsNot2) 设置第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
- * @method string getId() 获取特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
- * @method void setId(string $Id) 设置特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+ * @method string getMatchBegin2() 获取（已废弃）
+ * @method void setMatchBegin2(string $MatchBegin2) 设置（已废弃）
+ * @method string getMatchType2() 获取（已废弃）
+ * @method void setMatchType2(string $MatchType2) 设置（已废弃）
+ * @method string getStr2() 获取（已废弃）
+ * @method void setStr2(string $Str2) 设置（已废弃）
+ * @method integer getDepth2() 获取（已废弃）
+ * @method void setDepth2(integer $Depth2) 设置（已废弃）
+ * @method integer getOffset2() 获取（已废弃）
+ * @method void setOffset2(integer $Offset2) 设置（已废弃）
+ * @method integer getIsNot2() 获取（已废弃）
+ * @method void setIsNot2(integer $IsNot2) 设置（已废弃）
+ * @method string getId() 获取特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
+ * @method void setId(string $Id) 设置特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
  * @method integer getPktLenGT() 获取大于报文长度，取值1+
  * @method void setPktLenGT(integer $PktLenGT) 设置大于报文长度，取值1+
  */
@@ -181,8 +153,8 @@ class PacketFilterConfig extends AbstractModel
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
      */
@@ -201,16 +173,13 @@ no_match(不匹配)
     /**
      * @var string 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
      */
     public $MatchType;
 
     /**
-     * @var string 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * @var string 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
      */
     public $Str;
 
@@ -227,63 +196,52 @@ pcre(正则表达式)
     /**
      * @var integer 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
      */
     public $IsNot;
 
     /**
-     * @var string 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * @var string 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
      */
     public $MatchLogic;
 
     /**
-     * @var string 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
+     * @var string （已废弃）
      */
     public $MatchBegin2;
 
     /**
-     * @var string 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
+     * @var string （已废弃）
      */
     public $MatchType2;
 
     /**
-     * @var string 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * @var string （已废弃）
      */
     public $Str2;
 
     /**
-     * @var integer 从第二个检测位置开始的第二个检测深度，取值[0,1500]
+     * @var integer （已废弃）
      */
     public $Depth2;
 
     /**
-     * @var integer 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
+     * @var integer （已废弃）
      */
     public $Offset2;
 
     /**
-     * @var integer 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
+     * @var integer （已废弃）
      */
     public $IsNot2;
 
     /**
-     * @var string 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+     * @var string 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
      */
     public $Id;
 
@@ -304,8 +262,8 @@ pcre(正则表达式)
 drop(丢弃)
 transmit(放行)
 drop_black(丢弃并拉黑)
-drop_rst(拦截)
-drop_black_rst(拦截并拉黑)
+drop_rst(拦截)（已废弃，不支持drop_rst）
+drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
 forward(继续防护)
 ]
      * @param string $MatchBegin 检测位置，取值[
@@ -316,41 +274,27 @@ no_match(不匹配)
 ]
      * @param string $MatchType 检测类型，取值[
 sunday(关键字)
-pcre(正则表达式)
+pcre(正则表达式) （已废弃，仅支持sunday）
 ]
-     * @param string $Str 检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
+     * @param string $Str 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
      * @param integer $Depth 从检测位置开始的检测深度，取值[0,1500]
      * @param integer $Offset 从检测位置开始的偏移量，取值范围[0,Depth]
      * @param integer $IsNot 是否包含检测值，取值[
 0(包含)
-1(不包含)
+1(不包含) （已废弃，仅支持0）
 ]
-     * @param string $MatchLogic 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-and(且的关系)
+     * @param string $MatchLogic 
+当有第二个检测条件时，与第一检测条件的且或关系，取值[
+and(且的关系) （已废弃，仅支持none）
 none(当没有第二个检测条件时填写此值)
 ]
-     * @param string $MatchBegin2 第二个检测位置，取值[
-begin_l5(载荷)
-no_match(不匹配)
-]
-     * @param string $MatchType2 第二个检测类型，取值[
-sunday(关键字)
-pcre(正则表达式)
-]
-     * @param string $Str2 第二个检测值，关键字符串或正则表达式,取值[
-当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-当检测类型为pcre时, 请填写正则表达式字符串;
-]
-     * @param integer $Depth2 从第二个检测位置开始的第二个检测深度，取值[0,1500]
-     * @param integer $Offset2 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
-     * @param integer $IsNot2 第二个检测是否包含检测值，取值[
-0(包含)
-1(不包含)
-]
-     * @param string $Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+     * @param string $MatchBegin2 （已废弃）
+     * @param string $MatchType2 （已废弃）
+     * @param string $Str2 （已废弃）
+     * @param integer $Depth2 （已废弃）
+     * @param integer $Offset2 （已废弃）
+     * @param integer $IsNot2 （已废弃）
+     * @param string $Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
      * @param integer $PktLenGT 大于报文长度，取值1+
      */
     function __construct()

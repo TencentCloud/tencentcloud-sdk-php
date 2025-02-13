@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermRead(boolean $PermRead) 设置是否开启消费
  * @method boolean getPermWrite() 获取是否开启生产
  * @method void setPermWrite(boolean $PermWrite) 设置是否开启生产
+ * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+ * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method array getDetailedPerms() 获取Topic&Group维度权限配置
+ * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置
  */
 class ModifyRoleRequest extends AbstractModel
 {
@@ -54,16 +58,28 @@ class ModifyRoleRequest extends AbstractModel
     public $PermWrite;
 
     /**
+     * @var string 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+     */
+    public $PermType;
+
+    /**
      * @var string 备注
      */
     public $Remark;
+
+    /**
+     * @var array Topic&Group维度权限配置
+     */
+    public $DetailedPerms;
 
     /**
      * @param string $InstanceId 集群ID
      * @param string $Role 角色名称
      * @param boolean $PermRead 是否开启消费
      * @param boolean $PermWrite 是否开启生产
+     * @param string $PermType 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
      * @param string $Remark 备注
+     * @param array $DetailedPerms Topic&Group维度权限配置
      */
     function __construct()
     {
@@ -94,8 +110,21 @@ class ModifyRoleRequest extends AbstractModel
             $this->PermWrite = $param["PermWrite"];
         }
 
+        if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
+            $this->PermType = $param["PermType"];
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("DetailedPerms",$param) and $param["DetailedPerms"] !== null) {
+            $this->DetailedPerms = [];
+            foreach ($param["DetailedPerms"] as $key => $value){
+                $obj = new DetailedRolePerm();
+                $obj->deserialize($value);
+                array_push($this->DetailedPerms, $obj);
+            }
         }
     }
 }

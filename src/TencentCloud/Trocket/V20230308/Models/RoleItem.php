@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
  * @method integer getModifiedTime() 获取修改时间，秒为单位
  * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间，秒为单位
+ * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+ * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+ * @method array getDetailedRolePerms() 获取Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetailedRolePerms(array $DetailedRolePerms) 设置Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleItem extends AbstractModel
 {
@@ -80,6 +86,17 @@ class RoleItem extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var string 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public $PermType;
+
+    /**
+     * @var array Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetailedRolePerms;
+
+    /**
      * @param string $RoleName 角色名称
      * @param boolean $PermRead 是否开启消费
      * @param boolean $PermWrite 是否开启生产
@@ -88,6 +105,9 @@ class RoleItem extends AbstractModel
      * @param string $Remark 备注信息
      * @param integer $CreatedTime 创建时间，秒为单位
      * @param integer $ModifiedTime 修改时间，秒为单位
+     * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     * @param array $DetailedRolePerms Topic和Group维度权限配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +152,19 @@ class RoleItem extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
+            $this->PermType = $param["PermType"];
+        }
+
+        if (array_key_exists("DetailedRolePerms",$param) and $param["DetailedRolePerms"] !== null) {
+            $this->DetailedRolePerms = [];
+            foreach ($param["DetailedRolePerms"] as $key => $value){
+                $obj = new DetailedRolePerm();
+                $obj->deserialize($value);
+                array_push($this->DetailedRolePerms, $obj);
+            }
         }
     }
 }

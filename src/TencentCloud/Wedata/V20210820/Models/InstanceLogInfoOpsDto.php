@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchedBrokerIp() 获取日志匹配节点信息
  * @method void setMatchedBrokerIp(string $MatchedBrokerIp) 设置日志匹配节点信息
+ * @method array getExecutionExtendedProps() 获取执行平台通用协议
+ * @method void setExecutionExtendedProps(array $ExecutionExtendedProps) 设置执行平台通用协议
  */
 class InstanceLogInfoOpsDto extends AbstractModel
 {
@@ -121,6 +123,11 @@ class InstanceLogInfoOpsDto extends AbstractModel
     public $MatchedBrokerIp;
 
     /**
+     * @var array 执行平台通用协议
+     */
+    public $ExecutionExtendedProps;
+
+    /**
      * @param string $LogInfo 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $YarnLogInfo 实例运行提交的yarn日志地址
@@ -140,6 +147,7 @@ class InstanceLogInfoOpsDto extends AbstractModel
      * @param string $FileSize 文件大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchedBrokerIp 日志匹配节点信息
+     * @param array $ExecutionExtendedProps 执行平台通用协议
      */
     function __construct()
     {
@@ -192,6 +200,15 @@ class InstanceLogInfoOpsDto extends AbstractModel
 
         if (array_key_exists("MatchedBrokerIp",$param) and $param["MatchedBrokerIp"] !== null) {
             $this->MatchedBrokerIp = $param["MatchedBrokerIp"];
+        }
+
+        if (array_key_exists("ExecutionExtendedProps",$param) and $param["ExecutionExtendedProps"] !== null) {
+            $this->ExecutionExtendedProps = [];
+            foreach ($param["ExecutionExtendedProps"] as $key => $value){
+                $obj = new PairDto();
+                $obj->deserialize($value);
+                array_push($this->ExecutionExtendedProps, $obj);
+            }
         }
     }
 }

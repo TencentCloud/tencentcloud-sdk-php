@@ -24,37 +24,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnCodes(array $WarnCodes) 设置警告代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAddress() 获取地址
+ * @method string getAddress() 获取地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddress(string $Address) 设置地址
+ * @method void setAddress(string $Address) 设置地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAuthority() 获取签发机关
+ * @method string getAuthority() 获取发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuthority(string $Authority) 设置签发机关
+ * @method void setAuthority(string $Authority) 设置发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBirth() 获取出生日期
+ * @method string getBirth() 获取出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBirth(string $Birth) 设置出生日期
+ * @method void setBirth(string $Birth) 设置出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdNum() 获取身份证号
+ * @method string getIdNum() 获取身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdNum(string $IdNum) 设置身份证号
+ * @method void setIdNum(string $IdNum) 设置身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取名字
+ * @method string getName() 获取名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置名字
+ * @method void setName(string $Name) 设置名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNation() 获取地区
+ * @method string getNation() 获取民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNation(string $Nation) 设置地区
+ * @method void setNation(string $Nation) 设置民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSex() 获取性别
+ * @method string getSex() 获取性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSex(string $Sex) 设置性别
+ * @method void setSex(string $Sex) 设置性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValidDate() 获取到期时间
+ * @method string getValidDate() 获取证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValidDate(string $ValidDate) 设置到期时间
+ * @method void setValidDate(string $ValidDate) 设置证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取请求的id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageUrl() 获取原图地址
  * @method void setImageUrl(string $ImageUrl) 设置原图地址
+ * @method string getPortraitUrl() 获取身份证头像照片的地址（人像面）
+ * @method void setPortraitUrl(string $PortraitUrl) 设置身份证头像照片的地址（人像面）
  */
 class IDCardInfoResult extends AbstractModel
 {
@@ -80,49 +82,49 @@ class IDCardInfoResult extends AbstractModel
     public $WarnCodes;
 
     /**
-     * @var string 地址
+     * @var string 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
-     * @var string 签发机关
+     * @var string 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Authority;
 
     /**
-     * @var string 出生日期
+     * @var string 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Birth;
 
     /**
-     * @var string 身份证号
+     * @var string 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdNum;
 
     /**
-     * @var string 名字
+     * @var string 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 地区
+     * @var string 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nation;
 
     /**
-     * @var string 性别
+     * @var string 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sex;
 
     /**
-     * @var string 到期时间
+     * @var string 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidDate;
@@ -151,23 +153,28 @@ class IDCardInfoResult extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var string 身份证头像照片的地址（人像面）
+     */
+    public $PortraitUrl;
+
+    /**
      * @param array $WarnCodes 警告代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Address 地址
+     * @param string $Address 地址（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Authority 签发机关
+     * @param string $Authority 发证机关（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Birth 出生日期
+     * @param string $Birth 出生日期（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdNum 身份证号
+     * @param string $IdNum 身份证号（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 名字
+     * @param string $Name 名字（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Nation 地区
+     * @param string $Nation 民族（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sex 性别
+     * @param string $Sex 性别（人像面）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ValidDate 到期时间
+     * @param string $ValidDate 证件有效期（国徽面）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 请求的id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,6 +183,7 @@ class IDCardInfoResult extends AbstractModel
      * @param string $ErrorMessage 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageUrl 原图地址
+     * @param string $PortraitUrl 身份证头像照片的地址（人像面）
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class IDCardInfoResult extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("PortraitUrl",$param) and $param["PortraitUrl"] !== null) {
+            $this->PortraitUrl = $param["PortraitUrl"];
         }
     }
 }

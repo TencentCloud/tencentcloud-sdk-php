@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) 设置推流异常回调 URL。
  * @method string getAudioAuditNotifyUrl() 获取音频审核回调 URL。
  * @method void setAudioAuditNotifyUrl(string $AudioAuditNotifyUrl) 设置音频审核回调 URL。
+ * @method string getRecordExceptionNotifyUrl() 获取录制异常回调 URL。
+ * @method void setRecordExceptionNotifyUrl(string $RecordExceptionNotifyUrl) 设置录制异常回调 URL。
+ * @method array getRecordExceptionLevels() 获取录制异常回调级别，可选择：error、warning、info。
+ * @method void setRecordExceptionLevels(array $RecordExceptionLevels) 设置录制异常回调级别，可选择：error、warning、info。
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -141,6 +145,16 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     public $AudioAuditNotifyUrl;
 
     /**
+     * @var string 录制异常回调 URL。
+     */
+    public $RecordExceptionNotifyUrl;
+
+    /**
+     * @var array 录制异常回调级别，可选择：error、warning、info。
+     */
+    public $RecordExceptionLevels;
+
+    /**
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。
@@ -164,6 +178,8 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
      * @param string $StreamMixNotifyUrl 参数已弃用。
      * @param string $PushExceptionNotifyUrl 推流异常回调 URL。
      * @param string $AudioAuditNotifyUrl 音频审核回调 URL。
+     * @param string $RecordExceptionNotifyUrl 录制异常回调 URL。
+     * @param array $RecordExceptionLevels 录制异常回调级别，可选择：error、warning、info。
      */
     function __construct()
     {
@@ -224,6 +240,14 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("AudioAuditNotifyUrl",$param) and $param["AudioAuditNotifyUrl"] !== null) {
             $this->AudioAuditNotifyUrl = $param["AudioAuditNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordExceptionNotifyUrl",$param) and $param["RecordExceptionNotifyUrl"] !== null) {
+            $this->RecordExceptionNotifyUrl = $param["RecordExceptionNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordExceptionLevels",$param) and $param["RecordExceptionLevels"] !== null) {
+            $this->RecordExceptionLevels = $param["RecordExceptionLevels"];
         }
     }
 }

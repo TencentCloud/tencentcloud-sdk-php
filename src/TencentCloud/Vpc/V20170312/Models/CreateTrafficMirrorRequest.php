@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置流量镜像状态, 支持RUNNING/STOPED（vpc），RUNNING（公网IP），当采集vpc流量镜像时，此参数为必填。
  * @method string getDirection() 获取流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
  * @method void setDirection(string $Direction) 设置流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
- * @method array getCollectorSrcs() 获取流量镜像的采集对象，支持eni_xxxx。
- * @method void setCollectorSrcs(array $CollectorSrcs) 设置流量镜像的采集对象，支持eni_xxxx。
+ * @method array getCollectorSrcs() 获取流量镜像的采集对象。
+ * @method void setCollectorSrcs(array $CollectorSrcs) 设置流量镜像的采集对象。
  * @method string getNatId() 获取流量镜像过滤的natgw实例。
  * @method void setNatId(string $NatId) 设置流量镜像过滤的natgw实例。
  * @method array getCollectorNormalFilters() 获取需要过滤的五元组规则。
@@ -73,7 +73,7 @@ class CreateTrafficMirrorRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var array 流量镜像的采集对象，支持eni_xxxx。
+     * @var array 流量镜像的采集对象。
      */
     public $CollectorSrcs;
 
@@ -113,7 +113,7 @@ class CreateTrafficMirrorRequest extends AbstractModel
      * @param string $TrafficMirrorDescribe 流量镜像描述。
      * @param string $State 流量镜像状态, 支持RUNNING/STOPED（vpc），RUNNING（公网IP），当采集vpc流量镜像时，此参数为必填。
      * @param string $Direction 流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
-     * @param array $CollectorSrcs 流量镜像的采集对象，支持eni_xxxx。
+     * @param array $CollectorSrcs 流量镜像的采集对象。
      * @param string $NatId 流量镜像过滤的natgw实例。
      * @param array $CollectorNormalFilters 需要过滤的五元组规则。
      * @param TrafficMirrorTarget $CollectorTarget 流量镜像的目的地址。

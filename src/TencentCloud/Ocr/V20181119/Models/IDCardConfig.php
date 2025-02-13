@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvalidDateWarn(boolean $InvalidDateWarn) 设置身份证有效日期不合法告警，默认为false
  * @method boolean getReflectWarn() 获取是否开启反光检测，默认为false
  * @method void setReflectWarn(boolean $ReflectWarn) 设置是否开启反光检测，默认为false
+ * @method boolean getCropPortrait() 获取是否开启头像剪切
+ * @method void setCropPortrait(boolean $CropPortrait) 设置是否开启头像剪切
  */
 class IDCardConfig extends AbstractModel
 {
@@ -73,6 +75,11 @@ class IDCardConfig extends AbstractModel
     public $ReflectWarn;
 
     /**
+     * @var boolean 是否开启头像剪切
+     */
+    public $CropPortrait;
+
+    /**
      * @param boolean $CopyWarn 复印件告警，默认为false
      * @param boolean $BorderCheckWarn 边框和框内遮挡告警，默认为false
      * @param boolean $ReshootWarn 翻拍告警，默认为false
@@ -80,6 +87,7 @@ class IDCardConfig extends AbstractModel
      * @param boolean $TempIdWarn 临时身份证告警，默认为false
      * @param boolean $InvalidDateWarn 身份证有效日期不合法告警，默认为false
      * @param boolean $ReflectWarn 是否开启反光检测，默认为false
+     * @param boolean $CropPortrait 是否开启头像剪切
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class IDCardConfig extends AbstractModel
 
         if (array_key_exists("ReflectWarn",$param) and $param["ReflectWarn"] !== null) {
             $this->ReflectWarn = $param["ReflectWarn"];
+        }
+
+        if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
+            $this->CropPortrait = $param["CropPortrait"];
         }
     }
 }

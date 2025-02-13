@@ -123,7 +123,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) 修改7层转发规则
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) 修改DDoS防护的特征过滤规则
  * @method Models\ModifyPortAclConfigResponse ModifyPortAclConfig(Models\ModifyPortAclConfigRequest $req) 修改DDoS防护的端口acl策略
- * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置
+ * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置，此功能为付费增值服务，有需求请联系售后
  */
 
 class AntiddosClient extends AbstractClient

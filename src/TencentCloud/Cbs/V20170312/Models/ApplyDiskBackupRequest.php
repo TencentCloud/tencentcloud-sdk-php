@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
  * @method string getDiskId() 获取云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
  * @method void setDiskId(string $DiskId) 设置云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+ * @method boolean getAutoStopInstance() 获取回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
+ * @method void setAutoStopInstance(boolean $AutoStopInstance) 设置回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
+ * @method boolean getAutoStartInstance() 获取回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+ * @method void setAutoStartInstance(boolean $AutoStartInstance) 设置回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
  */
 class ApplyDiskBackupRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ApplyDiskBackupRequest extends AbstractModel
     public $DiskId;
 
     /**
+     * @var boolean 回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
+     */
+    public $AutoStopInstance;
+
+    /**
+     * @var boolean 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+     */
+    public $AutoStartInstance;
+
+    /**
      * @param string $DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
      * @param string $DiskId 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+     * @param boolean $AutoStopInstance 回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
+     * @param boolean $AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ApplyDiskBackupRequest extends AbstractModel
 
         if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
             $this->DiskId = $param["DiskId"];
+        }
+
+        if (array_key_exists("AutoStopInstance",$param) and $param["AutoStopInstance"] !== null) {
+            $this->AutoStopInstance = $param["AutoStopInstance"];
+        }
+
+        if (array_key_exists("AutoStartInstance",$param) and $param["AutoStartInstance"] !== null) {
+            $this->AutoStartInstance = $param["AutoStartInstance"];
         }
     }
 }

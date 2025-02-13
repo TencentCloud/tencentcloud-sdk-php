@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredIdleNodeCapacity(integer $DesiredIdleNodeCapacity) 设置队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDesiredNodeCount() 获取队列中期望的总节点数。
+ * @method void setDesiredNodeCount(integer $DesiredNodeCount) 设置队列中期望的总节点数。
  * @method integer getScaleOutRatio() 获取扩容比例。默认值：100。取值范围：1～100。
 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,6 +108,11 @@ class QueueConfigOverview extends AbstractModel
     public $DesiredIdleNodeCapacity;
 
     /**
+     * @var integer 队列中期望的总节点数。
+     */
+    public $DesiredNodeCount;
+
+    /**
      * @var integer 扩容比例。默认值：100。取值范围：1～100。
 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -145,6 +152,7 @@ class QueueConfigOverview extends AbstractModel
      * @param array $ExpansionNodeConfigs 扩容节点配置信息。
      * @param integer $DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DesiredNodeCount 队列中期望的总节点数。
      * @param integer $ScaleOutRatio 扩容比例。默认值：100。取值范围：1～100。
 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -205,6 +213,10 @@ class QueueConfigOverview extends AbstractModel
 
         if (array_key_exists("DesiredIdleNodeCapacity",$param) and $param["DesiredIdleNodeCapacity"] !== null) {
             $this->DesiredIdleNodeCapacity = $param["DesiredIdleNodeCapacity"];
+        }
+
+        if (array_key_exists("DesiredNodeCount",$param) and $param["DesiredNodeCount"] !== null) {
+            $this->DesiredNodeCount = $param["DesiredNodeCount"];
         }
 
         if (array_key_exists("ScaleOutRatio",$param) and $param["ScaleOutRatio"] !== null) {

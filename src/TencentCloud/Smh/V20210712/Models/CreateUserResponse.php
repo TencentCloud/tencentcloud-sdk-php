@@ -51,21 +51,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountUserId(string $AccountUserId) 设置第三方账号 ID，用于关联第三方账号体系，如未指定则为 null。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickname() 获取昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickname(string $Nickname) 设置昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAvatar() 获取用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvatar(string $Avatar) 设置用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomize() 获取自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomize(string $Customize) 设置自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -128,25 +120,21 @@ class CreateUserResponse extends AbstractModel
 
     /**
      * @var string 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
      * @var string 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Avatar;
 
     /**
      * @var string 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Customize;
 
@@ -172,13 +160,9 @@ class CreateUserResponse extends AbstractModel
      * @param string $AccountUserId 第三方账号 ID，用于关联第三方账号体系，如未指定则为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nickname 昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Avatar 用户头像地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Customize 自定义信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

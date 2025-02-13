@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTrafficMirrorIds() 获取流量镜像实例ID集合
  * @method void setTrafficMirrorIds(array $TrafficMirrorIds) 设置流量镜像实例ID集合
- * @method Filter getFilters() 获取流量镜像查询过滤调节
- * @method void setFilters(Filter $Filters) 设置流量镜像查询过滤调节
+ * @method Filter getFilters() 获取流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
+ * @method void setFilters(Filter $Filters) 设置流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -37,7 +45,11 @@ class DescribeTrafficMirrorsRequest extends AbstractModel
     public $TrafficMirrorIds;
 
     /**
-     * @var Filter 流量镜像查询过滤调节
+     * @var Filter 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
      */
     public $Filters;
 
@@ -53,7 +65,11 @@ class DescribeTrafficMirrorsRequest extends AbstractModel
 
     /**
      * @param array $TrafficMirrorIds 流量镜像实例ID集合
-     * @param Filter $Filters 流量镜像查询过滤调节
+     * @param Filter $Filters 流量镜像查询过滤调节。
+vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+traffic-mirror-id：流量镜像实例ID。
+traffic-mirror-name：流量镜像名称。
+tag-key ：按照标签键进行过滤。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */

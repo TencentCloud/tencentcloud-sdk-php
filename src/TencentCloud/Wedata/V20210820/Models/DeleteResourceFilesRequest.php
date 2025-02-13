@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method boolean getUseStatus() 获取使用状态
- * @method void setUseStatus(boolean $UseStatus) 设置使用状态
+ * @method boolean getUseStatus() 获取使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
+ * @method void setUseStatus(boolean $UseStatus) 设置使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
  * @method array getResourceIds() 获取资源id列表
  * @method void setResourceIds(array $ResourceIds) 设置资源id列表
- * @method array getFilePaths() 获取资源路径列表
- * @method void setFilePaths(array $FilePaths) 设置资源路径列表
+ * @method array getFilePaths() 获取需要删除的资源路径列表 即资源管理中的目录结构
+ * @method void setFilePaths(array $FilePaths) 设置需要删除的资源路径列表 即资源管理中的目录结构
  */
 class DeleteResourceFilesRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class DeleteResourceFilesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var boolean 使用状态
+     * @var boolean 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
      */
     public $UseStatus;
 
@@ -47,15 +47,15 @@ class DeleteResourceFilesRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var array 资源路径列表
+     * @var array 需要删除的资源路径列表 即资源管理中的目录结构
      */
     public $FilePaths;
 
     /**
      * @param string $ProjectId 项目id
-     * @param boolean $UseStatus 使用状态
+     * @param boolean $UseStatus 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
      * @param array $ResourceIds 资源id列表
-     * @param array $FilePaths 资源路径列表
+     * @param array $FilePaths 需要删除的资源路径列表 即资源管理中的目录结构
      */
     function __construct()
     {

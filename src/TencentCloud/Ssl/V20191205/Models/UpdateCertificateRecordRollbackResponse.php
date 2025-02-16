@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateRecordRollback返回参数结构体
  *
- * @method integer getDeployRecordId() 获取回滚部署记录ID
- * @method void setDeployRecordId(integer $DeployRecordId) 设置回滚部署记录ID
+ * @method integer getDeployRecordId() 获取新生成的回滚部署任务的记录ID
+ * @method void setDeployRecordId(integer $DeployRecordId) 设置新生成的回滚部署任务的记录ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateCertificateRecordRollbackResponse extends AbstractModel
 {
     /**
-     * @var integer 回滚部署记录ID
+     * @var integer 新生成的回滚部署任务的记录ID
      */
     public $DeployRecordId;
 
@@ -38,7 +38,7 @@ class UpdateCertificateRecordRollbackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $DeployRecordId 回滚部署记录ID
+     * @param integer $DeployRecordId 新生成的回滚部署任务的记录ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置部署资源类型cdn
  * @method string getOldCertificateId() 获取原证书ID
  * @method void setOldCertificateId(string $OldCertificateId) 设置原证书ID
- * @method integer getOffset() 获取分页偏移量，从0开始。	
- * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。	
- * @method integer getLimit() 获取每页数量，默认10。	
- * @method void setLimit(integer $Limit) 设置每页数量，默认10。	
+ * @method integer getOffset() 获取分页偏移量，默认值为0。	
+ * @method void setOffset(integer $Offset) 设置分页偏移量，默认值为0。	
+ * @method integer getLimit() 获取每页数量，默认10，最大值为200。	
+ * @method void setLimit(integer $Limit) 设置每页数量，默认10，最大值为200。	
  * @method integer getAsyncCache() 获取是否异步,0表示否，1表示是，默认为0
  * @method void setAsyncCache(integer $AsyncCache) 设置是否异步,0表示否，1表示是，默认为0
  */
@@ -56,6 +56,7 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
 
     /**
      * @var string 部署资源类型cdn
+     * @deprecated
      */
     public $ResourceType;
 
@@ -65,12 +66,12 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @var integer 分页偏移量，从0开始。	
+     * @var integer 分页偏移量，默认值为0。	
      */
     public $Offset;
 
     /**
-     * @var integer 每页数量，默认10。	
+     * @var integer 每页数量，默认10，最大值为200。	
      */
     public $Limit;
 
@@ -85,8 +86,8 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
      * @param array $Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
      * @param string $ResourceType 部署资源类型cdn
      * @param string $OldCertificateId 原证书ID
-     * @param integer $Offset 分页偏移量，从0开始。	
-     * @param integer $Limit 每页数量，默认10。	
+     * @param integer $Offset 分页偏移量，默认值为0。	
+     * @param integer $Limit 每页数量，默认10，最大值为200。	
      * @param integer $AsyncCache 是否异步,0表示否，1表示是，默认为0
      */
     function __construct()

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidType(string $ValidType) 设置验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
  * @method string getCsrType() 获取类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
  * @method void setCsrType(string $CsrType) 设置类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
- * @method string getCsrContent() 获取CSR 内容。
- * @method void setCsrContent(string $CsrContent) 设置CSR 内容。
+ * @method string getCsrContent() 获取CSR 内容，手动上传的时候需要。
+ * @method void setCsrContent(string $CsrContent) 设置CSR 内容，手动上传的时候需要。
  * @method string getCsrkeyPassword() 获取KEY 密码。
  * @method void setCsrkeyPassword(string $CsrkeyPassword) 设置KEY 密码。
  * @method string getReason() 获取重颁发原因。
@@ -57,7 +57,7 @@ class ReplaceCertificateRequest extends AbstractModel
     public $CsrType;
 
     /**
-     * @var string CSR 内容。
+     * @var string CSR 内容，手动上传的时候需要。
      */
     public $CsrContent;
 
@@ -86,7 +86,7 @@ class ReplaceCertificateRequest extends AbstractModel
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
-     * @param string $CsrContent CSR 内容。
+     * @param string $CsrContent CSR 内容，手动上传的时候需要。
      * @param string $CsrkeyPassword KEY 密码。
      * @param string $Reason 重颁发原因。
      * @param string $CertCSREncryptAlgo CSR加密方式，可选：RSA、ECC、SM2

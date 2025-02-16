@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCertificateDomainVerification请求参数结构体
  *
- * @method string getCertificateId() 获取证书ID。
- * @method void setCertificateId(string $CertificateId) 设置证书ID。
+ * @method string getCertificateId() 获取证书ID。 
+ * @method void setCertificateId(string $CertificateId) 设置证书ID。 
  */
 class CheckCertificateDomainVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 证书ID。
+     * @var string 证书ID。 
      */
     public $CertificateId;
 
     /**
-     * @param string $CertificateId 证书ID。
+     * @param string $CertificateId 证书ID。 
      */
     function __construct()
     {

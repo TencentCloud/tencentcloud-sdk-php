@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskCount(integer $DiskCount) 设置创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
  * @method integer getThroughputPerformance() 获取可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
  * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+ * @method string getKmsKeyId() 获取可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+ * @method void setKmsKeyId(string $KmsKeyId) 设置可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
  * @method integer getDiskSize() 获取云硬盘大小，单位为GiB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小</li><br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小</li><br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。</li>
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位为GiB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小</li><br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小</li><br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。</li>
  * @method boolean getShareable() 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
@@ -100,6 +102,11 @@ class CreateDisksRequest extends AbstractModel
     public $ThroughputPerformance;
 
     /**
+     * @var string 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+     */
+    public $KmsKeyId;
+
+    /**
      * @var integer 云硬盘大小，单位为GiB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小</li><br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小</li><br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。</li>
      */
     public $DiskSize;
@@ -158,6 +165,7 @@ class CreateDisksRequest extends AbstractModel
      * @param string $SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
      * @param integer $DiskCount 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
      * @param integer $ThroughputPerformance 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+     * @param string $KmsKeyId 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
      * @param integer $DiskSize 云硬盘大小，单位为GiB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小</li><br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小</li><br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。</li>
      * @param boolean $Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -218,6 +226,10 @@ class CreateDisksRequest extends AbstractModel
 
         if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
             $this->ThroughputPerformance = $param["ThroughputPerformance"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {

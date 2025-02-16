@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostDeployRecordDetail请求参数结构体
  *
- * @method string getDeployRecordId() 获取部署记录ID
- * @method void setDeployRecordId(string $DeployRecordId) 设置部署记录ID
- * @method integer getOffset() 获取分页偏移量，从0开始。
- * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
- * @method integer getLimit() 获取每页数量，默认10。
- * @method void setLimit(integer $Limit) 设置每页数量，默认10。
+ * @method string getDeployRecordId() 获取部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
+ * @method void setDeployRecordId(string $DeployRecordId) 设置部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
+ * @method integer getOffset() 获取分页偏移量，从0开始。默认为0
+ * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。默认为0
+ * @method integer getLimit() 获取每页数量，默认10。最大值为200
+ * @method void setLimit(integer $Limit) 设置每页数量，默认10。最大值为200
  */
 class DescribeHostDeployRecordDetailRequest extends AbstractModel
 {
     /**
-     * @var string 部署记录ID
+     * @var string 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
      */
     public $DeployRecordId;
 
     /**
-     * @var integer 分页偏移量，从0开始。
+     * @var integer 分页偏移量，从0开始。默认为0
      */
     public $Offset;
 
     /**
-     * @var integer 每页数量，默认10。
+     * @var integer 每页数量，默认10。最大值为200
      */
     public $Limit;
 
     /**
-     * @param string $DeployRecordId 部署记录ID
-     * @param integer $Offset 分页偏移量，从0开始。
-     * @param integer $Limit 每页数量，默认10。
+     * @param string $DeployRecordId 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
+     * @param integer $Offset 分页偏移量，从0开始。默认为0
+     * @param integer $Limit 每页数量，默认10。最大值为200
      */
     function __construct()
     {

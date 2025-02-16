@@ -18,7 +18,7 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 返回参数键为 RevokeDomainValidateAuths 的内容。
+ * 吊销证书域名验证信息。
  *
  * @method string getDomainValidateAuthPath() 获取DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。

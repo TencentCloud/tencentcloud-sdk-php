@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取请求日志数量，默认为20。
- * @method void setLimit(integer $Limit) 设置请求日志数量，默认为20。
+ * @method integer getLimit() 获取请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
+ * @method void setLimit(integer $Limit) 设置请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
  * @method string getStartTime() 获取开始时间，默认15天前。
  * @method void setStartTime(string $StartTime) 设置开始时间，默认15天前。
  * @method string getEndTime() 获取结束时间，默认现在时间。
@@ -37,7 +37,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 请求日志数量，默认为20。
+     * @var integer 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
      */
     public $Limit;
 
@@ -53,7 +53,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
 
     /**
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 请求日志数量，默认为20。
+     * @param integer $Limit 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
      * @param string $StartTime 开始时间，默认15天前。
      * @param string $EndTime 结束时间，默认现在时间。
      */

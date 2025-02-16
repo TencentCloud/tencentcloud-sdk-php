@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 背景图片配置
  *
  * @method string getUrl() 获取背景图片的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置背景图片的url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackgroundPictureConfig extends AbstractModel
 {
     /**
      * @var string 背景图片的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @param string $Url 背景图片的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

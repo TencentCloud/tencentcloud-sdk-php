@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompanies请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移量
- * @method void setOffset(integer $Offset) 设置分页偏移量
- * @method integer getLimit() 获取分页每页限制数
- * @method void setLimit(integer $Limit) 设置分页每页限制数
+ * @method integer getOffset() 获取分页偏移量，默认值为0.
+ * @method void setOffset(integer $Offset) 设置分页偏移量，默认值为0.
+ * @method integer getLimit() 获取分页每页限制数，默认值为0，最大值1000.
+ * @method void setLimit(integer $Limit) 设置分页每页限制数，默认值为0，最大值1000.
  * @method integer getCompanyId() 获取公司ID
  * @method void setCompanyId(integer $CompanyId) 设置公司ID
  */
 class DescribeCompaniesRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量
+     * @var integer 分页偏移量，默认值为0.
      */
     public $Offset;
 
     /**
-     * @var integer 分页每页限制数
+     * @var integer 分页每页限制数，默认值为0，最大值1000.
      */
     public $Limit;
 
@@ -45,8 +45,8 @@ class DescribeCompaniesRequest extends AbstractModel
     public $CompanyId;
 
     /**
-     * @param integer $Offset 分页偏移量
-     * @param integer $Limit 分页每页限制数
+     * @param integer $Offset 分页偏移量，默认值为0.
+     * @param integer $Limit 分页每页限制数，默认值为0，最大值1000.
      * @param integer $CompanyId 公司ID
      */
     function __construct()

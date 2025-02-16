@@ -20,45 +20,245 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateDetail返回参数结构体
  *
- * @method string getOwnerUin() 获取用户 UIN。
+ * @method string getOwnerUin() 获取证书所属用户主账号 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(string $OwnerUin) 设置用户 UIN。
+ * @method void setOwnerUin(string $OwnerUin) 设置证书所属用户主账号 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrom() 获取证书来源：trustasia = 亚洲诚信，upload = 用户上传。
+ * @method string getFrom() 获取证书来源：
+trustasia：亚洲诚信，
+upload：用户上传。
+wosign：沃通
+sheca：上海CA
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrom(string $From) 设置证书来源：trustasia = 亚洲诚信，upload = 用户上传。
+ * @method void setFrom(string $From) 设置证书来源：
+trustasia：亚洲诚信，
+upload：用户上传。
+wosign：沃通
+sheca：上海CA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateType(string $CertificateType) 设置证书类型：CA = 客户端证书，SVR = 服务器证书。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取证书套餐类型：null = 用户上传证书（没有套餐类型），1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = SecureSite 增强型企业版（EV Pro）， 4 = SecureSite 增强型（EV）， 5 = SecureSite 企业型专业版（OV Pro）， 6 = SecureSite 企业型（OV）， 7 = SecureSite 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书，25 = Wotrus 域名型证书，26 = Wotrus 域名型多域名证书，27 = Wotrus 域名型通配符证书，28 = Wotrus 企业型证书，29 = Wotrus 企业型多域名证书，30 = Wotrus 企业型通配符证书，31 = Wotrus 增强型证书，32 = Wotrus 增强型多域名证书，33 = DNSPod 国密域名型证书，34 = DNSPod 国密域名型多域名证书，35 = DNSPod 国密域名型通配符证书，37 = DNSPod 国密企业型证书，38 = DNSPod 国密企业型多域名证书，39 = DNSPod 国密企业型通配符证书，40 = DNSPod 国密增强型证书，41 = DNSPod 国密增强型多域名证书，42 = TrustAsia 域名型通配符多域名证书。
+ * @method string getPackageType() 获取证书套餐类型：
+null：用户上传证书（没有套餐类型），
+2：TrustAsia TLS RSA CA， 
+3：SecureSite 增强型企业版（EV Pro）， 
+4：SecureSite 增强型（EV）， 
+5：SecureSite 企业型专业版（OV Pro），
+6：SecureSite 企业型（OV）， 
+7：SecureSite 企业型（OV）通配符， 
+8：Geotrust 增强型（EV）， 
+9：Geotrust 企业型（OV）， 
+10：Geotrust 企业型（OV）通配符， 
+11：TrustAsia 域名型多域名 SSL 证书， 
+12：TrustAsia 域名型（DV）通配符， 
+13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
+14：TrustAsia 企业型（OV）SSL 证书（D3）， 
+15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
+16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
+17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
+18：GlobalSign 企业型（OV）SSL 证书， 
+19：GlobalSign 企业型通配符 （OV）SSL 证书， 
+20：GlobalSign 增强型 （EV）SSL 证书， 
+21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
+22：GlobalSign 企业型多域名（OV）SSL 证书， 
+23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
+24：GlobalSign 增强型多域名（EV）SSL 证书，
+25：Wotrus 域名型证书，
+26：Wotrus 域名型多域名证书，
+27：Wotrus 域名型通配符证书，
+28：Wotrus 企业型证书，
+29：Wotrus 企业型多域名证书，
+30：Wotrus 企业型通配符证书，
+31：Wotrus 增强型证书，
+32：Wotrus 增强型多域名证书，
+33：WoTrus-国密域名型证书，
+34：WoTrus-国密域名型证书（多域名），
+35：WoTrus-国密域名型证书（通配符），
+37：WoTrus-国密企业型证书，
+38：WoTrus-国密企业型证书（多域名），
+39：WoTrus-国密企业型证书（通配符），
+40：WoTrus-国密增强型证书，
+41：WoTrus-国密增强型证书（多域名），
+42：TrustAsia-域名型证书（通配符多域名），
+43：DNSPod-企业型(OV)SSL证书
+44：DNSPod-企业型(OV)通配符SSL证书
+45：DNSPod-企业型(OV)多域名SSL证书
+46：DNSPod-增强型(EV)SSL证书
+47：DNSPod-增强型(EV)多域名SSL证书
+48：DNSPod-域名型(DV)SSL证书
+49：DNSPod-域名型(DV)通配符SSL证书
+50：DNSPod-域名型(DV)多域名SSL证书
+51：DNSPod（国密）-企业型(OV)SSL证书
+52：DNSPod（国密）-企业型(OV)通配符SSL证书
+53：DNSPod（国密）-企业型(OV)多域名SSL证书
+54：DNSPod（国密）-域名型(DV)SSL证书
+55：DNSPod（国密）-域名型(DV)通配符SSL证书
+56：DNSPod（国密）-域名型(DV)多域名SSL证书
+57：SecureSite 企业型专业版多域名(OV Pro)
+58：SecureSite 企业型多域名(OV)
+59：SecureSite 增强型专业版多域名(EV Pro)
+60：SecureSite 增强型多域名(EV)
+61：Geotrust 增强型多域名(EV)
+75：SecureSite 企业型(OV)
+76：SecureSite 企业型(OV)通配符
+77：SecureSite 增强型(EV)
+78：Geotrust 企业型(OV)
+79：Geotrust 企业型(OV)通配符
+80：Geotrust 增强型(EV)
+81：GlobalSign 企业型（OV）SSL证书
+82：GlobalSign 企业型通配符 （OV）SSL证书
+83：TrustAsia C1 DV Free
+85：GlobalSign 增强型 （EV）SSL证书
+88：GlobalSign 企业型通配符多域名 （OV）SSL证书
+89：GlobalSign 企业型多域名 （OV）SSL证书
+90：GlobalSign 增强型多域名（EV） SSL证书
+91：Geotrust 增强型多域名(EV)
+92：SecureSite 企业型专业版多域名(OV Pro)
+93：SecureSite 企业型多域名(OV)
+94：SecureSite 增强型专业版多域名(EV Pro)
+95：SecureSite 增强型多域名(EV)
+96：SecureSite 增强型专业版(EV Pro)
+97：SecureSite 企业型专业版(OV Pro)
+98：CFCA 企业型(OV)SSL证书
+99：CFCA 企业型多域名(OV)SSL证书
+100：CFCA 企业型通配符(OV)SSL证书
+101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置证书套餐类型：null = 用户上传证书（没有套餐类型），1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = SecureSite 增强型企业版（EV Pro）， 4 = SecureSite 增强型（EV）， 5 = SecureSite 企业型专业版（OV Pro）， 6 = SecureSite 企业型（OV）， 7 = SecureSite 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书，25 = Wotrus 域名型证书，26 = Wotrus 域名型多域名证书，27 = Wotrus 域名型通配符证书，28 = Wotrus 企业型证书，29 = Wotrus 企业型多域名证书，30 = Wotrus 企业型通配符证书，31 = Wotrus 增强型证书，32 = Wotrus 增强型多域名证书，33 = DNSPod 国密域名型证书，34 = DNSPod 国密域名型多域名证书，35 = DNSPod 国密域名型通配符证书，37 = DNSPod 国密企业型证书，38 = DNSPod 国密企业型多域名证书，39 = DNSPod 国密企业型通配符证书，40 = DNSPod 国密增强型证书，41 = DNSPod 国密增强型多域名证书，42 = TrustAsia 域名型通配符多域名证书。
+ * @method void setPackageType(string $PackageType) 设置证书套餐类型：
+null：用户上传证书（没有套餐类型），
+2：TrustAsia TLS RSA CA， 
+3：SecureSite 增强型企业版（EV Pro）， 
+4：SecureSite 增强型（EV）， 
+5：SecureSite 企业型专业版（OV Pro），
+6：SecureSite 企业型（OV）， 
+7：SecureSite 企业型（OV）通配符， 
+8：Geotrust 增强型（EV）， 
+9：Geotrust 企业型（OV）， 
+10：Geotrust 企业型（OV）通配符， 
+11：TrustAsia 域名型多域名 SSL 证书， 
+12：TrustAsia 域名型（DV）通配符， 
+13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
+14：TrustAsia 企业型（OV）SSL 证书（D3）， 
+15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
+16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
+17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
+18：GlobalSign 企业型（OV）SSL 证书， 
+19：GlobalSign 企业型通配符 （OV）SSL 证书， 
+20：GlobalSign 增强型 （EV）SSL 证书， 
+21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
+22：GlobalSign 企业型多域名（OV）SSL 证书， 
+23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
+24：GlobalSign 增强型多域名（EV）SSL 证书，
+25：Wotrus 域名型证书，
+26：Wotrus 域名型多域名证书，
+27：Wotrus 域名型通配符证书，
+28：Wotrus 企业型证书，
+29：Wotrus 企业型多域名证书，
+30：Wotrus 企业型通配符证书，
+31：Wotrus 增强型证书，
+32：Wotrus 增强型多域名证书，
+33：WoTrus-国密域名型证书，
+34：WoTrus-国密域名型证书（多域名），
+35：WoTrus-国密域名型证书（通配符），
+37：WoTrus-国密企业型证书，
+38：WoTrus-国密企业型证书（多域名），
+39：WoTrus-国密企业型证书（通配符），
+40：WoTrus-国密增强型证书，
+41：WoTrus-国密增强型证书（多域名），
+42：TrustAsia-域名型证书（通配符多域名），
+43：DNSPod-企业型(OV)SSL证书
+44：DNSPod-企业型(OV)通配符SSL证书
+45：DNSPod-企业型(OV)多域名SSL证书
+46：DNSPod-增强型(EV)SSL证书
+47：DNSPod-增强型(EV)多域名SSL证书
+48：DNSPod-域名型(DV)SSL证书
+49：DNSPod-域名型(DV)通配符SSL证书
+50：DNSPod-域名型(DV)多域名SSL证书
+51：DNSPod（国密）-企业型(OV)SSL证书
+52：DNSPod（国密）-企业型(OV)通配符SSL证书
+53：DNSPod（国密）-企业型(OV)多域名SSL证书
+54：DNSPod（国密）-域名型(DV)SSL证书
+55：DNSPod（国密）-域名型(DV)通配符SSL证书
+56：DNSPod（国密）-域名型(DV)多域名SSL证书
+57：SecureSite 企业型专业版多域名(OV Pro)
+58：SecureSite 企业型多域名(OV)
+59：SecureSite 增强型专业版多域名(EV Pro)
+60：SecureSite 增强型多域名(EV)
+61：Geotrust 增强型多域名(EV)
+75：SecureSite 企业型(OV)
+76：SecureSite 企业型(OV)通配符
+77：SecureSite 增强型(EV)
+78：Geotrust 企业型(OV)
+79：Geotrust 企业型(OV)通配符
+80：Geotrust 增强型(EV)
+81：GlobalSign 企业型（OV）SSL证书
+82：GlobalSign 企业型通配符 （OV）SSL证书
+83：TrustAsia C1 DV Free
+85：GlobalSign 增强型 （EV）SSL证书
+88：GlobalSign 企业型通配符多域名 （OV）SSL证书
+89：GlobalSign 企业型多域名 （OV）SSL证书
+90：GlobalSign 增强型多域名（EV） SSL证书
+91：Geotrust 增强型多域名(EV)
+92：SecureSite 企业型专业版多域名(OV Pro)
+93：SecureSite 企业型多域名(OV)
+94：SecureSite 增强型专业版多域名(EV Pro)
+95：SecureSite 增强型多域名(EV)
+96：SecureSite 增强型专业版(EV Pro)
+97：SecureSite 企业型专业版(OV Pro)
+98：CFCA 企业型(OV)SSL证书
+99：CFCA 企业型多域名(OV)SSL证书
+100：CFCA 企业型通配符(OV)SSL证书
+101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductZhName() 获取颁发者。
+ * @method string getProductZhName() 获取证书产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductZhName(string $ProductZhName) 设置颁发者。
+ * @method void setProductZhName(string $ProductZhName) 设置证书产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDomain() 获取域名。
+ * @method string getDomain() 获取证书绑定通用名称域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置域名。
+ * @method void setDomain(string $Domain) 设置证书绑定通用名称域名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+ * @method integer getStatus() 获取证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+ * @method void setStatus(integer $Status) 设置证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatusMsg() 获取状态信息。
+ * @method string getStatusMsg() 获取状态信息。 取值范围：
+//通用状态信息
+1、PRE-REVIEWING：预审核中
+2、LEGAL-REVIEWING：法务审核中
+3、CA-REVIEWING：CA审核中
+4、PENDING-DCV：域名验证中
+5、WAIT-ISSUE：等待签发（域名验证已通过）
+//证书审核失败状态信息
+1、订单审核失败
+2、CA审核失败，域名未通过安全审查
+3、域名验证超时，订单自动关闭，请您重新进行证书申请
+4、证书资料未通过证书CA机构审核，审核人员会致电您证书预留的联系方式，请您留意来电。后续可通过“修改资料”重新提交资料
+待持续完善
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusMsg(string $StatusMsg) 设置状态信息。
+ * @method void setStatusMsg(string $StatusMsg) 设置状态信息。 取值范围：
+//通用状态信息
+1、PRE-REVIEWING：预审核中
+2、LEGAL-REVIEWING：法务审核中
+3、CA-REVIEWING：CA审核中
+4、PENDING-DCV：域名验证中
+5、WAIT-ISSUE：等待签发（域名验证已通过）
+//证书审核失败状态信息
+1、订单审核失败
+2、CA审核失败，域名未通过安全审查
+3、域名验证超时，订单自动关闭，请您重新进行证书申请
+4、证书资料未通过证书CA机构审核，审核人员会致电您证书预留的联系方式，请您留意来电。后续可通过“修改资料”重新提交资料
+待持续完善
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVerifyType() 获取验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,29 +280,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置证书有效期：单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInsertTime() 获取申请时间。
+ * @method string getInsertTime() 获取证书申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInsertTime(string $InsertTime) 设置申请时间。
+ * @method void setInsertTime(string $InsertTime) 设置证书申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrderId() 获取订单 ID。
+ * @method string getOrderId() 获取CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrderId(string $OrderId) 设置订单 ID。
+ * @method void setOrderId(string $OrderId) 设置CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CertificateExtra getCertificateExtra() 获取证书扩展信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateExtra(CertificateExtra $CertificateExtra) 设置证书扩展信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertificatePrivateKey() 获取证书私钥
+ * @method string getCertificatePrivateKey() 获取私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置证书私钥
+ * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertificatePublicKey() 获取证书公钥（即证书内容）
+ * @method string getCertificatePublicKey() 获取公钥证书， 国密则为签名证书中的公钥证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置证书公钥（即证书内容）
+ * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置公钥证书， 国密则为签名证书中的公钥证书
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DvAuthDetail getDvAuthDetail() 获取DV 认证信息。
+ * @method DvAuthDetail getDvAuthDetail() 获取证书域名验证信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthDetail(DvAuthDetail $DvAuthDetail) 设置DV 认证信息。
+ * @method void setDvAuthDetail(DvAuthDetail $DvAuthDetail) 设置证书域名验证信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulnerabilityReport() 获取漏洞扫描评估报告。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,9 +340,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVulnerability(boolean $IsVulnerability) 设置是否启用了漏洞扫描功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SubmittedData getSubmittedData() 获取提交的资料信息。
+ * @method SubmittedData getSubmittedData() 获取付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubmittedData(SubmittedData $SubmittedData) 设置提交的资料信息。
+ * @method void setSubmittedData(SubmittedData $SubmittedData) 设置付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRenewAble() 获取是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,13 +360,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootCert(RootCertificates $RootCert) 设置根证书。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEncryptCert() 获取国密加密证书
+ * @method string getEncryptCert() 获取国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryptCert(string $EncryptCert) 设置国密加密证书
+ * @method void setEncryptCert(string $EncryptCert) 设置国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEncryptPrivateKey() 获取国密加密私钥
+ * @method string getEncryptPrivateKey() 获取国密加密私钥证书， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryptPrivateKey(string $EncryptPrivateKey) 设置国密加密私钥
+ * @method void setEncryptPrivateKey(string $EncryptPrivateKey) 设置国密加密私钥证书， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertFingerprint() 获取签名证书 SHA1指纹
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,9 +376,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptCertFingerprint(string $EncryptCertFingerprint) 设置加密证书 SHA1指纹 （国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEncryptAlgorithm() 获取证书算法
+ * @method string getEncryptAlgorithm() 获取证书加密算法（国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书算法
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书加密算法（国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDvRevokeAuthDetail() 获取DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,7 +394,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertificateDetailResponse extends AbstractModel
 {
     /**
-     * @var string 用户 UIN。
+     * @var string 证书所属用户主账号 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
@@ -206,7 +406,11 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 证书来源：trustasia = 亚洲诚信，upload = 用户上传。
+     * @var string 证书来源：
+trustasia：亚洲诚信，
+upload：用户上传。
+wosign：沃通
+sheca：上海CA
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $From;
@@ -218,19 +422,103 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $CertificateType;
 
     /**
-     * @var string 证书套餐类型：null = 用户上传证书（没有套餐类型），1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = SecureSite 增强型企业版（EV Pro）， 4 = SecureSite 增强型（EV）， 5 = SecureSite 企业型专业版（OV Pro）， 6 = SecureSite 企业型（OV）， 7 = SecureSite 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书，25 = Wotrus 域名型证书，26 = Wotrus 域名型多域名证书，27 = Wotrus 域名型通配符证书，28 = Wotrus 企业型证书，29 = Wotrus 企业型多域名证书，30 = Wotrus 企业型通配符证书，31 = Wotrus 增强型证书，32 = Wotrus 增强型多域名证书，33 = DNSPod 国密域名型证书，34 = DNSPod 国密域名型多域名证书，35 = DNSPod 国密域名型通配符证书，37 = DNSPod 国密企业型证书，38 = DNSPod 国密企业型多域名证书，39 = DNSPod 国密企业型通配符证书，40 = DNSPod 国密增强型证书，41 = DNSPod 国密增强型多域名证书，42 = TrustAsia 域名型通配符多域名证书。
+     * @var string 证书套餐类型：
+null：用户上传证书（没有套餐类型），
+2：TrustAsia TLS RSA CA， 
+3：SecureSite 增强型企业版（EV Pro）， 
+4：SecureSite 增强型（EV）， 
+5：SecureSite 企业型专业版（OV Pro），
+6：SecureSite 企业型（OV）， 
+7：SecureSite 企业型（OV）通配符， 
+8：Geotrust 增强型（EV）， 
+9：Geotrust 企业型（OV）， 
+10：Geotrust 企业型（OV）通配符， 
+11：TrustAsia 域名型多域名 SSL 证书， 
+12：TrustAsia 域名型（DV）通配符， 
+13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
+14：TrustAsia 企业型（OV）SSL 证书（D3）， 
+15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
+16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
+17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
+18：GlobalSign 企业型（OV）SSL 证书， 
+19：GlobalSign 企业型通配符 （OV）SSL 证书， 
+20：GlobalSign 增强型 （EV）SSL 证书， 
+21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
+22：GlobalSign 企业型多域名（OV）SSL 证书， 
+23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
+24：GlobalSign 增强型多域名（EV）SSL 证书，
+25：Wotrus 域名型证书，
+26：Wotrus 域名型多域名证书，
+27：Wotrus 域名型通配符证书，
+28：Wotrus 企业型证书，
+29：Wotrus 企业型多域名证书，
+30：Wotrus 企业型通配符证书，
+31：Wotrus 增强型证书，
+32：Wotrus 增强型多域名证书，
+33：WoTrus-国密域名型证书，
+34：WoTrus-国密域名型证书（多域名），
+35：WoTrus-国密域名型证书（通配符），
+37：WoTrus-国密企业型证书，
+38：WoTrus-国密企业型证书（多域名），
+39：WoTrus-国密企业型证书（通配符），
+40：WoTrus-国密增强型证书，
+41：WoTrus-国密增强型证书（多域名），
+42：TrustAsia-域名型证书（通配符多域名），
+43：DNSPod-企业型(OV)SSL证书
+44：DNSPod-企业型(OV)通配符SSL证书
+45：DNSPod-企业型(OV)多域名SSL证书
+46：DNSPod-增强型(EV)SSL证书
+47：DNSPod-增强型(EV)多域名SSL证书
+48：DNSPod-域名型(DV)SSL证书
+49：DNSPod-域名型(DV)通配符SSL证书
+50：DNSPod-域名型(DV)多域名SSL证书
+51：DNSPod（国密）-企业型(OV)SSL证书
+52：DNSPod（国密）-企业型(OV)通配符SSL证书
+53：DNSPod（国密）-企业型(OV)多域名SSL证书
+54：DNSPod（国密）-域名型(DV)SSL证书
+55：DNSPod（国密）-域名型(DV)通配符SSL证书
+56：DNSPod（国密）-域名型(DV)多域名SSL证书
+57：SecureSite 企业型专业版多域名(OV Pro)
+58：SecureSite 企业型多域名(OV)
+59：SecureSite 增强型专业版多域名(EV Pro)
+60：SecureSite 增强型多域名(EV)
+61：Geotrust 增强型多域名(EV)
+75：SecureSite 企业型(OV)
+76：SecureSite 企业型(OV)通配符
+77：SecureSite 增强型(EV)
+78：Geotrust 企业型(OV)
+79：Geotrust 企业型(OV)通配符
+80：Geotrust 增强型(EV)
+81：GlobalSign 企业型（OV）SSL证书
+82：GlobalSign 企业型通配符 （OV）SSL证书
+83：TrustAsia C1 DV Free
+85：GlobalSign 增强型 （EV）SSL证书
+88：GlobalSign 企业型通配符多域名 （OV）SSL证书
+89：GlobalSign 企业型多域名 （OV）SSL证书
+90：GlobalSign 增强型多域名（EV） SSL证书
+91：Geotrust 增强型多域名(EV)
+92：SecureSite 企业型专业版多域名(OV Pro)
+93：SecureSite 企业型多域名(OV)
+94：SecureSite 增强型专业版多域名(EV Pro)
+95：SecureSite 增强型多域名(EV)
+96：SecureSite 增强型专业版(EV Pro)
+97：SecureSite 企业型专业版(OV Pro)
+98：CFCA 企业型(OV)SSL证书
+99：CFCA 企业型多域名(OV)SSL证书
+100：CFCA 企业型通配符(OV)SSL证书
+101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
     /**
-     * @var string 颁发者。
+     * @var string 证书产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductZhName;
 
     /**
-     * @var string 域名。
+     * @var string 证书绑定通用名称域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
@@ -242,13 +530,25 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $Alias;
 
     /**
-     * @var integer 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+     * @var integer 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 状态信息。
+     * @var string 状态信息。 取值范围：
+//通用状态信息
+1、PRE-REVIEWING：预审核中
+2、LEGAL-REVIEWING：法务审核中
+3、CA-REVIEWING：CA审核中
+4、PENDING-DCV：域名验证中
+5、WAIT-ISSUE：等待签发（域名验证已通过）
+//证书审核失败状态信息
+1、订单审核失败
+2、CA审核失败，域名未通过安全审查
+3、域名验证超时，订单自动关闭，请您重新进行证书申请
+4、证书资料未通过证书CA机构审核，审核人员会致电您证书预留的联系方式，请您留意来电。后续可通过“修改资料”重新提交资料
+待持续完善
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusMsg;
@@ -284,13 +584,13 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $ValidityPeriod;
 
     /**
-     * @var string 申请时间。
+     * @var string 证书申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
 
     /**
-     * @var string 订单 ID。
+     * @var string CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderId;
@@ -302,19 +602,19 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $CertificateExtra;
 
     /**
-     * @var string 证书私钥
+     * @var string 私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificatePrivateKey;
 
     /**
-     * @var string 证书公钥（即证书内容）
+     * @var string 公钥证书， 国密则为签名证书中的公钥证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificatePublicKey;
 
     /**
-     * @var DvAuthDetail DV 认证信息。
+     * @var DvAuthDetail 证书域名验证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthDetail;
@@ -374,7 +674,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $IsVulnerability;
 
     /**
-     * @var SubmittedData 提交的资料信息。
+     * @var SubmittedData 付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubmittedData;
@@ -404,13 +704,13 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $RootCert;
 
     /**
-     * @var string 国密加密证书
+     * @var string 国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptCert;
 
     /**
-     * @var string 国密加密私钥
+     * @var string 国密加密私钥证书， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptPrivateKey;
@@ -428,7 +728,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $EncryptCertFingerprint;
 
     /**
-     * @var string 证书算法
+     * @var string 证书加密算法（国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptAlgorithm;
@@ -451,25 +751,125 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OwnerUin 用户 UIN。
+     * @param string $OwnerUin 证书所属用户主账号 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $From 证书来源：trustasia = 亚洲诚信，upload = 用户上传。
+     * @param string $From 证书来源：
+trustasia：亚洲诚信，
+upload：用户上传。
+wosign：沃通
+sheca：上海CA
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 证书套餐类型：null = 用户上传证书（没有套餐类型），1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = SecureSite 增强型企业版（EV Pro）， 4 = SecureSite 增强型（EV）， 5 = SecureSite 企业型专业版（OV Pro）， 6 = SecureSite 企业型（OV）， 7 = SecureSite 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书，25 = Wotrus 域名型证书，26 = Wotrus 域名型多域名证书，27 = Wotrus 域名型通配符证书，28 = Wotrus 企业型证书，29 = Wotrus 企业型多域名证书，30 = Wotrus 企业型通配符证书，31 = Wotrus 增强型证书，32 = Wotrus 增强型多域名证书，33 = DNSPod 国密域名型证书，34 = DNSPod 国密域名型多域名证书，35 = DNSPod 国密域名型通配符证书，37 = DNSPod 国密企业型证书，38 = DNSPod 国密企业型多域名证书，39 = DNSPod 国密企业型通配符证书，40 = DNSPod 国密增强型证书，41 = DNSPod 国密增强型多域名证书，42 = TrustAsia 域名型通配符多域名证书。
+     * @param string $PackageType 证书套餐类型：
+null：用户上传证书（没有套餐类型），
+2：TrustAsia TLS RSA CA， 
+3：SecureSite 增强型企业版（EV Pro）， 
+4：SecureSite 增强型（EV）， 
+5：SecureSite 企业型专业版（OV Pro），
+6：SecureSite 企业型（OV）， 
+7：SecureSite 企业型（OV）通配符， 
+8：Geotrust 增强型（EV）， 
+9：Geotrust 企业型（OV）， 
+10：Geotrust 企业型（OV）通配符， 
+11：TrustAsia 域名型多域名 SSL 证书， 
+12：TrustAsia 域名型（DV）通配符， 
+13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
+14：TrustAsia 企业型（OV）SSL 证书（D3）， 
+15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
+16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
+17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
+18：GlobalSign 企业型（OV）SSL 证书， 
+19：GlobalSign 企业型通配符 （OV）SSL 证书， 
+20：GlobalSign 增强型 （EV）SSL 证书， 
+21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
+22：GlobalSign 企业型多域名（OV）SSL 证书， 
+23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
+24：GlobalSign 增强型多域名（EV）SSL 证书，
+25：Wotrus 域名型证书，
+26：Wotrus 域名型多域名证书，
+27：Wotrus 域名型通配符证书，
+28：Wotrus 企业型证书，
+29：Wotrus 企业型多域名证书，
+30：Wotrus 企业型通配符证书，
+31：Wotrus 增强型证书，
+32：Wotrus 增强型多域名证书，
+33：WoTrus-国密域名型证书，
+34：WoTrus-国密域名型证书（多域名），
+35：WoTrus-国密域名型证书（通配符），
+37：WoTrus-国密企业型证书，
+38：WoTrus-国密企业型证书（多域名），
+39：WoTrus-国密企业型证书（通配符），
+40：WoTrus-国密增强型证书，
+41：WoTrus-国密增强型证书（多域名），
+42：TrustAsia-域名型证书（通配符多域名），
+43：DNSPod-企业型(OV)SSL证书
+44：DNSPod-企业型(OV)通配符SSL证书
+45：DNSPod-企业型(OV)多域名SSL证书
+46：DNSPod-增强型(EV)SSL证书
+47：DNSPod-增强型(EV)多域名SSL证书
+48：DNSPod-域名型(DV)SSL证书
+49：DNSPod-域名型(DV)通配符SSL证书
+50：DNSPod-域名型(DV)多域名SSL证书
+51：DNSPod（国密）-企业型(OV)SSL证书
+52：DNSPod（国密）-企业型(OV)通配符SSL证书
+53：DNSPod（国密）-企业型(OV)多域名SSL证书
+54：DNSPod（国密）-域名型(DV)SSL证书
+55：DNSPod（国密）-域名型(DV)通配符SSL证书
+56：DNSPod（国密）-域名型(DV)多域名SSL证书
+57：SecureSite 企业型专业版多域名(OV Pro)
+58：SecureSite 企业型多域名(OV)
+59：SecureSite 增强型专业版多域名(EV Pro)
+60：SecureSite 增强型多域名(EV)
+61：Geotrust 增强型多域名(EV)
+75：SecureSite 企业型(OV)
+76：SecureSite 企业型(OV)通配符
+77：SecureSite 增强型(EV)
+78：Geotrust 企业型(OV)
+79：Geotrust 企业型(OV)通配符
+80：Geotrust 增强型(EV)
+81：GlobalSign 企业型（OV）SSL证书
+82：GlobalSign 企业型通配符 （OV）SSL证书
+83：TrustAsia C1 DV Free
+85：GlobalSign 增强型 （EV）SSL证书
+88：GlobalSign 企业型通配符多域名 （OV）SSL证书
+89：GlobalSign 企业型多域名 （OV）SSL证书
+90：GlobalSign 增强型多域名（EV） SSL证书
+91：Geotrust 增强型多域名(EV)
+92：SecureSite 企业型专业版多域名(OV Pro)
+93：SecureSite 企业型多域名(OV)
+94：SecureSite 增强型专业版多域名(EV Pro)
+95：SecureSite 增强型多域名(EV)
+96：SecureSite 增强型专业版(EV Pro)
+97：SecureSite 企业型专业版(OV Pro)
+98：CFCA 企业型(OV)SSL证书
+99：CFCA 企业型多域名(OV)SSL证书
+100：CFCA 企业型通配符(OV)SSL证书
+101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductZhName 颁发者。
+     * @param string $ProductZhName 证书产品名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Domain 域名。
+     * @param string $Domain 证书绑定通用名称域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+     * @param integer $Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StatusMsg 状态信息。
+     * @param string $StatusMsg 状态信息。 取值范围：
+//通用状态信息
+1、PRE-REVIEWING：预审核中
+2、LEGAL-REVIEWING：法务审核中
+3、CA-REVIEWING：CA审核中
+4、PENDING-DCV：域名验证中
+5、WAIT-ISSUE：等待签发（域名验证已通过）
+//证书审核失败状态信息
+1、订单审核失败
+2、CA审核失败，域名未通过安全审查
+3、域名验证超时，订单自动关闭，请您重新进行证书申请
+4、证书资料未通过证书CA机构审核，审核人员会致电您证书预留的联系方式，请您留意来电。后续可通过“修改资料”重新提交资料
+待持续完善
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -481,17 +881,17 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityPeriod 证书有效期：单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InsertTime 申请时间。
+     * @param string $InsertTime 证书申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrderId 订单 ID。
+     * @param string $OrderId CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateExtra $CertificateExtra 证书扩展信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertificatePrivateKey 证书私钥
+     * @param string $CertificatePrivateKey 私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertificatePublicKey 证书公钥（即证书内容）
+     * @param string $CertificatePublicKey 公钥证书， 国密则为签名证书中的公钥证书
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthDetail $DvAuthDetail DV 认证信息。
+     * @param DvAuthDetail $DvAuthDetail 证书域名验证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityReport 漏洞扫描评估报告。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -511,7 +911,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVulnerability 是否启用了漏洞扫描功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubmittedData $SubmittedData 提交的资料信息。
+     * @param SubmittedData $SubmittedData 付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -521,15 +921,15 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RootCertificates $RootCert 根证书。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EncryptCert 国密加密证书
+     * @param string $EncryptCert 国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EncryptPrivateKey 国密加密私钥
+     * @param string $EncryptPrivateKey 国密加密私钥证书， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertFingerprint 签名证书 SHA1指纹
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EncryptAlgorithm 证书算法
+     * @param string $EncryptAlgorithm 证书加密算法（国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DvRevokeAuthDetail DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。

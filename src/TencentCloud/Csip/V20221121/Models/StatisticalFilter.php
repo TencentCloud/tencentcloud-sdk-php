@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperatorType(integer $OperatorType) 设置0:不基于统计检测
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getValue() 获取统计值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(float $Value) 设置统计值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticalFilter extends AbstractModel
 {
@@ -42,13 +38,11 @@ class StatisticalFilter extends AbstractModel
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorType;
 
     /**
      * @var float 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -57,9 +51,7 @@ class StatisticalFilter extends AbstractModel
 1:发生次数高于固定值
 2:发生次数高于周期平均值的百分之
 3:发生次数高于用户平均值的百分之
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostDeployRecordDetail返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
+ * @method integer getTotalCount() 获取部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method void setTotalCount(integer $TotalCount) 设置部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeployRecordDetailList() 获取证书部署记录列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostDeployRecordDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -81,7 +81,7 @@ class DescribeHostDeployRecordDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
+     * @param integer $TotalCount 部署记录总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeployRecordDetailList 证书部署记录列表
 注意：此字段可能返回 null，表示取不到有效值。

@@ -48,6 +48,7 @@ class DescribeHostLighthouseInstanceListRequest extends AbstractModel
 
     /**
      * @var string 部署资源类型 lighthouse
+     * @deprecated
      */
     public $ResourceType;
 

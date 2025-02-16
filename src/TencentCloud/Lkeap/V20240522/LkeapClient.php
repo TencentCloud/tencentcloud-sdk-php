@@ -149,7 +149,8 @@ except TencentCloudSDKException as err:
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
  * @method Models\UploadDocResponse UploadDoc(Models\UploadDocRequest $req) 用于上传文档内容。上传的文档将存储在知识库中，可以通过SearchKnowledge知识库内容检索接口进行检索。 
 使用场景：适用于需要长期存储和检索的文档内容，如产品手册、用户指南等。
- * @method Models\UploadDocRealtimeResponse UploadDocRealtime(Models\UploadDocRealtimeRequest $req) 用于上传实时文档内容。实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
+ * @method Models\UploadDocRealtimeResponse UploadDocRealtime(Models\UploadDocRealtimeRequest $req) 用于上传实时文档内容。
+实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
  */
 
 class LkeapClient extends AbstractClient

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCompanyId() 获取公司ID,可以从DescribeCompanies接口获取
  * @method void setCompanyId(integer $CompanyId) 设置公司ID,可以从DescribeCompanies接口获取
- * @method integer getOffset() 获取分页偏移量
- * @method void setOffset(integer $Offset) 设置分页偏移量
- * @method integer getLimit() 获取分页每页数量
- * @method void setLimit(integer $Limit) 设置分页每页数量
+ * @method integer getOffset() 获取分页偏移量，如果不传默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移量，如果不传默认值为0
+ * @method integer getLimit() 获取分页每页数量，如果不传默认值为10，最大值为1000
+ * @method void setLimit(integer $Limit) 设置分页每页数量，如果不传默认值为10，最大值为1000
  * @method string getManagerName() 获取管理人姓名（将废弃），请使用SearchKey
  * @method void setManagerName(string $ManagerName) 设置管理人姓名（将废弃），请使用SearchKey
  * @method string getManagerMail() 获取模糊查询管理人邮箱（将废弃），请使用SearchKey
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
- * @method string getSearchKey() 获取管理人姓/管理人名/邮箱/部门精准匹配
- * @method void setSearchKey(string $SearchKey) 设置管理人姓/管理人名/邮箱/部门精准匹配
+ * @method string getSearchKey() 获取根据这样的格式:管理人姓|管理人名|邮箱|部门 ,进行精准匹配
+ * @method void setSearchKey(string $SearchKey) 设置根据这样的格式:管理人姓|管理人名|邮箱|部门 ,进行精准匹配
  */
 class DescribeManagersRequest extends AbstractModel
 {
@@ -57,12 +57,12 @@ class DescribeManagersRequest extends AbstractModel
     public $CompanyId;
 
     /**
-     * @var integer 分页偏移量
+     * @var integer 分页偏移量，如果不传默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 分页每页数量
+     * @var integer 分页每页数量，如果不传默认值为10，最大值为1000
      */
     public $Limit;
 
@@ -89,14 +89,14 @@ class DescribeManagersRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 管理人姓/管理人名/邮箱/部门精准匹配
+     * @var string 根据这样的格式:管理人姓|管理人名|邮箱|部门 ,进行精准匹配
      */
     public $SearchKey;
 
     /**
      * @param integer $CompanyId 公司ID,可以从DescribeCompanies接口获取
-     * @param integer $Offset 分页偏移量
-     * @param integer $Limit 分页每页数量
+     * @param integer $Offset 分页偏移量，如果不传默认值为0
+     * @param integer $Limit 分页每页数量，如果不传默认值为10，最大值为1000
      * @param string $ManagerName 管理人姓名（将废弃），请使用SearchKey
      * @param string $ManagerMail 模糊查询管理人邮箱（将废弃），请使用SearchKey
      * @param string $Status 根据管理人状态进行筛选，取值有
@@ -107,7 +107,7 @@ class DescribeManagersRequest extends AbstractModel
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
-     * @param string $SearchKey 管理人姓/管理人名/邮箱/部门精准匹配
+     * @param string $SearchKey 根据这样的格式:管理人姓|管理人名|邮箱|部门 ,进行精准匹配
      */
     function __construct()
     {

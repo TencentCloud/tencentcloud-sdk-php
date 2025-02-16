@@ -21,87 +21,59 @@ use TencentCloud\Common\AbstractModel;
  * 用户行为分析策略
  *
  * @method string getRuleID() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleID(string $RuleID) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleType() 获取策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleType(integer $RuleType) 设置策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleLevel() 获取策略等级
 0:提示
 1:低危
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleLevel(integer $RuleLevel) 设置策略等级
 0:提示
 1:低危
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleContent() 获取策略内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleContent(string $RuleContent) 设置策略内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRuleStatus() 获取策略开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleStatus(boolean $RuleStatus) 设置策略开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHitCount() 获取命中次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHitCount(integer $HitCount) 设置命中次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppID() 获取所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppID(string $AppID) 设置所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemberID() 获取多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberID(string $MemberID) 设置多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickname() 获取昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickname(string $Nickname) 设置昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method UebaCustomRule getCustomRuleDetail() 获取自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRuleDetail(UebaCustomRule $CustomRuleDetail) 设置自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCloudType() 获取云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(integer $CloudType) 设置云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UebaRule extends AbstractModel
 {
     /**
      * @var string 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleID;
 
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
@@ -109,7 +81,6 @@ class UebaRule extends AbstractModel
      * @var integer 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
@@ -120,55 +91,46 @@ class UebaRule extends AbstractModel
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleLevel;
 
     /**
      * @var string 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleContent;
 
     /**
      * @var boolean 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleStatus;
 
     /**
      * @var integer 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitCount;
 
     /**
      * @var string 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
 
     /**
      * @var string 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberID;
 
     /**
      * @var string Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
      * @var UebaCustomRule 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomRuleDetail;
 
@@ -176,46 +138,32 @@ class UebaRule extends AbstractModel
      * @var integer 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
      * @param string $RuleID 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleType 策略类型
 0:系统策略
 1:自定义策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleLevel 策略等级
 0:提示
 1:低危
 2:中危
 3:高危
 4:严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleContent 策略内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RuleStatus 策略开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HitCount 命中次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppID 所属账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemberID 多账号，成员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nickname 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UebaCustomRule $CustomRuleDetail 自定义规则具体内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CloudType 云类型
 腾讯云：0
 aws：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

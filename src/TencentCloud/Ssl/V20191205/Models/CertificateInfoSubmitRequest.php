@@ -20,237 +20,312 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CertificateInfoSubmit请求参数结构体
  *
- * @method string getCertId() 获取证书 ID。
- * @method void setCertId(string $CertId) 设置证书 ID。
- * @method string getGenCsrType() 获取CSR 生成方式：online = 在线生成, upload = 手动上传。
- * @method void setGenCsrType(string $GenCsrType) 设置CSR 生成方式：online = 在线生成, upload = 手动上传。
- * @method string getCertCommonName() 获取绑定证书的主域名。
- * @method void setCertCommonName(string $CertCommonName) 设置绑定证书的主域名。
- * @method integer getCompanyType() 获取组织信息类型：1，个人； 2， 公司； 
- * @method void setCompanyType(integer $CompanyType) 设置组织信息类型：1，个人； 2， 公司； 
- * @method string getOrgIdType() 获取公司证件类型（）
- * @method void setOrgIdType(string $OrgIdType) 设置公司证件类型（）
- * @method string getOrgIdNumber() 获取公司证件号码
- * @method void setOrgIdNumber(string $OrgIdNumber) 设置公司证件号码
- * @method string getAdminIdType() 获取管理人证件类型
- * @method void setAdminIdType(string $AdminIdType) 设置管理人证件类型
- * @method string getAdminIdNumber() 获取管理人证件号码
- * @method void setAdminIdNumber(string $AdminIdNumber) 设置管理人证件号码
- * @method string getTechIdType() 获取联系人证件类型
- * @method void setTechIdType(string $TechIdType) 设置联系人证件类型
- * @method string getTechIdNumber() 获取联系人证件号码
- * @method void setTechIdNumber(string $TechIdNumber) 设置联系人证件号码
- * @method string getCompanyId() 获取公司ID
- * @method void setCompanyId(string $CompanyId) 设置公司ID
- * @method string getCsr() 获取上传的 CSR 内容。如果GenCsrType为upload则该字段必传
- * @method void setCsr(string $Csr) 设置上传的 CSR 内容。如果GenCsrType为upload则该字段必传
- * @method array getDnsNames() 获取域名数组（多域名证书可以上传）。
- * @method void setDnsNames(array $DnsNames) 设置域名数组（多域名证书可以上传）。
- * @method string getKeyPass() 获取私钥密码（非必填）。
- * @method void setKeyPass(string $KeyPass) 设置私钥密码（非必填）。
- * @method string getOrgOrganization() 获取公司名称。
- * @method void setOrgOrganization(string $OrgOrganization) 设置公司名称。
- * @method string getOrgDivision() 获取部门名称。
- * @method void setOrgDivision(string $OrgDivision) 设置部门名称。
- * @method string getOrgAddress() 获取公司详细地址。
- * @method void setOrgAddress(string $OrgAddress) 设置公司详细地址。
- * @method string getOrgCountry() 获取国家名称，如中国：CN 。
- * @method void setOrgCountry(string $OrgCountry) 设置国家名称，如中国：CN 。
- * @method string getOrgCity() 获取公司所在城市。
- * @method void setOrgCity(string $OrgCity) 设置公司所在城市。
- * @method string getOrgRegion() 获取公司所在省份。
- * @method void setOrgRegion(string $OrgRegion) 设置公司所在省份。
- * @method string getOrgPhoneArea() 获取公司座机区号。
- * @method void setOrgPhoneArea(string $OrgPhoneArea) 设置公司座机区号。
- * @method string getOrgPhoneNumber() 获取公司座机号码。
- * @method void setOrgPhoneNumber(string $OrgPhoneNumber) 设置公司座机号码。
- * @method string getVerifyType() 获取证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
- * @method void setVerifyType(string $VerifyType) 设置证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
- * @method string getAdminFirstName() 获取管理人名。
- * @method void setAdminFirstName(string $AdminFirstName) 设置管理人名。
- * @method string getAdminLastName() 获取管理人姓。
- * @method void setAdminLastName(string $AdminLastName) 设置管理人姓。
- * @method string getAdminPhone() 获取管理人手机号码。
- * @method void setAdminPhone(string $AdminPhone) 设置管理人手机号码。
- * @method string getAdminEmail() 获取管理人邮箱地址。
- * @method void setAdminEmail(string $AdminEmail) 设置管理人邮箱地址。
- * @method string getAdminTitle() 获取管理人职位。
- * @method void setAdminTitle(string $AdminTitle) 设置管理人职位。
- * @method string getTechFirstName() 获取联系人名。
- * @method void setTechFirstName(string $TechFirstName) 设置联系人名。
- * @method string getTechLastName() 获取联系人姓。
- * @method void setTechLastName(string $TechLastName) 设置联系人姓。
- * @method string getContactEmail() 获取联系人邮箱地址。
- * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址。
+ * @method string getCertId() 获取待提交资料的付费证书 ID。	
+ * @method void setCertId(string $CertId) 设置待提交资料的付费证书 ID。	
+ * @method string getGenCsrType() 获取此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
+ * @method void setGenCsrType(string $GenCsrType) 设置此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
+ * @method string getCertCommonName() 获取证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
+ * @method void setCertCommonName(string $CertCommonName) 设置证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
+ * @method integer getCompanyType() 获取组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
+ * @method void setCompanyType(integer $CompanyType) 设置组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
+ * @method string getCompanyId() 获取公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
+
+
+ * @method void setCompanyId(string $CompanyId) 设置公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
+
+
+ * @method string getOrgIdType() 获取公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+ * @method void setOrgIdType(string $OrgIdType) 设置公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+ * @method string getOrgIdNumber() 获取公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+ * @method void setOrgIdNumber(string $OrgIdNumber) 设置公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+ * @method string getAdminIdType() 获取管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+ * @method void setAdminIdType(string $AdminIdType) 设置管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+ * @method string getAdminIdNumber() 获取管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+ * @method void setAdminIdNumber(string $AdminIdNumber) 设置管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+ * @method string getTechIdType() 获取联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+ * @method void setTechIdType(string $TechIdType) 设置联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+ * @method string getTechIdNumber() 获取联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+ * @method void setTechIdNumber(string $TechIdNumber) 设置联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+ * @method string getCsr() 获取上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
+ * @method void setCsr(string $Csr) 设置上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
+ * @method array getDnsNames() 获取证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
+ * @method void setDnsNames(array $DnsNames) 设置证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
+ * @method string getKeyPass() 获取私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
+ * @method void setKeyPass(string $KeyPass) 设置私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
+ * @method string getOrgOrganization() 获取公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgOrganization(string $OrgOrganization) 设置公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgDivision() 获取部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgDivision(string $OrgDivision) 设置部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgAddress() 获取公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgAddress(string $OrgAddress) 设置公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgCountry() 获取国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgCountry(string $OrgCountry) 设置国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgCity() 获取公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgCity(string $OrgCity) 设置公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgRegion() 获取公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgRegion(string $OrgRegion) 设置公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getOrgPhoneArea() 获取公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
+ * @method void setOrgPhoneArea(string $OrgPhoneArea) 设置公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
+ * @method string getOrgPhoneNumber() 获取公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method void setOrgPhoneNumber(string $OrgPhoneNumber) 设置公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
+ * @method string getVerifyType() 获取证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
+ * @method void setVerifyType(string $VerifyType) 设置证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
+ * @method string getAdminFirstName() 获取管理人名。若没有传ManagerId， 则此字段必传
+ * @method void setAdminFirstName(string $AdminFirstName) 设置管理人名。若没有传ManagerId， 则此字段必传
+ * @method string getAdminLastName() 获取管理人姓。若没有传ManagerId， 则此字段必传
+ * @method void setAdminLastName(string $AdminLastName) 设置管理人姓。若没有传ManagerId， 则此字段必传
+ * @method string getAdminPhone() 获取管理人手机号码。若没有传ManagerId， 则此字段必传
+ * @method void setAdminPhone(string $AdminPhone) 设置管理人手机号码。若没有传ManagerId， 则此字段必传
+ * @method string getAdminEmail() 获取管理人邮箱地址。若没有传ManagerId， 则此字段必传
+ * @method void setAdminEmail(string $AdminEmail) 设置管理人邮箱地址。若没有传ManagerId， 则此字段必传
+ * @method string getAdminTitle() 获取管理人职位。若没有传ManagerId， 则此字段必传
+ * @method void setAdminTitle(string $AdminTitle) 设置管理人职位。若没有传ManagerId， 则此字段必传
+ * @method string getTechFirstName() 获取联系人名。若没有传ManagerId， 则此字段必传
+ * @method void setTechFirstName(string $TechFirstName) 设置联系人名。若没有传ManagerId， 则此字段必传
+ * @method string getTechLastName() 获取联系人姓。若没有传ManagerId， 则此字段必传
+ * @method void setTechLastName(string $TechLastName) 设置联系人姓。若没有传ManagerId， 则此字段必传
+ * @method string getContactEmail() 获取联系人邮箱地址。CompanyType为1时， 此字段必传
+ * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址。CompanyType为1时， 此字段必传
  * @method integer getAutoRenewFlag() 获取是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
- * @method string getCsrKeyParameter() 获取证书加密参数
- * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置证书加密参数
- * @method string getCsrEncryptAlgo() 获取证书加密方式
- * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置证书加密方式
- * @method string getManagerId() 获取管理人ID
- * @method void setManagerId(string $ManagerId) 设置管理人ID
- * @method string getTechPhone() 获取联系人电话
- * @method void setTechPhone(string $TechPhone) 设置联系人电话
+ * @method string getCsrKeyParameter() 获取密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
+ * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
+ * @method string getCsrEncryptAlgo() 获取加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
+ * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
+ * @method string getManagerId() 获取管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
+ * @method void setManagerId(string $ManagerId) 设置管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
+ * @method string getTechPhone() 获取联系人电话。若没有传ManagerId， 则此字段必传
+ * @method void setTechPhone(string $TechPhone) 设置联系人电话。若没有传ManagerId， 则此字段必传
  * @method string getTechEmail() 获取联系人邮箱
  * @method void setTechEmail(string $TechEmail) 设置联系人邮箱
- * @method string getTechTitle() 获取联系人职位
- * @method void setTechTitle(string $TechTitle) 设置联系人职位
+ * @method string getTechTitle() 获取联系人职位。若没有传ManagerId， 则此字段必传
+ * @method void setTechTitle(string $TechTitle) 设置联系人职位。若没有传ManagerId， 则此字段必传
  */
 class CertificateInfoSubmitRequest extends AbstractModel
 {
     /**
-     * @var string 证书 ID。
+     * @var string 待提交资料的付费证书 ID。	
      */
     public $CertId;
 
     /**
-     * @var string CSR 生成方式：online = 在线生成, upload = 手动上传。
+     * @var string 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
      */
     public $GenCsrType;
 
     /**
-     * @var string 绑定证书的主域名。
+     * @var string 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
      */
     public $CertCommonName;
 
     /**
-     * @var integer 组织信息类型：1，个人； 2， 公司； 
+     * @var integer 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
      */
     public $CompanyType;
 
     /**
-     * @var string 公司证件类型（）
-     */
-    public $OrgIdType;
+     * @var string 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
 
-    /**
-     * @var string 公司证件号码
-     */
-    public $OrgIdNumber;
 
-    /**
-     * @var string 管理人证件类型
-     */
-    public $AdminIdType;
-
-    /**
-     * @var string 管理人证件号码
-     */
-    public $AdminIdNumber;
-
-    /**
-     * @var string 联系人证件类型
-     */
-    public $TechIdType;
-
-    /**
-     * @var string 联系人证件号码
-     */
-    public $TechIdNumber;
-
-    /**
-     * @var string 公司ID
      */
     public $CompanyId;
 
     /**
-     * @var string 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
+     * @var string 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+     */
+    public $OrgIdType;
+
+    /**
+     * @var string 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+     */
+    public $OrgIdNumber;
+
+    /**
+     * @var string 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public $AdminIdType;
+
+    /**
+     * @var string 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public $AdminIdNumber;
+
+    /**
+     * @var string 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     */
+    public $TechIdType;
+
+    /**
+     * @var string 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     */
+    public $TechIdNumber;
+
+    /**
+     * @var string 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
      */
     public $Csr;
 
     /**
-     * @var array 域名数组（多域名证书可以上传）。
+     * @var array 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
      */
     public $DnsNames;
 
     /**
-     * @var string 私钥密码（非必填）。
+     * @var string 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
      */
     public $KeyPass;
 
     /**
-     * @var string 公司名称。
+     * @var string 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgOrganization;
 
     /**
-     * @var string 部门名称。
+     * @var string 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgDivision;
 
     /**
-     * @var string 公司详细地址。
+     * @var string 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgAddress;
 
     /**
-     * @var string 国家名称，如中国：CN 。
+     * @var string 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgCountry;
 
     /**
-     * @var string 公司所在城市。
+     * @var string 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgCity;
 
     /**
-     * @var string 公司所在省份。
+     * @var string 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgRegion;
 
     /**
-     * @var string 公司座机区号。
+     * @var string 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
      */
     public $OrgPhoneArea;
 
     /**
-     * @var string 公司座机号码。
+     * @var string 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
      */
     public $OrgPhoneNumber;
 
     /**
-     * @var string 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+     * @var string 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
      */
     public $VerifyType;
 
     /**
-     * @var string 管理人名。
+     * @var string 管理人名。若没有传ManagerId， 则此字段必传
      */
     public $AdminFirstName;
 
     /**
-     * @var string 管理人姓。
+     * @var string 管理人姓。若没有传ManagerId， 则此字段必传
      */
     public $AdminLastName;
 
     /**
-     * @var string 管理人手机号码。
+     * @var string 管理人手机号码。若没有传ManagerId， 则此字段必传
      */
     public $AdminPhone;
 
     /**
-     * @var string 管理人邮箱地址。
+     * @var string 管理人邮箱地址。若没有传ManagerId， 则此字段必传
      */
     public $AdminEmail;
 
     /**
-     * @var string 管理人职位。
+     * @var string 管理人职位。若没有传ManagerId， 则此字段必传
      */
     public $AdminTitle;
 
     /**
-     * @var string 联系人名。
+     * @var string 联系人名。若没有传ManagerId， 则此字段必传
      */
     public $TechFirstName;
 
     /**
-     * @var string 联系人姓。
+     * @var string 联系人姓。若没有传ManagerId， 则此字段必传
      */
     public $TechLastName;
 
     /**
-     * @var string 联系人邮箱地址。
+     * @var string 联系人邮箱地址。CompanyType为1时， 此字段必传
      */
     public $ContactEmail;
 
@@ -260,22 +335,25 @@ class CertificateInfoSubmitRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string 证书加密参数
+     * @var string 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
      */
     public $CsrKeyParameter;
 
     /**
-     * @var string 证书加密方式
+     * @var string 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
      */
     public $CsrEncryptAlgo;
 
     /**
-     * @var string 管理人ID
+     * @var string 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
      */
     public $ManagerId;
 
     /**
-     * @var string 联系人电话
+     * @var string 联系人电话。若没有传ManagerId， 则此字段必传
      */
     public $TechPhone;
 
@@ -285,49 +363,75 @@ class CertificateInfoSubmitRequest extends AbstractModel
     public $TechEmail;
 
     /**
-     * @var string 联系人职位
+     * @var string 联系人职位。若没有传ManagerId， 则此字段必传
      */
     public $TechTitle;
 
     /**
-     * @param string $CertId 证书 ID。
-     * @param string $GenCsrType CSR 生成方式：online = 在线生成, upload = 手动上传。
-     * @param string $CertCommonName 绑定证书的主域名。
-     * @param integer $CompanyType 组织信息类型：1，个人； 2， 公司； 
-     * @param string $OrgIdType 公司证件类型（）
-     * @param string $OrgIdNumber 公司证件号码
-     * @param string $AdminIdType 管理人证件类型
-     * @param string $AdminIdNumber 管理人证件号码
-     * @param string $TechIdType 联系人证件类型
-     * @param string $TechIdNumber 联系人证件号码
-     * @param string $CompanyId 公司ID
-     * @param string $Csr 上传的 CSR 内容。如果GenCsrType为upload则该字段必传
-     * @param array $DnsNames 域名数组（多域名证书可以上传）。
-     * @param string $KeyPass 私钥密码（非必填）。
-     * @param string $OrgOrganization 公司名称。
-     * @param string $OrgDivision 部门名称。
-     * @param string $OrgAddress 公司详细地址。
-     * @param string $OrgCountry 国家名称，如中国：CN 。
-     * @param string $OrgCity 公司所在城市。
-     * @param string $OrgRegion 公司所在省份。
-     * @param string $OrgPhoneArea 公司座机区号。
-     * @param string $OrgPhoneNumber 公司座机号码。
-     * @param string $VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
-     * @param string $AdminFirstName 管理人名。
-     * @param string $AdminLastName 管理人姓。
-     * @param string $AdminPhone 管理人手机号码。
-     * @param string $AdminEmail 管理人邮箱地址。
-     * @param string $AdminTitle 管理人职位。
-     * @param string $TechFirstName 联系人名。
-     * @param string $TechLastName 联系人姓。
-     * @param string $ContactEmail 联系人邮箱地址。
+     * @param string $CertId 待提交资料的付费证书 ID。	
+     * @param string $GenCsrType 此字段必传。 CSR 生成方式， 取值为：
+- online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
+- parse：自行生成CSR和私钥，并通过上传CSR申请证书
+     * @param string $CertCommonName 证书绑定的通用名称， 若是上传的CSR，则该域名需与CSR解析的通用名称一致
+     * @param integer $CompanyType 组织信息类型， 取值范围：
+1（个人）：仅DV类型证书可设置为1， 个人类型证书组织信息字段可不传：Org开头，Admin开头，Tech开头
+2（公司）：所有类型证书都可设置为2， 按需传组织信息字段
+     * @param string $CompanyId 公司ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的公司信息， 则本参数传0 ； 若存在满足当前订单的公司信息， 可以根据 [DescribeCompanies](https://cloud.tencent.com/document/product/400/90375) 查看公司ID； 若传了公司ID，则Org开头的参数可不传
+
+
+     * @param string $OrgIdType 公司证件类型，取值范围：
+TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+OTHERS（其他）
+     * @param string $OrgIdNumber 公司证件号码，取值范围：
+TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
+
+     * @param string $AdminIdType 管理人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     * @param string $AdminIdNumber 管理人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段， 取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     * @param string $TechIdType 联系人证件类型，取值范围：
+SFZ（身份证）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+HZ（护照）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
+     * @param string $TechIdNumber 联系人证件号码，仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段，取值范围：
+SFZ（身份证）：110000xxxxxxxx1242
+HZ（护照）:EFxxxxxxx
+     * @param string $Csr 上传的 CSR 内容。
+若GenCsrType为parse， 则此字段必传。
+     * @param array $DnsNames 证书绑定的其他域名， 单域名、泛域名证书无需提供。 多域名、多泛域名必填
+     * @param string $KeyPass 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密	
+     * @param string $OrgOrganization 公司名称。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgDivision 部门名称。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgAddress 公司详细地址。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgCountry 国家名称，如中国：CN 。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgCity 公司所在城市。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgRegion 公司所在省份。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $OrgPhoneArea 公司所属区号。若没有传CompanyId或者ManagerId， 则此字段必传
+如：021。  手机号码传 86
+     * @param string $OrgPhoneNumber 公司所属号码。若没有传CompanyId或者ManagerId， 则此字段必传
+     * @param string $VerifyType 证书域名验证方式：
+DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
+     * @param string $AdminFirstName 管理人名。若没有传ManagerId， 则此字段必传
+     * @param string $AdminLastName 管理人姓。若没有传ManagerId， 则此字段必传
+     * @param string $AdminPhone 管理人手机号码。若没有传ManagerId， 则此字段必传
+     * @param string $AdminEmail 管理人邮箱地址。若没有传ManagerId， 则此字段必传
+     * @param string $AdminTitle 管理人职位。若没有传ManagerId， 则此字段必传
+     * @param string $TechFirstName 联系人名。若没有传ManagerId， 则此字段必传
+     * @param string $TechLastName 联系人姓。若没有传ManagerId， 则此字段必传
+     * @param string $ContactEmail 联系人邮箱地址。CompanyType为1时， 此字段必传
      * @param integer $AutoRenewFlag 是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
-     * @param string $CsrKeyParameter 证书加密参数
-     * @param string $CsrEncryptAlgo 证书加密方式
-     * @param string $ManagerId 管理人ID
-     * @param string $TechPhone 联系人电话
+     * @param string $CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
+国密证书类型本字段不用传
+     * @param string $CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
+国密证书类型本字段不用传
+     * @param string $ManagerId 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
+
+     * @param string $TechPhone 联系人电话。若没有传ManagerId， 则此字段必传
      * @param string $TechEmail 联系人邮箱
-     * @param string $TechTitle 联系人职位
+     * @param string $TechTitle 联系人职位。若没有传ManagerId， 则此字段必传
      */
     function __construct()
     {
@@ -358,6 +462,10 @@ class CertificateInfoSubmitRequest extends AbstractModel
             $this->CompanyType = $param["CompanyType"];
         }
 
+        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
+            $this->CompanyId = $param["CompanyId"];
+        }
+
         if (array_key_exists("OrgIdType",$param) and $param["OrgIdType"] !== null) {
             $this->OrgIdType = $param["OrgIdType"];
         }
@@ -380,10 +488,6 @@ class CertificateInfoSubmitRequest extends AbstractModel
 
         if (array_key_exists("TechIdNumber",$param) and $param["TechIdNumber"] !== null) {
             $this->TechIdNumber = $param["TechIdNumber"];
-        }
-
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
         }
 
         if (array_key_exists("Csr",$param) and $param["Csr"] !== null) {

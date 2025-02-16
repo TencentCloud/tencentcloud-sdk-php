@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElapsed(integer $Elapsed) 设置当前请求执行时间, 单位 ms
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeName() 获取工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeName(string $NodeName) 设置工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReplyIndex() 获取用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplyIndex(integer $ReplyIndex) 设置用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentProcedure extends AbstractModel
 {
@@ -114,6 +122,18 @@ class AgentProcedure extends AbstractModel
     public $Elapsed;
 
     /**
+     * @var string 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeName;
+
+    /**
+     * @var integer 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplyIndex;
+
+    /**
      * @param integer $Index 索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 执行过程英语名
@@ -131,6 +151,10 @@ class AgentProcedure extends AbstractModel
      * @param string $WorkflowName 工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Elapsed 当前请求执行时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeName 工作流节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReplyIndex 用于展示思考放在哪个回复气泡中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +205,14 @@ class AgentProcedure extends AbstractModel
 
         if (array_key_exists("Elapsed",$param) and $param["Elapsed"] !== null) {
             $this->Elapsed = $param["Elapsed"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("ReplyIndex",$param) and $param["ReplyIndex"] !== null) {
+            $this->ReplyIndex = $param["ReplyIndex"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 批量删除失败的项
  *
  * @method string getCertId() 获取失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsg() 获取失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchDeleteFail extends AbstractModel
 {
     /**
      * @var string 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
      * @var string 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
      * @param string $CertId 失败的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Msg 失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostVodInstanceList请求参数结构体
  *
- * @method string getCertificateId() 获取待部署的证书ID
- * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID
+ * @method string getCertificateId() 获取待部署的证书ID,必填选项
+ * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID,必填选项
  * @method integer getIsCache() 获取是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method void setIsCache(integer $IsCache) 设置是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method array getFilters() 获取过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostVodInstanceListRequest extends AbstractModel
 {
     /**
-     * @var string 待部署的证书ID
+     * @var string 待部署的证书ID,必填选项
      */
     public $CertificateId;
 
@@ -60,7 +60,7 @@ class DescribeHostVodInstanceListRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @param string $CertificateId 待部署的证书ID
+     * @param string $CertificateId 待部署的证书ID,必填选项
      * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
      * @param array $Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
      * @param string $ResourceType 部署资源类型 vod

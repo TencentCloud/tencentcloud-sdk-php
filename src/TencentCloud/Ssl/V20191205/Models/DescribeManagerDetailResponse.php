@@ -69,6 +69,7 @@ class DescribeManagerDetailResponse extends AbstractModel
 {
     /**
      * @var string 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
+     * @deprecated
      */
     public $Status;
 

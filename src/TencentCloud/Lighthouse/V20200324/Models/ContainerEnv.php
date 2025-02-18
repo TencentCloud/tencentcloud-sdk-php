@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 容器环境变量
  *
  * @method string getKey() 获取环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerEnv extends AbstractModel
 {
     /**
      * @var string 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 环境变量Key
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 环境变量值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

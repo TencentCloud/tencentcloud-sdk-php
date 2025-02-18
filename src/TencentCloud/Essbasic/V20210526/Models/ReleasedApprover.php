@@ -75,13 +75,13 @@ use TencentCloud\Common\AbstractModel;
 如果名称中包含英文括号()，请使用中文括号（）代替。
 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
  * @method string getOrganizationOpenId() 获取第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
  * @method string getOpenId() 获取第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
  * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
  * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
@@ -157,13 +157,13 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      */
     public $OpenId;
 
@@ -211,9 +211,9 @@ class ReleasedApprover extends AbstractModel
 如果名称中包含英文括号()，请使用中文括号（）代替。
 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
      * @param string $OrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      * @param string $OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>

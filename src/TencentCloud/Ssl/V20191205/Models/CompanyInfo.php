@@ -37,21 +37,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdType() 获取公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdType(string $IdType) 设置公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdNumber() 获取公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdNumber(string $IdNumber) 设置公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompanyInfo extends AbstractModel
 {
@@ -94,20 +88,17 @@ class CompanyInfo extends AbstractModel
      * @var string 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdType;
 
     /**
      * @var string 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdNumber;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -122,12 +113,9 @@ TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
      * @param string $IdType 公司证件类型，取值范围：
 TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
 OTHERS（其他）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdNumber 公司证件号码，取值范围：
 TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

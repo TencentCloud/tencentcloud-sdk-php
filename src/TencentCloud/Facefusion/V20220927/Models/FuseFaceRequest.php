@@ -27,7 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRspImgType() 获取返回图像方式（url 或 base64) ，二选一。url有效期为7天。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为7天。
  * @method array getMergeInfos() 获取用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+●图片分辨率限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于4096*4096（单边限制）。
+●图片大小限制：base64 编码后大小不可超过5M， url不超过10M。
+●支持图片格式：支持jpg或png
  * @method void setMergeInfos(array $MergeInfos) 设置用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+●图片分辨率限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于4096*4096（单边限制）。
+●图片大小限制：base64 编码后大小不可超过5M， url不超过10M。
+●支持图片格式：支持jpg或png
  * @method integer getFuseProfileDegree() 获取脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
  * @method void setFuseProfileDegree(integer $FuseProfileDegree) 设置脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
@@ -72,6 +78,9 @@ class FuseFaceRequest extends AbstractModel
 
     /**
      * @var array 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+●图片分辨率限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于4096*4096（单边限制）。
+●图片大小限制：base64 编码后大小不可超过5M， url不超过10M。
+●支持图片格式：支持jpg或png
      */
     public $MergeInfos;
 
@@ -112,6 +121,9 @@ class FuseFaceRequest extends AbstractModel
      * @param string $ModelId 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
      * @param array $MergeInfos 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+●图片分辨率限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于4096*4096（单边限制）。
+●图片大小限制：base64 编码后大小不可超过5M， url不超过10M。
+●支持图片格式：支持jpg或png
      * @param integer $FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      * @param integer $FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 

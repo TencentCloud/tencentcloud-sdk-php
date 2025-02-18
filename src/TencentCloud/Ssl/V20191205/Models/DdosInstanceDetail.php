@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取协议类型
  * @method void setProtocol(string $Protocol) 设置协议类型
  * @method string getCertId() 获取证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualPort() 获取转发端口
  * @method void setVirtualPort(string $VirtualPort) 设置转发端口
  */
@@ -52,7 +50,6 @@ class DdosInstanceDetail extends AbstractModel
 
     /**
      * @var string 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
@@ -66,7 +63,6 @@ class DdosInstanceDetail extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $Protocol 协议类型
      * @param string $CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualPort 转发端口
      */
     function __construct()

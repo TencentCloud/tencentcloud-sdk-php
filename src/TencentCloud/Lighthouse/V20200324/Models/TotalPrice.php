@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 总计价格信息
  *
  * @method float getOriginalPrice() 获取原始总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalPrice(float $OriginalPrice) 设置原始总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscountPrice() 获取折扣总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折扣总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TotalPrice extends AbstractModel
 {
     /**
      * @var float 原始总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalPrice;
 
     /**
      * @var float 折扣总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPrice;
 
     /**
      * @param float $OriginalPrice 原始总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 折扣总计价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

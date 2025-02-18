@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取资源标识:clb,cdn,live,waf,antiddos
  * @method void setType(string $Type) 设置资源标识:clb,cdn,live,waf,antiddos
  * @method array getResourceIds() 获取不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(array $ResourceIds) 设置不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResources() 获取关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(array $Resources) 设置关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployedResources extends AbstractModel
 {
@@ -54,13 +50,11 @@ class DeployedResources extends AbstractModel
 
     /**
      * @var array 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var array 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
@@ -69,9 +63,7 @@ class DeployedResources extends AbstractModel
      * @param integer $Count 数量
      * @param string $Type 资源标识:clb,cdn,live,waf,antiddos
      * @param array $ResourceIds 不建议使用。字段返回和Resources相同。本字段后续只返回null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Resources 关联资源ID或关联域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

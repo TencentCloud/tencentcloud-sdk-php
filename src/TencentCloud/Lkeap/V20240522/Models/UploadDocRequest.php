@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKnowledgeBaseId() 获取知识库ID
  * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
- * @method string getFileName() 获取文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
- * @method void setFileName(string $FileName) 设置文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+ * @method string getFileName() 获取文件名。
+**需带文件类型后缀**
+ * @method void setFileName(string $FileName) 设置文件名。
+**需带文件类型后缀**
  * @method string getFileType() 获取文件类型。
 
 **支持的文件类型：**
@@ -67,8 +67,8 @@ class UploadDocRequest extends AbstractModel
     public $KnowledgeBaseId;
 
     /**
-     * @var string 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+     * @var string 文件名。
+**需带文件类型后缀**
      */
     public $FileName;
 
@@ -111,8 +111,8 @@ class UploadDocRequest extends AbstractModel
 
     /**
      * @param string $KnowledgeBaseId 知识库ID
-     * @param string $FileName 文件名，可选。
-**需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+     * @param string $FileName 文件名。
+**需带文件类型后缀**
      * @param string $FileType 文件类型。
 
 **支持的文件类型：**

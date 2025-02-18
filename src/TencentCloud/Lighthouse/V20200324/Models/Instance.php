@@ -121,9 +121,7 @@ FAILED：表示操作失败
  * @method string getInitInvocationId() 获取创建实例后自动执行TAT命令的调用ID。
  * @method void setInitInvocationId(string $InitInvocationId) 设置创建实例后自动执行TAT命令的调用ID。
  * @method InstanceViolationDetail getInstanceViolationDetail() 获取实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceViolationDetail(InstanceViolationDetail $InstanceViolationDetail) 设置实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -303,7 +301,6 @@ FAILED：表示操作失败
 
     /**
      * @var InstanceViolationDetail 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceViolationDetail;
 
@@ -359,7 +356,6 @@ FAILED：表示操作失败
      * @param array $PublicIpv6Addresses 公网IPv6地址列表。
      * @param string $InitInvocationId 创建实例后自动执行TAT命令的调用ID。
      * @param InstanceViolationDetail $InstanceViolationDetail 实例违规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

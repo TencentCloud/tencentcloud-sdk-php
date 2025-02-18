@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取监听器协议类型， HTTPS|TCP_SSL
  * @method void setProtocol(string $Protocol) 设置监听器协议类型， HTTPS|TCP_SSL
  * @method Certificate getCertificate() 获取监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(Certificate $Certificate) 设置监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRules() 获取监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNoMatchDomains() 获取不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoMatchDomains(array $NoMatchDomains) 设置不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbListener extends AbstractModel
 {
@@ -65,19 +59,16 @@ class ClbListener extends AbstractModel
 
     /**
      * @var Certificate 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Certificate;
 
     /**
      * @var array 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
      * @var array 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoMatchDomains;
 
@@ -87,11 +78,8 @@ class ClbListener extends AbstractModel
      * @param integer $SniSwitch 是否开启SNI，1为开启，0为关闭
      * @param string $Protocol 监听器协议类型， HTTPS|TCP_SSL
      * @param Certificate $Certificate 监听器绑定的证书数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rules 监听器规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NoMatchDomains 不匹配域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

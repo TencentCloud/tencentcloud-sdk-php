@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取证书绑定的域名。
  * @method void setDomain(string $Domain) 设置证书绑定的域名。
  * @method string getVerifyType() 获取域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyType(string $VerifyType) 设置域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLocalCheck() 获取腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
 
  * @method void setLocalCheck(integer $LocalCheck) 设置腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
@@ -33,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCaCheck() 获取CA检查结果。取值： -1（未检测通过）；2（检测通过）
  * @method void setCaCheck(integer $CaCheck) 设置CA检查结果。取值： -1（未检测通过）；2（检测通过）
  * @method string getLocalCheckFailReason() 获取检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalCheckFailReason(string $LocalCheckFailReason) 设置检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCheckValue() 获取检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckValue(array $CheckValue) 设置检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFrequently() 获取是否被限频拦截， 取值：false（未被限频）；true（被限频）
  * @method void setFrequently(boolean $Frequently) 设置是否被限频拦截， 取值：false（未被限频）；true（被限频）
  * @method boolean getIssued() 获取证书是否已经签发。取值： false（未签发）；true（已签发）
@@ -54,7 +48,6 @@ class DomainValidationResult extends AbstractModel
 
     /**
      * @var string 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyType;
 
@@ -71,13 +64,11 @@ class DomainValidationResult extends AbstractModel
 
     /**
      * @var string 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalCheckFailReason;
 
     /**
      * @var array 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckValue;
 
@@ -94,14 +85,11 @@ class DomainValidationResult extends AbstractModel
     /**
      * @param string $Domain 证书绑定的域名。
      * @param string $VerifyType 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LocalCheck 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
 
      * @param integer $CaCheck CA检查结果。取值： -1（未检测通过）；2（检测通过）
      * @param string $LocalCheckFailReason 检查失败原因。状态LocalCheck的具体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckValue 检查到的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Frequently 是否被限频拦截， 取值：false（未被限频）；true（被限频）
      * @param boolean $Issued 证书是否已经签发。取值： false（未签发）；true（已签发）
      */

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTransferCount() 获取本次转移点数。
  * @method void setTransferCount(integer $TransferCount) 设置本次转移点数。
  * @method string getReceivePackageId() 获取转入的PackageID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceivePackageId(string $ReceivePackageId) 设置转入的PackageID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取本次转移过期时间。
  * @method void setExpireTime(string $ExpireTime) 设置本次转移过期时间。
  * @method string getCreateTime() 获取本次转移生成时间。
@@ -39,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTransferStatus() 获取转移状态。
  * @method void setTransferStatus(string $TransferStatus) 设置转移状态。
  * @method integer getReceiverUin() 获取接收者uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverUin(integer $ReceiverUin) 设置接收者uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReceiveTime() 获取接收时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveTime(string $ReceiveTime) 设置接收时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageTransferOutInfo extends AbstractModel
 {
@@ -66,7 +60,6 @@ class PackageTransferOutInfo extends AbstractModel
 
     /**
      * @var string 转入的PackageID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceivePackageId;
 
@@ -92,13 +85,11 @@ class PackageTransferOutInfo extends AbstractModel
 
     /**
      * @var integer 接收者uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverUin;
 
     /**
      * @var string 接收时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveTime;
 
@@ -107,15 +98,12 @@ class PackageTransferOutInfo extends AbstractModel
      * @param string $TransferCode 转移码。
      * @param integer $TransferCount 本次转移点数。
      * @param string $ReceivePackageId 转入的PackageID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 本次转移过期时间。
      * @param string $CreateTime 本次转移生成时间。
      * @param string $UpdateTime 本次转移更新时间。
      * @param string $TransferStatus 转移状态。
      * @param integer $ReceiverUin 接收者uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReceiveTime 接收时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

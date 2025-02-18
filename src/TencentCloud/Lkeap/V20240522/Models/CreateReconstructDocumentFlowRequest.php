@@ -49,10 +49,12 @@ use TencentCloud\Common\AbstractModel;
 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
  * @method string getFileBase64() 获取文件的 Base64 值。
+支持的文件类型： PNG、JPG、JPEG、PDF、GIF、BMP、TIFF
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
 支持的图片像素：单边介于20-10000px之间。
 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
  * @method void setFileBase64(string $FileBase64) 设置文件的 Base64 值。
+支持的文件类型： PNG、JPG、JPEG、PDF、GIF、BMP、TIFF
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
 支持的图片像素：单边介于20-10000px之间。
 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
@@ -93,6 +95,7 @@ class CreateReconstructDocumentFlowRequest extends AbstractModel
 
     /**
      * @var string 文件的 Base64 值。
+支持的文件类型： PNG、JPG、JPEG、PDF、GIF、BMP、TIFF
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
 支持的图片像素：单边介于20-10000px之间。
 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
@@ -132,6 +135,7 @@ class CreateReconstructDocumentFlowRequest extends AbstractModel
 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
      * @param string $FileBase64 文件的 Base64 值。
+支持的文件类型： PNG、JPG、JPEG、PDF、GIF、BMP、TIFF
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
 支持的图片像素：单边介于20-10000px之间。
 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。

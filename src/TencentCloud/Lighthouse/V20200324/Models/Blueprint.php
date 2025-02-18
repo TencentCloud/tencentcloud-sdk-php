@@ -57,17 +57,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRequiredMemorySize() 获取镜像所需内存大小, 单位: GB
  * @method void setRequiredMemorySize(integer $RequiredMemorySize) 设置镜像所需内存大小, 单位: GB
  * @method string getImageId() 获取CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommunityUrl() 获取官方网站Url。
  * @method void setCommunityUrl(string $CommunityUrl) 设置官方网站Url。
  * @method string getGuideUrl() 获取指导文章Url。
  * @method void setGuideUrl(string $GuideUrl) 设置指导文章Url。
  * @method array getSceneIdSet() 获取镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneIdSet(array $SceneIdSet) 设置镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDockerVersion() 获取Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDockerVersion(string $DockerVersion) 设置Docker版本号。
@@ -157,7 +153,6 @@ class Blueprint extends AbstractModel
 
     /**
      * @var string CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
@@ -173,7 +168,6 @@ class Blueprint extends AbstractModel
 
     /**
      * @var array 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneIdSet;
 
@@ -208,11 +202,9 @@ class Blueprint extends AbstractModel
      * @param boolean $SupportAutomationTools 镜像是否支持自动化助手。
      * @param integer $RequiredMemorySize 镜像所需内存大小, 单位: GB
      * @param string $ImageId CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CommunityUrl 官方网站Url。
      * @param string $GuideUrl 指导文章Url。
      * @param array $SceneIdSet 镜像关联使用场景Id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DockerVersion Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BlueprintShared 镜像是否已共享。

@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
  * @method string getEndTime() 获取结束时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DockerActivity extends AbstractModel
 {
@@ -83,7 +81,6 @@ class DockerActivity extends AbstractModel
 
     /**
      * @var string 结束时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -99,7 +96,6 @@ class DockerActivity extends AbstractModel
      * @param array $ContainerIds 容器ID列表。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
      * @param string $EndTime 结束时间。按照 ISO8601 标准表示，并且使用 UTC 时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

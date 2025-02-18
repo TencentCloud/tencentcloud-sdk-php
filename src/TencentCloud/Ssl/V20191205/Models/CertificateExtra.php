@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 获取证书列表（DescribeCertificates）返回参数键为 Certificates 数组下，key为CertificateExtra 的内容。
  *
  * @method string getDomainNumber() 获取证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNumber(string $DomainNumber) 设置证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginCertificateId() 获取续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginCertificateId(string $OriginCertificateId) 设置续费原证书 ID。
@@ -41,19 +39,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewOrder(string $RenewOrder) 设置续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSMCert() 获取是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSMCert(integer $SMCert) 设置是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompanyType() 获取公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompanyType(integer $CompanyType) 设置公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateExtra extends AbstractModel
 {
     /**
      * @var string 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainNumber;
 
@@ -83,19 +76,16 @@ class CertificateExtra extends AbstractModel
 
     /**
      * @var integer 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SMCert;
 
     /**
      * @var integer 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompanyType;
 
     /**
      * @param string $DomainNumber 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginCertificateId 续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReplacedBy 重颁发证书原始 ID。
@@ -105,9 +95,7 @@ class CertificateExtra extends AbstractModel
      * @param string $RenewOrder 续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SMCert 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompanyType 公司类型，取值：1（个人）；2（公司）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

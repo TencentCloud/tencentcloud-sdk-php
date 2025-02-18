@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getDiscountPrice() 获取折后价。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折后价。
  * @method string getCurrency() 获取价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrency(string $Currency) 设置价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstancePrice extends AbstractModel
 {
@@ -57,7 +55,6 @@ class InstancePrice extends AbstractModel
 
     /**
      * @var string 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Currency;
 
@@ -67,7 +64,6 @@ class InstancePrice extends AbstractModel
      * @param float $Discount 折扣。
      * @param float $DiscountPrice 折后价。
      * @param string $Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

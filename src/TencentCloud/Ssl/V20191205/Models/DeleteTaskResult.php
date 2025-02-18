@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取异步查询结果： 0表示任务进行中、 1表示任务成功、 2表示任务失败、3表示未授权服务角色导致任务失败、4表示有未解绑的云资源导致任务失败、5表示查询关联云资源超时导致任务失败
  * @method void setStatus(integer $Status) 设置异步查询结果： 0表示任务进行中、 1表示任务成功、 2表示任务失败、3表示未授权服务角色导致任务失败、4表示有未解绑的云资源导致任务失败、5表示查询关联云资源超时导致任务失败
  * @method string getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(string $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCacheTime() 获取当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheTime(string $CacheTime) 设置当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDomains() 获取包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeleteTaskResult extends AbstractModel
 {
@@ -58,19 +52,16 @@ class DeleteTaskResult extends AbstractModel
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @var string 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheTime;
 
     /**
      * @var array 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domains;
 
@@ -79,11 +70,8 @@ class DeleteTaskResult extends AbstractModel
      * @param string $CertId 证书ID
      * @param integer $Status 异步查询结果： 0表示任务进行中、 1表示任务成功、 2表示任务失败、3表示未授权服务角色导致任务失败、4表示有未解绑的云资源导致任务失败、5表示查询关联云资源超时导致任务失败
      * @param string $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CacheTime 当前结果缓存时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Domains 包含的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

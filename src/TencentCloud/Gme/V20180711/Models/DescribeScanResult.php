@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getLive() 获取是否为流
  * @method void setLive(boolean $Live) 设置是否为流
  * @method string getMsg() 获取业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScanPiece() 获取检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPiece(array $ScanPiece) 设置检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanStartTime() 获取提交检测的时间戳
  * @method void setScanStartTime(integer $ScanStartTime) 设置提交检测的时间戳
  * @method array getScenes() 获取语音检测场景，对应请求时的 Scene
@@ -86,13 +82,11 @@ class DescribeScanResult extends AbstractModel
 
     /**
      * @var string 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
      * @var array 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPiece;
 
@@ -136,9 +130,7 @@ class DescribeScanResult extends AbstractModel
      * @param boolean $HitFlag 是否违规
      * @param boolean $Live 是否为流
      * @param string $Msg 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScanPiece 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanStartTime 提交检测的时间戳
      * @param array $Scenes 语音检测场景，对应请求时的 Scene
      * @param string $TaskId 语音检测任务 ID，由后台分配

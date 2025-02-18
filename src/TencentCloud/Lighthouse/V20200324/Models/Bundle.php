@@ -69,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
  * @method string getBundleTypeDescription() 获取套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBundleTypeDescription(string $BundleTypeDescription) 设置套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleDisplayLabel() 获取套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
@@ -163,7 +161,6 @@ class Bundle extends AbstractModel
 
     /**
      * @var string 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleTypeDescription;
 
@@ -202,7 +199,6 @@ class Bundle extends AbstractModel
 <li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
      * @param string $BundleTypeDescription 套餐类型描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleDisplayLabel 套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,

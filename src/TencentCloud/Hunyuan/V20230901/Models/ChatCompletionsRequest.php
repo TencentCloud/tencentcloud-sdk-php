@@ -178,6 +178,8 @@ use TencentCloud\Common\AbstractModel;
 说明：
 1. 未传值时默认关闭。
 2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
+ * @method boolean getEnableDeepRead() 获取是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+ * @method void setEnableDeepRead(boolean $EnableDeepRead) 设置是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -337,6 +339,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableRecommendedQuestions;
 
     /**
+     * @var boolean 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+     */
+    public $EnableDeepRead;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-code、hunyuan-role、hunyuan-functioncall、hunyuan-vision、hunyuan-turbo、hunyuan-turbo-latest、hunyuan-turbo-20241223、hunyuan-turbo-20241120、hunyuan-large、hunyuan-large-longcontext、hunyuan-turbo-vision、hunyuan-standard-vision、hunyuan-lite-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -416,6 +423,7 @@ class ChatCompletionsRequest extends AbstractModel
 说明：
 1. 未传值时默认关闭。
 2. 开启后，在返回值的最后一个包中会增加 RecommendedQuestions 字段表示推荐问答， 最多返回3条。
+     * @param boolean $EnableDeepRead 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
      */
     function __construct()
     {
@@ -515,6 +523,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableRecommendedQuestions",$param) and $param["EnableRecommendedQuestions"] !== null) {
             $this->EnableRecommendedQuestions = $param["EnableRecommendedQuestions"];
+        }
+
+        if (array_key_exists("EnableDeepRead",$param) and $param["EnableDeepRead"] !== null) {
+            $this->EnableDeepRead = $param["EnableDeepRead"];
         }
     }
 }

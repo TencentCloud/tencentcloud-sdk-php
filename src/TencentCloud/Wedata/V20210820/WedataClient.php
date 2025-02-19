@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Wedata\V20210820\Models as Models;
 
 /**
+ * @method Models\AddProjectUserRoleResponse AddProjectUserRole(Models\AddProjectUserRoleRequest $req) 添加项目用户角色
  * @method Models\BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarms(Models\BatchCreateIntegrationTaskAlarmsRequest $req) 批量创建任务告警规则
  * @method Models\BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsync(Models\BatchCreateTaskVersionAsyncRequest $req) 异步批量创建任务版本
  * @method Models\BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasks(Models\BatchDeleteIntegrationTasksRequest $req) 批量删除集成任务

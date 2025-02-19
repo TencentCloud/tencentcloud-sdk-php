@@ -20,14 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的回复, 支持多个
  *
- * @method string getFinishReason() 获取结束标志位，可能为 stop、 sensitive或者tool_calls。
+ * @method string getFinishReason() 获取结束标志位，可能为 stop、 content_filter。
 stop 表示输出正常结束。
-sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
-tool_calls 标识函数调用。
- * @method void setFinishReason(string $FinishReason) 设置结束标志位，可能为 stop、 sensitive或者tool_calls。
+content_filter 只在开启流式输出审核时会出现，表示安全审核未通过。
+ * @method void setFinishReason(string $FinishReason) 设置结束标志位，可能为 stop、 content_filter。
 stop 表示输出正常结束。
-sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
-tool_calls 标识函数调用。
+content_filter 只在开启流式输出审核时会出现，表示安全审核未通过。
  * @method Delta getDelta() 获取增量返回值，流式调用时使用该字段。
  * @method void setDelta(Delta $Delta) 设置增量返回值，流式调用时使用该字段。
  * @method Message getMessage() 获取返回值，非流式调用时使用该字段。
@@ -38,10 +36,9 @@ tool_calls 标识函数调用。
 class Choice extends AbstractModel
 {
     /**
-     * @var string 结束标志位，可能为 stop、 sensitive或者tool_calls。
+     * @var string 结束标志位，可能为 stop、 content_filter。
 stop 表示输出正常结束。
-sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
-tool_calls 标识函数调用。
+content_filter 只在开启流式输出审核时会出现，表示安全审核未通过。
      */
     public $FinishReason;
 
@@ -61,10 +58,9 @@ tool_calls 标识函数调用。
     public $Index;
 
     /**
-     * @param string $FinishReason 结束标志位，可能为 stop、 sensitive或者tool_calls。
+     * @param string $FinishReason 结束标志位，可能为 stop、 content_filter。
 stop 表示输出正常结束。
-sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
-tool_calls 标识函数调用。
+content_filter 只在开启流式输出审核时会出现，表示安全审核未通过。
      * @param Delta $Delta 增量返回值，流式调用时使用该字段。
      * @param Message $Message 返回值，非流式调用时使用该字段。
      * @param integer $Index 索引值，流式调用时使用该字段。

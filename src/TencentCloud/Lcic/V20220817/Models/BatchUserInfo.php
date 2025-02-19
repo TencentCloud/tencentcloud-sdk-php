@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
 
  * @method string getUserId() 获取用户ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginId() 获取用户在客户系统的Id。 若用户注册时该字段为空，则默认为 UserId 值一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id。 若用户注册时该字段为空，则默认为 UserId 值一致。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchUserInfo extends AbstractModel
 {
@@ -43,13 +39,11 @@ class BatchUserInfo extends AbstractModel
 
     /**
      * @var string 用户ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 用户在客户系统的Id。 若用户注册时该字段为空，则默认为 UserId 值一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginId;
 
@@ -57,9 +51,7 @@ class BatchUserInfo extends AbstractModel
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
 
      * @param string $UserId 用户ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginId 用户在客户系统的Id。 若用户注册时该字段为空，则默认为 UserId 值一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

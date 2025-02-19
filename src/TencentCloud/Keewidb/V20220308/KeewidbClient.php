@@ -27,6 +27,7 @@ use TencentCloud\Keewidb\V20220308\Models as Models;
  * @method Models\ChangeInstanceMasterResponse ChangeInstanceMaster(Models\ChangeInstanceMasterRequest $req) 本接口（ChangeInstanceMaster）用于将副本节点提升为主节点。
  * @method Models\CleanUpInstanceResponse CleanUpInstance(Models\CleanUpInstanceRequest $req) 本接口（CleanUpInstance）用于立即下线回收站已隔离的实例。
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 本接口（ClearInstance）用于清空实例数据。
+> **说明**：在清空数据流程中，系统将自动进行数据备份，耗时较长，请您耐心等待并提前做好时间规划。
  * @method Models\CreateBackupManuallyResponse CreateBackupManually(Models\CreateBackupManuallyRequest $req) 手动发起备份
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 创建数据库实例
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 本接口（DescribeAutoBackupConfig）用于获取自动备份配置。

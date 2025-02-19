@@ -41,6 +41,8 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 产品下线
 
 获取Qos加速状态
+ * @method Models\DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(Models\DownloadActiveDeviceCountRequest $req) 下载活跃设备数量统计
+ * @method Models\GetActiveDeviceCountResponse GetActiveDeviceCount(Models\GetActiveDeviceCountRequest $req) 活跃设备数量统计
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicePayModeResponse GetDevicePayMode(Models\GetDevicePayModeRequest $req) 获取设备付费模式
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表

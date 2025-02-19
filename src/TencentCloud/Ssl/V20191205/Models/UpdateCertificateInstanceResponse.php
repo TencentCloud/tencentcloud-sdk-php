@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateInstance返回参数结构体
  *
- * @method integer getDeployRecordId() 获取云资源更新任务ID
+ * @method integer getDeployRecordId() 获取云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployRecordId(integer $DeployRecordId) 设置云资源更新任务ID
+ * @method void setDeployRecordId(integer $DeployRecordId) 设置云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeployStatus() 获取更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
  * @method void setDeployStatus(integer $DeployStatus) 设置更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateCertificateInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 云资源更新任务ID
+     * @var integer 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployRecordId;
@@ -58,7 +58,7 @@ class UpdateCertificateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $DeployRecordId 云资源更新任务ID
+     * @param integer $DeployRecordId 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployStatus 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
      * @param array $UpdateSyncProgress 更新异步创建任务进度详情

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 上链数据
  *
  * @method string getCode() 获取码url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置码url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取上链数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置上链数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Chain extends AbstractModel
 {
     /**
      * @var string 码url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var array 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param string $Code 码url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置IP地址
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getProtocol() 获取协议，可取值HTTP，HTTPS
- * @method void setProtocol(string $Protocol) 设置协议，可取值HTTP，HTTPS
+ * @method string getProtocol() 获取协议，可取值http、https、http/https
+ * @method void setProtocol(string $Protocol) 设置协议，可取值http、https、http/https
  * @method string getLevel() 获取CC防护等级，可取值loose表示宽松，strict表示严格，normal表示适中， emergency表示攻击紧急， sup_loose表示超级宽松，default表示默认策略（无频控配置下发），customized表示自定义策略
  * @method void setLevel(string $Level) 设置CC防护等级，可取值loose表示宽松，strict表示严格，normal表示适中， emergency表示攻击紧急， sup_loose表示超级宽松，default表示默认策略（无频控配置下发），customized表示自定义策略
  */
@@ -49,7 +49,7 @@ class ModifyCCLevelPolicyRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 协议，可取值HTTP，HTTPS
+     * @var string 协议，可取值http、https、http/https
      */
     public $Protocol;
 
@@ -62,7 +62,7 @@ class ModifyCCLevelPolicyRequest extends AbstractModel
      * @param string $InstanceId 实例Id
      * @param string $Ip IP地址
      * @param string $Domain 域名
-     * @param string $Protocol 协议，可取值HTTP，HTTPS
+     * @param string $Protocol 协议，可取值http、https、http/https
      * @param string $Level CC防护等级，可取值loose表示宽松，strict表示严格，normal表示适中， emergency表示攻击紧急， sup_loose表示超级宽松，default表示默认策略（无频控配置下发），customized表示自定义策略
      */
     function __construct()

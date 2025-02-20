@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置业务系统名
  * @method string getDescription() 获取业务系统描述信息
  * @method void setDescription(string $Description) 设置业务系统描述信息
- * @method integer getStatus() 获取业务系统状态
- * @method void setStatus(integer $Status) 设置业务系统状态
+ * @method integer getStatus() 获取业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
+ * @method void setStatus(integer $Status) 设置业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
  * @method string getRegion() 获取业务系统所属地域
  * @method void setRegion(string $Region) 设置业务系统所属地域
  * @method array getTags() 获取业务系统 Tag 列表
@@ -92,6 +94,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测（0=关， 1=开）
  * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入分析（0=关， 1=开）
  * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入分析（0=关， 1=开）
+ * @method integer getStopReason() 获取限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+ * @method void setStopReason(integer $StopReason) 设置限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -111,7 +125,8 @@ class ApmInstanceDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 业务系统状态
+     * @var integer 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
      */
     public $Status;
 
@@ -276,10 +291,21 @@ class ApmInstanceDetail extends AbstractModel
     public $IsSqlInjectionAnalysis;
 
     /**
+     * @var integer 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
+     */
+    public $StopReason;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
-     * @param integer $Status 业务系统状态
+     * @param integer $Status 业务系统状态。{
+1: 初始化中; 2: 运行中; 4: 限流}
      * @param string $Region 业务系统所属地域
      * @param array $Tags 业务系统 Tag 列表
      * @param integer $AppId AppID 信息
@@ -312,6 +338,12 @@ class ApmInstanceDetail extends AbstractModel
      * @param string $DashboardTopicID 关联的 Dashboard ID
      * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
      * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
+     * @param integer $StopReason 限流原因。{
+1: 正式版限额;
+2: 试用版限额;
+4: 试用版到期;
+8: 账号欠费
+}
      */
     function __construct()
     {
@@ -473,6 +505,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("IsSqlInjectionAnalysis",$param) and $param["IsSqlInjectionAnalysis"] !== null) {
             $this->IsSqlInjectionAnalysis = $param["IsSqlInjectionAnalysis"];
+        }
+
+        if (array_key_exists("StopReason",$param) and $param["StopReason"] !== null) {
+            $this->StopReason = $param["StopReason"];
         }
     }
 }

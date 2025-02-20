@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAmount() 获取数量
  * @method void setAmount(integer $Amount) 设置数量
  * @method string getCustomId() 获取码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomId(string $CustomId) 设置码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCodeParts() 获取码段配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeParts(array $CodeParts) 设置码段配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取包装单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置包装单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSceneCode() 获取场景值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneCode(integer $SceneCode) 设置场景值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackSpec extends AbstractModel
 {
@@ -62,25 +54,21 @@ class PackSpec extends AbstractModel
 
     /**
      * @var string 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomId;
 
     /**
      * @var array 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeParts;
 
     /**
      * @var string 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var integer 场景值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneCode;
 
@@ -89,13 +77,9 @@ class PackSpec extends AbstractModel
      * @param integer $Rate 比例
      * @param integer $Amount 数量
      * @param string $CustomId 码规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CodeParts 码段配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SceneCode 场景值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

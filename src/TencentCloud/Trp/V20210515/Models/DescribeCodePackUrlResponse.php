@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCodePackUrl返回参数结构体
  *
  * @method string getUrl() 获取文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImgUrl() 获取图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgUrl(string $ImgUrl) 设置图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileKey() 获取文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileKey(string $FileKey) 设置文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeCodePackUrlResponse extends AbstractModel
 {
     /**
      * @var string 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImgUrl;
 
     /**
      * @var string 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileKey;
 
@@ -62,11 +53,8 @@ class DescribeCodePackUrlResponse extends AbstractModel
 
     /**
      * @param string $Url 文字码包地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImgUrl 图片码包地址，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileKey 文字码包Key，用于上传导入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

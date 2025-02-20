@@ -58,10 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterAssetIpList(array $FilterAssetIpList) 设置资产IP数组
  * @method integer getFilterBasicPlusFlag() 获取是否包含基础防护增强版 0: 不包含 1: 包含
  * @method void setFilterBasicPlusFlag(integer $FilterBasicPlusFlag) 设置是否包含基础防护增强版 0: 不包含 1: 包含
- * @method integer getFilterPlanCntFlag() 获取是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
- * @method void setFilterPlanCntFlag(integer $FilterPlanCntFlag) 设置是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+ * @method integer getFilterPlanCntFlag() 获取是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
+ * @method void setFilterPlanCntFlag(integer $FilterPlanCntFlag) 设置是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
  * @method integer getFilterTransRegionFlag() 获取是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
  * @method void setFilterTransRegionFlag(integer $FilterTransRegionFlag) 设置是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
  * @method array getFilterZoneIdList() 获取zoenid列表
@@ -165,8 +163,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterBasicPlusFlag;
 
     /**
-     * @var integer 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+     * @var integer 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
      */
     public $FilterPlanCntFlag;
 
@@ -200,8 +197,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param boolean $ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
      * @param array $FilterAssetIpList 资产IP数组
      * @param integer $FilterBasicPlusFlag 是否包含基础防护增强版 0: 不包含 1: 包含
-     * @param integer $FilterPlanCntFlag 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
-
+     * @param integer $FilterPlanCntFlag 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
      * @param integer $FilterTransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
      * @param array $FilterZoneIdList zoenid列表
      */

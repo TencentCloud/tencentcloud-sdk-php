@@ -333,12 +333,14 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClient(Models\DeleteVpnGatewaySslClientRequest $req) 本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
  * @method Models\DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServer(Models\DeleteVpnGatewaySslServerRequest $req) 删除SSL-VPN-SERVER 实例
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
+ * @method Models\DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(Models\DescribeAddressBandwidthRangeRequest $req) 查询指定EIP的带宽上下限范围。
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
  * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板。
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
  * @method Models\DescribeAssistantCidrResponse DescribeAssistantCidr(Models\DescribeAssistantCidrRequest $req) 本接口（DescribeAssistantCidr）用于查询辅助CIDR列表。
+ * @method Models\DescribeBandwidthPackageBandwidthRangeResponse DescribeBandwidthPackageBandwidthRange(Models\DescribeBandwidthPackageBandwidthRangeRequest $req) 查询指定带宽包的带宽上下限范围
  * @method Models\DescribeBandwidthPackageBillUsageResponse DescribeBandwidthPackageBillUsage(Models\DescribeBandwidthPackageBillUsageRequest $req) 本接口 (DescribeBandwidthPackageBillUsage) 用于查询后付费共享带宽包当前的计费用量.
  * @method Models\DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuota(Models\DescribeBandwidthPackageQuotaRequest $req) 接口用于查询账户在当前地域的带宽包上限数量以及使用数量
  * @method Models\DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(Models\DescribeBandwidthPackageResourcesRequest $req) 本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。

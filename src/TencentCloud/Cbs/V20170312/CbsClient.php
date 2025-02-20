@@ -33,6 +33,10 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * 仅支持回滚到原云硬盘上。对于数据盘快照，如果您需要复制快照数据到其它云硬盘上，请使用[CreateDisks](/document/product/362/16312)接口创建新的弹性云盘，将快照数据复制到新购云盘上。 
 * 用于回滚的快照必须处于NORMAL状态。快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
 * 如果是弹性云盘，则云盘必须处于未挂载状态，云硬盘挂载状态可以通过[DescribeDisks](/document/product/362/16315)接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云盘，则实例必须处于关机状态，实例状态可以通过[DescribeInstancesStatus](/document/product/213/15738)接口查询。
+ * @method Models\ApplySnapshotGroupResponse ApplySnapshotGroup(Models\ApplySnapshotGroupRequest $req) 本接口（ApplySnapshotGroup）用于回滚快照组，将实例恢复到创建快照组时刻的状态。
+* 1.可选择快照组全部或部分盘进行回滚；
+* 2.如果回滚的盘中包含已挂载的盘，要求这些盘必须挂载在同一实例上，且要求该实例已关机才能回滚；
+* 3.回滚为异步操作，接口返回成功不代表回滚成功，可通过调DescribeSnapshotGroups接口查询快照组的状态。
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载云硬盘。
  
 * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
@@ -60,10 +64,16 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * 只有具有快照能力的云硬盘才能创建快照。云硬盘是否具有快照能力可由[DescribeDisks](/document/product/362/16315)接口查询，见SnapshotAbility字段。
 * 可创建快照数量限制见[产品使用限制](https://cloud.tencent.com/doc/product/362/5145)。
 * 当前支持将备份点转化为普通快照，转化之后可能会收取快照使用费用，备份点不保留，其占用的备份点配额也将被释放。
+ * @method Models\CreateSnapshotGroupResponse CreateSnapshotGroup(Models\CreateSnapshotGroupRequest $req) 本接口（CreateSnapshotGroup）用于创建快照组。
+* 创建快照组的云硬盘列表必须挂载在同一实例上；
+* 可选择挂载在实例上的全部或部分盘创建快照组。
  * @method Models\DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(Models\DeleteAutoSnapshotPoliciesRequest $req) 本接口（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
 
 *  支持批量操作。如果多个定期快照策略存在无法删除的，则操作不执行，以特定错误码返回。
  * @method Models\DeleteDiskBackupsResponse DeleteDiskBackups(Models\DeleteDiskBackupsRequest $req) 批量删除指定的云硬盘备份点。
+ * @method Models\DeleteSnapshotGroupResponse DeleteSnapshotGroup(Models\DeleteSnapshotGroupRequest $req) 本接口（DeleteSnapshotGroup）用于删除快照组，一次调用仅支持删除一个快照组。
+* 默认会删除快照组内的所有快照；
+* 如果快照组内的快照有关联镜像，则删除失败，所有快照均不会删除；如果需要同时删除快照绑定的镜像，可传入参数DeleteBindImages等于true。
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
 
 * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -89,6 +99,9 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) 本接口（DescribeInstancesDiskNum）用于查询实例已挂载云硬盘数量。
 
 * 支持批量操作，当传入多个云服务器实例ID，返回结果会分别列出每个云服务器挂载的云硬盘数量。
+ * @method Models\DescribeSnapshotGroupsResponse DescribeSnapshotGroups(Models\DescribeSnapshotGroupsRequest $req) 本接口（DescribeSnapshotGroups）用于查询快照组列表。
+* 可以根据快照组ID、快照组状态、快照组关联的快照ID等来查询快照组列表，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照组列表。
  * @method Models\DescribeSnapshotOverviewResponse DescribeSnapshotOverview(Models\DescribeSnapshotOverviewRequest $req) 该接口用于查询用户快照使用概览，包括快照总容量、计费容量等信息。
  * @method Models\DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(Models\DescribeSnapshotSharePermissionRequest $req) 本接口（DescribeSnapshotSharePermission）用于查询快照的分享信息。
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。

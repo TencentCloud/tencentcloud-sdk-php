@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置日志Key列表，RechargeType为full_regex_log时必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getParseArray() 获取json解析模式，开启首层数据解析
+ * @method void setParseArray(boolean $ParseArray) 设置json解析模式，开启首层数据解析
  */
 class LogRechargeRuleInfo extends AbstractModel
 {
@@ -152,6 +154,11 @@ class LogRechargeRuleInfo extends AbstractModel
     public $Keys;
 
     /**
+     * @var boolean json解析模式，开启首层数据解析
+     */
+    public $ParseArray;
+
+    /**
      * @param string $RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
      * @param integer $EncodingFormat 解析编码格式，0: UTF-8（默认值），1: GBK
      * @param boolean $DefaultTimeSwitch 使用默认时间，true：开启（默认值）， flase：关闭
@@ -176,6 +183,7 @@ class LogRechargeRuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keys 日志Key列表，RechargeType为full_regex_log时必填
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ParseArray json解析模式，开启首层数据解析
      */
     function __construct()
     {
@@ -244,6 +252,10 @@ class LogRechargeRuleInfo extends AbstractModel
 
         if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
             $this->Keys = $param["Keys"];
+        }
+
+        if (array_key_exists("ParseArray",$param) and $param["ParseArray"] !== null) {
+            $this->ParseArray = $param["ParseArray"];
         }
     }
 }

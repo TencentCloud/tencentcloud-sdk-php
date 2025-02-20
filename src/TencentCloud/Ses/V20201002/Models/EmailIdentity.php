@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) 设置当前信誉等级
  * @method integer getDailyQuota() 获取当日最高发信量
  * @method void setDailyQuota(integer $DailyQuota) 设置当日最高发信量
+ * @method array getSendIp() 获取域名配置的独立ip
+ * @method void setSendIp(array $SendIp) 设置域名配置的独立ip
  */
 class EmailIdentity extends AbstractModel
 {
@@ -59,11 +61,17 @@ class EmailIdentity extends AbstractModel
     public $DailyQuota;
 
     /**
+     * @var array 域名配置的独立ip
+     */
+    public $SendIp;
+
+    /**
      * @param string $IdentityName 发信域名
      * @param string $IdentityType 验证类型，固定为DOMAIN
      * @param boolean $SendingEnabled 是否已通过验证
      * @param integer $CurrentReputationLevel 当前信誉等级
      * @param integer $DailyQuota 当日最高发信量
+     * @param array $SendIp 域名配置的独立ip
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class EmailIdentity extends AbstractModel
 
         if (array_key_exists("DailyQuota",$param) and $param["DailyQuota"] !== null) {
             $this->DailyQuota = $param["DailyQuota"];
+        }
+
+        if (array_key_exists("SendIp",$param) and $param["SendIp"] !== null) {
+            $this->SendIp = $param["SendIp"];
         }
     }
 }

@@ -21,41 +21,30 @@ use TencentCloud\Common\AbstractModel;
  * 码段配置
  *
  * @method string getName() 获取码段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置码段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取码段类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置码段类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取码段内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置码段内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLength() 获取码段长度
  * @method void setLength(integer $Length) 设置码段长度
  * @method string getExt() 获取扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExt(string $Ext) 设置扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodePart extends AbstractModel
 {
     /**
      * @var string 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -66,20 +55,15 @@ class CodePart extends AbstractModel
 
     /**
      * @var string 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ext;
 
     /**
      * @param string $Name 码段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 码段类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 码段内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Length 码段长度
      * @param string $Ext 扩展字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

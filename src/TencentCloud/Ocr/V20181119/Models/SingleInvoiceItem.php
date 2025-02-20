@@ -128,6 +128,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElectronicFlightTicketFull(ElectronicFlightTicketFull $ElectronicFlightTicketFull) 设置电子发票（机票行程单）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaxPayment getTaxPayment() 获取完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaxPayment(TaxPayment $TaxPayment) 设置完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CustomsPaymentReceipt getCustomsPaymentReceipt() 获取海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomsPaymentReceipt(CustomsPaymentReceipt $CustomsPaymentReceipt) 设置海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -294,6 +302,18 @@ class SingleInvoiceItem extends AbstractModel
     public $ElectronicFlightTicketFull;
 
     /**
+     * @var TaxPayment 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaxPayment;
+
+    /**
+     * @var CustomsPaymentReceipt 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomsPaymentReceipt;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -347,6 +367,10 @@ class SingleInvoiceItem extends AbstractModel
      * @param ElectronicTrainTicketFull $ElectronicTrainTicketFull 电子发票（火车票）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ElectronicFlightTicketFull $ElectronicFlightTicketFull 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaxPayment $TaxPayment 完税凭证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomsPaymentReceipt $CustomsPaymentReceipt 海关缴款
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -495,6 +519,16 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("ElectronicFlightTicketFull",$param) and $param["ElectronicFlightTicketFull"] !== null) {
             $this->ElectronicFlightTicketFull = new ElectronicFlightTicketFull();
             $this->ElectronicFlightTicketFull->deserialize($param["ElectronicFlightTicketFull"]);
+        }
+
+        if (array_key_exists("TaxPayment",$param) and $param["TaxPayment"] !== null) {
+            $this->TaxPayment = new TaxPayment();
+            $this->TaxPayment->deserialize($param["TaxPayment"]);
+        }
+
+        if (array_key_exists("CustomsPaymentReceipt",$param) and $param["CustomsPaymentReceipt"] !== null) {
+            $this->CustomsPaymentReceipt = new CustomsPaymentReceipt();
+            $this->CustomsPaymentReceipt->deserialize($param["CustomsPaymentReceipt"]);
         }
     }
 }

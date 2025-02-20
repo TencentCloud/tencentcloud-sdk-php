@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigType(integer $ConfigType) 设置 0 公有云查询；1青鹅查询，青鹅查询显示所有需要展示的
  * @method string getFileName() 获取模糊搜索关键字文件
  * @method void setFileName(string $FileName) 设置模糊搜索关键字文件
- * @method integer getClusterConfigType() 获取0集群维度 1节点维度
- * @method void setClusterConfigType(integer $ClusterConfigType) 设置0集群维度 1节点维度
+ * @method integer getClusterConfigType() 获取0集群维度 1节点维度 2启动脚本 3计算组维度
+ * @method void setClusterConfigType(integer $ClusterConfigType) 设置0集群维度 1节点维度 2启动脚本 3计算组维度
  * @method string getIPAddress() 获取eth0的ip地址
  * @method void setIPAddress(string $IPAddress) 设置eth0的ip地址
+ * @method string getComputeGroupId() 获取计算组id
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组id
  */
 class DescribeClusterConfigsRequest extends AbstractModel
 {
@@ -49,7 +51,7 @@ class DescribeClusterConfigsRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var integer 0集群维度 1节点维度
+     * @var integer 0集群维度 1节点维度 2启动脚本 3计算组维度
      */
     public $ClusterConfigType;
 
@@ -59,11 +61,17 @@ class DescribeClusterConfigsRequest extends AbstractModel
     public $IPAddress;
 
     /**
+     * @var string 计算组id
+     */
+    public $ComputeGroupId;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param integer $ConfigType  0 公有云查询；1青鹅查询，青鹅查询显示所有需要展示的
      * @param string $FileName 模糊搜索关键字文件
-     * @param integer $ClusterConfigType 0集群维度 1节点维度
+     * @param integer $ClusterConfigType 0集群维度 1节点维度 2启动脚本 3计算组维度
      * @param string $IPAddress eth0的ip地址
+     * @param string $ComputeGroupId 计算组id
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeClusterConfigsRequest extends AbstractModel
 
         if (array_key_exists("IPAddress",$param) and $param["IPAddress"] !== null) {
             $this->IPAddress = $param["IPAddress"];
+        }
+
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
         }
     }
 }

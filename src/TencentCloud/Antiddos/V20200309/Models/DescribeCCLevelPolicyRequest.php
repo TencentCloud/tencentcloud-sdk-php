@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置IP值
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getProtocol() 获取协议，可取值HTTP，HTTPS
- * @method void setProtocol(string $Protocol) 设置协议，可取值HTTP，HTTPS
+ * @method string getProtocol() 获取协议，可取值http、https、http/https
+ * @method void setProtocol(string $Protocol) 设置协议，可取值http、https、http/https
  */
 class DescribeCCLevelPolicyRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeCCLevelPolicyRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 协议，可取值HTTP，HTTPS
+     * @var string 协议，可取值http、https、http/https
      */
     public $Protocol;
 
@@ -55,7 +55,7 @@ class DescribeCCLevelPolicyRequest extends AbstractModel
      * @param string $InstanceId 实例Id
      * @param string $Ip IP值
      * @param string $Domain 域名
-     * @param string $Protocol 协议，可取值HTTP，HTTPS
+     * @param string $Protocol 协议，可取值http、https、http/https
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 业务出参
  *
  * @method integer getCode() 获取推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputAuthorizedTransfer extends AbstractModel
 {
     /**
      * @var integer 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param integer $Code 推送状态，0表示成功。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

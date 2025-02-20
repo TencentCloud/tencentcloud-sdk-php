@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCorpQuotas返回参数结构体
  *
  * @method array getCorpQuotas() 获取子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpQuotas(array $CorpQuotas) 设置子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeCorpQuotasResponse extends AbstractModel
 {
     /**
      * @var array 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpQuotas;
 
     /**
      * @var integer 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -52,9 +46,7 @@ class DescribeCorpQuotasResponse extends AbstractModel
 
     /**
      * @param array $CorpQuotas 子企业额度使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 记录总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

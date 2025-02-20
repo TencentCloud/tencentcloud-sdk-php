@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCostAmount() 获取累计成本金额（单位：元）
  * @method void setCostAmount(string $CostAmount) 设置累计成本金额（单位：元）
  * @method array getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(array $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SavingPlanUsageDetail extends AbstractModel
 {
@@ -92,7 +90,6 @@ class SavingPlanUsageDetail extends AbstractModel
 
     /**
      * @var array 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -107,7 +104,6 @@ class SavingPlanUsageDetail extends AbstractModel
      * @param string $DosageAmount 累计按量计费预期金额（单位：元）
      * @param string $CostAmount 累计成本金额（单位：元）
      * @param array $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

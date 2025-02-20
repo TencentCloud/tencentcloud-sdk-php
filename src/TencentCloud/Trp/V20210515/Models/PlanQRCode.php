@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 安心计划二维码
  *
  * @method string getUrl() 获取二维码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置二维码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlanQRCode extends AbstractModel
 {
     /**
      * @var string 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var integer 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态，0:未激活 1:已激活 2:已冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

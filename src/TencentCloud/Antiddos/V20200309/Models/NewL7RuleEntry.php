@@ -58,8 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCStatus(integer $CCStatus) 设置cc防护状态，取值[0(关闭), 1(开启)]
  * @method integer getCCEnable() 获取HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
  * @method void setCCEnable(integer $CCEnable) 设置HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
- * @method integer getCCThreshold() 获取HTTPS协议的CC防护阈值
- * @method void setCCThreshold(integer $CCThreshold) 设置HTTPS协议的CC防护阈值
+ * @method integer getCCThreshold() 获取HTTPS协议的CC防护阈值（已废弃）
+ * @method void setCCThreshold(integer $CCThreshold) 设置HTTPS协议的CC防护阈值（已废弃）
+ * @method integer getCCThresholdNew() 获取HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+ * @method void setCCThresholdNew(integer $CCThresholdNew) 设置HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
  * @method string getCCLevel() 获取HTTPS协议的CC防护等级
  * @method void setCCLevel(string $CCLevel) 设置HTTPS协议的CC防护等级
  * @method string getModifyTime() 获取修改时间
@@ -177,9 +183,16 @@ class NewL7RuleEntry extends AbstractModel
     public $CCEnable;
 
     /**
-     * @var integer HTTPS协议的CC防护阈值
+     * @var integer HTTPS协议的CC防护阈值（已废弃）
      */
     public $CCThreshold;
+
+    /**
+     * @var integer HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
+     */
+    public $CCThresholdNew;
 
     /**
      * @var string HTTPS协议的CC防护等级
@@ -238,7 +251,10 @@ class NewL7RuleEntry extends AbstractModel
      * @param integer $Status 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param integer $CCStatus cc防护状态，取值[0(关闭), 1(开启)]
      * @param integer $CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
-     * @param integer $CCThreshold HTTPS协议的CC防护阈值
+     * @param integer $CCThreshold HTTPS协议的CC防护阈值（已废弃）
+     * @param integer $CCThresholdNew HTTPS协议的CC防护阈值 -1：默认防御阈值
+0: 关闭
+大于0：自定义防护阈值
      * @param string $CCLevel HTTPS协议的CC防护等级
      * @param string $ModifyTime 修改时间
      * @param integer $HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
@@ -345,6 +361,10 @@ class NewL7RuleEntry extends AbstractModel
 
         if (array_key_exists("CCThreshold",$param) and $param["CCThreshold"] !== null) {
             $this->CCThreshold = $param["CCThreshold"];
+        }
+
+        if (array_key_exists("CCThresholdNew",$param) and $param["CCThresholdNew"] !== null) {
+            $this->CCThresholdNew = $param["CCThresholdNew"];
         }
 
         if (array_key_exists("CCLevel",$param) and $param["CCLevel"] !== null) {

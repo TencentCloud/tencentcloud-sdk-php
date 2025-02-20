@@ -21,73 +21,53 @@ use TencentCloud\Common\AbstractModel;
  * 付费信息使用量
  *
  * @method integer getCorpId() 获取企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpId(integer $CorpId) 设置企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFactoryCnt() 获取商户配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFactoryCnt(integer $FactoryCnt) 设置商户配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getItemCnt() 获取商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemCnt(integer $ItemCnt) 设置商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrackCnt() 获取溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackCnt(integer $TrackCnt) 设置溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSaleCnt() 获取营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSaleCnt(integer $SaleCnt) 设置营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChainCnt() 获取区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainCnt(integer $ChainCnt) 设置区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskCnt() 获取风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskCnt(integer $RiskCnt) 设置风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsageQuota extends AbstractModel
 {
     /**
      * @var integer 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpId;
 
     /**
      * @var integer 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FactoryCnt;
 
     /**
      * @var integer 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCnt;
 
     /**
      * @var integer 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrackCnt;
 
     /**
      * @var integer 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SaleCnt;
 
     /**
      * @var integer 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainCnt;
 
@@ -100,27 +80,19 @@ class UsageQuota extends AbstractModel
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param integer $CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FactoryCnt 商户配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ItemCnt 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrackCnt 溯源码量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SaleCnt 营销码额度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChainCnt 区块链上链次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskCnt 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

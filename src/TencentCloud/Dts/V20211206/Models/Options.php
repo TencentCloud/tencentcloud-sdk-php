@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddAdditionalColumn(boolean $AddAdditionalColumn) 设置是否添加附加列
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOpTypes() 获取所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， 不填（不选），PartialDDL(自定义,和DdlOptions一起起作用 )
+ * @method array getOpTypes() 获取所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpTypes(array $OpTypes) 设置所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， 不填（不选），PartialDDL(自定义,和DdlOptions一起起作用 )
+ * @method void setOpTypes(array $OpTypes) 设置所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ConflictHandleOption getConflictHandleOption() 获取冲突处理的详细选项，如条件覆盖中的条件行和条件操作
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,7 +100,7 @@ class Options extends AbstractModel
     public $AddAdditionalColumn;
 
     /**
-     * @var array 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， 不填（不选），PartialDDL(自定义,和DdlOptions一起起作用 )
+     * @var array 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpTypes;
@@ -162,7 +162,7 @@ class Options extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AddAdditionalColumn 是否添加附加列
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， 不填（不选），PartialDDL(自定义,和DdlOptions一起起作用 )
+     * @param array $OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleOption $ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
 注意：此字段可能返回 null，表示取不到有效值。

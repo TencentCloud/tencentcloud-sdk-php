@@ -41,6 +41,11 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 - 查询生成写真图片任务：根据任务 ID 查询生成图片任务的处理状态、处理结果。
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
+ * @method Models\QueryGlamPicJobResponse QueryGlamPicJob(Models\QueryGlamPicJobRequest $req) AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个美照生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\QueryMemeJobResponse QueryMemeJob(Models\QueryMemeJobRequest $req) 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
 - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
 - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -72,6 +77,11 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 提交生成写真图片任务默认提供1个并发。
+ * @method Models\SubmitGlamPicJobResponse SubmitGlamPicJob(Models\SubmitGlamPicJobRequest $req) AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+- 提交任务：提交一个美照生成异步任务，获得任务 ID。
+- 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+
+AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\SubmitMemeJobResponse SubmitMemeJob(Models\SubmitMemeJobRequest $req) 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
 
 - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。

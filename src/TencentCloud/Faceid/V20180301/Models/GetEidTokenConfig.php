@@ -63,15 +63,17 @@ use TencentCloud\Common\AbstractModel;
 - 若未使用意愿核身朗读功能，该字段无需传入。
 - 默认为空，最长可接受120的字符串长度。
  * @method array getIntentionQuestions() 获取意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
  * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
  * @method array getIntentionActions() 获取意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
  * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
  * @method boolean getIntentionRecognition() 获取意愿核身过程中识别用户的回答意图。
 - 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
 - 默认开启。
@@ -144,7 +146,7 @@ class GetEidTokenConfig extends AbstractModel
 
     /**
      * @var array 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public $IntentionQuestions;
 
@@ -152,6 +154,7 @@ class GetEidTokenConfig extends AbstractModel
      * @var array 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public $IntentionActions;
 
@@ -209,10 +212,11 @@ class GetEidTokenConfig extends AbstractModel
 - 若未使用意愿核身朗读功能，该字段无需传入。
 - 默认为空，最长可接受120的字符串长度。
      * @param array $IntentionQuestions 意愿核身问答模式的配置列表。
-- 当前仅支持一个问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
 - 默认为空，最长可接受150的字符串长度。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      * @param boolean $IntentionRecognition 意愿核身过程中识别用户的回答意图。
 - 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
 - 默认开启。

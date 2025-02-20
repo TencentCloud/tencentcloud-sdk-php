@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置页面数量
  * @method string getExpression() 获取表达式
  * @method void setExpression(string $Expression) 设置表达式
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DescribeDMSPartitionsRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeDMSPartitionsRequest extends AbstractModel
     public $Expression;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 数据库名
      * @param string $TableName 表名称
      * @param string $SchemaName schema名称
@@ -120,6 +127,7 @@ class DescribeDMSPartitionsRequest extends AbstractModel
      * @param integer $Offset 翻页跳过数量
      * @param integer $Limit 页面数量
      * @param string $Expression 表达式
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeDMSPartitionsRequest extends AbstractModel
 
         if (array_key_exists("Expression",$param) and $param["Expression"] !== null) {
             $this->Expression = $param["Expression"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

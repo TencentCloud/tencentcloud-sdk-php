@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(integer $Source) 设置来源(1 文档生成 2 批量导入 3 手动添加)
  * @method string getQueryAnswer() 获取查询答案
  * @method void setQueryAnswer(string $QueryAnswer) 设置查询答案
+ * @method string getCateBizId() 获取分类ID
+ * @method void setCateBizId(string $CateBizId) 设置分类ID
  * @method array getQaBizIds() 获取QA业务ID列表
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
  * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
@@ -91,6 +93,11 @@ class ListQARequest extends AbstractModel
     public $QueryAnswer;
 
     /**
+     * @var string 分类ID
+     */
+    public $CateBizId;
+
+    /**
      * @var array QA业务ID列表
      */
     public $QaBizIds;
@@ -110,6 +117,7 @@ class ListQARequest extends AbstractModel
      * @param string $DocBizId 文档ID
      * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
      * @param string $QueryAnswer 查询答案
+     * @param string $CateBizId 分类ID
      * @param array $QaBizIds QA业务ID列表
      * @param string $QueryType 查询类型 filename 名称、 attribute 标签
      */
@@ -160,6 +168,10 @@ class ListQARequest extends AbstractModel
 
         if (array_key_exists("QueryAnswer",$param) and $param["QueryAnswer"] !== null) {
             $this->QueryAnswer = $param["QueryAnswer"];
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
         }
 
         if (array_key_exists("QaBizIds",$param) and $param["QaBizIds"] !== null) {

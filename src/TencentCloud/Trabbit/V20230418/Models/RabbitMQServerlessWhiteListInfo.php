@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 公网白名单信息
  *
  * @method string getPublicDataStreamWhiteList() 获取公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataStreamWhiteList(string $PublicDataStreamWhiteList) 设置公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDataStreamWhiteListStatus() 获取公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataStreamWhiteListStatus(string $PublicDataStreamWhiteListStatus) 设置公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQServerlessWhiteListInfo extends AbstractModel
 {
     /**
      * @var string 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataStreamWhiteList;
 
     /**
      * @var string 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataStreamWhiteListStatus;
 
     /**
      * @param string $PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDataStreamWhiteListStatus 公网数据流白名单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

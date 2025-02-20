@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 虚拟主机配额
  *
  * @method integer getMaxVirtualHost() 获取最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxVirtualHost(integer $MaxVirtualHost) 设置最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedVirtualHost() 获取已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedVirtualHost(integer $UsedVirtualHost) 设置已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirtualHostQuota extends AbstractModel
 {
     /**
      * @var integer 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxVirtualHost;
 
     /**
      * @var integer 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedVirtualHost;
 
     /**
      * @param integer $MaxVirtualHost 最大虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedVirtualHost 已经使用的虚拟主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

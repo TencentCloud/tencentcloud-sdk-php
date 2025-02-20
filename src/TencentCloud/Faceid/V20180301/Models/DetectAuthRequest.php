@@ -66,16 +66,16 @@ use TencentCloud\Common\AbstractModel;
 - 最长可接受120的字符串长度。
  * @method array getIntentionQuestions() 获取意愿核身（语音播报+语音回答模式）使用的文案。
 - 包括：系统语音播报的文本、需要核验的标准文本。
-- 当前仅支持1轮问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
  * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身（语音播报+语音回答模式）使用的文案。
 - 包括：系统语音播报的文本、需要核验的标准文本。
-- 当前仅支持1轮问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
  * @method array getIntentionActions() 获取意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 当前仅支持一个提示文本。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
  * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 当前仅支持一个提示文本。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
  * @method RuleIdConfig getConfig() 获取意愿核身流程配置。
  * @method void setConfig(RuleIdConfig $Config) 设置意愿核身流程配置。
  */
@@ -142,14 +142,14 @@ class DetectAuthRequest extends AbstractModel
     /**
      * @var array 意愿核身（语音播报+语音回答模式）使用的文案。
 - 包括：系统语音播报的文本、需要核验的标准文本。
-- 当前仅支持1轮问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public $IntentionQuestions;
 
     /**
      * @var array 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 当前仅支持一个提示文本。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      */
     public $IntentionActions;
 
@@ -183,10 +183,10 @@ class DetectAuthRequest extends AbstractModel
 - 最长可接受120的字符串长度。
      * @param array $IntentionQuestions 意愿核身（语音播报+语音回答模式）使用的文案。
 - 包括：系统语音播报的文本、需要核验的标准文本。
-- 当前仅支持1轮问答。
+- 问答模式支持1-10轮（不超过10轮）的意愿确认。
      * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案。
 - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 当前仅支持一个提示文本。
+- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
      * @param RuleIdConfig $Config 意愿核身流程配置。
      */
     function __construct()

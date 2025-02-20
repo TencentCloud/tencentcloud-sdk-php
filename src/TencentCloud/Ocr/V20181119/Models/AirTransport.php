@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomesticInternationalTag(string $DomesticInternationalTag) 设置国内国际标签
  * @method string getDateStart() 获取客票生效日期
  * @method void setDateStart(string $DateStart) 设置客票生效日期
- * @method string getDateEnd() 获取有效截至日期
- * @method void setDateEnd(string $DateEnd) 设置有效截至日期
+ * @method string getDateEnd() 获取有效截止日期
+ * @method void setDateEnd(string $DateEnd) 设置有效截止日期
  * @method string getEndorsement() 获取签注
  * @method void setEndorsement(string $Endorsement) 设置签注
  * @method integer getQRCodeMark() 获取是否存在二维码（1：有，0：无）
@@ -186,7 +186,7 @@ class AirTransport extends AbstractModel
     public $DateStart;
 
     /**
-     * @var string 有效截至日期
+     * @var string 有效截止日期
      */
     public $DateEnd;
 
@@ -261,7 +261,7 @@ class AirTransport extends AbstractModel
      * @param string $Kind 发票消费类型
      * @param string $DomesticInternationalTag 国内国际标签
      * @param string $DateStart 客票生效日期
-     * @param string $DateEnd 有效截至日期
+     * @param string $DateEnd 有效截止日期
      * @param string $Endorsement 签注
      * @param integer $QRCodeMark 是否存在二维码（1：有，0：无）
      * @param array $FlightItems 条目

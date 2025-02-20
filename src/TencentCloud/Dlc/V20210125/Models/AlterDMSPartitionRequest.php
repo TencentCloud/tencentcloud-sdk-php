@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValues(string $CurrentValues) 设置当前名称，变更前Part名称
  * @method DMSPartition getPartition() 获取分区
  * @method void setPartition(DMSPartition $Partition) 设置分区
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class AlterDMSPartitionRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AlterDMSPartitionRequest extends AbstractModel
     public $Partition;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $CurrentDbName 当前名称，变更前db名称
      * @param string $CurrentTableName 当前名称，变更前table名称
      * @param string $CurrentValues 当前名称，变更前Part名称
      * @param DMSPartition $Partition 分区
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class AlterDMSPartitionRequest extends AbstractModel
         if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
             $this->Partition = new DMSPartition();
             $this->Partition->deserialize($param["Partition"]);
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

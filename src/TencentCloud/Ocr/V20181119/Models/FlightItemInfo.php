@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFareBasis(string $FareBasis) 设置客票级别/客票类别
  * @method string getAllow() 获取免费行李额
  * @method void setAllow(string $Allow) 设置免费行李额
+ * @method string getDateStart() 获取客票生效日期
+ * @method void setDateStart(string $DateStart) 设置客票生效日期
+ * @method string getDateEnd() 获取有效截止日期
+ * @method void setDateEnd(string $DateEnd) 设置有效截止日期
  */
 class FlightItemInfo extends AbstractModel
 {
@@ -87,6 +91,16 @@ class FlightItemInfo extends AbstractModel
     public $Allow;
 
     /**
+     * @var string 客票生效日期
+     */
+    public $DateStart;
+
+    /**
+     * @var string 有效截止日期
+     */
+    public $DateEnd;
+
+    /**
      * @param string $TerminalGetOn 出发站
      * @param string $TerminalGetOff 到达站
      * @param string $Carrier 承运人
@@ -96,6 +110,8 @@ class FlightItemInfo extends AbstractModel
      * @param string $TimeGetOn 乘机时间
      * @param string $FareBasis 客票级别/客票类别
      * @param string $Allow 免费行李额
+     * @param string $DateStart 客票生效日期
+     * @param string $DateEnd 有效截止日期
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class FlightItemInfo extends AbstractModel
 
         if (array_key_exists("Allow",$param) and $param["Allow"] !== null) {
             $this->Allow = $param["Allow"];
+        }
+
+        if (array_key_exists("DateStart",$param) and $param["DateStart"] !== null) {
+            $this->DateStart = $param["DateStart"];
+        }
+
+        if (array_key_exists("DateEnd",$param) and $param["DateEnd"] !== null) {
+            $this->DateEnd = $param["DateEnd"];
         }
     }
 }

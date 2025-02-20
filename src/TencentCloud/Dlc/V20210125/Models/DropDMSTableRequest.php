@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteData(boolean $DeleteData) 设置是否删除数据
  * @method KVPair getEnvProps() 获取环境属性
  * @method void setEnvProps(KVPair $EnvProps) 设置环境属性
+ * @method string getDatasourceConnectionName() 获取数据目录信息
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据目录信息
  */
 class DropDMSTableRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DropDMSTableRequest extends AbstractModel
     public $EnvProps;
 
     /**
+     * @var string 数据目录信息
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DbName 数据库名称
      * @param string $Name 表名称
      * @param boolean $DeleteData 是否删除数据
      * @param KVPair $EnvProps 环境属性
+     * @param string $DatasourceConnectionName 数据目录信息
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class DropDMSTableRequest extends AbstractModel
         if (array_key_exists("EnvProps",$param) and $param["EnvProps"] !== null) {
             $this->EnvProps = new KVPair();
             $this->EnvProps->deserialize($param["EnvProps"]);
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

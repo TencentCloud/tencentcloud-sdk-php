@@ -21,261 +21,177 @@ use TencentCloud\Common\AbstractModel;
  * 文档信息
  *
  * @method string getDocumentId() 获取文档Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentId(string $DocumentId) 设置文档Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentUrl() 获取文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentUrl(string $DocumentUrl) 设置文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentName() 获取文档名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentName(string $DocumentName) 设置文档名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwner() 获取文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwner(string $Owner) 设置文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSdkAppId() 获取应用Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSdkAppId(integer $SdkAppId) 设置应用Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPermission() 获取文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermission(integer $Permission) 设置文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranscodeResult() 获取转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeResult(string $TranscodeResult) 设置转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTranscodeType() 获取转码类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeType(integer $TranscodeType) 设置转码类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTranscodeProgress() 获取转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeProgress(integer $TranscodeProgress) 设置转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTranscodeState() 获取转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeState(integer $TranscodeState) 设置转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranscodeInfo() 获取转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeInfo(string $TranscodeInfo) 设置转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentType() 获取文档类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentType(string $DocumentType) 设置文档类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDocumentSize() 获取文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSize(integer $DocumentSize) 设置文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPages() 获取课件页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPages(integer $Pages) 设置课件页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCover() 获取封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCover(string $Cover) 设置封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreview() 获取课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreview(string $Preview) 设置课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResolution() 获取文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResolution(string $Resolution) 设置文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DocumentInfo extends AbstractModel
 {
     /**
      * @var string 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentId;
 
     /**
      * @var string 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentUrl;
 
     /**
      * @var string 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentName;
 
     /**
      * @var string 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
      * @var integer 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SdkAppId;
 
     /**
      * @var integer 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Permission;
 
     /**
      * @var string 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeResult;
 
     /**
      * @var integer 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeType;
 
     /**
      * @var integer 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeProgress;
 
     /**
      * @var integer 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeState;
 
     /**
      * @var string 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeInfo;
 
     /**
      * @var string 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentType;
 
     /**
      * @var integer 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSize;
 
     /**
      * @var integer 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pages;
 
     /**
      * @var integer 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var string 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cover;
 
     /**
      * @var string 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Preview;
 
     /**
      * @var string 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resolution;
 
     /**
      * @var string 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinScaleResolution;
 
     /**
      * @param string $DocumentId 文档Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentUrl 文档原址url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentName 文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 文档所有者UserId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SdkAppId 应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Permission 文档权限，0：私有课件 1：公共课件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranscodeResult 转码结果，无需转码为空，转码成功为结果url，转码失败为错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TranscodeType 转码类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TranscodeProgress 转码进度， 0 - 100 表示（0% - 100%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TranscodeState 转码状态，0为无需转码，1为正在转码，2为转码失败，3为转码成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranscodeInfo 转码失败后的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentType 文档类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DocumentSize 文档大小，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新的UNIX时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pages 课件页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 宽，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 高，仅在静态转码的课件有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cover 封面，仅转码的课件会生成封面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Preview 课件预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resolution 文档的分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

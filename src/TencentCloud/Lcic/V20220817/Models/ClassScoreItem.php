@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 课堂评分字段
  *
  * @method integer getRoomId() 获取课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomId(integer $RoomId) 设置课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取评分时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置评分时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScoreMsg() 获取课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScoreMsg(string $ScoreMsg) 设置课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClassScoreItem extends AbstractModel
 {
     /**
      * @var integer 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomId;
 
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var integer 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var string 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScoreMsg;
 
     /**
      * @param integer $RoomId 课堂iD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 评分时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 课堂评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScoreMsg 课堂评价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

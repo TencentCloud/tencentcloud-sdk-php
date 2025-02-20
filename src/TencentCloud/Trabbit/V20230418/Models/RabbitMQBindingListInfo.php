@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Rabbitmq路由关系列表成员
  *
  * @method integer getBindingId() 获取路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindingId(integer $BindingId) 设置路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualHost() 获取Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDestinationType() 获取目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationType(string $DestinationType) 设置目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDestination() 获取目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestination(string $Destination) 设置目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoutingKey() 获取绑定key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutingKey(string $RoutingKey) 设置绑定key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceExchangeType() 获取源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceExchangeType(string $SourceExchangeType) 设置源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQBindingListInfo extends AbstractModel
 {
     /**
      * @var integer 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindingId;
 
     /**
      * @var string Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHost;
 
     /**
      * @var string 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationType;
 
     /**
      * @var string 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Destination;
 
     /**
      * @var string 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutingKey;
 
     /**
      * @var string 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceExchangeType;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @param integer $BindingId 路由关系id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 源exchange名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DestinationType 目标类型,queue或exchange
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Destination 目标资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoutingKey 绑定key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceExchangeType 源exchange类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

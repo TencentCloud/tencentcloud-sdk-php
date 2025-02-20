@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteData(boolean $DeleteData) 设置是否删除数据
  * @method boolean getCascade() 获取是否级联删除
  * @method void setCascade(boolean $Cascade) 设置是否级联删除
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DropDMSDatabaseRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DropDMSDatabaseRequest extends AbstractModel
     public $Cascade;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $Name 数据库名称
      * @param boolean $DeleteData 是否删除数据
      * @param boolean $Cascade 是否级联删除
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DropDMSDatabaseRequest extends AbstractModel
 
         if (array_key_exists("Cascade",$param) and $param["Cascade"] !== null) {
             $this->Cascade = $param["Cascade"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

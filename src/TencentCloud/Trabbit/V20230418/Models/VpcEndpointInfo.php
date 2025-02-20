@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcEndpoint(string $VpcEndpoint) 设置vpc接入点信息
  * @method string getVpcDataStreamEndpointStatus() 获取vpc接入点状态
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置vpc接入点状态
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcEndpointInfo extends AbstractModel
 {
@@ -53,7 +51,6 @@ class VpcEndpointInfo extends AbstractModel
     /**
      * @var string vpc接入点状态
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcDataStreamEndpointStatus;
 
@@ -63,7 +60,6 @@ OFF/ON/CREATING/DELETING
      * @param string $VpcEndpoint vpc接入点信息
      * @param string $VpcDataStreamEndpointStatus vpc接入点状态
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

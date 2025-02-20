@@ -160,6 +160,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectStatus(DataSourceConnectStatus $ConnectStatus) 设置数据源连接状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisplayType() 获取数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayType(string $DisplayType) 设置数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnv() 获取数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnv(string $Env) 设置数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceUrn() 获取数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceUrn(string $DatasourceUrn) 设置数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModel() 获取是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModel(string $Model) 设置是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataSourceEnvInfos() 获取 数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceEnvInfos(array $DataSourceEnvInfos) 设置 数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -374,6 +394,36 @@ class DataSourceInfo extends AbstractModel
     public $ConnectStatus;
 
     /**
+     * @var string 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayType;
+
+    /**
+     * @var string 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Env;
+
+    /**
+     * @var string 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceUrn;
+
+    /**
+     * @var string 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Model;
+
+    /**
+     * @var array  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceEnvInfos;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -443,6 +493,16 @@ class DataSourceInfo extends AbstractModel
      * @param string $DevelopmentParams 同params 内容为开发数据源的数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceConnectStatus $ConnectStatus 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisplayType 数据源展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Env 数据源环境
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceUrn 数据源唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Model 是否标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataSourceEnvInfos  数据源环境信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -597,6 +657,31 @@ class DataSourceInfo extends AbstractModel
         if (array_key_exists("ConnectStatus",$param) and $param["ConnectStatus"] !== null) {
             $this->ConnectStatus = new DataSourceConnectStatus();
             $this->ConnectStatus->deserialize($param["ConnectStatus"]);
+        }
+
+        if (array_key_exists("DisplayType",$param) and $param["DisplayType"] !== null) {
+            $this->DisplayType = $param["DisplayType"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("DatasourceUrn",$param) and $param["DatasourceUrn"] !== null) {
+            $this->DatasourceUrn = $param["DatasourceUrn"];
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("DataSourceEnvInfos",$param) and $param["DataSourceEnvInfos"] !== null) {
+            $this->DataSourceEnvInfos = [];
+            foreach ($param["DataSourceEnvInfos"] as $key => $value){
+                $obj = new DataSourceEnvInfo();
+                $obj->deserialize($value);
+                array_push($this->DataSourceEnvInfos, $obj);
+            }
         }
     }
 }

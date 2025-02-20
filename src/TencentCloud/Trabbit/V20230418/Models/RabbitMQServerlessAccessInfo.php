@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 公网访问信息
  *
  * @method string getPublicAccessEndpoint() 获取公网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置公网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDataStreamStatus() 获取公网状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) 设置公网状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQServerlessAccessInfo extends AbstractModel
 {
     /**
      * @var string 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEndpoint;
 
     /**
      * @var string 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataStreamStatus;
 
     /**
      * @param string $PublicAccessEndpoint 公网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDataStreamStatus 公网状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

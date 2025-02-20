@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxExchange() 获取可创建最大exchange数
  * @method void setMaxExchange(integer $MaxExchange) 设置可创建最大exchange数
  * @method integer getUsedExchange() 获取已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedExchange(integer $UsedExchange) 设置已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExchangeQuota extends AbstractModel
 {
@@ -36,14 +34,12 @@ class ExchangeQuota extends AbstractModel
 
     /**
      * @var integer 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedExchange;
 
     /**
      * @param integer $MaxExchange 可创建最大exchange数
      * @param integer $UsedExchange 已创建exchange数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

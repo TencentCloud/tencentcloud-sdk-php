@@ -23,69 +23,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQueueName() 获取队列名
  * @method void setQueueName(string $QueueName) 设置队列名
  * @method string getRemark() 获取备注说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RabbitMQQueueListConsumerDetailInfo getConsumerDetail() 获取消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerDetail(RabbitMQQueueListConsumerDetailInfo $ConsumerDetail) 设置消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueueType() 获取队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueType(string $QueueType) 设置队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageHeapCount() 获取消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageHeapCount(integer $MessageHeapCount) 设置消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessageRateIn() 获取消息生产速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateIn(float $MessageRateIn) 设置消息生产速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessageRateOut() 获取消息消费速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateOut(float $MessageRateOut) 设置消息消费速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDurable() 获取队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurable(boolean $Durable) 设置队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoDelete() 获取队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoDelete(boolean $AutoDelete) 设置队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualHost() 获取队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHost(string $VirtualHost) 设置队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNode() 获取队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNode(string $Node) 设置队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicy() 获取生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicy(string $Policy) 设置生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArguments() 获取扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArguments(string $Arguments) 设置扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExclusive() 获取是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusive(boolean $Exclusive) 设置是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQQueueListInfo extends AbstractModel
 {
@@ -96,134 +64,102 @@ class RabbitMQQueueListInfo extends AbstractModel
 
     /**
      * @var string 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var RabbitMQQueueListConsumerDetailInfo 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerDetail;
 
     /**
      * @var string 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueType;
 
     /**
      * @var integer 消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageHeapCount;
 
     /**
      * @var float 消息生产速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRateIn;
 
     /**
      * @var float 消息消费速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRateOut;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var boolean 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Durable;
 
     /**
      * @var boolean 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoDelete;
 
     /**
      * @var string 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHost;
 
     /**
      * @var string 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Node;
 
     /**
      * @var string 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policy;
 
     /**
      * @var string 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arguments;
 
     /**
      * @var boolean 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exclusive;
 
     /**
      * @param string $QueueName 队列名
      * @param string $Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQQueueListConsumerDetailInfo $ConsumerDetail 消费者信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueType 队列类型，取值 "classic"，"quorum"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageHeapCount 消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateIn 消息生产速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateOut 消息消费速率，每秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Durable 队列是否持久化，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 队列所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualHost 队列所属虚拟主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Node 队列所在主节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Policy 生效的策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Exclusive 是否独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

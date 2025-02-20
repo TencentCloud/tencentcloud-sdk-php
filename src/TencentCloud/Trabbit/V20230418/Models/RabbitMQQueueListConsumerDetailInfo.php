@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * RabbitMQ队列列表消费者信息
  *
  * @method integer getConsumersNumber() 获取消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumersNumber(integer $ConsumersNumber) 设置消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQQueueListConsumerDetailInfo extends AbstractModel
 {
     /**
      * @var integer 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumersNumber;
 
     /**
      * @param integer $ConsumersNumber 消费者数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

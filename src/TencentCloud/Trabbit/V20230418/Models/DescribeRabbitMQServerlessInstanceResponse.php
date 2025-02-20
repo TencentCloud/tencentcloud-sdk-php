@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method QueueQuota getQueueQuota() 获取queue配额信息
  * @method void setQueueQuota(QueueQuota $QueueQuota) 设置queue配额信息
  * @method RabbitMQServerlessAccessInfo getClusterNetInfo() 获取网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterNetInfo(RabbitMQServerlessAccessInfo $ClusterNetInfo) 设置网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RabbitMQServerlessWhiteListInfo getClusterWhiteListInfo() 获取公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterWhiteListInfo(RabbitMQServerlessWhiteListInfo $ClusterWhiteListInfo) 设置公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method UserQuota getUserQuota() 获取user配额信息
  * @method void setUserQuota(UserQuota $UserQuota) 设置user配额信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -72,13 +68,11 @@ class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel
 
     /**
      * @var RabbitMQServerlessAccessInfo 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterNetInfo;
 
     /**
      * @var RabbitMQServerlessWhiteListInfo 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterWhiteListInfo;
 
@@ -99,9 +93,7 @@ class DescribeRabbitMQServerlessInstanceResponse extends AbstractModel
      * @param ExchangeQuota $ExchangeQuota exchange配额信息
      * @param QueueQuota $QueueQuota queue配额信息
      * @param RabbitMQServerlessAccessInfo $ClusterNetInfo 网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQServerlessWhiteListInfo $ClusterWhiteListInfo 公网白名单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserQuota $UserQuota user配额信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

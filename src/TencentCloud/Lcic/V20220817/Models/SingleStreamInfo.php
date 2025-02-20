@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 录制流信息
  *
  * @method string getUserId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStopTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopTime(integer $StopTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取总时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置总时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileFormat() 获取文件格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileFormat(string $FileFormat) 设置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordUrl() 获取流url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置流url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordSize() 获取流大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordSize(integer $RecordSize) 设置流大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVideoId() 获取流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoId(string $VideoId) 设置流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRole() 获取流类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRole(string $Role) 设置流类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleStreamInfo extends AbstractModel
 {
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var integer 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopTime;
 
     /**
      * @var integer 总时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var string 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileFormat;
 
     /**
      * @var string 流url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordUrl;
 
     /**
      * @var integer 流大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordSize;
 
     /**
      * @var string 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoId;
 
     /**
      * @var string 流类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
 
     /**
      * @param string $UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StopTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 总时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileFormat 文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 流url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordSize 流大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VideoId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role 流类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

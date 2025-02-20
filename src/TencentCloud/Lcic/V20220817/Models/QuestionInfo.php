@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCorrectAnswer() 获取正确答案（按照位表示是否选择，如0x1表示选择A，0x11表示选择AB）
  * @method void setCorrectAnswer(integer $CorrectAnswer) 设置正确答案（按照位表示是否选择，如0x1表示选择A，0x11表示选择AB）
  * @method array getAnswerStats() 获取每个选项答题人数统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnswerStats(array $AnswerStats) 设置每个选项答题人数统计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QuestionInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class QuestionInfo extends AbstractModel
 
     /**
      * @var array 每个选项答题人数统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnswerStats;
 
@@ -67,7 +64,6 @@ class QuestionInfo extends AbstractModel
      * @param integer $Duration 倒计时答题设置的秒数（0 表示不计时）
      * @param integer $CorrectAnswer 正确答案（按照位表示是否选择，如0x1表示选择A，0x11表示选择AB）
      * @param array $AnswerStats 每个选项答题人数统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

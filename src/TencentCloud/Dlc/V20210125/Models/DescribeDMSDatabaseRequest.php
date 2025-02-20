@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置数据库名称
  * @method string getSchemaName() 获取schema名称
  * @method void setSchemaName(string $SchemaName) 设置schema名称
- * @method string getPattern() 获取匹配规则
- * @method void setPattern(string $Pattern) 设置匹配规则
+ * @method string getPattern() 获取匹配规则，只支持填*
+ * @method void setPattern(string $Pattern) 设置匹配规则，只支持填*
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DescribeDMSDatabaseRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class DescribeDMSDatabaseRequest extends AbstractModel
     public $SchemaName;
 
     /**
-     * @var string 匹配规则
+     * @var string 匹配规则，只支持填*
      */
     public $Pattern;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $Name 数据库名称
      * @param string $SchemaName schema名称
-     * @param string $Pattern 匹配规则
+     * @param string $Pattern 匹配规则，只支持填*
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDMSDatabaseRequest extends AbstractModel
 
         if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
             $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

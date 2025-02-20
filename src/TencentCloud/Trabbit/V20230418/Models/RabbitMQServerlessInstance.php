@@ -39,23 +39,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPayMode() 获取0-后付费，1-预付费
  * @method void setPayMode(integer $PayMode) 设置0-后付费，1-预付费
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取集群规格
  * @method void setSpecName(string $SpecName) 设置集群规格
  * @method string getExceptionInformation() 获取异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptionInformation(string $ExceptionInformation) 设置异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicAccessEndpoint() 获取公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcs() 获取私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcs(array $Vpcs) 设置私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 
  * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
@@ -68,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) 设置为了兼容托管版，固定值 0
  * @method integer getMaxStorage() 获取为了兼容托管版，固定值 0
  * @method void setMaxStorage(integer $MaxStorage) 设置为了兼容托管版，固定值 0
+ * @method integer getIsolatedTime() 获取隔离时间
+ * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间
  */
 class RabbitMQServerlessInstance extends AbstractModel
 {
@@ -118,7 +112,6 @@ class RabbitMQServerlessInstance extends AbstractModel
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -129,19 +122,16 @@ class RabbitMQServerlessInstance extends AbstractModel
 
     /**
      * @var string 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptionInformation;
 
     /**
      * @var string 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEndpoint;
 
     /**
      * @var array 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vpcs;
 
@@ -172,6 +162,11 @@ class RabbitMQServerlessInstance extends AbstractModel
     public $MaxStorage;
 
     /**
+     * @var integer 隔离时间
+     */
+    public $IsolatedTime;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本号
@@ -182,20 +177,17 @@ class RabbitMQServerlessInstance extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param integer $PayMode 0-后付费，1-预付费
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 集群规格
      * @param string $ExceptionInformation 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicAccessEndpoint 公网接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vpcs 私有网络接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 
      * @param integer $InstanceType 集群类型：1
      * @param integer $CreateTime 过期时间
      * @param integer $NodeCount 为了兼容托管版，固定值 0
      * @param integer $MaxStorage 为了兼容托管版，固定值 0
+     * @param integer $IsolatedTime 隔离时间
      */
     function __construct()
     {
@@ -289,6 +281,10 @@ class RabbitMQServerlessInstance extends AbstractModel
 
         if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
             $this->MaxStorage = $param["MaxStorage"];
+        }
+
+        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
+            $this->IsolatedTime = $param["IsolatedTime"];
         }
     }
 }

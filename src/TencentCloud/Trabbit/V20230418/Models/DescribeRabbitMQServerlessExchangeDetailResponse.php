@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExchangeName() 获取exchange 名
  * @method void setExchangeName(string $ExchangeName) 设置exchange 名
  * @method string getRemark() 获取备注说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDurable() 获取是否为持久化 exchange, 当集群重启时, 将会清除所有该字段为 "false" 的 exchange
  * @method void setDurable(boolean $Durable) 设置是否为持久化 exchange, 当集群重启时, 将会清除所有该字段为 "false" 的 exchange
  * @method boolean getAutoDelete() 获取是否自动删除该 exchange, 如果为 "true", 当解绑所有当前 exchange 上的路由关系时, 该 exchange 将会被自动删除
@@ -54,7 +52,6 @@ class DescribeRabbitMQServerlessExchangeDetailResponse extends AbstractModel
 
     /**
      * @var string 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -106,7 +103,6 @@ class DescribeRabbitMQServerlessExchangeDetailResponse extends AbstractModel
     /**
      * @param string $ExchangeName exchange 名
      * @param string $Remark 备注说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Durable 是否为持久化 exchange, 当集群重启时, 将会清除所有该字段为 "false" 的 exchange
      * @param boolean $AutoDelete 是否自动删除该 exchange, 如果为 "true", 当解绑所有当前 exchange 上的路由关系时, 该 exchange 将会被自动删除
      * @param boolean $Internal 是否为内部 exchange, 如果为 "true", 则无法直接投递消息到该 exchange, 需要在路由设置中通过其他 exchange 进行转发

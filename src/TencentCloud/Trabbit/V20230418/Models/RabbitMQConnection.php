@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * RabbitMQ连接详情
  *
  * @method string getConnectionName() 获取连接名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionName(string $ConnectionName) 设置连接名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPeerHost() 获取客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerHost(string $PeerHost) 设置客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSSL() 获取是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSSL(boolean $SSL) 设置是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取连接协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置连接协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannels() 获取连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannels(integer $Channels) 设置连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQConnection extends AbstractModel
 {
     /**
      * @var string 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionName;
 
     /**
      * @var string 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerHost;
 
     /**
      * @var string 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var boolean 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSL;
 
     /**
      * @var string 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var integer 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Channels;
 
     /**
      * @param string $ConnectionName 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PeerHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 连接使用用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SSL 是否开启ssl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 连接协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Channels 连接下的channel数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

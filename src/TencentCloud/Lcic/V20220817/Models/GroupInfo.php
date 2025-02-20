@@ -21,25 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 获取群组列表返回的群组信息
  *
  * @method string getGroupId() 获取群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取群组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置群组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTeacherId() 获取群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTeacherId(string $TeacherId) 设置群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupType() 获取群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupType(integer $GroupType) 设置群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubGroupIds() 获取子群组ID列表，如有。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubGroupIds(string $SubGroupIds) 设置子群组ID列表，如有。
@@ -49,19 +41,16 @@ class GroupInfo extends AbstractModel
 {
     /**
      * @var string 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeacherId;
 
@@ -69,7 +58,6 @@ class GroupInfo extends AbstractModel
      * @var integer 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupType;
 
@@ -81,15 +69,11 @@ class GroupInfo extends AbstractModel
 
     /**
      * @param string $GroupId 群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 群组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupType 群组类型 
 0-基础群组 
 1-组合群组，若为1时会返回子群组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubGroupIds 子群组ID列表，如有。
 注意：此字段可能返回 null，表示取不到有效值。
      */

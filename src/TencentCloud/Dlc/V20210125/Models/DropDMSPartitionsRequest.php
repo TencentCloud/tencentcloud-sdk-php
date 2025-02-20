@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValues(array $Values) 设置单个分区名称
  * @method boolean getDeleteData() 获取是否删除分区数据
  * @method void setDeleteData(boolean $DeleteData) 设置是否删除分区数据
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DropDMSPartitionsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DropDMSPartitionsRequest extends AbstractModel
     public $DeleteData;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 数据库名称
      * @param string $SchemaName 数据库Schema名称
      * @param string $TableName 数据表名称
      * @param string $Name 分区名称
      * @param array $Values 单个分区名称
      * @param boolean $DeleteData 是否删除分区数据
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DropDMSPartitionsRequest extends AbstractModel
 
         if (array_key_exists("DeleteData",$param) and $param["DeleteData"] !== null) {
             $this->DeleteData = $param["DeleteData"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

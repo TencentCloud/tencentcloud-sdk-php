@@ -43,9 +43,7 @@ ScreenOff: 屏幕共享关闭
 VisibleOn: 页面可见
 VisibleOff: 页面不可见
  * @method EventDataInfo getEventData() 获取事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventData(EventDataInfo $EventData) 设置事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventInfo extends AbstractModel
 {
@@ -70,7 +68,6 @@ VisibleOff: 页面不可见
 
     /**
      * @var EventDataInfo 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventData;
 
@@ -87,7 +84,6 @@ ScreenOff: 屏幕共享关闭
 VisibleOn: 页面可见
 VisibleOff: 页面不可见
      * @param EventDataInfo $EventData 事件详细内容，包含房间号,成员类型事件包含用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

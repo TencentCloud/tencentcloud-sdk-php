@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomCertId() 获取ssl自定义证书id
  * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id
+ * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -358,6 +360,11 @@ class InstanceAttributesResponse extends AbstractModel
     public $CustomCertId;
 
     /**
+     * @var integer 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     */
+    public $UncleanLeaderElectionEnable;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param string $InstanceName ckafka集群实例Name
      * @param array $VipList 接入点 VIP 列表信息
@@ -416,6 +423,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomCertId ssl自定义证书id
+     * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
      */
     function __construct()
     {
@@ -601,6 +609,10 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("CustomCertId",$param) and $param["CustomCertId"] !== null) {
             $this->CustomCertId = $param["CustomCertId"];
+        }
+
+        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
+            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
         }
     }
 }

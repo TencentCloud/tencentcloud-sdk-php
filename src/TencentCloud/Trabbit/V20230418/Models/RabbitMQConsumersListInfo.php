@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 队列消费者列表信息
  *
  * @method string getClientIp() 获取客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIp(string $ClientIp) 设置客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerTag() 获取消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerTag(string $ConsumerTag) 设置消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQConsumersListInfo extends AbstractModel
 {
     /**
      * @var string 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIp;
 
     /**
      * @var string 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerTag;
 
     /**
      * @param string $ClientIp 客户端Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerTag 消费者Tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

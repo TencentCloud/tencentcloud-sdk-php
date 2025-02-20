@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 接入点
  *
  * @method string getVpcId() 获取vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取subnet id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置subnet id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcEndpoint() 获取接入地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcEndpoint(string $VpcEndpoint) 设置接入地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcDataStreamEndpointStatus() 获取接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPublicNetwork() 获取是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetwork(boolean $PublicNetwork) 设置是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessStrategy() 获取访问策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessStrategy(string $AccessStrategy) 设置访问策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandwidth() 获取带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQServerlessEndpoint extends AbstractModel
 {
     /**
      * @var string vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string subnet id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcEndpoint;
 
     /**
      * @var string 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcDataStreamEndpointStatus;
 
     /**
      * @var boolean 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
 
     /**
      * @var string 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessStrategy;
 
     /**
      * @var integer 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bandwidth;
 
     /**
      * @param string $VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId subnet id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcEndpoint 接入地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcDataStreamEndpointStatus 接入地址状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PublicNetwork 是否是公网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessStrategy 访问策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bandwidth 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

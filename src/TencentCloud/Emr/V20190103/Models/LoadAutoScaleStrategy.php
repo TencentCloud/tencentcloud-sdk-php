@@ -60,10 +60,28 @@ use TencentCloud\Common\AbstractModel;
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
+ * @method array getSoftDeployDesc() 获取节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoftDeployDesc(array $SoftDeployDesc) 设置节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceNodeDesc() 获取启动进程列表，例如["NodeManager"]。
+ * @method void setServiceNodeDesc(string $ServiceNodeDesc) 设置启动进程列表，例如["NodeManager"]。
+ * @method array getServiceNodeInfo() 获取启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceNodeInfo(array $ServiceNodeInfo) 设置启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSoftDeployInfo() 获取节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method LoadMetricsConditions getLoadMetricsConditions() 获取多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadMetricsConditions(LoadMetricsConditions $LoadMetricsConditions) 设置多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGroupId() 获取伸缩组Id
+ * @method void setGroupId(integer $GroupId) 设置伸缩组Id
+ * @method string getSoft() 获取soft例如yarn
+ * @method void setSoft(string $Soft) 设置soft例如yarn
  */
 class LoadAutoScaleStrategy extends AbstractModel
 {
@@ -148,10 +166,43 @@ class LoadAutoScaleStrategy extends AbstractModel
     public $MeasureMethod;
 
     /**
+     * @var array 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoftDeployDesc;
+
+    /**
+     * @var string 启动进程列表，例如["NodeManager"]。
+     */
+    public $ServiceNodeDesc;
+
+    /**
+     * @var array 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceNodeInfo;
+
+    /**
+     * @var array 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoftDeployInfo;
+
+    /**
      * @var LoadMetricsConditions 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadMetricsConditions;
+
+    /**
+     * @var integer 伸缩组Id
+     */
+    public $GroupId;
+
+    /**
+     * @var string soft例如yarn
+     */
+    public $Soft;
 
     /**
      * @param integer $StrategyId 规则ID。
@@ -174,8 +225,17 @@ class LoadAutoScaleStrategy extends AbstractModel
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
+     * @param array $SoftDeployDesc 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceNodeDesc 启动进程列表，例如["NodeManager"]。
+     * @param array $ServiceNodeInfo 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadMetricsConditions $LoadMetricsConditions 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GroupId 伸缩组Id
+     * @param string $Soft soft例如yarn
      */
     function __construct()
     {
@@ -255,9 +315,33 @@ class LoadAutoScaleStrategy extends AbstractModel
             $this->MeasureMethod = $param["MeasureMethod"];
         }
 
+        if (array_key_exists("SoftDeployDesc",$param) and $param["SoftDeployDesc"] !== null) {
+            $this->SoftDeployDesc = $param["SoftDeployDesc"];
+        }
+
+        if (array_key_exists("ServiceNodeDesc",$param) and $param["ServiceNodeDesc"] !== null) {
+            $this->ServiceNodeDesc = $param["ServiceNodeDesc"];
+        }
+
+        if (array_key_exists("ServiceNodeInfo",$param) and $param["ServiceNodeInfo"] !== null) {
+            $this->ServiceNodeInfo = $param["ServiceNodeInfo"];
+        }
+
+        if (array_key_exists("SoftDeployInfo",$param) and $param["SoftDeployInfo"] !== null) {
+            $this->SoftDeployInfo = $param["SoftDeployInfo"];
+        }
+
         if (array_key_exists("LoadMetricsConditions",$param) and $param["LoadMetricsConditions"] !== null) {
             $this->LoadMetricsConditions = new LoadMetricsConditions();
             $this->LoadMetricsConditions->deserialize($param["LoadMetricsConditions"]);
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Soft",$param) and $param["Soft"] !== null) {
+            $this->Soft = $param["Soft"];
         }
     }
 }

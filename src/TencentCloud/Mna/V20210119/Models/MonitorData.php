@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTime() 获取时间点：s
  * @method void setTime(string $Time) 设置时间点：s
  * @method float getBusinessMetrics() 获取业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessMetrics(float $BusinessMetrics) 设置业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSlotNetInfo() 获取网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlotNetInfo(array $SlotNetInfo) 设置网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MonitorData extends AbstractModel
 {
@@ -40,22 +36,18 @@ class MonitorData extends AbstractModel
 
     /**
      * @var float 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessMetrics;
 
     /**
      * @var array 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlotNetInfo;
 
     /**
      * @param string $Time 时间点：s
      * @param float $BusinessMetrics 业务指标（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SlotNetInfo 网卡状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

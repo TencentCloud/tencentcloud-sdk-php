@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessPointType(string $AccessPointType) 设置接入点类型。VXLAN/QCPL/QCAR
  * @method array getAvailablePortInfo() 获取端口规格信息。
  * @method void setAvailablePortInfo(array $AvailablePortInfo) 设置端口规格信息。
+ * @method string getAddress() 获取接入点地址。
+ * @method void setAddress(string $Address) 设置接入点地址。
  */
 class AccessPoint extends AbstractModel
 {
@@ -108,6 +110,11 @@ class AccessPoint extends AbstractModel
     public $AvailablePortInfo;
 
     /**
+     * @var string 接入点地址。
+     */
+    public $Address;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -120,6 +127,7 @@ class AccessPoint extends AbstractModel
      * @param string $Area 接入点地域名称。
      * @param string $AccessPointType 接入点类型。VXLAN/QCPL/QCAR
      * @param array $AvailablePortInfo 端口规格信息。
+     * @param string $Address 接入点地址。
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class AccessPoint extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AvailablePortInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
         }
     }
 }

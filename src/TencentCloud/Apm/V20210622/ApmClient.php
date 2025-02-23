@@ -29,6 +29,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeGeneralApmApplicationConfigResponse DescribeGeneralApmApplicationConfig(Models\DescribeGeneralApmApplicationConfigRequest $req) 查询应用配置信息
  * @method Models\DescribeGeneralMetricDataResponse DescribeGeneralMetricData(Models\DescribeGeneralMetricDataRequest $req) 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+ * @method Models\DescribeGeneralOTSpanListResponse DescribeGeneralOTSpanList(Models\DescribeGeneralOTSpanListRequest $req) 通用查询 OpenTelemetry 调用链列表
  * @method Models\DescribeGeneralSpanListResponse DescribeGeneralSpanList(Models\DescribeGeneralSpanListRequest $req) 通用查询调用链列表
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取

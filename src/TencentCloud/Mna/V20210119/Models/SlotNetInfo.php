@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 网卡流量指标数据
  *
  * @method string getNetInfoName() 获取网卡名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetInfoName(string $NetInfoName) 设置网卡名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIP() 获取公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIP(string $PublicIP) 设置公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCurrent() 获取指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrent(float $Current) 设置指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlotNetInfo extends AbstractModel
 {
     /**
      * @var string 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetInfoName;
 
     /**
      * @var string 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIP;
 
     /**
      * @var float 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Current;
 
     /**
      * @param string $NetInfoName 网卡名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Current 指标数据（bps/ms/%）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

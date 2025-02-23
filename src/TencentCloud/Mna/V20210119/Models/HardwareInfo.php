@@ -21,126 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 硬件信息
  *
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActiveTime() 获取激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveTime(string $ActiveTime) 设置激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastOnlineTime() 获取最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastOnlineTime(string $LastOnlineTime) 设置最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVendorDescription() 获取厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVendorDescription(string $VendorDescription) 设置厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseChargingMode() 获取license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseChargingMode(integer $LicenseChargingMode) 设置license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSN() 获取硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSN(string $SN) 设置硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicensePayMode() 获取license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayer() 获取付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayer(integer $Payer) 设置付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HardwareInfo extends AbstractModel
 {
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveTime;
 
     /**
      * @var string 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastOnlineTime;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VendorDescription;
 
     /**
      * @var integer license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseChargingMode;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SN;
 
@@ -148,7 +111,6 @@ class HardwareInfo extends AbstractModel
      * @var integer license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicensePayMode;
 
@@ -156,62 +118,44 @@ class HardwareInfo extends AbstractModel
      * @var integer 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Payer;
 
     /**
      * @var string 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTrunc;
 
     /**
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActiveTime 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastOnlineTime 最后在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VendorDescription 厂商备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 硬件序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicensePayMode license授权有效期 
 0：月度授权 
 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Payer 付费方 
 0：客户付费 
 1：厂商付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

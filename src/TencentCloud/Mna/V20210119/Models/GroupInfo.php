@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取分组更新的时间，单位：ms	
  * @method void setUpdateTime(string $UpdateTime) 设置分组更新的时间，单位：ms	
  * @method string getDescription() 获取分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceNum() 获取分组中的设备数量
  * @method void setDeviceNum(integer $DeviceNum) 设置分组中的设备数量
  */
@@ -59,7 +57,6 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var string 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -74,7 +71,6 @@ class GroupInfo extends AbstractModel
      * @param string $CreateTime 分组创建的时间，单位：ms	
      * @param string $UpdateTime 分组更新的时间，单位：ms	
      * @param string $Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceNum 分组中的设备数量
      */
     function __construct()

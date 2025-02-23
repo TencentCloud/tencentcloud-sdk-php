@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnable() 获取互通规则启用状态
  * @method void setEnable(boolean $Enable) 设置互通规则启用状态
  * @method string getDescription() 获取互通规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置互通规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class L3ConnInfo extends AbstractModel
 {
@@ -71,7 +69,6 @@ class L3ConnInfo extends AbstractModel
 
     /**
      * @var string 互通规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -83,7 +80,6 @@ class L3ConnInfo extends AbstractModel
      * @param string $Cidr2 互通规则CIDR
      * @param boolean $Enable 互通规则启用状态
      * @param string $Description 互通规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

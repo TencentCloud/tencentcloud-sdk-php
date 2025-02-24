@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 黑白名单数据列表信息
  *
  * @method integer getCount() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getList() 获取列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置列表
@@ -33,7 +31,6 @@ class OuntputDescribeDataListInfo extends AbstractModel
 {
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
@@ -45,7 +42,6 @@ class OuntputDescribeDataListInfo extends AbstractModel
 
     /**
      * @param integer $Count 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

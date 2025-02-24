@@ -44,16 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序参数
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
- * @method integer getValidStatus() 获取生效状态
- * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+ * @method integer getValidStatus() 获取生效状态，1表示生效中，2表示过期，0表示全部
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态，1表示生效中，2表示过期，0表示全部
  * @method string getValidTimeStampMin() 获取最小有效时间的时间戳
  * @method void setValidTimeStampMin(string $ValidTimeStampMin) 设置最小有效时间的时间戳
  * @method string getValidTimeStampMax() 获取最大有效时间的时间戳
  * @method void setValidTimeStampMax(string $ValidTimeStampMax) 设置最大有效时间的时间戳
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
- * @method integer getTimerType() 获取定时任务类型筛选0 1 2 3 4
- * @method void setTimerType(integer $TimerType) 设置定时任务类型筛选0 1 2 3 4
+ * @method integer getTimerType() 获取0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+ * @method void setTimerType(integer $TimerType) 设置0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -120,7 +120,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Ip;
 
     /**
-     * @var integer 生效状态
+     * @var integer 生效状态，1表示生效中，2表示过期，0表示全部
      */
     public $ValidStatus;
 
@@ -140,7 +140,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var integer 定时任务类型筛选0 1 2 3 4
+     * @var integer 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
      */
     public $TimerType;
 
@@ -157,11 +157,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip IP
-     * @param integer $ValidStatus 生效状态
+     * @param integer $ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
      * @param string $ValidTimeStampMin 最小有效时间的时间戳
      * @param string $ValidTimeStampMax 最大有效时间的时间戳
      * @param integer $RuleId 规则ID
-     * @param integer $TimerType 定时任务类型筛选0 1 2 3 4
+     * @param integer $TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
      */
     function __construct()
     {

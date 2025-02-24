@@ -47,17 +47,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDiskSize() 获取系统盘大小，单位：GB。默认值为 50
  * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GB。默认值为 50
  * @method string getCdcId() 获取所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskName() 获取磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskName(string $DiskName) 设置磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SystemDisk extends AbstractModel
 {
@@ -88,7 +84,6 @@ class SystemDisk extends AbstractModel
 
     /**
      * @var string 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
@@ -96,7 +91,6 @@ class SystemDisk extends AbstractModel
      * @var string 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskName;
 
@@ -115,11 +109,9 @@ class SystemDisk extends AbstractModel
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
      * @param integer $DiskSize 系统盘大小，单位：GB。默认值为 50
      * @param string $CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskName 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

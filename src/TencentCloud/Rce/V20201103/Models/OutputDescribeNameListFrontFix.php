@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setCreateTime(string $CreateTime) 设置创建时间，时间格式示例"2024-05-05 12:10:15"
- * @method string getUpdateTime() 获取更新时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间，时间格式示例"2024-05-05 12:10:15"
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getUpdateTime() 获取更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getEffectCount() 获取有效数据/数据总数
  * @method void setEffectCount(string $EffectCount) 设置有效数据/数据总数
  * @method integer getEncryptionType() 获取加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
@@ -89,12 +89,12 @@ class OutputDescribeNameListFrontFix extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 创建时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 更新时间
      */
     public $UpdateTime;
 
@@ -125,8 +125,8 @@ class OutputDescribeNameListFrontFix extends AbstractModel
      * @param integer $Status 记录状态 [1 启用 2 停用]
      * @param string $Remark 描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间，时间格式示例"2024-05-05 12:10:15"
-     * @param string $UpdateTime 更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @param string $CreateTime 创建时间
+     * @param string $UpdateTime 更新时间
      * @param string $EffectCount 有效数据/数据总数
      * @param integer $EncryptionType 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
 注意：此字段可能返回 null，表示取不到有效值。

@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCtsMax(integer $CtsMax) 设置创建时间最大时间戳
  * @method integer getSkip() 获取偏移参数
  * @method void setSkip(integer $Skip) 设置偏移参数
- * @method integer getLimit() 获取限制数目
- * @method void setLimit(integer $Limit) 设置限制数目
+ * @method integer getLimit() 获取限制数目，category不等于threat_intelligence时，该值需要必传
+ * @method void setLimit(integer $Limit) 设置限制数目，category不等于threat_intelligence时，该值需要必传
  * @method string getName() 获取策略名称
  * @method void setName(string $Name) 设置策略名称
  * @method string getSort() 获取排序参数
  * @method void setSort(string $Sort) 设置排序参数
- * @method string getIp() 获取IP
- * @method void setIp(string $Ip) 设置IP
+ * @method string getIp() 获取IP,category传threat_intelligence的时候，该值必传
+ * @method void setIp(string $Ip) 设置IP,category传threat_intelligence的时候，该值必传
  * @method integer getValidTimeStampMin() 获取有效时间最小时间戳
  * @method void setValidTimeStampMin(integer $ValidTimeStampMin) 设置有效时间最小时间戳
  * @method integer getValidTimeStampMax() 获取有效时间最大时间戳
@@ -94,7 +94,7 @@ class DescribeIpHitItemsRequest extends AbstractModel
     public $Skip;
 
     /**
-     * @var integer 限制数目
+     * @var integer 限制数目，category不等于threat_intelligence时，该值需要必传
      */
     public $Limit;
 
@@ -109,7 +109,7 @@ class DescribeIpHitItemsRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string IP
+     * @var string IP,category传threat_intelligence的时候，该值必传
      */
     public $Ip;
 
@@ -132,10 +132,10 @@ class DescribeIpHitItemsRequest extends AbstractModel
      * @param integer $CtsMin 创建时间最小时间戳
      * @param integer $CtsMax 创建时间最大时间戳
      * @param integer $Skip 偏移参数
-     * @param integer $Limit 限制数目
+     * @param integer $Limit 限制数目，category不等于threat_intelligence时，该值需要必传
      * @param string $Name 策略名称
      * @param string $Sort 排序参数
-     * @param string $Ip IP
+     * @param string $Ip IP,category传threat_intelligence的时候，该值必传
      * @param integer $ValidTimeStampMin 有效时间最小时间戳
      * @param integer $ValidTimeStampMax 有效时间最大时间戳
      */

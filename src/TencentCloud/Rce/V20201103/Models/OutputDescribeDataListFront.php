@@ -28,28 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataContent(string $DataContent) 设置名单数据内容
  * @method integer getDataSource() 获取数据来源，固定传2（手工录入）
  * @method void setDataSource(integer $DataSource) 设置数据来源，固定传2（手工录入）
- * @method string getStartTime() 获取名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取名单数据开始时间
+ * @method void setStartTime(string $StartTime) 设置名单数据开始时间
+ * @method string getEndTime() 获取名单数据结束时间
+ * @method void setEndTime(string $EndTime) 设置名单数据结束时间
  * @method integer getStatus() 获取名单数据状态 [1 启用 2 停用]
  * @method void setStatus(integer $Status) 设置名单数据状态 [1 启用 2 停用]
  * @method string getRemark() 获取名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setCreateTime(string $CreateTime) 设置名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
- * @method string getUpdateTime() 获取名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setUpdateTime(string $UpdateTime) 设置名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+ * @method string getCreateTime() 获取名单数据创建时间
+ * @method void setCreateTime(string $CreateTime) 设置名单数据创建时间
+ * @method string getUpdateTime() 获取名单数据更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置名单数据更新时间
  * @method string getEncryptDataContent() 获取加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptDataContent(string $EncryptDataContent) 设置加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputDescribeDataListFront extends AbstractModel
 {
@@ -74,14 +66,12 @@ class OutputDescribeDataListFront extends AbstractModel
     public $DataSource;
 
     /**
-     * @var string 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 名单数据开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 名单数据结束时间
      */
     public $EndTime;
 
@@ -92,23 +82,21 @@ class OutputDescribeDataListFront extends AbstractModel
 
     /**
      * @var string 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 名单数据创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 名单数据更新时间
      */
     public $UpdateTime;
 
     /**
      * @var string 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptDataContent;
 
@@ -117,17 +105,13 @@ class OutputDescribeDataListFront extends AbstractModel
      * @param integer $NameListId 名单ID
      * @param string $DataContent 名单数据内容
      * @param integer $DataSource 数据来源，固定传2（手工录入）
-     * @param string $StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 名单数据开始时间
+     * @param string $EndTime 名单数据结束时间
      * @param integer $Status 名单数据状态 [1 启用 2 停用]
      * @param string $Remark 名单数据描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
-     * @param string $UpdateTime 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+     * @param string $CreateTime 名单数据创建时间
+     * @param string $UpdateTime 名单数据更新时间
      * @param string $EncryptDataContent 加密名单数据内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,6 +44,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetail(Models\DescribeClusterFlowStatusDetailRequest $req) 查询EMR任务运行详情状态
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
+ * @method Models\DescribeDAGInfoResponse DescribeDAGInfo(Models\DescribeDAGInfoRequest $req) 查询DAG信息
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询
  * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
  * @method Models\DescribeGlobalConfigResponse DescribeGlobalConfig(Models\DescribeGlobalConfigRequest $req) 查询YARN资源调度的全局配置

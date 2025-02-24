@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataContent(string $DataContent) 设置名单数据内容
  * @method string getDataRemark() 获取名单数据描述
  * @method void setDataRemark(string $DataRemark) 设置名单数据描述
- * @method string getStartTime() 获取名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setStartTime(string $StartTime) 设置名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
- * @method string getEndTime() 获取名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
- * @method void setEndTime(string $EndTime) 设置名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+ * @method string getStartTime() 获取名单数据开始时间
+ * @method void setStartTime(string $StartTime) 设置名单数据开始时间
+ * @method string getEndTime() 获取名单数据结束时间
+ * @method void setEndTime(string $EndTime) 设置名单数据结束时间
  */
 class DataContentInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DataContentInfo extends AbstractModel
     public $DataRemark;
 
     /**
-     * @var string 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 名单数据开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+     * @var string 名单数据结束时间
      */
     public $EndTime;
 
     /**
      * @param string $DataContent 名单数据内容
      * @param string $DataRemark 名单数据描述
-     * @param string $StartTime 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-     * @param string $EndTime 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+     * @param string $StartTime 名单数据开始时间
+     * @param string $EndTime 名单数据结束时间
      */
     function __construct()
     {

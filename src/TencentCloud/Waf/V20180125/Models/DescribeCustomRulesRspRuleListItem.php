@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageId(string $PageId) 设置拦截页面id
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class DescribeCustomRulesRspRuleListItem extends AbstractModel
 {
@@ -164,6 +166,11 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
     public $Domain;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      * @param string $Bypass 跳过的策略
      * @param string $CreateTime 创建时间
@@ -184,6 +191,7 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
      * @param string $Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
      * @param string $PageId 拦截页面id
      * @param string $Domain 域名
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -282,6 +290,10 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

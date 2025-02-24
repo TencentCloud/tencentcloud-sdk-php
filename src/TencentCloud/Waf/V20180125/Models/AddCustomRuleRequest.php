@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置开关状态，小程序风控规则的时候传该值
  * @method string getPageId() 获取拦截页面id
  * @method void setPageId(string $PageId) 设置拦截页面id
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class AddCustomRuleRequest extends AbstractModel
 {
@@ -97,6 +99,7 @@ class AddCustomRuleRequest extends AbstractModel
 
     /**
      * @var string 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
+     * @deprecated
      */
     public $Bypass;
 
@@ -136,6 +139,11 @@ class AddCustomRuleRequest extends AbstractModel
     public $PageId;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param string $Name 规则名称
      * @param string $SortId 优先级
      * @param array $Strategies 策略详情
@@ -152,6 +160,7 @@ class AddCustomRuleRequest extends AbstractModel
      * @param string $Label 规则标签，小程序规则用，标识是内置规则还是自定义规则
      * @param integer $Status 开关状态，小程序风控规则的时候传该值
      * @param string $PageId 拦截页面id
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -234,6 +243,10 @@ class AddCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
             $this->PageId = $param["PageId"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

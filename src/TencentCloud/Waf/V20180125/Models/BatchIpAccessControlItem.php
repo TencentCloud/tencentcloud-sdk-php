@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置黑白名单的IP
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
- * @method string getSource() 获取添加路径
- * @method void setSource(string $Source) 设置添加路径
+ * @method string getSource() 获取batch为批量域名，batch-group为防护对象组
+ * @method void setSource(string $Source) 设置batch为批量域名，batch-group为防护对象组
  * @method integer getTsVersion() 获取修改时间
  * @method void setTsVersion(integer $TsVersion) 设置修改时间
  * @method integer getValidTs() 获取超时时间
@@ -50,11 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置详情
  * @method integer getValidStatus() 获取生效状态
  * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+ * @method array getGroupIds() 获取防护对象组ID列表，如果绑定的是防护对象组
+ * @method void setGroupIds(array $GroupIds) 设置防护对象组ID列表，如果绑定的是防护对象组
  */
 class BatchIpAccessControlItem extends AbstractModel
 {
     /**
      * @var string mongo表自增Id
+     * @deprecated
      */
     public $Id;
 
@@ -65,6 +68,7 @@ class BatchIpAccessControlItem extends AbstractModel
 
     /**
      * @var string 黑白名单的IP
+     * @deprecated
      */
     public $Ip;
 
@@ -74,7 +78,7 @@ class BatchIpAccessControlItem extends AbstractModel
     public $Note;
 
     /**
-     * @var string 添加路径
+     * @var string batch为批量域名，batch-group为防护对象组
      */
     public $Source;
 
@@ -129,11 +133,16 @@ class BatchIpAccessControlItem extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var array 防护对象组ID列表，如果绑定的是防护对象组
+     */
+    public $GroupIds;
+
+    /**
      * @param string $Id mongo表自增Id
      * @param integer $ActionType 黑名单42或白名单40
      * @param string $Ip 黑白名单的IP
      * @param string $Note 备注
-     * @param string $Source 添加路径
+     * @param string $Source batch为批量域名，batch-group为防护对象组
      * @param integer $TsVersion 修改时间
      * @param integer $ValidTs 超时时间
      * @param array $Hosts 域名列表
@@ -144,6 +153,7 @@ class BatchIpAccessControlItem extends AbstractModel
      * @param string $CronType 周期任务类型
      * @param JobDateTime $JobDateTime 定时任务配置详情
      * @param integer $ValidStatus 生效状态
+     * @param array $GroupIds 防护对象组ID列表，如果绑定的是防护对象组
      */
     function __construct()
     {
@@ -217,6 +227,10 @@ class BatchIpAccessControlItem extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
+            $this->GroupIds = $param["GroupIds"];
         }
     }
 }

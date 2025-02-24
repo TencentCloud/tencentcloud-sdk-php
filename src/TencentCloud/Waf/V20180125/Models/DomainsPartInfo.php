@@ -212,6 +212,14 @@ https：使用https协议回源
  * @method void setLabels(array $Labels) 设置域名标签
  * @method integer getProbeStatus() 获取拨测状态。 0: 禁用拨测, 1: 启用拨测
  * @method void setProbeStatus(integer $ProbeStatus) 设置拨测状态。 0: 禁用拨测, 1: 启用拨测
+ * @method integer getUpstreamPolicy() 获取回源策略。
+0：负载均衡回源
+1：分流回源
+ * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略。
+0：负载均衡回源
+1：分流回源
+ * @method array getUpstreamRules() 获取分流回源策略
+ * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源策略
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -516,6 +524,18 @@ https：使用https协议回源
     public $ProbeStatus;
 
     /**
+     * @var integer 回源策略。
+0：负载均衡回源
+1：分流回源
+     */
+    public $UpstreamPolicy;
+
+    /**
+     * @var array 分流回源策略
+     */
+    public $UpstreamRules;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -612,6 +632,10 @@ https：使用https协议回源
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      * @param array $Labels 域名标签
      * @param integer $ProbeStatus 拨测状态。 0: 禁用拨测, 1: 启用拨测
+     * @param integer $UpstreamPolicy 回源策略。
+0：负载均衡回源
+1：分流回源
+     * @param array $UpstreamRules 分流回源策略
      */
     function __construct()
     {
@@ -833,6 +857,19 @@ https：使用https协议回源
 
         if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
             $this->ProbeStatus = $param["ProbeStatus"];
+        }
+
+        if (array_key_exists("UpstreamPolicy",$param) and $param["UpstreamPolicy"] !== null) {
+            $this->UpstreamPolicy = $param["UpstreamPolicy"];
+        }
+
+        if (array_key_exists("UpstreamRules",$param) and $param["UpstreamRules"] !== null) {
+            $this->UpstreamRules = [];
+            foreach ($param["UpstreamRules"] as $key => $value){
+                $obj = new UpstreamRule();
+                $obj->deserialize($value);
+                array_push($this->UpstreamRules, $obj);
+            }
         }
     }
 }

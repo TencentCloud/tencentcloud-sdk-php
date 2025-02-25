@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 黑白名单详情出参
  *
  * @method integer getNameListId() 获取名单ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameListId(integer $NameListId) 设置名单ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getListName() 获取名单名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListName(string $ListName) 设置名单名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getListType() 获取名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListType(integer $ListType) 设置名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataType() 获取数据类型[1 手机号 2 qqOpenId 3 2echatOpenId 4 ip 6 idfa 7 imei]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataType(integer $DataType) 设置数据类型[1 手机号 2 qqOpenId 3 2echatOpenId 4 ip 6 idfa 7 imei]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSceneCode() 获取场景Code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneCode(string $SceneCode) 设置场景Code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取名单列表状态 [1 启用 2 停用]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置名单列表状态 [1 启用 2 停用]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptionType() 获取加密类型 [0 无需加密，1 MD5加密，2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptionType(integer $EncryptionType) 设置加密类型 [0 无需加密，1 MD5加密，2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputDescribeNameListDetail extends AbstractModel
 {
     /**
      * @var integer 名单ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameListId;
 
     /**
      * @var string 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListName;
 
     /**
      * @var integer 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListType;
 
     /**
      * @var integer 数据类型[1 手机号 2 qqOpenId 3 2echatOpenId 4 ip 6 idfa 7 imei]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataType;
 
     /**
      * @var string 场景Code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneCode;
 
     /**
      * @var integer 名单列表状态 [1 启用 2 停用]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 加密类型 [0 无需加密，1 MD5加密，2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptionType;
 
     /**
      * @param integer $NameListId 名单ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListName 名单名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ListType 名单类型 [1 黑名单 2 白名单]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataType 数据类型[1 手机号 2 qqOpenId 3 2echatOpenId 4 ip 6 idfa 7 imei]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SceneCode 场景Code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 名单列表状态 [1 启用 2 停用]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptionType 加密类型 [0 无需加密，1 MD5加密，2 SHA256加密]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

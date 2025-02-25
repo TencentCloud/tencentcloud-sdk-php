@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNetworkCard() 获取网卡类型，例如：25代表25G网卡
  * @method void setNetworkCard(integer $NetworkCard) 设置网卡类型，例如：25代表25G网卡
  * @method Externals getExternals() 获取扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternals(Externals $Externals) 设置扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取实例的CPU核数，单位：核。
  * @method void setCpu(integer $Cpu) 设置实例的CPU核数，单位：核。
  * @method integer getMemory() 获取实例内存容量，单位：`GB`。
@@ -47,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method ItemPrice getPrice() 获取实例的售卖价格。
  * @method void setPrice(ItemPrice $Price) 设置实例的售卖价格。
  * @method string getSoldOutReason() 获取售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoldOutReason(string $SoldOutReason) 设置售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getInstanceBandwidth() 获取内网带宽，单位Gbps。
  * @method void setInstanceBandwidth(float $InstanceBandwidth) 设置内网带宽，单位Gbps。
  * @method integer getInstancePps() 获取网络收发包能力，单位万PPS。
@@ -73,13 +69,11 @@ use TencentCloud\Common\AbstractModel;
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusCategory(string $StatusCategory) 设置描述库存情况。取值范围：
 <li> EnoughStock：表示对应库存非常充足</li> 
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -105,7 +99,6 @@ class InstanceTypeQuotaItem extends AbstractModel
 
     /**
      * @var Externals 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Externals;
 
@@ -146,7 +139,6 @@ class InstanceTypeQuotaItem extends AbstractModel
 
     /**
      * @var string 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoldOutReason;
 
@@ -201,7 +193,6 @@ class InstanceTypeQuotaItem extends AbstractModel
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusCategory;
 
@@ -211,7 +202,6 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
      * @param integer $NetworkCard 网卡类型，例如：25代表25G网卡
      * @param Externals $Externals 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu 实例的CPU核数，单位：核。
      * @param integer $Memory 实例内存容量，单位：`GB`。
      * @param string $InstanceFamily 实例机型系列。
@@ -220,7 +210,6 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
      * @param ItemPrice $Price 实例的售卖价格。
      * @param string $SoldOutReason 售罄原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $InstanceBandwidth 内网带宽，单位Gbps。
      * @param integer $InstancePps 网络收发包能力，单位万PPS。
      * @param integer $StorageBlockAmount 本地存储块数量。
@@ -235,7 +224,6 @@ class InstanceTypeQuotaItem extends AbstractModel
 <li>NormalStock：表示对应库存供应有保障</li>
 <li> UnderStock：表示对应库存即将售罄</li> 
 <li>WithoutStock：表示对应库存已经售罄</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

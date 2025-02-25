@@ -22,48 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCode() 获取错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OutputDescribeNameListInfo getValue() 获取黑白名单列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(OutputDescribeNameListInfo $Value) 设置黑白名单列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputDescribeNameListFrontFixListData extends AbstractModel
 {
     /**
      * @var integer 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var OutputDescribeNameListInfo 黑白名单列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param integer $Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputDescribeNameListInfo $Value 黑白名单列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

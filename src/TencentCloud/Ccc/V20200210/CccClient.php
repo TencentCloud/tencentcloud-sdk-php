@@ -35,7 +35,11 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\CreateAdminURLResponse CreateAdminURL(Models\CreateAdminURLRequest $req) 创建管理端访问链接
  * @method Models\CreateAutoCalloutTaskResponse CreateAutoCalloutTask(Models\CreateAutoCalloutTaskRequest $req) 创建自动外呼任务
  * @method Models\CreateCCCSkillGroupResponse CreateCCCSkillGroup(Models\CreateCCCSkillGroupRequest $req) 新建技能组
- * @method Models\CreateCallOutSessionResponse CreateCallOutSession(Models\CreateCallOutSessionRequest $req) 创建外呼会话，当前仅支持双呼，即先使用平台号码呼出到坐席手机上，坐席接听后，然后再外呼用户，而且由于运营商频率限制，坐席手机号必须先加白名单，避免频控导致外呼失败。
+ * @method Models\CreateCallOutSessionResponse CreateCallOutSession(Models\CreateCallOutSessionRequest $req) 创建外呼会话，当前仅支持双呼，即先使用平台号码呼出到座席手机上，座席接听后，然后再外呼用户，而且由于运营商频率限制，座席手机号必须先加白名单，避免频控导致外呼失败。所以调用此接口前，下述操作均已完成
+1. UserId 指定的座席已经[绑定手机号](https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF)
+2. 座席绑定的手机号已经[申请并通过了外呼白名单](https://cloud.tencent.com/document/product/679/76744#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4)
+3. 当前座席侧只能呼叫其手机，所以 IsForceMobile 字段当前必须为 true
+4. 被叫不要填当前 UserId 所绑定的手机号，否则会造成占线呼叫失败
  * @method Models\CreateCarrierPrivilegeNumberApplicantResponse CreateCarrierPrivilegeNumberApplicant(Models\CreateCarrierPrivilegeNumberApplicantRequest $req) 用于无限频率地呼叫坐席手机
  * @method Models\CreateCompanyApplyResponse CreateCompanyApply(Models\CreateCompanyApplyRequest $req) 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
  * @method Models\CreateExtensionResponse CreateExtension(Models\CreateExtensionRequest $req) 创建话机账号

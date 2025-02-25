@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 预付费 后付费 总数显示接口出参
  *
  * @method integer getPayMode() 获取当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAfterPayModeThisMonthUsedCnt() 获取后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAfterPayModeThisMonthUsedCnt(integer $AfterPayModeThisMonthUsedCnt) 设置后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取超出时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置超出时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAfterPayModeLastMonthUsedCnt() 获取后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAfterPayModeLastMonthUsedCnt(integer $AfterPayModeLastMonthUsedCnt) 设置后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBeforePayModeTotalUsedCnt() 获取预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeforePayModeTotalUsedCnt(integer $BeforePayModeTotalUsedCnt) 设置预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBeforePayModeRemainUsedCnt() 获取预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeforePayModeRemainUsedCnt(integer $BeforePayModeRemainUsedCnt) 设置预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputDescribeUserUsageCnt extends AbstractModel
 {
     /**
      * @var integer 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var integer 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AfterPayModeThisMonthUsedCnt;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var integer 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AfterPayModeLastMonthUsedCnt;
 
     /**
      * @var integer 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeforePayModeTotalUsedCnt;
 
     /**
      * @var integer 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeforePayModeRemainUsedCnt;
 
     /**
      * @param integer $PayMode 当前付费模式，0 后付费 1 预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AfterPayModeThisMonthUsedCnt 后付费本月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 超出时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AfterPayModeLastMonthUsedCnt 后付费上月使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BeforePayModeTotalUsedCnt 预付费总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BeforePayModeRemainUsedCnt 预付费剩余用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

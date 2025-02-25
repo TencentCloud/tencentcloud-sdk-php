@@ -24,20 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数 最大100条
  * @method integer getOffset() 获取分页参数
  * @method void setOffset(integer $Offset) 设置分页参数
- * @method array getFilters() 获取过滤条件。
-<li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 威胁等级</li>
-<li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
-<li>Uuid- String - 主机uuid</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 威胁等级</li>
-<li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
-<li>Uuid- String - 主机uuid</li>
+ * @method array getFilters() 获取过滤条件 <li>StrategyId- Uint64 - 基线策略id</li> <li>Status - Uint64 - 处理状态 1-已通过 0-未通过</li> <li>Level - Uint64 - 威胁等级 1-低危 2-中危 3-高危 4-严重</li> <li>BaselineName  - String - 基线名称</li> <li>Quuid- String - 主机quuid</li> <li>Uuid- String - 主机uuid</li>
+ * @method void setFilters(array $Filters) 设置过滤条件 <li>StrategyId- Uint64 - 基线策略id</li> <li>Status - Uint64 - 处理状态 1-已通过 0-未通过</li> <li>Level - Uint64 - 威胁等级 1-低危 2-中危 3-高危 4-严重</li> <li>BaselineName  - String - 基线名称</li> <li>Quuid- String - 主机quuid</li> <li>Uuid- String - 主机uuid</li>
  */
 class DescribeBaselineListRequest extends AbstractModel
 {
@@ -52,26 +40,14 @@ class DescribeBaselineListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件。
-<li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 威胁等级</li>
-<li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
-<li>Uuid- String - 主机uuid</li>
+     * @var array 过滤条件 <li>StrategyId- Uint64 - 基线策略id</li> <li>Status - Uint64 - 处理状态 1-已通过 0-未通过</li> <li>Level - Uint64 - 威胁等级 1-低危 2-中危 3-高危 4-严重</li> <li>BaselineName  - String - 基线名称</li> <li>Quuid- String - 主机quuid</li> <li>Uuid- String - 主机uuid</li>
      */
     public $Filters;
 
     /**
      * @param integer $Limit 分页参数 最大100条
      * @param integer $Offset 分页参数
-     * @param array $Filters 过滤条件。
-<li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 威胁等级</li>
-<li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
-<li>Uuid- String - 主机uuid</li>
+     * @param array $Filters 过滤条件 <li>StrategyId- Uint64 - 基线策略id</li> <li>Status - Uint64 - 处理状态 1-已通过 0-未通过</li> <li>Level - Uint64 - 威胁等级 1-低危 2-中危 3-高危 4-严重</li> <li>BaselineName  - String - 基线名称</li> <li>Quuid- String - 主机quuid</li> <li>Uuid- String - 主机uuid</li>
      */
     function __construct()
     {

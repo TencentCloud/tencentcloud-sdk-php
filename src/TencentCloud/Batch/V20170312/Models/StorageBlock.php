@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * HDD的本地存储信息
  *
  * @method string getType() 获取HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinSize() 获取HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinSize(integer $MinSize) 设置HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSize() 获取HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSize(integer $MaxSize) 设置HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StorageBlock extends AbstractModel
 {
     /**
      * @var string HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinSize;
 
     /**
      * @var integer HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSize;
 
     /**
      * @param string $Type HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinSize HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSize HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

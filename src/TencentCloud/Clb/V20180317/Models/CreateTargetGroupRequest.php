@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
+ * @method string getType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+ * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
  * @method integer getWeight() 获取后端服务默认权重。
@@ -68,6 +70,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
+     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     */
+    public $Type;
+
+    /**
      * @var array 标签。
      */
     public $Tags;
@@ -88,6 +95,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
+     * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
      * @param array $Tags 标签。
      * @param integer $Weight 后端服务默认权重。
 <ul>
@@ -127,6 +135,10 @@ class CreateTargetGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstances, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

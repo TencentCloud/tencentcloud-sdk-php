@@ -25,35 +25,25 @@ use TencentCloud\Common\AbstractModel;
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId；
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostTime(integer $PostTime) 设置操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssociateAccount() 获取业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociateAccount(string $AssociateAccount) 设置业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserIp() 获取操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIp(string $UserIp) 设置操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskType() 获取风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
 11: 疑似低活跃账号，账号活跃度与正常用户有差异。
@@ -73,7 +63,6 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(array $RiskType) 设置风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
 11: 疑似低活跃账号，账号活跃度与正常用户有差异。
@@ -93,15 +82,10 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConstId() 获取设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstId(string $ConstId) 设置设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskInformation() 获取风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskInformation(string $RiskInformation) 设置风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputManageMarketingRiskValue extends AbstractModel
 {
@@ -111,25 +95,21 @@ class OutputManageMarketingRiskValue extends AbstractModel
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var integer 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostTime;
 
     /**
      * @var string 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociateAccount;
 
     /**
      * @var string 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIp;
 
@@ -138,7 +118,6 @@ class OutputManageMarketingRiskValue extends AbstractModel
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
@@ -162,19 +141,16 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var string 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConstId;
 
     /**
      * @var string 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskInformation;
 
@@ -184,18 +160,13 @@ reject：高风险，建议拦截
 当AccountType为2时，对应微信的OpenId/UnionId；
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssociateAccount 业务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserIp 操作来源的外网IP（对应输入参数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级
 pass：无恶意
 review：低风险，需要人工审核
 reject：高风险，建议拦截
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskType 风险类型，可能同时命中多个风险类型
 1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
 11: 疑似低活跃账号，账号活跃度与正常用户有差异。
@@ -215,11 +186,8 @@ reject：高风险，建议拦截
 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskInformation 风险扩展数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

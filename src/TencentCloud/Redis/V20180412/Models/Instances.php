@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRedisShardSize() 获取分片内存大小。
  * @method void setRedisShardSize(integer $RedisShardSize) 设置分片内存大小。
  * @method integer getDiskSize() 获取实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV。
  * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV。
  * @method string getRole() 获取实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
@@ -47,13 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVip() 获取实例 VIP 地址。
  * @method void setVip(string $Vip) 设置实例 VIP 地址。
  * @method string getVip6() 获取该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip6(string $Vip6) 设置该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPv6() 获取内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPv6(string $IPv6) 设置内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVpcID() 获取VPC 网络ID，如：75101。
  * @method void setVpcID(integer $VpcID) 设置VPC 网络ID，如：75101。
  * @method integer getVPort() 获取实例端口。
@@ -133,7 +127,6 @@ class Instances extends AbstractModel
 
     /**
      * @var integer 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
@@ -154,13 +147,11 @@ class Instances extends AbstractModel
 
     /**
      * @var string 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
     /**
      * @var string 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6;
 
@@ -219,14 +210,11 @@ class Instances extends AbstractModel
      * @param integer $RedisShardNum 分片数量。
      * @param integer $RedisShardSize 分片内存大小。
      * @param integer $DiskSize 实例的磁盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
      * @param string $Role 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      * @param string $Vip 实例 VIP 地址。
      * @param string $Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VpcID VPC 网络ID，如：75101。
      * @param integer $VPort 实例端口。
      * @param integer $Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>

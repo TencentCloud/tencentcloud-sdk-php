@@ -38,7 +38,10 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\QueryAuthorityInfoResponse QueryAuthorityInfo(Models\QueryAuthorityInfoRequest $req) 查询权威机构信息
  * @method Models\QueryCPTResponse QueryCPT(Models\QueryCPTRequest $req) 查询凭证模板内容
  * @method Models\SetTDidAttributeResponse SetTDidAttribute(Models\SetTDidAttributeRequest $req) 设置DID文档的自定义属性
- * @method Models\UpdateCredentialStateResponse UpdateCredentialState(Models\UpdateCredentialStateRequest $req) 更新凭证的链上状态
+ * @method Models\UpdateCredentialStateResponse UpdateCredentialState(Models\UpdateCredentialStateRequest $req) 1. 首次更新凭证状态基于不同场景参数有所差异，分以下两种场景：
+(1)  颁发凭证的DID是本腾讯云账号创建
+(2) 颁发凭证的DID是非本腾讯云账号创建(此调用方式也适用于场景1)
+2. 首次更新过凭证状态后，凭证状态已绑定该账号的链上用户，后续更新凭证状态只需参数CredentialStatus即可, OperateCredential和OriginCredential参数均不需要
  * @method Models\VerifyCredentialsResponse VerifyCredentials(Models\VerifyCredentialsRequest $req) 验证已签名的可验证凭证
  * @method Models\VerifyPresentationResponse VerifyPresentation(Models\VerifyPresentationRequest $req) 验证可验证表达的内容
  */

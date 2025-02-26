@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 日志投递信息
  *
  * @method boolean getEnabled() 获取日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogsetId() 获取日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogRegion() 获取日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogRegion(string $LogRegion) 设置日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogDeliveryInfo extends AbstractModel
 {
     /**
      * @var boolean 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var string 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
     /**
      * @var string 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogRegion;
 
     /**
      * @param boolean $Enabled 日志投递开启状态，开启：true，关闭：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogsetId 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogRegion 日志集所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReconstructDocumentResult返回参数结构体
  *
- * @method string getStatus() 获取任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
- * @method void setStatus(string $Status) 设置任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+ * @method string getStatus() 获取任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
+ * @method void setStatus(string $Status) 设置任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
  * @method string getDocumentRecognizeResultUrl() 获取解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
  * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
  * @method array getFailedPages() 获取文档解析失败的页码
@@ -32,7 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class GetReconstructDocumentResultResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+     * @var string 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
      */
     public $Status;
 
@@ -52,7 +67,12 @@ class GetReconstructDocumentResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态。- `Success`：执行完成- `Processing`：执行中- `Pause`: 暂停- `Failed`：执行失败- `WaitExecute`：等待执行
+     * @param string $Status 任务状态。
+- `Success`：执行完成
+- `Processing`：执行中
+-  `Pause`: 暂停
+-  `Failed`：执行失败
+-  `WaitExecute`：等待执行
      * @param string $DocumentRecognizeResultUrl 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
      * @param array $FailedPages 文档解析失败的页码
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

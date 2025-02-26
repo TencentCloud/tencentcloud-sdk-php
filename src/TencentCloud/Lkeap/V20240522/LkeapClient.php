@@ -40,11 +40,8 @@ use TencentCloud\Lkeap\V20240522\Models as Models;
     -  支持64K上下文长度，最大输入56k，最大输出8k（不含思维链）。
 
 ### 计费说明
-- 限时免费
 
-本接口调用DeepSeek系列模型限时免费。即日至北京时间2025年2月25日23:59:59，所有腾讯云用户均可享受DeepSeek-V3、DeepSeek-R1模型限时免费服务，单账号限制接口并发上限为5。在此之后，模型价格将恢复至原价，单账号限制接口并发上限为5。
-- 标准计费（2025年2月26日起生效）
-
+- 标准计费（2025年2月26日起生效），计费模式为后付费小时结，为保证您账户资源的正常使用，请提前[开通后付费](https://lke.cloud.tencent.com/lke#/app/system/charge/postpaid)并及时[充值](https://console.cloud.tencent.com/expense/recharge)。
  ![image](https://cdn.xiaowei.qq.com/static/lke/deekseep-token0212.png)
 
 ### Openai兼容协议接口
@@ -126,7 +123,7 @@ except TencentCloudSDKException as err:
  * @method Models\CreateKnowledgeBaseResponse CreateKnowledgeBase(Models\CreateKnowledgeBaseRequest $req) 用于在系统中创建一个新的知识库。知识库是一个用于存储和管理知识条目的集合，可以包括文档、问答对、属性标签等。创建知识库后，可以向其中添加各种知识条目，以便在后续的知识检索中使用。 使用场景：当需要在系统中建立一个新的知识库以存储和管理特定领域或项目的知识条目时使用。例如，一个用户可能需要创建一个知识库，以存储用户指南、常见问题解答和技术文档。
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 用于创建新的问答对。问答对可以在SearchKnowledge接口知识检索时提供匹配的答案。 使用场景：当需要添加新的知识点和对应的问答对时使用，比如为产品添加新的常见问题解答。
  * @method Models\CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(Models\CreateReconstructDocumentFlowRequest $req) 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+文档解析支持将图片或PDF、DOCX、PPTX、EXCEL等文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。具体支持文件类型请查看下方输入参数列表。
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
  * @method Models\CreateSplitDocumentFlowResponse CreateSplitDocumentFlow(Models\CreateSplitDocumentFlowRequest $req) 用于创建一个文档拆分任务，支持多种文件类型，具备mllm能力，能够解析并深入理解图表中的信息。

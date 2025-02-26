@@ -44,6 +44,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCHProxy(boolean $IsCHProxy) 设置ture的时候表示该节点上部署了chproxy进程
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUUID() 获取节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUUID(string $UUID) 设置节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneDesc() 获取区描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneDesc(string $ZoneDesc) 设置区描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRealResourceId() 获取真实资源id
+ * @method void setRealResourceId(string $RealResourceId) 设置真实资源id
  */
 class InstanceNode extends AbstractModel
 {
@@ -100,6 +118,35 @@ class InstanceNode extends AbstractModel
     public $IsCHProxy;
 
     /**
+     * @var string 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UUID;
+
+    /**
+     * @var string 区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var string 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneDesc;
+
+    /**
+     * @var string 真实资源id
+     */
+    public $RealResourceId;
+
+    /**
      * @param string $Ip IP地址
      * @param string $Spec 机型，如 S1
      * @param integer $Core cpu核数
@@ -112,6 +159,15 @@ class InstanceNode extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsCHProxy ture的时候表示该节点上部署了chproxy进程
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 节点状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UUID 节点uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneDesc 区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RealResourceId 真实资源id
      */
     function __construct()
     {
@@ -169,6 +225,26 @@ class InstanceNode extends AbstractModel
 
         if (array_key_exists("IsCHProxy",$param) and $param["IsCHProxy"] !== null) {
             $this->IsCHProxy = $param["IsCHProxy"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("UUID",$param) and $param["UUID"] !== null) {
+            $this->UUID = $param["UUID"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ZoneDesc",$param) and $param["ZoneDesc"] !== null) {
+            $this->ZoneDesc = $param["ZoneDesc"];
+        }
+
+        if (array_key_exists("RealResourceId",$param) and $param["RealResourceId"] !== null) {
+            $this->RealResourceId = $param["RealResourceId"];
         }
     }
 }

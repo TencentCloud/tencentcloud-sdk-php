@@ -29,23 +29,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取数据源类型
  * @method void setType(string $Type) 设置数据源类型
  * @method string getDescription() 获取数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchema() 获取数据源配置
  * @method void setSchema(string $Schema) 设置数据源配置
  * @method string getCmsProject() 获取cms 项目状态, 0: 重新获取详情信息，1： 不需要重新获取详情信息
  * @method void setCmsProject(string $CmsProject) 设置cms 项目状态, 0: 重新获取详情信息，1： 不需要重新获取详情信息
  * @method string getPkgId() 获取当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgId(string $PkgId) 设置当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaVersion() 获取schema 版本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaVersion(string $SchemaVersion) 设置schema 版本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorId() 获取创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorId(string $CreatorId) 设置创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
@@ -55,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取环境 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置环境 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceVersion() 获取版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceVersion(string $DataSourceVersion) 设置版本
@@ -67,9 +63,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppUsageList(array $AppUsageList) 设置所属应用数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublishedAt() 获取发布时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishedAt(string $PublishedAt) 设置发布时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildDataSourceIds() 获取子数据源ids
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildDataSourceIds(array $ChildDataSourceIds) 设置子数据源ids
@@ -79,21 +73,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFun(string $Fun) 设置数据源发布信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScfStatus() 获取云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfStatus(integer $ScfStatus) 设置云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethods() 获取自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethods(string $Methods) 设置自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildDataSourceNames() 获取子数据源名数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildDataSourceNames(array $ChildDataSourceNames) 设置子数据源名数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNewDataSource() 获取是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewDataSource(integer $IsNewDataSource) 设置是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getViewId() 获取数据源视图id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewId(string $ViewId) 设置数据源视图id
@@ -119,9 +107,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishViewId(string $PublishViewId) 设置发布视图id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubType() 获取数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubType(string $SubType) 设置数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthStatus() 获取授权状态  0 授权无效 1 授权有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthStatus(integer $AuthStatus) 设置授权状态  0 授权无效 1 授权有效
@@ -129,6 +115,30 @@ use TencentCloud\Common\AbstractModel;
  * @method TicketAuthInfo getAuthInfo() 获取数据源授权信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthInfo(TicketAuthInfo $AuthInfo) 设置数据源授权信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPublishStatus() 获取1发布0未发布
+ * @method void setPublishStatus(integer $PublishStatus) 设置1发布0未发布
+ * @method integer getUpdateVersion() 获取更新版本
+ * @method void setUpdateVersion(integer $UpdateVersion) 设置更新版本
+ * @method array getRelationFieldList() 获取模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelationFieldList(array $RelationFieldList) 设置模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbInstanceType() 获取db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbInstanceType(string $DbInstanceType) 设置db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreviewTableName() 获取体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewTableName(string $PreviewTableName) 设置体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublishedTableName() 获取正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublishedTableName(string $PublishedTableName) 设置正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbSourceType() 获取DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbSourceType(string $DbSourceType) 设置DB来源类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceDetail extends AbstractModel
@@ -155,6 +165,7 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -170,7 +181,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgId;
 
@@ -182,7 +192,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorId;
 
@@ -200,7 +209,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
@@ -218,7 +226,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishedAt;
 
@@ -236,13 +243,11 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var integer 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfStatus;
 
     /**
      * @var string 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Methods;
 
@@ -254,7 +259,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var integer 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewDataSource;
 
@@ -285,6 +289,7 @@ class DataSourceDetail extends AbstractModel
     /**
      * @var string 发布版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $PublishVersion;
 
@@ -296,7 +301,6 @@ class DataSourceDetail extends AbstractModel
 
     /**
      * @var string 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
 
@@ -313,43 +317,77 @@ class DataSourceDetail extends AbstractModel
     public $AuthInfo;
 
     /**
+     * @var integer 1发布0未发布
+     */
+    public $PublishStatus;
+
+    /**
+     * @var integer 更新版本
+     */
+    public $UpdateVersion;
+
+    /**
+     * @var array 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelationFieldList;
+
+    /**
+     * @var string db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbInstanceType;
+
+    /**
+     * @var string 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewTableName;
+
+    /**
+     * @var string 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublishedTableName;
+
+    /**
+     * @var string DB来源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbSourceType;
+
+    /**
      * @param string $Id 数据源 ID
      * @param string $Title 数据源名称
      * @param string $Name 数据源标识
      * @param string $Type 数据源类型
      * @param string $Description 数据源描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Schema 数据源配置
      * @param string $CmsProject cms 项目状态, 0: 重新获取详情信息，1： 不需要重新获取详情信息
      * @param string $PkgId 当前为环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaVersion schema 版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorId 创建者用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 环境 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceVersion 版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AppUsageList 所属应用数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublishedAt 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ChildDataSourceIds 子数据源ids
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Fun 数据源发布信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScfStatus 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Methods 自定义方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ChildDataSourceNames 子数据源名数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewDataSource 是否旧数据源 1 新 0 旧
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ViewId 数据源视图id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Configuration 数据源属性配置
@@ -363,10 +401,21 @@ class DataSourceDetail extends AbstractModel
      * @param string $PublishViewId 发布视图id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubType 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthStatus 授权状态  0 授权无效 1 授权有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TicketAuthInfo $AuthInfo 数据源授权信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PublishStatus 1发布0未发布
+     * @param integer $UpdateVersion 更新版本
+     * @param array $RelationFieldList 模型关联关系字段列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbInstanceType db实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreviewTableName 体验环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublishedTableName 正式环境db表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbSourceType DB来源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -510,6 +559,39 @@ class DataSourceDetail extends AbstractModel
         if (array_key_exists("AuthInfo",$param) and $param["AuthInfo"] !== null) {
             $this->AuthInfo = new TicketAuthInfo();
             $this->AuthInfo->deserialize($param["AuthInfo"]);
+        }
+
+        if (array_key_exists("PublishStatus",$param) and $param["PublishStatus"] !== null) {
+            $this->PublishStatus = $param["PublishStatus"];
+        }
+
+        if (array_key_exists("UpdateVersion",$param) and $param["UpdateVersion"] !== null) {
+            $this->UpdateVersion = $param["UpdateVersion"];
+        }
+
+        if (array_key_exists("RelationFieldList",$param) and $param["RelationFieldList"] !== null) {
+            $this->RelationFieldList = [];
+            foreach ($param["RelationFieldList"] as $key => $value){
+                $obj = new RelationField();
+                $obj->deserialize($value);
+                array_push($this->RelationFieldList, $obj);
+            }
+        }
+
+        if (array_key_exists("DbInstanceType",$param) and $param["DbInstanceType"] !== null) {
+            $this->DbInstanceType = $param["DbInstanceType"];
+        }
+
+        if (array_key_exists("PreviewTableName",$param) and $param["PreviewTableName"] !== null) {
+            $this->PreviewTableName = $param["PreviewTableName"];
+        }
+
+        if (array_key_exists("PublishedTableName",$param) and $param["PublishedTableName"] !== null) {
+            $this->PublishedTableName = $param["PublishedTableName"];
+        }
+
+        if (array_key_exists("DbSourceType",$param) and $param["DbSourceType"] !== null) {
+            $this->DbSourceType = $param["DbSourceType"];
         }
     }
 }

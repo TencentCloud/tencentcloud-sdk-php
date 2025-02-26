@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyJson(string $PolicyJson) 设置披露策略文本
  * @method integer getDAPId() 获取DID应用ID
  * @method void setDAPId(integer $DAPId) 设置DID应用ID
+ * @method integer getUAPId() 获取用户应用ID
+ * @method void setUAPId(integer $UAPId) 设置用户应用ID
  */
 class CreateDisclosedCredentialRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDisclosedCredentialRequest extends AbstractModel
     public $DAPId;
 
     /**
+     * @var integer 用户应用ID
+     */
+    public $UAPId;
+
+    /**
      * @param integer $PolicyId 披露策略id，PolicyJson和PolicyId任选其一
      * @param string $CredentialData 凭证文本内容，FunctionArg和CredentialText任选其一
      * @param string $PolicyJson 披露策略文本
      * @param integer $DAPId DID应用ID
+     * @param integer $UAPId 用户应用ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateDisclosedCredentialRequest extends AbstractModel
 
         if (array_key_exists("DAPId",$param) and $param["DAPId"] !== null) {
             $this->DAPId = $param["DAPId"];
+        }
+
+        if (array_key_exists("UAPId",$param) and $param["UAPId"] !== null) {
+            $this->UAPId = $param["UAPId"];
         }
     }
 }

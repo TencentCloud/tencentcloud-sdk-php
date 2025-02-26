@@ -136,6 +136,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowRetry(boolean $IsAllowRetry) 设置是否允许重试，0：否，1：是
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProcessing() 获取0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessing(array $Processing) 设置0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListDocItem extends AbstractModel
 {
@@ -314,6 +322,18 @@ class ListDocItem extends AbstractModel
     public $IsAllowRetry;
 
     /**
+     * @var array 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Processing;
+
+    /**
+     * @var string 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -371,6 +391,10 @@ class ListDocItem extends AbstractModel
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAllowRetry 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Processing 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 文档创建落库时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -505,6 +529,14 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("IsAllowRetry",$param) and $param["IsAllowRetry"] !== null) {
             $this->IsAllowRetry = $param["IsAllowRetry"];
+        }
+
+        if (array_key_exists("Processing",$param) and $param["Processing"] !== null) {
+            $this->Processing = $param["Processing"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

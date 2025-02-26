@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopP(string $TopP) 设置模型TopP
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceStatus() 获取模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceStatus(integer $ResourceStatus) 设置模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModel extends AbstractModel
 {
@@ -124,6 +128,12 @@ class AppModel extends AbstractModel
     public $TopP;
 
     /**
+     * @var integer 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceStatus;
+
+    /**
      * @param string $Name 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 模型描述
@@ -143,6 +153,8 @@ class AppModel extends AbstractModel
      * @param string $Temperature 模型温度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopP 模型TopP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceStatus 模型资源状态 1：资源可用；2：资源已用尽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class AppModel extends AbstractModel
 
         if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
             $this->TopP = $param["TopP"];
+        }
+
+        if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
+            $this->ResourceStatus = $param["ResourceStatus"];
         }
     }
 }

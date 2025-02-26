@@ -23,21 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取应用Id
  * @method void setId(string $Id) 设置应用Id
  * @method string getTitle() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEditStatusUse() 获取是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditStatusUse(integer $EditStatusUse) 设置是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPreviewStatusUse() 获取是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewStatusUse(integer $PreviewStatusUse) 设置是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOnlineStatusUse() 获取是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnlineStatusUse(integer $OnlineStatusUse) 设置是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSourceId() 获取数据源ID
+ * @method void setDataSourceId(string $DataSourceId) 设置数据源ID
  */
 class DataSourceLinkApp extends AbstractModel
 {
@@ -48,38 +42,36 @@ class DataSourceLinkApp extends AbstractModel
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var integer 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EditStatusUse;
 
     /**
      * @var integer 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewStatusUse;
 
     /**
      * @var integer 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnlineStatusUse;
 
     /**
+     * @var string 数据源ID
+     */
+    public $DataSourceId;
+
+    /**
      * @param string $Id 应用Id
      * @param string $Title 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EditStatusUse 是否编辑状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PreviewStatusUse 是否预览状态使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OnlineStatusUse 是否正式状态使用
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSourceId 数据源ID
      */
     function __construct()
     {
@@ -112,6 +104,10 @@ class DataSourceLinkApp extends AbstractModel
 
         if (array_key_exists("OnlineStatusUse",$param) and $param["OnlineStatusUse"] !== null) {
             $this->OnlineStatusUse = $param["OnlineStatusUse"];
+        }
+
+        if (array_key_exists("DataSourceId",$param) and $param["DataSourceId"] !== null) {
+            $this->DataSourceId = $param["DataSourceId"];
         }
     }
 }

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCaptchaCode() 获取返回码 0 成功，其它失败
  * @method void setCaptchaCode(integer $CaptchaCode) 设置返回码 0 成功，其它失败
  * @method string getCaptchaMsg() 获取返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class UpdateCaptchaAppIdInfoResponse extends AbstractModel
 
     /**
      * @var string 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
@@ -50,7 +47,6 @@ class UpdateCaptchaAppIdInfoResponse extends AbstractModel
     /**
      * @param integer $CaptchaCode 返回码 0 成功，其它失败
      * @param string $CaptchaMsg 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

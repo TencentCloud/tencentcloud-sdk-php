@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 资源计数统计数据
  *
  * @method integer getDidCnt() 获取DID总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDidCnt(integer $DidCnt) 设置DID总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVCCnt() 获取VC总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVCCnt(integer $VCCnt) 设置VC总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCPTCnt() 获取CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCPTCnt(integer $CPTCnt) 设置CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVerifyCnt() 获取 VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyCnt(integer $VerifyCnt) 设置 VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthCnt() 获取权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthCnt(integer $AuthCnt) 设置权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceCounterData extends AbstractModel
 {
     /**
      * @var integer DID总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DidCnt;
 
     /**
      * @var integer VC总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VCCnt;
 
     /**
      * @var integer CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CPTCnt;
 
     /**
      * @var integer  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyCnt;
 
     /**
      * @var integer 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthCnt;
 
     /**
      * @param integer $DidCnt DID总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VCCnt VC总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CPTCnt CPT总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyCnt  VC验证总数 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthCnt 权威机构数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

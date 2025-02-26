@@ -21,15 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCaptchaUserAllAppId返回参数结构体
  *
  * @method array getData() 获取用户注册的所有Appid和应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置用户注册的所有Appid和应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCaptchaCode() 获取成功返回 0  其它失败
  * @method void setCaptchaCode(integer $CaptchaCode) 设置成功返回 0  其它失败
  * @method string getCaptchaMsg() 获取返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,7 +33,6 @@ class DescribeCaptchaUserAllAppIdResponse extends AbstractModel
 {
     /**
      * @var array 用户注册的所有Appid和应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -48,7 +43,6 @@ class DescribeCaptchaUserAllAppIdResponse extends AbstractModel
 
     /**
      * @var string 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
@@ -59,10 +53,8 @@ class DescribeCaptchaUserAllAppIdResponse extends AbstractModel
 
     /**
      * @param array $Data 用户注册的所有Appid和应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CaptchaCode 成功返回 0  其它失败
      * @param string $CaptchaMsg 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

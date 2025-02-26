@@ -26,26 +26,20 @@ use TencentCloud\Common\AbstractModel;
 1002：参数错误
 4300：未开通服务
 4301：后端未创建对应产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。
 0：成功
 1：错误
 1002：参数错误
 4300：未开通服务
 4301：后端未创建对应产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取UTF-8编码，出错消息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置UTF-8编码，出错消息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OutputManageMarketingRiskValue getValue() 获取业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(OutputManageMarketingRiskValue $Value) 设置业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUUid() 获取控制台显示的req_id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUid(string $UUid) 设置控制台显示的req_id。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputManageMarketingRisk extends AbstractModel
 {
@@ -56,13 +50,11 @@ class OutputManageMarketingRisk extends AbstractModel
 1002：参数错误
 4300：未开通服务
 4301：后端未创建对应产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string UTF-8编码，出错消息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -74,7 +66,6 @@ class OutputManageMarketingRisk extends AbstractModel
 
     /**
      * @var string 控制台显示的req_id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUid;
 
@@ -85,13 +76,10 @@ class OutputManageMarketingRisk extends AbstractModel
 1002：参数错误
 4300：未开通服务
 4301：后端未创建对应产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message UTF-8编码，出错消息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputManageMarketingRiskValue $Value 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUid 控制台显示的req_id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

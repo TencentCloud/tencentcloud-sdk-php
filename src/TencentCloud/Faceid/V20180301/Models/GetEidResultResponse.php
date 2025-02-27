@@ -37,12 +37,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBestFrame(DetectInfoBestFrame $BestFrame) 设置最佳帧信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method EidInfo getEidInfo() 获取Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEidInfo(EidInfo $EidInfo) 设置Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method IntentionVerifyData getIntentionVerifyData() 获取意愿核身朗读模式相关信息。
 - 若未使用意愿核身朗读功能，该字段返回值可以不处理。
@@ -89,8 +93,10 @@ class GetEidResultResponse extends AbstractModel
 
     /**
      * @var EidInfo Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EidInfo;
@@ -131,8 +137,10 @@ class GetEidResultResponse extends AbstractModel
      * @param DetectInfoBestFrame $BestFrame 最佳帧信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EidInfo $EidInfo Eid信息。
-- 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
-- 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- EidInfo字段只有在人脸核身控制台完成“申请返回实名信息”之后返回，操作指引详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
+- Eid信息包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+- 解密方式详见 [E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
+- 只有整个核验流程完成之后才能返回该字段信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntentionVerifyData $IntentionVerifyData 意愿核身朗读模式相关信息。
 - 若未使用意愿核身朗读功能，该字段返回值可以不处理。

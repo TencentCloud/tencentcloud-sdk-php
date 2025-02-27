@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询租户楼栋数量和楼栋建筑面积相应体
  *
  * @method integer getBuildingCount() 获取总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingCount(integer $BuildingCount) 设置总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBuildingArea() 获取总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingArea(float $BuildingArea) 设置总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceDataTotalStatsRes extends AbstractModel
 {
     /**
      * @var integer 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingCount;
 
     /**
      * @var float 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingArea;
 
     /**
      * @param integer $BuildingCount 总楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BuildingArea 总建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

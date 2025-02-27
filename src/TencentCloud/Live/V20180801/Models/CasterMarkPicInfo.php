@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMarkPicIndex() 获取水印图片Index。
  * @method void setMarkPicIndex(integer $MarkPicIndex) 设置水印图片Index。
  * @method integer getMarkPicId() 获取注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkPicId(integer $MarkPicId) 设置注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMarkPicWidth() 获取水印图片在输出时的宽度。
 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。 
 当该值为小于1大于0的小数时，单位为百分比，表示水印在最终画面上所占的比例值。
@@ -52,22 +50,16 @@ use TencentCloud\Common\AbstractModel;
 当该值为小于1大于0的小数时，单位为百分比，表示水印在最终画面Y坐标上所占的比例值。
  * @method string getMarkPicUrl() 获取水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkPicUrl(string $MarkPicUrl) 设置水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsEqualProportion() 获取是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEqualProportion(boolean $IsEqualProportion) 设置是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterMarkPicInfo extends AbstractModel
 {
@@ -78,7 +70,6 @@ class CasterMarkPicInfo extends AbstractModel
 
     /**
      * @var integer 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkPicId;
 
@@ -113,28 +104,24 @@ class CasterMarkPicInfo extends AbstractModel
     /**
      * @var string 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkPicUrl;
 
     /**
      * @var string 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var boolean 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEqualProportion;
 
     /**
      * @param integer $MarkPicIndex 水印图片Index。
      * @param integer $MarkPicId 注：该字段已废弃。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MarkPicWidth 水印图片在输出时的宽度。
 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。 
 当该值为小于1大于0的小数时，单位为百分比，表示水印在最终画面上所占的比例值。
@@ -149,13 +136,10 @@ class CasterMarkPicInfo extends AbstractModel
 当该值为小于1大于0的小数时，单位为百分比，表示水印在最终画面Y坐标上所占的比例值。
      * @param string $MarkPicUrl 水印地址。
 最大长度256字符，且url需以jpg、jpeg、png、bmp、gif后缀结尾。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 水印描述。
 最大允许长度为256。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsEqualProportion 是否启用了等比例缩放。
 注：该字段仅做状态保存，无实际效果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

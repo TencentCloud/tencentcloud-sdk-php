@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、odbcinst.ini
  * @method void setConfigFileNames(array $ConfigFileNames) 设置需要查询的配置文件名称数组，如果为空则查询全部历史记录。目前支持的配置文件名称有：
 apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、odbcinst.ini
+ * @method array getComputeGroupIds() 获取需要查询的计算组列表
+ * @method void setComputeGroupIds(array $ComputeGroupIds) 设置需要查询的计算组列表
  */
 class DescribeClusterConfigsHistoryRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
     public $ConfigFileNames;
 
     /**
+     * @var array 需要查询的计算组列表
+     */
+    public $ComputeGroupIds;
+
+    /**
      * @param string $InstanceId 集群id名称
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
@@ -76,6 +83,7 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
      * @param string $EndTime 配置修改历史的时间范围结束
      * @param array $ConfigFileNames 需要查询的配置文件名称数组，如果为空则查询全部历史记录。目前支持的配置文件名称有：
 apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、odbcinst.ini
+     * @param array $ComputeGroupIds 需要查询的计算组列表
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ apache_hdfs_broker.conf、be.conf、fe.conf、core-site.xml、hdfs-site.xml、od
 
         if (array_key_exists("ConfigFileNames",$param) and $param["ConfigFileNames"] !== null) {
             $this->ConfigFileNames = $param["ConfigFileNames"];
+        }
+
+        if (array_key_exists("ComputeGroupIds",$param) and $param["ComputeGroupIds"] !== null) {
+            $this->ComputeGroupIds = $param["ComputeGroupIds"];
         }
     }
 }

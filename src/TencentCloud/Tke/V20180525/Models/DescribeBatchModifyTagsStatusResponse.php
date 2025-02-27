@@ -21,19 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeBatchModifyTagsStatus返回参数结构体
  *
  * @method array getFailedResources() 获取失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedResources(array $FailedResources) 设置失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务状态：
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务状态：
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSyncSubresource() 获取是否同步集群内子资源标签
  * @method void setSyncSubresource(boolean $SyncSubresource) 设置是否同步集群内子资源标签
  * @method array getTags() 获取集群标签
@@ -45,7 +41,6 @@ class DescribeBatchModifyTagsStatusResponse extends AbstractModel
 {
     /**
      * @var array 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedResources;
 
@@ -54,7 +49,6 @@ class DescribeBatchModifyTagsStatusResponse extends AbstractModel
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -75,12 +69,10 @@ class DescribeBatchModifyTagsStatusResponse extends AbstractModel
 
     /**
      * @param array $FailedResources 失败资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务状态：
 - running 运行中
 - failed 失败
 - done 成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SyncSubresource 是否同步集群内子资源标签
      * @param array $Tags 集群标签
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

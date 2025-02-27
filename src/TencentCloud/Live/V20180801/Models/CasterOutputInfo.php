@@ -32,17 +32,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputUrl(string $OutputUrl) 设置rtmp协议推流地址。
 最大允许长度512字符。
  * @method string getDescription() 获取描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputStreamId() 获取推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStreamId(string $OutputStreamId) 设置推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputType() 获取推流类型。
 范围[1,2]
 1. 推送到腾讯云直播源站。
@@ -54,27 +50,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOutputDomainName() 获取推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputDomainName(string $OutputDomainName) 设置推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputAppName() 获取推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputAppName(string $OutputAppName) 设置推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputParam() 获取推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputParam(string $OutputParam) 设置推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterOutputInfo extends AbstractModel
 {
@@ -93,7 +83,6 @@ class CasterOutputInfo extends AbstractModel
 
     /**
      * @var string 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -101,7 +90,6 @@ class CasterOutputInfo extends AbstractModel
      * @var string 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStreamId;
 
@@ -117,7 +105,6 @@ class CasterOutputInfo extends AbstractModel
      * @var string 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputDomainName;
 
@@ -125,7 +112,6 @@ class CasterOutputInfo extends AbstractModel
      * @var string 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputAppName;
 
@@ -133,7 +119,6 @@ class CasterOutputInfo extends AbstractModel
      * @var string 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputParam;
 
@@ -144,11 +129,9 @@ class CasterOutputInfo extends AbstractModel
      * @param string $OutputUrl rtmp协议推流地址。
 最大允许长度512字符。
      * @param string $Description 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputStreamId 推流到腾讯云直播源站时，使用的流ID。
 仅当OutputType为1时生效。
 最大允许128字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputType 推流类型。
 范围[1,2]
 1. 推送到腾讯云直播源站。
@@ -156,15 +139,12 @@ class CasterOutputInfo extends AbstractModel
      * @param string $OutputDomainName 推到腾讯云直播源站时，使用的域名。
 最大允许128字符，且域名需属于当前账号绑定的云直播推流域名。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputAppName 推到腾讯云直播源站时，使用的AppName。
 最大允许64字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputParam 推到腾讯云直播源站时需要添加的推流参数。
 最大允许长度256字符。
 仅在OutputType为1时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

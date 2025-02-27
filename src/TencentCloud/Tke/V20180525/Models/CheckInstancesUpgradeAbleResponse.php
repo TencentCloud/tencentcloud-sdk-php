@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLatestVersion() 获取集群master对应的大版本目前最新小版本
  * @method void setLatestVersion(string $LatestVersion) 设置集群master对应的大版本目前最新小版本
  * @method array getUpgradeAbleInstances() 获取可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeAbleInstances(array $UpgradeAbleInstances) 设置可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUnavailableVersionReason() 获取不可升级原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnavailableVersionReason(array $UnavailableVersionReason) 设置不可升级原因
@@ -53,13 +49,11 @@ class CheckInstancesUpgradeAbleResponse extends AbstractModel
 
     /**
      * @var array 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeAbleInstances;
 
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -78,9 +72,7 @@ class CheckInstancesUpgradeAbleResponse extends AbstractModel
      * @param string $ClusterVersion 集群master当前小版本
      * @param string $LatestVersion 集群master对应的大版本目前最新小版本
      * @param array $UpgradeAbleInstances 可升级节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnavailableVersionReason 不可升级原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

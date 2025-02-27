@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 当AccountType为10005时，对应手机号的SHA256值。
  * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
  * @method void setPostTime(integer $PostTime) 设置操作时间戳，单位秒（对应输入参数）。
- * @method string getAssociateAccount() 获取业务参数。
- * @method void setAssociateAccount(string $AssociateAccount) 设置业务参数。
+ * @method string getAssociateAccount() 获取业务预留参数（暂无实际业务含义， 无需关注返回值）
+ * @method void setAssociateAccount(string $AssociateAccount) 设置业务预留参数（暂无实际业务含义， 无需关注返回值）
  * @method string getUserIp() 获取操作来源的外网IP（对应输入参数）。
  * @method void setUserIp(string $UserIp) 设置操作来源的外网IP（对应输入参数）。
  * @method string getRiskLevel() 获取风险等级
@@ -104,7 +104,7 @@ class OutputManageMarketingRiskValue extends AbstractModel
     public $PostTime;
 
     /**
-     * @var string 业务参数。
+     * @var string 业务预留参数（暂无实际业务含义， 无需关注返回值）
      */
     public $AssociateAccount;
 
@@ -161,7 +161,7 @@ reject：高风险，建议拦截
 当AccountType为10004时，对应手机号的MD5值；
 当AccountType为10005时，对应手机号的SHA256值。
      * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
-     * @param string $AssociateAccount 业务参数。
+     * @param string $AssociateAccount 业务预留参数（暂无实际业务含义， 无需关注返回值）
      * @param string $UserIp 操作来源的外网IP（对应输入参数）。
      * @param string $RiskLevel 风险等级
 pass：无恶意

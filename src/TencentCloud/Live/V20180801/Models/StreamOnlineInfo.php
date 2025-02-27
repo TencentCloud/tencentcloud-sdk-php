@@ -31,11 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPushToDelay() 获取流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPushToDelay(integer $PushToDelay) 设置流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StreamOnlineInfo extends AbstractModel
 {
@@ -63,7 +61,6 @@ class StreamOnlineInfo extends AbstractModel
      * @var integer 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PushToDelay;
 
@@ -75,7 +72,6 @@ class StreamOnlineInfo extends AbstractModel
      * @param integer $PushToDelay 流是否推送到延播。
 0 - 无延播，
 1 - 有延播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

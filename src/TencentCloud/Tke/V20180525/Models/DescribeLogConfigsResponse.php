@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLogConfigs返回参数结构体
  *
  * @method integer getTotal() 获取分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogConfigs() 获取采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogConfigs(string $LogConfigs) 设置采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeLogConfigsResponse extends AbstractModel
 {
     /**
      * @var integer 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var string 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfigs;
 
@@ -62,11 +53,8 @@ class DescribeLogConfigsResponse extends AbstractModel
 
     /**
      * @param integer $Total 分页查找时返回采集规则总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 指定采集规则名称查找，部分失败时返回失败采集规则名称及最后一个失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogConfigs 采集规则查询结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

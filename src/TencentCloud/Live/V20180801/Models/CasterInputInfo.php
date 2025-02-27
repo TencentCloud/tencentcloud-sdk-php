@@ -42,60 +42,46 @@ use TencentCloud\Common\AbstractModel;
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputUrl(string $InputUrl) 设置输入源的源地址。
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInputUrls() 获取点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputUrls(array $InputUrls) 设置点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLoopEnable() 获取是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoopEnable(boolean $LoopEnable) 设置是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLoopNumber() 获取点播循环次数。
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoopNumber(integer $LoopNumber) 设置点播循环次数。
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPullPushEnable() 获取是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPullPushEnable(boolean $PullPushEnable) 设置是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVolume() 获取输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolume(integer $Volume) 设置输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterInputInfo extends AbstractModel
 {
@@ -121,14 +107,12 @@ class CasterInputInfo extends AbstractModel
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputUrl;
 
     /**
      * @var string 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -137,14 +121,12 @@ class CasterInputInfo extends AbstractModel
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputUrls;
 
     /**
      * @var boolean 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoopEnable;
 
@@ -154,14 +136,12 @@ class CasterInputInfo extends AbstractModel
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoopNumber;
 
     /**
      * @var boolean 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullPushEnable;
 
@@ -169,7 +149,6 @@ class CasterInputInfo extends AbstractModel
      * @var integer 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volume;
 
@@ -187,31 +166,24 @@ class CasterInputInfo extends AbstractModel
 最大允许长度512。
 当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 输入源描述。
 最大允许长度256字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InputUrls 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
 单个地址最大允许长度512字符。
 最多允许同时填入5个地址。
 注：此时需保持InputUrl字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LoopEnable 是否启用点播无限循环播放。
 注：当前该字段未生效，默认为True。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LoopNumber 点播循环次数。
 允许值-1或正整数。
 当值为-1时，表示无限循环。
 当值为其他正整数时，表示循环对应次数。
 注：该字段暂未生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PullPushEnable 是否启用拉取到导播台。
 注：该字段默认强制为true。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Volume 输入源音量百分比。
 默认为100。表示音量为原始大小。
 允许值[0,200]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

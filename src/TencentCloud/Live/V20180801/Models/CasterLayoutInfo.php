@@ -39,17 +39,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLayoutWidth() 获取布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayoutWidth(integer $LayoutWidth) 设置布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLayoutHeight() 获取布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayoutHeight(integer $LayoutHeight) 设置布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterLayoutInfo extends AbstractModel
 {
@@ -81,14 +77,12 @@ class CasterLayoutInfo extends AbstractModel
      * @var integer 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayoutWidth;
 
     /**
      * @var integer 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayoutHeight;
 
@@ -104,10 +98,8 @@ class CasterLayoutInfo extends AbstractModel
      * @param integer $LayoutWidth 布局输出的宽度，单位为像素。
 默认为1280像素。
 注：该值仅在画中画布局，且未设置PgmWidth时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LayoutHeight 布局输出的高度，单位为像素。
 注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

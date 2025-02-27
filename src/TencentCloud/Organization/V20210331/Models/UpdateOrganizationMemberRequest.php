@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置是否允许成员退出组织。取值：Allow-允许、Denied-不允许
  * @method string getPayUin() 获取代付者Uin。成员财务权限有代付费时需要，取值为成员对应主体的主体管理员Uin
  * @method void setPayUin(string $PayUin) 设置代付者Uin。成员财务权限有代付费时需要，取值为成员对应主体的主体管理员Uin
+ * @method integer getIsModifyNickName() 获取是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+ * @method void setIsModifyNickName(integer $IsModifyNickName) 设置是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
  */
 class UpdateOrganizationMemberRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class UpdateOrganizationMemberRequest extends AbstractModel
     public $PayUin;
 
     /**
+     * @var integer 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+     */
+    public $IsModifyNickName;
+
+    /**
      * @param integer $MemberUin 成员Uin。
      * @param string $Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      * @param string $Remark 备注。最大长度为40个字符
@@ -84,6 +91,7 @@ class UpdateOrganizationMemberRequest extends AbstractModel
 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析，如果有值，1、2 默认必须
      * @param string $IsAllowQuit 是否允许成员退出组织。取值：Allow-允许、Denied-不允许
      * @param string $PayUin 代付者Uin。成员财务权限有代付费时需要，取值为成员对应主体的主体管理员Uin
+     * @param integer $IsModifyNickName 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class UpdateOrganizationMemberRequest extends AbstractModel
 
         if (array_key_exists("PayUin",$param) and $param["PayUin"] !== null) {
             $this->PayUin = $param["PayUin"];
+        }
+
+        if (array_key_exists("IsModifyNickName",$param) and $param["IsModifyNickName"] !== null) {
+            $this->IsModifyNickName = $param["IsModifyNickName"];
         }
     }
 }

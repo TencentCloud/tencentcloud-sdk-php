@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+ * @method string getSSLVerifyClient() 获取是否开启客户端证书验证，只在双向认证时生效。
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) 设置是否开启客户端证书验证，只在双向认证时生效。
  * @method string getCertId() 获取服务端证书的ID。
  * @method void setCertId(string $CertId) 设置服务端证书的ID。
  * @method string getCertCaId() 获取客户端证书的 ID。
@@ -39,6 +41,11 @@ class CertificateOutput extends AbstractModel
      * @var string 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public $SSLMode;
+
+    /**
+     * @var string 是否开启客户端证书验证，只在双向认证时生效。
+     */
+    public $SSLVerifyClient;
 
     /**
      * @var string 服务端证书的ID。
@@ -59,6 +66,7 @@ class CertificateOutput extends AbstractModel
 
     /**
      * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * @param string $SSLVerifyClient 是否开启客户端证书验证，只在双向认证时生效。
      * @param string $CertId 服务端证书的ID。
      * @param string $CertCaId 客户端证书的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,6 +88,10 @@ class CertificateOutput extends AbstractModel
         }
         if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
             $this->SSLMode = $param["SSLMode"];
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {

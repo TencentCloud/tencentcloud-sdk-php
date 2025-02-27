@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 大于30时取30
  * @method integer getPageNum() 获取不传或传0时 会默认为1
  * @method void setPageNum(integer $PageNum) 设置不传或传0时 会默认为1
+ * @method string getServerName() 获取服务名
+ * @method void setServerName(string $ServerName) 设置服务名
+ * @method string getServerType() 获取服务类型：function | container
+ * @method void setServerType(string $ServerType) 设置服务类型：function | container
  */
 class DescribeCloudRunServersRequest extends AbstractModel
 {
@@ -51,11 +55,23 @@ class DescribeCloudRunServersRequest extends AbstractModel
     public $PageNum;
 
     /**
+     * @var string 服务名
+     */
+    public $ServerName;
+
+    /**
+     * @var string 服务类型：function | container
+     */
+    public $ServerType;
+
+    /**
      * @param string $EnvId 环境Id
      * @param integer $PageSize 默认为9， 最大为30
 不传或传0时 取默认9
 大于30时取30
      * @param integer $PageNum 不传或传0时 会默认为1
+     * @param string $ServerName 服务名
+     * @param string $ServerType 服务类型：function | container
      */
     function __construct()
     {
@@ -80,6 +96,14 @@ class DescribeCloudRunServersRequest extends AbstractModel
 
         if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
             $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("ServerName",$param) and $param["ServerName"] !== null) {
+            $this->ServerName = $param["ServerName"];
+        }
+
+        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
+            $this->ServerType = $param["ServerType"];
         }
     }
 }

@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeClusterPendingReleases返回参数结构体
  *
  * @method array getReleaseSet() 获取正在安装中应用列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseSet(array $ReleaseSet) 设置正在安装中应用列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLimit() 获取每页返回数量限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimit(integer $Limit) 设置每页返回数量限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取页偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置页偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeClusterPendingReleasesResponse extends AbstractModel
 {
     /**
      * @var array 正在安装中应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseSet;
 
     /**
      * @var integer 每页返回数量限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Limit;
 
     /**
      * @var integer 页偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @var integer 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -72,13 +60,9 @@ class DescribeClusterPendingReleasesResponse extends AbstractModel
 
     /**
      * @param array $ReleaseSet 正在安装中应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Limit 每页返回数量限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 页偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

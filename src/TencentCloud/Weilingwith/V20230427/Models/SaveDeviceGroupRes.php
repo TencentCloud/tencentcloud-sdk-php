@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 保存or修改设备分组回包
  *
  * @method integer getId() 获取保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SaveDeviceGroupRes extends AbstractModel
 {
     /**
      * @var integer 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @param integer $Id 保存or修改设备分组回包信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

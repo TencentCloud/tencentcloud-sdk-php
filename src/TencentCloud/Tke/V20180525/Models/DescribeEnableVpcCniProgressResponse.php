@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务进度的描述：Running/Succeed/Failed
  * @method void setStatus(string $Status) 设置任务进度的描述：Running/Succeed/Failed
  * @method string getErrorMessage() 获取当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeEnableVpcCniProgressResponse extends AbstractModel
 
     /**
      * @var string 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
@@ -50,7 +47,6 @@ class DescribeEnableVpcCniProgressResponse extends AbstractModel
     /**
      * @param string $Status 任务进度的描述：Running/Succeed/Failed
      * @param string $ErrorMessage 当任务进度为Failed时，对任务状态的进一步描述，例如IPAMD组件安装失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

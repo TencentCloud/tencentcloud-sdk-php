@@ -69,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getFlux() 获取流量，单位MB。
  * @method void setFlux(float $Flux) 设置流量，单位MB。
  * @method string getServerIp() 获取推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerIp(string $ServerIp) 设置推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PushQualityData extends AbstractModel
 {
@@ -189,7 +187,6 @@ class PushQualityData extends AbstractModel
 
     /**
      * @var string 推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerIp;
 
@@ -219,7 +216,6 @@ class PushQualityData extends AbstractModel
      * @param float $Bandwidth 带宽，单位Mbps。
      * @param float $Flux 流量，单位MB。
      * @param string $ServerIp 推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

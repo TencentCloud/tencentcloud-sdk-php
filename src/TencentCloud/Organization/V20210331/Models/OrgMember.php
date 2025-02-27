@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermissionStatus(string $PermissionStatus) 设置成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
  * @method array getTags() 获取成员标签列表
  * @method void setTags(array $Tags) 设置成员标签列表
+ * @method string getNickName() 获取腾讯云昵称
+ * @method void setNickName(string $NickName) 设置腾讯云昵称
  */
 class OrgMember extends AbstractModel
 {
@@ -150,6 +152,11 @@ class OrgMember extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 腾讯云昵称
+     */
+    public $NickName;
+
+    /**
      * @param integer $MemberUin 成员Uin
      * @param string $Name 成员名
      * @param string $MemberType 成员类型，邀请：Invite， 创建：Create
@@ -168,6 +175,7 @@ class OrgMember extends AbstractModel
      * @param string $BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
      * @param string $PermissionStatus 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
      * @param array $Tags 成员标签列表
+     * @param string $NickName 腾讯云昵称
      */
     function __construct()
     {
@@ -267,6 +275,10 @@ class OrgMember extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
+            $this->NickName = $param["NickName"];
         }
     }
 }

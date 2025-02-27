@@ -614,6 +614,16 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td> 17 </td>
         </tr>
         <tr>
+          <td> TaxPayment </td>
+          <td> 完税凭证 </td>
+          <td> 18 </td>
+        </tr>
+        <tr>
+          <td> CustomsPaymentReceipt </td>
+          <td> 海关缴款 </td>
+          <td> 19 </td>
+        </tr>
+        <tr>
           <td> OtherInvoice </td>
           <td> 其他发票 </td>
           <td> -1 </td>

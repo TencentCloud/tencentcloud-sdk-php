@@ -23,83 +23,61 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMarkWordIndex() 获取文字水印Index。
  * @method void setMarkWordIndex(integer $MarkWordIndex) 设置文字水印Index。
  * @method string getMarkWordText() 获取文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordText(string $MarkWordText) 设置文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMarkWordFontSize() 获取文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordFontSize(integer $MarkWordFontSize) 设置文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMarkWordFontColor() 获取文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordFontColor(string $MarkWordFontColor) 设置文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMarkWordFontType() 获取文字水印的字体类型。
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordFontType(integer $MarkWordFontType) 设置文字水印的字体类型。
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMarkWordLocationX() 获取文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordLocationX(float $MarkWordLocationX) 设置文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMarkWordLocationY() 获取文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordLocationY(float $MarkWordLocationY) 设置文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMarkWordRollEnable() 获取是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordRollEnable(boolean $MarkWordRollEnable) 设置是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMarkWordRollOnceTime() 获取跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordRollOnceTime(integer $MarkWordRollOnceTime) 设置跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMarkWordRollDirection() 获取跑马灯文字的方向。
 默认值为0。
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordRollDirection(integer $MarkWordRollDirection) 设置跑马灯文字的方向。
 默认值为0。
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMarkWordRollStartLocationX() 获取跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordRollStartLocationX(float $MarkWordRollStartLocationX) 设置跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMarkWordRollEndLocationX() 获取跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarkWordRollEndLocationX(float $MarkWordRollEndLocationX) 设置跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterMarkWordInfo extends AbstractModel
 {
@@ -110,20 +88,17 @@ class CasterMarkWordInfo extends AbstractModel
 
     /**
      * @var string 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordText;
 
     /**
      * @var integer 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordFontSize;
 
     /**
      * @var string 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordFontColor;
 
@@ -132,7 +107,6 @@ class CasterMarkWordInfo extends AbstractModel
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordFontType;
 
@@ -140,7 +114,6 @@ class CasterMarkWordInfo extends AbstractModel
      * @var float 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordLocationX;
 
@@ -148,14 +121,12 @@ class CasterMarkWordInfo extends AbstractModel
      * @var float 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordLocationY;
 
     /**
      * @var boolean 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordRollEnable;
 
@@ -163,7 +134,6 @@ class CasterMarkWordInfo extends AbstractModel
      * @var integer 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordRollOnceTime;
 
@@ -173,65 +143,51 @@ class CasterMarkWordInfo extends AbstractModel
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordRollDirection;
 
     /**
      * @var float 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordRollStartLocationX;
 
     /**
      * @var float 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarkWordRollEndLocationX;
 
     /**
      * @param integer $MarkWordIndex 文字水印Index。
      * @param string $MarkWordText 文字水印内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MarkWordFontSize 文字水印的字号。
 范围[16, 60]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MarkWordFontColor 文字水印的颜色，值为HEX颜色代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MarkWordFontType 文字水印的字体类型。
 范围[1,2]。
 1. 宋体
 2. 黑体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MarkWordLocationX 文字水印的x坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MarkWordLocationY 文字水印的Y坐标位置，单位百分比。
 范围[0.0, 1.0]
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MarkWordRollEnable 是否开启文字跑马灯功能。
 默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MarkWordRollOnceTime 跑马灯文字显示一遍的时间，单位为秒。
 默认为5s。
 范围[5, 600]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MarkWordRollDirection 跑马灯文字的方向。
 默认值为0。
 范围[0,1]。
 0 从左到右
 1 从右到左
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MarkWordRollStartLocationX 跑马灯文字显示的起始x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MarkWordRollEndLocationX 跑马灯文字显示的截止x坐标，单位百分比。
 范围[0.0, 1.0]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

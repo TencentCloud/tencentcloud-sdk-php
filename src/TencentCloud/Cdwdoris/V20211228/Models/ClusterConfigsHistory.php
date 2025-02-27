@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群的配置文件的修改历史
  *
+ * @method string getComputeGroupId() 获取计算组id
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组id
  * @method string getFileName() 获取配置文件名称
  * @method void setFileName(string $FileName) 设置配置文件名称
  * @method string getNewConfValue() 获取修改后的配置文件内容，base64编码
@@ -35,6 +37,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ClusterConfigsHistory extends AbstractModel
 {
+    /**
+     * @var string 计算组id
+     */
+    public $ComputeGroupId;
+
     /**
      * @var string 配置文件名称
      */
@@ -66,6 +73,7 @@ class ClusterConfigsHistory extends AbstractModel
     public $UserUin;
 
     /**
+     * @param string $ComputeGroupId 计算组id
      * @param string $FileName 配置文件名称
      * @param string $NewConfValue 修改后的配置文件内容，base64编码
      * @param string $OldConfValue 修改前的配置文件内容，base64编码
@@ -86,6 +94,10 @@ class ClusterConfigsHistory extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
+        }
+
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
         }

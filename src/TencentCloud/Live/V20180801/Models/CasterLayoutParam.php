@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
  * @method boolean getUsePortraitSegment() 获取是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsePortraitSegment(boolean $UsePortraitSegment) 设置是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CasterLayoutParam extends AbstractModel
 {
@@ -91,7 +89,6 @@ class CasterLayoutParam extends AbstractModel
 
     /**
      * @var boolean 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsePortraitSegment;
 
@@ -111,7 +108,6 @@ class CasterLayoutParam extends AbstractModel
 当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
 当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
      * @param boolean $UsePortraitSegment 是否启用抠图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

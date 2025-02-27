@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 项目空间楼栋数量与建筑面积出参
  *
  * @method string getWorkspaceId() 获取工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceId(string $WorkspaceId) 设置工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkspaceName() 获取工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceName(string $WorkspaceName) 设置工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBuildingCount() 获取楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingCount(integer $BuildingCount) 设置楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBuildingArea() 获取建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingArea(float $BuildingArea) 设置建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceDataStats extends AbstractModel
 {
     /**
      * @var string 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
      * @var string 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceName;
 
     /**
      * @var integer 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingCount;
 
     /**
      * @var float 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingArea;
 
     /**
      * @param string $WorkspaceId 工作空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkspaceName 工作空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BuildingCount 楼栋数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BuildingArea 建筑面积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

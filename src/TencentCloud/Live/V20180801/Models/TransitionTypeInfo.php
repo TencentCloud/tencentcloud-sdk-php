@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 转场信息
  *
  * @method string getTransitionType() 获取转场名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransitionType(string $TransitionType) 设置转场名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceUrl() 获取素材url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceUrl(string $SourceUrl) 设置素材url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndex() 获取转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(integer $Index) 设置转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransitionTypeInfo extends AbstractModel
 {
     /**
      * @var string 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransitionType;
 
     /**
      * @var string 素材url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceUrl;
 
     /**
      * @var integer 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @param string $TransitionType 转场名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceUrl 素材url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 转场的下标，可用来排序，从1开始递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

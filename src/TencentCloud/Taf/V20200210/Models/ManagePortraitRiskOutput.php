@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCode() 获取返回码（0，成功，其他失败）
  * @method void setCode(integer $Code) 设置返回码（0，成功，其他失败）
  * @method string getMessage() 获取返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ManagePortraitRiskValueOutput getValue() 获取结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(ManagePortraitRiskValueOutput $Value) 设置结果
@@ -40,7 +38,6 @@ class ManagePortraitRiskOutput extends AbstractModel
 
     /**
      * @var string 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -53,7 +50,6 @@ class ManagePortraitRiskOutput extends AbstractModel
     /**
      * @param integer $Code 返回码（0，成功，其他失败）
      * @param string $Message 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManagePortraitRiskValueOutput $Value 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 第三方应用集成员工部门信息
  *
  * @method string getDepartmentId() 获取部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentId(string $DepartmentId) 设置部门id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartmentName() 获取部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentName(string $DepartmentName) 设置部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Department extends AbstractModel
 {
     /**
      * @var string 部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentId;
 
     /**
      * @var string 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentName;
 
     /**
      * @param string $DepartmentId 部门id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

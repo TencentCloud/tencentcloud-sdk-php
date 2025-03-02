@@ -23,21 +23,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSignId() 获取签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignId(string $SignId) 设置签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientId() 获取签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientId(string $RecipientId) 设置签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ArchiveDynamicApproverData extends AbstractModel
 {
@@ -45,7 +40,6 @@ class ArchiveDynamicApproverData extends AbstractModel
      * @var string 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignId;
 
@@ -54,7 +48,6 @@ class ArchiveDynamicApproverData extends AbstractModel
 
 填写控件和签署控件都与特定的角色编号关联。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
 
@@ -62,12 +55,9 @@ class ArchiveDynamicApproverData extends AbstractModel
      * @param string $SignId 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
 
 可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientId 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
 
 填写控件和签署控件都与特定的角色编号关联。
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

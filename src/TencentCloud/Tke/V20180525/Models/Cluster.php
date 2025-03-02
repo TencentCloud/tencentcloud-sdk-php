@@ -45,59 +45,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterStatus() 获取集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
  * @method string getProperty() 获取集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperty(string $Property) 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterMaterNodeNum() 获取集群当前master数量
  * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) 设置集群当前master数量
  * @method string getImageId() 获取集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsCustomizeType() 获取OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerRuntime() 获取集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerRuntime(string $ContainerRuntime) 设置集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeletionProtection() 获取删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableExternalNode() 获取集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableExternalNode(boolean $EnableExternalNode) 设置集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterLevel() 获取集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuntimeVersion() 获取运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterEtcdNodeNum() 获取集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) 设置集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -159,7 +133,6 @@ class Cluster extends AbstractModel
 
     /**
      * @var string 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Property;
 
@@ -170,73 +143,61 @@ class Cluster extends AbstractModel
 
     /**
      * @var string 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
     /**
      * @var string OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
 
     /**
      * @var string 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerRuntime;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var boolean 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionProtection;
 
     /**
      * @var boolean 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableExternalNode;
 
     /**
      * @var string 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterLevel;
 
     /**
      * @var boolean 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoUpgradeClusterLevel;
 
     /**
      * @var boolean 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QGPUShareEnable;
 
     /**
      * @var string 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeVersion;
 
     /**
      * @var integer 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterEtcdNodeNum;
 
     /**
      * @var string 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
@@ -254,32 +215,19 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
      * @param string $Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterMaterNodeNum 集群当前master数量
      * @param string $ImageId 集群使用镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsCustomizeType OsCustomizeType 系统定制类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerRuntime 集群运行环境docker或container
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableExternalNode 集群是否开启第三方节点支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterLevel 集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterEtcdNodeNum 集群当前etcd数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId 本地专用集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

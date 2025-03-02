@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKeyPairs请求参数结构体
  *
- * @method array getKeyIds() 获取密钥对 ID 列表，每次请求批量密钥对的上限为 100。
- * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表，每次请求批量密钥对的上限为 100。
+ * @method array getKeyIds() 获取密钥对 ID 列表。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口返回值字段KeyPairSet获取。列表长度最大值为100。
+ * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口返回值字段KeyPairSet获取。列表长度最大值为100。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeKeyPairsRequest extends AbstractModel
 {
     /**
-     * @var array 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
+     * @var array 密钥对 ID 列表。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口返回值字段KeyPairSet获取。列表长度最大值为100。
      */
     public $KeyIds;
 
@@ -73,7 +73,7 @@ class DescribeKeyPairsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param array $KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
+     * @param array $KeyIds 密钥对 ID 列表。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口返回值字段KeyPairSet获取。列表长度最大值为100。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param array $Filters 过滤器列表。

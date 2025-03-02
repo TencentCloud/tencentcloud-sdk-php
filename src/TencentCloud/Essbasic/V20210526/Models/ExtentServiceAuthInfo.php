@@ -47,13 +47,9 @@ use TencentCloud\Common\AbstractModel;
 **ENABLE**：开通 
 **DISABLE**：未开通	
  * @method string getOperatorOpenId() 获取操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperatorOpenId(string $OperatorOpenId) 设置操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOperateOn() 获取扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateOn(integer $OperateOn) 设置扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtentServiceAuthInfo extends AbstractModel
 {
@@ -84,13 +80,11 @@ class ExtentServiceAuthInfo extends AbstractModel
 
     /**
      * @var string 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorOpenId;
 
     /**
      * @var integer 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOn;
 
@@ -109,9 +103,7 @@ class ExtentServiceAuthInfo extends AbstractModel
 **ENABLE**：开通 
 **DISABLE**：未开通	
      * @param string $OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

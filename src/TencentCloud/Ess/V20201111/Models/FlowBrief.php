@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowName() 获取合同流程的名称。
  * @method void setFlowName(string $FlowName) 设置合同流程的名称。
  * @method string getFlowDescription() 获取合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowDescription(string $FlowDescription) 设置合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowType() 获取合同流程的类别分类（如销售合同/入职合同等）。
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（如销售合同/入职合同等）。
  * @method integer getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值
@@ -43,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowStatus(integer $FlowStatus) 设置合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
 <li> **1** : 待签署</li>
@@ -57,23 +54,14 @@ use TencentCloud\Common\AbstractModel;
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatedOn() 获取合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(integer $CreatedOn) 设置合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowMessage() 获取当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowMessage(string $FlowMessage) 设置当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowBrief extends AbstractModel
 {
@@ -89,7 +77,6 @@ class FlowBrief extends AbstractModel
 
     /**
      * @var string 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowDescription;
 
@@ -112,31 +99,26 @@ class FlowBrief extends AbstractModel
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowStatus;
 
     /**
      * @var integer 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedOn;
 
     /**
      * @var string 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowMessage;
 
     /**
      * @var string  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
     /**
      * @var integer 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deadline;
 
@@ -144,7 +126,6 @@ class FlowBrief extends AbstractModel
      * @param string $FlowId 合同流程ID，为32位字符串。
      * @param string $FlowName 合同流程的名称。
      * @param string $FlowDescription 合同流程描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowType 合同流程的类别分类（如销售合同/入职合同等）。
      * @param integer $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
@@ -159,15 +140,10 @@ class FlowBrief extends AbstractModel
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
 <li> **21** : 已解除</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedOn 合同流程创建时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

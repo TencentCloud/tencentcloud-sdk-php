@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 企业角色数据信息
  *
  * @method string getRoleId() 获取角色id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleId(string $RoleId) 设置角色id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoleName() 获取角色名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoleStatus() 获取角色状态，1-启用，2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleStatus(integer $RoleStatus) 设置角色状态，1-启用，2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsGroupRole() 获取是否是集团角色，true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGroupRole(boolean $IsGroupRole) 设置是否是集团角色，true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubOrgIdList() 获取管辖的子企业列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubOrgIdList(array $SubOrgIdList) 设置管辖的子企业列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissionGroups() 获取权限树
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrateRole extends AbstractModel
 {
     /**
      * @var string 角色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleId;
 
     /**
      * @var string 角色名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
     /**
      * @var integer 角色状态，1-启用，2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleStatus;
 
     /**
      * @var boolean 是否是集团角色，true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGroupRole;
 
     /**
      * @var array 管辖的子企业列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubOrgIdList;
 
     /**
      * @var array 权限树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PermissionGroups;
 
     /**
      * @param string $RoleId 角色id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoleStatus 角色状态，1-启用，2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsGroupRole 是否是集团角色，true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubOrgIdList 管辖的子企业列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PermissionGroups 权限树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

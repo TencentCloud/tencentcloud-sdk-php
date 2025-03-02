@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSealStatus() 获取印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
  * @method void setSealStatus(string $SealStatus) 设置印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
  * @method string getFailReason() 获取审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取印章图片url，5分钟内有效
  * @method void setUrl(string $Url) 设置印章图片url，5分钟内有效
  * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
@@ -91,7 +89,6 @@ class OccupiedSeal extends AbstractModel
 
     /**
      * @var string 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
@@ -129,7 +126,6 @@ class OccupiedSeal extends AbstractModel
      * @param string $SealPolicyId 电子印章策略Id
      * @param string $SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
      * @param string $FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 印章图片url，5分钟内有效
      * @param string $SealType 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) 设置服务 ID
  * @method CloudNativeAPIGatewayCanaryRule getCanaryRule() 获取灰度规则配置
  * @method void setCanaryRule(CloudNativeAPIGatewayCanaryRule $CanaryRule) 设置灰度规则配置
+ * @method array getCanaryRuleList() 获取灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略CanaryRule参数
+ * @method void setCanaryRuleList(array $CanaryRuleList) 设置灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略CanaryRule参数
  */
 class CreateCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
     public $CanaryRule;
 
     /**
+     * @var array 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略CanaryRule参数
+     */
+    public $CanaryRuleList;
+
+    /**
      * @param string $GatewayId 网关 ID
      * @param string $ServiceId 服务 ID
      * @param CloudNativeAPIGatewayCanaryRule $CanaryRule 灰度规则配置
+     * @param array $CanaryRuleList 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略CanaryRule参数
      */
     function __construct()
     {
@@ -73,6 +81,15 @@ class CreateCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
         if (array_key_exists("CanaryRule",$param) and $param["CanaryRule"] !== null) {
             $this->CanaryRule = new CloudNativeAPIGatewayCanaryRule();
             $this->CanaryRule->deserialize($param["CanaryRule"]);
+        }
+
+        if (array_key_exists("CanaryRuleList",$param) and $param["CanaryRuleList"] !== null) {
+            $this->CanaryRuleList = [];
+            foreach ($param["CanaryRuleList"] as $key => $value){
+                $obj = new CloudNativeAPIGatewayCanaryRule();
+                $obj->deserialize($value);
+                array_push($this->CanaryRuleList, $obj);
+            }
         }
     }
 }

@@ -74,48 +74,36 @@ use TencentCloud\Common\AbstractModel;
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的 H5 预览链接，有效期为 5 分钟。
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
 （此功能开放需要联系客户经理）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPdfUrl(string $PdfUrl) 设置第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
 （此功能开放需要联系客户经理）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelTemplateId() 获取本模板关联的第三方应用平台企业模板ID
  * @method void setChannelTemplateId(string $ChannelTemplateId) 设置本模板关联的第三方应用平台企业模板ID
  * @method string getChannelTemplateName() 获取本模板关联的三方应用平台平台企业模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelTemplateName(string $ChannelTemplateName) 设置本模板关联的三方应用平台平台企业模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelAutoSave() 获取0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelAutoSave(integer $ChannelAutoSave) 设置0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateVersion() 获取模板版本，由全数字字符组成。
 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本，由全数字字符组成。
 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAvailable() 获取模板可用状态的取值通常为以下两种：
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailable(integer $Available) 设置模板可用状态的取值通常为以下两种：
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -186,7 +174,6 @@ class TemplateInfo extends AbstractModel
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
 
@@ -194,7 +181,6 @@ class TemplateInfo extends AbstractModel
      * @var string 第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
 （此功能开放需要联系客户经理）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PdfUrl;
 
@@ -205,21 +191,18 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @var string 本模板关联的三方应用平台平台企业模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelTemplateName;
 
     /**
      * @var integer 0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelAutoSave;
 
     /**
      * @var string 模板版本，由全数字字符组成。
 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateVersion;
 
@@ -228,7 +211,6 @@ class TemplateInfo extends AbstractModel
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Available;
 
@@ -258,25 +240,19 @@ class TemplateInfo extends AbstractModel
 您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
 
 注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PdfUrl 第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
 （此功能开放需要联系客户经理）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelTemplateId 本模板关联的第三方应用平台企业模板ID
      * @param string $ChannelTemplateName 本模板关联的三方应用平台平台企业模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateVersion 模板版本，由全数字字符组成。
 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Available 模板可用状态的取值通常为以下两种：
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询黑白名单出参
  *
- * @method integer getCode() 获取错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
- * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
- * @method string getMessage() 获取错误信息
- * @method void setMessage(string $Message) 设置错误信息
- * @method OutputDescribeNameListInfo getValue() 获取黑白名单列表信息
- * @method void setValue(OutputDescribeNameListInfo $Value) 设置黑白名单列表信息
+ * @method integer getCode() 获取错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
+ * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
+ * @method string getMessage() 获取错误信息。
+ * @method void setMessage(string $Message) 设置错误信息。
+ * @method OutputDescribeNameListInfo getValue() 获取黑白名单列表信息。
+ * @method void setValue(OutputDescribeNameListInfo $Value) 设置黑白名单列表信息。
  */
 class OutputDescribeNameListFrontFixListData extends AbstractModel
 {
     /**
-     * @var integer 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
+     * @var integer 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
      */
     public $Code;
 
     /**
-     * @var string 错误信息
+     * @var string 错误信息。
      */
     public $Message;
 
     /**
-     * @var OutputDescribeNameListInfo 黑白名单列表信息
+     * @var OutputDescribeNameListInfo 黑白名单列表信息。
      */
     public $Value;
 
     /**
-     * @param integer $Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误
-
-     * @param string $Message 错误信息
-     * @param OutputDescribeNameListInfo $Value 黑白名单列表信息
+     * @param integer $Code 错误码，0 表示成功，非0表示失败错误码。 0：成功 1002：参数错误 4300：未开通服务 6000：系统内部错误。
+     * @param string $Message 错误信息。
+     * @param OutputDescribeNameListInfo $Value 黑白名单列表信息。
      */
     function __construct()
     {

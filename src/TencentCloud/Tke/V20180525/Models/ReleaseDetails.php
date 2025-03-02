@@ -25,69 +25,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespace() 获取应用所在命名空间
  * @method void setNamespace(string $Namespace) 设置应用所在命名空间
  * @method integer getVersion() 获取应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取应用状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置应用状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取应用描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置应用描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNotes() 获取应用提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotes(string $Notes) 设置应用提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfig() 获取用户自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(string $Config) 设置用户自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManifest() 获取应用资源详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManifest(string $Manifest) 设置应用资源详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartVersion() 获取应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartVersion(string $ChartVersion) 设置应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartName() 获取应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartName(string $ChartName) 设置应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartDescription() 获取应用制品描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartDescription(string $ChartDescription) 设置应用制品描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppVersion() 获取应用制品app版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppVersion(string $AppVersion) 设置应用制品app版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstDeployedTime() 获取应用首次部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstDeployedTime(string $FirstDeployedTime) 设置应用首次部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastDeployedTime() 获取应用最近部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastDeployedTime(string $LastDeployedTime) 设置应用最近部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComputedValues() 获取应用参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputedValues(string $ComputedValues) 设置应用参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartFrom() 获取chart 的来源， tke-market, others
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartFrom(string $ChartFrom) 设置chart 的来源， tke-market, others
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartURL() 获取第三方chart 的安装地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartURL(string $ChartURL) 设置第三方chart 的安装地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResources() 获取通过chart 创建的资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(string $Resources) 设置通过chart 创建的资源
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseDetails extends AbstractModel
 {
@@ -103,97 +71,81 @@ class ReleaseDetails extends AbstractModel
 
     /**
      * @var integer 应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 应用提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Notes;
 
     /**
      * @var string 用户自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
      * @var string 应用资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manifest;
 
     /**
      * @var string 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartVersion;
 
     /**
      * @var string 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartName;
 
     /**
      * @var string 应用制品描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartDescription;
 
     /**
      * @var string 应用制品app版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppVersion;
 
     /**
      * @var string 应用首次部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstDeployedTime;
 
     /**
      * @var string 应用最近部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastDeployedTime;
 
     /**
      * @var string 应用参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputedValues;
 
     /**
      * @var string chart 的来源， tke-market, others
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartFrom;
 
     /**
      * @var string 第三方chart 的安装地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartURL;
 
     /**
      * @var string 通过chart 创建的资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
@@ -201,37 +153,21 @@ class ReleaseDetails extends AbstractModel
      * @param string $Name 应用名称
      * @param string $Namespace 应用所在命名空间
      * @param integer $Version 应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Notes 应用提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Config 用户自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manifest 应用资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartVersion 应用制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartName 应用制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartDescription 应用制品描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppVersion 应用制品app版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstDeployedTime 应用首次部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastDeployedTime 应用最近部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComputedValues 应用参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartFrom chart 的来源， tke-market, others
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartURL 第三方chart 的安装地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resources 通过chart 创建的资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

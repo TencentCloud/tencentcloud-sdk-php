@@ -463,16 +463,12 @@ ChildrenComponent结构体定义:
 注：   `部分特殊控件需要在控制台配置模板形式创建`
  * @method float getOffsetX() 获取**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetX(float $OffsetX) 设置**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOffsetY() 获取**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetY(float $OffsetY) 设置**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeywordOrder() 获取**如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
 <ul><li> <b>Positive</b> :表示正序，即根据关键字在PDF文件内的顺序进行排列</li>
 <li> <b>Reverse</b> :表示倒序，即根据关键字在PDF文件内的反序进行排列</li></ul>
@@ -508,19 +504,15 @@ ChildrenComponent结构体定义:
  * @method boolean getLockComponentValue() 获取**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockComponentValue(boolean $LockComponentValue) 设置**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getForbidMoveAndDelete() 获取**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForbidMoveAndDelete(boolean $ForbidMoveAndDelete) 设置**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComponentDateFontSize() 获取<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
  * @method string getChannelComponentId() 获取<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
@@ -815,14 +807,12 @@ ChildrenComponent结构体定义:
     /**
      * @var float **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetX;
 
     /**
      * @var float **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetY;
 
@@ -862,7 +852,6 @@ ChildrenComponent结构体定义:
      * @var boolean **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockComponentValue;
 
@@ -870,7 +859,6 @@ ChildrenComponent结构体定义:
      * @var boolean **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForbidMoveAndDelete;
 
@@ -1112,10 +1100,8 @@ ChildrenComponent结构体定义:
 注：   `部分特殊控件需要在控制台配置模板形式创建`
      * @param float $OffsetX **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OffsetY **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeywordOrder **如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
 <ul><li> <b>Positive</b> :表示正序，即根据关键字在PDF文件内的顺序进行排列</li>
 <li> <b>Reverse</b> :表示倒序，即根据关键字在PDF文件内的反序进行排列</li></ul>
@@ -1135,11 +1121,9 @@ ChildrenComponent结构体定义:
      * @param boolean $LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
      * @param string $ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
      * @param integer $ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。

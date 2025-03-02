@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskBackups请求参数结构体
  *
- * @method array getDiskBackupIds() 获取查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
- * @method void setDiskBackupIds(array $DiskBackupIds) 设置查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
+ * @method array getDiskBackupIds() 获取查询的云硬盘备份点ID列表。可通过[DescribeDiskBackups](https://cloud.tencent.com/document/product/1207/84379)接口返回值字段DiskBackupSet获取。列表长度最大值为100。参数不支持同时指定 DiskBackupIds 和 Filters。
+ * @method void setDiskBackupIds(array $DiskBackupIds) 设置查询的云硬盘备份点ID列表。可通过[DescribeDiskBackups](https://cloud.tencent.com/document/product/1207/84379)接口返回值字段DiskBackupSet获取。列表长度最大值为100。参数不支持同时指定 DiskBackupIds 和 Filters。
  * @method array getFilters() 获取过滤器列表。
 <li>disk-backup-id</li>按照【云硬盘备份点 ID】进行过滤。
 类型：String
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDiskBackupsRequest extends AbstractModel
 {
     /**
-     * @var array 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * @var array 查询的云硬盘备份点ID列表。可通过[DescribeDiskBackups](https://cloud.tencent.com/document/product/1207/84379)接口返回值字段DiskBackupSet获取。列表长度最大值为100。参数不支持同时指定 DiskBackupIds 和 Filters。
      */
     public $DiskBackupIds;
 
@@ -100,7 +100,7 @@ class DescribeDiskBackupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $DiskBackupIds 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * @param array $DiskBackupIds 查询的云硬盘备份点ID列表。可通过[DescribeDiskBackups](https://cloud.tencent.com/document/product/1207/84379)接口返回值字段DiskBackupSet获取。列表长度最大值为100。参数不支持同时指定 DiskBackupIds 和 Filters。
      * @param array $Filters 过滤器列表。
 <li>disk-backup-id</li>按照【云硬盘备份点 ID】进行过滤。
 类型：String

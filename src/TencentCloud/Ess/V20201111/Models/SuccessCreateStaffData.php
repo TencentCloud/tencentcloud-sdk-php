@@ -28,9 +28,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取员工在电子签平台的id
  * @method void setUserId(string $UserId) 设置员工在电子签平台的id
  * @method string getNote() 获取提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWeworkOpenId() 获取传入的企微账号id
  * @method void setWeworkOpenId(string $WeworkOpenId) 设置传入的企微账号id
  * @method string getUrl() 获取员工邀请返回链接 根据入参的 InvitationNotifyType 和 Endpoint 返回链接 <table><tbody><tr><td>链接类型</td><td>有效期</td><td>示例</td></tr><tr><td>HTTP_SHORT_URL（短链）</td><td>一天</td><td>https://test.essurl.cn/fvG7UBEd0F</td></tr><tr><td>HTTP（长链）</td><td>一天</td><td>https://res.ess.tencent.cn/cdn/h5-activity-dev/jump-mp.html?where=mini&from=MSG&to=USER_VERIFY&verifyToken=yDCVbUUckpwocmfpUySko7IS83LTV0u0&expireTime=1710840183</td></tr><tr><td>H5</td><td>30 天</td><td>https://quick.test.qian.tencent.cn/guide?Code=yDCVbUUckpwtvxqoUbTw4VBBjLbfAtW7&CodeType=QUICK&shortKey=yDCVbUY7lhqV7mZlCL2d</td></tr><tr><td>APP</td><td>一天</td><td>/pages/guide/index?to=USER_VERIFY&verifyToken=yDCVbUUckpwocm96UySko7ISvEIZH7Yz&expireTime=1710840455 </td></tr></tbody></table>
@@ -55,7 +53,6 @@ class SuccessCreateStaffData extends AbstractModel
 
     /**
      * @var string 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
@@ -74,7 +71,6 @@ class SuccessCreateStaffData extends AbstractModel
      * @param string $Mobile 员工手机号
      * @param string $UserId 员工在电子签平台的id
      * @param string $Note 提示，当创建已存在未实名用户时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WeworkOpenId 传入的企微账号id
      * @param string $Url 员工邀请返回链接 根据入参的 InvitationNotifyType 和 Endpoint 返回链接 <table><tbody><tr><td>链接类型</td><td>有效期</td><td>示例</td></tr><tr><td>HTTP_SHORT_URL（短链）</td><td>一天</td><td>https://test.essurl.cn/fvG7UBEd0F</td></tr><tr><td>HTTP（长链）</td><td>一天</td><td>https://res.ess.tencent.cn/cdn/h5-activity-dev/jump-mp.html?where=mini&from=MSG&to=USER_VERIFY&verifyToken=yDCVbUUckpwocmfpUySko7IS83LTV0u0&expireTime=1710840183</td></tr><tr><td>H5</td><td>30 天</td><td>https://quick.test.qian.tencent.cn/guide?Code=yDCVbUUckpwtvxqoUbTw4VBBjLbfAtW7&CodeType=QUICK&shortKey=yDCVbUY7lhqV7mZlCL2d</td></tr><tr><td>APP</td><td>一天</td><td>/pages/guide/index?to=USER_VERIFY&verifyToken=yDCVbUUckpwocm96UySko7ISvEIZH7Yz&expireTime=1710840455 </td></tr></tbody></table>
      */

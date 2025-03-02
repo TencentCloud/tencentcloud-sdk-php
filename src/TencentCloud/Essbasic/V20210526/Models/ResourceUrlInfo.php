@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 资源链接信息
  *
  * @method string getUrl() 获取资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceUrlInfo extends AbstractModel
 {
     /**
      * @var string 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $Url 资源链接地址，过期时间5分钟
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

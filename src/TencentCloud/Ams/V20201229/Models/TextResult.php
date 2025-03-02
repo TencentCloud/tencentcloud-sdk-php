@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHitInfos() 获取该字段用于返回违规文本命中信息
+ * @method void setHitInfos(array $HitInfos) 设置该字段用于返回违规文本命中信息
  */
 class TextResult extends AbstractModel
 {
@@ -131,6 +133,11 @@ class TextResult extends AbstractModel
     public $SubLabel;
 
     /**
+     * @var array 该字段用于返回违规文本命中信息
+     */
+    public $HitInfos;
+
+    /**
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
@@ -156,6 +163,7 @@ class TextResult extends AbstractModel
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HitInfos 该字段用于返回违规文本命中信息
      */
     function __construct()
     {
@@ -200,6 +208,15 @@ class TextResult extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("HitInfos",$param) and $param["HitInfos"] !== null) {
+            $this->HitInfos = [];
+            foreach ($param["HitInfos"] as $key => $value){
+                $obj = new HitInfo();
+                $obj->deserialize($value);
+                array_push($this->HitInfos, $obj);
+            }
         }
     }
 }

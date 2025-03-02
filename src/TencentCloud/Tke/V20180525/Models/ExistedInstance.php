@@ -21,23 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 已经存在的实例信息
  *
  * @method boolean getUsable() 获取实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsable(boolean $Usable) 设置实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnusableReason() 获取实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnusableReason(string $UnusableReason) 设置实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlreadyInCluster() 获取实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlreadyInCluster(string $AlreadyInCluster) 设置实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID形如：ins-e55paxnt。
  * @method void setInstanceId(string $InstanceId) 设置实例ID形如：ins-e55paxnt。
  * @method string getInstanceName() 获取实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置实例主网卡的内网IP列表。
@@ -49,33 +41,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCPU() 获取实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCPU(integer $CPU) 设置实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(integer $Memory) 设置实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsName() 获取操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsName(string $OsName) 设置操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoscalingGroupId() 获取伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceChargeType() 获取实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIPv6Addresses() 获取实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,19 +65,16 @@ class ExistedInstance extends AbstractModel
 {
     /**
      * @var boolean 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Usable;
 
     /**
      * @var string 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnusableReason;
 
     /**
      * @var string 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlreadyInCluster;
 
@@ -110,7 +85,6 @@ class ExistedInstance extends AbstractModel
 
     /**
      * @var string 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -129,43 +103,36 @@ class ExistedInstance extends AbstractModel
 
     /**
      * @var string 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var integer 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CPU;
 
     /**
      * @var integer 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var string 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsName;
 
     /**
      * @var string 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalingGroupId;
 
     /**
      * @var string 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceChargeType;
 
@@ -178,33 +145,22 @@ class ExistedInstance extends AbstractModel
 
     /**
      * @param boolean $Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnusableReason 实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlreadyInCluster 实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID形如：ins-e55paxnt。
      * @param string $InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicIpAddresses 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CPU 实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsName 操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalingGroupId 伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。

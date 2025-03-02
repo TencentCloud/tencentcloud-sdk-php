@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 合同组签署方信息
  *
  * @method string getFlowId() 获取合同流程ID 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(string $FlowId) 设置合同流程ID 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取签署方信息，包含合同ID和角色ID用于定位RecipientId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovers(array $Approvers) 设置签署方信息，包含合同ID和角色ID用于定位RecipientId。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowGroupApprovers extends AbstractModel
 {
     /**
      * @var string 合同流程ID 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @var array 签署方信息，包含合同ID和角色ID用于定位RecipientId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Approvers;
 
     /**
      * @param string $FlowId 合同流程ID 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 签署方信息，包含合同ID和角色ID用于定位RecipientId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -86,12 +86,10 @@ use TencentCloud\Common\AbstractModel;
 2：iOS
 3：H5
 4：小程序
-
  * @method void setPlatform(string $Platform) 设置1：Android
 2：iOS
 3：H5
 4：小程序
-
  * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息。
  * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息。
  */
@@ -217,7 +215,6 @@ class InputManageMarketingRisk extends AbstractModel
 2：iOS
 3：H5
 4：小程序
-
      */
     public $Platform;
 
@@ -262,7 +259,6 @@ class InputManageMarketingRisk extends AbstractModel
 2：iOS
 3：H5
 4：小程序
-
      * @param DataAuthorizationInfo $DataAuthorization 数据授权信息。
      */
     function __construct()

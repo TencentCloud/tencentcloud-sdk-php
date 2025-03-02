@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 权限树中的权限组
  *
  * @method string getGroupName() 获取权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupKey() 获取权限组key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupKey(string $GroupKey) 设置权限组key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHide() 获取是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHide(integer $Hide) 设置是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissions() 获取权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissions(array $Permissions) 设置权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PermissionGroup extends AbstractModel
 {
     /**
      * @var string 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupKey;
 
     /**
      * @var integer 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hide;
 
     /**
      * @var array 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Permissions;
 
     /**
      * @param string $GroupName 权限组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupKey 权限组key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Hide 是否隐藏分组，0否1是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Permissions 权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

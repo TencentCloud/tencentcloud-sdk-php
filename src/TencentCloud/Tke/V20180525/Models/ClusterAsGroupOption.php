@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsScaleDownEnabled(boolean $IsScaleDownEnabled) 设置是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpander() 获取多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpander(string $Expander) 设置多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxEmptyBulkDelete() 获取最大并发缩容数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxEmptyBulkDelete(integer $MaxEmptyBulkDelete) 设置最大并发缩容数
@@ -83,7 +81,6 @@ class ClusterAsGroupOption extends AbstractModel
 
     /**
      * @var string 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expander;
 
@@ -157,7 +154,6 @@ class ClusterAsGroupOption extends AbstractModel
      * @param boolean $IsScaleDownEnabled 是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Expander 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxEmptyBulkDelete 最大并发缩容数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleDownDelay 集群扩容后多少分钟开始判断缩容（默认为10分钟）

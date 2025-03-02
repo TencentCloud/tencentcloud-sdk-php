@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 角色信息
  *
  * @method string getRoleId() 获取角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleId(string $RoleId) 设置角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoleName() 获取角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoleStatus() 获取此角色状态
 1: 已经启用
 2: 已经禁用
@@ -35,21 +31,17 @@ use TencentCloud\Common\AbstractModel;
 1: 已经启用
 2: 已经禁用
  * @method array getPermissionGroups() 获取此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionGroups(array $PermissionGroups) 设置此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelRole extends AbstractModel
 {
     /**
      * @var string 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleId;
 
     /**
      * @var string 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
@@ -62,20 +54,16 @@ class ChannelRole extends AbstractModel
 
     /**
      * @var array 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PermissionGroups;
 
     /**
      * @param string $RoleId 角色ID,为32位字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoleStatus 此角色状态
 1: 已经启用
 2: 已经禁用
      * @param array $PermissionGroups 此角色对应的权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

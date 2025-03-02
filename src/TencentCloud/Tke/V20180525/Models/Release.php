@@ -25,33 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespace() 获取应用命名空间
  * @method void setNamespace(string $Namespace) 设置应用命名空间
  * @method string getRevision() 获取应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRevision(string $Revision) 设置应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取应用状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置应用状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartName() 获取制品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartName(string $ChartName) 设置制品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChartVersion() 获取制品版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChartVersion(string $ChartVersion) 设置制品版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppVersion() 获取制品应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppVersion(string $AppVersion) 设置制品应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取应用描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置应用描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Release extends AbstractModel
 {
@@ -67,43 +53,36 @@ class Release extends AbstractModel
 
     /**
      * @var string 应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Revision;
 
     /**
      * @var string 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartName;
 
     /**
      * @var string 制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChartVersion;
 
     /**
      * @var string 制品应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppVersion;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
     /**
      * @var string 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -111,19 +90,12 @@ class Release extends AbstractModel
      * @param string $Name 应用名称
      * @param string $Namespace 应用命名空间
      * @param string $Revision 应用当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 应用状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartName 制品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChartVersion 制品版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppVersion 制品应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

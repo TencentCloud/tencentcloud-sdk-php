@@ -34,16 +34,12 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPromoter(boolean $IsPromoter) 设置此角色是否是发起方角色
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponents() 获取此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponents(array $Components) 设置此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecipientComponentInfo extends AbstractModel
 {
@@ -65,13 +61,11 @@ class RecipientComponentInfo extends AbstractModel
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPromoter;
 
     /**
      * @var array 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Components;
 
@@ -85,9 +79,7 @@ class RecipientComponentInfo extends AbstractModel
 
 <ul><li> **true** : 是发起方角色</li>
 <li> **false** : 不是发起方角色</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Components 此角色的填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

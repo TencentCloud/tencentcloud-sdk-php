@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlueprints请求参数结构体
  *
- * @method array getBlueprintIds() 获取镜像 ID 列表。
- * @method void setBlueprintIds(array $BlueprintIds) 设置镜像 ID 列表。
+ * @method array getBlueprintIds() 获取镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
+ * @method void setBlueprintIds(array $BlueprintIds) 设置镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
  * @method integer getOffset() 获取偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
@@ -76,7 +76,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBlueprintsRequest extends AbstractModel
 {
     /**
-     * @var array 镜像 ID 列表。
+     * @var array 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      */
     public $BlueprintIds;
 
@@ -118,7 +118,7 @@ class DescribeBlueprintsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param array $BlueprintIds 镜像 ID 列表。
+     * @param array $BlueprintIds 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param array $Filters 过滤器列表。

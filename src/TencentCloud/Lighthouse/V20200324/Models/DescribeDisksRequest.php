@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisks请求参数结构体
  *
- * @method array getDiskIds() 获取云硬盘ID列表。每次批量请求云硬盘的上限为 100。
- * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。每次批量请求云硬盘的上限为 100。
+ * @method array getDiskIds() 获取云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值字段KeyPairSet获取。列表长度最大值为100。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值字段KeyPairSet获取。列表长度最大值为100。
  * @method array getFilters() 获取过滤器列表。
 disk-id
 按照【云硬盘 ID】进行过滤。
@@ -90,7 +90,7 @@ disk-state
 class DescribeDisksRequest extends AbstractModel
 {
     /**
-     * @var array 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
+     * @var array 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值字段KeyPairSet获取。列表长度最大值为100。
      */
     public $DiskIds;
 
@@ -147,7 +147,7 @@ disk-state
     public $Order;
 
     /**
-     * @param array $DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
+     * @param array $DiskIds 云硬盘ID列表。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值字段KeyPairSet获取。列表长度最大值为100。
      * @param array $Filters 过滤器列表。
 disk-id
 按照【云硬盘 ID】进行过滤。

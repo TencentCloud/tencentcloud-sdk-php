@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFirewallTemplateRules请求参数结构体
  *
- * @method string getTemplateId() 获取防火墙模板ID。
- * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID。
- * @method array getTemplateRuleIds() 获取防火墙模板规则ID列表。
- * @method void setTemplateRuleIds(array $TemplateRuleIds) 设置防火墙模板规则ID列表。
+ * @method string getTemplateId() 获取防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
+ * @method void setTemplateId(string $TemplateId) 设置防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
+ * @method array getTemplateRuleIds() 获取防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。列表长度最大值为100。
+ * @method void setTemplateRuleIds(array $TemplateRuleIds) 设置防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。列表长度最大值为100。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFirewallTemplateRulesRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙模板ID。
+     * @var string 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
      */
     public $TemplateId;
 
     /**
-     * @var array 防火墙模板规则ID列表。
+     * @var array 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。列表长度最大值为100。
      */
     public $TemplateRuleIds;
 
@@ -52,8 +52,8 @@ class DescribeFirewallTemplateRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $TemplateId 防火墙模板ID。
-     * @param array $TemplateRuleIds 防火墙模板规则ID列表。
+     * @param string $TemplateId 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
+     * @param array $TemplateRuleIds 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。列表长度最大值为100。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      */

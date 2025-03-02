@@ -35,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置数据盘是否随子机销毁。取值范围：
 <li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
 <li>
@@ -43,11 +42,8 @@ use TencentCloud\Common\AbstractModel;
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotId() 获取数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEncrypt() 获取数据盘是加密。取值范围：
 <li>true：加密</li>
 <li>
@@ -55,7 +51,6 @@ use TencentCloud\Common\AbstractModel;
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncrypt(boolean $Encrypt) 设置数据盘是加密。取值范围：
 <li>true：加密</li>
 <li>
@@ -63,31 +58,22 @@ use TencentCloud\Common\AbstractModel;
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKmsKeyId() 获取自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKmsKeyId(string $KmsKeyId) 设置自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThroughputPerformance() 获取云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getBurstPerformance() 获取突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBurstPerformance(boolean $BurstPerformance) 设置突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskName() 获取磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。
@@ -121,13 +107,11 @@ class DataDisk extends AbstractModel
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
 
     /**
      * @var string 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotId;
 
@@ -139,7 +123,6 @@ class DataDisk extends AbstractModel
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encrypt;
 
@@ -147,19 +130,16 @@ class DataDisk extends AbstractModel
      * @var string 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KmsKeyId;
 
     /**
      * @var integer 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThroughputPerformance;
 
     /**
      * @var string 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
@@ -167,7 +147,6 @@ class DataDisk extends AbstractModel
      * @var boolean 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BurstPerformance;
 
@@ -190,9 +169,7 @@ class DataDisk extends AbstractModel
   默认取值：true<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Encrypt 数据盘是加密。取值范围：
 <li>true：加密</li>
 <li>
@@ -200,19 +177,14 @@ class DataDisk extends AbstractModel
   默认取值：false<br />
   该参数目前仅用于 `RunInstances` 接口。
 </li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ThroughputPerformance 云硬盘性能，单位：MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId 所属的独享集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BurstPerformance 突发性能
 
  <b>注：内测中。</b>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskName 磁盘名称，长度不超过128 个字符。
 
 该参数正在邀测中，暂未开放使用。

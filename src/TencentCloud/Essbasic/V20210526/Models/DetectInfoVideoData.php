@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLiveNessVideo() 获取活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveNessVideo(string $LiveNessVideo) 设置活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoVideoData extends AbstractModel
 {
@@ -35,7 +33,6 @@ class DetectInfoVideoData extends AbstractModel
      * @var string 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveNessVideo;
 
@@ -43,7 +40,6 @@ class DetectInfoVideoData extends AbstractModel
      * @param string $LiveNessVideo 活体视频的base64编码，mp4格式
 
 注:`需进行base64解码获取活体视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,7 +36,9 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNew(Models\CreateBlockIgnoreRuleNewRequest $req) 批量添加入侵防御封禁列表、放通列表规则
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则
- * @method Models\CreateIdsWhiteRuleResponse CreateIdsWhiteRule(Models\CreateIdsWhiteRuleRequest $req) 创建入侵防御规则白名单接口
+ * @method Models\CreateIdsWhiteRuleResponse CreateIdsWhiteRule(Models\CreateIdsWhiteRuleRequest $req) CreateIdsWhiteRule
+
+创建入侵防御规则白名单接口
  * @method Models\CreateNatFwInstanceResponse CreateNatFwInstance(Models\CreateNatFwInstanceRequest $req) 创建NAT防火墙实例（Region参数必填）
  * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名（Region参数必填）
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) 创建企业安全组规则
@@ -46,7 +48,9 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(Models\DeleteAllAccessControlRuleRequest $req) 全部删除规则
  * @method Models\DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(Models\DeleteBlockIgnoreRuleListRequest $req) 批量删除入侵防御封禁列表、放通列表规则
  * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 批量删除入侵防御封禁列表、放通列表规则（新）
- * @method Models\DeleteIdsWhiteRuleResponse DeleteIdsWhiteRule(Models\DeleteIdsWhiteRuleRequest $req) 删除入侵防御规则白名单接口
+ * @method Models\DeleteIdsWhiteRuleResponse DeleteIdsWhiteRule(Models\DeleteIdsWhiteRuleRequest $req) 历史方案，业务已迁移，接口不再适用
+
+删除入侵防御规则白名单接口
  * @method Models\DeleteNatFwInstanceResponse DeleteNatFwInstance(Models\DeleteNatFwInstanceRequest $req) 销毁防火墙实例
  * @method Models\DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(Models\DeleteRemoteAccessDomainRequest $req) 删除远程运维域名
  * @method Models\DeleteResourceGroupResponse DeleteResourceGroup(Models\DeleteResourceGroupRequest $req) DeleteResourceGroup-资产中心资产组删除
@@ -70,7 +74,9 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeFwSyncStatusResponse DescribeFwSyncStatus(Models\DescribeFwSyncStatusRequest $req) 获取防火墙同步状态，一般在执行同步操作后查询
  * @method Models\DescribeGuideScanInfoResponse DescribeGuideScanInfo(Models\DescribeGuideScanInfoRequest $req) DescribeGuideScanInfo新手引导扫描接口信息
  * @method Models\DescribeIPStatusListResponse DescribeIPStatusList(Models\DescribeIPStatusListRequest $req) IP防护状态查询
- * @method Models\DescribeIdsWhiteRuleResponse DescribeIdsWhiteRule(Models\DescribeIdsWhiteRuleRequest $req) 查询入侵防御规则白名单接口
+ * @method Models\DescribeIdsWhiteRuleResponse DescribeIdsWhiteRule(Models\DescribeIdsWhiteRuleRequest $req) 历史方案，业务已迁移，接口不再适用
+
+查询入侵防御规则白名单接口
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 日志审计日志查询
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
  * @method Models\DescribeNatFwDnatRuleResponse DescribeNatFwDnatRule(Models\DescribeNatFwDnatRuleRequest $req) 查询Nat防火墙Dnat规则

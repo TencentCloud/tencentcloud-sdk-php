@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 签署人详情信息
  *
  * @method string getApproveMessage() 获取签署时的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveMessage(string $ApproveMessage) 设置签署时的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproveName() 获取签署方姓名
  * @method void setApproveName(string $ApproveName) 设置签署方姓名
  * @method integer getApproveStatus() 获取签署方的签署状态
@@ -57,9 +55,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReceiptId() 获取模板配置中的参与方ID,与控件绑定
  * @method void setReceiptId(string $ReceiptId) 设置模板配置中的参与方ID,与控件绑定
  * @method string getCustomUserId() 获取客户自定义的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomUserId(string $CustomUserId) 设置客户自定义的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMobile() 获取签署人手机号
  * @method void setMobile(string $Mobile) 设置签署人手机号
  * @method integer getSignOrder() 获取签署顺序，如果是有序签署，签署顺序从小到大
@@ -67,33 +63,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getApproveTime() 获取签署人签署时间，时间戳，单位秒
  * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间，时间戳，单位秒
  * @method string getApproveType() 获取签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveType(string $ApproveType) 设置签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverSource() 获取签署方侧用户来源，如WEWORKAPP-企业微信等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverSource(string $ApproverSource) 设置签署方侧用户来源，如WEWORKAPP-企业微信等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomApproverTag() 获取客户自定义签署方标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署方标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationId() 获取签署方企业Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationId(string $OrganizationId) 设置签署方企业Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationName() 获取签署方企业名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置签署方企业名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSignId() 获取签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignId(string $SignId) 设置签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverRoleName() 获取自定义签署人角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientId() 获取模板配置中的参与方ID,与控件绑定
  * @method void setRecipientId(string $RecipientId) 设置模板配置中的参与方ID,与控件绑定
  */
@@ -101,7 +83,6 @@ class FlowApproverDetail extends AbstractModel
 {
     /**
      * @var string 签署时的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveMessage;
 
@@ -136,7 +117,6 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @var string 客户自定义的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomUserId;
 
@@ -157,43 +137,36 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @var string 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveType;
 
     /**
      * @var string 签署方侧用户来源，如WEWORKAPP-企业微信等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverSource;
 
     /**
      * @var string 客户自定义签署方标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomApproverTag;
 
     /**
      * @var string 签署方企业Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationId;
 
     /**
      * @var string 签署方企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationName;
 
     /**
      * @var string 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignId;
 
     /**
      * @var string 自定义签署人角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverRoleName;
 
@@ -204,7 +177,6 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @param string $ApproveMessage 签署时的相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveName 签署方姓名
      * @param integer $ApproveStatus 签署方的签署状态
 0：还没有发起
@@ -222,24 +194,16 @@ class FlowApproverDetail extends AbstractModel
 19：转他人处理
      * @param string $ReceiptId 模板配置中的参与方ID,与控件绑定
      * @param string $CustomUserId 客户自定义的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 签署人手机号
      * @param integer $SignOrder 签署顺序，如果是有序签署，签署顺序从小到大
      * @param integer $ApproveTime 签署人签署时间，时间戳，单位秒
      * @param string $ApproveType 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverSource 签署方侧用户来源，如WEWORKAPP-企业微信等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomApproverTag 客户自定义签署方标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationId 签署方企业Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 签署方企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverRoleName 自定义签署人角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientId 模板配置中的参与方ID,与控件绑定
      */
     function __construct()

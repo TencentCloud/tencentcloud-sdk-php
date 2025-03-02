@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 企业扩展服务授权列表详情
  *
  * @method string getType() 获取扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHasAuthUserList() 获取授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasAuthUserList(array $HasAuthUserList) 设置授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHasAuthOrganizationList() 获取授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasAuthOrganizationList(array $HasAuthOrganizationList) 设置授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthUserTotal() 获取授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthUserTotal(integer $AuthUserTotal) 设置授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthOrganizationTotal() 获取授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthOrganizationTotal(integer $AuthOrganizationTotal) 设置授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthInfoDetail extends AbstractModel
 {
     /**
      * @var string 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasAuthUserList;
 
     /**
      * @var array 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasAuthOrganizationList;
 
     /**
      * @var integer 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthUserTotal;
 
     /**
      * @var integer 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthOrganizationTotal;
 
     /**
      * @param string $Type 扩展服务类型，和入参一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 扩展服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HasAuthUserList 授权员工列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthUserTotal 授权员工列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthOrganizationTotal 授权企业列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

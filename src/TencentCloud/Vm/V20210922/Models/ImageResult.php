@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHitFlag() 获取违规标志
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHitFlag(integer $HitFlag) 设置违规标志
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取命中的标签
 Porn 色情
 Sexy 性感
@@ -36,7 +34,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置命中的标签
 Porn 色情
 Sexy 性感
@@ -45,33 +42,26 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResults() 获取画面截帧图片结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置画面截帧图片结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取附加字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtra(string $Extra) 设置附加字段
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取二级标签
+ * @method void setSubLabel(string $SubLabel) 设置二级标签
+ * @method array getRecognitionResults() 获取场景结果
+ * @method void setRecognitionResults(array $RecognitionResults) 设置场景结果
  */
 class ImageResult extends AbstractModel
 {
@@ -79,7 +69,6 @@ class ImageResult extends AbstractModel
      * @var integer 违规标志
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitFlag;
 
@@ -92,7 +81,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
@@ -101,39 +89,43 @@ Ad 广告
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var integer 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var array 画面截帧图片结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
      * @var string 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string 附加字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
+
+    /**
+     * @var string 二级标签
+     */
+    public $SubLabel;
+
+    /**
+     * @var array 场景结果
+     */
+    public $RecognitionResults;
 
     /**
      * @param integer $HitFlag 违规标志
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 命中的标签
 Porn 色情
 Sexy 性感
@@ -142,20 +134,16 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 画面截帧图片结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 附加字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 二级标签
+     * @param array $RecognitionResults 场景结果
      */
     function __construct()
     {
@@ -201,6 +189,19 @@ Block 确认违规
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("RecognitionResults",$param) and $param["RecognitionResults"] !== null) {
+            $this->RecognitionResults = [];
+            foreach ($param["RecognitionResults"] as $key => $value){
+                $obj = new RecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->RecognitionResults, $obj);
+            }
         }
     }
 }

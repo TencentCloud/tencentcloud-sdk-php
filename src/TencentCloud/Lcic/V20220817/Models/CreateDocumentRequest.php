@@ -33,11 +33,19 @@ use TencentCloud\Common\AbstractModel;
 1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
+请注意，待录制的页面中任何视频的分辨率不能超过页面录制最大分辨率（1920*1080），否则将导致录制失败。
+ - ppt课件内嵌视频或纯视频课件，在上传课件时，云api会进行转码，以确保视频分辨率不超过页面录制最大分辨率。
+ - h5课件中内嵌音视频内容时，由于平台无法获取视频内容，因此在制作环节需确保视频分辨率不超过页面录制最大分辨率。
+
  * @method void setTranscodeType(integer $TranscodeType) 设置转码类型，可以有如下取值：
 0 无需转码（默认），bmp，jpg，jpeg，png，gif
 1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
+请注意，待录制的页面中任何视频的分辨率不能超过页面录制最大分辨率（1920*1080），否则将导致录制失败。
+ - ppt课件内嵌视频或纯视频课件，在上传课件时，云api会进行转码，以确保视频分辨率不超过页面录制最大分辨率。
+ - h5课件中内嵌音视频内容时，由于平台无法获取视频内容，因此在制作环节需确保视频分辨率不超过页面录制最大分辨率。
+
  * @method integer getPermission() 获取权限，可以有如下取值：
 0 私有文档（默认）
 1 公共文档
@@ -58,8 +66,10 @@ use TencentCloud\Common\AbstractModel;
 1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
 2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
- * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
- * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+ * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。该参数仅对TranscodeType=1的课件生效。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+示例值：1280x720
+ * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。该参数仅对TranscodeType=1的课件生效。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+示例值：1280x720
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -89,6 +99,10 @@ class CreateDocumentRequest extends AbstractModel
 1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
+请注意，待录制的页面中任何视频的分辨率不能超过页面录制最大分辨率（1920*1080），否则将导致录制失败。
+ - ppt课件内嵌视频或纯视频课件，在上传课件时，云api会进行转码，以确保视频分辨率不超过页面录制最大分辨率。
+ - h5课件中内嵌音视频内容时，由于平台无法获取视频内容，因此在制作环节需确保视频分辨率不超过页面录制最大分辨率。
+
      */
     public $TranscodeType;
 
@@ -119,7 +133,8 @@ class CreateDocumentRequest extends AbstractModel
     public $AutoHandleUnsupportedElement;
 
     /**
-     * @var string 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     * @var string 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。该参数仅对TranscodeType=1的课件生效。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+示例值：1280x720
      */
     public $MinScaleResolution;
 
@@ -133,6 +148,10 @@ class CreateDocumentRequest extends AbstractModel
 1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
+请注意，待录制的页面中任何视频的分辨率不能超过页面录制最大分辨率（1920*1080），否则将导致录制失败。
+ - ppt课件内嵌视频或纯视频课件，在上传课件时，云api会进行转码，以确保视频分辨率不超过页面录制最大分辨率。
+ - h5课件中内嵌音视频内容时，由于平台无法获取视频内容，因此在制作环节需确保视频分辨率不超过页面录制最大分辨率。
+
      * @param integer $Permission 权限，可以有如下取值：
 0 私有文档（默认）
 1 公共文档
@@ -143,7 +162,8 @@ class CreateDocumentRequest extends AbstractModel
 1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
 2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
-     * @param string $MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     * @param string $MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。该参数仅对TranscodeType=1的课件生效。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+示例值：1280x720
      */
     function __construct()
     {

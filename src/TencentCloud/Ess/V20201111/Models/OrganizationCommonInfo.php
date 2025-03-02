@@ -23,63 +23,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOrganizationName() 获取组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniformSocialCreditCode() 获取组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLegalName() 获取组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLegalName(string $LegalName) 设置组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLegalIdCardType() 获取组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLegalIdCardType(string $LegalIdCardType) 设置组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLegalIdCardNumber() 获取组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLegalIdCardNumber(string $LegalIdCardNumber) 设置组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdminName() 获取组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdminName(string $AdminName) 设置组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdminMobile() 获取组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdminMobile(string $AdminMobile) 设置组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdminIdCardType() 获取组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdminIdCardType(string $AdminIdCardType) 设置组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdminIdCardNumber() 获取组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldAdminName() 获取原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldAdminName(string $OldAdminName) 设置原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldAdminMobile() 获取原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldAdminMobile(string $OldAdminMobile) 设置原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldAdminIdCardType() 获取原超管证件类型
  * @method void setOldAdminIdCardType(string $OldAdminIdCardType) 设置原超管证件类型
  * @method string getOldAdminIdCardNumber() 获取原超管证件号码
@@ -91,73 +69,62 @@ class OrganizationCommonInfo extends AbstractModel
      * @var string 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationName;
 
     /**
      * @var string 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniformSocialCreditCode;
 
     /**
      * @var string 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LegalName;
 
     /**
      * @var string 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LegalIdCardType;
 
     /**
      * @var string 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LegalIdCardNumber;
 
     /**
      * @var string 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminName;
 
     /**
      * @var string 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminMobile;
 
     /**
      * @var string 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminIdCardType;
 
     /**
      * @var string 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminIdCardNumber;
 
     /**
      * @var string 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldAdminName;
 
     /**
      * @var string 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldAdminMobile;
 
@@ -175,33 +142,22 @@ class OrganizationCommonInfo extends AbstractModel
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniformSocialCreditCode 组织机构企业统一社会信用代码。
 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LegalName 组织机构法人的姓名。
 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LegalIdCardType 组织机构法人的证件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LegalIdCardNumber 组织机构法人的证件号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdminName 组织机构超管姓名。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdminMobile 组织机构超管手机号。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdminIdCardType 组织机构超管证件类型
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdminIdCardNumber 组织机构超管证件号码
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldAdminName 原超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldAdminMobile 原超管手机号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldAdminIdCardType 原超管证件类型
      * @param string $OldAdminIdCardNumber 原超管证件号码
      */

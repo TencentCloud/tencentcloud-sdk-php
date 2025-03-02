@@ -35,35 +35,23 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getCni() 获取网络插件是否启用CNI(默认开启)
  * @method void setCni(boolean $Cni) 设置网络插件是否启用CNI(默认开启)
  * @method string getKubeProxyMode() 获取service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeProxyMode(string $KubeProxyMode) 设置service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceCIDR() 获取用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceCIDR(string $ServiceCIDR) 设置用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnets() 获取集群关联的容器子网
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnets(array $Subnets) 设置集群关联的容器子网
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIgnoreServiceCIDRConflict() 获取是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreServiceCIDRConflict(boolean $IgnoreServiceCIDRConflict) 设置是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDualStack() 获取集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDualStack(boolean $IsDualStack) 设置集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpv6ServiceCIDR() 获取用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6ServiceCIDR(string $Ipv6ServiceCIDR) 设置用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCiliumMode() 获取集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCiliumMode(string $CiliumMode) 设置集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -104,13 +92,11 @@ class ClusterNetworkSettings extends AbstractModel
 
     /**
      * @var string service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeProxyMode;
 
     /**
      * @var string 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCIDR;
 
@@ -122,26 +108,22 @@ class ClusterNetworkSettings extends AbstractModel
 
     /**
      * @var boolean 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreServiceCIDRConflict;
 
     /**
      * @var boolean 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDualStack;
 
     /**
      * @var string 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6ServiceCIDR;
 
     /**
      * @var string 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CiliumMode;
 
@@ -154,20 +136,14 @@ class ClusterNetworkSettings extends AbstractModel
      * @param string $VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      * @param boolean $Cni 网络插件是否启用CNI(默认开启)
      * @param string $KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Subnets 集群关联的容器子网
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CiliumMode 集群Cilium Mode配置
 - clusterIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

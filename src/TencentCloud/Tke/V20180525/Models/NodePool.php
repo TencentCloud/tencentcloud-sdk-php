@@ -41,53 +41,33 @@ use TencentCloud\Common\AbstractModel;
  * @method NodeCountSummary getNodeCountSummary() 获取NodeCountSummary 节点列表
  * @method void setNodeCountSummary(NodeCountSummary $NodeCountSummary) 设置NodeCountSummary 节点列表
  * @method string getAutoscalingGroupStatus() 获取状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingGroupStatus(string $AutoscalingGroupStatus) 设置状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxNodesNum() 获取最大节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxNodesNum(integer $MaxNodesNum) 设置最大节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinNodesNum() 获取最小节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinNodesNum(integer $MinNodesNum) 设置最小节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDesiredNodesNum() 获取期望的节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredNodesNum(integer $DesiredNodesNum) 设置期望的节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RuntimeConfig getRuntimeConfig() 获取运行时描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeConfig(RuntimeConfig $RuntimeConfig) 设置运行时描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodePoolOs() 获取节点池osName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePoolOs(string $NodePoolOs) 设置节点池osName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDesiredPodNum() 获取集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredPodNum(integer $DesiredPodNum) 设置集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserScript() 获取用户自定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserScript(string $UserScript) 设置用户自定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取资源标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeletionProtection() 获取删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceExtraArgs getExtraArgs() 获取节点配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点配置
@@ -97,21 +77,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDataDisks() 获取多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisks(array $DataDisks) 设置多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnschedulable() 获取是否不可调度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnschedulable(integer $Unschedulable) 设置是否不可调度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStartUserScript() 获取用户自定义脚本,在UserScript前执行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreStartUserScript(string $PreStartUserScript) 设置用户自定义脚本,在UserScript前执行
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodePool extends AbstractModel
 {
@@ -167,25 +141,21 @@ class NodePool extends AbstractModel
 
     /**
      * @var string 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalingGroupStatus;
 
     /**
      * @var integer 最大节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxNodesNum;
 
     /**
      * @var integer 最小节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinNodesNum;
 
     /**
      * @var integer 期望的节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DesiredNodesNum;
 
@@ -197,31 +167,26 @@ class NodePool extends AbstractModel
 
     /**
      * @var string 节点池osName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolOs;
 
     /**
      * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
 
     /**
      * @var string 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
     /**
      * @var integer 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DesiredPodNum;
 
     /**
      * @var string 用户自定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserScript;
 
@@ -233,7 +198,6 @@ class NodePool extends AbstractModel
 
     /**
      * @var boolean 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionProtection;
 
@@ -251,7 +215,6 @@ class NodePool extends AbstractModel
 
     /**
      * @var string dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DockerGraphPath;
 
@@ -263,13 +226,11 @@ class NodePool extends AbstractModel
 
     /**
      * @var integer 是否不可调度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unschedulable;
 
     /**
      * @var string 用户自定义脚本,在UserScript前执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreStartUserScript;
 
@@ -285,41 +246,28 @@ class NodePool extends AbstractModel
      * @param array $Annotations 节点 Annotation 列表
      * @param NodeCountSummary $NodeCountSummary NodeCountSummary 节点列表
      * @param string $AutoscalingGroupStatus 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxNodesNum 最大节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinNodesNum 最小节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredNodesNum 期望的节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuntimeConfig $RuntimeConfig 运行时描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodePoolOs 节点池osName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredPodNum 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserScript 用户自定义脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 删除保护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceExtraArgs $ExtraArgs 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUArgs $GPUArgs GPU驱动相关参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Unschedulable 是否不可调度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStartUserScript 用户自定义脚本,在UserScript前执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

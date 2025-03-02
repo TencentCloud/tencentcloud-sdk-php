@@ -125,6 +125,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ReconstructDocumentResponse ReconstructDocument(Models\ReconstructDocumentRequest $req) 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
+ * @method Models\RenameDocResponse RenameDoc(Models\RenameDocRequest $req) 文档重命名
  * @method Models\ResetSessionResponse ResetSession(Models\ResetSessionRequest $req) 重置会话
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试

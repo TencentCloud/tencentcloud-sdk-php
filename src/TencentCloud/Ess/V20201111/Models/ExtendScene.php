@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 印章扩展信息
  *
  * @method string getGenerateType() 获取印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGenerateType(string $GenerateType) 设置印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGenerateTypeDesc() 获取印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGenerateTypeDesc(string $GenerateTypeDesc) 设置印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGenerateTypeLogo() 获取印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGenerateTypeLogo(string $GenerateTypeLogo) 设置印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtendScene extends AbstractModel
 {
     /**
      * @var string 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GenerateType;
 
     /**
      * @var string 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GenerateTypeDesc;
 
     /**
      * @var string 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GenerateTypeLogo;
 
     /**
      * @param string $GenerateType 印章来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GenerateTypeDesc 印章来源类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GenerateTypeLogo 印章来源logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

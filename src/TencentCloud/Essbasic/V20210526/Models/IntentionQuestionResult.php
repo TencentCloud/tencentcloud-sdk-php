@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVideo() 获取视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideo(string $Video) 设置视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResultCode() 获取 和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultCode(array $ResultCode) 设置 和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAsrResult() 获取回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrResult(array $AsrResult) 设置回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionQuestionResult extends AbstractModel
 {
@@ -43,19 +37,16 @@ class IntentionQuestionResult extends AbstractModel
      * @var string 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Video;
 
     /**
      * @var array  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultCode;
 
     /**
      * @var array 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrResult;
 
@@ -63,11 +54,8 @@ class IntentionQuestionResult extends AbstractModel
      * @param string $Video 视频base64（其中包含全程问题和回答音频，mp4格式）
 
 注：`需进行base64解码获取视频文件`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResultCode  和答案匹配结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AsrResult 回答问题语音识别结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

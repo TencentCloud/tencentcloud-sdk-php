@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 批量补充签署人时，补充失败的报错说明
  *
  * @method string getRecipientId() 获取为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientId(string $RecipientId) 设置为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMessage() 获取补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMessage(string $ErrMessage) 设置补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowId() 获取合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FillError extends AbstractModel
 {
     /**
      * @var string 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
 
     /**
      * @var string 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMessage;
 
     /**
      * @var string 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @param string $RecipientId 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMessage 补充失败错误说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowId 合同流程ID，为32位字符串。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

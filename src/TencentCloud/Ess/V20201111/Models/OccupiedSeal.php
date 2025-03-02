@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSealStatus() 获取印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
  * @method void setSealStatus(string $SealStatus) 设置印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
  * @method string getFailReason() 获取审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取印章图片url，5分钟内有效
  * @method void setUrl(string $Url) 设置印章图片url，5分钟内有效
  * @method string getSealType() 获取印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
@@ -43,13 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsAllTime() 获取用印申请是否为永久授权，true-是，false-否
  * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权，true-是，false-否
  * @method array getAuthorizedUsers() 获取授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ExtendScene getExtendScene() 获取印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendScene(ExtendScene $ExtendScene) 设置印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OccupiedSeal extends AbstractModel
 {
@@ -85,7 +79,6 @@ class OccupiedSeal extends AbstractModel
 
     /**
      * @var string 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
@@ -106,13 +99,11 @@ class OccupiedSeal extends AbstractModel
 
     /**
      * @var array 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizedUsers;
 
     /**
      * @var ExtendScene 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtendScene;
 
@@ -124,14 +115,11 @@ class OccupiedSeal extends AbstractModel
      * @param string $SealPolicyId 电子印章策略Id
      * @param string $SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
      * @param string $FailReason 审核失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 印章图片url，5分钟内有效
      * @param string $SealType 印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
      * @param boolean $IsAllTime 用印申请是否为永久授权，true-是，false-否
      * @param array $AuthorizedUsers 授权人列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendScene $ExtendScene 印章扩展数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

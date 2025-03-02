@@ -503,26 +503,20 @@ ChildrenComponent结构体定义:
 注意：关键字索引是从0开始计数的
  * @method string getPlaceholder() 获取填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlaceholder(string $Placeholder) 设置填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLockComponentValue() 获取**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockComponentValue(boolean $LockComponentValue) 设置**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getForbidMoveAndDelete() 获取**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForbidMoveAndDelete(boolean $ForbidMoveAndDelete) 设置**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Component extends AbstractModel
 {
@@ -863,7 +857,6 @@ ChildrenComponent结构体定义:
     /**
      * @var string 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Placeholder;
 
@@ -871,7 +864,6 @@ ChildrenComponent结构体定义:
      * @var boolean **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockComponentValue;
 
@@ -879,7 +871,6 @@ ChildrenComponent结构体定义:
      * @var boolean **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForbidMoveAndDelete;
 
@@ -1124,15 +1115,12 @@ ChildrenComponent结构体定义:
 注意：关键字索引是从0开始计数的
      * @param string $Placeholder 填写控件在腾讯电子签小程序填写界面展示的提示信息，例如，在身份证号码填写控件中，提示信息可以设置成“请输入18位身份证号码”。
 注：`签署控件设置此字段无效`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

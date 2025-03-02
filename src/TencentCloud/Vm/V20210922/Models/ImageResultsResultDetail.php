@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取子标签
+ * @method void setSubLabel(string $SubLabel) 设置子标签
+ * @method array getOcrHitInfos() 获取Ocr文本命中信息
+ * @method void setOcrHitInfos(array $OcrHitInfos) 设置Ocr文本命中信息
  */
 class ImageResultsResultDetail extends AbstractModel
 {
@@ -124,6 +128,16 @@ class ImageResultsResultDetail extends AbstractModel
     public $SubLabelCode;
 
     /**
+     * @var string 子标签
+     */
+    public $SubLabel;
+
+    /**
+     * @var array Ocr文本命中信息
+     */
+    public $OcrHitInfos;
+
+    /**
      * @param string $Name 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text OCR识别文本
@@ -144,6 +158,8 @@ class ImageResultsResultDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabelCode 子标签码
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 子标签
+     * @param array $OcrHitInfos Ocr文本命中信息
      */
     function __construct()
     {
@@ -197,6 +213,19 @@ class ImageResultsResultDetail extends AbstractModel
 
         if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
             $this->SubLabelCode = $param["SubLabelCode"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("OcrHitInfos",$param) and $param["OcrHitInfos"] !== null) {
+            $this->OcrHitInfos = [];
+            foreach ($param["OcrHitInfos"] as $key => $value){
+                $obj = new OcrHitInfo();
+                $obj->deserialize($value);
+                array_push($this->OcrHitInfos, $obj);
+            }
         }
     }
 }

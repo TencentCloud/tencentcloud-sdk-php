@@ -23,23 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSignId() 获取签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignId(string $SignId) 设置签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientId() 获取签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientId(string $RecipientId) 设置签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverRoleName() 获取签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverRoleName(string $ApproverRoleName) 设置签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApproverItem extends AbstractModel
 {
@@ -47,7 +41,6 @@ class ApproverItem extends AbstractModel
      * @var string 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignId;
 
@@ -55,13 +48,11 @@ class ApproverItem extends AbstractModel
      * @var string 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
 
     /**
      * @var string 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverRoleName;
 
@@ -69,13 +60,10 @@ class ApproverItem extends AbstractModel
      * @param string $SignId 签署方唯一编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientId 签署方角色编号
 
 在<a href="https://qian.tencent.com/developers/company/dynamic_signer" target="_blank">动态补充签署人</a>场景下，可以用此编号确定参与方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverRoleName 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 应用市场安装的Pending应用
  *
  * @method string getCondition() 获取应用状态详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCondition(string $Condition) 设置应用状态详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getID() 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取应用命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置应用命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PendingRelease extends AbstractModel
 {
     /**
      * @var string 应用状态详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var string 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 应用命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
     /**
      * @param string $Condition 应用状态详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ID 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 应用命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabelResults(array $LabelResults) 设置歌曲识别结果
  * @method array getTravelResults() 获取出行结果
  * @method void setTravelResults(array $TravelResults) 设置出行结果
+ * @method string getSubTag() 获取三级标签
+ * @method void setSubTag(string $SubTag) 设置三级标签
+ * @method string getSubTagCode() 获取三级标签码
+ * @method void setSubTagCode(string $SubTagCode) 设置三级标签码
  */
 class AudioResult extends AbstractModel
 {
@@ -163,6 +167,16 @@ class AudioResult extends AbstractModel
     public $TravelResults;
 
     /**
+     * @var string 三级标签
+     */
+    public $SubTag;
+
+    /**
+     * @var string 三级标签码
+     */
+    public $SubTagCode;
+
+    /**
      * @param integer $HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
@@ -188,6 +202,8 @@ class AudioResult extends AbstractModel
      * @param array $SpeakerResults 说话人结果
      * @param array $LabelResults 歌曲识别结果
      * @param array $TravelResults 出行结果
+     * @param string $SubTag 三级标签
+     * @param string $SubTagCode 三级标签码
      */
     function __construct()
     {
@@ -299,6 +315,14 @@ class AudioResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TravelResults, $obj);
             }
+        }
+
+        if (array_key_exists("SubTag",$param) and $param["SubTag"] !== null) {
+            $this->SubTag = $param["SubTag"];
+        }
+
+        if (array_key_exists("SubTagCode",$param) and $param["SubTagCode"] !== null) {
+            $this->SubTagCode = $param["SubTagCode"];
         }
     }
 }

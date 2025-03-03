@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRate(integer $Rate) 设置该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
  * @method string getSubLabel() 获取该字段用于返回检测结果所对应的恶意二级标签。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回检测结果所对应的恶意二级标签。
+ * @method array getHitInfos() 获取关键词命中位置信息
+ * @method void setHitInfos(array $HitInfos) 设置关键词命中位置信息
  */
 class OcrTextDetail extends AbstractModel
 {
@@ -87,6 +89,11 @@ class OcrTextDetail extends AbstractModel
     public $SubLabel;
 
     /**
+     * @var array 关键词命中位置信息
+     */
+    public $HitInfos;
+
+    /**
      * @param string $Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $LibId 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
@@ -96,6 +103,7 @@ class OcrTextDetail extends AbstractModel
      * @param Location $Location 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
      * @param integer $Rate 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
      * @param string $SubLabel 该字段用于返回检测结果所对应的恶意二级标签。
+     * @param array $HitInfos 关键词命中位置信息
      */
     function __construct()
     {
@@ -145,6 +153,15 @@ class OcrTextDetail extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("HitInfos",$param) and $param["HitInfos"] !== null) {
+            $this->HitInfos = [];
+            foreach ($param["HitInfos"] as $key => $value){
+                $obj = new OcrHitInfo();
+                $obj->deserialize($value);
+                array_push($this->HitInfos, $obj);
+            }
         }
     }
 }

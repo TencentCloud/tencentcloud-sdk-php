@@ -23,17 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNotifyPolicyType() 获取通知策略类型：范围[0,1]
 0:代表不使用任何通知策略
 1:代表使用全局回调策略，所有事件通知到CallbackUrl。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyPolicyType(integer $NotifyPolicyType) 设置通知策略类型：范围[0,1]
 0:代表不使用任何通知策略
 1:代表使用全局回调策略，所有事件通知到CallbackUrl。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCallbackUrl() 获取回调URL：长度[0,512]
 只支持http和https类型的url。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调URL：长度[0,512]
 只支持http和https类型的url。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamMonitorNotifyPolicy extends AbstractModel
 {
@@ -41,14 +37,12 @@ class LiveStreamMonitorNotifyPolicy extends AbstractModel
      * @var integer 通知策略类型：范围[0,1]
 0:代表不使用任何通知策略
 1:代表使用全局回调策略，所有事件通知到CallbackUrl。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyPolicyType;
 
     /**
      * @var string 回调URL：长度[0,512]
 只支持http和https类型的url。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallbackUrl;
 
@@ -56,10 +50,8 @@ class LiveStreamMonitorNotifyPolicy extends AbstractModel
      * @param integer $NotifyPolicyType 通知策略类型：范围[0,1]
 0:代表不使用任何通知策略
 1:代表使用全局回调策略，所有事件通知到CallbackUrl。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackUrl 回调URL：长度[0,512]
 只支持http和https类型的url。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

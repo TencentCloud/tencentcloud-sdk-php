@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCalendarName(string $CalendarName) 设置日历名称
  * @method string getCalendarId() 获取日历id
  * @method void setCalendarId(string $CalendarId) 设置日历id
+ * @method string getScheduleTimeZone() 获取时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
  */
 class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
     public $CalendarId;
 
     /**
+     * @var string 时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
      * @param integer $DelayTime 延迟时间
@@ -180,6 +187,7 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
      * @param string $CalendarOpen 是否开启日历调度 1 开启 0关闭
      * @param string $CalendarName 日历名称
      * @param string $CalendarId 日历id
+     * @param string $ScheduleTimeZone 时区
      */
     function __construct()
     {
@@ -268,6 +276,10 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 
         if (array_key_exists("CalendarId",$param) and $param["CalendarId"] !== null) {
             $this->CalendarId = $param["CalendarId"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

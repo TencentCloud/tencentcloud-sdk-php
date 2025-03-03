@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamUrl(string $StreamUrl) 设置源流URL。
  * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
  * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
+ * @method boolean getIsPause() 获取是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+ * @method void setIsPause(boolean $IsPause) 设置是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
  */
 class UpdateStreamIngestRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateStreamIngestRequest extends AbstractModel
     public $Volume;
 
     /**
+     * @var boolean 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     */
+    public $IsPause;
+
+    /**
      * @param integer $SdkAppId TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同
      * @param string $TaskId 任务的唯一Id，在启动任务成功后会返回。
      * @param string $StreamUrl 源流URL。
      * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @param boolean $IsPause 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdateStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("IsPause",$param) and $param["IsPause"] !== null) {
+            $this->IsPause = $param["IsPause"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 媒体处理结果，包含智能语音识别、智能文字识别结果
  *
  * @method array getAiAsrResults() 获取智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiAsrResults(array $AiAsrResults) 设置智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAiOcrResults() 获取智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiOcrResults(array $AiOcrResults) 设置智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStreamQuaCtrlResults() 获取内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamQuaCtrlResults(array $StreamQuaCtrlResults) 设置内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MPSResult extends AbstractModel
 {
     /**
      * @var array 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiAsrResults;
 
     /**
      * @var array 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiOcrResults;
 
     /**
      * @var array 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamQuaCtrlResults;
 
     /**
      * @param array $AiAsrResults 智能语音识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiOcrResults 智能文字识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StreamQuaCtrlResults 内容质检结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

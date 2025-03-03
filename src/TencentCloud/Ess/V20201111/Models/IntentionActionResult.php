@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 意愿核身点头确认模式结果
  *
  * @method array getDetails() 获取意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionActionResult extends AbstractModel
 {
     /**
      * @var array 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
     /**
      * @param array $Details 意愿核身结果详细数据，与每段点头确认过程一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -42,7 +42,9 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(Models\DescribeBillingSpecsPriceRequest $req) 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
  * @method Models\DescribeBuildInImagesResponse DescribeBuildInImages(Models\DescribeBuildInImagesRequest $req) 获取内置镜像列表
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
- * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 查询推理镜像模板
+ * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 已废弃，收敛到统一接口
+
+查询推理镜像模板
  * @method Models\DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(Models\DescribeModelAccelerateTaskRequest $req) 查询模型优化任务详情
  * @method Models\DescribeModelAccelerateVersionsResponse DescribeModelAccelerateVersions(Models\DescribeModelAccelerateVersionsRequest $req) 模型加速之后的模型版本列表
  * @method Models\DescribeModelServiceResponse DescribeModelService(Models\DescribeModelServiceRequest $req) 查询单个服务

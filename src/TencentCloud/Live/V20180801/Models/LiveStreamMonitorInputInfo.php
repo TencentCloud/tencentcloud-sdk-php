@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 直播监播功能输入流信息
  *
  * @method string getInputStreamName() 获取待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputStreamName(string $InputStreamName) 设置待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputDomain() 获取待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputDomain(string $InputDomain) 设置待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputApp() 获取待监播的输入流推流路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputApp(string $InputApp) 设置待监播的输入流推流路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputUrl() 获取待监播的输入流推流url。一般场景下，无需该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputUrl(string $InputUrl) 设置待监播的输入流推流url。一般场景下，无需该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述。256字节以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。256字节以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCasterInputIndex() 获取导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
  * @method void setCasterInputIndex(integer $CasterInputIndex) 设置导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
  * @method boolean getNeedMonitor() 获取该输入源是否正在监播
@@ -51,31 +41,26 @@ class LiveStreamMonitorInputInfo extends AbstractModel
 {
     /**
      * @var string 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputStreamName;
 
     /**
      * @var string 待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputDomain;
 
     /**
      * @var string 待监播的输入流推流路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputApp;
 
     /**
      * @var string 待监播的输入流推流url。一般场景下，无需该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputUrl;
 
     /**
      * @var string 描述。256字节以内。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -96,15 +81,10 @@ class LiveStreamMonitorInputInfo extends AbstractModel
 
     /**
      * @param string $InputStreamName 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputDomain 待监播的输入流推流域名。128字节以内，只允许填处于启用状态的推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputApp 待监播的输入流推流路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputUrl 待监播的输入流推流url。一般场景下，无需该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述。256字节以内。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CasterInputIndex 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
      * @param boolean $NeedMonitor 该输入源是否正在监播
      * @param string $CdnStreamId 导播台pvw pgm的cdn流id

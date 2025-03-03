@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 媒体诊断结果，包含断流信息、低帧率信息等
  *
  * @method array getStreamBrokenResults() 获取断流信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamBrokenResults(array $StreamBrokenResults) 设置断流信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLowFrameRateResults() 获取低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLowFrameRateResults(array $LowFrameRateResults) 设置低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStreamFormatResults() 获取流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamFormatResults(array $StreamFormatResults) 设置流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagnoseResult extends AbstractModel
 {
     /**
      * @var array 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamBrokenResults;
 
     /**
      * @var array 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LowFrameRateResults;
 
     /**
      * @var array 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamFormatResults;
 
     /**
      * @param array $StreamBrokenResults 断流信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LowFrameRateResults 低帧率信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StreamFormatResults 流格式诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

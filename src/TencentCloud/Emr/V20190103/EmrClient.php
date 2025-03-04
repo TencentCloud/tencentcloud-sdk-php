@@ -92,6 +92,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifySLInstanceResponse ModifySLInstance(Models\ModifySLInstanceRequest $req) 本接口（ModifySLInstance）用于Serverless HBase变配实例。
 - 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
+ * @method Models\ModifySLInstanceBasicResponse ModifySLInstanceBasic(Models\ModifySLInstanceBasicRequest $req) serverless hbase修改实例名称
  * @method Models\ModifyUserManagerPwdResponse ModifyUserManagerPwd(Models\ModifyUserManagerPwdRequest $req) 修改用户密码（用户管理）
  * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息

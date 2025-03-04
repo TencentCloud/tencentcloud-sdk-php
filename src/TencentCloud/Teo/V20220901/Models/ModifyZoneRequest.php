@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
  * @method VanityNameServers getVanityNameServers() 获取自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
- * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
- * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
+ * @method string getAliasZoneName() 获取同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
+ * @method void setAliasZoneName(string $AliasZoneName) 设置同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
  * @method string getArea() 获取站点接入地域，取值有：
 <li> global：全球；</li>
 <li> mainland：中国大陆；</li>
@@ -66,7 +66,7 @@ class ModifyZoneRequest extends AbstractModel
     public $VanityNameServers;
 
     /**
-     * @var string 站点别名。数字、英文、-和_组合，限制20个字符。
+     * @var string 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
      */
     public $AliasZoneName;
 
@@ -90,7 +90,7 @@ class ModifyZoneRequest extends AbstractModel
 <li>partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到 CNAME 接入；</li>
 <li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>不填写保持原有配置。
      * @param VanityNameServers $VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
-     * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     * @param string $AliasZoneName 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。
      * @param string $Area 站点接入地域，取值有：
 <li> global：全球；</li>
 <li> mainland：中国大陆；</li>

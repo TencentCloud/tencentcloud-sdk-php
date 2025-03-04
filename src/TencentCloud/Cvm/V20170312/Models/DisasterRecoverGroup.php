@@ -37,13 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCurrentNum() 获取分散置放群组内云服务器当前数量。
  * @method void setCurrentNum(integer $CurrentNum) 设置分散置放群组内云服务器当前数量。
  * @method array getInstanceIds() 获取分散置放群组内，云服务器id列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置分散置放群组内，云服务器id列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取置放群组关联的标签列表。
+ * @method void setTags(array $Tags) 设置置放群组关联的标签列表。
  */
 class DisasterRecoverGroup extends AbstractModel
 {
@@ -77,15 +75,18 @@ class DisasterRecoverGroup extends AbstractModel
 
     /**
      * @var array 分散置放群组内，云服务器id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
     /**
      * @var string 分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
+    /**
+     * @var array 置放群组关联的标签列表。
+     */
+    public $Tags;
 
     /**
      * @param string $DisasterRecoverGroupId 分散置放群组id。
@@ -97,9 +98,8 @@ class DisasterRecoverGroup extends AbstractModel
      * @param integer $CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      * @param integer $CurrentNum 分散置放群组内云服务器当前数量。
      * @param array $InstanceIds 分散置放群组内，云服务器id列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 置放群组关联的标签列表。
      */
     function __construct()
     {
@@ -140,6 +140,15 @@ class DisasterRecoverGroup extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

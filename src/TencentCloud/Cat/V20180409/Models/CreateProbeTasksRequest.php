@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
  * @method array getNodes() 获取拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
  * @method void setNodes(array $Nodes) 设置拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
- * @method integer getInterval() 获取拨测间隔
- * @method void setInterval(integer $Interval) 设置拨测间隔
+ * @method integer getInterval() 获取拨测间隔，单位为分钟
+ * @method void setInterval(integer $Interval) 设置拨测间隔，单位为分钟
  * @method string getParameters() 获取拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
  * @method void setParameters(string $Parameters) 设置拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
  * @method integer getTaskCategory() 获取任务分类
@@ -69,7 +69,7 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Nodes;
 
     /**
-     * @var integer 拨测间隔
+     * @var integer 拨测间隔，单位为分钟
      */
     public $Interval;
 
@@ -124,7 +124,7 @@ class CreateProbeTasksRequest extends AbstractModel
      * @param array $BatchTasks 批量任务名-地址
      * @param integer $TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
      * @param array $Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
-     * @param integer $Interval 拨测间隔
+     * @param integer $Interval 拨测间隔，单位为分钟
      * @param string $Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
      * @param integer $TaskCategory 任务分类
 <li>1 = PC</li>

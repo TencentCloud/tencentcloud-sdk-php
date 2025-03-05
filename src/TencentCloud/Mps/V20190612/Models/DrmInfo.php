@@ -22,9 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SimpleAesDrm getSimpleAesDrm() 获取SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,6 +42,9 @@ class DrmInfo extends AbstractModel
     /**
      * @var string 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -49,6 +58,9 @@ class DrmInfo extends AbstractModel
     /**
      * @param string $Type 加密类型：
 <li> simpleaes: aes-128 加密</li>
+<li> widevine</li>
+<li> fairplay：Dash不支持fairplay加密</li>  
+<li> playready</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SimpleAesDrm $SimpleAesDrm SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。

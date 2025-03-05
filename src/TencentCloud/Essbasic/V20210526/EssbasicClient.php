@@ -868,7 +868,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 </ul>
  * @method Models\CreateSealByImageResponse CreateSealByImage(Models\CreateSealByImageRequest $req) 1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
 
-2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
+2. 可以使用**系统生成印章**为子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage.png)
  * @method Models\CreateSignUrlsResponse CreateSignUrls(Models\CreateSignUrlsRequest $req) 创建跳转小程序查看或签署的链接

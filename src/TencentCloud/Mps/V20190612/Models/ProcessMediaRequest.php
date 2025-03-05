@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置任务类型，默认Online
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -155,6 +157,11 @@ class ProcessMediaRequest extends AbstractModel
     public $TaskType;
 
     /**
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public $ResourceId;
+
+    /**
      * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
 注意：当InputInfo.Type为URL时，该参数是必填项
@@ -180,6 +187,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param string $TaskType 任务类型，默认Online
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

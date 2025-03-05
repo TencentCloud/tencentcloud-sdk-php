@@ -80,14 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCharset(string $Charset) 设置字符集
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineVersion() 获取引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineVersion(string $EngineVersion) 设置引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getGTMNodes() 获取GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGTMNodes(array $GTMNodes) 设置GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCNNodes() 获取CN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCNNodes(array $CNNodes) 设置CN节点列表
@@ -96,13 +88,41 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDNNodes(array $DNNodes) 设置DN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBackupStorage() 获取备份存储
+ * @method integer getRegionId() 获取1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupStorage(array $BackupStorage) 设置备份存储
+ * @method void setRegionId(integer $RegionId) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFNNodes() 获取FN节点列表
+ * @method integer getZoneId() 获取1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFNNodes(array $FNNodes) 设置FN节点列表
+ * @method void setZoneId(integer $ZoneId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetId(string $SubnetId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpireTime() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(string $ExpireTime) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayMode() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(string $PayMode) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRenewFlag() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(boolean $RenewFlag) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAccessDetails() 获取访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessDetails(array $AccessDetails) 设置访问信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -198,18 +218,6 @@ class InstanceInfo extends AbstractModel
     public $Charset;
 
     /**
-     * @var string 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $EngineVersion;
-
-    /**
-     * @var array GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $GTMNodes;
-
-    /**
      * @var array CN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -222,16 +230,58 @@ class InstanceInfo extends AbstractModel
     public $DNNodes;
 
     /**
-     * @var array 备份存储
+     * @var integer 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BackupStorage;
+    public $RegionId;
 
     /**
-     * @var array FN节点列表
+     * @var integer 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FNNodes;
+    public $ZoneId;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetId;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
+     * @var boolean 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var array 访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessDetails;
 
     /**
      * @param integer $ID ID值
@@ -264,17 +314,27 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Charset 字符集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineVersion 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $GTMNodes GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CNNodes CN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DNNodes DN节点列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BackupStorage 备份存储
+     * @param integer $RegionId 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FNNodes FN节点列表
+     * @param integer $ZoneId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpireTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayMode 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RenewFlag 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AccessDetails 访问信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,19 +416,6 @@ class InstanceInfo extends AbstractModel
             $this->Charset = $param["Charset"];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
-        }
-
-        if (array_key_exists("GTMNodes",$param) and $param["GTMNodes"] !== null) {
-            $this->GTMNodes = [];
-            foreach ($param["GTMNodes"] as $key => $value){
-                $obj = new InstanceNodeGroup();
-                $obj->deserialize($value);
-                array_push($this->GTMNodes, $obj);
-            }
-        }
-
         if (array_key_exists("CNNodes",$param) and $param["CNNodes"] !== null) {
             $this->CNNodes = [];
             foreach ($param["CNNodes"] as $key => $value){
@@ -387,21 +434,44 @@ class InstanceInfo extends AbstractModel
             }
         }
 
-        if (array_key_exists("BackupStorage",$param) and $param["BackupStorage"] !== null) {
-            $this->BackupStorage = [];
-            foreach ($param["BackupStorage"] as $key => $value){
-                $obj = new InstanceNodeGroup();
-                $obj->deserialize($value);
-                array_push($this->BackupStorage, $obj);
-            }
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
 
-        if (array_key_exists("FNNodes",$param) and $param["FNNodes"] !== null) {
-            $this->FNNodes = [];
-            foreach ($param["FNNodes"] as $key => $value){
-                $obj = new InstanceNodeGroup();
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AccessDetails",$param) and $param["AccessDetails"] !== null) {
+            $this->AccessDetails = [];
+            foreach ($param["AccessDetails"] as $key => $value){
+                $obj = new AccessInfo();
                 $obj->deserialize($value);
-                array_push($this->FNNodes, $obj);
+                array_push($this->AccessDetails, $obj);
             }
         }
     }

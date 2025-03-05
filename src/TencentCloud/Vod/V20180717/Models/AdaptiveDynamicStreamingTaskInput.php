@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置转自适应码流模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印，该功能已不再支持使用。
- * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印，该功能已不再支持使用。
- * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印，该功能已不再支持使用。
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印，该功能已不再支持使用。
+ * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印。
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
+ * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印。
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印。
  * @method array getSubtitleSet() 获取字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
  * @method void setSubtitleSet(array $SubtitleSet) 设置字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
  */
@@ -44,12 +44,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var TraceWatermarkInput 溯源水印，该功能已不再支持使用。
+     * @var TraceWatermarkInput 溯源水印。
      */
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 版权水印，该功能已不再支持使用。
+     * @var CopyRightWatermarkInput 版权水印。
      */
     public $CopyRightWatermark;
 
@@ -61,8 +61,8 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param TraceWatermarkInput $TraceWatermark 溯源水印，该功能已不再支持使用。
-     * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印，该功能已不再支持使用。
+     * @param TraceWatermarkInput $TraceWatermark 溯源水印。
+     * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印。
      * @param array $SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
     function __construct()

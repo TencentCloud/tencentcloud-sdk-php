@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 实例启动模板简要信息。
  *
  * @method integer getLatestVersionNumber() 获取实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestVersionNumber(integer $LatestVersionNumber) 设置实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLaunchTemplateId() 获取实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLaunchTemplateName() 获取实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTemplateName(string $LaunchTemplateName) 设置实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultVersionNumber() 获取实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultVersionNumber(integer $DefaultVersionNumber) 设置实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLaunchTemplateVersionCount() 获取实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTemplateVersionCount(integer $LaunchTemplateVersionCount) 设置实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedBy() 获取创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedBy(string $CreatedBy) 设置创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreationTime() 获取创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(string $CreationTime) 设置创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LaunchTemplateInfo extends AbstractModel
 {
     /**
      * @var integer 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestVersionNumber;
 
     /**
      * @var string 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTemplateId;
 
     /**
      * @var string 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTemplateName;
 
     /**
      * @var integer 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultVersionNumber;
 
     /**
      * @var integer 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTemplateVersionCount;
 
     /**
      * @var string 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedBy;
 
     /**
      * @var string 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
     /**
      * @param integer $LatestVersionNumber 实例启动模版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaunchTemplateId 实例启动模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaunchTemplateName 实例启动模板名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultVersionNumber 实例启动模板默认版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LaunchTemplateVersionCount 实例启动模板包含的版本总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedBy 创建该模板的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationTime 创建该模板的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

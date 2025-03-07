@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * tsf-privilege模块，数据项
  *
  * @method string getProgramItemId() 获取数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramItemId(string $ProgramItemId) 设置数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Resource getResource() 获取资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(Resource $Resource) 设置资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValueList() 获取数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValueList(array $ValueList) 设置数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAll() 获取全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAll(boolean $IsAll) 设置全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreationTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(integer $CreationTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastUpdateTime() 获取最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteFlag() 获取删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProgramId() 获取数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramId(string $ProgramId) 设置数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProgramItem extends AbstractModel
 {
     /**
      * @var string 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgramItemId;
 
     /**
      * @var Resource 资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var array 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueList;
 
     /**
      * @var boolean 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAll;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
     /**
      * @var integer 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
 
     /**
      * @var boolean 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteFlag;
 
     /**
      * @var string 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgramId;
 
     /**
      * @param string $ProgramItemId 数据项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource $Resource 资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ValueList 数据值列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAll 全选标识，true: 全选；false: 非全选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteFlag 删除标识，true: 可删除；false: 不可删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

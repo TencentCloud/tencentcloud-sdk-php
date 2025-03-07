@@ -53,21 +53,15 @@ use TencentCloud\Common\AbstractModel;
  * @method float getTotalCost() 获取原价（分）
  * @method void setTotalCost(float $TotalCost) 设置原价（分）
  * @method string getProductCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品编码
  * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
  * @method string getBigDealId() 获取大订单号
  * @method void setBigDealId(string $BigDealId) 设置大订单号
  * @method string getFormula() 获取退费公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormula(string $Formula) 设置退费公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRefReturnDeals() 获取退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefReturnDeals(string $RefReturnDeals) 设置退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取付费模式：prePay 预付费 postPay后付费 riPay预留实例
  * @method void setPayMode(string $PayMode) 设置付费模式：prePay 预付费 postPay后付费 riPay预留实例
  * @method string getAction() 获取交易类型
@@ -83,7 +77,6 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置交易类型
 modifyNetworkMode 调整带宽模式
 modifyNetworkSize 调整带宽大小
@@ -97,15 +90,10 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductName() 获取子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductName(string $SubProductName) 设置子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceId() 获取订单对应的资源id, 查询参数Limit超过200，将返回null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(array $ResourceId) 设置订单对应的资源id, 查询参数Limit超过200，将返回null
@@ -195,7 +183,6 @@ class Deal extends AbstractModel
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
@@ -211,13 +198,11 @@ class Deal extends AbstractModel
 
     /**
      * @var string 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Formula;
 
     /**
      * @var string 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefReturnDeals;
 
@@ -240,19 +225,16 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var string 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductName;
 
@@ -280,13 +262,10 @@ postMoveIn 按量计费迁入资源
      * @param float $Price 单价（分）
      * @param float $TotalCost 原价（分）
      * @param string $ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品编码
      * @param string $BigDealId 大订单号
      * @param string $Formula 退费公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RefReturnDeals 退费涉及订单信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
      * @param string $Action 交易类型
 modifyNetworkMode 调整带宽模式
@@ -301,11 +280,8 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductName 子产品编码中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceId 订单对应的资源id, 查询参数Limit超过200，将返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */

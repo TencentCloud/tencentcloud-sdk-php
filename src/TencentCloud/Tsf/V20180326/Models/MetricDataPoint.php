@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 监控统计数据点
  *
  * @method string getKey() 获取数据点键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置数据点键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取数据点值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置数据点值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取数据点标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置数据点标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricDataPoint extends AbstractModel
 {
     /**
      * @var string 数据点键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 数据点值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 数据点标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @param string $Key 数据点键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 数据点值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 数据点标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAllocationBillConditions返回参数结构体
  *
  * @method array getBusiness() 获取产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(array $Business) 设置产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProduct() 获取子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProduct(array $Product) 设置子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItem() 获取组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItem(array $Item) 设置组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegion() 获取地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(array $Region) 设置地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceType() 获取实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(array $InstanceType) 设置实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPayMode() 获取计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(array $PayMode) 设置计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProject() 获取项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProject(array $Project) 设置项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOwnerUin() 获取使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(array $OwnerUin) 设置使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOperateUin() 获取操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(array $OperateUin) 设置操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBillDay() 获取日期筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDay(array $BillDay) 设置日期筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getActionType() 获取交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(array $ActionType) 设置交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponent() 获取组件类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponent(array $Component) 设置组件类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZone() 获取可用区筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(array $Zone) 设置可用区筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAllocationTreeNode() 获取分账单元筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllocationTreeNode(array $AllocationTreeNode) 设置分账单元筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagKey() 获取分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKey(array $TagKey) 设置分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,97 +59,81 @@ class DescribeAllocationBillConditionsResponse extends AbstractModel
 {
     /**
      * @var array 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @var array 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Product;
 
     /**
      * @var array 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Item;
 
     /**
      * @var array 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var array 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var array 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var array 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Project;
 
     /**
      * @var array 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var array 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var array 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
     /**
      * @var array 日期筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDay;
 
     /**
      * @var array 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var array 组件类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Component;
 
     /**
      * @var array 可用区筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var array 分账单元筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllocationTreeNode;
 
     /**
      * @var array 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagKey;
 
@@ -192,37 +144,21 @@ class DescribeAllocationBillConditionsResponse extends AbstractModel
 
     /**
      * @param array $Business 产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Product 子产品筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Item 组件名称筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Region 地域筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceType 实例类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PayMode 计费模式筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Project 项目筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 标签筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OwnerUin 使用者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OperateUin 操作者 UIN 筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BillDay 日期筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ActionType 交易类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Component 组件类型筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zone 可用区筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AllocationTreeNode 分账单元筛选列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagKey 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

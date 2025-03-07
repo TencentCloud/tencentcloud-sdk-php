@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * tsf 容器集群节点调度策略
  *
  * @method string getType() 获取NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeScheduleStrategyType() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeScheduleStrategyType(string $NodeScheduleStrategyType) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodeScheduleOptions() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeScheduleOptions(array $NodeScheduleOptions) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStrongAffinityList() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrongAffinityList(array $StrongAffinityList) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWeakAffinityList() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeakAffinityList(array $WeakAffinityList) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeakAffinityWeight() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeakAffinityWeight(integer $WeakAffinityWeight) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAvailableZoneScatterScheduleType() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableZoneScatterScheduleType(string $AvailableZoneScatterScheduleType) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAvailableZoneScatterScheduleRules() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableZoneScatterScheduleRules(array $AvailableZoneScatterScheduleRules) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodScheduleStrategyType() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodScheduleStrategyType(string $PodScheduleStrategyType) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CustomPodSchedule getCustomPodSchedule() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomPodSchedule(CustomPodSchedule $CustomPodSchedule) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTolerateScheduleType() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTolerateScheduleType(string $TolerateScheduleType) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomTolerateSchedules() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomTolerateSchedules(array $CustomTolerateSchedules) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SchedulingStrategy extends AbstractModel
 {
     /**
      * @var string NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeScheduleStrategyType;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeScheduleOptions;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrongAffinityList;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeakAffinityList;
 
     /**
      * @var integer -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeakAffinityWeight;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableZoneScatterScheduleType;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableZoneScatterScheduleRules;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodScheduleStrategyType;
 
     /**
      * @var CustomPodSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomPodSchedule;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TolerateScheduleType;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomTolerateSchedules;
 
     /**
      * @param string $Type NONE：不使用调度策略；CROSS_AZ：跨可用区部署
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeScheduleOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StrongAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WeakAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WeakAffinityWeight -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AvailableZoneScatterScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AvailableZoneScatterScheduleRules -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodScheduleStrategyType -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomPodSchedule $CustomPodSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TolerateScheduleType -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomTolerateSchedules -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

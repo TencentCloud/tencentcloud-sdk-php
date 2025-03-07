@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 失败的用户
  *
  * @method string getFailedUserIdentification() 获取失败用户标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedUserIdentification(string $FailedUserIdentification) 设置失败用户标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailedReason() 获取导入的用户失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedReason(string $FailedReason) 设置导入的用户失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailedUsers extends AbstractModel
 {
     /**
      * @var string 失败用户标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedUserIdentification;
 
     /**
      * @var string 导入的用户失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedReason;
 
     /**
      * @param string $FailedUserIdentification 失败用户标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedReason 导入的用户失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

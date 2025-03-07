@@ -23,37 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRepositoryId() 获取仓库ID
  * @method void setRepositoryId(string $RepositoryId) 设置仓库ID
  * @method string getRepositoryName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryType() 获取仓库类型（默认仓库：default，私有仓库：private）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryType(string $RepositoryType) 设置仓库类型（默认仓库：default，私有仓库：private）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryDesc() 获取仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryDesc(string $RepositoryDesc) 设置仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUsed() 获取仓库是否正在被使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUsed(boolean $IsUsed) 设置仓库是否正在被使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketName() 获取仓库桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketName(string $BucketName) 设置仓库桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketRegion() 获取仓库桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketRegion(string $BucketRegion) 设置仓库桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDirectory() 获取仓库目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectory(string $Directory) 设置仓库目录
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RepositoryInfo extends AbstractModel
 {
@@ -64,70 +48,54 @@ class RepositoryInfo extends AbstractModel
 
     /**
      * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryName;
 
     /**
      * @var string 仓库类型（默认仓库：default，私有仓库：private）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryType;
 
     /**
      * @var string 仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryDesc;
 
     /**
      * @var boolean 仓库是否正在被使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUsed;
 
     /**
      * @var string 仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 仓库桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketName;
 
     /**
      * @var string 仓库桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketRegion;
 
     /**
      * @var string 仓库目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Directory;
 
     /**
      * @param string $RepositoryId 仓库ID
      * @param string $RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryDesc 仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUsed 仓库是否正在被使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketName 仓库桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketRegion 仓库桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Directory 仓库目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

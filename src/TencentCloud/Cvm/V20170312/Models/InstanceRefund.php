@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 描述退款详情。
  *
  * @method string getInstanceId() 获取实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRefunds() 获取退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefunds(float $Refunds) 设置退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPriceDetail() 获取退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceDetail(string $PriceDetail) 设置退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceRefund extends AbstractModel
 {
     /**
      * @var string 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var float 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Refunds;
 
     /**
      * @var string 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceDetail;
 
     /**
      * @param string $InstanceId 实例Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Refunds 退款数额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PriceDetail 退款详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,163 +21,87 @@ use TencentCloud\Common\AbstractModel;
  * 分账账单按组件汇总明细
  *
  * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTreeNodeUniqKeyName() 获取分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKeyName(string $TreeNodeUniqKeyName) 设置分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillDate() 获取日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDate(string $BillDate) 设置日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayerUin() 获取支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayerUin(string $PayerUin) 设置支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwnerUin() 获取使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateUin() 获取操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayModeName() 获取计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayModeName(string $PayModeName) 设置计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionTypeName() 获取交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionTypeName(string $ActionTypeName) 设置交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCodeName() 获取产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCodeName() 获取子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceTypeName() 获取实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTypeName(string $InstanceTypeName) 设置实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAllocationType() 获取费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllocationType(integer $AllocationType) 设置费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCost() 获取组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(string $TotalCost) 设置组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiTimeSpan() 获取预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiTimeSpan(string $RiTimeSpan) 设置预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiCost() 获取预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiCost(string $RiCost) 设置预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealTotalCost() 获取优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalCost(string $RealTotalCost) 设置优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCashPayAmount() 获取现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVoucherPayAmount() 获取代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncentivePayAmount() 获取赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferPayAmount() 获取分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemCode() 获取组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemCode(string $ItemCode) 设置组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemCodeName() 获取组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemCodeName(string $ItemCodeName) 设置组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentCode() 获取组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCode(string $ComponentCode) 设置组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentCodeName() 获取组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSplitItemId() 获取分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSplitItemId(string $SplitItemId) 设置分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
@@ -187,271 +111,190 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSplitItemName(string $SplitItemName) 设置分拆项名称：涉及分拆产品的分拆后的分拆项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeeBeginTime() 获取开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeBeginTime(string $FeeBeginTime) 设置开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeeEndTime() 获取结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeEndTime(string $FeeEndTime) 设置结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSPCost() 获取节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSPCost(string $SPCost) 设置节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionType() 获取国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionType(string $RegionType) 设置国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionTypeName() 获取国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionTypeName(string $RegionTypeName) 设置国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSinglePrice() 获取组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSinglePrice(string $SinglePrice) 设置组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContractPrice() 获取组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContractPrice(string $ContractPrice) 设置组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSinglePriceUnit() 获取组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSinglePriceUnit(string $SinglePriceUnit) 设置组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsedAmount() 获取组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedAmount(string $UsedAmount) 设置组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsedAmountUnit() 获取组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedAmountUnit(string $UsedAmountUnit) 设置组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeSpan() 获取使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(string $TimeSpan) 设置使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveDetail() 获取备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveDetail(string $ReserveDetail) 设置备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealTotalMeasure() 获取原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalMeasure(string $RealTotalMeasure) 设置原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeductedMeasure() 获取抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductedMeasure(string $DeductedMeasure) 设置抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscount() 获取折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(string $Discount) 设置折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBlendedDiscount() 获取混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlendedDiscount(string $BlendedDiscount) 设置混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPriceInfo() 获取价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceInfo(array $PriceInfo) 设置价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormula() 获取计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormula(string $Formula) 设置计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormulaUrl() 获取计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentConfig() 获取配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentConfig(string $ComponentConfig) 设置配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSPDeduction() 获取SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSPDeduction(string $SPDeduction) 设置SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSPDeductionRate() 获取节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSPDeductionRate(string $SPDeductionRate) 设置节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssociatedOrder() 获取AssociatedOrder
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedOrder(string $AssociatedOrder) 设置AssociatedOrder
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscountObject() 获取当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountObject(string $DiscountObject) 设置当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscountType() 获取当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountType(string $DiscountType) 设置当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscountContent() 获取对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountContent(string $DiscountContent) 设置对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillMonth() 获取账单月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillMonth(string $BillMonth) 设置账单月
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationSummaryByItem extends AbstractModel
 {
     /**
      * @var string 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKey;
 
     /**
      * @var string 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKeyName;
 
     /**
      * @var string 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDate;
 
     /**
      * @var string 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayerUin;
 
     /**
      * @var string 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var string 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
     /**
      * @var string 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var string 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayModeName;
 
     /**
      * @var string 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var string 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTypeName;
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
      * @var string 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCodeName;
 
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodeName;
 
     /**
      * @var integer 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var integer 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @var string 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeName;
 
     /**
      * @var string 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var array 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var integer 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
@@ -460,79 +303,66 @@ class AllocationSummaryByItem extends AbstractModel
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllocationType;
 
     /**
      * @var string 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var string 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiTimeSpan;
 
     /**
      * @var string 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiCost;
 
     /**
      * @var string 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCost;
 
     /**
      * @var string 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CashPayAmount;
 
     /**
      * @var string 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoucherPayAmount;
 
     /**
      * @var string 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncentivePayAmount;
 
     /**
      * @var string 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
     /**
      * @var string 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCode;
 
     /**
      * @var string 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCodeName;
 
     /**
      * @var string 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCode;
 
     /**
      * @var string 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCodeName;
 
@@ -552,316 +382,222 @@ class AllocationSummaryByItem extends AbstractModel
 
     /**
      * @var string 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeeBeginTime;
 
     /**
      * @var string 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeeEndTime;
 
     /**
      * @var string 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SPCost;
 
     /**
      * @var string 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionType;
 
     /**
      * @var string 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionTypeName;
 
     /**
      * @var string 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SinglePrice;
 
     /**
      * @var string 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContractPrice;
 
     /**
      * @var string 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SinglePriceUnit;
 
     /**
      * @var string 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedAmount;
 
     /**
      * @var string 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedAmountUnit;
 
     /**
      * @var string 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @var string 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveDetail;
 
     /**
      * @var string 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalMeasure;
 
     /**
      * @var string 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductedMeasure;
 
     /**
      * @var string 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
 
     /**
      * @var string 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlendedDiscount;
 
     /**
      * @var array 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceInfo;
 
     /**
      * @var string 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Formula;
 
     /**
      * @var string 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormulaUrl;
 
     /**
      * @var string 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentConfig;
 
     /**
      * @var string SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SPDeduction;
 
     /**
      * @var string 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SPDeductionRate;
 
     /**
      * @var string AssociatedOrder
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedOrder;
 
     /**
      * @var string 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountObject;
 
     /**
      * @var string 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountType;
 
     /**
      * @var string 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountContent;
 
     /**
      * @var string 账单月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillMonth;
 
     /**
      * @param string $TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin 使用者 UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 计费模式编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名称：资源所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 分账标签：资源绑定的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
 -1 - 未分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiTimeSpan 预留实例抵扣时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiCost 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SplitItemId 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SplitItemName 分拆项名称：涉及分拆产品的分拆后的分拆项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeeBeginTime 开始使用时间：产品服务开始使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeeEndTime 结束使用时间：产品服务结束使用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SPCost 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionType 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionTypeName 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SinglePrice 组件刊例价：组件的官网原始单价（如客户享受一口价/合同价则默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SinglePriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsedAmount 组件用量：该组件实际结算用量，组件用量=组件原始用量-抵扣用量（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsedAmountUnit 组件用量单位：组件用量对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeSpan 使用时长：资源使用的时长，组件用量=组件原始使用时长-抵扣时长（含资源包）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 时长单位：资源使用时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量
 （目前仅实时音视频、弹性微服务、云呼叫中心及专属可用区产品支持该信息外显，其他产品尚在接入中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Discount 折扣率：本资源享受的折扣率（如客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率=优惠后总价/原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Formula 计算规则说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SPDeduction SPDeduction
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssociatedOrder AssociatedOrder
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillMonth 账单月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

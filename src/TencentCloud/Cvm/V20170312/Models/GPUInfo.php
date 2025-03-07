@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 实例GPU信息
  *
  * @method float getGPUCount() 获取实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUCount(float $GPUCount) 设置实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGPUId() 获取实例GPU地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUId(array $GPUId) 设置实例GPU地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGPUType() 获取实例GPU类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUType(string $GPUType) 设置实例GPU类型。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GPUInfo extends AbstractModel
 {
     /**
      * @var float 实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUCount;
 
     /**
      * @var array 实例GPU地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUId;
 
     /**
      * @var string 实例GPU类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUType;
 
     /**
      * @param float $GPUCount 实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GPUId 实例GPU地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GPUType 实例GPU类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

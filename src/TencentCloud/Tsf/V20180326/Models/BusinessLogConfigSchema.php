@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaMultilinePattern(string $SchemaMultilinePattern) 设置解析规则对应的多行匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaCreateTime() 获取解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaCreateTime(string $SchemaCreateTime) 设置解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaPatternLayout() 获取用户填写的解析规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaPatternLayout(string $SchemaPatternLayout) 设置用户填写的解析规则
@@ -70,7 +68,6 @@ class BusinessLogConfigSchema extends AbstractModel
 
     /**
      * @var string 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaCreateTime;
 
@@ -89,7 +86,6 @@ class BusinessLogConfigSchema extends AbstractModel
      * @param string $SchemaMultilinePattern 解析规则对应的多行匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaCreateTime 解析规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaPatternLayout 用户填写的解析规则
 注意：此字段可能返回 null，表示取不到有效值。
      */

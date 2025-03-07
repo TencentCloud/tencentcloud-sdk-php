@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClientLimit() 获取实例当前单分片连接数限制。
  * @method void setClientLimit(integer $ClientLimit) 设置实例当前单分片连接数限制。
  * @method integer getClientLimitMin() 获取单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientLimitMin(integer $ClientLimitMin) 设置单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientLimitMax() 获取单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientLimitMax(integer $ClientLimitMax) 设置单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,13 +52,11 @@ class DescribeConnectionConfigResponse extends AbstractModel
 
     /**
      * @var integer 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMin;
 
     /**
      * @var integer 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMax;
 
@@ -76,9 +70,7 @@ class DescribeConnectionConfigResponse extends AbstractModel
      * @param integer $OutNetLimit 单分片出流量带宽限制，单位：MB。
      * @param integer $ClientLimit 实例当前单分片连接数限制。
      * @param integer $ClientLimitMin 单分片连接数限制最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientLimitMax 单分片连接数限制最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

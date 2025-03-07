@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValue() 获取值
  * @method void setValue(string $Value) 设置值
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MemberMap extends AbstractModel
 {
@@ -43,7 +41,6 @@ class MemberMap extends AbstractModel
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -51,7 +48,6 @@ class MemberMap extends AbstractModel
      * @param string $Name 健
      * @param string $Value 值
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

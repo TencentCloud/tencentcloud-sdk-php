@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
 - 0：未被锁定。
 - 1：已被锁定。
  * @method integer getBackupSize() 获取内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSize(integer $BackupSize) 设置内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFullBackup() 获取内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullBackup(integer $FullBackup) 设置内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceType() 获取内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method string getInstanceName() 获取实例名称。
@@ -118,19 +112,16 @@ class RedisBackupSet extends AbstractModel
 
     /**
      * @var integer 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSize;
 
     /**
      * @var integer 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullBackup;
 
     /**
      * @var integer 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
@@ -181,11 +172,8 @@ class RedisBackupSet extends AbstractModel
 - 0：未被锁定。
 - 1：已被锁定。
      * @param integer $BackupSize 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FullBackup 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType 内部字段，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例 ID。
      * @param string $InstanceName 实例名称。
      * @param string $Region 本地备份所在地域。

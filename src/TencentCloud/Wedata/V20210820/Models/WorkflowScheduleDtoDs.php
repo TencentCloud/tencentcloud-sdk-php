@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalendarId(string $CalendarId) 设置日历调度id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleTimeZone() 获取时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowScheduleDtoDs extends AbstractModel
 {
@@ -264,6 +268,12 @@ class WorkflowScheduleDtoDs extends AbstractModel
     public $CalendarId;
 
     /**
+     * @var string 时区配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowId 工作流ID
@@ -311,6 +321,8 @@ class WorkflowScheduleDtoDs extends AbstractModel
      * @param string $CalendarName 日历调度名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CalendarId 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone 时区配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -420,6 +432,10 @@ class WorkflowScheduleDtoDs extends AbstractModel
 
         if (array_key_exists("CalendarId",$param) and $param["CalendarId"] !== null) {
             $this->CalendarId = $param["CalendarId"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

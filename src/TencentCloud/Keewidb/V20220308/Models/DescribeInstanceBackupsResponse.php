@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取备份文件总数。
  * @method void setTotalCount(integer $TotalCount) 设置备份文件总数。
  * @method array getBackupSet() 获取废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSet(array $BackupSet) 设置废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupRecord() 获取实例备份信息列表。
  * @method void setBackupRecord(array $BackupRecord) 设置实例备份信息列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +38,6 @@ class DescribeInstanceBackupsResponse extends AbstractModel
 
     /**
      * @var array 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSet;
 
@@ -57,7 +54,6 @@ class DescribeInstanceBackupsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 备份文件总数。
      * @param array $BackupSet 废弃字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupRecord 实例备份信息列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

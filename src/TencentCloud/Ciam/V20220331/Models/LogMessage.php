@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLogId() 获取日志标识
  * @method void setLogId(string $LogId) 设置日志标识
  * @method string getTenantId() 获取租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenantId(string $TenantId) 设置租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserStoreId() 获取用户池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserStoreId(string $UserStoreId) 设置用户池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventCode() 获取事件编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventCode(string $EventCode) 设置事件编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventDate() 获取事件发生时间戳，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventDate(integer $EventDate) 设置事件发生时间戳，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
@@ -46,48 +38,28 @@ use TencentCloud\Common\AbstractModel;
 
 <li> **TENANT** </li>  租户
 <li> **USER** </li>  用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParticipant(string $Participant) 设置事件参与者
 
 <li> **TENANT** </li>  租户
 <li> **USER** </li>  用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationClientId() 获取应用clientId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationClientId(string $ApplicationClientId) 设置应用clientId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthSourceId() 获取认证源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthSourceId(string $AuthSourceId) 设置认证源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthSourceName() 获取认证源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthSourceName(string $AuthSourceName) 设置认证源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthSourceType() 获取认证源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthSourceType(string $AuthSourceType) 设置认证源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthSourceCategory() 获取认证源类别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthSourceCategory(string $AuthSourceCategory) 设置认证源类别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取IP地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置IP地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAgent() 获取用户代理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAgent(string $UserAgent) 设置用户代理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置详情
@@ -106,25 +78,21 @@ class LogMessage extends AbstractModel
 
     /**
      * @var string 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
      * @var string 用户池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserStoreId;
 
     /**
      * @var string 事件编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCode;
 
     /**
      * @var integer 事件发生时间戳，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventDate;
 
@@ -139,61 +107,51 @@ class LogMessage extends AbstractModel
 
 <li> **TENANT** </li>  租户
 <li> **USER** </li>  用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Participant;
 
     /**
      * @var string 应用clientId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationClientId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 认证源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthSourceId;
 
     /**
      * @var string 认证源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthSourceName;
 
     /**
      * @var string 认证源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthSourceType;
 
     /**
      * @var string 认证源类别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthSourceCategory;
 
     /**
      * @var string IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var string 用户代理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAgent;
 
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
@@ -212,38 +170,24 @@ class LogMessage extends AbstractModel
     /**
      * @param string $LogId 日志标识
      * @param string $TenantId 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserStoreId 用户池ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventCode 事件编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventDate 事件发生时间戳，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Participant 事件参与者
 
 <li> **TENANT** </li>  租户
 <li> **USER** </li>  用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationClientId 应用clientId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthSourceId 认证源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthSourceName 认证源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthSourceType 认证源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthSourceCategory 认证源类别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAgent 用户代理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionResult 日志结果

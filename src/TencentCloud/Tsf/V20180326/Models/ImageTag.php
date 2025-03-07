@@ -41,17 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDockerVersion() 获取Docker客户端版本
  * @method void setDockerVersion(string $DockerVersion) 设置Docker客户端版本
  * @method string getOs() 获取操作系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOs(string $Os) 设置操作系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPushTime() 获取push时间
  * @method void setPushTime(string $PushTime) 设置push时间
  * @method integer getSizeByte() 获取单位为字节
  * @method void setSizeByte(integer $SizeByte) 设置单位为字节
  * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageTag extends AbstractModel
 {
@@ -107,7 +103,6 @@ class ImageTag extends AbstractModel
 
     /**
      * @var string 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Os;
 
@@ -123,7 +118,6 @@ class ImageTag extends AbstractModel
 
     /**
      * @var TcrRepoInfo TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TcrRepoInfo;
 
@@ -139,11 +133,9 @@ class ImageTag extends AbstractModel
      * @param string $Architecture CPU架构
      * @param string $DockerVersion Docker客户端版本
      * @param string $Os 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PushTime push时间
      * @param integer $SizeByte 单位为字节
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

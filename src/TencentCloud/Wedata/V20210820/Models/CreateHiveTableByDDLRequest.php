@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmartOptimizerWritten(string $SmartOptimizerWritten) 设置是否开启数据优化
  * @method string getTableName() 获取数据优化表名
  * @method void setTableName(string $TableName) 设置数据优化表名
+ * @method string getResourceGroupName() 获取数据优化资源组
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置数据优化资源组
  */
 class CreateHiveTableByDDLRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $TableName;
 
     /**
+     * @var string 数据优化资源组
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
      * @param string $DDLSql 建hive表ddl的base64编码
@@ -120,6 +127,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
      * @param string $DataOptimizationResource 数据优化使用的资源
      * @param string $SmartOptimizerWritten 是否开启数据优化
      * @param string $TableName 数据优化表名
+     * @param string $ResourceGroupName 数据优化资源组
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class CreateHiveTableByDDLRequest extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

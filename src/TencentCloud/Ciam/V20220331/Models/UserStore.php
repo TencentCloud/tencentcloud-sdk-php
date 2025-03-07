@@ -39,17 +39,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAppNum() 获取应用数量
  * @method void setAppNum(integer $AppNum) 设置应用数量
  * @method boolean getLastStatus() 获取上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastStatus(boolean $LastStatus) 设置上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDefaultStatus() 获取默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultStatus(boolean $DefaultStatus) 设置默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateDate() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(integer $CreateDate) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastStatusTime() 获取上次切换时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastStatusTime(integer $LastStatusTime) 设置上次切换时间
@@ -100,19 +94,16 @@ class UserStore extends AbstractModel
 
     /**
      * @var boolean 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastStatus;
 
     /**
      * @var boolean 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultStatus;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateDate;
 
@@ -139,11 +130,8 @@ class UserStore extends AbstractModel
      * @param string $UserStoreId 用户池ID
      * @param integer $AppNum 应用数量
      * @param boolean $LastStatus 上次切换的用户池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DefaultStatus 默认用户池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastStatusTime 上次切换时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserStoreProtocolHost 用户目录域名

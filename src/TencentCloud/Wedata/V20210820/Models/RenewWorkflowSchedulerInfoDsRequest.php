@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCalendarId(string $CalendarId) 设置日历id
  * @method string getScheduleTimeZone() 获取时区
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+ * @method boolean getClearLink() 获取是否自动清理不支持的任务链接
+ * @method void setClearLink(boolean $ClearLink) 设置是否自动清理不支持的任务链接
  */
 class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 {
@@ -167,6 +169,11 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var boolean 是否自动清理不支持的任务链接
+     */
+    public $ClearLink;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
      * @param integer $DelayTime 延迟时间
@@ -188,6 +195,7 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
      * @param string $CalendarName 日历名称
      * @param string $CalendarId 日历id
      * @param string $ScheduleTimeZone 时区
+     * @param boolean $ClearLink 是否自动清理不支持的任务链接
      */
     function __construct()
     {
@@ -280,6 +288,10 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("ClearLink",$param) and $param["ClearLink"] !== null) {
+            $this->ClearLink = $param["ClearLink"];
         }
     }
 }

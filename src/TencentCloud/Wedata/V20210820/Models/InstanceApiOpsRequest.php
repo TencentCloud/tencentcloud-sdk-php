@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutorGroupIdList(array $ExecutorGroupIdList) 设置资源组id,多个资源组id用英文逗号分隔
  * @method boolean getOnlyRerun() 获取true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
  * @method void setOnlyRerun(boolean $OnlyRerun) 设置true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+ * @method string getScheduleTimeZone() 获取时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
  */
 class InstanceApiOpsRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class InstanceApiOpsRequest extends AbstractModel
     public $OnlyRerun;
 
     /**
+     * @var string 时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param InstanceOpsDto $Instance 单个查询条件
      * @param string $SortCol 排序字段，目前包含：重试次数，实例数据时间，运行耗时
      * @param array $TaskIdList 任务id列表
@@ -280,6 +287,7 @@ class InstanceApiOpsRequest extends AbstractModel
      * @param string $DataTimeCycle 根据当前数据时间或者是下一个数据时间查询, 默认当前数据时间
      * @param array $ExecutorGroupIdList 资源组id,多个资源组id用英文逗号分隔
      * @param boolean $OnlyRerun true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+     * @param string $ScheduleTimeZone 时区
      */
     function __construct()
     {
@@ -426,6 +434,10 @@ class InstanceApiOpsRequest extends AbstractModel
 
         if (array_key_exists("OnlyRerun",$param) and $param["OnlyRerun"] !== null) {
             $this->OnlyRerun = $param["OnlyRerun"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

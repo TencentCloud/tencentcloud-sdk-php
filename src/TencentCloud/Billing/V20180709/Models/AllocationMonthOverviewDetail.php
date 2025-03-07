@@ -53,19 +53,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRatio() 获取占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
  * @method void setRatio(string $Ratio) 设置占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
  * @method string getTrend() 获取环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrend(string $Trend) 设置环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrendType() 获取环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrendType(string $TrendType) 设置环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationMonthOverviewDetail extends AbstractModel
 {
@@ -151,7 +147,6 @@ class AllocationMonthOverviewDetail extends AbstractModel
 
     /**
      * @var string 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trend;
 
@@ -160,7 +155,6 @@ class AllocationMonthOverviewDetail extends AbstractModel
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrendType;
 
@@ -182,12 +176,10 @@ none - 平稳
      * @param string $RealTotalCost 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
      * @param string $Ratio 占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
      * @param string $Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 打散调度规则
  *
  * @method string getScatterDimension() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScatterDimension(string $ScatterDimension) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxUnbalanceQuantity() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxUnbalanceQuantity(integer $MaxUnbalanceQuantity) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsForceSchedule() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsForceSchedule(boolean $IsForceSchedule) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AvailableZoneScatterScheduleRule extends AbstractModel
 {
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScatterDimension;
 
     /**
      * @var integer -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxUnbalanceQuantity;
 
     /**
      * @var boolean -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsForceSchedule;
 
     /**
      * @param string $ScatterDimension -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxUnbalanceQuantity -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

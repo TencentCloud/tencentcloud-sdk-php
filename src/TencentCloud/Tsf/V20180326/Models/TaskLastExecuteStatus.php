@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 任务最近一次执行状态
  *
  * @method string getBatchId() 获取批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取运行状态，RUNNING/SUCCESS/FAIL/HALF/TERMINATED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置运行状态，RUNNING/SUCCESS/FAIL/HALF/TERMINATED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchLogId() 获取批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchLogId(string $BatchLogId) 设置批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLastExecuteStatus extends AbstractModel
 {
     /**
      * @var string 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchId;
 
     /**
      * @var string 运行状态，RUNNING/SUCCESS/FAIL/HALF/TERMINATED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchLogId;
 
     /**
      * @param string $BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 运行状态，RUNNING/SUCCESS/FAIL/HALF/TERMINATED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchLogId 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

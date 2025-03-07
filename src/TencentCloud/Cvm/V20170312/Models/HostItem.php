@@ -45,13 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method HostResource getHostResource() 获取专用宿主机实例资源信息
  * @method void setHostResource(HostResource $HostResource) 设置专用宿主机实例资源信息
  * @method string getCageId() 获取专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCageId(string $CageId) 设置专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取专用宿主机关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置专用宿主机关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostItem extends AbstractModel
 {
@@ -117,13 +113,11 @@ class HostItem extends AbstractModel
 
     /**
      * @var string 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CageId;
 
     /**
      * @var array 专用宿主机关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -141,9 +135,7 @@ class HostItem extends AbstractModel
      * @param string $HostIp 专用宿主机实例IP
      * @param HostResource $HostResource 专用宿主机实例资源信息
      * @param string $CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 专用宿主机关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

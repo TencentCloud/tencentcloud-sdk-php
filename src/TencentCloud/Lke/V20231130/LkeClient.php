@@ -40,6 +40,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
+ * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签
  * @method Models\DeleteDocResponse DeleteDoc(Models\DeleteDocRequest $req) 删除文档
@@ -81,6 +82,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\GetMsgRecordResponse GetMsgRecord(Models\GetMsgRecordRequest $req) 获取聊天历史请求
  * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) 获取任务状态
+ * @method Models\GetVarListResponse GetVarList(Models\GetVarListRequest $req) 查询自定义变量列表
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) 获取ws token
  * @method Models\GroupDocResponse GroupDoc(Models\GroupDocRequest $req) Doc分组
  * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) QA分组

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 按产品汇总产品详情
  *
  * @method string getBusinessCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCodeName() 获取产品名称：用户所采购的各类云产品，例如：云服务器 CVM
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：用户所采购的各类云产品，例如：云服务器 CVM
  * @method string getRealTotalCostRatio() 获取费用所占百分比，两位小数
@@ -47,7 +45,6 @@ class BusinessSummaryOverviewItem extends AbstractModel
 {
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
@@ -98,7 +95,6 @@ class BusinessSummaryOverviewItem extends AbstractModel
 
     /**
      * @param string $BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
      * @param string $RealTotalCost 优惠后总价

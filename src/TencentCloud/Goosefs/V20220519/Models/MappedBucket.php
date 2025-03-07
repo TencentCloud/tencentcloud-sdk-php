@@ -32,7 +32,6 @@ use TencentCloud\Common\AbstractModel;
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataRepositoryTaskAutoStrategy(array $DataRepositoryTaskAutoStrategy) 设置数据流动的自动策略, 包含加载与沉降。策略可以是多种的组合
 按需加载(OnDemandImport)
 自动加载元数据(AutoImportMeta)
@@ -41,7 +40,6 @@ use TencentCloud\Common\AbstractModel;
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleId() 获取绑定bucket的数据流动策略ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置绑定bucket的数据流动策略ID
@@ -86,7 +84,6 @@ class MappedBucket extends AbstractModel
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataRepositoryTaskAutoStrategy;
 
@@ -136,7 +133,6 @@ class MappedBucket extends AbstractModel
 
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleId 绑定bucket的数据流动策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleDescription 规则备注与描述

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 健康检查配置
  *
  * @method string getPath() 获取健康检查路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置健康检查路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheckConfig extends AbstractModel
 {
     /**
      * @var string 健康检查路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @param string $Path 健康检查路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

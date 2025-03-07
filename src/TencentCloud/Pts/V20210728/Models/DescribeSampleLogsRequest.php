@@ -26,20 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScenarioId(string $ScenarioId) 设置测试场景ID
  * @method string getJobId() 获取测试任务ID
  * @method void setJobId(string $JobId) 设置测试任务ID
- * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
- * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+ * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
+ * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
  * @method string getFrom() 获取日志开始时间
  * @method void setFrom(string $From) 设置日志开始时间
  * @method string getTo() 获取日志结束时间
  * @method void setTo(string $To) 设置日志结束时间
  * @method string getSeverityText() 获取日志级别debug,info,error
  * @method void setSeverityText(string $SeverityText) 设置日志级别debug,info,error
- * @method string getInstanceRegion() 获取ap-shanghai, ap-guangzhou
- * @method void setInstanceRegion(string $InstanceRegion) 设置ap-shanghai, ap-guangzhou
+ * @method string getInstanceRegion() 获取地域
+ * @method void setInstanceRegion(string $InstanceRegion) 设置地域
  * @method string getInstance() 获取施压引擎节点IP
  * @method void setInstance(string $Instance) 设置施压引擎节点IP
- * @method string getLogType() 获取request 代表采样日志,可为不填
- * @method void setLogType(string $LogType) 设置request 代表采样日志,可为不填
+ * @method string getLogType() 获取request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
+ * @method void setLogType(string $LogType) 设置request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
+ * @method integer getOffset() 获取日志偏移量，不与Context 参数同时使用
+ * @method void setOffset(integer $Offset) 设置日志偏移量，不与Context 参数同时使用
  * @method integer getLimit() 获取返回日志条数，最大100
  * @method void setLimit(integer $Limit) 设置返回日志条数，最大100
  * @method ReactionTimeRange getReactionTimeRange() 获取采样日志响应时间范围
@@ -71,7 +73,7 @@ class DescribeSampleLogsRequest extends AbstractModel
     public $JobId;
 
     /**
-     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
      */
     public $Context;
 
@@ -91,7 +93,7 @@ class DescribeSampleLogsRequest extends AbstractModel
     public $SeverityText;
 
     /**
-     * @var string ap-shanghai, ap-guangzhou
+     * @var string 地域
      */
     public $InstanceRegion;
 
@@ -101,9 +103,14 @@ class DescribeSampleLogsRequest extends AbstractModel
     public $Instance;
 
     /**
-     * @var string request 代表采样日志,可为不填
+     * @var string request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
      */
     public $LogType;
+
+    /**
+     * @var integer 日志偏移量，不与Context 参数同时使用
+     */
+    public $Offset;
 
     /**
      * @var integer 返回日志条数，最大100
@@ -139,13 +146,14 @@ class DescribeSampleLogsRequest extends AbstractModel
      * @param string $ProjectId 测试项目ID
      * @param string $ScenarioId 测试场景ID
      * @param string $JobId 测试任务ID
-     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时，不与 Offset  参数同时使用
      * @param string $From 日志开始时间
      * @param string $To 日志结束时间
      * @param string $SeverityText 日志级别debug,info,error
-     * @param string $InstanceRegion ap-shanghai, ap-guangzhou
+     * @param string $InstanceRegion 地域
      * @param string $Instance 施压引擎节点IP
-     * @param string $LogType request 代表采样日志,可为不填
+     * @param string $LogType request 代表采样日志,engine 代表引擎日志，console 代表用户打印日志
+     * @param integer $Offset 日志偏移量，不与Context 参数同时使用
      * @param integer $Limit 返回日志条数，最大100
      * @param ReactionTimeRange $ReactionTimeRange 采样日志响应时间范围
      * @param string $Status 采样请求状态码
@@ -204,6 +212,10 @@ class DescribeSampleLogsRequest extends AbstractModel
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVolumeConfig() 获取数据卷配置
  * @method void setVolumeConfig(string $VolumeConfig) 设置数据卷配置
  * @method array getConfigMapOptions() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigMapOptions(array $ConfigMapOptions) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EmptyDirOption getEmptyDirOption() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmptyDirOption(EmptyDirOption $EmptyDirOption) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VolumeInfo extends AbstractModel
 {
@@ -54,13 +50,11 @@ class VolumeInfo extends AbstractModel
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigMapOptions;
 
     /**
      * @var EmptyDirOption -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmptyDirOption;
 
@@ -69,9 +63,7 @@ class VolumeInfo extends AbstractModel
      * @param string $VolumeName 数据卷名称
      * @param string $VolumeConfig 数据卷配置
      * @param array $ConfigMapOptions -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyDirOption $EmptyDirOption -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

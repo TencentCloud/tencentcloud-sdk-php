@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * opa策略信息
  *
  * @method string getPolicyCategory() 获取策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyCategory(string $PolicyCategory) 设置策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyName() 获取策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyDesc() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDesc(string $PolicyDesc) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnforcementAction() 获取策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnforcementAction(string $EnforcementAction) 设置策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventNums() 获取关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventNums(integer $EventNums) 设置关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKind() 获取策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKind(string $Kind) 设置策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnabledStatus() 获取策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabledStatus(string $EnabledStatus) 设置策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConstraintYamlExample() 获取策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstraintYamlExample(string $ConstraintYamlExample) 设置策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOpenConstraintInfoList() 获取策略关联的实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenConstraintInfoList(array $OpenConstraintInfoList) 设置策略关联的实例列表
@@ -65,55 +47,46 @@ class OpenPolicyInfo extends AbstractModel
 {
     /**
      * @var string 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyCategory;
 
     /**
      * @var string 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDesc;
 
     /**
      * @var string 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnforcementAction;
 
     /**
      * @var integer 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventNums;
 
     /**
      * @var string 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
 
     /**
      * @var string 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnabledStatus;
 
     /**
      * @var string 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConstraintYamlExample;
 
@@ -125,23 +98,14 @@ class OpenPolicyInfo extends AbstractModel
 
     /**
      * @param string $PolicyCategory 策略分类：cluster集群策略、node节点策略、namespace命名空间策略、configuration配置相关策略、compute计算资源策略、storage存储资源策略、network网络资源策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 策略中文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnforcementAction 策略运行模式：dryrun空跑不生效，deny拦截生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventNums 关联的事件数量(最近7d)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 策略英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Kind 策略模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnabledStatus 策略开关状态：open打开，close关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConstraintYamlExample 策略的实例的yaml示例base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OpenConstraintInfoList 策略关联的实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 部署组实例列表
  *
  * @method integer getTotalCount() 获取总记录数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupPodResult extends AbstractModel
 {
     /**
      * @var integer 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

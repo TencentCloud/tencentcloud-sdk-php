@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 分账账单按产品汇总明细
  *
  * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTreeNodeUniqKeyName() 获取分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKeyName(string $TreeNodeUniqKeyName) 设置分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillDate() 获取日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDate(string $BillDate) 设置日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatherCashPayAmount() 获取归集费用(现金)：基于归集规则直接归集到分账单元的现金
  * @method void setGatherCashPayAmount(string $GatherCashPayAmount) 设置归集费用(现金)：基于归集规则直接归集到分账单元的现金
  * @method string getGatherVoucherPayAmount() 获取归集费用(优惠券)：基于归集规则直接归集到分账单元的资源优惠券
@@ -65,27 +59,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRatio() 获取占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
  * @method void setRatio(string $Ratio) 设置占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
  * @method string getTrend() 获取环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrend(string $Trend) 设置环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrendType() 获取环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrendType(string $TrendType) 设置环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCodeName() 获取产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCost() 获取组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
  * @method void setTotalCost(string $TotalCost) 设置组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
  * @method string getRICost() 获取预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
@@ -109,19 +95,16 @@ class AllocationSummaryByBusiness extends AbstractModel
 {
     /**
      * @var string 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKey;
 
     /**
      * @var string 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKeyName;
 
     /**
      * @var string 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDate;
 
@@ -207,7 +190,6 @@ class AllocationSummaryByBusiness extends AbstractModel
 
     /**
      * @var string 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trend;
 
@@ -216,19 +198,16 @@ class AllocationSummaryByBusiness extends AbstractModel
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrendType;
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
      * @var string 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCodeName;
 
@@ -275,11 +254,8 @@ none - 平稳
 
     /**
      * @param string $TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillDate 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatherCashPayAmount 归集费用(现金)：基于归集规则直接归集到分账单元的现金
      * @param string $GatherVoucherPayAmount 归集费用(优惠券)：基于归集规则直接归集到分账单元的资源优惠券
      * @param string $GatherIncentivePayAmount 归集费用(赠送金)：基于归集规则直接归集到分账单元的资源赠送金
@@ -297,16 +273,12 @@ none - 平稳
      * @param string $RealTotalCost 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
      * @param string $Ratio 占比(折后总额)：本分账单元合计费用(折后总额)/合计费用(折后总额)*100%
      * @param string $Trend 环比(折后总额)：[本月分账单元合计费用(折后总额) - 上月分账单元合计费用(折后总额)] / 上月分账单元合计费用(折后总额) * 100%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrendType 环比箭头
 upward -上升
 downward - 下降
 none - 平稳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如客户享受一口价/合同价则默认不展示，退费类场景也默认不展示），指定价模式
      * @param string $RICost 预留实例抵扣原价：本产品或服务使用预留实例抵扣的组件原价金额
      * @param string $SPCost 节省计划抵扣原价：节省计划抵扣原价 = 节省计划包抵扣面值 / 节省计划抵扣率

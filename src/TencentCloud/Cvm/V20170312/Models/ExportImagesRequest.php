@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBucketName() 获取COS存储桶名称
  * @method void setBucketName(string $BucketName) 设置COS存储桶名称
- * @method array getImageIds() 获取镜像ID列表
- * @method void setImageIds(array $ImageIds) 设置镜像ID列表
+ * @method array getImageIds() 获取镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+ * @method void setImageIds(array $ImageIds) 设置镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
  * @method string getExportFormat() 获取镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
  * @method void setExportFormat(string $ExportFormat) 设置镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
  * @method array getFileNamePrefixList() 获取导出文件的名称前缀列表
@@ -43,7 +43,7 @@ class ExportImagesRequest extends AbstractModel
     public $BucketName;
 
     /**
-     * @var array 镜像ID列表
+     * @var array 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
      */
     public $ImageIds;
 
@@ -74,7 +74,7 @@ class ExportImagesRequest extends AbstractModel
 
     /**
      * @param string $BucketName COS存储桶名称
-     * @param array $ImageIds 镜像ID列表
+     * @param array $ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
      * @param string $ExportFormat 镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
      * @param array $FileNamePrefixList 导出文件的名称前缀列表
      * @param boolean $OnlyExportRootDisk 是否只导出系统盘

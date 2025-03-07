@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Tsf命名空间分页对象
  *
  * @method integer getTotalCount() 获取命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageNamespace extends AbstractModel
 {
     /**
      * @var integer 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

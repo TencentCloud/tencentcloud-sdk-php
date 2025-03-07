@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 删除用户组信息时返回的详情
  *
  * @method string getErrorMessage() 获取错误详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAppAssociatedUserGroupIds() 获取用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppAssociatedUserGroupIds(array $AppAssociatedUserGroupIds) 设置用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserGroupDeleteResp extends AbstractModel
 {
     /**
      * @var string 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @var array 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppAssociatedUserGroupIds;
 
     /**
      * @param string $ErrorMessage 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AppAssociatedUserGroupIds 用户组关联的应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

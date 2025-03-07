@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 命名空间
  *
  * @method string getNamespaceId() 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceCode() 获取命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceCode(string $NamespaceCode) 设置命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceName() 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceDesc() 获取命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceDesc(string $NamespaceDesc) 设置命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsDefault() 获取默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(string $IsDefault) 设置默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceStatus() 获取命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceStatus(string $NamespaceStatus) 设置命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteFlag() 获取删除标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterList() 获取集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterList(array $ClusterList) 设置集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceResourceType() 获取集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceType() 获取命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceType(string $NamespaceType) 设置命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsHaEnable() 获取是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getKubeInjectEnable() 获取KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceInfo extends AbstractModel
 {
     /**
      * @var string 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceId;
 
     /**
      * @var string 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceCode;
 
     /**
      * @var string 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
 
     /**
      * @var string 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceDesc;
 
     /**
      * @var string 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @var string 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceStatus;
 
     /**
      * @var boolean 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteFlag;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var array 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterList;
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceResourceType;
 
     /**
      * @var string 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceType;
 
     /**
      * @var string 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsHaEnable;
 
     /**
      * @var boolean KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeInjectEnable;
 
     /**
      * @param string $NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceCode 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceDesc 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsDefault 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceStatus 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceResourceType 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceType 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsHaEnable 是否开启高可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KubeInjectEnable KubeInjectEnable值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,97 +21,67 @@ use TencentCloud\Common\AbstractModel;
  * 实例事件信息
  *
  * @method integer getID() 获取事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGrade() 获取事件等级根据其影响严重程度和紧急程度进行分级，由重至轻依次为关键、重要、中等、一般。
 - Critical：关键
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrade(string $Grade) 设置事件等级根据其影响严重程度和紧急程度进行分级，由重至轻依次为关键、重要、中等、一般。
 - Critical：关键
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionDate() 获取事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionDate(string $ExecutionDate) 设置事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestExecutionDate() 获取运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestExecutionDate(string $LatestExecutionDate) 设置运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskEndTime() 获取事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskEndTime(string $TaskEndTime) 设置事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEffectInfo() 获取事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectInfo(string $EffectInfo) 设置事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInitialExecutionDate() 获取事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitialExecutionDate(string $InitialExecutionDate) 设置事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RedisInstanceEvent extends AbstractModel
 {
     /**
      * @var integer 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -121,31 +91,26 @@ class RedisInstanceEvent extends AbstractModel
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Grade;
 
     /**
      * @var string 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionDate;
 
     /**
      * @var string 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestExecutionDate;
 
@@ -155,63 +120,46 @@ class RedisInstanceEvent extends AbstractModel
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskEndTime;
 
     /**
      * @var string 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectInfo;
 
     /**
      * @var string 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialExecutionDate;
 
     /**
      * @param integer $ID 事件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 事件类型，当前仅支持配置实例迁移、资源腾挪、机房裁撤相关的运维操作。该参数仅支持配置为 **InstanceMigration**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Grade 事件等级根据其影响严重程度和紧急程度进行分级，由重至轻依次为关键、重要、中等、一般。
 - Critical：关键
 - High：重要
 - Middle：中等
 - Low：一般
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionDate 事件计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 事件计划执行开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 事件计划执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestExecutionDate 运维事件最迟执行的日期，即该事件必须在该日期之前完成，否则可能会对业务产生影响。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 事件当前状态。
 - Waiting：未到达执行日期或不在维护时间窗内的事件。
 - Running：在维护时间窗内，正在执行维护的事件。
 - Finished：已全部完成维护的事件。
 - Canceled：已取消执行的事件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskEndTime 事件执行任务完成时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EffectInfo 事件影响信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InitialExecutionDate 事件最初计划执行日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

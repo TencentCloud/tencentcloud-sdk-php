@@ -37,17 +37,11 @@ use TencentCloud\Common\AbstractModel;
 - 0：不需要重启。
 - 1：需要重启。
  * @method string getMax() 获取参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(string $Max) 设置参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMin() 获取参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMin(string $Min) 设置参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEnumValue() 获取参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnumValue(array $EnumValue) 设置参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParameterDetail extends AbstractModel
 {
@@ -85,19 +79,16 @@ class ParameterDetail extends AbstractModel
 
     /**
      * @var string 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
      * @var string 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
      * @var array 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnumValue;
 
@@ -111,11 +102,8 @@ class ParameterDetail extends AbstractModel
 - 0：不需要重启。
 - 1：需要重启。
      * @param string $Max 参数允许的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Min 参数允许的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

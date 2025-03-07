@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 分账账单趋势图
  *
  * @method AllocationAverageData getAverage() 获取费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAverage(AllocationAverageData $Average) 设置费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationStat extends AbstractModel
 {
     /**
      * @var AllocationAverageData 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Average;
 
     /**
      * @param AllocationAverageData $Average 费用平均信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

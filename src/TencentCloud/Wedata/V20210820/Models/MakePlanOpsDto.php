@@ -142,6 +142,10 @@ REVERSE： 实例数据时间逆序
 NORMAL： 正常
 ORDER ： 按照实例时间顺序执行
 REVERSE： 实例数据时间逆序
+ * @method string getScheduleTimeZone() 获取补录时间范围的时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置补录时间范围的时区
+ * @method string getAppParam() 获取执行应用参数
+ * @method void setAppParam(string $AppParam) 设置执行应用参数
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -319,6 +323,16 @@ REVERSE： 实例数据时间逆序
     public $MakeDataTimeOrder;
 
     /**
+     * @var string 补录时间范围的时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
+     * @var string 执行应用参数
+     */
+    public $AppParam;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -380,6 +394,8 @@ REVERSE： 实例数据时间逆序
 NORMAL： 正常
 ORDER ： 按照实例时间顺序执行
 REVERSE： 实例数据时间逆序
+     * @param string $ScheduleTimeZone 补录时间范围的时区
+     * @param string $AppParam 执行应用参数
      */
     function __construct()
     {
@@ -514,6 +530,14 @@ REVERSE： 实例数据时间逆序
 
         if (array_key_exists("MakeDataTimeOrder",$param) and $param["MakeDataTimeOrder"] !== null) {
             $this->MakeDataTimeOrder = $param["MakeDataTimeOrder"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("AppParam",$param) and $param["AppParam"] !== null) {
+            $this->AppParam = $param["AppParam"];
         }
     }
 }

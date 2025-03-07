@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFix(string $Fix) 设置修复建议
  * @method string getPayload() 获取证明
  * @method void setPayload(string $Payload) 设置证明
+ * @method integer getPort() 获取端口
+ * @method void setPort(integer $Port) 设置端口
  */
 class AssetViewWeakPassRisk extends AbstractModel
 {
@@ -171,6 +173,11 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $Payload;
 
     /**
+     * @var integer 端口
+     */
+    public $Port;
+
+    /**
      * @param string $AffectAsset 影响资产
      * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $InstanceType 资产类型
@@ -192,6 +199,7 @@ class AssetViewWeakPassRisk extends AbstractModel
      * @param string $VULURL 漏洞url
      * @param string $Fix 修复建议
      * @param string $Payload 证明
+     * @param integer $Port 端口
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class AssetViewWeakPassRisk extends AbstractModel
 
         if (array_key_exists("Payload",$param) and $param["Payload"] !== null) {
             $this->Payload = $param["Payload"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

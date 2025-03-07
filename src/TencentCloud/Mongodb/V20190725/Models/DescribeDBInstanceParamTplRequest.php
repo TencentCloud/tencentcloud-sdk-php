@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTplIds(array $TplIds) 设置参数模板 ID 查询条件。
  * @method array getTplNames() 获取模板名称，查询条件。
  * @method void setTplNames(array $TplNames) 设置模板名称，查询条件。
- * @method array getMongoVersion() 获取根据版本号插叙参数模板，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
- * @method void setMongoVersion(array $MongoVersion) 设置根据版本号插叙参数模板，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+ * @method array getMongoVersion() 获取根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+ * @method void setMongoVersion(array $MongoVersion) 设置根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
  * @method string getTplType() 获取根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
  * @method void setTplType(string $TplType) 设置根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
  */
@@ -42,7 +48,10 @@ class DescribeDBInstanceParamTplRequest extends AbstractModel
     public $TplNames;
 
     /**
-     * @var array 根据版本号插叙参数模板，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+     * @var array 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
@@ -54,7 +63,10 @@ class DescribeDBInstanceParamTplRequest extends AbstractModel
     /**
      * @param array $TplIds 参数模板 ID 查询条件。
      * @param array $TplNames 模板名称，查询条件。
-     * @param array $MongoVersion 根据版本号插叙参数模板，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+     * @param array $MongoVersion 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
      * @param string $TplType 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
      */
     function __construct()

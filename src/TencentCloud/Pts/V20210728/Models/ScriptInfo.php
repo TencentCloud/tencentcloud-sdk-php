@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadWeight(integer $LoadWeight) 设置脚本权重，范围 1-100
  * @method string getFileId() 获取文件 ID
  * @method void setFileId(string $FileId) 设置文件 ID
+ * @method boolean getUploaded() 获取文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+ * @method void setUploaded(boolean $Uploaded) 设置文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
  */
 class ScriptInfo extends AbstractModel
 {
@@ -83,6 +87,12 @@ class ScriptInfo extends AbstractModel
     public $FileId;
 
     /**
+     * @var boolean 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+     */
+    public $Uploaded;
+
+    /**
      * @param string $Name 文件名
      * @param integer $Size 文件大小
      * @param string $Type 文件类型
@@ -92,6 +102,8 @@ class ScriptInfo extends AbstractModel
      * @param string $EncodedHttpArchive base64编码后的har结构体
      * @param integer $LoadWeight 脚本权重，范围 1-100
      * @param string $FileId 文件 ID
+     * @param boolean $Uploaded 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
      */
     function __construct()
     {
@@ -136,6 +148,10 @@ class ScriptInfo extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Uploaded",$param) and $param["Uploaded"] !== null) {
+            $this->Uploaded = $param["Uploaded"];
         }
     }
 }

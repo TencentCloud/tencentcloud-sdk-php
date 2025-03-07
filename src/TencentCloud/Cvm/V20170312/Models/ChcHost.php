@@ -45,109 +45,61 @@ use TencentCloud\Common\AbstractModel;
 <li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
  * @method string getDeviceType() 获取设备类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置设备类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Placement getPlacement() 获取所属可用区
  * @method void setPlacement(Placement $Placement) 设置所属可用区
  * @method VirtualPrivateCloud getBmcVirtualPrivateCloud() 获取带外网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBmcVirtualPrivateCloud(VirtualPrivateCloud $BmcVirtualPrivateCloud) 设置带外网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBmcIp() 获取带外网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBmcIp(string $BmcIp) 设置带外网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBmcSecurityGroupIds() 获取带外网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBmcSecurityGroupIds(array $BmcSecurityGroupIds) 设置带外网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VirtualPrivateCloud getDeployVirtualPrivateCloud() 获取部署网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) 设置部署网络。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployIp() 获取部署网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployIp(string $DeployIp) 设置部署网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeploySecurityGroupIds() 获取部署网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) 设置部署网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCvmInstanceId() 获取关联的云主机Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvmInstanceId(string $CvmInstanceId) 设置关联的云主机Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取服务器导入的时间。
  * @method void setCreatedTime(string $CreatedTime) 设置服务器导入的时间。
  * @method string getHardwareDescription() 获取机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHardwareDescription(string $HardwareDescription) 设置机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCPU() 获取CHC物理服务器的CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCPU(integer $CPU) 设置CHC物理服务器的CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取CHC物理服务器的内存大小，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(integer $Memory) 设置CHC物理服务器的内存大小，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisk() 获取CHC物理服务器的磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisk(string $Disk) 设置CHC物理服务器的磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBmcMAC() 获取带外网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBmcMAC(string $BmcMAC) 设置带外网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployMAC() 获取部署网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployMAC(string $DeployMAC) 设置部署网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenantType() 获取设备托管类型。
 HOSTING: 托管
 TENANT: 租赁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenantType(string $TenantType) 设置设备托管类型。
 HOSTING: 托管
 TENANT: 租赁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ChcDeployExtraConfig getDeployExtraConfig() 获取chc dhcp选项，用于minios调试。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployExtraConfig(ChcDeployExtraConfig $DeployExtraConfig) 设置chc dhcp选项，用于minios调试。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGpu() 获取GPU型号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpu(string $Gpu) 设置GPU型号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkCard() 获取网卡型号。主要指RDMA网卡。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkCard(string $NetworkCard) 设置网卡型号。主要指RDMA网卡。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPredefinedType() 获取是否是预定义机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPredefinedType(boolean $IsPredefinedType) 设置是否是预定义机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChcInstanceType() 获取CHC云主机机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChcInstanceType(string $ChcInstanceType) 设置CHC云主机机型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChcInstanceFamily() 获取CHC云主机机型簇。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChcInstanceFamily(string $ChcInstanceFamily) 设置CHC云主机机型簇。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChcInstanceFamilyName() 获取CHC云主机机型簇名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChcInstanceFamilyName(string $ChcInstanceFamilyName) 设置CHC云主机机型簇名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResaleAppId() 获取转售客户的AppId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResaleAppId(string $ResaleAppId) 设置转售客户的AppId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResaleAccountId() 获取转售客户的账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResaleAccountId(string $ResaleAccountId) 设置转售客户的账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSaleStatus() 获取售卖状态。<br/>
 <ul>
 <li>NOT_FOR_SALE:不可售卖</li>
@@ -155,7 +107,6 @@ TENANT: 租赁
 <li>SOLD: 已售卖</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSaleStatus(string $SaleStatus) 设置售卖状态。<br/>
 <ul>
 <li>NOT_FOR_SALE:不可售卖</li>
@@ -163,11 +114,8 @@ TENANT: 租赁
 <li>SOLD: 已售卖</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取CHC物理服务器关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置CHC物理服务器关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperation() 获取最近操作
  * @method void setLatestOperation(string $LatestOperation) 设置最近操作
  * @method string getLatestOperationErrorCode() 获取最近操作错误码
@@ -211,7 +159,6 @@ class ChcHost extends AbstractModel
 
     /**
      * @var string 设备类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
@@ -222,43 +169,36 @@ class ChcHost extends AbstractModel
 
     /**
      * @var VirtualPrivateCloud 带外网络。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BmcVirtualPrivateCloud;
 
     /**
      * @var string 带外网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BmcIp;
 
     /**
      * @var array 带外网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BmcSecurityGroupIds;
 
     /**
      * @var VirtualPrivateCloud 部署网络。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployVirtualPrivateCloud;
 
     /**
      * @var string 部署网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployIp;
 
     /**
      * @var array 部署网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeploySecurityGroupIds;
 
     /**
      * @var string 关联的云主机Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvmInstanceId;
 
@@ -269,37 +209,31 @@ class ChcHost extends AbstractModel
 
     /**
      * @var string 机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HardwareDescription;
 
     /**
      * @var integer CHC物理服务器的CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CPU;
 
     /**
      * @var integer CHC物理服务器的内存大小，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var string CHC物理服务器的磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disk;
 
     /**
      * @var string 带外网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BmcMAC;
 
     /**
      * @var string 部署网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployMAC;
 
@@ -307,61 +241,51 @@ class ChcHost extends AbstractModel
      * @var string 设备托管类型。
 HOSTING: 托管
 TENANT: 租赁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantType;
 
     /**
      * @var ChcDeployExtraConfig chc dhcp选项，用于minios调试。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployExtraConfig;
 
     /**
      * @var string GPU型号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gpu;
 
     /**
      * @var string 网卡型号。主要指RDMA网卡。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkCard;
 
     /**
      * @var boolean 是否是预定义机型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPredefinedType;
 
     /**
      * @var string CHC云主机机型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChcInstanceType;
 
     /**
      * @var string CHC云主机机型簇。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChcInstanceFamily;
 
     /**
      * @var string CHC云主机机型簇名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChcInstanceFamilyName;
 
     /**
      * @var string 转售客户的AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResaleAppId;
 
     /**
      * @var string 转售客户的账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResaleAccountId;
 
@@ -373,13 +297,11 @@ TENANT: 租赁
 <li>SOLD: 已售卖</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SaleStatus;
 
     /**
      * @var array CHC物理服务器关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -422,57 +344,33 @@ TENANT: 租赁
 <li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
      * @param string $DeviceType 设备类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Placement $Placement 所属可用区
      * @param VirtualPrivateCloud $BmcVirtualPrivateCloud 带外网络。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BmcIp 带外网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BmcSecurityGroupIds 带外网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualPrivateCloud $DeployVirtualPrivateCloud 部署网络。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployIp 部署网络Ip。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeploySecurityGroupIds 部署网络安全组Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CvmInstanceId 关联的云主机Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 服务器导入的时间。
      * @param string $HardwareDescription 机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CPU CHC物理服务器的CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory CHC物理服务器的内存大小，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Disk CHC物理服务器的磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BmcMAC 带外网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployMAC 部署网络下分配的MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantType 设备托管类型。
 HOSTING: 托管
 TENANT: 租赁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChcDeployExtraConfig $DeployExtraConfig chc dhcp选项，用于minios调试。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Gpu GPU型号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkCard 网卡型号。主要指RDMA网卡。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPredefinedType 是否是预定义机型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChcInstanceType CHC云主机机型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChcInstanceFamily CHC云主机机型簇。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChcInstanceFamilyName CHC云主机机型簇名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResaleAppId 转售客户的AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResaleAccountId 转售客户的账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SaleStatus 售卖状态。<br/>
 <ul>
 <li>NOT_FOR_SALE:不可售卖</li>
@@ -480,9 +378,7 @@ TENANT: 租赁
 <li>SOLD: 已售卖</li>
 </ul>
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags CHC物理服务器关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperation 最近操作
      * @param string $LatestOperationErrorCode 最近操作错误码
      * @param string $LatestOperationErrorMsg 最近操作错误详情和建议项

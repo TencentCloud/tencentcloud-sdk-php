@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 指标
  *
  * @method string getName() 获取指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunction() 获取指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunction(string $Function) 设置指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metric extends AbstractModel
 {
     /**
      * @var string 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Function;
 
     /**
      * @param string $Name 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Function 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

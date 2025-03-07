@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 失败详情
  *
  * @method string getUserId() 获取用户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getError() 获取失败原因
  * @method void setError(string $Error) 设置失败原因
  */
@@ -31,7 +29,6 @@ class ErrorDetails extends AbstractModel
 {
     /**
      * @var string 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
@@ -42,7 +39,6 @@ class ErrorDetails extends AbstractModel
 
     /**
      * @param string $UserId 用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Error 失败原因
      */
     function __construct()

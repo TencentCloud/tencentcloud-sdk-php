@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 指标维度
  *
  * @method string getName() 获取指标维度名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置指标维度名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取指标维度取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置指标维度取值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricDimension extends AbstractModel
 {
     /**
      * @var string 指标维度名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 指标维度取值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 指标维度名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 指标维度取值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

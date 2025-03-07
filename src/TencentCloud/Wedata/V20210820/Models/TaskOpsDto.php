@@ -376,6 +376,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewParentTaskInfos(array $NewParentTaskInfos) 设置父任务simple信息(新)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSelfWorkFlowDependType() 获取任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfWorkFlowDependType(string $SelfWorkFlowDependType) 设置任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -914,6 +922,14 @@ class TaskOpsDto extends AbstractModel
     public $NewParentTaskInfos;
 
     /**
+     * @var string 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfWorkFlowDependType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1091,6 +1107,10 @@ class TaskOpsDto extends AbstractModel
      * @param ExtResourceFlagDto $ExtResourceFlag 资源获取标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewParentTaskInfos 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SelfWorkFlowDependType 任务自依赖类型：
+yes： 任务需满足自依赖
+no：任务无需满足自依赖
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1476,6 +1496,10 @@ class TaskOpsDto extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NewParentTaskInfos, $obj);
             }
+        }
+
+        if (array_key_exists("SelfWorkFlowDependType",$param) and $param["SelfWorkFlowDependType"] !== null) {
+            $this->SelfWorkFlowDependType = $param["SelfWorkFlowDependType"];
         }
     }
 }

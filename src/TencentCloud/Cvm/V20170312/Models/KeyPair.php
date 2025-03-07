@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method array getTags() 获取密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyPair extends AbstractModel
 {
@@ -85,7 +83,6 @@ class KeyPair extends AbstractModel
 
     /**
      * @var array 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -99,7 +96,6 @@ class KeyPair extends AbstractModel
      * @param array $AssociatedInstanceIds 密钥关联的实例`ID`列表。
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param array $Tags 密钥关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

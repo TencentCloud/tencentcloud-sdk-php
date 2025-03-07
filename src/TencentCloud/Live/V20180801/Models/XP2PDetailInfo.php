@@ -37,17 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTime() 获取时间，一分钟粒度，utc格式：yyyy-mm-ddTHH:MM:SSZ，参考https://cloud.tencent.com/document/product/266/11732#I。。
  * @method void setTime(string $Time) 设置时间，一分钟粒度，utc格式：yyyy-mm-ddTHH:MM:SSZ，参考https://cloud.tencent.com/document/product/266/11732#I。。
  * @method string getType() 获取类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStreamName() 获取流ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamName(string $StreamName) 设置流ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取AppId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置AppId。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class XP2PDetailInfo extends AbstractModel
 {
@@ -93,19 +87,16 @@ class XP2PDetailInfo extends AbstractModel
 
     /**
      * @var string 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamName;
 
     /**
      * @var string AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
@@ -119,11 +110,8 @@ class XP2PDetailInfo extends AbstractModel
      * @param integer $RequestSuccess 起播成功次数
      * @param string $Time 时间，一分钟粒度，utc格式：yyyy-mm-ddTHH:MM:SSZ，参考https://cloud.tencent.com/document/product/266/11732#I。。
      * @param string $Type 类型，分live和vod两种。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StreamName 流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId AppId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,37 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 投递kafka配置项
  *
  * @method string getConfigId() 获取配置项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigId(string $ConfigId) 设置配置项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigName() 获取配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigName(string $ConfigName) 设置配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCollectPath() 获取采集路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCollectPath(array $CollectPath) 设置采集路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKafkaVIp() 获取kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaVIp(string $KafkaVIp) 设置kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKafkaVPort() 获取kafka vport
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaVPort(string $KafkaVPort) 设置kafka vport
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLineRule() 获取换行规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineRule(string $LineRule) 设置换行规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableAuth() 获取是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAuth(boolean $EnableAuth) 设置是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsername() 获取用户名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsername(string $Username) 设置用户名
@@ -61,13 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置密码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKafkaInfos() 获取投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaInfos(array $KafkaInfos) 设置投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableGlobalLineRule() 获取是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableGlobalLineRule(boolean $EnableGlobalLineRule) 设置是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomRule() 获取自定义分行规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRule(string $CustomRule) 设置自定义分行规则
@@ -81,25 +63,21 @@ class KafkaDeliveryConfig extends AbstractModel
 {
     /**
      * @var string 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigId;
 
     /**
      * @var string 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigName;
 
     /**
      * @var array 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CollectPath;
 
     /**
      * @var string kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaVIp;
 
@@ -111,19 +89,16 @@ class KafkaDeliveryConfig extends AbstractModel
 
     /**
      * @var string kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var string 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineRule;
 
     /**
      * @var boolean 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableAuth;
 
@@ -141,13 +116,11 @@ class KafkaDeliveryConfig extends AbstractModel
 
     /**
      * @var array 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaInfos;
 
     /**
      * @var boolean 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableGlobalLineRule;
 
@@ -165,29 +138,20 @@ class KafkaDeliveryConfig extends AbstractModel
 
     /**
      * @param string $ConfigId 配置项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigName 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaVIp kafka vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaVPort kafka vport
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineRule 换行规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableAuth 是否需要认证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Username 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password 密码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KafkaInfos 投递的topic和path
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableGlobalLineRule 是否应用单行规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRule 自定义分行规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaAddress KafkaAddress

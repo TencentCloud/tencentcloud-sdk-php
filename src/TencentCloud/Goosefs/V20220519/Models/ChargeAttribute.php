@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurDeadline(string $CurDeadline) 设置到期时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取付费方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置付费方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
@@ -47,7 +45,6 @@ class ChargeAttribute extends AbstractModel
 
     /**
      * @var string 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
@@ -67,7 +64,6 @@ class ChargeAttribute extends AbstractModel
      * @param string $CurDeadline 到期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动付费标识：0:默认未设置 1:自动续费 2 不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID

@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 任务信息详情
  *
  * @method integer getTaskId() 获取任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskType() 获取任务类型。
 - FLOW_CREATE: "001"，新建实例
 - FLOW_RESIZE ： "002"，配置变更
@@ -84,7 +80,6 @@ use TencentCloud\Common\AbstractModel;
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(string $TaskType) 设置任务类型。
 - FLOW_CREATE: "001"，新建实例
 - FLOW_RESIZE ： "002"，配置变更
@@ -141,53 +136,38 @@ use TencentCloud\Common\AbstractModel;
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(float $Progress) 设置任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResult() 获取任务执行状态。
 
 0：任务初始化。
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(integer $Result) 设置任务执行状态。
 
 0：任务初始化。
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfoDetail extends AbstractModel
 {
     /**
      * @var integer 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
@@ -248,37 +228,31 @@ class TaskInfoDetail extends AbstractModel
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
      * @var string 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var integer 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var float 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var string 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -289,15 +263,12 @@ class TaskInfoDetail extends AbstractModel
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @param integer $TaskId 任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskType 任务类型。
 - FLOW_CREATE: "001"，新建实例
 - FLOW_RESIZE ： "002"，配置变更
@@ -354,24 +325,17 @@ class TaskInfoDetail extends AbstractModel
 - FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY： "067"，实例版本升级中。
 - FLOW_MODIFY_PROXY_NUM："069"，加（减）Proxy 节点。
 - FLOW_MODIFYBACKUPMOD："070"，变更实例备份模式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 任务执行结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Result 任务执行状态。
 
 0：任务初始化。
 1：执行中。
 2：完成。
 4：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

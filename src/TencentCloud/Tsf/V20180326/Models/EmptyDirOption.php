@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 空目录选项
  *
  * @method boolean getEnableMemory() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableMemory(boolean $EnableMemory) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageCapacity() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageCapacity(integer $StorageCapacity) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageUnit() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageUnit(string $StorageUnit) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSizeLimit() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSizeLimit(string $SizeLimit) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmptyDirOption extends AbstractModel
 {
     /**
      * @var boolean -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableMemory;
 
     /**
      * @var integer -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageCapacity;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageUnit;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SizeLimit;
 
     /**
      * @param boolean $EnableMemory -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageCapacity -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageUnit -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SizeLimit -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

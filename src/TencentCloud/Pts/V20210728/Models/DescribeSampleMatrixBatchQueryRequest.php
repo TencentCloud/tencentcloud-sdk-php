@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScenarioId(string $ScenarioId) 设置场景ID
  * @method array getQueries() 获取查询语句
  * @method void setQueries(array $Queries) 设置查询语句
+ * @method integer getMaxPoint() 获取最多返回的数据点个数
+ * @method void setMaxPoint(integer $MaxPoint) 设置最多返回的数据点个数
  */
 class DescribeSampleMatrixBatchQueryRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSampleMatrixBatchQueryRequest extends AbstractModel
     public $Queries;
 
     /**
+     * @var integer 最多返回的数据点个数
+     */
+    public $MaxPoint;
+
+    /**
      * @param string $JobId 任务ID
      * @param string $ProjectId 项目ID
      * @param string $ScenarioId 场景ID
      * @param array $Queries 查询语句
+     * @param integer $MaxPoint 最多返回的数据点个数
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeSampleMatrixBatchQueryRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Queries, $obj);
             }
+        }
+
+        if (array_key_exists("MaxPoint",$param) and $param["MaxPoint"] !== null) {
+            $this->MaxPoint = $param["MaxPoint"];
         }
     }
 }

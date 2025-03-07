@@ -21,37 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * 主备流分组信息。
  *
  * @method string getStreamName() 获取流名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamName(string $StreamName) 设置流名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupList() 获取主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupList(array $BackupList) 设置主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOptimalEnable() 获取是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptimalEnable(integer $OptimalEnable) 设置是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostGroupName() 获取域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostGroupName(string $HostGroupName) 设置域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupStreamGroupInfo extends AbstractModel
 {
     /**
      * @var string 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamName;
 
     /**
      * @var array 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupList;
 
@@ -59,27 +49,21 @@ class BackupStreamGroupInfo extends AbstractModel
      * @var integer 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptimalEnable;
 
     /**
      * @var string 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostGroupName;
 
     /**
      * @param string $StreamName 流名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupList 主备流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OptimalEnable 是否对该流开启了择优调度。
 0 - 未开启。
 1 - 已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostGroupName 域名分组的分组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

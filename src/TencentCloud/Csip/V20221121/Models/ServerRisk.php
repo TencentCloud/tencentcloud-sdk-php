@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskDetails(string $RiskDetails) 设置风险详情
  * @method string getSuggestion() 获取处置建议
  * @method void setSuggestion(string $Suggestion) 设置处置建议
- * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
- * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
+ * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护
+ * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略、3云防已防护
  * @method string getId() 获取资产唯一id
  * @method void setId(string $Id) 设置资产唯一id
  * @method string getAppId() 获取用户appid
@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestionList(array $SuggestionList) 设置建议列表
  * @method string getStatusCode() 获取HTTP响应状态码
  * @method void setStatusCode(string $StatusCode) 设置HTTP响应状态码
+ * @method string getNewLevel() 获取新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+ * @method void setNewLevel(string $NewLevel) 设置新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+ * @method integer getXspmStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+ * @method void setXspmStatus(integer $XspmStatus) 设置状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
  */
 class ServerRisk extends AbstractModel
 {
@@ -144,7 +148,7 @@ class ServerRisk extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var integer 状态，0未处理、1已处置、2已忽略
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public $Status;
 
@@ -199,6 +203,16 @@ class ServerRisk extends AbstractModel
     public $StatusCode;
 
     /**
+     * @var string 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     */
+    public $NewLevel;
+
+    /**
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public $XspmStatus;
+
+    /**
      * @param string $ServiceTag 测绘标签
      * @param integer $Port 端口
      * @param string $AffectAsset 影响资产
@@ -213,7 +227,7 @@ class ServerRisk extends AbstractModel
      * @param string $FirstTime 首次识别时间
      * @param string $RiskDetails 风险详情
      * @param string $Suggestion 处置建议
-     * @param integer $Status 状态，0未处理、1已处置、2已忽略
+     * @param integer $Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      * @param string $Id 资产唯一id
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
@@ -224,6 +238,8 @@ class ServerRisk extends AbstractModel
      * @param array $RiskList 风险列表
      * @param array $SuggestionList 建议列表
      * @param string $StatusCode HTTP响应状态码
+     * @param string $NewLevel 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     * @param integer $XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
      */
     function __construct()
     {
@@ -346,6 +362,14 @@ class ServerRisk extends AbstractModel
 
         if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
             $this->StatusCode = $param["StatusCode"];
+        }
+
+        if (array_key_exists("NewLevel",$param) and $param["NewLevel"] !== null) {
+            $this->NewLevel = $param["NewLevel"];
+        }
+
+        if (array_key_exists("XspmStatus",$param) and $param["XspmStatus"] !== null) {
+            $this->XspmStatus = $param["XspmStatus"];
         }
     }
 }

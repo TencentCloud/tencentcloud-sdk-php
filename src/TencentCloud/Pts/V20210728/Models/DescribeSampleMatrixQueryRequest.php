@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
  * @method array getGroupBy() 获取分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
  * @method void setGroupBy(array $GroupBy) 设置分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
+ * @method integer getMaxPoint() 获取返回的最大数据点个数
+ * @method void setMaxPoint(integer $MaxPoint) 设置返回的最大数据点个数
  */
 class DescribeSampleMatrixQueryRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
     public $GroupBy;
 
     /**
+     * @var integer 返回的最大数据点个数
+     */
+    public $MaxPoint;
+
+    /**
      * @param string $JobId 任务ID
      * @param string $ProjectId 项目ID
      * @param string $ScenarioId 场景ID
@@ -80,6 +87,7 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
      * @param string $Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      * @param array $Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      * @param array $GroupBy 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
+     * @param integer $MaxPoint 返回的最大数据点个数
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("MaxPoint",$param) and $param["MaxPoint"] !== null) {
+            $this->MaxPoint = $param["MaxPoint"];
         }
     }
 }

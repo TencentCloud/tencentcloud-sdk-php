@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 单值指标
  *
  * @method string getMetricName() 获取指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricName(string $MetricName) 设置指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricFunction() 获取统计方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricFunction(string $MetricFunction) 设置统计方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricDataValue() 获取指标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricDataValue(string $MetricDataValue) 设置指标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDailyPercent() 获取日环比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDailyPercent(float $DailyPercent) 设置日环比
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricDataSingleValue extends AbstractModel
 {
     /**
      * @var string 指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
      * @var string 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricFunction;
 
     /**
      * @var string 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricDataValue;
 
     /**
      * @var float 日环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DailyPercent;
 
     /**
      * @param string $MetricName 指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricFunction 统计方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricDataValue 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DailyPercent 日环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

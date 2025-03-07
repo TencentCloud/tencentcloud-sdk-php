@@ -38,6 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置项目类型(可接受值为 "web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
  * @method string getDesc() 获取应用描述(可选，最长为 1000字符)
  * @method void setDesc(string $Desc) 设置应用描述(可选，最长为 1000字符)
+ * @method integer getEnableKafka() 获取启动kafka配置
+ * @method void setEnableKafka(integer $EnableKafka) 设置启动kafka配置
+ * @method string getKafkaHost() 获取kafka_host
+ * @method void setKafkaHost(string $KafkaHost) 设置kafka_host
+ * @method string getKafkaTopic() 获取topic
+ * @method void setKafkaTopic(string $KafkaTopic) 设置topic
+ * @method string getKafkaVersion() 获取kafka_version
+ * @method void setKafkaVersion(string $KafkaVersion) 设置kafka_version
+ * @method string getSaslUserName() 获取kafka_username
+ * @method void setSaslUserName(string $SaslUserName) 设置kafka_username
+ * @method string getSaslPassword() 获取kafka_pwd
+ * @method void setSaslPassword(string $SaslPassword) 设置kafka_pwd
+ * @method string getSaslMechanism() 获取SaslMechanism
+ * @method void setSaslMechanism(string $SaslMechanism) 设置SaslMechanism
+ * @method integer getSinkId() 获取sink_id，日知汇算子id
+ * @method void setSinkId(integer $SinkId) 设置sink_id，日知汇算子id
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -87,6 +103,46 @@ class ModifyProjectRequest extends AbstractModel
     public $Desc;
 
     /**
+     * @var integer 启动kafka配置
+     */
+    public $EnableKafka;
+
+    /**
+     * @var string kafka_host
+     */
+    public $KafkaHost;
+
+    /**
+     * @var string topic
+     */
+    public $KafkaTopic;
+
+    /**
+     * @var string kafka_version
+     */
+    public $KafkaVersion;
+
+    /**
+     * @var string kafka_username
+     */
+    public $SaslUserName;
+
+    /**
+     * @var string kafka_pwd
+     */
+    public $SaslPassword;
+
+    /**
+     * @var string SaslMechanism
+     */
+    public $SaslMechanism;
+
+    /**
+     * @var integer sink_id，日知汇算子id
+     */
+    public $SinkId;
+
+    /**
      * @param integer $ID 项目 id
      * @param string $Name 应用名称(可选，不为空且最长为 200字符)
      * @param string $URL 项目网页地址(可选，最长为 256)
@@ -96,6 +152,14 @@ class ModifyProjectRequest extends AbstractModel
      * @param integer $EnableURLGroup 是否开启聚类(可选)
      * @param string $Type 项目类型(可接受值为 "web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")
      * @param string $Desc 应用描述(可选，最长为 1000字符)
+     * @param integer $EnableKafka 启动kafka配置
+     * @param string $KafkaHost kafka_host
+     * @param string $KafkaTopic topic
+     * @param string $KafkaVersion kafka_version
+     * @param string $SaslUserName kafka_username
+     * @param string $SaslPassword kafka_pwd
+     * @param string $SaslMechanism SaslMechanism
+     * @param integer $SinkId sink_id，日知汇算子id
      */
     function __construct()
     {
@@ -144,6 +208,38 @@ class ModifyProjectRequest extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("EnableKafka",$param) and $param["EnableKafka"] !== null) {
+            $this->EnableKafka = $param["EnableKafka"];
+        }
+
+        if (array_key_exists("KafkaHost",$param) and $param["KafkaHost"] !== null) {
+            $this->KafkaHost = $param["KafkaHost"];
+        }
+
+        if (array_key_exists("KafkaTopic",$param) and $param["KafkaTopic"] !== null) {
+            $this->KafkaTopic = $param["KafkaTopic"];
+        }
+
+        if (array_key_exists("KafkaVersion",$param) and $param["KafkaVersion"] !== null) {
+            $this->KafkaVersion = $param["KafkaVersion"];
+        }
+
+        if (array_key_exists("SaslUserName",$param) and $param["SaslUserName"] !== null) {
+            $this->SaslUserName = $param["SaslUserName"];
+        }
+
+        if (array_key_exists("SaslPassword",$param) and $param["SaslPassword"] !== null) {
+            $this->SaslPassword = $param["SaslPassword"];
+        }
+
+        if (array_key_exists("SaslMechanism",$param) and $param["SaslMechanism"] !== null) {
+            $this->SaslMechanism = $param["SaslMechanism"];
+        }
+
+        if (array_key_exists("SinkId",$param) and $param["SinkId"] !== null) {
+            $this->SinkId = $param["SinkId"];
         }
     }
 }

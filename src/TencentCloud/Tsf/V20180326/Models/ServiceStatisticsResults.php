@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 服务统计结果集
  *
  * @method array getContent() 获取返回结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置返回结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceStatisticsResults extends AbstractModel
 {
     /**
      * @var array 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var integer 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $Content 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取仓库总量
  * @method void setTotalCount(integer $TotalCount) 设置仓库总量
  * @method array getContent() 获取仓库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置仓库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RepositoryList extends AbstractModel
 {
@@ -36,14 +34,12 @@ class RepositoryList extends AbstractModel
 
     /**
      * @var array 仓库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 仓库总量
      * @param array $Content 仓库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

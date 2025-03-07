@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestResourceTypes(array $RequestResourceTypes) 设置额外请求的资源类型
  * @method array getProjectIds() 获取项目ID列表
  * @method void setProjectIds(array $ProjectIds) 设置项目ID列表
+ * @method array getBlackTaskIdList() 获取黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+ * @method void setBlackTaskIdList(array $BlackTaskIdList) 设置黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+ * @method string getScheduleTimeZone() 获取时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $ProjectIds;
 
     /**
+     * @var array 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+     */
+    public $BlackTaskIdList;
+
+    /**
+     * @var string 时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -232,6 +246,8 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $InitStrategy 实例生成方式
      * @param array $RequestResourceTypes 额外请求的资源类型
      * @param array $ProjectIds 项目ID列表
+     * @param array $BlackTaskIdList 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
+     * @param string $ScheduleTimeZone 时区
      */
     function __construct()
     {
@@ -353,6 +369,14 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
             $this->ProjectIds = $param["ProjectIds"];
+        }
+
+        if (array_key_exists("BlackTaskIdList",$param) and $param["BlackTaskIdList"] !== null) {
+            $this->BlackTaskIdList = $param["BlackTaskIdList"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

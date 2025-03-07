@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 秒级备份不存在的时间戳范围
  *
  * @method integer getStartTimeStamp() 获取开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeStamp(integer $StartTimeStamp) 设置开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTimeStamp() 获取结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecondLevelBackupMissingTimestamps extends AbstractModel
 {
     /**
      * @var integer 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeStamp;
 
     /**
      * @var integer 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeStamp;
 
     /**
      * @param integer $StartTimeStamp 开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTimeStamp 结束时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

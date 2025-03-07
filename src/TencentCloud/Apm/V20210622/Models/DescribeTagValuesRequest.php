@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTagValues请求参数结构体
  *
- * @method string getTagKey() 获取维度名
- * @method void setTagKey(string $TagKey) 设置维度名
  * @method string getInstanceId() 获取业务系统 ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method string getTagKey() 获取维度名
+ * @method void setTagKey(string $TagKey) 设置维度名
  * @method integer getStartTime() 获取开始时间（单位为秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间（单位为秒）
  * @method integer getEndTime() 获取结束时间（单位为秒）
  * @method void setEndTime(integer $EndTime) 设置结束时间（单位为秒）
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
  * @method array getOrFilters() 获取Or 过滤条件
  * @method void setOrFilters(array $OrFilters) 设置Or 过滤条件
  * @method string getType() 获取使用类型
@@ -38,19 +38,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTagValuesRequest extends AbstractModel
 {
     /**
-     * @var string 维度名
-     */
-    public $TagKey;
-
-    /**
      * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var array 过滤条件
+     * @var string 维度名
      */
-    public $Filters;
+    public $TagKey;
 
     /**
      * @var integer 开始时间（单位为秒）
@@ -63,6 +58,11 @@ class DescribeTagValuesRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var array 过滤条件
+     */
+    public $Filters;
+
+    /**
      * @var array Or 过滤条件
      */
     public $OrFilters;
@@ -73,11 +73,11 @@ class DescribeTagValuesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param string $TagKey 维度名
      * @param string $InstanceId 业务系统 ID
-     * @param array $Filters 过滤条件
+     * @param string $TagKey 维度名
      * @param integer $StartTime 开始时间（单位为秒）
      * @param integer $EndTime 结束时间（单位为秒）
+     * @param array $Filters 过滤条件
      * @param array $OrFilters Or 过滤条件
      * @param string $Type 使用类型
      */
@@ -94,12 +94,20 @@ class DescribeTagValuesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -109,14 +117,6 @@ class DescribeTagValuesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("OrFilters",$param) and $param["OrFilters"] !== null) {

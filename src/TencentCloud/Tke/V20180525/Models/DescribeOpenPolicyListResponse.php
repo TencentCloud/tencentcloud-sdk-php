@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOpenPolicyList返回参数结构体
  *
  * @method array getOpenPolicyInfoList() 获取策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenPolicyInfoList(array $OpenPolicyInfoList) 设置策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGatekeeperStatus() 获取集群内是否安装了gatekeeper addon
  * @method void setGatekeeperStatus(integer $GatekeeperStatus) 设置集群内是否安装了gatekeeper addon
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeOpenPolicyListResponse extends AbstractModel
 {
     /**
      * @var array 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenPolicyInfoList;
 
@@ -49,7 +46,6 @@ class DescribeOpenPolicyListResponse extends AbstractModel
 
     /**
      * @param array $OpenPolicyInfoList 策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GatekeeperStatus 集群内是否安装了gatekeeper addon
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

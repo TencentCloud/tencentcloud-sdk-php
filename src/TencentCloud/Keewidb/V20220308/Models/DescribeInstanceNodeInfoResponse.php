@@ -23,29 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProxyCount() 获取Proxy 节点数量。
  * @method void setProxyCount(integer $ProxyCount) 设置Proxy 节点数量。
  * @method array getProxy() 获取Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxy(array $Proxy) 设置Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRedisCount() 获取Redis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
  * @method void setRedisCount(integer $RedisCount) 设置Redis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
  * @method array getRedis() 获取Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedis(array $Redis) 设置Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTendisCount() 获取Tendis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
  * @method void setTendisCount(integer $TendisCount) 设置Tendis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
  * @method array getTendis() 获取Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTendis(array $Tendis) 设置Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getKeeWiDBCount() 获取KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeeWiDBCount(integer $KeeWiDBCount) 设置KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeeWiDB() 获取KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeeWiDB(array $KeeWiDB) 设置KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -58,7 +48,6 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Proxy;
 
@@ -69,7 +58,6 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Redis;
 
@@ -80,19 +68,16 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tendis;
 
     /**
      * @var integer KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeeWiDBCount;
 
     /**
      * @var array KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeeWiDB;
 
@@ -104,17 +89,12 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
     /**
      * @param integer $ProxyCount Proxy 节点数量。
      * @param array $Proxy Proxy 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedisCount Redis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
      * @param array $Redis Redis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TendisCount Tendis 节点数量。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
      * @param array $Tendis Tendis 节点信息。该参数仅为产品兼容性而保留，并不具有实际意义，可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $KeeWiDBCount KeewiDB 节点数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KeeWiDB KeewiDB 节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

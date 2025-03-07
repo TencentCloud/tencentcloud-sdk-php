@@ -75,6 +75,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\ModifyJWTAuthenticatorResponse ModifyJWTAuthenticator(Models\ModifyJWTAuthenticatorRequest $req) 修改MQTT JWKS 认证器
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改MQTT角色
+ * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 发布 MQTT 消息到消息主题或客户端
  * @method Models\RegisterCaCertificateResponse RegisterCaCertificate(Models\RegisterCaCertificateRequest $req) 注册ca证书
  * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书
  * @method Models\RevokedDeviceCertificateResponse RevokedDeviceCertificate(Models\RevokedDeviceCertificateRequest $req) 吊销设备证书

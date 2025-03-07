@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置任务结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrorDetails() 获取失败详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorDetails(array $ErrorDetails) 设置失败详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedUsers() 获取失败的用户
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedUsers(array $FailedUsers) 设置失败的用户
@@ -114,7 +112,6 @@ class Job extends AbstractModel
 
     /**
      * @var array 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorDetails;
 
@@ -145,7 +142,6 @@ class Job extends AbstractModel
      * @param string $Location 任务结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ErrorDetails 失败详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedUsers 失败的用户
 注意：此字段可能返回 null，表示取不到有效值。
      */

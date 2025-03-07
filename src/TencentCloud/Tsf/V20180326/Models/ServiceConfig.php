@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPorts() 获取端口信息列表
  * @method void setPorts(array $Ports) 设置端口信息列表
  * @method HealthCheckConfig getHealthCheck() 获取健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheckConfig $HealthCheck) 设置健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceConfig extends AbstractModel
 {
@@ -43,7 +41,6 @@ class ServiceConfig extends AbstractModel
 
     /**
      * @var HealthCheckConfig 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
@@ -51,7 +48,6 @@ class ServiceConfig extends AbstractModel
      * @param string $Name 服务名
      * @param array $Ports 端口信息列表
      * @param HealthCheckConfig $HealthCheck 健康检查配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

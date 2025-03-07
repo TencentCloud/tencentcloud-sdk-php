@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 描述程序包关联信息
  *
  * @method string getApplicationId() 获取应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取部署组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PkgBind extends AbstractModel
 {
     /**
      * @var string 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @param string $ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

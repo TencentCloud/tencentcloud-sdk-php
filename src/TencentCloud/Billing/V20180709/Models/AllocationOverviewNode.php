@@ -21,55 +21,40 @@ use TencentCloud\Common\AbstractModel;
  * 分账账单月概览详情
  *
  * @method integer getId() 获取分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSymbol() 获取分账单元包含规则标志
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymbol(integer $Symbol) 设置分账单元包含规则标志
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildren() 获取子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AllocationMonthOverviewDetail getDetail() 获取分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(AllocationMonthOverviewDetail $Detail) 设置分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationOverviewNode extends AbstractModel
 {
     /**
      * @var integer 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKey;
 
@@ -79,39 +64,30 @@ class AllocationOverviewNode extends AbstractModel
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Symbol;
 
     /**
      * @var array 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Children;
 
     /**
      * @var AllocationMonthOverviewDetail 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @param integer $Id 分账单元ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Symbol 分账单元包含规则标志
 0 - 不存在规则
 1 - 同时存在归集规则和公摊规则
 2 - 仅存在归集规则
 3 - 仅存在公摊规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 子单元月概览详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocationMonthOverviewDetail $Detail 分账账单月概览金额明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

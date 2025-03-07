@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTargetPort() 获取容器端口
  * @method void setTargetPort(integer $TargetPort) 设置容器端口
  * @method integer getNodePort() 获取主机端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePort(integer $NodePort) 设置主机端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取端口名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置端口名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtocolPort extends AbstractModel
 {
@@ -54,13 +50,11 @@ class ProtocolPort extends AbstractModel
 
     /**
      * @var integer 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePort;
 
     /**
      * @var string 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -69,9 +63,7 @@ class ProtocolPort extends AbstractModel
      * @param integer $Port 服务端口
      * @param integer $TargetPort 容器端口
      * @param integer $NodePort 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 端口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

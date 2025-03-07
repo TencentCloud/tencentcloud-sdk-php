@@ -55,51 +55,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperateUin() 获取操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
  * @method void setOperateUin(string $OperateUin) 设置操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getPriceInfo() 获取价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceInfo(array $PriceInfo) 设置价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BillDetailAssociatedOrder getAssociatedOrder() 获取关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) 设置关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormula() 获取计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormula(string $Formula) 设置计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormulaUrl() 获取计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillMonth() 获取账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillMonth(string $BillMonth) 设置账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillDay() 获取账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDay(string $BillDay) 设置账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DistributionBillDetail extends AbstractModel
 {
@@ -190,31 +168,26 @@ class DistributionBillDetail extends AbstractModel
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -225,37 +198,31 @@ class DistributionBillDetail extends AbstractModel
 
     /**
      * @var array 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceInfo;
 
     /**
      * @var BillDetailAssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedOrder;
 
     /**
      * @var string 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Formula;
 
     /**
      * @var string 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormulaUrl;
 
     /**
      * @var string 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillMonth;
 
     /**
      * @var string 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDay;
 
@@ -278,28 +245,17 @@ class DistributionBillDetail extends AbstractModel
      * @param string $OwnerUin 使用者UIN：实际使用资源的账号 ID
      * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
      * @param array $PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDetailAssociatedOrder $AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillDay 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

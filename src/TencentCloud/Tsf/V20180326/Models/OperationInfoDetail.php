@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 提供给前端控制按钮显示逻辑的字段
  *
  * @method string getDisabledReason() 获取不显示的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisabledReason(string $DisabledReason) 设置不显示的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnabled() 获取该按钮是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置该按钮是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupported() 获取是否显示该按钮
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupported(boolean $Supported) 设置是否显示该按钮
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OperationInfoDetail extends AbstractModel
 {
     /**
      * @var string 不显示的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisabledReason;
 
     /**
      * @var boolean 该按钮是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var boolean 是否显示该按钮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Supported;
 
     /**
      * @param string $DisabledReason 不显示的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 该按钮是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Supported 是否显示该按钮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,37 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * kafka投递的topic和path的信息
  *
  * @method string getTopic() 获取投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPath() 获取采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(array $Path) 设置采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLineRule() 获取default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineRule(string $LineRule) 设置default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomRule() 获取自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRule(string $CustomRule) 设置自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeliveryKafkaInfo extends AbstractModel
 {
     /**
      * @var string 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var array 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
@@ -59,27 +49,21 @@ class DeliveryKafkaInfo extends AbstractModel
      * @var string default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineRule;
 
     /**
      * @var string 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomRule;
 
     /**
      * @param string $Topic 投递kafka的topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Path 采集日志的path
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineRule default，默认换行符分行
 time，按时间分行
 custom, 选了custom那么CustomRule就要填入具体的自定义值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRule 自定义的分行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

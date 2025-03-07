@@ -100,6 +100,10 @@ TEZ-TezTaskGC:TasksGC
  * @method void setScheduleTaskName(string $ScheduleTaskName) 设置调度flow中的某个task节点
  * @method string getJobConf() 获取Yarn任务的部分核心配置
  * @method void setJobConf(string $JobConf) 设置Yarn任务的部分核心配置
+ * @method string getContext() 获取洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContext(string $Context) 设置洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InsightResult extends AbstractModel
 {
@@ -192,6 +196,12 @@ TEZ-TezTaskGC:TasksGC
     public $JobConf;
 
     /**
+     * @var string 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Context;
+
+    /**
      * @param string $ID 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
      * @param string $Type 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
      * @param string $RuleID 洞察规则ID
@@ -232,6 +242,8 @@ TEZ-TezTaskGC:TasksGC
      * @param string $ScheduleFlowName 调度流，DAG
      * @param string $ScheduleTaskName 调度flow中的某个task节点
      * @param string $JobConf Yarn任务的部分核心配置
+     * @param string $Context 洞察结构化信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -292,6 +304,10 @@ TEZ-TezTaskGC:TasksGC
 
         if (array_key_exists("JobConf",$param) and $param["JobConf"] !== null) {
             $this->JobConf = $param["JobConf"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
         }
     }
 }

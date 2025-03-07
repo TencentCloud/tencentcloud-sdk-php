@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcesTagValue请求参数结构体
  *
- * @method string getServiceType() 获取业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
- * @method void setServiceType(string $ServiceType) 设置业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+ * @method string getServiceType() 获取业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
+ * @method void setServiceType(string $ServiceType) 设置业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
  * @method array getResourceIds() 获取资源ID数组，资源个数最多为50
  * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，资源个数最多为50
  * @method string getTagKey() 获取标签键
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyResourcesTagValueRequest extends AbstractModel
 {
     /**
-     * @var string 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * @var string 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
      */
     public $ServiceType;
 
@@ -66,7 +66,7 @@ class ModifyResourcesTagValueRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * @param string $ServiceType 业务类型，示例 cvm。资源所属业务名称（资源六段式中的第三段）
      * @param array $ResourceIds 资源ID数组，资源个数最多为50
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值

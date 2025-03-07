@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 添加实例到集群的结果
  *
  * @method array getFailedInstanceIds() 获取添加集群失败的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置添加集群失败的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSuccInstanceIds() 获取添加集群成功的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccInstanceIds(array $SuccInstanceIds) 设置添加集群成功的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimeoutInstanceIds() 获取添加集群超时的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置添加集群超时的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedReasons() 获取失败的节点的失败原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedReasons(array $FailedReasons) 设置失败的节点的失败原因
@@ -41,19 +35,16 @@ class AddInstanceResult extends AbstractModel
 {
     /**
      * @var array 添加集群失败的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedInstanceIds;
 
     /**
      * @var array 添加集群成功的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccInstanceIds;
 
     /**
      * @var array 添加集群超时的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutInstanceIds;
 
@@ -65,11 +56,8 @@ class AddInstanceResult extends AbstractModel
 
     /**
      * @param array $FailedInstanceIds 添加集群失败的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuccInstanceIds 添加集群成功的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeoutInstanceIds 添加集群超时的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedReasons 失败的节点的失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 自定义容忍调度规则列表
  *
  * @method string getKey() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEffect() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffect(string $Effect) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTolerationSeconds() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTolerationSeconds(integer $TolerationSeconds) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomTolerateSchedule extends AbstractModel
 {
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Effect;
 
     /**
      * @var integer -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TolerationSeconds;
 
     /**
      * @param string $Key -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Effect -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TolerationSeconds -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

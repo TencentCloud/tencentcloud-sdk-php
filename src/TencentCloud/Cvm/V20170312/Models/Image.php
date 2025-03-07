@@ -63,23 +63,15 @@ IMPORTFAILED-导入失败
  * @method void setSyncPercent(integer $SyncPercent) 设置同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSupportCloudinit() 获取镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) 设置镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSnapshotSet() 获取镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotSet(array $SnapshotSet) 设置镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseType() 获取镜像许可类型
  * @method void setLicenseType(string $LicenseType) 设置镜像许可类型
  * @method string getImageFamily() 获取镜像族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageFamily(string $ImageFamily) 设置镜像族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getImageDeprecated() 获取镜像是否废弃
  * @method void setImageDeprecated(boolean $ImageDeprecated) 设置镜像是否废弃
  */
@@ -160,19 +152,16 @@ IMPORTFAILED-导入失败
 
     /**
      * @var boolean 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportCloudinit;
 
     /**
      * @var array 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotSet;
 
     /**
      * @var array 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -183,7 +172,6 @@ IMPORTFAILED-导入失败
 
     /**
      * @var string 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageFamily;
 
@@ -215,14 +203,10 @@ IMPORTFAILED-导入失败
      * @param integer $SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportCloudinit 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnapshotSet 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 镜像关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 镜像许可类型
      * @param string $ImageFamily 镜像族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ImageDeprecated 镜像是否废弃
      */
     function __construct()

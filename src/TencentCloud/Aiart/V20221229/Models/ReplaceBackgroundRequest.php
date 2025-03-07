@@ -35,8 +35,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNegativePrompt(string $NegativePrompt) 设置反向提示词。
 最多支持256个 utf-8 字符，支持中、英文。
  * @method string getProduct() 获取商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
  * @method void setProduct(string $Product) 设置商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
  * @method string getBackgroundTemplate() 获取背景模板。
 仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
@@ -98,6 +100,7 @@ class ReplaceBackgroundRequest extends AbstractModel
 
     /**
      * @var string 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
      */
     public $Product;
@@ -153,6 +156,7 @@ class ReplaceBackgroundRequest extends AbstractModel
      * @param string $NegativePrompt 反向提示词。
 最多支持256个 utf-8 字符，支持中、英文。
      * @param string $Product 商品图中的商品主体名称。
+最多支持50个 utf-8 字符，支持中、英文。
 建议说明商品主体，否则影响生成效果。
      * @param string $BackgroundTemplate 背景模板。
 仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。

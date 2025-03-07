@@ -89,9 +89,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisasterRecoverGroupId() 获取分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIPv6Addresses() 获取实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPv6Addresses(array $IPv6Addresses) 设置实例的IPv6地址。
@@ -101,25 +99,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHpcClusterId() 获取高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRdmaIpAddresses() 获取高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) 设置高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDedicatedClusterId() 获取实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolatedSource() 获取实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedSource(string $IsolatedSource) 设置实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GPUInfo getGPUInfo() 获取GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUInfo(GPUInfo $GPUInfo) 设置GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseType() 获取实例的操作系统许可类型，默认为TencentCloud
  * @method void setLicenseType(string $LicenseType) 设置实例的操作系统许可类型，默认为TencentCloud
  * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
@@ -283,7 +273,6 @@ class Instance extends AbstractModel
 
     /**
      * @var string 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoverGroupId;
 
@@ -301,7 +290,6 @@ class Instance extends AbstractModel
 
     /**
      * @var string 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HpcClusterId;
 
@@ -313,19 +301,16 @@ class Instance extends AbstractModel
 
     /**
      * @var string 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DedicatedClusterId;
 
     /**
      * @var string 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedSource;
 
     /**
      * @var GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUInfo;
 
@@ -391,21 +376,16 @@ class Instance extends AbstractModel
      * @param string $LatestOperationRequestId 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisasterRecoverGroupId 分散置放群组ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CamRoleName CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HpcClusterId 高性能计算集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RdmaIpAddresses 高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId 实例所在的专用集群`ID`。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUInfo $GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 实例的操作系统许可类型，默认为TencentCloud
      * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
      * @param string $DefaultLoginUser 默认登录用户。

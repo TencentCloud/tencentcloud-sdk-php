@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 业务日志
  *
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceIp() 获取实例IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIp(string $InstanceIp) 设置实例IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogId() 获取日志ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogId(string $LogId) 设置日志ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BusinessLogV2 extends AbstractModel
 {
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var integer 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIp;
 
     /**
      * @var string 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogId;
 
     /**
      * @var string 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceIp 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogId 日志ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

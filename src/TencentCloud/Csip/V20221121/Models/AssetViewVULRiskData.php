@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTvdID(string $TvdID) 设置新版漏洞id
  * @method integer getIsOneClick() 获取是否可以一键体检，1-可以，0-不可以
  * @method void setIsOneClick(integer $IsOneClick) 设置是否可以一键体检，1-可以，0-不可以
+ * @method integer getIsPOC() 获取是否POC扫描，0-非POC，1-POC
+ * @method void setIsPOC(integer $IsPOC) 设置是否POC扫描，0-非POC，1-POC
  */
 class AssetViewVULRiskData extends AbstractModel
 {
@@ -304,6 +306,11 @@ class AssetViewVULRiskData extends AbstractModel
     public $IsOneClick;
 
     /**
+     * @var integer 是否POC扫描，0-非POC，1-POC
+     */
+    public $IsPOC;
+
+    /**
      * @param string $AffectAsset 影响资产
      * @param string $Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $InstanceType 资产类型
@@ -344,6 +351,7 @@ class AssetViewVULRiskData extends AbstractModel
      * @param string $VulRiskId 新的漏洞风险id(同全网漏洞表的riskid)
      * @param string $TvdID 新版漏洞id
      * @param integer $IsOneClick 是否可以一键体检，1-可以，0-不可以
+     * @param integer $IsPOC 是否POC扫描，0-非POC，1-POC
      */
     function __construct()
     {
@@ -516,6 +524,10 @@ class AssetViewVULRiskData extends AbstractModel
 
         if (array_key_exists("IsOneClick",$param) and $param["IsOneClick"] !== null) {
             $this->IsOneClick = $param["IsOneClick"];
+        }
+
+        if (array_key_exists("IsPOC",$param) and $param["IsPOC"] !== null) {
+            $this->IsPOC = $param["IsPOC"];
         }
     }
 }

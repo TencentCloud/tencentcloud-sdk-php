@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 监控指标坐标
  *
  * @method string getCoordX() 获取指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoordX(string $CoordX) 设置指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCoordY() 获取指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoordY(string $CoordY) 设置指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCoordTag() 获取指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoordTag(string $CoordTag) 设置指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorCoord extends AbstractModel
 {
     /**
      * @var string 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoordX;
 
     /**
      * @var string 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoordY;
 
     /**
      * @var string 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoordTag;
 
     /**
      * @param string $CoordX 指标横坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CoordY 指标纵坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CoordTag 指标标签，用于标识附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

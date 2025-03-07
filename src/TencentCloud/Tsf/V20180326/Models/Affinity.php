@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 亲和规则
  *
  * @method string getScope() 获取亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScope(string $Scope) 设置亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWeight() 获取亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(string $Weight) 设置亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPaths() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaths(array $Paths) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Affinity extends AbstractModel
 {
     /**
      * @var string 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scope;
 
     /**
      * @var string 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paths;
 
     /**
      * @param string $Scope 亲和性范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Weight 亲和规则的权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Paths -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

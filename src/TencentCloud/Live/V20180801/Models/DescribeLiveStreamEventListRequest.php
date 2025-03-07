@@ -20,18 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveStreamEventList请求参数结构体
  *
- * @method string getStartTime() 获取起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
- * @method void setStartTime(string $StartTime) 设置起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
- * @method string getEndTime() 获取结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
- * @method void setEndTime(string $EndTime) 设置结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+ * @method string getStartTime() 获取起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
+ * @method void setStartTime(string $StartTime) 设置起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
+ * @method string getEndTime() 获取结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
+ * @method void setEndTime(string $EndTime) 设置结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method string getDomainName() 获取推流域名。
@@ -80,16 +72,12 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 class DescribeLiveStreamEventListRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
+     * @var string 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+     * @var string 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
      */
     public $EndTime;
 
@@ -148,12 +136,8 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     public $IsAsc;
 
     /**
-     * @param string $StartTime 起始时间。 
-UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
-     * @param string $EndTime 结束时间。
-UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+     * @param string $StartTime 起始时间。 UTC 格式，例如：2018-12-29T19:00:00Z。支持查询2个月内的历史记录。
+     * @param string $EndTime 结束时间。UTC 格式，例如：2018-12-29T20:00:00Z。不超过当前时间，且和起始时间相差不得超过1个月。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param string $DomainName 推流域名。
      * @param string $StreamName 流名称，不支持通配符（*）查询，默认模糊匹配。

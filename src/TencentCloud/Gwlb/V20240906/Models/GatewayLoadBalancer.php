@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargeType(string $ChargeType) 设置网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
  * @method integer getIsolation() 获取0：表示未被隔离，1：表示被隔离。
  * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
- * @method string getIsolatedTime() 获取负载均衡实例被隔离的时间
- * @method void setIsolatedTime(string $IsolatedTime) 设置负载均衡实例被隔离的时间
+ * @method string getIsolatedTime() 获取网关负载均衡实例被隔离的时间
+ * @method void setIsolatedTime(string $IsolatedTime) 设置网关负载均衡实例被隔离的时间
+ * @method boolean getOperateProtect() 获取是否开启配置修改保护功能。
+ * @method void setOperateProtect(boolean $OperateProtect) 设置是否开启配置修改保护功能。
  */
 class GatewayLoadBalancer extends AbstractModel
 {
@@ -113,9 +115,14 @@ class GatewayLoadBalancer extends AbstractModel
     public $Isolation;
 
     /**
-     * @var string 负载均衡实例被隔离的时间
+     * @var string 网关负载均衡实例被隔离的时间
      */
     public $IsolatedTime;
+
+    /**
+     * @var boolean 是否开启配置修改保护功能。
+     */
+    public $OperateProtect;
 
     /**
      * @param string $LoadBalancerId 网关负载均衡实例 ID。
@@ -131,7 +138,8 @@ class GatewayLoadBalancer extends AbstractModel
      * @param string $CreateTime 创建时间。
      * @param string $ChargeType 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
      * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
-     * @param string $IsolatedTime 负载均衡实例被隔离的时间
+     * @param string $IsolatedTime 网关负载均衡实例被隔离的时间
+     * @param boolean $OperateProtect 是否开启配置修改保护功能。
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ class GatewayLoadBalancer extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("OperateProtect",$param) and $param["OperateProtect"] !== null) {
+            $this->OperateProtect = $param["OperateProtect"];
         }
     }
 }

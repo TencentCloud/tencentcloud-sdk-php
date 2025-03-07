@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * ValueFrom 通用结构
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取Key值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置Key值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonRef extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string Key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key Key值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

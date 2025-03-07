@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServiceOverview请求参数结构体
  *
- * @method array getMetrics() 获取指标列表
- * @method void setMetrics(array $Metrics) 设置指标列表
  * @method string getInstanceId() 获取业务系统 ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getMetrics() 获取指标列表
+ * @method void setMetrics(array $Metrics) 设置指标列表
  * @method array getGroupBy() 获取聚合维度
  * @method void setGroupBy(array $GroupBy) 设置聚合维度
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
  * @method integer getStartTime() 获取开始时间（单位：秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间（单位：秒）
  * @method integer getEndTime() 获取结束时间（单位：秒）
@@ -48,24 +48,24 @@ Value 填写：
 class DescribeServiceOverviewRequest extends AbstractModel
 {
     /**
-     * @var array 指标列表
-     */
-    public $Metrics;
-
-    /**
      * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var array 过滤条件
+     * @var array 指标列表
      */
-    public $Filters;
+    public $Metrics;
 
     /**
      * @var array 聚合维度
      */
     public $GroupBy;
+
+    /**
+     * @var array 过滤条件
+     */
+    public $Filters;
 
     /**
      * @var integer 开始时间（单位：秒）
@@ -96,10 +96,10 @@ Value 填写：
     public $Offset;
 
     /**
-     * @param array $Metrics 指标列表
      * @param string $InstanceId 业务系统 ID
-     * @param array $Filters 过滤条件
+     * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
+     * @param array $Filters 过滤条件
      * @param integer $StartTime 开始时间（单位：秒）
      * @param integer $EndTime 结束时间（单位：秒）
      * @param OrderBy $OrderBy 排序方式
@@ -122,6 +122,10 @@ Value 填写：
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
             $this->Metrics = [];
             foreach ($param["Metrics"] as $key => $value){
@@ -131,8 +135,8 @@ Value 填写：
             }
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -142,10 +146,6 @@ Value 填写：
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
-            $this->GroupBy = $param["GroupBy"];
         }
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {

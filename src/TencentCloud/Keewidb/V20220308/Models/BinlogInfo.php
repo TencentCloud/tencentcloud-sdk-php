@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFilename() 获取备份文件名。
  * @method void setFilename(string $Filename) 设置备份文件名。
  * @method integer getFileSize() 获取备份文件大小，单位：Byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置备份文件大小，单位：Byte。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BinlogInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class BinlogInfo extends AbstractModel
 
     /**
      * @var integer 备份文件大小，单位：Byte。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
@@ -67,7 +64,6 @@ class BinlogInfo extends AbstractModel
      * @param string $BackupId 备份 ID。
      * @param string $Filename 备份文件名。
      * @param integer $FileSize 备份文件大小，单位：Byte。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

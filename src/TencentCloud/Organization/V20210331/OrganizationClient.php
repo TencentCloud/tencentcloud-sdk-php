@@ -34,7 +34,9 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) 为用户组添加用户
  * @method Models\AttachPolicyResponse AttachPolicy(Models\AttachPolicyRequest $req) 绑定策略
  * @method Models\BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(Models\BindOrganizationMemberAuthAccountRequest $req) 绑定组织成员和组织管理员子账号的授权关系
+ * @method Models\BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccount(Models\BindOrganizationPolicySubAccountRequest $req) 绑定成员访问授权策略和组织管理员子账号
  * @method Models\CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(Models\CancelOrganizationMemberAuthAccountRequest $req) 取消组织成员和组织管理员子账号的授权关系
+ * @method Models\CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccount(Models\CancelOrganizationPolicySubAccountRequest $req) 解绑成员访问授权策略和组织管理员子账号
  * @method Models\CheckAccountDeleteResponse CheckAccountDelete(Models\CheckAccountDeleteRequest $req) 成员账号删除检查
  * @method Models\ClearExternalSAMLIdentityProviderResponse ClearExternalSAMLIdentityProvider(Models\ClearExternalSAMLIdentityProviderRequest $req) 清空SAML身份提供商配置信息
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组

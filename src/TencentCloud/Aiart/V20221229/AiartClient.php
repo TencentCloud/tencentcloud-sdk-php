@@ -64,6 +64,8 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 - 查询训练写真模型任务：根据写真模型 ID 查询训练任务的处理状态、处理结果。
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
+ * @method Models\RefineImageResponse RefineImage(Models\RefineImageRequest $req) 将图像变清晰，增强图像细节。变清晰后的图片将保持原图比例，长边为2048。
+默认提供1个并发，代表最多能同时处理1个已提交的任务。
  * @method Models\ReplaceBackgroundResponse ReplaceBackground(Models\ReplaceBackgroundRequest $req) 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
 
 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。

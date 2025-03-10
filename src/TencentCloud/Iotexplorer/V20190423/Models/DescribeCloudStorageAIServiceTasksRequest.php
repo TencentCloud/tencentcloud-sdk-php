@@ -52,6 +52,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户 ID
  * @method integer getChannelId() 获取通道 ID
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
+ * @method array getDeviceNames() 获取设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+ * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+ * @method integer getStartTime() 获取查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+ * @method void setStartTime(integer $StartTime) 设置查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+ * @method integer getEndTime() 获取查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+ * @method void setEndTime(integer $EndTime) 设置查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+ * @method integer getFileURLExpireTime() 获取下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
  */
 class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 {
@@ -104,6 +120,30 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var array 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     */
+    public $DeviceNames;
+
+    /**
+     * @var integer 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     */
+    public $EndTime;
+
+    /**
+     * @var integer 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public $FileURLExpireTime;
+
+    /**
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
@@ -120,6 +160,14 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 - `4`：执行中
      * @param string $UserId 用户 ID
      * @param integer $ChannelId 通道 ID
+     * @param array $DeviceNames 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     * @param integer $StartTime 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     * @param integer $EndTime 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     * @param integer $FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
      */
     function __construct()
     {
@@ -164,6 +212,22 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("DeviceNames",$param) and $param["DeviceNames"] !== null) {
+            $this->DeviceNames = $param["DeviceNames"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
+            $this->FileURLExpireTime = $param["FileURLExpireTime"];
         }
     }
 }

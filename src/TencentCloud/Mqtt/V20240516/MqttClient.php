@@ -47,6 +47,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) 查询授权规则
  * @method Models\DescribeCaCertificateResponse DescribeCaCertificate(Models\DescribeCaCertificateRequest $req) 查询Ca证书详情接口
  * @method Models\DescribeCaCertificatesResponse DescribeCaCertificates(Models\DescribeCaCertificatesRequest $req) 查询集群下的ca证书信息
+ * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) 查询 MQTT 客户端详情
  * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) 查询设备证书详情接口
  * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) 分页查询设备证书
  * @method Models\DescribeInsPublicEndpointsResponse DescribeInsPublicEndpoints(Models\DescribeInsPublicEndpointsRequest $req) 查询MQTT实例公网接入点
@@ -58,7 +59,9 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
+ * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 查询消息列表，如查询死信，请设置ConsumerGroup参数
  * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) 获取产品售卖规格
+ * @method Models\DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(Models\DescribeSharedSubscriptionLagRequest $req) 查询共享订阅消息堆积量
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询mqtt主题详情
  * @method Models\DescribeTopicListResponse DescribeTopicList(Models\DescribeTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
 

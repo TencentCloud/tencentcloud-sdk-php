@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(string $Result) 设置任务结果
  * @method array getFiles() 获取任务输出文件列表
  * @method void setFiles(array $Files) 设置任务输出文件列表
+ * @method array getFilesInfo() 获取任务输出文件信息列表
+ * @method void setFilesInfo(array $FilesInfo) 设置任务输出文件信息列表
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getUpdateTime() 获取最后更新时间
@@ -112,6 +114,11 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $Files;
 
     /**
+     * @var array 任务输出文件信息列表
+     */
+    public $FilesInfo;
+
+    /**
      * @var integer 创建时间
      */
     public $CreateTime;
@@ -141,6 +148,7 @@ class CloudStorageAIServiceTask extends AbstractModel
      * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      * @param string $Result 任务结果
      * @param array $Files 任务输出文件列表
+     * @param array $FilesInfo 任务输出文件信息列表
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 最后更新时间
      * @param string $CustomId 自定义任务 ID
@@ -196,6 +204,15 @@ class CloudStorageAIServiceTask extends AbstractModel
 
         if (array_key_exists("Files",$param) and $param["Files"] !== null) {
             $this->Files = $param["Files"];
+        }
+
+        if (array_key_exists("FilesInfo",$param) and $param["FilesInfo"] !== null) {
+            $this->FilesInfo = [];
+            foreach ($param["FilesInfo"] as $key => $value){
+                $obj = new CloudStorageAIServiceTaskFileInfo();
+                $obj->deserialize($value);
+                array_push($this->FilesInfo, $obj);
+            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

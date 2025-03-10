@@ -78,6 +78,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineGeneration() 获取引擎类型
+
+ * @method void setEngineGeneration(string $EngineGeneration) 设置引擎类型
  */
 class Policy extends AbstractModel
 {
@@ -179,6 +182,12 @@ class Policy extends AbstractModel
     public $Id;
 
     /**
+     * @var string 引擎类型
+
+     */
+    public $EngineGeneration;
+
+    /**
      * @param string $Database 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      * @param string $Catalog 需要授权的数据源名称，管理员级别下只支持填*（代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
      * @param string $Table 需要授权的表名，填*代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
@@ -208,6 +217,7 @@ class Policy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineGeneration 引擎类型
      */
     function __construct()
     {
@@ -288,6 +298,10 @@ class Policy extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("EngineGeneration",$param) and $param["EngineGeneration"] !== null) {
+            $this->EngineGeneration = $param["EngineGeneration"];
         }
     }
 }

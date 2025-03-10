@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getVersions() 获取版本列表
  * @method void setVersions(array $Versions) 设置版本列表
  * @method string getEdgeVersionLatest() 获取边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEdgeVersionLatest(string $EdgeVersionLatest) 设置边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEdgeVersionCurrent() 获取边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEdgeVersionCurrent(string $EdgeVersionCurrent) 设置边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
 
     /**
      * @var string 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EdgeVersionLatest;
 
     /**
      * @var string 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EdgeVersionCurrent;
 
@@ -60,9 +54,7 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
     /**
      * @param array $Versions 版本列表
      * @param string $EdgeVersionLatest 边缘集群最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EdgeVersionCurrent 边缘集群当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

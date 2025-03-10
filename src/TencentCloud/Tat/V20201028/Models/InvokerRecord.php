@@ -22,14 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInvokerId() 获取执行器ID。
  * @method void setInvokerId(string $InvokerId) 设置执行器ID。
- * @method string getInvokeTime() 获取执行时间。
- * @method void setInvokeTime(string $InvokeTime) 设置执行时间。
+ * @method string getInvokeTime() 获取执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setInvokeTime(string $InvokeTime) 设置执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getReason() 获取执行原因。
  * @method void setReason(string $Reason) 设置执行原因。
  * @method string getInvocationId() 获取命令执行ID。
  * @method void setInvocationId(string $InvocationId) 设置命令执行ID。
  * @method string getResult() 获取触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
  * @method void setResult(string $Result) 设置触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
  */
 class InvokerRecord extends AbstractModel
 {
@@ -39,7 +59,7 @@ class InvokerRecord extends AbstractModel
     public $InvokerId;
 
     /**
-     * @var string 执行时间。
+     * @var string 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $InvokeTime;
 
@@ -55,15 +75,35 @@ class InvokerRecord extends AbstractModel
 
     /**
      * @var string 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      */
     public $Result;
 
     /**
      * @param string $InvokerId 执行器ID。
-     * @param string $InvokeTime 执行时间。
+     * @param string $InvokeTime 执行时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $Reason 执行原因。
      * @param string $InvocationId 命令执行ID。
      * @param string $Result 触发结果。
+
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      */
     function __construct()
     {

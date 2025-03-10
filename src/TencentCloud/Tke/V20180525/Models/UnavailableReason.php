@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 不可用原因
  *
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnavailableReason extends AbstractModel
 {
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

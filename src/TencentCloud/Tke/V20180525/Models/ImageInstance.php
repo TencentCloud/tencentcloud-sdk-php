@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 镜像信息
  *
  * @method string getAlias() 获取镜像别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置镜像别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsName() 获取操作系统名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsName(string $OsName) 设置操作系统名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInstance extends AbstractModel
 {
     /**
      * @var string 镜像别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
      * @var string 操作系统名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsName;
 
     /**
      * @var string 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
     /**
      * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
 
     /**
      * @param string $Alias 镜像别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsName 操作系统名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

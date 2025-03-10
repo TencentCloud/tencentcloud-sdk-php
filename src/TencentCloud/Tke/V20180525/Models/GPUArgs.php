@@ -21,29 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * GPU相关的参数，包括驱动版本，CUDA版本，cuDNN版本以及是否开启MIG
  *
  * @method boolean getMIGEnable() 获取是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMIGEnable(boolean $MIGEnable) 设置是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DriverVersion getDriver() 获取GPU驱动版本信息
  * @method void setDriver(DriverVersion $Driver) 设置GPU驱动版本信息
  * @method DriverVersion getCUDA() 获取CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCUDA(DriverVersion $CUDA) 设置CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CUDNN getCUDNN() 获取cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCUDNN(CUDNN $CUDNN) 设置cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CustomDriver getCustomDriver() 获取自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomDriver(CustomDriver $CustomDriver) 设置自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GPUArgs extends AbstractModel
 {
     /**
      * @var boolean 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MIGEnable;
 
@@ -54,32 +45,25 @@ class GPUArgs extends AbstractModel
 
     /**
      * @var DriverVersion CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CUDA;
 
     /**
      * @var CUDNN cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CUDNN;
 
     /**
      * @var CustomDriver 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomDriver;
 
     /**
      * @param boolean $MIGEnable 是否启用MIG特性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DriverVersion $Driver GPU驱动版本信息
      * @param DriverVersion $CUDA CUDA版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CUDNN $CUDNN cuDNN版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomDriver $CustomDriver 自定义GPU驱动信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

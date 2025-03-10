@@ -180,6 +180,8 @@ pausing
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZoneAttr(array $SlaveZoneAttr) 设置备可用区属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCynosVersionTag() 获取版本标签
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置版本标签
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -464,6 +466,11 @@ pausing
     public $SlaveZoneAttr;
 
     /**
+     * @var string 版本标签
+     */
+    public $CynosVersionTag;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -544,6 +551,7 @@ pausing
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SlaveZoneAttr 备可用区属性
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CynosVersionTag 版本标签
      */
     function __construct()
     {
@@ -787,6 +795,10 @@ pausing
                 $obj->deserialize($value);
                 array_push($this->SlaveZoneAttr, $obj);
             }
+        }
+
+        if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
+            $this->CynosVersionTag = $param["CynosVersionTag"];
         }
     }
 }

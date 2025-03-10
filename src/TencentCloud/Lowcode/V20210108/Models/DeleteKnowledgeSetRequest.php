@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteKnowledgeSet请求参数结构体
  *
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getName() 获取知识库标识
  * @method void setName(string $Name) 设置知识库标识
  */
 class DeleteKnowledgeSetRequest extends AbstractModel
 {
     /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
+    /**
      * @var string 知识库标识
      */
     public $Name;
 
     /**
+     * @param string $EnvId 环境ID
      * @param string $Name 知识库标识
      */
     function __construct()
@@ -46,6 +54,10 @@ class DeleteKnowledgeSetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }

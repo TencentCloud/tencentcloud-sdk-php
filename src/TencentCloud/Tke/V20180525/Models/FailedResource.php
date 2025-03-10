@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 修改标签失败的资源
  *
  * @method string getResource() 获取资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getError() 获取执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(string $Error) 设置执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailedResource extends AbstractModel
 {
     /**
      * @var string 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @param string $Resource 资源六段式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Error 执行失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 描述了k8s节点数据盘相关配置与信息。
  *
  * @method string getDiskType() 获取云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileSystem() 获取文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSystem(string $FileSystem) 设置文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoFormatAndMount() 获取是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountTarget() 获取挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountTarget(string $MountTarget) 设置挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskPartition() 获取挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskPartition(string $DiskPartition) 设置挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
 {
     /**
      * @var string 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var string 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSystem;
 
     /**
      * @var integer 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var boolean 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoFormatAndMount;
 
     /**
      * @var string 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountTarget;
 
     /**
      * @var string 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskPartition;
 
     /**
      * @param string $DiskType 云盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSystem 文件系统(ext3/ext4/xfs)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 云盘大小(G）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountTarget 挂载目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

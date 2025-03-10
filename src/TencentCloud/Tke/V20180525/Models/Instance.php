@@ -29,27 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceState() 获取实例的状态（running 运行中，initializing 初始化中，failed 异常）
  * @method void setInstanceState(string $InstanceState) 设置实例的状态（running 运行中，initializing 初始化中，failed 异常）
  * @method string getDrainStatus() 获取实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrainStatus(string $DrainStatus) 设置实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取节点配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取添加时间
  * @method void setCreatedTime(string $CreatedTime) 设置添加时间
  * @method string getLanIP() 获取节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanIP(string $LanIP) 设置节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodePoolId() 获取资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePoolId(string $NodePoolId) 设置资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoscalingGroupId() 获取自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -75,13 +65,11 @@ class Instance extends AbstractModel
 
     /**
      * @var string 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrainStatus;
 
     /**
      * @var InstanceAdvancedSettings 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceAdvancedSettings;
 
@@ -92,19 +80,16 @@ class Instance extends AbstractModel
 
     /**
      * @var string 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LanIP;
 
     /**
      * @var string 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolId;
 
     /**
      * @var string 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalingGroupId;
 
@@ -114,16 +99,11 @@ class Instance extends AbstractModel
      * @param string $FailedReason 实例异常(或者处于初始化中)的原因
      * @param string $InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      * @param string $DrainStatus 实例是否封锁状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 添加时间
      * @param string $LanIP 节点内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodePoolId 资源池ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalingGroupId 自动伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

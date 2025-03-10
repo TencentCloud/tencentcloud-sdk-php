@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 边缘容器集群master自定义参数
  *
  * @method array getKubeAPIServer() 获取kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeAPIServer(array $KubeAPIServer) 设置kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubeControllerManager() 获取kube-controller-manager自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeControllerManager(array $KubeControllerManager) 设置kube-controller-manager自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubeScheduler() 获取kube-scheduler自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeScheduler(array $KubeScheduler) 设置kube-scheduler自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeClusterExtraArgs extends AbstractModel
 {
     /**
      * @var array kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeAPIServer;
 
     /**
      * @var array kube-controller-manager自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeControllerManager;
 
     /**
      * @var array kube-scheduler自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeScheduler;
 
     /**
      * @param array $KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeControllerManager kube-controller-manager自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeScheduler kube-scheduler自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

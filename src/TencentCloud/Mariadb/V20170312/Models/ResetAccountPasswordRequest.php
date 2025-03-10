@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置登录用户名。
  * @method string getHost() 获取用户允许的访问 host，用户名+host唯一确定一个账号。
  * @method void setHost(string $Host) 设置用户允许的访问 host，用户名+host唯一确定一个账号。
- * @method string getPassword() 获取新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
- * @method void setPassword(string $Password) 设置新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+ * @method string getPassword() 获取密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
+ * @method void setPassword(string $Password) 设置密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
  * @method string getEncryptedPassword() 获取使用GetPublicKey返回的RSA2048公钥加密后的密码
  * @method void setEncryptedPassword(string $EncryptedPassword) 设置使用GetPublicKey返回的RSA2048公钥加密后的密码
  */
@@ -49,7 +49,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * @var string 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      */
     public $Password;
 
@@ -62,7 +62,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $UserName 登录用户名。
      * @param string $Host 用户允许的访问 host，用户名+host唯一确定一个账号。
-     * @param string $Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * @param string $Password 密码需要 8\~32 个字符，不能以 '/' 开头，并且至少包含字母、数字和特殊字符 ()~!@#$%^&*-+=_|{}[]:<>,.?/ 中的两项
      * @param string $EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码
      */
     function __construct()

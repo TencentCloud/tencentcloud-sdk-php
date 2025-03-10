@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddonVersion() 获取addon的版本
  * @method void setAddonVersion(string $AddonVersion) 设置addon的版本
  * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhase() 获取addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhase(string $Phase) 设置addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取addon的创建时间
  * @method void setCreateTime(string $CreateTime) 设置addon的创建时间
  */
@@ -53,19 +47,16 @@ class Addon extends AbstractModel
 
     /**
      * @var string addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawValues;
 
     /**
      * @var string addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phase;
 
     /**
      * @var string addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
@@ -78,11 +69,8 @@ class Addon extends AbstractModel
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon的版本
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phase addon的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason addon失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime addon的创建时间
      */
     function __construct()

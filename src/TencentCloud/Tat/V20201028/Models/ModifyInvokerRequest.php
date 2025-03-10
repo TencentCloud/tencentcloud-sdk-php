@@ -21,19 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * ModifyInvoker请求参数结构体
  *
  * @method string getInvokerId() 获取待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  * @method void setInvokerId(string $InvokerId) 设置待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  * @method string getName() 获取待修改的执行器名称。
  * @method void setName(string $Name) 设置待修改的执行器名称。
  * @method string getType() 获取执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
  * @method void setType(string $Type) 设置执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
  * @method string getCommandId() 获取待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  * @method void setCommandId(string $CommandId) 设置待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  * @method string getUsername() 获取待修改的用户名。
  * @method void setUsername(string $Username) 设置待修改的用户名。
  * @method string getParameters() 获取待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
  * @method void setParameters(string $Parameters) 设置待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
  * @method array getInstanceIds() 获取待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
  * @method void setInstanceIds(array $InstanceIds) 设置待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
  * @method ScheduleSettings getScheduleSettings() 获取待修改的周期执行器设置。
  * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置待修改的周期执行器设置。
  */
@@ -41,6 +61,8 @@ class ModifyInvokerRequest extends AbstractModel
 {
     /**
      * @var string 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public $InvokerId;
 
@@ -56,6 +78,8 @@ class ModifyInvokerRequest extends AbstractModel
 
     /**
      * @var string 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public $CommandId;
 
@@ -66,11 +90,17 @@ class ModifyInvokerRequest extends AbstractModel
 
     /**
      * @var string 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
     public $Parameters;
 
     /**
      * @var array 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      */
     public $InstanceIds;
 
@@ -81,12 +111,22 @@ class ModifyInvokerRequest extends AbstractModel
 
     /**
      * @param string $InvokerId 待修改的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      * @param string $Name 待修改的执行器名称。
      * @param string $Type 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
      * @param string $CommandId 待修改的命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      * @param string $Username 待修改的用户名。
      * @param string $Parameters 待修改的自定义参数。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      * @param array $InstanceIds 待修改的实例ID列表。列表长度上限100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      * @param ScheduleSettings $ScheduleSettings 待修改的周期执行器设置。
      */
     function __construct()

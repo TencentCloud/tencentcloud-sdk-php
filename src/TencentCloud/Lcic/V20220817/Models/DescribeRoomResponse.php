@@ -69,21 +69,13 @@ video 纯视频
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
  * @method array getAssistants() 获取助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistants(array $Assistants) 设置助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordUrl() 获取录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
  * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
  * @method integer getInteractionMode() 获取开启专注模式。
@@ -122,6 +114,8 @@ video 纯视频
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method integer getRecordLayout() 获取录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+ * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -201,25 +195,21 @@ video 纯视频
 
     /**
      * @var array 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Assistants;
 
     /**
      * @var string 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordUrl;
 
     /**
      * @var integer 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
@@ -307,6 +297,11 @@ video 纯视频
     public $RecordLayout;
 
     /**
+     * @var integer 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public $WhiteBoardSnapshotMode;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -337,13 +332,9 @@ video 纯视频
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教UserId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
      * @param integer $InteractionMode 开启专注模式。
 0 收看全部角色音视频(默认)
@@ -363,6 +354,7 @@ video 纯视频
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -504,6 +496,10 @@ video 纯视频
 
         if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {
             $this->RecordLayout = $param["RecordLayout"];
+        }
+
+        if (array_key_exists("WhiteBoardSnapshotMode",$param) and $param["WhiteBoardSnapshotMode"] !== null) {
+            $this->WhiteBoardSnapshotMode = $param["WhiteBoardSnapshotMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

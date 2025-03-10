@@ -21,149 +21,98 @@ use TencentCloud\Common\AbstractModel;
  * 房间列表
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoomId() 获取房间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomId(integer $RoomId) 设置房间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealStartTime() 获取实际开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealStartTime(integer $RealStartTime) 设置实际开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealEndTime() 获取实际结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealEndTime(integer $RealEndTime) 设置实际结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResolution() 获取头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResolution(integer $Resolution) 设置头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRTCMember() 获取最大允许连麦人数。已废弃，使用字段 MaxMicNumber
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRTCMember(integer $MaxRTCMember) 设置最大允许连麦人数。已废弃，使用字段 MaxMicNumber
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReplayUrl() 获取房间录制地址。已废弃，使用新字段 RecordUrl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplayUrl(string $ReplayUrl) 设置房间录制地址。已废弃，使用新字段 RecordUrl
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordUrl() 获取录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMicNumber() 获取课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMicNumber(integer $MaxMicNumber) 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInteractionMode() 获取开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInteractionMode(integer $InteractionMode) 设置开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVideoOrientation() 获取横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsGradingRequiredPostClass() 获取开启课后评分。 0：不开启(默认)  1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoomType() 获取房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注：大班课的布局(layout)只有三分屏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomType(integer $RoomType) 设置房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注：大班课的布局(layout)只有三分屏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveType(integer $LiveType) 设置直播类型：0 常规（默认）1 伪直播
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordLiveUrl() 获取伪直播回放链接	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播回放链接	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+ * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
  */
 class RoomItem extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 房间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomId;
 
     /**
      * @var integer 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 实际开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealStartTime;
 
     /**
      * @var integer 实际结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealEndTime;
 
@@ -172,98 +121,82 @@ class RoomItem extends AbstractModel
 1 标清
 2 高清
 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resolution;
 
     /**
      * @var integer 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRTCMember;
 
     /**
      * @var string 房间录制地址。已废弃，使用新字段 RecordUrl
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplayUrl;
 
     /**
      * @var string 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordUrl;
 
     /**
      * @var integer 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMicNumber;
 
     /**
      * @var integer 打开学生麦克风/摄像头的授权开关 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableDirectControl;
 
     /**
      * @var integer 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InteractionMode;
 
     /**
      * @var integer 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoOrientation;
 
     /**
      * @var integer 开启课后评分。 0：不开启(默认)  1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGradingRequiredPostClass;
 
     /**
      * @var integer 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注：大班课的布局(layout)只有三分屏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomType;
 
     /**
      * @var integer 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndDelayTime;
 
     /**
      * @var integer 直播类型：0 常规（默认）1 伪直播
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveType;
 
     /**
      * @var string 伪直播回放链接	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordLiveUrl;
 
     /**
      * @var integer 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableAutoStart;
 
     /**
      * @var string 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordBackground;
 
     /**
      * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordScene;
 
@@ -273,57 +206,40 @@ class RoomItem extends AbstractModel
     public $RecordLang;
 
     /**
+     * @var integer 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public $WhiteBoardSnapshotMode;
+
+    /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealStartTime 实际开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealEndTime 实际结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRTCMember 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReplayUrl 房间录制地址。已废弃，使用新字段 RecordUrl
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMicNumber 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomType 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注：大班课的布局(layout)只有三分屏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordLiveUrl 伪直播回放链接	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
      */
     function __construct()
     {
@@ -432,6 +348,10 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
             $this->RecordLang = $param["RecordLang"];
+        }
+
+        if (array_key_exists("WhiteBoardSnapshotMode",$param) and $param["WhiteBoardSnapshotMode"] !== null) {
+            $this->WhiteBoardSnapshotMode = $param["WhiteBoardSnapshotMode"];
         }
     }
 }

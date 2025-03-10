@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnable() 获取是否启用
  * @method void setEnable(boolean $Enable) 设置是否启用
  * @method integer getOtherCount() 获取其他资源数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherCount(integer $OtherCount) 设置其他资源数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterLevelAttribute extends AbstractModel
 {
@@ -85,7 +83,6 @@ class ClusterLevelAttribute extends AbstractModel
 
     /**
      * @var integer 其他资源数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherCount;
 
@@ -99,7 +96,6 @@ class ClusterLevelAttribute extends AbstractModel
      * @param integer $CRDCount CRD数量
      * @param boolean $Enable 是否启用
      * @param integer $OtherCount 其他资源数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

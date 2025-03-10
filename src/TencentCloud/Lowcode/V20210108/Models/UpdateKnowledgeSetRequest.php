@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateKnowledgeSet请求参数结构体
  *
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getName() 获取知识库标识
  * @method void setName(string $Name) 设置知识库标识
  * @method string getTitle() 获取知识库名称
@@ -28,9 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesc(string $Desc) 设置描述
  * @method string getActive() 获取状态;ENABLED启用；NOT_ENABLED不启用
  * @method void setActive(string $Active) 设置状态;ENABLED启用；NOT_ENABLED不启用
+ * @method string getMeta() 获取知识库的meta信息
+ * @method void setMeta(string $Meta) 设置知识库的meta信息
  */
 class UpdateKnowledgeSetRequest extends AbstractModel
 {
+    /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
     /**
      * @var string 知识库标识
      */
@@ -52,10 +61,17 @@ class UpdateKnowledgeSetRequest extends AbstractModel
     public $Active;
 
     /**
+     * @var string 知识库的meta信息
+     */
+    public $Meta;
+
+    /**
+     * @param string $EnvId 环境ID
      * @param string $Name 知识库标识
      * @param string $Title 知识库名称
      * @param string $Desc 描述
      * @param string $Active 状态;ENABLED启用；NOT_ENABLED不启用
+     * @param string $Meta 知识库的meta信息
      */
     function __construct()
     {
@@ -70,6 +86,10 @@ class UpdateKnowledgeSetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -84,6 +104,10 @@ class UpdateKnowledgeSetRequest extends AbstractModel
 
         if (array_key_exists("Active",$param) and $param["Active"] !== null) {
             $this->Active = $param["Active"];
+        }
+
+        if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
+            $this->Meta = $param["Meta"];
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 集群属性
  *
  * @method string getNodeNameType() 获取节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeNameType(string $NodeNameType) 设置节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterProperty extends AbstractModel
 {
     /**
      * @var string 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeNameType;
 
     /**
      * @param string $NodeNameType 节点hostname命名模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

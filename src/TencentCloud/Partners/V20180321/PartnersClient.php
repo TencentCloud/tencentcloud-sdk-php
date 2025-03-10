@@ -40,6 +40,7 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentRelateBigDealIdsResponse DescribeAgentRelateBigDealIds(Models\DescribeAgentRelateBigDealIdsRequest $req) 根据大订单号查询关联申请合并支付的其他订单号
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）
  * @method Models\DescribeClientBalanceNewResponse DescribeClientBalanceNew(Models\DescribeClientBalanceNewRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+ * @method Models\DescribeClientJoinIncreaseListResponse DescribeClientJoinIncreaseList(Models\DescribeClientJoinIncreaseListRequest $req) 查询合作伙伴名下客户的参与增量激励考核信息列表
  * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息
  * @method Models\DescribeRebateInfosNewResponse DescribeRebateInfosNew(Models\DescribeRebateInfosNewRequest $req) 代理商可查询自己名下全部返佣信息
  * @method Models\DescribeSalesmansResponse DescribeSalesmans(Models\DescribeSalesmansRequest $req) 代理商查询名下业务员列表信息

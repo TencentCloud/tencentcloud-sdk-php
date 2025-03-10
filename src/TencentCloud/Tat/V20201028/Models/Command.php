@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置命令描述。
  * @method string getContent() 获取Base64编码后的命令内容。
  * @method void setContent(string $Content) 设置Base64编码后的命令内容。
- * @method string getCommandType() 获取命令类型。
- * @method void setCommandType(string $CommandType) 设置命令类型。
+ * @method string getCommandType() 获取命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+ * @method void setCommandType(string $CommandType) 设置命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
  * @method string getWorkingDirectory() 获取命令执行路径。
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径。
  * @method integer getTimeout() 获取命令超时时间。
  * @method void setTimeout(integer $Timeout) 设置命令超时时间。
- * @method string getCreatedTime() 获取命令创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置命令创建时间。
- * @method string getUpdatedTime() 获取命令更新时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置命令更新时间。
+ * @method string getCreatedTime() 获取命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
  * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
  * @method string getDefaultParameters() 获取自定义参数的默认取值。
@@ -82,7 +82,7 @@ class Command extends AbstractModel
     public $Content;
 
     /**
-     * @var string 命令类型。
+     * @var string 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public $CommandType;
 
@@ -97,12 +97,12 @@ class Command extends AbstractModel
     public $Timeout;
 
     /**
-     * @var string 命令创建时间。
+     * @var string 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 命令更新时间。
+     * @var string 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
 
@@ -161,11 +161,11 @@ class Command extends AbstractModel
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
      * @param string $Content Base64编码后的命令内容。
-     * @param string $CommandType 命令类型。
+     * @param string $CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      * @param string $WorkingDirectory 命令执行路径。
      * @param integer $Timeout 命令超时时间。
-     * @param string $CreatedTime 命令创建时间。
-     * @param string $UpdatedTime 命令更新时间。
+     * @param string $CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param boolean $EnableParameter 是否启用自定义参数功能。
      * @param string $DefaultParameters 自定义参数的默认取值。
      * @param array $DefaultParameterConfs 自定义参数的默认取值。

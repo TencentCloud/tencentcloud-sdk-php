@@ -48,6 +48,8 @@ ENABLED 已启用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMeta() 获取知识库的meta信息
+ * @method void setMeta(string $Meta) 设置知识库的meta信息
  */
 class KnowledgeSet extends AbstractModel
 {
@@ -90,6 +92,11 @@ ENABLED 已启用
     public $UpdateTime;
 
     /**
+     * @var string 知识库的meta信息
+     */
+    public $Meta;
+
+    /**
      * @param string $Name 知识库标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 知识库名称
@@ -104,6 +111,7 @@ ENABLED 已启用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Meta 知识库的meta信息
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ ENABLED 已启用
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
+            $this->Meta = $param["Meta"];
         }
     }
 }

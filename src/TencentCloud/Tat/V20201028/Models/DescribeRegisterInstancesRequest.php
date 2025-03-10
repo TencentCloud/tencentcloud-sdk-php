@@ -20,25 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegisterInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例id。
- * @method void setInstanceIds(array $InstanceIds) 设置实例id。
- * @method array getFilters() 获取过滤器列表。
+ * @method array getInstanceIds() 获取托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+ * @method void setInstanceIds(array $InstanceIds) 设置托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+ * @method array getFilters() 获取过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -49,23 +56,24 @@ use TencentCloud\Common\AbstractModel;
 必选：否
 
 
- * @method void setFilters(array $Filters) 设置过滤器列表。
+ * @method void setFilters(array $Filters) 设置过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -84,28 +92,32 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRegisterInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例id。
+     * @var array 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
      */
     public $InstanceIds;
 
     /**
-     * @var array 过滤器列表。
+     * @var array 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -130,24 +142,28 @@ class DescribeRegisterInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $InstanceIds 实例id。
-     * @param array $Filters 过滤器列表。
+     * @param array $InstanceIds 托管实例 id。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+     * @param array $Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 

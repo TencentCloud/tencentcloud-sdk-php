@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置Base64编码后的命令内容，长度不可超过64KB。
  * @method string getDescription() 获取命令描述。不超过120字符。
  * @method void setDescription(string $Description) 设置命令描述。不超过120字符。
- * @method string getCommandType() 获取命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
- * @method void setCommandType(string $CommandType) 设置命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+ * @method string getCommandType() 获取命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
+ * @method void setCommandType(string $CommandType) 设置命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
  * @method string getWorkingDirectory() 获取命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
  * @method integer getTimeout() 获取命令超时时间，默认60秒。取值范围[1, 86400]。
@@ -41,18 +41,26 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
  * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
  * @method array getDefaultParameterConfs() 获取自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
  * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
  * @method array getTags() 获取为命令关联的标签，列表长度不超过10。
  * @method void setTags(array $Tags) 设置为命令关联的标签，列表长度不超过10。
@@ -89,7 +97,7 @@ class CreateCommandRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+     * @var string 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
      */
     public $CommandType;
 
@@ -114,6 +122,8 @@ class CreateCommandRequest extends AbstractModel
      * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
@@ -122,6 +132,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * @var array 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
      */
     public $DefaultParameterConfs;
@@ -154,7 +166,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * @param string $CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param string $Description 命令描述。不超过120字符。
-     * @param string $CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+     * @param string $CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
      * @param string $WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
      * @param integer $Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
      * @param boolean $EnableParameter 是否启用自定义参数功能。
@@ -163,10 +175,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      * @param array $DefaultParameterConfs 自定义参数数组。
 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+仅在 EnableParameter 参数为 true 时，才允许设置此参数。
 自定义参数最多20个。
      * @param array $Tags 为命令关联的标签，列表长度不超过10。
      * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。

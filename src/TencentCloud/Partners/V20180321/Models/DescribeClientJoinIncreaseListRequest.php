@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryParseDocResult请求参数结构体
+ * DescribeClientJoinIncreaseList请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method array getClientUins() 获取客户UIN列表
+ * @method void setClientUins(array $ClientUins) 设置客户UIN列表
  */
-class QueryParseDocResultRequest extends AbstractModel
+class DescribeClientJoinIncreaseListRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var array 客户UIN列表
      */
-    public $TaskId;
+    public $ClientUins;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param array $ClientUins 客户UIN列表
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryParseDocResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("ClientUins",$param) and $param["ClientUins"] !== null) {
+            $this->ClientUins = $param["ClientUins"];
         }
     }
 }

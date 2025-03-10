@@ -28,26 +28,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getTaskStatus() 获取执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
  * @method void setTaskStatus(string $TaskStatus) 设置执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method TaskResult getTaskResult() 获取执行结果。
  * @method void setTaskResult(TaskResult $TaskResult) 设置执行结果。
- * @method string getStartTime() 获取执行任务开始时间。
+ * @method string getStartTime() 获取执行任务开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置执行任务开始时间。
+ * @method void setStartTime(string $StartTime) 设置执行任务开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取执行任务结束时间。
+ * @method string getEndTime() 获取执行任务结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置执行任务结束时间。
+ * @method void setEndTime(string $EndTime) 设置执行任务结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getUpdatedTime() 获取更新时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
+ * @method string getCreatedTime() 获取创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method CommandDocument getCommandDocument() 获取执行任务所执行的命令详情。
  * @method void setCommandDocument(CommandDocument $CommandDocument) 设置执行任务所执行的命令详情。
  * @method string getErrorInfo() 获取执行任务失败时的错误信息。
@@ -75,7 +99,19 @@ class InvocationTask extends AbstractModel
     /**
      * @var string 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
      */
     public $TaskStatus;
 
@@ -90,24 +126,24 @@ class InvocationTask extends AbstractModel
     public $TaskResult;
 
     /**
-     * @var string 执行任务开始时间。
+     * @var string 执行任务开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 执行任务结束时间。
+     * @var string 执行任务结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 更新时间。
+     * @var string 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
 
@@ -132,15 +168,27 @@ class InvocationTask extends AbstractModel
      * @param string $CommandId 命令ID。
      * @param string $TaskStatus 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
+- PENDING：等待下发
+- DELIVERING：下发中
+- DELIVER_DELAYED：延时下发
+- DELIVER_FAILED：下发失败
+- START_FAILED：命令启动失败
+- RUNNING：命令运行中
+- SUCCESS：命令成功
+- FAILED：命令执行失败，执行完退出码不为 0
+- TIMEOUT：命令超时
+- TASK_TIMEOUT：客户端无响应
+- CANCELLING：取消中
+- CANCELLED：已取消（命令启动前就被取消）
+- TERMINATED：已中止（命令执行期间被取消）
      * @param string $InstanceId 实例ID。
      * @param TaskResult $TaskResult 执行结果。
-     * @param string $StartTime 执行任务开始时间。
+     * @param string $StartTime 执行任务开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 执行任务结束时间。
+     * @param string $EndTime 执行任务结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedTime 创建时间。
-     * @param string $UpdatedTime 更新时间。
+     * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param CommandDocument $CommandDocument 执行任务所执行的命令详情。
      * @param string $ErrorInfo 执行任务失败时的错误信息。
      * @param string $InvocationSource 调用来源。

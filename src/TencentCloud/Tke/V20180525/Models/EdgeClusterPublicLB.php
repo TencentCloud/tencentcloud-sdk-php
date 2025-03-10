@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 边缘计算集群公网访问负载均衡信息
  *
  * @method boolean getEnabled() 获取是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAllowFromCidrs() 获取允许访问的公网cidr
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowFromCidrs(array $AllowFromCidrs) 设置允许访问的公网cidr
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeClusterPublicLB extends AbstractModel
 {
     /**
      * @var boolean 是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var array 允许访问的公网cidr
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowFromCidrs;
 
     /**
      * @param boolean $Enabled 是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AllowFromCidrs 允许访问的公网cidr
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

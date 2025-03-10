@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKnowledgeDocumentSetDetail请求参数结构体
  *
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getCollectionView() 获取知识库标识
  * @method void setCollectionView(string $CollectionView) 设置知识库标识
  * @method string getDocumentSetName() 获取文件名
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeKnowledgeDocumentSetDetailRequest extends AbstractModel
 {
+    /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
     /**
      * @var string 知识库标识
      */
@@ -45,6 +52,7 @@ class DescribeKnowledgeDocumentSetDetailRequest extends AbstractModel
     public $DocumentSetId;
 
     /**
+     * @param string $EnvId 环境ID
      * @param string $CollectionView 知识库标识
      * @param string $DocumentSetName 文件名
      * @param string $DocumentSetId 文件id
@@ -62,6 +70,10 @@ class DescribeKnowledgeDocumentSetDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
         if (array_key_exists("CollectionView",$param) and $param["CollectionView"] !== null) {
             $this->CollectionView = $param["CollectionView"];
         }

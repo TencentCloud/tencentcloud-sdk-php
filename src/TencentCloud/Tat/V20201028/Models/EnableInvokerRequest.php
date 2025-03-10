@@ -21,17 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * EnableInvoker请求参数结构体
  *
  * @method string getInvokerId() 获取待启用的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  * @method void setInvokerId(string $InvokerId) 设置待启用的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  */
 class EnableInvokerRequest extends AbstractModel
 {
     /**
      * @var string 待启用的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public $InvokerId;
 
     /**
      * @param string $InvokerId 待启用的执行器ID。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     function __construct()
     {

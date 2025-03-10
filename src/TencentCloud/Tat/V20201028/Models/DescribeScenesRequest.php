@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScenes请求参数结构体
  *
- * @method array getSceneIds() 获取场景 ID 数组
- * @method void setSceneIds(array $SceneIds) 设置场景 ID 数组
+ * @method array getSceneIds() 获取场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
+ * @method void setSceneIds(array $SceneIds) 设置场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
  * @method array getFilters() 获取过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于 `Limit` 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
@@ -42,15 +50,19 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScenesRequest extends AbstractModel
 {
     /**
-     * @var array 场景 ID 数组
+     * @var array 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
      */
     public $SceneIds;
 
     /**
      * @var array 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
      */
@@ -67,11 +79,15 @@ class DescribeScenesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $SceneIds 场景 ID 数组
+     * @param array $SceneIds 场景 ID 数组。
+
+参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
+
      * @param array $Filters 过滤条件。
-<li> scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。</li>
-<li> scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。</li>
-<li> created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，取值为 TAT 或 USER。TAT 代表公共命令，USER 代表由用户创建的命令。</li>
+
+- scene-id - String - 是否必填：否 -（过滤条件）按照场景 ID 过滤。
+- scene-name - String - 是否必填：否 -（过滤条件）按照场景名称过滤。
+- created-by - String - 是否必填：否 -（过滤条件）按照场景创建者过滤，目前仅支持 TAT，代表公共场景。
 
 每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `SceneIds` 和 `Filters` 。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于 `Limit` 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。

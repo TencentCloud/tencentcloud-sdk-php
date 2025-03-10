@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokerId(string $InvokerId) 设置执行器ID。
  * @method string getName() 获取执行器名称。
  * @method void setName(string $Name) 设置执行器名称。
- * @method string getType() 获取执行器类型。
- * @method void setType(string $Type) 设置执行器类型。
+ * @method string getType() 获取执行器类型。目前仅支持 SCHEDULE 一种。
+ * @method void setType(string $Type) 设置执行器类型。目前仅支持 SCHEDULE 一种。
  * @method string getCommandId() 获取命令ID。
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getUsername() 获取用户名。
@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置执行器周期计划。周期执行器会返回此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getUpdatedTime() 获取修改时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置修改时间。
+ * @method string getCreatedTime() 获取创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
  */
 class Invoker extends AbstractModel
 {
@@ -58,7 +58,7 @@ class Invoker extends AbstractModel
     public $Name;
 
     /**
-     * @var string 执行器类型。
+     * @var string 执行器类型。目前仅支持 SCHEDULE 一种。
      */
     public $Type;
 
@@ -94,19 +94,19 @@ class Invoker extends AbstractModel
     public $ScheduleSettings;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 修改时间。
+     * @var string 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
 
     /**
      * @param string $InvokerId 执行器ID。
      * @param string $Name 执行器名称。
-     * @param string $Type 执行器类型。
+     * @param string $Type 执行器类型。目前仅支持 SCHEDULE 一种。
      * @param string $CommandId 命令ID。
      * @param string $Username 用户名。
      * @param string $Parameters 自定义参数。
@@ -114,8 +114,8 @@ class Invoker extends AbstractModel
      * @param boolean $Enable 执行器是否启用。
      * @param ScheduleSettings $ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedTime 创建时间。
-     * @param string $UpdatedTime 修改时间。
+     * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     function __construct()
     {

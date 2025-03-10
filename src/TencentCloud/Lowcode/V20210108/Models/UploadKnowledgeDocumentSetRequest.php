@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadKnowledgeDocumentSet请求参数结构体
  *
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getCollectionView() 获取知识库标识
  * @method void setCollectionView(string $CollectionView) 设置知识库标识
  * @method string getFileName() 获取状态;ENABLED启用；NOT_ENABLED不启用
  * @method void setFileName(string $FileName) 设置状态;ENABLED启用；NOT_ENABLED不启用
- * @method string getCosUrl() 获取文件存储位置的可读地址
- * @method void setCosUrl(string $CosUrl) 设置文件存储位置的可读地址
+ * @method string getCosUrl() 获取腾讯云文件存储位置的可读地址
+ * @method void setCosUrl(string $CosUrl) 设置腾讯云文件存储位置的可读地址
  * @method string getDocumentType() 获取文件类型，例如: .docx, .md
  * @method void setDocumentType(string $DocumentType) 设置文件类型，例如: .docx, .md
  * @method string getDocumentDesc() 获取对文件的描述
@@ -40,6 +42,11 @@ use TencentCloud\Common\AbstractModel;
 class UploadKnowledgeDocumentSetRequest extends AbstractModel
 {
     /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
+    /**
      * @var string 知识库标识
      */
     public $CollectionView;
@@ -50,7 +57,7 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var string 文件存储位置的可读地址
+     * @var string 腾讯云文件存储位置的可读地址
      */
     public $CosUrl;
 
@@ -80,9 +87,10 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
     public $DocumentSetId;
 
     /**
+     * @param string $EnvId 环境ID
      * @param string $CollectionView 知识库标识
      * @param string $FileName 状态;ENABLED启用；NOT_ENABLED不启用
-     * @param string $CosUrl 文件存储位置的可读地址
+     * @param string $CosUrl 腾讯云文件存储位置的可读地址
      * @param string $DocumentType 文件类型，例如: .docx, .md
      * @param string $DocumentDesc 对文件的描述
      * @param string $FileTitle 文件标题
@@ -102,6 +110,10 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
         if (array_key_exists("CollectionView",$param) and $param["CollectionView"] !== null) {
             $this->CollectionView = $param["CollectionView"];
         }

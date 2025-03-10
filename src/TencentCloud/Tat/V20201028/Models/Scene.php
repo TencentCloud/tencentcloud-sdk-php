@@ -25,11 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSceneName() 获取场景名称。
  * @method void setSceneName(string $SceneName) 设置场景名称。
  * @method string getCreatedBy() 获取场景创建者。
+
+- TAT：公共场景
  * @method void setCreatedBy(string $CreatedBy) 设置场景创建者。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getUpdatedTime() 获取更新时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
+
+- TAT：公共场景
+ * @method string getCreatedTime() 获取创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
  */
 class Scene extends AbstractModel
 {
@@ -45,16 +49,18 @@ class Scene extends AbstractModel
 
     /**
      * @var string 场景创建者。
+
+- TAT：公共场景
      */
     public $CreatedBy;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 更新时间。
+     * @var string 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
 
@@ -62,8 +68,10 @@ class Scene extends AbstractModel
      * @param string $SceneId 场景 ID 。
      * @param string $SceneName 场景名称。
      * @param string $CreatedBy 场景创建者。
-     * @param string $CreatedTime 创建时间。
-     * @param string $UpdatedTime 更新时间。
+
+- TAT：公共场景
+     * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     function __construct()
     {

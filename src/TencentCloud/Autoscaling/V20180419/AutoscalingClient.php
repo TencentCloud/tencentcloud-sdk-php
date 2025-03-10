@@ -163,8 +163,9 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 伸缩策略所属伸缩组处于伸缩活动时，会拒绝执行伸缩策略。
 * 本接口不支持执行目标追踪策略。
  * @method Models\ExitStandbyResponse ExitStandby(Models\ExitStandbyRequest $req) 伸缩组内实例退出备用中状态。
-* 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
-* 对备用中状态实例进行开关机操作也会使其退出备用中状态
+* 退出备用中状态后，实例会进入运行中状态，CLB 权重值恢复为预设值
+* 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+* 实例退出备用中状态后，伸缩组会上调期望实例数，新期望数不能大于最大值
  * @method Models\ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(Models\ModifyAutoScalingGroupRequest $req) 本接口（ModifyAutoScalingGroup）用于修改伸缩组。
  * @method Models\ModifyDesiredCapacityResponse ModifyDesiredCapacity(Models\ModifyDesiredCapacityRequest $req) 本接口（ModifyDesiredCapacity）用于修改指定伸缩组的期望实例数
  * @method Models\ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(Models\ModifyLaunchConfigurationAttributesRequest $req) 本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。

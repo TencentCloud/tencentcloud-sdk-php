@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名。
  * @method string getMachineId() 获取机器ID。
  * @method void setMachineId(string $MachineId) 设置机器ID。
- * @method string getSystemName() 获取系统名。
- * @method void setSystemName(string $SystemName) 设置系统名。
+ * @method string getSystemName() 获取系统名。取值：Linux | Windows。
+ * @method void setSystemName(string $SystemName) 设置系统名。取值：Linux | Windows。
  * @method string getHostName() 获取主机名。
  * @method void setHostName(string $HostName) 设置主机名。
  * @method string getLocalIp() 获取内网IP。
@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
 返回Online表示实例正在托管，返回Offline表示实例未托管。
  * @method void setStatus(string $Status) 设置托管状态。
 返回Online表示实例正在托管，返回Offline表示实例未托管。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getUpdatedTime() 获取上次更新时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置上次更新时间。
+ * @method string getCreatedTime() 获取创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class RegisterInstanceInfo extends AbstractModel
 {
@@ -68,7 +70,7 @@ class RegisterInstanceInfo extends AbstractModel
     public $MachineId;
 
     /**
-     * @var string 系统名。
+     * @var string 系统名。取值：Linux | Windows。
      */
     public $SystemName;
 
@@ -94,28 +96,34 @@ class RegisterInstanceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 上次更新时间。
+     * @var string 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
+
+    /**
+     * @var array 标签
+     */
+    public $Tags;
 
     /**
      * @param string $RegisterCodeId 注册码ID。
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名。
      * @param string $MachineId 机器ID。
-     * @param string $SystemName 系统名。
+     * @param string $SystemName 系统名。取值：Linux | Windows。
      * @param string $HostName 主机名。
      * @param string $LocalIp 内网IP。
      * @param string $PublicKey 公钥。
      * @param string $Status 托管状态。
 返回Online表示实例正在托管，返回Offline表示实例未托管。
-     * @param string $CreatedTime 创建时间。
-     * @param string $UpdatedTime 上次更新时间。
+     * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 上次更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -172,6 +180,15 @@ class RegisterInstanceInfo extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

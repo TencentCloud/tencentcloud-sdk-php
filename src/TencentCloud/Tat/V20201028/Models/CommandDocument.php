@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取Base64 编码后的执行命令。
  * @method void setContent(string $Content) 设置Base64 编码后的执行命令。
- * @method string getCommandType() 获取命令类型。
- * @method void setCommandType(string $CommandType) 设置命令类型。
- * @method integer getTimeout() 获取超时时间。
- * @method void setTimeout(integer $Timeout) 设置超时时间。
+ * @method string getCommandType() 获取命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+ * @method void setCommandType(string $CommandType) 设置命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+ * @method integer getTimeout() 获取超时时间。单位：秒。
+ * @method void setTimeout(integer $Timeout) 设置超时时间。单位：秒。
  * @method string getWorkingDirectory() 获取执行路径。
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置执行路径。
  * @method string getUsername() 获取执行用户。
@@ -43,12 +43,12 @@ class CommandDocument extends AbstractModel
     public $Content;
 
     /**
-     * @var string 命令类型。
+     * @var string 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
      */
     public $CommandType;
 
     /**
-     * @var integer 超时时间。
+     * @var integer 超时时间。单位：秒。
      */
     public $Timeout;
 
@@ -74,8 +74,8 @@ class CommandDocument extends AbstractModel
 
     /**
      * @param string $Content Base64 编码后的执行命令。
-     * @param string $CommandType 命令类型。
-     * @param integer $Timeout 超时时间。
+     * @param string $CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * @param integer $Timeout 超时时间。单位：秒。
      * @param string $WorkingDirectory 执行路径。
      * @param string $Username 执行用户。
      * @param string $OutputCOSBucketUrl 保存输出的 COS Bucket 链接。

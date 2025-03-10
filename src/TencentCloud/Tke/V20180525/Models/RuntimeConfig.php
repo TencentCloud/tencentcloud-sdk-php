@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 运行时配置
  *
  * @method string getRuntimeType() 获取运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeType(string $RuntimeType) 设置运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuntimeVersion() 获取运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuntimeConfig extends AbstractModel
 {
     /**
      * @var string 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeType;
 
     /**
      * @var string 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeVersion;
 
     /**
      * @param string $RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

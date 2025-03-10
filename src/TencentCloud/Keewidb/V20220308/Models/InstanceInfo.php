@@ -111,9 +111,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
  * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
  * @method array getNodeSet() 获取实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
  * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
  * @method integer getMachineMemory() 获取实例内存容量，单位：GB。KeeWiDB 内存容量
@@ -356,7 +354,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeSet;
 
@@ -437,7 +434,6 @@ class InstanceInfo extends AbstractModel
      * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
      * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
      * @param array $NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
      * @param integer $MachineMemory 实例内存容量，单位：GB。KeeWiDB 内存容量
      * @param integer $DiskShardSize 单分片磁盘大小，单位：MB

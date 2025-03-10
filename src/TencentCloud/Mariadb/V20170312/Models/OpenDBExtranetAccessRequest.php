@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
- * @method integer getIpv6Flag() 获取是否IPv6，默认0
- * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否IPv6，默认0
+ * @method integer getIpv6Flag() 获取是否为IPV6网络类型实例，0:否，1:是，不传默认为0表示实例为IPV4网络类型
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否为IPV6网络类型实例，0:否，1:是，不传默认为0表示实例为IPV4网络类型
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class OpenDBExtranetAccessRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 是否IPv6，默认0
+     * @var integer 是否为IPV6网络类型实例，0:否，1:是，不传默认为0表示实例为IPV4网络类型
      */
     public $Ipv6Flag;
 
     /**
      * @param string $InstanceId 待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
-     * @param integer $Ipv6Flag 是否IPv6，默认0
+     * @param integer $Ipv6Flag 是否为IPV6网络类型实例，0:否，1:是，不传默认为0表示实例为IPV4网络类型
      */
     function __construct()
     {

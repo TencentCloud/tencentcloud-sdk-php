@@ -50,6 +50,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) 查询设备证书详情接口
  * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) 分页查询设备证书
  * @method Models\DescribeInsPublicEndpointsResponse DescribeInsPublicEndpoints(Models\DescribeInsPublicEndpointsRequest $req) 查询MQTT实例公网接入点
+ * @method Models\DescribeInsVPCEndpointsResponse DescribeInsVPCEndpoints(Models\DescribeInsVPCEndpointsRequest $req) 查询MQTT实例公网接入点
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询

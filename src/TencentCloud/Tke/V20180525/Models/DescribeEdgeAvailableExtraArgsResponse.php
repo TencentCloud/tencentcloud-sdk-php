@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeEdgeAvailableExtraArgs返回参数结构体
  *
  * @method string getClusterVersion() 获取集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EdgeAvailableExtraArgs getAvailableExtraArgs() 获取可用的自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableExtraArgs(EdgeAvailableExtraArgs $AvailableExtraArgs) 设置可用的自定义参数
@@ -35,7 +33,6 @@ class DescribeEdgeAvailableExtraArgsResponse extends AbstractModel
 {
     /**
      * @var string 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterVersion;
 
@@ -52,7 +49,6 @@ class DescribeEdgeAvailableExtraArgsResponse extends AbstractModel
 
     /**
      * @param string $ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EdgeAvailableExtraArgs $AvailableExtraArgs 可用的自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method RuntimeConfig getRuntimeConfig() 获取第三方节点Runtime配置
  * @method void setRuntimeConfig(RuntimeConfig $RuntimeConfig) 设置第三方节点Runtime配置
  * @method integer getNodesNum() 获取节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodesNum(integer $NodesNum) 设置节点数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExternalNodePoolInfo extends AbstractModel
 {
@@ -36,14 +34,12 @@ class ExternalNodePoolInfo extends AbstractModel
 
     /**
      * @var integer 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodesNum;
 
     /**
      * @param RuntimeConfig $RuntimeConfig 第三方节点Runtime配置
      * @param integer $NodesNum 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

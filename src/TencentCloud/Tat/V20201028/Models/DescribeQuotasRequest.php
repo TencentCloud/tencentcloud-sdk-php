@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeQuotas请求参数结构体
  *
- * @method array getResourceNames() 获取资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
- * @method void setResourceNames(array $ResourceNames) 设置资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+ * @method array getResourceNames() 获取资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
+ * @method void setResourceNames(array $ResourceNames) 设置资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
  */
 class DescribeQuotasRequest extends AbstractModel
 {
     /**
-     * @var array 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+     * @var array 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public $ResourceNames;
 
     /**
-     * @param array $ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+     * @param array $ResourceNames 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     function __construct()
     {

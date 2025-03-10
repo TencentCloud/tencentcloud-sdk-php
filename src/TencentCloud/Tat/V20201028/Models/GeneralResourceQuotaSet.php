@@ -21,7 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 用户配额信息。
  *
  * @method string getResourceName() 获取资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
  * @method void setResourceName(string $ResourceName) 设置资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
  * @method integer getResourceQuotaUsed() 获取已使用额度
  * @method void setResourceQuotaUsed(integer $ResourceQuotaUsed) 设置已使用额度
  * @method integer getResourceQuotaTotal() 获取总额度
@@ -31,6 +41,11 @@ class GeneralResourceQuotaSet extends AbstractModel
 {
     /**
      * @var string 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      */
     public $ResourceName;
 
@@ -46,6 +61,11 @@ class GeneralResourceQuotaSet extends AbstractModel
 
     /**
      * @param string $ResourceName 资源名称
+
+取值为：
+
+- COMMAND：命令
+- REGISTER_CODE：托管实例注册码
      * @param integer $ResourceQuotaUsed 已使用额度
      * @param integer $ResourceQuotaTotal 总额度
      */

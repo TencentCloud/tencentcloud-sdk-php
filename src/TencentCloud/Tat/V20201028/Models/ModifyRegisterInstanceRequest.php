@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRegisterInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
  * @method string getInstanceName() 获取实例名称。有效长度为 1～60 字符。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。有效长度为 1～60 字符。
  */
 class ModifyRegisterInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
      */
     public $InstanceId;
 
@@ -38,7 +44,9 @@ class ModifyRegisterInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 托管实例ID。
+
+可通过 [DescribeRegisterInstances(查询托管实例)](https://cloud.tencent.com/document/api/1340/96924) 接口获取。
      * @param string $InstanceName 实例名称。有效长度为 1～60 字符。
      */
     function __construct()

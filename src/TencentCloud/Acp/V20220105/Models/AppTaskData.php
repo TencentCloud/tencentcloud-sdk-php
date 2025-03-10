@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskStatus() 获取0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
  * @method void setTaskStatus(integer $TaskStatus) 设置0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
  * @method string getTaskErrMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskErrMsg(string $TaskErrMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSource() 获取任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
  * @method void setSource(integer $Source) 设置任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
  * @method AppInfoItem getAppInfo() 获取应用信息
@@ -39,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取任务完成时间(更新时间)
  * @method void setEndTime(string $EndTime) 设置任务完成时间(更新时间)
  * @method string getContactName() 获取联系人信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContactName(string $ContactName) 设置联系人信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppTaskData extends AbstractModel
 {
@@ -62,7 +58,6 @@ class AppTaskData extends AbstractModel
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskErrMsg;
 
@@ -88,7 +83,6 @@ class AppTaskData extends AbstractModel
 
     /**
      * @var string 联系人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContactName;
 
@@ -97,13 +91,11 @@ class AppTaskData extends AbstractModel
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
      * @param integer $TaskStatus 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      * @param string $TaskErrMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Source 任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
      * @param AppInfoItem $AppInfo 应用信息
      * @param string $StartTime 任务启动时间
      * @param string $EndTime 任务完成时间(更新时间)
      * @param string $ContactName 联系人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

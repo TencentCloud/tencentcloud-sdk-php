@@ -35,21 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClusterFailedNodeNum() 获取集群异常的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
  * @method void setClusterFailedNodeNum(integer $ClusterFailedNodeNum) 设置集群异常的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
  * @method integer getClusterClosedNodeNum() 获取集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterClosedNodeNum(integer $ClusterClosedNodeNum) 设置集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterClosingNodeNum() 获取集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterClosingNodeNum(integer $ClusterClosingNodeNum) 设置集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getClusterDeletionProtection() 获取集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDeletionProtection(boolean $ClusterDeletionProtection) 设置集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getClusterAuditEnabled() 获取集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterAuditEnabled(boolean $ClusterAuditEnabled) 设置集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterStatus extends AbstractModel
 {
@@ -90,25 +82,21 @@ class ClusterStatus extends AbstractModel
 
     /**
      * @var integer 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterClosedNodeNum;
 
     /**
      * @var integer 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterClosingNodeNum;
 
     /**
      * @var boolean 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterDeletionProtection;
 
     /**
      * @var boolean 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterAuditEnabled;
 
@@ -121,13 +109,9 @@ class ClusterStatus extends AbstractModel
      * @param integer $ClusterRunningNodeNum 集群运行中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
      * @param integer $ClusterFailedNodeNum 集群异常的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
      * @param integer $ClusterClosedNodeNum 集群已关机的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterClosingNodeNum 集群关机中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ClusterDeletionProtection 集群是否开启删除保护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ClusterAuditEnabled 集群是否可审计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

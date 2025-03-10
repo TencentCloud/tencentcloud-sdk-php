@@ -39,13 +39,9 @@ timeout 已超时
 aborted 已取消
 pending 还未开始
  * @method string getStartAt() 获取升级开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartAt(string $StartAt) 设置升级开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndAt() 获取升级结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndAt(string $EndAt) 设置升级结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceUpgradePreCheckResult getCheckResult() 获取升级前检查结果
  * @method void setCheckResult(InstanceUpgradePreCheckResult $CheckResult) 设置升级前检查结果
  * @method array getDetail() 获取升级步骤详情
@@ -72,13 +68,11 @@ pending 还未开始
 
     /**
      * @var string 升级开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartAt;
 
     /**
      * @var string 升级结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndAt;
 
@@ -103,9 +97,7 @@ timeout 已超时
 aborted 已取消
 pending 还未开始
      * @param string $StartAt 升级开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndAt 升级结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceUpgradePreCheckResult $CheckResult 升级前检查结果
      * @param array $Detail 升级步骤详情
      */

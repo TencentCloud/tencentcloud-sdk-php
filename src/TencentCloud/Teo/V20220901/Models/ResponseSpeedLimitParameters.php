@@ -28,10 +28,19 @@ use TencentCloud\Common\AbstractModel;
 <li>LimitUponDownload：全过程下载限速；</li>
 <li>LimitAfterSpecificBytesDownloaded：全速下载特定字节后开始限速；</li>
 <li>LimitAfterSpecificSecondsDownloaded：全速下载特定时间后开始限速。</li>
- * @method string getMaxSpeed() 获取限速值，单位为：KB/s，填写数值，指定限速大小。
- * @method void setMaxSpeed(string $MaxSpeed) 设置限速值，单位为：KB/s，填写数值，指定限速大小。
- * @method string getStartAt() 获取限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
- * @method void setStartAt(string $StartAt) 设置限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+ * @method string getMaxSpeed() 获取限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
+ * @method void setMaxSpeed(string $MaxSpeed) 设置限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
+ * @method string getStartAt() 获取限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
+ * @method void setStartAt(string $StartAt) 设置限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
  */
 class ResponseSpeedLimitParameters extends AbstractModel
 {
@@ -44,12 +53,17 @@ class ResponseSpeedLimitParameters extends AbstractModel
     public $Mode;
 
     /**
-     * @var string 限速值，单位为：KB/s，填写数值，指定限速大小。
+     * @var string 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
      */
     public $MaxSpeed;
 
     /**
-     * @var string 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+     * @var string 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
+
      */
     public $StartAt;
 
@@ -58,8 +72,12 @@ class ResponseSpeedLimitParameters extends AbstractModel
 <li>LimitUponDownload：全过程下载限速；</li>
 <li>LimitAfterSpecificBytesDownloaded：全速下载特定字节后开始限速；</li>
 <li>LimitAfterSpecificSecondsDownloaded：全速下载特定时间后开始限速。</li>
-     * @param string $MaxSpeed 限速值，单位为：KB/s，填写数值，指定限速大小。
-     * @param string $StartAt 限速开始值，可以为下载大小或指定时长，单位为：KB或s，当 Mode 取值为 LimitAfterSpecificBytesDownloaded 或 LimitAfterSpecificSecondsDownloaded 时，该参数必填。填写数值，指定下载大小或指定时长。
+     * @param string $MaxSpeed 限速值，指定限速大小，填写含单位的数值或变量。当前支持单位有：KB/s。
+     * @param string $StartAt 限速开始值，可以为下载大小或指定时长，填写含单位的数值或变量，指定下载大小或指定时长。
+
+- 当Mode 取值为 LimitAfterSpecificBytesDownloaded 时，单位取值有： KB；
+
+- 当Mode 取值为 LimitAfterSpecificSecondsDownloaded 时，单位取值有： s。
      */
     function __construct()
     {

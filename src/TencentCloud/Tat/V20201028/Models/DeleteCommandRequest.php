@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCommand请求参数结构体
  *
- * @method string getCommandId() 获取待删除的命令ID。
- * @method void setCommandId(string $CommandId) 设置待删除的命令ID。
+ * @method string getCommandId() 获取待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+ * @method void setCommandId(string $CommandId) 设置待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  */
 class DeleteCommandRequest extends AbstractModel
 {
     /**
-     * @var string 待删除的命令ID。
+     * @var string 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public $CommandId;
 
     /**
-     * @param string $CommandId 待删除的命令ID。
+     * @param string $CommandId 待删除的命令 ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     function __construct()
     {

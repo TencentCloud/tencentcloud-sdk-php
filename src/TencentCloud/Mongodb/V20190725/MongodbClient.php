@@ -55,7 +55,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(Models\DescribeTransparentDataEncryptionStatusRequest $req) 获取实例透明加密的开启状态
  * @method Models\DropDBInstanceParamTplResponse DropDBInstanceParamTpl(Models\DropDBInstanceParamTplRequest $req) 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
 **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
- * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+ * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
  * @method Models\FlashBackDBInstanceResponse FlashBackDBInstance(Models\FlashBackDBInstanceRequest $req) 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
  * @method Models\FlushInstanceRouterConfigResponse FlushInstanceRouterConfig(Models\FlushInstanceRouterConfigRequest $req) 在所有mongos上执行FlushRouterConfig命令

@@ -43,15 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFormat() 获取证书格式
  * @method void setFormat(string $Format) 设置证书格式
  * @method string getClientId() 获取客户端id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientId(string $ClientId) 设置客户端id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateSource() 获取    API, 手动注册   
     JITP 自动注册
  * @method void setCertificateSource(string $CertificateSource) 设置    API, 手动注册   
     JITP 自动注册
  * @method integer getNotBeforeTime() 获取证书生效开始时间
  * @method void setNotBeforeTime(integer $NotBeforeTime) 设置证书生效开始时间
+ * @method string getOrganizationalUnit() 获取组织单位
+ * @method void setOrganizationalUnit(string $OrganizationalUnit) 设置组织单位
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -114,7 +114,6 @@ class DescribeDeviceCertificateResponse extends AbstractModel
 
     /**
      * @var string 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientId;
 
@@ -128,6 +127,11 @@ class DescribeDeviceCertificateResponse extends AbstractModel
      * @var integer 证书生效开始时间
      */
     public $NotBeforeTime;
+
+    /**
+     * @var string 组织单位
+     */
+    public $OrganizationalUnit;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -147,10 +151,10 @@ class DescribeDeviceCertificateResponse extends AbstractModel
      * @param string $DeviceCertificateCn 设备证书common name
      * @param string $Format 证书格式
      * @param string $ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateSource     API, 手动注册   
     JITP 自动注册
      * @param integer $NotBeforeTime 证书生效开始时间
+     * @param string $OrganizationalUnit 组织单位
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -220,6 +224,10 @@ class DescribeDeviceCertificateResponse extends AbstractModel
 
         if (array_key_exists("NotBeforeTime",$param) and $param["NotBeforeTime"] !== null) {
             $this->NotBeforeTime = $param["NotBeforeTime"];
+        }
+
+        if (array_key_exists("OrganizationalUnit",$param) and $param["OrganizationalUnit"] !== null) {
+            $this->OrganizationalUnit = $param["OrganizationalUnit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

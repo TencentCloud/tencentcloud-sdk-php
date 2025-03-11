@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFormat() 获取证书格式
  * @method void setFormat(string $Format) 设置证书格式
  * @method string getCaIssuerCn() 获取Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaIssuerCn(string $CaIssuerCn) 设置Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotBeforeTime() 获取生效开始时间
  * @method void setNotBeforeTime(integer $NotBeforeTime) 设置生效开始时间
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -103,7 +101,6 @@ class DescribeCaCertificateResponse extends AbstractModel
 
     /**
      * @var string Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaIssuerCn;
 
@@ -129,7 +126,6 @@ class DescribeCaCertificateResponse extends AbstractModel
      * @param string $CaCertificate 证书内容
      * @param string $Format 证书格式
      * @param string $CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotBeforeTime 生效开始时间
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

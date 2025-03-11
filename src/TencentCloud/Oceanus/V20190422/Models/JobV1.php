@@ -170,6 +170,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningMem(float $RunningMem) 设置使用内存数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOpenJobDefaultAlarm() 获取是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpenJobDefaultAlarm(integer $OpenJobDefaultAlarm) 设置是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProgressDesc() 获取操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgressDesc(string $ProgressDesc) 设置操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -397,6 +405,18 @@ class JobV1 extends AbstractModel
     public $RunningMem;
 
     /**
+     * @var integer 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpenJobDefaultAlarm;
+
+    /**
+     * @var string 操作中描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProgressDesc;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -471,6 +491,10 @@ class JobV1 extends AbstractModel
      * @param float $RunningCpu 使用CPU数目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RunningMem 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OpenJobDefaultAlarm 是否开了默认告警
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProgressDesc 操作中描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -638,6 +662,14 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
             $this->RunningMem = $param["RunningMem"];
+        }
+
+        if (array_key_exists("OpenJobDefaultAlarm",$param) and $param["OpenJobDefaultAlarm"] !== null) {
+            $this->OpenJobDefaultAlarm = $param["OpenJobDefaultAlarm"];
+        }
+
+        if (array_key_exists("ProgressDesc",$param) and $param["ProgressDesc"] !== null) {
+            $this->ProgressDesc = $param["ProgressDesc"];
         }
     }
 }

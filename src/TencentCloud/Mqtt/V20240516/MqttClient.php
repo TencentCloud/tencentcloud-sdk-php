@@ -27,6 +27,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\ActivateDeviceCertificateResponse ActivateDeviceCertificate(Models\ActivateDeviceCertificateRequest $req) 生效设备证书
  * @method Models\ApplyRegistrationCodeResponse ApplyRegistrationCode(Models\ApplyRegistrationCodeRequest $req) 申请ca注册码
  * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) 创建MQTT实例的性能测试任务
+ * @method Models\CreateHttpAuthenticatorResponse CreateHttpAuthenticator(Models\CreateHttpAuthenticatorRequest $req) 创建一个HTTP的认证器
  * @method Models\CreateInsPublicEndpointResponse CreateInsPublicEndpoint(Models\CreateInsPublicEndpointRequest $req) 为MQTT实例创建公网接入点
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 购买新的MQTT实例
  * @method Models\CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(Models\CreateJWKSAuthenticatorRequest $req) 创建一个jwks的认证
@@ -71,6 +72,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 
 1. Username，用户名称模糊搜索
  * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) 修改策略规则
+ * @method Models\ModifyHttpAuthenticatorResponse ModifyHttpAuthenticator(Models\ModifyHttpAuthenticatorRequest $req) 修改MQTT HTTP 认证器
  * @method Models\ModifyInsPublicEndpointResponse ModifyInsPublicEndpoint(Models\ModifyInsPublicEndpointRequest $req) 更新MQTT实例公网接入点
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改实例属性
  * @method Models\ModifyInstanceCertBindingResponse ModifyInstanceCertBinding(Models\ModifyInstanceCertBindingRequest $req) 更新MQTT集群绑定证书

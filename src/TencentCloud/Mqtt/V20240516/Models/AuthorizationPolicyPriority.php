@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 策略规则优先级
  *
  * @method integer getId() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取优先级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置优先级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthorizationPolicyPriority extends AbstractModel
 {
     /**
      * @var integer 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @param integer $Id 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

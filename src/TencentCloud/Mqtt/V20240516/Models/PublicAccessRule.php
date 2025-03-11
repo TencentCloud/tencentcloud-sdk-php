@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 公网访问安全规则
  *
  * @method string getIpRule() 获取ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpRule(string $IpRule) 设置ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllow() 获取允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllow(boolean $Allow) 设置允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PublicAccessRule extends AbstractModel
 {
     /**
      * @var string ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpRule;
 
     /**
      * @var boolean 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Allow;
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param string $IpRule ip网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Allow 允许或者拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

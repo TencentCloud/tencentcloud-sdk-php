@@ -23,43 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceType() 获取规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkuCode() 获取规格代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkuCode(string $SkuCode) 设置规格代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getOnSale() 获取是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnSale(boolean $OnSale) 设置是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicNumLimit() 获取topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTpsLimit() 获取tps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTpsLimit(integer $TpsLimit) 设置tps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientNumLimit() 获取客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthorizationPolicyLimit() 获取授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPriceTags() 获取计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceTags(array $PriceTags) 设置计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductSkuItem extends AbstractModel
 {
@@ -67,55 +49,46 @@ class ProductSkuItem extends AbstractModel
      * @var string 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkuCode;
 
     /**
      * @var boolean 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnSale;
 
     /**
      * @var integer topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNumLimit;
 
     /**
      * @var integer tps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TpsLimit;
 
     /**
      * @var integer 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientNumLimit;
 
     /**
      * @var integer 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSubscriptionPerClient;
 
     /**
      * @var integer 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizationPolicyLimit;
 
     /**
      * @var array 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceTags;
 
@@ -123,23 +96,14 @@ PRO ：专业版
      * @param string $InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkuCode 规格代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $OnSale 是否售卖
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNumLimit topic num限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TpsLimit tps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientNumLimit 客户端连接数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthorizationPolicyLimit 授权规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PriceTags 计费项信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

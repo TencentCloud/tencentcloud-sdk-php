@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * MQTT认证器信息
  *
  * @method string getType() 获取认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfig() 获取认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(string $Config) 设置认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置说明
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MQTTAuthenticatorItem extends AbstractModel
 {
     /**
      * @var string 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
      * @var string 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param string $Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Config 认证器配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 认证器状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

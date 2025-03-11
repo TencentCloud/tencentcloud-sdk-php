@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCode() 获取计费项标签
  * @method void setCode(string $Code) 设置计费项标签
  * @method integer getStep() 获取步长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStep(integer $Step) 设置步长
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PriceTag extends AbstractModel
 {
@@ -50,7 +48,6 @@ class PriceTag extends AbstractModel
 
     /**
      * @var integer 步长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Step;
 
@@ -59,7 +56,6 @@ class PriceTag extends AbstractModel
      * @param string $Category 计价类别
      * @param string $Code 计费项标签
      * @param integer $Step 步长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

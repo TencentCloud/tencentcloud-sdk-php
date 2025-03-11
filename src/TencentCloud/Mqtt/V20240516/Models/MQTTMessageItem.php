@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 消息记录
  *
  * @method string getMsgId() 获取消息ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgId(string $MsgId) 设置消息ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTags() 获取消息tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(string $Tags) 设置消息tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeys() 获取消息key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(string $Keys) 设置消息key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProducerAddr() 获取客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducerAddr(string $ProducerAddr) 设置客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProduceTime() 获取消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProduceTime(string $ProduceTime) 设置消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadLetterResendTimes() 获取死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterResendTimes(integer $DeadLetterResendTimes) 设置死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadLetterResendSuccessTimes() 获取死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterResendSuccessTimes(integer $DeadLetterResendSuccessTimes) 设置死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubTopic() 获取子topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubTopic(string $SubTopic) 设置子topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQos() 获取消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQos(string $Qos) 设置消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MQTTMessageItem extends AbstractModel
 {
     /**
      * @var string 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgId;
 
     /**
      * @var string 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
     /**
      * @var string 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProducerAddr;
 
     /**
      * @var string 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProduceTime;
 
     /**
      * @var integer 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadLetterResendTimes;
 
     /**
      * @var integer 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadLetterResendSuccessTimes;
 
     /**
      * @var string 子topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubTopic;
 
     /**
      * @var string 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qos;
 
     /**
      * @param string $MsgId 消息ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tags 消息tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Keys 消息key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProducerAddr 客户端地址	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProduceTime 消息发送时间	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeadLetterResendTimes 死信重发次数	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeadLetterResendSuccessTimes 死信重发成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubTopic 子topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qos 消息质量等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

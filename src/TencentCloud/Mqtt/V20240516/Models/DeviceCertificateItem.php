@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 设备证书信息
  *
  * @method string getClientId() 获取客户端id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientId(string $ClientId) 设置客户端id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceCertificate() 获取设备证书
  * @method void setDeviceCertificate(string $DeviceCertificate) 设置设备证书
  * @method string getDeviceCertificateSn() 获取设备证书Sn
@@ -44,42 +42,31 @@ use TencentCloud\Common\AbstractModel;
     INACTIVE,//未激活
     REVOKED,//吊销
     PENDING_ACTIVATION,//注册待激活
+ * @method string getOrganizationalUnit() 获取组织单位
+ * @method void setOrganizationalUnit(string $OrganizationalUnit) 设置组织单位
  * @method integer getLastActivationTime() 获取上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastInactivationTime() 获取上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatedTime() 获取创建时间
  * @method void setCreatedTime(integer $CreatedTime) 设置创建时间
  * @method integer getUpdateTime() 获取预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateSource() 获取证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateSource(string $CertificateSource) 设置证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotAfterTime() 获取证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotAfterTime(integer $NotAfterTime) 设置证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotBeforeTime() 获取证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotBeforeTime(integer $NotBeforeTime) 设置证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceCertificateItem extends AbstractModel
 {
     /**
      * @var string 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientId;
 
@@ -118,14 +105,17 @@ class DeviceCertificateItem extends AbstractModel
     public $Status;
 
     /**
+     * @var string 组织单位
+     */
+    public $OrganizationalUnit;
+
+    /**
      * @var integer 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastActivationTime;
 
     /**
      * @var integer 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastInactivationTime;
 
@@ -136,7 +126,6 @@ class DeviceCertificateItem extends AbstractModel
 
     /**
      * @var integer 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -144,25 +133,21 @@ class DeviceCertificateItem extends AbstractModel
      * @var string 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateSource;
 
     /**
      * @var integer 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotAfterTime;
 
     /**
      * @var integer 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotBeforeTime;
 
     /**
      * @param string $ClientId 客户端id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceCertificate 设备证书
      * @param string $DeviceCertificateSn 设备证书Sn
      * @param string $DeviceCertificateCn 设备证书Cn
@@ -173,21 +158,16 @@ JITP 自动注册
     INACTIVE,//未激活
     REVOKED,//吊销
     PENDING_ACTIVATION,//注册待激活
+     * @param string $OrganizationalUnit 组织单位
      * @param integer $LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastInactivationTime 上次取消激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedTime 创建时间
      * @param integer $UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateSource 证书来源：
 API, 手动注册   
 JITP 自动注册
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotAfterTime 证书失效日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotBeforeTime 证书生效开始日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +208,10 @@ JITP 自动注册
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OrganizationalUnit",$param) and $param["OrganizationalUnit"] !== null) {
+            $this->OrganizationalUnit = $param["OrganizationalUnit"];
         }
 
         if (array_key_exists("LastActivationTime",$param) and $param["LastActivationTime"] !== null) {

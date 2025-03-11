@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * MQTT客户端信息
  *
  * @method string getClientId() 获取客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientId(string $ClientId) 设置客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientAddress() 获取客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientAddress(string $ClientAddress) 设置客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProtocolVersion() 获取MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolVersion(integer $ProtocolVersion) 设置MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getKeepalive() 获取保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepalive(integer $Keepalive) 设置保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConnectionStatus() 获取连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionStatus(string $ConnectionStatus) 设置连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnectTime() 获取上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectTime(integer $ConnectTime) 设置上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDisconnectTime() 获取上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMQTTClientSubscriptions() 获取客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMQTTClientSubscriptions(array $MQTTClientSubscriptions) 设置客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MQTTClientInfo extends AbstractModel
 {
     /**
      * @var string 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientId;
 
     /**
      * @var string 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientAddress;
 
     /**
      * @var integer MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolVersion;
 
     /**
      * @var integer 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keepalive;
 
     /**
      * @var string 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionStatus;
 
     /**
      * @var integer 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectTime;
 
     /**
      * @var integer 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisconnectTime;
 
     /**
      * @var array 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MQTTClientSubscriptions;
 
     /**
      * @param string $ClientId 客户端唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientAddress 客户端网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Keepalive 保持连接时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnectionStatus 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 客户端创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnectTime 上次建立连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MQTTClientSubscriptions 客户端的订阅列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

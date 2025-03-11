@@ -47,9 +47,17 @@ use TencentCloud\Common\AbstractModel;
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRunningCpu() 获取RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningCpu(float $RunningCpu) 设置RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRunningMem() 获取RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningMem(float $RunningMem) 设置RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDecodeSqlCode() 获取sql
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDecodeSqlCode(string $DecodeSqlCode) 设置sql
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TreeJobSets extends AbstractModel
 {
@@ -92,13 +100,21 @@ class TreeJobSets extends AbstractModel
 
     /**
      * @var float RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCpu;
 
     /**
      * @var float RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningMem;
+
+    /**
+     * @var string sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DecodeSqlCode;
 
     /**
      * @param string $JobId 作业Id
@@ -115,7 +131,11 @@ class TreeJobSets extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RunningCpu RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RunningMem RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DecodeSqlCode sql
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -160,6 +180,10 @@ class TreeJobSets extends AbstractModel
 
         if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
             $this->RunningMem = $param["RunningMem"];
+        }
+
+        if (array_key_exists("DecodeSqlCode",$param) and $param["DecodeSqlCode"] !== null) {
+            $this->DecodeSqlCode = $param["DecodeSqlCode"];
         }
     }
 }

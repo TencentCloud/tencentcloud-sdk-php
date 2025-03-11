@@ -31,37 +31,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVerificationCertificate() 获取验证证书内容
  * @method void setVerificationCertificate(string $VerificationCertificate) 设置验证证书内容
  * @method string getStatus() 获取ca状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置ca状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastActivationTime() 获取上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(integer $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastInactivationTime() 获取上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCaIssuerCn() 获取Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaIssuerCn(string $CaIssuerCn) 设置Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotBeforeTime() 获取生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotBeforeTime(integer $NotBeforeTime) 设置生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotAfterTime() 获取失效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotAfterTime(integer $NotAfterTime) 设置失效时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CaCertificateItem extends AbstractModel
 {
@@ -92,49 +76,41 @@ class CaCertificateItem extends AbstractModel
 
     /**
      * @var string ca状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastActivationTime;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var integer 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastInactivationTime;
 
     /**
      * @var string Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaIssuerCn;
 
     /**
      * @var integer 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotBeforeTime;
 
     /**
      * @var integer 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotAfterTime;
 
@@ -145,21 +121,13 @@ class CaCertificateItem extends AbstractModel
      * @param string $Format 证书格式
      * @param string $VerificationCertificate 验证证书内容
      * @param string $Status ca状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastActivationTime 上次激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastInactivationTime 上次去激活时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CaIssuerCn Ca证书颁发者CN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotBeforeTime 生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotAfterTime 失效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

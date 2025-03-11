@@ -61,57 +61,33 @@ DELETING，删除中
  * @method integer getTopicNumLimit() 获取实例主题数上限
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置实例主题数上限
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicNum() 获取主题数量
  * @method void setTopicNum(integer $TopicNum) 设置主题数量
  * @method string getSkuCode() 获取商品规格
  * @method void setSkuCode(string $SkuCode) 设置商品规格
  * @method integer getTpsLimit() 获取弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTpsLimit(integer $TpsLimit) 设置弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientNumLimit() 获取客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpiryTime() 获取到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDestroyTime() 获取预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthorizationPolicyLimit() 获取授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxCaNum() 获取最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxCaNum(integer $MaxCaNum) 设置最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSubscription() 获取最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSubscription(integer $MaxSubscription) 设置最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MQTTInstanceItem extends AbstractModel
 {
@@ -161,7 +137,6 @@ DELETING，删除中
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -177,67 +152,56 @@ DELETING，删除中
 
     /**
      * @var integer 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TpsLimit;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSubscriptionPerClient;
 
     /**
      * @var integer 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientNumLimit;
 
     /**
      * @var integer 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var string 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var integer 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiryTime;
 
     /**
      * @var integer 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestroyTime;
 
     /**
      * @var integer 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizationPolicyLimit;
 
     /**
      * @var integer 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxCaNum;
 
     /**
      * @var integer 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSubscription;
 
@@ -263,31 +227,19 @@ MODIFY_FAILURE，变配失败
 DELETING，删除中
      * @param integer $TopicNumLimit 实例主题数上限
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNum 主题数量
      * @param string $SkuCode 商品规格
      * @param integer $TpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientNumLimit 客户端连接数上线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpiryTime 到期时间，秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DestroyTime 预销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthorizationPolicyLimit 授权规则条数限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxCaNum 最大ca配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSubscription 最大订阅数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 上传知识库文档返回结果
  *
  * @method integer getCount() 获取获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KnowledgeDocumentSet getDocumentSet() 获取文档信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSet(KnowledgeDocumentSet $DocumentSet) 设置文档信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeKnowledgeDocumentSetDetailRsp extends AbstractModel
 {
     /**
      * @var integer 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var KnowledgeDocumentSet 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSet;
 
     /**
      * @param integer $Count 获取的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeDocumentSet $DocumentSet 文档信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

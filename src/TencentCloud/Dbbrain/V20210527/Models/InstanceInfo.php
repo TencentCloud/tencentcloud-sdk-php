@@ -77,23 +77,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAuditRunningStatus() 获取实例审计日志运行状态：normal： 运行中； paused： 欠费暂停。
  * @method void setAuditRunningStatus(string $AuditRunningStatus) 设置实例审计日志运行状态：normal： 运行中； paused： 欠费暂停。
  * @method string getInternalVip() 获取内网vip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalVip(string $InternalVip) 设置内网vip。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternalVport() 获取内网port。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalVport(integer $InternalVport) 设置内网port。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getClusterId() 获取所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAgentStatus() 获取自建MySQL的Agent状态，"not_deployed" - 未部署，"deploying" - 部署中，"connected" - 连接正常，"deploy_failed" - 连接失败，"monitoring" - 连接正常，"stopped" - 暂停连接，"connect_failed" - 连接失败，unknown - 未知。
  * @method void setAgentStatus(string $AgentStatus) 设置自建MySQL的Agent状态，"not_deployed" - 未部署，"deploying" - 部署中，"connected" - 连接正常，"deploy_failed" - 连接失败，"monitoring" - 连接正常，"stopped" - 暂停连接，"connect_failed" - 连接失败，unknown - 未知。
  * @method string getInstanceStatus() 获取自建MySQL的实例状态，"not_attached" - 未连接，"attached" - 连接正常，"failed" - 连接失败，"stopped" - 停止监控，unknown- 未知。
@@ -243,13 +235,11 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 内网vip。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalVip;
 
     /**
      * @var integer 内网port。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalVport;
 
@@ -260,13 +250,11 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
@@ -310,14 +298,10 @@ class InstanceInfo extends AbstractModel
      * @param string $AuditPolicyStatus 实例审计日志开启状态，ALL_AUDIT： 开启全审计；RULE_AUDIT： 开启规则审计；UNBOUND： 未开启审计。
      * @param string $AuditRunningStatus 实例审计日志运行状态：normal： 运行中； paused： 欠费暂停。
      * @param string $InternalVip 内网vip。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternalVport 内网port。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $ClusterId 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgentStatus 自建MySQL的Agent状态，"not_deployed" - 未部署，"deploying" - 部署中，"connected" - 连接正常，"deploy_failed" - 连接失败，"monitoring" - 连接正常，"stopped" - 暂停连接，"connect_failed" - 连接失败，unknown - 未知。
      * @param string $InstanceStatus 自建MySQL的实例状态，"not_attached" - 未连接，"attached" - 连接正常，"failed" - 连接失败，"stopped" - 停止监控，unknown- 未知。
      */

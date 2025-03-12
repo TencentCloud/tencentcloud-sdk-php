@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 订阅校验任务的各步骤信息。
  *
  * @method string getStepName() 获取步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepName(string $StepName) 设置步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepId() 获取步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepId(string $StepId) 设置步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepNo() 获取步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNo(integer $StepNo) 设置步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPercent() 获取当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(integer $Percent) 设置当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrors() 获取错误提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置错误提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWarnings() 获取告警提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnings(array $Warnings) 设置告警提示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeCheckStepInfo extends AbstractModel
 {
     /**
      * @var string 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepName;
 
     /**
      * @var string 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepId;
 
     /**
      * @var integer 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNo;
 
     /**
      * @var string 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
      * @var array 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
      * @var array 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warnings;
 
     /**
      * @param string $StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepId 步骤Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepNo 步骤编号，从 1 开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 当前步骤状态，可能值为 notStarted,running,finished,failed
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Percent 当前步骤进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Errors 错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

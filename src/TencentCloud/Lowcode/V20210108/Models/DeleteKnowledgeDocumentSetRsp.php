@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 删除文档出参
  *
  * @method integer getAffectedCount() 获取删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectedCount(integer $AffectedCount) 设置删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeleteKnowledgeDocumentSetRsp extends AbstractModel
 {
     /**
      * @var integer 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectedCount;
 
     /**
      * @param integer $AffectedCount 删除文档数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

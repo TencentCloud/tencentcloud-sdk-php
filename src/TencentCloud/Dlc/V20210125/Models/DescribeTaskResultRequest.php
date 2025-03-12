@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxResults(integer $MaxResults) 设置返回结果的最大行数，范围0~1000，默认为1000.
  * @method boolean getIsTransformDataType() 获取是否转化数据类型
  * @method void setIsTransformDataType(boolean $IsTransformDataType) 设置是否转化数据类型
+ * @method integer getDataFieldCutLen() 获取返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+ * @method void setDataFieldCutLen(integer $DataFieldCutLen) 设置返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTaskResultRequest extends AbstractModel
     public $IsTransformDataType;
 
     /**
+     * @var integer 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
+     */
+    public $DataFieldCutLen;
+
+    /**
      * @param string $TaskId 任务唯一ID，仅支持30天内的任务
      * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      * @param integer $MaxResults 返回结果的最大行数，范围0~1000，默认为1000.
      * @param boolean $IsTransformDataType 是否转化数据类型
+     * @param integer $DataFieldCutLen 返回结果集中字段长度截取，如果字段值长度超过该长度则截取到该长度
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTaskResultRequest extends AbstractModel
 
         if (array_key_exists("IsTransformDataType",$param) and $param["IsTransformDataType"] !== null) {
             $this->IsTransformDataType = $param["IsTransformDataType"];
+        }
+
+        if (array_key_exists("DataFieldCutLen",$param) and $param["DataFieldCutLen"] !== null) {
+            $this->DataFieldCutLen = $param["DataFieldCutLen"];
         }
     }
 }

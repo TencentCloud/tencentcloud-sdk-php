@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 一致性校验库表对象
  *
  * @method string getDbName() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbMode() 获取数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbMode(string $DbMode) 设置数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaName() 获取schema名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaName(string $SchemaName) 设置schema名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableMode() 获取表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableMode(string $TableMode) 设置表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTables() 获取用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTables(array $Tables) 设置用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getViewMode() 获取视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewMode(string $ViewMode) 设置视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getViews() 获取用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViews(array $Views) 设置用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
@@ -53,37 +41,31 @@ class CompareObjectItem extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var string 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbMode;
 
     /**
      * @var string schema名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
 
     /**
      * @var string 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableMode;
 
     /**
      * @var array 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tables;
 
     /**
      * @var string 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewMode;
 
@@ -95,17 +77,11 @@ class CompareObjectItem extends AbstractModel
 
     /**
      * @param string $DbName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbMode 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaName schema名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableMode 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tables 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */

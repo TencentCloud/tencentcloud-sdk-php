@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 步骤信息
  *
  * @method integer getStepNo() 获取步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNo(integer $StepNo) 设置步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepName() 获取步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepName(string $StepName) 设置步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepId() 获取步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepId(string $StepId) 设置步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepMessage() 获取步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepMessage(string $StepMessage) 设置步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPercent() 获取执行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(integer $Percent) 设置执行进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrors() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWarnings() 获取告警提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnings(array $Warnings) 设置告警提示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StepDetailInfo extends AbstractModel
 {
     /**
      * @var integer 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNo;
 
     /**
      * @var string 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepName;
 
     /**
      * @var string 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepId;
 
     /**
      * @var string 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepMessage;
 
     /**
      * @var integer 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
      * @var array 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
      * @var array 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warnings;
 
     /**
      * @param integer $StepNo 步骤序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepName 步骤展现名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepId 步骤英文标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepMessage 步骤错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Percent 执行进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Errors 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Warnings 告警提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

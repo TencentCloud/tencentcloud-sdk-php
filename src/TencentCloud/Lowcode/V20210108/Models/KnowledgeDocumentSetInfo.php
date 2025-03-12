@@ -21,61 +21,44 @@ use TencentCloud\Common\AbstractModel;
  * 文档信息
  *
  * @method integer getTextLength() 获取文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextLength(integer $TextLength) 设置文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getByteLength() 获取文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setByteLength(integer $ByteLength) 设置文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndexedProgress() 获取文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexedProgress(integer $IndexedProgress) 设置文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexedStatus() 获取文件预处理、Embedding 向量化的状态。
 New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexedStatus(string $IndexedStatus) 设置文件预处理、Embedding 向量化的状态。
 New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastUpdateTime() 获取文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(string $LastUpdateTime) 设置文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeywords() 获取文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywords(string $Keywords) 设置文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeDocumentSetInfo extends AbstractModel
 {
     /**
      * @var integer 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextLength;
 
     /**
      * @var integer 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ByteLength;
 
     /**
      * @var integer 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedProgress;
 
@@ -86,48 +69,37 @@ Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedStatus;
 
     /**
      * @var string 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
 
     /**
      * @var string 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
 
     /**
      * @param integer $TextLength 文件的字符数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ByteLength 文件的字节数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IndexedProgress 文件被预处理、Embedding 向量化的进度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexedStatus 文件预处理、Embedding 向量化的状态。
 New：等待解析。
 Loading：文件解析中。
 Failure：文件解析、写入出错。
 Ready：文件解析、写入完成。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 文件创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastUpdateTime 文件最后更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Keywords 文件关键字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

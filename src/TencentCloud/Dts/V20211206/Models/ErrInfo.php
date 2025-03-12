@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReason() 获取错误原因
  * @method void setReason(string $Reason) 设置错误原因
  * @method string getMessage() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ErrInfo extends AbstractModel
 {
@@ -40,22 +36,18 @@ class ErrInfo extends AbstractModel
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @param string $Reason 错误原因
      * @param string $Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

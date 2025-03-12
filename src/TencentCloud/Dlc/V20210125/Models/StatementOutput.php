@@ -21,21 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * notebook session statement输出信息。
  *
  * @method integer getExecutionCount() 获取执行总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionCount(integer $ExecutionCount) 设置执行总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取Statement数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置Statement数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorName() 获取错误名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorName(string $ErrorName) 设置错误名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorValue() 获取错误类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorValue(string $ErrorValue) 设置错误类型
@@ -45,15 +39,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(array $ErrorMessage) 设置错误堆栈信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSQLResult() 获取SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQLResult(string $SQLResult) 设置SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatementOutput extends AbstractModel
 {
     /**
      * @var integer 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionCount;
 
@@ -65,13 +56,11 @@ class StatementOutput extends AbstractModel
 
     /**
      * @var string Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorName;
 
@@ -89,25 +78,20 @@ class StatementOutput extends AbstractModel
 
     /**
      * @var string SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQLResult;
 
     /**
      * @param integer $ExecutionCount 执行总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data Statement数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status Statement状态:ok,error
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorName 错误名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorValue 错误类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ErrorMessage 错误堆栈信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQLResult SQL类型任务结果返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

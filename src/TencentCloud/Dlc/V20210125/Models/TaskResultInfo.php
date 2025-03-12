@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取任务唯一ID
  * @method void setTaskId(string $TaskId) 设置任务唯一ID
  * @method string getDatasourceConnectionName() 获取数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSQL() 获取当前执行的SQL，一个任务包含一个SQL
  * @method void setSQL(string $SQL) 设置当前执行的SQL，一个任务包含一个SQL
  * @method string getSQLType() 获取执行任务的类型，现在分为DDL、DML、DQL
@@ -53,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultSchema(array $ResultSchema) 设置结果的schema信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResultSet() 获取结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultSet(string $ResultSet) 设置结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNextToken() 获取分页信息，如果没有更多结果数据，nextToken为空
  * @method void setNextToken(string $NextToken) 设置分页信息，如果没有更多结果数据，nextToken为空
  * @method integer getPercentage() 获取任务执行进度num/100(%)
@@ -67,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalTime() 获取任务耗时，单位： ms
  * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
  * @method float getQueryResultTime() 获取获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueryResultTime(float $QueryResultTime) 设置获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -80,13 +72,11 @@ class TaskResultInfo extends AbstractModel
 
     /**
      * @var string 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceConnectionName;
 
     /**
      * @var string 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
@@ -143,7 +133,6 @@ class TaskResultInfo extends AbstractModel
 
     /**
      * @var string 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultSet;
 
@@ -174,16 +163,13 @@ class TaskResultInfo extends AbstractModel
 
     /**
      * @var float 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryResultTime;
 
     /**
      * @param string $TaskId 任务唯一ID
      * @param string $DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称，当前任务执行时候选中的默认数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQL 当前执行的SQL，一个任务包含一个SQL
      * @param string $SQLType 执行任务的类型，现在分为DDL、DML、DQL
      * @param integer $State 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
@@ -196,14 +182,12 @@ class TaskResultInfo extends AbstractModel
      * @param array $ResultSchema 结果的schema信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultSet 结果信息，反转义后，外层数组的每个元素为一行数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NextToken 分页信息，如果没有更多结果数据，nextToken为空
      * @param integer $Percentage 任务执行进度num/100(%)
      * @param string $ProgressDetail 任务进度明细
      * @param string $DisplayFormat 控制台展示格式。table：表格展示 text：文本展示
      * @param integer $TotalTime 任务耗时，单位： ms
      * @param float $QueryResultTime 获取结果消耗的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

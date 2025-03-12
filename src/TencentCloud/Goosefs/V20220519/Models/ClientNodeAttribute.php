@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取cvmId
  * @method void setInstanceId(string $InstanceId) 设置cvmId
  * @method string getMountPoint() 获取自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountPoint(string $MountPoint) 设置自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClientNodeAttribute extends AbstractModel
 {
@@ -71,7 +69,6 @@ class ClientNodeAttribute extends AbstractModel
 
     /**
      * @var string 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountPoint;
 
@@ -83,7 +80,6 @@ class ClientNodeAttribute extends AbstractModel
      * @param string $SubnetId 节点所属子网id
      * @param string $InstanceId cvmId
      * @param string $MountPoint 自定义挂载点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

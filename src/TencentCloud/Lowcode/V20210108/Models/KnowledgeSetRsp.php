@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询知识库列表返回
  *
  * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKnowledgeSets() 获取知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKnowledgeSets(array $KnowledgeSets) 设置知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeSetRsp extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var array 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KnowledgeSets;
 
     /**
      * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KnowledgeSets 知识库列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -73,6 +73,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @var array 按照引擎筛选实例。
+     * @deprecated
      */
     public $EngineNames;
 
@@ -93,6 +94,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @var array 按照可用区筛选实例。
+     * @deprecated
      */
     public $Zones;
 

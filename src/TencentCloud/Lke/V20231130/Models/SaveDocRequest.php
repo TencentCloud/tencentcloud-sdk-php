@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置文件类型(md|txt|docx|pdf|xlsx)
  * @method string getCosUrl() 获取平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
  * @method void setCosUrl(string $CosUrl) 设置平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
- * @method string getETag() 获取ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
- * @method void setETag(string $ETag) 设置ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
- * @method string getCosHash() 获取cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
- * @method void setCosHash(string $CosHash) 设置cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+ * @method string getETag() 获取ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
+ * @method void setETag(string $ETag) 设置ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
+ * @method string getCosHash() 获取cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
+ * @method void setCosHash(string $CosHash) 设置cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
  * @method string getSize() 获取文件大小
  * @method void setSize(string $Size) 设置文件大小
- * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件范围
- * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件范围
+ * @method integer getAttrRange() 获取标签适用范围，默认填0即可
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，默认填0即可
  * @method integer getSource() 获取来源(0 源文件导入 1 网页导入)
  * @method void setSource(integer $Source) 设置来源(0 源文件导入 1 网页导入)
  * @method string getWebUrl() 获取网页(或自定义链接)地址
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method boolean getIsRefer() 获取是否引用链接
  * @method void setIsRefer(boolean $IsRefer) 设置是否引用链接
- * @method integer getOpt() 获取文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
- * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+ * @method integer getOpt() 获取文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
+ * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
  */
@@ -80,12 +80,12 @@ class SaveDocRequest extends AbstractModel
     public $CosUrl;
 
     /**
-     * @var string ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
+     * @var string ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
      */
     public $ETag;
 
     /**
-     * @var string cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+     * @var string cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
      */
     public $CosHash;
 
@@ -95,7 +95,7 @@ class SaveDocRequest extends AbstractModel
     public $Size;
 
     /**
-     * @var integer 标签适用范围 1：全部，2：按条件范围
+     * @var integer 标签适用范围，默认填0即可
      */
     public $AttrRange;
 
@@ -136,7 +136,7 @@ class SaveDocRequest extends AbstractModel
     public $IsRefer;
 
     /**
-     * @var integer 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * @var integer 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
      */
     public $Opt;
 
@@ -150,10 +150,10 @@ class SaveDocRequest extends AbstractModel
      * @param string $FileName 文件名
      * @param string $FileType 文件类型(md|txt|docx|pdf|xlsx)
      * @param string $CosUrl 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
-     * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化
-     * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性
+     * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
+     * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
      * @param string $Size 文件大小
-     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件范围
+     * @param integer $AttrRange 标签适用范围，默认填0即可
      * @param integer $Source 来源(0 源文件导入 1 网页导入)
      * @param string $WebUrl 网页(或自定义链接)地址
      * @param array $AttrLabels 标签引用
@@ -162,7 +162,7 @@ class SaveDocRequest extends AbstractModel
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param boolean $IsRefer 是否引用链接
-     * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
      * @param string $CateBizId 分类ID
      */
     function __construct()

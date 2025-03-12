@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 校验任务运行详情
  *
  * @method string getStartAt() 获取任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartAt(string $StartAt) 设置任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndAt() 获取任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndAt(string $EndAt) 设置任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ProcessProgress getProgress() 获取任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(ProcessProgress $Progress) 设置任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CheckStepInfo extends AbstractModel
 {
     /**
      * @var string 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartAt;
 
     /**
      * @var string 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndAt;
 
     /**
      * @var ProcessProgress 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @param string $StartAt 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndAt 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessProgress $Progress 任务步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

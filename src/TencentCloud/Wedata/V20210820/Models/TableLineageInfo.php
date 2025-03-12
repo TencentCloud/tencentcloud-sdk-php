@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseId(string $DatabaseId) 设置DatabaseId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataFromType() 获取数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataFromType(string $DataFromType) 设置数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobId() 获取采集id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobId(string $CollectJobId) 设置采集id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableLineageInfo extends AbstractModel
 {
@@ -284,6 +292,18 @@ class TableLineageInfo extends AbstractModel
     public $DatabaseId;
 
     /**
+     * @var string 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataFromType;
+
+    /**
+     * @var string 采集id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobId;
+
+    /**
      * @param string $MetastoreType 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 空间id
@@ -335,6 +355,10 @@ class TableLineageInfo extends AbstractModel
      * @param string $DatabaseName DatabaseName
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseId DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataFromType 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobId 采集id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -462,6 +486,14 @@ class TableLineageInfo extends AbstractModel
 
         if (array_key_exists("DatabaseId",$param) and $param["DatabaseId"] !== null) {
             $this->DatabaseId = $param["DatabaseId"];
+        }
+
+        if (array_key_exists("DataFromType",$param) and $param["DataFromType"] !== null) {
+            $this->DataFromType = $param["DataFromType"];
+        }
+
+        if (array_key_exists("CollectJobId",$param) and $param["CollectJobId"] !== null) {
+            $this->CollectJobId = $param["CollectJobId"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 删除文档出参
  *
  * @method array getDocumentSets() 获取文件集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSets(array $DocumentSets) 设置文件集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeKnowledgeDocumentSetListRsp extends AbstractModel
 {
     /**
      * @var array 文件集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSets;
 
     /**
      * @var integer 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @param array $DocumentSets 文件集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

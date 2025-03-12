@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * statement信息
  *
  * @method string getTaskId() 获取SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSQL() 获取SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQL(string $SQL) 设置SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatementInformation extends AbstractModel
 {
     /**
      * @var string SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQL;
 
     /**
      * @param string $TaskId SQL任务唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQL SQL内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

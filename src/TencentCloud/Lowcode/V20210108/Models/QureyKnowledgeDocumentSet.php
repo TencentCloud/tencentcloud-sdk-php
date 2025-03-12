@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 搜索数据的集合
  *
  * @method string getDocumentSetId() 获取文件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetId(string $DocumentSetId) 设置文件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentSetName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetName(string $DocumentSetName) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTextPrefix() 获取文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextPrefix(string $TextPrefix) 设置文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KnowledgeSplitterPreprocess getSplitterPreprocess() 获取文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSplitterPreprocess(KnowledgeSplitterPreprocess $SplitterPreprocess) 设置文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method QureyKnowledgeDocumentSetInfo getDocumentSetInfo() 获取文件详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetInfo(QureyKnowledgeDocumentSetInfo $DocumentSetInfo) 设置文件详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileTitle() 获取文件标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTitle(string $FileTitle) 设置文件标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileMetaData() 获取文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMetaData(string $FileMetaData) 设置文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthor() 获取作者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthor(string $Author) 设置作者
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QureyKnowledgeDocumentSet extends AbstractModel
 {
     /**
      * @var string 文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetId;
 
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetName;
 
     /**
      * @var string 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextPrefix;
 
     /**
      * @var KnowledgeSplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SplitterPreprocess;
 
     /**
      * @var QureyKnowledgeDocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetInfo;
 
     /**
      * @var string 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTitle;
 
     /**
      * @var string 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMetaData;
 
     /**
      * @var string name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Author;
 
     /**
      * @param string $DocumentSetId 文件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TextPrefix 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeSplitterPreprocess $SplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QureyKnowledgeDocumentSetInfo $DocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMetaData 文件元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Author 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

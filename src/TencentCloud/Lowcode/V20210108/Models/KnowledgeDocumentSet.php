@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 文档信息
  *
  * @method string getDocumentSetId() 获取文档id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetId(string $DocumentSetId) 设置文档id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentSetName() 获取文档名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetName(string $DocumentSetName) 设置文档名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取文件完整内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文件完整内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTextPrefix() 获取文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextPrefix(string $TextPrefix) 设置文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KnowledgeDocumentSetInfo getDocumentSetInfo() 获取文件详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetInfo(KnowledgeDocumentSetInfo $DocumentSetInfo) 设置文件详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KnowledgeSplitterPreprocess getSplitterPreprocess() 获取文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSplitterPreprocess(KnowledgeSplitterPreprocess $SplitterPreprocess) 设置文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取未使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置未使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileTitle() 获取文档标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTitle(string $FileTitle) 设置文档标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileMetaData() 获取文档元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMetaData(string $FileMetaData) 设置文档元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthor() 获取作者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthor(string $Author) 设置作者
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeDocumentSet extends AbstractModel
 {
     /**
      * @var string 文档id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetId;
 
     /**
      * @var string 文档名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetName;
 
     /**
      * @var string 文件完整内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextPrefix;
 
     /**
      * @var KnowledgeDocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetInfo;
 
     /**
      * @var KnowledgeSplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SplitterPreprocess;
 
     /**
      * @var string 未使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 文档标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTitle;
 
     /**
      * @var string 文档元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMetaData;
 
     /**
      * @var string 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Author;
 
     /**
      * @param string $DocumentSetId 文档id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentSetName 文档名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 文件完整内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TextPrefix 文件内容前 200个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeDocumentSetInfo $DocumentSetInfo 文件详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeSplitterPreprocess $SplitterPreprocess 文件拆分信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 未使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileTitle 文档标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMetaData 文档元信息，必须为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Author 作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

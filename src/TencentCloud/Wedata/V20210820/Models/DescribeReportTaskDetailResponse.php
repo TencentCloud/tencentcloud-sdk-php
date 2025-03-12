@@ -14,33 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRabbitMQVirtualHostList返回参数结构体
+ * DescribeReportTaskDetail返回参数结构体
  *
- * @method integer getTotalCount() 获取集群列表数量
- * @method void setTotalCount(integer $TotalCount) 设置集群列表数量
- * @method array getVirtualHostList() 获取集群列表
+ * @method ReportTaskDetail getData() 获取1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualHostList(array $VirtualHostList) 设置集群列表
+ * @method void setData(ReportTaskDetail $Data) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRabbitMQVirtualHostListResponse extends AbstractModel
+class DescribeReportTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 集群列表数量
-     */
-    public $TotalCount;
-
-    /**
-     * @var array 集群列表
+     * @var ReportTaskDetail 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $VirtualHostList;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +41,7 @@ class DescribeRabbitMQVirtualHostListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 集群列表数量
-     * @param array $VirtualHostList 集群列表
+     * @param ReportTaskDetail $Data 1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -66,17 +58,9 @@ class DescribeRabbitMQVirtualHostListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("VirtualHostList",$param) and $param["VirtualHostList"] !== null) {
-            $this->VirtualHostList = [];
-            foreach ($param["VirtualHostList"] as $key => $value){
-                $obj = new RabbitMQPrivateVirtualHost();
-                $obj->deserialize($value);
-                array_push($this->VirtualHostList, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ReportTaskDetail();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

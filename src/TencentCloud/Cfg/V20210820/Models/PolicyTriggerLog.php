@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 护栏策略触发日志
  *
  * @method integer getTaskId() 获取演练ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置演练ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
@@ -45,7 +43,6 @@ class PolicyTriggerLog extends AbstractModel
 {
     /**
      * @var integer 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
@@ -75,7 +72,6 @@ class PolicyTriggerLog extends AbstractModel
 
     /**
      * @param integer $TaskId 演练ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerType 类型，0--触发，1--恢复

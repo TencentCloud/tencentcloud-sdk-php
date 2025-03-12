@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 任务错误信息
  *
  * @method string getCode() 获取错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorLog() 获取错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorLog(string $ErrorLog) 设置错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHelpDoc() 获取文档提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(string $HelpDoc) 设置文档提示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ErrorInfoItem extends AbstractModel
 {
     /**
      * @var string 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var string 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorLog;
 
     /**
      * @var string 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HelpDoc;
 
     /**
      * @param string $Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorLog 错误日志信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

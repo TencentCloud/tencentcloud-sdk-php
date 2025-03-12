@@ -55,7 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAccessPoint() 获取日志接入点，用户忽略。
  * @method void setAccessPoint(string $AccessPoint) 设置日志接入点，用户忽略。
  * @method Kafka getKafka() 获取kafka旁路配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafka(Kafka $Kafka) 设置kafka旁路配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RumProject extends AbstractModel
 {
@@ -146,6 +148,7 @@ class RumProject extends AbstractModel
 
     /**
      * @var Kafka kafka旁路配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kafka;
 
@@ -168,6 +171,7 @@ class RumProject extends AbstractModel
      * @param integer $ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
      * @param string $AccessPoint 日志接入点，用户忽略。
      * @param Kafka $Kafka kafka旁路配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

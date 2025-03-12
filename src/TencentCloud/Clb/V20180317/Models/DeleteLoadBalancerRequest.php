@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerIds() 获取要删除的负载均衡实例 ID数组，数组大小最大支持20。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要删除的负载均衡实例 ID数组，数组大小最大支持20。
+ * @method boolean getForceDelete() 获取是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+ * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
  */
 class DeleteLoadBalancerRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteLoadBalancerRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
+     * @var boolean 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     */
+    public $ForceDelete;
+
+    /**
      * @param array $LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+     * @param boolean $ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteLoadBalancerRequest extends AbstractModel
         }
         if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
             $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        }
+
+        if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
+            $this->ForceDelete = $param["ForceDelete"];
         }
     }
 }

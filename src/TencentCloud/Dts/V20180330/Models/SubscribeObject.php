@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 数据订阅的对象
  *
  * @method integer getObjectsType() 获取数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectsType(integer $ObjectsType) 设置数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTableNames() 获取订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableNames(array $TableNames) 设置订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeObject extends AbstractModel
 {
     /**
      * @var integer 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectsType;
 
     /**
      * @var string 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var array 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableNames;
 
     /**
      * @param integer $ObjectsType 数据订阅对象的类型，0-数据库，1-数据库内的表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableNames 订阅数据库中表名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

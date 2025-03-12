@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 订阅的kafka分区数和分区规则。mariadb，percona，tdsqlmysql，tdpg不支持自定义分区，所以DistributeRules和DefaultRuleType可以不填，但是NumberOfPartitions是必填。
  *
  * @method integer getNumberOfPartitions() 获取kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumberOfPartitions(integer $NumberOfPartitions) 设置kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDistributeRules() 获取分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDistributeRules(array $DistributeRules) 设置分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultRuleType() 获取默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultRuleType(string $DefaultRuleType) 设置默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeKafkaConfig extends AbstractModel
 {
     /**
      * @var integer kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberOfPartitions;
 
     /**
      * @var array 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DistributeRules;
 
@@ -55,19 +47,15 @@ class SubscribeKafkaConfig extends AbstractModel
      * @var string 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultRuleType;
 
     /**
      * @param integer $NumberOfPartitions kafka分区数量，枚举值为1，4，8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DistributeRules 分区规则。当NumberOfPartitions > 1时，该项必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultRuleType 默认分区策略。当NumberOfPartitions > 1时，该项必填。不满足DistributeRules中正则表达式的数据，将按照默认分区策略计算分区。
 非mongo产品的枚举值为: table-按表名分区，pk-按表名+主键分区。mongo的枚举值为：collection-按集合名分区。
 该字段与DistributeRules搭配使用，如果配置了该字段，视为配置了一条DistributeRules。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

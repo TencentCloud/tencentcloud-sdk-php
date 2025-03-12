@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 任务操作信息，包含迁移任务的所有操作列表，及迁移任务在当前状态下允许的操作列表
  *
  * @method array getAllAction() 获取任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllAction(array $AllAction) 设置任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAllowedAction() 获取任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowedAction(array $AllowedAction) 设置任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MigrateAction extends AbstractModel
 {
     /**
      * @var array 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllAction;
 
     /**
      * @var array 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowedAction;
 
     /**
      * @param array $AllAction 任务的所有操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AllowedAction 任务在当前状态下允许的操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) 设置上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
  * @method string getBatchId() 获取批次Id
  * @method void setBatchId(string $BatchId) 设置批次Id
+ * @method integer getDataFieldCutLen() 获取返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+ * @method void setDataFieldCutLen(integer $DataFieldCutLen) 设置返回结果集中字段值长度截取，如果超过该长度则截取到该长度
  */
 class DescribeNotebookSessionStatementSqlResultRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeNotebookSessionStatementSqlResultRequest extends AbstractModel
     public $BatchId;
 
     /**
+     * @var integer 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
+     */
+    public $DataFieldCutLen;
+
+    /**
      * @param string $TaskId 任务唯一ID
      * @param integer $MaxResults 返回结果的最大行数，范围0~1000，默认为1000.
      * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      * @param string $BatchId 批次Id
+     * @param integer $DataFieldCutLen 返回结果集中字段值长度截取，如果超过该长度则截取到该长度
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeNotebookSessionStatementSqlResultRequest extends AbstractModel
 
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("DataFieldCutLen",$param) and $param["DataFieldCutLen"] !== null) {
+            $this->DataFieldCutLen = $param["DataFieldCutLen"];
         }
     }
 }

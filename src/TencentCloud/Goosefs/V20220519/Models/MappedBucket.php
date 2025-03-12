@@ -41,27 +41,17 @@ use TencentCloud\Common\AbstractModel;
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
  * @method string getRuleId() 获取绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleDescription() 获取规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleDescription(string $RuleDescription) 设置规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取桶关联状态 0：关联中 1：关联完成
  * @method void setStatus(integer $Status) 设置桶关联状态 0：关联中 1：关联完成
  * @method boolean getAccelerateFlag() 获取是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccelerateFlag(boolean $AccelerateFlag) 设置是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketRegion() 获取桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketRegion(string $BucketRegion) 设置桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndpoint() 获取自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndpoint(string $Endpoint) 设置自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MappedBucket extends AbstractModel
 {
@@ -89,13 +79,11 @@ class MappedBucket extends AbstractModel
 
     /**
      * @var string 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleDescription;
 
@@ -106,19 +94,16 @@ class MappedBucket extends AbstractModel
 
     /**
      * @var boolean 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccelerateFlag;
 
     /**
      * @var string 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketRegion;
 
     /**
      * @var string 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Endpoint;
 
@@ -134,16 +119,11 @@ class MappedBucket extends AbstractModel
 周期沉降(PeriodExport)
 立即沉降(ImmediateExport)
      * @param string $RuleId 绑定bucket的数据流动策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleDescription 规则备注与描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 桶关联状态 0：关联中 1：关联完成
      * @param boolean $AccelerateFlag 是否使用全球加速域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketRegion 桶所在的园区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Endpoint 自定义Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

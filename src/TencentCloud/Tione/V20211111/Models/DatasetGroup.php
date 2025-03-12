@@ -148,6 +148,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnnotationSchemaConfigured(boolean $AnnotationSchemaConfigured) 设置标注Schema是否配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorNickname() 获取创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorNickname(string $CreatorNickname) 设置创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsCfsUpdated() 获取cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCfsUpdated(boolean $IsCfsUpdated) 设置cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasetGroup extends AbstractModel
 {
@@ -344,6 +352,18 @@ class DatasetGroup extends AbstractModel
     public $AnnotationSchemaConfigured;
 
     /**
+     * @var string 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorNickname;
+
+    /**
+     * @var boolean cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCfsUpdated;
+
+    /**
      * @param string $DatasetId 数据集ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasetName 数据集名称
@@ -407,6 +427,10 @@ class DatasetGroup extends AbstractModel
      * @param string $AnnotationSpecification 标注规范
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AnnotationSchemaConfigured 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorNickname 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsCfsUpdated cfs路径是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -561,6 +585,14 @@ class DatasetGroup extends AbstractModel
 
         if (array_key_exists("AnnotationSchemaConfigured",$param) and $param["AnnotationSchemaConfigured"] !== null) {
             $this->AnnotationSchemaConfigured = $param["AnnotationSchemaConfigured"];
+        }
+
+        if (array_key_exists("CreatorNickname",$param) and $param["CreatorNickname"] !== null) {
+            $this->CreatorNickname = $param["CreatorNickname"];
+        }
+
+        if (array_key_exists("IsCfsUpdated",$param) and $param["IsCfsUpdated"] !== null) {
+            $this->IsCfsUpdated = $param["IsCfsUpdated"];
         }
     }
 }

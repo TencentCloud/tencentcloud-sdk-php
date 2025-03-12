@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFiles(array $Files) 设置备份文件列表
  * @method integer getTotalCount() 获取总条目数
  * @method void setTotalCount(integer $TotalCount) 设置总条目数
+ * @method string getUrlPrefix() 获取下载链接前缀
+ * @method void setUrlPrefix(string $UrlPrefix) 设置下载链接前缀
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeBackupFilesResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 下载链接前缀
+     */
+    public $UrlPrefix;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeBackupFilesResponse extends AbstractModel
     /**
      * @param array $Files 备份文件列表
      * @param integer $TotalCount 总条目数
+     * @param string $UrlPrefix 下载链接前缀
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeBackupFilesResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("UrlPrefix",$param) and $param["UrlPrefix"] !== null) {
+            $this->UrlPrefix = $param["UrlPrefix"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

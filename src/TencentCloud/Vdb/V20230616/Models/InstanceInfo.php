@@ -21,53 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * 实例信息，用于实例列表
  *
  * @method string getInstanceId() 获取实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProduct() 获取产品。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProduct(string $Product) 设置产品。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNetworks() 获取网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworks(array $Networks) 设置网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShardNum() 获取分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardNum(integer $ShardNum) 设置分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicaNum() 获取副本数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCpu() 获取CPU.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(float $Cpu) 设置CPU.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemory() 获取内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(float $Memory) 设置内存。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDisk() 获取磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisk(integer $Disk) 设置磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getHealthScore() 获取健康得分。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthScore(float $HealthScore) 设置健康得分。
@@ -81,129 +57,91 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProject(string $Project) 设置所属项目。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceTags() 获取所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineName() 获取引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineName(string $EngineName) 设置引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineVersion() 获取引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineVersion(string $EngineVersion) 设置引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApiVersion() 获取api版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiVersion(string $ApiVersion) 设置api版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend() 获取差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend(string $Extend) 设置差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredAt() 获取过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredAt(string $ExpiredAt) 设置过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsNoExpired() 获取是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNoExpired(boolean $IsNoExpired) 设置是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanAddress() 获取外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanAddress(string $WanAddress) 设置外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateAt() 获取隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateAt(string $IsolateAt) 设置隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenew() 获取是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
     /**
      * @var string 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 产品。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Product;
 
     /**
      * @var array 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Networks;
 
     /**
      * @var integer 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardNum;
 
     /**
      * @var integer 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaNum;
 
     /**
      * @var float CPU.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var float 内存。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var integer 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disk;
 
@@ -230,107 +168,82 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
 
     /**
      * @var string 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineVersion;
 
     /**
      * @var string api版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiVersion;
 
     /**
      * @var integer 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var string 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend;
 
     /**
      * @var string 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredAt;
 
     /**
      * @var boolean 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNoExpired;
 
     /**
      * @var string 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanAddress;
 
     /**
      * @var string 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateAt;
 
     /**
      * @var integer 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenew;
 
     /**
      * @param string $InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例自定义名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户APPID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Product 产品。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Networks 网络信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShardNum 分片信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplicaNum 副本数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Cpu CPU.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Memory 内存。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Disk 磁盘。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $HealthScore 健康得分。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Warning 异常告警。
@@ -338,31 +251,18 @@ class InstanceInfo extends AbstractModel
      * @param string $Project 所属项目。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 所属标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 资源状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineName 引擎名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineVersion 引擎版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiVersion api版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 计费模式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend 差异化扩展信息, json格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredAt 过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNoExpired 是否不过期(永久)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateAt 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

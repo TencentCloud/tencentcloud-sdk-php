@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 角色对象，postgresql独有参数
  *
  * @method string getRoleName() 获取角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewRoleName() 获取迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewRoleName(string $NewRoleName) 设置迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleItem extends AbstractModel
 {
     /**
      * @var string 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
     /**
      * @var string 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewRoleName;
 
     /**
      * @param string $RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewRoleName 迁移后的角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

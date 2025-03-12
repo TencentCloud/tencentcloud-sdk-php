@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceGroupName(string $ResourceGroupName) 设置spark集群资源组名称
  * @method boolean getIsMultiStatement() 获取是否使用multi- statement方式运行一批次任务，true: 是，false: 否
  * @method void setIsMultiStatement(boolean $IsMultiStatement) 设置是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+ * @method array getSourceInfo() 获取任务来源信息
+ * @method void setSourceInfo(array $SourceInfo) 设置任务来源信息
  */
 class CreateTasksRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateTasksRequest extends AbstractModel
     public $IsMultiStatement;
 
     /**
+     * @var array 任务来源信息
+     */
+    public $SourceInfo;
+
+    /**
      * @param string $DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      * @param TasksInfo $Tasks SQL任务信息
      * @param string $DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      * @param string $DataEngineName 计算引擎名称，不填任务提交到默认集群
      * @param string $ResourceGroupName spark集群资源组名称
      * @param boolean $IsMultiStatement 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+     * @param array $SourceInfo 任务来源信息
      */
     function __construct()
     {
@@ -109,6 +117,15 @@ class CreateTasksRequest extends AbstractModel
 
         if (array_key_exists("IsMultiStatement",$param) and $param["IsMultiStatement"] !== null) {
             $this->IsMultiStatement = $param["IsMultiStatement"];
+        }
+
+        if (array_key_exists("SourceInfo",$param) and $param["SourceInfo"] !== null) {
+            $this->SourceInfo = [];
+            foreach ($param["SourceInfo"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->SourceInfo, $obj);
+            }
         }
     }
 }

@@ -31,19 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
  * @method CertificateInput getCertificate() 获取证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
  * @method void setCertificate(CertificateInput $Certificate) 设置证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
  * @method string getScheduler() 获取监听器转发的方式。可选值：WRR、LEAST_CONN
@@ -63,19 +55,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
  * @method MultiCertInfo getMultiCertInfo() 获取证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
  * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
  * @method integer getMaxConn() 获取监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
  * @method void setMaxConn(integer $MaxConn) 设置监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
  * @method integer getMaxCps() 获取监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
@@ -90,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setH2cSwitch(boolean $H2cSwitch) 设置内网http监听器开启h2c开关
  * @method boolean getSslCloseSwitch() 获取TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
  * @method void setSslCloseSwitch(boolean $SslCloseSwitch) 设置TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+ * @method string getDataCompressMode() 获取数据压缩模式
+ * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -120,12 +106,8 @@ class CreateListenerRequest extends AbstractModel
 
     /**
      * @var CertificateInput 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      */
     public $Certificate;
 
@@ -172,12 +154,8 @@ class CreateListenerRequest extends AbstractModel
 
     /**
      * @var MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
      */
     public $MultiCertInfo;
 
@@ -217,18 +195,19 @@ class CreateListenerRequest extends AbstractModel
     public $SslCloseSwitch;
 
     /**
+     * @var string 数据压缩模式
+     */
+    public $DataCompressMode;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
      * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
      * @param array $ListenerNames 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数。
      * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      * @param CertificateInput $Certificate 证书相关信息。参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
@@ -239,12 +218,8 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
      * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
-<li>
-此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-</li>
-<li>
-创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
-</li>
+<li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
+<li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
      * @param integer $MaxConn 监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $MaxCps 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
@@ -252,6 +227,7 @@ class CreateListenerRequest extends AbstractModel
      * @param array $FullEndPorts 全端口段监听器的结束端口
      * @param boolean $H2cSwitch 内网http监听器开启h2c开关
      * @param boolean $SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     * @param string $DataCompressMode 数据压缩模式
      */
     function __construct()
     {
@@ -355,6 +331,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("SslCloseSwitch",$param) and $param["SslCloseSwitch"] !== null) {
             $this->SslCloseSwitch = $param["SslCloseSwitch"];
+        }
+
+        if (array_key_exists("DataCompressMode",$param) and $param["DataCompressMode"] !== null) {
+            $this->DataCompressMode = $param["DataCompressMode"];
         }
     }
 }

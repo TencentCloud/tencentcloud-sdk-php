@@ -18,24 +18,20 @@ namespace TencentCloud\Vdb\V20230616\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例pod信息，仅包含 pod 名称
+ * 实例pod信息， pod 名称
  *
  * @method string getName() 获取Pod名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置Pod名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfo extends AbstractModel
 {
     /**
      * @var string Pod名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Name Pod名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

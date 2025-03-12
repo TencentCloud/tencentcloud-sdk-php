@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息，有使用HTTPS协议时候必须传
  * @method WafConf getWafConfig() 获取web 应用防火墙配置
  * @method void setWafConfig(WafConf $WafConfig) 设置web 应用防火墙配置
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateCustomDomainRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCustomDomainRequest extends AbstractModel
     public $WafConfig;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Domain 域名，不支持泛域名
      * @param string $Protocol 协议，取值范围：HTTP, HTTPS, HTTP&HTTPS
      * @param array $EndpointsConfig 路由配置
      * @param CertConf $CertConfig 证书配置信息，有使用HTTPS协议时候必须传
      * @param WafConf $WafConfig web 应用防火墙配置
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -103,6 +111,15 @@ class CreateCustomDomainRequest extends AbstractModel
         if (array_key_exists("WafConfig",$param) and $param["WafConfig"] !== null) {
             $this->WafConfig = new WafConf();
             $this->WafConfig->deserialize($param["WafConfig"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

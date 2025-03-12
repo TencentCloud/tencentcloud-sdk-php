@@ -40,8 +40,22 @@ use TencentCloud\Common\AbstractModel;
 图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
- * @method boolean getEnableBodyJoins() 获取是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
- * @method void setEnableBodyJoins(boolean $EnableBodyJoins) 设置是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+ * @method boolean getEnableBodyJoins() 获取是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
+ * @method void setEnableBodyJoins(boolean $EnableBodyJoins) 设置是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
+ * @method boolean getEnableFace() 获取是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+ * @method void setEnableFace(boolean $EnableFace) 设置是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
  */
 class CheckAnimateImageJobRequest extends AbstractModel
 {
@@ -68,9 +82,20 @@ class CheckAnimateImageJobRequest extends AbstractModel
     public $ImageBase64;
 
     /**
-     * @var boolean 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     * @var boolean 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
      */
     public $EnableBodyJoins;
+
+    /**
+     * @var boolean 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
+     */
+    public $EnableFace;
 
     /**
      * @param string $TemplateId 动作模板ID。
@@ -83,7 +108,14 @@ class CheckAnimateImageJobRequest extends AbstractModel
 图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
-     * @param boolean $EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     * @param boolean $EnableBodyJoins 是否对输入图采用加强检测方案。
+
+默认不加强检测（false），仅对输入图做必要的基础检测。
+
+开启加强检测（true）有助于提升效果稳定性，将根据选择的动作模板提取建议的人体关键点，并判断输入图中是否包含这些人体关键点。加强检测仅对人像输入图生效，对非人输入图不生效。
+     * @param boolean $EnableFace 是否开启人脸检测。
+
+默认开启人脸检测（true），拦截主体为人像但无人脸、人脸不完整或被遮挡的输入图。可选关闭人脸检测（false）。
      */
     function __construct()
     {
@@ -112,6 +144,10 @@ class CheckAnimateImageJobRequest extends AbstractModel
 
         if (array_key_exists("EnableBodyJoins",$param) and $param["EnableBodyJoins"] !== null) {
             $this->EnableBodyJoins = $param["EnableBodyJoins"];
+        }
+
+        if (array_key_exists("EnableFace",$param) and $param["EnableFace"] !== null) {
+            $this->EnableFace = $param["EnableFace"];
         }
     }
 }

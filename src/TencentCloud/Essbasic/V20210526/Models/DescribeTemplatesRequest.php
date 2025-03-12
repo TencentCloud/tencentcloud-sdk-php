@@ -134,6 +134,8 @@ use TencentCloud\Common\AbstractModel;
 注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method string getUserFlowTypeId() 获取用户合同类型id
+ * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置用户合同类型id
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -244,6 +246,11 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 用户合同类型id
+     */
+    public $UserFlowTypeId;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -301,6 +308,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
      * @param UserInfo $Operator 操作者的信息
+     * @param string $UserFlowTypeId 用户合同类型id
      */
     function __construct()
     {
@@ -363,6 +371,10 @@ class DescribeTemplatesRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("UserFlowTypeId",$param) and $param["UserFlowTypeId"] !== null) {
+            $this->UserFlowTypeId = $param["UserFlowTypeId"];
         }
     }
 }

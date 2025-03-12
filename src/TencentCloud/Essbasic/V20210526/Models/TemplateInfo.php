@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
+ * @method UserFlowType getUserFlowType() 获取模版的用户合同类型
+ * @method void setUserFlowType(UserFlowType $UserFlowType) 设置模版的用户合同类型
  */
 class TemplateInfo extends AbstractModel
 {
@@ -215,6 +217,11 @@ class TemplateInfo extends AbstractModel
     public $Available;
 
     /**
+     * @var UserFlowType 模版的用户合同类型
+     */
+    public $UserFlowType;
+
+    /**
      * @param string $TemplateId 模板ID，模板的唯一标识
      * @param string $TemplateName 模板名
      * @param string $Description 模板描述信息
@@ -253,6 +260,7 @@ class TemplateInfo extends AbstractModel
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
+     * @param UserFlowType $UserFlowType 模版的用户合同类型
      */
     function __construct()
     {
@@ -348,6 +356,11 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("Available",$param) and $param["Available"] !== null) {
             $this->Available = $param["Available"];
+        }
+
+        if (array_key_exists("UserFlowType",$param) and $param["UserFlowType"] !== null) {
+            $this->UserFlowType = new UserFlowType();
+            $this->UserFlowType->deserialize($param["UserFlowType"]);
         }
     }
 }

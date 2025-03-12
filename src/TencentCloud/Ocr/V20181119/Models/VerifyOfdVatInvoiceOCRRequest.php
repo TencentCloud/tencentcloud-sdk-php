@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOfdFileUrl() 获取OFD文件的 Url 地址。
  * @method void setOfdFileUrl(string $OfdFileUrl) 设置OFD文件的 Url 地址。
- * @method string getOfdFileBase64() 获取OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
- * @method void setOfdFileBase64(string $OfdFileBase64) 设置OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+ * @method string getOfdFileBase64() 获取OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
+ * @method void setOfdFileBase64(string $OfdFileBase64) 设置OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
  * @method integer getOfdPageNumber() 获取需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
  * @method void setOfdPageNumber(integer $OfdPageNumber) 设置需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
  */
@@ -37,8 +35,7 @@ class VerifyOfdVatInvoiceOCRRequest extends AbstractModel
     public $OfdFileUrl;
 
     /**
-     * @var string OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+     * @var string OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
      */
     public $OfdFileBase64;
 
@@ -49,8 +46,7 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
 
     /**
      * @param string $OfdFileUrl OFD文件的 Url 地址。
-     * @param string $OfdFileBase64 OFD文件的 Base64 值。
-OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBase64。
+     * @param string $OfdFileBase64 OFD文件的 Base64 值。OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只使用OfdFileUrl。
      * @param integer $OfdPageNumber 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
      */
     function __construct()

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertConfig(CertConf $CertConfig) 设置证书配置信息
  * @method WafConf getWafConfig() 获取web 应用防火墙配置
  * @method void setWafConfig(WafConf $WafConfig) 设置web 应用防火墙配置
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class GetCustomDomainResponse extends AbstractModel
     public $WafConfig;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class GetCustomDomainResponse extends AbstractModel
      * @param array $EndpointsConfig 路由配置
      * @param CertConf $CertConfig 证书配置信息
      * @param WafConf $WafConfig web 应用防火墙配置
+     * @param array $Tags 标签
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -111,6 +119,15 @@ class GetCustomDomainResponse extends AbstractModel
         if (array_key_exists("WafConfig",$param) and $param["WafConfig"] !== null) {
             $this->WafConfig = new WafConf();
             $this->WafConfig->deserialize($param["WafConfig"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) 设置spark作业名
  * @method string getCmdArgs() 获取spark作业程序入参，以空格分隔；一般用于周期性调用使用
  * @method void setCmdArgs(string $CmdArgs) 设置spark作业程序入参，以空格分隔；一般用于周期性调用使用
+ * @method array getSourceInfo() 获取任务来源信息
+ * @method void setSourceInfo(array $SourceInfo) 设置任务来源信息
  */
 class CreateSparkAppTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateSparkAppTaskRequest extends AbstractModel
     public $CmdArgs;
 
     /**
+     * @var array 任务来源信息
+     */
+    public $SourceInfo;
+
+    /**
      * @param string $JobName spark作业名
      * @param string $CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
+     * @param array $SourceInfo 任务来源信息
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateSparkAppTaskRequest extends AbstractModel
 
         if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
             $this->CmdArgs = $param["CmdArgs"];
+        }
+
+        if (array_key_exists("SourceInfo",$param) and $param["SourceInfo"] !== null) {
+            $this->SourceInfo = [];
+            foreach ($param["SourceInfo"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->SourceInfo, $obj);
+            }
         }
     }
 }

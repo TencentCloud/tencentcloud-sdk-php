@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 视图对象
  *
  * @method string getViewName() 获取视图名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewName(string $ViewName) 设置视图名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewViewName() 获取迁移后的视图名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewViewName(string $NewViewName) 设置迁移后的视图名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ViewItem extends AbstractModel
 {
     /**
      * @var string 视图名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewName;
 
     /**
      * @var string 迁移后的视图名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewViewName;
 
     /**
      * @param string $ViewName 视图名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewViewName 迁移后的视图名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

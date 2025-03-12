@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConsumerGroupName() 获取消费者组名称
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费者组名称
  * @method string getDescription() 获取消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsumerGroupOffset() 获取消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
  * @method void setConsumerGroupOffset(integer $ConsumerGroupOffset) 设置消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
  * @method integer getConsumerGroupLag() 获取消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
@@ -43,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConsumerGroupState() 获取消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
  * @method void setConsumerGroupState(string $ConsumerGroupState) 设置消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
  * @method array getPartitionAssignment() 获取每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionAssignment(array $PartitionAssignment) 设置每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupInfo extends AbstractModel
 {
@@ -61,7 +57,6 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var string 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -102,7 +97,6 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var array 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionAssignment;
 
@@ -110,7 +104,6 @@ class GroupInfo extends AbstractModel
      * @param string $Account 消费者组账号
      * @param string $ConsumerGroupName 消费者组名称
      * @param string $Description 消费者组备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsumerGroupOffset 消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
      * @param integer $ConsumerGroupLag 消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
      * @param integer $Latency 消费延迟(单位为秒)
@@ -119,7 +112,6 @@ class GroupInfo extends AbstractModel
      * @param string $UpdatedAt 消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
      * @param string $ConsumerGroupState 消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
      * @param array $PartitionAssignment 每个消费者正在消费的分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

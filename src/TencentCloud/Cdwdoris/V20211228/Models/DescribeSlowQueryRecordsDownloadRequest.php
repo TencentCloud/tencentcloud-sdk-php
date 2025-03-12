@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) 设置排序字段
  * @method string getSortOrder() 获取排序方式
  * @method void setSortOrder(string $SortOrder) 设置排序方式
+ * @method string getUserName() 获取user
+ * @method void setUserName(string $UserName) 设置user
  */
 class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
     public $SortOrder;
 
     /**
+     * @var string user
+     */
+    public $UserName;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -136,6 +143,7 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
      * @param array $CatalogName catalog名称
      * @param string $SortField 排序字段
      * @param string $SortOrder 排序方式
+     * @param string $UserName user
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel
 
         if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
             $this->SortOrder = $param["SortOrder"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
     }
 }

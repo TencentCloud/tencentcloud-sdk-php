@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 上传知识库文档返回结果
  *
  * @method string getDocumentSetId() 获取给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetId(string $DocumentSetId) 设置给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDocumentSetName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocumentSetName(string $DocumentSetName) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileTitle() 获取文件标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTitle(string $FileTitle) 设置文件标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileMetaData() 获取文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMetaData(string $FileMetaData) 设置文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UploadKnowledgeDocumentSetRsp extends AbstractModel
 {
     /**
      * @var string 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetId;
 
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocumentSetName;
 
     /**
      * @var string 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTitle;
 
     /**
      * @var string 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMetaData;
 
     /**
      * @param string $DocumentSetId 给文件分配的 ID 信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentSetName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileTitle 文件标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMetaData 文件元信息，为jsonstring
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

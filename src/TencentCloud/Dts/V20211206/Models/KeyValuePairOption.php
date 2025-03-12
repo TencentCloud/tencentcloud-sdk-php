@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 存放配置时的额外信息
  *
  * @method string getKey() 获取选项key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置选项key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取选项value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置选项value
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyValuePairOption extends AbstractModel
 {
     /**
      * @var string 选项key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 选项value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 选项key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 选项value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

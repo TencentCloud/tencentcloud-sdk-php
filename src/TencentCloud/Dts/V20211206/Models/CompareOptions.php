@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 一致性校验选项
  *
  * @method string getMethod() 获取对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSampleRate() 获取抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleRate(integer $SampleRate) 设置抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThreadCount() 获取线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreadCount(integer $ThreadCount) 设置线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareOptions extends AbstractModel
 {
     /**
      * @var string 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var integer 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleRate;
 
     /**
      * @var integer 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThreadCount;
 
     /**
      * @param string $Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SampleRate 抽样比例;范围0,100。默认为100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ThreadCount 线程数，取值1-5，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

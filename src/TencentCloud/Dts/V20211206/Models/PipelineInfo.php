@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * mongo输出聚合设置。输出默认 Change Event
  *
  * @method string getAggOp() 获取聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAggOp(string $AggOp) 设置聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAggCmd() 获取聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAggCmd(string $AggCmd) 设置聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PipelineInfo extends AbstractModel
 {
     /**
      * @var string 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AggOp;
 
     /**
      * @var string 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AggCmd;
 
     /**
      * @param string $AggOp 聚合运算符：$addFields、$match、$project、$replaceRoot、$redact、$replaceWith、$set、$unset。其中 $replaceWith、$set、$unset 只有当订阅实例是4.2及以上版本可选。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AggCmd 聚合表达式。必须是json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

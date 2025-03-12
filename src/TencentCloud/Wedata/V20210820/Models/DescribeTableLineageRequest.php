@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTableLineage请求参数结构体
  *
- * @method string getDirection() 获取查询方向，INPUT,OUTPUT,BOTH枚举值
- * @method void setDirection(string $Direction) 设置查询方向，INPUT,OUTPUT,BOTH枚举值
+ * @method string getDirection() 获取查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
+ * @method void setDirection(string $Direction) 设置查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
  * @method TableLineageInfo getData() 获取表信息
  * @method void setData(TableLineageInfo $Data) 设置表信息
  * @method integer getInputDepth() 获取单次查询入度,默认 1
@@ -38,7 +46,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTableLineageRequest extends AbstractModel
 {
     /**
-     * @var string 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * @var string 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public $Direction;
 
@@ -73,7 +85,11 @@ class DescribeTableLineageRequest extends AbstractModel
     public $RecursiveSecond;
 
     /**
-     * @param string $Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * @param string $Direction 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      * @param TableLineageInfo $Data 表信息
      * @param integer $InputDepth 单次查询入度,默认 1
      * @param integer $OutputDepth 单次查询出度,默认 1

@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceId() 获取设备通道所属的设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备通道所属的设备ID
  * @method string getDeviceName() 获取设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelId() 获取设备通道ID
  * @method void setChannelId(string $ChannelId) 设置设备通道ID
  * @method string getChannelName() 获取设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelName(string $ChannelName) 设置设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelAttrInfo extends AbstractModel
 {
@@ -42,7 +38,6 @@ class ChannelAttrInfo extends AbstractModel
 
     /**
      * @var string 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
@@ -53,17 +48,14 @@ class ChannelAttrInfo extends AbstractModel
 
     /**
      * @var string 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelName;
 
     /**
      * @param string $DeviceId 设备通道所属的设备ID
      * @param string $DeviceName 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelId 设备通道ID
      * @param string $ChannelName 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

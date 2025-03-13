@@ -154,6 +154,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道列表
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
+ * @method Models\DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIds(Models\DescribeMicroservicesByGroupIdsRequest $req) 通过部署组ID获取微服务
  * @method Models\DescribeMsApiListResponse DescribeMsApiList(Models\DescribeMsApiListRequest $req) 查询服务API列表
  * @method Models\DescribeOverviewInvocationResponse DescribeOverviewInvocation(Models\DescribeOverviewInvocationRequest $req) 服务调用监控统计概览
  * @method Models\DescribePathRewriteResponse DescribePathRewrite(Models\DescribePathRewriteRequest $req) 查询路径重写

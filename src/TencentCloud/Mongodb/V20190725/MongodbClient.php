@@ -40,6 +40,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeCurrentOpResponse DescribeCurrentOp(Models\DescribeCurrentOpRequest $req) 本接口（DescribeCurrentOp）用于查询云数据库实例的当前正在执行的操作。
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+ * @method Models\DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespace(Models\DescribeDBInstanceNamespaceRequest $req) 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
  * @method Models\DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(Models\DescribeDBInstanceNodePropertyRequest $req) 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
  * @method Models\DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(Models\DescribeDBInstanceParamTplRequest $req) 本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
 **说明：DescribeDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**

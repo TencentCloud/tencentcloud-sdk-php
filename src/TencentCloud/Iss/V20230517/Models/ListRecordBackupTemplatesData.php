@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 查询录像上云模板列表返回数据
  *
  * @method string getTemplateId() 获取模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateName(string $TemplateName) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimeSections() 获取上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSections(array $TimeSections) 设置上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDevTimeSections() 获取录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevTimeSections(array $DevTimeSections) 设置录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScale() 获取上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScale(integer $Scale) 设置上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateAt(string $CreateAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateAt(string $UpdateAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListRecordBackupTemplatesData extends AbstractModel
 {
     /**
      * @var string 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
 
     /**
      * @var array 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSections;
 
     /**
      * @var array 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevTimeSections;
 
     /**
      * @var integer 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scale;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateAt;
 
     /**
      * @param string $TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

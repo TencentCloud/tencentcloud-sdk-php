@@ -82,6 +82,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则
  * @method Models\ModifyGlobalConfigResponse ModifyGlobalConfig(Models\ModifyGlobalConfigRequest $req) 修改YARN资源调度的全局配置
+ * @method Models\ModifyInspectionSettingsResponse ModifyInspectionSettings(Models\ModifyInspectionSettingsRequest $req) 设置巡检任务配置
  * @method Models\ModifyInstanceBasicResponse ModifyInstanceBasic(Models\ModifyInstanceBasicRequest $req) 修改集群名称
  * @method Models\ModifyPodNumResponse ModifyPodNum(Models\ModifyPodNumRequest $req) 调整Pod数量
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 变配实例

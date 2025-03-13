@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据库表信息
  *
  * @method string getDatabase() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTables() 获取表名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTables(array $Tables) 设置表名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseTables extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var array 表名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tables;
 
     /**
      * @param string $Database 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tables 表名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关服务版本信息返回数据
  *
  * @method string getName() 获取服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取服务版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置服务版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestVersion() 获取服务最新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestVersion(string $LatestVersion) 设置服务最新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否需要更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否需要更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUpgradeInfo() 获取升级信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeInfo(array $UpgradeInfo) 设置升级信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeGatewayVersion extends AbstractModel
 {
     /**
      * @var string 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 服务版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 服务最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestVersion;
 
     /**
      * @var boolean 是否需要更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var array 升级信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeInfo;
 
     /**
      * @param string $Name 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 服务版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestVersion 服务最新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否需要更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UpgradeInfo 升级信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 我预定的域名结构体。
  *
  * @method string getBusinessID() 获取business_id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessID(string $BusinessID) 设置business_id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppointPrice() 获取预定价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppointPrice(integer $AppointPrice) 设置预定价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppointBondPrice() 获取预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppointBondPrice(integer $AppointBondPrice) 设置预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppointEndTime() 获取预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppointEndTime(string $AppointEndTime) 设置预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppointNum() 获取预约人数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppointNum(integer $AppointNum) 设置预约人数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BiddingAppointResult extends AbstractModel
 {
     /**
      * @var string business_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessID;
 
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var integer 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppointPrice;
 
     /**
      * @var integer 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppointBondPrice;
 
     /**
      * @var string 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppointEndTime;
 
     /**
      * @var integer 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppointNum;
 
     /**
      * @var integer 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $BusinessID business_id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppointPrice 预定价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppointBondPrice 预约保证金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppointEndTime 预约结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppointNum 预约人数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

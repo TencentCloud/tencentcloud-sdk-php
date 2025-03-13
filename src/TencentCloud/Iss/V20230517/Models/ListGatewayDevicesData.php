@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关设备列表返回数据
  *
  * @method array getList() 获取网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListGatewayDevicesData extends AbstractModel
 {
     /**
      * @var array 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @var integer 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $List 网关下设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 网关下设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

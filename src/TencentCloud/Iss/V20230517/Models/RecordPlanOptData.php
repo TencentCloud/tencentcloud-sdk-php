@@ -27,15 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateId() 获取上云模板ID
  * @method void setTemplateId(string $TemplateId) 设置上云模板ID
  * @method string getDescribe() 获取上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribe(string $Describe) 设置上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LifeCycleData getLifeCycle() 获取云文件生命周期
  * @method void setLifeCycle(LifeCycleData $LifeCycle) 设置云文件生命周期
  * @method string getStreamType() 获取码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamType(string $StreamType) 设置码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRepairMode() 获取录像补录模式（0:不启用，1:启用）
  * @method void setRepairMode(integer $RepairMode) 设置录像补录模式（0:不启用，1:启用）
  */
@@ -58,7 +54,6 @@ class RecordPlanOptData extends AbstractModel
 
     /**
      * @var string 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
@@ -69,7 +64,6 @@ class RecordPlanOptData extends AbstractModel
 
     /**
      * @var string 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamType;
 
@@ -83,10 +77,8 @@ class RecordPlanOptData extends AbstractModel
      * @param string $PlanName 上云计划名称
      * @param string $TemplateId 上云模板ID
      * @param string $Describe 上云计划描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LifeCycleData $LifeCycle 云文件生命周期
      * @param string $StreamType 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RepairMode 录像补录模式（0:不启用，1:启用）
      */
     function __construct()

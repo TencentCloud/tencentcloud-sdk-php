@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDefault() 获取默认值
  * @method void setDefault(string $Default) 设置默认值
  * @method array getEnumValue() 获取参数为enum/string/bool时，可选值列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnumValue(array $EnumValue) 设置参数为enum/string/bool时，可选值列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMax() 获取参数类型为float/integer时的最大值
  * @method void setMax(string $Max) 设置参数类型为float/integer时的最大值
  * @method string getMin() 获取参数类型为float/integer时的最小值
@@ -45,25 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取参数描述
  * @method void setDescription(string $Description) 设置参数描述
  * @method integer getIsGlobal() 获取是否为全局参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGlobal(integer $IsGlobal) 设置是否为全局参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ModifiableInfo getModifiableInfo() 获取参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) 设置参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsFunc() 获取是否为函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFunc(boolean $IsFunc) 设置是否为函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunc() 获取函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunc(string $Func) 设置函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamInfo extends AbstractModel
 {
@@ -79,7 +67,6 @@ class ParamInfo extends AbstractModel
 
     /**
      * @var array 参数为enum/string/bool时，可选值列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnumValue;
 
@@ -125,31 +112,26 @@ class ParamInfo extends AbstractModel
 
     /**
      * @var integer 是否为全局参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGlobal;
 
     /**
      * @var ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifiableInfo;
 
     /**
      * @var boolean 是否为函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFunc;
 
     /**
      * @var string 函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Func;
 
     /**
      * @var string 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FuncPattern;
 
@@ -157,7 +139,6 @@ class ParamInfo extends AbstractModel
      * @param string $CurrentValue 当前值
      * @param string $Default 默认值
      * @param array $EnumValue 参数为enum/string/bool时，可选值列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Max 参数类型为float/integer时的最大值
      * @param string $Min 参数类型为float/integer时的最小值
      * @param string $ParamName 参数名称
@@ -167,15 +148,10 @@ class ParamInfo extends AbstractModel
      * @param string $MatchValue 匹配目标值，当multiVal时，各个key用;分割
      * @param string $Description 参数描述
      * @param integer $IsGlobal 是否为全局参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiableInfo $ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsFunc 是否为函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Func 函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

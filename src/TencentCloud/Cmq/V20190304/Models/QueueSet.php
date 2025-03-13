@@ -23,103 +23,61 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQueueId() 获取消息队列ID。
  * @method void setQueueId(string $QueueId) 设置消息队列ID。
  * @method integer getRewindSeconds() 获取回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewindSeconds(integer $RewindSeconds) 设置回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateUin() 获取创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUin(integer $CreateUin) 设置创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastModifyTime() 获取最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTime(integer $LastModifyTime) 设置最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVisibilityTimeout() 获取消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVisibilityTimeout(integer $VisibilityTimeout) 设置消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueueName() 获取消息队列名字。
  * @method void setQueueName(string $QueueName) 设置消息队列名字。
  * @method boolean getTrace() 获取消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrace(boolean $Trace) 设置消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRewindMsgNum() 获取已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewindMsgNum(integer $RewindMsgNum) 设置已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDelaySeconds() 获取飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDelaySeconds(integer $MaxDelaySeconds) 设置飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TransactionPolicy getTransactionPolicy() 获取事务消息策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransactionPolicy(TransactionPolicy $TransactionPolicy) 设置事务消息策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgRetentionSeconds() 获取消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDelayMsgNum() 获取延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayMsgNum(integer $DelayMsgNum) 设置延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMsgHeapNum() 获取最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) 设置最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPollingWaitSeconds() 获取消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) 设置消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBps() 获取带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBps(integer $Bps) 设置带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInactiveMsgNum() 获取在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInactiveMsgNum(integer $InactiveMsgNum) 设置在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DeadLetterPolicy getDeadLetterPolicy() 获取死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterPolicy(DeadLetterPolicy $DeadLetterPolicy) 设置死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveMsgNum() 获取在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveMsgNum(integer $ActiveMsgNum) 设置在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinMsgTime() 获取消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinMsgTime(integer $MinMsgTime) 设置消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeadLetterSource() 获取死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterSource(array $DeadLetterSource) 设置死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTransaction() 获取事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransaction(boolean $Transaction) 设置事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQps() 获取每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQps(integer $Qps) 设置每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMigrate() 获取是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigrate(integer $Migrate) 设置是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueueSet extends AbstractModel
 {
@@ -130,25 +88,21 @@ class QueueSet extends AbstractModel
 
     /**
      * @var integer 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewindSeconds;
 
     /**
      * @var integer 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUin;
 
     /**
      * @var integer 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTime;
 
     /**
      * @var integer 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VisibilityTimeout;
 
@@ -159,25 +113,21 @@ class QueueSet extends AbstractModel
 
     /**
      * @var boolean 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trace;
 
     /**
      * @var array 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var integer 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewindMsgNum;
 
     /**
      * @var integer 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDelaySeconds;
 
@@ -189,37 +139,31 @@ class QueueSet extends AbstractModel
 
     /**
      * @var integer 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRetentionSeconds;
 
     /**
      * @var integer 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayMsgNum;
 
     /**
      * @var integer 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMsgHeapNum;
 
     /**
      * @var integer 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PollingWaitSeconds;
 
     /**
      * @var integer 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bps;
 
     /**
      * @var integer 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InactiveMsgNum;
 
@@ -231,25 +175,21 @@ class QueueSet extends AbstractModel
 
     /**
      * @var integer 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveMsgNum;
 
     /**
      * @var integer 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMsgSize;
 
     /**
      * @var integer 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinMsgTime;
 
     /**
      * @var array 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadLetterSource;
 
@@ -261,73 +201,49 @@ class QueueSet extends AbstractModel
 
     /**
      * @var integer 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
 
     /**
      * @var integer 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Migrate;
 
     /**
      * @param string $QueueId 消息队列ID。
      * @param integer $RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUin 创建者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueName 消息队列名字。
      * @param boolean $Trace 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDelaySeconds 飞行消息最大保留时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransactionPolicy $TransactionPolicy 事务消息策略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DelayMsgNum 延迟消息数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PollingWaitSeconds 消息接收长轮询等待时间。取值范围0 - 30秒，默认值0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bps 带宽限制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InactiveMsgNum 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadLetterPolicy $DeadLetterPolicy 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinMsgTime 消息最小未消费时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeadLetterSource 死信队列。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Transaction 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Migrate 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

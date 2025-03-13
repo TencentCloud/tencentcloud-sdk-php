@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Fmu\V20191213\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryBeautifyVideoJob请求参数结构体
+ * DescribeWhiteBoardSnapshot请求参数结构体
  *
- * @method string getJobId() 获取视频美颜Job id
- * @method void setJobId(string $JobId) 设置视频美颜Job id
+ * @method integer getRoomId() 获取房间ID
+ * @method void setRoomId(integer $RoomId) 设置房间ID
  */
-class QueryBeautifyVideoJobRequest extends AbstractModel
+class DescribeWhiteBoardSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 视频美颜Job id
+     * @var integer 房间ID
      */
-    public $JobId;
+    public $RoomId;
 
     /**
-     * @param string $JobId 视频美颜Job id
+     * @param integer $RoomId 房间ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryBeautifyVideoJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
     }
 }

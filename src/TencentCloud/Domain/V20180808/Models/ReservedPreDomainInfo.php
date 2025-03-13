@@ -25,29 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getReservedStatus() 获取1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成
  * @method void setReservedStatus(integer $ReservedStatus) 设置1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成
  * @method string getFailReason() 获取域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChangeOwnerTime() 获取预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChangeOwnerTime(string $ChangeOwnerTime) 设置预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegTime() 获取注册时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegTime(string $RegTime) 设置注册时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessId() 获取业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReservedPreDomainInfo extends AbstractModel
 {
@@ -63,37 +51,31 @@ class ReservedPreDomainInfo extends AbstractModel
 
     /**
      * @var string 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
     /**
      * @var string 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChangeOwnerTime;
 
     /**
      * @var string 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegTime;
 
     /**
      * @var string 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessId;
 
@@ -101,17 +83,11 @@ class ReservedPreDomainInfo extends AbstractModel
      * @param string $Domain 域名
      * @param integer $ReservedStatus 1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成
      * @param string $FailReason 域名预定失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChangeOwnerTime 预计变更所有权时间（仅用于参考，实际时间会存在误差）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegTime 注册时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID，用于删除资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValue() 获取标签值
  * @method void setValue(string $Value) 设置标签值
  * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
@@ -43,7 +41,6 @@ class Tag extends AbstractModel
 
     /**
      * @var string 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
@@ -51,7 +48,6 @@ class Tag extends AbstractModel
      * @param string $Key 标签键
      * @param string $Value 标签值
      * @param string $ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

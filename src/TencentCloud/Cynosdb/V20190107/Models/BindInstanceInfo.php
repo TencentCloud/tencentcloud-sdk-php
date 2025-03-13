@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 资源包绑定的实例信息
  *
  * @method string getInstanceId() 获取绑定的集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置绑定的集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceRegion() 获取绑定的实例所在的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceRegion(string $InstanceRegion) 设置绑定的实例所在的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取绑定的实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置绑定的实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExtendIds() 获取绑定集群下的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendIds(array $ExtendIds) 设置绑定集群下的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindInstanceInfo extends AbstractModel
 {
     /**
      * @var string 绑定的集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 绑定的实例所在的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceRegion;
 
     /**
      * @var string 绑定的实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var array 绑定集群下的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtendIds;
 
     /**
      * @param string $InstanceId 绑定的集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceRegion 绑定的实例所在的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 绑定的实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtendIds 绑定集群下的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

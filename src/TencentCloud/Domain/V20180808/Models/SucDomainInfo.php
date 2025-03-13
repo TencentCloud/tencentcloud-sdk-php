@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 预释放域名预约参数补充成功信息
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessId() 获取业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SucDomainInfo extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessId;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

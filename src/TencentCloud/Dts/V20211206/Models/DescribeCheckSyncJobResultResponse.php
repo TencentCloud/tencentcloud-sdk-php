@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCheckSyncJobResult返回参数结构体
  *
  * @method string getStatus() 获取校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepCount() 获取步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepCount(integer $StepCount) 设置步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepCur() 获取当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepCur(integer $StepCur) 设置当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepInfos() 获取步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfos(array $StepInfos) 设置步骤信息
@@ -47,25 +39,21 @@ class DescribeCheckSyncJobResultResponse extends AbstractModel
 {
     /**
      * @var string 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepCount;
 
     /**
      * @var integer 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepCur;
 
     /**
      * @var integer 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
@@ -82,13 +70,9 @@ class DescribeCheckSyncJobResultResponse extends AbstractModel
 
     /**
      * @param string $Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepCount 步骤总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepCur 当前所在步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 总体进度，范围为[0,100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfos 步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

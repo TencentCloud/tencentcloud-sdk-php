@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 本地录像播放url数据结构
  *
  * @method string getFlv() 获取录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlv(string $Flv) 设置录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlayRecordData extends AbstractModel
 {
     /**
      * @var string 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flv;
 
     /**
      * @param string $Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

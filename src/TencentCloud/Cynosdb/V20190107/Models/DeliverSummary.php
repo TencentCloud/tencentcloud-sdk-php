@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 日志投递信息
  *
  * @method string getDeliverType() 获取投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeliverType(string $DeliverType) 设置投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeliverSubType() 获取投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeliverSubType(string $DeliverSubType) 设置投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeliverSummary extends AbstractModel
 {
     /**
      * @var string 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeliverType;
 
     /**
      * @var string 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeliverSubType;
 
     /**
      * @param string $DeliverType 投递类型，store（存储类），mq（消息通道）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeliverSubType 投递子类型：cls，ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

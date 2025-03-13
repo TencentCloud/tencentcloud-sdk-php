@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 语音转文本不同套餐版本支持的语言如下：
 
 **基础版**：
-- "zh": 中文
-- "zh-TW": 中国台湾
+- "zh": 中文（简体）
+- "zh-TW": 中文（繁体）
 - "en": 英语
 
 **标准版：**
@@ -71,8 +71,8 @@ use TencentCloud\Common\AbstractModel;
 语音转文本不同套餐版本支持的语言如下：
 
 **基础版**：
-- "zh": 中文
-- "zh-TW": 中国台湾
+- "zh": 中文（简体）
+- "zh-TW": 中文（繁体）
 - "en": 英语
 
 **标准版：**
@@ -130,8 +130,8 @@ class STTConfig extends AbstractModel
 语音转文本不同套餐版本支持的语言如下：
 
 **基础版**：
-- "zh": 中文
-- "zh-TW": 中国台湾
+- "zh": 中文（简体）
+- "zh-TW": 中文（繁体）
 - "en": 英语
 
 **标准版：**
@@ -199,8 +199,8 @@ class STTConfig extends AbstractModel
 语音转文本不同套餐版本支持的语言如下：
 
 **基础版**：
-- "zh": 中文
-- "zh-TW": 中国台湾
+- "zh": 中文（简体）
+- "zh-TW": 中文（繁体）
 - "en": 英语
 
 **标准版：**

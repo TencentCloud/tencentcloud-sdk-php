@@ -14,51 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TWeCall分类统计数据
+ * 键值对
  *
- * @method integer getPkgType() 获取类型
+ * @method string getK() 获取键名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPkgType(integer $PkgType) 设置类型
+ * @method void setK(string $K) 设置键名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAll() 获取总数
+ * @method string getV() 获取值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAll(integer $All) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUsed() 获取已使用数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsed(integer $Used) 设置已使用数
+ * @method void setV(string $V) 设置值
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class TWeCallCategoryPkgInfo extends AbstractModel
+class KVPair extends AbstractModel
 {
     /**
-     * @var integer 类型
+     * @var string 键名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PkgType;
+    public $K;
 
     /**
-     * @var integer 总数
+     * @var string 值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $All;
+    public $V;
 
     /**
-     * @var integer 已使用数
+     * @param string $K 键名
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Used;
-
-    /**
-     * @param integer $PkgType 类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $All 总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Used 已使用数
+     * @param string $V 值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,16 +62,12 @@ class TWeCallCategoryPkgInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgType",$param) and $param["PkgType"] !== null) {
-            $this->PkgType = $param["PkgType"];
+        if (array_key_exists("K",$param) and $param["K"] !== null) {
+            $this->K = $param["K"];
         }
 
-        if (array_key_exists("All",$param) and $param["All"] !== null) {
-            $this->All = $param["All"];
-        }
-
-        if (array_key_exists("Used",$param) and $param["Used"] !== null) {
-            $this->Used = $param["Used"];
+        if (array_key_exists("V",$param) and $param["V"] !== null) {
+            $this->V = $param["V"];
         }
     }
 }

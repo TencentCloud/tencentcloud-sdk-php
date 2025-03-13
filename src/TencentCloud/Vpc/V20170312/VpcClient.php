@@ -106,6 +106,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
 * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
  * @method Models\CheckDefaultSubnetResponse CheckDefaultSubnet(Models\CheckDefaultSubnetRequest $req) 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
+ * @method Models\CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitor(Models\CheckGatewayFlowMonitorRequest $req) 本接口（CheckGatewayFlowMonitor）用于查询网关是否启用流量监控。
  * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口（CheckNetDetectState）用于验证网络探测。
  * @method Models\CheckTrafficMirrorResponse CheckTrafficMirror(Models\CheckTrafficMirrorRequest $req) 检查流量镜像的采集端接收端（公网IP类型）
  * @method Models\ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPolicies(Models\ClearRouteTableSelectionPoliciesRequest $req) 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。

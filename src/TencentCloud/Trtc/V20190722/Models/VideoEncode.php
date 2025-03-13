@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWidth() 获取输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
  * @method void setWidth(integer $Width) 设置输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
- * @method integer getHeight() 获取输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
- * @method void setHeight(integer $Height) 设置输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+ * @method integer getHeight() 获取输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
+ * @method void setHeight(integer $Height) 设置输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
  * @method integer getFps() 获取输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
  * @method void setFps(integer $Fps) 设置输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
  * @method integer getBitRate() 获取输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
@@ -39,7 +39,7 @@ class VideoEncode extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+     * @var integer 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      */
     public $Height;
 
@@ -60,7 +60,7 @@ class VideoEncode extends AbstractModel
 
     /**
      * @param integer $Width 输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
-     * @param integer $Height 输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+     * @param integer $Height 输出流高，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      * @param integer $Fps 输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
      * @param integer $BitRate 输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
      * @param integer $Gop 输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 跨地域备份各地域备份信息
  *
  * @method string getCrossRegion() 获取备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrossRegion(string $CrossRegion) 设置备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBackupId() 获取目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupId(string $BackupId) 设置目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBackupId() 获取目标地域的备份任务ID
+ * @method void setBackupId(integer $BackupId) 设置目标地域的备份任务ID
  * @method string getBackupStatus() 获取目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupStatus(string $BackupStatus) 设置目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CrossRegionBackupItem extends AbstractModel
 {
     /**
      * @var string 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrossRegion;
 
     /**
-     * @var string 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 目标地域的备份任务ID
      */
     public $BackupId;
 
     /**
      * @var string 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupStatus;
 
     /**
      * @param string $CrossRegion 备份的目标地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BackupId 目标地域的备份任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BackupId 目标地域的备份任务ID
      * @param string $BackupStatus 目标地域的备份状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubscribeId() 获取订阅实例ID
  * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID
  * @method string getMessage() 获取失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务运行状态，可能值为 running,failed,success
  * @method void setStatus(string $Status) 设置任务运行状态，可能值为 running,failed,success
  * @method integer getProgress() 获取当前总体进度，范围 0~100
@@ -35,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStepNow() 获取当前执行步骤
  * @method void setStepNow(integer $StepNow) 设置当前执行步骤
  * @method array getSteps() 获取各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSteps(array $Steps) 设置各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,7 +46,6 @@ class DescribeSubscribeCheckJobResponse extends AbstractModel
 
     /**
      * @var string 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -76,7 +71,6 @@ class DescribeSubscribeCheckJobResponse extends AbstractModel
 
     /**
      * @var array 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Steps;
 
@@ -88,13 +82,11 @@ class DescribeSubscribeCheckJobResponse extends AbstractModel
     /**
      * @param string $SubscribeId 订阅实例ID
      * @param string $Message 失败或者报错提示，成功则提示success。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务运行状态，可能值为 running,failed,success
      * @param integer $Progress 当前总体进度，范围 0~100
      * @param integer $StepAll 校验总步骤数
      * @param integer $StepNow 当前执行步骤
      * @param array $Steps 各个步骤运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

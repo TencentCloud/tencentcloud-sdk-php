@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEnd() 获取时间片段结束时间，UTC秒数，例如：1662114146
  * @method void setEnd(integer $End) 设置时间片段结束时间，UTC秒数，例如：1662114146
  * @method string getHlsUrl() 获取对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHlsUrl(string $HlsUrl) 设置对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordTimeLine extends AbstractModel
 {
@@ -43,7 +41,6 @@ class RecordTimeLine extends AbstractModel
 
     /**
      * @var string 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HlsUrl;
 
@@ -51,7 +48,6 @@ class RecordTimeLine extends AbstractModel
      * @param integer $Begin 时间片段开始时间，UTC秒数，例如：1662114146
      * @param integer $End 时间片段结束时间，UTC秒数，例如：1662114146
      * @param string $HlsUrl 对应时间片段的播放url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

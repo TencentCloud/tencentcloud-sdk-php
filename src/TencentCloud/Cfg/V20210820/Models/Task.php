@@ -134,6 +134,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskRegionName(string $TaskRegionName) 设置region信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskArchId() 获取架构ID
+ * @method void setTaskArchId(string $TaskArchId) 设置架构ID
  */
 class Task extends AbstractModel
 {
@@ -331,6 +333,11 @@ class Task extends AbstractModel
     public $TaskRegionName;
 
     /**
+     * @var string 架构ID
+     */
+    public $TaskArchId;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -388,6 +395,7 @@ class Task extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskRegionName region信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskArchId 架构ID
      */
     function __construct()
     {
@@ -562,6 +570,10 @@ class Task extends AbstractModel
 
         if (array_key_exists("TaskRegionName",$param) and $param["TaskRegionName"] !== null) {
             $this->TaskRegionName = $param["TaskRegionName"];
+        }
+
+        if (array_key_exists("TaskArchId",$param) and $param["TaskArchId"] !== null) {
+            $this->TaskArchId = $param["TaskArchId"];
         }
     }
 }

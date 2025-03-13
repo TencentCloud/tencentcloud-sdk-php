@@ -21,81 +21,55 @@ use TencentCloud\Common\AbstractModel;
  * 数据同步中的选项
  *
  * @method string getInitType() 获取同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitType(string $InitType) 设置同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDealOfExistSameTable() 获取同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOfExistSameTable(string $DealOfExistSameTable) 设置同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConflictHandleType() 获取冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConflictHandleType(string $ConflictHandleType) 设置冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAddAdditionalColumn() 获取是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddAdditionalColumn(boolean $AddAdditionalColumn) 设置是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOpTypes() 获取所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpTypes(array $OpTypes) 设置所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ConflictHandleOption getConflictHandleOption() 获取冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConflictHandleOption(ConflictHandleOption $ConflictHandleOption) 设置冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDdlOptions() 获取DDL同步选项，具体描述要同步那些DDL
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDdlOptions(array $DdlOptions) 设置DDL同步选项，具体描述要同步那些DDL
 注意：此字段可能返回 null，表示取不到有效值。
  * @method KafkaOption getKafkaOption() 获取kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaOption(KafkaOption $KafkaOption) 设置kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RateLimitOption getRateLimitOption() 获取任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitOption(RateLimitOption $RateLimitOption) 设置任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartPosition() 获取同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartPosition(string $StartPosition) 设置同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFilterBeginCommit() 获取同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterBeginCommit(boolean $FilterBeginCommit) 设置同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFilterCheckpoint() 获取同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterCheckpoint(boolean $FilterCheckpoint) 设置同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Options extends AbstractModel
 {
     /**
      * @var string 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitType;
 
     /**
      * @var string 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOfExistSameTable;
 
     /**
      * @var string 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConflictHandleType;
 
     /**
      * @var boolean 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddAdditionalColumn;
 
@@ -107,7 +81,6 @@ class Options extends AbstractModel
 
     /**
      * @var ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConflictHandleOption;
 
@@ -119,67 +92,50 @@ class Options extends AbstractModel
 
     /**
      * @var KafkaOption kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaOption;
 
     /**
      * @var RateLimitOption 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitOption;
 
     /**
      * @var integer 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRetryTimeRangeMinutes;
 
     /**
      * @var string 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartPosition;
 
     /**
      * @var boolean 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterBeginCommit;
 
     /**
      * @var boolean 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterCheckpoint;
 
     /**
      * @param string $InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AddAdditionalColumn 是否添加附加列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleOption $ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DdlOptions DDL同步选项，具体描述要同步那些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaOption $KafkaOption kafka同步选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitOption $RateLimitOption 任务限速信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

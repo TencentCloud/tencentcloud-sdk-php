@@ -14,40 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Fmu\V20191213\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryBeautifyVideoJob返回参数结构体
+ * TriggerManualTasks返回参数结构体
  *
- * @method string getJobStatus() 获取当前任务状态：排队中、处理中、处理失败或者处理完成
- * @method void setJobStatus(string $JobStatus) 设置当前任务状态：排队中、处理中、处理失败或者处理完成
- * @method BeautifyVideoOutput getBeautifyVideoOutput() 获取视频美颜输出的结果信息
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeautifyVideoOutput(BeautifyVideoOutput $BeautifyVideoOutput) 设置视频美颜输出的结果信息
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJobStatusCode() 获取当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
- * @method void setJobStatusCode(integer $JobStatusCode) 设置当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+ * @method ManualTriggerRecordOpsDto getData() 获取详情结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(ManualTriggerRecordOpsDto $Data) 设置详情结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryBeautifyVideoJobResponse extends AbstractModel
+class TriggerManualTasksResponse extends AbstractModel
 {
     /**
-     * @var string 当前任务状态：排队中、处理中、处理失败或者处理完成
-     */
-    public $JobStatus;
-
-    /**
-     * @var BeautifyVideoOutput 视频美颜输出的结果信息
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BeautifyVideoOutput;
+    public $RequestFromSource;
 
     /**
-     * @var integer 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     * @var ManualTriggerRecordOpsDto 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $JobStatusCode;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +51,10 @@ class QueryBeautifyVideoJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
-     * @param BeautifyVideoOutput $BeautifyVideoOutput 视频美颜输出的结果信息
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     * @param ManualTriggerRecordOpsDto $Data 详情结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,17 +70,13 @@ class QueryBeautifyVideoJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
-            $this->JobStatus = $param["JobStatus"];
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
         }
 
-        if (array_key_exists("BeautifyVideoOutput",$param) and $param["BeautifyVideoOutput"] !== null) {
-            $this->BeautifyVideoOutput = new BeautifyVideoOutput();
-            $this->BeautifyVideoOutput->deserialize($param["BeautifyVideoOutput"]);
-        }
-
-        if (array_key_exists("JobStatusCode",$param) and $param["JobStatusCode"] !== null) {
-            $this->JobStatusCode = $param["JobStatusCode"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ManualTriggerRecordOpsDto();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

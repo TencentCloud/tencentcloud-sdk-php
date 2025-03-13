@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 失败预约预释放域名信息
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailReason() 获取预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailReservedDomainInfo extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailReason 预约失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

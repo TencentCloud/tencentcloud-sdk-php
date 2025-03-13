@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getArchLayer() 获取1.接入层 2.逻辑层 3. 数据层
  * @method void setArchLayer(integer $ArchLayer) 设置1.接入层 2.逻辑层 3. 数据层
+ * @method boolean getIsArchSvg() 获取是否支持演练生图
+ * @method void setIsArchSvg(boolean $IsArchSvg) 设置是否支持演练生图
  */
 class ObjectType extends AbstractModel
 {
@@ -99,6 +101,11 @@ class ObjectType extends AbstractModel
     public $ArchLayer;
 
     /**
+     * @var boolean 是否支持演练生图
+     */
+    public $IsArchSvg;
+
+    /**
      * @param integer $ObjectTypeId 对象类型ID
      * @param string $ObjectTypeTitle 对象类型名称
      * @param string $ObjectTypeLevelOne 对象类型第一级
@@ -112,6 +119,7 @@ class ObjectType extends AbstractModel
      * @param integer $ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ArchLayer 1.接入层 2.逻辑层 3. 数据层
+     * @param boolean $IsArchSvg 是否支持演练生图
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class ObjectType extends AbstractModel
 
         if (array_key_exists("ArchLayer",$param) and $param["ArchLayer"] !== null) {
             $this->ArchLayer = $param["ArchLayer"];
+        }
+
+        if (array_key_exists("IsArchSvg",$param) and $param["IsArchSvg"] !== null) {
+            $this->IsArchSvg = $param["IsArchSvg"];
         }
     }
 }

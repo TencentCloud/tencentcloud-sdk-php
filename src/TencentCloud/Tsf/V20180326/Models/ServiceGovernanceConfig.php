@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableGovernance() 获取是否开启服务注册治理
  * @method void setEnableGovernance(boolean $EnableGovernance) 设置是否开启服务注册治理
- * @method string getGovernanceType() 获取服务治理类型
- * @method void setGovernanceType(string $GovernanceType) 设置服务治理类型
+ * @method string getGovernanceType() 获取服务治理类型（枚举：SHARE、EXCLUSIVE）
+ * @method void setGovernanceType(string $GovernanceType) 设置服务治理类型（枚举：SHARE、EXCLUSIVE）
  * @method array getExclusiveInstances() 获取独享实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveInstances(array $ExclusiveInstances) 设置独享实例列表
@@ -37,7 +37,7 @@ class ServiceGovernanceConfig extends AbstractModel
     public $EnableGovernance;
 
     /**
-     * @var string 服务治理类型
+     * @var string 服务治理类型（枚举：SHARE、EXCLUSIVE）
      */
     public $GovernanceType;
 
@@ -49,7 +49,7 @@ class ServiceGovernanceConfig extends AbstractModel
 
     /**
      * @param boolean $EnableGovernance 是否开启服务注册治理
-     * @param string $GovernanceType 服务治理类型
+     * @param string $GovernanceType 服务治理类型（枚举：SHARE、EXCLUSIVE）
      * @param array $ExclusiveInstances 独享实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

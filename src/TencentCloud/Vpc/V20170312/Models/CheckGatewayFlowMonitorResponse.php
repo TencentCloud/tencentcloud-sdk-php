@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Fmu\V20191213\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BeautifyVideo返回参数结构体
+ * CheckGatewayFlowMonitor返回参数结构体
  *
- * @method string getJobId() 获取视频美颜任务的Job id
- * @method void setJobId(string $JobId) 设置视频美颜任务的Job id
- * @method integer getEstimatedProcessTime() 获取预估处理时间，粒度为秒
- * @method void setEstimatedProcessTime(integer $EstimatedProcessTime) 设置预估处理时间，粒度为秒
+ * @method boolean getEnabled() 获取网关是否启用了流控。true为启用，false未启用。
+ * @method void setEnabled(boolean $Enabled) 设置网关是否启用了流控。true为启用，false未启用。
+ * @method integer getBandwidth() 获取网关的带宽。
+ * @method void setBandwidth(integer $Bandwidth) 设置网关的带宽。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class BeautifyVideoResponse extends AbstractModel
+class CheckGatewayFlowMonitorResponse extends AbstractModel
 {
     /**
-     * @var string 视频美颜任务的Job id
+     * @var boolean 网关是否启用了流控。true为启用，false未启用。
      */
-    public $JobId;
+    public $Enabled;
 
     /**
-     * @var integer 预估处理时间，粒度为秒
+     * @var integer 网关的带宽。
      */
-    public $EstimatedProcessTime;
+    public $Bandwidth;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class BeautifyVideoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 视频美颜任务的Job id
-     * @param integer $EstimatedProcessTime 预估处理时间，粒度为秒
+     * @param boolean $Enabled 网关是否启用了流控。true为启用，false未启用。
+     * @param integer $Bandwidth 网关的带宽。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class BeautifyVideoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
 
-        if (array_key_exists("EstimatedProcessTime",$param) and $param["EstimatedProcessTime"] !== null) {
-            $this->EstimatedProcessTime = $param["EstimatedProcessTime"];
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

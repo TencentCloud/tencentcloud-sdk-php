@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * OnlineDDL类型
  *
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OnlineDDL extends AbstractModel
 {
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

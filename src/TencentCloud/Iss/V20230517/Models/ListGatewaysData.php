@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关列表返回结果
  *
  * @method array getList() 获取网关列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置网关列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取网关数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置网关数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListGatewaysData extends AbstractModel
 {
     /**
      * @var array 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @var integer 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $List 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关服务版本信息返回数据
  *
  * @method array getServices() 获取网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServices(array $Services) 设置网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeGatewayVersionData extends AbstractModel
 {
     /**
      * @var array 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Services;
 
     /**
      * @param array $Services 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

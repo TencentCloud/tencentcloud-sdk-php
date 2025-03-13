@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 错误日志导出格式
  *
  * @method string getTimestamp() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(string $Timestamp) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取日志等级，可选值note, warning，error
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置日志等级，可选值note, warning，error
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ErrorLogItemExport extends AbstractModel
 {
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 日志等级，可选值note, warning，error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param string $Timestamp 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 日志等级，可选值note, warning，error
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

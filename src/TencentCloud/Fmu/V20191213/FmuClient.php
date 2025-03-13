@@ -24,20 +24,11 @@ use TencentCloud\Fmu\V20191213\Models as Models;
 
 /**
  * @method Models\BeautifyPicResponse BeautifyPic(Models\BeautifyPicRequest $req) 用户上传一张人脸图片（最多能处理一张图片中最大的五张人脸信息），精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
- * @method Models\BeautifyVideoResponse BeautifyVideo(Models\BeautifyVideoRequest $req) 产品不再维护，准备下线。
-
-视频美颜(此接口目前已下线)
- * @method Models\CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(Models\CancelBeautifyVideoJobRequest $req) 产品不再维护，准备下线。
-
-撤销视频美颜任务请求
  * @method Models\CreateModelResponse CreateModel(Models\CreateModelRequest $req) 在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
 
 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
  * @method Models\DeleteModelResponse DeleteModel(Models\DeleteModelRequest $req) 删除已注册的唇色素材。
  * @method Models\GetModelListResponse GetModelList(Models\GetModelListRequest $req) 查询已注册的唇色素材。
- * @method Models\QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(Models\QueryBeautifyVideoJobRequest $req) 产品不再维护，准备下线。
-
-查询视频美颜处理进度
  * @method Models\StyleImageResponse StyleImage(Models\StyleImageRequest $req) 上传一张照片，输出滤镜处理后的图片。
  * @method Models\StyleImageProResponse StyleImagePro(Models\StyleImageProRequest $req) 上传一张照片，输出滤镜处理后的图片。
  * @method Models\TryLipstickPicResponse TryLipstickPic(Models\TryLipstickPicRequest $req) 对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。

@@ -21,49 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 资源包信息
  *
  * @method string getPackageId() 获取资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeductionPriority() 获取当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductionPriority(integer $DeductionPriority) 设置当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourcePackage extends AbstractModel
 {
     /**
      * @var string 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
      * @var string 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
     /**
      * @var integer 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductionPriority;
 
     /**
      * @param string $PackageId 资源包的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 资源包类型：CCU：计算资源包
 DISK：存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeductionPriority 当前资源包绑定在当前实例下的抵扣优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

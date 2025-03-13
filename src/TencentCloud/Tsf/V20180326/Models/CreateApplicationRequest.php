@@ -44,18 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgramIdList(array $ProgramIdList) 设置数据集id列表
  * @method string getApmInstanceId() 获取apm业务系统id
  * @method void setApmInstanceId(string $ApmInstanceId) 设置apm业务系统id
- * @method string getProgramLanguage() 获取编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
- * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+ * @method string getProgramLanguage() 获取编程语言:  Java；C/C++；Python；Go；Other
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言:  Java；C/C++；Python；Go；Other
  * @method string getFrameworkType() 获取开发框架-SpringCloud/Dubbo/Go-GRPC/Other
  * @method void setFrameworkType(string $FrameworkType) 设置开发框架-SpringCloud/Dubbo/Go-GRPC/Other
  * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理
@@ -126,12 +116,7 @@ class CreateApplicationRequest extends AbstractModel
     public $ApmInstanceId;
 
     /**
-     * @var string 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+     * @var string 编程语言:  Java；C/C++；Python；Go；Other
      */
     public $ProgramLanguage;
 
@@ -163,12 +148,7 @@ O - Other；
      * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
      * @param array $ProgramIdList 数据集id列表
      * @param string $ApmInstanceId apm业务系统id
-     * @param string $ProgramLanguage 编程语言;
-J - JAVA；
-C - C/C++；
-P - Python；
-G - Go；
-O - Other；
+     * @param string $ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
      * @param string $FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
      * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理
      * @param boolean $CreateSameNameImageRepository 是否创建并关联同名镜像仓库

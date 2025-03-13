@@ -21,45 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关所支持的接入协议
  *
  * @method string getTypeCode() 获取接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeCode(string $TypeCode) 设置接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValueText() 获取协议值文本
+ * @method void setValueText(string $ValueText) 设置协议值文本
  */
 class DescribeGatewayProtocolData extends AbstractModel
 {
     /**
      * @var string 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TypeCode;
 
     /**
      * @var integer 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
+     * @var string 协议值文本
+     */
+    public $ValueText;
+
+    /**
      * @param string $TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ValueText 协议值文本
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class DescribeGatewayProtocolData extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("ValueText",$param) and $param["ValueText"] !== null) {
+            $this->ValueText = $param["ValueText"];
         }
     }
 }

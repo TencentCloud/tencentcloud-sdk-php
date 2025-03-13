@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLifecycleTransitionType() 获取生命周期挂钩适用场景
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置生命周期挂钩适用场景
  * @method LifecycleCommand getLifecycleCommand() 获取远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LifecycleHook extends AbstractModel
 {
@@ -99,7 +97,6 @@ class LifecycleHook extends AbstractModel
 
     /**
      * @var LifecycleCommand 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifecycleCommand;
 
@@ -115,7 +112,6 @@ class LifecycleHook extends AbstractModel
      * @param NotificationTarget $NotificationTarget 通知目标
      * @param string $LifecycleTransitionType 生命周期挂钩适用场景
      * @param LifecycleCommand $LifecycleCommand 远程命令执行对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

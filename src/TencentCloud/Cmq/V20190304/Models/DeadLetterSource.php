@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 死信源队列信息
  *
  * @method string getQueueId() 获取消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueId(string $QueueId) 设置消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueueName() 获取消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueName(string $QueueName) 设置消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeadLetterSource extends AbstractModel
 {
     /**
      * @var string 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueId;
 
     /**
      * @var string 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueName;
 
     /**
      * @param string $QueueId 消息队列ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueName 消息队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

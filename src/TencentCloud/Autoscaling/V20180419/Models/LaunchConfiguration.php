@@ -63,9 +63,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceTags() 获取实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
  * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
  * @method array getTags() 获取标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersionNumber() 获取版本号。
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
  * @method string getUpdatedTime() 获取更新时间。
@@ -91,9 +89,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
  * @method string getImageFamily() 获取镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDedicatedClusterId() 获取本地专用集群 ID。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群 ID。
  */
@@ -198,7 +194,6 @@ class LaunchConfiguration extends AbstractModel
 
     /**
      * @var array 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -260,7 +255,6 @@ class LaunchConfiguration extends AbstractModel
 
     /**
      * @var string 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageFamily;
 
@@ -292,7 +286,6 @@ class LaunchConfiguration extends AbstractModel
      * @param array $InstanceTypes 实例机型列表。
      * @param array $InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
      * @param array $Tags 标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VersionNumber 版本号。
      * @param string $UpdatedTime 更新时间。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
@@ -306,7 +299,6 @@ class LaunchConfiguration extends AbstractModel
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。
      * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      * @param string $ImageFamily 镜像族名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId 本地专用集群 ID。
      */
     function __construct()

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 备可用区库存信息
  *
  * @method string getSlaveZone() 获取备可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZone(string $SlaveZone) 设置备可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStockCount() 获取备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStockCount(integer $StockCount) 设置备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasStock() 获取备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasStock(boolean $HasStock) 设置备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlaveZoneStockInfo extends AbstractModel
 {
     /**
      * @var string 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZone;
 
     /**
      * @var integer 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StockCount;
 
     /**
      * @var boolean 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasStock;
 
     /**
      * @param string $SlaveZone 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StockCount 备可用区的库存数量	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasStock 备可用区是否有库存	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

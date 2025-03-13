@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * ISUP智能安全接入 API返回数据
  *
  * @method string getOutputData() 获取输出参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputData(string $OutputData) 设置输出参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ISAPIOutputData extends AbstractModel
 {
     /**
      * @var string 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputData;
 
     /**
      * @param string $OutputData 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

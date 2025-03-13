@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 数据同步中的ddl同步处理
  *
  * @method string getDdlObject() 获取ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDdlObject(string $DdlObject) 设置ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDdlValue() 获取ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDdlValue(array $DdlValue) 设置ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
@@ -33,7 +31,6 @@ class DdlOption extends AbstractModel
 {
     /**
      * @var string ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdlObject;
 
@@ -45,7 +42,6 @@ class DdlOption extends AbstractModel
 
     /**
      * @param string $DdlObject ddl类型，如Database,Table,View,Index等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DdlValue ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
      */

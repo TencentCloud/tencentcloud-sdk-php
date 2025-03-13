@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDbUserName() 获取授权用户
  * @method void setDbUserName(string $DbUserName) 设置授权用户
  * @method string getDbHost() 获取客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbHost(string $DbHost) 设置客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbPrivilege() 获取用户权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbPrivilege(string $DbPrivilege) 设置用户权限
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserHostPrivilege extends AbstractModel
 {
@@ -40,22 +36,18 @@ class UserHostPrivilege extends AbstractModel
 
     /**
      * @var string 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbHost;
 
     /**
      * @var string 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbPrivilege;
 
     /**
      * @param string $DbUserName 授权用户
      * @param string $DbHost 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbPrivilege 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

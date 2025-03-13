@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询视频通道码率的返回结果列表
  *
  * @method array getBitRates() 获取通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitRates(array $BitRates) 设置通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeVideoBitRateList extends AbstractModel
 {
     /**
      * @var array 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BitRates;
 
     /**
      * @param array $BitRates 通道码率列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

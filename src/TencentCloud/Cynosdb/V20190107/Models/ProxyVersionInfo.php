@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * TDSQL-C MySQL支持的proxy版本信息
  *
  * @method string getProxyVersion() 获取proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyVersion(string $ProxyVersion) 设置proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyVersionType() 获取版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyVersionType(string $ProxyVersionType) 设置版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyVersionInfo extends AbstractModel
 {
     /**
      * @var string proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyVersion;
 
     /**
      * @var string 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyVersionType;
 
     /**
      * @param string $ProxyVersion proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyVersionType 版本描述：GA:稳定版  BETA:尝鲜版，DEPRECATED:过旧，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

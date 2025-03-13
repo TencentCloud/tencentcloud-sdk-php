@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDefault() 获取默认值
  * @method void setDefault(string $Default) 设置默认值
  * @method array getEnumValue() 获取参数类型为enum时可选的值类型集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnumValue(array $EnumValue) 设置参数类型为enum时可选的值类型集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMax() 获取参数类型为float/integer时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(string $Max) 设置参数类型为float/integer时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMin() 获取参数类型为float/integer时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMin(string $Min) 设置参数类型为float/integer时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParamName() 获取参数名称
  * @method void setParamName(string $ParamName) 设置参数名称
  * @method integer getNeedReboot() 获取是否需要重启
@@ -59,19 +53,16 @@ class TemplateParamInfo extends AbstractModel
 
     /**
      * @var array 参数类型为enum时可选的值类型集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnumValue;
 
     /**
      * @var string 参数类型为float/integer时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
      * @var string 参数类型为float/integer时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
@@ -99,11 +90,8 @@ class TemplateParamInfo extends AbstractModel
      * @param string $CurrentValue 当前值
      * @param string $Default 默认值
      * @param array $EnumValue 参数类型为enum时可选的值类型集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Max 参数类型为float/integer时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Min 参数类型为float/integer时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParamName 参数名称
      * @param integer $NeedReboot 是否需要重启
      * @param string $Description 参数描述

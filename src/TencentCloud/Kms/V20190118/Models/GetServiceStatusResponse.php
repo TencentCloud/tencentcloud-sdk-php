@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) 设置是否开通 KMS 独享版
  * @method string getSubscriptionInfo() 获取KMS 订阅信息。
  * @method void setSubscriptionInfo(string $SubscriptionInfo) 设置KMS 订阅信息。
+ * @method integer getCmkUserCount() 获取返回KMS用户密钥使用数量
+ * @method void setCmkUserCount(integer $CmkUserCount) 设置返回KMS用户密钥使用数量
+ * @method integer getCmkLimit() 获取返回KMS用户密钥规格数量
+ * @method void setCmkLimit(integer $CmkLimit) 设置返回KMS用户密钥规格数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +93,16 @@ class GetServiceStatusResponse extends AbstractModel
     public $SubscriptionInfo;
 
     /**
+     * @var integer 返回KMS用户密钥使用数量
+     */
+    public $CmkUserCount;
+
+    /**
+     * @var integer 返回KMS用户密钥规格数量
+     */
+    public $CmkLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +117,8 @@ class GetServiceStatusResponse extends AbstractModel
      * @param boolean $ExclusiveVSMEnabled 是否开通 KMS 托管版
      * @param boolean $ExclusiveHSMEnabled 是否开通 KMS 独享版
      * @param string $SubscriptionInfo KMS 订阅信息。
+     * @param integer $CmkUserCount 返回KMS用户密钥使用数量
+     * @param integer $CmkLimit 返回KMS用户密钥规格数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +168,14 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("SubscriptionInfo",$param) and $param["SubscriptionInfo"] !== null) {
             $this->SubscriptionInfo = $param["SubscriptionInfo"];
+        }
+
+        if (array_key_exists("CmkUserCount",$param) and $param["CmkUserCount"] !== null) {
+            $this->CmkUserCount = $param["CmkUserCount"];
+        }
+
+        if (array_key_exists("CmkLimit",$param) and $param["CmkLimit"] !== null) {
+            $this->CmkLimit = $param["CmkLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

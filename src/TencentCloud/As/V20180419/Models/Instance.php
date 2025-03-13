@@ -28,46 +28,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
  * @method string getLaunchConfigurationName() 获取启动配置名称
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置名称
- * @method string getLifeCycleState() 获取生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
- * @method void setLifeCycleState(string $LifeCycleState) 设置生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+ * @method string getLifeCycleState() 获取生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
+ * @method void setLifeCycleState(string $LifeCycleState) 设置生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
  * @method string getHealthStatus() 获取健康状态，取值包括HEALTHY和UNHEALTHY
  * @method void setHealthStatus(string $HealthStatus) 设置健康状态，取值包括HEALTHY和UNHEALTHY
  * @method boolean getProtectedFromScaleIn() 获取是否加入缩容保护
@@ -85,19 +85,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAutoScalingGroupName() 获取伸缩组名称
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称
  * @method string getWarmupStatus() 获取预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
  * @method void setWarmupStatus(string $WarmupStatus) 设置预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
  * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -122,26 +120,26 @@ class Instance extends AbstractModel
     public $LaunchConfigurationName;
 
     /**
-     * @var string 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+     * @var string 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
      */
     public $LifeCycleState;
 
@@ -187,16 +185,15 @@ class Instance extends AbstractModel
 
     /**
      * @var string 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
      */
     public $WarmupStatus;
 
     /**
      * @var array 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoverGroupIds;
 
@@ -205,26 +202,26 @@ class Instance extends AbstractModel
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $LaunchConfigurationName 启动配置名称
-     * @param string $LifeCycleState 生命周期状态，取值如下：<br>
-<li>IN_SERVICE：运行中
-<li>CREATING：创建中
-<li>CREATION_FAILED：创建失败
-<li>TERMINATING：中止中
-<li>TERMINATION_FAILED：中止失败
-<li>ATTACHING：绑定中
-<li>ATTACH_FAILED：绑定失败
-<li>DETACHING：解绑中
-<li>DETACH_FAILED：解绑失败
-<li>ATTACHING_LB：绑定LB中
-<li>DETACHING_LB：解绑LB中
-<li>MODIFYING_LB：修改LB中
-<li>STARTING：开机中
-<li>START_FAILED：开机失败
-<li>STOPPING：关机中
-<li>STOP_FAILED：关机失败
-<li>STOPPED：已关机
-<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
-<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
+     * @param string $LifeCycleState 生命周期状态，取值如下：
+<li>IN_SERVICE：运行中</li>
+<li>CREATING：创建中</li>
+<li>CREATION_FAILED：创建失败</li>
+<li>TERMINATING：中止中</li>
+<li>TERMINATION_FAILED：中止失败</li>
+<li>ATTACHING：绑定中</li>
+<li>ATTACH_FAILED：绑定失败</li>
+<li>DETACHING：解绑中</li>
+<li>DETACH_FAILED：解绑失败</li>
+<li>ATTACHING_LB：绑定LB中</li>
+<li>DETACHING_LB：解绑LB中</li>
+<li>MODIFYING_LB：修改LB中</li>
+<li>STARTING：开机中</li>
+<li>START_FAILED：开机失败</li>
+<li>STOPPING：关机中</li>
+<li>STOP_FAILED：关机失败</li>
+<li>STOPPED：已关机</li>
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
      * @param string $HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
      * @param boolean $ProtectedFromScaleIn 是否加入缩容保护
      * @param string $Zone 可用区
@@ -234,12 +231,11 @@ class Instance extends AbstractModel
      * @param integer $VersionNumber 版本号
      * @param string $AutoScalingGroupName 伸缩组名称
      * @param string $WarmupStatus 预热状态，取值如下：
-<li>WAITING_ENTER_WARMUP：等待进入预热
-<li>NO_NEED_WARMUP：无需预热
-<li>IN_WARMUP：预热中
-<li>AFTER_WARMUP：完成预热
+<li>WAITING_ENTER_WARMUP：等待进入预热</li>
+<li>NO_NEED_WARMUP：无需预热</li>
+<li>IN_WARMUP：预热中</li>
+<li>AFTER_WARMUP：完成预热</li>
      * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

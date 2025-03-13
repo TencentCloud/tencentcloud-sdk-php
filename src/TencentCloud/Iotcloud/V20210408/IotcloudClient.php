@@ -44,7 +44,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribeDeviceClientKeyResponse DescribeDeviceClientKey(Models\DescribeDeviceClientKeyRequest $req) 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
  * @method Models\DescribeDeviceResourceResponse DescribeDeviceResource(Models\DescribeDeviceResourceRequest $req) 本接口（DescribeDeviceResource）用于查询设备资源详情。 
  * @method Models\DescribeDeviceResourcesResponse DescribeDeviceResources(Models\DescribeDeviceResourcesRequest $req) 本接口（DescribeDeviceResources）用于查询设备资源列表。 
- * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
+ * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
  * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 查询固件升级任务详情

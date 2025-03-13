@@ -65,6 +65,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
  * @method Models\DeleteSupervisorResponse DeleteSupervisor(Models\DeleteSupervisorRequest $req) 删除巡课
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除已注册用户。注：如果该成员已被添加到群组，请先在群组中删除该成员。
+ * @method Models\DeleteWhiteBoardSnapshotResponse DeleteWhiteBoardSnapshot(Models\DeleteWhiteBoardSnapshotRequest $req) 删除白板板书截图
  * @method Models\DescribeAnswerListResponse DescribeAnswerList(Models\DescribeAnswerListRequest $req) 获取房间答题详情
  * @method Models\DescribeAppDetailResponse DescribeAppDetail(Models\DescribeAppDetailRequest $req) 获取应用详情
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) 获取当前房间的成员列表，房间结束或过期后无法使用。
@@ -89,6 +90,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) 获取巡课列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
+ * @method Models\DescribeWhiteBoardSnapshotResponse DescribeWhiteBoardSnapshot(Models\DescribeWhiteBoardSnapshotRequest $req) 查询白板板书截图
  * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) 结束房间的直播
  * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。
 取消对某些用户的禁言。

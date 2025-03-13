@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getExpired() 获取是否有效
  * @method void setExpired(boolean $Expired) 设置是否有效
  * @method string getCosUrl() 获取演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosUrl(string $CosUrl) 设置演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLog() 获取演练报告导出日志
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置演练报告导出日志
@@ -41,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getArchiveTime() 获取归档时间
  * @method void setArchiveTime(string $ArchiveTime) 设置归档时间
  * @method string getArchiveUuid() 获取归档ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArchiveUuid(string $ArchiveUuid) 设置归档ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskReportInfo extends AbstractModel
 {
@@ -69,7 +65,6 @@ class TaskReportInfo extends AbstractModel
 
     /**
      * @var string 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosUrl;
 
@@ -91,7 +86,6 @@ class TaskReportInfo extends AbstractModel
 
     /**
      * @var string 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArchiveUuid;
 
@@ -101,13 +95,11 @@ class TaskReportInfo extends AbstractModel
      * @param string $ExpirationTime 有效期截止时间
      * @param boolean $Expired 是否有效
      * @param string $CosUrl 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Log 演练报告导出日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ArchiveStage 0--未开始，1--正在归档，2--归档成功，3--归档失败
      * @param string $ArchiveTime 归档时间
      * @param string $ArchiveUuid 归档ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

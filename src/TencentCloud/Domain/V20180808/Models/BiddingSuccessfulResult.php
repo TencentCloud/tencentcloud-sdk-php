@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 我得标的域名结构体。
  *
  * @method string getPayEndTime() 获取支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayEndTime(string $PayEndTime) 设置支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BiddingSuccessfulResult extends AbstractModel
 {
     /**
      * @var string 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayEndTime;
 
     /**
      * @param string $PayEndTime 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

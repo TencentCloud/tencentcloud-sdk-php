@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 修改组织接口返回数据
  *
  * @method string getOrganizationId() 获取组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationId(string $OrganizationId) 设置组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取组织名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置组织名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentId() 获取组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(string $ParentId) 设置组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取组织层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置组织层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentIds() 获取组织结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentIds(string $ParentIds) 设置组织结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOnline() 获取设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnline(integer $Online) 设置设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateOrgData extends AbstractModel
 {
     /**
      * @var string 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationId;
 
     /**
      * @var string 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @var integer 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentIds;
 
     /**
      * @var integer 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var integer 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Online;
 
     /**
      * @param string $OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

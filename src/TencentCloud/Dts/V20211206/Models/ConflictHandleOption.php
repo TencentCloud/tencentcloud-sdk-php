@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 冲突处理里的详细描述
  *
  * @method string getConditionColumn() 获取条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionColumn(string $ConditionColumn) 设置条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConditionOperator() 获取条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionOperator(string $ConditionOperator) 设置条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConditionOrderInSrcAndDst() 获取条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionOrderInSrcAndDst(string $ConditionOrderInSrcAndDst) 设置条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConflictHandleOption extends AbstractModel
 {
     /**
      * @var string 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionColumn;
 
     /**
      * @var string 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionOperator;
 
     /**
      * @var string 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionOrderInSrcAndDst;
 
     /**
      * @param string $ConditionColumn 条件覆盖的列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConditionOperator 条件覆盖操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConditionOrderInSrcAndDst 条件覆盖优先级处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

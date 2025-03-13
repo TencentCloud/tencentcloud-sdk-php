@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCurrentValue() 获取参数当前值
  * @method void setCurrentValue(string $CurrentValue) 设置参数当前值
  * @method string getOldValue() 获取参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldValue(string $OldValue) 设置参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModifyParamItem extends AbstractModel
 {
@@ -43,7 +41,6 @@ class ModifyParamItem extends AbstractModel
 
     /**
      * @var string 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldValue;
 
@@ -51,7 +48,6 @@ class ModifyParamItem extends AbstractModel
      * @param string $ParamName 参数名
      * @param string $CurrentValue 参数当前值
      * @param string $OldValue 参数旧值（只在出参时有用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

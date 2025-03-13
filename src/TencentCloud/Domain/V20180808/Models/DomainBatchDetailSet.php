@@ -35,17 +35,13 @@ doing 执行中。
 failed 操作失败。
 success  操作成功。
  * @method string getReason() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
  * @method string getUpdatedOn() 获取更新时间
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
  * @method string getBigDealId() 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealId(string $BigDealId) 设置订单号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainBatchDetailSet extends AbstractModel
 {
@@ -74,7 +70,6 @@ success  操作成功。
 
     /**
      * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
@@ -90,7 +85,6 @@ success  操作成功。
 
     /**
      * @var string 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealId;
 
@@ -103,11 +97,9 @@ doing 执行中。
 failed 操作失败。
 success  操作成功。
      * @param string $Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
      * @param string $UpdatedOn 更新时间
      * @param string $BigDealId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

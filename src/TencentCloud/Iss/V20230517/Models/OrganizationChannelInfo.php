@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceId() 获取设备通道所属的设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备通道所属的设备ID
  * @method string getDeviceName() 获取设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelId() 获取设备通道ID
  * @method void setChannelId(string $ChannelId) 设置设备通道ID
  * @method string getChannelName() 获取设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelName(string $ChannelName) 设置设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getInPlan() 获取该通道是否在上云计划中，如果是，则不能在添加到其他上云计划|true：在上云计划中，false：不在上云计划中
  * @method void setInPlan(boolean $InPlan) 设置该通道是否在上云计划中，如果是，则不能在添加到其他上云计划|true：在上云计划中，false：不在上云计划中
  */
@@ -44,7 +40,6 @@ class OrganizationChannelInfo extends AbstractModel
 
     /**
      * @var string 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
@@ -55,7 +50,6 @@ class OrganizationChannelInfo extends AbstractModel
 
     /**
      * @var string 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelName;
 
@@ -67,10 +61,8 @@ class OrganizationChannelInfo extends AbstractModel
     /**
      * @param string $DeviceId 设备通道所属的设备ID
      * @param string $DeviceName 设备通道所属的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelId 设备通道ID
      * @param string $ChannelName 设备通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $InPlan 该通道是否在上云计划中，如果是，则不能在添加到其他上云计划|true：在上云计划中，false：不在上云计划中
      */
     function __construct()

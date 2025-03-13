@@ -29,37 +29,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCollateRule() 获取排序规则
  * @method void setCollateRule(string $CollateRule) 设置排序规则
  * @method string getDescription() 获取数据库备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置数据库备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserHostPrivileges() 获取用户权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserHostPrivileges(array $UserHostPrivileges) 设置用户权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDbId() 获取数据库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbId(integer $DbId) 设置数据库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DbInfo extends AbstractModel
 {
@@ -85,49 +69,41 @@ class DbInfo extends AbstractModel
 
     /**
      * @var string 数据库备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var array 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserHostPrivileges;
 
     /**
      * @var integer 数据库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbId;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
@@ -137,21 +113,13 @@ class DbInfo extends AbstractModel
      * @param string $Status 数据库状态
      * @param string $CollateRule 排序规则
      * @param string $Description 数据库备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserHostPrivileges 用户权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DbId 数据库ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

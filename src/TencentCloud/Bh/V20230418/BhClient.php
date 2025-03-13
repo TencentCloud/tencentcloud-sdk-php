@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Bh\V20230418\Models as Models;
 
 /**
+ * @method Models\AccessDevicesResponse AccessDevices(Models\AccessDevicesRequest $req) 外部客户访问资产
  * @method Models\AddDeviceGroupMembersResponse AddDeviceGroupMembers(Models\AddDeviceGroupMembersRequest $req) 添加资产组成员
  * @method Models\AddUserGroupMembersResponse AddUserGroupMembers(Models\AddUserGroupMembersRequest $req) 添加用户组成员
  * @method Models\BindDeviceAccountPasswordResponse BindDeviceAccountPassword(Models\BindDeviceAccountPasswordRequest $req) 绑定主机账号密码

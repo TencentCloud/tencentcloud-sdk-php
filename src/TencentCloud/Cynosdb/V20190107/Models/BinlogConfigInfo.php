@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * binlog配置信息
  *
  * @method integer getBinlogSaveDays() 获取binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBinlogSaveDays(integer $BinlogSaveDays) 设置binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBinlogCrossRegionsEnable() 获取binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) 设置binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBinlogCrossRegions() 获取binlog异地地域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBinlogCrossRegions(array $BinlogCrossRegions) 设置binlog异地地域
@@ -37,13 +33,11 @@ class BinlogConfigInfo extends AbstractModel
 {
     /**
      * @var integer binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BinlogSaveDays;
 
     /**
      * @var string binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BinlogCrossRegionsEnable;
 
@@ -55,9 +49,7 @@ class BinlogConfigInfo extends AbstractModel
 
     /**
      * @param integer $BinlogSaveDays binlog保留时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BinlogCrossRegionsEnable binlog异地地域备份是否开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BinlogCrossRegions binlog异地地域
 注意：此字段可能返回 null，表示取不到有效值。
      */

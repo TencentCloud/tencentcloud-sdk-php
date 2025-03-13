@@ -234,6 +234,8 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindSGs(array $BindSGs) 设置绑定的安全组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasPublicCloudClb() 获取是否开启公网clb
+ * @method void setHasPublicCloudClb(boolean $HasPublicCloudClb) 设置是否开启公网clb
  */
 class InstanceInfo extends AbstractModel
 {
@@ -553,6 +555,11 @@ Modify 集群变更中；
     public $BindSGs;
 
     /**
+     * @var boolean 是否开启公网clb
+     */
+    public $HasPublicCloudClb;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -660,6 +667,7 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindSGs 绑定的安全组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasPublicCloudClb 是否开启公网clb
      */
     function __construct()
     {
@@ -894,6 +902,10 @@ Modify 集群变更中；
 
         if (array_key_exists("BindSGs",$param) and $param["BindSGs"] !== null) {
             $this->BindSGs = $param["BindSGs"];
+        }
+
+        if (array_key_exists("HasPublicCloudClb",$param) and $param["HasPublicCloudClb"] !== null) {
+            $this->HasPublicCloudClb = $param["HasPublicCloudClb"];
         }
     }
 }

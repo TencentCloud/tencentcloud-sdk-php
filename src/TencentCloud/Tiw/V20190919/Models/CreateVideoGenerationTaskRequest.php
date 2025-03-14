@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVideoGenerationTask请求参数结构体
  *
- * @method string getOnlineRecordTaskId() 获取录制任务的TaskId
- * @method void setOnlineRecordTaskId(string $OnlineRecordTaskId) 设置录制任务的TaskId
+ * @method string getOnlineRecordTaskId() 获取实时录制任务的TaskId
+ * @method void setOnlineRecordTaskId(string $OnlineRecordTaskId) 设置实时录制任务的TaskId
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method Whiteboard getWhiteboard() 获取视频生成的白板参数，例如白板宽高等。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVideoGenerationTaskRequest extends AbstractModel
 {
     /**
-     * @var string 录制任务的TaskId
+     * @var string 实时录制任务的TaskId
      */
     public $OnlineRecordTaskId;
 
@@ -97,7 +97,7 @@ class CreateVideoGenerationTaskRequest extends AbstractModel
     public $ExtraData;
 
     /**
-     * @param string $OnlineRecordTaskId 录制任务的TaskId
+     * @param string $OnlineRecordTaskId 实时录制任务的TaskId
      * @param integer $SdkAppId 客户的SdkAppId
      * @param Whiteboard $Whiteboard 视频生成的白板参数，例如白板宽高等。
 

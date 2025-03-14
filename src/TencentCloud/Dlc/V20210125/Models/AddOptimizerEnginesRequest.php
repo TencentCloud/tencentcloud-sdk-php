@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOptimizerEngines请求参数结构体
  *
-
+ * @method string getCatalog() 获取数据目录名称
+ * @method void setCatalog(string $Catalog) 设置数据目录名称
+ * @method array getEngines() 获取引擎信息列表
+ * @method void setEngines(array $Engines) 设置引擎信息列表
+ * @method string getDatabase() 获取数据库名称
+ * @method void setDatabase(string $Database) 设置数据库名称
+ * @method string getTable() 获取数据表名称
+ * @method void setTable(string $Table) 设置数据表名称
  */
 class AddOptimizerEnginesRequest extends AbstractModel
 {
-
+    /**
+     * @var string 数据目录名称
+     */
+    public $Catalog;
 
     /**
+     * @var array 引擎信息列表
+     */
+    public $Engines;
 
+    /**
+     * @var string 数据库名称
+     */
+    public $Database;
+
+    /**
+     * @var string 数据表名称
+     */
+    public $Table;
+
+    /**
+     * @param string $Catalog 数据目录名称
+     * @param array $Engines 引擎信息列表
+     * @param string $Database 数据库名称
+     * @param string $Table 数据表名称
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class AddOptimizerEnginesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Catalog",$param) and $param["Catalog"] !== null) {
+            $this->Catalog = $param["Catalog"];
+        }
 
+        if (array_key_exists("Engines",$param) and $param["Engines"] !== null) {
+            $this->Engines = [];
+            foreach ($param["Engines"] as $key => $value){
+                $obj = new OptimizerEngineInfo();
+                $obj->deserialize($value);
+                array_push($this->Engines, $obj);
+            }
+        }
+
+        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
+            $this->Database = $param["Database"];
+        }
+
+        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
+            $this->Table = $param["Table"];
+        }
     }
 }

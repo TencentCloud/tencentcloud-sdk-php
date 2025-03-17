@@ -77,7 +77,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getErrorInfo() 获取执行任务失败时的错误信息。
  * @method void setErrorInfo(string $ErrorInfo) 设置执行任务失败时的错误信息。
  * @method string getInvocationSource() 获取调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
  * @method void setInvocationSource(string $InvocationSource) 设置调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
  */
 class InvocationTask extends AbstractModel
 {
@@ -159,6 +165,9 @@ class InvocationTask extends AbstractModel
 
     /**
      * @var string 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      */
     public $InvocationSource;
 
@@ -192,6 +201,9 @@ class InvocationTask extends AbstractModel
      * @param CommandDocument $CommandDocument 执行任务所执行的命令详情。
      * @param string $ErrorInfo 执行任务失败时的错误信息。
      * @param string $InvocationSource 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      */
     function __construct()
     {

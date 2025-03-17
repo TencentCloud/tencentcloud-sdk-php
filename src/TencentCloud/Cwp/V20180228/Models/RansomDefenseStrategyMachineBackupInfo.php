@@ -62,8 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollBackStatus(integer $RollBackStatus) 设置最近一次回滚状态：0进行中，1成功，2失败
  * @method integer getBackupSuccessCount() 获取备份成功次数
  * @method void setBackupSuccessCount(integer $BackupSuccessCount) 设置备份成功次数
- * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
- * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+ * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+ * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+ * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  */
 class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 {
@@ -169,9 +171,14 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
     public $BackupSuccessCount;
 
     /**
-     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public $HostVersion;
+
+    /**
+     * @var string 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public $MachineType;
 
     /**
      * @param string $Uuid 主机Uuid
@@ -195,7 +202,8 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
      * @param integer $RollBackPercent 最近一次回滚进度百分比
      * @param integer $RollBackStatus 最近一次回滚状态：0进行中，1成功，2失败
      * @param integer $BackupSuccessCount 备份成功次数
-     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      */
     function __construct()
     {
@@ -303,6 +311,10 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 
         if (array_key_exists("HostVersion",$param) and $param["HostVersion"] !== null) {
             $this->HostVersion = $param["HostVersion"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

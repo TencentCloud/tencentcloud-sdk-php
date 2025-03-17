@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxQueue() 获取可创建最大Queue数
  * @method void setMaxQueue(integer $MaxQueue) 设置可创建最大Queue数
  * @method integer getUsedQueue() 获取已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedQueue(integer $UsedQueue) 设置已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueueQuota extends AbstractModel
 {
@@ -36,14 +34,12 @@ class QueueQuota extends AbstractModel
 
     /**
      * @var integer 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedQueue;
 
     /**
      * @param integer $MaxQueue 可创建最大Queue数
      * @param integer $UsedQueue 已创建Queue数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

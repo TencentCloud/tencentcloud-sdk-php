@@ -140,6 +140,12 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method SignComponentConfig getSignComponentConfig() 获取签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
  */
 class CreatePrepareFlowRequest extends AbstractModel
 {
@@ -284,6 +290,13 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $FlowDisplayType;
 
     /**
+     * @var SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -344,6 +357,9 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param array $InitiatorComponents 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括  
+
+- 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -455,6 +471,11 @@ class CreatePrepareFlowRequest extends AbstractModel
 
         if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
             $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

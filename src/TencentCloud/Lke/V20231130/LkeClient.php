@@ -29,7 +29,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 
 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
- * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建属性
+ * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答

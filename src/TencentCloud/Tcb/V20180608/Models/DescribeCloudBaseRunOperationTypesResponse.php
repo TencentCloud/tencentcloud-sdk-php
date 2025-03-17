@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCloudBaseRunOperationTypes返回参数结构体
  *
  * @method array getAction() 获取操作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(array $Action) 设置操作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServerName() 获取服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerName(array $ServerName) 设置服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel
 {
     /**
      * @var array 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var array 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerName;
 
@@ -52,9 +46,7 @@ class DescribeCloudBaseRunOperationTypesResponse extends AbstractModel
 
     /**
      * @param array $Action 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServerName 服务名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

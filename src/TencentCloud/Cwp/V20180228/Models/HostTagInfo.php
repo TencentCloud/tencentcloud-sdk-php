@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
  * @method string getInstanceID() 获取主机instance ID
  * @method void setInstanceID(string $InstanceID) 设置主机instance ID
+ * @method string getMachineType() 获取主机类型
+ * @method void setMachineType(string $MachineType) 设置主机类型
  */
 class HostTagInfo extends AbstractModel
 {
@@ -108,6 +110,11 @@ class HostTagInfo extends AbstractModel
     public $InstanceID;
 
     /**
+     * @var string 主机类型
+     */
+    public $MachineType;
+
+    /**
      * @param string $Quuid 主机Quuid
      * @param array $TagList 主机标签名数组
      * @param string $HostIp 主机内网Ip
@@ -120,6 +127,7 @@ class HostTagInfo extends AbstractModel
      * @param integer $VulNum 漏洞数
      * @param array $CloudTags 云标签信息
      * @param string $InstanceID 主机instance ID
+     * @param string $MachineType 主机类型
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class HostTagInfo extends AbstractModel
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxVirtualHost() 获取允许创建最大vhost数
  * @method void setMaxVirtualHost(integer $MaxVirtualHost) 设置允许创建最大vhost数
  * @method integer getUsedVirtualHost() 获取已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedVirtualHost(integer $UsedVirtualHost) 设置已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirtualHostQuota extends AbstractModel
 {
@@ -36,14 +34,12 @@ class VirtualHostQuota extends AbstractModel
 
     /**
      * @var integer 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedVirtualHost;
 
     /**
      * @param integer $MaxVirtualHost 允许创建最大vhost数
      * @param integer $UsedVirtualHost 已创建vhost数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

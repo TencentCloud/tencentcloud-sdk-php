@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 按机型归类的实例可售卖规格信息
  *
  * @method string getMachine() 获取设备型号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachine(string $Machine) 设置设备型号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSpecInfos() 获取该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecInfos(array $SpecInfos) 设置该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSpec extends AbstractModel
 {
     /**
      * @var string 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Machine;
 
     /**
      * @var array 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecInfos;
 
     /**
      * @param string $Machine 设备型号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SpecInfos 该机型对应的可售卖规格列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

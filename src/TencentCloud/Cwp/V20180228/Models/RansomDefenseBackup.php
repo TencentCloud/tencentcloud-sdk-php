@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTime(string $BackupTime) 设置备份时间
  * @method integer getEventStatus() 获取勒索状态：0无告警, 1有告警
  * @method void setEventStatus(integer $EventStatus) 设置勒索状态：0无告警, 1有告警
- * @method integer getBackupStatus() 获取备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
- * @method void setBackupStatus(integer $BackupStatus) 设置备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+ * @method integer getBackupStatus() 获取备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
+ * @method void setBackupStatus(integer $BackupStatus) 设置备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
  * @method integer getDiskCount() 获取备份磁盘数量
  * @method void setDiskCount(integer $DiskCount) 设置备份磁盘数量
  * @method string getDisks() 获取硬盘信息，；分隔
@@ -52,7 +52,7 @@ class RansomDefenseBackup extends AbstractModel
     public $EventStatus;
 
     /**
-     * @var integer 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+     * @var integer 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
      */
     public $BackupStatus;
 
@@ -89,7 +89,7 @@ class RansomDefenseBackup extends AbstractModel
     /**
      * @param string $BackupTime 备份时间
      * @param integer $EventStatus 勒索状态：0无告警, 1有告警
-     * @param integer $BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，9快照已删除
+     * @param integer $BackupStatus 备份状态：0备份中，1正常，2、3失败，4快照已过期，5快照数量超出限制，9快照已删除
      * @param integer $DiskCount 备份磁盘数量
      * @param string $Disks 硬盘信息，；分隔
      * @param string $SnapshotIds 快照列表，；分隔

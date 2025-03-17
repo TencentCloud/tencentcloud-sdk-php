@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuSize(integer $CpuSize) 设置Cpu数量
  * @method string getCpuLoad() 获取Cpu负载
  * @method void setCpuLoad(string $CpuLoad) 设置Cpu负载
- * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3普惠版
- * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3普惠版
+ * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3轻量版
+ * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3轻量版
  * @method string getRiskStatus() 获取风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method void setRiskStatus(string $RiskStatus) 设置风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method integer getProtectDays() 获取已防护天数
@@ -170,7 +170,7 @@ class AssetMachineDetail extends AbstractModel
     public $CpuLoad;
 
     /**
-     * @var integer 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * @var integer 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      */
     public $ProtectLevel;
 
@@ -304,7 +304,7 @@ class AssetMachineDetail extends AbstractModel
      * @param string $MachineWanIp 主机外网IP
      * @param integer $CpuSize Cpu数量
      * @param string $CpuLoad Cpu负载
-     * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      * @param string $RiskStatus 风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
      * @param integer $ProtectDays 已防护天数
      * @param string $BuyTime 专业版开通时间

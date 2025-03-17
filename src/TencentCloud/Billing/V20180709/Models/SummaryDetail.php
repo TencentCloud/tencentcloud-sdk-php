@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 账单多维度汇总消费详情
  *
  * @method string getGroupKey() 获取账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupKey(string $GroupKey) 设置账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupValue() 获取账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupValue(string $GroupValue) 设置账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  * @method string getRealTotalCost() 获取优惠后总价
@@ -39,25 +35,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVoucherPayAmount() 获取优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
  * @method string getTransferPayAmount() 获取分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBusiness() 获取产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(array $Business) 设置产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SummaryDetail extends AbstractModel
 {
     /**
      * @var string 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupKey;
 
     /**
      * @var string 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupValue;
 
@@ -88,30 +78,24 @@ class SummaryDetail extends AbstractModel
 
     /**
      * @var string 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
     /**
      * @var array 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @param string $GroupKey 账单维度编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupValue 账单维度值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
      * @param string $RealTotalCost 优惠后总价
      * @param string $CashPayAmount 现金账户支出：通过现金账户支付的金额
      * @param string $IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      * @param string $VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      * @param string $TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Business 产品汇总信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

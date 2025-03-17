@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置救援模式下系统密码
  * @method string getUsername() 获取救援模式下系统用户名
  * @method void setUsername(string $Username) 设置救援模式下系统用户名
- * @method boolean getForceStop() 获取是否强制关机
- * @method void setForceStop(boolean $ForceStop) 设置是否强制关机
+ * @method boolean getForceStop() 获取是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+ * @method void setForceStop(boolean $ForceStop) 设置是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+ * @method string getStopType() 获取实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+ * @method void setStopType(string $StopType) 设置实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
  */
 class EnterRescueModeRequest extends AbstractModel
 {
@@ -47,15 +49,22 @@ class EnterRescueModeRequest extends AbstractModel
     public $Username;
 
     /**
-     * @var boolean 是否强制关机
+     * @var boolean 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+     * @deprecated
      */
     public $ForceStop;
+
+    /**
+     * @var string 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
+     */
+    public $StopType;
 
     /**
      * @param string $InstanceId 需要进入救援模式的实例id
      * @param string $Password 救援模式下系统密码
      * @param string $Username 救援模式下系统用户名
-     * @param boolean $ForceStop 是否强制关机
+     * @param boolean $ForceStop 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
+     * @param string $StopType 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。
      */
     function __construct()
     {
@@ -84,6 +93,10 @@ class EnterRescueModeRequest extends AbstractModel
 
         if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
             $this->ForceStop = $param["ForceStop"];
+        }
+
+        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
+            $this->StopType = $param["StopType"];
         }
     }
 }

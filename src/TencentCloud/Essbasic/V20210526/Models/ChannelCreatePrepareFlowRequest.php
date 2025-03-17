@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息，不用传
  * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
  * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息，不用传
+ * @method SignComponentConfig getSignComponentConfig() 获取签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
  */
 class ChannelCreatePrepareFlowRequest extends AbstractModel
 {
@@ -145,6 +151,13 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -171,6 +184,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传
+     * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -233,6 +249,11 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

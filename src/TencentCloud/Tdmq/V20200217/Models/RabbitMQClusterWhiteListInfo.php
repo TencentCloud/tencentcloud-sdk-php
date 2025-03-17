@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * RabbiteMQ集群白名单信息
  *
  * @method string getWhiteList() 获取废弃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhiteList(string $WhiteList) 设置废弃
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicControlConsoleWhiteList() 获取公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicControlConsoleWhiteList(string $PublicControlConsoleWhiteList) 设置公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDataStreamWhiteList() 获取公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataStreamWhiteList(string $PublicDataStreamWhiteList) 设置公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicControlConsoleWhiteListStatus() 获取公网管控台白名单状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicControlConsoleWhiteListStatus(string $PublicControlConsoleWhiteListStatus) 设置公网管控台白名单状态
@@ -45,19 +39,16 @@ class RabbitMQClusterWhiteListInfo extends AbstractModel
 {
     /**
      * @var string 废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhiteList;
 
     /**
      * @var string 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicControlConsoleWhiteList;
 
     /**
      * @var string 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataStreamWhiteList;
 
@@ -75,11 +66,8 @@ class RabbitMQClusterWhiteListInfo extends AbstractModel
 
     /**
      * @param string $WhiteList 废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicControlConsoleWhiteList 公网管控台白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDataStreamWhiteList 公网数据流白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicControlConsoleWhiteListStatus 公网管控台白名单状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDataStreamWhiteListStatus 公网数据流白名单状态

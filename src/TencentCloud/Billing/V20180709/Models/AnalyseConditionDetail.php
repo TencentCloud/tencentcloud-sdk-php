@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析过滤框复杂类型
  *
  * @method array getBusiness() 获取产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(array $Business) 设置产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProject() 获取项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProject(array $Project) 设置项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(array $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPayMode() 获取计费模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(array $PayMode) 设置计费模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getActionType() 获取交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(array $ActionType) 设置交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(array $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOwnerUin() 获取资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(array $OwnerUin) 设置资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAmount() 获取费用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmount(array $Amount) 设置费用类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseConditionDetail extends AbstractModel
 {
     /**
      * @var array 产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @var array 项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Project;
 
     /**
      * @var array 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var array 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var array 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var array 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var array 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var array 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amount;
 
     /**
      * @param array $Business 产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Project 项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PayMode 计费模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ActionType 交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OwnerUin 资源所有者Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Amount 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置排序方法 ASC DESC
  * @method string getBy() 获取排序字段支持CreateTime
  * @method void setBy(string $By) 设置排序字段支持CreateTime
+ * @method string getCreateBeginTime() 获取事件创建起始时间
+ * @method void setCreateBeginTime(string $CreateBeginTime) 设置事件创建起始时间
+ * @method string getCreateEndTime() 获取事件创建结束时间
+ * @method void setCreateEndTime(string $CreateEndTime) 设置事件创建结束时间
  */
 class DescribeRansomDefenseEventsListRequest extends AbstractModel
 {
@@ -68,6 +72,16 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var string 事件创建起始时间
+     */
+    public $CreateBeginTime;
+
+    /**
+     * @var string 事件创建结束时间
+     */
+    public $CreateEndTime;
+
+    /**
      * @param integer $Limit 分页参数 最大100条
      * @param integer $Offset 分页参数
      * @param array $Filters 过滤条件。
@@ -76,6 +90,8 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
 <li>HostIp- String - 主机ip</li>
      * @param string $Order 排序方法 ASC DESC
      * @param string $By 排序字段支持CreateTime
+     * @param string $CreateBeginTime 事件创建起始时间
+     * @param string $CreateEndTime 事件创建结束时间
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("CreateBeginTime",$param) and $param["CreateBeginTime"] !== null) {
+            $this->CreateBeginTime = $param["CreateBeginTime"];
+        }
+
+        if (array_key_exists("CreateEndTime",$param) and $param["CreateEndTime"] !== null) {
+            $this->CreateEndTime = $param["CreateEndTime"];
         }
     }
 }

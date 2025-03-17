@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * dcn 配置情况
  *
  * @method string getRoReplicationMode() 获取DCN 运行状态，START为正常运行，STOP为暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoReplicationMode(string $RoReplicationMode) 设置DCN 运行状态，START为正常运行，STOP为暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDelayReplicationType() 获取延迟复制的类型，DEFAULT为正常，DUE_TIME为指定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayReplicationType(string $DelayReplicationType) 设置延迟复制的类型，DEFAULT为正常，DUE_TIME为指定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDueTime() 获取延迟复制的指定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDueTime(string $DueTime) 设置延迟复制的指定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicationDelay() 获取延迟复制时的延迟秒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicationDelay(integer $ReplicationDelay) 设置延迟复制时的延迟秒数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DCNReplicaConfig extends AbstractModel
 {
     /**
      * @var string DCN 运行状态，START为正常运行，STOP为暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoReplicationMode;
 
     /**
      * @var string 延迟复制的类型，DEFAULT为正常，DUE_TIME为指定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayReplicationType;
 
     /**
      * @var string 延迟复制的指定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DueTime;
 
     /**
      * @var integer 延迟复制时的延迟秒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicationDelay;
 
     /**
      * @param string $RoReplicationMode DCN 运行状态，START为正常运行，STOP为暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DelayReplicationType 延迟复制的类型，DEFAULT为正常，DUE_TIME为指定时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DueTime 延迟复制的指定时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplicationDelay 延迟复制时的延迟秒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

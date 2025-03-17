@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRabbitMQQueueDetail返回参数结构体
  *
  * @method string getInstanceId() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualHost() 获取Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueueName() 获取队列名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueName(string $QueueName) 设置队列名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQueueType() 获取队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueType(string $QueueType) 设置队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsumers() 获取在线消费者数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumers(integer $Consumers) 设置在线消费者数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDurable() 获取持久标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurable(boolean $Durable) 设置持久标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoDelete() 获取自动清除
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoDelete(boolean $AutoDelete) 设置自动清除
@@ -109,9 +99,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxInMemoryBytes(integer $MaxInMemoryBytes) 设置MaxInMemoryBytes参数,quorum类型专用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNode() 获取节点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNode(string $Node) 设置节点
@@ -129,17 +117,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuorumInitialGroupSize(integer $QuorumInitialGroupSize) 设置仲裁队列的初始副本组大小
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExclusive() 获取是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusive(boolean $Exclusive) 设置是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicy() 获取生效的策略名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicy(string $Policy) 设置生效的策略名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArguments() 获取扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArguments(string $Arguments) 设置扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -147,25 +131,21 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 {
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHost;
 
     /**
      * @var string 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueName;
 
     /**
      * @var string 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueType;
 
@@ -177,7 +157,6 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
     /**
      * @var boolean 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Durable;
 
@@ -279,7 +258,6 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
     /**
      * @var integer 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -309,7 +287,6 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
     /**
      * @var boolean 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exclusive;
 
@@ -321,7 +298,6 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
     /**
      * @var string 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arguments;
 
@@ -332,17 +308,12 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
     /**
      * @param string $InstanceId 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualHost Vhost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueName 队列名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueueType 队列类型,取值classic或quorum
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Consumers 在线消费者数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Durable 持久标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoDelete 自动清除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
@@ -376,7 +347,6 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
      * @param integer $MaxInMemoryBytes MaxInMemoryBytes参数,quorum类型专用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间戳,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Node 节点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadLetterStrategy 仲裁队列死信一致性策略
@@ -386,11 +356,9 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
      * @param integer $QuorumInitialGroupSize 仲裁队列的初始副本组大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Exclusive 是否为独占队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Policy 生效的策略名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arguments 扩展参数 key-value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

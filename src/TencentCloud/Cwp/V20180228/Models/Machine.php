@@ -88,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method string getKernelVersion() 获取内核版本
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
- * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+ * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
  * @method array getCloudTags() 获取云标签信息
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
  * @method integer getIsAddedOnTheFifteen() 获取是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
@@ -234,7 +234,7 @@ class Machine extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      */
     public $ProtectType;
 
@@ -308,7 +308,7 @@ class Machine extends AbstractModel
      * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      * @param array $CloudTags 云标签信息
      * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
      * @param string $IpList 主机ip列表

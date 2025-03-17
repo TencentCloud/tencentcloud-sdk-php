@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegisterCodeId() 获取注册码ID。
  * @method void setRegisterCodeId(string $RegisterCodeId) 设置注册码ID。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getInstanceName() 获取实例名。
- * @method void setInstanceName(string $InstanceName) 设置实例名。
+ * @method string getInstanceId() 获取托管实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置托管实例ID。
+ * @method string getInstanceName() 获取托管实例名。
+ * @method void setInstanceName(string $InstanceName) 设置托管实例名。
  * @method string getMachineId() 获取机器ID。
  * @method void setMachineId(string $MachineId) 设置机器ID。
  * @method string getSystemName() 获取系统名。取值：Linux | Windows。
@@ -55,12 +55,12 @@ class RegisterInstanceInfo extends AbstractModel
     public $RegisterCodeId;
 
     /**
-     * @var string 实例ID。
+     * @var string 托管实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名。
+     * @var string 托管实例名。
      */
     public $InstanceName;
 
@@ -112,8 +112,8 @@ class RegisterInstanceInfo extends AbstractModel
 
     /**
      * @param string $RegisterCodeId 注册码ID。
-     * @param string $InstanceId 实例ID。
-     * @param string $InstanceName 实例名。
+     * @param string $InstanceId 托管实例ID。
+     * @param string $InstanceName 托管实例名。
      * @param string $MachineId 机器ID。
      * @param string $SystemName 系统名。取值：Linux | Windows。
      * @param string $HostName 主机名。

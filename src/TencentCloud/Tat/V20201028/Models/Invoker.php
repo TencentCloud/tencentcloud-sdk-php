@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnable() 获取执行器是否启用。
  * @method void setEnable(boolean $Enable) 设置执行器是否启用。
  * @method ScheduleSettings getScheduleSettings() 获取执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getUpdatedTime() 获取修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
@@ -89,7 +87,6 @@ class Invoker extends AbstractModel
 
     /**
      * @var ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleSettings;
 
@@ -113,7 +110,6 @@ class Invoker extends AbstractModel
      * @param array $InstanceIds 实例ID列表。
      * @param boolean $Enable 执行器是否启用。
      * @param ScheduleSettings $ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $UpdatedTime 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */

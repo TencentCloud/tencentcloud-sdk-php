@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCloudBaseRunResource返回参数结构体
  *
  * @method string getClusterStatus() 获取集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirtualClusterId() 获取虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualClusterId(string $VirtualClusterId) 设置虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetIds() 获取子网信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网信息
@@ -47,25 +39,21 @@ class DescribeCloudBaseRunResourceResponse extends AbstractModel
 {
     /**
      * @var string 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStatus;
 
     /**
      * @var string 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualClusterId;
 
     /**
      * @var string vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -82,13 +70,9 @@ class DescribeCloudBaseRunResourceResponse extends AbstractModel
 
     /**
      * @param string $ClusterStatus 集群状态(creating/succ)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualClusterId 虚拟集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId vpc id信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

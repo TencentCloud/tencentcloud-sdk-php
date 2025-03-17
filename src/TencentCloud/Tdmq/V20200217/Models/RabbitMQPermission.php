@@ -27,25 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVirtualHost() 获取vhost名
  * @method void setVirtualHost(string $VirtualHost) 设置vhost名
  * @method string getConfigRegexp() 获取权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigRegexp(string $ConfigRegexp) 设置权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWriteRegexp() 获取权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteRegexp(string $WriteRegexp) 设置权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReadRegexp() 获取权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadRegexp(string $ReadRegexp) 设置权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQPermission extends AbstractModel
 {
@@ -66,31 +56,26 @@ class RabbitMQPermission extends AbstractModel
 
     /**
      * @var string 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigRegexp;
 
     /**
      * @var string 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteRegexp;
 
     /**
      * @var string 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadRegexp;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
@@ -99,15 +84,10 @@ class RabbitMQPermission extends AbstractModel
      * @param string $User 用户名，权限关联的用户
      * @param string $VirtualHost vhost名
      * @param string $ConfigRegexp 权限类型，declare相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WriteRegexp 权限类型，消息写入相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReadRegexp 权限类型，消息读取相关操作，该用户可操作该vhost下的资源名称正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCostExplorerSummary返回参数结构体
  *
  * @method integer getTotal() 获取数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AnalyseHeaderDetail getHeader() 获取表头信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeader(AnalyseHeaderDetail $Header) 设置表头信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetail() 获取数据明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(array $Detail) 设置数据明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AnalyseDetail getTotalDetail() 获取数据总计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalDetail(AnalyseDetail $TotalDetail) 设置数据总计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AnalyseConditionDetail getConditionValue() 获取筛选框
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionValue(AnalyseConditionDetail $ConditionValue) 设置筛选框
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeCostExplorerSummaryResponse extends AbstractModel
 {
     /**
      * @var integer 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var AnalyseHeaderDetail 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Header;
 
     /**
      * @var array 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @var AnalyseDetail 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalDetail;
 
     /**
      * @var AnalyseConditionDetail 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionValue;
 
@@ -82,15 +67,10 @@ class DescribeCostExplorerSummaryResponse extends AbstractModel
 
     /**
      * @param integer $Total 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseHeaderDetail $Header 表头信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Detail 数据明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseDetail $TotalDetail 数据总计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalyseConditionDetail $ConditionValue 筛选框
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

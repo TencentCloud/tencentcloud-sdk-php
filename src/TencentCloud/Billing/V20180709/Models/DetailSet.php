@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDetailPoints() 获取使用数据明细
  * @method void setDetailPoints(array $DetailPoints) 设置使用数据明细
  * @method string getInstanceID() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailSet extends AbstractModel
 {
@@ -43,7 +41,6 @@ class DetailSet extends AbstractModel
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
@@ -51,7 +48,6 @@ class DetailSet extends AbstractModel
      * @param string $Domain 域名
      * @param array $DetailPoints 使用数据明细
      * @param string $InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

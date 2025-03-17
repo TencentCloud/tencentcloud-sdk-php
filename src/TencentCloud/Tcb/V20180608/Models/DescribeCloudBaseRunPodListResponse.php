@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getPodList() 获取容器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodList(array $PodList) 设置容器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,7 +50,6 @@ class DescribeCloudBaseRunPodListResponse extends AbstractModel
 
     /**
      * @var array 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodList;
 
@@ -66,7 +63,6 @@ class DescribeCloudBaseRunPodListResponse extends AbstractModel
      * @param integer $Limit 分页大小
      * @param integer $TotalCount 总数
      * @param array $PodList 容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

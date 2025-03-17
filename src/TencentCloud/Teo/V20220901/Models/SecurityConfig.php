@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全配置
+ * Web安全配置
  *
  * @method WafConfig getWafConfig() 获取托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,6 +59,10 @@ use TencentCloud\Common\AbstractModel;
  * @method SlowPostConfig getSlowPostConfig() 获取慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) 设置慢速攻击配置。如果入参为空或不填，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DetectLengthLimitConfig getDetectLengthLimitConfig() 获取检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetectLengthLimitConfig(DetectLengthLimitConfig $DetectLengthLimitConfig) 设置检测长度限制配置。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityConfig extends AbstractModel
@@ -124,6 +128,12 @@ class SecurityConfig extends AbstractModel
     public $SlowPostConfig;
 
     /**
+     * @var DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetectLengthLimitConfig;
+
+    /**
      * @param WafConfig $WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitConfig $RateLimitConfig 速率限制。如果入参为空或不填，默认使用历史配置。
@@ -143,6 +153,8 @@ class SecurityConfig extends AbstractModel
      * @param TemplateConfig $TemplateConfig 模板配置。此处仅出参数使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowPostConfig $SlowPostConfig 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectLengthLimitConfig $DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -206,6 +218,11 @@ class SecurityConfig extends AbstractModel
         if (array_key_exists("SlowPostConfig",$param) and $param["SlowPostConfig"] !== null) {
             $this->SlowPostConfig = new SlowPostConfig();
             $this->SlowPostConfig->deserialize($param["SlowPostConfig"]);
+        }
+
+        if (array_key_exists("DetectLengthLimitConfig",$param) and $param["DetectLengthLimitConfig"] !== null) {
+            $this->DetectLengthLimitConfig = new DetectLengthLimitConfig();
+            $this->DetectLengthLimitConfig->deserialize($param["DetectLengthLimitConfig"]);
         }
     }
 }

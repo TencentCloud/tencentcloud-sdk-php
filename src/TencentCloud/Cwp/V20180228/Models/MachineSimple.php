@@ -58,8 +58,8 @@ https://cloud.tencent.com/document/api/213/15753#Instance
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method string getKernelVersion() 获取内核版本
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
- * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+ * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
+ * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
  * @method LicenseOrder getLicenseOrder() 获取授权订单对象
  * @method void setLicenseOrder(LicenseOrder $LicenseOrder) 设置授权订单对象
  * @method array getCloudTags() 获取云标签信息
@@ -145,7 +145,7 @@ https://cloud.tencent.com/document/api/213/15753#Instance
     public $KernelVersion;
 
     /**
-     * @var string 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * @var string 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      */
     public $ProtectType;
 
@@ -184,7 +184,7 @@ https://cloud.tencent.com/document/api/213/15753#Instance
      * @param integer $ProjectId 项目ID
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      * @param LicenseOrder $LicenseOrder 授权订单对象
      * @param array $CloudTags 云标签信息
      * @param string $InstanceId 实例ID

@@ -42,15 +42,11 @@ use TencentCloud\Common\AbstractModel;
 100 param err 参数校验错误
  * @method string getCaptchaMsg() 获取状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method OutputManageMarketingRiskValue getManageMarketingRiskValue() 获取拦截策略返回信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManageMarketingRiskValue(OutputManageMarketingRiskValue $ManageMarketingRiskValue) 设置拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -74,13 +70,11 @@ class DescribeCaptchaMiniRiskResultResponse extends AbstractModel
     /**
      * @var string 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
     /**
      * @var OutputManageMarketingRiskValue 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManageMarketingRiskValue;
@@ -103,9 +97,7 @@ class DescribeCaptchaMiniRiskResultResponse extends AbstractModel
 100 param err 参数校验错误
      * @param string $CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputManageMarketingRiskValue $ManageMarketingRiskValue 拦截策略返回信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

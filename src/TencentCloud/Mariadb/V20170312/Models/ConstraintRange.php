@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 约束类型值的范围
  *
  * @method string getMin() 获取约束类型为section时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMin(string $Min) 设置约束类型为section时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMax() 获取约束类型为section时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(string $Max) 设置约束类型为section时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConstraintRange extends AbstractModel
 {
     /**
      * @var string 约束类型为section时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
      * @var string 约束类型为section时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
      * @param string $Min 约束类型为section时的最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Max 约束类型为section时的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

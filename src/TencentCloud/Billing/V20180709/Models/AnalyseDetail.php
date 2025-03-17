@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTotal() 获取金额
  * @method void setTotal(string $Total) 设置金额
  * @method array getTimeDetail() 获取日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeDetail(array $TimeDetail) 设置日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseDetail extends AbstractModel
 {
@@ -43,7 +41,6 @@ class AnalyseDetail extends AbstractModel
 
     /**
      * @var array 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeDetail;
 
@@ -51,7 +48,6 @@ class AnalyseDetail extends AbstractModel
      * @param string $Name 时间
      * @param string $Total 金额
      * @param array $TimeDetail 日期明细金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

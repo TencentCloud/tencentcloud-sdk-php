@@ -21,37 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCloudBaseRunServer返回参数结构体
  *
  * @method integer getTotalCount() 获取个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVersionItems() 获取版本列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionItems(array $VersionItems) 设置版本列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerName() 获取服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerName(string $ServerName) 设置服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPublic() 获取是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPublic(boolean $IsPublic) 设置是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageRepo() 获取镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageRepo(string $ImageRepo) 设置镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficType() 获取流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficType(string $TrafficType) 设置流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceType() 获取服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,49 +43,41 @@ class DescribeCloudBaseRunServerResponse extends AbstractModel
 {
     /**
      * @var integer 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionItems;
 
     /**
      * @var string 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerName;
 
     /**
      * @var boolean 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPublic;
 
     /**
      * @var string 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageRepo;
 
     /**
      * @var string 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficType;
 
     /**
      * @var string 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -112,21 +88,13 @@ class DescribeCloudBaseRunServerResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VersionItems 版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPublic 是否对于外网开放
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageRepo 镜像仓库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficType 流量配置的类型（FLOW,URL_PARAMS)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceType 服务创建类型，默认为空，一键部署为oneclick
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 服务标签, function: 托管函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

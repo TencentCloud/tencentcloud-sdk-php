@@ -46,10 +46,12 @@ use TencentCloud\Common\AbstractModel;
 ;分割 diskId1|diskName1;diskId2|diskName2
  * @method void setDiskInfo(string $DiskInfo) 设置硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
- * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
- * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+ * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
  * @method string getStrategyName() 获取策略名称
  * @method void setStrategyName(string $StrategyName) 设置策略名称
+ * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+ * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  */
 class RansomDefenseStrategyMachineDetail extends AbstractModel
 {
@@ -115,7 +117,7 @@ class RansomDefenseStrategyMachineDetail extends AbstractModel
     public $DiskInfo;
 
     /**
-     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      */
     public $HostVersion;
 
@@ -123,6 +125,11 @@ class RansomDefenseStrategyMachineDetail extends AbstractModel
      * @var string 策略名称
      */
     public $StrategyName;
+
+    /**
+     * @var string 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public $MachineType;
 
     /**
      * @param string $Uuid 主机Uuid
@@ -138,8 +145,9 @@ class RansomDefenseStrategyMachineDetail extends AbstractModel
      * @param integer $StrategyId 策略id，为0时未绑定策略
      * @param string $DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
      * @param string $StrategyName 策略名称
+     * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      */
     function __construct()
     {
@@ -219,6 +227,10 @@ class RansomDefenseStrategyMachineDetail extends AbstractModel
 
         if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
             $this->StrategyName = $param["StrategyName"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

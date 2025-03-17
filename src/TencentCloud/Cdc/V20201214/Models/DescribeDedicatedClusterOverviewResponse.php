@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHostCount() 获取宿主机数量
  * @method void setHostCount(integer $HostCount) 设置宿主机数量
  * @method string getVpnConnectionState() 获取vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpnConnectionState(string $VpnConnectionState) 设置vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VpngwBandwidthData getVpngwBandwidthData() 获取vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpngwBandwidthData(VpngwBandwidthData $VpngwBandwidthData) 设置vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LocalNetInfo getLocalNetInfo() 获取本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalNetInfo(LocalNetInfo $LocalNetInfo) 设置本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpnConnectionBandwidthData() 获取vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpnConnectionBandwidthData(array $VpnConnectionBandwidthData) 设置vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostDetailInfo() 获取宿主机资源概览信息
  * @method void setHostDetailInfo(array $HostDetailInfo) 设置宿主机资源概览信息
  * @method integer getHostStandbyCount() 获取热备宿主机数量
@@ -63,25 +55,21 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
 
     /**
      * @var string vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpnConnectionState;
 
     /**
      * @var VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpngwBandwidthData;
 
     /**
      * @var LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalNetInfo;
 
     /**
      * @var array vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpnConnectionBandwidthData;
 
@@ -109,13 +97,9 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
      * @param integer $CvmCount 云服务器数量
      * @param integer $HostCount 宿主机数量
      * @param string $VpnConnectionState vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpngwBandwidthData $VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalNetInfo $LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpnConnectionBandwidthData vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostDetailInfo 宿主机资源概览信息
      * @param integer $HostStandbyCount 热备宿主机数量
      * @param integer $HostNormalCount 普通宿主机数量

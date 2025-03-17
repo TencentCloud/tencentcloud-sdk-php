@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) 设置日志投递开启状态。
 - true：开启。
 - false：关闭。
- * @method string getLogsetId() 获取投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
- * @method void setLogsetId(string $LogsetId) 设置投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
- * @method string getTopicId() 获取投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
- * @method void setTopicId(string $TopicId) 设置投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
- * @method string getLogsetName() 获取日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
- * @method void setLogsetName(string $LogsetName) 设置日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
- * @method string getTopicName() 获取日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
- * @method void setTopicName(string $TopicName) 设置日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+ * @method string getLogsetId() 获取投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
+ * @method void setLogsetId(string $LogsetId) 设置投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
+ * @method string getTopicId() 获取投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
+ * @method void setTopicId(string $TopicId) 设置投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
+ * @method string getLogsetName() 获取日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
+ * @method void setLogsetName(string $LogsetName) 设置日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
+ * @method string getTopicName() 获取日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
+ * @method void setTopicName(string $TopicName) 设置日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
  * @method string getLogRegion() 获取日志集所在地域，不传默认使用实例所在地域。
  * @method void setLogRegion(string $LogRegion) 设置日志集所在地域，不传默认使用实例所在地域。
  * @method integer getPeriod() 获取日志存储时间，默认为30天，可选范围1-3600天。
@@ -65,22 +65,22 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
     public $Enabled;
 
     /**
-     * @var string 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+     * @var string 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
      */
     public $LogsetId;
 
     /**
-     * @var string 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+     * @var string 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
      */
     public $TopicId;
 
     /**
-     * @var string 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
+     * @var string 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
      */
     public $LogsetName;
 
     /**
-     * @var string 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+     * @var string 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
      */
     public $TopicName;
 
@@ -105,10 +105,10 @@ class ModifyInstanceLogDeliveryRequest extends AbstractModel
      * @param boolean $Enabled 日志投递开启状态。
 - true：开启。
 - false：关闭。
-     * @param string $LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
-     * @param string $TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
-     * @param string $LogsetName 日志集名称。若**LogsetId**未指定具体的日志集ID，请配置该参数，设置日志集名称，系统会以设置的日志集名称自动创建新的日志集。
-     * @param string $TopicName 日志主题名称，TopicId为空时必传，会自动创建新的日志主题。
+     * @param string $LogsetId 投递的日志集ID。通过接口[DescribeLogsets](https://cloud.tencent.com/document/api/614/58624)获取到日志集ID。
+     * @param string $TopicId 投递的日志主题ID。通过接口[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)获取到日志主题ID。
+     * @param string $LogsetName 日志集名称。**LogsetId**为空时必传，系统会以LogsetName为名称来创建新的日志集并投递日志。
+     * @param string $TopicName 日志主题名称。**TopicId**为空时必传，系统会以TopicName为名称来创建新的日志主题并投递日志。
      * @param string $LogRegion 日志集所在地域，不传默认使用实例所在地域。
      * @param integer $Period 日志存储时间，默认为30天，可选范围1-3600天。
      * @param boolean $CreateIndex 创建日志主题时，是否创建索引。

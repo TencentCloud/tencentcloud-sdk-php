@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置事件发生次数
  * @method integer getStatus() 获取状态 0: 待处理 1:已防御 2:已处理 3: 已忽略 4: 已删除
  * @method void setStatus(integer $Status) 设置状态 0: 待处理 1:已防御 2:已处理 3: 已忽略 4: 已删除
- * @method integer getUpgradeType() 获取0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
- * @method void setUpgradeType(integer $UpgradeType) 设置0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+ * @method integer getUpgradeType() 获取0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
+ * @method void setUpgradeType(integer $UpgradeType) 设置0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
  * @method integer getFixType() 获取0 不支持修复，1 支持修复
  * @method void setFixType(integer $FixType) 设置0 不支持修复，1 支持修复
  * @method string getUuid() 获取主机uuid
@@ -144,7 +144,7 @@ class VulDefenceEvent extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+     * @var integer 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
      */
     public $UpgradeType;
 
@@ -180,7 +180,7 @@ class VulDefenceEvent extends AbstractModel
      * @param string $MergeTime 更新事件时间
      * @param integer $Count 事件发生次数
      * @param integer $Status 状态 0: 待处理 1:已防御 2:已处理 3: 已忽略 4: 已删除
-     * @param integer $UpgradeType 0 专业版,1 旗舰版,2 LH普惠版（仅限LH使用）,3  CVM普惠版（仅限CVM使用）
+     * @param integer $UpgradeType 0 专业版,1 旗舰版,2 LH轻量版（仅限LH使用）,3  CVM轻量版（仅限CVM使用）
      * @param integer $FixType 0 不支持修复，1 支持修复
      * @param string $Uuid 主机uuid
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息

@@ -29,21 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExchangeType() 获取exchange 类型, 支持 "fanout","direct","topic","headers"
  * @method void setExchangeType(string $ExchangeType) 设置exchange 类型, 支持 "fanout","direct","topic","headers"
  * @method string getVirtualHost() 获取VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHost(string $VirtualHost) 设置VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExchangeCreator() 获取exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExchangeCreator(string $ExchangeCreator) 设置exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTimeStamp() 获取exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTimeStamp(string $CreateTimeStamp) 设置exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModTimeStamp() 获取exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTimeStamp(string $ModTimeStamp) 设置exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessageRateIn() 获取输入消息速率
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateIn(float $MessageRateIn) 设置输入消息速率
@@ -53,29 +45,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRateOut(float $MessageRateOut) 设置输出消息速率
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDurable() 获取是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurable(boolean $Durable) 设置是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoDelete() 获取是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoDelete(boolean $AutoDelete) 设置是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getInternal() 获取是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternal(boolean $Internal) 设置是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicy() 获取生效的策略名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicy(string $Policy) 设置生效的策略名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArguments() 获取扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArguments(string $Arguments) 设置扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessagesDelayed() 获取未调度的延时消息数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessagesDelayed(integer $MessagesDelayed) 设置未调度的延时消息数量
@@ -101,25 +83,21 @@ class RabbitMQExchangeListInfo extends AbstractModel
 
     /**
      * @var string VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHost;
 
     /**
      * @var string exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExchangeCreator;
 
     /**
      * @var string exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTimeStamp;
 
     /**
      * @var string exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModTimeStamp;
 
@@ -137,25 +115,21 @@ class RabbitMQExchangeListInfo extends AbstractModel
 
     /**
      * @var boolean 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Durable;
 
     /**
      * @var boolean 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoDelete;
 
     /**
      * @var boolean 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Internal;
 
     /**
      * @var string 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -167,7 +141,6 @@ class RabbitMQExchangeListInfo extends AbstractModel
 
     /**
      * @var string 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arguments;
 
@@ -183,29 +156,20 @@ class RabbitMQExchangeListInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExchangeType exchange 类型, 支持 "fanout","direct","topic","headers"
      * @param string $VirtualHost VHost参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExchangeCreator exchange 创建者, "system":"系统创建", "user":"用户创建"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTimeStamp exchange 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModTimeStamp exchange 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateIn 输入消息速率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateOut 输出消息速率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Durable 是否为持久化交换机，true 为持久化，false 为非持久化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoDelete 是否为自动删除交换机，true 为自动删除，false 为非自动删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Internal 是否为内部交换机，true 为内部交换机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 交换机所属实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Policy 生效的策略名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arguments 扩展参数 key-value 对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessagesDelayed 未调度的延时消息数量
 注意：此字段可能返回 null，表示取不到有效值。
      */

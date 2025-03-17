@@ -86,12 +86,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMongosMemory(integer $MongosMemory) 设置Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
  * @method integer getMongosNum() 获取指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
  * @method void setMongosNum(integer $MongosNum) 设置指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
- * @method integer getConfigServerCpu() 获取指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
- * @method void setConfigServerCpu(integer $ConfigServerCpu) 设置指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
- * @method integer getConfigServerMemory() 获取指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
- * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
- * @method integer getConfigServerVolume() 获取指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
- * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+ * @method integer getConfigServerCpu() 获取指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
+ * @method void setConfigServerCpu(integer $ConfigServerCpu) 设置指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
+ * @method integer getConfigServerMemory() 获取指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
+ * @method integer getConfigServerVolume() 获取指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
  */
 class InquirePriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -185,17 +185,17 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $MongosNum;
 
     /**
-     * @var integer 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+     * @var integer 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
      */
     public $ConfigServerCpu;
 
     /**
-     * @var integer 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * @var integer 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
      */
     public $ConfigServerMemory;
 
     /**
-     * @var integer 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * @var integer 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
      */
     public $ConfigServerVolume;
 
@@ -233,9 +233,9 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
      * @param integer $MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
      * @param integer $MongosMemory Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
      * @param integer $MongosNum 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
-     * @param integer $ConfigServerCpu 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
-     * @param integer $ConfigServerMemory 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
-     * @param integer $ConfigServerVolume 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * @param integer $ConfigServerCpu 指 ConfigServer CPU核数，固定取值为 1，单位：GB，可不配置该参数。
+     * @param integer $ConfigServerMemory 指 ConfigServer 内存大小，固定取值为 2，单位：GB，可不配置该参数。
+     * @param integer $ConfigServerVolume 指 ConfigServer 磁盘大小，固定取值为 20，单位：GB，可不配置该参数。
      */
     function __construct()
     {

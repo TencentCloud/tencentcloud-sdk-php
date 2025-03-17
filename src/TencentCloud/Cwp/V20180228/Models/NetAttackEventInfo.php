@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstPort(integer $DstPort) 设置目标端口
  * @method integer getCount() 获取攻击次数
  * @method void setCount(integer $Count) 设置攻击次数
- * @method integer getPayVersion() 获取机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
- * @method void setPayVersion(integer $PayVersion) 设置机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+ * @method integer getPayVersion() 获取机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
+ * @method void setPayVersion(integer $PayVersion) 设置机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
  * @method string getQuuid() 获取cvm uuid
  * @method void setQuuid(string $Quuid) 设置cvm uuid
  * @method string getMergeTime() 获取攻击发生时间
@@ -155,7 +155,7 @@ class NetAttackEventInfo extends AbstractModel
     public $Count;
 
     /**
-     * @var integer 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * @var integer 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      */
     public $PayVersion;
 
@@ -202,7 +202,7 @@ class NetAttackEventInfo extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
      * @param integer $DstPort 目标端口
      * @param integer $Count 攻击次数
-     * @param integer $PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * @param integer $PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      * @param string $Quuid cvm uuid
      * @param string $MergeTime 攻击发生时间
      * @param integer $Type 0: 尝试攻击 1:攻击成功

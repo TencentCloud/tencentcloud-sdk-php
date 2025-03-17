@@ -117,6 +117,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态(LatestOperationState)。
  * @method Models\DescribeInstancesActionTimerResponse DescribeInstancesActionTimer(Models\DescribeInstancesActionTimerRequest $req) 本接口 (DescribeInstancesActionTimer) 用于查询定时任务信息。
+ * @method Models\DescribeInstancesAttributesResponse DescribeInstancesAttributes(Models\DescribeInstancesAttributesRequest $req) 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
  * @method Models\DescribeInstancesModificationResponse DescribeInstancesModification(Models\DescribeInstancesModificationRequest $req) 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
  * @method Models\DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(Models\DescribeInstancesOperationLimitRequest $req) 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
 

@@ -126,7 +126,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 发布暂停后重试
- * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+ * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
  * @method Models\SaveDocResponse SaveDoc(Models\SaveDocRequest $req) 知识库文档问答保存。
 将文件存储到应用的知识库内需要三步：
 1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * TCB静态托管服务列表
  *
  * @method array getInstanceList() 获取实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCBHostService extends AbstractModel
 {
     /**
      * @var array 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $InstanceList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

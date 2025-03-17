@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMin() 获取参数容许的最小值
  * @method void setMin(string $Min) 设置参数容许的最小值
  * @method array getEnumValue() 获取参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnumValue(array $EnumValue) 设置参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsGlobal() 获取1：全局参数，0：非全局参数
  * @method void setIsGlobal(integer $IsGlobal) 设置1：全局参数，0：非全局参数
  * @method string getMatchType() 获取匹配类型，multiVal
@@ -49,21 +47,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMatchValue() 获取匹配目标值，当multiVal时，各个key用，分割
  * @method void setMatchValue(string $MatchValue) 设置匹配目标值，当multiVal时，各个key用，分割
  * @method boolean getIsFunc() 获取true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFunc(boolean $IsFunc) 设置true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunc() 获取参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunc(string $Func) 设置参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ModifiableInfo getModifiableInfo() 获取参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) 设置参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamDetail extends AbstractModel
 {
@@ -114,7 +104,6 @@ class ParamDetail extends AbstractModel
 
     /**
      * @var array 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnumValue;
 
@@ -135,25 +124,21 @@ class ParamDetail extends AbstractModel
 
     /**
      * @var boolean true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFunc;
 
     /**
      * @var string 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Func;
 
     /**
      * @var ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifiableInfo;
 
     /**
      * @var string 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FuncPattern;
 
@@ -168,18 +153,13 @@ class ParamDetail extends AbstractModel
      * @param string $Max 参数容许的最大值
      * @param string $Min 参数容许的最小值
      * @param array $EnumValue 参数的可选枚举值。如果为非枚举值，则为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGlobal 1：全局参数，0：非全局参数
      * @param string $MatchType 匹配类型，multiVal
      * @param string $MatchValue 匹配目标值，当multiVal时，各个key用，分割
      * @param boolean $IsFunc true-为公式，false-非公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Func 参数设置为公式时，Func返回设置的公式内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiableInfo $ModifiableInfo 参数是否可修改
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

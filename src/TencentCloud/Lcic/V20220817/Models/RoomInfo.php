@@ -86,8 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method integer getRecordStream() 获取录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
- * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
- * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+ * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+ * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  */
 class RoomInfo extends AbstractModel
 {
@@ -243,7 +243,7 @@ class RoomInfo extends AbstractModel
     public $RecordStream;
 
     /**
-     * @var integer 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @var integer 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      */
     public $WhiteBoardSnapshotMode;
 
@@ -281,7 +281,7 @@ class RoomInfo extends AbstractModel
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
-     * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      */
     function __construct()
     {

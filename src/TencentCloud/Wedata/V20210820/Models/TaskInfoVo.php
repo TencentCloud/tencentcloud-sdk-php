@@ -20,225 +20,225 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务信息
  *
- * @method string getAppID() 获取1
+ * @method string getAppID() 获取租户id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppID(string $AppID) 设置1
+ * @method void setAppID(string $AppID) 设置租户id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取1
+ * @method string getProjectId() 获取项目id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置1
+ * @method void setProjectId(string $ProjectId) 设置项目id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取1
+ * @method string getTaskId() 获取任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置1
+ * @method void setTaskId(string $TaskId) 设置任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取1
+ * @method string getTaskName() 获取任务名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置1
+ * @method void setTaskName(string $TaskName) 设置任务名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskTypeId() 获取1
+ * @method integer getTaskTypeId() 获取任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeId(integer $TaskTypeId) 设置1
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOnwerUid() 获取1
+ * @method string getOnwerUid() 获取主账号id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOnwerUid(string $OnwerUid) 设置1
+ * @method void setOnwerUid(string $OnwerUid) 设置主账号id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInChargeId() 获取1
+ * @method string getInChargeId() 获取负责人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInChargeId(string $InChargeId) 设置1
+ * @method void setInChargeId(string $InChargeId) 设置负责人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取1
+ * @method string getInstanceId() 获取实例id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置1
+ * @method void setInstanceId(string $InstanceId) 设置实例id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getJobId() 获取1
+ * @method string getJobId() 获取jobId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(string $JobId) 设置1
+ * @method void setJobId(string $JobId) 设置jobId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineType() 获取1
+ * @method string getEngineType() 获取引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineType(string $EngineType) 设置1
+ * @method void setEngineType(string $EngineType) 设置引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineName() 获取1
+ * @method string getEngineName() 获取引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineName(string $EngineName) 设置1
+ * @method void setEngineName(string $EngineName) 设置引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineSubType() 获取1
+ * @method string getEngineSubType() 获取引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineSubType(string $EngineSubType) 设置1
+ * @method void setEngineSubType(string $EngineSubType) 设置引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineTaskId() 获取1
+ * @method string getEngineTaskId() 获取引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineTaskId(string $EngineTaskId) 设置1
+ * @method void setEngineTaskId(string $EngineTaskId) 设置引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeStatus() 获取1
+ * @method string getEngineExeStatus() 获取引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeStatus(string $EngineExeStatus) 设置1
+ * @method void setEngineExeStatus(string $EngineExeStatus) 设置引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeUser() 获取1
+ * @method string getEngineExeUser() 获取引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeUser(string $EngineExeUser) 设置1
+ * @method void setEngineExeUser(string $EngineExeUser) 设置引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeStartTime() 获取1
+ * @method string getEngineExeStartTime() 获取引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeStartTime(string $EngineExeStartTime) 设置1
+ * @method void setEngineExeStartTime(string $EngineExeStartTime) 设置引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeEndTime() 获取1
+ * @method string getEngineExeEndTime() 获取引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeEndTime(string $EngineExeEndTime) 设置1
+ * @method void setEngineExeEndTime(string $EngineExeEndTime) 设置引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductSource() 获取1
+ * @method string getProductSource() 获取数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductSource(string $ProductSource) 设置1
+ * @method void setProductSource(string $ProductSource) 设置数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfoVo extends AbstractModel
 {
     /**
-     * @var string 1
+     * @var string 租户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
 
     /**
-     * @var string 1
+     * @var string 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 1
+     * @var string 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 1
+     * @var string 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var integer 1
+     * @var integer 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeId;
 
     /**
-     * @var string 1
+     * @var string 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnwerUid;
 
     /**
-     * @var string 1
+     * @var string 负责人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InChargeId;
 
     /**
-     * @var string 1
+     * @var string 实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string 1
+     * @var string jobId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @var string 1
+     * @var string 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
     /**
-     * @var string 1
+     * @var string 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
 
     /**
-     * @var string 1
+     * @var string 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineSubType;
 
     /**
-     * @var string 1
+     * @var string 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTaskId;
 
     /**
-     * @var string 1
+     * @var string 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeStatus;
 
     /**
-     * @var string 1
+     * @var string 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeUser;
 
     /**
-     * @var string 1
+     * @var string 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeStartTime;
 
     /**
-     * @var string 1
+     * @var string 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeEndTime;
 
     /**
-     * @var string 1
+     * @var string 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductSource;
 
     /**
-     * @param string $AppID 1
+     * @param string $AppID 租户id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 1
+     * @param string $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 1
+     * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 1
+     * @param string $TaskName 任务名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskTypeId 1
+     * @param integer $TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OnwerUid 1
+     * @param string $OnwerUid 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InChargeId 1
+     * @param string $InChargeId 负责人
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 1
+     * @param string $InstanceId 实例id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $JobId 1
+     * @param string $JobId jobId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineType 1
+     * @param string $EngineType 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineName 1
+     * @param string $EngineName 引擎名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineSubType 1
+     * @param string $EngineSubType 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineTaskId 1
+     * @param string $EngineTaskId 引擎taskId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeStatus 1
+     * @param string $EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeUser 1
+     * @param string $EngineExeUser 引擎执行用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeStartTime 1
+     * @param string $EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeEndTime 1
+     * @param string $EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductSource 1
+     * @param string $ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

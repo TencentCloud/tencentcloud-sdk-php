@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceSet() 获取实例组包含实例信息
  * @method void setInstanceSet(array $InstanceSet) 设置实例组包含实例信息
  * @method string getUniqVpcId() 获取VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OldAddrInfo getOldAddrInfo() 获取正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) 设置正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProcessingTasks() 获取正在进行的任务
  * @method void setProcessingTasks(array $ProcessingTasks) 设置正在进行的任务
  * @method array getTasks() 获取任务列表
@@ -148,19 +142,16 @@ class CynosdbInstanceGroup extends AbstractModel
 
     /**
      * @var string VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqSubnetId;
 
     /**
      * @var OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldAddrInfo;
 
@@ -196,11 +187,8 @@ class CynosdbInstanceGroup extends AbstractModel
      * @param string $WanStatus 外网状态
      * @param array $InstanceSet 实例组包含实例信息
      * @param string $UniqVpcId VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqSubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldAddrInfo $OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProcessingTasks 正在进行的任务
      * @param array $Tasks 任务列表
      * @param integer $NetServiceId biz_net_service表id

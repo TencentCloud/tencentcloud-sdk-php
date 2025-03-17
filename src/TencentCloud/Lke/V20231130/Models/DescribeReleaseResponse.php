@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getDescription() 获取发布描述
  * @method void setDescription(string $Description) 设置发布描述
- * @method integer getStatus() 获取发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中 6发布中 7发布失败 9发布暂停)
- * @method void setStatus(integer $Status) 设置发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中 6发布中 7发布失败 9发布暂停)
+ * @method integer getStatus() 获取发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中(审核中) 6发布中(审核完成) 7发布失败(审核失败) 9发布暂停)
+ * @method void setStatus(integer $Status) 设置发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中(审核中) 6发布中(审核完成) 7发布失败(审核失败) 9发布暂停)
  * @method string getStatusDesc() 获取发布状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置发布状态描述
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class DescribeReleaseResponse extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中 6发布中 7发布失败 9发布暂停)
+     * @var integer 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中(审核中) 6发布中(审核完成) 7发布失败(审核失败) 9发布暂停)
      */
     public $Status;
 
@@ -61,7 +61,7 @@ class DescribeReleaseResponse extends AbstractModel
     /**
      * @param string $CreateTime 创建时间
      * @param string $Description 发布描述
-     * @param integer $Status 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中 6发布中 7发布失败 9发布暂停)
+     * @param integer $Status 发布状态(1待发布 2发布中 3发布成功 4发布失败 5发布中(审核中) 6发布中(审核完成) 7发布失败(审核失败) 9发布暂停)
      * @param string $StatusDesc 发布状态描述
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

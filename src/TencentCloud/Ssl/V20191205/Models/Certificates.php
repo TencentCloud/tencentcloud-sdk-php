@@ -307,7 +307,9 @@ null：用户上传证书（没有套餐类型），
  * @method array getHostingResourceTypes() 获取托管资源类型列表
  * @method void setHostingResourceTypes(array $HostingResourceTypes) 设置托管资源类型列表
  * @method HostingConfig getHostingConfig() 获取托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostingConfig(HostingConfig $HostingConfig) 设置托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -676,6 +678,7 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostingConfig;
 
@@ -824,6 +827,7 @@ null：用户上传证书（没有套餐类型），
      * @param string $CertRevokedTime 证书吊销完成时间
      * @param array $HostingResourceTypes 托管资源类型列表
      * @param HostingConfig $HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunReRank请求参数结构体
  *
- * @method string getQuery() 获取模型名称, 必填，默认: lke-reranker-base
- * @method void setQuery(string $Query) 设置模型名称, 必填，默认: lke-reranker-base
+ * @method string getQuery() 获取查询内容，必填
+ * @method void setQuery(string $Query) 设置查询内容，必填
  * @method array getDocs() 获取文档列表，必填，最多20个
  * @method void setDocs(array $Docs) 设置文档列表，必填，最多20个
  * @method string getModel() 获取模型名称, 非必填，默认: lke-reranker-base
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class RunReRankRequest extends AbstractModel
 {
     /**
-     * @var string 模型名称, 必填，默认: lke-reranker-base
+     * @var string 查询内容，必填
      */
     public $Query;
 
@@ -61,7 +61,7 @@ class RunReRankRequest extends AbstractModel
     public $Online;
 
     /**
-     * @param string $Query 模型名称, 必填，默认: lke-reranker-base
+     * @param string $Query 查询内容，必填
      * @param array $Docs 文档列表，必填，最多20个
      * @param string $Model 模型名称, 非必填，默认: lke-reranker-base
      * @param array $DataList 需要计算关联性的2段内容

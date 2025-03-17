@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 专属可用区资源水位数据扩展信息，包含可用区当地时间等数据。
  *
  * @method string getThisMondayLocalDate() 获取专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThisMondayLocalDate(string $ThisMondayLocalDate) 设置专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastMondayLocalDate() 获取专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastMondayLocalDate(string $LastMondayLocalDate) 设置专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtraInfo extends AbstractModel
 {
     /**
      * @var string 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThisMondayLocalDate;
 
     /**
      * @var string 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastMondayLocalDate;
 
     /**
      * @param string $ThisMondayLocalDate 专属可用区当地时间本周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastMondayLocalDate 专属可用区当地时间上周一日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

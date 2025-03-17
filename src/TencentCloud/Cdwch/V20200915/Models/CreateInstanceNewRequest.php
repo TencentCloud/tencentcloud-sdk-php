@@ -54,6 +54,8 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
 SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
  * @method array getTagItems() 获取标签列表
  * @method void setTagItems(array $TagItems) 设置标签列表
+ * @method array getSecondaryZoneInfo() 获取副可用去信息
+ * @method void setSecondaryZoneInfo(array $SecondaryZoneInfo) 设置副可用去信息
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     public $TagItems;
 
     /**
+     * @var array 副可用去信息
+     */
+    public $SecondaryZoneInfo;
+
+    /**
      * @param string $Zone 可用区
      * @param boolean $HaFlag 是否高可用
      * @param string $UserVPCId 私有网络
@@ -153,6 +160,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
      * @param NodeSpec $CommonSpec ZK节点
 SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
      * @param array $TagItems 标签列表
+     * @param array $SecondaryZoneInfo 副可用去信息
      */
     function __construct()
     {
@@ -233,6 +241,15 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagItems, $obj);
+            }
+        }
+
+        if (array_key_exists("SecondaryZoneInfo",$param) and $param["SecondaryZoneInfo"] !== null) {
+            $this->SecondaryZoneInfo = [];
+            foreach ($param["SecondaryZoneInfo"] as $key => $value){
+                $obj = new SecondaryZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->SecondaryZoneInfo, $obj);
             }
         }
     }

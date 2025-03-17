@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStockCount() 获取库存数量
  * @method void setStockCount(integer $StockCount) 设置库存数量
  * @method array getSlaveZoneStockInfos() 获取备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) 设置备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneStockInfo extends AbstractModel
 {
@@ -50,7 +48,6 @@ class ZoneStockInfo extends AbstractModel
 
     /**
      * @var array 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZoneStockInfos;
 
@@ -59,7 +56,6 @@ class ZoneStockInfo extends AbstractModel
      * @param boolean $HasStock 是否有库存
      * @param integer $StockCount 库存数量
      * @param array $SlaveZoneStockInfos 备可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

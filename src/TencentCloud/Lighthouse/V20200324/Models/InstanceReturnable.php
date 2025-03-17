@@ -24,8 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method boolean getIsReturnable() 获取实例是否可退还。
  * @method void setIsReturnable(boolean $IsReturnable) 设置实例是否可退还。
- * @method integer getReturnFailCode() 获取实例退还失败错误码。
- * @method void setReturnFailCode(integer $ReturnFailCode) 设置实例退还失败错误码。
+ * @method integer getReturnFailCode() 获取实例退还失败错误码。取值:
+0: 可以退还
+1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+2: 资源已到期
+3: 资源购买超过5天不支持退款
+4: 非预付费资源不支持退款
+8: 退货数量超出限额
+9: 涉及活动订单不支持退款
+10: 资源不支持自助退，请走工单退款
+11: 涉及推广奖励渠道订单，请提工单咨询
+12: 根据业务侧产品规定，该资源不允许退款
+ * @method void setReturnFailCode(integer $ReturnFailCode) 设置实例退还失败错误码。取值:
+0: 可以退还
+1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+2: 资源已到期
+3: 资源购买超过5天不支持退款
+4: 非预付费资源不支持退款
+8: 退货数量超出限额
+9: 涉及活动订单不支持退款
+10: 资源不支持自助退，请走工单退款
+11: 涉及推广奖励渠道订单，请提工单咨询
+12: 根据业务侧产品规定，该资源不允许退款
  * @method string getReturnFailMessage() 获取实例退还失败错误信息。
  * @method void setReturnFailMessage(string $ReturnFailMessage) 设置实例退还失败错误信息。
  */
@@ -42,7 +62,17 @@ class InstanceReturnable extends AbstractModel
     public $IsReturnable;
 
     /**
-     * @var integer 实例退还失败错误码。
+     * @var integer 实例退还失败错误码。取值:
+0: 可以退还
+1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+2: 资源已到期
+3: 资源购买超过5天不支持退款
+4: 非预付费资源不支持退款
+8: 退货数量超出限额
+9: 涉及活动订单不支持退款
+10: 资源不支持自助退，请走工单退款
+11: 涉及推广奖励渠道订单，请提工单咨询
+12: 根据业务侧产品规定，该资源不允许退款
      */
     public $ReturnFailCode;
 
@@ -54,7 +84,17 @@ class InstanceReturnable extends AbstractModel
     /**
      * @param string $InstanceId 实例 ID。
      * @param boolean $IsReturnable 实例是否可退还。
-     * @param integer $ReturnFailCode 实例退还失败错误码。
+     * @param integer $ReturnFailCode 实例退还失败错误码。取值:
+0: 可以退还
+1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+2: 资源已到期
+3: 资源购买超过5天不支持退款
+4: 非预付费资源不支持退款
+8: 退货数量超出限额
+9: 涉及活动订单不支持退款
+10: 资源不支持自助退，请走工单退款
+11: 涉及推广奖励渠道订单，请提工单咨询
+12: 根据业务侧产品规定，该资源不允许退款
      * @param string $ReturnFailMessage 实例退还失败错误信息。
      */
     function __construct()

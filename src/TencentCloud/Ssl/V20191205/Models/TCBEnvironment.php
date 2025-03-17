@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * TCB环境
  *
  * @method string getID() 获取唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCBEnvironment extends AbstractModel
 {
     /**
      * @var string 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $ID 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

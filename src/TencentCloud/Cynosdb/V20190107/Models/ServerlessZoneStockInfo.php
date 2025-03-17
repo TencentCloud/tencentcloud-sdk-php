@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * serverless类型的可用区库存信息
  *
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStockCount() 获取存储量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStockCount(integer $StockCount) 设置存储量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasStock() 获取是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasStock(boolean $HasStock) 设置是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSlaveZoneStockInfos() 获取从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZoneStockInfos(array $SlaveZoneStockInfos) 设置从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessZoneStockInfo extends AbstractModel
 {
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var integer 存储量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StockCount;
 
     /**
      * @var boolean 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasStock;
 
     /**
      * @var array 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZoneStockInfos;
 
     /**
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StockCount 存储量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasStock 是否包含库存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SlaveZoneStockInfos 从可用区库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

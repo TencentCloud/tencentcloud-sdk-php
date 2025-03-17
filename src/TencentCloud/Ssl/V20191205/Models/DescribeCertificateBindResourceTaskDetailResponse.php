@@ -21,57 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCertificateBindResourceTaskDetail返回参数结构体
  *
  * @method array getCLB() 获取关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLB(array $CLB) 设置关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCDN() 获取关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCDN(array $CDN) 设置关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWAF() 获取关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWAF(array $WAF) 设置关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDDOS() 获取关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDDOS(array $DDOS) 设置关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLIVE() 获取关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLIVE(array $LIVE) 设置关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVOD() 获取关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVOD(array $VOD) 设置关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTKE() 获取关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTKE(array $TKE) 设置关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAPIGATEWAY() 获取关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAPIGATEWAY(array $APIGATEWAY) 设置关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTCB() 获取关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTCB(array $TCB) 设置关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTEO() 获取关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEO(array $TEO) 设置关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
  * @method void setStatus(integer $Status) 设置关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
  * @method string getCacheTime() 获取当前结果缓存时间
  * @method void setCacheTime(string $CacheTime) 设置当前结果缓存时间
  * @method array getTSE() 获取关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTSE(array $TSE) 设置关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCOS() 获取关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOS(array $COS) 设置关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -79,61 +55,51 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 {
     /**
      * @var array 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLB;
 
     /**
      * @var array 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CDN;
 
     /**
      * @var array 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WAF;
 
     /**
      * @var array 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DDOS;
 
     /**
      * @var array 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LIVE;
 
     /**
      * @var array 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VOD;
 
     /**
      * @var array 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TKE;
 
     /**
      * @var array 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $APIGATEWAY;
 
     /**
      * @var array 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TCB;
 
     /**
      * @var array 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TEO;
 
@@ -149,13 +115,11 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 
     /**
      * @var array 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TSE;
 
     /**
      * @var array 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $COS;
 
@@ -166,31 +130,19 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 
     /**
      * @param array $CLB 关联clb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CDN 关联cdn资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WAF 关联waf资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DDOS 关联ddos资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LIVE 关联live资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VOD 关联vod资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TKE 关联tke资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $APIGATEWAY 关联apigateway资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TCB 关联tcb资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TEO 关联teo资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
      * @param string $CacheTime 当前结果缓存时间
      * @param array $TSE 关联tse资源详情	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $COS 关联的COS资源详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -65,7 +65,9 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\CreateInstanceSnapshotResponse CreateInstanceSnapshot(Models\CreateInstanceSnapshotRequest $req) 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口（CreateKeyPair）用于创建一个密钥对。
- * @method Models\DeleteBlueprintsResponse DeleteBlueprints(Models\DeleteBlueprintsRequest $req) 本接口 (DeleteBlueprints) 用于删除镜像。
+ * @method Models\DeleteBlueprintsResponse DeleteBlueprints(Models\DeleteBlueprintsRequest $req) 本接口 (DeleteBlueprints) 用于删除镜像。可删除的镜像应满足如下条件：
+1、删除镜像接口需要镜像状态为NORMAL（正常）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败），其他状态下的镜像不支持删除操作。镜像状态，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintState获取。
+2、仅支持删除自定义镜像。
  * @method Models\DeleteDiskBackupsResponse DeleteDiskBackups(Models\DeleteDiskBackupsRequest $req) 本接口（DeleteDiskBackups）用于删除云硬盘备份点。
 云硬盘备份点必须处于 NORMAL 状态，云硬盘备份点状态可以通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询，见输出参数中 DiskBackupState 字段解释。
  * @method Models\DeleteFirewallRulesResponse DeleteFirewallRules(Models\DeleteFirewallRulesRequest $req) 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
@@ -81,11 +83,12 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DeleteFirewallTemplateResponse DeleteFirewallTemplate(Models\DeleteFirewallTemplateRequest $req) 本接口 (DeleteFirewallTemplate) 用于删除防火墙模板。
  * @method Models\DeleteFirewallTemplateRulesResponse DeleteFirewallTemplateRules(Models\DeleteFirewallTemplateRulesRequest $req) 本接口 (DeleteFirewallTemplateRules) 用于删除防火墙模板规则。
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) 本接口（DeleteKeyPairs）用于删除密钥对。
+- 不能删除已被实例或镜像引用的密钥对，删除之前需要确保没有被任何实例和镜像引用。
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
 快照必须处于 NORMAL 状态，快照状态可以通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a> 接口查询，见输出参数中 SnapshotState 字段解释。
  * @method Models\DescribeAllScenesResponse DescribeAllScenes(Models\DescribeAllScenesRequest $req) 本接口(DescribeAllScenes)用于查询全地域使用场景列表。
  * @method Models\DescribeBlueprintInstancesResponse DescribeBlueprintInstances(Models\DescribeBlueprintInstancesRequest $req) 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
- * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。
+ * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。该接口返回的镜像类型有：自定义镜像、共享镜像、公共镜像。
  * @method Models\DescribeBundleDiscountResponse DescribeBundleDiscount(Models\DescribeBundleDiscountRequest $req) 本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) 本接口（DescribeBundles）用于查询套餐信息。
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) 本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。
@@ -115,7 +118,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 本接口用于查询实例默认登录密钥属性。
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 
-* 处于 `STOPPED` 状态的机器无法使用此功能。
+* 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
 * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
 * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
 * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
@@ -126,7 +129,6 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 ```
 https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
 ```
-
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询一个或多个实例的详细信息。
 
 * 可以根据实例 ID、实例名称或者实例的内网 IP 查询实例的详细信息。
@@ -176,6 +178,11 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
  * @method Models\ModifyDisksBackupQuotaResponse ModifyDisksBackupQuota(Models\ModifyDisksBackupQuotaRequest $req) 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
+云硬盘需要处于以下状态：
+<li> ATTACHED （已挂载）</li>
+<li> UNATTACHED （待挂载）</li>
+<li> ATTACHING （挂载中） </li>
+<li> DETACHING （卸载中）</li>
  * @method Models\ModifyDockerContainerResponse ModifyDockerContainer(Models\ModifyDockerContainerRequest $req) 修改实例内的Docker容器，之后可以通过返回的ActivityId调用<a href="https://cloud.tencent.com/document/product/1207/95476" target="_blank">DescribeDockerActivities</a>接口查询重建情况。
 请注意：本接口会重新创建并运行实例内的Docker容器。
  * @method Models\ModifyFirewallRuleDescriptionResponse ModifyFirewallRuleDescription(Models\ModifyFirewallRuleDescriptionRequest $req) 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
@@ -278,6 +285,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于销毁一个或多个云硬盘。
+云硬盘状态必须处于SHUTDOWN（已隔离）状态。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于销毁实例。
 
 * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。

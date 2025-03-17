@@ -157,6 +157,10 @@ use TencentCloud\As\V20180419\Models as Models;
     - 关闭伸缩组内 CVM 实例（StopAutoScalingInstances）
     - 开启伸缩组内 CVM 实例（StartAutoScalingInstances）
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) 本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
+ * @method Models\EnterStandbyResponse EnterStandby(Models\EnterStandbyRequest $req) 伸缩组内实例进入备用中状态。
+* 备用中状态实例的 CLB 权重值为 0，不会被自动缩容、不健康替换、实例刷新操作选中
+* 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+* 实例进入备用中状态后，伸缩组会尝试下调期望实例数，新期望数不会小于最小值
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) 本接口（ExecuteScalingPolicy）用于执行伸缩策略。
 
 * 可以根据伸缩策略ID执行伸缩策略。

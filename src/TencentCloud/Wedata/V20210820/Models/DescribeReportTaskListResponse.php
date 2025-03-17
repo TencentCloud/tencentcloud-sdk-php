@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportTaskList返回参数结构体
  *
- * @method ReportTaskListInfo getData() 获取1
- * @method void setData(ReportTaskListInfo $Data) 设置1
+ * @method ReportTaskListInfo getData() 获取任务列表信息
+ * @method void setData(ReportTaskListInfo $Data) 设置任务列表信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReportTaskListResponse extends AbstractModel
 {
     /**
-     * @var ReportTaskListInfo 1
+     * @var ReportTaskListInfo 任务列表信息
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeReportTaskListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ReportTaskListInfo $Data 1
+     * @param ReportTaskListInfo $Data 任务列表信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

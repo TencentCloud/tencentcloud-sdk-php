@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 交换实例信息
  *
  * @method RollbackInstanceInfo getSrcInstanceInfo() 获取源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcInstanceInfo(RollbackInstanceInfo $SrcInstanceInfo) 设置源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RollbackInstanceInfo getDstInstanceInfo() 获取目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstInstanceInfo(RollbackInstanceInfo $DstInstanceInfo) 设置目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExchangeInstanceInfo extends AbstractModel
 {
     /**
      * @var RollbackInstanceInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcInstanceInfo;
 
     /**
      * @var RollbackInstanceInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstInstanceInfo;
 
     /**
      * @param RollbackInstanceInfo $SrcInstanceInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackInstanceInfo $DstInstanceInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

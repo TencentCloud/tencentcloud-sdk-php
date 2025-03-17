@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 上报任务信息
  *
- * @method array getRows() 获取1
+ * @method array getRows() 获取任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRows(array $Rows) 设置1
+ * @method void setRows(array $Rows) 设置任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNum() 获取1
+ * @method integer getPageNum() 获取页码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNum(integer $PageNum) 设置1
+ * @method void setPageNum(integer $PageNum) 设置页码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取1
+ * @method integer getPageSize() 获取每页条数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置1
+ * @method void setPageSize(integer $PageSize) 设置每页条数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取1
+ * @method integer getTotalCount() 获取总记录数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置1
+ * @method void setTotalCount(integer $TotalCount) 设置总记录数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalPageNumber() 获取1
+ * @method integer getTotalPageNumber() 获取总页数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalPageNumber(integer $TotalPageNumber) 设置1
+ * @method void setTotalPageNumber(integer $TotalPageNumber) 设置总页数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportTaskListInfo extends AbstractModel
 {
     /**
-     * @var array 1
+     * @var array 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rows;
 
     /**
-     * @var integer 1
+     * @var integer 页码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNum;
 
     /**
-     * @var integer 1
+     * @var integer 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
-     * @var integer 1
+     * @var integer 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var integer 1
+     * @var integer 总页数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPageNumber;
 
     /**
-     * @param array $Rows 1
+     * @param array $Rows 任务列表详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNum 1
+     * @param integer $PageNum 页码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 1
+     * @param integer $PageSize 每页条数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 1
+     * @param integer $TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalPageNumber 1
+     * @param integer $TotalPageNumber 总页数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

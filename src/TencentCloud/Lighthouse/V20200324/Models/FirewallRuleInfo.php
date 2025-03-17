@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述防火墙规则详细信息。
  *
- * @method string getAppType() 获取应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
- * @method void setAppType(string $AppType) 设置应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
- * @method string getProtocol() 获取协议，取值：TCP，UDP，ICMP，ALL。
- * @method void setProtocol(string $Protocol) 设置协议，取值：TCP，UDP，ICMP，ALL。
+ * @method string getAppType() 获取应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
+ * @method void setAppType(string $AppType) 设置应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
+ * @method string getProtocol() 获取协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
+ * @method void setProtocol(string $Protocol) 设置协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
  * @method string getPort() 获取端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
  * @method void setPort(string $Port) 设置端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
  * @method string getCidrBlock() 获取IPv4网段或 IPv4地址(互斥)。
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class FirewallRuleInfo extends AbstractModel
 {
     /**
-     * @var string 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+     * @var string 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
      */
     public $AppType;
 
     /**
-     * @var string 协议，取值：TCP，UDP，ICMP，ALL。
+     * @var string 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
      */
     public $Protocol;
 
@@ -91,8 +91,8 @@ class FirewallRuleInfo extends AbstractModel
     public $FirewallRuleDescription;
 
     /**
-     * @param string $AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
-     * @param string $Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * @param string $AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，Windows登录优化 (3389)，FTP (21)，Ping，Ping (IPv6)，ALL。
+     * @param string $Protocol 协议，取值：TCP，UDP，ICMP，ICMPv6，ALL。
      * @param string $Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
      * @param string $CidrBlock IPv4网段或 IPv4地址(互斥)。
 示例值：0.0.0.0/0。

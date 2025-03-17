@@ -61,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusInfo(array $StatusInfo) 设置具体审核状态信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerInfo extends AbstractModel
 {
@@ -149,7 +147,6 @@ class ManagerInfo extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -175,7 +172,6 @@ class ManagerInfo extends AbstractModel
      * @param array $StatusInfo 具体审核状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

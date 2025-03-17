@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedOn() 获取操作时间。
  * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
  * @method string getUin() 获取主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertId() 获取证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
 1. apply - 表示申请一个免费的证书。
 2. delete - 表示删除操作。
@@ -63,7 +57,6 @@ use TencentCloud\Common\AbstractModel;
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
 1. apply - 表示申请一个免费的证书。
 2. delete - 表示删除操作。
@@ -91,7 +84,6 @@ use TencentCloud\Common\AbstractModel;
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OperationLog extends AbstractModel
 {
@@ -107,19 +99,16 @@ class OperationLog extends AbstractModel
 
     /**
      * @var string 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @var string 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
@@ -151,7 +140,6 @@ class OperationLog extends AbstractModel
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -159,11 +147,8 @@ class OperationLog extends AbstractModel
      * @param string $Action 操作证书动作。
      * @param string $CreatedOn 操作时间。
      * @param string $Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
 1. apply - 表示申请一个免费的证书。
 2. delete - 表示删除操作。
@@ -191,7 +176,6 @@ class OperationLog extends AbstractModel
 24. issued - 表示证书签发。
 25. domainValidationPassed - 表示域名验证完成。
 26. Resubmit - 表示证书重新申请。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业id
  * @method string getEngineTaskId() 获取引擎任务id
  * @method void setEngineTaskId(string $EngineTaskId) 设置引擎任务id
- * @method string getProductSource() 获取产品模块
- * @method void setProductSource(string $ProductSource) 设置产品模块
+ * @method string getProductSource() 获取数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
+ * @method void setProductSource(string $ProductSource) 设置数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
  * @method string getOnwerUid() 获取主账号
  * @method void setOnwerUid(string $OnwerUid) 设置主账号
  * @method string getStartTime() 获取开始时间
@@ -88,7 +88,7 @@ class DescribeReportTaskListRequest extends AbstractModel
     public $EngineTaskId;
 
     /**
-     * @var string 产品模块
+     * @var string 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
      */
     public $ProductSource;
 
@@ -116,7 +116,7 @@ class DescribeReportTaskListRequest extends AbstractModel
      * @param string $InstanceId 实例id
      * @param string $JobId 作业id
      * @param string $EngineTaskId 引擎任务id
-     * @param string $ProductSource 产品模块
+     * @param string $ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
      * @param string $OnwerUid 主账号
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间

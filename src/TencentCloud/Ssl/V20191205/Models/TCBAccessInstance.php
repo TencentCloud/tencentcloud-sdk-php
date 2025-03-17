@@ -21,93 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * TCB访问服务实例
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnionStatus() 获取统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnionStatus(integer $UnionStatus) 设置统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPreempted() 获取是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPreempted(boolean $IsPreempted) 设置是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getICPStatus() 获取icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setICPStatus(integer $ICPStatus) 设置icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldCertificateId() 获取已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldCertificateId(string $OldCertificateId) 设置已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCBAccessInstance extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnionStatus;
 
     /**
      * @var boolean 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPreempted;
 
     /**
      * @var integer icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ICPStatus;
 
     /**
      * @var string 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldCertificateId;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnionStatus 统一域名状态
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPreempted 是否被抢占, 被抢占表示域名被其他环境绑定了，需要解绑或者重新绑定。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ICPStatus icp黑名单封禁状态，0-未封禁，1-封禁
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

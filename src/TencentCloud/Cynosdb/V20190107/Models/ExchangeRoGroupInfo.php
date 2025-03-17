@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 交换RO组信息
  *
  * @method RollbackRoGroupInfo getSrcRoGroupInfo() 获取源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcRoGroupInfo(RollbackRoGroupInfo $SrcRoGroupInfo) 设置源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RollbackRoGroupInfo getDstRoGroupInfo() 获取目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstRoGroupInfo(RollbackRoGroupInfo $DstRoGroupInfo) 设置目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExchangeRoGroupInfo extends AbstractModel
 {
     /**
      * @var RollbackRoGroupInfo 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcRoGroupInfo;
 
     /**
      * @var RollbackRoGroupInfo 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstRoGroupInfo;
 
     /**
      * @param RollbackRoGroupInfo $SrcRoGroupInfo 源RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackRoGroupInfo $DstRoGroupInfo 目标RO组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

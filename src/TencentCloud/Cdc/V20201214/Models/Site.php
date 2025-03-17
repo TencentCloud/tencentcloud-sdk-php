@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSiteId() 获取站点id
  * @method void setSiteId(string $SiteId) 设置站点id
  * @method string getDescription() 获取站点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置站点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取站点创建时间
  * @method void setCreateTime(string $CreateTime) 设置站点创建时间
  */
@@ -45,7 +43,6 @@ class Site extends AbstractModel
 
     /**
      * @var string 站点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -58,7 +55,6 @@ class Site extends AbstractModel
      * @param string $Name 站点名称
      * @param string $SiteId 站点id
      * @param string $Description 站点描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 站点创建时间
      */
     function __construct()

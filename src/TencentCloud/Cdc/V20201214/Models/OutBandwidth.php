@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 出带宽数据。
  *
  * @method array getTimestamps() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamps(array $Timestamps) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取对应时间的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置对应时间的值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutBandwidth extends AbstractModel
 {
     /**
      * @var array 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamps;
 
     /**
      * @var array 对应时间的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param array $Timestamps 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 对应时间的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

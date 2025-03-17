@@ -20,249 +20,269 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 引擎任务信息
  *
- * @method string getEngineSubmitTime() 获取1
+ * @method string getEngineSubmitTime() 获取引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineSubmitTime(string $EngineSubmitTime) 设置1
+ * @method void setEngineSubmitTime(string $EngineSubmitTime) 设置引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeTime() 获取1
+ * @method string getEngineExeTime() 获取引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeTime(string $EngineExeTime) 设置1
+ * @method void setEngineExeTime(string $EngineExeTime) 设置引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEngineExeTimes() 获取1
+ * @method integer getEngineExeTimes() 获取引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeTimes(integer $EngineExeTimes) 设置1
+ * @method void setEngineExeTimes(integer $EngineExeTimes) 设置引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCuConsume() 获取1
+ * @method integer getCuConsume() 获取cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCuConsume(integer $CuConsume) 设置1
+ * @method void setCuConsume(integer $CuConsume) 设置cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceUsage() 获取1
+ * @method integer getResourceUsage() 获取资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceUsage(integer $ResourceUsage) 设置1
+ * @method void setResourceUsage(integer $ResourceUsage) 设置资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineName() 获取1
+ * @method string getEngineName() 获取引擎名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineName(string $EngineName) 设置1
+ * @method void setEngineName(string $EngineName) 设置引擎名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeStatus() 获取1
+ * @method string getEngineExeStatus() 获取引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeStatus(string $EngineExeStatus) 设置1
+ * @method void setEngineExeStatus(string $EngineExeStatus) 设置引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskKind() 获取1
+ * @method string getTaskKind() 获取任务种类
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskKind(string $TaskKind) 设置1
+ * @method void setTaskKind(string $TaskKind) 设置任务种类
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskType() 获取1
+ * @method string getTaskType() 获取任务类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(string $TaskType) 设置1
+ * @method void setTaskType(string $TaskType) 设置任务类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskContent() 获取1
+ * @method string getTaskContent() 获取任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskContent(string $TaskContent) 设置1
+ * @method void setTaskContent(string $TaskContent) 设置任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInputBytesSum() 获取1
+ * @method integer getInputBytesSum() 获取数据扫描总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputBytesSum(integer $InputBytesSum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getShuffleReadBytesSum() 获取1
+ * @method void setInputBytesSum(integer $InputBytesSum) 设置数据扫描总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShuffleReadBytesSum(integer $ShuffleReadBytesSum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getShuffleReadRecordsSum() 获取1
+ * @method integer getShuffleReadBytesSum() 获取shuffle read 总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShuffleReadRecordsSum(integer $ShuffleReadRecordsSum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOutputRecordsSum() 获取1
+ * @method void setShuffleReadBytesSum(integer $ShuffleReadBytesSum) 设置shuffle read 总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputRecordsSum(integer $OutputRecordsSum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOutputBytesSum() 获取1
+ * @method integer getShuffleReadRecordsSum() 获取shuffle read 总行数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputBytesSum(integer $OutputBytesSum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOutputFilesNum() 获取1
+ * @method void setShuffleReadRecordsSum(integer $ShuffleReadRecordsSum) 设置shuffle read 总行数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputFilesNum(integer $OutputFilesNum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOutputSmallFilesNum() 获取1
+ * @method integer getOutputRecordsSum() 获取输出总行数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputSmallFilesNum(integer $OutputSmallFilesNum) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWaitTime() 获取1
+ * @method void setOutputRecordsSum(integer $OutputRecordsSum) 设置输出总行数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWaitTime(integer $WaitTime) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQueryResultTime() 获取1
+ * @method integer getOutputBytesSum() 获取输出总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQueryResultTime(integer $QueryResultTime) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCmdArgs() 获取1
+ * @method void setOutputBytesSum(integer $OutputBytesSum) 设置输出总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCmdArgs(string $CmdArgs) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOutputFilesNum() 获取输出文件数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutputFilesNum(integer $OutputFilesNum) 设置输出文件数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOutputSmallFilesNum() 获取输出小文件数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutputSmallFilesNum(integer $OutputSmallFilesNum) 设置输出小文件数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWaitTime() 获取执行等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaitTime(integer $WaitTime) 设置执行等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQueryResultTime() 获取查询结果时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueryResultTime(integer $QueryResultTime) 设置查询结果时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCmdArgs() 获取入参
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCmdArgs(string $CmdArgs) 设置入参
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineTaskInfo extends AbstractModel
 {
     /**
-     * @var string 1
+     * @var string 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineSubmitTime;
 
     /**
-     * @var string 1
+     * @var string 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeTime;
 
     /**
-     * @var integer 1
+     * @var integer 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeTimes;
 
     /**
-     * @var integer 1
+     * @var integer cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CuConsume;
 
     /**
-     * @var integer 1
+     * @var integer 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceUsage;
 
     /**
-     * @var string 1
+     * @var string 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
 
     /**
-     * @var string 1
+     * @var string 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeStatus;
 
     /**
-     * @var string 1
+     * @var string 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskKind;
 
     /**
-     * @var string 1
+     * @var string 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var string 1
+     * @var string 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskContent;
 
     /**
-     * @var integer 1
+     * @var integer 数据扫描总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputBytesSum;
 
     /**
-     * @var integer 1
+     * @var integer shuffle read 总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShuffleReadBytesSum;
 
     /**
-     * @var integer 1
+     * @var integer shuffle read 总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShuffleReadRecordsSum;
 
     /**
-     * @var integer 1
+     * @var integer 输出总行数
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputRecordsSum;
 
     /**
-     * @var integer 1
+     * @var integer 输出总 bytes
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputBytesSum;
 
     /**
-     * @var integer 1
+     * @var integer 输出文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputFilesNum;
 
     /**
-     * @var integer 1
+     * @var integer 输出小文件数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputSmallFilesNum;
 
     /**
-     * @var integer 1
+     * @var integer 执行等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaitTime;
 
     /**
-     * @var integer 1
+     * @var integer 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryResultTime;
 
     /**
-     * @var string 1
+     * @var string 入参
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CmdArgs;
 
     /**
-     * @param string $EngineSubmitTime 1
+     * @param string $EngineSubmitTime 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeTime 1
+     * @param string $EngineExeTime 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EngineExeTimes 1
+     * @param integer $EngineExeTimes 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CuConsume 1
+     * @param integer $CuConsume cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceUsage 1
+     * @param integer $ResourceUsage 资源消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineName 1
+     * @param string $EngineName 引擎名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeStatus 1
+     * @param string $EngineExeStatus 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskKind 1
+     * @param string $TaskKind 任务种类
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskType 1
+     * @param string $TaskType 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskContent 1
+     * @param string $TaskContent 任务SQL语句
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InputBytesSum 1
+     * @param integer $InputBytesSum 数据扫描总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ShuffleReadBytesSum 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ShuffleReadRecordsSum 1
+     * @param integer $ShuffleReadBytesSum shuffle read 总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OutputRecordsSum 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OutputBytesSum 1
+     * @param integer $ShuffleReadRecordsSum shuffle read 总行数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OutputFilesNum 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OutputSmallFilesNum 1
+     * @param integer $OutputRecordsSum 输出总行数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WaitTime 1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QueryResultTime 1
+     * @param integer $OutputBytesSum 输出总 bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CmdArgs 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OutputFilesNum 输出文件数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OutputSmallFilesNum 输出小文件数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WaitTime 执行等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QueryResultTime 查询结果时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CmdArgs 入参
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

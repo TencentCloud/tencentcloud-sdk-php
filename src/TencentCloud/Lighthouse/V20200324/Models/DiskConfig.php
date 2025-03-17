@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
- * @method string getDiskType() 获取云硬盘类型。
- * @method void setDiskType(string $DiskType) 设置云硬盘类型。
+ * @method string getDiskType() 获取云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+ * @method void setDiskType(string $DiskType) 设置云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
  * @method string getDiskSalesState() 获取云硬盘可售卖状态。
  * @method void setDiskSalesState(string $DiskSalesState) 设置云硬盘可售卖状态。
  * @method integer getMaxDiskSize() 获取最大云硬盘大小。
@@ -41,7 +49,11 @@ class DiskConfig extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 云硬盘类型。
+     * @var string 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
      */
     public $DiskType;
 
@@ -67,7 +79,11 @@ class DiskConfig extends AbstractModel
 
     /**
      * @param string $Zone 可用区。
-     * @param string $DiskType 云硬盘类型。
+     * @param string $DiskType 云硬盘类型。枚举值如下：
+
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
      * @param string $DiskSalesState 云硬盘可售卖状态。
      * @param integer $MaxDiskSize 最大云硬盘大小。
      * @param integer $MinDiskSize 最小云硬盘大小。

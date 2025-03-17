@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getModifyInstanceParamList() 获取实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyInstanceParamList(array $ModifyInstanceParamList) 设置实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BizTaskModifyInstanceParam extends AbstractModel
 {
@@ -36,14 +34,12 @@ class BizTaskModifyInstanceParam extends AbstractModel
 
     /**
      * @var array 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyInstanceParamList;
 
     /**
      * @param string $InstanceId 实例ID
      * @param array $ModifyInstanceParamList 实例参数修改任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -53,17 +53,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTypeName() 获取规格英文名
  * @method void setTypeName(string $TypeName) 设置规格英文名
  * @method string getComputeFormat() 获取规格展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeFormat(string $ComputeFormat) 设置规格展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTypeFamily() 获取规格类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeFamily(string $TypeFamily) 设置规格类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubOrderPayStatus() 获取0未支付，1已支付
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubOrderPayStatus(integer $SubOrderPayStatus) 设置0未支付，1已支付
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrderItem extends AbstractModel
 {
@@ -149,19 +143,16 @@ class DedicatedClusterOrderItem extends AbstractModel
 
     /**
      * @var string 规格展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeFormat;
 
     /**
      * @var string 规格类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TypeFamily;
 
     /**
      * @var integer 0未支付，1已支付
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubOrderPayStatus;
 
@@ -183,11 +174,8 @@ class DedicatedClusterOrderItem extends AbstractModel
      * @param integer $TotalGpu GPU数
      * @param string $TypeName 规格英文名
      * @param string $ComputeFormat 规格展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TypeFamily 规格类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubOrderPayStatus 0未支付，1已支付
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

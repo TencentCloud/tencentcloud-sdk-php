@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeHostCosInstanceList返回参数结构体
  *
  * @method array getInstanceList() 获取COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAsyncTotalNum() 获取异步刷新总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncTotalNum(integer $AsyncTotalNum) 设置异步刷新总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAsyncOffset() 获取异步刷新当前执行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncOffset(integer $AsyncOffset) 设置异步刷新当前执行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncCacheTime() 获取当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncCacheTime(string $AsyncCacheTime) 设置当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeHostCosInstanceListResponse extends AbstractModel
 {
     /**
      * @var array COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var integer 异步刷新总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncTotalNum;
 
     /**
      * @var integer 异步刷新当前执行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncOffset;
 
     /**
      * @var string 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncCacheTime;
 
@@ -82,15 +67,10 @@ class DescribeHostCosInstanceListResponse extends AbstractModel
 
     /**
      * @param array $InstanceList COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AsyncTotalNum 异步刷新总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AsyncOffset 异步刷新当前执行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncCacheTime 当前缓存读取时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

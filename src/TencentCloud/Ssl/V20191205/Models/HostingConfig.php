@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 托管配置
  *
  * @method integer getReplaceTime() 获取托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplaceTime(integer $ReplaceTime) 设置托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMessageTypes() 获取托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageTypes(array $MessageTypes) 设置托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReplaceStartTime() 获取资源替换开始时间
  * @method void setReplaceStartTime(string $ReplaceStartTime) 设置资源替换开始时间
  * @method string getReplaceEndTime() 获取资源替换结束时间
@@ -37,13 +33,11 @@ class HostingConfig extends AbstractModel
 {
     /**
      * @var integer 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplaceTime;
 
     /**
      * @var array 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageTypes;
 
@@ -59,9 +53,7 @@ class HostingConfig extends AbstractModel
 
     /**
      * @param integer $ReplaceTime 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MessageTypes 托管发送消息类型：0，托管开始前消息提醒（没有续费证书也会收到该提示消息）； 1， 托管开始消息提醒（存在续费证书才会收到消息提醒）； 2， 托管资源替换失败消息提醒； 3 托管资源替换成功消息提醒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReplaceStartTime 资源替换开始时间
      * @param string $ReplaceEndTime 资源替换结束时间
      */

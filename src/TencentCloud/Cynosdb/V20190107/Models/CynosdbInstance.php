@@ -107,61 +107,41 @@ pause
 resume
 pause
  * @method string getStorageId() 获取预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageId(string $StorageId) 设置预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStoragePayMode() 获取存储付费类型
  * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型
  * @method string getPhysicalZone() 获取物理区
  * @method void setPhysicalZone(string $PhysicalZone) 设置物理区
  * @method string getBusinessType() 获取商业类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessType(string $BusinessType) 设置商业类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTasks() 获取任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasks(array $Tasks) 设置任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsFreeze() 获取是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceTags() 获取资源标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMasterZone() 获取主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterZone(string $MasterZone) 设置主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSlaveZones() 获取备可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZones(array $SlaveZones) 设置备可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceNetInfo() 获取实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNetInfo(array $InstanceNetInfo) 设置实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceIndexMode() 获取实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIndexMode(string $InstanceIndexMode) 设置实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceAbility getInstanceAbility() 获取当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceStorageType() 获取实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -374,7 +354,6 @@ pause
 
     /**
      * @var string 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageId;
 
@@ -390,19 +369,16 @@ pause
 
     /**
      * @var string 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessType;
 
     /**
      * @var array 任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
      * @var string 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFreeze;
 
@@ -414,7 +390,6 @@ pause
 
     /**
      * @var string 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterZone;
 
@@ -426,7 +401,6 @@ pause
 
     /**
      * @var array 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNetInfo;
 
@@ -438,25 +412,21 @@ pause
 
     /**
      * @var string 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIndexMode;
 
     /**
      * @var InstanceAbility 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceAbility;
 
     /**
      * @var string 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @var string 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStorageType;
 
@@ -505,33 +475,23 @@ pause
 resume
 pause
      * @param string $StorageId 预付费存储Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StoragePayMode 存储付费类型
      * @param string $PhysicalZone 物理区
      * @param string $BusinessType 商业类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tasks 任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsFreeze 是否冻结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MasterZone 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SlaveZones 备可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAbility $InstanceAbility 当前实例支持的能力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchTags(array $SearchTags) 设置搜索标签列表
  * @method boolean getIsSimple() 获取信息详细与否
  * @method void setIsSimple(boolean $IsSimple) 设置信息详细与否
+ * @method array getVips() 获取vip列表
+ * @method void setVips(array $Vips) 设置vip列表
  */
 class DescribeInstancesNewRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeInstancesNewRequest extends AbstractModel
     public $IsSimple;
 
     /**
+     * @var array vip列表
+     */
+    public $Vips;
+
+    /**
      * @param string $SearchInstanceId 搜索的集群id名称
      * @param string $SearchInstanceName 搜索的集群name
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
      * @param array $SearchTags 搜索标签列表
      * @param boolean $IsSimple 信息详细与否
+     * @param array $Vips vip列表
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeInstancesNewRequest extends AbstractModel
 
         if (array_key_exists("IsSimple",$param) and $param["IsSimple"] !== null) {
             $this->IsSimple = $param["IsSimple"];
+        }
+
+        if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {
+            $this->Vips = $param["Vips"];
         }
     }
 }

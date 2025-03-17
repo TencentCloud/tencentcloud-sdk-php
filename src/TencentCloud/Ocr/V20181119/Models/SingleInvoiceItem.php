@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomsPaymentReceipt(CustomsPaymentReceipt $CustomsPaymentReceipt) 设置海关缴款
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BankSlip getBankSlip() 获取银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBankSlip(BankSlip $BankSlip) 设置银行回单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -314,6 +318,12 @@ class SingleInvoiceItem extends AbstractModel
     public $CustomsPaymentReceipt;
 
     /**
+     * @var BankSlip 银行回单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BankSlip;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -371,6 +381,8 @@ class SingleInvoiceItem extends AbstractModel
      * @param TaxPayment $TaxPayment 完税凭证
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomsPaymentReceipt $CustomsPaymentReceipt 海关缴款
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BankSlip $BankSlip 银行回单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -529,6 +541,11 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("CustomsPaymentReceipt",$param) and $param["CustomsPaymentReceipt"] !== null) {
             $this->CustomsPaymentReceipt = new CustomsPaymentReceipt();
             $this->CustomsPaymentReceipt->deserialize($param["CustomsPaymentReceipt"]);
+        }
+
+        if (array_key_exists("BankSlip",$param) and $param["BankSlip"] !== null) {
+            $this->BankSlip = new BankSlip();
+            $this->BankSlip->deserialize($param["BankSlip"]);
         }
     }
 }

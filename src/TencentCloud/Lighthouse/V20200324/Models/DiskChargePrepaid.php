@@ -21,33 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 云硬盘包年包月相关参数设置
  *
  * @method integer getPeriod() 获取新购周期。
+可选值：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
  * @method void setPeriod(integer $Period) 设置新购周期。
- * @method string getRenewFlag() 获取自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
- * @method string getTimeUnit() 获取新购单位. 默认值: "m"。
- * @method void setTimeUnit(string $TimeUnit) 设置新购单位. 默认值: "m"。
+可选值：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+- DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+- DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+ * @method string getTimeUnit() 获取新购单位.。
+可选值：m - 月。
+默认值：m - 月。
+ * @method void setTimeUnit(string $TimeUnit) 设置新购单位.。
+可选值：m - 月。
+默认值：m - 月。
  */
 class DiskChargePrepaid extends AbstractModel
 {
     /**
      * @var integer 新购周期。
+可选值：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
      */
     public $Period;
 
     /**
-     * @var string 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+     * @var string 自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+- DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
      */
     public $RenewFlag;
 
     /**
-     * @var string 新购单位. 默认值: "m"。
+     * @var string 新购单位.。
+可选值：m - 月。
+默认值：m - 月。
      */
     public $TimeUnit;
 
     /**
      * @param integer $Period 新购周期。
-     * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
-     * @param string $TimeUnit 新购单位. 默认值: "m"。
+可选值：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
+     * @param string $RenewFlag 自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+- DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+     * @param string $TimeUnit 新购单位.。
+可选值：m - 月。
+默认值：m - 月。
      */
     function __construct()
     {

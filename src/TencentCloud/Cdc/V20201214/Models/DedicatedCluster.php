@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取专用集群所属可用区名称。
  * @method void setZone(string $Zone) 设置专用集群所属可用区名称。
  * @method string getDescription() 获取专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取专用集群的名称。
  * @method void setName(string $Name) 设置专用集群的名称。
  * @method string getLifecycleStatus() 获取专用集群的生命周期。如"PENDING"。
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置专用集群的创建时间。
  * @method string getSiteId() 获取专用集群所属的站点id。
  * @method void setSiteId(string $SiteId) 设置专用集群所属的站点id。
+ * @method string getRunningStatus() 获取专用集群的运营状态
+ * @method void setRunningStatus(string $RunningStatus) 设置专用集群的运营状态
  */
 class DedicatedCluster extends AbstractModel
 {
@@ -51,7 +51,6 @@ class DedicatedCluster extends AbstractModel
 
     /**
      * @var string 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -76,14 +75,19 @@ class DedicatedCluster extends AbstractModel
     public $SiteId;
 
     /**
+     * @var string 专用集群的运营状态
+     */
+    public $RunningStatus;
+
+    /**
      * @param string $DedicatedClusterId 专用集群id。如"cluster-xxxxx"。
      * @param string $Zone 专用集群所属可用区名称。
      * @param string $Description 专用集群的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 专用集群的名称。
      * @param string $LifecycleStatus 专用集群的生命周期。如"PENDING"。
      * @param string $CreateTime 专用集群的创建时间。
      * @param string $SiteId 专用集群所属的站点id。
+     * @param string $RunningStatus 专用集群的运营状态
      */
     function __construct()
     {
@@ -124,6 +128,10 @@ class DedicatedCluster extends AbstractModel
 
         if (array_key_exists("SiteId",$param) and $param["SiteId"] !== null) {
             $this->SiteId = $param["SiteId"];
+        }
+
+        if (array_key_exists("RunningStatus",$param) and $param["RunningStatus"] !== null) {
+            $this->RunningStatus = $param["RunningStatus"];
         }
     }
 }

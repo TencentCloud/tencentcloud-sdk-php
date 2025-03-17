@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例ID列表。一个或多个待操作的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。每次请求批量实例的上限为15。
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。一个或多个待操作的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。每次请求批量实例的上限为15。
- * @method string getBundleId() 获取待变更的套餐Id。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
- * @method void setBundleId(string $BundleId) 设置待变更的套餐Id。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
+ * @method string getBundleId() 获取待变更的套餐Id。注意不可和当前要升配的实例套餐ID相同。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
+ * @method void setBundleId(string $BundleId) 设置待变更的套餐Id。注意不可和当前要升配的实例套餐ID相同。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
  * @method boolean getAutoVoucher() 获取是否自动抵扣代金券。取值范围：
 true：表示自动抵扣代金券
 false：表示不自动抵扣代金券
@@ -41,7 +41,7 @@ class ModifyInstancesBundleRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 待变更的套餐Id。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
+     * @var string 待变更的套餐Id。注意不可和当前要升配的实例套餐ID相同。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
      */
     public $BundleId;
 
@@ -55,7 +55,7 @@ false：表示不自动抵扣代金券
 
     /**
      * @param array $InstanceIds 实例ID列表。一个或多个待操作的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。每次请求批量实例的上限为15。
-     * @param string $BundleId 待变更的套餐Id。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
+     * @param string $BundleId 待变更的套餐Id。注意不可和当前要升配的实例套餐ID相同。可通过[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口返回值中的BundleId获取。
      * @param boolean $AutoVoucher 是否自动抵扣代金券。取值范围：
 true：表示自动抵扣代金券
 false：表示不自动抵扣代金券

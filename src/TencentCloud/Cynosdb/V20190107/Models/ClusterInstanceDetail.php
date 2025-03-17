@@ -39,33 +39,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceRole() 获取实例角色
  * @method void setInstanceRole(string $InstanceRole) 设置实例角色
  * @method integer getMaintainStartTime() 获取执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaintainStartTime(integer $MaintainStartTime) 设置执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaintainDuration() 获取持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaintainDuration(integer $MaintainDuration) 设置持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMaintainWeekDays() 获取可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerlessStatus() 获取serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTasks() 获取实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTasks(array $InstanceTasks) 设置实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceDeviceType() 获取实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceStorageType() 获取实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbMode() 获取数据库类型
  * @method void setDbMode(string $DbMode) 设置数据库类型
  */
@@ -118,43 +104,36 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var integer 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaintainStartTime;
 
     /**
      * @var integer 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaintainDuration;
 
     /**
      * @var array 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaintainWeekDays;
 
     /**
      * @var string serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerlessStatus;
 
     /**
      * @var array 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTasks;
 
     /**
      * @var string 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceDeviceType;
 
     /**
      * @var string 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStorageType;
 
@@ -174,19 +153,12 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $InstanceStorage 硬盘
      * @param string $InstanceRole 实例角色
      * @param integer $MaintainStartTime 执行开始时间(距离0点的秒数)	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaintainDuration 持续的时间(单位：秒)	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerlessStatus serverless实例子状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTasks 实例任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceDeviceType 实例机器类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStorageType 实例存储类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbMode 数据库类型
      */
     function __construct()

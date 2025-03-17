@@ -125,17 +125,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) 设置secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTCBType() 获取TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTCBType(string $TCBType) 设置TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateRecordDetail extends AbstractModel
 {
@@ -273,19 +267,16 @@ class UpdateRecordDetail extends AbstractModel
 
     /**
      * @var string 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
     /**
      * @var string TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TCBType;
 
     /**
      * @var string 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -343,11 +334,8 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $SecretName secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TCBType TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

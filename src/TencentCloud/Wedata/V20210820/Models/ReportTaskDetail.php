@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 上报任务详情
  *
- * @method string getEngineTaskId() 获取1
+ * @method string getEngineTaskId() 获取引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineTaskId(string $EngineTaskId) 设置1
+ * @method void setEngineTaskId(string $EngineTaskId) 设置引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeStatus() 获取1
+ * @method string getEngineExeStatus() 获取引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeStatus(string $EngineExeStatus) 设置1
+ * @method void setEngineExeStatus(string $EngineExeStatus) 设置引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeStartTime() 获取1
+ * @method string getEngineExeStartTime() 获取引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeStartTime(string $EngineExeStartTime) 设置1
+ * @method void setEngineExeStartTime(string $EngineExeStartTime) 设置引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineExeEndTime() 获取1
+ * @method string getEngineExeEndTime() 获取引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeEndTime(string $EngineExeEndTime) 设置1
+ * @method void setEngineExeEndTime(string $EngineExeEndTime) 设置引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskTypeId() 获取1
+ * @method integer getTaskTypeId() 获取任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeId(integer $TaskTypeId) 设置1
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBusinessInfo() 获取1
+ * @method string getBusinessInfo() 获取业务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessInfo(string $BusinessInfo) 设置1
+ * @method void setBusinessInfo(string $BusinessInfo) 设置业务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EngineTaskInfo getEngineTaskInfo() 获取1
+ * @method EngineTaskInfo getEngineTaskInfo() 获取引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineTaskInfo(EngineTaskInfo $EngineTaskInfo) 设置1
+ * @method void setEngineTaskInfo(EngineTaskInfo $EngineTaskInfo) 设置引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportTaskDetail extends AbstractModel
 {
     /**
-     * @var string 1
+     * @var string 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTaskId;
 
     /**
-     * @var string 1
+     * @var string 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeStatus;
 
     /**
-     * @var string 1
+     * @var string 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeStartTime;
 
     /**
-     * @var string 1
+     * @var string 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineExeEndTime;
 
     /**
-     * @var integer 1
+     * @var integer 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeId;
 
     /**
-     * @var string 1
+     * @var string 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessInfo;
 
     /**
-     * @var EngineTaskInfo 1
+     * @var EngineTaskInfo 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTaskInfo;
 
     /**
-     * @param string $EngineTaskId 1
+     * @param string $EngineTaskId 引擎任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeStatus 1
+     * @param string $EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeStartTime 1
+     * @param string $EngineExeStartTime 引擎执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineExeEndTime 1
+     * @param string $EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskTypeId 1
+     * @param integer $TaskTypeId 任务类型id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BusinessInfo 1
+     * @param string $BusinessInfo 业务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTaskInfo $EngineTaskInfo 1
+     * @param EngineTaskInfo $EngineTaskInfo 引擎任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

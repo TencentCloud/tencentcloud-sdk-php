@@ -27,19 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
  * @method string getDelayTime() 获取延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayTime(string $DelayTime) 设置延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowId() 获取异步任务流id
  * @method void setFlowId(integer $FlowId) 设置异步任务流id
  * @method string getInput() 获取任务输入信息
@@ -81,29 +75,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyParamsData(array $ModifyParamsData) 设置修改参数任务信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CreateClustersData getCreateClustersData() 获取创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateClustersData(CreateClustersData $CreateClustersData) 设置创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RollbackData getRollbackData() 获取集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollbackData(RollbackData $RollbackData) 设置集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ModifyInstanceData getModifyInstanceData() 获取实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) 设置实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ManualBackupData getManualBackupData() 获取手动备份任务信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManualBackupData(ManualBackupData $ManualBackupData) 设置手动备份任务信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ModifyDbVersionData getModifyDbVersionData() 获取修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) 设置修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ClusterSlaveData getClusterSlaveData() 获取集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) 设置集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SwitchClusterLogBin getSwitchClusterLogBin() 获取转换集群日志
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) 设置转换集群日志
@@ -113,15 +97,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) 设置修改实例参数数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskMaintainInfo getTaskMaintainInfo() 获取维护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) 设置维护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceCLSDeliveryInfos() 获取实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) 设置实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskProgressInfo getTaskProgressInfo() 获取任务进度信息
  * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置任务进度信息
  */
@@ -144,7 +124,6 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -155,13 +134,11 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var string 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayTime;
 
     /**
      * @var string 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
@@ -265,19 +242,16 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var CreateClustersData 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateClustersData;
 
     /**
      * @var RollbackData 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollbackData;
 
     /**
      * @var ModifyInstanceData 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyInstanceData;
 
@@ -289,13 +263,11 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var ModifyDbVersionData 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyDbVersionData;
 
     /**
      * @var ClusterSlaveData 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterSlaveData;
 
@@ -313,14 +285,12 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var TaskMaintainInfo 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskMaintainInfo;
 
     /**
      * @var array 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCLSDeliveryInfos;
 
@@ -334,12 +304,9 @@ class BizTaskInfo extends AbstractModel
      * @param integer $AppId 用户appid
      * @param string $ClusterId 集群id
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间
      * @param string $DelayTime 延迟执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 任务失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowId 异步任务流id
      * @param string $Input 任务输入信息
      * @param string $InstanceGrpId 实例组id
@@ -361,26 +328,19 @@ class BizTaskInfo extends AbstractModel
      * @param array $ModifyParamsData 修改参数任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateClustersData $CreateClustersData 创建集群任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackData $RollbackData 集群回档任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyInstanceData $ModifyInstanceData 实例变配任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManualBackupData $ManualBackupData 手动备份任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyDbVersionData $ModifyDbVersionData 修改内核版本任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterSlaveData $ClusterSlaveData 集群可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchClusterLogBin $SwitchClusterLogBin 转换集群日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BizTaskModifyParamsData $ModifyInstanceParamsData 修改实例参数数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMaintainInfo $TaskMaintainInfo 维护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceCLSDeliveryInfos 实例日志投递信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskProgressInfo $TaskProgressInfo 任务进度信息
      */
     function __construct()

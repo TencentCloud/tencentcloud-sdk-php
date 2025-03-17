@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method array getBindResourceResult() 获取关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindResourceResult(array $BindResourceResult) 设置关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
  * @method void setStatus(integer $Status) 设置关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
  * @method Error getError() 获取关联云资源错误信息
@@ -44,7 +42,6 @@ class SyncTaskBindResourceResult extends AbstractModel
 
     /**
      * @var array 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindResourceResult;
 
@@ -67,7 +64,6 @@ class SyncTaskBindResourceResult extends AbstractModel
     /**
      * @param string $TaskId 任务ID
      * @param array $BindResourceResult 关联云资源结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
      * @param Error $Error 关联云资源错误信息
 注意：此字段可能返回 null，表示取不到有效值。

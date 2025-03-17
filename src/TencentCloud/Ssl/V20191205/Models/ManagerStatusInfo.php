@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 管理人的四种审核状态
  *
- * @method string getType() 获取审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取审核类型，枚举值：ov,ev
+ * @method void setType(string $Type) 设置审核类型，枚举值：ov,ev
  * @method string getStatus() 获取审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerStatusInfo extends AbstractModel
 {
     /**
-     * @var string 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 审核类型，枚举值：ov,ev
      */
     public $Type;
 
     /**
      * @var string 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @param string $Type 审核类型，枚举值：ov,ev,cs,ev_cs
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 审核类型，枚举值：ov,ev
      * @param string $Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

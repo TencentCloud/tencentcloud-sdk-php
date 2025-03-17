@@ -21,29 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCertificateDetail返回参数结构体
  *
  * @method string getOwnerUin() 获取证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrom() 获取证书来源：
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrom(string $From) 设置证书来源：
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateType(string $CertificateType) 设置证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取证书套餐类型：
 null：用户上传证书（没有套餐类型），
 2：TrustAsia TLS RSA CA， 
@@ -217,21 +209,13 @@ null：用户上传证书（没有套餐类型），
 101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductZhName() 获取证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductZhName(string $ProductZhName) 设置证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusMsg() 获取状态信息。 取值范围：
 //通用状态信息
 1、PRE-REVIEWING：预审核中
@@ -265,9 +249,7 @@ null：用户上传证书（没有套餐类型），
  * @method void setVerifyType(string $VerifyType) 设置验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulnerabilityStatus() 获取漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulnerabilityStatus(string $VulnerabilityStatus) 设置漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertBeginTime() 获取证书生效时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。
@@ -277,21 +259,15 @@ null：用户上传证书（没有套餐类型），
  * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidityPeriod() 获取证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInsertTime() 获取证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsertTime(string $InsertTime) 设置证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderId() 获取CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderId(string $OrderId) 设置CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CertificateExtra getCertificateExtra() 获取证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateExtra(CertificateExtra $CertificateExtra) 设置证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificatePrivateKey() 获取私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥证书， 国密证书则为签名证书中的私钥证书
@@ -309,57 +285,35 @@ null：用户上传证书（没有套餐类型），
  * @method void setVulnerabilityReport(string $VulnerabilityReport) 设置漏洞扫描评估报告。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateId() 获取证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTypeName() 获取证书类型名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeName(string $TypeName) 设置证书类型名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusName() 获取状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusName(string $StatusName) 设置状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubjectAltName() 获取证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectAltName(array $SubjectAltName) 设置证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsVip() 获取是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVip(boolean $IsVip) 设置是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsWildcard() 获取是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsWildcard(boolean $IsWildcard) 设置是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDv() 获取是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDv(boolean $IsDv) 设置是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsVulnerability() 获取是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVulnerability(boolean $IsVulnerability) 设置是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SubmittedData getSubmittedData() 获取付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmittedData(SubmittedData $SubmittedData) 设置付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRenewAble() 获取是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewAble(boolean $RenewAble) 设置是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployable() 获取是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployable(boolean $Deployable) 设置是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RootCertificates getRootCert() 获取根证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootCert(RootCertificates $RootCert) 设置根证书。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptCert() 获取国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptCert(string $EncryptCert) 设置国密加密证书公钥， 仅国密证书有值
@@ -377,9 +331,7 @@ null：用户上传证书（没有套餐类型），
  * @method void setEncryptCertFingerprint(string $EncryptCertFingerprint) 设置加密证书 SHA1指纹 （国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptAlgorithm() 获取证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDvRevokeAuthDetail() 获取DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDvRevokeAuthDetail(array $DvRevokeAuthDetail) 设置DV证书吊销验证值
@@ -395,13 +347,11 @@ class DescribeCertificateDetailResponse extends AbstractModel
 {
     /**
      * @var string 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var string 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
@@ -411,13 +361,11 @@ trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $From;
 
     /**
      * @var string 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateType;
 
@@ -513,25 +461,21 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductZhName;
 
     /**
      * @var string 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
      * @var integer 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -561,7 +505,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulnerabilityStatus;
 
@@ -579,13 +522,11 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidityPeriod;
 
     /**
      * @var string 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
 
@@ -597,7 +538,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var CertificateExtra 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateExtra;
 
@@ -627,7 +567,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateId;
 
@@ -639,37 +578,31 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusName;
 
     /**
      * @var array 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectAltName;
 
     /**
      * @var boolean 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVip;
 
     /**
      * @var boolean 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsWildcard;
 
     /**
      * @var boolean 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDv;
 
     /**
      * @var boolean 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVulnerability;
 
@@ -681,25 +614,21 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var boolean 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewAble;
 
     /**
      * @var boolean 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deployable;
 
     /**
      * @var array 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var RootCertificates 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootCert;
 
@@ -729,7 +658,6 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @var string 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptAlgorithm;
 
@@ -752,17 +680,13 @@ null：用户上传证书（没有套餐类型），
 
     /**
      * @param string $OwnerUin 证书所属用户主账号 UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $From 证书来源：
 trustasia：亚洲诚信，
 upload：用户上传。
 wosign：沃通
 sheca：上海CA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 证书套餐类型：
 null：用户上传证书（没有套餐类型），
 2：TrustAsia TLS RSA CA， 
@@ -850,13 +774,9 @@ null：用户上传证书（没有套餐类型），
 101：CFCA 增强型(EV)SSL证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductZhName 证书产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 证书绑定通用名称域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 备注名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusMsg 状态信息。 取值范围：
 //通用状态信息
 1、PRE-REVIEWING：预审核中
@@ -874,19 +794,15 @@ null：用户上传证书（没有套餐类型），
      * @param string $VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityStatus 漏洞扫描状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertBeginTime 证书生效时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertEndTime 证书失效时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityPeriod 证书有效期：单位（月）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InsertTime 证书申请时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateExtra $CertificateExtra 证书扩展信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificatePrivateKey 私钥证书， 国密证书则为签名证书中的私钥证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificatePublicKey 公钥证书， 国密则为签名证书中的公钥证书
@@ -896,31 +812,20 @@ null：用户上传证书（没有套餐类型），
      * @param string $VulnerabilityReport 漏洞扫描评估报告。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateId 证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TypeName 证书类型名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusName 状态描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVip 是否为付费证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWildcard 是否为泛域名证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDv 是否为 DV 版证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVulnerability 是否启用了漏洞扫描功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmittedData $SubmittedData 付费证书提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RenewAble 是否可续费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Deployable 是否可部署。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RootCertificates $RootCert 根证书。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptCert 国密加密证书公钥， 仅国密证书有值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptPrivateKey 国密加密私钥证书， 仅国密证书有值
@@ -930,7 +835,6 @@ null：用户上传证书（没有套餐类型），
      * @param string $EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptAlgorithm 证书加密算法（国密证书特有）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DvRevokeAuthDetail DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertChainInfo 证书链信息

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 按月获取组织财务信息
  *
  * @method integer getId() 获取记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMonth() 获取月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonth(string $Month) 设置月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalCost() 获取消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(float $TotalCost) 设置消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGrowthRate() 获取比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrowthRate(string $GrowthRate) 设置比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgFinancialByMonth extends AbstractModel
 {
     /**
      * @var integer 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Month;
 
     /**
      * @var float 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var string 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GrowthRate;
 
     /**
      * @param integer $Id 记录ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Month 月份，格式：yyyy-mm，示例：2021-01。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalCost 消耗金额，单元：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GrowthRate 比上月增长率%。正数增长，负数下降，空值无法统计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

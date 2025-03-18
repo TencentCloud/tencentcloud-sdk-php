@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskMonitorId() 获取演练监控指标ID
  * @method void setTaskMonitorId(integer $TaskMonitorId) 设置演练监控指标ID
  * @method integer getMetricId() 获取监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricId(integer $MetricId) 设置监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskMonitorObjectTypeId() 获取监控指标对象类型ID
  * @method void setTaskMonitorObjectTypeId(integer $TaskMonitorObjectTypeId) 设置监控指标对象类型ID
  * @method string getMetricName() 获取指标名称
@@ -33,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstancesIds() 获取实例ID列表
  * @method void setInstancesIds(array $InstancesIds) 设置实例ID列表
  * @method string getMetricChineseName() 获取中文指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricChineseName(string $MetricChineseName) 设置中文指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskMonitor extends AbstractModel
 {
@@ -50,7 +44,6 @@ class TaskMonitor extends AbstractModel
 
     /**
      * @var integer 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricId;
 
@@ -71,27 +64,22 @@ class TaskMonitor extends AbstractModel
 
     /**
      * @var string 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricChineseName;
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @param integer $TaskMonitorId 演练监控指标ID
      * @param integer $MetricId 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskMonitorObjectTypeId 监控指标对象类型ID
      * @param string $MetricName 指标名称
      * @param array $InstancesIds 实例ID列表
      * @param string $MetricChineseName 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

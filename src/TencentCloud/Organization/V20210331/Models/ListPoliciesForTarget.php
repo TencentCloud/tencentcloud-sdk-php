@@ -25,29 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStrategyName() 获取策略名称
  * @method void setStrategyName(string $StrategyName) 设置策略名称
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUin() 获取关联的账号或节点
  * @method void setUin(integer $Uin) 设置关联的账号或节点
  * @method integer getType() 获取关联类型 1-节点 2-用户
  * @method void setType(integer $Type) 设置关联类型 1-节点 2-用户
  * @method string getAddTime() 获取策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttachTime() 获取策略绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachTime(string $AttachTime) 设置策略绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListPoliciesForTarget extends AbstractModel
 {
@@ -63,7 +53,6 @@ class ListPoliciesForTarget extends AbstractModel
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -79,25 +68,21 @@ class ListPoliciesForTarget extends AbstractModel
 
     /**
      * @var string 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @var string 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 策略绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachTime;
 
@@ -105,17 +90,12 @@ class ListPoliciesForTarget extends AbstractModel
      * @param integer $StrategyId 策略Id
      * @param string $StrategyName 策略名称
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 关联的账号或节点
      * @param integer $Type 关联类型 1-节点 2-用户
      * @param string $AddTime 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttachTime 策略绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

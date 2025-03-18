@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHeader() 获取实例id
  * @method void setHeader(string $Header) 设置实例id
  * @method string getTransfer() 获取字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransfer(string $Transfer) 设置字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJsonParse() 获取tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonParse(string $JsonParse) 设置tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取字段类型 0:str 1:list
  * @method void setType(integer $Type) 设置字段类型 0:str 1:list
  */
@@ -49,13 +45,11 @@ class ObjectTypeConfigFields extends AbstractModel
 
     /**
      * @var string 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Transfer;
 
     /**
      * @var string tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonParse;
 
@@ -68,9 +62,7 @@ class ObjectTypeConfigFields extends AbstractModel
      * @param string $Key instanceId
      * @param string $Header 实例id
      * @param string $Transfer 字段值是否需要转译，当不需要转译时，此字段返回null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JsonParse tke的pod字段信息解析
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 字段类型 0:str 1:list
      */
     function __construct()

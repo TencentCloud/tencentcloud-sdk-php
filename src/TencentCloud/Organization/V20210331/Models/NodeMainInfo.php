@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 部门主要信息
  *
  * @method integer getNodeId() 获取部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(integer $NodeId) 设置部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeName() 获取部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeMainInfo extends AbstractModel
 {
     /**
      * @var integer 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @var string 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
      * @param integer $NodeId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

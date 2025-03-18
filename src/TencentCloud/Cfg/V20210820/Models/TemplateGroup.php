@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTitle() 获取分组标题
  * @method void setTitle(string $Title) 设置分组标题
  * @method string getDescription() 获取分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrder() 获取分组顺序
  * @method void setOrder(integer $Order) 设置分组顺序
  * @method integer getMode() 获取执行模式。1 --- 顺序执行，2 --- 阶段执行
@@ -60,7 +58,6 @@ class TemplateGroup extends AbstractModel
 
     /**
      * @var string 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -94,7 +91,6 @@ class TemplateGroup extends AbstractModel
      * @param array $TemplateGroupActions 经验库动作分组动作列表
      * @param string $Title 分组标题
      * @param string $Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Order 分组顺序
      * @param integer $Mode 执行模式。1 --- 顺序执行，2 --- 阶段执行
      * @param integer $ObjectTypeId 对象类型ID

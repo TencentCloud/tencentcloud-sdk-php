@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置列表查询数量。
  * @method array getResourceTags() 获取按照标签筛选实例
  * @method void setResourceTags(array $ResourceTags) 设置按照标签筛选实例
+ * @method array getTaskStatus() 获取任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+ * @method void setTaskStatus(array $TaskStatus) 设置任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -124,6 +126,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var array 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public $TaskStatus;
+
+    /**
      * @param array $InstanceIds 实例ID数组。
      * @param array $InstanceNames 实例名称，支持模糊搜索。
      * @param array $InstanceKeys 实例模糊搜索字段。
@@ -138,6 +145,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Offset 查询开始位置。
      * @param integer $Limit 列表查询数量。
      * @param array $ResourceTags 按照标签筛选实例
+     * @param array $TaskStatus 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
      */
     function __construct()
     {
@@ -211,6 +219,10 @@ class DescribeInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

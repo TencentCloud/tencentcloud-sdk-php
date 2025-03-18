@@ -206,6 +206,10 @@ use TencentCloud\Common\AbstractModel;
 <li>DISTRICT : 省市区</li></ul>
  * @method array getResultPageConfig() 获取发起流程的可嵌入页面结果页配置
  * @method void setResultPageConfig(array $ResultPageConfig) 设置发起流程的可嵌入页面结果页配置
+ * @method SignComponentConfig getSignComponentConfig() 获取签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -359,6 +363,12 @@ class CreateFlowOption extends AbstractModel
     public $ResultPageConfig;
 
     /**
+     * @var SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      * @param boolean $CanEditFormField 是否允许编辑模板控件
@@ -452,6 +462,8 @@ class CreateFlowOption extends AbstractModel
 <li>GENDER : 性别</li>
 <li>DISTRICT : 省市区</li></ul>
      * @param array $ResultPageConfig 发起流程的可嵌入页面结果页配置
+     * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -525,6 +537,11 @@ class CreateFlowOption extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultPageConfig, $obj);
             }
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

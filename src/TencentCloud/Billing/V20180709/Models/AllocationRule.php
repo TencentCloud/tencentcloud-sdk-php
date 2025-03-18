@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 当前资源命中公摊规则信息
  *
  * @method integer getRuleId() 获取公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationRule extends AbstractModel
 {
     /**
      * @var integer 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @param integer $RuleId 公摊规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 公摊规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

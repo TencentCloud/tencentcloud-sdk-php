@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 每个检查步骤里的具体检查项
  *
  * @method string getCheckItemName() 获取检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckItemName(string $CheckItemName) 设置检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckResult() 获取pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckResult(string $CheckResult) 设置pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureReason() 获取检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureReason(string $FailureReason) 设置检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrorLog() 获取运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorLog(array $ErrorLog) 设置运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHelpDoc() 获取详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(array $HelpDoc) 设置详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkipInfo() 获取跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkipInfo(string $SkipInfo) 设置跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailCheckItem extends AbstractModel
 {
     /**
      * @var string 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckItemName;
 
     /**
      * @var string 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
     /**
      * @var string 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureReason;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var array 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorLog;
 
     /**
      * @var array 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HelpDoc;
 
     /**
      * @var string 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkipInfo;
 
     /**
      * @param string $CheckItemName 检查项的名称，如：源实例权限检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 检查项详细内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckResult pass(通过)，failed(失败), warning(校验有警告，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 检查项失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ErrorLog 运行报错日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HelpDoc 详细帮助的文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkipInfo 跳过风险文案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

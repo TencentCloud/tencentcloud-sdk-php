@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置新购云硬盘包年包月相关参数设置。
  * @method integer getDiskCount() 获取云硬盘个数, 默认值: 1。
  * @method void setDiskCount(integer $DiskCount) 设置云硬盘个数, 默认值: 1。
- * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+ * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，不传时默认为不带备份点配额。
+取值范围：0 到 500
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置指定云硬盘备份点配额，不传时默认为不带备份点配额。
+取值范围：0 到 500
  */
 class InquirePriceCreateDisksRequest extends AbstractModel
 {
@@ -54,7 +56,8 @@ class InquirePriceCreateDisksRequest extends AbstractModel
     public $DiskCount;
 
     /**
-     * @var integer 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * @var integer 指定云硬盘备份点配额，不传时默认为不带备份点配额。
+取值范围：0 到 500
      */
     public $DiskBackupQuota;
 
@@ -63,7 +66,8 @@ class InquirePriceCreateDisksRequest extends AbstractModel
      * @param string $DiskType 云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
      * @param DiskChargePrepaid $DiskChargePrepaid 新购云硬盘包年包月相关参数设置。
      * @param integer $DiskCount 云硬盘个数, 默认值: 1。
-     * @param integer $DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * @param integer $DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。
+取值范围：0 到 500
      */
     function __construct()
     {

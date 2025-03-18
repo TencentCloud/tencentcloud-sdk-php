@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getClickTimeout() 获取一键扫描超时时长，如：1800秒（s）
  * @method void setClickTimeout(integer $ClickTimeout) 设置一键扫描超时时长，如：1800秒（s）
- * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
- * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+ * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
+ * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
  * @method integer getScanMethod() 获取0版本比对,2版本比对+poc
  * @method void setScanMethod(integer $ScanMethod) 设置0版本比对,2版本比对+poc
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -93,7 +93,7 @@ class DescribeScanVulSettingResponse extends AbstractModel
     public $ClickTimeout;
 
     /**
-     * @var array 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @var array 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      */
     public $Uuids;
 
@@ -117,7 +117,7 @@ class DescribeScanVulSettingResponse extends AbstractModel
      * @param integer $EnableScan 是否开启
      * @param string $EndTime 结束时间
      * @param integer $ClickTimeout 一键扫描超时时长，如：1800秒（s）
-     * @param array $Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @param array $Uuids 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      * @param integer $ScanMethod 0版本比对,2版本比对+poc
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

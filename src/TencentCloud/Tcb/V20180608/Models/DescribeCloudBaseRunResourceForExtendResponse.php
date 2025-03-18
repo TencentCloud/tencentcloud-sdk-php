@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
  * @method array getSubnetIds() 获取子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,7 +57,6 @@ class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
 
     /**
      * @var array 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIds;
 
@@ -74,7 +71,6 @@ class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
      * @param string $VpcId vpc id信息
      * @param string $Region 地域信息
      * @param array $SubnetIds 子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

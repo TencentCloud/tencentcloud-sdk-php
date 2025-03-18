@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 子产品筛选列表
  *
  * @method string getProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCodeName() 获取子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillProduct extends AbstractModel
 {
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodeName;
 
     /**
      * @param string $ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

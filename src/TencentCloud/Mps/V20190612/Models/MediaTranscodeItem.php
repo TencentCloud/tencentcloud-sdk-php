@@ -44,6 +44,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
  * @method array getVideoStreamSet() 获取视频流信息。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
+ * @method string getCallBackExtInfo() 获取视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallBackExtInfo(string $CallBackExtInfo) 设置视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -108,6 +134,23 @@ class MediaTranscodeItem extends AbstractModel
     public $VideoStreamSet;
 
     /**
+     * @var string 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallBackExtInfo;
+
+    /**
      * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储。
      * @param string $Path 转码后的视频文件路径。
      * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
@@ -120,6 +163,19 @@ class MediaTranscodeItem extends AbstractModel
      * @param string $Md5 视频的 md5 值。
      * @param array $AudioStreamSet 音频流信息。
      * @param array $VideoStreamSet 视频流信息。
+     * @param string $CallBackExtInfo 视频转码使用增强项说明，增强项解释
+<li>hdr：HDR配置</li>
+<li>wd_fps：插帧帧率配置</li>
+<li>video_super_resolution：	超分配置</li>
+<li>repair：综合增强配置</li>
+<li>denoise：视频降噪配置</li>
+<li>color_enhance：色彩增强配置</li>
+<li>scratch：去划痕配置</li>
+<li>artifact：去伪影（毛刺）配置</li>
+<li>sharp：细节增强配置</li>
+<li>low_light：低光照增强配置</li>
+<li>face_enhance：人脸增强配置</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -191,6 +247,10 @@ class MediaTranscodeItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VideoStreamSet, $obj);
             }
+        }
+
+        if (array_key_exists("CallBackExtInfo",$param) and $param["CallBackExtInfo"] !== null) {
+            $this->CallBackExtInfo = $param["CallBackExtInfo"];
         }
     }
 }

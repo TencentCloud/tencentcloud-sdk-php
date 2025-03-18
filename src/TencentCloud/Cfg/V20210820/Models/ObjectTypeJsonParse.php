@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 标准pod对象类型下拉数据的解析
  *
  * @method string getNameSpace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameSpace(string $NameSpace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkloadName() 获取工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkloadName(string $WorkloadName) 设置工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLanIP() 获取节点IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanIP(string $LanIP) 设置节点IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectTypeJsonParse extends AbstractModel
 {
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameSpace;
 
     /**
      * @var string 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkloadName;
 
     /**
      * @var string 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LanIP;
 
     /**
      * @var string 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $NameSpace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkloadName 工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LanIP 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

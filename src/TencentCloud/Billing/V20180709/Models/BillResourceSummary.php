@@ -67,9 +67,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIncentivePayAmount() 获取赠送账户支出：使用赠送金支付的金额
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支出：使用赠送金支付的金额
  * @method string getTransferPayAmount() 获取分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtendField3() 获取扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
  * @method void setExtendField3(string $ExtendField3) 设置扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
  * @method string getExtendField4() 获取扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
@@ -77,9 +75,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExtendField5() 获取扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
  * @method void setExtendField5(string $ExtendField5) 设置扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayerUin() 获取支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
  * @method void setPayerUin(string $PayerUin) 设置支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
  * @method string getOwnerUin() 获取使用者UIN：实际使用资源的账号 ID
@@ -101,9 +97,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOriginalCostWithSP() 获取节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) 设置节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
  * @method string getBillMonth() 获取账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillMonth(string $BillMonth) 设置账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -224,7 +218,6 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @var string 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
@@ -245,7 +238,6 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -302,7 +294,6 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @var string 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillMonth;
 
@@ -331,12 +322,10 @@ class BillResourceSummary extends AbstractModel
      * @param string $CashPayAmount 现金账户支出：通过现金账户支付的金额
      * @param string $IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      * @param string $TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtendField3 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
      * @param string $ExtendField4 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
      * @param string $ExtendField5 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
      * @param string $OwnerUin 使用者UIN：实际使用资源的账号 ID
      * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
@@ -348,7 +337,6 @@ class BillResourceSummary extends AbstractModel
      * @param string $SPDeduction 节省计划抵扣金额（已废弃）
      * @param string $OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
      * @param string $BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskDescription() 获取任务描述
  * @method void setTaskDescription(string $TaskDescription) 设置任务描述
  * @method string getTaskTag() 获取自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskTag(string $TaskTag) 设置自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskStatus() 获取任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(integer $TaskStatus) 设置任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskStatusType() 获取任务结束状态，表明任务以何种状态结束: 0 -- 尚未结束，1 -- 成功，2-- 失败，3--终止
  * @method void setTaskStatusType(integer $TaskStatusType) 设置任务结束状态，表明任务以何种状态结束: 0 -- 尚未结束，1 -- 成功，2-- 失败，3--终止
  * @method string getTaskProtectStrategy() 获取保护策略
@@ -71,17 +67,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskRegionId() 获取地域ID
  * @method void setTaskRegionId(integer $TaskRegionId) 设置地域ID
  * @method array getTaskMonitors() 获取监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskMonitors(array $TaskMonitors) 设置监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicy getTaskPolicy() 获取保护策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPolicy(DescribePolicy $TaskPolicy) 设置保护策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskPlanId() 获取关联的演练计划ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPlanId(integer $TaskPlanId) 设置关联的演练计划ID
@@ -95,25 +87,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置关联的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlarmPolicy() 获取关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmPolicy(array $AlarmPolicy) 设置关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApmServiceList() 获取关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApmServiceList(array $ApmServiceList) 设置关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVerifyId() 获取关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyId(integer $VerifyId) 设置关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskPlanStartTime() 获取计划开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPlanStartTime(string $TaskPlanStartTime) 设置计划开始时间
@@ -131,9 +115,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskIssue(string $TaskIssue) 设置问题和改进
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskRegionName() 获取region信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskRegionName(string $TaskRegionName) 设置region信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskArchId() 获取架构ID
  * @method void setTaskArchId(string $TaskArchId) 设置架构ID
  */
@@ -156,13 +138,11 @@ class Task extends AbstractModel
 
     /**
      * @var string 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTag;
 
     /**
      * @var integer 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
@@ -238,7 +218,6 @@ class Task extends AbstractModel
 
     /**
      * @var array 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskMonitors;
 
@@ -250,7 +229,6 @@ class Task extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -274,19 +252,16 @@ class Task extends AbstractModel
 
     /**
      * @var string 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var array 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmPolicy;
 
     /**
      * @var array 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApmServiceList;
 
@@ -298,7 +273,6 @@ class Task extends AbstractModel
 
     /**
      * @var integer 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDealType;
 
@@ -328,7 +302,6 @@ class Task extends AbstractModel
 
     /**
      * @var string region信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskRegionName;
 
@@ -342,9 +315,7 @@ class Task extends AbstractModel
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
      * @param string $TaskTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskStatus 任务状态，1001--未开始  1002--进行中（执行）1003--进行中（暂停）1004--执行结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskStatusType 任务结束状态，表明任务以何种状态结束: 0 -- 尚未结束，1 -- 成功，2-- 失败，3--终止
      * @param string $TaskProtectStrategy 保护策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -364,11 +335,9 @@ class Task extends AbstractModel
      * @param string $TaskOwnerUin 演练创建者Uin
      * @param integer $TaskRegionId 地域ID
      * @param array $TaskMonitors 监控指标列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicy $TaskPolicy 保护策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskPlanId 关联的演练计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskPlanTitle 关联的演练计划名称
@@ -376,15 +345,11 @@ class Task extends AbstractModel
      * @param string $ApplicationId 关联的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 关联的应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlarmPolicy 关联的告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApmServiceList 关联的APM服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyId 关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskPlanStartTime 计划开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskPlanEndTime 计划结束时间
@@ -394,7 +359,6 @@ class Task extends AbstractModel
      * @param string $TaskIssue 问题和改进
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskRegionName region信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskArchId 架构ID
      */
     function __construct()

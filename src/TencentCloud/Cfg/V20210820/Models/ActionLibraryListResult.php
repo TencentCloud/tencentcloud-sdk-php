@@ -47,37 +47,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActionContent() 获取自定义动作的参数，json string
  * @method void setActionContent(string $ActionContent) 设置自定义动作的参数，json string
  * @method string getResourceType() 获取二级分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置二级分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionDetail() 获取动作描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionDetail(string $ActionDetail) 设置动作描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAllowed() 获取是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowed(boolean $IsAllowed) 设置是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionBestCase() 获取最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionBestCase(string $ActionBestCase) 设置最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getObjectType() 获取对象类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectType(string $ObjectType) 设置对象类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetricIdList() 获取监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricIdList(array $MetricIdList) 设置监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsNewAction() 获取是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAction(boolean $IsNewAction) 设置是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getObjectTypeId() 获取对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectTypeId(integer $ObjectTypeId) 设置对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActionLibraryListResult extends AbstractModel
 {
@@ -148,49 +132,41 @@ class ActionLibraryListResult extends AbstractModel
 
     /**
      * @var string 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var string 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionDetail;
 
     /**
      * @var boolean 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAllowed;
 
     /**
      * @var string 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionBestCase;
 
     /**
      * @var string 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectType;
 
     /**
      * @var array 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricIdList;
 
     /**
      * @var boolean 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAction;
 
     /**
      * @var integer 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectTypeId;
 
@@ -209,21 +185,13 @@ class ActionLibraryListResult extends AbstractModel
      * @param integer $ActionCommandType 动作类型（0 -- tat   1 -- 云API）
      * @param string $ActionContent 自定义动作的参数，json string
      * @param string $ResourceType 二级分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionDetail 动作描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAllowed 是否允许当前账号使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionBestCase 最佳实践案例的链接地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ObjectType 对象类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MetricIdList 监控指标ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNewAction 是否是新动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectTypeId 对象类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

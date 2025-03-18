@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 数据不一致的表详情
  *
  * @method integer getTotalCount() 获取数据不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置数据不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取校验不一致的表详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置校验不一致的表详情
@@ -33,7 +31,6 @@ class DifferenceDetail extends AbstractModel
 {
     /**
      * @var integer 数据不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -45,7 +42,6 @@ class DifferenceDetail extends AbstractModel
 
     /**
      * @param integer $TotalCount 数据不一致的表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 校验不一致的表详情
 注意：此字段可能返回 null，表示取不到有效值。
      */

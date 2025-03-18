@@ -43,9 +43,7 @@ time   时间选择
  * @method string getField() 获取组件唯一标识， 传回后端时的key
  * @method void setField(string $Field) 设置组件唯一标识， 传回后端时的key
  * @method string getDefaultValue() 获取默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfig() 获取支持配置项如下,可根据需要选择配置项，不需要配置是设置空{}：
 
 {
@@ -146,7 +144,6 @@ time   时间选择
 
     /**
      * @var string 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultValue;
 
@@ -215,7 +212,6 @@ time   时间选择
      * @param string $Lable 组件label
      * @param string $Field 组件唯一标识， 传回后端时的key
      * @param string $DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Config 支持配置项如下,可根据需要选择配置项，不需要配置是设置空{}：
 
 {

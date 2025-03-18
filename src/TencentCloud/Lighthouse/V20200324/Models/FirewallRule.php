@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述防火墙规则信息。
  *
- * @method string getProtocol() 获取协议，取值：TCP，UDP，ICMP，ALL。
- * @method void setProtocol(string $Protocol) 设置协议，取值：TCP，UDP，ICMP，ALL。
+ * @method string getProtocol() 获取协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
+ * @method void setProtocol(string $Protocol) 设置协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
  * @method string getPort() 获取端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
  * @method void setPort(string $Port) 设置端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
  * @method string getCidrBlock() 获取IPv4网段或 IPv4地址(互斥)。
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class FirewallRule extends AbstractModel
 {
     /**
-     * @var string 协议，取值：TCP，UDP，ICMP，ALL。
+     * @var string 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
      */
     public $Protocol;
 
@@ -84,7 +84,7 @@ class FirewallRule extends AbstractModel
     public $FirewallRuleDescription;
 
     /**
-     * @param string $Protocol 协议，取值：TCP，UDP，ICMP，ALL。
+     * @param string $Protocol 协议，取值：TCP，UDP，ICMP，ALL，ICMPv6。
      * @param string $Port 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
      * @param string $CidrBlock IPv4网段或 IPv4地址(互斥)。
 示例值：0.0.0.0/0。

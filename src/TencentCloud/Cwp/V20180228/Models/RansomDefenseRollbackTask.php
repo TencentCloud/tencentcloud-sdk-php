@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置可用区信息
  * @method string getInstanceId() 获取主机示例ID
  * @method void setInstanceId(string $InstanceId) 设置主机示例ID
+ * @method string getMachineType() 获取主机类型
+ * @method void setMachineType(string $MachineType) 设置主机类型
  */
 class RansomDefenseRollbackTask extends AbstractModel
 {
@@ -101,6 +103,11 @@ class RansomDefenseRollbackTask extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 主机类型
+     */
+    public $MachineType;
+
+    /**
      * @param integer $Id 任务ID
      * @param string $Uuid 主机Uuid
      * @param string $Quuid 主机Quuid
@@ -112,6 +119,7 @@ class RansomDefenseRollbackTask extends AbstractModel
      * @param string $ModifyTime Status!=0时为完成时间
      * @param RegionInfo $RegionInfo 可用区信息
      * @param string $InstanceId 主机示例ID
+     * @param string $MachineType 主机类型
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class RansomDefenseRollbackTask extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

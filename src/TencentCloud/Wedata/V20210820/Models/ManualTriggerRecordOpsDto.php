@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置数据实例时间的时区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimeType() 获取时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+ * @method void setTimeType(string $TimeType) 设置时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
  */
 class ManualTriggerRecordOpsDto extends AbstractModel
 {
@@ -197,6 +199,11 @@ class ManualTriggerRecordOpsDto extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var string 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public $TimeType;
+
+    /**
      * @param string $TriggerId 运行触发记录ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerName 用户提交运行时配置的运行名称
@@ -232,6 +239,7 @@ class ManualTriggerRecordOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTimeZone 数据实例时间的时区
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class ManualTriggerRecordOpsDto extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
+            $this->TimeType = $param["TimeType"];
         }
     }
 }

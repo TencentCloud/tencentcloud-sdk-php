@@ -20,14 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 取消任务响应
  *
-
+ * @method string getTaskId() 获取任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(string $TaskId) 设置任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CancelVRSTaskRsp extends AbstractModel
 {
-
+    /**
+     * @var string 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
 
     /**
-
+     * @param string $TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +50,8 @@ class CancelVRSTaskRsp extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
     }
 }

@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateAt(string $IsolateAt) 设置隔离时间
  * @method integer getAutoRenew() 获取是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+ * @method integer getTaskStatus() 获取任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
  */
 class InstanceInfo extends AbstractModel
 {
@@ -232,6 +234,11 @@ class InstanceInfo extends AbstractModel
     public $AutoRenew;
 
     /**
+     * @var integer 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public $TaskStatus;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $Name 实例自定义名称。
      * @param integer $AppId 用户APPID。
@@ -263,6 +270,7 @@ class InstanceInfo extends AbstractModel
      * @param string $WanAddress 外网地址。
      * @param string $IsolateAt 隔离时间
      * @param integer $AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+     * @param integer $TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
      */
     function __construct()
     {
@@ -397,6 +405,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

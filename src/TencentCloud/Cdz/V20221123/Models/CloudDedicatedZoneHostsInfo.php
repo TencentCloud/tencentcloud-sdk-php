@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * CDZ的母机和子机的对应关系
  *
  * @method string getHostUuid() 获取Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostUuid(string $HostUuid) 设置Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstancesInfo() 获取实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancesInfo(array $InstancesInfo) 设置实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudDedicatedZoneHostsInfo extends AbstractModel
 {
     /**
      * @var string Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostUuid;
 
     /**
      * @var array 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancesInfo;
 
     /**
      * @param string $HostUuid Host的唯一标识uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstancesInfo 实例名称数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateDescription() 获取经验库描述
  * @method void setTemplateDescription(string $TemplateDescription) 设置经验库描述
  * @method string getTemplateTag() 获取经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateTag(string $TemplateTag) 设置经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTemplateIsUsed() 获取经验库状态。1 -- 使用中，2 -- 停用
  * @method void setTemplateIsUsed(integer $TemplateIsUsed) 设置经验库状态。1 -- 使用中，2 -- 停用
  * @method string getTemplateCreateTime() 获取经验库创建时间
@@ -39,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTemplateUsedNum() 获取经验库关联的任务数量
  * @method void setTemplateUsedNum(integer $TemplateUsedNum) 设置经验库关联的任务数量
  * @method integer getTemplateSource() 获取经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateSource(integer $TemplateSource) 设置经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListItem extends AbstractModel
 {
@@ -62,7 +58,6 @@ class TemplateListItem extends AbstractModel
 
     /**
      * @var string 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateTag;
 
@@ -88,7 +83,6 @@ class TemplateListItem extends AbstractModel
 
     /**
      * @var integer 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateSource;
 
@@ -97,13 +91,11 @@ class TemplateListItem extends AbstractModel
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
      * @param string $TemplateTag 经验库标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TemplateIsUsed 经验库状态。1 -- 使用中，2 -- 停用
      * @param string $TemplateCreateTime 经验库创建时间
      * @param string $TemplateUpdateTime 经验库更新时间
      * @param integer $TemplateUsedNum 经验库关联的任务数量
      * @param integer $TemplateSource 经验库来源 0-自建经验 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

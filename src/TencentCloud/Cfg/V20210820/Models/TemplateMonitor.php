@@ -23,17 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMonitorId() 获取pk
  * @method void setMonitorId(integer $MonitorId) 设置pk
  * @method integer getMetricId() 获取监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricId(integer $MetricId) 设置监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getObjectTypeId() 获取监控指标对象类型ID
  * @method void setObjectTypeId(integer $ObjectTypeId) 设置监控指标对象类型ID
  * @method string getMetricName() 获取指标名称
  * @method void setMetricName(string $MetricName) 设置指标名称
  * @method string getMetricChineseName() 获取中文指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricChineseName(string $MetricChineseName) 设置中文指标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateMonitor extends AbstractModel
 {
@@ -44,7 +40,6 @@ class TemplateMonitor extends AbstractModel
 
     /**
      * @var integer 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricId;
 
@@ -60,18 +55,15 @@ class TemplateMonitor extends AbstractModel
 
     /**
      * @var string 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricChineseName;
 
     /**
      * @param integer $MonitorId pk
      * @param integer $MetricId 监控指标ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectTypeId 监控指标对象类型ID
      * @param string $MetricName 指标名称
      * @param string $MetricChineseName 中文指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

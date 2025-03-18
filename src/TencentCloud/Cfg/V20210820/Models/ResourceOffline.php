@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 资源下线
  *
  * @method integer getResourceId() 获取资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(integer $ResourceId) 设置资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceDeleteTime() 获取资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceDeleteTime(string $ResourceDeleteTime) 设置资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceDeleteMessage() 获取资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceDeleteMessage(string $ResourceDeleteMessage) 设置资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceOffline extends AbstractModel
 {
     /**
      * @var integer 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceDeleteTime;
 
     /**
      * @var string 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceDeleteMessage;
 
     /**
      * @param integer $ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceDeleteTime 资源下线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceDeleteMessage 资源下线提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 应用性能监控产品中应用信息
  *
  * @method string getInstanceId() 获取业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServiceNameList() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceNameList(array $ServiceNameList) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmServiceInfo extends AbstractModel
 {
     /**
      * @var string 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var array 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceNameList;
 
     /**
      * @var integer 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @param string $InstanceId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceNameList 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

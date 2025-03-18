@@ -48,6 +48,8 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
  * @method void setExtraParams(string $ExtraParams) 设置页面反显使用，无业务含义
  * @method string getScheduleTimeZone() 获取实例时间的时区
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置实例时间的时区
+ * @method string getTimeType() 获取时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+ * @method void setTimeType(string $TimeType) 设置时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
  */
 class TriggerManualTasksRequest extends AbstractModel
 {
@@ -118,6 +120,11 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
     public $ScheduleTimeZone;
 
     /**
+     * @var string 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     */
+    public $TimeType;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TriggerName 触发运行名称
      * @param string $TriggerScope 运行范围 ENTIRE_WORKFLOW or SPECIFIED_TASK
@@ -132,6 +139,7 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
      * @param array $CustomParams 自定义参数，最高优先级
      * @param string $ExtraParams 页面反显使用，无业务含义
      * @param string $ScheduleTimeZone 实例时间的时区
+     * @param string $TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
+            $this->TimeType = $param["TimeType"];
         }
     }
 }

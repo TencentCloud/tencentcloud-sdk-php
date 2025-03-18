@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 当前归属单元信息
  *
  * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTreeNodeUniqKeyName() 获取分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreeNodeUniqKeyName(string $TreeNodeUniqKeyName) 设置分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationTreeNode extends AbstractModel
 {
     /**
      * @var string 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKey;
 
     /**
      * @var string 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKeyName;
 
     /**
      * @param string $TreeNodeUniqKey 分账单元唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreeNodeUniqKeyName 分账单元名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnlyRerun(boolean $OnlyRerun) 设置true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
  * @method string getScheduleTimeZone() 获取时区
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+ * @method string getScheduleTimeFrom() 获取计划调度时间
+ * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) 设置计划调度时间
+ * @method string getScheduleTimeTo() 获取计划调度时间
+ * @method void setScheduleTimeTo(string $ScheduleTimeTo) 设置计划调度时间
  */
 class InstanceApiOpsRequest extends AbstractModel
 {
@@ -255,6 +259,16 @@ class InstanceApiOpsRequest extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var string 计划调度时间
+     */
+    public $ScheduleTimeFrom;
+
+    /**
+     * @var string 计划调度时间
+     */
+    public $ScheduleTimeTo;
+
+    /**
      * @param InstanceOpsDto $Instance 单个查询条件
      * @param string $SortCol 排序字段，目前包含：重试次数，实例数据时间，运行耗时
      * @param array $TaskIdList 任务id列表
@@ -288,6 +302,8 @@ class InstanceApiOpsRequest extends AbstractModel
      * @param array $ExecutorGroupIdList 资源组id,多个资源组id用英文逗号分隔
      * @param boolean $OnlyRerun true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
      * @param string $ScheduleTimeZone 时区
+     * @param string $ScheduleTimeFrom 计划调度时间
+     * @param string $ScheduleTimeTo 计划调度时间
      */
     function __construct()
     {
@@ -438,6 +454,14 @@ class InstanceApiOpsRequest extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("ScheduleTimeFrom",$param) and $param["ScheduleTimeFrom"] !== null) {
+            $this->ScheduleTimeFrom = $param["ScheduleTimeFrom"];
+        }
+
+        if (array_key_exists("ScheduleTimeTo",$param) and $param["ScheduleTimeTo"] !== null) {
+            $this->ScheduleTimeTo = $param["ScheduleTimeTo"];
         }
     }
 }

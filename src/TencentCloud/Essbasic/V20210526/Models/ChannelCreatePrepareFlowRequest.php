@@ -72,10 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息，不用传
  * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
  * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息，不用传
- * @method SignComponentConfig getSignComponentConfig() 获取签署控件的配置信息，用在嵌入式发起的页面配置，包括
+ * @method SignComponentConfig getSignComponentConfig() 获取<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
- * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
  */
@@ -151,9 +153,11 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * @var SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
+     * @deprecated
      */
     public $SignComponentConfig;
 
@@ -184,7 +188,8 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传
-     * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括
+     * @param SignComponentConfig $SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
 
 - 签署控件 是否默认展示日期.
      */

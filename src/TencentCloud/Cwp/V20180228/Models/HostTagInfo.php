@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置主机instance ID
  * @method string getMachineType() 获取主机类型
  * @method void setMachineType(string $MachineType) 设置主机类型
+ * @method string getRegionName() 获取可用区名称
+ * @method void setRegionName(string $RegionName) 设置可用区名称
+ * @method integer getRegionId() 获取可用区ID
+ * @method void setRegionId(integer $RegionId) 设置可用区ID
  */
 class HostTagInfo extends AbstractModel
 {
@@ -115,6 +119,16 @@ class HostTagInfo extends AbstractModel
     public $MachineType;
 
     /**
+     * @var string 可用区名称
+     */
+    public $RegionName;
+
+    /**
+     * @var integer 可用区ID
+     */
+    public $RegionId;
+
+    /**
      * @param string $Quuid 主机Quuid
      * @param array $TagList 主机标签名数组
      * @param string $HostIp 主机内网Ip
@@ -128,6 +142,8 @@ class HostTagInfo extends AbstractModel
      * @param array $CloudTags 云标签信息
      * @param string $InstanceID 主机instance ID
      * @param string $MachineType 主机类型
+     * @param string $RegionName 可用区名称
+     * @param integer $RegionId 可用区ID
      */
     function __construct()
     {
@@ -197,6 +213,14 @@ class HostTagInfo extends AbstractModel
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

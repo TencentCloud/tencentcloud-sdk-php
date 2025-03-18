@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlagShip(VersionWhiteConfig $FlagShip) 设置旗舰版 配置信息
  * @method VersionWhiteConfig getProfessional() 获取专业版 配置信息
  * @method void setProfessional(VersionWhiteConfig $Professional) 设置专业版 配置信息
- * @method VersionWhiteConfig getPrattWhitney() 获取普惠版 配置信息
- * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置普惠版 配置信息
+ * @method VersionWhiteConfig getPrattWhitney() 获取轻量版 配置信息
+ * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置轻量版 配置信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
     public $Professional;
 
     /**
-     * @var VersionWhiteConfig 普惠版 配置信息
+     * @var VersionWhiteConfig 轻量版 配置信息
      */
     public $PrattWhitney;
 
@@ -54,7 +54,7 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
     /**
      * @param VersionWhiteConfig $FlagShip 旗舰版 配置信息
      * @param VersionWhiteConfig $Professional 专业版 配置信息
-     * @param VersionWhiteConfig $PrattWhitney 普惠版 配置信息
+     * @param VersionWhiteConfig $PrattWhitney 轻量版 配置信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

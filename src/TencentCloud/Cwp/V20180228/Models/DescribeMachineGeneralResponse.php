@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineMachineCnt(integer $DeadlineMachineCnt) 设置即将到期的机器数
  * @method integer getNotProtectMachineCnt() 获取未防护机器数
  * @method void setNotProtectMachineCnt(integer $NotProtectMachineCnt) 设置未防护机器数
- * @method integer getLHGeneralDiscountCnt() 获取已防护普惠版机器数（Lighthouse机器）
- * @method void setLHGeneralDiscountCnt(integer $LHGeneralDiscountCnt) 设置已防护普惠版机器数（Lighthouse机器）
+ * @method integer getLHGeneralDiscountCnt() 获取已防护轻量机器数（Lighthouse机器）
+ * @method void setLHGeneralDiscountCnt(integer $LHGeneralDiscountCnt) 设置已防护轻量机器数（Lighthouse机器）
  * @method integer getCompareYesterdayMachineCnt() 获取比较昨日新增的主机数
  * @method void setCompareYesterdayMachineCnt(integer $CompareYesterdayMachineCnt) 设置比较昨日新增的主机数
  * @method integer getMachineDestroyAfterOfflineHours() 获取自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
@@ -151,7 +151,7 @@ class DescribeMachineGeneralResponse extends AbstractModel
     public $NotProtectMachineCnt;
 
     /**
-     * @var integer 已防护普惠版机器数（Lighthouse机器）
+     * @var integer 已防护轻量机器数（Lighthouse机器）
      */
     public $LHGeneralDiscountCnt;
 
@@ -192,7 +192,7 @@ class DescribeMachineGeneralResponse extends AbstractModel
      * @param integer $CompareYesterdayDeadlineMachineCnt 比较昨日即将到期的机器数
      * @param integer $DeadlineMachineCnt 即将到期的机器数
      * @param integer $NotProtectMachineCnt 未防护机器数
-     * @param integer $LHGeneralDiscountCnt 已防护普惠版机器数（Lighthouse机器）
+     * @param integer $LHGeneralDiscountCnt 已防护轻量机器数（Lighthouse机器）
      * @param integer $CompareYesterdayMachineCnt 比较昨日新增的主机数
      * @param integer $MachineDestroyAfterOfflineHours 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
      * @param array $CloudFrom 云服务器类型数组

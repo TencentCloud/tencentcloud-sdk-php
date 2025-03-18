@@ -162,6 +162,10 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServicePort(integer $ServicePort) 设置服务端口，默认为8501
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTerminationGracePeriodSeconds() 获取服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+ * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
  */
 class ServiceInfo extends AbstractModel
 {
@@ -367,6 +371,16 @@ HYBRID_PAID:
     public $ServicePort;
 
     /**
+     * @var integer 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     */
+    public $TerminationGracePeriodSeconds;
+
+    /**
+     * @var array 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     */
+    public $PreStopCommand;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -438,6 +452,8 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ServicePort 服务端口，默认为8501
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      */
     function __construct()
     {
@@ -605,6 +621,14 @@ HYBRID_PAID:
 
         if (array_key_exists("ServicePort",$param) and $param["ServicePort"] !== null) {
             $this->ServicePort = $param["ServicePort"];
+        }
+
+        if (array_key_exists("TerminationGracePeriodSeconds",$param) and $param["TerminationGracePeriodSeconds"] !== null) {
+            $this->TerminationGracePeriodSeconds = $param["TerminationGracePeriodSeconds"];
+        }
+
+        if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
+            $this->PreStopCommand = $param["PreStopCommand"];
         }
     }
 }

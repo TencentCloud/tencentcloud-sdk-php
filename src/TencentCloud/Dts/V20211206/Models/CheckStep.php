@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 检查步骤
  *
  * @method integer getStepNo() 获取步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNo(integer $StepNo) 设置步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepId() 获取步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepId(string $StepId) 设置步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepName() 获取步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepName(string $StepName) 设置步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepStatus() 获取此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepStatus(string $StepStatus) 设置此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepMessage() 获取此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepMessage(string $StepMessage) 设置此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetailCheckItems() 获取每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetailCheckItems(array $DetailCheckItems) 设置每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasSkipped() 获取是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasSkipped(boolean $HasSkipped) 设置是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CheckStep extends AbstractModel
 {
     /**
      * @var integer 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNo;
 
     /**
      * @var string 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepId;
 
     /**
      * @var string 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepName;
 
     /**
      * @var string 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepStatus;
 
     /**
      * @var string 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepMessage;
 
     /**
      * @var array 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailCheckItems;
 
     /**
      * @var boolean 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasSkipped;
 
     /**
      * @param integer $StepNo 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepId 步骤Id， 如：ConnectDBCheck、VersionCheck、SrcPrivilegeCheck等，具体校验项和源目标实例相关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepName 步骤名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepStatus 此检查步骤的结果，pass(校验通过)、failed(校验失败)、notStarted(校验还未开始进行)、blocked(检验阻塞)、warning(校验有告警，但仍通过)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepMessage 此检查步骤的错误消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DetailCheckItems 每个检查步骤里的具体检查项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasSkipped 是否已跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

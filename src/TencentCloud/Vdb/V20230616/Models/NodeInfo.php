@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取Pod名称。
  * @method void setName(string $Name) 设置Pod名称。
+ * @method string getStatus() 获取pod状态
+ * @method void setStatus(string $Status) 设置pod状态
  */
 class NodeInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class NodeInfo extends AbstractModel
     public $Name;
 
     /**
+     * @var string pod状态
+     */
+    public $Status;
+
+    /**
      * @param string $Name Pod名称。
+     * @param string $Status pod状态
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class NodeInfo extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 按地域汇总消费详情
  *
  * @method string getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名称：资源所属地域，例如华南地区（广州）
  * @method void setRegionName(string $RegionName) 设置地域名称：资源所属地域，例如华南地区（广州）
  * @method string getRealTotalCostRatio() 获取费用所占百分比，两位小数
@@ -47,7 +45,6 @@ class RegionSummaryOverviewItem extends AbstractModel
 {
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -98,7 +95,6 @@ class RegionSummaryOverviewItem extends AbstractModel
 
     /**
      * @param string $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名称：资源所属地域，例如华南地区（广州）
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
      * @param string $RealTotalCost 优惠后总价

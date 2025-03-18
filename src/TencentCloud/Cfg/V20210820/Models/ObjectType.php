@@ -29,21 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method ObjectTypeConfig getObjectTypeParams() 获取对象类型参数
  * @method void setObjectTypeParams(ObjectTypeConfig $ObjectTypeParams) 设置对象类型参数
  * @method ObjectTypeJsonParse getObjectTypeJsonParse() 获取tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectTypeJsonParse(ObjectTypeJsonParse $ObjectTypeJsonParse) 设置tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getObjectHasNewAction() 获取是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectHasNewAction(boolean $ObjectHasNewAction) 设置是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getObjectPlatformName() 获取对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectPlatformName(string $ObjectPlatformName) 设置对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getObjectSupportType() 获取1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectSupportType(integer $ObjectSupportType) 设置1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getArchLayer() 获取1.接入层 2.逻辑层 3. 数据层
  * @method void setArchLayer(integer $ArchLayer) 设置1.接入层 2.逻辑层 3. 数据层
  * @method boolean getIsArchSvg() 获取是否支持演练生图
@@ -73,25 +65,21 @@ class ObjectType extends AbstractModel
 
     /**
      * @var ObjectTypeJsonParse tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectTypeJsonParse;
 
     /**
      * @var boolean 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectHasNewAction;
 
     /**
      * @var string 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectPlatformName;
 
     /**
      * @var integer 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectSupportType;
 
@@ -111,13 +99,9 @@ class ObjectType extends AbstractModel
      * @param string $ObjectTypeLevelOne 对象类型第一级
      * @param ObjectTypeConfig $ObjectTypeParams 对象类型参数
      * @param ObjectTypeJsonParse $ObjectTypeJsonParse tke接口json解析规则，null不需要解析
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ObjectHasNewAction 是否包含新动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ObjectPlatformName 对应在平台架构图中的资源类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ArchLayer 1.接入层 2.逻辑层 3. 数据层
      * @param boolean $IsArchSvg 是否支持演练生图
      */

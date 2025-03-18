@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置扫描结束时间，如：08:00
  * @method integer getEnableScan() 获取是否开启扫描 1开启 0不开启
  * @method void setEnableScan(integer $EnableScan) 设置是否开启扫描 1开启 0不开启
- * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
- * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+ * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
+ * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
  * @method integer getScanMethod() 获取0版本比对，2版本比对+poc
  * @method void setScanMethod(integer $ScanMethod) 设置0版本比对，2版本比对+poc
  */
@@ -84,7 +84,7 @@ class ScanVulSettingRequest extends AbstractModel
     public $EnableScan;
 
     /**
-     * @var array 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @var array 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      */
     public $Uuids;
 
@@ -102,7 +102,7 @@ class ScanVulSettingRequest extends AbstractModel
      * @param string $StartTime 扫描开始时间，如：00:00
      * @param string $EndTime 扫描结束时间，如：08:00
      * @param integer $EnableScan 是否开启扫描 1开启 0不开启
-     * @param array $Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @param array $Uuids 为空默认扫描全部专业版、旗舰版、轻量版主机，不为空只扫描选中主机
      * @param integer $ScanMethod 0版本比对，2版本比对+poc
      */
     function __construct()

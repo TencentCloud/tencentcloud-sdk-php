@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityPolicy请求参数结构体
  *
- * @method string getZoneId() 获取站点Id。
- * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method SecurityConfig getSecurityConfig() 获取安全配置。
- * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置安全配置。
- * @method string getEntity() 获取子域名/应用名。
-
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
- * @method void setEntity(string $Entity) 设置子域名/应用名。
-
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
- * @method string getTemplateId() 获取指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
-
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
- * @method void setTemplateId(string $TemplateId) 设置指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
-
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method SecurityConfig getSecurityConfig() 获取安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
+ * @method SecurityPolicy getSecurityPolicy() 获取安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+ * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) 设置安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+ * @method string getEntity() 获取安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
+ * @method void setEntity(string $Entity) 设置安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
+ * @method string getHost() 获取指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+ * @method void setHost(string $Host) 设置指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+ * @method string getTemplateId() 获取指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
+ * @method void setTemplateId(string $TemplateId) 设置指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
  */
 class ModifySecurityPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 站点Id。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var SecurityConfig 安全配置。
+     * @var SecurityConfig 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
      */
     public $SecurityConfig;
 
     /**
-     * @var string 子域名/应用名。
+     * @var SecurityPolicy 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+     */
+    public $SecurityPolicy;
 
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+    /**
+     * @var string 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
      */
     public $Entity;
 
     /**
-     * @var string 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+     * @var string 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+     */
+    public $Host;
 
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+    /**
+     * @var string 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
      */
     public $TemplateId;
 
     /**
-     * @param string $ZoneId 站点Id。
-     * @param SecurityConfig $SecurityConfig 安全配置。
-     * @param string $Entity 子域名/应用名。
-
-注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
-     * @param string $TemplateId 指定模板策略 ID，或指定站点全局策略。
-- 如需配置策略模板，请指定策略模板 ID。
-- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
-
-注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+     * @param string $ZoneId 站点 ID。
+     * @param SecurityConfig $SecurityConfig 安全策略配置。<li>当 SecurityPolicy 参数中的 CustomRule 被设置时，SecurityConfig 参数中的 AclConfg、 IpTableConfg 将被忽略；</li><li>当 SecurityPolicy 参数中的 ManagedRule 被设置时，SecurityConfig 参数中的 WafConfig 将被忽略。</li><li>对于自定义规则以及托管规则策略配置建议使用 SecurityPolicy 参数进行设置。</li>
+     * @param SecurityPolicy $SecurityPolicy 安全策略配置。对 Web 防护自定义策略和托管规则配置建议使用，支持表达式语法对安全策略进行配置。
+     * @param string $Entity 安全策略类型，可使用以下参数值： <li>ZoneDefaultPolicy：用于指定站点级策略；</li><li>Template：用于指定策略模板，需要同时指定 TemplateId 参数；</li><li>Host：用于指定域名级策略（注意：当使用域名来指定域名服务策略时，仅支持已经应用了域名级策略的域名服务或者策略模板）。</li>
+     * @param string $Host 指定域名。当 Entity 参数值为 Host 时，使用本参数指定的域名级策略，例如：使用 www.example.com ，配置该域名的域名级策略。
+     * @param string $TemplateId 指定策略模板 ID。当 Entity 参数值为 Template 时，使用本参数指定策略模板的 ID。
      */
     function __construct()
     {
@@ -103,8 +95,17 @@ class ModifySecurityPolicyRequest extends AbstractModel
             $this->SecurityConfig->deserialize($param["SecurityConfig"]);
         }
 
+        if (array_key_exists("SecurityPolicy",$param) and $param["SecurityPolicy"] !== null) {
+            $this->SecurityPolicy = new SecurityPolicy();
+            $this->SecurityPolicy->deserialize($param["SecurityPolicy"]);
+        }
+
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {

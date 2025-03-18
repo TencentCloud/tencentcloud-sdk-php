@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
+ * @method SignComponentConfig getSignComponentConfig() 获取签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -128,6 +132,12 @@ class CreateFlowOption extends AbstractModel
     public $SkipUploadFile;
 
     /**
+     * @var SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -152,6 +162,8 @@ class CreateFlowOption extends AbstractModel
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
+     * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
+ - 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -196,6 +208,11 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("SkipUploadFile",$param) and $param["SkipUploadFile"] !== null) {
             $this->SkipUploadFile = $param["SkipUploadFile"];
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

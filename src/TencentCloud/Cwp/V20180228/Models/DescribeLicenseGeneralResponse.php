@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) 设置旗舰版总授权数(有效订单)
  * @method integer getProVersionLicenseCnt() 获取专业版总授权数(有效订单)
  * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) 设置专业版总授权数(有效订单)
- * @method integer getCwpVersionLicenseCnt() 获取普惠版总授权数(有效订单的授权数)
- * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置普惠版总授权数(有效订单的授权数)
+ * @method integer getCwpVersionLicenseCnt() 获取轻量版总授权数(有效订单的授权数)
+ * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置轻量版总授权数(有效订单的授权数)
  * @method integer getAvailableLHLicenseCnt() 获取可用惠普版授权数
  * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) 设置可用惠普版授权数
  * @method boolean getAutoRepurchaseSwitch() 获取自动加购开关, true 开启, false 关闭
@@ -129,7 +129,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $ProVersionLicenseCnt;
 
     /**
-     * @var integer 普惠版总授权数(有效订单的授权数)
+     * @var integer 轻量版总授权数(有效订单的授权数)
      */
     public $CwpVersionLicenseCnt;
 
@@ -177,7 +177,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param integer $NotExpiredLicenseCnt 未到期授权数
      * @param integer $FlagshipVersionLicenseCnt 旗舰版总授权数(有效订单)
      * @param integer $ProVersionLicenseCnt 专业版总授权数(有效订单)
-     * @param integer $CwpVersionLicenseCnt 普惠版总授权数(有效订单的授权数)
+     * @param integer $CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
      * @param integer $AvailableLHLicenseCnt 可用惠普版授权数
      * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
      * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭

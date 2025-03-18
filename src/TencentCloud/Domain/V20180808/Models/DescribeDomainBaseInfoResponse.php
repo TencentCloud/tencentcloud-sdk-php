@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method DomainBaseInfo getDomainInfo() 获取域名信息
  * @method void setDomainInfo(DomainBaseInfo $DomainInfo) 设置域名信息
  * @method string getUin() 获取用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeDomainBaseInfoResponse extends AbstractModel
 
     /**
      * @var string 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -50,7 +47,6 @@ class DescribeDomainBaseInfoResponse extends AbstractModel
     /**
      * @param DomainBaseInfo $DomainInfo 域名信息
      * @param string $Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

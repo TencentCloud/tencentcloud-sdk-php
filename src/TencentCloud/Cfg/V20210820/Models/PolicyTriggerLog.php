@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskId() 获取演练ID
  * @method void setTaskId(integer $TaskId) 设置演练ID
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTriggerType() 获取类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerType(integer $TriggerType) 设置类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatTime() 获取触发时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatTime(string $CreatTime) 设置触发时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyTriggerLog extends AbstractModel
 {
@@ -48,38 +40,30 @@ class PolicyTriggerLog extends AbstractModel
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
      * @var string 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatTime;
 
     /**
      * @param integer $TaskId 演练ID
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerType 类型，0--触发，1--恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

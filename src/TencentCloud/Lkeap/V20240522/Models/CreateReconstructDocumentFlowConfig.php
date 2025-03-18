@@ -23,27 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTableResultType() 获取Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
  * @method void setTableResultType(string $TableResultType) 设置Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
  * @method string getResultType() 获取智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
  * @method void setResultType(string $ResultType) 设置智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+默认值为0
  */
 class CreateReconstructDocumentFlowConfig extends AbstractModel
 {
@@ -51,7 +49,7 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
      * @var string Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
      */
     public $TableResultType;
 
@@ -62,9 +60,7 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
-
-
+默认值为0
      */
     public $ResultType;
 
@@ -72,14 +68,14 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
      * @param string $TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
-默认为1
+默认为0
      * @param string $ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+默认值为0
      */
     function __construct()
     {

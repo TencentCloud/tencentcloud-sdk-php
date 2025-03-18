@@ -118,6 +118,10 @@ HYBRID_PAID:
  * @method void setServicePort(integer $ServicePort) 设置服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
  * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
  * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method integer getTerminationGracePeriodSeconds() 获取30
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置30
+ * @method array getPreStopCommand() 获取["sleep","60"]
+ * @method void setPreStopCommand(array $PreStopCommand) 设置["sleep","60"]
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -275,6 +279,16 @@ HYBRID_PAID:
     public $InstancePerReplicas;
 
     /**
+     * @var integer 30
+     */
+    public $TerminationGracePeriodSeconds;
+
+    /**
+     * @var array ["sleep","60"]
+     */
+    public $PreStopCommand;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -324,6 +338,8 @@ HYBRID_PAID:
      * @param string $CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
      * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @param integer $TerminationGracePeriodSeconds 30
+     * @param array $PreStopCommand ["sleep","60"]
      */
     function __construct()
     {
@@ -459,6 +475,14 @@ HYBRID_PAID:
 
         if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
             $this->InstancePerReplicas = $param["InstancePerReplicas"];
+        }
+
+        if (array_key_exists("TerminationGracePeriodSeconds",$param) and $param["TerminationGracePeriodSeconds"] !== null) {
+            $this->TerminationGracePeriodSeconds = $param["TerminationGracePeriodSeconds"];
+        }
+
+        if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
+            $this->PreStopCommand = $param["PreStopCommand"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) 设置SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SpekeDrm getSpekeDrm() 获取FairPlay, WideVine， PlayReady 加密信息。
+ * @method void setSpekeDrm(SpekeDrm $SpekeDrm) 设置FairPlay, WideVine， PlayReady 加密信息。
  */
 class DrmInfo extends AbstractModel
 {
@@ -56,6 +58,11 @@ class DrmInfo extends AbstractModel
     public $SimpleAesDrm;
 
     /**
+     * @var SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
+     */
+    public $SpekeDrm;
+
+    /**
      * @param string $Type 加密类型：
 <li> simpleaes: aes-128 加密</li>
 <li> widevine</li>
@@ -64,6 +71,7 @@ class DrmInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SimpleAesDrm $SimpleAesDrm SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpekeDrm $SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class DrmInfo extends AbstractModel
         if (array_key_exists("SimpleAesDrm",$param) and $param["SimpleAesDrm"] !== null) {
             $this->SimpleAesDrm = new SimpleAesDrm();
             $this->SimpleAesDrm->deserialize($param["SimpleAesDrm"]);
+        }
+
+        if (array_key_exists("SpekeDrm",$param) and $param["SpekeDrm"] !== null) {
+            $this->SpekeDrm = new SpekeDrm();
+            $this->SpekeDrm->deserialize($param["SpekeDrm"]);
         }
     }
 }

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * mongodb行数校验不一致性详情结果
  *
  * @method integer getTotalCount() 获取不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取不一致列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置不一致列表
@@ -33,7 +31,6 @@ class DifferenceRowDetail extends AbstractModel
 {
     /**
      * @var integer 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -45,7 +42,6 @@ class DifferenceRowDetail extends AbstractModel
 
     /**
      * @param integer $TotalCount 不一致总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 不一致列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

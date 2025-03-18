@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBlueprintId() 获取镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  * @method array getContainers() 获取要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
  * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
  * @method LoginConfiguration getLoginConfiguration() 获取实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
  * @method void setLoginConfiguration(LoginConfiguration $LoginConfiguration) 设置实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
  */
@@ -43,6 +45,7 @@ class ResetInstanceRequest extends AbstractModel
 
     /**
      * @var array 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
      */
     public $Containers;
 
@@ -55,6 +58,7 @@ class ResetInstanceRequest extends AbstractModel
      * @param string $InstanceId 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      * @param string $BlueprintId 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      * @param array $Containers 要创建的容器配置列表。
+注意：仅重装的镜像类型为Docker时支持传入该参数。
      * @param LoginConfiguration $LoginConfiguration 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
      */
     function __construct()

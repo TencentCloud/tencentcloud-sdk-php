@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpectedAmount(float $ExpectedAmount) 设置按量计费预期金额（即折前价 * 折扣）
  * @method float getSpCoverage() 获取覆盖率结果，取值[0, 100]
  * @method void setSpCoverage(float $SpCoverage) 设置覆盖率结果，取值[0, 100]
+ * @method string getPayerUinName() 获取支付者昵称
+ * @method void setPayerUinName(string $PayerUinName) 设置支付者昵称
+ * @method string getOwnerUinName() 获取使用者昵称
+ * @method void setOwnerUinName(string $OwnerUinName) 设置使用者昵称
+ * @method string getPayerUin() 获取支付者uin
+ * @method void setPayerUin(string $PayerUin) 设置支付者uin
+ * @method string getSubBillingItemName() 获取计费项名称
+ * @method void setSubBillingItemName(string $SubBillingItemName) 设置计费项名称
+ * @method string getBillingItemName() 获取计费细项名称
+ * @method void setBillingItemName(string $BillingItemName) 设置计费细项名称
+ * @method string getSubProductName() 获取子产品名称
+ * @method void setSubProductName(string $SubProductName) 设置子产品名称
  */
 class SavingPlanCoverageDetail extends AbstractModel
 {
@@ -110,6 +122,36 @@ class SavingPlanCoverageDetail extends AbstractModel
     public $SpCoverage;
 
     /**
+     * @var string 支付者昵称
+     */
+    public $PayerUinName;
+
+    /**
+     * @var string 使用者昵称
+     */
+    public $OwnerUinName;
+
+    /**
+     * @var string 支付者uin
+     */
+    public $PayerUin;
+
+    /**
+     * @var string 计费项名称
+     */
+    public $SubBillingItemName;
+
+    /**
+     * @var string 计费细项名称
+     */
+    public $BillingItemName;
+
+    /**
+     * @var string 子产品名称
+     */
+    public $SubProductName;
+
+    /**
      * @param string $ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      * @param integer $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,6 +166,12 @@ class SavingPlanCoverageDetail extends AbstractModel
      * @param float $TotalRealAmount 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
      * @param float $ExpectedAmount 按量计费预期金额（即折前价 * 折扣）
      * @param float $SpCoverage 覆盖率结果，取值[0, 100]
+     * @param string $PayerUinName 支付者昵称
+     * @param string $OwnerUinName 使用者昵称
+     * @param string $PayerUin 支付者uin
+     * @param string $SubBillingItemName 计费项名称
+     * @param string $BillingItemName 计费细项名称
+     * @param string $SubProductName 子产品名称
      */
     function __construct()
     {
@@ -180,6 +228,30 @@ class SavingPlanCoverageDetail extends AbstractModel
 
         if (array_key_exists("SpCoverage",$param) and $param["SpCoverage"] !== null) {
             $this->SpCoverage = $param["SpCoverage"];
+        }
+
+        if (array_key_exists("PayerUinName",$param) and $param["PayerUinName"] !== null) {
+            $this->PayerUinName = $param["PayerUinName"];
+        }
+
+        if (array_key_exists("OwnerUinName",$param) and $param["OwnerUinName"] !== null) {
+            $this->OwnerUinName = $param["OwnerUinName"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("SubBillingItemName",$param) and $param["SubBillingItemName"] !== null) {
+            $this->SubBillingItemName = $param["SubBillingItemName"];
+        }
+
+        if (array_key_exists("BillingItemName",$param) and $param["BillingItemName"] !== null) {
+            $this->BillingItemName = $param["BillingItemName"];
+        }
+
+        if (array_key_exists("SubProductName",$param) and $param["SubProductName"] !== null) {
+            $this->SubProductName = $param["SubProductName"];
         }
     }
 }

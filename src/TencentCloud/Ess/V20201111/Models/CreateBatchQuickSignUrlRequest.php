@@ -126,6 +126,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCacheApproverInfo(boolean $CacheApproverInfo) 设置缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
+ * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+ * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
  */
 class CreateBatchQuickSignUrlRequest extends AbstractModel
 {
@@ -231,6 +240,15 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $CacheApproverInfo;
 
     /**
+     * @var boolean 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
+
+     */
+    public $CanBatchReject;
+
+    /**
      * @param FlowCreateApprover $FlowApproverInfo 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -284,6 +302,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
      * @param boolean $CacheApproverInfo 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
+     * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。
+ <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
+
+注：`合同组暂不支持批量拒签功能。`
      */
     function __construct()
     {
@@ -349,6 +371,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 
         if (array_key_exists("CacheApproverInfo",$param) and $param["CacheApproverInfo"] !== null) {
             $this->CacheApproverInfo = $param["CacheApproverInfo"];
+        }
+
+        if (array_key_exists("CanBatchReject",$param) and $param["CanBatchReject"] !== null) {
+            $this->CanBatchReject = $param["CanBatchReject"];
         }
     }
 }

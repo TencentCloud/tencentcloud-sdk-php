@@ -34,7 +34,6 @@ use TencentCloud\Common\AbstractModel;
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
  * @method void setResourceNames(array $ResourceNames) 设置资源名列表，可取值:
 - GENERAL_BUNDLE_INSTANCE 通用型套餐实例
 - STORAGE_BUNDLE_INSTANCE 存储型套餐实例 
@@ -49,7 +48,6 @@ use TencentCloud\Common\AbstractModel;
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
  */
 class DescribeGeneralResourceQuotasRequest extends AbstractModel
 {
@@ -68,7 +66,6 @@ class DescribeGeneralResourceQuotasRequest extends AbstractModel
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
      */
     public $ResourceNames;
 
@@ -87,7 +84,6 @@ class DescribeGeneralResourceQuotasRequest extends AbstractModel
 - BLUEPRINT 自定义镜像
 - FREE_BLUEPRINT 免费自定义镜像
 - DATA_DISK 数据盘
-- FIREWALL_RULE 防火墙规则
      */
     function __construct()
     {

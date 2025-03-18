@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionDeadline(string $ProVersionDeadline) 设置专业版到期时间(仅预付费)
  * @method integer getHasAssetScan() 获取是否有资产扫描记录，0无，1有
  * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描记录，0无，1有
- * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
- * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+ * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,7 +194,7 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $HasAssetScan;
 
     /**
-     * @var string 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @var string 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      */
     public $ProtectType;
 
@@ -234,7 +234,7 @@ class DescribeMachineInfoResponse extends AbstractModel
      * @param string $AgentVersion agent版本号
      * @param string $ProVersionDeadline 专业版到期时间(仅预付费)
      * @param integer $HasAssetScan 是否有资产扫描记录，0无，1有
-     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -146,6 +146,10 @@ REVERSE： 实例数据时间逆序
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置补录时间范围的时区
  * @method string getAppParam() 获取执行应用参数
  * @method void setAppParam(string $AppParam) 设置执行应用参数
+ * @method string getTimeType() 获取补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+ * @method void setTimeType(string $TimeType) 设置补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -333,6 +337,12 @@ REVERSE： 实例数据时间逆序
     public $AppParam;
 
     /**
+     * @var string 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     */
+    public $TimeType;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -396,6 +406,8 @@ ORDER ： 按照实例时间顺序执行
 REVERSE： 实例数据时间逆序
      * @param string $ScheduleTimeZone 补录时间范围的时区
      * @param string $AppParam 执行应用参数
+     * @param string $TimeType 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
      */
     function __construct()
     {
@@ -538,6 +550,10 @@ REVERSE： 实例数据时间逆序
 
         if (array_key_exists("AppParam",$param) and $param["AppParam"] !== null) {
             $this->AppParam = $param["AppParam"];
+        }
+
+        if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
+            $this->TimeType = $param["TimeType"];
         }
     }
 }

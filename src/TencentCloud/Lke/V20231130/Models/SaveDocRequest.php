@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosHash(string $CosHash) 设置cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
  * @method string getSize() 获取文件大小
  * @method void setSize(string $Size) 设置文件大小
- * @method integer getAttrRange() 获取标签适用范围，默认填0即可
- * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，默认填0即可
+ * @method integer getAttrRange() 获取标签适用范围，需要传参为1
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，需要传参为1
  * @method integer getSource() 获取来源(0 源文件导入 1 网页导入)
  * @method void setSource(integer $Source) 设置来源(0 源文件导入 1 网页导入)
  * @method string getWebUrl() 获取网页(或自定义链接)地址
@@ -95,7 +95,7 @@ class SaveDocRequest extends AbstractModel
     public $Size;
 
     /**
-     * @var integer 标签适用范围，默认填0即可
+     * @var integer 标签适用范围，需要传参为1
      */
     public $AttrRange;
 
@@ -153,7 +153,7 @@ class SaveDocRequest extends AbstractModel
      * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
      * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  <br> 成功上传cos后，从返回头中获取
      * @param string $Size 文件大小
-     * @param integer $AttrRange 标签适用范围，默认填0即可
+     * @param integer $AttrRange 标签适用范围，需要传参为1
      * @param integer $Source 来源(0 源文件导入 1 网页导入)
      * @param string $WebUrl 网页(或自定义链接)地址
      * @param array $AttrLabels 标签引用

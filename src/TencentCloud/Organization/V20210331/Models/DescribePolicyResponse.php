@@ -23,27 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPolicyId() 获取策略Id。
  * @method void setPolicyId(integer $PolicyId) 设置策略Id。
  * @method string getPolicyName() 获取策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取策略类型。1-自定义 2-预设策略
  * @method void setType(integer $Type) 设置策略类型。1-自定义 2-预设策略
  * @method string getDescription() 获取策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyDocument() 获取策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,7 +46,6 @@ class DescribePolicyResponse extends AbstractModel
 
     /**
      * @var string 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
@@ -67,25 +56,21 @@ class DescribePolicyResponse extends AbstractModel
 
     /**
      * @var string 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDocument;
 
     /**
      * @var string 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
@@ -97,16 +82,11 @@ class DescribePolicyResponse extends AbstractModel
     /**
      * @param integer $PolicyId 策略Id。
      * @param string $PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 策略类型。1-自定义 2-预设策略
      * @param string $Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 策略更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

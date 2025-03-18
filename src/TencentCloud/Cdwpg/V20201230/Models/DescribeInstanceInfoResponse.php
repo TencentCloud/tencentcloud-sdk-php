@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceInfo返回参数结构体
  *
- * @method SimpleInstanceInfo getSimpleInstanceInfo() 获取1
- * @method void setSimpleInstanceInfo(SimpleInstanceInfo $SimpleInstanceInfo) 设置1
- * @method string getErrorMsg() 获取1
- * @method void setErrorMsg(string $ErrorMsg) 设置1
+ * @method SimpleInstanceInfo getSimpleInstanceInfo() 获取集群描述信息
+ * @method void setSimpleInstanceInfo(SimpleInstanceInfo $SimpleInstanceInfo) 设置集群描述信息
+ * @method string getErrorMsg() 获取错误信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceInfoResponse extends AbstractModel
 {
     /**
-     * @var SimpleInstanceInfo 1
+     * @var SimpleInstanceInfo 集群描述信息
      */
     public $SimpleInstanceInfo;
 
     /**
-     * @var string 1
+     * @var string 错误信息
      */
     public $ErrorMsg;
 
@@ -45,8 +45,8 @@ class DescribeInstanceInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SimpleInstanceInfo $SimpleInstanceInfo 1
-     * @param string $ErrorMsg 1
+     * @param SimpleInstanceInfo $SimpleInstanceInfo 集群描述信息
+     * @param string $ErrorMsg 错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

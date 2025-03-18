@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 演练人员组织
  *
  * @method string getTaskRole() 获取演练角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskRole(string $TaskRole) 设置演练角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskOperator() 获取负责人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskOperator(string $TaskOperator) 设置负责人
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOrg extends AbstractModel
 {
     /**
      * @var string 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskRole;
 
     /**
      * @var string 负责人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskOperator;
 
     /**
      * @param string $TaskRole 演练角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskOperator 负责人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommand(string $Command) 设置容器Command
  * @method string getStatus() 获取容器状态描述
  * @method void setStatus(string $Status) 设置容器状态描述
- * @method string getState() 获取容器状态，和docker的容器状态保持一致，当前取值有：created, restarting, running, removing, paused, exited, or dead
- * @method void setState(string $State) 设置容器状态，和docker的容器状态保持一致，当前取值有：created, restarting, running, removing, paused, exited, or dead
+ * @method string getState() 获取容器状态，和docker的容器状态保持一致，当前取值有：created（已创建）、restarting（重启中）、running（运行中）、removing（迁移中）、paused（暂停）、exited（停止）和dead（死亡）
+
+ * @method void setState(string $State) 设置容器状态，和docker的容器状态保持一致，当前取值有：created（已创建）、restarting（重启中）、running（运行中）、removing（迁移中）、paused（暂停）、exited（停止）和dead（死亡）
+
  * @method array getPublishPortSet() 获取容器端口主机端口映射列表
  * @method void setPublishPortSet(array $PublishPortSet) 设置容器端口主机端口映射列表
  * @method array getVolumeSet() 获取容器挂载本地卷列表
@@ -67,7 +69,8 @@ class DockerContainer extends AbstractModel
     public $Status;
 
     /**
-     * @var string 容器状态，和docker的容器状态保持一致，当前取值有：created, restarting, running, removing, paused, exited, or dead
+     * @var string 容器状态，和docker的容器状态保持一致，当前取值有：created（已创建）、restarting（重启中）、running（运行中）、removing（迁移中）、paused（暂停）、exited（停止）和dead（死亡）
+
      */
     public $State;
 
@@ -92,7 +95,8 @@ class DockerContainer extends AbstractModel
      * @param string $ContainerImage 容器镜像地址
      * @param string $Command 容器Command
      * @param string $Status 容器状态描述
-     * @param string $State 容器状态，和docker的容器状态保持一致，当前取值有：created, restarting, running, removing, paused, exited, or dead
+     * @param string $State 容器状态，和docker的容器状态保持一致，当前取值有：created（已创建）、restarting（重启中）、running（运行中）、removing（迁移中）、paused（暂停）、exited（停止）和dead（死亡）
+
      * @param array $PublishPortSet 容器端口主机端口映射列表
      * @param array $VolumeSet 容器挂载本地卷列表
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 日期筛选列表
  *
  * @method string getBillDay() 获取日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDay(string $BillDay) 设置日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDays extends AbstractModel
 {
     /**
      * @var string 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDay;
 
     /**
      * @param string $BillDay 日期：结算日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

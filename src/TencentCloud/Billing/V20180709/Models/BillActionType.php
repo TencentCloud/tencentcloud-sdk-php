@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 交易类型筛选列表
  *
  * @method string getActionType() 获取交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionTypeName() 获取交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionTypeName(string $ActionTypeName) 设置交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillActionType extends AbstractModel
 {
     /**
      * @var string 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var string 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTypeName;
 
     /**
      * @param string $ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTypeName 交易类型：明细交易类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

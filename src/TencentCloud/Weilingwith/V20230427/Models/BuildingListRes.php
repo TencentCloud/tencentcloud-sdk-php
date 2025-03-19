@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 建筑列表响应体
  *
  * @method array getBuildingProfileList() 获取建筑列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingProfileList(array $BuildingProfileList) 设置建筑列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BuildingListRes extends AbstractModel
 {
     /**
      * @var array 建筑列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingProfileList;
 
     /**
      * @param array $BuildingProfileList 建筑列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

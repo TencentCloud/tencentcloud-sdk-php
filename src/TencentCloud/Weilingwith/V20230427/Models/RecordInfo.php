@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 录像信息
  *
  * @method integer getStartTime() 获取本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVideoURL() 获取录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoURL(string $VideoURL) 设置录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordInfo extends AbstractModel
 {
     /**
      * @var integer 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoURL;
 
     /**
      * @param integer $StartTime 本录像片段开始时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 本录像片段结束时间（s）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VideoURL 录像片段文件url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

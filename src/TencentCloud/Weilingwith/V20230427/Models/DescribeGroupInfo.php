@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取设备分组名称
  * @method void setName(string $Name) 设置设备分组名称
  * @method string getDescription() 获取分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParentId() 获取分组父级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(integer $ParentId) 设置分组父级ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeGroupInfo extends AbstractModel
 {
@@ -47,13 +43,11 @@ class DescribeGroupInfo extends AbstractModel
 
     /**
      * @var string 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 分组父级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
@@ -61,9 +55,7 @@ class DescribeGroupInfo extends AbstractModel
      * @param integer $Id 分组
      * @param string $Name 设备分组名称
      * @param string $Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ParentId 分组父级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

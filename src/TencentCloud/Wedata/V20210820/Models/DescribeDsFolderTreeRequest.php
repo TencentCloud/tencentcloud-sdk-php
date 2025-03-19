@@ -62,6 +62,16 @@ false 否
 
 - cycle    周期工作流
 - manual    手动工作流
+ * @method array getTaskTypeIdList() 获取任务类型id列表
+ * @method void setTaskTypeIdList(array $TaskTypeIdList) 设置任务类型id列表
+ * @method array getInChargeIdList() 获取责任人id列表
+ * @method void setInChargeIdList(array $InChargeIdList) 设置责任人id列表
+ * @method boolean getOnlyMe() 获取自身责任人
+ * @method void setOnlyMe(boolean $OnlyMe) 设置自身责任人
+ * @method boolean getIncludeCodeTemplate() 获取是否包含代码模版
+ * @method void setIncludeCodeTemplate(boolean $IncludeCodeTemplate) 设置是否包含代码模版
+ * @method string getFolderForm() 获取编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+ * @method void setFolderForm(string $FolderForm) 设置编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -143,6 +153,31 @@ false 否
     public $WorkflowType;
 
     /**
+     * @var array 任务类型id列表
+     */
+    public $TaskTypeIdList;
+
+    /**
+     * @var array 责任人id列表
+     */
+    public $InChargeIdList;
+
+    /**
+     * @var boolean 自身责任人
+     */
+    public $OnlyMe;
+
+    /**
+     * @var boolean 是否包含代码模版
+     */
+    public $IncludeCodeTemplate;
+
+    /**
+     * @var string 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+     */
+    public $FolderForm;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取 true 是 
 false 否
@@ -164,6 +199,11 @@ false 否
 
 - cycle    周期工作流
 - manual    手动工作流
+     * @param array $TaskTypeIdList 任务类型id列表
+     * @param array $InChargeIdList 责任人id列表
+     * @param boolean $OnlyMe 自身责任人
+     * @param boolean $IncludeCodeTemplate 是否包含代码模版
+     * @param string $FolderForm 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
      */
     function __construct()
     {
@@ -232,6 +272,26 @@ false 否
 
         if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
             $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("TaskTypeIdList",$param) and $param["TaskTypeIdList"] !== null) {
+            $this->TaskTypeIdList = $param["TaskTypeIdList"];
+        }
+
+        if (array_key_exists("InChargeIdList",$param) and $param["InChargeIdList"] !== null) {
+            $this->InChargeIdList = $param["InChargeIdList"];
+        }
+
+        if (array_key_exists("OnlyMe",$param) and $param["OnlyMe"] !== null) {
+            $this->OnlyMe = $param["OnlyMe"];
+        }
+
+        if (array_key_exists("IncludeCodeTemplate",$param) and $param["IncludeCodeTemplate"] !== null) {
+            $this->IncludeCodeTemplate = $param["IncludeCodeTemplate"];
+        }
+
+        if (array_key_exists("FolderForm",$param) and $param["FolderForm"] !== null) {
+            $this->FolderForm = $param["FolderForm"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 构件树节点信息
  *
  * @method ElementProfile getElementProfile() 获取构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementProfile(ElementProfile $ElementProfile) 设置构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildren() 获取子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementProfileTreeNode extends AbstractModel
 {
     /**
      * @var ElementProfile 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementProfile;
 
     /**
      * @var array 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Children;
 
     /**
      * @param ElementProfile $ElementProfile 构件概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 子节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

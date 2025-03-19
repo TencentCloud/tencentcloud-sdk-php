@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 部门用户
  *
  * @method string getUserId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealName() 获取用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealName(string $RealName) 设置用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserType() 获取用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserType(string $UserType) 设置用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenantId() 获取所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenantId(string $TenantId) 设置所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEmail() 获取邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取电话
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置电话
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取用户状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置用户状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateAt(integer $CreateAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartmentId() 获取部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartmentName() 获取部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentName(string $DepartmentName) 设置部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLinkFilter() 获取是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinkFilter(integer $LinkFilter) 设置是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SsoTeamUser extends AbstractModel
 {
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealName;
 
     /**
      * @var string 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserType;
 
     /**
      * @var string 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
      * @var string 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
      * @var string 电话
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var integer 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateAt;
 
     /**
      * @var string 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentId;
 
     /**
      * @var string 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentName;
 
     /**
      * @var integer 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkFilter;
 
     /**
      * @param string $UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantId 所属租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Email 邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 电话
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 用户状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LinkFilter 是否关联权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

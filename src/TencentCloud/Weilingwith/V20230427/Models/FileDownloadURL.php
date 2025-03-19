@@ -22,24 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileURL() 获取下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileURL(string $FileURL) 设置下载地址
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileDownloadURL extends AbstractModel
 {
     /**
      * @var string 下载地址
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileURL;
 
     /**
      * @param string $FileURL 下载地址
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 构件平移信息
  *
  * @method float getX() 获取X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(float $X) 设置X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getY() 获取Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(float $Y) 设置Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getZ() 获取Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZ(float $Z) 设置Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementTranslate extends AbstractModel
 {
     /**
      * @var float X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var float Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @var float Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Z;
 
     /**
      * @param float $X X方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Y Y方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Z Z方向偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

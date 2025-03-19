@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
  * @method void setFilters(array $Filters) 设置过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
  * @method integer getLimit() 获取显示数量限制，默认20。
  * @method void setLimit(integer $Limit) 设置显示数量限制，默认20。
  * @method integer getOffset() 获取显示的偏移量，默认为0。
@@ -41,8 +41,8 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
      * @var array 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
      */
     public $Filters;
 
@@ -60,8 +60,8 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
      * @param array $Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
 
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
-- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
-- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”
      * @param integer $Limit 显示数量限制，默认20。
      * @param integer $Offset 显示的偏移量，默认为0。
      */

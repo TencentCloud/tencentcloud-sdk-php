@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinTime(integer $MinTime) 设置日志开始时间，毫秒级时间戳
  * @method integer getMaxTime() 获取日志结束时间，毫秒级时间戳
  * @method void setMaxTime(integer $MaxTime) 设置日志结束时间，毫秒级时间戳
- * @method string getKeywords() 获取查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。
-一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
- * @method void setKeywords(string $Keywords) 设置查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。
-一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
+ * @method string getKeywords() 获取查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:vlue worda。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
+ * @method void setKeywords(string $Keywords) 设置查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:vlue worda。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
  * @method string getContext() 获取日志检索上下文
  * @method void setContext(string $Context) 设置日志检索上下文
  * @method integer getMaxNum() 获取查询条数
@@ -46,8 +44,7 @@ class ListLogRequest extends AbstractModel
     public $MaxTime;
 
     /**
-     * @var string 查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。
-一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
+     * @var string 查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:vlue worda。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
      */
     public $Keywords;
 
@@ -64,8 +61,7 @@ class ListLogRequest extends AbstractModel
     /**
      * @param integer $MinTime 日志开始时间，毫秒级时间戳
      * @param integer $MaxTime 日志结束时间，毫秒级时间戳
-     * @param string $Keywords 查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。
-一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
+     * @param string $Keywords 查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:vlue worda。键值或文本可以包含多个，以空格隔开。其中可以索引的key包括：requestid、productid、devicename、scene、content。一个典型的查询示例：productid:ABCDE12345 devicename:test scene:SHADOW content:Device%20connect publish
      * @param string $Context 日志检索上下文
      * @param integer $MaxNum 查询条数
      */

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 导入失败设备信息
  *
  * @method integer getProductId() 获取产品id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(integer $ProductId) 设置产品id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentWID() 获取父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentWID(string $ParentWID) 设置父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSN() 获取设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSN(string $SN) 设置设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateDeviceFailed extends AbstractModel
 {
     /**
      * @var integer 产品id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentWID;
 
     /**
      * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var string 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SN;
 
     /**
      * @param integer $ProductId 产品id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentWID 父设备wid，不为空表示导入自设备
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 设备sn序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

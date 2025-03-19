@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 应用描述
  *
  * @method string getApplicationId() 获取应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取应用地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置应用地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ApplicationLogo getApplicationLogo() 获取应用logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationLogo(ApplicationLogo $ApplicationLogo) 设置应用logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnglishName() 获取engine
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnglishName(string $EnglishName) 设置engine
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationInfo extends AbstractModel
 {
     /**
      * @var string 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var ApplicationLogo 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationLogo;
 
     /**
      * @var integer 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string engine
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnglishName;
 
     /**
      * @var string 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $ApplicationId 应用分配的appId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 应用中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 应用地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationLogo $ApplicationLogo 应用logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 应用类型，0:saas应用 1:平台应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnglishName engine
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 能源管理应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

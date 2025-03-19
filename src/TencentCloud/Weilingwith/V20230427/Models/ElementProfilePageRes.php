@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 构件分页查询响应体
  *
  * @method integer getTotalCount() 获取构件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置构件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getList() 获取构件列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置构件列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementProfilePageRes extends AbstractModel
 {
     /**
      * @var integer 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @param integer $TotalCount 构件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 构件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

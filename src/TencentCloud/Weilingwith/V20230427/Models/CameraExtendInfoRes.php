@@ -21,61 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 视频扩展信息结果
  *
  * @method string getSaveType() 获取存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSaveType(string $SaveType) 设置存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSaveDay() 获取云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSaveDay(integer $SaveDay) 设置云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveResolution() 获取实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveResolution(integer $LiveResolution) 设置实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHistoryResolution() 获取历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistoryResolution(integer $HistoryResolution) 设置历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CameraExtendInfoRes extends AbstractModel
 {
     /**
      * @var string 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SaveType;
 
     /**
      * @var integer 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SaveDay;
 
     /**
      * @var integer 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveResolution;
 
     /**
      * @var integer 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistoryResolution;
 
     /**
      * @param string $SaveType 存储方式 (nvr或cosmtav)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SaveDay 云存储天数（save_type是cosmtav时这个参数才有效）
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveResolution 实时分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HistoryResolution 历史分辨率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

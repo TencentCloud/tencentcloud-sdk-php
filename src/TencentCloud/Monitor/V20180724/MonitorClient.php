@@ -132,6 +132,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
 </ul>
  * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) 获取与 Prometheus 监控融合实例列表
+ * @method Models\DescribePrometheusIntegrationMetricsResponse DescribePrometheusIntegrationMetrics(Models\DescribePrometheusIntegrationMetricsRequest $req) 获取prometheus集成指标
  * @method Models\DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(Models\DescribePrometheusRecordRulesRequest $req) 获取聚合规则列表，包含关联集群内crd资源创建的record rule
  * @method Models\DescribePrometheusRegionsResponse DescribePrometheusRegions(Models\DescribePrometheusRegionsRequest $req) 列出 Prometheus 服务所有可用的地域
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) 列出 Prometheus 抓取任务

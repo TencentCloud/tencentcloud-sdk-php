@@ -47,19 +47,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取告警发生时间，毫秒级Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置告警发生时间，毫秒级Unix时间戳
  * @method array getGroupTriggerCondition() 获取告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmLevel() 获取告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonitorObjectType() 获取监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertHistoryRecord extends AbstractModel
 {
@@ -130,20 +124,17 @@ class AlertHistoryRecord extends AbstractModel
 
     /**
      * @var array 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupTriggerCondition;
 
     /**
      * @var integer 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
 
     /**
      * @var integer 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorObjectType;
 
@@ -162,12 +153,9 @@ class AlertHistoryRecord extends AbstractModel
      * @param integer $Status 告警状态，0代表未恢复，1代表已恢复，2代表已失效
      * @param integer $CreateTime 告警发生时间，毫秒级Unix时间戳
      * @param array $GroupTriggerCondition 告警分组触发时对应的分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorObjectType 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

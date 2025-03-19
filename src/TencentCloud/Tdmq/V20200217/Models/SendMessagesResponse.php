@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SendMessages返回参数结构体
  *
  * @method string getMessageId() 获取消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageId(string $MessageId) 设置消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class SendMessagesResponse extends AbstractModel
 {
     /**
      * @var string 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageId;
 
     /**
      * @var string 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
@@ -52,9 +46,7 @@ class SendMessagesResponse extends AbstractModel
 
     /**
      * @param string $MessageId 消息的messageID, 是全局唯一的，用来标识消息的元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 返回的错误消息，如果返回为 “”，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

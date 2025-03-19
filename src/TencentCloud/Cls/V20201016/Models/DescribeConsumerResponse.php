@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method Ckafka getCkafka() 获取CKafka的描述
  * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
  * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -62,7 +60,6 @@ class DescribeConsumerResponse extends AbstractModel
 
     /**
      * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compression;
 
@@ -78,7 +75,6 @@ class DescribeConsumerResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ckafka $Ckafka CKafka的描述
      * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

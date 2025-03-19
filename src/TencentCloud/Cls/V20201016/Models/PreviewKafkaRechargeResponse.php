@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLogSample() 获取日志样例，PreviewType为2时返回
  * @method void setLogSample(string $LogSample) 设置日志样例，PreviewType为2时返回
  * @method string getLogData() 获取日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogData(string $LogData) 设置日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class PreviewKafkaRechargeResponse extends AbstractModel
 
     /**
      * @var string 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogData;
 
@@ -50,7 +47,6 @@ class PreviewKafkaRechargeResponse extends AbstractModel
     /**
      * @param string $LogSample 日志样例，PreviewType为2时返回
      * @param string $LogData 日志预览结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

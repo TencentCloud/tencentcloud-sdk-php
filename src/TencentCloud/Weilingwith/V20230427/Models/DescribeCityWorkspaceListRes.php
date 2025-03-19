@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 通过城市id查询工作空间列表
  *
  * @method array getWorkspaceSet() 获取通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceSet(array $WorkspaceSet) 设置通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCityWorkspaceListRes extends AbstractModel
 {
     /**
      * @var array 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceSet;
 
     /**
      * @param array $WorkspaceSet 通过城市id查询工作空间列表结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

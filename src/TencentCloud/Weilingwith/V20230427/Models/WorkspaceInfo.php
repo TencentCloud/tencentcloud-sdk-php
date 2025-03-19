@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 工作空间信息描述
  *
  * @method integer getWorkspaceId() 获取工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceId(integer $WorkspaceId) 设置工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChineseName() 获取工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChineseName(string $ChineseName) 设置工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParkName() 获取该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParkName(string $ParkName) 设置该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParkNum() 获取该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParkNum(string $ParkNum) 设置该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAdministrativeDetailSet() 获取获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrativeDetailSet(array $AdministrativeDetailSet) 设置获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkspaceInfo extends AbstractModel
 {
     /**
      * @var integer 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
      * @var string 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChineseName;
 
     /**
      * @var string 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParkName;
 
     /**
      * @var string 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParkNum;
 
     /**
      * @var array 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrativeDetailSet;
 
     /**
      * @param integer $WorkspaceId 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChineseName 工作空间中文名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 工作空间是否删除状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParkName 该工作空间绑定的区/县的行政区名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParkNum 该工作空间绑定的区/县的行政区编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdministrativeDetailSet 获取该工作空间绑定的区/县的上级行政区划信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

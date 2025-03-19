@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 高级过滤规则
  *
  * @method string getKey() 获取过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRule() 获取过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(integer $Rule) 设置过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取过滤值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置过滤值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvanceFilterRuleInfo extends AbstractModel
 {
     /**
      * @var string 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rule;
 
     /**
      * @var string 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Rule 过滤规则，0:等于，1:字段存在，2:字段不存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 应用列表
  *
  * @method array getApplicationInfoList() 获取应用列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationInfoList(array $ApplicationInfoList) 设置应用列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCount() 获取当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(string $TotalCount) 设置当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationList extends AbstractModel
 {
     /**
      * @var array 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationInfoList;
 
     /**
      * @var string 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $ApplicationInfoList 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCount 当前查询条件命中的数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

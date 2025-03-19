@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 视频流查询结果
  *
  * @method string getFLV() 获取FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFLV(string $FLV) 设置FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRTMP() 获取RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRTMP(string $RTMP) 设置RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHLS() 获取HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHLS(string $HLS) 设置HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebRTC() 获取WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebRTC(string $WebRTC) 设置WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RawInfo getRAW() 获取RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRAW(RawInfo $RAW) 设置RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStream() 获取视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStream(string $Stream) 设置视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoRecordStreamRes extends AbstractModel
 {
     /**
      * @var string FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FLV;
 
     /**
      * @var string RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTMP;
 
     /**
      * @var string HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HLS;
 
     /**
      * @var string WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebRTC;
 
     /**
      * @var RawInfo RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RAW;
 
     /**
      * @var string 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stream;
 
     /**
      * @param string $FLV FLV协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RTMP RTMP协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HLS HLS协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebRTC WebRtc协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RawInfo $RAW RAW协议格式视频流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Stream 视频流的唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

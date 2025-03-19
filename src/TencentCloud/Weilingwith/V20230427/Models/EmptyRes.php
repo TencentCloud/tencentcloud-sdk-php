@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 空结果返回
  *
  * @method string getMsg() 获取返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmptyRes extends AbstractModel
 {
     /**
      * @var string 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
      * @param string $Msg 返回请求状态,成功ok，失败error
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

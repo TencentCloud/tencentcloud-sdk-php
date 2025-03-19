@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取告警通知渠道组名称。
  * @method void setName(string $Name) 设置告警通知渠道组名称。
  * @method array getTags() 获取告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取告警模板的类型。可选值：
 <br><li> Trigger - 告警触发</li>
 <br><li> Recovery - 告警恢复</li>
@@ -35,43 +33,27 @@ use TencentCloud\Common\AbstractModel;
 <br><li> Recovery - 告警恢复</li>
 <br><li> All - 告警触发和告警恢复</li>
  * @method array getNoticeReceivers() 获取告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebCallbacks() 获取告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmNoticeId() 获取告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNoticeRules() 获取通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmShieldStatus() 获取免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJumpDomain() 获取调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJumpDomain(string $JumpDomain) 设置调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AlarmNoticeDeliverConfig getAlarmNoticeDeliverConfig() 获取投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig) 设置投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNotice extends AbstractModel
 {
@@ -82,7 +64,6 @@ class AlarmNotice extends AbstractModel
 
     /**
      * @var array 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -96,38 +77,32 @@ class AlarmNotice extends AbstractModel
 
     /**
      * @var array 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeReceivers;
 
     /**
      * @var array 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebCallbacks;
 
     /**
      * @var string 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmNoticeId;
 
     /**
      * @var array 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeRules;
 
     /**
      * @var integer 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmShieldStatus;
 
     /**
      * @var string 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JumpDomain;
 
@@ -139,43 +114,32 @@ class AlarmNotice extends AbstractModel
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $Name 告警通知渠道组名称。
      * @param array $Tags 告警通知渠道组绑定的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 告警模板的类型。可选值：
 <br><li> Trigger - 告警触发</li>
 <br><li> Recovery - 告警恢复</li>
 <br><li> All - 告警触发和告警恢复</li>
      * @param array $NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebCallbacks 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmNoticeId 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NoticeRules 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmShieldStatus 免登录操作告警开关。
 参数值： 1：关闭 2：开启（默认开启）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig 投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

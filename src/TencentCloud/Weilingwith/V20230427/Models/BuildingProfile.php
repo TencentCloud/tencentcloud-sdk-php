@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 建筑概要信息
  *
  * @method string getBuildingId() 获取建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingId(string $BuildingId) 设置建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBuildingName() 获取建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingName(string $BuildingName) 设置建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpaceCode() 获取空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceCode(string $SpaceCode) 设置空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getLongitude() 获取经度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLongitude(float $Longitude) 设置经度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getLatitude() 获取纬度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatitude(float $Latitude) 设置纬度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BuildingProfile extends AbstractModel
 {
     /**
      * @var string 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingId;
 
     /**
      * @var string 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingName;
 
     /**
      * @var string 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceCode;
 
     /**
      * @var float 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Longitude;
 
     /**
      * @var float 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Latitude;
 
     /**
      * @var string 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @param string $BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BuildingName 建筑名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUnit() 获取指标单位。
  * @method void setUnit(string $Unit) 设置指标单位。
  * @method array getValues() 获取指标值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置指标值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MonitorFloatMetric extends AbstractModel
 {
@@ -43,7 +41,6 @@ class MonitorFloatMetric extends AbstractModel
 
     /**
      * @var array 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
@@ -51,7 +48,6 @@ class MonitorFloatMetric extends AbstractModel
      * @param string $Metric 指标名称。
      * @param string $Unit 指标单位。
      * @param array $Values 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

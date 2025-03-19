@@ -25,77 +25,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method string getConnectedSince() 获取消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectedSince(string $ConnectedSince) 设置消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerAddr() 获取消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerAddr(string $ConsumerAddr) 设置消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerCount() 获取消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerCount(string $ConsumerCount) 设置消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerName() 获取消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerName(string $ConsumerName) 设置消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgBacklog() 获取堆积的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgBacklog(string $MsgBacklog) 设置堆积的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgRateExpired() 获取于TTL，此订阅下没有被发送而是被丢弃的比例。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateExpired(string $MsgRateExpired) 设置于TTL，此订阅下没有被发送而是被丢弃的比例。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgRateOut() 获取消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateOut(string $MsgRateOut) 设置消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgThroughputOut() 获取消费者每秒消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgThroughputOut(string $MsgThroughputOut) 设置消费者每秒消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubscriptionName() 获取订阅名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConsumerSets() 获取消费者集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerSets(array $ConsumerSets) 设置消费者集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsOnline() 获取是否在线。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsOnline(boolean $IsOnline) 设置是否在线。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConsumersScheduleSets() 获取消费进度集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumersScheduleSets(array $ConsumersScheduleSets) 设置消费进度集合。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubType() 获取订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubType(string $SubType) 设置订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getBlockedSubscriptionOnUnackedMsgs() 获取是否由于未 ack 数到达上限而被 block
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockedSubscriptionOnUnackedMsgs(boolean $BlockedSubscriptionOnUnackedMsgs) 设置是否由于未 ack 数到达上限而被 block
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxUnackedMsgNum() 获取未 ack 消息数上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) 设置未 ack 消息数上限
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subscription extends AbstractModel
 {
@@ -111,109 +75,91 @@ class Subscription extends AbstractModel
 
     /**
      * @var string 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectedSince;
 
     /**
      * @var string 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerAddr;
 
     /**
      * @var string 消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerCount;
 
     /**
      * @var string 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerName;
 
     /**
      * @var string 堆积的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgBacklog;
 
     /**
      * @var string 于TTL，此订阅下没有被发送而是被丢弃的比例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateExpired;
 
     /**
      * @var string 消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateOut;
 
     /**
      * @var string 消费者每秒消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgThroughputOut;
 
     /**
      * @var string 订阅名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscriptionName;
 
     /**
      * @var array 消费者集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerSets;
 
     /**
      * @var boolean 是否在线。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOnline;
 
     /**
      * @var array 消费进度集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumersScheduleSets;
 
     /**
      * @var string 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
 
     /**
      * @var boolean 是否由于未 ack 数到达上限而被 block
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockedSubscriptionOnUnackedMsgs;
 
     /**
      * @var integer 未 ack 消息数上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxUnackedMsgNum;
 
@@ -221,41 +167,23 @@ class Subscription extends AbstractModel
      * @param string $TopicName 主题名称。
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $ConnectedSince 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerAddr 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerName 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgBacklog 堆积的消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgRateExpired 于TTL，此订阅下没有被发送而是被丢弃的比例。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgRateOut 消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgThroughputOut 消费者每秒消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscriptionName 订阅名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConsumerSets 消费者集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsOnline 是否在线。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConsumersScheduleSets 消费进度集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxUnackedMsgNum 未 ack 消息数上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

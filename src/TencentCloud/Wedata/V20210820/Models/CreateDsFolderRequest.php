@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFolderName(string $FolderName) 设置文件夹名称
  * @method string getParentsFolderId() 获取父文件夹ID
  * @method void setParentsFolderId(string $ParentsFolderId) 设置父文件夹ID
+ * @method string getFolderForm() 获取文件夹来源 template管理，orchestrationSpace 编排空间
+ * @method void setFolderForm(string $FolderForm) 设置文件夹来源 template管理，orchestrationSpace 编排空间
  */
 class CreateDsFolderRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateDsFolderRequest extends AbstractModel
     public $ParentsFolderId;
 
     /**
+     * @var string 文件夹来源 template管理，orchestrationSpace 编排空间
+     */
+    public $FolderForm;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $FolderName 文件夹名称
      * @param string $ParentsFolderId 父文件夹ID
+     * @param string $FolderForm 文件夹来源 template管理，orchestrationSpace 编排空间
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateDsFolderRequest extends AbstractModel
 
         if (array_key_exists("ParentsFolderId",$param) and $param["ParentsFolderId"] !== null) {
             $this->ParentsFolderId = $param["ParentsFolderId"];
+        }
+
+        if (array_key_exists("FolderForm",$param) and $param["FolderForm"] !== null) {
+            $this->FolderForm = $param["FolderForm"];
         }
     }
 }

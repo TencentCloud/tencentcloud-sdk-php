@@ -21,43 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * cfs挂载点
  *
  * @method string getName() 获取资源名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置资源名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountPath() 获取挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountPath(string $MountPath) 设置挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getReadOnly() 获取是否只读
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnly(boolean $ReadOnly) 设置是否只读
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNfsVolumes() 获取Nfs挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNfsVolumes(array $NfsVolumes) 设置Nfs挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountPropagation() 获取挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountPropagation(string $MountPropagation) 设置挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVolumeMount extends AbstractModel
 {
     /**
      * @var string 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountPath;
 
     /**
      * @var boolean 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnly;
 
@@ -69,21 +58,16 @@ class CloudBaseRunVolumeMount extends AbstractModel
 
     /**
      * @var string 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountPropagation;
 
     /**
      * @param string $Name 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountPath 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ReadOnly 是否只读
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NfsVolumes Nfs挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountPropagation 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

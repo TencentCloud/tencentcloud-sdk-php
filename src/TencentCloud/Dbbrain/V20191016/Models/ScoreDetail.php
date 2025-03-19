@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScoreLostMax() 获取扣分总分上限。
  * @method void setScoreLostMax(integer $ScoreLostMax) 设置扣分总分上限。
  * @method array getItems() 获取扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScoreDetail extends AbstractModel
 {
@@ -50,7 +48,6 @@ class ScoreDetail extends AbstractModel
 
     /**
      * @var array 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
@@ -59,7 +56,6 @@ class ScoreDetail extends AbstractModel
      * @param integer $ScoreLost 扣分总分。
      * @param integer $ScoreLostMax 扣分总分上限。
      * @param array $Items 扣分项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

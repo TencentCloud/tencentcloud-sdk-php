@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 设备类型列表
  *
  * @method array getSet() 获取设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSet(array $Set) 设置设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceTypeSet extends AbstractModel
 {
     /**
      * @var array 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Set;
 
     /**
      * @param array $Set 设备类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BeautifyPic请求参数结构体
  *
- * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M，单边分辨率不超过4000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 暂不支持带有alpha透明通道的图片。
- * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M，单边分辨率不超过4000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 暂不支持带有alpha透明通道的图片。
- * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。，单边分辨率不超过4000。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 暂不支持带有alpha透明通道的图片。
- * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。，单边分辨率不超过4000。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
@@ -52,14 +52,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 class BeautifyPicRequest extends AbstractModel
 {
     /**
-     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。 
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M，单边分辨率不超过4000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 暂不支持带有alpha透明通道的图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。，单边分辨率不超过4000。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
@@ -94,10 +94,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $RspImgType;
 
     /**
-     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。 
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M，单边分辨率不超过4000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 暂不支持带有alpha透明通道的图片。
-     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。，单边分辨率不超过4000。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 

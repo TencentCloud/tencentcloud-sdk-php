@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getNodePermWipeFlag() 获取有调度任务且没有切回的可用区，此标识为true
  * @method void setNodePermWipeFlag(boolean $NodePermWipeFlag) 设置有调度任务且没有切回的可用区，此标识为true
  * @method string getZoneStatus() 获取可用区状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneStatus(string $ZoneStatus) 设置可用区状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceNodeDistribution extends AbstractModel
 {
@@ -57,7 +55,6 @@ class InstanceNodeDistribution extends AbstractModel
 
     /**
      * @var string 可用区状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneStatus;
 
@@ -67,7 +64,6 @@ class InstanceNodeDistribution extends AbstractModel
      * @param integer $NodeCount 节点数
      * @param boolean $NodePermWipeFlag 有调度任务且没有切回的可用区，此标识为true
      * @param string $ZoneStatus 可用区状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

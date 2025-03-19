@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method DeliverConfig getDeliverConfig() 获取通知渠道投递日志配置信息。
  * @method void setDeliverConfig(DeliverConfig $DeliverConfig) 设置通知渠道投递日志配置信息。
  * @method string getErrMsg() 获取投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNoticeDeliverConfig extends AbstractModel
 {
@@ -36,14 +34,12 @@ class AlarmNoticeDeliverConfig extends AbstractModel
 
     /**
      * @var string 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
     /**
      * @param DeliverConfig $DeliverConfig 通知渠道投递日志配置信息。
      * @param string $ErrMsg 投递失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

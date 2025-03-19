@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 消费信息
  *
  * @method integer getTotalCount() 获取记录数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置记录数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConsumerLogSets() 获取消费日志。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerLogSets(array $ConsumerLogSets) 设置消费日志。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerLogs extends AbstractModel
 {
     /**
      * @var integer 记录数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 消费日志。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerLogSets;
 
     /**
      * @param integer $TotalCount 记录数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConsumerLogSets 消费日志。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 服务的volume
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudBaseRunNfsVolumeSource getNFS() 获取NFS的挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNFS(CloudBaseRunNfsVolumeSource $NFS) 设置NFS的挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretName() 获取secret名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretName(string $SecretName) 设置secret名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableEmptyDirVolume() 获取是否开启临时目录逐步废弃，请使用 EmptyDir
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置是否开启临时目录逐步废弃，请使用 EmptyDir
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudBaseRunEmptyDirVolumeSource getEmptyDir() 获取emptydir数据卷详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmptyDir(CloudBaseRunEmptyDirVolumeSource $EmptyDir) 设置emptydir数据卷详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudBaseRunServiceVolumeHostPath getHostPath() 获取主机路径挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostPath(CloudBaseRunServiceVolumeHostPath $HostPath) 设置主机路径挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudRunServiceVolume extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var CloudBaseRunNfsVolumeSource NFS的挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NFS;
 
     /**
      * @var string secret名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretName;
 
     /**
      * @var boolean 是否开启临时目录逐步废弃，请使用 EmptyDir
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableEmptyDirVolume;
 
     /**
      * @var CloudBaseRunEmptyDirVolumeSource emptydir数据卷详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmptyDir;
 
     /**
      * @var CloudBaseRunServiceVolumeHostPath 主机路径挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostPath;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseRunNfsVolumeSource $NFS NFS的挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretName secret名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableEmptyDirVolume 是否开启临时目录逐步废弃，请使用 EmptyDir
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseRunEmptyDirVolumeSource $EmptyDir emptydir数据卷详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseRunServiceVolumeHostPath $HostPath 主机路径挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

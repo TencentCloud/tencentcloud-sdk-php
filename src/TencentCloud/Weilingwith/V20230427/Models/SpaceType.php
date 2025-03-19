@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 空间分类
  *
  * @method string getSpaceTypeCode() 获取空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceTypeCode(string $SpaceTypeCode) 设置空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpaceTypeName() 获取空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceTypeName(string $SpaceTypeName) 设置空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceType extends AbstractModel
 {
     /**
      * @var string 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceTypeCode;
 
     /**
      * @var string 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceTypeName;
 
     /**
      * @param string $SpaceTypeCode 空间分类编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpaceTypeName 空间分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

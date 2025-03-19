@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * emptydir 数据卷详细信息
  *
  * @method boolean getEnableEmptyDirVolume() 获取启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMedium() 获取"","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedium(string $Medium) 设置"","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSizeLimit() 获取emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSizeLimit(string $SizeLimit) 设置emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunEmptyDirVolumeSource extends AbstractModel
 {
     /**
      * @var boolean 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableEmptyDirVolume;
 
     /**
      * @var string "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Medium;
 
     /**
      * @var string emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SizeLimit;
 
     /**
      * @param boolean $EnableEmptyDirVolume 启用emptydir数据卷
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Medium "","Memory","HugePages"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SizeLimit emptydir数据卷大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

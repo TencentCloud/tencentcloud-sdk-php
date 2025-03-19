@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getType() 获取屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method void setType(integer $Type) 设置屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method string getRule() 获取屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(string $Rule) 设置屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取屏蔽原因。
  * @method void setReason(string $Reason) 设置屏蔽原因。
  * @method integer getSource() 获取规则创建来源。
@@ -80,7 +78,6 @@ class AlarmShieldInfo extends AbstractModel
 
     /**
      * @var string 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rule;
 
@@ -123,7 +120,6 @@ class AlarmShieldInfo extends AbstractModel
      * @param integer $EndTime 屏蔽结束时间（秒级时间戳）。
      * @param integer $Type 屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
      * @param string $Rule 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 屏蔽原因。
      * @param integer $Source 规则创建来源。
 1. 控制台，2.api，3.告警通知

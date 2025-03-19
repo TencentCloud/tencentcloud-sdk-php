@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHealthy() 获取集群是否健康，1表示健康，0表示异常
  * @method void setHealthy(integer $Healthy) 设置集群是否健康，1表示健康，0表示异常
  * @method string getHealthyInfo() 获取集群健康信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyInfo(string $HealthyInfo) 设置集群健康信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
  * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
  * @method integer getMaxNamespaceNum() 获取最大命名空间数量
@@ -49,73 +47,43 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxStorageCapacity() 获取最大存储容量
  * @method void setMaxStorageCapacity(integer $MaxStorageCapacity) 设置最大存储容量
  * @method string getVersion() 获取集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicEndPoint() 获取公网访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicEndPoint(string $PublicEndPoint) 设置公网访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcEndPoint() 获取VPC访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcEndPoint(string $VpcEndPoint) 设置VPC访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNamespaceNum() 获取命名空间数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceNum(integer $NamespaceNum) 设置命名空间数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedStorageBudget() 获取已使用存储限制，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedStorageBudget(integer $UsedStorageBudget) 设置已使用存储限制，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxPublishRateInMessages() 获取最大生产消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPublishRateInMessages(integer $MaxPublishRateInMessages) 设置最大生产消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDispatchRateInMessages() 获取最大推送消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDispatchRateInMessages(integer $MaxDispatchRateInMessages) 设置最大推送消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxPublishRateInBytes() 获取最大生产消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPublishRateInBytes(integer $MaxPublishRateInBytes) 设置最大生产消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDispatchRateInBytes() 获取最大推送消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDispatchRateInBytes(integer $MaxDispatchRateInBytes) 设置最大推送消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicNum() 获取已创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNum(integer $TopicNum) 设置已创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMessageDelayInSeconds() 获取最长消息延时，以秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageDelayInSeconds(integer $MaxMessageDelayInSeconds) 设置最长消息延时，以秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPublicAccessEnabled() 获取是否开启公网访问，不填时默认开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置是否开启公网访问，不填时默认开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取计费模式：
 0: 按量计费
 1: 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置计费模式：
 0: 按量计费
 1: 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取项目名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名字
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUpgradeProInstance() 获取是否支持升级专业版实例
+ * @method void setUpgradeProInstance(boolean $UpgradeProInstance) 设置是否支持升级专业版实例
  */
 class Cluster extends AbstractModel
 {
@@ -151,7 +119,6 @@ class Cluster extends AbstractModel
 
     /**
      * @var string 集群健康信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyInfo;
 
@@ -187,79 +154,66 @@ class Cluster extends AbstractModel
 
     /**
      * @var string 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 公网访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicEndPoint;
 
     /**
      * @var string VPC访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcEndPoint;
 
     /**
      * @var integer 命名空间数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceNum;
 
     /**
      * @var integer 已使用存储限制，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedStorageBudget;
 
     /**
      * @var integer 最大生产消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPublishRateInMessages;
 
     /**
      * @var integer 最大推送消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDispatchRateInMessages;
 
     /**
      * @var integer 最大生产消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPublishRateInBytes;
 
     /**
      * @var integer 最大推送消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDispatchRateInBytes;
 
     /**
      * @var integer 已创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNum;
 
     /**
      * @var integer 最长消息延时，以秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageDelayInSeconds;
 
     /**
      * @var boolean 是否开启公网访问，不填时默认开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEnabled;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -267,21 +221,23 @@ class Cluster extends AbstractModel
      * @var integer 计费模式：
 0: 按量计费
 1: 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var integer 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 项目名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
+
+    /**
+     * @var boolean 是否支持升级专业版实例
+     */
+    public $UpgradeProInstance;
 
     /**
      * @param string $ClusterId 集群Id。
@@ -291,7 +247,6 @@ class Cluster extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param integer $Healthy 集群是否健康，1表示健康，0表示异常
      * @param string $HealthyInfo 集群健康信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量
@@ -299,39 +254,24 @@ class Cluster extends AbstractModel
      * @param integer $MessageRetentionTime 最大消息保留时间，秒为单位
      * @param integer $MaxStorageCapacity 最大存储容量
      * @param string $Version 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicEndPoint 公网访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcEndPoint VPC访问接入点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NamespaceNum 命名空间数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedStorageBudget 已使用存储限制，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPublishRateInMessages 最大生产消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPublishRateInBytes 最大生产消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNum 已创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageDelayInSeconds 最长消息延时，以秒为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PublicAccessEnabled 是否开启公网访问，不填时默认开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 计费模式：
 0: 按量计费
 1: 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UpgradeProInstance 是否支持升级专业版实例
      */
     function __construct()
     {
@@ -465,6 +405,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("UpgradeProInstance",$param) and $param["UpgradeProInstance"] !== null) {
+            $this->UpgradeProInstance = $param["UpgradeProInstance"];
         }
     }
 }

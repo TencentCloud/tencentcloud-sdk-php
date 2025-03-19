@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云录像接口结果
  *
  * @method integer getTotalCount() 获取录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRecordSet() 获取录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordSet(array $RecordSet) 设置录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoCloudRecordRes extends AbstractModel
 {
     /**
      * @var integer 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordSet;
 
     /**
      * @param integer $TotalCount 录像信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RecordSet 录像信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

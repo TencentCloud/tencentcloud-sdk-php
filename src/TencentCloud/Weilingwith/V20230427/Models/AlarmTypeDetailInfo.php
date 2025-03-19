@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 告警类型详情信息
  *
  * @method integer getId() 获取告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParentId() 获取父节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(integer $ParentId) 设置父节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnglishName() 获取告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnglishName(string $EnglishName) 设置告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmTypeDetailInfo extends AbstractModel
 {
     /**
      * @var integer 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @var integer 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnglishName;
 
     /**
      * @param integer $Id 告警类型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ParentId 父节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 0-标准告警类型，1-自定义告警类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警名称类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnglishName 告警类型英文名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 建筑模型信息
  *
  * @method string getElementId() 获取构件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementId(string $ElementId) 设置构件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementName() 获取构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementName(string $ElementName) 设置构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModelType() 获取模型类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelType(string $ModelType) 设置模型类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModelUrl() 获取模型URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelUrl(string $ModelUrl) 设置模型URL
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BuildingModel extends AbstractModel
 {
     /**
      * @var string 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementId;
 
     /**
      * @var string 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementName;
 
     /**
      * @var string 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelType;
 
     /**
      * @var string 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelUrl;
 
     /**
      * @param string $ElementId 构件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelType 模型类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelUrl 模型URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

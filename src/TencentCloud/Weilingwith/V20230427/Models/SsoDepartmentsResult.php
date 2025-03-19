@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 部门用户结果
  *
  * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDepartments() 获取部门列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartments(array $Departments) 设置部门列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SsoDepartmentsResult extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var array 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Departments;
 
     /**
      * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Departments 部门列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

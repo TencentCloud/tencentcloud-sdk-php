@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 设备-空间绑定关系
  *
  * @method string getDeviceId() 获取设备id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementId() 获取构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementId(string $ElementId) 设置构件id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceDeviceRelation extends AbstractModel
 {
     /**
      * @var string 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementId;
 
     /**
      * @param string $DeviceId 设备id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

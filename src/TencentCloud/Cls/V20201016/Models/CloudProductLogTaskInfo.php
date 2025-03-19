@@ -29,13 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
  * @method string getExtend() 获取日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend(string $Extend) 设置日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogType(string $LogType) 设置日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取任务状态， 0创建中 1创建完成 2 删除中 
+ * @method void setStatus(integer $Status) 设置任务状态， 0创建中 1创建完成 2 删除中 
  */
 class CloudProductLogTaskInfo extends AbstractModel
 {
@@ -61,15 +59,18 @@ class CloudProductLogTaskInfo extends AbstractModel
 
     /**
      * @var string 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend;
 
     /**
      * @var string 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogType;
+
+    /**
+     * @var integer 任务状态， 0创建中 1创建完成 2 删除中 
+     */
+    public $Status;
 
     /**
      * @param string $ClsRegion 日志服务地域
@@ -77,9 +78,8 @@ class CloudProductLogTaskInfo extends AbstractModel
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 任务状态， 0创建中 1创建完成 2 删除中 
      */
     function __construct()
     {
@@ -116,6 +116,10 @@ class CloudProductLogTaskInfo extends AbstractModel
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

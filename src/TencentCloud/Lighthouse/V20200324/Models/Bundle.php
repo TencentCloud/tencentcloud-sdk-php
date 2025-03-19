@@ -50,33 +50,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBundleSalesState(string $BundleSalesState) 设置套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
  * @method string getBundleType() 获取套餐类型。
 取值范围：
-<li>STARTER_BUNDLE：入门型</li>
 <li>GENERAL_BUNDLE：通用型</li>
-<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>STORAGE_BUNDLE：存储型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>EXCLUSIVE_BUNDLE：专属型</li>
-<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
-<li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
-<li>EXCLUSIVE_BUNDLE_02：境外专属Ⅱ型</li>
-<li>NEWCOMER_BUNDLE：新客专享</li>
-<li>GAME_PORTAL_BUNDLE：游戏专区</li>
-<li>ECONOMY_BUNDLE：经济型</li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>CAREFREE_BUNDLE：无忧型</li>
 <li>RAZOR_SPEED_BUNDLE：锐驰型</li>
  * @method void setBundleType(string $BundleType) 设置套餐类型。
 取值范围：
-<li>STARTER_BUNDLE：入门型</li>
 <li>GENERAL_BUNDLE：通用型</li>
-<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>STORAGE_BUNDLE：存储型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>EXCLUSIVE_BUNDLE：专属型</li>
-<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
-<li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
-<li>EXCLUSIVE_BUNDLE_02：境外专属Ⅱ型</li>
-<li>NEWCOMER_BUNDLE：新客专享</li>
-<li>GAME_PORTAL_BUNDLE：游戏专区</li>
-<li>ECONOMY_BUNDLE：经济型</li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>CAREFREE_BUNDLE：无忧型</li>
 <li>RAZOR_SPEED_BUNDLE：锐驰型</li>
  * @method string getBundleTypeDescription() 获取套餐类型描述信息。
  * @method void setBundleTypeDescription(string $BundleTypeDescription) 设置套餐类型描述信息。
@@ -158,18 +148,13 @@ class Bundle extends AbstractModel
     /**
      * @var string 套餐类型。
 取值范围：
-<li>STARTER_BUNDLE：入门型</li>
 <li>GENERAL_BUNDLE：通用型</li>
-<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>STORAGE_BUNDLE：存储型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>EXCLUSIVE_BUNDLE：专属型</li>
-<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
-<li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
-<li>EXCLUSIVE_BUNDLE_02：境外专属Ⅱ型</li>
-<li>NEWCOMER_BUNDLE：新客专享</li>
-<li>GAME_PORTAL_BUNDLE：游戏专区</li>
-<li>ECONOMY_BUNDLE：经济型</li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>CAREFREE_BUNDLE：无忧型</li>
 <li>RAZOR_SPEED_BUNDLE：锐驰型</li>
      */
     public $BundleType;
@@ -205,18 +190,13 @@ class Bundle extends AbstractModel
      * @param string $BundleSalesState 套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
      * @param string $BundleType 套餐类型。
 取值范围：
-<li>STARTER_BUNDLE：入门型</li>
 <li>GENERAL_BUNDLE：通用型</li>
-<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>STORAGE_BUNDLE：存储型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
 <li>EXCLUSIVE_BUNDLE：专属型</li>
-<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
-<li>CAREFREE_BUNDLE：无忧型</li>
 <li>BEFAST_BUNDLE：蜂驰型 </li>
-<li>EXCLUSIVE_BUNDLE_02：境外专属Ⅱ型</li>
-<li>NEWCOMER_BUNDLE：新客专享</li>
-<li>GAME_PORTAL_BUNDLE：游戏专区</li>
-<li>ECONOMY_BUNDLE：经济型</li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>CAREFREE_BUNDLE：无忧型</li>
 <li>RAZOR_SPEED_BUNDLE：锐驰型</li>
      * @param string $BundleTypeDescription 套餐类型描述信息。
      * @param string $BundleDisplayLabel 套餐展示标签.

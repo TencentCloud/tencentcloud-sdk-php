@@ -21,37 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * 批量绑定名字空间和角色权限关系
  *
  * @method string getEnvironmentId() 获取需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissions() 获取名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissions(array $Permissions) 设置名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvironmentRoleSet extends AbstractModel
 {
     /**
      * @var string 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentId;
 
     /**
      * @var array 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Permissions;
 
     /**
      * @param string $EnvironmentId 需要绑定的命名空间Id，不重复且存在资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Permissions 名字空间需要绑定的权限，枚举为 "consume" "produce" 组合，但是不为空
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

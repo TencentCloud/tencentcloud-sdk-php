@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOverviewDisplay() 获取实例概览开关，Yes/No。
  * @method void setOverviewDisplay(string $OverviewDisplay) 设置实例概览开关，Yes/No。
  * @method array getKeyDelimiters() 获取redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyDelimiters(array $KeyDelimiters) 设置redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceConfs extends AbstractModel
 {
@@ -43,7 +41,6 @@ class InstanceConfs extends AbstractModel
 
     /**
      * @var array redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyDelimiters;
 
@@ -51,7 +48,6 @@ class InstanceConfs extends AbstractModel
      * @param string $DailyInspection 数据库巡检开关, Yes/No。
      * @param string $OverviewDisplay 实例概览开关，Yes/No。
      * @param array $KeyDelimiters redis大key分析的自定义分割符，仅redis使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

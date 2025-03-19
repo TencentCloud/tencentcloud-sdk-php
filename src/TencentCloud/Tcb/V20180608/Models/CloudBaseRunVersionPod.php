@@ -25,15 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPodId() 获取pod name
  * @method void setPodId(string $PodId) 设置pod name
  * @method string getPodIp() 获取pod ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodIp(string $PodIp) 设置pod ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVersionPod extends AbstractModel
 {
@@ -49,7 +45,6 @@ class CloudBaseRunVersionPod extends AbstractModel
 
     /**
      * @var string pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodIp;
 
@@ -60,7 +55,6 @@ class CloudBaseRunVersionPod extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -68,10 +62,8 @@ class CloudBaseRunVersionPod extends AbstractModel
      * @param string $Webshell webshell链接
      * @param string $PodId pod name
      * @param string $PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

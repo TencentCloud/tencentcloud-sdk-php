@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 消费者
  *
  * @method string getConnectedSince() 获取消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectedSince(string $ConnectedSince) 设置消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerAddr() 获取消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerAddr(string $ConsumerAddr) 设置消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerName() 获取消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerName(string $ConsumerName) 设置消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientVersion() 获取消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientVersion(string $ClientVersion) 设置消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartition() 获取消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartition(integer $Partition) 设置消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Consumer extends AbstractModel
 {
     /**
      * @var string 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectedSince;
 
     /**
      * @var string 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerAddr;
 
     /**
      * @var string 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerName;
 
     /**
      * @var string 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientVersion;
 
     /**
      * @var integer 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partition;
 
     /**
      * @param string $ConnectedSince 消费者开始连接的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerAddr 消费者地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerName 消费者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientVersion 消费者版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Partition 消费者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

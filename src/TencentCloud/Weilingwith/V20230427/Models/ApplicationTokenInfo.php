@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 应用Token令牌信息
  *
  * @method string getToken() 获取应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToken(string $Token) 设置应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationTokenInfo extends AbstractModel
 {
     /**
      * @var string 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Token;
 
     /**
      * @param string $Token 应用申请调用API的令牌
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

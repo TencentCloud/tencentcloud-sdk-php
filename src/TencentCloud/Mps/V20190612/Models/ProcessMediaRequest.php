@@ -72,6 +72,16 @@ use TencentCloud\Common\AbstractModel;
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
  * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
  * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕
+ * @method integer getSkipMateData() 获取是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+ * @method void setSkipMateData(integer $SkipMateData) 设置是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -162,6 +172,19 @@ class ProcessMediaRequest extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var SmartSubtitlesTaskInput 智能字幕
+     */
+    public $SmartSubtitlesTask;
+
+    /**
+     * @var integer 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
+     */
+    public $SkipMateData;
+
+    /**
      * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
 注意：当InputInfo.Type为URL时，该参数是必填项
@@ -188,6 +211,11 @@ class ProcessMediaRequest extends AbstractModel
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
      * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕
+     * @param integer $SkipMateData 是否跳过元信息获取，可选值： 
+0：表示不跳过 
+1：表示跳过 
+默认值：0	
      */
     function __construct()
     {
@@ -268,6 +296,15 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SkipMateData",$param) and $param["SkipMateData"] !== null) {
+            $this->SkipMateData = $param["SkipMateData"];
         }
     }
 }

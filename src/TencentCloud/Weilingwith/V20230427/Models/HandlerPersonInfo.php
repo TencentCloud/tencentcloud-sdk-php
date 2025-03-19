@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 告警处理人列表
  *
  * @method string getId() 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HandlerPersonInfo extends AbstractModel
 {
     /**
      * @var string 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Id 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

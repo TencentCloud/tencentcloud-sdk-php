@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询指定空间id列表响应
  *
  * @method array getDeviceIds() 获取设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceIds(array $DeviceIds) 设置设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceDeviceIdListRes extends AbstractModel
 {
     /**
      * @var array 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceIds;
 
     /**
      * @param array $DeviceIds 设备id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

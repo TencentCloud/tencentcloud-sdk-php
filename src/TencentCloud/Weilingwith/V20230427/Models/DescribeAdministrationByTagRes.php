@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 根据Tag获取行政区划列表返回结构
  *
  * @method array getList() 获取行政区划列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置行政区划列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAdministrationByTagRes extends AbstractModel
 {
     /**
      * @var array 行政区划列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @param array $List 行政区划列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

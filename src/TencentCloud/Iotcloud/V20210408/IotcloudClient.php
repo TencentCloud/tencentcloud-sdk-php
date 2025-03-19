@@ -45,7 +45,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribeDeviceResourceResponse DescribeDeviceResource(Models\DescribeDeviceResourceRequest $req) 本接口（DescribeDeviceResource）用于查询设备资源详情。 
  * @method Models\DescribeDeviceResourcesResponse DescribeDeviceResources(Models\DescribeDeviceResourcesRequest $req) 本接口（DescribeDeviceResources）用于查询设备资源列表。 
  * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
- * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
+ * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
  * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 查询固件升级任务详情
  * @method Models\DescribeFirmwareTaskDevicesResponse DescribeFirmwareTaskDevices(Models\DescribeFirmwareTaskDevicesRequest $req) 查询固件升级任务的设备列表
@@ -62,18 +62,18 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribeProductResourcesResponse DescribeProductResources(Models\DescribeProductResourcesRequest $req) 本接口（DescribeProductResources）用于查询产品资源列表。
  * @method Models\DescribeProductTaskResponse DescribeProductTask(Models\DescribeProductTaskRequest $req) 本接口（DescribeProductTask）用于查看产品级别的任务信息
  * @method Models\DescribeProductTasksResponse DescribeProductTasks(Models\DescribeProductTasksRequest $req) 本接口（DescribeProductTasks）用于查看产品级别的任务列表
- * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出产品列表。 
+ * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出产品列表。
  * @method Models\DescribePushResourceTaskStatisticsResponse DescribePushResourceTaskStatistics(Models\DescribePushResourceTaskStatisticsRequest $req) 查询推送资源任务统计信息
  * @method Models\DescribeResourceTasksResponse DescribeResourceTasks(Models\DescribeResourceTasksRequest $req) 查询资源推送任务列表
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 本接口（DisableTopicRule）用于禁用规则
  * @method Models\DownloadDeviceResourceResponse DownloadDeviceResource(Models\DownloadDeviceResourceRequest $req) 本接口（DownloadDeviceResource）用于下载设备资源
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 编辑固件信息
- * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
+ * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则
  * @method Models\GetAllVersionResponse GetAllVersion(Models\GetAllVersionRequest $req) 本接口（GetAllVersion）用于获取所有的版本列表
  * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL
  * @method Models\GetUserResourceInfoResponse GetUserResourceInfo(Models\GetUserResourceInfoRequest $req) 本接口（GetUserResourceInfo）用于查询用户资源使用信息。
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表
- * @method Models\ListLogResponse ListLog(Models\ListLogRequest $req) 本接口（ListLog）用于查看日志信息 
+ * @method Models\ListLogResponse ListLog(Models\ListLogRequest $req) 本接口（ListLog）用于查看日志信息
  * @method Models\ListLogPayloadResponse ListLogPayload(Models\ListLogPayloadRequest $req) 获取日志内容列表
  * @method Models\ListSDKLogResponse ListSDKLog(Models\ListSDKLogRequest $req) 获取设备上报的日志
  * @method Models\ListTopicRulesResponse ListTopicRules(Models\ListTopicRulesRequest $req) 本接口（ListTopicRules）用于分页获取规则列表

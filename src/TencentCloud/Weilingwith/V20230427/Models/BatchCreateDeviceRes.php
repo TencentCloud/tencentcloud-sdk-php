@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 批量新增设备接口返回结果
  *
  * @method array getSuccessSet() 获取新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessSet(array $SuccessSet) 设置新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailSet() 获取新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailSet(array $FailSet) 设置新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchCreateDeviceRes extends AbstractModel
 {
     /**
      * @var array 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessSet;
 
     /**
      * @var array 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailSet;
 
     /**
      * @param array $SuccessSet 新增成功的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailSet 新增失败的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

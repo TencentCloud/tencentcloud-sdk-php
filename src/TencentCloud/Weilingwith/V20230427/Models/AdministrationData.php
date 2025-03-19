@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 行政区划数据结构
  *
  * @method string getAdministrationCode() 获取行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrationCode(string $AdministrationCode) 设置行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdministrationName() 获取行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrationName(string $AdministrationName) 设置行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdministrationData extends AbstractModel
 {
     /**
      * @var string 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrationCode;
 
     /**
      * @var string 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrationName;
 
     /**
      * @param string $AdministrationCode 行政区划编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdministrationName 行政区划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

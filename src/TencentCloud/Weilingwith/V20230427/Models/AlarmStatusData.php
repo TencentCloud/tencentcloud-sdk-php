@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 告警状态返回结构体
  *
  * @method string getStatusID() 获取告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusID(string $StatusID) 设置告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusName() 获取告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusName(string $StatusName) 设置告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusType() 获取告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusType(string $StatusType) 设置告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmStatusData extends AbstractModel
 {
     /**
      * @var string 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusID;
 
     /**
      * @var string 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusName;
 
     /**
      * @var string 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusType;
 
     /**
      * @param string $StatusID 告警状态ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusName 告警状态名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusType 告警状态类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

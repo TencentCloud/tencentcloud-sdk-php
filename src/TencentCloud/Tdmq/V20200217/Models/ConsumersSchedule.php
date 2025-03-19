@@ -21,43 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * 消费进度详情
  *
  * @method integer getPartitions() 获取当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitions(integer $Partitions) 设置当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumberOfEntries() 获取消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumberOfEntries(integer $NumberOfEntries) 设置消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgBacklog() 获取消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgBacklog(integer $MsgBacklog) 设置消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgRateOut() 获取消费者每秒分发消息的数量之和。
  * @method void setMsgRateOut(string $MsgRateOut) 设置消费者每秒分发消息的数量之和。
  * @method string getMsgThroughputOut() 获取消费者每秒消息的byte。
  * @method void setMsgThroughputOut(string $MsgThroughputOut) 设置消费者每秒消息的byte。
  * @method string getMsgRateExpired() 获取超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateExpired(string $MsgRateExpired) 设置超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumersSchedule extends AbstractModel
 {
     /**
      * @var integer 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partitions;
 
     /**
      * @var integer 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberOfEntries;
 
     /**
      * @var integer 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgBacklog;
 
@@ -73,21 +62,16 @@ class ConsumersSchedule extends AbstractModel
 
     /**
      * @var string 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateExpired;
 
     /**
      * @param integer $Partitions 当前分区id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumberOfEntries 消息数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgBacklog 消息积压数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgRateOut 消费者每秒分发消息的数量之和。
      * @param string $MsgThroughputOut 消费者每秒消息的byte。
      * @param string $MsgRateExpired 超时丢弃比例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

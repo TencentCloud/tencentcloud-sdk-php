@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 设备挂接的空间信息
  *
  * @method string getBuildingId() 获取建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingId(string $BuildingId) 设置建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementId() 获取构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementId(string $ElementId) 设置构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEntityType() 获取构件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntityType(string $EntityType) 设置构件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementName() 获取构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementName(string $ElementName) 设置构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取构件级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置构件级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBottomHeight() 获取底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBottomHeight(integer $BottomHeight) 设置底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpaceCode() 获取空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceCode(string $SpaceCode) 设置空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceSpaceInfoRes extends AbstractModel
 {
     /**
      * @var string 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingId;
 
     /**
      * @var string 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementId;
 
     /**
      * @var string 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntityType;
 
     /**
      * @var string 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementName;
 
     /**
      * @var integer 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BottomHeight;
 
     /**
      * @var string 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceCode;
 
     /**
      * @param string $BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EntityType 构件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 构件级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BottomHeight 底部标高（单位mm）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

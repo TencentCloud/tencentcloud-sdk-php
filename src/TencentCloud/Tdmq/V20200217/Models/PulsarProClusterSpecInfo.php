@@ -31,15 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxTopics() 获取最大主题分区数
  * @method void setMaxTopics(integer $MaxTopics) 设置最大主题分区数
  * @method integer getScalableTps() 获取规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScalableTps(integer $ScalableTps) 设置规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxPartitions() 获取32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPartitions(integer $MaxPartitions) 设置32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDelayedMessages() 获取商品最大延迟消息数量。0代表没有限制	
+ * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) 设置商品最大延迟消息数量。0代表没有限制	
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
@@ -70,16 +68,19 @@ class PulsarProClusterSpecInfo extends AbstractModel
 
     /**
      * @var integer 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalableTps;
 
     /**
      * @var integer 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPartitions;
+
+    /**
+     * @var integer 商品最大延迟消息数量。0代表没有限制	
+     */
+    public $MaxDelayedMessages;
 
     /**
      * @param string $SpecName 集群规格名称
@@ -88,10 +89,9 @@ class PulsarProClusterSpecInfo extends AbstractModel
      * @param integer $MaxNamespaces 最大命名空间个数
      * @param integer $MaxTopics 最大主题分区数
      * @param integer $ScalableTps 规格外弹性TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPartitions 32或者128
 当前集群topic的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
      */
     function __construct()
     {
@@ -132,6 +132,10 @@ class PulsarProClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("MaxPartitions",$param) and $param["MaxPartitions"] !== null) {
             $this->MaxPartitions = $param["MaxPartitions"];
+        }
+
+        if (array_key_exists("MaxDelayedMessages",$param) and $param["MaxDelayedMessages"] !== null) {
+            $this->MaxDelayedMessages = $param["MaxDelayedMessages"];
         }
     }
 }

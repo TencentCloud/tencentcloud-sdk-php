@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 设备类型统计
  *
  * @method integer getTotal() 获取汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNormal() 获取正常数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormal(integer $Normal) 设置正常数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffline() 获取离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffline(integer $Offline) 设置离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFault() 获取故障数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFault(integer $Fault) 设置故障数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取设备名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置设备名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatDeviceType extends AbstractModel
 {
     /**
      * @var integer 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var integer 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Normal;
 
     /**
      * @var integer 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offline;
 
     /**
      * @var integer 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fault;
 
     /**
      * @var string 设备名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @param integer $Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Normal 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offline 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Fault 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 设备名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

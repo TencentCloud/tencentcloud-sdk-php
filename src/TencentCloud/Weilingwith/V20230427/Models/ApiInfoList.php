@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * API列表
  *
  * @method array getApiInfo() 获取API列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiInfo(array $ApiInfo) 设置API列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiInfoList extends AbstractModel
 {
     /**
      * @var array API列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiInfo;
 
     /**
      * @var integer 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $ApiInfo API列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

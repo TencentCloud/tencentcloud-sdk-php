@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 主机路径挂载参数
  *
  * @method string getPath() 获取主机路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置主机路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunServiceVolumeHostPath extends AbstractModel
 {
     /**
      * @var string 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @param string $Path 主机路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRepoLanguage() 获取仓库语言
  * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
  * @method string getBranch() 获取分支名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBranch(string $Branch) 设置分支名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CbrRepoInfo extends AbstractModel
 {
@@ -50,7 +48,6 @@ class CbrRepoInfo extends AbstractModel
 
     /**
      * @var string 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Branch;
 
@@ -59,7 +56,6 @@ class CbrRepoInfo extends AbstractModel
      * @param string $RepoType 仓库平台
      * @param string $RepoLanguage 仓库语言
      * @param string $Branch 分支名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

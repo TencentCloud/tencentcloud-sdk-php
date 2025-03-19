@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 空间层级关系
  *
  * @method string getElementId() 获取构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementId(string $ElementId) 设置构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementName() 获取构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementName(string $ElementName) 设置构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取空间层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置空间层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpaceCode() 获取空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceCode(string $SpaceCode) 设置空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentSpaceCode() 获取父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentSpaceCode(string $ParentSpaceCode) 设置父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildren() 获取子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceRelation extends AbstractModel
 {
     /**
      * @var string 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementId;
 
     /**
      * @var string 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementName;
 
     /**
      * @var integer 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceCode;
 
     /**
      * @var string 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentSpaceCode;
 
     /**
      * @var array 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Children;
 
     /**
      * @param string $ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 空间层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpaceCode 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentSpaceCode 父级空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 子构件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标维度对象
  *
-
+ * @method string getName() 获取查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValue() 获取查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DimensionOpt extends AbstractModel
 {
-
+    /**
+     * @var string 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
 
     /**
+     * @var string 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Value;
 
+    /**
+     * @param string $Name 查询的维度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value 查询维度的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DimensionOpt extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
     }
 }

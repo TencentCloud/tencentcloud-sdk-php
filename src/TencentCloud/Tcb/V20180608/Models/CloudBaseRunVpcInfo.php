@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * vpc信息
  *
  * @method string getVpcId() 获取vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetIds() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateType() 获取创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateType(integer $CreateType) 设置创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVpcInfo extends AbstractModel
 {
     /**
      * @var string vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var array 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIds;
 
     /**
      * @var integer 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateType;
 
     /**
      * @param string $VpcId vpc的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateType 创建类型(0=继承; 1=新建; 2=指定)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

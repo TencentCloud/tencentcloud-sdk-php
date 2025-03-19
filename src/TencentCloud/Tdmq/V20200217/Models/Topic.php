@@ -21,57 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * 主题实例
  *
  * @method string getAverageMsgSize() 获取最后一次间隔内发布消息的平均byte大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAverageMsgSize(string $AverageMsgSize) 设置最后一次间隔内发布消息的平均byte大小。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerCount() 获取消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerCount(string $ConsumerCount) 设置消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastConfirmedEntry() 获取被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastConfirmedEntry(string $LastConfirmedEntry) 设置被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastLedgerCreatedTimestamp() 获取最后一个ledger创建的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastLedgerCreatedTimestamp(string $LastLedgerCreatedTimestamp) 设置最后一个ledger创建的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgRateIn() 获取本地和复制的发布者每秒发布消息的速率。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateIn(string $MsgRateIn) 设置本地和复制的发布者每秒发布消息的速率。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgRateOut() 获取本地和复制的消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateOut(string $MsgRateOut) 设置本地和复制的消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgThroughputIn() 获取本地和复制的发布者每秒发布消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgThroughputIn(string $MsgThroughputIn) 设置本地和复制的发布者每秒发布消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgThroughputOut() 获取本地和复制的消费者每秒分发消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgThroughputOut(string $MsgThroughputOut) 设置本地和复制的消费者每秒分发消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNumberOfEntries() 获取被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumberOfEntries(string $NumberOfEntries) 设置被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitions() 获取分区数<=0：topic下无子分区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitions(integer $Partitions) 设置分区数<=0：topic下无子分区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProducerCount() 获取生产者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducerCount(string $ProducerCount) 设置生产者数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalSize() 获取以byte计算的所有消息存储总量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalSize(string $TotalSize) 设置以byte计算的所有消息存储总量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubTopicSets() 获取分区topic里面的子分区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubTopicSets(array $SubTopicSets) 设置分区topic里面的子分区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicType() 获取topic类型描述：
 0：普通消息；
 1：全局顺序消息；
@@ -79,7 +53,6 @@ use TencentCloud\Common\AbstractModel;
 3：重试队列；
 4：死信队列；
 5：事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicType(integer $TopicType) 设置topic类型描述：
 0：普通消息；
 1：全局顺序消息；
@@ -87,129 +60,102 @@ use TencentCloud\Common\AbstractModel;
 3：重试队列；
 4：死信队列；
 5：事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取说明，128个字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置说明，128个字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProducerLimit() 获取生产者上限。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducerLimit(string $ProducerLimit) 设置生产者上限。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerLimit() 获取消费者上限。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerLimit(string $ConsumerLimit) 设置消费者上限。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPulsarTopicType() 获取0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPulsarTopicType(integer $PulsarTopicType) 设置0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒
 
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取集群 ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID
+ * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+ * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
  */
 class Topic extends AbstractModel
 {
     /**
      * @var string 最后一次间隔内发布消息的平均byte大小。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AverageMsgSize;
 
     /**
      * @var string 消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerCount;
 
     /**
      * @var string 被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastConfirmedEntry;
 
     /**
      * @var string 最后一个ledger创建的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastLedgerCreatedTimestamp;
 
     /**
      * @var string 本地和复制的发布者每秒发布消息的速率。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateIn;
 
     /**
      * @var string 本地和复制的消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateOut;
 
     /**
      * @var string 本地和复制的发布者每秒发布消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgThroughputIn;
 
     /**
      * @var string 本地和复制的消费者每秒分发消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgThroughputOut;
 
     /**
      * @var string 被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberOfEntries;
 
     /**
      * @var integer 分区数<=0：topic下无子分区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partitions;
 
     /**
      * @var string 生产者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProducerCount;
 
     /**
      * @var string 以byte计算的所有消息存储总量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalSize;
 
     /**
      * @var array 分区topic里面的子分区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubTopicSets;
 
@@ -221,49 +167,41 @@ class Topic extends AbstractModel
 3：重试队列；
 4：死信队列；
 5：事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicType;
 
     /**
      * @var string 环境（命名空间）名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentId;
 
     /**
      * @var string 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 说明，128个字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 生产者上限。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProducerLimit;
 
     /**
      * @var string 消费者上限。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerLimit;
 
@@ -272,44 +210,40 @@ class Topic extends AbstractModel
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PulsarTopicType;
 
     /**
      * @var integer 未消费消息过期时间，单位：秒
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgTTL;
 
     /**
+     * @var string 集群 ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+     */
+    public $Tenant;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastConfirmedEntry 被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastLedgerCreatedTimestamp 最后一个ledger创建的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgRateIn 本地和复制的发布者每秒发布消息的速率。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgRateOut 本地和复制的消费者每秒分发消息的数量之和。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgThroughputIn 本地和复制的发布者每秒发布消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgThroughputOut 本地和复制的消费者每秒分发消息的byte。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NumberOfEntries 被记录下来的消息总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Partitions 分区数<=0：topic下无子分区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProducerCount 生产者数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalSize 以byte计算的所有消息存储总量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubTopicSets 分区topic里面的子分区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicType topic类型描述：
 0：普通消息；
 1：全局顺序消息；
@@ -317,29 +251,21 @@ class Topic extends AbstractModel
 3：重试队列；
 4：死信队列；
 5：事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvironmentId 环境（命名空间）名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 说明，128个字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProducerLimit 生产者上限。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerLimit 消费者上限。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PulsarTopicType 0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒
 
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 集群 ID
+     * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
      */
     function __construct()
     {
@@ -449,6 +375,14 @@ class Topic extends AbstractModel
 
         if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
             $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
         }
     }
 }

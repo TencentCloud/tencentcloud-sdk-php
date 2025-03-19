@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 生产者信息
  *
  * @method integer getProducerId() 获取生产者id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducerId(integer $ProducerId) 设置生产者id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProducerName() 获取生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducerName(string $ProducerName) 设置生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientVersion() 获取客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientVersion(string $ClientVersion) 设置客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMsgRateIn() 获取消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRateIn(float $MsgRateIn) 设置消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMsgThroughputIn() 获取消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgThroughputIn(float $MsgThroughputIn) 设置消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getAverageMsgSize() 获取平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAverageMsgSize(float $AverageMsgSize) 设置平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConnectedSince() 获取连接时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectedSince(string $ConnectedSince) 设置连接时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartition() 获取生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartition(integer $Partition) 设置生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Publisher extends AbstractModel
 {
     /**
      * @var integer 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProducerId;
 
     /**
      * @var string 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProducerName;
 
     /**
      * @var string 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientVersion;
 
     /**
      * @var float 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRateIn;
 
     /**
      * @var float 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgThroughputIn;
 
     /**
      * @var float 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AverageMsgSize;
 
     /**
      * @var string 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectedSince;
 
     /**
      * @var integer 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partition;
 
     /**
      * @param integer $ProducerId 生产者id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProducerName 生产者名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 生产者地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientVersion 客户端版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MsgRateIn 消息生产速率（条/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MsgThroughputIn 消息生产吞吐速率（字节/秒）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $AverageMsgSize 平均消息大小（字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnectedSince 连接时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Partition 生产者连接的主题分区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

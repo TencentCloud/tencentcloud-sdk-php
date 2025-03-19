@@ -30,6 +30,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
+ * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) 智能字幕新建热词库接口
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
@@ -48,6 +49,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
 
 注意：创建编排成功后是禁用状态，需要手动启用。
+ * @method Models\CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(Models\CreateSmartSubtitleTemplateRequest $req) 创建自定义智能字幕模板
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) 创建用户自定义指定时间点截图模板，数量上限：16。
  * @method Models\CreateStreamLinkEventResponse CreateStreamLinkEvent(Models\CreateStreamLinkEventRequest $req) 创建媒体传输的事件Event。
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) 创建媒体传输的传输流配置。
@@ -78,6 +80,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(Models\DeleteAIRecognitionTemplateRequest $req) 删除用户自定义内容识别模板。
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) 删除转自适应码流模板
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
+ * @method Models\DeleteAsrHotwordsResponse DeleteAsrHotwords(Models\DeleteAsrHotwordsRequest $req) 删除智能字幕热词库
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) 删除用户自定义内容审核模板。
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) 删除雪碧图模板。
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) 删除直播录制模板
@@ -85,6 +88,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) 删除媒体质检模板
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) 删除用户自定义采样截图模板。
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) 删除编排
+ * @method Models\DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(Models\DeleteSmartSubtitleTemplateRequest $req) 删除用户自定义智能字幕模板。
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) 删除用户自定义指定时间点截图模板。
  * @method Models\DeleteStreamLinkEventResponse DeleteStreamLinkEvent(Models\DeleteStreamLinkEventRequest $req) 删除媒体传输的事件配置。
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) 删除媒体传输的传输流配置。
@@ -98,6 +102,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(Models\DescribeAIRecognitionTemplatesRequest $req) 根据内容识别模板唯一标识，获取内容识别模板详情列表。返回结果包含符合条件的所有用户自定义内容识别模板及系统预置视频内容识别模板
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) 查询转自适应码流模板，支持根据条件，分页查询。
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
+ * @method Models\DescribeAsrHotwordsResponse DescribeAsrHotwords(Models\DescribeAsrHotwordsRequest $req) 查询智能字幕热词库
+ * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) 获取热词库列表
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
  * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
@@ -107,6 +113,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) 查询用户自定义媒体质检模板，支持根据条件，分页查询。
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) 查询采样截图模板，支持根据条件，分页查询。
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) 查询编排。
+ * @method Models\DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(Models\DescribeSmartSubtitleTemplatesRequest $req) 根据智能字幕 模板唯一标识，获取智能字幕模板详情列表。返回结果包含符合条件的所有用户自定义智能字幕模板及系统预置智能字幕模板
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) 查询指定时间点截图模板，支持根据条件，分页查询。
  * @method Models\DescribeStreamLinkActivateStateResponse DescribeStreamLinkActivateState(Models\DescribeStreamLinkActivateStateRequest $req) 查询媒体传输开通状态。
  * @method Models\DescribeStreamLinkEventResponse DescribeStreamLinkEvent(Models\DescribeStreamLinkEventRequest $req) 查询媒体传输事件的配置信息。
@@ -159,6 +166,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(Models\ModifyAIRecognitionTemplateRequest $req) 修改用户自定义内容识别模板。
  * @method Models\ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(Models\ModifyAdaptiveDynamicStreamingTemplateRequest $req) 修改转自适应码流模板
  * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) 修改用户自定义转动图模板。
+ * @method Models\ModifyAsrHotwordsResponse ModifyAsrHotwords(Models\ModifyAsrHotwordsRequest $req) 智能字幕更新热词库接口
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 修改用户自定义内容审核模板。
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) 修改用户自定义雪碧图模板。
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) 修改直播录制模板
@@ -166,6 +174,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) 修改媒体质检模板。
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) 修改用户自定义采样截图模板。
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) 修改编排
+ * @method Models\ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(Models\ModifySmartSubtitleTemplateRequest $req) 修改用户自定义智能字幕模板。
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) 修改用户自定义指定时间点截图模板。
  * @method Models\ModifyStreamLinkEventResponse ModifyStreamLinkEvent(Models\ModifyStreamLinkEventRequest $req) 修改媒体传输的事件配置信息。
  * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) 修改媒体传输的传输流配置信息。
@@ -202,6 +211,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
 10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+11. 智能字幕（语音全文、语音热词、语音翻译）
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。

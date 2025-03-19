@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 事件信息
  *
  * @method integer getId() 获取事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Event extends AbstractModel
 {
     /**
      * @var integer 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $Id 事件id或动作Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 事件名称或动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

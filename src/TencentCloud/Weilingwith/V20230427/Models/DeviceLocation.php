@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 设备点位坐标值
  *
  * @method float getX() 获取点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(float $X) 设置点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getY() 获取点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(float $Y) 设置点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getZ() 获取点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZ(float $Z) 设置点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceLocation extends AbstractModel
 {
     /**
      * @var float 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var float 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @var float 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Z;
 
     /**
      * @param float $X 点位X坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Y 点位Y坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Z 点位Z坐标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

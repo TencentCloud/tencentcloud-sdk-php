@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 设备影子信息
  *
  * @method string getWID() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWID(string $WID) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceShadow() 获取设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceShadow(string $DeviceShadow) 设置设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceShadowUpdateTime() 获取设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceShadowUpdateTime(string $DeviceShadowUpdateTime) 设置设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceShadowInfo extends AbstractModel
 {
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WID;
 
     /**
      * @var string 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceShadow;
 
     /**
      * @var string 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceShadowUpdateTime;
 
     /**
      * @param string $WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceShadow 设备影子数据,返回有效数据为"x-json:"后字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceShadowUpdateTime 设备影子更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

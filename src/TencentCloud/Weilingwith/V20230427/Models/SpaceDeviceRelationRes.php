@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 设备-空间绑定关系响应体
  *
  * @method array getSpaceDeviceRelationList() 获取设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceDeviceRelationList(array $SpaceDeviceRelationList) 设置设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceDeviceRelationRes extends AbstractModel
 {
     /**
      * @var array 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceDeviceRelationList;
 
     /**
      * @param array $SpaceDeviceRelationList 设备空间绑定关系列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

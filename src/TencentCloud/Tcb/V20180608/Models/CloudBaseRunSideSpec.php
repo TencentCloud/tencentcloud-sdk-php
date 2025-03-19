@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * CloudBaseRun 的 Side 描述定义
  *
  * @method string getContainerImage() 获取容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerImage(string $ContainerImage) 设置容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getContainerPort() 获取容器端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerPort(integer $ContainerPort) 设置容器端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerName() 获取容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerName(string $ContainerName) 设置容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvVar() 获取kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvVar(string $EnvVar) 设置kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInitialDelaySeconds() 获取InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMem() 获取内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMem(integer $Mem) 设置内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudBaseSecurityContext getSecurity() 获取安全特性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurity(CloudBaseSecurityContext $Security) 设置安全特性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVolumeMountInfos() 获取挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeMountInfos(array $VolumeMountInfos) 设置挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunSideSpec extends AbstractModel
 {
     /**
      * @var string 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerImage;
 
     /**
      * @var integer 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerPort;
 
     /**
      * @var string 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerName;
 
     /**
      * @var string kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvVar;
 
     /**
      * @var integer InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialDelaySeconds;
 
     /**
      * @var integer CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mem;
 
     /**
      * @var CloudBaseSecurityContext 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Security;
 
     /**
      * @var array 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeMountInfos;
 
     /**
      * @param string $ContainerImage 容器镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContainerPort 容器端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerName 容器的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvVar kv的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InitialDelaySeconds InitialDelaySeconds 延迟多长时间启动健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mem 内存大小（单位：M）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseSecurityContext $Security 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VolumeMountInfos 挂载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

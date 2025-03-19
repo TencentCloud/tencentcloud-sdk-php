@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
  * @method string getType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+ * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+ * @method void setProtocol(string $Protocol) 设置目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
  * @method integer getWeight() 获取后端服务默认权重。
@@ -75,6 +77,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     */
+    public $Protocol;
+
+    /**
      * @var array 标签。
      */
     public $Tags;
@@ -96,6 +103,7 @@ class CreateTargetGroupRequest extends AbstractModel
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
      * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
      * @param array $Tags 标签。
      * @param integer $Weight 后端服务默认权重。
 <ul>
@@ -139,6 +147,10 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

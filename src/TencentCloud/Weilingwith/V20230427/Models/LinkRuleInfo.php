@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 联动规则信息
  *
  * @method integer getId() 获取联动id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置联动id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取联动名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置联动名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventSet() 获取事件列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventSet(array $EventSet) 设置事件列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getActionSet() 获取动作列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionSet(array $ActionSet) 设置动作列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginDate() 获取起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginDate(string $BeginDate) 设置起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndDate() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDate(string $EndDate) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidPeriod() 获取有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidPeriod(string $ValidPeriod) 设置有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LinkRuleInfo extends AbstractModel
 {
     /**
      * @var integer 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventSet;
 
     /**
      * @var array 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionSet;
 
     /**
      * @var integer 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginDate;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndDate;
 
     /**
      * @var string 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidPeriod;
 
     /**
      * @param integer $Id 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventSet 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ActionSet 动作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态：0开，-1关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidPeriod 有效周期内容,有效字段为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

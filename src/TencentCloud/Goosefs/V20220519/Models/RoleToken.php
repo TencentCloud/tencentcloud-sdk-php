@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRoleName() 获取角色名
  * @method void setRoleName(string $RoleName) 设置角色名
  * @method string getToken() 获取用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToken(string $Token) 设置用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleToken extends AbstractModel
 {
@@ -36,14 +34,12 @@ class RoleToken extends AbstractModel
 
     /**
      * @var string 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Token;
 
     /**
      * @param string $RoleName 角色名
      * @param string $Token 用于goosefs client/sdk等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

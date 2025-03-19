@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 获取文件上传URL接口回包
  *
  * @method string getUploadURL() 获取上传地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadURL(string $UploadURL) 设置上传地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取文件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadURL() 获取下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadURL(string $DownloadURL) 设置下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileUploadURL extends AbstractModel
 {
     /**
      * @var string 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadURL;
 
     /**
      * @var string 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadURL;
 
     /**
      * @param string $UploadURL 上传地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadURL 下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

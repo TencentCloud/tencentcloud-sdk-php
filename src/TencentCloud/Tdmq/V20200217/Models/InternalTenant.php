@@ -57,21 +57,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxDispatchTps() 获取命名空间最大消费TPS
  * @method void setMaxDispatchTps(integer $MaxDispatchTps) 设置命名空间最大消费TPS
  * @method integer getMaxDispatchRateInBytes() 获取命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDispatchRateInBytes(integer $MaxDispatchRateInBytes) 设置命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxPublishRateInBytes() 获取命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPublishRateInBytes(integer $MaxPublishRateInBytes) 设置命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRetentionSizeInMB() 获取消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRetentionSizeInMB(integer $MaxRetentionSizeInMB) 设置消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPublicAccessEnabled() 获取public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalTenant extends AbstractModel
 {
@@ -167,25 +159,21 @@ class InternalTenant extends AbstractModel
 
     /**
      * @var integer 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDispatchRateInBytes;
 
     /**
      * @var integer 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPublishRateInBytes;
 
     /**
      * @var integer 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRetentionSizeInMB;
 
     /**
      * @var boolean public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEnabled;
 
@@ -209,13 +197,9 @@ class InternalTenant extends AbstractModel
      * @param integer $UpdateTime 修改时间，毫秒为单位
      * @param integer $MaxDispatchTps 命名空间最大消费TPS
      * @param integer $MaxDispatchRateInBytes 命名空间最大消费带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPublishRateInBytes 命名空间最大生产带宽，byte为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRetentionSizeInMB 消息最大保留空间，MB为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PublicAccessEnabled public Access Enabled
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

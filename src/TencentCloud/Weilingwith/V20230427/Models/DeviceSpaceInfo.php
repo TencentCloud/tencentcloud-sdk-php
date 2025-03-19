@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 设备位置信息
  *
  * @method string getId() 获取空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取空间名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置空间名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取空间级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置空间级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置空间编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceSpaceInfo extends AbstractModel
 {
     /**
      * @var string 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @param string $Id 空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 空间名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 空间级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 空间编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

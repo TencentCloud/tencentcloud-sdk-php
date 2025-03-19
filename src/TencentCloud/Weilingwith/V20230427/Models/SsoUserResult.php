@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 租户人员结果
  *
  * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUsers() 获取租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(array $Users) 设置租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SsoUserResult extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var array 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Users;
 
     /**
      * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Users 租户人员数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

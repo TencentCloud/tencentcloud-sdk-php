@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScanStatus() 获取任务状态:SCANNING:扫描中 FAILED:失败 FINISHED:完成 CANCELED:取消
  * @method void setScanStatus(string $ScanStatus) 设置任务状态:SCANNING:扫描中 FAILED:失败 FINISHED:完成 CANCELED:取消
  * @method float getScanDuration() 获取扫描时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanDuration(float $ScanDuration) 设置扫描时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHighLevelVulCount() 获取高危漏洞数
  * @method void setHighLevelVulCount(integer $HighLevelVulCount) 设置高危漏洞数
  * @method integer getMediumLevelVulCount() 获取中危漏洞数
@@ -73,7 +71,6 @@ class VulScanImageInfo extends AbstractModel
 
     /**
      * @var float 扫描时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanDuration;
 
@@ -123,7 +120,6 @@ class VulScanImageInfo extends AbstractModel
      * @param float $Size 镜像大小
      * @param string $ScanStatus 任务状态:SCANNING:扫描中 FAILED:失败 FINISHED:完成 CANCELED:取消
      * @param float $ScanDuration 扫描时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighLevelVulCount 高危漏洞数
      * @param integer $MediumLevelVulCount 中危漏洞数
      * @param integer $LowLevelVulCount 低危漏洞数

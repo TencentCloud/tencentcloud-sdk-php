@@ -89,7 +89,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -97,7 +96,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -106,7 +104,6 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -115,11 +112,8 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerStatus() 获取容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -288,7 +282,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetStatus;
 
@@ -301,13 +294,11 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
@@ -417,7 +408,6 @@ RULE_MODE_HOLDUP 拦截
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -426,9 +416,7 @@ RULE_MODE_HOLDUP 拦截
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED

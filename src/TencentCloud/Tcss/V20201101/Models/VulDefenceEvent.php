@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEventID() 获取事件ID
  * @method void setEventID(integer $EventID) 设置事件ID
  * @method string getCreateTime() 获取首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -65,9 +63,7 @@ use TencentCloud\Common\AbstractModel;
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
  * @method string getMergeTime() 获取最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMergeTime(string $MergeTime) 设置最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerStatus() 获取容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -76,7 +72,6 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -85,7 +80,6 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -94,7 +88,6 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -103,23 +96,14 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQUUID() 获取主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQUUID(string $QUUID) 设置主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIP() 获取主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeType() 获取节点类型[NORMAL:普通节点|SUPER:超级节点]
  * @method void setNodeType(string $NodeType) 设置节点类型[NORMAL:普通节点|SUPER:超级节点]
  * @method string getPublicIP() 获取外网IP
@@ -206,7 +190,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var string 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -223,7 +206,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var string 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MergeTime;
 
@@ -236,7 +218,6 @@ class VulDefenceEvent extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerStatus;
 
@@ -249,31 +230,26 @@ class VulDefenceEvent extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
     /**
      * @var string 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QUUID;
 
     /**
      * @var string 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIP;
 
     /**
      * @var string 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
@@ -332,7 +308,6 @@ class VulDefenceEvent extends AbstractModel
      * @param string $Status 处理状态
      * @param integer $EventID 事件ID
      * @param string $CreateTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -341,7 +316,6 @@ class VulDefenceEvent extends AbstractModel
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
      * @param string $MergeTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -350,7 +324,6 @@ class VulDefenceEvent extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -359,15 +332,10 @@ class VulDefenceEvent extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
      * @param string $PublicIP 外网IP
      * @param string $NodeUniqueID 超级节点唯一ID

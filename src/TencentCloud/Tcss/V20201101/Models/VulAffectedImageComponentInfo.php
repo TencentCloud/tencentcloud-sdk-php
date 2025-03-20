@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 受漏洞影响的组件信息
  *
  * @method string getName() 获取组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFixedVersion() 获取组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixedVersion(string $FixedVersion) 设置组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取组件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置组件路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulAffectedImageComponentInfo extends AbstractModel
 {
     /**
      * @var string 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixedVersion;
 
     /**
      * @var string 组件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @param string $Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixedVersion 组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 组件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

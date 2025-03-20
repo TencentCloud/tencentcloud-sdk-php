@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 统计分析维度下的统计数据详情
  *
  * @method string getName() 获取统计维度的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置统计维度的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTimeAvg() 获取平均时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeAvg(float $TimeAvg) 设置平均时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTimeSum() 获取总时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSum(float $TimeSum) 设置总时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置数量。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticDataInfo extends AbstractModel
 {
     /**
      * @var string 统计维度的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var float 平均时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeAvg;
 
     /**
      * @var float 总时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSum;
 
     /**
      * @var integer 数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @param string $Name 统计维度的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TimeAvg 平均时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TimeSum 总时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

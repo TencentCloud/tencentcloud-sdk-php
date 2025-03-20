@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 批量修改topic属性结果
  *
  * @method string getInstanceId() 获取ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取主题名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReturnCode() 获取操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnCode(string $ReturnCode) 设置操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取操作返回信息
  * @method void setMessage(string $Message) 设置操作返回信息
  */
@@ -39,19 +33,16 @@ class BatchModifyTopicResultDTO extends AbstractModel
 {
     /**
      * @var string ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnCode;
 
@@ -62,11 +53,8 @@ class BatchModifyTopicResultDTO extends AbstractModel
 
     /**
      * @param string $InstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReturnCode 操作返回码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 操作返回信息
      */
     function __construct()

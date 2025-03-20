@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValue() 获取当前参数值
  * @method void setValue(string $Value) 设置当前参数值
  * @method string getSetValue() 获取设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetValue(string $SetValue) 设置设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefault() 获取系统默认值
  * @method void setDefault(string $Default) 设置系统默认值
  * @method ParamConstraint getConstraint() 获取参数限制
@@ -53,7 +51,6 @@ class ParamDesc extends AbstractModel
 
     /**
      * @var string 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetValue;
 
@@ -82,7 +79,6 @@ true:需要重启
      * @param string $Param 参数名字
      * @param string $Value 当前参数值
      * @param string $SetValue 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Default 系统默认值
      * @param ParamConstraint $Constraint 参数限制
      * @param boolean $HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method string getOrder() 获取排序方式 asc,desc
+ * @method void setOrder(string $Order) 设置排序方式 asc,desc
+ * @method string getBy() 获取排序字段 ContainerCnt
+ * @method void setBy(string $By) 设置排序字段 ContainerCnt
  */
 class DescribeImageSimpleListRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeImageSimpleListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序方式
+     * @var string 排序方式 asc,desc
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段 ContainerCnt
      */
     public $By;
 
@@ -62,8 +62,8 @@ class DescribeImageSimpleListRequest extends AbstractModel
      * @param array $Filters IsAuthorized 是否已经授权, 0:否 1:是 无:全部
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param string $Order 排序方式
-     * @param string $By 排序字段
+     * @param string $Order 排序方式 asc,desc
+     * @param string $By 排序字段 ContainerCnt
      */
     function __construct()
     {

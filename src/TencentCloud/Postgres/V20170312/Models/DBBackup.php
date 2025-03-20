@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExternalAddr() 获取外网下载地址
  * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
  * @method string getSetId() 获取备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetId(string $SetId) 设置备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBBackup extends AbstractModel
 {
@@ -106,7 +104,6 @@ class DBBackup extends AbstractModel
 
     /**
      * @var string 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetId;
 
@@ -123,7 +120,6 @@ class DBBackup extends AbstractModel
      * @param string $InternalAddr 内网下载地址
      * @param string $ExternalAddr 外网下载地址
      * @param string $SetId 备份集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

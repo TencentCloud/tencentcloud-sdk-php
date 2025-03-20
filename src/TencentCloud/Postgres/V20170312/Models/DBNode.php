@@ -29,9 +29,7 @@ Standby，代表备节点。
  * @method string getZone() 获取节点所在可用区，例如 ap-guangzhou-1。
  * @method void setZone(string $Zone) 设置节点所在可用区，例如 ap-guangzhou-1。
  * @method string getDedicatedClusterId() 获取专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBNode extends AbstractModel
 {
@@ -49,7 +47,6 @@ Standby，代表备节点。
 
     /**
      * @var string 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DedicatedClusterId;
 
@@ -59,7 +56,6 @@ Primary，代表主节点；
 Standby，代表备节点。
      * @param string $Zone 节点所在可用区，例如 ap-guangzhou-1。
      * @param string $DedicatedClusterId 专属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

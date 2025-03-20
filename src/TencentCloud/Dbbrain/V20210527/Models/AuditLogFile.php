@@ -21,25 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 审计日志文件
  *
  * @method integer getAsyncRequestId() 获取审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncRequestId(integer $AsyncRequestId) 设置审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取审计日志文件名称。
  * @method void setFileName(string $FileName) 设置审计日志文件名称。
  * @method string getCreateTime() 获取审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFileSize() 获取文件大小，单位为 KB。
  * @method void setFileSize(float $FileSize) 设置文件大小，单位为 KB。
  * @method string getDownloadUrl() 获取审计日志下载地址。
@@ -55,7 +49,6 @@ class AuditLogFile extends AbstractModel
 {
     /**
      * @var integer 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncRequestId;
 
@@ -66,7 +59,6 @@ class AuditLogFile extends AbstractModel
 
     /**
      * @var string 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -75,7 +67,6 @@ class AuditLogFile extends AbstractModel
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -106,15 +97,12 @@ class AuditLogFile extends AbstractModel
 
     /**
      * @param integer $AsyncRequestId 审计日志文件生成异步任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 审计日志文件名称。
      * @param string $CreateTime 审计日志文件创建时间。格式为 : "2019-03-20 17:09:13"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 文件状态值。可能返回的值为：
 "creating" - 生成中;
 "failed" - 创建失败;
 "success" - 已生成;
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FileSize 文件大小，单位为 KB。
      * @param string $DownloadUrl 审计日志下载地址。
      * @param string $ErrMsg 错误信息。

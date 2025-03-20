@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * sql会话统计信息
  *
  * @method string getDimension() 获取统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDimension(string $Dimension) 设置统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticInfo extends AbstractModel
 {
     /**
      * @var string 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimension;
 
     /**
      * @var array 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param string $Dimension 统计分析的维度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 统计分析的维度下的统计数据详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

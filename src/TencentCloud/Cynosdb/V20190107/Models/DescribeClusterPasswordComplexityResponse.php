@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DescribeClusterPasswordComplexity返回参数结构体
  *
  * @method ParamInfo getValidatePasswordDictionary() 获取数据字典参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordDictionary(ParamInfo $ValidatePasswordDictionary) 设置数据字典参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParamInfo getValidatePasswordLength() 获取密码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordLength(ParamInfo $ValidatePasswordLength) 设置密码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParamInfo getValidatePasswordMixedCaseCount() 获取大小写敏感字符个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordMixedCaseCount(ParamInfo $ValidatePasswordMixedCaseCount) 设置大小写敏感字符个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParamInfo getValidatePasswordNumberCount() 获取数字个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordNumberCount(ParamInfo $ValidatePasswordNumberCount) 设置数字个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParamInfo getValidatePasswordPolicy() 获取密码等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordPolicy(ParamInfo $ValidatePasswordPolicy) 设置密码等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParamInfo getValidatePasswordSpecialCharCount() 获取特殊字符个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidatePasswordSpecialCharCount(ParamInfo $ValidatePasswordSpecialCharCount) 设置特殊字符个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,37 +39,31 @@ class DescribeClusterPasswordComplexityResponse extends AbstractModel
 {
     /**
      * @var ParamInfo 数据字典参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordDictionary;
 
     /**
      * @var ParamInfo 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordLength;
 
     /**
      * @var ParamInfo 大小写敏感字符个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordMixedCaseCount;
 
     /**
      * @var ParamInfo 数字个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordNumberCount;
 
     /**
      * @var ParamInfo 密码等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordPolicy;
 
     /**
      * @var ParamInfo 特殊字符个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidatePasswordSpecialCharCount;
 
@@ -92,17 +74,11 @@ class DescribeClusterPasswordComplexityResponse extends AbstractModel
 
     /**
      * @param ParamInfo $ValidatePasswordDictionary 数据字典参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamInfo $ValidatePasswordLength 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamInfo $ValidatePasswordMixedCaseCount 大小写敏感字符个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamInfo $ValidatePasswordNumberCount 数字个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamInfo $ValidatePasswordPolicy 密码等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamInfo $ValidatePasswordSpecialCharCount 特殊字符个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

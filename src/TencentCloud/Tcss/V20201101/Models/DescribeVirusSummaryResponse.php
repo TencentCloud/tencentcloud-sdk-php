@@ -23,33 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取最近的一次扫描任务id
  * @method void setTaskId(string $TaskId) 设置最近的一次扫描任务id
  * @method integer getRiskContainerCnt() 获取木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskContainerCnt(integer $RiskContainerCnt) 设置木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskCnt() 获取待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskCnt(integer $RiskCnt) 设置待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusDataBaseModifyTime() 获取病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusDataBaseModifyTime(string $VirusDataBaseModifyTime) 设置病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskContainerIncrease() 获取木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskContainerIncrease(integer $RiskContainerIncrease) 设置木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskIncrease() 获取待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskIncrease(integer $RiskIncrease) 设置待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsolateIncrease() 获取隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateIncrease(integer $IsolateIncrease) 设置隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsolateCnt() 获取隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateCnt(integer $IsolateCnt) 设置隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -62,43 +48,36 @@ class DescribeVirusSummaryResponse extends AbstractModel
 
     /**
      * @var integer 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskContainerCnt;
 
     /**
      * @var integer 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskCnt;
 
     /**
      * @var string 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusDataBaseModifyTime;
 
     /**
      * @var integer 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskContainerIncrease;
 
     /**
      * @var integer 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskIncrease;
 
     /**
      * @var integer 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateIncrease;
 
     /**
      * @var integer 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateCnt;
 
@@ -110,19 +89,12 @@ class DescribeVirusSummaryResponse extends AbstractModel
     /**
      * @param string $TaskId 最近的一次扫描任务id
      * @param integer $RiskContainerCnt 木马影响容器个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskCnt 待处理风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusDataBaseModifyTime 病毒库更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskContainerIncrease 木马影响容器个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskIncrease 待处理风险个数较昨日增长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsolateIncrease 隔离事件个数较昨日新增
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsolateCnt 隔离事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

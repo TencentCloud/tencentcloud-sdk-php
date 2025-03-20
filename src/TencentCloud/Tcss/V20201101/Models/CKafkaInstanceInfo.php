@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 安全日志kafka可选信息
  *
  * @method string getInstanceID() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTopicList() 获取主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRouteList() 获取路由列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteList(array $RouteList) 设置路由列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKafkaVersion() 获取kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaVersion(string $KafkaVersion) 设置kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CKafkaInstanceInfo extends AbstractModel
 {
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var array 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @var array 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteList;
 
     /**
      * @var string kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaVersion;
 
     /**
      * @param string $InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RouteList 路由列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaVersion kafka版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

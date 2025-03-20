@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * broker维度topic 流量排行指标
  *
  * @method string getTopicName() 获取主题名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取主题Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置主题Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicTraffic() 获取Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BrokerTopicFlowData extends AbstractModel
 {
     /**
      * @var string 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicTraffic;
 
     /**
      * @param string $TopicName 主题名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 主题Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicTraffic Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

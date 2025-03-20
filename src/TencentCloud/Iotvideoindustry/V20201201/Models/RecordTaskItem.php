@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 普通设备的录像详情
  *
  * @method string getRecordTaskId() 获取录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordTaskId(string $RecordTaskId) 设置录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordPlanId() 获取录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordPlanId(string $RecordPlanId) 设置录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventId() 获取录制模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(integer $EventId) 设置录制模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVideoUrl() 获取本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoUrl(string $VideoUrl) 设置本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordStatus() 获取本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordStatus(integer $RecordStatus) 设置本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSceneId() 获取场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneId(integer $SceneId) 设置场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWarnId() 获取告警ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnId(integer $WarnId) 设置告警ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordId() 获取录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordId(string $RecordId) 设置录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordTaskItem extends AbstractModel
 {
     /**
      * @var string 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordTaskId;
 
     /**
      * @var string 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordPlanId;
 
     /**
      * @var integer 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var string 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoUrl;
 
     /**
      * @var integer 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordStatus;
 
     /**
      * @var integer 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneId;
 
     /**
      * @var integer 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnId;
 
     /**
      * @var string 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
 
     /**
      * @param string $RecordTaskId 录像任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordPlanId 录制计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 本录制片段开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 本录制片段结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventId 录制模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VideoUrl 本录制片段对应的录制文件URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordStatus 本录制片段当前的录制状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SceneId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WarnId 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordId 录制id，NVR下属设备有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

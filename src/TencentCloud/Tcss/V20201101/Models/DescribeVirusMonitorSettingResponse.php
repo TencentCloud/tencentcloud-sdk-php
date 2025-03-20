@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableScan() 获取是否开启实时监控
  * @method void setEnableScan(boolean $EnableScan) 设置是否开启实时监控
  * @method boolean getScanPathAll() 获取扫描全部路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPathAll(boolean $ScanPathAll) 设置扫描全部路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanPathType() 获取当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPathType(integer $ScanPathType) 设置当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScanPath() 获取自选排除或扫描的地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanPathMode() 获取扫描路径模式：
 SCAN_PATH_ALL：全部路径
 SCAN_PATH_DEFAULT：默认路径
@@ -56,19 +50,16 @@ class DescribeVirusMonitorSettingResponse extends AbstractModel
 
     /**
      * @var boolean 扫描全部路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPathAll;
 
     /**
      * @var integer 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPathType;
 
     /**
      * @var array 自选排除或扫描的地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPath;
 
@@ -89,11 +80,8 @@ SCAN_PATH_USER_DEFINE：用户自定义路径
     /**
      * @param boolean $EnableScan 是否开启实时监控
      * @param boolean $ScanPathAll 扫描全部路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScanPath 自选排除或扫描的地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanPathMode 扫描路径模式：
 SCAN_PATH_ALL：全部路径
 SCAN_PATH_DEFAULT：默认路径

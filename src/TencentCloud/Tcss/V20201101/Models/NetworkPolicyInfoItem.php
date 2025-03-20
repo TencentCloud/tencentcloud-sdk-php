@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取网络策略名
  * @method void setName(string $Name) 设置网络策略名
  * @method string getDescription() 获取网络策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置网络策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublishStatus() 获取发布状态：
 
 开启待确认：PublishedNoConfirm
@@ -73,9 +71,7 @@ kube-router：KubeRouter
 
 cilium：Cilium
  * @method string getPublishResult() 获取策略发布结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishResult(string $PublishResult) 设置策略发布结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFromPolicyRule() 获取入站规则
 
 全部允许：1
@@ -105,9 +101,7 @@ cilium：Cilium
 
 自定义：3
  * @method string getPodSelector() 获取作用对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodSelector(string $PodSelector) 设置作用对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取网络策略Id
  * @method void setId(integer $Id) 设置网络策略Id
  */
@@ -120,7 +114,6 @@ class NetworkPolicyInfoItem extends AbstractModel
 
     /**
      * @var string 网络策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -169,7 +162,6 @@ cilium：Cilium
 
     /**
      * @var string 策略发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishResult;
 
@@ -197,7 +189,6 @@ cilium：Cilium
 
     /**
      * @var string 作用对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodSelector;
 
@@ -209,7 +200,6 @@ cilium：Cilium
     /**
      * @param string $Name 网络策略名
      * @param string $Description 网络策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublishStatus 发布状态：
 
 开启待确认：PublishedNoConfirm
@@ -234,7 +224,6 @@ kube-router：KubeRouter
 
 cilium：Cilium
      * @param string $PublishResult 策略发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FromPolicyRule 入站规则
 
 全部允许：1
@@ -250,7 +239,6 @@ cilium：Cilium
 
 自定义：3
      * @param string $PodSelector 作用对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 网络策略Id
      */
     function __construct()

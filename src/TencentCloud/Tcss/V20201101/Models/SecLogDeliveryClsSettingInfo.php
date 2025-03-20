@@ -31,13 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicID() 获取主题ID
  * @method void setTopicID(string $TopicID) 设置主题ID
  * @method string getLogSetName() 获取日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSetName(string $LogSetName) 设置日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSubLogType() 获取日志类型	
+ * @method void setSubLogType(array $SubLogType) 设置日志类型	
+ * @method string getErrMsg() 获取错误信息
+ * @method void setErrMsg(string $ErrMsg) 设置错误信息
  */
 class SecLogDeliveryClsSettingInfo extends AbstractModel
 {
@@ -68,15 +68,23 @@ class SecLogDeliveryClsSettingInfo extends AbstractModel
 
     /**
      * @var string 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSetName;
 
     /**
      * @var string 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
+
+    /**
+     * @var array 日志类型	
+     */
+    public $SubLogType;
+
+    /**
+     * @var string 错误信息
+     */
+    public $ErrMsg;
 
     /**
      * @param string $LogType 日志类型
@@ -85,9 +93,9 @@ class SecLogDeliveryClsSettingInfo extends AbstractModel
      * @param string $LogSet 日志集
      * @param string $TopicID 主题ID
      * @param string $LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SubLogType 日志类型	
+     * @param string $ErrMsg 错误信息
      */
     function __construct()
     {
@@ -128,6 +136,14 @@ class SecLogDeliveryClsSettingInfo extends AbstractModel
 
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("SubLogType",$param) and $param["SubLogType"] !== null) {
+            $this->SubLogType = $param["SubLogType"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
         }
     }
 }

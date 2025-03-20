@@ -47,25 +47,17 @@ CHECK_FAILED, 检测失败
  * @method string getCheckResult() 获取检测结果
 RESULT_PASSED: 通过
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckResult(string $CheckResult) 设置检测结果
 RESULT_PASSED: 通过
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWhitelistId() 获取检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhitelistId(integer $WhitelistId) 设置检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFixSuggestion() 获取处理建议。
  * @method void setFixSuggestion(string $FixSuggestion) 设置处理建议。
  * @method string getLastCheckTime() 获取最近检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置最近检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVerifyInfo() 获取验证信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyInfo(string $VerifyInfo) 设置验证信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAssetPolicyItem extends AbstractModel
 {
@@ -117,13 +109,11 @@ CHECK_FAILED, 检测失败
      * @var string 检测结果
 RESULT_PASSED: 通过
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
     /**
      * @var integer 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhitelistId;
 
@@ -134,13 +124,11 @@ RESULT_FAILED: 未通过
 
     /**
      * @var string 最近检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastCheckTime;
 
     /**
      * @var string 验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyInfo;
 
@@ -160,14 +148,10 @@ CHECK_FAILED, 检测失败
      * @param string $CheckResult 检测结果
 RESULT_PASSED: 通过
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WhitelistId 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixSuggestion 处理建议。
      * @param string $LastCheckTime 最近检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyInfo 验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

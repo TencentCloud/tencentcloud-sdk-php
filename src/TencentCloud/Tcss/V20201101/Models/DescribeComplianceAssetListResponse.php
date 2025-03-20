@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取返回资产的总数。
  * @method void setTotalCount(integer $TotalCount) 设置返回资产的总数。
  * @method array getAssetInfoList() 获取返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetInfoList(array $AssetInfoList) 设置返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeComplianceAssetListResponse extends AbstractModel
 
     /**
      * @var array 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetInfoList;
 
@@ -50,7 +47,6 @@ class DescribeComplianceAssetListResponse extends AbstractModel
     /**
      * @param integer $TotalCount 返回资产的总数。
      * @param array $AssetInfoList 返回各类资产的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

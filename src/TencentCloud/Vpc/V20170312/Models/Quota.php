@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getQuotaLimit() 获取配额数量
  * @method void setQuotaLimit(integer $QuotaLimit) 设置配额数量
  * @method string getQuotaGroup() 获取配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuotaGroup(string $QuotaGroup) 设置配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Quota extends AbstractModel
 {
@@ -68,7 +66,6 @@ class Quota extends AbstractModel
 
     /**
      * @var string 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuotaGroup;
 
@@ -83,7 +80,6 @@ class Quota extends AbstractModel
      * @param integer $QuotaCurrent 当前数量
      * @param integer $QuotaLimit 配额数量
      * @param string $QuotaGroup 配额所属的网络组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeStatisticSummary返回参数结构体
  *
  * @method integer getRecordingDevice() 获取录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordingDevice(integer $RecordingDevice) 设置录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNonRecordingDevice() 获取非录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonRecordingDevice(integer $NonRecordingDevice) 设置非录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getWatchFlux() 获取观看流量总数。为直播观看流量与点播观看流量之和。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatchFlux(float $WatchFlux) 设置观看流量总数。为直播观看流量与点播观看流量之和。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStorageUsage() 获取累计有效存储容量总数。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageUsage(float $StorageUsage) 设置累计有效存储容量总数。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getP2PFluxTotal() 获取X-P2P分享流量。单位 Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setP2PFluxTotal(float $P2PFluxTotal) 设置X-P2P分享流量。单位 Byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getP2PPeakValue() 获取X-P2P峰值带宽。 单位bps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setP2PPeakValue(float $P2PPeakValue) 设置X-P2P峰值带宽。 单位bps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLivePushTotal() 获取RTMP推流路数 ( 直播推流)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivePushTotal(integer $LivePushTotal) 设置RTMP推流路数 ( 直播推流)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,43 +41,36 @@ class DescribeStatisticSummaryResponse extends AbstractModel
 {
     /**
      * @var integer 录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordingDevice;
 
     /**
      * @var integer 非录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NonRecordingDevice;
 
     /**
      * @var float 观看流量总数。为直播观看流量与点播观看流量之和。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatchFlux;
 
     /**
      * @var float 累计有效存储容量总数。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageUsage;
 
     /**
      * @var float X-P2P分享流量。单位 Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P2PFluxTotal;
 
     /**
      * @var float X-P2P峰值带宽。 单位bps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P2PPeakValue;
 
     /**
      * @var integer RTMP推流路数 ( 直播推流)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivePushTotal;
 
@@ -102,19 +81,12 @@ class DescribeStatisticSummaryResponse extends AbstractModel
 
     /**
      * @param integer $RecordingDevice 录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NonRecordingDevice 非录制设备总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $WatchFlux 观看流量总数。为直播观看流量与点播观看流量之和。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StorageUsage 累计有效存储容量总数。单位：GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $P2PFluxTotal X-P2P分享流量。单位 Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $P2PPeakValue X-P2P峰值带宽。 单位bps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LivePushTotal RTMP推流路数 ( 直播推流)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

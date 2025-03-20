@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRuleDetail请求参数结构体
+ * DescribeFileInfoByJobId请求参数结构体
  *
-
+ * @method integer getJobId() 获取任务ID
+ * @method void setJobId(integer $JobId) 设置任务ID
  */
-class DescribeRuleDetailRequest extends AbstractModel
+class DescribeFileInfoByJobIdRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 任务ID
+     */
+    public $JobId;
 
     /**
-
+     * @param integer $JobId 任务ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeRuleDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
+        }
     }
 }

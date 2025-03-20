@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsEnabled() 获取规则是否生效，0:不生效，1:已生效
  * @method void setIsEnabled(integer $IsEnabled) 设置规则是否生效，0:不生效，1:已生效
  * @method string getRangeType() 获取授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRangeType(string $RangeType) 设置授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostCount() 获取授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDailyCount() 获取每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDailyCount(integer $MaxDailyCount) 设置每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoScanEnabled() 获取自动扫描开关，0：关闭，1：开启
  * @method void setAutoScanEnabled(integer $AutoScanEnabled) 设置自动扫描开关，0：关闭，1：开启
  * @method array getScanType() 获取自动扫描范围
@@ -54,25 +46,21 @@ class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel
 
     /**
      * @var string 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RangeType;
 
     /**
      * @var integer 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostCount;
 
     /**
      * @var integer 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDailyCount;
 
     /**
      * @var integer 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -94,13 +82,9 @@ class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel
     /**
      * @param integer $IsEnabled 规则是否生效，0:不生效，1:已生效
      * @param string $RangeType 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostCount 授权范围是自选主机时的主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDailyCount 每天最大的镜像授权数限制, 0表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则id，用未设置时为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoScanEnabled 自动扫描开关，0：关闭，1：开启
      * @param array $ScanType 自动扫描范围
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

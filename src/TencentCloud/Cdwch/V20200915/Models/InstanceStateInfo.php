@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 集群状态抽象后的结构体
  *
  * @method string getInstanceState() 获取集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowCreateTime() 获取集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowCreateTime(string $FlowCreateTime) 设置集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowName() 获取集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowName(string $FlowName) 设置集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowProgress() 获取集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowProgress(integer $FlowProgress) 设置集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceStateDesc() 获取集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStateDesc(string $InstanceStateDesc) 设置集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowMsg() 获取集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowMsg(string $FlowMsg) 设置集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessName() 获取当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessName(string $ProcessName) 设置当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取请求id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestId(string $RequestId) 设置请求id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessSubName() 获取流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessSubName(string $ProcessSubName) 设置流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceStateInfo extends AbstractModel
 {
     /**
      * @var string 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceState;
 
     /**
      * @var string 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowCreateTime;
 
     /**
      * @var string 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowName;
 
     /**
      * @var integer 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowProgress;
 
     /**
      * @var string 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStateDesc;
 
     /**
      * @var string 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowMsg;
 
     /**
      * @var string 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessName;
 
     /**
      * @var string 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestId;
 
     /**
      * @var string 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessSubName;
 
     /**
      * @param string $InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessSubName 流程的二级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -97,6 +97,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) 删除k8sapi异常事件规则
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 卸载Agent客户端
  * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略删除任务
+ * @method Models\DeleteRaspRulesResponse DeleteRaspRules(Models\DeleteRaspRulesRequest $req) 删除漏洞防御白名单
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 删除运行时反弹shell事件
  * @method Models\DeleteReverseShellWhiteListsResponse DeleteReverseShellWhiteLists(Models\DeleteReverseShellWhiteListsRequest $req) 删除运行时反弹shell白名单
  * @method Models\DeleteRiskSyscallEventsResponse DeleteRiskSyscallEvents(Models\DeleteRiskSyscallEventsRequest $req) 删除运行时高危系统调用事件
@@ -106,23 +107,14 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) 查询运行时异常进程事件详细信息
  * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) 查询待处理异常进程事件趋势
  * @method Models\DescribeAbnormalProcessEventsResponse DescribeAbnormalProcessEvents(Models\DescribeAbnormalProcessEventsRequest $req) 查询运行时异常进程事件列表信息
- * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 接口已废弃
-
-查询运行时异常进程事件列表信息导出
  * @method Models\DescribeAbnormalProcessLevelSummaryResponse DescribeAbnormalProcessLevelSummary(Models\DescribeAbnormalProcessLevelSummaryRequest $req) 统计异常进程各威胁等级待处理事件数
  * @method Models\DescribeAbnormalProcessRuleDetailResponse DescribeAbnormalProcessRuleDetail(Models\DescribeAbnormalProcessRuleDetailRequest $req) 查询运行时异常策略详细信息
  * @method Models\DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(Models\DescribeAbnormalProcessRulesRequest $req) 查询运行时异常进程策略列表信息
- * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 接口已废弃
-
-查询运行时异常进程策略列表信息导出
  * @method Models\DescribeAccessControlDetailResponse DescribeAccessControlDetail(Models\DescribeAccessControlDetailRequest $req) 查询运行时访问控制事件的详细信息
  * @method Models\DescribeAccessControlEventsResponse DescribeAccessControlEvents(Models\DescribeAccessControlEventsRequest $req) 查询运行时访问控制事件列表
  * @method Models\DescribeAccessControlEventsExportResponse DescribeAccessControlEventsExport(Models\DescribeAccessControlEventsExportRequest $req) 查询运行时访问控制事件列表导出
  * @method Models\DescribeAccessControlRuleDetailResponse DescribeAccessControlRuleDetail(Models\DescribeAccessControlRuleDetailRequest $req) 查询运行时访问控制策略详细信息
  * @method Models\DescribeAccessControlRulesResponse DescribeAccessControlRules(Models\DescribeAccessControlRulesRequest $req) 查询运行访问控制策略列表信息
- * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) 接口已废弃
-
-查询运行时访问控制策略列表导出
  * @method Models\DescribeAffectedClusterCountResponse DescribeAffectedClusterCount(Models\DescribeAffectedClusterCountRequest $req) 获取受影响的集群数量，返回数量
  * @method Models\DescribeAffectedNodeListResponse DescribeAffectedNodeList(Models\DescribeAffectedNodeListRequest $req) 查询节点类型的影响范围，返回节点列表
  * @method Models\DescribeAffectedWorkloadListResponse DescribeAffectedWorkloadList(Models\DescribeAffectedWorkloadListRequest $req) 查询workload类型的影响范围，返回workload列表
@@ -140,9 +132,6 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAssetImageDetailResponse DescribeAssetImageDetail(Models\DescribeAssetImageDetailRequest $req) 查询镜像详细信息
  * @method Models\DescribeAssetImageHostListResponse DescribeAssetImageHostList(Models\DescribeAssetImageHostListRequest $req) 容器安全查询镜像关联主机
  * @method Models\DescribeAssetImageListResponse DescribeAssetImageList(Models\DescribeAssetImageListRequest $req) 容器安全搜索查询镜像列表
- * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) 接口已废弃
-
-容器安全搜索查询镜像列表导出
  * @method Models\DescribeAssetImageRegistryAssetStatusResponse DescribeAssetImageRegistryAssetStatus(Models\DescribeAssetImageRegistryAssetStatusRequest $req) 查看镜像仓库资产更新进度状态
  * @method Models\DescribeAssetImageRegistryDetailResponse DescribeAssetImageRegistryDetail(Models\DescribeAssetImageRegistryDetailRequest $req) 镜像仓库镜像仓库列表详情
  * @method Models\DescribeAssetImageRegistryListResponse DescribeAssetImageRegistryList(Models\DescribeAssetImageRegistryListRequest $req) 镜像仓库镜像仓库列表
@@ -197,9 +186,6 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeEscapeEventInfoResponse DescribeEscapeEventInfo(Models\DescribeEscapeEventInfoRequest $req) DescribeEscapeEventInfo 查询容器逃逸事件列表
  * @method Models\DescribeEscapeEventTendencyResponse DescribeEscapeEventTendency(Models\DescribeEscapeEventTendencyRequest $req) 查询待处理逃逸事件趋势
  * @method Models\DescribeEscapeEventTypeSummaryResponse DescribeEscapeEventTypeSummary(Models\DescribeEscapeEventTypeSummaryRequest $req) 统计容器逃逸各事件类型和待处理事件数
- * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) 接口已废弃
-
-DescribeEscapeEventsExport  查询容器逃逸事件列表导出
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) DescribeEscapeSafeState 查询容器逃逸安全状态
  * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) 查询逃逸白名单
@@ -244,6 +230,8 @@ DescribeEscapeEventsExport  查询容器逃逸事件列表导出
  * @method Models\DescribePromotionActivityResponse DescribePromotionActivity(Models\DescribePromotionActivityRequest $req) 查询促销活动
  * @method Models\DescribePublicKeyResponse DescribePublicKey(Models\DescribePublicKeyRequest $req) 获取公钥
  * @method Models\DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(Models\DescribePurchaseStateInfoRequest $req) DescribePurchaseStateInfo 查询容器安全服务已购买信息
+ * @method Models\DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(Models\DescribeRaspRuleVulsRequest $req) 获取漏洞防御白名单漏洞列表
+ * @method Models\DescribeRaspRulesResponse DescribeRaspRules(Models\DescribeRaspRulesRequest $req) 查询支持防御的漏洞列表
  * @method Models\DescribeRefreshTaskResponse DescribeRefreshTask(Models\DescribeRefreshTaskRequest $req) 查询刷新任务
  * @method Models\DescribeReverseShellDetailResponse DescribeReverseShellDetail(Models\DescribeReverseShellDetailRequest $req) 查询运行时反弹shell事件详细信息
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 查询运行时反弹shell事件列表信息
@@ -341,6 +329,7 @@ DescribeEscapeEventsExport  查询容器逃逸事件列表导出
  * @method Models\ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatus(Models\ModifyK8sApiAbnormalEventStatusRequest $req) 修改k8sapi异常事件状态
  * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) 修改k8sapi异常规则信息
  * @method Models\ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(Models\ModifyK8sApiAbnormalRuleStatusRequest $req) 修改k8sapi异常事件规则状态
+ * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) 编辑或者创建java内存马白名单
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) 修改反弹shell事件的状态信息
  * @method Models\ModifyRiskSyscallStatusResponse ModifyRiskSyscallStatus(Models\ModifyRiskSyscallStatusRequest $req) 修改高危系统调用事件的状态信息
  * @method Models\ModifySecLogCleanSettingInfoResponse ModifySecLogCleanSettingInfo(Models\ModifySecLogCleanSettingInfoRequest $req) 修改安全日志清理设置信息

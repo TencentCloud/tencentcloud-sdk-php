@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * ModifyInstanceKeyValConfigs返回参数结构体
  *
  * @method string getErrorMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowId() 获取ID
  * @method void setFlowId(integer $FlowId) 设置ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class ModifyInstanceKeyValConfigsResponse extends AbstractModel
 {
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
@@ -49,7 +46,6 @@ class ModifyInstanceKeyValConfigsResponse extends AbstractModel
 
     /**
      * @param string $ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowId ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 大盘统计-录像存储统计 出参RecordStatistic
  *
  * @method integer getTime() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(integer $Time) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RecordStatisticValue getValue() 获取统计结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(RecordStatisticValue $Value) 设置统计结果
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordStatistic extends AbstractModel
 {
     /**
      * @var integer 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var RecordStatisticValue 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param integer $Time 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordStatisticValue $Value 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleName() 获取策略名字
  * @method void setRuleName(string $RuleName) 设置策略名字
  * @method string getRuleId() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystemChildRules() 获取系统策略的子策略数组
  * @method void setSystemChildRules(array $SystemChildRules) 设置系统策略的子策略数组
  * @method boolean getIsDefault() 获取是否是系统默认策略
@@ -61,7 +59,6 @@ class AccessControlRuleInfo extends AbstractModel
 
     /**
      * @var string 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -81,7 +78,6 @@ class AccessControlRuleInfo extends AbstractModel
      * @param array $ChildRules 用户策略的子策略数组
      * @param string $RuleName 策略名字
      * @param string $RuleId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystemChildRules 系统策略的子策略数组
      * @param boolean $IsDefault 是否是系统默认策略
      */

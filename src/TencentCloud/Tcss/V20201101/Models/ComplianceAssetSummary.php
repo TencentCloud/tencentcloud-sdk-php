@@ -47,9 +47,7 @@ CHECK_FINISHED, 检测完成
 
 CHECK_FAILED, 检测失败
  * @method float getCheckProgress() 获取此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckProgress(float $CheckProgress) 设置此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPassedPolicyItemCount() 获取此类资产通过的检测项的数目。
  * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) 设置此类资产通过的检测项的数目。
  * @method integer getFailedPolicyItemCount() 获取此类资产未通过的检测的数目。
@@ -73,35 +71,21 @@ CHECK_FAILED, 检测失败
  * @method integer getScanFailedAssetCount() 获取检测失败的资产的数目。
  * @method void setScanFailedAssetCount(integer $ScanFailedAssetCount) 设置检测失败的资产的数目。
  * @method float getCheckCostTime() 获取上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckCostTime(float $CheckCostTime) 设置上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastCheckTime() 获取上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CompliancePeriodTaskRule getPeriodRule() 获取定时检测规则。
  * @method void setPeriodRule(CompliancePeriodTaskRule $PeriodRule) 设置定时检测规则。
  * @method integer getOpenPolicyItemCount() 获取已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenPolicyItemCount(integer $OpenPolicyItemCount) 设置已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIgnoredPolicyItemCount() 获取已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoredPolicyItemCount(integer $IgnoredPolicyItemCount) 设置已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalPolicyItemCount() 获取总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPolicyItemCount(integer $TotalPolicyItemCount) 设置总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDetectHostCount() 获取检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectHostCount(integer $DetectHostCount) 设置检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLeftTime() 获取当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeftTime(integer $LeftTime) 设置当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAssetSummary extends AbstractModel
 {
@@ -132,7 +116,6 @@ CHECK_FAILED, 检测失败
 
     /**
      * @var float 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckProgress;
 
@@ -193,13 +176,11 @@ CHECK_FAILED, 检测失败
 
     /**
      * @var float 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckCostTime;
 
     /**
      * @var string 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastCheckTime;
 
@@ -210,31 +191,26 @@ CHECK_FAILED, 检测失败
 
     /**
      * @var integer 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenPolicyItemCount;
 
     /**
      * @var integer 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoredPolicyItemCount;
 
     /**
      * @var integer 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPolicyItemCount;
 
     /**
      * @var integer 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectHostCount;
 
     /**
      * @var integer 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftTime;
 
@@ -253,7 +229,6 @@ CHECK_FINISHED, 检测完成
 
 CHECK_FAILED, 检测失败
      * @param float $CheckProgress 此类别的检测进度，为 0~100 的数。若未在检测中，无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PassedPolicyItemCount 此类资产通过的检测项的数目。
      * @param integer $FailedPolicyItemCount 此类资产未通过的检测的数目。
      * @param integer $FailedCriticalPolicyItemCount 此类资产下未通过的严重级别的检测项的数目。
@@ -266,20 +241,13 @@ CHECK_FAILED, 检测失败
      * @param float $AssetPassedRate 此类资产的合规率，0~100的数。
      * @param integer $ScanFailedAssetCount 检测失败的资产的数目。
      * @param float $CheckCostTime 上次检测的耗时，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompliancePeriodTaskRule $PeriodRule 定时检测规则。
      * @param integer $OpenPolicyItemCount 已开启的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IgnoredPolicyItemCount 已忽略的检查项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPolicyItemCount 总检测项数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DetectHostCount 检测主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LeftTime 当前任务剩余时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

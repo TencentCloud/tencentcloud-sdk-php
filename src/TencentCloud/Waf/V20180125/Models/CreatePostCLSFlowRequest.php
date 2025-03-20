@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetName(string $LogsetName) 设置投递的CLS所在日志集合名称，默认为 waf_post_logset
  * @method integer getLogType() 获取1-访问日志，2-攻击日志，默认为访问日志。
  * @method void setLogType(integer $LogType) 设置1-访问日志，2-攻击日志，默认为访问日志。
+ * @method string getLogTopicName() 获取投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+ * @method void setLogTopicName(string $LogTopicName) 设置投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
  */
 class CreatePostCLSFlowRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreatePostCLSFlowRequest extends AbstractModel
     public $LogType;
 
     /**
+     * @var string 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
+     */
+    public $LogTopicName;
+
+    /**
      * @param string $CLSRegion 投递的CLS所在区域，默认为ap-shanghai
      * @param string $LogsetName 投递的CLS所在日志集合名称，默认为 waf_post_logset
      * @param integer $LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * @param string $LogTopicName 投递的CLS所在日志主题的名称，默认为 waf_post_logtopic
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreatePostCLSFlowRequest extends AbstractModel
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("LogTopicName",$param) and $param["LogTopicName"] !== null) {
+            $this->LogTopicName = $param["LogTopicName"];
         }
     }
 }

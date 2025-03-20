@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * serverless实例网络信息描述
  *
  * @method string getAddress() 获取地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetType() 获取网络类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetType(string $NetType) 设置网络类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessDBInstanceNetInfo extends AbstractModel
 {
     /**
      * @var string 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer 端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetType;
 
     /**
      * @param string $Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetType 网络类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

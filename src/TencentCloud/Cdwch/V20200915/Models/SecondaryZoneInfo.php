@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 副可用区详情
  *
  * @method string getSecondaryZone() 获取副可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryZone(string $SecondaryZone) 设置副可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecondarySubnet() 获取可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondarySubnet(string $SecondarySubnet) 设置可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserIpNum() 获取可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIpNum(string $UserIpNum) 设置可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecondaryUserSubnetIPNum() 获取可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryUserSubnetIPNum(integer $SecondaryUserSubnetIPNum) 设置可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecondaryZoneInfo extends AbstractModel
 {
     /**
      * @var string 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondaryZone;
 
     /**
      * @var string 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondarySubnet;
 
     /**
      * @var string 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIpNum;
 
     /**
      * @var integer 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondaryUserSubnetIPNum;
 
     /**
      * @param string $SecondaryZone 副可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecondarySubnet 可用区可用的子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserIpNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecondaryUserSubnetIPNum 可用区可用的子网可用ip的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

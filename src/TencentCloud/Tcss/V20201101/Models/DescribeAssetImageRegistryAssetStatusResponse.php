@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取更新进度状态,doing更新中，success更新成功，failed失败
  * @method void setStatus(string $Status) 设置更新进度状态,doing更新中，success更新成功，failed失败
  * @method string getErr() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErr(string $Err) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestSyncSuccessTime() 获取最后一次同步成功时间
  * @method void setLatestSyncSuccessTime(string $LatestSyncSuccessTime) 设置最后一次同步成功时间
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +38,6 @@ class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Err;
 
@@ -57,7 +54,6 @@ class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
     /**
      * @param string $Status 更新进度状态,doing更新中，success更新成功，failed失败
      * @param string $Err 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestSyncSuccessTime 最后一次同步成功时间
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

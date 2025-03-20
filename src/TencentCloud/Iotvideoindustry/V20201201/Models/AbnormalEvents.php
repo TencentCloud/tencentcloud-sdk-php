@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 异动事件走势列表
  *
  * @method string getDate() 获取对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInfo() 获取列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfo(array $Info) 设置列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalEvents extends AbstractModel
 {
     /**
      * @var string 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @var array 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Info;
 
     /**
      * @param string $Date 对应查询日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Info 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

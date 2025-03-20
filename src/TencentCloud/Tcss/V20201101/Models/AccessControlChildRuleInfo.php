@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetFilePath() 获取被访问文件路径，仅仅在访问控制生效
  * @method void setTargetFilePath(string $TargetFilePath) 设置被访问文件路径，仅仅在访问控制生效
  * @method string getRuleId() 获取子策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置子策略id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessControlChildRuleInfo extends AbstractModel
 {
@@ -56,7 +54,6 @@ class AccessControlChildRuleInfo extends AbstractModel
 
     /**
      * @var string 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -67,7 +64,6 @@ class AccessControlChildRuleInfo extends AbstractModel
      * @param string $ProcessPath 进程路径
      * @param string $TargetFilePath 被访问文件路径，仅仅在访问控制生效
      * @param string $RuleId 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

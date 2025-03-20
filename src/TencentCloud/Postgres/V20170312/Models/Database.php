@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 描述数据库详细信息，包括所有者、字符编码等
  *
  * @method string getDatabaseName() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseOwner() 获取数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseOwner(string $DatabaseOwner) 设置数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncoding() 获取数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncoding(string $Encoding) 设置数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCollate() 获取数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCollate(string $Collate) 设置数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCtype() 获取数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCtype(string $Ctype) 设置数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllowConn() 获取数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowConn(boolean $AllowConn) 设置数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnLimit() 获取数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnLimit(integer $ConnLimit) 设置数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivileges() 获取数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivileges(string $Privileges) 设置数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Database extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var string 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseOwner;
 
     /**
      * @var string 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encoding;
 
     /**
      * @var string 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Collate;
 
     /**
      * @var string 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ctype;
 
     /**
      * @var boolean 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowConn;
 
     /**
      * @var integer 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnLimit;
 
     /**
      * @var string 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privileges;
 
     /**
      * @param string $DatabaseName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseOwner 数据库所有者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Encoding 数据库字符编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Collate 数据库排序规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ctype 数据库字符分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowConn 数据库是否允许连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnLimit 数据库最大连接数，-1表示无限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privileges 数据库权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

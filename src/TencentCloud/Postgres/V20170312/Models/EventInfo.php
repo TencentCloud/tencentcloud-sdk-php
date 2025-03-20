@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 参数修改事件信息
  *
  * @method string getParamName() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamName(string $ParamName) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldValue() 获取原参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldValue(string $OldValue) 设置原参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewValue() 获取本次修改期望参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewValue(string $NewValue) 设置本次修改期望参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取后台参数修改开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置后台参数修改开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEffectiveTime() 获取后台参数生效开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectiveTime(string $EffectiveTime) 设置后台参数生效开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取修改状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置修改状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取操作者（一般为用户sub UIN）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作者（一般为用户sub UIN）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventLog() 获取时间日志。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventLog(string $EventLog) 设置时间日志。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventInfo extends AbstractModel
 {
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamName;
 
     /**
      * @var string 原参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldValue;
 
     /**
      * @var string 本次修改期望参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewValue;
 
     /**
      * @var string 后台参数修改开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 后台参数生效开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectiveTime;
 
     /**
      * @var string 修改状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 操作者（一般为用户sub UIN）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @var string 时间日志。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventLog;
 
     /**
      * @param string $ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldValue 原参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewValue 本次修改期望参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 后台参数修改开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EffectiveTime 后台参数生效开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 修改状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 操作者（一般为用户sub UIN）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventLog 时间日志。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

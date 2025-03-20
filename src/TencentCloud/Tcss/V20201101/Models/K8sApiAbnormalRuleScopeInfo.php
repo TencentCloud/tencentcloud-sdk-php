@@ -49,17 +49,11 @@ USER_DEFINED: 用户自定义
  * @method string getAction() 获取动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
  * @method void setAction(string $Action) 设置动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
  * @method string getRiskLevel() 获取威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStatus() 获取开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(boolean $Status) 设置开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDelete() 获取是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDelete(boolean $IsDelete) 设置是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class K8sApiAbnormalRuleScopeInfo extends AbstractModel
 {
@@ -87,19 +81,16 @@ USER_DEFINED: 用户自定义
 
     /**
      * @var string 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var boolean 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var boolean 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDelete;
 
@@ -119,11 +110,8 @@ ABNORMAL_CREATE_POD: 异常pod创建
 USER_DEFINED: 用户自定义
      * @param string $Action 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
      * @param string $RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Status 开关状态(true:开 false:关) 适用于系统规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDelete 是否被删除 适用于自定义规则入参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

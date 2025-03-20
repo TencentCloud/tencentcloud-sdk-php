@@ -118,8 +118,12 @@ Operator 目前支持
 -eq  等于=操作符
 -is     in操作符
 
- * @method integer getTokenType() 获取100 不绑定用户  200 单用户单token  300 单用户多token
- * @method void setTokenType(integer $TokenType) 设置100 不绑定用户  200 单用户单token  300 单用户多token
+ * @method integer getTokenType() 获取100 不绑定用户, 一次创建一个token，UserCorpId和UserId 非必填，不支持 ChatBI 嵌出
+200 单用户单token , 一次创建一个token， UserCorpId和UserId 必填
+300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
+ * @method void setTokenType(integer $TokenType) 设置100 不绑定用户, 一次创建一个token，UserCorpId和UserId 非必填，不支持 ChatBI 嵌出
+200 单用户单token , 一次创建一个token， UserCorpId和UserId 必填
+300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
  * @method integer getTokenNum() 获取一次创建的token数
  * @method void setTokenNum(integer $TokenNum) 设置一次创建的token数
  */
@@ -215,7 +219,9 @@ Operator 目前支持
     public $GlobalParam;
 
     /**
-     * @var integer 100 不绑定用户  200 单用户单token  300 单用户多token
+     * @var integer 100 不绑定用户, 一次创建一个token，UserCorpId和UserId 非必填，不支持 ChatBI 嵌出
+200 单用户单token , 一次创建一个token， UserCorpId和UserId 必填
+300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
      */
     public $TokenType;
 
@@ -274,7 +280,9 @@ Operator 目前支持
 -eq  等于=操作符
 -is     in操作符
 
-     * @param integer $TokenType 100 不绑定用户  200 单用户单token  300 单用户多token
+     * @param integer $TokenType 100 不绑定用户, 一次创建一个token，UserCorpId和UserId 非必填，不支持 ChatBI 嵌出
+200 单用户单token , 一次创建一个token， UserCorpId和UserId 必填
+300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
      * @param integer $TokenNum 一次创建的token数
      */
     function __construct()

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 超级节点上的资源统计
  *
  * @method string getNodeName() 获取节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNum() 获取节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNum(integer $Num) 设置节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCpu() 获取节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(float $Cpu) 设置节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemory() 获取节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(float $Memory) 设置节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getGpu() 获取节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpu(float $Gpu) 设置节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SuperNodeResource extends AbstractModel
 {
     /**
      * @var string 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
      * @var integer 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Num;
 
     /**
      * @var float 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var float 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var float 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gpu;
 
     /**
      * @param string $NodeName 节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Num 节点上的资源总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Cpu 节点上的总核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Memory 节点上的总内存数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Gpu 节点上的总 GPU 卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

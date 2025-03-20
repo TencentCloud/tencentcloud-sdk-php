@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegistryVersion() 获取仓库版本
  * @method void setRegistryVersion(string $RegistryVersion) 设置仓库版本
  * @method string getConnectMsg() 获取仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectMsg(string $ConnectMsg) 设置仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConnDetectType() 获取联通性检测方式
  * @method void setConnDetectType(string $ConnDetectType) 设置联通性检测方式
  * @method integer getConnDetectHostCount() 获取联通性检测主机数
@@ -56,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncSolution(string $SyncSolution) 设置同步失败解决方案
  * @method string getSyncMessage() 获取同步失败信息
  * @method void setSyncMessage(string $SyncMessage) 设置同步失败信息
+ * @method integer getSyncMode() 获取同步方式，0全量同步，1增量同步	
+ * @method void setSyncMode(integer $SyncMode) 设置同步方式，0全量同步，1增量同步	
  */
 class ImageRepoRegistryInfo extends AbstractModel
 {
@@ -96,7 +96,6 @@ class ImageRepoRegistryInfo extends AbstractModel
 
     /**
      * @var string 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectMsg;
 
@@ -146,6 +145,11 @@ class ImageRepoRegistryInfo extends AbstractModel
     public $SyncMessage;
 
     /**
+     * @var integer 同步方式，0全量同步，1增量同步	
+     */
+    public $SyncMode;
+
+    /**
      * @param integer $RegistryId 仓库id
      * @param string $Name 仓库名
      * @param string $RegistryType 仓库类型，列表：harbor、tcr
@@ -154,7 +158,6 @@ class ImageRepoRegistryInfo extends AbstractModel
      * @param string $RegistryRegion 区域，列表：default
      * @param string $RegistryVersion 仓库版本
      * @param string $ConnectMsg 仓库连接错误信息，待废弃，请使用ConnDetectException
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnDetectType 联通性检测方式
      * @param integer $ConnDetectHostCount 联通性检测主机数
      * @param array $ConnDetectDetail 联通性检测详情
@@ -164,6 +167,7 @@ class ImageRepoRegistryInfo extends AbstractModel
      * @param string $SyncFailReason 同步失败原因
      * @param string $SyncSolution 同步失败解决方案
      * @param string $SyncMessage 同步失败信息
+     * @param integer $SyncMode 同步方式，0全量同步，1增量同步	
      */
     function __construct()
     {
@@ -249,6 +253,10 @@ class ImageRepoRegistryInfo extends AbstractModel
 
         if (array_key_exists("SyncMessage",$param) and $param["SyncMessage"] !== null) {
             $this->SyncMessage = $param["SyncMessage"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
         }
     }
 }

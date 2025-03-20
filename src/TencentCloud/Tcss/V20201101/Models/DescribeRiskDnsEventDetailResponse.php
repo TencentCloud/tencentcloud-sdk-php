@@ -101,13 +101,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getReference() 获取参考链接
  * @method void setReference(array $Reference) 设置参考链接
  * @method string getAddress() 获取恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCity() 获取恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(string $City) 设置恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchRuleType() 获取命中规则类型
 SYSTEM：系统规则
  USER：用户自定义
@@ -159,9 +155,7 @@ EVENT_DEALED：已处理
 EVENT_IGNORE： 已忽略
 EVENT_ADD_WHITE：已加白
  * @method string getOperationTime() 获取操作时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationTime(string $OperationTime) 设置操作时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method string getNodeType() 获取节点类型
@@ -317,13 +311,11 @@ class DescribeRiskDnsEventDetailResponse extends AbstractModel
 
     /**
      * @var string 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
@@ -430,7 +422,6 @@ EVENT_ADD_WHITE：已加白
 
     /**
      * @var string 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationTime;
 
@@ -551,9 +542,7 @@ EVENT_ADD_WHITE：已加白
      * @param string $Solution 解决方案
      * @param array $Reference 参考链接
      * @param string $Address 恶意域名或IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $City 恶意IP所属城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchRuleType 命中规则类型
 SYSTEM：系统规则
  USER：用户自定义
@@ -580,7 +569,6 @@ EVENT_DEALED：已处理
 EVENT_IGNORE： 已忽略
 EVENT_ADD_WHITE：已加白
      * @param string $OperationTime 操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
      * @param string $NodeType 节点类型
      * @param string $NodeName 节点名称

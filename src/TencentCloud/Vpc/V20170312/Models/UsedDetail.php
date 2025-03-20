@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTrafficPackageId() 获取流量包唯一ID
  * @method void setTrafficPackageId(string $TrafficPackageId) 设置流量包唯一ID
  * @method string getTrafficPackageName() 获取流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficPackageName(string $TrafficPackageName) 设置流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TrafficFlow getTotalAmount() 获取流量包总量
  * @method void setTotalAmount(TrafficFlow $TotalAmount) 设置流量包总量
  * @method TrafficFlow getDeduction() 获取本次抵扣
@@ -52,7 +50,6 @@ class UsedDetail extends AbstractModel
 
     /**
      * @var string 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficPackageName;
 
@@ -99,7 +96,6 @@ class UsedDetail extends AbstractModel
     /**
      * @param string $TrafficPackageId 流量包唯一ID
      * @param string $TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficFlow $TotalAmount 流量包总量
      * @param TrafficFlow $Deduction 本次抵扣
      * @param TrafficFlow $RemainingAmount 本次抵扣后剩余量

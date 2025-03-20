@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAbnormalProcessRulesExport返回参数结构体
+ * DescribeFileInfoByJobId返回参数结构体
  *
- * @method string getDownloadUrl() 获取execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDownloadUrl(string $DownloadUrl) 设置execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileInfo getFileInfo() 获取生成文件相关信息
+ * @method void setFileInfo(FileInfo $FileInfo) 设置生成文件相关信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAbnormalProcessRulesExportResponse extends AbstractModel
+class DescribeFileInfoByJobIdResponse extends AbstractModel
 {
     /**
-     * @var string execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var FileInfo 生成文件相关信息
      */
-    public $DownloadUrl;
+    public $FileInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeAbnormalProcessRulesExportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileInfo $FileInfo 生成文件相关信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,9 @@ class DescribeAbnormalProcessRulesExportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
+            $this->FileInfo = new FileInfo();
+            $this->FileInfo->deserialize($param["FileInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

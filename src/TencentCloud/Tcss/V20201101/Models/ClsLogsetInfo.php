@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLogsetID() 获取日志集ID
  * @method void setLogsetID(string $LogsetID) 设置日志集ID
  * @method string getLogsetName() 获取日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetName(string $LogsetName) 设置日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTopicList() 获取cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClsLogsetInfo extends AbstractModel
 {
@@ -40,22 +36,18 @@ class ClsLogsetInfo extends AbstractModel
 
     /**
      * @var string 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetName;
 
     /**
      * @var array cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @param string $LogsetID 日志集ID
      * @param string $LogsetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TopicList cls主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

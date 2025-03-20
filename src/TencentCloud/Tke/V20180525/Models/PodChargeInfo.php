@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取Pod类型：intel、amd、v100、t4、a10\*gnv4、a10\*gnv4v等。
  * @method void setType(string $Type) 设置Pod类型：intel、amd、v100、t4、a10\*gnv4、a10\*gnv4v等。
  * @method string getGpu() 获取Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpu(string $Gpu) 设置Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeType() 获取计费类型
 PREPAID：Pod调度到包月超级节点
 POSTPAID_BY_HOUR：按量计费
@@ -80,7 +78,6 @@ class PodChargeInfo extends AbstractModel
 
     /**
      * @var string Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gpu;
 
@@ -111,7 +108,6 @@ TPOD：特惠实例
      * @param float $Memory Pod的内存
      * @param string $Type Pod类型：intel、amd、v100、t4、a10\*gnv4、a10\*gnv4v等。
      * @param string $Gpu Pod是GPU时，表示GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 计费类型
 PREPAID：Pod调度到包月超级节点
 POSTPAID_BY_HOUR：按量计费

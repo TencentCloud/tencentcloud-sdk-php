@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoIsolateSwitch(boolean $AutoIsolateSwitch) 设置自动隔离开关(true:开 false:关)
  * @method boolean getIsKillProgress() 获取是否中断隔离文件关联的进程(true:是 false:否)
  * @method void setIsKillProgress(boolean $IsKillProgress) 设置是否中断隔离文件关联的进程(true:是 false:否)
+ * @method boolean getUserAutoIsolateKillSwitch() 获取用户用户自定义开关
+ * @method void setUserAutoIsolateKillSwitch(boolean $UserAutoIsolateKillSwitch) 设置用户用户自定义开关
  */
 class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
     public $IsKillProgress;
 
     /**
+     * @var boolean 用户用户自定义开关
+     */
+    public $UserAutoIsolateKillSwitch;
+
+    /**
      * @param boolean $AutoIsolateSwitch 自动隔离开关(true:开 false:关)
      * @param boolean $IsKillProgress 是否中断隔离文件关联的进程(true:是 false:否)
+     * @param boolean $UserAutoIsolateKillSwitch 用户用户自定义开关
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
 
         if (array_key_exists("IsKillProgress",$param) and $param["IsKillProgress"] !== null) {
             $this->IsKillProgress = $param["IsKillProgress"];
+        }
+
+        if (array_key_exists("UserAutoIsolateKillSwitch",$param) and $param["UserAutoIsolateKillSwitch"] !== null) {
+            $this->UserAutoIsolateKillSwitch = $param["UserAutoIsolateKillSwitch"];
         }
     }
 }

@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * ClickHouse连接源参数
  *
  * @method integer getPort() 获取ClickHouse的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置ClickHouse的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取ClickHouse连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置ClickHouse连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取ClickHouse连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置ClickHouse连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取ClickHouse连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置ClickHouse连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取ClickHouse连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置ClickHouse连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取ClickHouse连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置ClickHouse连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取ClickHouse连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置ClickHouse连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClickHouseConnectParam extends AbstractModel
 {
     /**
      * @var integer ClickHouse的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string ClickHouse连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string ClickHouse连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string ClickHouse连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var boolean ClickHouse连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @var string ClickHouse连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string ClickHouse连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var boolean 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @param integer $Port ClickHouse的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName ClickHouse连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password ClickHouse连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource ClickHouse连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt ClickHouse连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip ClickHouse连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId ClickHouse连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -14,44 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCloudProductLogTask返回参数结构体
+ * CreateSubDomainsAnalyticsFile返回参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getTopicName() 获取日志主题名称
- * @method void setTopicName(string $TopicName) 设置日志主题名称
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getLogsetName() 获取日志集名称
- * @method void setLogsetName(string $LogsetName) 设置日志集名称
+ * @method integer getJobId() 获取当前批量任务 id。
+ * @method void setJobId(integer $JobId) 设置当前批量任务 id。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateCloudProductLogTaskResponse extends AbstractModel
+class CreateSubDomainsAnalyticsFileResponse extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var integer 当前批量任务 id。
      */
-    public $TopicId;
-
-    /**
-     * @var string 日志主题名称
-     */
-    public $TopicName;
-
-    /**
-     * @var string 日志集ID
-     */
-    public $LogsetId;
-
-    /**
-     * @var string 日志集名称
-     */
-    public $LogsetName;
+    public $JobId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +38,7 @@ class CreateCloudProductLogTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param string $TopicName 日志主题名称
-     * @param string $LogsetId 日志集ID
-     * @param string $LogsetName 日志集名称
+     * @param integer $JobId 当前批量任务 id。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,20 +54,8 @@ class CreateCloudProductLogTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
-        }
-
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
-        }
-
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
-        }
-
-        if (array_key_exists("LogsetName",$param) and $param["LogsetName"] !== null) {
-            $this->LogsetName = $param["LogsetName"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

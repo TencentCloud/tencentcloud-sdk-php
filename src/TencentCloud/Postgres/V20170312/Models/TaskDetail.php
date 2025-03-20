@@ -21,65 +21,47 @@ use TencentCloud\Common\AbstractModel;
  * 任务的详情信息
  *
  * @method string getCurrentStep() 获取当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentStep(string $CurrentStep) 设置当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAllSteps() 获取当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllSteps(string $AllSteps) 设置当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInput() 获取任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(string $Input) 设置任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutput() 获取任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(string $Output) 设置任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间，默认值：0
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间，默认值：0
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSwitchTime() 获取指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchTime(string $SwitchTime) 设置指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
     /**
      * @var string 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentStep;
 
     /**
      * @var string 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllSteps;
 
     /**
      * @var string 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var string 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -89,41 +71,31 @@ class TaskDetail extends AbstractModel
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchTag;
 
     /**
      * @var string 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchTime;
 
     /**
      * @var string 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $CurrentStep 当前执行的子任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AllSteps 当前任务所拥有的子步骤描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Input 任务的输入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Output 任务的输出参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SwitchTag 指定实例配置完成变更后的切换时间，默认值：0
 0:   此任务不需要切换
 1：立即切换
 2：指定时间切换
 3：维护时间窗口内切换。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SwitchTime 指定的切换时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务的提示信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDiskTotal() 获取独享集群的总容量大小，单位GiB
  * @method void setDiskTotal(integer $DiskTotal) 设置独享集群的总容量大小，单位GiB
  * @method integer getDiskAvailable() 获取独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskAvailable(integer $DiskAvailable) 设置独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdcSize extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CdcSize extends AbstractModel
 
     /**
      * @var integer 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskAvailable;
 
     /**
      * @param integer $DiskTotal 独享集群的总容量大小，单位GiB
      * @param integer $DiskAvailable 独享集群的可用容量大小，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

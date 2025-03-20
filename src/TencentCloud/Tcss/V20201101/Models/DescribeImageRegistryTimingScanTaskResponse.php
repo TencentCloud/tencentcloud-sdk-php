@@ -21,35 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeImageRegistryTimingScanTask返回参数结构体
  *
  * @method boolean getEnable() 获取定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnable(boolean $Enable) 设置定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanTime() 获取定时任务扫描时间
  * @method void setScanTime(string $ScanTime) 设置定时任务扫描时间
  * @method integer getScanPeriod() 获取定时扫描间隔
  * @method void setScanPeriod(integer $ScanPeriod) 设置定时扫描间隔
  * @method array getScanType() 获取扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanType(array $ScanType) 设置扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAll() 获取扫描全部镜像
  * @method void setAll(boolean $All) 设置扫描全部镜像
  * @method array getImages() 获取自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImages(array $Images) 设置自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getId() 获取自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(array $Id) 设置自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLatest() 获取是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatest(boolean $Latest) 设置是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanEndTime() 获取扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRegistryType() 获取仓库类型 tcr,ccr,harbor	
  * @method void setRegistryType(array $RegistryType) 设置仓库类型 tcr,ccr,harbor	
  * @method boolean getContainerRunning() 获取是否存在运行中的容器	
@@ -59,13 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNamespace() 获取命名空间
  * @method void setNamespace(array $Namespace) 设置命名空间
  * @method array getExcludeImageAssetIds() 获取排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeImageAssetIds(array $ExcludeImageAssetIds) 设置排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanResult() 获取扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
  * @method void setScanResult(string $ScanResult) 设置扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -75,7 +59,6 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 {
     /**
      * @var boolean 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
@@ -91,7 +74,6 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
     /**
      * @var array 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanType;
 
@@ -103,25 +85,21 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
     /**
      * @var array 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Images;
 
     /**
      * @var array 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var boolean 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Latest;
 
     /**
      * @var string 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanEndTime;
 
@@ -147,13 +125,11 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
     /**
      * @var array 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeImageAssetIds;
 
     /**
      * @var string 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
 
@@ -169,28 +145,20 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
     /**
      * @param boolean $Enable 定时扫描开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanTime 定时任务扫描时间
      * @param integer $ScanPeriod 定时扫描间隔
      * @param array $ScanType 扫描类型数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $All 扫描全部镜像
      * @param array $Images 自定义扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Id 自动以扫描镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Latest 是否扫描最新版本镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanEndTime 扫描结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegistryType 仓库类型 tcr,ccr,harbor	
      * @param boolean $ContainerRunning 是否存在运行中的容器	
      * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
      * @param array $Namespace 命名空间
      * @param array $ExcludeImageAssetIds 排除的镜像资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

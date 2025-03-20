@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCloudProductLogTasks返回参数结构体
+ * DeleteRaspRules返回参数结构体
  *
- * @method array getTasks() 获取日志配置详情列表
- * @method void setTasks(array $Tasks) 设置日志配置详情列表
- * @method integer getTotalCount() 获取日志配置总数
- * @method void setTotalCount(integer $TotalCount) 设置日志配置总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeCloudProductLogTasksResponse extends AbstractModel
+class DeleteRaspRulesResponse extends AbstractModel
 {
-    /**
-     * @var array 日志配置详情列表
-     */
-    public $Tasks;
-
-    /**
-     * @var integer 日志配置总数
-     */
-    public $TotalCount;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Tasks 日志配置详情列表
-     * @param integer $TotalCount 日志配置总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeCloudProductLogTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
-            $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
-                $obj = new CloudProductLogTaskInfo();
-                $obj->deserialize($value);
-                array_push($this->Tasks, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

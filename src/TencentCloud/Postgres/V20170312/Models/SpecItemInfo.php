@@ -41,17 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取机器类型
  * @method void setType(string $Type) 设置机器类型
  * @method string getMajorVersion() 获取PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMajorVersion(string $MajorVersion) 设置PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKernelVersion() 获取PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKernelVersion(string $KernelVersion) 设置PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportTDE() 获取是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportTDE(integer $IsSupportTDE) 设置是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -107,19 +101,16 @@ class SpecItemInfo extends AbstractModel
 
     /**
      * @var string PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MajorVersion;
 
     /**
      * @var string PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KernelVersion;
 
     /**
      * @var integer 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportTDE;
 
@@ -135,11 +126,8 @@ class SpecItemInfo extends AbstractModel
      * @param integer $Pid 【该字段废弃】
      * @param string $Type 机器类型
      * @param string $MajorVersion PostgreSQL的主要版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KernelVersion PostgreSQL的内核版本编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

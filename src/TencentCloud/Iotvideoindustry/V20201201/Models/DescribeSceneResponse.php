@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeScene返回参数结构体
  *
  * @method integer getIntId() 获取场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntId(integer $IntId) 设置场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordDuration() 获取录制时长(秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordDuration(integer $RecordDuration) 设置录制时长(秒)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSceneName() 获取场景名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneName(string $SceneName) 设置场景名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSceneTrigger() 获取场景触发规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneTrigger(string $SceneTrigger) 设置场景触发规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStoreDuration() 获取存储时长 (天)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoreDuration(integer $StoreDuration) 设置存储时长 (天)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户Uin
  * @method void setUin(string $Uin) 设置用户Uin
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,43 +43,36 @@ class DescribeSceneResponse extends AbstractModel
 {
     /**
      * @var integer 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntId;
 
     /**
      * @var integer 录制时长(秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordDuration;
 
     /**
      * @var string 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneName;
 
     /**
      * @var string 场景触发规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneTrigger;
 
     /**
      * @var integer 存储时长 (天)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StoreDuration;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -109,19 +88,12 @@ class DescribeSceneResponse extends AbstractModel
 
     /**
      * @param integer $IntId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordDuration 录制时长(秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SceneName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SceneTrigger 场景触发规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StoreDuration 存储时长 (天)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户Uin
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

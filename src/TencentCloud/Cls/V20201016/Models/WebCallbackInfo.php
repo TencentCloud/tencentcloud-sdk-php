@@ -21,61 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * 告警渠道回调配置信息
  *
  * @method string getWebCallbackId() 获取告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebCallbackId(string $WebCallbackId) 设置告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebhook() 获取回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebhook(string $Webhook) 设置回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethod() 获取请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUin() 获取主账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(integer $Uin) 设置主账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubUin() 获取子账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubUin(integer $SubUin) 设置子账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebCallbackInfo extends AbstractModel
 {
     /**
      * @var string 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebCallbackId;
 
     /**
      * @var string 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -83,75 +61,57 @@ class WebCallbackInfo extends AbstractModel
      * @var string 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Webhook;
 
     /**
      * @var string 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var string 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var integer 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUin;
 
     /**
      * @var integer 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $WebCallbackId 告警渠道回调配置id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警渠道回调配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Webhook 回调地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 请求方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 秘钥信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubUin 子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新时间。秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

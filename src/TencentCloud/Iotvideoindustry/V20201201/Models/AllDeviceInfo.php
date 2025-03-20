@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 查询全部设备出参
  *
  * @method string getDeviceId() 获取设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceType() 获取设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(integer $DeviceType) 设置设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInformation() 获取设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInformation(string $ExtraInformation) 设置设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickName(string $NickName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupPath() 获取设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupPath(string $GroupPath) 设置设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceCode() 获取设备编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCode(string $DeviceCode) 设置设备编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRecord() 获取是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecord(integer $IsRecord) 设置是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordable() 获取该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordable(integer $Recordable) 设置该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置组名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllDeviceInfo extends AbstractModel
 {
     /**
      * @var string 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var integer 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @var integer 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInformation;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
     /**
      * @var string 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupPath;
 
     /**
      * @var string 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceCode;
 
     /**
      * @var integer 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRecord;
 
     /**
      * @var integer 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Recordable;
 
     /**
      * @var string 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @param string $DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceType 设备类型；2：IPC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInformation 设备扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupPath 设备绑定分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRecord 是否存在录像,，0:不存在；1：存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Recordable 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

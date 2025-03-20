@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 返回连接源的Id
  *
  * @method string getResourceId() 获取连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConnectResourceResourceIdResp extends AbstractModel
 {
     /**
      * @var string 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @param string $ResourceId 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

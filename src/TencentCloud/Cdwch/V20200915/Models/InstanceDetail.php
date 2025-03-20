@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Instance表detail字段
  *
  * @method boolean getEnableAlarmStrategy() 获取告警策略是否可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAlarmStrategy(boolean $EnableAlarmStrategy) 设置告警策略是否可用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
     /**
      * @var boolean 告警策略是否可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableAlarmStrategy;
 
     /**
      * @param boolean $EnableAlarmStrategy 告警策略是否可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

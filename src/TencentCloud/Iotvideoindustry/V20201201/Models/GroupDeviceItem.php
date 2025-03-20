@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 分组下设备信息
  *
  * @method string getDeviceId() 获取设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickName(string $NickName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取设备状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置设备状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInformation() 获取扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInformation(string $ExtraInformation) 设置扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceType() 获取设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(integer $DeviceType) 设置设备类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRTSPUrl() 获取rtsp地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRTSPUrl(string $RTSPUrl) 设置rtsp地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceCode() 获取设备编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCode(string $DeviceCode) 设置设备编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRecord() 获取是否存在录像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecord(integer $IsRecord) 设置是否存在录像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordable() 获取该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordable(integer $Recordable) 设置该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelNum() 获取设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelNum(integer $ChannelNum) 设置设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVideoChannelNum() 获取设备视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoChannelNum(integer $VideoChannelNum) 设置设备视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupDeviceItem extends AbstractModel
 {
     /**
      * @var string 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
     /**
      * @var integer 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInformation;
 
     /**
      * @var integer 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @var string rtsp地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTSPUrl;
 
     /**
      * @var string 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceCode;
 
     /**
      * @var integer 是否存在录像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRecord;
 
     /**
      * @var integer 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Recordable;
 
     /**
      * @var string 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var integer 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelNum;
 
     /**
      * @var integer 设备视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoChannelNum;
 
     /**
      * @param string $DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 设备状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInformation 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceType 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RTSPUrl rtsp地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRecord 是否存在录像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Recordable 该设备是否可录制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 设备接入协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelNum 设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VideoChannelNum 设备视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

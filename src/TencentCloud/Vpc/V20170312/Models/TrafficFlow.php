@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValue() 获取实际流量，单位为 字节
  * @method void setValue(integer $Value) 设置实际流量，单位为 字节
  * @method float getFormatValue() 获取格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormatValue(float $FormatValue) 设置格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormatUnit() 获取格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormatUnit(string $FormatUnit) 设置格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficFlow extends AbstractModel
 {
@@ -40,22 +36,18 @@ class TrafficFlow extends AbstractModel
 
     /**
      * @var float 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormatValue;
 
     /**
      * @var string 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormatUnit;
 
     /**
      * @param integer $Value 实际流量，单位为 字节
      * @param float $FormatValue 格式化后的流量，单位见参数 FormatUnit
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormatUnit 格式化后流量的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

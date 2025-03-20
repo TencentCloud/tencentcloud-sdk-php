@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSecLogKafkaUIN返回参数结构体
  *
  * @method string getDstUIN() 获取目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstUIN(string $DstUIN) 设置目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStatus() 获取授权状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(boolean $Status) 设置授权状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeSecLogKafkaUINResponse extends AbstractModel
 {
     /**
      * @var string 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstUIN;
 
     /**
      * @var boolean 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -52,9 +46,7 @@ class DescribeSecLogKafkaUINResponse extends AbstractModel
 
     /**
      * @param string $DstUIN 目标UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Status 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

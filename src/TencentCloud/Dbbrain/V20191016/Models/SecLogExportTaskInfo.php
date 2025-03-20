@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAsyncRequestId() 获取异步任务Id。
  * @method void setAsyncRequestId(integer $AsyncRequestId) 设置异步任务Id。
  * @method string getStartTime() 获取任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务创建时间。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
  * @method string getStatus() 获取任务状态。
@@ -37,21 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取任务执行进度。
  * @method void setProgress(integer $Progress) 设置任务执行进度。
  * @method string getLogStartTime() 获取导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogStartTime(string $LogStartTime) 设置导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogEndTime() 获取导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogEndTime(string $LogEndTime) 设置导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalSize() 获取日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalSize(integer $TotalSize) 设置日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDangerLevels() 获取风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDangerLevels(array $DangerLevels) 设置风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecLogExportTaskInfo extends AbstractModel
 {
@@ -62,13 +50,11 @@ class SecLogExportTaskInfo extends AbstractModel
 
     /**
      * @var string 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -89,45 +75,35 @@ class SecLogExportTaskInfo extends AbstractModel
 
     /**
      * @var string 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogStartTime;
 
     /**
      * @var string 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogEndTime;
 
     /**
      * @var integer 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalSize;
 
     /**
      * @var array 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DangerLevels;
 
     /**
      * @param integer $AsyncRequestId 异步任务Id。
      * @param string $StartTime 任务开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 任务结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间。
      * @param string $Status 任务状态。
      * @param integer $Progress 任务执行进度。
      * @param string $LogStartTime 导出日志开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogEndTime 导出日志结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalSize 日志文件总大小，单位KB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DangerLevels 风险等级列表。0 无风险；1 低风险；2 中风险；3 高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

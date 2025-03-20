@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 设备事件列表
  *
  * @method integer getEventTime() 获取开始时间，秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventTime(integer $EventTime) 设置开始时间，秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventType() 获取事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventType(integer $EventType) 设置事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventDesc() 获取事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventDesc(string $EventDesc) 设置事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceType() 获取设备类型
  * @method void setDeviceType(integer $DeviceType) 设置设备类型
  * @method string getDeviceAddress() 获取设备地址
@@ -43,27 +37,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventLog() 获取事件日志
  * @method void setEventLog(string $EventLog) 设置事件日志
  * @method string getDeviceName() 获取设备备注名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备备注名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Events extends AbstractModel
 {
     /**
      * @var integer 开始时间，秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventTime;
 
     /**
      * @var integer 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventType;
 
     /**
      * @var string 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventDesc;
 
@@ -94,24 +83,19 @@ class Events extends AbstractModel
 
     /**
      * @var string 设备备注名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @param integer $EventTime 开始时间，秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventType 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventDesc 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceType 设备类型
      * @param string $DeviceAddress 设备地址
      * @param string $DeviceId 设备Id
      * @param string $ChannelId 通道Id
      * @param string $EventLog 事件日志
      * @param string $DeviceName 设备备注名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

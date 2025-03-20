@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 表示主机资产专属的详情。
  *
  * @method string getDockerVersion() 获取主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDockerVersion(string $DockerVersion) 设置主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getK8SVersion() 获取主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setK8SVersion(string $K8SVersion) 设置主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerdVersion() 获取主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerdVersion(string $ContainerdVersion) 设置主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceHostDetailInfo extends AbstractModel
 {
     /**
      * @var string 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DockerVersion;
 
     /**
      * @var string 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $K8SVersion;
 
     /**
      * @var string 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerdVersion;
 
     /**
      * @param string $DockerVersion 主机上的Docker版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $K8SVersion 主机上的K8S的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerdVersion 主机上Containerd版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

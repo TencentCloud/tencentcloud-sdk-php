@@ -18,22 +18,26 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccessControlRulesExport返回参数结构体
+ * DescribeRaspRuleVuls返回参数结构体
  *
- * @method string getDownloadUrl() 获取execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDownloadUrl(string $DownloadUrl) 设置execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getList() 获取列表内容	
+ * @method void setList(array $List) 设置列表内容	
+ * @method integer getTotalCount() 获取总数量
+ * @method void setTotalCount(integer $TotalCount) 设置总数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAccessControlRulesExportResponse extends AbstractModel
+class DescribeRaspRuleVulsResponse extends AbstractModel
 {
     /**
-     * @var string execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 列表内容	
      */
-    public $DownloadUrl;
+    public $List;
+
+    /**
+     * @var integer 总数量
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class DescribeAccessControlRulesExportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl execle下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $List 列表内容	
+     * @param integer $TotalCount 总数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,17 @@ class DescribeAccessControlRulesExportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new RaspRuleVul();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

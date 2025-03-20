@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSinkSchemaName(string $SinkSchemaName) 设置目标端schema名称
  * @method string getEnv() 获取获取源信息的环境
  * @method void setEnv(string $Env) 设置获取源信息的环境
+ * @method string getWriteMode() 获取doris写入模式配置
+ * @method void setWriteMode(string $WriteMode) 设置doris写入模式配置
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string doris写入模式配置
+     */
+    public $WriteMode;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
@@ -224,6 +231,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param TableBaseInfo $TableBaseInfo dlc表治理信息
      * @param string $SinkSchemaName 目标端schema名称
      * @param string $Env 获取源信息的环境
+     * @param string $WriteMode doris写入模式配置
      */
     function __construct()
     {
@@ -352,6 +360,10 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("WriteMode",$param) and $param["WriteMode"] !== null) {
+            $this->WriteMode = $param["WriteMode"];
         }
     }
 }

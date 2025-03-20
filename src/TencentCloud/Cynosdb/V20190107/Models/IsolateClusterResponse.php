@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * IsolateCluster返回参数结构体
  *
  * @method integer getFlowId() 获取任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNames() 获取退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
@@ -35,7 +33,6 @@ class IsolateClusterResponse extends AbstractModel
 {
     /**
      * @var integer 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
@@ -52,7 +49,6 @@ class IsolateClusterResponse extends AbstractModel
 
     /**
      * @param integer $FlowId 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

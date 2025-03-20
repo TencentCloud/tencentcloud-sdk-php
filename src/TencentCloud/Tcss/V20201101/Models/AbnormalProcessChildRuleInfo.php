@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProcessPath() 获取进程路径
  * @method void setProcessPath(string $ProcessPath) 设置进程路径
  * @method string getRuleId() 获取子策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置子策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleLevel() 获取威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleLevel(string $RuleLevel) 设置威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalProcessChildRuleInfo extends AbstractModel
 {
@@ -53,13 +49,11 @@ class AbnormalProcessChildRuleInfo extends AbstractModel
 
     /**
      * @var string 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleLevel;
 
@@ -69,9 +63,7 @@ class AbnormalProcessChildRuleInfo extends AbstractModel
    RULE_MODE_HOLDUP:拦截
      * @param string $ProcessPath 进程路径
      * @param string $RuleId 子策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

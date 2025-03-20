@@ -21,129 +21,94 @@ use TencentCloud\Common\AbstractModel;
  * 容器安全镜像病毒信息
  *
  * @method string getPath() 获取路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusName() 获取病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusName(string $VirusName) 设置病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取修护建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置修护建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstScanTime() 获取首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstScanTime(string $FirstScanTime) 设置首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestScanTime() 获取最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestScanTime(string $LatestScanTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取文件md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置文件md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCheckPlatform() 获取检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckPlatform(array $CheckPlatform) 设置检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVirusInfo extends AbstractModel
 {
     /**
      * @var string 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var integer 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusName;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var string 修护建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var integer 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstScanTime;
 
     /**
      * @var string 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestScanTime;
 
     /**
      * @var string 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var string 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
@@ -154,40 +119,27 @@ class ImageVirusInfo extends AbstractModel
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckPlatform;
 
     /**
      * @param string $Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 修护建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstScanTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

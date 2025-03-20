@@ -77,13 +77,9 @@ MountNamespace逃逸、
  * @method string getLatestFoundTime() 获取最近生成时间
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
  * @method string getNodeIP() 获取节点IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeIP(string $NodeIP) 设置节点IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostID() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostID(string $HostID) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -91,7 +87,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -99,7 +94,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -108,7 +102,6 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -117,11 +110,8 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerStatus() 获取容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -247,13 +237,11 @@ MountNamespace逃逸、
 
     /**
      * @var string 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeIP;
 
     /**
      * @var string 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostID;
 
@@ -265,7 +253,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetStatus;
 
@@ -278,13 +265,11 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
@@ -370,9 +355,7 @@ MountNamespace逃逸、
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
      * @param string $NodeIP 节点IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostID 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -380,7 +363,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -389,9 +371,7 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED

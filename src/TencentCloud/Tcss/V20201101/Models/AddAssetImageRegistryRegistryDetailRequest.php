@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置密码
  * @method string getUrl() 获取仓库url
  * @method void setUrl(string $Url) 设置仓库url
- * @method string getRegistryType() 获取仓库类型，列表：harbor
- * @method void setRegistryType(string $RegistryType) 设置仓库类型，列表：harbor
+ * @method string getRegistryType() 获取仓库类型，列表：harbor,quay,jfrog,aws,azure,other-tcr
+ * @method void setRegistryType(string $RegistryType) 设置仓库类型，列表：harbor,quay,jfrog,aws,azure,other-tcr
  * @method string getNetType() 获取网络类型，列表：public（公网）
  * @method void setNetType(string $NetType) 设置网络类型，列表：public（公网）
  * @method string getRegistryVersion() 获取仓库版本
@@ -42,8 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
  * @method array getConnDetectConfig() 获取联通性检测的记录ID
  * @method void setConnDetectConfig(array $ConnDetectConfig) 设置联通性检测的记录ID
- * @method boolean getNeedScan() 获取”授权&扫描"开关
- * @method void setNeedScan(boolean $NeedScan) 设置”授权&扫描"开关
+ * @method boolean getNeedScan() 获取是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+ * @method void setNeedScan(boolean $NeedScan) 设置是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+ * @method integer getSyncMode() 获取同步方式，0全量同步，1增量同步
+ * @method void setSyncMode(integer $SyncMode) 设置同步方式，0全量同步，1增量同步
+ * @method string getWebhookUrl() 获取webhook接入地址
+ * @method void setWebhookUrl(string $WebhookUrl) 设置webhook接入地址
+ * @method string getWebhookToken() 获取webhook接入token
+ * @method void setWebhookToken(string $WebhookToken) 设置webhook接入token
  */
 class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -68,7 +74,7 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var string 仓库类型，列表：harbor
+     * @var string 仓库类型，列表：harbor,quay,jfrog,aws,azure,other-tcr
      */
     public $RegistryType;
 
@@ -103,23 +109,41 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $ConnDetectConfig;
 
     /**
-     * @var boolean ”授权&扫描"开关
+     * @var boolean 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
      */
     public $NeedScan;
+
+    /**
+     * @var integer 同步方式，0全量同步，1增量同步
+     */
+    public $SyncMode;
+
+    /**
+     * @var string webhook接入地址
+     */
+    public $WebhookUrl;
+
+    /**
+     * @var string webhook接入token
+     */
+    public $WebhookToken;
 
     /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
      * @param string $Url 仓库url
-     * @param string $RegistryType 仓库类型，列表：harbor
+     * @param string $RegistryType 仓库类型，列表：harbor,quay,jfrog,aws,azure,other-tcr
      * @param string $NetType 网络类型，列表：public（公网）
      * @param string $RegistryVersion 仓库版本
      * @param string $RegistryRegion 区域，列表：default（默认）
      * @param integer $SpeedLimit 限速
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
      * @param array $ConnDetectConfig 联通性检测的记录ID
-     * @param boolean $NeedScan ”授权&扫描"开关
+     * @param boolean $NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     * @param integer $SyncMode 同步方式，0全量同步，1增量同步
+     * @param string $WebhookUrl webhook接入地址
+     * @param string $WebhookToken webhook接入token
      */
     function __construct()
     {
@@ -185,6 +209,18 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
             $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
+        }
+
+        if (array_key_exists("WebhookUrl",$param) and $param["WebhookUrl"] !== null) {
+            $this->WebhookUrl = $param["WebhookUrl"];
+        }
+
+        if (array_key_exists("WebhookToken",$param) and $param["WebhookToken"] !== null) {
+            $this->WebhookToken = $param["WebhookToken"];
         }
     }
 }

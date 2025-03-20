@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExportStatus() 获取导出的状态。取值为, SUCCESS:成功、FAILURE:失败，RUNNING: 进行中。
  * @method void setExportStatus(string $ExportStatus) 设置导出的状态。取值为, SUCCESS:成功、FAILURE:失败，RUNNING: 进行中。
  * @method string getDownloadURL() 获取返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadURL(string $DownloadURL) 设置返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getExportProgress() 获取当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExportProgress(float $ExportProgress) 设置当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureMsg() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureMsg(string $FailureMsg) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,19 +40,16 @@ class DescribeExportJobResultResponse extends AbstractModel
 
     /**
      * @var string 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadURL;
 
     /**
      * @var float 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExportProgress;
 
     /**
      * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureMsg;
 
@@ -70,11 +61,8 @@ class DescribeExportJobResultResponse extends AbstractModel
     /**
      * @param string $ExportStatus 导出的状态。取值为, SUCCESS:成功、FAILURE:失败，RUNNING: 进行中。
      * @param string $DownloadURL 返回下载URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ExportProgress 当ExportStatus为RUNNING时，返回导出进度。0~100范围的浮点数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

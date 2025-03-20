@@ -21,213 +21,145 @@ use TencentCloud\Common\AbstractModel;
  * serverless实例描述
  *
  * @method string getDBInstanceId() 获取实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceName(string $DBInstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBInstanceStatus() 获取实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceStatus(string $DBInstanceStatus) 设置实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBCharset() 获取字符集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBCharset(string $DBCharset) 设置字符集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBVersion() 获取数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBVersion(string $DBVersion) 设置数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBInstanceNetInfo() 获取实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) 设置实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBAccountSet() 获取实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBAccountSet(array $DBAccountSet) 设置实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBDatabaseList() 获取实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBDatabaseList(array $DBDatabaseList) 设置实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBKernelVersion() 获取数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBKernelVersion(string $DBKernelVersion) 设置数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBMajorVersion() 获取数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessDBInstance extends AbstractModel
 {
     /**
      * @var string 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceName;
 
     /**
      * @var string 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceStatus;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var integer 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBCharset;
 
     /**
      * @var string 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBVersion;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var array 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceNetInfo;
 
     /**
      * @var array 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBAccountSet;
 
     /**
      * @var array 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBDatabaseList;
 
     /**
      * @var array 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
      * @var string 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBKernelVersion;
 
     /**
      * @var string 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBMajorVersion;
 
     /**
      * @param string $DBInstanceId 实例id，唯一标识符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBInstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBInstanceStatus 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBCharset 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBInstanceNetInfo 实例网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBAccountSet 实例账户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBDatabaseList 实例下的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 实例绑定的标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBKernelVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBMajorVersion 数据库主要版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

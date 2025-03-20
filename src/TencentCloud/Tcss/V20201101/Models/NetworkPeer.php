@@ -35,17 +35,11 @@ pod类型：PodSelector，代表NamespaceSelector和PodSelector都有值
 
 ip类型：IPBlock，代表只有IPBlock有值
  * @method string getNamespaceSelector() 获取空间选择器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceSelector(string $NamespaceSelector) 设置空间选择器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodSelector() 获取pod选择器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodSelector(string $PodSelector) 设置pod选择器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPBlock() 获取Ip选择器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPBlock(string $IPBlock) 设置Ip选择器
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkPeer extends AbstractModel
 {
@@ -62,19 +56,16 @@ ip类型：IPBlock，代表只有IPBlock有值
 
     /**
      * @var string 空间选择器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceSelector;
 
     /**
      * @var string pod选择器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodSelector;
 
     /**
      * @var string Ip选择器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPBlock;
 
@@ -87,11 +78,8 @@ pod类型：PodSelector，代表NamespaceSelector和PodSelector都有值
 
 ip类型：IPBlock，代表只有IPBlock有值
      * @param string $NamespaceSelector 空间选择器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodSelector pod选择器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPBlock Ip选择器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

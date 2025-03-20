@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取组件类型
  * @method void setType(string $Type) 设置组件类型
  * @method integer getVulCount() 获取组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCount(integer $VulCount) 设置组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageID() 获取镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageID(string $ImageID) 设置镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageComponent extends AbstractModel
 {
@@ -61,13 +57,11 @@ class ImageComponent extends AbstractModel
 
     /**
      * @var integer 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCount;
 
     /**
      * @var string 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageID;
 
@@ -77,9 +71,7 @@ class ImageComponent extends AbstractModel
      * @param string $Path 组件路径
      * @param string $Type 组件类型
      * @param integer $VulCount 组件漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageID 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

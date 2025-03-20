@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取漏洞名称
  * @method void setName(string $Name) 设置漏洞名称
  * @method array getTags() 获取漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryType() 获取漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryType(string $CategoryType) 设置漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取漏洞威胁等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置漏洞威胁等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubmitTime() 获取漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmitTime(string $SubmitTime) 设置漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取漏洞描述
  * @method void setDescription(string $Description) 设置漏洞描述
  * @method string getCVSSV3Desc() 获取CVSS V3描述
@@ -69,25 +61,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPocID() 获取漏洞PocID
  * @method void setPocID(string $PocID) 设置漏洞PocID
  * @method string getDefenceStatus() 获取防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenceStatus(string $DefenceStatus) 设置防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefenceScope() 获取漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenceScope(string $DefenceScope) 设置漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefenceHostCount() 获取漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenceHostCount(integer $DefenceHostCount) 设置漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefendedCount() 获取已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefendedCount(integer $DefendedCount) 设置已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanStatus() 获取是否已扫描，NOT_SCAN:未扫描,SCANNED:已扫描
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanStatus(string $ScanStatus) 设置是否已扫描，NOT_SCAN:未扫描,SCANNED:已扫描
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDetailInfo extends AbstractModel
 {
@@ -103,25 +85,21 @@ class VulDetailInfo extends AbstractModel
 
     /**
      * @var array 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryType;
 
     /**
      * @var string 漏洞威胁等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubmitTime;
 
@@ -197,31 +175,26 @@ class VulDetailInfo extends AbstractModel
 
     /**
      * @var string 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenceStatus;
 
     /**
      * @var string 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenceScope;
 
     /**
      * @var integer 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenceHostCount;
 
     /**
      * @var integer 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefendedCount;
 
     /**
      * @var string 是否已扫描，NOT_SCAN:未扫描,SCANNED:已扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
 
@@ -229,13 +202,9 @@ class VulDetailInfo extends AbstractModel
      * @param string $CVEID CVE编号
      * @param string $Name 漏洞名称
      * @param array $Tags 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryType 漏洞类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 漏洞威胁等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubmitTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 漏洞描述
      * @param string $CVSSV3Desc CVSS V3描述
      * @param string $OfficialSolution 漏洞修复建议
@@ -251,15 +220,10 @@ class VulDetailInfo extends AbstractModel
      * @param integer $RegistryNewestImageCount 影响最新仓库镜像数
      * @param string $PocID 漏洞PocID
      * @param string $DefenceStatus 防御状态，NO_DEFENDED:未防御，DEFENDED:已防御
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenceHostCount 漏洞防御主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefendedCount 已防御攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanStatus 是否已扫描，NOT_SCAN:未扫描,SCANNED:已扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

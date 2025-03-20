@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 容器安全镜像高危行为信息
  *
  * @method integer getBehavior() 获取高危行为
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBehavior(integer $Behavior) 设置高危行为
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取种类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置种类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstructionContent() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstructionContent(string $InstructionContent) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRisk extends AbstractModel
 {
     /**
      * @var integer 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Behavior;
 
     /**
      * @var integer 种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstructionContent;
 
     /**
      * @param integer $Behavior 高危行为
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 种类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstructionContent 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 服务详细信息描述。
  *
  * @method string getName() 获取服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取服务的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置服务的版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceInfo extends AbstractModel
 {
     /**
      * @var string 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 服务的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @param string $Name 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 服务的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAssetType() 获取检测项所属的资产类型
  * @method void setAssetType(string $AssetType) 设置检测项所属的资产类型
  * @method string getLastCheckTime() 获取最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckStatus() 获取检测状态
 
 CHECK_INIT, 待检测
@@ -59,47 +57,31 @@ CHECK_FAILED, 检测失败
  * @method string getCheckResult() 获取检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckResult(string $CheckResult) 设置检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPassedAssetCount() 获取通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassedAssetCount(integer $PassedAssetCount) 设置通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailedAssetCount() 获取未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedAssetCount(integer $FailedAssetCount) 设置未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWhitelistId() 获取检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhitelistId(integer $WhitelistId) 设置检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFixSuggestion() 获取处理建议。
  * @method void setFixSuggestion(string $FixSuggestion) 设置处理建议。
  * @method integer getBenchmarkStandardId() 获取所属的合规标准的ID
  * @method void setBenchmarkStandardId(integer $BenchmarkStandardId) 设置所属的合规标准的ID
  * @method string getApplicableVersion() 获取检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicableVersion(string $ApplicableVersion) 设置检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuditProcedure() 获取检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditProcedure(string $AuditProcedure) 设置检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsEnable() 获取是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEnable(integer $IsEnable) 设置是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompliancePolicyItemSummary extends AbstractModel
 {
@@ -140,7 +122,6 @@ class CompliancePolicyItemSummary extends AbstractModel
 
     /**
      * @var string 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastCheckTime;
 
@@ -161,25 +142,21 @@ CHECK_FAILED, 检测失败
      * @var string 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
     /**
      * @var integer 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassedAssetCount;
 
     /**
      * @var integer 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedAssetCount;
 
     /**
      * @var integer 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhitelistId;
 
@@ -195,19 +172,16 @@ RESULT_FAILED: 未通过
 
     /**
      * @var string 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicableVersion;
 
     /**
      * @var string 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuditProcedure;
 
@@ -215,7 +189,6 @@ RESULT_FAILED: 未通过
      * @var integer 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEnable;
 
@@ -228,7 +201,6 @@ RESULT_FAILED: 未通过
      * @param string $RiskLevel 威胁等级。RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
      * @param string $AssetType 检测项所属的资产类型
      * @param string $LastCheckTime 最近检测的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckStatus 检测状态
 
 CHECK_INIT, 待检测
@@ -241,25 +213,17 @@ CHECK_FAILED, 检测失败
      * @param string $CheckResult 检测结果。RESULT_PASSED: 通过
 
 RESULT_FAILED: 未通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PassedAssetCount 通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedAssetCount 未通过检测的资产的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WhitelistId 检测项对应的白名单项的ID。如果存在且非0，表示检测项被用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixSuggestion 处理建议。
      * @param integer $BenchmarkStandardId 所属的合规标准的ID
      * @param string $ApplicableVersion 检测项适用的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 检查项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuditProcedure 检查项审计方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsEnable 是否开启
 <li>0 关闭</li>
 <li>1 开启</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

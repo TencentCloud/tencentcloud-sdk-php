@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method float getUnitPrice() 获取付费单价，单位：元，仅后付费价格查询返回。
  * @method void setUnitPrice(float $UnitPrice) 设置付费单价，单位：元，仅后付费价格查询返回。
  * @method float getDiscountPrice() 获取折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeUnit() 获取计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeUnit(string $ChargeUnit) 设置计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalPrice() 获取原价，单位：元，仅预付费价格查询返回。
  * @method void setOriginalPrice(float $OriginalPrice) 设置原价，单位：元，仅预付费价格查询返回。
  */
@@ -42,13 +38,11 @@ class InternetPriceDetail extends AbstractModel
 
     /**
      * @var float 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPrice;
 
     /**
      * @var string 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
 
@@ -60,9 +54,7 @@ class InternetPriceDetail extends AbstractModel
     /**
      * @param float $UnitPrice 付费单价，单位：元，仅后付费价格查询返回。
      * @param float $DiscountPrice 折扣后的价格，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeUnit 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalPrice 原价，单位：元，仅预付费价格查询返回。
      */
     function __construct()

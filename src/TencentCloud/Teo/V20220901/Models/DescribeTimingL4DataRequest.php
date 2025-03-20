@@ -25,15 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method array getMetricNames() 获取查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
  * @method void setMetricNames(array $MetricNames) 设置查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
  * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
  * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
  * @method array getProxyIds() 获取四层实例列表, 不填表示选择全部实例。
@@ -54,14 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件Key值如下：
 <li>ruleId：按照转发规则 ID 进行过滤。</li>
 <li>proxyId：按照四层代理实例 ID 进行过滤。</li>
- * @method string getArea() 获取数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
- * @method void setArea(string $Area) 设置数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+ * @method string getArea() 获取数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
+ * @method void setArea(string $Area) 设置数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
  */
 class DescribeTimingL4DataRequest extends AbstractModel
 {
@@ -77,10 +75,12 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @var array 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
      */
     public $MetricNames;
 
@@ -111,10 +111,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * @var string 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      */
     public $Area;
 
@@ -122,10 +119,12 @@ class DescribeTimingL4DataRequest extends AbstractModel
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param array $MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
+<li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量。</li>
+<li>l4Flow_outFlux: 访问出流量；</li>
+<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
+<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
      * @param array $ZoneIds 站点 ID 集合，此参数必填。
      * @param array $ProxyIds 四层实例列表, 不填表示选择全部实例。
      * @param string $Interval 查询时间粒度，取值有：
@@ -136,10 +135,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
      * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
 <li>ruleId：按照转发规则 ID 进行过滤。</li>
 <li>proxyId：按照四层代理实例 ID 进行过滤。</li>
-     * @param string $Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * @param string $Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      */
     function __construct()
     {

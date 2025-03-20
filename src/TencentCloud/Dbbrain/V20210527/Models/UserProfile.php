@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 用户配置的相关信息，包括邮件配置。
  *
  * @method string getProfileId() 获取配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfileId(string $ProfileId) 设置配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfileType() 获取配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfileType(string $ProfileType) 设置配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfileLevel() 获取配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfileLevel(string $ProfileLevel) 设置配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfileName() 获取配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfileName(string $ProfileName) 设置配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ProfileInfo getProfileInfo() 获取配置详情。
  * @method void setProfileInfo(ProfileInfo $ProfileInfo) 设置配置详情。
  */
@@ -43,25 +35,21 @@ class UserProfile extends AbstractModel
 {
     /**
      * @var string 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProfileId;
 
     /**
      * @var string 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProfileType;
 
     /**
      * @var string 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProfileLevel;
 
     /**
      * @var string 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProfileName;
 
@@ -72,13 +60,9 @@ class UserProfile extends AbstractModel
 
     /**
      * @param string $ProfileId 配置的id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProfileType 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProfileLevel 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProfileName 配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfileInfo $ProfileInfo 配置详情。
      */
     function __construct()

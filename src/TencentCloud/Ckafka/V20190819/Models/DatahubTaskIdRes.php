@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Datahub请求的taskid
  *
  * @method string getTaskId() 获取任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatahubTaskIdRes extends AbstractModel
 {
     /**
      * @var string 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @param string $TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

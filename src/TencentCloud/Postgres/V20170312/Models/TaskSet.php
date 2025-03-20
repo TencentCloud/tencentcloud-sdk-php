@@ -29,17 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取任务的开始时间。
  * @method void setStartTime(string $StartTime) 设置任务的开始时间。
  * @method string getEndTime() 获取任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务的运行状态，包括Running,Success,WaitSwitch,Fail,Pause。
  * @method void setStatus(string $Status) 设置任务的运行状态，包括Running,Success,WaitSwitch,Fail,Pause。
  * @method integer getProgress() 获取任务的执行进度，取值范围0-100。
  * @method void setProgress(integer $Progress) 设置任务的执行进度，取值范围0-100。
  * @method TaskDetail getTaskDetail() 获取任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskDetail(TaskDetail $TaskDetail) 设置任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskSet extends AbstractModel
 {
@@ -65,7 +61,6 @@ class TaskSet extends AbstractModel
 
     /**
      * @var string 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -81,7 +76,6 @@ class TaskSet extends AbstractModel
 
     /**
      * @var TaskDetail 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskDetail;
 
@@ -91,11 +85,9 @@ class TaskSet extends AbstractModel
      * @param string $DBInstanceId 任务实例的实例ID。
      * @param string $StartTime 任务的开始时间。
      * @param string $EndTime 任务的结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务的运行状态，包括Running,Success,WaitSwitch,Fail,Pause。
      * @param integer $Progress 任务的执行进度，取值范围0-100。
      * @param TaskDetail $TaskDetail 任务的详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

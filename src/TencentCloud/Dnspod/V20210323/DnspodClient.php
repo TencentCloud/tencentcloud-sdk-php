@@ -33,6 +33,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 批量添加域名
  * @method Models\CreateDomainCustomLineResponse CreateDomainCustomLine(Models\CreateDomainCustomLineRequest $req) 创建域名的自定义线路
  * @method Models\CreateDomainGroupResponse CreateDomainGroup(Models\CreateDomainGroupRequest $req) 创建域名分组
+ * @method Models\CreateDomainsAnalyticsFileResponse CreateDomainsAnalyticsFile(Models\CreateDomainsAnalyticsFileRequest $req) 批量导出域名解析量
  * @method Models\CreateLineGroupResponse CreateLineGroup(Models\CreateLineGroupRequest $req) 创建域名的线路分组
  * @method Models\CreateLineGroupCopyResponse CreateLineGroupCopy(Models\CreateLineGroupCopyRequest $req) 复制域名的线路分组
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) 添加记录
@@ -40,6 +41,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
+ * @method Models\CreateSubDomainsAnalyticsFileResponse CreateSubDomainsAnalyticsFile(Models\CreateSubDomainsAnalyticsFileRequest $req) 批量导出子域名解析量
  * @method Models\CreateSubdomainValidateTXTValueResponse CreateSubdomainValidateTXTValue(Models\CreateSubdomainValidateTXTValueRequest $req) 创建添加子域名 Zone 域解析时所需要的 TXT 记录值
  * @method Models\CreateTXTRecordResponse CreateTXTRecord(Models\CreateTXTRecordRequest $req) 添加TXT记录
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
@@ -69,6 +71,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
  * @method Models\DescribeDomainShareUserListResponse DescribeDomainShareUserList(Models\DescribeDomainShareUserListRequest $req) 获取指定域名的已共享列表
  * @method Models\DescribeDomainWhoisResponse DescribeDomainWhois(Models\DescribeDomainWhoisRequest $req) 获取域名Whois信息
+ * @method Models\DescribeFileInfoByJobIdResponse DescribeFileInfoByJobId(Models\DescribeFileInfoByJobIdRequest $req) 根据批量任务ID获取生成文件信息
  * @method Models\DescribeLineGroupListResponse DescribeLineGroupList(Models\DescribeLineGroupListRequest $req) 获取域名的线路分组列表
  * @method Models\DescribePackageDetailResponse DescribePackageDetail(Models\DescribePackageDetailRequest $req) 获取各套餐配置详情
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息

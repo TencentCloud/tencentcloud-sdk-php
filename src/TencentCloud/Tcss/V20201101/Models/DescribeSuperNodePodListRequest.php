@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method string getBy() 获取排序字段 StartTime
+ * @method void setBy(string $By) 设置排序字段 StartTime
  * @method string getOrder() 获取排序方式 asc,desc
  * @method void setOrder(string $Order) 设置排序方式 asc,desc
  */
@@ -70,7 +70,7 @@ class DescribeSuperNodePodListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段 StartTime
      */
     public $By;
 
@@ -90,7 +90,7 @@ class DescribeSuperNodePodListRequest extends AbstractModel
 
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param string $By 排序字段
+     * @param string $By 排序字段 StartTime
      * @param string $Order 排序方式 asc,desc
      */
     function __construct()

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImageTag() 获取镜像的Tag。
  * @method void setImageTag(string $ImageTag) 设置镜像的Tag。
  * @method string getRepository() 获取镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepository(string $Repository) 设置镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceImageDetailInfo extends AbstractModel
 {
@@ -50,7 +48,6 @@ class ComplianceImageDetailInfo extends AbstractModel
 
     /**
      * @var string 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Repository;
 
@@ -59,7 +56,6 @@ class ComplianceImageDetailInfo extends AbstractModel
      * @param string $ImageName 镜像的名称。
      * @param string $ImageTag 镜像的Tag。
      * @param string $Repository 镜像所在远程仓库的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

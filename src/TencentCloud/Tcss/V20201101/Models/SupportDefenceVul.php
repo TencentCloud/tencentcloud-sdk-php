@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubmitTime() 获取漏洞披露时间
  * @method void setSubmitTime(string $SubmitTime) 设置漏洞披露时间
  * @method integer getVulId() 获取漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulId(integer $VulId) 设置漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SupportDefenceVul extends AbstractModel
 {
@@ -82,13 +78,11 @@ class SupportDefenceVul extends AbstractModel
 
     /**
      * @var integer 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulId;
 
     /**
      * @var integer 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -101,9 +95,7 @@ class SupportDefenceVul extends AbstractModel
      * @param string $CVEID 漏洞CVEID
      * @param string $SubmitTime 漏洞披露时间
      * @param integer $VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

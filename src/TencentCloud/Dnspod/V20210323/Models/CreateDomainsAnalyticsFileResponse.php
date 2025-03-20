@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyPublicNetworkAccessPoint返回参数结构体
+ * CreateDomainsAnalyticsFile返回参数结构体
  *
- * @method string getModifyResult() 获取修改结果
- * @method void setModifyResult(string $ModifyResult) 设置修改结果
+ * @method integer getJobId() 获取当前批量任务 id。
+ * @method void setJobId(integer $JobId) 设置当前批量任务 id。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyPublicNetworkAccessPointResponse extends AbstractModel
+class CreateDomainsAnalyticsFileResponse extends AbstractModel
 {
     /**
-     * @var string 修改结果
+     * @var integer 当前批量任务 id。
      */
-    public $ModifyResult;
+    public $JobId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ModifyPublicNetworkAccessPointResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ModifyResult 修改结果
+     * @param integer $JobId 当前批量任务 id。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class ModifyPublicNetworkAccessPointResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModifyResult",$param) and $param["ModifyResult"] !== null) {
-            $this->ModifyResult = $param["ModifyResult"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

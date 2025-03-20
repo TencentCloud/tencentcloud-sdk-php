@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
  * @method void setStatus(string $Status) 设置网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
  * @method string getVpcId() 获取私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocolType() 获取连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(string $ProtocolType) 设置连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -72,19 +66,16 @@ class DBInstanceNetInfo extends AbstractModel
 
     /**
      * @var string 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolType;
 
@@ -95,11 +86,8 @@ class DBInstanceNetInfo extends AbstractModel
      * @param string $NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
      * @param string $Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
      * @param string $VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

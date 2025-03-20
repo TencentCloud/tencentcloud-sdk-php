@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 托管节点池自动升级配置
  *
  * @method boolean getAutoUpgrade() 获取是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoUpgrade(boolean $AutoUpgrade) 设置是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AutoUpgradeOptions getUpgradeOptions() 获取运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeOptions(AutoUpgradeOptions $UpgradeOptions) 设置运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponents() 获取升级项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponents(array $Components) 设置升级项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method IntOrString getMaxUnavailable() 获取升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxUnavailable(IntOrString $MaxUnavailable) 设置升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MachineUpgradeSettings extends AbstractModel
 {
     /**
      * @var boolean 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoUpgrade;
 
     /**
      * @var AutoUpgradeOptions 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeOptions;
 
@@ -59,19 +51,15 @@ class MachineUpgradeSettings extends AbstractModel
 
     /**
      * @var IntOrString 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxUnavailable;
 
     /**
      * @param boolean $AutoUpgrade 是否开启自动升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoUpgradeOptions $UpgradeOptions 运维窗口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Components 升级项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntOrString $MaxUnavailable 升级时，最大不可升级的节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

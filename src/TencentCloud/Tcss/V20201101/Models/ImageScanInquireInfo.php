@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInquireKey() 获取计费项
  * @method void setInquireKey(string $InquireKey) 设置计费项
- * @method integer getCapcity() 获取容量
- * @method void setCapcity(integer $Capcity) 设置容量
+ * @method integer getCapcity() 获取总容量
+ * @method void setCapcity(integer $Capcity) 设置总容量
  * @method integer getUseage() 获取已使用量
  * @method void setUseage(integer $Useage) 设置已使用量
  * @method string getStartTime() 获取起始时间
@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 (Isolate:隔离)
  * @method string getResourceID() 获取资源ID
  * @method void setResourceID(string $ResourceID) 设置资源ID
+ * @method integer getPayNum() 获取购买扫描数
+ * @method void setPayNum(integer $PayNum) 设置购买扫描数
+ * @method integer getTrialNum() 获取试用扫描数
+ * @method void setTrialNum(integer $TrialNum) 设置试用扫描数
+ * @method integer getPayUsage() 获取购买已使用量
+ * @method void setPayUsage(integer $PayUsage) 设置购买已使用量
  */
 class ImageScanInquireInfo extends AbstractModel
 {
@@ -49,7 +55,7 @@ class ImageScanInquireInfo extends AbstractModel
     public $InquireKey;
 
     /**
-     * @var integer 容量
+     * @var integer 总容量
      */
     public $Capcity;
 
@@ -82,8 +88,23 @@ class ImageScanInquireInfo extends AbstractModel
     public $ResourceID;
 
     /**
+     * @var integer 购买扫描数
+     */
+    public $PayNum;
+
+    /**
+     * @var integer 试用扫描数
+     */
+    public $TrialNum;
+
+    /**
+     * @var integer 购买已使用量
+     */
+    public $PayUsage;
+
+    /**
      * @param string $InquireKey 计费项
-     * @param integer $Capcity 容量
+     * @param integer $Capcity 总容量
      * @param integer $Useage 已使用量
      * @param string $StartTime 起始时间
      * @param string $EndTime 截止时间
@@ -92,6 +113,9 @@ class ImageScanInquireInfo extends AbstractModel
 (Normal:正常)
 (Isolate:隔离)
      * @param string $ResourceID 资源ID
+     * @param integer $PayNum 购买扫描数
+     * @param integer $TrialNum 试用扫描数
+     * @param integer $PayUsage 购买已使用量
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class ImageScanInquireInfo extends AbstractModel
 
         if (array_key_exists("ResourceID",$param) and $param["ResourceID"] !== null) {
             $this->ResourceID = $param["ResourceID"];
+        }
+
+        if (array_key_exists("PayNum",$param) and $param["PayNum"] !== null) {
+            $this->PayNum = $param["PayNum"];
+        }
+
+        if (array_key_exists("TrialNum",$param) and $param["TrialNum"] !== null) {
+            $this->TrialNum = $param["TrialNum"];
+        }
+
+        if (array_key_exists("PayUsage",$param) and $param["PayUsage"] !== null) {
+            $this->PayUsage = $param["PayUsage"];
         }
     }
 }

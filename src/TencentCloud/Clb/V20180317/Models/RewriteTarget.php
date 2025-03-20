@@ -20,17 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 重定向目标的信息
  *
- * @method string getTargetListenerId() 获取重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method string getTargetListenerId() 获取重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetListenerId(string $TargetListenerId) 设置重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method void setTargetListenerId(string $TargetListenerId) 设置重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetLocationId() 获取重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method string getTargetLocationId() 获取重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRewriteCode() 获取重定向状态码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,15 +44,13 @@ use TencentCloud\Common\AbstractModel;
 class RewriteTarget extends AbstractModel
 {
     /**
-     * @var string 重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+     * @var string 重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetListenerId;
 
     /**
-     * @var string 重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+     * @var string 重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetLocationId;
@@ -80,11 +74,9 @@ class RewriteTarget extends AbstractModel
     public $RewriteType;
 
     /**
-     * @param string $TargetListenerId 重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+     * @param string $TargetListenerId 重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetLocationId 重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+     * @param string $TargetLocationId 重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RewriteCode 重定向状态码
 注意：此字段可能返回 null，表示取不到有效值。

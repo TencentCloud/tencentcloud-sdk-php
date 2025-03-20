@@ -35,15 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperationTime() 获取操作时间
  * @method void setOperationTime(string $OperationTime) 设置操作时间
  * @method integer getAppId() 获取操作人appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置操作人appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取操作人uin
  * @method void setUin(string $Uin) 设置操作人uin
  * @method integer getPolicyId() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyId(integer $PolicyId) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkAuditRecord extends AbstractModel
 {
@@ -84,7 +80,6 @@ class NetworkAuditRecord extends AbstractModel
 
     /**
      * @var integer 操作人appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
@@ -95,7 +90,6 @@ class NetworkAuditRecord extends AbstractModel
 
     /**
      * @var integer 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
@@ -108,10 +102,8 @@ class NetworkAuditRecord extends AbstractModel
      * @param string $NetworkPolicyName 策略名
      * @param string $OperationTime 操作时间
      * @param integer $AppId 操作人appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 操作人uin
      * @param integer $PolicyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

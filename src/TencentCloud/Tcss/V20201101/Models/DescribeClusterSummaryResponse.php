@@ -45,17 +45,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getServerlessClusterCount() 获取eks集群数量
  * @method void setServerlessClusterCount(integer $ServerlessClusterCount) 设置eks集群数量
  * @method integer getTkeClusterCount() 获取TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTkeClusterCount(integer $TkeClusterCount) 设置TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserCreateTencentClusterCount() 获取用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserCreateTencentClusterCount(integer $UserCreateTencentClusterCount) 设置用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserCreateHybridClusterCount() 获取用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserCreateHybridClusterCount(integer $UserCreateHybridClusterCount) 设置用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -123,19 +117,16 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
     /**
      * @var integer TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TkeClusterCount;
 
     /**
      * @var integer 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserCreateTencentClusterCount;
 
     /**
      * @var integer 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserCreateHybridClusterCount;
 
@@ -158,11 +149,8 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $NotImportedClusterCount 未导入的集群数量
      * @param integer $ServerlessClusterCount eks集群数量
      * @param integer $TkeClusterCount TKE集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserCreateTencentClusterCount 用户自建腾讯云集群数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserCreateHybridClusterCount 用户自建集群混合云数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

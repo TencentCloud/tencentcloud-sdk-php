@@ -25,7 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取目标组实例的端口
  * @method void setPort(integer $Port) 设置目标组实例的端口
  * @method integer getWeight() 获取目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
  * @method void setWeight(integer $Weight) 设置目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
  * @method integer getNewPort() 获取目标组实例的新端口
  * @method void setNewPort(integer $NewPort) 设置目标组实例的新端口
  */
@@ -43,6 +47,8 @@ class TargetGroupInstance extends AbstractModel
 
     /**
      * @var integer 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
      */
     public $Weight;
 
@@ -55,6 +61,8 @@ class TargetGroupInstance extends AbstractModel
      * @param string $BindIP 目标组实例的内网IP
      * @param integer $Port 目标组实例的端口
      * @param integer $Weight 目标组实例的权重
+
+v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
      * @param integer $NewPort 目标组实例的新端口
      */
     function __construct()

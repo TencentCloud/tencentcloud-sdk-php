@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceErrorLogs返回参数结构体
  *
  * @method integer getTotalCount() 获取日志条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置日志条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrorLogs() 获取错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorLogs(array $ErrorLogs) 设置错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeInstanceErrorLogsResponse extends AbstractModel
 {
     /**
      * @var integer 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorLogs;
 
@@ -52,9 +46,7 @@ class DescribeInstanceErrorLogsResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ErrorLogs 错误日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

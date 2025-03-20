@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDirection() 获取网络策略方向，分为FROM和TO
  * @method void setDirection(string $Direction) 设置网络策略方向，分为FROM和TO
  * @method array getPorts() 获取网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPorts(array $Ports) 设置网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPeer() 获取网络策略策略对象
 
 开启待确认：PublishedNoConfirm
@@ -37,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 开启中：Publishing
 
 待开启：unPublishEdit
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeer(array $Peer) 设置网络策略策略对象
 
 开启待确认：PublishedNoConfirm
@@ -49,7 +46,6 @@ use TencentCloud\Common\AbstractModel;
 开启中：Publishing
 
 待开启：unPublishEdit
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkCustomPolicy extends AbstractModel
 {
@@ -60,7 +56,6 @@ class NetworkCustomPolicy extends AbstractModel
 
     /**
      * @var array 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ports;
 
@@ -76,14 +71,12 @@ class NetworkCustomPolicy extends AbstractModel
 开启中：Publishing
 
 待开启：unPublishEdit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Peer;
 
     /**
      * @param string $Direction 网络策略方向，分为FROM和TO
      * @param array $Ports 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Peer 网络策略策略对象
 
 开启待确认：PublishedNoConfirm
@@ -95,7 +88,6 @@ class NetworkCustomPolicy extends AbstractModel
 开启中：Publishing
 
 待开启：unPublishEdit
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

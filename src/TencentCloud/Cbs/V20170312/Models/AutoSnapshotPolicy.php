@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
   <li>ISOLATED：已隔离</li>
 </ul>
  * @method integer getIsCopyToRemote() 获取是否是跨账号复制快照快照, 1：是, 0: 不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCopyToRemote(integer $IsCopyToRemote) 设置是否是跨账号复制快照快照, 1：是, 0: 不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPermanent() 获取使用该定期快照策略创建出来的快照是否永久保留。
  * @method void setIsPermanent(boolean $IsPermanent) 设置使用该定期快照策略创建出来的快照是否永久保留。
  * @method string getNextTriggerTime() 获取定期快照下次触发的时间。
@@ -57,17 +55,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyToAccountUin(string $CopyToAccountUin) 设置复制的目标账户ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceIdSet() 获取已绑定当前定期快照策略的实例ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置已绑定当前定期快照策略的实例ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetentionMonths() 获取该定期快照创建的快照可以保留的月数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionMonths(integer $RetentionMonths) 设置该定期快照创建的快照可以保留的月数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetentionAmount() 获取该定期快照创建的快照最大保留数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionAmount(integer $RetentionAmount) 设置该定期快照创建的快照最大保留数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取定期快照高级保留策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置定期快照高级保留策略。
@@ -77,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyFromAccountUin(string $CopyFromAccountUin) 设置该复制快照策略的源端账户ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -104,7 +94,6 @@ class AutoSnapshotPolicy extends AbstractModel
 
     /**
      * @var integer 是否是跨账号复制快照快照, 1：是, 0: 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCopyToRemote;
 
@@ -151,19 +140,16 @@ class AutoSnapshotPolicy extends AbstractModel
 
     /**
      * @var array 已绑定当前定期快照策略的实例ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIdSet;
 
     /**
      * @var integer 该定期快照创建的快照可以保留的月数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionMonths;
 
     /**
      * @var integer 该定期快照创建的快照最大保留数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionAmount;
 
@@ -181,7 +167,6 @@ class AutoSnapshotPolicy extends AbstractModel
 
     /**
      * @var array 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -194,7 +179,6 @@ class AutoSnapshotPolicy extends AbstractModel
   <li>ISOLATED：已隔离</li>
 </ul>
      * @param integer $IsCopyToRemote 是否是跨账号复制快照快照, 1：是, 0: 不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPermanent 使用该定期快照策略创建出来的快照是否永久保留。
      * @param string $NextTriggerTime 定期快照下次触发的时间。
      * @param string $AutoSnapshotPolicyName 定期快照策略名称。
@@ -205,17 +189,13 @@ class AutoSnapshotPolicy extends AbstractModel
      * @param string $CopyToAccountUin 复制的目标账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIdSet 已绑定当前定期快照策略的实例ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetentionMonths 该定期快照创建的快照可以保留的月数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetentionAmount 该定期快照创建的快照最大保留数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy 定期快照高级保留策略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CopyFromAccountUin 该复制快照策略的源端账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

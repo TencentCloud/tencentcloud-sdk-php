@@ -47,17 +47,13 @@ CHECK_FAILED, 检测失败
  * @method integer getFailedPolicyItemCount() 获取此类资产未通过的检测的数目。
  * @method void setFailedPolicyItemCount(integer $FailedPolicyItemCount) 设置此类资产未通过的检测的数目。
  * @method string getLastCheckTime() 获取上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckResult() 获取检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckResult(string $CheckResult) 设置检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetStatus() 获取资产的运行状态。
  * @method void setAssetStatus(string $AssetStatus) 设置资产的运行状态。
  * @method string getAssetCreateTime() 获取创建资产的时间。
@@ -124,7 +120,6 @@ CHECK_FAILED, 检测失败
 
     /**
      * @var string 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastCheckTime;
 
@@ -132,7 +127,6 @@ CHECK_FAILED, 检测失败
      * @var string 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
@@ -165,11 +159,9 @@ CHECK_FAILED, 检测失败
      * @param integer $PassedPolicyItemCount 此类资产通过的检测项的数目。
      * @param integer $FailedPolicyItemCount 此类资产未通过的检测的数目。
      * @param string $LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckResult 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetStatus 资产的运行状态。
      * @param string $AssetCreateTime 创建资产的时间。
 ASSET_NORMAL: 正常运行，

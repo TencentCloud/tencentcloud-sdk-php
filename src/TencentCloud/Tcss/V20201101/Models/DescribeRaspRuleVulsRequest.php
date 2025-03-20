@@ -18,27 +18,34 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAbnormalProcessEventsExport请求参数结构体
+ * DescribeRaspRuleVuls请求参数结构体
  *
- * @method array getExportField() 获取导出字段
- * @method void setExportField(array $ExportField) 设置导出字段
+ * @method array getFilters() 获取过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setFilters(array $Filters) 设置过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
- * @method string getOrder() 获取升序降序,asc desc
- * @method void setOrder(string $Order) 设置升序降序,asc desc
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method string getOrder() 获取排序方式：asc/desc
+ * @method void setOrder(string $Order) 设置排序方式：asc/desc
+ * @method string getBy() 获取排序字段：披露时间：SubmitTime
+ * @method void setBy(string $By) 设置排序字段：披露时间：SubmitTime
  */
-class DescribeAbnormalProcessEventsExportRequest extends AbstractModel
+class DescribeRaspRuleVulsRequest extends AbstractModel
 {
     /**
-     * @var array 导出字段
+     * @var array 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
      */
-    public $ExportField;
+    public $Filters;
 
     /**
      * @var integer 需要返回的数量，默认为10，最大值为100
@@ -51,27 +58,24 @@ class DescribeAbnormalProcessEventsExportRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public $Filters;
-
-    /**
-     * @var string 升序降序,asc desc
+     * @var string 排序方式：asc/desc
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段：披露时间：SubmitTime
      */
     public $By;
 
     /**
-     * @param array $ExportField 导出字段
+     * @param array $Filters 过滤条件。
+<li>Level- String - 是否必填：否 - 威胁等级，CRITICAL:严重 HIGH:高/MIDDLE:中/LOW:低</li>
+<li>CVEID- string - 是否必填：否 - CVE编号</li>
+<li>Name- string -是否必填: 否 - 漏洞名称</li>
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param string $Order 升序降序,asc desc
-     * @param string $By 排序字段
+     * @param string $Order 排序方式：asc/desc
+     * @param string $By 排序字段：披露时间：SubmitTime
      */
     function __construct()
     {
@@ -86,8 +90,13 @@ class DescribeAbnormalProcessEventsExportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new RunTimeFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
@@ -96,15 +105,6 @@ class DescribeAbnormalProcessEventsExportRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new RunTimeFilters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
         }
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {

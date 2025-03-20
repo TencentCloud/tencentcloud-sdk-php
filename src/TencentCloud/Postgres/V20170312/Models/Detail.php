@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCallNum() 获取输入时间范围内所有慢sql总条数
  * @method void setTotalCallNum(integer $TotalCallNum) 设置输入时间范围内所有慢sql总条数
  * @method array getAnalysisItems() 获取慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysisItems(array $AnalysisItems) 设置慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Detail extends AbstractModel
 {
@@ -43,7 +41,6 @@ class Detail extends AbstractModel
 
     /**
      * @var array 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisItems;
 
@@ -51,7 +48,6 @@ class Detail extends AbstractModel
      * @param float $TotalTime 输入时间范围内所有慢sql执行的总时间，单位毫秒（ms）
      * @param integer $TotalCallNum 输入时间范围内所有慢sql总条数
      * @param array $AnalysisItems 慢SQL统计分析列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

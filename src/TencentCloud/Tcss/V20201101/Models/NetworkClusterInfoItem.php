@@ -43,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkPolicyPluginStatus() 获取集群网络插件状态，正常：Running 不正常：Error
  * @method void setNetworkPolicyPluginStatus(string $NetworkPolicyPluginStatus) 设置集群网络插件状态，正常：Running 不正常：Error
  * @method string getNetworkPolicyPluginError() 获取集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkPolicyPluginError(string $NetworkPolicyPluginError) 设置集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterNetworkSettings() 获取容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterNetworkSettings(string $ClusterNetworkSettings) 设置容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkClusterInfoItem extends AbstractModel
 {
@@ -110,13 +106,11 @@ class NetworkClusterInfoItem extends AbstractModel
 
     /**
      * @var string 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkPolicyPluginError;
 
     /**
      * @var string 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterNetworkSettings;
 
@@ -133,9 +127,7 @@ class NetworkClusterInfoItem extends AbstractModel
      * @param integer $EnableRuleCount 已开启策略数量
      * @param string $NetworkPolicyPluginStatus 集群网络插件状态，正常：Running 不正常：Error
      * @param string $NetworkPolicyPluginError 集群网络插件错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterNetworkSettings 容器网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

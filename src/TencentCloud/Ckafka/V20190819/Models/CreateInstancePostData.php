@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 创建后付费接口返回的 Data 数据结构
  *
  * @method integer getFlowId() 获取CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNames() 获取订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNameInstanceIdMapping() 获取订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) 设置订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePostData extends AbstractModel
 {
     /**
      * @var integer CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @var array 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
 
     /**
      * @var string ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var array 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNameInstanceIdMapping;
 
     /**
      * @param integer $FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 订单号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNameInstanceIdMapping 订单和购买实例对应映射列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

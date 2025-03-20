@@ -83,13 +83,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetSubStatus() 获取网络子状态
  * @method void setNetSubStatus(string $NetSubStatus) 设置网络子状态
  * @method string getIsolateSource() 获取隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateSource(string $IsolateSource) 设置隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateTime() 获取隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeID() 获取节点ID
  * @method void setNodeID(string $NodeID) 设置节点ID
  * @method string getNodeName() 获取节点名称
@@ -254,13 +250,11 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
 
     /**
      * @var string 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateSource;
 
     /**
      * @var string 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
@@ -367,9 +361,7 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
 解除隔离失败 RESTORE_FAILED
      * @param string $NetSubStatus 网络子状态
      * @param string $IsolateSource 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeID 节点ID
      * @param string $NodeName 节点名称
      * @param string $NodeSubNetID 节点子网ID

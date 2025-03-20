@@ -71,7 +71,6 @@ use TencentCloud\Common\AbstractModel;
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态:
 未接入: AccessedNone
 已防护: AccessedDefended
@@ -81,27 +80,16 @@ use TencentCloud\Common\AbstractModel;
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessedSubStatus() 获取接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNodeCount() 获取节点总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeCount(integer $NodeCount) 设置节点总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffLineNodeCount() 获取离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffLineNodeCount(integer $OffLineNodeCount) 设置离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnInstallAgentNodeCount() 获取未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChargeCoresCnt() 获取计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMasterAddresses() 获取master 地址列表
  * @method void setMasterAddresses(array $MasterAddresses) 设置master 地址列表
  * @method integer getCoresCnt() 获取核数
@@ -230,37 +218,31 @@ class ClusterInfoItem extends AbstractModel
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessedStatus;
 
     /**
      * @var string 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessedSubStatus;
 
     /**
      * @var integer 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeCount;
 
     /**
      * @var integer 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffLineNodeCount;
 
     /**
      * @var integer 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnInstallAgentNodeCount;
 
     /**
      * @var integer 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeCoresCnt;
 
@@ -316,17 +298,11 @@ class ClusterInfoItem extends AbstractModel
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessedSubStatus 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OffLineNodeCount 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnInstallAgentNodeCount 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MasterAddresses master 地址列表
      * @param integer $CoresCnt 核数
      * @param string $ClusterAuditStatus 集群审计开关状态：

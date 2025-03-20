@@ -33,9 +33,7 @@ ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
  * @method string getLastTriggerTime() 获取最近一次触发的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTriggerTime(string $LastTriggerTime) 设置最近一次触发的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalPolicyItemCount() 获取总的检查项数目
  * @method void setTotalPolicyItemCount(integer $TotalPolicyItemCount) 设置总的检查项数目
  * @method CompliancePeriodTaskRule getPeriodRule() 获取周期设置
@@ -61,7 +59,6 @@ ASSET_K8S, K8S资产
 
     /**
      * @var string 最近一次触发的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTriggerTime;
 
@@ -88,7 +85,6 @@ ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
      * @param string $LastTriggerTime 最近一次触发的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPolicyItemCount 总的检查项数目
      * @param CompliancePeriodTaskRule $PeriodRule 周期设置
      * @param array $BenchmarkStandardSet 合规标准列表

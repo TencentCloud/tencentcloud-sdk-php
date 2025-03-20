@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeActivityInfo请求参数结构体
+ * DeleteRaspRules请求参数结构体
  *
- * @method array getActivityIdList() 获取活动id列表
- * @method void setActivityIdList(array $ActivityIdList) 设置活动id列表
+ * @method array getIDs() 获取待删除的规则ID数组 (最大100条)
+ * @method void setIDs(array $IDs) 设置待删除的规则ID数组 (最大100条)
  */
-class DescribeActivityInfoRequest extends AbstractModel
+class DeleteRaspRulesRequest extends AbstractModel
 {
     /**
-     * @var array 活动id列表
+     * @var array 待删除的规则ID数组 (最大100条)
      */
-    public $ActivityIdList;
+    public $IDs;
 
     /**
-     * @param array $ActivityIdList 活动id列表
+     * @param array $IDs 待删除的规则ID数组 (最大100条)
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeActivityInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityIdList",$param) and $param["ActivityIdList"] !== null) {
-            $this->ActivityIdList = $param["ActivityIdList"];
+        if (array_key_exists("IDs",$param) and $param["IDs"] !== null) {
+            $this->IDs = $param["IDs"];
         }
     }
 }

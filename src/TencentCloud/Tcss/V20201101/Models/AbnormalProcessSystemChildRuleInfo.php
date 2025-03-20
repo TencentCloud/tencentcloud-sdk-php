@@ -47,9 +47,7 @@ FILELESS：无文件程序执行
 RISK_CMD：高危命令
 ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
  * @method string getRuleLevel() 获取威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleLevel(string $RuleLevel) 设置威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalProcessSystemChildRuleInfo extends AbstractModel
 {
@@ -84,7 +82,6 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
 
     /**
      * @var string 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleLevel;
 
@@ -103,7 +100,6 @@ FILELESS：无文件程序执行
 RISK_CMD：高危命令
 ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
      * @param string $RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

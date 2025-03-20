@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
 
- * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
- * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
+ * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器，单次最多支持50个。
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器，单次最多支持50个。
  * @method string getType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
@@ -67,7 +67,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var array 目标组绑定的后端服务器
+     * @var array 目标组绑定的后端服务器，单次最多支持50个。
      */
     public $TargetGroupInstances;
 
@@ -101,7 +101,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
 
-     * @param array $TargetGroupInstances 目标组绑定的后端服务器
+     * @param array $TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
      * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
      * @param array $Tags 标签。

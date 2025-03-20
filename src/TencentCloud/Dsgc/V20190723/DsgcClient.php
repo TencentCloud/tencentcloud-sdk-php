@@ -143,8 +143,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeRDBAssetSensitiveDistributionResponse DescribeRDBAssetSensitiveDistribution(Models\DescribeRDBAssetSensitiveDistributionRequest $req) 数据资产报告-查询rbd 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeReportTaskDownloadUrlResponse DescribeReportTaskDownloadUrl(Models\DescribeReportTaskDownloadUrlRequest $req) 获取报表下载链接
  * @method Models\DescribeReportTasksResponse DescribeReportTasks(Models\DescribeReportTasksRequest $req) 获取资产报表任务列表
- * @method Models\DescribeRuleDetailResponse DescribeRuleDetail(Models\DescribeRuleDetailRequest $req) 查询分类规则详情
-
  * @method Models\DescribeRuleListResponse DescribeRuleList(Models\DescribeRuleListRequest $req) 查询分类下规则列表
 
  * @method Models\DescribeSensitiveCOSDataDistributionResponse DescribeSensitiveCOSDataDistribution(Models\DescribeSensitiveCOSDataDistributionRequest $req) 数据资产报告-查询cos的敏感数据分布（分级分布 分类分布 敏感规则分布详情列表）

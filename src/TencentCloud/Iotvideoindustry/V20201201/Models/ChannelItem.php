@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * GB28181通道
  *
  * @method string getDeviceId() 获取设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelId() 获取通道唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelId(string $ChannelId) 设置通道唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelItem extends AbstractModel
 {
     /**
      * @var string 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 通道唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelId;
 
     /**
      * @param string $DeviceId 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelId 通道唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * serverless账号描述
  *
  * @method string getDBUser() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBUser(string $DBUser) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDBPassword() 获取密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBPassword(string $DBPassword) 设置密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDBConnLimit() 获取连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBConnLimit(integer $DBConnLimit) 设置连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessDBAccount extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBUser;
 
     /**
      * @var string 密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBPassword;
 
     /**
      * @var integer 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBConnLimit;
 
     /**
      * @param string $DBUser 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBPassword 密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DBConnLimit 连接数限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

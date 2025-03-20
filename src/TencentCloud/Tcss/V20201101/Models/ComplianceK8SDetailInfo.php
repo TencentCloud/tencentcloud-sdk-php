@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 表示K8S资产专属的详情。
  *
  * @method string getClusterName() 获取K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterVersion() 获取K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterVersion(string $ClusterVersion) 设置K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceK8SDetailInfo extends AbstractModel
 {
     /**
      * @var string K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterVersion;
 
     /**
      * @param string $ClusterName K8S集群的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterVersion K8S集群的版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSavingPlanOverview返回参数结构体
  *
  * @method array getOverviews() 获取节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverviews(array $Overviews) 设置节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取查询命中的节省计划总览明细数据总条数
  * @method void setTotal(integer $Total) 设置查询命中的节省计划总览明细数据总条数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeSavingPlanOverviewResponse extends AbstractModel
 {
     /**
      * @var array 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Overviews;
 
@@ -49,7 +46,6 @@ class DescribeSavingPlanOverviewResponse extends AbstractModel
 
     /**
      * @param array $Overviews 节省计划总览明细数据	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 查询命中的节省计划总览明细数据总条数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

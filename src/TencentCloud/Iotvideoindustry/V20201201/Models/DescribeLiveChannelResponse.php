@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLiveChannel返回参数结构体
  *
  * @method string getLiveChannelId() 获取频道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelId(string $LiveChannelId) 设置频道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLiveChannelName() 获取频道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelName(string $LiveChannelName) 设置频道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveChannelType() 获取直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelType(integer $LiveChannelType) 设置直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveStatus() 获取通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveStatus(integer $LiveStatus) 设置通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPushStreamAddress() 获取推流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPushStreamAddress(string $PushStreamAddress) 设置推流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(array $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUpdateTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(array $UpdateTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,43 +41,36 @@ class DescribeLiveChannelResponse extends AbstractModel
 {
     /**
      * @var string 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelId;
 
     /**
      * @var string 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelName;
 
     /**
      * @var integer 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelType;
 
     /**
      * @var integer 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveStatus;
 
     /**
      * @var string 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PushStreamAddress;
 
     /**
      * @var array 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var array 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -102,19 +81,12 @@ class DescribeLiveChannelResponse extends AbstractModel
 
     /**
      * @param string $LiveChannelId 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LiveChannelName 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveChannelType 直播频道类型 1：固定直播；2：移动直播
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveStatus 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PushStreamAddress 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

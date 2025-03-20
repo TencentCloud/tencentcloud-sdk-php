@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 基本镜像信息
  *
  * @method string getImageId() 获取镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryType() 获取仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryType(string $RegistryType) 设置仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageRepoAddress() 获取镜像仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageRepoAddress(string $ImageRepoAddress) 设置镜像仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageName(string $ImageName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageTag() 获取镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanStatus() 获取镜像扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanStatus(string $ScanStatus) 设置镜像扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCveProgress() 获取镜像cve扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCveProgress(integer $CveProgress) 设置镜像cve扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskProgress() 获取镜像敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskProgress(integer $RiskProgress) 设置镜像敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVirusProgress() 获取镜像木马扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusProgress(integer $VirusProgress) 设置镜像木马扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageProgress extends AbstractModel
 {
     /**
      * @var string 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
     /**
      * @var string 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryType;
 
     /**
      * @var string 镜像仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageRepoAddress;
 
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageName;
 
     /**
      * @var string 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
     /**
      * @var string 镜像扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
 
     /**
      * @var integer 镜像cve扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveProgress;
 
     /**
      * @var integer 镜像敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskProgress;
 
     /**
      * @var integer 镜像木马扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusProgress;
 
     /**
      * @param string $ImageId 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryType 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageRepoAddress 镜像仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageTag 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanStatus 镜像扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CveProgress 镜像cve扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskProgress 镜像敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VirusProgress 镜像木马扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

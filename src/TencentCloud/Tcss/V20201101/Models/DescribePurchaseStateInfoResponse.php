@@ -25,59 +25,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAllCoresCnt() 获取总资源核数 = 总防护核数 + 未防护核数
  * @method void setAllCoresCnt(integer $AllCoresCnt) 设置总资源核数 = 总防护核数 + 未防护核数
  * @method integer getCoresCnt() 获取总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoresCnt(integer $CoresCnt) 设置总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUndefendCoresCnt() 获取未防护核数(未开启防护资源核数)
  * @method void setUndefendCoresCnt(integer $UndefendCoresCnt) 设置未防护核数(未开启防护资源核数)
  * @method integer getAuthorizedCoresCnt() 获取已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedCoresCnt(integer $AuthorizedCoresCnt) 设置已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGivenAuthorizedCoresCnt() 获取试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGivenAuthorizedCoresCnt(integer $GivenAuthorizedCoresCnt) 设置试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentFlexibleCoresCnt() 获取当前弹性计费核数数量
  * @method void setCurrentFlexibleCoresCnt(integer $CurrentFlexibleCoresCnt) 设置当前弹性计费核数数量
  * @method integer getImageCnt() 获取镜像数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageCnt(integer $ImageCnt) 设置镜像数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthorizedImageCnt() 获取已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedImageCnt(integer $AuthorizedImageCnt) 设置已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpirationTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpirationTime(string $ExpirationTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPurchasedAuthorizedCnt() 获取已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) 设置已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutomaticRenewal() 获取0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutomaticRenewal(integer $AutomaticRenewal) 设置0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGivenAuthorizedCnt() 获取试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGivenAuthorizedCnt(integer $GivenAuthorizedCnt) 设置试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubState() 获取子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubState(string $SubState) 设置子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInquireKey() 获取计费key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInquireKey(string $InquireKey) 设置计费key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefendPolicy() 获取防护策略
  * @method void setDefendPolicy(string $DefendPolicy) 设置防护策略
  * @method integer getFlexibleCoresLimit() 获取弹性计费核数上限
@@ -103,7 +79,6 @@ class DescribePurchaseStateInfoResponse extends AbstractModel
 
     /**
      * @var integer 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoresCnt;
 
@@ -114,13 +89,11 @@ class DescribePurchaseStateInfoResponse extends AbstractModel
 
     /**
      * @var integer 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizedCoresCnt;
 
     /**
      * @var integer 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GivenAuthorizedCoresCnt;
 
@@ -131,56 +104,47 @@ class DescribePurchaseStateInfoResponse extends AbstractModel
 
     /**
      * @var integer 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCnt;
 
     /**
      * @var integer 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizedImageCnt;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpirationTime;
 
     /**
      * @var integer 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PurchasedAuthorizedCnt;
 
     /**
      * @var integer 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutomaticRenewal;
 
     /**
      * @var integer 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GivenAuthorizedCnt;
 
     /**
      * @var string 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubState;
 
     /**
      * @var string 计费key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InquireKey;
 
@@ -213,32 +177,20 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
      * @param integer $State 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
      * @param integer $AllCoresCnt 总资源核数 = 总防护核数 + 未防护核数
      * @param integer $CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UndefendCoresCnt 未防护核数(未开启防护资源核数)
      * @param integer $AuthorizedCoresCnt 已购买核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GivenAuthorizedCoresCnt 试用赠送专业版核心数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentFlexibleCoresCnt 当前弹性计费核数数量
      * @param integer $ImageCnt 镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthorizedImageCnt 已授权镜像数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpirationTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PurchasedAuthorizedCnt 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutomaticRenewal 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GivenAuthorizedCnt 试用期间赠送镜像授权数，可能会过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubState 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InquireKey 计费key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefendPolicy 防护策略
      * @param integer $FlexibleCoresLimit 弹性计费核数上限
      * @param integer $DefendClusterCoresCnt 已防护集群核数

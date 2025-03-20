@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 受漏洞影响的组件信息
  *
  * @method string getName() 获取组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVersion() 获取组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(array $Version) 设置组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFixedVersion() 获取组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixedVersion(array $FixedVersion) 设置组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulAffectedComponentInfo extends AbstractModel
 {
     /**
      * @var string 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var array 组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixedVersion;
 
     /**
      * @param string $Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Version 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FixedVersion 组件修复版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

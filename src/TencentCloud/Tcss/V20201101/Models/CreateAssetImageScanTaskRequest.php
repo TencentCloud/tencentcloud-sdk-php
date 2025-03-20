@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
  * @method integer getTimeout() 获取任务超时时长单位秒，默认1小时
  * @method void setTimeout(integer $Timeout) 设置任务超时时长单位秒，默认1小时
+ * @method boolean getIsOneClickScanningTask() 获取一键扫描任务。默认false表示非一键扫描，true一键扫描
+ * @method void setIsOneClickScanningTask(boolean $IsOneClickScanningTask) 设置一键扫描任务。默认false表示非一键扫描，true一键扫描
  */
 class CreateAssetImageScanTaskRequest extends AbstractModel
 {
@@ -95,6 +97,11 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
     public $Timeout;
 
     /**
+     * @var boolean 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     */
+    public $IsOneClickScanningTask;
+
+    /**
      * @param boolean $All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param array $Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param boolean $ScanVul 扫描漏洞；漏洞，木马和风险需选其一
@@ -105,6 +112,7 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
      * @param boolean $ContainerRunning 镜像是否存在运行中的容器
      * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
      * @param integer $Timeout 任务超时时长单位秒，默认1小时
+     * @param boolean $IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("IsOneClickScanningTask",$param) and $param["IsOneClickScanningTask"] !== null) {
+            $this->IsOneClickScanningTask = $param["IsOneClickScanningTask"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置分散置放群组内，云服务器id列表。
  * @method string getCreateTime() 获取分散置放群组创建时间。
  * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。
+ * @method integer getAffinity() 获取置放群组亲和度
+ * @method void setAffinity(integer $Affinity) 设置置放群组亲和度
  * @method array getTags() 获取置放群组关联的标签列表。
  * @method void setTags(array $Tags) 设置置放群组关联的标签列表。
  */
@@ -84,6 +86,11 @@ class DisasterRecoverGroup extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 置放群组亲和度
+     */
+    public $Affinity;
+
+    /**
      * @var array 置放群组关联的标签列表。
      */
     public $Tags;
@@ -99,6 +106,7 @@ class DisasterRecoverGroup extends AbstractModel
      * @param integer $CurrentNum 分散置放群组内云服务器当前数量。
      * @param array $InstanceIds 分散置放群组内，云服务器id列表。
      * @param string $CreateTime 分散置放群组创建时间。
+     * @param integer $Affinity 置放群组亲和度
      * @param array $Tags 置放群组关联的标签列表。
      */
     function __construct()
@@ -140,6 +148,10 @@ class DisasterRecoverGroup extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Affinity",$param) and $param["Affinity"] !== null) {
+            $this->Affinity = $param["Affinity"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

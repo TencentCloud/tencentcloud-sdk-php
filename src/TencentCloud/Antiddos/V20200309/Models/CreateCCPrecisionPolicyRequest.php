@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议， 可取值http，https，http/https
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getPolicyAction() 获取策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
- * @method void setPolicyAction(string $PolicyAction) 设置策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
+ * @method string getPolicyAction() 获取策略方式，可取值alg表示人机校验，drop表示丢弃，trans表示放行
+ * @method void setPolicyAction(string $PolicyAction) 设置策略方式，可取值alg表示人机校验，drop表示丢弃，trans表示放行
  * @method array getPolicyList() 获取策略记录
  * @method void setPolicyList(array $PolicyList) 设置策略记录
  */
@@ -56,7 +56,7 @@ class CreateCCPrecisionPolicyRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
+     * @var string 策略方式，可取值alg表示人机校验，drop表示丢弃，trans表示放行
      */
     public $PolicyAction;
 
@@ -70,7 +70,7 @@ class CreateCCPrecisionPolicyRequest extends AbstractModel
      * @param string $Ip IP值
      * @param string $Protocol 协议， 可取值http，https，http/https
      * @param string $Domain 域名
-     * @param string $PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃，trans表示放行
+     * @param string $PolicyAction 策略方式，可取值alg表示人机校验，drop表示丢弃，trans表示放行
      * @param array $PolicyList 策略记录
      */
     function __construct()

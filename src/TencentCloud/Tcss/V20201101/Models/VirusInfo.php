@@ -135,27 +135,21 @@ VALIDATION: 参数非法
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
  * @method string getMD5() 获取md5值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMD5(string $MD5) 设置md5值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCheckPlatform() 获取检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckPlatform(array $CheckPlatform) 设置检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeID() 获取节点ID
  * @method void setNodeID(string $NodeID) 设置节点ID
  * @method string getNodeName() 获取节点名称
@@ -312,13 +306,11 @@ VALIDATION: 参数非法
 
     /**
      * @var string md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MD5;
 
     /**
      * @var string 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
@@ -329,7 +321,6 @@ VALIDATION: 参数非法
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckPlatform;
 
@@ -447,16 +438,13 @@ VALIDATION: 参数非法
 	"UNKNOW"              // 原因未知
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
      * @param string $MD5 md5值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckPlatform 检测平台
 1: 云查杀引擎
 2: tav
 3: binaryAi
 4: 异常行为
 5: 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeID 节点ID
      * @param string $NodeName 节点名称
      * @param string $PodIP pod ip

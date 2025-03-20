@@ -35,21 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxNodeSize() 获取最大节点数目限制
  * @method void setMaxNodeSize(integer $MaxNodeSize) 设置最大节点数目限制
  * @method boolean getAvailable() 获取是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailable(boolean $Available) 设置是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComputeSpecDesc() 获取规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeSpecDesc(string $ComputeSpecDesc) 设置规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisplayName() 获取规格名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisplayName(string $DisplayName) 设置规格名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceQuota() 获取库存数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceQuota(integer $InstanceQuota) 设置库存数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceSpec extends AbstractModel
 {
@@ -90,25 +82,21 @@ class ResourceSpec extends AbstractModel
 
     /**
      * @var boolean 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Available;
 
     /**
      * @var string 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeSpecDesc;
 
     /**
      * @var string 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayName;
 
     /**
      * @var integer 库存数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceQuota;
 
@@ -121,13 +109,9 @@ class ResourceSpec extends AbstractModel
      * @param DiskSpec $DataDisk 数据盘描述信息
      * @param integer $MaxNodeSize 最大节点数目限制
      * @param boolean $Available 是否可用，false代表售罄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComputeSpecDesc 规格描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisplayName 规格名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceQuota 库存数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

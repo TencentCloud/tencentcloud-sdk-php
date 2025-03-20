@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastAccessTimeByTables(integer $LastAccessTimeByTables) 设置库下表的最新访问时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseGuid() 获取库guid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseGuid(string $DatabaseGuid) 设置库guid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseMeta extends AbstractModel
 {
@@ -294,6 +298,12 @@ class DatabaseMeta extends AbstractModel
     public $LastAccessTimeByTables;
 
     /**
+     * @var string 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseGuid;
+
+    /**
      * @param string $ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetastoreType 技术类型
@@ -347,6 +357,8 @@ class DatabaseMeta extends AbstractModel
      * @param integer $ModifiedTimeByTables 库下表的最新更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastAccessTimeByTables 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseGuid 库guid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -473,6 +485,10 @@ class DatabaseMeta extends AbstractModel
 
         if (array_key_exists("LastAccessTimeByTables",$param) and $param["LastAccessTimeByTables"] !== null) {
             $this->LastAccessTimeByTables = $param["LastAccessTimeByTables"];
+        }
+
+        if (array_key_exists("DatabaseGuid",$param) and $param["DatabaseGuid"] !== null) {
+            $this->DatabaseGuid = $param["DatabaseGuid"];
         }
     }
 }

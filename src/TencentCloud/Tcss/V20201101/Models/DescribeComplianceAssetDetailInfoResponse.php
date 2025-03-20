@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method ComplianceAssetDetailInfo getAssetDetailInfo() 获取某资产的详情。
  * @method void setAssetDetailInfo(ComplianceAssetDetailInfo $AssetDetailInfo) 设置某资产的详情。
  * @method ComplianceContainerDetailInfo getContainerDetailInfo() 获取当资产为容器时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerDetailInfo(ComplianceContainerDetailInfo $ContainerDetailInfo) 设置当资产为容器时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ComplianceImageDetailInfo getImageDetailInfo() 获取当资产为镜像时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageDetailInfo(ComplianceImageDetailInfo $ImageDetailInfo) 设置当资产为镜像时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ComplianceHostDetailInfo getHostDetailInfo() 获取当资产为主机时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostDetailInfo(ComplianceHostDetailInfo $HostDetailInfo) 设置当资产为主机时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ComplianceK8SDetailInfo getK8SDetailInfo() 获取当资产为K8S时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setK8SDetailInfo(ComplianceK8SDetailInfo $K8SDetailInfo) 设置当资产为K8S时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,25 +42,21 @@ class DescribeComplianceAssetDetailInfoResponse extends AbstractModel
 
     /**
      * @var ComplianceContainerDetailInfo 当资产为容器时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerDetailInfo;
 
     /**
      * @var ComplianceImageDetailInfo 当资产为镜像时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageDetailInfo;
 
     /**
      * @var ComplianceHostDetailInfo 当资产为主机时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostDetailInfo;
 
     /**
      * @var ComplianceK8SDetailInfo 当资产为K8S时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $K8SDetailInfo;
 
@@ -80,13 +68,9 @@ class DescribeComplianceAssetDetailInfoResponse extends AbstractModel
     /**
      * @param ComplianceAssetDetailInfo $AssetDetailInfo 某资产的详情。
      * @param ComplianceContainerDetailInfo $ContainerDetailInfo 当资产为容器时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceImageDetailInfo $ImageDetailInfo 当资产为镜像时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceHostDetailInfo $HostDetailInfo 当资产为主机时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceK8SDetailInfo $K8SDetailInfo 当资产为K8S时，返回此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

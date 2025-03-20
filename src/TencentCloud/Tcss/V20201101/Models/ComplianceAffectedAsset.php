@@ -63,21 +63,13 @@ RESULT_FAILED: 未通过
 
 RESULT_PASSED: 通过
  * @method string getHostIP() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageTag() 获取镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVerifyInfo() 获取检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyInfo(string $VerifyInfo) 设置检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageRegistryInfo getImageRegistryInfo() 获取镜像仓库信息
  * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) 设置镜像仓库信息
  * @method string getClusterID() 获取集群id
@@ -138,25 +130,21 @@ RESULT_PASSED: 通过
 
     /**
      * @var string 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIP;
 
     /**
      * @var string 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
     /**
      * @var string 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyInfo;
 
     /**
      * @var string 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -198,13 +186,9 @@ RESULT_FAILED: 未通过
 
 RESULT_PASSED: 通过
      * @param string $HostIP 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageTag 镜像的tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyInfo 检查项验证信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageRegistryInfo $ImageRegistryInfo 镜像仓库信息
      * @param string $ClusterID 集群id
      * @param string $ClusterName 集群名称

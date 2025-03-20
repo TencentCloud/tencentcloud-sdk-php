@@ -25,37 +25,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyName() 获取策略名
  * @method void setPolicyName(string $PolicyName) 设置策略名
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFromPolicyRule() 获取入站类型
  * @method void setFromPolicyRule(integer $FromPolicyRule) 设置入站类型
  * @method integer getToPolicyRule() 获取出站类型
  * @method void setToPolicyRule(integer $ToPolicyRule) 设置出站类型
  * @method array getCustomPolicy() 获取自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomPolicy(array $CustomPolicy) 设置自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodSelector() 获取pod选择器
  * @method void setPodSelector(string $PodSelector) 设置pod选择器
  * @method string getDescription() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyCreateTime() 获取策略创建时间
  * @method void setPolicyCreateTime(string $PolicyCreateTime) 设置策略创建时间
  * @method string getPolicySourceType() 获取策略源类型，分为System和Manual，分别代表手动和系统添加
  * @method void setPolicySourceType(string $PolicySourceType) 设置策略源类型，分为System和Manual，分别代表手动和系统添加
  * @method string getNetworkPolicyPlugin() 获取网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkPolicyPlugin(string $NetworkPolicyPlugin) 设置网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublishStatus() 获取网络策略状态
  * @method void setPublishStatus(string $PublishStatus) 设置网络策略状态
  * @method string getPublishResult() 获取网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishResult(string $PublishResult) 设置网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,7 +63,6 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
@@ -89,7 +78,6 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
 
     /**
      * @var array 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomPolicy;
 
@@ -100,7 +88,6 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -116,7 +103,6 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
 
     /**
      * @var string 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkPolicyPlugin;
 
@@ -127,7 +113,6 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
 
     /**
      * @var string 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishResult;
 
@@ -140,21 +125,16 @@ class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel
      * @param string $ClusterId 集群Id
      * @param string $PolicyName 策略名
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FromPolicyRule 入站类型
      * @param integer $ToPolicyRule 出站类型
      * @param array $CustomPolicy 自定义规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodSelector pod选择器
      * @param string $Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyCreateTime 策略创建时间
      * @param string $PolicySourceType 策略源类型，分为System和Manual，分别代表手动和系统添加
      * @param string $NetworkPolicyPlugin 网络策略对应的网络插件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublishStatus 网络策略状态
      * @param string $PublishResult 网络发布结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

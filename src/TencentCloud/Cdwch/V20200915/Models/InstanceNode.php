@@ -37,29 +37,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNodeGroups() 获取节点所属的分组信息
  * @method void setNodeGroups(array $NodeGroups) 设置节点所属的分组信息
  * @method string getRip() 获取VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRip(string $Rip) 设置VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsCHProxy() 获取ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCHProxy(boolean $IsCHProxy) 设置ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取节点状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置节点状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUUID() 获取节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUID(string $UUID) 设置节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneDesc() 获取区描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneDesc(string $ZoneDesc) 设置区描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealResourceId() 获取真实资源id
  * @method void setRealResourceId(string $RealResourceId) 设置真实资源id
  */
@@ -107,37 +95,31 @@ class InstanceNode extends AbstractModel
 
     /**
      * @var string VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rip;
 
     /**
      * @var boolean ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCHProxy;
 
     /**
      * @var string 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUID;
 
     /**
      * @var string 区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 区描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneDesc;
 
@@ -156,17 +138,11 @@ class InstanceNode extends AbstractModel
      * @param string $Cluster 所属clickhouse cluster名称
      * @param array $NodeGroups 节点所属的分组信息
      * @param string $Rip VPC IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsCHProxy ture的时候表示该节点上部署了chproxy进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUID 节点uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneDesc 区描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealResourceId 真实资源id
      */
     function __construct()

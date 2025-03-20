@@ -71,13 +71,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsImage() 获取OS的名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsImage(string $OsImage) 设置OS的名称
@@ -198,13 +194,11 @@ class NativeNodeInfo extends AbstractModel
 
     /**
      * @var string VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -250,9 +244,7 @@ class NativeNodeInfo extends AbstractModel
      * @param array $SecurityGroupIDs 安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId VPC 唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsImage OS的名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId **原生节点对应的实例 ID**

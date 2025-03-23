@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDatabaseName() 获取数据库名称
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
- * @method array getDatabasePrivileges() 获取//库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabasePrivileges(array $DatabasePrivileges) 设置//库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTablePrivilegeList() 获取// 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTablePrivilegeList(array $TablePrivilegeList) 设置// 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDatabasePrivileges() 获取库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
+ * @method void setDatabasePrivileges(array $DatabasePrivileges) 设置库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
+ * @method array getTablePrivilegeList() 获取库下面的表权限
+ * @method void setTablePrivilegeList(array $TablePrivilegeList) 设置库下面的表权限
  */
 class DatabasePrivilegeInfo extends AbstractModel
 {
@@ -39,23 +35,19 @@ class DatabasePrivilegeInfo extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var array //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
      */
     public $DatabasePrivileges;
 
     /**
-     * @var array // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 库下面的表权限
      */
     public $TablePrivilegeList;
 
     /**
      * @param string $DatabaseName 数据库名称
-     * @param array $DatabasePrivileges //库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TablePrivilegeList // 库下面的表权限
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DatabasePrivileges 库表权限，SELECT、INSERT_ALL、ALTER、TRUNCATE、DROP_TABLE、CREATE_TABLE、DROP_DATABASE
+     * @param array $TablePrivilegeList 库下面的表权限
      */
     function __construct()
     {

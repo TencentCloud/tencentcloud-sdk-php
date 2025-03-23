@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置任务过期时间
  * @method string getJobStatus() 获取任务状态
  * @method void setJobStatus(string $JobStatus) 设置任务状态
+ * @method integer getProcessSize() 获取处理数据量
+ * @method void setProcessSize(integer $ProcessSize) 设置处理数据量
+ * @method string getErrorReason() 获取错误原因
+ * @method void setErrorReason(string $ErrorReason) 设置错误原因
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -73,6 +77,16 @@ class BackUpJobDisplay extends AbstractModel
     public $JobStatus;
 
     /**
+     * @var integer 处理数据量
+     */
+    public $ProcessSize;
+
+    /**
+     * @var string 错误原因
+     */
+    public $ErrorReason;
+
+    /**
      * @param integer $JobId 备份任务id
      * @param string $Snapshot 备份任务名
      * @param string $BackUpType 任务类型(元数据),(数据)
@@ -80,6 +94,8 @@ class BackUpJobDisplay extends AbstractModel
      * @param string $BackUpTime 任务创建时间
      * @param string $ExpireTime 任务过期时间
      * @param string $JobStatus 任务状态
+     * @param integer $ProcessSize 处理数据量
+     * @param string $ErrorReason 错误原因
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class BackUpJobDisplay extends AbstractModel
 
         if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
             $this->JobStatus = $param["JobStatus"];
+        }
+
+        if (array_key_exists("ProcessSize",$param) and $param["ProcessSize"] !== null) {
+            $this->ProcessSize = $param["ProcessSize"];
+        }
+
+        if (array_key_exists("ErrorReason",$param) and $param["ErrorReason"] !== null) {
+            $this->ErrorReason = $param["ErrorReason"];
         }
     }
 }

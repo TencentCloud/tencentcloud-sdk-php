@@ -37,59 +37,39 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getStatus() 获取是否生效
  * @method void setStatus(boolean $Status) 设置是否生效
  * @method array getFilterRules() 获取投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterRules(array $FilterRules) 设置投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPartition() 获取投递日志的分区规则，支持strftime的时间格式表示
  * @method void setPartition(string $Partition) 设置投递日志的分区规则，支持strftime的时间格式表示
  * @method CompressInfo getCompress() 获取投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompress(CompressInfo $Compress) 设置投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ContentInfo getContent() 获取投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取投递日志的创建时间
  * @method void setCreateTime(string $CreateTime) 设置投递日志的创建时间
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(float $Progress) 设置历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainTime() 获取历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainTime(integer $RemainTime) 设置历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHistoryStatus() 获取历史任务状态：
 0：实时任务
 1：任务准备中
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistoryStatus(integer $HistoryStatus) 设置历史任务状态：
 0：实时任务
 1：任务准备中
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageType() 获取cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShipperInfo extends AbstractModel
 {
@@ -135,7 +115,6 @@ class ShipperInfo extends AbstractModel
 
     /**
      * @var array 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterRules;
 
@@ -146,13 +125,11 @@ class ShipperInfo extends AbstractModel
 
     /**
      * @var CompressInfo 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compress;
 
     /**
      * @var ContentInfo 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
@@ -163,31 +140,26 @@ class ShipperInfo extends AbstractModel
 
     /**
      * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilenameMode;
 
     /**
      * @var integer 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var float 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var integer 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainTime;
 
@@ -198,13 +170,11 @@ class ShipperInfo extends AbstractModel
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistoryStatus;
 
     /**
      * @var string cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
@@ -218,32 +188,22 @@ class ShipperInfo extends AbstractModel
      * @param integer $MaxSize 投递的文件的最大值，单位 MB
      * @param boolean $Status 是否生效
      * @param array $FilterRules 投递日志的过滤规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
      * @param CompressInfo $Compress 投递日志的压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContentInfo $Content 投递日志的内容格式配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 投递日志的创建时间
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 投递数据范围的开始时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 投递数据范围的结束时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HistoryStatus 历史任务状态：
 0：实时任务
 1：任务准备中
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageType cos桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method string getProduct() 获取服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "redis" - 云数据库 Redis。
+ * @method string getInstanceProxyId() 获取实列代理ID。
+ * @method void setInstanceProxyId(string $InstanceProxyId) 设置实列代理ID。
  */
 class CreateProxySessionKillTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateProxySessionKillTaskRequest extends AbstractModel
     public $Product;
 
     /**
+     * @var string 实列代理ID。
+     */
+    public $InstanceProxyId;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
+     * @param string $InstanceProxyId 实列代理ID。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateProxySessionKillTaskRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("InstanceProxyId",$param) and $param["InstanceProxyId"] !== null) {
+            $this->InstanceProxyId = $param["InstanceProxyId"];
         }
     }
 }

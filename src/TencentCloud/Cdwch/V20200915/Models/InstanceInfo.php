@@ -21,219 +21,115 @@ use TencentCloud\Common\AbstractModel;
  * 实例描述信息
  *
  * @method string getInstanceId() 获取集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NodesSummary getMasterSummary() 获取数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterSummary(NodesSummary $MasterSummary) 设置数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NodesSummary getCommonSummary() 获取zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonSummary(NodesSummary $CommonSummary) 设置zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHA() 获取高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHA(string $HA) 设置高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessInfo() 获取访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessInfo(string $AccessInfo) 设置访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneDesc() 获取可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneDesc(string $ZoneDesc) 设置可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowMsg() 获取错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowMsg(string $FlowMsg) 设置错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRenewFlag() 获取自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMonitor() 获取监控信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitor(string $Monitor) 设置监控信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasClsTopic() 获取是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasClsTopic(boolean $HasClsTopic) 设置是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClsTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClsTopicId(string $ClsTopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClsLogSetId() 获取日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClsLogSetId(string $ClsLogSetId) 设置日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableXMLConfig() 获取是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableXMLConfig(integer $EnableXMLConfig) 设置是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionDesc() 获取区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionDesc(string $RegionDesc) 设置区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEip() 获取弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEip(string $Eip) 设置弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCosMoveFactor() 获取冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosMoveFactor(integer $CosMoveFactor) 设置冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKind() 获取external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKind(string $Kind) 设置external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsElastic() 获取是否弹性ck
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsElastic(boolean $IsElastic) 设置是否弹性ck
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceStateInfo getInstanceStateInfo() 获取集群详细状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStateInfo(InstanceStateInfo $InstanceStateInfo) 设置集群详细状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHAZk() 获取ZK高可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHAZk(boolean $HAZk) 设置ZK高可用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMountDiskType() 获取挂载盘,默认0:没有类型；1:裸盘;2:lvm
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountDiskType(integer $MountDiskType) 设置挂载盘,默认0:没有类型；1:裸盘;2:lvm
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCHProxyVip() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCHProxyVip(string $CHProxyVip) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCHProxyVip() 获取chproxy连接ip
+ * @method void setCHProxyVip(string $CHProxyVip) 设置chproxy连接ip
  * @method string getCosBucketName() 获取cos buket的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosBucketName(string $CosBucketName) 设置cos buket的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanAttachCbs() 获取是否可以挂载云盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanAttachCbs(boolean $CanAttachCbs) 设置是否可以挂载云盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanAttachCbsLvm() 获取是否可以挂载云盘阵列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanAttachCbsLvm(boolean $CanAttachCbsLvm) 设置是否可以挂载云盘阵列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanAttachCos() 获取是否可以挂载cos
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanAttachCos(boolean $CanAttachCos) 设置是否可以挂载cos
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponents() 获取服务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponents(array $Components) 设置服务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeVersions() 获取可升级的内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeVersions(string $UpgradeVersions) 设置可升级的内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEsIndexId() 获取ex-index
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsIndexId(string $EsIndexId) 设置ex-index
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEsIndexUsername() 获取username
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsIndexUsername(string $EsIndexUsername) 设置username
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEsIndexPassword() 获取password
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsIndexPassword(string $EsIndexPassword) 设置password
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasEsIndex() 获取true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasEsIndex(boolean $HasEsIndex) 设置true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSecondaryZone() 获取true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSecondaryZone(boolean $IsSecondaryZone) 设置true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecondaryZoneInfo() 获取desc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryZoneInfo(string $SecondaryZoneInfo) 设置desc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getClickHouseKeeper() 获取是否clickhouse-keeper
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClickHouseKeeper(boolean $ClickHouseKeeper) 设置是否clickhouse-keeper
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceDetail getDetails() 获取实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(InstanceDetail $Details) 设置实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsWhiteSGs() 获取安全组白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsWhiteSGs(boolean $IsWhiteSGs) 设置安全组白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBindSGs() 获取绑定的安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindSGs(array $BindSGs) 设置绑定的安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasPublicCloudClb() 获取是否开启公网clb
  * @method void setHasPublicCloudClb(boolean $HasPublicCloudClb) 设置是否开启公网clb
  */
@@ -241,13 +137,11 @@ class InstanceInfo extends AbstractModel
 {
     /**
      * @var string 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -256,301 +150,251 @@ class InstanceInfo extends AbstractModel
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var NodesSummary 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterSummary;
 
     /**
      * @var NodesSummary zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonSummary;
 
     /**
      * @var string 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HA;
 
     /**
      * @var string 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessInfo;
 
     /**
      * @var integer 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneDesc;
 
     /**
      * @var string 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowMsg;
 
     /**
      * @var string 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
     /**
      * @var boolean 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Monitor;
 
     /**
      * @var boolean 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasClsTopic;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClsTopicId;
 
     /**
      * @var string 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClsLogSetId;
 
     /**
      * @var integer 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableXMLConfig;
 
     /**
      * @var string 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionDesc;
 
     /**
      * @var string 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Eip;
 
     /**
      * @var integer 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosMoveFactor;
 
     /**
      * @var string external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
 
     /**
      * @var boolean 是否弹性ck
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsElastic;
 
     /**
      * @var InstanceStateInfo 集群详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStateInfo;
 
     /**
      * @var boolean ZK高可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HAZk;
 
     /**
      * @var integer 挂载盘,默认0:没有类型；1:裸盘;2:lvm
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountDiskType;
 
     /**
-     * @var string 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string chproxy连接ip
      */
     public $CHProxyVip;
 
     /**
      * @var string cos buket的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucketName;
 
     /**
      * @var boolean 是否可以挂载云盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanAttachCbs;
 
     /**
      * @var boolean 是否可以挂载云盘阵列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanAttachCbsLvm;
 
     /**
      * @var boolean 是否可以挂载cos
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanAttachCos;
 
     /**
      * @var array 服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Components;
 
     /**
      * @var string 可升级的内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeVersions;
 
     /**
      * @var string ex-index
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsIndexId;
 
     /**
      * @var string username
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsIndexUsername;
 
     /**
      * @var string password
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsIndexPassword;
 
     /**
      * @var boolean true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasEsIndex;
 
     /**
      * @var boolean true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSecondaryZone;
 
     /**
      * @var string desc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondaryZoneInfo;
 
     /**
      * @var boolean 是否clickhouse-keeper
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClickHouseKeeper;
 
     /**
      * @var InstanceDetail 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
     /**
      * @var boolean 安全组白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsWhiteSGs;
 
     /**
      * @var array 绑定的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindSGs;
 
@@ -561,112 +405,60 @@ Modify 集群变更中；
 
     /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态,
 Init 创建中; Serving 运行中； 
 Deleted已销毁；Deleting 销毁中；
 Modify 集群变更中；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域, ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区， ap-guangzhou-3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 付费类型，"hour", "prepay"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodesSummary $MasterSummary 数据节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodesSummary $CommonSummary zookeeper节点描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HA 高可用，“true" "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessInfo 访问地址，例如 "10.0.0.1:9000"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 记录ID，数值型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId regionId, 表示地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneDesc 可用区说明，例如 "广州二区"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowMsg 错误流程说明信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 状态描述，例如“运行中”等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Monitor 监控信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasClsTopic 是否开通日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClsTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClsLogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableXMLConfig 是否支持xml配置管理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionDesc 区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Eip 弹性网卡地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CosMoveFactor 冷热分层系数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Kind external/local/yunti
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsElastic 是否弹性ck
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStateInfo $InstanceStateInfo 集群详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HAZk ZK高可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CHProxyVip 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CHProxyVip chproxy连接ip
      * @param string $CosBucketName cos buket的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanAttachCbs 是否可以挂载云盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanAttachCbsLvm 是否可以挂载云盘阵列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanAttachCos 是否可以挂载cos
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Components 服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeVersions 可升级的内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsIndexId ex-index
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsIndexUsername username
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsIndexPassword password
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasEsIndex true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSecondaryZone true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecondaryZoneInfo desc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ClickHouseKeeper 是否clickhouse-keeper
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceDetail $Details 实例扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWhiteSGs 安全组白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindSGs 绑定的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasPublicCloudClb 是否开启公网clb
      */
     function __construct()

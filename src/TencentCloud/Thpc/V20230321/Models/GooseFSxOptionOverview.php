@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * GooseFSx存储选项概览信息。
  *
  * @method array getMasters() 获取文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasters(array $Masters) 设置文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalPath() 获取文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalPath(string $LocalPath) 设置文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GooseFSxOptionOverview extends AbstractModel
 {
     /**
      * @var array 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Masters;
 
     /**
      * @var string 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalPath;
 
     /**
      * @param array $Masters 文件系统master的ip和端口列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalPath 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

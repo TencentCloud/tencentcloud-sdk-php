@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 路由信息返回对象
  *
  * @method array getRouters() 获取路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouters(array $Routers) 设置路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteResponse extends AbstractModel
 {
     /**
      * @var array 路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Routers;
 
     /**
      * @param array $Routers 路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

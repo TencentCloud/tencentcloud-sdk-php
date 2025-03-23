@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleType(integer $CycleType) 设置生产调度任务任务类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskType() 获取生产任务类型
+ * @method void setTaskType(string $TaskType) 设置生产任务类型
  */
 class ProdSchedulerTask extends AbstractModel
 {
@@ -64,6 +66,11 @@ class ProdSchedulerTask extends AbstractModel
     public $CycleType;
 
     /**
+     * @var string 生产任务类型
+     */
+    public $TaskType;
+
+    /**
      * @param string $WorkflowId 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 生产调度任务Id
@@ -72,6 +79,7 @@ class ProdSchedulerTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CycleType 生产调度任务任务类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskType 生产任务类型
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class ProdSchedulerTask extends AbstractModel
 
         if (array_key_exists("CycleType",$param) and $param["CycleType"] !== null) {
             $this->CycleType = $param["CycleType"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

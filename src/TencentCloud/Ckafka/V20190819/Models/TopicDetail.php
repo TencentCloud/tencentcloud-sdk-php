@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
  * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
  * @method string getNote() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method boolean getEnableWhiteList() 获取是否开启ip鉴权白名单，true表示开启，false表示不开启
@@ -39,25 +37,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIpWhiteListCount() 获取ip白名单中ip个数
  * @method void setIpWhiteListCount(integer $IpWhiteListCount) 设置ip白名单中ip个数
  * @method string getForwardCosBucket() 获取数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForwardCosBucket(string $ForwardCosBucket) 设置数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getForwardStatus() 获取数据备份cos 状态： 1 不开启数据备份，0 开启数据备份
  * @method void setForwardStatus(integer $ForwardStatus) 设置数据备份cos 状态： 1 不开启数据备份，0 开启数据备份
  * @method integer getForwardInterval() 获取数据备份到cos的周期频率
  * @method void setForwardInterval(integer $ForwardInterval) 设置数据备份到cos的周期频率
  * @method Config getConfig() 获取高级配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(Config $Config) 设置高级配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TopicRetentionTimeConfigRsp getRetentionTimeConfig() 获取消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionTimeConfig(TopicRetentionTimeConfigRsp $RetentionTimeConfig) 设置消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
@@ -87,7 +77,6 @@ class TopicDetail extends AbstractModel
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
@@ -108,7 +97,6 @@ class TopicDetail extends AbstractModel
 
     /**
      * @var string 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardCosBucket;
 
@@ -124,19 +112,16 @@ class TopicDetail extends AbstractModel
 
     /**
      * @var Config 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
      * @var TopicRetentionTimeConfigRsp 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionTimeConfig;
 
     /**
      * @var integer 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -152,20 +137,15 @@ class TopicDetail extends AbstractModel
      * @param integer $PartitionNum 分区数
      * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
      * @param string $Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
      * @param boolean $EnableWhiteList 是否开启ip鉴权白名单，true表示开启，false表示不开启
      * @param integer $IpWhiteListCount ip白名单中ip个数
      * @param string $ForwardCosBucket 数据备份cos bucket: 转存到cos 的bucket地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ForwardStatus 数据备份cos 状态： 1 不开启数据备份，0 开启数据备份
      * @param integer $ForwardInterval 数据备份到cos的周期频率
      * @param Config $Config 高级配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0:正常，1：已删除，2：删除中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

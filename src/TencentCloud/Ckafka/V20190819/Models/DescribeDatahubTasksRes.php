@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取任务总数
  * @method void setTotalCount(integer $TotalCount) 设置任务总数
  * @method array getTaskList() 获取Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskList(array $TaskList) 设置Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDatahubTasksRes extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DescribeDatahubTasksRes extends AbstractModel
 
     /**
      * @var array Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskList;
 
     /**
      * @param integer $TotalCount 任务总数
      * @param array $TaskList Datahub任务信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 删除实例返回任务
  *
  * @method integer getFlowId() 获取删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDeleteResponse extends AbstractModel
 {
     /**
      * @var integer 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @param integer $FlowId 删除实例返回的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

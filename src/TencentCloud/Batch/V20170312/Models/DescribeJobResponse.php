@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置作业绑定的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNextAction() 获取下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextAction(string $NextAction) 设置下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -125,7 +123,6 @@ class DescribeJobResponse extends AbstractModel
 
     /**
      * @var string 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextAction;
 
@@ -150,7 +147,6 @@ class DescribeJobResponse extends AbstractModel
      * @param array $Tags 作业绑定的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NextAction 下一步动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

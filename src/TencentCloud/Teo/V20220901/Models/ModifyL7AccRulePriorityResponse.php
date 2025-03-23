@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBlackWhiteIpList返回参数结构体
+ * ModifyL7AccRulePriority返回参数结构体
  *
- * @method array getBlackIpList() 获取黑名单IP列表
- * @method void setBlackIpList(array $BlackIpList) 设置黑名单IP列表
- * @method array getWhiteIpList() 获取白名单IP列表
- * @method void setWhiteIpList(array $WhiteIpList) 设置白名单IP列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeBlackWhiteIpListResponse extends AbstractModel
+class ModifyL7AccRulePriorityResponse extends AbstractModel
 {
-    /**
-     * @var array 黑名单IP列表
-     */
-    public $BlackIpList;
-
-    /**
-     * @var array 白名单IP列表
-     */
-    public $WhiteIpList;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $BlackIpList 黑名单IP列表
-     * @param array $WhiteIpList 白名单IP列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class DescribeBlackWhiteIpListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlackIpList",$param) and $param["BlackIpList"] !== null) {
-            $this->BlackIpList = $param["BlackIpList"];
-        }
-
-        if (array_key_exists("WhiteIpList",$param) and $param["WhiteIpList"] !== null) {
-            $this->WhiteIpList = $param["WhiteIpList"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

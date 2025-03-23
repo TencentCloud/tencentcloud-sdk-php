@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 操作类型返回的Data结构
  *
  * @method integer getFlowId() 获取流程Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置流程Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RouteDTO getRouteDTO() 获取RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteDTO(RouteDTO $RouteDTO) 设置RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OperateResponseData extends AbstractModel
 {
     /**
      * @var integer 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @var RouteDTO RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteDTO;
 
     /**
      * @param integer $FlowId 流程Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteDTO $RouteDTO RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

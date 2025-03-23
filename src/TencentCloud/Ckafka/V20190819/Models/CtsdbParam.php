@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Ctsdb类型入参
  *
  * @method string getResource() 获取连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCtsdbMetric() 获取Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCtsdbMetric(string $CtsdbMetric) 设置Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CtsdbParam extends AbstractModel
 {
     /**
      * @var string 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CtsdbMetric;
 
     /**
      * @param string $Resource 连接管理实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CtsdbMetric Ctsdb的metric
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

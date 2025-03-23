@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatusCountInfo() 获取消费分组状态数量信息
  * @method void setStatusCountInfo(string $StatusCountInfo) 设置消费分组状态数量信息
  * @method array getGroupsInfo() 获取消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupsInfo(array $GroupsInfo) 设置消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicSubscribeGroup extends AbstractModel
 {
@@ -47,13 +43,11 @@ class TopicSubscribeGroup extends AbstractModel
 
     /**
      * @var array 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupsInfo;
 
     /**
      * @var integer 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -61,9 +55,7 @@ class TopicSubscribeGroup extends AbstractModel
      * @param integer $TotalCount 总数
      * @param string $StatusCountInfo 消费分组状态数量信息
      * @param array $GroupsInfo 消费分组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 此次请求是否异步的状态。实例里分组较少的会直接返回结果,Status为1。当分组较多时,会异步更新缓存，Status为0时不会返回分组信息，直至Status为1更新完毕返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

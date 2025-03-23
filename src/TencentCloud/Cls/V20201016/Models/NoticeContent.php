@@ -27,13 +27,9 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
 
 Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
  * @method NoticeContentInfo getTriggerContent() 获取告警触发通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerContent(NoticeContentInfo $TriggerContent) 设置告警触发通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NoticeContentInfo getRecoveryContent() 获取告警恢复通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecoveryContent(NoticeContentInfo $RecoveryContent) 设置告警恢复通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NoticeContent extends AbstractModel
 {
@@ -46,13 +42,11 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
 
     /**
      * @var NoticeContentInfo 告警触发通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerContent;
 
     /**
      * @var NoticeContentInfo 告警恢复通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecoveryContent;
 
@@ -61,9 +55,7 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
 
 Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
      * @param NoticeContentInfo $TriggerContent 告警触发通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoticeContentInfo $RecoveryContent 告警恢复通知内容模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

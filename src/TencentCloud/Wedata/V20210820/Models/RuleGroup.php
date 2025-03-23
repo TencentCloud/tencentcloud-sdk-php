@@ -116,6 +116,28 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDeployType(string $ClusterDeployType) 设置EMR集群部署方式：CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecDetail() 获取执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecDetail(string $ExecDetail) 设置执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPipelineTaskCount() 获取事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPipelineTaskCount(integer $PipelineTaskCount) 设置事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableRuleCount() 获取有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableRuleCount(integer $EnableRuleCount) 设置有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateUserName() 获取监控创建人
+ * @method void setCreateUserName(string $CreateUserName) 设置监控创建人
  */
 class RuleGroup extends AbstractModel
 {
@@ -264,6 +286,41 @@ class RuleGroup extends AbstractModel
     public $ClusterDeployType;
 
     /**
+     * @var string 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
+     * @var string 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecDetail;
+
+    /**
+     * @var integer 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PipelineTaskCount;
+
+    /**
+     * @var integer 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableRuleCount;
+
+    /**
+     * @var string 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var string 监控创建人
+     */
+    public $CreateUserName;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -312,6 +369,17 @@ class RuleGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDeployType EMR集群部署方式：CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecDetail 执行详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PipelineTaskCount 事中关联任务数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableRuleCount 有效规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateUserName 监控创建人
      */
     function __construct()
     {
@@ -422,6 +490,30 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("ClusterDeployType",$param) and $param["ClusterDeployType"] !== null) {
             $this->ClusterDeployType = $param["ClusterDeployType"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("ExecDetail",$param) and $param["ExecDetail"] !== null) {
+            $this->ExecDetail = $param["ExecDetail"];
+        }
+
+        if (array_key_exists("PipelineTaskCount",$param) and $param["PipelineTaskCount"] !== null) {
+            $this->PipelineTaskCount = $param["PipelineTaskCount"];
+        }
+
+        if (array_key_exists("EnableRuleCount",$param) and $param["EnableRuleCount"] !== null) {
+            $this->EnableRuleCount = $param["EnableRuleCount"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CreateUserName",$param) and $param["CreateUserName"] !== null) {
+            $this->CreateUserName = $param["CreateUserName"];
         }
     }
 }

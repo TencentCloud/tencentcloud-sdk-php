@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIp() 获取机器的IP
  * @method void setIp(string $Ip) 设置机器的IP
  * @method string getInstanceID() 获取机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取机器状态，0:异常，1:正常
  * @method void setStatus(integer $Status) 设置机器状态，0:异常，1:正常
  * @method string getOfflineTime() 获取机器离线时间，空为正常，异常返回具体时间
@@ -54,7 +52,6 @@ class MachineInfo extends AbstractModel
 
     /**
      * @var string 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
@@ -98,7 +95,6 @@ class MachineInfo extends AbstractModel
     /**
      * @param string $Ip 机器的IP
      * @param string $InstanceID 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 机器状态，0:异常，1:正常
      * @param string $OfflineTime 机器离线时间，空为正常，异常返回具体时间
      * @param integer $AutoUpdate 机器是否开启自动升级。0:关闭，1:开启

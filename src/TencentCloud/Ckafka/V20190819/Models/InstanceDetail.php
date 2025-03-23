@@ -59,57 +59,31 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() 获取标识tag
  * @method void setTags(array $Tags) 设置标识tag
  * @method string getVersion() 获取kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZoneIds() 获取跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneIds(array $ZoneIds) 设置跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCvm() 获取ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxTopicNumber() 获取当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTopicNumber(integer $MaxTopicNumber) 设置当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxPartitionNumber() 获取当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) 设置当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRebalanceTime() 获取计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebalanceTime(string $RebalanceTime) 设置计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionNumber() 获取实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionNumber(integer $PartitionNumber) 设置实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicNetworkChargeType() 获取ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterType() 获取ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterType(string $ClusterType) 设置ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFeatures() 获取实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatures(array $Features) 设置实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -210,79 +184,66 @@ class InstanceDetail extends AbstractModel
 
     /**
      * @var string kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var array 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
     /**
      * @var integer ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cvm;
 
     /**
      * @var string ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxTopicNumber;
 
     /**
      * @var integer 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPartitionNumber;
 
     /**
      * @var string 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RebalanceTime;
 
     /**
      * @var integer 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionNumber;
 
     /**
      * @var string ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetworkChargeType;
 
     /**
      * @var integer 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
 
     /**
      * @var string ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
      * @var array 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Features;
 
@@ -307,31 +268,18 @@ class InstanceDetail extends AbstractModel
      * @param integer $TopicNum Topic个数
      * @param array $Tags 标识tag
      * @param string $Version kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneIds 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cvm ckafka售卖类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType ckafka集群实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType ckafka集群实例磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTopicNumber 当前规格最大Topic数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPartitionNumber 当前规格最大Partition数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RebalanceTime 计划升级配置时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNumber 实例当前partition数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicNetworkChargeType ckafka集群实例公网带宽类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterType ckafka集群实例底层集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Features 实例功能列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

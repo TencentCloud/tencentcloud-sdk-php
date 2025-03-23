@@ -21,20 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 主题实例
  *
  * @method string getTopicName() 获取主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPulsarTopicType() 获取0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPulsarTopicType(integer $PulsarTopicType) 设置0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Topic_Simplification extends AbstractModel
 {
     /**
      * @var string 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
@@ -43,15 +48,18 @@ class Topic_Simplification extends AbstractModel
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PulsarTopicType;
 
     /**
      * @param string $TopicName 主题名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PulsarTopicType 0: 非持久非分区
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

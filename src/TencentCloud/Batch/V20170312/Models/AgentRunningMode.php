@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * agent运行模式
  *
  * @method string getScene() 获取场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSession() 获取运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSession(string $Session) 设置运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentRunningMode extends AbstractModel
 {
     /**
      * @var string 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
     /**
      * @var string 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Session;
 
     /**
      * @param string $Scene 场景类型，支持WINDOWS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 运行Agent的User
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Session 运行Agent的Session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

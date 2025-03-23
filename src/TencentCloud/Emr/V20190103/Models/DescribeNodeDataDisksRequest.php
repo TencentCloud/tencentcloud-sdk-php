@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置EMR集群实例ID
  * @method array getCvmInstanceIds() 获取节点CVM实例Id列表
  * @method void setCvmInstanceIds(array $CvmInstanceIds) 设置节点CVM实例Id列表
+ * @method array getFilters() 获取查询云盘的过滤条件
+ * @method void setFilters(array $Filters) 设置查询云盘的过滤条件
+ * @method string getInnerSearch() 获取模糊搜索
+ * @method void setInnerSearch(string $InnerSearch) 设置模糊搜索
+ * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
+ * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
+ * @method integer getOffset() 获取数据偏移值
+ * @method void setOffset(integer $Offset) 设置数据偏移值
  */
 class DescribeNodeDataDisksRequest extends AbstractModel
 {
@@ -38,8 +46,32 @@ class DescribeNodeDataDisksRequest extends AbstractModel
     public $CvmInstanceIds;
 
     /**
+     * @var array 查询云盘的过滤条件
+     */
+    public $Filters;
+
+    /**
+     * @var string 模糊搜索
+     */
+    public $InnerSearch;
+
+    /**
+     * @var integer 每页返回数量，默认值为100，最大值为100。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 数据偏移值
+     */
+    public $Offset;
+
+    /**
      * @param string $InstanceId EMR集群实例ID
      * @param array $CvmInstanceIds 节点CVM实例Id列表
+     * @param array $Filters 查询云盘的过滤条件
+     * @param string $InnerSearch 模糊搜索
+     * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
+     * @param integer $Offset 数据偏移值
      */
     function __construct()
     {
@@ -60,6 +92,27 @@ class DescribeNodeDataDisksRequest extends AbstractModel
 
         if (array_key_exists("CvmInstanceIds",$param) and $param["CvmInstanceIds"] !== null) {
             $this->CvmInstanceIds = $param["CvmInstanceIds"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("InnerSearch",$param) and $param["InnerSearch"] !== null) {
+            $this->InnerSearch = $param["InnerSearch"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

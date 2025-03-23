@@ -31,21 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置Offset类型为timestamp时必传，传时间戳，精确到秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseAutoCreateTopic() 获取使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicParam extends AbstractModel
 {
@@ -68,25 +60,21 @@ class TopicParam extends AbstractModel
 
     /**
      * @var string Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompressionType;
 
     /**
      * @var boolean 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseAutoCreateTopic;
 
     /**
      * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgMultiple;
 
@@ -97,13 +85,9 @@ class TopicParam extends AbstractModel
      * @param integer $StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId Topic的TopicId【出参】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

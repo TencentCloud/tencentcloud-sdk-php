@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取Vpc的Port
  * @method void setPort(integer $Port) 设置Vpc的Port
  * @method string getRemark() 获取说明，128个字符以内
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置说明，128个字符以内
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcBindRecord extends AbstractModel
 {
@@ -62,6 +64,7 @@ class VpcBindRecord extends AbstractModel
 
     /**
      * @var string 说明，128个字符以内
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -72,6 +75,7 @@ class VpcBindRecord extends AbstractModel
      * @param string $Ip Vpc的Id
      * @param integer $Port Vpc的Port
      * @param string $Remark 说明，128个字符以内
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

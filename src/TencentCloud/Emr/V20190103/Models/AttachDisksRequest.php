@@ -38,6 +38,8 @@ ALIGN_DEADLINE：自动对其到期时间
  * @method void setDiskSpec(NodeSpecDiskV2 $DiskSpec) 设置新购云盘规格
  * @method boolean getDeleteWithInstance() 获取可选参数，不传该参数则仅执行挂载操作。传入True时，会在挂载成功后将云硬盘设置为随云主机销毁模式，仅对按量计费云硬盘有效。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置可选参数，不传该参数则仅执行挂载操作。传入True时，会在挂载成功后将云硬盘设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+ * @method array getSelectiveConfServices() 获取新挂磁盘时可支持配置的服务名称列表
+ * @method void setSelectiveConfServices(array $SelectiveConfServices) 设置新挂磁盘时可支持配置的服务名称列表
  */
 class AttachDisksRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ ALIGN_DEADLINE：自动对其到期时间
     public $DeleteWithInstance;
 
     /**
+     * @var array 新挂磁盘时可支持配置的服务名称列表
+     */
+    public $SelectiveConfServices;
+
+    /**
      * @param string $InstanceId EMR集群实例ID
      * @param array $DiskIds 需要挂载的云盘ID
      * @param string $AlignType 挂载模式，取值范围：
@@ -88,6 +95,7 @@ ALIGN_DEADLINE：自动对其到期时间
      * @param boolean $CreateDisk 是否是新购云盘进行挂载
      * @param NodeSpecDiskV2 $DiskSpec 新购云盘规格
      * @param boolean $DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，会在挂载成功后将云硬盘设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * @param array $SelectiveConfServices 新挂磁盘时可支持配置的服务名称列表
      */
     function __construct()
     {
@@ -129,6 +137,10 @@ ALIGN_DEADLINE：自动对其到期时间
 
         if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
             $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        }
+
+        if (array_key_exists("SelectiveConfServices",$param) and $param["SelectiveConfServices"] !== null) {
+            $this->SelectiveConfServices = $param["SelectiveConfServices"];
         }
     }
 }

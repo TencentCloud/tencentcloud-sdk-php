@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * SQLServer修改连接源参数
  *
  * @method string getResource() 获取SQLServer连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置SQLServer连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取SQLServer的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置SQLServer的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取SQLServer连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置SQLServer连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取SQLServer连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置SQLServer连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SQLServerModifyConnectParam extends AbstractModel
 {
     /**
      * @var string SQLServer连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var integer SQLServer的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string SQLServer连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string SQLServer连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var boolean 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @param string $Resource SQLServer连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port SQLServer的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip SQLServer连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId SQLServer连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName SQLServer连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password SQLServer连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

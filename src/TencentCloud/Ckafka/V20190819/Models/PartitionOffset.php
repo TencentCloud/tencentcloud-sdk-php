@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 分区和位移
  *
  * @method string getPartition() 获取分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartition(string $Partition) 设置分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PartitionOffset extends AbstractModel
 {
     /**
      * @var string 分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partition;
 
     /**
      * @var integer 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @param string $Partition 分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 位点偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

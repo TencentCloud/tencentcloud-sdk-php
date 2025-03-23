@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取连接源个数
  * @method void setTotalCount(integer $TotalCount) 设置连接源个数
  * @method array getConnectResourceList() 获取连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectResourceList(array $ConnectResourceList) 设置连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeConnectResourcesResp extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DescribeConnectResourcesResp extends AbstractModel
 
     /**
      * @var array 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectResourceList;
 
     /**
      * @param integer $TotalCount 连接源个数
      * @param array $ConnectResourceList 连接源数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

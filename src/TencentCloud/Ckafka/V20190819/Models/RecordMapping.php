@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJsonKey(string $JsonKey) 设置消息的 key 名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取消息类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置消息类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllowNull() 获取消息是否允许为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowNull(boolean $AllowNull) 设置消息是否允许为空
@@ -67,7 +65,6 @@ class RecordMapping extends AbstractModel
 
     /**
      * @var string 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -117,7 +114,6 @@ class RecordMapping extends AbstractModel
      * @param string $JsonKey 消息的 key 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 消息类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowNull 消息是否允许为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ColumnName 对应映射列名称

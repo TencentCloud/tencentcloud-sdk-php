@@ -21,49 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * 查询连接源具体数据的返参
  *
  * @method string getResourceId() 获取连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDatahubTaskCount() 获取该连接源关联的Datahub任务数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatahubTaskCount(integer $DatahubTaskCount) 设置该连接源关联的Datahub任务数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentStep() 获取连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentStep(string $CurrentStep) 设置连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTaskProgress() 获取创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskProgress(float $TaskProgress) 设置创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepList() 获取步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepList(array $StepList) 设置步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DtsConnectParam getDtsConnectParam() 获取Dts配置，Type为DTS时返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDtsConnectParam(DtsConnectParam $DtsConnectParam) 设置Dts配置，Type为DTS时返回
@@ -117,67 +95,56 @@ class DescribeConnectResource extends AbstractModel
 {
     /**
      * @var string 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var string 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @var integer 该连接源关联的Datahub任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatahubTaskCount;
 
     /**
      * @var string 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentStep;
 
     /**
      * @var float 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskProgress;
 
     /**
      * @var array 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepList;
 
@@ -255,27 +222,16 @@ class DescribeConnectResource extends AbstractModel
 
     /**
      * @param string $ResourceId 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DatahubTaskCount 该连接源关联的Datahub任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentStep 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TaskProgress 创建进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepList 步骤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DtsConnectParam $DtsConnectParam Dts配置，Type为DTS时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoDBConnectParam $MongoDBConnectParam MongoDB配置，Type为MONGODB时返回

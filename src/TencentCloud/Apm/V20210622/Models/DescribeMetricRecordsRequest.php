@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMetricRecords请求参数结构体
  *
- * @method array getMetrics() 获取指标列表
- * @method void setMetrics(array $Metrics) 设置指标列表
  * @method string getInstanceId() 获取业务系统 ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
+ * @method array getMetrics() 获取指标列表
+ * @method void setMetrics(array $Metrics) 设置指标列表
  * @method integer getStartTime() 获取开始时间（单位为秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间（单位为秒）
  * @method integer getEndTime() 获取结束时间（单位为秒）
  * @method void setEndTime(integer $EndTime) 设置结束时间（单位为秒）
+ * @method array getGroupBy() 获取聚合维度
+ * @method void setGroupBy(array $GroupBy) 设置聚合维度
  * @method array getFilters() 获取过滤条件
  * @method void setFilters(array $Filters) 设置过滤条件
  * @method array getOrFilters() 获取Or 过滤条件
  * @method void setOrFilters(array $OrFilters) 设置Or 过滤条件
- * @method array getGroupBy() 获取聚合维度
- * @method void setGroupBy(array $GroupBy) 设置聚合维度
  * @method OrderBy getOrderBy() 获取排序
 现支持的 Key 有：
 
@@ -72,14 +72,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMetricRecordsRequest extends AbstractModel
 {
     /**
-     * @var array 指标列表
-     */
-    public $Metrics;
-
-    /**
      * @var string 业务系统 ID
      */
     public $InstanceId;
+
+    /**
+     * @var array 指标列表
+     */
+    public $Metrics;
 
     /**
      * @var integer 开始时间（单位为秒）
@@ -92,6 +92,11 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var array 聚合维度
+     */
+    public $GroupBy;
+
+    /**
      * @var array 过滤条件
      */
     public $Filters;
@@ -100,11 +105,6 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @var array Or 过滤条件
      */
     public $OrFilters;
-
-    /**
-     * @var array 聚合维度
-     */
-    public $GroupBy;
 
     /**
      * @var OrderBy 排序
@@ -152,13 +152,13 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param array $Metrics 指标列表
      * @param string $InstanceId 业务系统 ID
+     * @param array $Metrics 指标列表
      * @param integer $StartTime 开始时间（单位为秒）
      * @param integer $EndTime 结束时间（单位为秒）
+     * @param array $GroupBy 聚合维度
      * @param array $Filters 过滤条件
      * @param array $OrFilters Or 过滤条件
-     * @param array $GroupBy 聚合维度
      * @param OrderBy $OrderBy 排序
 现支持的 Key 有：
 
@@ -190,6 +190,10 @@ class DescribeMetricRecordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
             $this->Metrics = [];
             foreach ($param["Metrics"] as $key => $value){
@@ -199,16 +203,16 @@ class DescribeMetricRecordsRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -227,10 +231,6 @@ class DescribeMetricRecordsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrFilters, $obj);
             }
-        }
-
-        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
-            $this->GroupBy = $param["GroupBy"];
         }
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {

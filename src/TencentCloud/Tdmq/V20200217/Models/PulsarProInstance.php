@@ -41,23 +41,37 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPayMode() 获取0-后付费，1-预付费
  * @method void setPayMode(integer $PayMode) 设置0-后付费，1-预付费
  * @method string getRemark() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取实例配置ID
  * @method void setSpecName(string $SpecName) 设置实例配置ID
  * @method integer getScalableTps() 获取规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScalableTps(integer $ScalableTps) 设置规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxBandWidth() 获取峰值带宽。单位：mbps
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽。单位：mbps
  * @method array getTags() 获取集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingLabelVersion() 获取代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenant() 获取自定义租户
  * @method void setTenant(string $Tenant) 设置自定义租户
  */
@@ -115,6 +129,7 @@ class PulsarProInstance extends AbstractModel
 
     /**
      * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -125,16 +140,19 @@ class PulsarProInstance extends AbstractModel
 
     /**
      * @var integer 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalableTps;
 
     /**
      * @var string VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -145,16 +163,19 @@ class PulsarProInstance extends AbstractModel
 
     /**
      * @var array 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingLabelVersion;
 
@@ -175,14 +196,21 @@ class PulsarProInstance extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param integer $PayMode 0-后付费，1-预付费
      * @param string $Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 实例配置ID
      * @param integer $ScalableTps 规格外弹性TPS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId VPC的id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxBandWidth 峰值带宽。单位：mbps
      * @param array $Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tenant 自定义租户
      */
     function __construct()

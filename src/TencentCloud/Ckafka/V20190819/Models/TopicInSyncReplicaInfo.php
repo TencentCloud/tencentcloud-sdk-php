@@ -29,21 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInSyncReplica() 获取ISR
  * @method void setInSyncReplica(string $InSyncReplica) 设置ISR
  * @method integer getBeginOffset() 获取起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginOffset(integer $BeginOffset) 设置起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndOffset() 获取末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndOffset(integer $EndOffset) 设置末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageCount() 获取消息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageCount(integer $MessageCount) 设置消息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutOfSyncReplica() 获取未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutOfSyncReplica(string $OutOfSyncReplica) 设置未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInSyncReplicaInfo extends AbstractModel
 {
@@ -69,25 +61,21 @@ class TopicInSyncReplicaInfo extends AbstractModel
 
     /**
      * @var integer 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginOffset;
 
     /**
      * @var integer 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndOffset;
 
     /**
      * @var integer 消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageCount;
 
     /**
      * @var string 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutOfSyncReplica;
 
@@ -97,13 +85,9 @@ class TopicInSyncReplicaInfo extends AbstractModel
      * @param string $Replica 副本集
      * @param string $InSyncReplica ISR
      * @param integer $BeginOffset 起始Offset
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndOffset 末端Offset
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageCount 消息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutOfSyncReplica 未同步副本集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

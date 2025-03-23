@@ -33,21 +33,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVersion() 获取集群版本
  * @method void setVersion(string $Version) 设置集群版本
  * @method array getNodeDistribution() 获取节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeDistribution(array $NodeDistribution) 设置节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxStorage() 获取最大储存容量，单位：MB
  * @method void setMaxStorage(integer $MaxStorage) 设置最大储存容量，单位：MB
  * @method boolean getCanEditRoute() 获取是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanEditRoute(boolean $CanEditRoute) 设置是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingLabelVersion() 获取代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoCreateTopicStatus() 获取是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) 设置是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultPartitionNumber() 获取自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
 
  * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
@@ -86,6 +98,7 @@ class PulsarProClusterInfo extends AbstractModel
 
     /**
      * @var array 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeDistribution;
 
@@ -96,27 +109,32 @@ class PulsarProClusterInfo extends AbstractModel
 
     /**
      * @var boolean 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanEditRoute;
 
     /**
      * @var string 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingLabelVersion;
 
     /**
      * @var integer 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var boolean 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoCreateTopicStatus;
 
     /**
      * @var integer 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultPartitionNumber;
 
@@ -134,13 +152,19 @@ true就是开启了，false是关闭
      * @param integer $Status 集群状态，0:创建中，1:正常，2:隔离
      * @param string $Version 集群版本
      * @param array $NodeDistribution 节点分布情况
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStorage 最大储存容量，单位：MB
      * @param boolean $CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoCreateTopicStatus 是否开启自动创建主题
 true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
      */
     function __construct()

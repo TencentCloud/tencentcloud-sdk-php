@@ -35,11 +35,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method integer getTopicNum() 获取Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNum(integer $TopicNum) 设置Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method RetentionPolicy getRetentionPolicy() 获取消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoSubscriptionCreation() 获取是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) 设置是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -80,16 +86,19 @@ class Environment extends AbstractModel
 
     /**
      * @var integer Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNum;
 
     /**
      * @var RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionPolicy;
 
     /**
      * @var boolean 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoSubscriptionCreation;
 
@@ -102,8 +111,11 @@ class Environment extends AbstractModel
      * @param string $NamespaceId 命名空间ID
      * @param string $NamespaceName 命名空间名称
      * @param integer $TopicNum Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionPolicy $RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoSubscriptionCreation 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

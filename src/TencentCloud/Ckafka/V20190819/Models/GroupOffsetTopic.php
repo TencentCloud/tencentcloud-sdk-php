@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
  * @method array getPartitions() 获取该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitions(array $Partitions) 设置该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupOffsetTopic extends AbstractModel
 {
@@ -36,14 +34,12 @@ class GroupOffsetTopic extends AbstractModel
 
     /**
      * @var array 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partitions;
 
     /**
      * @param string $Topic 主题名称
      * @param array $Partitions 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

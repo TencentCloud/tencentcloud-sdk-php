@@ -35,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
@@ -52,7 +51,6 @@ use TencentCloud\Common\AbstractModel;
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
@@ -100,7 +98,6 @@ class Groups extends AbstractModel
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
@@ -157,7 +154,6 @@ class Groups extends AbstractModel
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本

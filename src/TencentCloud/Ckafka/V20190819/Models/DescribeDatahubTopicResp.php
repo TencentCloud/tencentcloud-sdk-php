@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRetentionMs() 获取过期时间
  * @method void setRetentionMs(integer $RetentionMs) 设置过期时间
  * @method string getNote() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getPassword() 获取密码
@@ -41,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取状态，1使用中，2删除中
  * @method void setStatus(integer $Status) 设置状态，1使用中，2删除中
  * @method string getAddress() 获取服务路由地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置服务路由地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDatahubTopicResp extends AbstractModel
 {
@@ -74,7 +70,6 @@ class DescribeDatahubTopicResp extends AbstractModel
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
@@ -95,7 +90,6 @@ class DescribeDatahubTopicResp extends AbstractModel
 
     /**
      * @var string 服务路由地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
@@ -106,12 +100,10 @@ class DescribeDatahubTopicResp extends AbstractModel
      * @param integer $PartitionNum 分区数
      * @param integer $RetentionMs 过期时间
      * @param string $Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名
      * @param string $Password 密码
      * @param integer $Status 状态，1使用中，2删除中
      * @param string $Address 服务路由地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

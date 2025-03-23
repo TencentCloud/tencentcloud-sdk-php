@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * RouteDTO
  *
  * @method integer getRouteId() 获取路由Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteId(integer $RouteId) 设置路由Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteDTO extends AbstractModel
 {
     /**
      * @var integer 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteId;
 
     /**
      * @param integer $RouteId 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

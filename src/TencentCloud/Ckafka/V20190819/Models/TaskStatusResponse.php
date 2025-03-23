@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
 1 失败
 2 进行中
  * @method string getOutput() 获取输出信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(string $Output) 设置输出信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskStatusResponse extends AbstractModel
 {
@@ -45,7 +43,6 @@ class TaskStatusResponse extends AbstractModel
 
     /**
      * @var string 输出信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -55,7 +52,6 @@ class TaskStatusResponse extends AbstractModel
 1 失败
 2 进行中
      * @param string $Output 输出信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 实例维度组合数组
  *
  * @method array getDimensions() 获取实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDimensions(array $Dimensions) 设置实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DimensionInstance extends AbstractModel
 {
     /**
      * @var array 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimensions;
 
     /**
      * @param array $Dimensions 实例的维度组合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

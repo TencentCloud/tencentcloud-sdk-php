@@ -25,37 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFieldChain() 获取处理链
  * @method void setFieldChain(array $FieldChain) 设置处理链
  * @method array getFilterParam() 获取过滤器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterParam(array $FilterParam) 设置过滤器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FailureParam getFailureParam() 获取失败处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureParam(FailureParam $FailureParam) 设置失败处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResult() 获取测试结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置测试结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceType() 获取数据来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置数据来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputFormat() 获取输出格式，JSON，ROW，默认为JSON
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputFormat(string $OutputFormat) 设置输出格式，JSON，ROW，默认为JSON
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RowParam getRowParam() 获取输出格式为ROW必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowParam(RowParam $RowParam) 设置输出格式为ROW必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getKeepMetadata() 获取是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepMetadata(boolean $KeepMetadata) 设置是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BatchAnalyseParam getBatchAnalyse() 获取数组解析
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchAnalyse(BatchAnalyseParam $BatchAnalyse) 设置数组解析
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransformsParam extends AbstractModel
 {
@@ -71,49 +55,41 @@ class TransformsParam extends AbstractModel
 
     /**
      * @var array 过滤器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterParam;
 
     /**
      * @var FailureParam 失败处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureParam;
 
     /**
      * @var string 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var string 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string 输出格式，JSON，ROW，默认为JSON
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputFormat;
 
     /**
      * @var RowParam 输出格式为ROW必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RowParam;
 
     /**
      * @var boolean 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepMetadata;
 
     /**
      * @var BatchAnalyseParam 数组解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchAnalyse;
 
@@ -121,21 +97,13 @@ class TransformsParam extends AbstractModel
      * @param string $Content 原始数据
      * @param array $FieldChain 处理链
      * @param array $FilterParam 过滤器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureParam $FailureParam 失败处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceType 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputFormat 输出格式，JSON，ROW，默认为JSON
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowParam $RowParam 输出格式为ROW必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KeepMetadata 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchAnalyseParam $BatchAnalyse 数组解析
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

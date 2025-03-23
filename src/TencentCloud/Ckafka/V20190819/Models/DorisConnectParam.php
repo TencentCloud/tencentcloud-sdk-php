@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Doris 连接源参数
  *
  * @method integer getPort() 获取Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBePort() 获取Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBePort(integer $BePort) 设置Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DorisConnectParam extends AbstractModel
 {
     /**
      * @var integer Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var boolean 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var boolean Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @var integer Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BePort;
 
     /**
      * @param integer $Port Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName Doris 连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password Doris 连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource Doris 连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip Doris 连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId Doris 连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt Doris 连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BePort Doris 的 http 负载均衡连接 port，通常映射到 be 的 8040 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

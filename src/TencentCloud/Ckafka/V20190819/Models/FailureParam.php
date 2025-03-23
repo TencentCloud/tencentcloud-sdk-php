@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxRetryAttempts() 获取重试次数
  * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置重试次数
  * @method TopicParam getTopicParam() 获取DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicParam(TopicParam $TopicParam) 设置DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDlqType() 获取死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDlqType(string $DlqType) 设置死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailureParam extends AbstractModel
 {
@@ -61,13 +57,11 @@ class FailureParam extends AbstractModel
 
     /**
      * @var TopicParam DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicParam;
 
     /**
      * @var string 死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DlqType;
 
@@ -77,9 +71,7 @@ class FailureParam extends AbstractModel
      * @param integer $RetryInterval 重试间隔
      * @param integer $MaxRetryAttempts 重试次数
      * @param TopicParam $TopicParam DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DlqType 死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

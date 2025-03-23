@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Topic消息保留时间配置返回信息
  *
  * @method integer getExpect() 获取期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpect(integer $Expect) 设置期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrent() 获取当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrent(integer $Current) 设置当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getModTimeStamp() 获取最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTimeStamp(integer $ModTimeStamp) 设置最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicRetentionTimeConfigRsp extends AbstractModel
 {
     /**
      * @var integer 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expect;
 
     /**
      * @var integer 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Current;
 
     /**
      * @var integer 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModTimeStamp;
 
     /**
      * @param integer $Expect 期望值，即用户配置的Topic消息保留时间(单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Current 当前值，即当前生效值(可能存在动态调整，单位分钟)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModTimeStamp 最近变更时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

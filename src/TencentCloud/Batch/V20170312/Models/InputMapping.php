@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 输入映射
  *
  * @method string getSourcePath() 获取源端路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourcePath(string $SourcePath) 设置源端路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDestinationPath() 获取目的端路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationPath(string $DestinationPath) 设置目的端路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountOptionParameter() 获取挂载配置项参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountOptionParameter(string $MountOptionParameter) 设置挂载配置项参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InputMapping extends AbstractModel
 {
     /**
      * @var string 源端路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourcePath;
 
     /**
      * @var string 目的端路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationPath;
 
     /**
      * @var string 挂载配置项参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountOptionParameter;
 
     /**
      * @param string $SourcePath 源端路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DestinationPath 目的端路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountOptionParameter 挂载配置项参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

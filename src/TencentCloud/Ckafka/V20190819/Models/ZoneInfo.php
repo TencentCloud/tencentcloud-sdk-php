@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSoldOut() 获取true为售罄，false为未售罄
  * @method void setSoldOut(string $SoldOut) 设置true为售罄，false为未售罄
  * @method array getSalesInfo() 获取标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesInfo(array $SalesInfo) 设置标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraFlag() 获取额外标识
  * @method void setExtraFlag(string $ExtraFlag) 设置额外标识
  */
@@ -88,7 +86,6 @@ class ZoneInfo extends AbstractModel
 
     /**
      * @var array 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesInfo;
 
@@ -107,7 +104,6 @@ class ZoneInfo extends AbstractModel
      * @param string $Exflag 额外标识
      * @param string $SoldOut true为售罄，false为未售罄
      * @param array $SalesInfo 标准版售罄信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraFlag 额外标识
      */
     function __construct()

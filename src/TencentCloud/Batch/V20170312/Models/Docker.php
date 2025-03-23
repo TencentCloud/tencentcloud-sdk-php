@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDelayOnRetry() 获取拉取Docker镜像失败时延迟时间。单位：秒。
  * @method void setDelayOnRetry(integer $DelayOnRetry) 设置拉取Docker镜像失败时延迟时间。单位：秒。
  * @method string getDockerRunOption() 获取Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDockerRunOption(string $DockerRunOption) 设置Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Docker extends AbstractModel
 {
@@ -71,7 +69,6 @@ class Docker extends AbstractModel
 
     /**
      * @var string Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DockerRunOption;
 
@@ -83,7 +80,6 @@ class Docker extends AbstractModel
      * @param integer $MaxRetryCount 拉取Docker镜像重试次数。默认值：0。
      * @param integer $DelayOnRetry 拉取Docker镜像失败时延迟时间。单位：秒。
      * @param string $DockerRunOption Docker命令运行参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,25 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAreaName() 获取区域名称
  * @method void setAreaName(string $AreaName) 设置区域名称
  * @method string getRegionCode() 获取地域代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionCode(string $RegionCode) 设置地域代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionCodeV3() 获取地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionCodeV3(string $RegionCodeV3) 设置地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSupport() 获取NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupport(string $Support) 设置NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIpv6() 获取是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6(integer $Ipv6) 设置是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMultiZone() 获取是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiZone(integer $MultiZone) 设置是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Region extends AbstractModel
 {
@@ -66,31 +56,26 @@ class Region extends AbstractModel
 
     /**
      * @var string 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionCode;
 
     /**
      * @var string 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionCodeV3;
 
     /**
      * @var string NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Support;
 
     /**
      * @var integer 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6;
 
     /**
      * @var integer 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiZone;
 
@@ -99,15 +84,10 @@ class Region extends AbstractModel
      * @param string $RegionName 地域名称
      * @param string $AreaName 区域名称
      * @param string $RegionCode 地域代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionCodeV3 地域代码（V3版本）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Support NONE:默认值不支持任何特殊类型 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ipv6 是否支持ipv6, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MultiZone 是否支持跨可用区, 0：表示不支持，1：表示支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

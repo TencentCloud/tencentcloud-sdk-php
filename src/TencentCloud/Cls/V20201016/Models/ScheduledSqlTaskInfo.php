@@ -59,13 +59,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSrcTopicRegion() 获取源topicId的地域信息
  * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置源topicId的地域信息
  * @method integer getSyntaxRule() 获取语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHasServicesLog() 获取是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScheduledSqlTaskInfo extends AbstractModel
 {
@@ -158,13 +154,11 @@ class ScheduledSqlTaskInfo extends AbstractModel
 
     /**
      * @var integer 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyntaxRule;
 
     /**
      * @var integer 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasServicesLog;
 
@@ -189,9 +183,7 @@ class ScheduledSqlTaskInfo extends AbstractModel
      * @param integer $ProcessDelay 执行延迟(秒)
      * @param string $SrcTopicRegion 源topicId的地域信息
      * @param integer $SyntaxRule 语法规则，0：Lucene语法，1：CQL语法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

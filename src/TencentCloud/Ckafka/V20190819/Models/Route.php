@@ -45,17 +45,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainPort(integer $DomainPort) 设置域名port
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeleteTimestamp() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnet() 获取子网Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnet(string $Subnet) 设置子网Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBrokerVipList() 获取虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerVipList(array $BrokerVipList) 设置虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络Id
@@ -101,7 +97,6 @@ class Route extends AbstractModel
 
     /**
      * @var string 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteTimestamp;
 
@@ -113,7 +108,6 @@ class Route extends AbstractModel
 
     /**
      * @var array 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerVipList;
 
@@ -137,11 +131,9 @@ class Route extends AbstractModel
      * @param integer $DomainPort 域名port
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeleteTimestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Subnet 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerVipList 虚拟IP列表(1对1 broker节点)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */

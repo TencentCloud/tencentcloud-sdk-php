@@ -21,65 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 通知内容模板信息
  *
  * @method string getNoticeContentId() 获取通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取语言类型。
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置语言类型。
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNoticeContents() 获取通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeContents(array $NoticeContents) 设置通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlag() 获取通知内容模板标记。
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlag(integer $Flag) 设置通知内容模板标记。
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUin() 获取创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(integer $Uin) 设置创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubUin() 获取创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubUin(integer $SubUin) 设置创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NoticeContentTemplate extends AbstractModel
 {
     /**
      * @var string 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeContentId;
 
     /**
      * @var string 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -88,13 +68,11 @@ class NoticeContentTemplate extends AbstractModel
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var array 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeContents;
 
@@ -103,59 +81,45 @@ class NoticeContentTemplate extends AbstractModel
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flag;
 
     /**
      * @var integer 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var integer 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUin;
 
     /**
      * @var integer 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 通知内容模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 语言类型。
 
 0： 中文
 1： 英文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NoticeContents 通知内容模板信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Flag 通知内容模板标记。
 
 0： 用户自定义
 1： 系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 创建者主账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubUin 创建/修改者子账号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新时间 秒级时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

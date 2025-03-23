@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * dip失败消息写入cls的配置
  *
  * @method boolean getDropInvalidMessageToCls() 获取是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropInvalidMessageToCls(boolean $DropInvalidMessageToCls) 设置是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDropClsRegion() 获取投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropClsRegion(string $DropClsRegion) 设置投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDropClsOwneruin() 获取投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropClsOwneruin(string $DropClsOwneruin) 设置投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDropClsTopicId() 获取投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropClsTopicId(string $DropClsTopicId) 设置投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDropClsLogSet() 获取投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropClsLogSet(string $DropClsLogSet) 设置投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DropCls extends AbstractModel
 {
     /**
      * @var boolean 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropInvalidMessageToCls;
 
     /**
      * @var string 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropClsRegion;
 
     /**
      * @var string 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropClsOwneruin;
 
     /**
      * @var string 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropClsTopicId;
 
     /**
      * @var string 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropClsLogSet;
 
     /**
      * @param boolean $DropInvalidMessageToCls 是否投递到cls
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DropClsRegion 投递cls的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DropClsOwneruin 投递cls的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DropClsTopicId 投递cls的主题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DropClsLogSet 投递cls的日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

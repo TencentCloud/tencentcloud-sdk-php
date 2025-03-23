@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRowContent() 获取行内容，KEY_VALUE，VALUE
  * @method void setRowContent(string $RowContent) 设置行内容，KEY_VALUE，VALUE
  * @method string getKeyValueDelimiter() 获取key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyValueDelimiter(string $KeyValueDelimiter) 设置key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEntryDelimiter() 获取元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntryDelimiter(string $EntryDelimiter) 设置元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RowParam extends AbstractModel
 {
@@ -40,22 +36,18 @@ class RowParam extends AbstractModel
 
     /**
      * @var string key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyValueDelimiter;
 
     /**
      * @var string 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntryDelimiter;
 
     /**
      * @param string $RowContent 行内容，KEY_VALUE，VALUE
      * @param string $KeyValueDelimiter key和value间的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EntryDelimiter 元素建的分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

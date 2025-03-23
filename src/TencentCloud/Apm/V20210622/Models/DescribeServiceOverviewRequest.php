@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
  * @method array getMetrics() 获取指标列表
  * @method void setMetrics(array $Metrics) 设置指标列表
- * @method array getGroupBy() 获取聚合维度
- * @method void setGroupBy(array $GroupBy) 设置聚合维度
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
  * @method integer getStartTime() 获取开始时间（单位：秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间（单位：秒）
  * @method integer getEndTime() 获取结束时间（单位：秒）
  * @method void setEndTime(integer $EndTime) 设置结束时间（单位：秒）
+ * @method array getGroupBy() 获取聚合维度
+ * @method void setGroupBy(array $GroupBy) 设置聚合维度
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
  * @method OrderBy getOrderBy() 获取排序方式
 Value 填写：
 - asc：对查询指标进行升序排序
@@ -58,16 +58,6 @@ class DescribeServiceOverviewRequest extends AbstractModel
     public $Metrics;
 
     /**
-     * @var array 聚合维度
-     */
-    public $GroupBy;
-
-    /**
-     * @var array 过滤条件
-     */
-    public $Filters;
-
-    /**
      * @var integer 开始时间（单位：秒）
      */
     public $StartTime;
@@ -76,6 +66,16 @@ class DescribeServiceOverviewRequest extends AbstractModel
      * @var integer 结束时间（单位：秒）
      */
     public $EndTime;
+
+    /**
+     * @var array 聚合维度
+     */
+    public $GroupBy;
+
+    /**
+     * @var array 过滤条件
+     */
+    public $Filters;
 
     /**
      * @var OrderBy 排序方式
@@ -98,10 +98,10 @@ Value 填写：
     /**
      * @param string $InstanceId 业务系统 ID
      * @param array $Metrics 指标列表
-     * @param array $GroupBy 聚合维度
-     * @param array $Filters 过滤条件
      * @param integer $StartTime 开始时间（单位：秒）
      * @param integer $EndTime 结束时间（单位：秒）
+     * @param array $GroupBy 聚合维度
+     * @param array $Filters 过滤条件
      * @param OrderBy $OrderBy 排序方式
 Value 填写：
 - asc：对查询指标进行升序排序
@@ -135,6 +135,14 @@ Value 填写：
             }
         }
 
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
         }
@@ -146,14 +154,6 @@ Value 填写：
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {

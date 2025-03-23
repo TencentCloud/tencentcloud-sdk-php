@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubAssumerName() 获取云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
  * @method void setSubAssumerName(string $SubAssumerName) 设置云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
  * @method string getDescribes() 获取主题描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribes(string $Describes) 设置主题描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHotPeriod() 获取开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
@@ -79,9 +77,7 @@ HotPeriod=0为没有开启日志沉降。
  * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
  * @method TopicExtendInfo getExtends() 获取日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicAsyncTaskID() 获取异步迁移任务ID
  * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置异步迁移任务ID
  * @method integer getMigrationStatus() 获取异步迁移状态
@@ -168,7 +164,6 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var string 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describes;
 
@@ -194,7 +189,6 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * @var TopicExtendInfo 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extends;
 
@@ -234,7 +228,6 @@ HotPeriod=0为没有开启日志沉降。
      * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
      * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
      * @param string $Describes 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
@@ -244,7 +237,6 @@ HotPeriod=0为没有开启日志沉降。
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      * @param TopicExtendInfo $Extends 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicAsyncTaskID 异步迁移任务ID
      * @param integer $MigrationStatus 异步迁移状态
      * @param string $EffectiveDate 异步迁移完成后，预计生效日期

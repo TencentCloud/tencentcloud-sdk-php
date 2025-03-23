@@ -29,21 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPriority() 获取作业优先级
  * @method void setPriority(integer $Priority) 设置作业优先级
  * @method Placement getPlacement() 获取位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlacement(Placement $Placement) 设置位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskMetrics getTaskMetrics() 获取任务统计指标
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
  * @method array getTags() 获取作业绑定的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置作业绑定的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobView extends AbstractModel
 {
@@ -69,7 +63,6 @@ class JobView extends AbstractModel
 
     /**
      * @var Placement 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Placement;
 
@@ -80,7 +73,6 @@ class JobView extends AbstractModel
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -91,7 +83,6 @@ class JobView extends AbstractModel
 
     /**
      * @var array 作业绑定的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -101,13 +92,10 @@ class JobView extends AbstractModel
      * @param string $JobState 作业状态
      * @param integer $Priority 作业优先级
      * @param Placement $Placement 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMetrics $TaskMetrics 任务统计指标
      * @param array $Tags 作业绑定的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

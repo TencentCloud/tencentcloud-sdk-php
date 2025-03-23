@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取符合调节的总结果数
  * @method void setTotalCount(integer $TotalCount) 设置符合调节的总结果数
  * @method array getTopicList() 获取该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupOffsetResponse extends AbstractModel
 {
@@ -36,14 +34,12 @@ class GroupOffsetResponse extends AbstractModel
 
     /**
      * @var array 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @param integer $TotalCount 符合调节的总结果数
      * @param array $TopicList 该主题分区数组，其中每个元素为一个 json object
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

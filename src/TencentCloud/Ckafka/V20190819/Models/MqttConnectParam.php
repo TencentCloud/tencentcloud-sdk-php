@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * MQTT连接源参数
  *
  * @method string getUserName() 获取MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MqttConnectParam extends AbstractModel
 {
     /**
      * @var string MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var boolean 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @var boolean 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var string MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @param string $UserName MQTT连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password MQTT连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource MQTT连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId MQTT Instance vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region MQTT连接源的实例资源地域, 跨地域时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

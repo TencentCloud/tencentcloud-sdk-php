@@ -25,29 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskInstanceState() 获取任务实例状态
  * @method void setTaskInstanceState(string $TaskInstanceState) 设置任务实例状态
  * @method integer getExitCode() 获取应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExitCode(integer $ExitCode) 设置应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStateReason() 获取任务实例状态原因，任务实例失败时，会记录失败原因
  * @method void setStateReason(string $StateReason) 设置任务实例状态原因，任务实例失败时，会记录失败原因
  * @method string getComputeNodeInstanceId() 获取任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) 设置任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getLaunchTime() 获取启动时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTime(string $LaunchTime) 设置启动时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunningTime() 获取开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningTime(string $RunningTime) 设置开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RedirectInfo getRedirectInfo() 获取重定向信息
  * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
  * @method string getStateDetailedReason() 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
@@ -67,7 +57,6 @@ class TaskInstanceView extends AbstractModel
 
     /**
      * @var integer 应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExitCode;
 
@@ -78,7 +67,6 @@ class TaskInstanceView extends AbstractModel
 
     /**
      * @var string 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeNodeInstanceId;
 
@@ -89,19 +77,16 @@ class TaskInstanceView extends AbstractModel
 
     /**
      * @var string 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTime;
 
     /**
      * @var string 开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -119,17 +104,12 @@ class TaskInstanceView extends AbstractModel
      * @param integer $TaskInstanceIndex 任务实例索引
      * @param string $TaskInstanceState 任务实例状态
      * @param integer $ExitCode 应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StateReason 任务实例状态原因，任务实例失败时，会记录失败原因
      * @param string $ComputeNodeInstanceId 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $LaunchTime 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunningTime 开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RedirectInfo $RedirectInfo 重定向信息
      * @param string $StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */

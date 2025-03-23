@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method boolean getIfCommunity() 获取是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfCommunity(boolean $IfCommunity) 设置是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -50,7 +48,6 @@ class Instance extends AbstractModel
 
     /**
      * @var boolean 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IfCommunity;
 
@@ -59,7 +56,6 @@ class Instance extends AbstractModel
      * @param string $InstanceName ckafka集群实例Name
      * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      * @param boolean $IfCommunity 是否开源实例。开源：true，不开源：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

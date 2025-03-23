@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 标准版销售信息
  *
  * @method boolean getFlag() 获取手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlag(boolean $Flag) 设置手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlatform() 获取专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlatform(string $Platform) 设置专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSoldOut() 获取售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoldOut(boolean $SoldOut) 设置售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SaleInfo extends AbstractModel
 {
     /**
      * @var boolean 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flag;
 
     /**
      * @var string ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Platform;
 
     /**
      * @var boolean 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoldOut;
 
     /**
      * @param boolean $Flag 手动设置的flag标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version ckakfa版本号(1.1.1/2.4.2/0.10.2)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Platform 专业版、标准版标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SoldOut 售罄标志：true售罄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

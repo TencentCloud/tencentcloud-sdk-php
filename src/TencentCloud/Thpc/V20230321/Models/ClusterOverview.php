@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSchedulerType() 获取集群调度器。
  * @method void setSchedulerType(string $SchedulerType) 设置集群调度器。
  * @method string getSchedulerVersion() 获取集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerVersion(string $SchedulerVersion) 设置集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComputeNodeCount() 获取计算节点数量。
  * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置计算节点数量。
  * @method array getComputeNodeSet() 获取计算节点概览。
@@ -87,7 +85,6 @@ class ClusterOverview extends AbstractModel
 
     /**
      * @var string 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerVersion;
 
@@ -139,7 +136,6 @@ class ClusterOverview extends AbstractModel
      * @param string $CreateTime 集群创建时间。
      * @param string $SchedulerType 集群调度器。
      * @param string $SchedulerVersion 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComputeNodeCount 计算节点数量。
      * @param array $ComputeNodeSet 计算节点概览。
      * @param integer $ManagerNodeCount 管控节点数量。

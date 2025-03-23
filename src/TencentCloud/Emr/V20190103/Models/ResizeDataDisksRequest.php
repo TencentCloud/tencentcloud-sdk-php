@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取EMR集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置EMR集群实例ID
- * @method array getDiskIds() 获取需要扩容的云盘ID
- * @method void setDiskIds(array $DiskIds) 设置需要扩容的云盘ID
  * @method integer getDiskSize() 获取需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
  * @method void setDiskSize(integer $DiskSize) 设置需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
  * @method array getCvmInstanceIds() 获取需要扩容的节点ID列表
  * @method void setCvmInstanceIds(array $CvmInstanceIds) 设置需要扩容的节点ID列表
+ * @method array getDiskIds() 获取需要扩容的云盘ID
+ * @method void setDiskIds(array $DiskIds) 设置需要扩容的云盘ID
+ * @method boolean getResizeAll() 获取是否扩容全部云硬盘
+ * @method void setResizeAll(boolean $ResizeAll) 设置是否扩容全部云硬盘
  */
 class ResizeDataDisksRequest extends AbstractModel
 {
@@ -35,11 +37,6 @@ class ResizeDataDisksRequest extends AbstractModel
      * @var string EMR集群实例ID
      */
     public $InstanceId;
-
-    /**
-     * @var array 需要扩容的云盘ID
-     */
-    public $DiskIds;
 
     /**
      * @var integer 需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
@@ -52,10 +49,21 @@ class ResizeDataDisksRequest extends AbstractModel
     public $CvmInstanceIds;
 
     /**
+     * @var array 需要扩容的云盘ID
+     */
+    public $DiskIds;
+
+    /**
+     * @var boolean 是否扩容全部云硬盘
+     */
+    public $ResizeAll;
+
+    /**
      * @param string $InstanceId EMR集群实例ID
-     * @param array $DiskIds 需要扩容的云盘ID
      * @param integer $DiskSize 需要扩充的容量值，容量值需要大于原容量，并且为10的整数倍
      * @param array $CvmInstanceIds 需要扩容的节点ID列表
+     * @param array $DiskIds 需要扩容的云盘ID
+     * @param boolean $ResizeAll 是否扩容全部云硬盘
      */
     function __construct()
     {
@@ -74,16 +82,20 @@ class ResizeDataDisksRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
-        }
-
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
         }
 
         if (array_key_exists("CvmInstanceIds",$param) and $param["CvmInstanceIds"] !== null) {
             $this->CvmInstanceIds = $param["CvmInstanceIds"];
+        }
+
+        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
+            $this->DiskIds = $param["DiskIds"];
+        }
+
+        if (array_key_exists("ResizeAll",$param) and $param["ResizeAll"] !== null) {
+            $this->ResizeAll = $param["ResizeAll"];
         }
     }
 }

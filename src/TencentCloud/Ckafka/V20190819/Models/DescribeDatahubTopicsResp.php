@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getTopicList() 获取Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDatahubTopicsResp extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DescribeDatahubTopicsResp extends AbstractModel
 
     /**
      * @var array Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @param integer $TotalCount 总数
      * @param array $TopicList Topic列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

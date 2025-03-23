@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 聚合的实例状态返回结果
  *
  * @method array getInstanceList() 获取符合条件的实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置符合条件的实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的结果总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的结果总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceResponse extends AbstractModel
 {
     /**
      * @var array 符合条件的实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
     /**
      * @var integer 符合条件的结果总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $InstanceList 符合条件的实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的结果总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

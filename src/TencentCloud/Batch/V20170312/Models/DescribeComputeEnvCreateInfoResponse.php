@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEnvName() 获取计算环境名称
  * @method void setEnvName(string $EnvName) 设置计算环境名称
  * @method string getEnvDescription() 获取计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvType() 获取计算环境类型，仅支持“MANAGED”类型
  * @method void setEnvType(string $EnvType) 设置计算环境类型，仅支持“MANAGED”类型
  * @method EnvData getEnvData() 获取计算环境参数
@@ -63,7 +61,6 @@ class DescribeComputeEnvCreateInfoResponse extends AbstractModel
 
     /**
      * @var string 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvDescription;
 
@@ -117,7 +114,6 @@ class DescribeComputeEnvCreateInfoResponse extends AbstractModel
      * @param string $EnvId 计算环境 ID
      * @param string $EnvName 计算环境名称
      * @param string $EnvDescription 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvType 计算环境类型，仅支持“MANAGED”类型
      * @param EnvData $EnvData 计算环境参数
      * @param array $MountDataDisks 数据盘挂载选项

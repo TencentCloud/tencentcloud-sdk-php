@@ -35,47 +35,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置回调地址，最大支持1024个字节。
 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
  * @method string getWebCallbackId() 获取集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebCallbackId(string $WebCallbackId) 设置集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethod() 获取回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemindType() 获取提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemindType(integer $RemindType) 设置提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMobiles() 获取电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobiles(array $Mobiles) 设置电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserIds() 获取用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIds(array $UserIds) 设置用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBody() 获取该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置该参数已废弃，请使用NoticeContentId。
@@ -106,7 +92,6 @@ class WebCallback extends AbstractModel
 
     /**
      * @var string 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebCallbackId;
 
@@ -117,13 +102,11 @@ class WebCallback extends AbstractModel
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeContentId;
 
@@ -131,25 +114,21 @@ class WebCallback extends AbstractModel
      * @var integer 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemindType;
 
     /**
      * @var array 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobiles;
 
     /**
      * @var array 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIds;
 
     /**
      * @var array 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
@@ -175,26 +154,19 @@ class WebCallback extends AbstractModel
      * @param string $Url 回调地址，最大支持1024个字节。
 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
      * @param string $WebCallbackId 集成配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
 - 参数CallbackType为Http时为必选，其它回调方式无需填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemindType 提醒类型。
 
 0：不提醒；1：指定人；2：所有人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Mobiles 电话列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserIds 用户ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 该参数已废弃，请使用NoticeContentId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 序号。

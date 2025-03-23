@@ -22,52 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTitle() 获取通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NoticeContentInfo extends AbstractModel
 {
     /**
      * @var string 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var string 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var array 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
      * @param string $Title 通知内容模板标题信息。
 部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 通知内容模板正文信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

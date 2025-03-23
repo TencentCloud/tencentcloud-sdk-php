@@ -92,6 +92,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDlcGroupName(string $DlcGroupName) 设置DLC资源组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupName() 获取任务名称
+ * @method void setRuleGroupName(string $RuleGroupName) 设置任务名称
+ * @method string getDatabaseName() 获取数据库名称
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+ * @method string getSchemaName() 获取schema名称
+ * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method string getTableName() 获取表名称
+ * @method void setTableName(string $TableName) 设置表名称
+ * @method string getDatasourceId() 获取数据源id
+ * @method void setDatasourceId(string $DatasourceId) 设置数据源id
+ * @method string getDescription() 获取任务描述
+ * @method void setDescription(string $Description) 设置任务描述
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
@@ -204,6 +216,36 @@ class RuleGroupExecStrategy extends AbstractModel
     public $DlcGroupName;
 
     /**
+     * @var string 任务名称
+     */
+    public $RuleGroupName;
+
+    /**
+     * @var string 数据库名称
+     */
+    public $DatabaseName;
+
+    /**
+     * @var string schema名称
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 表名称
+     */
+    public $TableName;
+
+    /**
+     * @var string 数据源id
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 任务描述
+     */
+    public $Description;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
@@ -240,6 +282,12 @@ class RuleGroupExecStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DlcGroupName DLC资源组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupName 任务名称
+     * @param string $DatabaseName 数据库名称
+     * @param string $SchemaName schema名称
+     * @param string $TableName 表名称
+     * @param string $DatasourceId 数据源id
+     * @param string $Description 任务描述
      */
     function __construct()
     {
@@ -329,6 +377,30 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("DlcGroupName",$param) and $param["DlcGroupName"] !== null) {
             $this->DlcGroupName = $param["DlcGroupName"];
+        }
+
+        if (array_key_exists("RuleGroupName",$param) and $param["RuleGroupName"] !== null) {
+            $this->RuleGroupName = $param["RuleGroupName"];
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -98,7 +98,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息
  * @method Models\ResetYarnConfigResponse ResetYarnConfig(Models\ResetYarnConfigRequest $req) 修改YARN资源调度的资源配置
- * @method Models\ResizeDataDisksResponse ResizeDataDisks(Models\ResizeDataDisksRequest $req) 云盘扩容
+ * @method Models\ResizeDataDisksResponse ResizeDataDisks(Models\ResizeDataDisksRequest $req) 云数据盘扩容
  * @method Models\RunJobFlowResponse RunJobFlow(Models\RunJobFlowRequest $req) 创建流程作业
  * @method Models\ScaleOutClusterResponse ScaleOutCluster(Models\ScaleOutClusterRequest $req) 扩容集群节点
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 扩容节点

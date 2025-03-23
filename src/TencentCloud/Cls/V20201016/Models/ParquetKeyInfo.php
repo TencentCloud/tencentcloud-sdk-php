@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKeyType() 获取数据类型，目前支持6种类型：string、boolean、int32、int64、float、double
  * @method void setKeyType(string $KeyType) 设置数据类型，目前支持6种类型：string、boolean、int32、int64、float、double
  * @method string getKeyNonExistingField() 获取解析失败赋值信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyNonExistingField(string $KeyNonExistingField) 设置解析失败赋值信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParquetKeyInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class ParquetKeyInfo extends AbstractModel
 
     /**
      * @var string 解析失败赋值信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyNonExistingField;
 
@@ -51,7 +48,6 @@ class ParquetKeyInfo extends AbstractModel
      * @param string $KeyName 键值名称
      * @param string $KeyType 数据类型，目前支持6种类型：string、boolean、int32、int64、float、double
      * @param string $KeyNonExistingField 解析失败赋值信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

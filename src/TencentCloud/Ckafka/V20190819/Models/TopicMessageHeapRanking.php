@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * topic消息堆积、占用磁盘排行
  *
  * @method string getTopicId() 获取主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionNum() 获取分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicaNum() 获取副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicTraffic() 获取Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageHeap() 获取topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageHeap(integer $MessageHeap) 设置topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicMessageHeapRanking extends AbstractModel
 {
     /**
      * @var string 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var integer 分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionNum;
 
     /**
      * @var integer 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaNum;
 
     /**
      * @var string Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicTraffic;
 
     /**
      * @var integer topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageHeap;
 
     /**
      * @param string $TopicId 主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNum 分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplicaNum 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicTraffic Topic 流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageHeap topic消息堆积/占用磁盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

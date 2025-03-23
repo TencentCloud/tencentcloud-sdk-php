@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * PostgreSQL连接源参数
  *
  * @method integer getPort() 获取PostgreSQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置PostgreSQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取PostgreSQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置PostgreSQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取PostgreSQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置PostgreSQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取PostgreSQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置PostgreSQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取PostgreSQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置PostgreSQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取PostgreSQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置PostgreSQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取当type为TDSQL_C_POSTGRESQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置当type为TDSQL_C_POSTGRESQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取PostgreSQL连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置PostgreSQL连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PostgreSQLConnectParam extends AbstractModel
 {
     /**
      * @var integer PostgreSQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string PostgreSQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string PostgreSQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string PostgreSQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string PostgreSQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string PostgreSQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 当type为TDSQL_C_POSTGRESQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var boolean 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var boolean PostgreSQL连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @param integer $Port PostgreSQL的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName PostgreSQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password PostgreSQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource PostgreSQL连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip PostgreSQL连接源的实例vip，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId PostgreSQL连接源的vpcId，当为腾讯云实例时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 当type为TDSQL_C_POSTGRESQL时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt PostgreSQL连接源是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeListProtectThresholdConfig返回参数结构体
+ * DescribeUnbindedDevices返回参数结构体
  *
- * @method integer getTotal() 获取总记录数
- * @method void setTotal(integer $Total) 设置总记录数
- * @method array getConfigList() 获取防护阈值配置列表
- * @method void setConfigList(array $ConfigList) 设置防护阈值配置列表
+ * @method array getUnbindedDevices() 获取未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnbindedDevices(array $UnbindedDevices) 设置未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取设备的总数量
+ * @method void setTotal(integer $Total) 设置设备的总数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeListProtectThresholdConfigResponse extends AbstractModel
+class DescribeUnbindedDevicesResponse extends AbstractModel
 {
     /**
-     * @var integer 总记录数
+     * @var array 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Total;
+    public $UnbindedDevices;
 
     /**
-     * @var array 防护阈值配置列表
+     * @var integer 设备的总数量
      */
-    public $ConfigList;
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeListProtectThresholdConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总记录数
-     * @param array $ConfigList 防护阈值配置列表
+     * @param array $UnbindedDevices 未绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 设备的总数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +66,17 @@ class DescribeListProtectThresholdConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("UnbindedDevices",$param) and $param["UnbindedDevices"] !== null) {
+            $this->UnbindedDevices = [];
+            foreach ($param["UnbindedDevices"] as $key => $value){
+                $obj = new BindDeviceInfo();
+                $obj->deserialize($value);
+                array_push($this->UnbindedDevices, $obj);
+            }
         }
 
-        if (array_key_exists("ConfigList",$param) and $param["ConfigList"] !== null) {
-            $this->ConfigList = [];
-            foreach ($param["ConfigList"] as $key => $value){
-                $obj = new ProtectThresholdRelation();
-                $obj->deserialize($value);
-                array_push($this->ConfigList, $obj);
-            }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

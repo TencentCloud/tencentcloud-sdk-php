@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileIDs(array $FileIDs) 设置文件标识符。单次最大 50 个文件。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReasoningContent() 获取思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+ * @method void setReasoningContent(string $ReasoningContent) 设置思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
  */
 class Message extends AbstractModel
 {
@@ -78,6 +80,11 @@ class Message extends AbstractModel
     public $FileIDs;
 
     /**
+     * @var string 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public $ReasoningContent;
+
+    /**
      * @param string $Role 角色，可选值包括 system、user、assistant、 tool。
      * @param string $Content 文本内容
      * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
@@ -88,6 +95,7 @@ class Message extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileIDs 文件标识符。单次最大 50 个文件。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class Message extends AbstractModel
 
         if (array_key_exists("FileIDs",$param) and $param["FileIDs"] !== null) {
             $this->FileIDs = $param["FileIDs"];
+        }
+
+        if (array_key_exists("ReasoningContent",$param) and $param["ReasoningContent"] !== null) {
+            $this->ReasoningContent = $param["ReasoningContent"];
         }
     }
 }

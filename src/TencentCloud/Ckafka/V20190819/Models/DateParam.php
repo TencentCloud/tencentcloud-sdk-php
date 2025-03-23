@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFormat() 获取时间格式
  * @method void setFormat(string $Format) 设置时间格式
  * @method string getTargetType() 获取输入类型，string，unix时间戳，默认string
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(string $TargetType) 设置输入类型，string，unix时间戳，默认string
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeZone() 获取时区，默认GMT+8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeZone(string $TimeZone) 设置时区，默认GMT+8
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DateParam extends AbstractModel
 {
@@ -40,22 +36,18 @@ class DateParam extends AbstractModel
 
     /**
      * @var string 输入类型，string，unix时间戳，默认string
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
     /**
      * @var string 时区，默认GMT+8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeZone;
 
     /**
      * @param string $Format 时间格式
      * @param string $TargetType 输入类型，string，unix时间戳，默认string
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeZone 时区，默认GMT+8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

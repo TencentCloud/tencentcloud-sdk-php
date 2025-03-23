@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置云硬盘挂载的云主机ID
  * @method boolean getShareable() 获取云盘是否为共享型云盘。
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
+ * @method string getEmrResourceId() 获取emr节点ID
+ * @method void setEmrResourceId(string $EmrResourceId) 设置emr节点ID
  */
 class CBSInstance extends AbstractModel
 {
@@ -132,6 +134,11 @@ class CBSInstance extends AbstractModel
     public $Shareable;
 
     /**
+     * @var string emr节点ID
+     */
+    public $EmrResourceId;
+
+    /**
      * @param string $DiskId 云硬盘ID
      * @param string $DiskUsage 云硬盘类型
      * @param string $DiskName 云硬盘名称
@@ -148,6 +155,7 @@ class CBSInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云硬盘挂载的云主机ID
      * @param boolean $Shareable 云盘是否为共享型云盘。
+     * @param string $EmrResourceId emr节点ID
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class CBSInstance extends AbstractModel
 
         if (array_key_exists("Shareable",$param) and $param["Shareable"] !== null) {
             $this->Shareable = $param["Shareable"];
+        }
+
+        if (array_key_exists("EmrResourceId",$param) and $param["EmrResourceId"] !== null) {
+            $this->EmrResourceId = $param["EmrResourceId"];
         }
     }
 }

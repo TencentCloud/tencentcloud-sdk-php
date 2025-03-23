@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 预付费/后付费接口中，订单和 CKafka 实例映射数据结构
  *
  * @method string getDealName() 获取订单流水
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealName(string $DealName) 设置订单流水
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceIdList() 获取订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIdList(array $InstanceIdList) 设置订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DealInstanceDTO extends AbstractModel
 {
     /**
      * @var string 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealName;
 
     /**
      * @var array 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIdList;
 
     /**
      * @param string $DealName 订单流水
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIdList 订单流水对应购买的 CKafka 实例 id 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

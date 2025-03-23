@@ -122,7 +122,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
  * @method Models\RenameDocResponse RenameDoc(Models\RenameDocRequest $req) 文档重命名
- * @method Models\ResetSessionResponse ResetSession(Models\ResetSessionRequest $req) 重置会话
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 发布暂停后重试

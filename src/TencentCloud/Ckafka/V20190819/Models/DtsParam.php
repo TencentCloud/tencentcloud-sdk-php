@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Dts类型入参
  *
  * @method string getResource() 获取Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupUser() 获取Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupUser(string $GroupUser) 设置Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupPassword() 获取Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupPassword(string $GroupPassword) 设置Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTranSql() 获取false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranSql(boolean $TranSql) 设置false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DtsParam extends AbstractModel
 {
     /**
      * @var string Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var string Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupUser;
 
     /**
      * @var string Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupPassword;
 
     /**
      * @var boolean false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranSql;
 
     /**
      * @param string $Resource Dts实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip Dts的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port Dts的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic Dts订阅的topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupUser Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupPassword Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TranSql false同步原始数据，true同步解析后的json格式数据,默认true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSourcePort() 获取vport
  * @method void setSourcePort(integer $SourcePort) 设置vport
  * @method string getBrokerIp() 获取broker地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerIp(string $BrokerIp) 设置broker地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusDTO extends AbstractModel
 {
@@ -58,19 +52,16 @@ class PrometheusDTO extends AbstractModel
 
     /**
      * @var string broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerIp;
 
     /**
      * @var string VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -79,11 +70,8 @@ class PrometheusDTO extends AbstractModel
      * @param string $SourceIp vip
      * @param integer $SourcePort vport
      * @param string $BrokerIp broker地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId VPC ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

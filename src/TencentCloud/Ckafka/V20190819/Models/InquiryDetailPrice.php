@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicPrice(InquiryBasePrice $TopicPrice) 设置额外Topic价格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InquiryBasePrice getInstanceTypePrice() 获取实例套餐价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTypePrice(InquiryBasePrice $InstanceTypePrice) 设置实例套餐价格
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InquiryDetailPrice extends AbstractModel
 {
@@ -69,7 +67,6 @@ class InquiryDetailPrice extends AbstractModel
 
     /**
      * @var InquiryBasePrice 实例套餐价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypePrice;
 
@@ -83,7 +80,6 @@ class InquiryDetailPrice extends AbstractModel
      * @param InquiryBasePrice $TopicPrice 额外Topic价格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InquiryBasePrice $InstanceTypePrice 实例套餐价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

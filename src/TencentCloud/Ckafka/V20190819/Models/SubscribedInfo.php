@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicName() 获取订阅的主题名
  * @method void setTopicName(string $TopicName) 设置订阅的主题名
  * @method array getPartition() 获取订阅的分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartition(array $Partition) 设置订阅的分区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPartitionOffset() 获取分区offset信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionOffset(array $PartitionOffset) 设置分区offset信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取订阅的主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置订阅的主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -44,30 +38,24 @@ class SubscribedInfo extends AbstractModel
 
     /**
      * @var array 订阅的分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partition;
 
     /**
      * @var array 分区offset信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionOffset;
 
     /**
      * @var string 订阅的主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @param string $TopicName 订阅的主题名
      * @param array $Partition 订阅的分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartitionOffset 分区offset信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 订阅的主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

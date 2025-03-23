@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSavingPlanDeduct返回参数结构体
  *
  * @method integer getTotal() 获取查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeducts() 获取查询命中的节省计划抵扣明细数据明细
  * @method void setDeducts(array $Deducts) 设置查询命中的节省计划抵扣明细数据明细
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeSavingPlanDeductResponse extends AbstractModel
 {
     /**
      * @var integer 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -49,7 +46,6 @@ class DescribeSavingPlanDeductResponse extends AbstractModel
 
     /**
      * @param integer $Total 查询命中的节省计划抵扣明细数据总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Deducts 查询命中的节省计划抵扣明细数据明细
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Pulsar 网络接入点信息
  *
  * @method string getVpcId() 获取vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndpoint() 获取接入地址
  * @method void setEndpoint(string $Endpoint) 设置接入地址
  * @method string getInstanceId() 获取实例id
@@ -41,31 +45,45 @@ use TencentCloud\Common\AbstractModel;
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationType(integer $OperationType) 设置0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
 1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessPointsType() 获取接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointsType(string $AccessPointsType) 设置接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandwidth() 获取带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityPolicy() 获取类
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityPolicy(array $SecurityPolicy) 设置类
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStandardAccessPoint() 获取是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStandardAccessPoint(boolean $StandardAccessPoint) 设置是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
     /**
      * @var string vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -93,37 +111,45 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationType;
 
     /**
      * @var string 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointsType;
 
     /**
      * @var integer 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bandwidth;
 
     /**
      * @var array 类
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityPolicy;
 
     /**
      * @var boolean 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StandardAccessPoint;
 
     /**
      * @var string 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Endpoint 接入地址
      * @param string $InstanceId 实例id
      * @param integer $RouteType 接入点类型：
@@ -135,11 +161,17 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
 3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

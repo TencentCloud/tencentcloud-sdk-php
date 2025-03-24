@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNamespaceId() 获取触发器所属命名空间 Id
  * @method void setNamespaceId(integer $NamespaceId) 设置触发器所属命名空间 Id
  * @method string getNamespaceName() 获取触发器所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置触发器所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebhookTrigger extends AbstractModel
 {
@@ -85,7 +83,6 @@ class WebhookTrigger extends AbstractModel
 
     /**
      * @var string 触发器所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
 
@@ -99,7 +96,6 @@ class WebhookTrigger extends AbstractModel
      * @param string $Description 触发器描述
      * @param integer $NamespaceId 触发器所属命名空间 Id
      * @param string $NamespaceName 触发器所属命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

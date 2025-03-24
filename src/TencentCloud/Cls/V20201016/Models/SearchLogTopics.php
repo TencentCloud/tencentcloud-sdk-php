@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 多主题检索返回信息
  *
  * @method array getErrors() 获取多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInfos() 获取多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfos(array $Infos) 设置多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchLogTopics extends AbstractModel
 {
     /**
      * @var array 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
      * @var array 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Infos;
 
     /**
      * @param array $Errors 多日志主题检索对应的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Infos 多日志主题检索各日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

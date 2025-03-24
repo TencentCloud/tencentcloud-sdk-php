@@ -47,17 +47,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEtlContent() 获取加工逻辑函数。
  * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数。
  * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getKeepFailureLog() 获取保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureLogKey() 获取失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -128,19 +122,16 @@ class DataTransformTaskInfo extends AbstractModel
 
     /**
      * @var integer 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataTransformType;
 
     /**
      * @var integer 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepFailureLog;
 
     /**
      * @var string 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureLogKey;
 
@@ -159,11 +150,8 @@ class DataTransformTaskInfo extends AbstractModel
      * @param array $DstResources 加工任务目的topic_id以及别名
      * @param string $EtlContent 加工逻辑函数。
      * @param integer $DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureLogKey 失败日志的字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

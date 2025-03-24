@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 黑石计算环境数据
  *
- * @method array getZones() 获取黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
- * @method void setZones(array $Zones) 设置黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
- * @method array getInstanceTypes() 获取购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
- * @method void setInstanceTypes(array $InstanceTypes) 设置购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+ * @method array getZones() 获取黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
+ * @method void setZones(array $Zones) 设置黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
+ * @method array getInstanceTypes() 获取购买的机型ID。
+ * @method void setInstanceTypes(array $InstanceTypes) 设置购买的机型ID。
  * @method string getTimeUnit() 获取购买时长单位，取值：m(月)。
  * @method void setTimeUnit(string $TimeUnit) 设置购买时长单位，取值：m(月)。
  * @method integer getTimeSpan() 获取购买时长。
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长。
- * @method integer getRaidId() 获取RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
- * @method void setRaidId(integer $RaidId) 设置RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+ * @method integer getRaidId() 获取RAID类型ID。
+ * @method void setRaidId(integer $RaidId) 设置RAID类型ID。
  * @method integer getOsTypeId() 获取部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
  * @method void setOsTypeId(integer $OsTypeId) 设置部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
  * @method array getVirtualPrivateClouds() 获取黑石VPC列表，目前仅支持一个VPC。
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipBandwidth(integer $EipBandwidth) 设置弹性公网IP带宽限制，单位Mb。
  * @method string getImageId() 获取自定义镜像ID，取值生效时用自定义镜像部署物理机。
  * @method void setImageId(string $ImageId) 设置自定义镜像ID，取值生效时用自定义镜像部署物理机。
- * @method integer getSysRootSpace() 获取系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
- * @method void setSysRootSpace(integer $SysRootSpace) 设置系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+ * @method integer getSysRootSpace() 获取系统盘根分区大小，单位为G，默认取值10G。
+ * @method void setSysRootSpace(integer $SysRootSpace) 设置系统盘根分区大小，单位为G，默认取值10G。
  * @method integer getSysDataSpace() 获取/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
  * @method void setSysDataSpace(integer $SysDataSpace) 设置/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
  * @method integer getHyperThreading() 获取是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
@@ -66,12 +66,12 @@ use TencentCloud\Common\AbstractModel;
 class EnvDataCpm extends AbstractModel
 {
     /**
-     * @var array 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * @var array 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
      */
     public $Zones;
 
     /**
-     * @var array 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * @var array 购买的机型ID。
      */
     public $InstanceTypes;
 
@@ -86,7 +86,7 @@ class EnvDataCpm extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var integer RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * @var integer RAID类型ID。
      */
     public $RaidId;
 
@@ -151,7 +151,7 @@ class EnvDataCpm extends AbstractModel
     public $ImageId;
 
     /**
-     * @var integer 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * @var integer 系统盘根分区大小，单位为G，默认取值10G。
      */
     public $SysRootSpace;
 
@@ -171,11 +171,11 @@ class EnvDataCpm extends AbstractModel
     public $LanIps;
 
     /**
-     * @param array $Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
-     * @param array $InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * @param array $Zones 黑石可用区名称列表。如ap-guangzhou-bls-1。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * @param array $InstanceTypes 购买的机型ID。
      * @param string $TimeUnit 购买时长单位，取值：m(月)。
      * @param integer $TimeSpan 购买时长。
-     * @param integer $RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * @param integer $RaidId RAID类型ID。
      * @param integer $OsTypeId 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
      * @param array $VirtualPrivateClouds 黑石VPC列表，目前仅支持一个VPC。
      * @param integer $NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
@@ -188,7 +188,7 @@ class EnvDataCpm extends AbstractModel
      * @param string $EipPayMode 弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
      * @param integer $EipBandwidth 弹性公网IP带宽限制，单位Mb。
      * @param string $ImageId 自定义镜像ID，取值生效时用自定义镜像部署物理机。
-     * @param integer $SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * @param integer $SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。
      * @param integer $SysDataSpace /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
      * @param integer $HyperThreading 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
      * @param array $LanIps 指定的内网IP列表，不指定时自动分配。

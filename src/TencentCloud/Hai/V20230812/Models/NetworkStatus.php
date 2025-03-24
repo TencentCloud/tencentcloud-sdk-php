@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * HAI 实例的网络配置和消耗情况
  *
  * @method string getInstanceId() 获取HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressIp() 获取公网 IP 地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIp(string $AddressIp) 设置公网 IP 地址
@@ -33,19 +31,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置出带宽上限，单位Mbps
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalTrafficAmount() 获取流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTrafficAmount(float $TotalTrafficAmount) 设置流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRemainingTrafficAmount() 获取流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingTrafficAmount(float $RemainingTrafficAmount) 设置流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkStatus extends AbstractModel
 {
     /**
      * @var string HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -63,27 +56,22 @@ class NetworkStatus extends AbstractModel
 
     /**
      * @var float 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTrafficAmount;
 
     /**
      * @var float 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainingTrafficAmount;
 
     /**
      * @param string $InstanceId HAI 的实例 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIp 公网 IP 地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bandwidth 出带宽上限，单位Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalTrafficAmount 流量包总量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RemainingTrafficAmount 流量包剩余量，单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

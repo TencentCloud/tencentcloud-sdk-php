@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置指定命名空间，不填写默认为查询所有命名空间下镜像仓库
  * @method string getRepositoryName() 获取指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
  * @method void setRepositoryName(string $RepositoryName) 设置指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
- * @method integer getOffset() 获取页数，用于分页
- * @method void setOffset(integer $Offset) 设置页数，用于分页
- * @method integer getLimit() 获取每页个数，用于分页
- * @method void setLimit(integer $Limit) 设置每页个数，用于分页
+ * @method integer getOffset() 获取页数，第几页，用于分页
+ * @method void setOffset(integer $Offset) 设置页数，第几页，用于分页
+ * @method integer getLimit() 获取每页个数，用于分页，最大值为100
+ * @method void setLimit(integer $Limit) 设置每页个数，用于分页，最大值为100
  * @method string getSortBy() 获取基于字段排序，支持的值有-creation_time,-name, -update_time
  * @method void setSortBy(string $SortBy) 设置基于字段排序，支持的值有-creation_time,-name, -update_time
  */
@@ -51,12 +51,12 @@ class DescribeRepositoriesRequest extends AbstractModel
     public $RepositoryName;
 
     /**
-     * @var integer 页数，用于分页
+     * @var integer 页数，第几页，用于分页
      */
     public $Offset;
 
     /**
-     * @var integer 每页个数，用于分页
+     * @var integer 每页个数，用于分页，最大值为100
      */
     public $Limit;
 
@@ -69,8 +69,8 @@ class DescribeRepositoriesRequest extends AbstractModel
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
      * @param string $RepositoryName 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
-     * @param integer $Offset 页数，用于分页
-     * @param integer $Limit 每页个数，用于分页
+     * @param integer $Offset 页数，第几页，用于分页
+     * @param integer $Limit 每页个数，用于分页，最大值为100
      * @param string $SortBy 基于字段排序，支持的值有-creation_time,-name, -update_time
      */
     function __construct()

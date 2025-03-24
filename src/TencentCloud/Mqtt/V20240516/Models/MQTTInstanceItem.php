@@ -26,13 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getVersion() 获取实例版本
  * @method void setVersion(string $Version) 设置实例版本
- * @method string getInstanceType() 获取实例类型，
-EXPERIMENT，体验版
+ * @method string getInstanceType() 获取实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
- * @method void setInstanceType(string $InstanceType) 设置实例类型，
-EXPERIMENT，体验版
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -68,20 +66,24 @@ DELETING，删除中
  * @method void setSkuCode(string $SkuCode) 设置商品规格
  * @method integer getTpsLimit() 获取弹性TPS限流值
  * @method void setTpsLimit(integer $TpsLimit) 设置弹性TPS限流值
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
+ * @method integer getCreateTime() 获取创建时间，毫秒级时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒级时间戳
  * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数量
  * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数量
  * @method integer getClientNumLimit() 获取客户端连接数上线
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端连接数上线
- * @method integer getRenewFlag() 获取是否自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
+ * @method integer getRenewFlag() 获取是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
  * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
  * @method void setPayMode(string $PayMode) 设置计费模式， POSTPAID，按量计费 PREPAID，包年包月
- * @method integer getExpiryTime() 获取到期时间，秒为单位
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
- * @method integer getDestroyTime() 获取预销毁时间
- * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
+ * @method integer getExpiryTime() 获取到期时间，毫秒级时间戳
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，毫秒级时间戳
+ * @method integer getDestroyTime() 获取预销毁时间，毫秒级时间戳
+ * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间，毫秒级时间戳
  * @method integer getAuthorizationPolicyLimit() 获取授权规则条数限制
  * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数限制
  * @method integer getMaxCaNum() 获取最大ca配额
@@ -107,8 +109,7 @@ class MQTTInstanceItem extends AbstractModel
     public $Version;
 
     /**
-     * @var string 实例类型，
-EXPERIMENT，体验版
+     * @var string 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -156,7 +157,7 @@ DELETING，删除中
     public $TpsLimit;
 
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，毫秒级时间戳
      */
     public $CreateTime;
 
@@ -171,7 +172,9 @@ DELETING，删除中
     public $ClientNumLimit;
 
     /**
-     * @var integer 是否自动续费
+     * @var integer 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
      */
     public $RenewFlag;
 
@@ -181,12 +184,12 @@ DELETING，删除中
     public $PayMode;
 
     /**
-     * @var integer 到期时间，秒为单位
+     * @var integer 到期时间，毫秒级时间戳
      */
     public $ExpiryTime;
 
     /**
-     * @var integer 预销毁时间
+     * @var integer 预销毁时间，毫秒级时间戳
      */
     public $DestroyTime;
 
@@ -209,8 +212,7 @@ DELETING，删除中
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
-     * @param string $InstanceType 实例类型，
-EXPERIMENT，体验版
+     * @param string $InstanceType 实例类型
 BASIC，基础版
 PRO，专业版
 PLATINUM，铂金版
@@ -230,13 +232,15 @@ DELETING，删除中
      * @param integer $TopicNum 主题数量
      * @param string $SkuCode 商品规格
      * @param integer $TpsLimit 弹性TPS限流值
-     * @param integer $CreateTime 创建时间
+     * @param integer $CreateTime 创建时间，毫秒级时间戳
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数量
      * @param integer $ClientNumLimit 客户端连接数上线
-     * @param integer $RenewFlag 是否自动续费
+     * @param integer $RenewFlag 是否自动续费。仅包年包月就去那生效。
+1:自动续费
+0:非自动续费
      * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-     * @param integer $ExpiryTime 到期时间，秒为单位
-     * @param integer $DestroyTime 预销毁时间
+     * @param integer $ExpiryTime 到期时间，毫秒级时间戳
+     * @param integer $DestroyTime 预销毁时间，毫秒级时间戳
      * @param integer $AuthorizationPolicyLimit 授权规则条数限制
      * @param integer $MaxCaNum 最大ca配额
      * @param integer $MaxSubscription 最大订阅数

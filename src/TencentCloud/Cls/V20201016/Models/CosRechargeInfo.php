@@ -21,217 +21,149 @@ use TencentCloud\Common\AbstractModel;
  * cos导入配置信息
  *
  * @method string getId() 获取COS导入配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置COS导入配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogsetId() 获取日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取COS导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置COS导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucket() 获取COS存储桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置COS存储桶
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketRegion() 获取COS存储桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrefix() 获取COS文件所在文件夹的前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnable() 获取是否启用:   0： 未启用  ， 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnable(integer $Enable) 设置是否启用:   0： 未启用  ， 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取进度条百分值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置进度条百分值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompress() 获取supported: "", "gzip", "lzop", "snappy”; 默认空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompress(string $Compress) 设置supported: "", "gzip", "lzop", "snappy”; 默认空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ExtractRuleInfo getExtractRuleInfo() 获取见： ExtractRuleInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置见： ExtractRuleInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskType() 获取COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(integer $TaskType) 设置COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetadata() 获取元数据。支持 bucket，object。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadata(array $Metadata) 设置元数据。支持 bucket，object。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosRechargeInfo extends AbstractModel
 {
     /**
      * @var string COS导入配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
     /**
      * @var string COS导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string COS存储桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
      * @var string COS存储桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketRegion;
 
     /**
      * @var string COS文件所在文件夹的前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Prefix;
 
     /**
      * @var string 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogType;
 
     /**
      * @var integer 状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 是否启用:   0： 未启用  ， 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 进度条百分值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var string supported: "", "gzip", "lzop", "snappy”; 默认空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compress;
 
     /**
      * @var ExtractRuleInfo 见： ExtractRuleInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtractRuleInfo;
 
     /**
      * @var integer COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
      * @var array 元数据。支持 bucket，object。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
     /**
      * @param string $Id COS导入配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogsetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name COS导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Bucket COS存储桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketRegion COS存储桶所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Prefix COS文件所在文件夹的前缀
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Enable 是否启用:   0： 未启用  ， 1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 进度条百分值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Compress supported: "", "gzip", "lzop", "snappy”; 默认空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractRuleInfo $ExtractRuleInfo 见： ExtractRuleInfo 结构描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Metadata 元数据。支持 bucket，object。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

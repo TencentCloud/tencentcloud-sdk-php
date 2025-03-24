@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 创建资源工作空间时同时绑定的标签对说明
  *
  * @method string getResourceType() 获取标签绑定的资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagSpecification extends AbstractModel
 {
     /**
      * @var string 标签绑定的资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var array 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $ResourceType 标签绑定的资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

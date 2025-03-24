@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceList请求参数结构体
  *
- * @method array getFilters() 获取查询条件列表,支持以下子弹
+ * @method array getFilters() 获取查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
- * @method void setFilters(array $Filters) 设置查询条件列表,支持以下子弹
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+ * @method void setFilters(array $Filters) 设置查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+ * @method integer getOffset() 获取查询起始位置，默认0
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认0
+ * @method integer getLimit() 获取查询结果限制数量，默认20，最大100
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20，最大100
  * @method array getTagFilters() 获取标签过滤器
  * @method void setTagFilters(array $TagFilters) 设置标签过滤器
  */
 class DescribeInstanceListRequest extends AbstractModel
 {
     /**
-     * @var array 查询条件列表,支持以下子弹
+     * @var array 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
      */
     public $Filters;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认0
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认20，最大100
      */
     public $Limit;
 
@@ -61,12 +61,12 @@ InstanceStatus：集群状态搜索
     public $TagFilters;
 
     /**
-     * @param array $Filters 查询条件列表,支持以下子弹
+     * @param array $Filters 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+     * @param integer $Offset 查询起始位置，默认0
+     * @param integer $Limit 查询结果限制数量，默认20，最大100
      * @param array $TagFilters 标签过滤器
      */
     function __construct()

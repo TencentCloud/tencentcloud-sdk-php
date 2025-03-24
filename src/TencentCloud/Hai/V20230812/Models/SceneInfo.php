@@ -22,40 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSceneId() 获取场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneId(string $SceneId) 设置场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSceneName() 获取场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneName(string $SceneName) 设置场景名
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SceneInfo extends AbstractModel
 {
     /**
      * @var string 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneId;
 
     /**
      * @var string 场景名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneName;
 
     /**
      * @param string $SceneId 场景id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SceneName 场景名
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

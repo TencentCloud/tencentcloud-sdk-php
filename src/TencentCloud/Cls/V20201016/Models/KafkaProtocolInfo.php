@@ -22,72 +22,56 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtocol() 获取协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
 入参必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
 入参必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMechanism() 获取加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMechanism(string $Mechanism) 设置加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取用户密码。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置用户密码。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaProtocolInfo extends AbstractModel
 {
     /**
      * @var string 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
 入参必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mechanism;
 
     /**
      * @var string 用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 用户密码。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @param string $Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
 入参必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password 用户密码。
 当Protocol为sasl_plaintext或sasl_ssl时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUniqVpcId() 获取ClickHouse连接源的vpcId，当为腾讯云实例时，必填
  * @method void setUniqVpcId(string $UniqVpcId) 设置ClickHouse连接源的vpcId，当为腾讯云实例时，必填
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClickHouseConnectParam extends AbstractModel
 {
@@ -76,6 +78,7 @@ class ClickHouseConnectParam extends AbstractModel
 
     /**
      * @var boolean 是否更新到关联的Datahub任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
@@ -88,6 +91,7 @@ class ClickHouseConnectParam extends AbstractModel
      * @param string $ServiceVip ClickHouse连接源的实例vip，当为腾讯云实例时，必填
      * @param string $UniqVpcId ClickHouse连接源的vpcId，当为腾讯云实例时，必填
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

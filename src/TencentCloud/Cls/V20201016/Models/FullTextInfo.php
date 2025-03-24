@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
 仅支持英文符号、\n\t\r及转义符\；
 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
  * @method boolean getContainZH() 获取是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FullTextInfo extends AbstractModel
 {
@@ -49,7 +47,6 @@ class FullTextInfo extends AbstractModel
 
     /**
      * @var boolean 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainZH;
 
@@ -59,7 +56,6 @@ class FullTextInfo extends AbstractModel
 仅支持英文符号、\n\t\r及转义符\；
 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
      * @param boolean $ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

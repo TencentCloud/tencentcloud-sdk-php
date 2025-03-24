@@ -128,8 +128,8 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
  * @method Models\SaveDocResponse SaveDoc(Models\SaveDocRequest $req) 知识库文档问答保存。
 将文件存储到应用的知识库内需要三步：
-1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。
-2.调用腾讯云提供的 cos 存储接口，将文件存储到知识引擎 cos 中：参考[PUT Objectufeff](https://cloud.tencent.com/document/product/436/7749)
+1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。获取临时密钥不同参数组合权限不一样，可参考 [知识引擎操作 cos 指南](https://cloud.tencent.com/document/product/1759/116238)
+2.调用腾讯云提供的 cos 存储接口，将文件存储到知识引擎 cos 中：具体可参考[ COS SDK 概览](https://cloud.tencent.com/document/product/436/6474), 注意使用的是临时密钥的方式操作 COS 
 3.调用本接口，将文件的基础信息存储到知识引擎中。
 以上步骤可参考[文档](https://cloud.tencent.com/document/product/1759/108903)，文档最后有[代码demo](https://cloud.tencent.com/document/product/1759/108903#demo)，可作为参考。
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析

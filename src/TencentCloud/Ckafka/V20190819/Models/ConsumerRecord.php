@@ -27,13 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取位点
  * @method void setOffset(integer $Offset) 设置位点
  * @method string getKey() 获取消息key
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置消息key
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取消息value
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置消息value
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取消息时间戳
  * @method void setTimestamp(integer $Timestamp) 设置消息时间戳
  * @method string getHeaders() 获取消息headers
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(string $Headers) 设置消息headers
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerRecord extends AbstractModel
 {
@@ -54,11 +60,13 @@ class ConsumerRecord extends AbstractModel
 
     /**
      * @var string 消息key
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 消息value
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -69,6 +77,7 @@ class ConsumerRecord extends AbstractModel
 
     /**
      * @var string 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
@@ -77,9 +86,12 @@ class ConsumerRecord extends AbstractModel
      * @param integer $Partition 分区id
      * @param integer $Offset 位点
      * @param string $Key 消息key
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 消息value
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 消息时间戳
      * @param string $Headers 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

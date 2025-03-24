@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicList请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method array getFilters() 获取查询条件列表:
 支持TopicName模糊查询
  * @method void setFilters(array $Filters) 设置查询条件列表:
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicListRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
@@ -55,7 +55,7 @@ class DescribeTopicListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param array $Filters 查询条件列表:
 支持TopicName模糊查询
      * @param integer $Offset 查询起始位置

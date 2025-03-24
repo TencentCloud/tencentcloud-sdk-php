@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddProjectUserRole请求参数结构体
  *
-
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method array getUserIds() 获取用户uin
+ * @method void setUserIds(array $UserIds) 设置用户uin
+ * @method array getRoleIds() 获取角色id
+ * @method void setRoleIds(array $RoleIds) 设置角色id
  */
 class AddProjectUserRoleRequest extends AbstractModel
 {
-
+    /**
+     * @var string 项目id
+     */
+    public $ProjectId;
 
     /**
+     * @var array 用户uin
+     */
+    public $UserIds;
 
+    /**
+     * @var array 角色id
+     */
+    public $RoleIds;
+
+    /**
+     * @param string $ProjectId 项目id
+     * @param array $UserIds 用户uin
+     * @param array $RoleIds 角色id
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class AddProjectUserRoleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
 
+        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
+            $this->UserIds = $param["UserIds"];
+        }
+
+        if (array_key_exists("RoleIds",$param) and $param["RoleIds"] !== null) {
+            $this->RoleIds = $param["RoleIds"];
+        }
     }
 }

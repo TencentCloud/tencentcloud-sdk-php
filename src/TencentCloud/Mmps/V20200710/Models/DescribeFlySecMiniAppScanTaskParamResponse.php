@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMode() 获取诊断模式 1:基础诊断，2:深度诊断
  * @method void setMode(integer $Mode) 设置诊断模式 1:基础诊断，2:深度诊断
  * @method string getMiniAppTestAccount() 获取小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniAppTestAccount(string $MiniAppTestAccount) 设置小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMiniAppTestPwd() 获取小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniAppTestPwd(string $MiniAppTestPwd) 设置小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanVersion() 获取诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVersion(integer $ScanVersion) 设置诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,19 +54,16 @@ class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel
 
     /**
      * @var string 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniAppTestAccount;
 
     /**
      * @var string 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniAppTestPwd;
 
     /**
      * @var integer 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVersion;
 
@@ -86,11 +77,8 @@ class DescribeFlySecMiniAppScanTaskParamResponse extends AbstractModel
      * @param string $MiniAppID 小程序AppID
      * @param integer $Mode 诊断模式 1:基础诊断，2:深度诊断
      * @param string $MiniAppTestAccount 小程序测试账号(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniAppTestPwd 小程序测试密码(自有账号体系需提供,其他情况不需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanVersion 诊断扫描版本 0:正式版 1:体验版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

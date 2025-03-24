@@ -25,27 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method array getWebCallbacks() 获取告警通知模板回调信息。
  * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息。
  * @method boolean getEscalate() 获取告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEscalate(boolean $Escalate) 设置告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInterval() 获取告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterval(integer $Interval) 设置告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EscalateNoticeInfo getEscalateNotice() 获取告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEscalateNotice(EscalateNoticeInfo $EscalateNotice) 设置告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EscalateNoticeInfo extends AbstractModel
 {
@@ -61,13 +53,11 @@ class EscalateNoticeInfo extends AbstractModel
 
     /**
      * @var boolean 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Escalate;
 
     /**
      * @var integer 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interval;
 
@@ -76,13 +66,11 @@ class EscalateNoticeInfo extends AbstractModel
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var EscalateNoticeInfo 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EscalateNotice;
 
@@ -90,16 +78,12 @@ class EscalateNoticeInfo extends AbstractModel
      * @param array $NoticeReceivers 告警通知模板接收者信息。
      * @param array $WebCallbacks 告警通知模板回调信息。
      * @param boolean $Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
 - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
 - 未恢复：当前告警持续未恢复则升级
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EscalateNoticeInfo $EscalateNotice 告警升级后下一个环节的通知渠道配置，最多可配置5个环节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

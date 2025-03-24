@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取集群创建过程状态
  * @method void setStatus(string $Status) 设置集群创建过程状态
  * @method string getLastProbeTime() 获取最后一次探测到该状态的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastProbeTime(string $LastProbeTime) 设置最后一次探测到该状态的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTransitionTime() 获取最后一次转换到该过程的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTransitionTime(string $LastTransitionTime) 设置最后一次转换到该过程的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取转换到该过程的更多信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置转换到该过程的更多信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterCondition extends AbstractModel
 {
@@ -55,25 +47,21 @@ class ClusterCondition extends AbstractModel
 
     /**
      * @var string 最后一次探测到该状态的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastProbeTime;
 
     /**
      * @var string 最后一次转换到该过程的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTransitionTime;
 
     /**
      * @var string 转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var string 转换到该过程的更多信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -81,13 +69,9 @@ class ClusterCondition extends AbstractModel
      * @param string $Type 集群创建过程类型
      * @param string $Status 集群创建过程状态
      * @param string $LastProbeTime 最后一次探测到该状态的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTransitionTime 最后一次转换到该过程的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 转换到该过程的更多信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

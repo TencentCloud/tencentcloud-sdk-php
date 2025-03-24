@@ -45,11 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() 获取回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DashboardNoticeMode extends AbstractModel
 {
@@ -80,7 +78,6 @@ class DashboardNoticeMode extends AbstractModel
      * @var string 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -99,7 +96,6 @@ class DashboardNoticeMode extends AbstractModel
      * @param string $Url 回调Url。
 <br><li/> 当ReceiverType是 Wecom 时，Url必填。
 <br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

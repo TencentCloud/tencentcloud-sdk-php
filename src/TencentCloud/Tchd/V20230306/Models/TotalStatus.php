@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNotifyCount() 获取通知状态的数目
  * @method void setNotifyCount(integer $NotifyCount) 设置通知状态的数目
  * @method integer getAbnormalCount() 获取异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbnormalCount(integer $AbnormalCount) 设置异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TotalStatus extends AbstractModel
 {
@@ -43,7 +41,6 @@ class TotalStatus extends AbstractModel
 
     /**
      * @var integer 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbnormalCount;
 
@@ -51,7 +48,6 @@ class TotalStatus extends AbstractModel
      * @param integer $NormalCount 正常状态的数目
      * @param integer $NotifyCount 通知状态的数目
      * @param integer $AbnormalCount 异常状态的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

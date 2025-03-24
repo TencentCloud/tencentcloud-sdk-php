@@ -55,6 +55,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeDBDiagEventsResponse DescribeDBDiagEvents(Models\DescribeDBDiagEventsRequest $req) 获取指定时间段内的诊断事件列表，支持依据风险等级、实例ID等条件过滤。
  * @method Models\DescribeDBDiagHistoryResponse DescribeDBDiagHistory(Models\DescribeDBDiagHistoryRequest $req) 获取实例诊断事件的列表。
  * @method Models\DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasks(Models\DescribeDBDiagReportTasksRequest $req) 查询健康报告生成任务列表。
+ * @method Models\DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeries(Models\DescribeDBPerfTimeSeriesRequest $req) 根据实例ID获取指定时间段的性能趋势。
  * @method Models\DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(Models\DescribeDBSpaceStatusRequest $req) 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
  * @method Models\DescribeDiagDBInstancesResponse DescribeDiagDBInstances(Models\DescribeDiagDBInstancesRequest $req) 获取实例信息列表。Region统一选择广州。
  * @method Models\DescribeHealthScoreResponse DescribeHealthScore(Models\DescribeHealthScoreRequest $req) 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
@@ -66,6 +67,9 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatistics(Models\DescribeProxyProcessStatisticsRequest $req) 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。
  * @method Models\DescribeProxySessionKillTasksResponse DescribeProxySessionKillTasks(Models\DescribeProxySessionKillTasksRequest $req) 用于查询 redis 执行 kill 会话任务后代理节点的执行结果，入参异步任务 ID 从接口 CreateProxySessionKillTask 调用成功后取得。当前 product 只支持：redis。
  * @method Models\DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasks(Models\DescribeRedisBigKeyAnalysisTasksRequest $req) 查询redis大key分析任务列表。
+ * @method Models\DescribeRedisCmdPerfTimeSeriesResponse DescribeRedisCmdPerfTimeSeries(Models\DescribeRedisCmdPerfTimeSeriesRequest $req) 延迟分析-命令字分析-查询命令延迟趋势
+ * @method Models\DescribeRedisCommandCostStatisticsResponse DescribeRedisCommandCostStatistics(Models\DescribeRedisCommandCostStatisticsRequest $req) 延迟分析-查询命令延迟分布
+ * @method Models\DescribeRedisCommandOverviewResponse DescribeRedisCommandOverview(Models\DescribeRedisCommandOverviewRequest $req) 延迟分析-查询实例访问命令统计
  * @method Models\DescribeRedisProcessListResponse DescribeRedisProcessList(Models\DescribeRedisProcessListRequest $req) 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
  * @method Models\DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeys(Models\DescribeRedisTopBigKeysRequest $req) 查询redis实例大key列表。
  * @method Models\DescribeRedisTopHotKeysResponse DescribeRedisTopHotKeys(Models\DescribeRedisTopHotKeysRequest $req) 热Key分析

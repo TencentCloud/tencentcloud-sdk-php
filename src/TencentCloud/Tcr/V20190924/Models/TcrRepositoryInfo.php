@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getPublic() 获取是否公开
  * @method void setPublic(boolean $Public) 设置是否公开
  * @method string getDescription() 获取仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBriefDescription() 获取简单描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefDescription(string $BriefDescription) 设置简单描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
  */
@@ -63,13 +59,11 @@ class TcrRepositoryInfo extends AbstractModel
 
     /**
      * @var string 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefDescription;
 
@@ -84,9 +78,7 @@ class TcrRepositoryInfo extends AbstractModel
      * @param string $CreationTime 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      * @param boolean $Public 是否公开
      * @param string $Description 仓库详细描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BriefDescription 简单描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      */
     function __construct()

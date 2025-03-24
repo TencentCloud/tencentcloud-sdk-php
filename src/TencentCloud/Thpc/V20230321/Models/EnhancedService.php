@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 描述了实例的增强服务启用情况与其设置，如云安全，腾讯云可观测平台等实例 Agent
  *
  * @method RunSecurityServiceEnabled getSecurityService() 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RunMonitorServiceEnabled getMonitorService() 获取开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RunAutomationServiceEnabled getAutomationService() 获取开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutomationService(RunAutomationServiceEnabled $AutomationService) 设置开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnhancedService extends AbstractModel
 {
     /**
      * @var RunSecurityServiceEnabled 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityService;
 
     /**
      * @var RunMonitorServiceEnabled 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorService;
 
     /**
      * @var RunAutomationServiceEnabled 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutomationService;
 
     /**
      * @param RunSecurityServiceEnabled $SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunMonitorServiceEnabled $MonitorService 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunAutomationServiceEnabled $AutomationService 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，默认开启云自动化助手服务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

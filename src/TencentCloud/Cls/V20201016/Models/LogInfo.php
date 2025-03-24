@@ -35,21 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPkgLogId() 获取请求包内日志的ID
  * @method void setPkgLogId(string $PkgLogId) 设置请求包内日志的ID
  * @method string getLogJson() 获取日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogJson(string $LogJson) 设置日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRawLog() 获取原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawLog(string $RawLog) 设置原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexStatus() 获取日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexStatus(string $IndexStatus) 设置日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogInfo extends AbstractModel
 {
@@ -90,25 +82,21 @@ class LogInfo extends AbstractModel
 
     /**
      * @var string 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogJson;
 
     /**
      * @var string 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawLog;
 
     /**
      * @var string 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexStatus;
 
@@ -121,13 +109,9 @@ class LogInfo extends AbstractModel
      * @param string $PkgId 日志上报请求包的ID
      * @param string $PkgLogId 请求包内日志的ID
      * @param string $LogJson 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 日志来源主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RawLog 原始日志(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

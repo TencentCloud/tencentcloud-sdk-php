@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取工作负载的名称
  * @method void setName(string $Name) 设置工作负载的名称
  * @method string getContainer() 获取容器名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置容器名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerWorkLoadInfo extends AbstractModel
 {
@@ -47,13 +43,11 @@ class ContainerWorkLoadInfo extends AbstractModel
 
     /**
      * @var string 容器名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Container;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
@@ -61,9 +55,7 @@ class ContainerWorkLoadInfo extends AbstractModel
      * @param string $Kind 工作负载的类型
      * @param string $Name 工作负载的名称
      * @param string $Container 容器名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

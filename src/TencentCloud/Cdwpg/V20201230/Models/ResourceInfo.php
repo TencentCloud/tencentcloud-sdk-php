@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSpec(CBSSpecInfo $DiskSpec) 设置磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取资源类型，DATA
+ * @method string getType() 获取节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置资源类型，DATA
+ * @method void setType(string $Type) 设置节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
@@ -58,7 +58,7 @@ class ResourceInfo extends AbstractModel
     public $DiskSpec;
 
     /**
-     * @var string 资源类型，DATA
+     * @var string 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -70,7 +70,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSSpecInfo $DiskSpec 磁盘信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 资源类型，DATA
+     * @param string $Type 节点类型，cn 或dn
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

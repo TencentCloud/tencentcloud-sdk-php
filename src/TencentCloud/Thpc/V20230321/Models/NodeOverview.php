@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置thpc集群节点id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeAllocateState() 获取节点的工作状态
+ * @method void setNodeAllocateState(string $NodeAllocateState) 设置节点的工作状态
  */
 class NodeOverview extends AbstractModel
 {
@@ -104,6 +106,11 @@ class NodeOverview extends AbstractModel
     public $NodeId;
 
     /**
+     * @var string 节点的工作状态
+     */
+    public $NodeAllocateState;
+
+    /**
      * @param string $InstanceId 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 节点所在可用区信息。
@@ -120,6 +127,7 @@ class NodeOverview extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeId thpc集群节点id
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeAllocateState 节点的工作状态
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class NodeOverview extends AbstractModel
 
         if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
             $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("NodeAllocateState",$param) and $param["NodeAllocateState"] !== null) {
+            $this->NodeAllocateState = $param["NodeAllocateState"];
         }
     }
 }

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 弹性容器集群公网访问负载均衡信息
  *
  * @method boolean getEnabled() 获取是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAllowFromCidrs() 获取允许访问的来源CIDR列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowFromCidrs(array $AllowFromCidrs) 设置允许访问的来源CIDR列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityPolicies() 获取安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityPolicies(array $SecurityPolicies) 设置安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraParam() 获取外网访问相关的扩展参数，格式为json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraParam(string $ExtraParam) 设置外网访问相关的扩展参数，格式为json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroup() 获取新内外网功能，需要传递安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroup(string $SecurityGroup) 设置新内外网功能，需要传递安全组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterPublicLB extends AbstractModel
 {
     /**
      * @var boolean 是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var array 允许访问的来源CIDR列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowFromCidrs;
 
     /**
      * @var array 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityPolicies;
 
     /**
      * @var string 外网访问相关的扩展参数，格式为json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraParam;
 
     /**
      * @var string 新内外网功能，需要传递安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroup;
 
     /**
      * @param boolean $Enabled 是否开启公网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AllowFromCidrs 允许访问的来源CIDR列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraParam 外网访问相关的扩展参数，格式为json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroup 新内外网功能，需要传递安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

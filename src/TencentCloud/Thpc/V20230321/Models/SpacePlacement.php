@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 描述了实例的抽象位置，包括其所在的可用区，所属的项目
  *
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpacePlacement extends AbstractModel
 {
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var integer 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目，默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

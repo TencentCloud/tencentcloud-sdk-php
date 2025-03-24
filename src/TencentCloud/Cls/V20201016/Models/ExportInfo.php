@@ -51,9 +51,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则。 默认值为0。
 0：Lucene语法，1：CQL语法。
  * @method array getDerivedFields() 获取导出字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDerivedFields(array $DerivedFields) 设置导出字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExportInfo extends AbstractModel
 {
@@ -130,7 +128,6 @@ class ExportInfo extends AbstractModel
 
     /**
      * @var array 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DerivedFields;
 
@@ -151,7 +148,6 @@ class ExportInfo extends AbstractModel
      * @param integer $SyntaxRule 语法规则。 默认值为0。
 0：Lucene语法，1：CQL语法。
      * @param array $DerivedFields 导出字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

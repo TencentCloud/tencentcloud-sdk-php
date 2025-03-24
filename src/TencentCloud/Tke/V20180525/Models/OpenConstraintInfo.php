@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 策略实例信息
  *
  * @method string getName() 获取策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventNums() 获取策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventNums(integer $EventNums) 设置策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getYamlDetail() 获取实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYamlDetail(string $YamlDetail) 设置实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpenConstraintInfo extends AbstractModel
 {
     /**
      * @var string 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventNums;
 
     /**
      * @var string 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $YamlDetail;
 
     /**
      * @param string $Name 策略实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventNums 策略实例关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $YamlDetail 实例yaml详情base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

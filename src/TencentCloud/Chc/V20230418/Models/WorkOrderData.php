@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取工单创建时间
  * @method void setCreateTime(string $CreateTime) 设置工单创建时间
  * @method string getFinishTime() 获取工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishTime(string $FinishTime) 设置工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkOrderData extends AbstractModel
 {
@@ -71,7 +69,6 @@ class WorkOrderData extends AbstractModel
 
     /**
      * @var string 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishTime;
 
@@ -83,7 +80,6 @@ class WorkOrderData extends AbstractModel
      * @param string $Creator 工单创建人
      * @param string $CreateTime 工单创建时间
      * @param string $FinishTime 工单完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

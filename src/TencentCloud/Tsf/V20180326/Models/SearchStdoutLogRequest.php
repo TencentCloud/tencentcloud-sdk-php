@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 值"page"
  * @method string getScrollId() 获取游标ID
  * @method void setScrollId(string $ScrollId) 设置游标ID
+ * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
+ * @method void setSearchAfter(array $SearchAfter) 设置查询es使用searchAfter时，游标
  */
 class SearchStdoutLogRequest extends AbstractModel
 {
@@ -120,6 +122,11 @@ class SearchStdoutLogRequest extends AbstractModel
     public $ScrollId;
 
     /**
+     * @var array 查询es使用searchAfter时，游标
+     */
+    public $SearchAfter;
+
+    /**
      * @param string $InstanceId 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
      * @param integer $Limit 单页请求配置数量，取值范围[1, 500]，默认值为100
      * @param array $SearchWords 检索关键词
@@ -136,6 +143,7 @@ class SearchStdoutLogRequest extends AbstractModel
      * @param string $BatchType 批量请求类型，取值"page"或"scroll"，默认
 值"page"
      * @param string $ScrollId 游标ID
+     * @param array $SearchAfter 查询es使用searchAfter时，游标
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class SearchStdoutLogRequest extends AbstractModel
 
         if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
             $this->ScrollId = $param["ScrollId"];
+        }
+
+        if (array_key_exists("SearchAfter",$param) and $param["SearchAfter"] !== null) {
+            $this->SearchAfter = $param["SearchAfter"];
         }
     }
 }

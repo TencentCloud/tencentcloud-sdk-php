@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置状态
  * @method boolean getIsQuery() 获取是否是查询
  * @method void setIsQuery(boolean $IsQuery) 设置是否是查询
+ * @method string getComputeGroup() 获取计算组
+ * @method void setComputeGroup(string $ComputeGroup) 设置计算组
  */
 class DataBaseAuditRecord extends AbstractModel
 {
@@ -129,6 +131,11 @@ class DataBaseAuditRecord extends AbstractModel
     public $IsQuery;
 
     /**
+     * @var string 计算组
+     */
+    public $ComputeGroup;
+
+    /**
      * @param string $OsUser 查询用户
      * @param string $InitialQueryId 查询ID
      * @param string $Sql SQL语句
@@ -144,6 +151,7 @@ class DataBaseAuditRecord extends AbstractModel
      * @param string $Catalog catalog名称
      * @param string $State 状态
      * @param boolean $IsQuery 是否是查询
+     * @param string $ComputeGroup 计算组
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DataBaseAuditRecord extends AbstractModel
 
         if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
             $this->IsQuery = $param["IsQuery"];
+        }
+
+        if (array_key_exists("ComputeGroup",$param) and $param["ComputeGroup"] !== null) {
+            $this->ComputeGroup = $param["ComputeGroup"];
         }
     }
 }

@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBindIP() 获取目标组实例的内网IP
  * @method void setBindIP(string $BindIP) 设置目标组实例的内网IP
- * @method integer getPort() 获取目标组实例的端口
- * @method void setPort(integer $Port) 设置目标组实例的端口
+ * @method integer getPort() 获取目标组实例的端口，全监听目标组不支持传此字段。
+ * @method void setPort(integer $Port) 设置目标组实例的端口，全监听目标组不支持传此字段。
  * @method integer getWeight() 获取目标组实例的权重
 
 v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
  * @method void setWeight(integer $Weight) 设置目标组实例的权重
 
 v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
- * @method integer getNewPort() 获取目标组实例的新端口
- * @method void setNewPort(integer $NewPort) 设置目标组实例的新端口
+ * @method integer getNewPort() 获取目标组实例的新端口，全监听目标组不支持传此字段。
+ * @method void setNewPort(integer $NewPort) 设置目标组实例的新端口，全监听目标组不支持传此字段。
  */
 class TargetGroupInstance extends AbstractModel
 {
@@ -41,7 +41,7 @@ class TargetGroupInstance extends AbstractModel
     public $BindIP;
 
     /**
-     * @var integer 目标组实例的端口
+     * @var integer 目标组实例的端口，全监听目标组不支持传此字段。
      */
     public $Port;
 
@@ -53,17 +53,17 @@ v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时�
     public $Weight;
 
     /**
-     * @var integer 目标组实例的新端口
+     * @var integer 目标组实例的新端口，全监听目标组不支持传此字段。
      */
     public $NewPort;
 
     /**
      * @param string $BindIP 目标组实例的内网IP
-     * @param integer $Port 目标组实例的端口
+     * @param integer $Port 目标组实例的端口，全监听目标组不支持传此字段。
      * @param integer $Weight 目标组实例的权重
 
 v2目标组需要配置权重，调用CreateTargetGroup接口创建目标组时该参数与创建接口中的Weight参数必填其一。
-     * @param integer $NewPort 目标组实例的新端口
+     * @param integer $NewPort 目标组实例的新端口，全监听目标组不支持传此字段。
      */
     function __construct()
     {

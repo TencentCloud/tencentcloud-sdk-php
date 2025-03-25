@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID。
  * @method string getTargetGroupName() 获取目标组的新名称。
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
- * @method integer getPort() 获取目标组的新默认端口。
- * @method void setPort(integer $Port) 设置目标组的新默认端口。
+ * @method integer getPort() 获取目标组的新默认端口。全监听目标组不支持此参数。
+ * @method void setPort(integer $Port) 设置目标组的新默认端口。全监听目标组不支持此参数。
  * @method integer getWeight() 获取后端服务默认权重。
 <ul>
     <li>取值范围[0, 100]</li>
@@ -50,7 +50,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $TargetGroupName;
 
     /**
-     * @var integer 目标组的新默认端口。
+     * @var integer 目标组的新默认端口。全监听目标组不支持此参数。
      */
     public $Port;
 
@@ -66,7 +66,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     /**
      * @param string $TargetGroupId 目标组的ID。
      * @param string $TargetGroupName 目标组的新名称。
-     * @param integer $Port 目标组的新默认端口。
+     * @param integer $Port 目标组的新默认端口。全监听目标组不支持此参数。
      * @param integer $Weight 后端服务默认权重。
 <ul>
     <li>取值范围[0, 100]</li>

@@ -140,6 +140,8 @@ Modify 集群变更中；
  * @method void setMonitorMode(integer $MonitorMode) 设置监控模式 0: 老监控 1：新监控
  * @method NodesSummary getCNSummary() 获取cn节点信息
  * @method void setCNSummary(NodesSummary $CNSummary) 设置cn节点信息
+ * @method integer getComputeGroupCount() 获取计算组个数
+ * @method void setComputeGroupCount(integer $ComputeGroupCount) 设置计算组个数
  */
 class InstanceInfo extends AbstractModel
 {
@@ -413,6 +415,11 @@ Modify 集群变更中；
     public $CNSummary;
 
     /**
+     * @var integer 计算组个数
+     */
+    public $ComputeGroupCount;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -473,6 +480,7 @@ Modify 集群变更中；
      * @param integer $AccountType 账户类型 0:普通用户 1:CAM用户
      * @param integer $MonitorMode 监控模式 0: 老监控 1：新监控
      * @param NodesSummary $CNSummary cn节点信息
+     * @param integer $ComputeGroupCount 计算组个数
      */
     function __construct()
     {
@@ -702,6 +710,10 @@ Modify 集群变更中；
         if (array_key_exists("CNSummary",$param) and $param["CNSummary"] !== null) {
             $this->CNSummary = new NodesSummary();
             $this->CNSummary->deserialize($param["CNSummary"]);
+        }
+
+        if (array_key_exists("ComputeGroupCount",$param) and $param["ComputeGroupCount"] !== null) {
+            $this->ComputeGroupCount = $param["ComputeGroupCount"];
         }
     }
 }

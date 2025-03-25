@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PublishMessage请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getPayload() 获取消息 payload，需要按 encoding 指定的编码方式进行编码
- * @method void setPayload(string $Payload) 设置消息 payload，需要按 encoding 指定的编码方式进行编码
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getPayload() 获取消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+ * @method void setPayload(string $Payload) 设置消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
  * @method string getTargetTopic() 获取消息目的主题，该参数与 TargetClientId 二选一
  * @method void setTargetTopic(string $TargetTopic) 设置消息目的主题，该参数与 TargetClientId 二选一
  * @method string getTargetClientId() 获取消息目的客户端 ID，该参数与 TargetTopic 二选一
@@ -31,19 +31,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEncoding() 获取消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
  * @method void setEncoding(string $Encoding) 设置消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
  * @method integer getQos() 获取消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
  * @method void setQos(integer $Qos) 设置消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
  * @method boolean getRetain() 获取是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
  * @method void setRetain(boolean $Retain) 设置是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
  */
 class PublishMessageRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 消息 payload，需要按 encoding 指定的编码方式进行编码
+     * @var string 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
      */
     public $Payload;
 
@@ -64,6 +70,9 @@ class PublishMessageRequest extends AbstractModel
 
     /**
      * @var integer 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
      */
     public $Qos;
 
@@ -73,12 +82,15 @@ class PublishMessageRequest extends AbstractModel
     public $Retain;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Payload 消息 payload，需要按 encoding 指定的编码方式进行编码
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Payload 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
      * @param string $TargetTopic 消息目的主题，该参数与 TargetClientId 二选一
      * @param string $TargetClientId 消息目的客户端 ID，该参数与 TargetTopic 二选一
      * @param string $Encoding 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
      * @param integer $Qos 消息的服务质量等级，默认为 1
+QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
+QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
+QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
      * @param boolean $Retain 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
      */
     function __construct()

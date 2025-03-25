@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
  * @method string getInstanceId() 获取后端服务的唯一 ID
  * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID
- * @method integer getPort() 获取后端服务的监听端口
- * @method void setPort(integer $Port) 设置后端服务的监听端口
+ * @method integer getPort() 获取后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
+ * @method void setPort(integer $Port) 设置后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
  * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method array getPublicIpAddresses() 获取后端服务的外网 IP
@@ -73,7 +73,7 @@ class TargetGroupBackend extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 后端服务的监听端口
+     * @var integer 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
      */
     public $Port;
 
@@ -122,7 +122,7 @@ class TargetGroupBackend extends AbstractModel
      * @param string $TargetGroupId 目标组ID
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
      * @param string $InstanceId 后端服务的唯一 ID
-     * @param integer $Port 后端服务的监听端口
+     * @param integer $Port 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param array $PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。

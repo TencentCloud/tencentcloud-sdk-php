@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 触发器返回值
  *
  * @method string getTriggerName() 获取触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvokeSource() 获取触发来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeSource(string $InvokeSource) 设置触发来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvokeAction() 获取触发动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeAction(string $InvokeAction) 设置触发动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TriggerInvokeCondition getInvokeCondition() 获取触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeCondition(TriggerInvokeCondition $InvokeCondition) 设置触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TriggerInvokePara getInvokePara() 获取触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokePara(TriggerInvokePara $InvokePara) 设置触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerResp extends AbstractModel
 {
     /**
      * @var string 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerName;
 
     /**
      * @var string 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeSource;
 
     /**
      * @var string 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeAction;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var TriggerInvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeCondition;
 
     /**
      * @var TriggerInvokePara 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokePara;
 
     /**
      * @param string $TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvokeSource 触发来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerInvokeCondition $InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerInvokePara $InvokePara 触发器参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

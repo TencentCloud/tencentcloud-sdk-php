@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 分实例价格
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ItemPrice getInstancePrice() 获取实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePrice(ItemPrice $InstancePrice) 设置实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ItemPrice getCloudDiskPrice() 获取磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudDiskPrice(ItemPrice $CloudDiskPrice) 设置磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ItemPrice getInstanceTotalPrice() 获取该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTotalPrice(ItemPrice $InstanceTotalPrice) 设置该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ItemPriceDetail extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var ItemPrice 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePrice;
 
     /**
      * @var ItemPrice 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudDiskPrice;
 
     /**
      * @var ItemPrice 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTotalPrice;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemPrice $InstancePrice 实例价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemPrice $CloudDiskPrice 磁盘价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemPrice $InstanceTotalPrice 该实例的总价钱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

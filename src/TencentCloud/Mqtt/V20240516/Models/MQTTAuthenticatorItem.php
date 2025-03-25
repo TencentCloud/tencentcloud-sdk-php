@@ -20,50 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MQTT认证器信息
  *
- * @method string getType() 获取认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
- * @method void setType(string $Type) 设置认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
- * @method string getConfig() 获取认证器配置
- * @method void setConfig(string $Config) 设置认证器配置
+ * @method string getType() 获取认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
+ * @method void setType(string $Type) 设置认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
+ * @method string getConfig() 获取HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
+ * @method void setConfig(string $Config) 设置HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
  * @method string getStatus() 获取认证器状态
+open：认证器打开
+close：认证器关闭
  * @method void setStatus(string $Status) 设置认证器状态
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
- * @method string getRemark() 获取说明
- * @method void setRemark(string $Remark) 设置说明
+open：认证器打开
+close：认证器关闭
+ * @method integer getCreateTime() 获取创建时间，毫秒级时间戳 。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒级时间戳 。
+ * @method string getRemark() 获取说明，最长 128 字符。
+ * @method void setRemark(string $Remark) 设置说明，最长 128 字符。
  */
 class MQTTAuthenticatorItem extends AbstractModel
 {
     /**
-     * @var string 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
+     * @var string 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
      */
     public $Type;
 
     /**
-     * @var string 认证器配置
+     * @var string HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      */
     public $Config;
 
     /**
      * @var string 认证器状态
+open：认证器打开
+close：认证器关闭
      */
     public $Status;
 
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，毫秒级时间戳 。
      */
     public $CreateTime;
 
     /**
-     * @var string 说明
+     * @var string 说明，最长 128 字符。
      */
     public $Remark;
 
     /**
-     * @param string $Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
-     * @param string $Config 认证器配置
+     * @param string $Type 认证器类型
+JWT：JWT认证器
+JWKS：JWKS认证器
+HTTP：HTTP认证器
+     * @param string $Config HTTP认证器
+headers（请求头）：标准请求头和自定义请求头
+endpoint（接入点）：认证服务器接入点
+method（http请求方法）：POST/GET
+readTimeout（读超时时间）：读取认证服务器数据超时时间，单位秒
+connectTimeout（连接超时时间）：连接认证服务器超时时间，单位秒
+body（请求体）：http请求体
+concurrency（并发数）：最大并发请求数
+样例：{"headers":[{"key":"Content-type","value":"application/json"},{"key":"username","value":"${Username}"}],"endpoint":"https://127.0.0.1:443","method":"POST","readTimeout":10,"connectTimeout":10,"body":[{"key":"client-id","value":"${ClientId}"}],"concurrency":8}
+
+参考 [认证管理概述](https://cloud.tencent.com/document/product/1778/114813)
      * @param string $Status 认证器状态
-     * @param integer $CreateTime 创建时间
-     * @param string $Remark 说明
+open：认证器打开
+close：认证器关闭
+     * @param integer $CreateTime 创建时间，毫秒级时间戳 。
+     * @param string $Remark 说明，最长 128 字符。
      */
     function __construct()
     {

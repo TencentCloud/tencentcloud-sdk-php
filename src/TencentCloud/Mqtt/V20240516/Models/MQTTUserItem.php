@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置密码
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
- * @method integer getModifiedTime() 获取修改时间，秒为单位
- * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间，秒为单位
+ * @method integer getCreatedTime() 获取创建时间，毫秒级时间戳 。
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，毫秒级时间戳 。
+ * @method integer getModifiedTime() 获取修改时间，毫秒级时间戳 。
+ * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间，毫秒级时间戳 。
  */
 class MQTTUserItem extends AbstractModel
 {
@@ -49,12 +49,12 @@ class MQTTUserItem extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 创建时间，毫秒级时间戳 。
      */
     public $CreatedTime;
 
     /**
-     * @var integer 修改时间，秒为单位
+     * @var integer 修改时间，毫秒级时间戳 。
      */
     public $ModifiedTime;
 
@@ -62,8 +62,8 @@ class MQTTUserItem extends AbstractModel
      * @param string $Username 用户名
      * @param string $Password 密码
      * @param string $Remark 备注信息
-     * @param integer $CreatedTime 创建时间，秒为单位
-     * @param integer $ModifiedTime 修改时间，秒为单位
+     * @param integer $CreatedTime 创建时间，毫秒级时间戳 。
+     * @param integer $ModifiedTime 修改时间，毫秒级时间戳 。
      */
     function __construct()
     {

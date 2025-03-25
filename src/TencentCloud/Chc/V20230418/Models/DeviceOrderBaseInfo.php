@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIdcId() 获取机房id
  * @method void setIdcId(integer $IdcId) 设置机房id
  * @method string getIdcName() 获取机房名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdcName(string $IdcName) 设置机房名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取设备类型
  * @method void setDeviceType(string $DeviceType) 设置设备类型
  * @method string getRemark() 获取备注
@@ -64,7 +62,6 @@ class DeviceOrderBaseInfo extends AbstractModel
 
     /**
      * @var string 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdcName;
 
@@ -141,7 +138,6 @@ class DeviceOrderBaseInfo extends AbstractModel
     /**
      * @param integer $IdcId 机房id
      * @param string $IdcName 机房名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备类型
      * @param string $Remark 备注
      * @param string $ReceivingOperation 1.收货-仅核对外包装完整和数量，不开箱 2.验收-开箱核对型号SN一致

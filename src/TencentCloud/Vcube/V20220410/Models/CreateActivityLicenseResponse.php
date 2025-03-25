@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getAppName() 获取app名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置app名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleId() 获取ios包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBundleId(string $BundleId) 设置ios包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取安卓包名
  * @method void setPackageName(string $PackageName) 设置安卓包名
  * @method integer getDuration() 获取有效时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置有效时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
@@ -45,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLicenseUrl() 获取license 授权文件下载链接
  * @method void setLicenseUrl(string $LicenseUrl) 设置license 授权文件下载链接
  * @method integer getResidueDay() 获取license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResidueDay(integer $ResidueDay) 设置license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResidue() 获取license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResidue(integer $Residue) 设置license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,13 +54,11 @@ class CreateActivityLicenseResponse extends AbstractModel
 
     /**
      * @var string app名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
     /**
      * @var string ios包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleId;
 
@@ -81,7 +69,6 @@ class CreateActivityLicenseResponse extends AbstractModel
 
     /**
      * @var integer 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
@@ -107,13 +94,11 @@ class CreateActivityLicenseResponse extends AbstractModel
 
     /**
      * @var integer license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResidueDay;
 
     /**
      * @var integer license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Residue;
 
@@ -125,20 +110,15 @@ class CreateActivityLicenseResponse extends AbstractModel
     /**
      * @param string $AppId 用户appid
      * @param string $AppName app名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleId ios包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 安卓包名
      * @param integer $Duration 有效时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param string $LicenseKey license秘钥
      * @param string $LicenseUrl license 授权文件下载链接
      * @param integer $ResidueDay license剩余天数，最后一天以及过期显示0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Residue license剩余秒数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

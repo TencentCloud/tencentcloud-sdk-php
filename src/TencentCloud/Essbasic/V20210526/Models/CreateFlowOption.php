@@ -51,13 +51,13 @@ use TencentCloud\Common\AbstractModel;
 **true**：允许
 **false**：（默认）不允许
  * @method boolean getForbidEditApprover() 获取是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
  * @method void setForbidEditApprover(boolean $ForbidEditApprover) 设置是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
  * @method string getCustomCreateFlowDescription() 获取定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
  * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
  * @method boolean getForbidEditFillComponent() 获取禁止编辑填写控件
@@ -120,9 +120,9 @@ class CreateFlowOption extends AbstractModel
 
     /**
      * @var boolean 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
      */
     public $ForbidEditApprover;
 
@@ -170,9 +170,9 @@ class CreateFlowOption extends AbstractModel
 **true**：允许
 **false**：（默认）不允许
      * @param boolean $ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 可以编辑签署人</li></ul>
+<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 false， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
      * @param string $CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
      * @param boolean $ForbidEditFillComponent 禁止编辑填写控件
 

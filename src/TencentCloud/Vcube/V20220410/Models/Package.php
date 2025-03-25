@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取资源包名称
  * @method void setName(string $Name) 设置资源包名称
  * @method string getType() 获取资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Package extends AbstractModel
 {
@@ -81,7 +79,6 @@ class Package extends AbstractModel
 
     /**
      * @var string 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -95,7 +92,6 @@ class Package extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 资源包名称
      * @param string $Type 资源包类型ID,对应点播：PackageId 对应直播：TypeId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

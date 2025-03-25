@@ -35,45 +35,25 @@ use TencentCloud\Common\AbstractModel;
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。
  * @method JitterConfigureInfo getJitterConfigure() 获取视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) 设置视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlurConfigureInfo getBlurConfigure() 获取视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) 设置视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() 获取视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) 设置视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CrashScreenConfigureInfo getCrashScreenConfigure() 获取视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) 设置视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() 获取视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) 设置视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NoiseConfigureInfo getNoiseConfigure() 获取视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) 设置视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MosaicConfigureInfo getMosaicConfigure() 获取视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) 设置视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method QRCodeConfigureInfo getQRCodeConfigure() 获取视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) 设置视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VoiceConfigureInfo getVoiceConfigure() 获取音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) 设置音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -110,61 +90,51 @@ class QualityInspectTemplateItem extends AbstractModel
 
     /**
      * @var JitterConfigureInfo 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JitterConfigure;
 
     /**
      * @var BlurConfigureInfo 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlurConfigure;
 
     /**
      * @var AbnormalLightingConfigureInfo 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbnormalLightingConfigure;
 
     /**
      * @var CrashScreenConfigureInfo 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrashScreenConfigure;
 
     /**
      * @var BlackWhiteEdgeConfigureInfo 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlackWhiteEdgeConfigure;
 
     /**
      * @var NoiseConfigureInfo 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoiseConfigure;
 
     /**
      * @var MosaicConfigureInfo 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MosaicConfigure;
 
     /**
      * @var QRCodeConfigureInfo 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QRCodeConfigure;
 
     /**
      * @var QualityEvaluationConfigureInfo 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityEvaluationConfigure;
 
     /**
      * @var VoiceConfigureInfo 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceConfigure;
 
@@ -187,25 +157,15 @@ class QualityInspectTemplateItem extends AbstractModel
      * @param string $Comment 模板描述。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。
      * @param JitterConfigureInfo $JitterConfigure 视频画面抖动重影检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlurConfigureInfo $BlurConfigure 视频画面模糊检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrashScreenConfigureInfo $CrashScreenConfigure 视频画面花屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoiseConfigureInfo $NoiseConfigure 视频画面噪点检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MosaicConfigureInfo $MosaicConfigure 视频画面马赛克检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QRCodeConfigureInfo $QRCodeConfigure 视频画面二维码检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure 视频画面质量评价的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceConfigureInfo $VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */

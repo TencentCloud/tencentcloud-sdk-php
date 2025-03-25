@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyType(string $CompanyType) 设置用户公司行业类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlan() 获取优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlan(string $Plan) 设置优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseType() 获取测试版还是正式版 test | formal
  * @method void setLicenseType(string $LicenseType) 设置测试版还是正式版 test | formal
  * @method integer getStatus() 获取0: 预申请，需要补充申请信息
@@ -69,17 +67,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewalCount(integer $RenewalCount) 设置续期次数， LicenseType=test时有此字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReply() 获取历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReply(array $Reply) 设置历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getUpdatedAt() 获取修改时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置修改时间
  * @method string getUpdateTime() 获取用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpired() 获取是否过期
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpired(boolean $Expired) 设置是否过期
@@ -89,21 +83,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestTime(integer $RestTime) 设置返回还剩多少秒过期，过期后返回0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getXMagicType() 获取single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setXMagicType(string $XMagicType) 设置single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RenewResource getResource() 获取优图资源信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(RenewResource $Resource) 设置优图资源信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsVest() 获取是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVest(boolean $IsVest) 设置是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class XMagicInfo extends AbstractModel
 {
@@ -132,7 +120,6 @@ class XMagicInfo extends AbstractModel
 
     /**
      * @var string 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Plan;
 
@@ -177,7 +164,6 @@ class XMagicInfo extends AbstractModel
 
     /**
      * @var array 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reply;
 
@@ -193,7 +179,6 @@ class XMagicInfo extends AbstractModel
 
     /**
      * @var string 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -211,13 +196,11 @@ class XMagicInfo extends AbstractModel
 
     /**
      * @var string single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $XMagicType;
 
     /**
      * @var string 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -229,7 +212,6 @@ class XMagicInfo extends AbstractModel
 
     /**
      * @var boolean 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVest;
 
@@ -242,7 +224,6 @@ class XMagicInfo extends AbstractModel
      * @param string $CompanyType 用户公司行业类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Plan 优图套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 测试版还是正式版 test | formal
      * @param integer $Status 0: 预申请，需要补充申请信息
    1: 审批通过，xmagic已签发，正在生效中
@@ -259,23 +240,18 @@ class XMagicInfo extends AbstractModel
      * @param integer $RenewalCount 续期次数， LicenseType=test时有此字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Reply 历次审批的回复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
      * @param string $UpdatedAt 修改时间
      * @param string $UpdateTime 用户更新信息的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Expired 是否过期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RestTime 返回还剩多少秒过期，过期后返回0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 优图模块名称，自动中英文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewResource $Resource 优图资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVest 是否是马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

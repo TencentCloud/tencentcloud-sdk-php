@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAndroidAppId() 获取安卓应用 Id
  * @method void setAndroidAppId(string $AndroidAppId) 设置安卓应用 Id
  * @method string getName() 获取安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取安卓应用状态（上架、下架）
  * @method void setState(string $State) 设置安卓应用状态（上架、下架）
  * @method array getAndroidAppVersionInfo() 获取安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidAppVersionInfo(array $AndroidAppVersionInfo) 设置安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取安卓应用创建时间
  * @method void setCreateTime(string $CreateTime) 设置安卓应用创建时间
  */
@@ -44,7 +40,6 @@ class AndroidApp extends AbstractModel
 
     /**
      * @var string 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -55,7 +50,6 @@ class AndroidApp extends AbstractModel
 
     /**
      * @var array 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidAppVersionInfo;
 
@@ -67,10 +61,8 @@ class AndroidApp extends AbstractModel
     /**
      * @param string $AndroidAppId 安卓应用 Id
      * @param string $Name 安卓应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 安卓应用状态（上架、下架）
      * @param array $AndroidAppVersionInfo 安卓应用版本列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 安卓应用创建时间
      */
     function __construct()

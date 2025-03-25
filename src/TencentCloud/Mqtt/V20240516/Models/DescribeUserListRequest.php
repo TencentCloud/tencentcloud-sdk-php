@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserList请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method array getFilters() 获取查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
  * @method void setFilters(array $Filters) 设置查询条件列表支持字段
-Username：Username模糊查询
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
+ * @method integer getOffset() 获取查询起始位置，默认值0
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认值0
+ * @method integer getLimit() 获取查询结果限制数量，默认值20，最大值100
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认值20，最大值100
  */
 class DescribeUserListRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
      * @var array 查询条件列表支持字段
-Username：Username模糊查询
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
      */
     public $Filters;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认值0
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认值20，最大值100
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param array $Filters 查询条件列表支持字段
-Username：Username模糊查询
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+Username：按照【用户名】进行过滤，支持模糊过滤，类型：String
+     * @param integer $Offset 查询起始位置，默认值0
+     * @param integer $Limit 查询结果限制数量，默认值20，最大值100
      */
     function __construct()
     {

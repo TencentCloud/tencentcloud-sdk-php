@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentMemberList请求参数结构体
  *
- * @method integer getRoomId() 获取房间Id。
- * @method void setRoomId(integer $RoomId) 设置房间Id。
+ * @method integer getRoomId() 获取课堂Id。
+ * @method void setRoomId(integer $RoomId) 设置课堂Id。
  * @method integer getPage() 获取分页查询当前页数，从1开始递增。
  * @method void setPage(integer $Page) 设置分页查询当前页数，从1开始递增。
  * @method integer getLimit() 获取每页数据量，最大1000。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCurrentMemberListRequest extends AbstractModel
 {
     /**
-     * @var integer 房间Id。
+     * @var integer 课堂Id。
      */
     public $RoomId;
 
@@ -45,7 +45,7 @@ class DescribeCurrentMemberListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $RoomId 房间Id。
+     * @param integer $RoomId 课堂Id。
      * @param integer $Page 分页查询当前页数，从1开始递增。
      * @param integer $Limit 每页数据量，最大1000。
      */

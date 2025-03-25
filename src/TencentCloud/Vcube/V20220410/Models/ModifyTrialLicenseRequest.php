@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTrialLicense请求参数结构体
  *
- * @method string getLicenseId() 获取执照ID
- * @method void setLicenseId(string $LicenseId) 设置执照ID
+ * @method string getLicenseId() 获取授权ID
+ * @method void setLicenseId(string $LicenseId) 设置授权ID
  */
 class ModifyTrialLicenseRequest extends AbstractModel
 {
     /**
-     * @var string 执照ID
+     * @var string 授权ID
      */
     public $LicenseId;
 
     /**
-     * @param string $LicenseId 执照ID
+     * @param string $LicenseId 授权ID
      */
     function __construct()
     {

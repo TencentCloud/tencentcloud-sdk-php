@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略规则优先级
  *
- * @method integer getId() 获取策略id
- * @method void setId(integer $Id) 设置策略id
+ * @method integer getId() 获取授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
+ * @method void setId(integer $Id) 设置授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
  */
 class AuthorizationPolicyPriority extends AbstractModel
 {
     /**
-     * @var integer 策略id
+     * @var integer 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class AuthorizationPolicyPriority extends AbstractModel
     public $Priority;
 
     /**
-     * @param integer $Id 策略id
+     * @param integer $Id 授权策略规则id，可以从 [DescribeAuthorizationPolicies](https://cloud.tencent.com/document/api/1778/111074)接口获得。
      * @param integer $Priority 优先级
      */
     function __construct()

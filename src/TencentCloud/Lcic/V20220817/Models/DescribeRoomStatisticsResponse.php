@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealStartTime(integer $RealStartTime) 设置秒级unix时间戳，实际房间开始时间。
  * @method integer getRealEndTime() 获取秒级unix时间戳，实际房间结束时间。
  * @method void setRealEndTime(integer $RealEndTime) 设置秒级unix时间戳，实际房间结束时间。
- * @method integer getMessageCount() 获取房间消息总数。
- * @method void setMessageCount(integer $MessageCount) 设置房间消息总数。
- * @method integer getMicCount() 获取房间连麦总数。
- * @method void setMicCount(integer $MicCount) 设置房间连麦总数。
+ * @method integer getMessageCount() 获取课堂消息总数。
+ * @method void setMessageCount(integer $MessageCount) 设置课堂消息总数。
+ * @method integer getMicCount() 获取课堂连麦总数。
+ * @method void setMicCount(integer $MicCount) 设置课堂连麦总数。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,12 +72,12 @@ class DescribeRoomStatisticsResponse extends AbstractModel
     public $RealEndTime;
 
     /**
-     * @var integer 房间消息总数。
+     * @var integer 课堂消息总数。
      */
     public $MessageCount;
 
     /**
-     * @var integer 房间连麦总数。
+     * @var integer 课堂连麦总数。
      */
     public $MicCount;
 
@@ -93,8 +93,8 @@ class DescribeRoomStatisticsResponse extends AbstractModel
      * @param array $MemberRecords 成员记录列表。
      * @param integer $RealStartTime 秒级unix时间戳，实际房间开始时间。
      * @param integer $RealEndTime 秒级unix时间戳，实际房间结束时间。
-     * @param integer $MessageCount 房间消息总数。
-     * @param integer $MicCount 房间连麦总数。
+     * @param integer $MessageCount 课堂消息总数。
+     * @param integer $MicCount 课堂连麦总数。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤
  *
- * @method string getName() 获取"aaa"
- * @method void setName(string $Name) 设置"aaa"
- * @method array getValues() 获取["bbb", "ccc"]
- * @method void setValues(array $Values) 设置["bbb", "ccc"]
+ * @method string getName() 获取字段名
+ * @method void setName(string $Name) 设置字段名
+ * @method array getValues() 获取字段值列表
+ * @method void setValues(array $Values) 设置字段值列表
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string "aaa"
+     * @var string 字段名
      */
     public $Name;
 
     /**
-     * @var array ["bbb", "ccc"]
+     * @var array 字段值列表
      */
     public $Values;
 
     /**
-     * @param string $Name "aaa"
-     * @param array $Values ["bbb", "ccc"]
+     * @param string $Name 字段名
+     * @param array $Values 字段值列表
      */
     function __construct()
     {

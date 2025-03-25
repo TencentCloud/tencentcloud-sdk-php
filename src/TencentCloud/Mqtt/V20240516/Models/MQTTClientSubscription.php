@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicFilter() 获取topic 订阅
  * @method void setTopicFilter(string $TopicFilter) 设置topic 订阅
  * @method integer getQos() 获取服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
  * @method void setQos(integer $Qos) 设置服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
  * @method integer getLag() 获取堆积数量
  * @method void setLag(integer $Lag) 设置堆积数量
  * @method integer getInflight() 获取投递未确认数量
@@ -38,6 +44,9 @@ class MQTTClientSubscription extends AbstractModel
 
     /**
      * @var integer 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
      */
     public $Qos;
 
@@ -54,6 +63,9 @@ class MQTTClientSubscription extends AbstractModel
     /**
      * @param string $TopicFilter topic 订阅
      * @param integer $Qos 服务质量等级
+0: 至多一次
+1: 至少一次
+2: 恰好一次
      * @param integer $Lag 堆积数量
      * @param integer $Inflight 投递未确认数量
      */

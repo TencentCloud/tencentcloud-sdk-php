@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 大盘统计-录像存储统计 出参Value
  *
  * @method integer getExpectTimeLen() 获取期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpectTimeLen(integer $ExpectTimeLen) 设置期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordTimeLen() 获取实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordTimeLen(integer $RecordTimeLen) 设置实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFileSize() 获取存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(float $FileSize) 设置存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordStatisticValue extends AbstractModel
 {
     /**
      * @var integer 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpectTimeLen;
 
     /**
      * @var integer 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordTimeLen;
 
     /**
      * @var float 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @param integer $ExpectTimeLen 期望执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordTimeLen 实际执行时间 秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FileSize 存储大小 G
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

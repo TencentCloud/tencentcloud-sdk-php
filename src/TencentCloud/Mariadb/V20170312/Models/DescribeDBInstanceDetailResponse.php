@@ -85,9 +85,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsEncryptSupported() 获取是否支持数据加密。1-支持；0-不支持
  * @method void setIsEncryptSupported(integer $IsEncryptSupported) 设置是否支持数据加密。1-支持；0-不支持
  * @method string getVip6() 获取内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip6(string $Vip6) 设置内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取实例Cpu核数
  * @method void setCpu(integer $Cpu) 设置实例Cpu核数
  * @method integer getPid() 获取产品类型ID
@@ -95,63 +93,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getQps() 获取最大QPS
  * @method void setQps(integer $Qps) 设置最大QPS
  * @method integer getIpv6Flag() 获取是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanVipv6() 获取外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanVipv6(string $WanVipv6) 设置外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanStatusIpv6() 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanStatusIpv6(integer $WanStatusIpv6) 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanPortIpv6() 获取外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanPortIpv6(integer $WanPortIpv6) 设置外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbEngine() 获取数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbEngine(string $DbEngine) 设置数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersion() 获取数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersion(string $DbVersion) 设置数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceTags() 获取标签信息
  * @method void setResourceTags(array $ResourceTags) 设置标签信息
  * @method integer getDcnFlag() 获取DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnFlag(integer $DcnFlag) 设置DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDcnStatus() 获取DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnStatus(integer $DcnStatus) 设置DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDcnDstNum() 获取DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnDstNum(integer $DcnDstNum) 设置DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodesInfo() 获取实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodesInfo(array $NodesInfo) 设置实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsMaxUserConnectionsSupported() 获取实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsMaxUserConnectionsSupported(boolean $IsMaxUserConnectionsSupported) 设置实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersionId() 获取对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersionId(string $DbVersionId) 设置对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptStatus() 获取加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptStatus(integer $EncryptStatus) 设置加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DCNReplicaConfig getReplicaConfig() 获取DCN的配置信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaConfig(DCNReplicaConfig $ReplicaConfig) 设置DCN的配置信息
@@ -161,13 +131,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplicaStatus(DCNReplicaStatus $ReplicaStatus) 设置DCN的运行状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExclusterType() 获取独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusterType(integer $ExclusterType) 设置独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRsAccessStrategy() 获取VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRsAccessStrategy(integer $RsAccessStrategy) 设置VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReservedNetResources() 获取尚未回收的网络资源
  * @method void setReservedNetResources(array $ReservedNetResources) 设置尚未回收的网络资源
  * @method boolean getIsPhysicalReplicationSupported() 获取是否支持物理复制
@@ -345,7 +311,6 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
 
     /**
      * @var string 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
@@ -366,37 +331,31 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
 
     /**
      * @var integer 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6Flag;
 
     /**
      * @var string 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanVipv6;
 
     /**
      * @var integer 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanStatusIpv6;
 
     /**
      * @var integer 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanPortIpv6;
 
     /**
      * @var string 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbEngine;
 
     /**
      * @var string 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbVersion;
 
@@ -407,49 +366,41 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
 
     /**
      * @var integer DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnFlag;
 
     /**
      * @var integer DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnStatus;
 
     /**
      * @var integer DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnDstNum;
 
     /**
      * @var integer 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var array 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodesInfo;
 
     /**
      * @var boolean 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMaxUserConnectionsSupported;
 
     /**
      * @var string 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbVersionId;
 
     /**
      * @var integer 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptStatus;
 
@@ -467,13 +418,11 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
 
     /**
      * @var integer 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExclusterType;
 
     /**
      * @var integer VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RsAccessStrategy;
 
@@ -541,47 +490,30 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
      * @param integer $LogStorage 日志存储空间大小，单位 GB
      * @param integer $IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      * @param string $Vip6 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu 实例Cpu核数
      * @param integer $Pid 产品类型ID
      * @param integer $Qps 最大QPS
      * @param integer $Ipv6Flag 是否支持IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanVipv6 外网IPv6地址，公网可访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanStatusIpv6 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanPortIpv6 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbEngine 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 标签信息
      * @param integer $DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnDstNum DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodesInfo 实例的各个DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMaxUserConnectionsSupported 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersionId 对外显示的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptStatus 加密状态, 0-未开启，1-已开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DCNReplicaConfig $ReplicaConfig DCN的配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DCNReplicaStatus $ReplicaStatus DCN的运行状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RsAccessStrategy VPC就近访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReservedNetResources 尚未回收的网络资源
      * @param boolean $IsPhysicalReplicationSupported 是否支持物理复制
      * @param integer $IsDcnStrongSyncSupported 是否支持强同步DCN

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取返回总数
  * @method void setTotalCount(integer $TotalCount) 设置返回总数
  * @method array getLogInfo() 获取触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogInfo(array $LogInfo) 设置触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
 
     /**
      * @var array 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogInfo;
 
     /**
      * @param integer $TotalCount 返回总数
      * @param array $LogInfo 触发日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

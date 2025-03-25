@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 策略
  *
  * @method string getResource() 获取资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getActions() 获取动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActions(array $Actions) 设置动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Permission extends AbstractModel
 {
     /**
      * @var string 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var array 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Actions;
 
     /**
      * @param string $Resource 资源路径，目前仅支持Namespace
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

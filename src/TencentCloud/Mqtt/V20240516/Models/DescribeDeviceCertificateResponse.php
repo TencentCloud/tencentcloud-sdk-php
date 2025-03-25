@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceCertificate返回参数结构体
  *
- * @method integer getCreatedTime() 获取创建时间
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间
- * @method integer getUpdateTime() 获取上次更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置上次更新时间
- * @method integer getNotAfterTime() 获取证书失效日期
- * @method void setNotAfterTime(integer $NotAfterTime) 设置证书失效日期
- * @method integer getLastActivationTime() 获取上次激活时间
- * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间
- * @method integer getLastInactivationTime() 获取上次取消激活时间
- * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次取消激活时间
- * @method string getStatus() 获取证书状态
- * @method void setStatus(string $Status) 设置证书状态
+ * @method integer getCreatedTime() 获取创建时间，毫秒级时间戳 。
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，毫秒级时间戳 。
+ * @method integer getUpdateTime() 获取上次更新时间，毫秒级时间戳 。
+ * @method void setUpdateTime(integer $UpdateTime) 设置上次更新时间，毫秒级时间戳 。
+ * @method integer getNotAfterTime() 获取证书失效日期，毫秒级时间戳 。
+ * @method void setNotAfterTime(integer $NotAfterTime) 设置证书失效日期，毫秒级时间戳 。
+ * @method integer getLastActivationTime() 获取上次激活时间，毫秒级时间戳 。
+ * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间，毫秒级时间戳 。
+ * @method integer getLastInactivationTime() 获取上次取消激活时间，毫秒级时间戳 。
+ * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次取消激活时间，毫秒级时间戳 。
+ * @method string getStatus() 获取设备证书的状态
+    ACTIVE：激活 
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
+ * @method void setStatus(string $Status) 设置设备证书的状态
+    ACTIVE：激活 
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
  * @method string getCaSn() 获取Ca证书序列号
  * @method void setCaSn(string $CaSn) 设置Ca证书序列号
  * @method string getDeviceCertificateSn() 获取设备证书序列号
@@ -40,16 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceCertificate(string $DeviceCertificate) 设置设备证书内容
  * @method string getDeviceCertificateCn() 获取设备证书common name
  * @method void setDeviceCertificateCn(string $DeviceCertificateCn) 设置设备证书common name
- * @method string getFormat() 获取证书格式
- * @method void setFormat(string $Format) 设置证书格式
+ * @method string getFormat() 获取证书格式，当前仅支持PEM格式
+ * @method void setFormat(string $Format) 设置证书格式，当前仅支持PEM格式
  * @method string getClientId() 获取客户端id
  * @method void setClientId(string $ClientId) 设置客户端id
- * @method string getCertificateSource() 获取    API, 手动注册   
-    JITP 自动注册
- * @method void setCertificateSource(string $CertificateSource) 设置    API, 手动注册   
-    JITP 自动注册
- * @method integer getNotBeforeTime() 获取证书生效开始时间
- * @method void setNotBeforeTime(integer $NotBeforeTime) 设置证书生效开始时间
+ * @method string getCertificateSource() 获取证书来源    
+API：手动注册   
+JITP：自动注册
+ * @method void setCertificateSource(string $CertificateSource) 设置证书来源    
+API：手动注册   
+JITP：自动注册
+ * @method integer getNotBeforeTime() 获取证书生效开始时间，毫秒级时间戳 。
+ * @method void setNotBeforeTime(integer $NotBeforeTime) 设置证书生效开始时间，毫秒级时间戳 。
  * @method string getOrganizationalUnit() 获取组织单位
  * @method void setOrganizationalUnit(string $OrganizationalUnit) 设置组织单位
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,32 +68,36 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDeviceCertificateResponse extends AbstractModel
 {
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，毫秒级时间戳 。
      */
     public $CreatedTime;
 
     /**
-     * @var integer 上次更新时间
+     * @var integer 上次更新时间，毫秒级时间戳 。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 证书失效日期
+     * @var integer 证书失效日期，毫秒级时间戳 。
      */
     public $NotAfterTime;
 
     /**
-     * @var integer 上次激活时间
+     * @var integer 上次激活时间，毫秒级时间戳 。
      */
     public $LastActivationTime;
 
     /**
-     * @var integer 上次取消激活时间
+     * @var integer 上次取消激活时间，毫秒级时间戳 。
      */
     public $LastInactivationTime;
 
     /**
-     * @var string 证书状态
+     * @var string 设备证书的状态
+    ACTIVE：激活 
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
      */
     public $Status;
 
@@ -108,7 +122,7 @@ class DescribeDeviceCertificateResponse extends AbstractModel
     public $DeviceCertificateCn;
 
     /**
-     * @var string 证书格式
+     * @var string 证书格式，当前仅支持PEM格式
      */
     public $Format;
 
@@ -118,13 +132,14 @@ class DescribeDeviceCertificateResponse extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string     API, 手动注册   
-    JITP 自动注册
+     * @var string 证书来源    
+API：手动注册   
+JITP：自动注册
      */
     public $CertificateSource;
 
     /**
-     * @var integer 证书生效开始时间
+     * @var integer 证书生效开始时间，毫秒级时间戳 。
      */
     public $NotBeforeTime;
 
@@ -139,21 +154,26 @@ class DescribeDeviceCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CreatedTime 创建时间
-     * @param integer $UpdateTime 上次更新时间
-     * @param integer $NotAfterTime 证书失效日期
-     * @param integer $LastActivationTime 上次激活时间
-     * @param integer $LastInactivationTime 上次取消激活时间
-     * @param string $Status 证书状态
+     * @param integer $CreatedTime 创建时间，毫秒级时间戳 。
+     * @param integer $UpdateTime 上次更新时间，毫秒级时间戳 。
+     * @param integer $NotAfterTime 证书失效日期，毫秒级时间戳 。
+     * @param integer $LastActivationTime 上次激活时间，毫秒级时间戳 。
+     * @param integer $LastInactivationTime 上次取消激活时间，毫秒级时间戳 。
+     * @param string $Status 设备证书的状态
+    ACTIVE：激活 
+    INACTIVE：未激活
+    REVOKED：吊销
+    PENDING_ACTIVATION：注册待激活
      * @param string $CaSn Ca证书序列号
      * @param string $DeviceCertificateSn 设备证书序列号
      * @param string $DeviceCertificate 设备证书内容
      * @param string $DeviceCertificateCn 设备证书common name
-     * @param string $Format 证书格式
+     * @param string $Format 证书格式，当前仅支持PEM格式
      * @param string $ClientId 客户端id
-     * @param string $CertificateSource     API, 手动注册   
-    JITP 自动注册
-     * @param integer $NotBeforeTime 证书生效开始时间
+     * @param string $CertificateSource 证书来源    
+API：手动注册   
+JITP：自动注册
+     * @param integer $NotBeforeTime 证书生效开始时间，毫秒级时间戳 。
      * @param string $OrganizationalUnit 组织单位
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

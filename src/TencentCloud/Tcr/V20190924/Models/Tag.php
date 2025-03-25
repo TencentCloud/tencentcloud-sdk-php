@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云标签Tag
  *
  * @method string getKey() 获取云标签的key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置云标签的key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取云标签的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置云标签的值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
     /**
      * @var string 云标签的key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 云标签的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 云标签的key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 云标签的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchType(string $BatchType) 设置批量请求类型，取值"page"或"scroll"
  * @method string getScrollId() 获取游标ID
  * @method void setScrollId(string $ScrollId) 设置游标ID
+ * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
+ * @method void setSearchAfter(array $SearchAfter) 设置查询es使用searchAfter时，游标
  */
 class SearchBusinessLogRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class SearchBusinessLogRequest extends AbstractModel
     public $ScrollId;
 
     /**
+     * @var array 查询es使用searchAfter时，游标
+     */
+    public $SearchAfter;
+
+    /**
      * @param string $ConfigId 日志配置项ID
      * @param array $InstanceIds 机器实例ID，不传表示全部实例
      * @param string $StartTime 开始时间
@@ -128,6 +135,7 @@ class SearchBusinessLogRequest extends AbstractModel
      * @param string $SearchWordType 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
      * @param string $BatchType 批量请求类型，取值"page"或"scroll"
      * @param string $ScrollId 游标ID
+     * @param array $SearchAfter 查询es使用searchAfter时，游标
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class SearchBusinessLogRequest extends AbstractModel
 
         if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
             $this->ScrollId = $param["ScrollId"];
+        }
+
+        if (array_key_exists("SearchAfter",$param) and $param["SearchAfter"] !== null) {
+            $this->SearchAfter = $param["SearchAfter"];
         }
     }
 }

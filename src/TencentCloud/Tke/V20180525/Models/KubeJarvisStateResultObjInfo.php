@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 集群巡检诊断对象信息
  *
  * @method string getPropertyName() 获取对象属性名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropertyName(string $PropertyName) 设置对象属性名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPropertyValue() 获取对象属性值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropertyValue(string $PropertyValue) 设置对象属性值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateResultObjInfo extends AbstractModel
 {
     /**
      * @var string 对象属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertyName;
 
     /**
      * @var string 对象属性值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertyValue;
 
     /**
      * @param string $PropertyName 对象属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PropertyValue 对象属性值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

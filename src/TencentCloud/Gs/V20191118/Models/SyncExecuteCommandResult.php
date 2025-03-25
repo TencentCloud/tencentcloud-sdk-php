@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getOutput() 获取命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(string $Output) 设置命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取命令执行结果
  * @method void setStatus(string $Status) 设置命令执行结果
  */
@@ -38,7 +36,6 @@ class SyncExecuteCommandResult extends AbstractModel
 
     /**
      * @var string 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -50,7 +47,6 @@ class SyncExecuteCommandResult extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $Output 命令执行输出内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 命令执行结果
      */
     function __construct()

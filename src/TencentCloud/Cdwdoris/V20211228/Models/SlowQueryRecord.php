@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCatalogName(string $CatalogName) 设置Catalog  Name
  * @method integer getCpuTimeMs() 获取cpu执行时间 
  * @method void setCpuTimeMs(integer $CpuTimeMs) 设置cpu执行时间 
+ * @method string getComputeGroup() 获取计算组
+ * @method void setComputeGroup(string $ComputeGroup) 设置计算组
  */
 class SlowQueryRecord extends AbstractModel
 {
@@ -150,6 +152,11 @@ class SlowQueryRecord extends AbstractModel
     public $CpuTimeMs;
 
     /**
+     * @var string 计算组
+     */
+    public $ComputeGroup;
+
+    /**
      * @param string $OsUser 查询用户
      * @param string $InitialQueryId 查询ID
      * @param string $Sql SQL语句
@@ -168,6 +175,7 @@ class SlowQueryRecord extends AbstractModel
      * @param string $State 状态
      * @param string $CatalogName Catalog  Name
      * @param integer $CpuTimeMs cpu执行时间 
+     * @param string $ComputeGroup 计算组
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class SlowQueryRecord extends AbstractModel
 
         if (array_key_exists("CpuTimeMs",$param) and $param["CpuTimeMs"] !== null) {
             $this->CpuTimeMs = $param["CpuTimeMs"];
+        }
+
+        if (array_key_exists("ComputeGroup",$param) and $param["ComputeGroup"] !== null) {
+            $this->ComputeGroup = $param["ComputeGroup"];
         }
     }
 }

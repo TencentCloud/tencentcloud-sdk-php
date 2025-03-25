@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码平台的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码平台的SdkAppId。
- * @method integer getRoomId() 获取房间Id。
- * @method void setRoomId(integer $RoomId) 设置房间Id。
+ * @method integer getRoomId() 获取课堂Id。
+ * @method void setRoomId(integer $RoomId) 设置课堂Id。
  * @method string getUserId() 获取需要解禁踢出的成员Id。
  * @method void setUserId(string $UserId) 设置需要解禁踢出的成员Id。
  */
@@ -35,7 +35,7 @@ class UnblockKickedUserRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 房间Id。
+     * @var integer 课堂Id。
      */
     public $RoomId;
 
@@ -46,7 +46,7 @@ class UnblockKickedUserRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 低代码平台的SdkAppId。
-     * @param integer $RoomId 房间Id。
+     * @param integer $RoomId 课堂Id。
      * @param string $UserId 需要解禁踢出的成员Id。
      */
     function __construct()

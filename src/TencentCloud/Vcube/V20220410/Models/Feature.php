@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDuration() 获取可以试用的时长，单位天
  * @method void setDuration(integer $Duration) 设置可以试用的时长，单位天
  * @method string getCreatedAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Feature extends AbstractModel
 {
@@ -82,13 +78,11 @@ class Feature extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
@@ -101,9 +95,7 @@ class Feature extends AbstractModel
      * @param integer $TrialCount 可以试用的次数
      * @param integer $Duration 可以试用的时长，单位天
      * @param string $CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCpu() 获取分片Cpu核数
  * @method void setCpu(integer $Cpu) 设置分片Cpu核数
  * @method array getNodesInfo() 获取DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodesInfo(array $NodesInfo) 设置DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShardBriefInfo extends AbstractModel
 {
@@ -127,7 +125,6 @@ class ShardBriefInfo extends AbstractModel
 
     /**
      * @var array DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodesInfo;
 
@@ -147,7 +144,6 @@ class ShardBriefInfo extends AbstractModel
      * @param array $ShardSlaveZones 分片从DB可用区
      * @param integer $Cpu 分片Cpu核数
      * @param array $NodesInfo DB节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

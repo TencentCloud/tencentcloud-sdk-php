@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置任务详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSchedulerNameList() 获取调度类型筛选列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerNameList(array $SchedulerNameList) 设置调度类型筛选列表
@@ -49,7 +47,6 @@ class DescribeYarnScheduleHistoryResponse extends AbstractModel
 
     /**
      * @var integer 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -74,7 +71,6 @@ class DescribeYarnScheduleHistoryResponse extends AbstractModel
      * @param array $Tasks 任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 任务详情总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SchedulerNameList 调度类型筛选列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StateList 状态筛选列表

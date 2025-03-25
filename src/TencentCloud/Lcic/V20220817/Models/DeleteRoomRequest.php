@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoom请求参数结构体
  *
- * @method integer getRoomId() 获取房间ID。
- * @method void setRoomId(integer $RoomId) 设置房间ID。
+ * @method integer getRoomId() 获取课堂ID。
+ * @method void setRoomId(integer $RoomId) 设置课堂ID。
  */
 class DeleteRoomRequest extends AbstractModel
 {
     /**
-     * @var integer 房间ID。
+     * @var integer 课堂ID。
      */
     public $RoomId;
 
     /**
-     * @param integer $RoomId 房间ID。
+     * @param integer $RoomId 课堂ID。
      */
     function __construct()
     {

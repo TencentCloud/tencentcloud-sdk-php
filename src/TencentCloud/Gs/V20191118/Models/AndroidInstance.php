@@ -25,17 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAndroidInstanceRegion() 获取实例所在区域
  * @method void setAndroidInstanceRegion(string $AndroidInstanceRegion) 设置实例所在区域
  * @method string getAndroidInstanceZone() 获取实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceZone(string $AndroidInstanceZone) 设置实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取实例状态：INITIALIZING，NORMAL，PROCESSING
  * @method void setState(string $State) 设置实例状态：INITIALIZING，NORMAL，PROCESSING
  * @method string getAndroidInstanceType() 获取实例规格
  * @method void setAndroidInstanceType(string $AndroidInstanceType) 设置实例规格
  * @method string getAndroidInstanceImageId() 获取实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取分辨率宽度
  * @method void setWidth(integer $Width) 设置分辨率宽度
  * @method integer getHeight() 获取分辨率高度
@@ -65,7 +61,6 @@ class AndroidInstance extends AbstractModel
 
     /**
      * @var string 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceZone;
 
@@ -81,7 +76,6 @@ class AndroidInstance extends AbstractModel
 
     /**
      * @var string 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceImageId;
 
@@ -124,11 +118,9 @@ class AndroidInstance extends AbstractModel
      * @param string $AndroidInstanceId 实例 ID
      * @param string $AndroidInstanceRegion 实例所在区域
      * @param string $AndroidInstanceZone 实例可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 实例状态：INITIALIZING，NORMAL，PROCESSING
      * @param string $AndroidInstanceType 实例规格
      * @param string $AndroidInstanceImageId 实例镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 分辨率宽度
      * @param integer $Height 分辨率高度
      * @param string $HostSerialNumber 宿主机 ID

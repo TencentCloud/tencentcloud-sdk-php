@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlan(string $Plan) 设置功能类别
  * @method string getXMagicType() 获取single: 原子能力,combined:套餐
  * @method void setXMagicType(string $XMagicType) 设置single: 原子能力,combined:套餐
+ * @method string getBizType() 获取vod：点播 live：直播
+ * @method void setBizType(string $BizType) 设置vod：点播 live：直播
  */
 class XMagicTrial extends AbstractModel
 {
@@ -59,11 +61,17 @@ class XMagicTrial extends AbstractModel
     public $XMagicType;
 
     /**
+     * @var string vod：点播 live：直播
+     */
+    public $BizType;
+
+    /**
      * @param string $Name 功能名称
      * @param integer $TrialCount 可以申请的次数
      * @param integer $Duration 每次申请的时长单位：天
      * @param string $Plan 功能类别
      * @param string $XMagicType single: 原子能力,combined:套餐
+     * @param string $BizType vod：点播 live：直播
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class XMagicTrial extends AbstractModel
 
         if (array_key_exists("XMagicType",$param) and $param["XMagicType"] !== null) {
             $this->XMagicType = $param["XMagicType"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
         }
     }
 }

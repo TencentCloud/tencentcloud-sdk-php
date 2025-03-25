@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云标签
  *
  * @method string getResourceType() 获取默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagSpecification extends AbstractModel
 {
     /**
      * @var string 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var array 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $ResourceType 默认值为instance
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 云标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

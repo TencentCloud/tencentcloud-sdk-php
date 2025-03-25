@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getComputeGroupId() 获取计算组ID
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组ID
  */
 class InstanceNode extends AbstractModel
 {
@@ -115,6 +117,11 @@ class InstanceNode extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 计算组ID
+     */
+    public $ComputeGroupId;
+
+    /**
      * @param string $Ip IP地址
      * @param string $Spec 机型，如 S1
      * @param integer $Core cpu核数
@@ -128,6 +135,7 @@ class InstanceNode extends AbstractModel
      * @param string $UUID UUID
      * @param string $Zone 可用区
      * @param string $CreateTime 创建时间
+     * @param string $ComputeGroupId 计算组ID
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class InstanceNode extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
         }
     }
 }

@@ -27,15 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskStatus() 获取任务状态
  * @method void setTaskStatus(string $TaskStatus) 设置任务状态
  * @method string getTaskMessage() 获取任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskMessage(string $TaskMessage) 设置任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取任务开始时间
  * @method void setCreatedTime(string $CreatedTime) 设置任务开始时间
  * @method string getFinishedTime() 获取任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishedTime(string $FinishedTime) 设置任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
@@ -56,7 +52,6 @@ class TaskDetail extends AbstractModel
 
     /**
      * @var string 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskMessage;
 
@@ -67,7 +62,6 @@ class TaskDetail extends AbstractModel
 
     /**
      * @var string 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishedTime;
 
@@ -76,10 +70,8 @@ class TaskDetail extends AbstractModel
      * @param string $TaskUUID 任务UUID
      * @param string $TaskStatus 任务状态
      * @param string $TaskMessage 任务的状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 任务开始时间
      * @param string $FinishedTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

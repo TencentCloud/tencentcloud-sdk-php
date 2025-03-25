@@ -35,19 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLicenseType() 获取license是测试：test还是正式：formal
  * @method void setLicenseType(string $LicenseType) 设置license是测试：test还是正式：formal
  * @method boolean getRenewal() 获取测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewal(boolean $Renewal) 设置测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseId() 获取license索引
  * @method void setLicenseId(integer $LicenseId) 设置license索引
  * @method string getName() 获取license名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置license名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUpdate() 获取测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdate(boolean $Update) 设置测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldLicenseUrl() 获取兼容老的licenseUrl
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldLicenseUrl(string $OldLicenseUrl) 设置兼容老的licenseUrl
@@ -57,29 +51,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroup(integer $Group) 设置视立方url分组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpired() 获取过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpired(boolean $Expired) 设置过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRestTime() 获取返回还有多少秒过期，过期返回0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestTime(integer $RestTime) 设置返回还有多少秒过期，过期返回0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RenewResource getResource() 获取计费资源相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(RenewResource $Resource) 设置计费资源相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsVest() 获取是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVest(boolean $IsVest) 设置是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class License extends AbstractModel
 {
@@ -116,7 +102,6 @@ class License extends AbstractModel
 
     /**
      * @var boolean 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Renewal;
 
@@ -127,13 +112,11 @@ class License extends AbstractModel
 
     /**
      * @var string license名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var boolean 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Update;
 
@@ -151,7 +134,6 @@ class License extends AbstractModel
 
     /**
      * @var boolean 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expired;
 
@@ -163,13 +145,11 @@ class License extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
@@ -181,7 +161,6 @@ class License extends AbstractModel
 
     /**
      * @var boolean 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVest;
 
@@ -194,28 +173,21 @@ class License extends AbstractModel
      * @param integer $FeatureId license对应的功能Id
      * @param string $LicenseType license是测试：test还是正式：formal
      * @param boolean $Renewal 测试license 是否可以续期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseId license索引
      * @param string $Name license名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Update 测试license 是否升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldLicenseUrl 兼容老的licenseUrl
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Group 视立方url分组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Expired 过期：true ，未过期：其它
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RestTime 返回还有多少秒过期，过期返回0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewResource $Resource 计费资源相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVest 是否为马甲包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

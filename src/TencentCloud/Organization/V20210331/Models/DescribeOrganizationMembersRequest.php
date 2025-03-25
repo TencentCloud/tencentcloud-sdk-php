@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置可信服务产品简称。可信服务管理员查询时必须指定
  * @method array getTags() 获取成员标签搜索列表，最大10个
  * @method void setTags(array $Tags) 设置成员标签搜索列表，最大10个
+ * @method integer getNodeId() 获取组织单元ID
+ * @method void setNodeId(integer $NodeId) 设置组织单元ID
+ * @method string getNodeName() 获取组织单元名称
+ * @method void setNodeName(string $NodeName) 设置组织单元名称
  */
 class DescribeOrganizationMembersRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeOrganizationMembersRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 组织单元ID
+     */
+    public $NodeId;
+
+    /**
+     * @var string 组织单元名称
+     */
+    public $NodeName;
+
+    /**
      * @param integer $Offset 偏移量。取值是limit的整数倍，默认值 : 0
      * @param integer $Limit 限制数目。取值范围：1~50，默认值：10
      * @param string $Lang 国际站：en，国内站：zh
@@ -80,6 +94,8 @@ class DescribeOrganizationMembersRequest extends AbstractModel
      * @param string $AuthName 主体名称搜索。
      * @param string $Product 可信服务产品简称。可信服务管理员查询时必须指定
      * @param array $Tags 成员标签搜索列表，最大10个
+     * @param integer $NodeId 组织单元ID
+     * @param string $NodeName 组织单元名称
      */
     function __construct()
     {
@@ -125,6 +141,14 @@ class DescribeOrganizationMembersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

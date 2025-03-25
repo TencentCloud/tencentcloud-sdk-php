@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置目标组的vpcid
  * @method string getTargetGroupName() 获取目标组的名字
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的名字
- * @method integer getPort() 获取目标组的默认端口
+ * @method integer getPort() 获取目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置目标组的默认端口
+ * @method void setPort(integer $Port) 设置目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取目标组的创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置目标组的创建时间
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFullListenSwitch() 获取是否全监听目标组
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置是否全监听目标组
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -75,7 +77,7 @@ class TargetGroupInfo extends AbstractModel
     public $TargetGroupName;
 
     /**
-     * @var integer 目标组的默认端口
+     * @var integer 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
@@ -126,10 +128,15 @@ class TargetGroupInfo extends AbstractModel
     public $Weight;
 
     /**
+     * @var boolean 是否全监听目标组
+     */
+    public $FullListenSwitch;
+
+    /**
      * @param string $TargetGroupId 目标组ID
      * @param string $VpcId 目标组的vpcid
      * @param string $TargetGroupName 目标组的名字
-     * @param integer $Port 目标组的默认端口
+     * @param integer $Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 目标组的创建时间
      * @param string $UpdatedTime 目标组的修改时间
@@ -144,6 +151,7 @@ class TargetGroupInfo extends AbstractModel
      * @param array $Tag 标签。
      * @param integer $Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FullListenSwitch 是否全监听目标组
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ class TargetGroupInfo extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("FullListenSwitch",$param) and $param["FullListenSwitch"] !== null) {
+            $this->FullListenSwitch = $param["FullListenSwitch"];
         }
     }
 }

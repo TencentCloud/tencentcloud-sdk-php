@@ -29,31 +29,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppType() 获取应用类型，formal： 正式应用，test：测试应用
  * @method void setAppType(string $AppType) 设置应用类型，formal： 正式应用，test：测试应用
  * @method array getLicenses() 获取license数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenses(array $Licenses) 设置license数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseKey() 获取license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseKey(string $LicenseKey) 设置license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取安卓应用的唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置安卓应用的唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApplicationId() 获取用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(integer $ApplicationId) 设置用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseUrl() 获取视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseUrl(string $LicenseUrl) 设置视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getXMagics() 获取优图美视信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setXMagics(array $XMagics) 设置优图美视信息列表
@@ -93,12 +85,12 @@ class ApplicationInfo extends AbstractModel
 
     /**
      * @var array license数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Licenses;
 
     /**
      * @var string license 秘钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseKey;
 
@@ -110,25 +102,21 @@ class ApplicationInfo extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
      * @var integer 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseUrl;
 
@@ -167,18 +155,14 @@ class ApplicationInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppType 应用类型，formal： 正式应用，test：测试应用
      * @param array $Licenses license数组
-     * @param string $LicenseKey license 秘钥
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LicenseKey license 秘钥
      * @param string $PackageName 安卓应用的唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApplicationId 用户应用Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseUrl 视立方下载license的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $XMagics 优图美视信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MacBundleId Mac  进程名

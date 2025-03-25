@@ -20,29 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MQTT客户端信息
  *
- * @method string getClientId() 获取客户端唯一标识
- * @method void setClientId(string $ClientId) 设置客户端唯一标识
+ * @method string getClientId() 获取客户端ID
+ * @method void setClientId(string $ClientId) 设置客户端ID
  * @method string getClientAddress() 获取客户端网络地址
  * @method void setClientAddress(string $ClientAddress) 设置客户端网络地址
- * @method integer getProtocolVersion() 获取MQTT 协议版本，4 表示 MQTT 3.1.1
- * @method void setProtocolVersion(integer $ProtocolVersion) 设置MQTT 协议版本，4 表示 MQTT 3.1.1
+ * @method integer getProtocolVersion() 获取MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
+ * @method void setProtocolVersion(integer $ProtocolVersion) 设置MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
  * @method integer getKeepalive() 获取保持连接时间，单位：秒
  * @method void setKeepalive(integer $Keepalive) 设置保持连接时间，单位：秒
  * @method string getConnectionStatus() 获取连接状态，CONNECTED 已连接，DISCONNECTED 未连接
  * @method void setConnectionStatus(string $ConnectionStatus) 设置连接状态，CONNECTED 已连接，DISCONNECTED 未连接
- * @method integer getCreateTime() 获取客户端创建时间
- * @method void setCreateTime(integer $CreateTime) 设置客户端创建时间
- * @method integer getConnectTime() 获取上次建立连接时间
- * @method void setConnectTime(integer $ConnectTime) 设置上次建立连接时间
- * @method integer getDisconnectTime() 获取上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
- * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+ * @method integer getCreateTime() 获取客户端创建时间，毫秒级时间戳 。
+ * @method void setCreateTime(integer $CreateTime) 设置客户端创建时间，毫秒级时间戳 。
+ * @method integer getConnectTime() 获取上次建立连接时间，毫秒级时间戳 。
+ * @method void setConnectTime(integer $ConnectTime) 设置上次建立连接时间，毫秒级时间戳 。
+ * @method integer getDisconnectTime() 获取上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
+ * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
  * @method array getMQTTClientSubscriptions() 获取客户端的订阅列表
  * @method void setMQTTClientSubscriptions(array $MQTTClientSubscriptions) 设置客户端的订阅列表
  */
 class MQTTClientInfo extends AbstractModel
 {
     /**
-     * @var string 客户端唯一标识
+     * @var string 客户端ID
      */
     public $ClientId;
 
@@ -52,7 +58,10 @@ class MQTTClientInfo extends AbstractModel
     public $ClientAddress;
 
     /**
-     * @var integer MQTT 协议版本，4 表示 MQTT 3.1.1
+     * @var integer MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
      */
     public $ProtocolVersion;
 
@@ -67,17 +76,17 @@ class MQTTClientInfo extends AbstractModel
     public $ConnectionStatus;
 
     /**
-     * @var integer 客户端创建时间
+     * @var integer 客户端创建时间，毫秒级时间戳 。
      */
     public $CreateTime;
 
     /**
-     * @var integer 上次建立连接时间
+     * @var integer 上次建立连接时间，毫秒级时间戳 。
      */
     public $ConnectTime;
 
     /**
-     * @var integer 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+     * @var integer 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
      */
     public $DisconnectTime;
 
@@ -87,14 +96,17 @@ class MQTTClientInfo extends AbstractModel
     public $MQTTClientSubscriptions;
 
     /**
-     * @param string $ClientId 客户端唯一标识
+     * @param string $ClientId 客户端ID
      * @param string $ClientAddress 客户端网络地址
-     * @param integer $ProtocolVersion MQTT 协议版本，4 表示 MQTT 3.1.1
+     * @param integer $ProtocolVersion MQTT 协议版本
+3：表示MQTT 3.1版本
+4：表示 MQTT 3.1.1
+5:   标识MQTT 5.0协议
      * @param integer $Keepalive 保持连接时间，单位：秒
      * @param string $ConnectionStatus 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
-     * @param integer $CreateTime 客户端创建时间
-     * @param integer $ConnectTime 上次建立连接时间
-     * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
+     * @param integer $CreateTime 客户端创建时间，毫秒级时间戳 。
+     * @param integer $ConnectTime 上次建立连接时间，毫秒级时间戳 。
+     * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
      * @param array $MQTTClientSubscriptions 客户端的订阅列表
      */
     function __construct()

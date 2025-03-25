@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) 设置多可用区
  * @method string getSpecName() 获取机型名称
  * @method void setSpecName(string $SpecName) 设置机型名称
+ * @method boolean getIsSSC() 获取是否存算分离
+ * @method void setIsSSC(boolean $IsSSC) 设置是否存算分离
  */
 class DescribeSpecRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSpecRequest extends AbstractModel
     public $SpecName;
 
     /**
+     * @var boolean 是否存算分离
+     */
+    public $IsSSC;
+
+    /**
      * @param string $Zone 地域信息，例如"ap-guangzhou-1"
      * @param string $PayMode 计费类型，PREPAID 包年包月，POSTPAID_BY_HOUR 按量计费
      * @param array $Zones 多可用区
      * @param string $SpecName 机型名称
+     * @param boolean $IsSSC 是否存算分离
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSpecRequest extends AbstractModel
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("IsSSC",$param) and $param["IsSSC"] !== null) {
+            $this->IsSSC = $param["IsSSC"];
         }
     }
 }

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuthenticator请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method string getType() 获取认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
  * @method void setType(string $Type) 设置认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
  */
 class DeleteAuthenticatorRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
@@ -42,16 +42,16 @@ class DeleteAuthenticatorRequest extends AbstractModel
      * @var string 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
      */
     public $Type;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Type 认证器类型:
 JWT：JWT认证器
 JWKS：JWKS认证器
-BYOC：一端一证认证器
+HTTP：HTTP认证器
      */
     function __construct()
     {

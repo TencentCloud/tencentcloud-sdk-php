@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFeatureId() 获取功能ID
  * @method void setFeatureId(integer $FeatureId) 设置功能ID
  * @method string getName() 获取功能名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置功能名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取功能类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置功能类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTrial() 获取是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrial(boolean $Trial) 设置是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrialCount() 获取可以试用的次数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrialCount(integer $TrialCount) 设置可以试用的次数
@@ -45,21 +39,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(integer $Duration) 设置可以试用的时长，单位天
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBizType() 获取功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizType(string $BizType) 设置功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlatform() 获取平台类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlatform(string $Platform) 设置平台类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoFeature extends AbstractModel
 {
@@ -75,19 +61,16 @@ class VideoFeature extends AbstractModel
 
     /**
      * @var string 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var boolean 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trial;
 
@@ -105,25 +88,21 @@ class VideoFeature extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
      * @var string 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
     /**
      * @var string 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Platform;
 
@@ -131,23 +110,16 @@ class VideoFeature extends AbstractModel
      * @param integer $Id 索引
      * @param integer $FeatureId 功能ID
      * @param string $Name 功能名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 功能类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Trial 是否可以申请试用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrialCount 可以试用的次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 可以试用的时长，单位天
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BizType 功能所属业务方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Platform 平台类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

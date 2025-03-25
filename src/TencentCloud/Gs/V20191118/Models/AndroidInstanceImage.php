@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 安卓实例镜像信息
  *
  * @method string getAndroidInstanceImageId() 获取镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAndroidInstanceImageName() 获取镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceImageName(string $AndroidInstanceImageName) 设置镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAndroidInstanceImageState() 获取镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceImageState(string $AndroidInstanceImageState) 设置镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAndroidInstanceImageZone() 获取镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceImageZone(string $AndroidInstanceImageZone) 设置镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AndroidInstanceImage extends AbstractModel
 {
     /**
      * @var string 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceImageId;
 
     /**
      * @var string 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceImageName;
 
     /**
      * @var string 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceImageState;
 
     /**
      * @var string 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceImageZone;
 
     /**
      * @param string $AndroidInstanceImageId 镜像 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AndroidInstanceImageState 镜像状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AndroidInstanceImageZone 镜像可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

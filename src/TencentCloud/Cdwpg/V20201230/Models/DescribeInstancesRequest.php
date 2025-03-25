@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method string getSearchInstanceId() 获取搜索的集群id名称
- * @method void setSearchInstanceId(string $SearchInstanceId) 设置搜索的集群id名称
- * @method string getSearchInstanceName() 获取搜索的集群name
- * @method void setSearchInstanceName(string $SearchInstanceName) 设置搜索的集群name
+ * @method string getSearchInstanceId() 获取用集群id搜索
+ * @method void setSearchInstanceId(string $SearchInstanceId) 设置用集群id搜索
+ * @method string getSearchInstanceName() 获取用集群名字搜索
+ * @method void setSearchInstanceName(string $SearchInstanceName) 设置用集群名字搜索
  * @method integer getOffset() 获取分页参数，第一页为0，第二页为10
  * @method void setOffset(integer $Offset) 设置分页参数，第一页为0，第二页为10
  * @method integer getLimit() 获取分页参数，分页步长，默认为10
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 搜索的集群id名称
+     * @var string 用集群id搜索
      */
     public $SearchInstanceId;
 
     /**
-     * @var string 搜索的集群name
+     * @var string 用集群名字搜索
      */
     public $SearchInstanceName;
 
@@ -59,8 +59,8 @@ class DescribeInstancesRequest extends AbstractModel
     public $SearchTags;
 
     /**
-     * @param string $SearchInstanceId 搜索的集群id名称
-     * @param string $SearchInstanceName 搜索的集群name
+     * @param string $SearchInstanceId 用集群id搜索
+     * @param string $SearchInstanceName 用集群名字搜索
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
      * @param array $SearchTags 搜索标签列表

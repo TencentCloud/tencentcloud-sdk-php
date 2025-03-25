@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiType(string $ApiType) 设置api接口类型
  * @method integer getUserPrivilege() 获取用户权限类型 0:普通用户 1:管理员
  * @method void setUserPrivilege(integer $UserPrivilege) 设置用户权限类型 0:普通用户 1:管理员
+ * @method array getComputeGroups() 获取计算组列表
+ * @method void setComputeGroups(array $ComputeGroups) 设置计算组列表
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  */
 class ActionAlterUserRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ActionAlterUserRequest extends AbstractModel
     public $UserPrivilege;
 
     /**
+     * @var array 计算组列表
+     */
+    public $ComputeGroups;
+
+    /**
+     * @var string 集群ID
+     */
+    public $InstanceId;
+
+    /**
      * @param UserInfo $UserInfo 用户信息
      * @param string $ApiType api接口类型
      * @param integer $UserPrivilege 用户权限类型 0:普通用户 1:管理员
+     * @param array $ComputeGroups 计算组列表
+     * @param string $InstanceId 集群ID
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class ActionAlterUserRequest extends AbstractModel
 
         if (array_key_exists("UserPrivilege",$param) and $param["UserPrivilege"] !== null) {
             $this->UserPrivilege = $param["UserPrivilege"];
+        }
+
+        if (array_key_exists("ComputeGroups",$param) and $param["ComputeGroups"] !== null) {
+            $this->ComputeGroups = $param["ComputeGroups"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

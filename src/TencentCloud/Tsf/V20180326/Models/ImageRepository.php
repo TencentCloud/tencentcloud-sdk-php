@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateMode(string $CreateMode) 设置创建方式：manual | automatic
  * @method string getRepoName() 获取仓库名，等同reponame字段
  * @method void setRepoName(string $RepoName) 设置仓库名，等同reponame字段
+ * @method string getRepoType() 获取仓库类型
+ * @method void setRepoType(string $RepoType) 设置仓库类型
  */
 class ImageRepository extends AbstractModel
 {
@@ -157,6 +159,11 @@ class ImageRepository extends AbstractModel
     public $RepoName;
 
     /**
+     * @var string 仓库类型
+     */
+    public $RepoType;
+
+    /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
      * @param string $Repotype 仓库类型
      * @param integer $TagCount 镜像版本数
@@ -176,6 +183,7 @@ class ImageRepository extends AbstractModel
      * @param integer $Public 是否公共,1:公有,0:私有
      * @param string $CreateMode 创建方式：manual | automatic
      * @param string $RepoName 仓库名，等同reponame字段
+     * @param string $RepoType 仓库类型
      */
     function __construct()
     {
@@ -266,6 +274,10 @@ class ImageRepository extends AbstractModel
 
         if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
             $this->RepoName = $param["RepoName"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

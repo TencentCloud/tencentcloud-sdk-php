@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 安卓实例应用信息
  *
  * @method string getAndroidAppId() 获取应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidAppId(string $AndroidAppId) 设置应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAndroidAppVersion() 获取应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidAppVersion(string $AndroidAppVersion) 设置应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取应用包名
  * @method void setPackageName(string $PackageName) 设置应用包名
  * @method string getPackageVersion() 获取应用包版本
@@ -43,19 +37,16 @@ class AndroidInstanceAppInfo extends AbstractModel
 {
     /**
      * @var string 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidAppId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidAppVersion;
 
@@ -76,11 +67,8 @@ class AndroidInstanceAppInfo extends AbstractModel
 
     /**
      * @param string $AndroidAppId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AndroidAppVersion 应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 应用包名
      * @param string $PackageVersion 应用包版本
      * @param string $PackageLabel 应用包标签

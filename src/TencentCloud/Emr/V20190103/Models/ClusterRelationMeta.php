@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 集群间绑定使用信息
  *
  * @method string getClusterType() 获取集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterType(string $ClusterType) 设置集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterIdList() 获取集群id列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIdList(array $ClusterIdList) 设置集群id列表
@@ -33,7 +31,6 @@ class ClusterRelationMeta extends AbstractModel
 {
     /**
      * @var string 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
@@ -45,7 +42,6 @@ class ClusterRelationMeta extends AbstractModel
 
     /**
      * @param string $ClusterType 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterIdList 集群id列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

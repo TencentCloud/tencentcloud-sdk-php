@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 命名空间漏洞白名单列表
  *
  * @method string getCVEID() 获取漏洞白名单 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVEID(string $CVEID) 设置漏洞白名单 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CVEWhitelistItem extends AbstractModel
 {
     /**
      * @var string 漏洞白名单 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVEID;
 
     /**
      * @param string $CVEID 漏洞白名单 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

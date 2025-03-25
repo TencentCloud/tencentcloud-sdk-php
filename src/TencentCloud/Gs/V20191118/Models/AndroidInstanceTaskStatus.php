@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAndroidInstanceId() 获取实例ID
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置实例ID
  * @method string getTaskResult() 获取任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskResult(string $TaskResult) 设置任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AndroidInstanceTaskStatus extends AbstractModel
 {
@@ -50,7 +48,6 @@ class AndroidInstanceTaskStatus extends AbstractModel
 
     /**
      * @var string 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskResult;
 
@@ -59,7 +56,6 @@ class AndroidInstanceTaskStatus extends AbstractModel
      * @param string $Status 任务状态：SUCCESS，FAILED，PROCESSING，PENDING,CANCELED
      * @param string $AndroidInstanceId 实例ID
      * @param string $TaskResult 任务执行结果描述，针对某些任务，可以是可解析的 json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

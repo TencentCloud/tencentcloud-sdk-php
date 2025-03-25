@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(integer $JobId) 设置操作对应的jobid
  * @method string getOperationDetail() 获取操作明细
  * @method void setOperationDetail(string $OperationDetail) 设置操作明细
+ * @method string getComputerGroupId() 获取计算组id
+ * @method void setComputerGroupId(string $ComputerGroupId) 设置计算组id
  */
 class InstanceOperation extends AbstractModel
 {
@@ -101,6 +103,11 @@ class InstanceOperation extends AbstractModel
     public $OperationDetail;
 
     /**
+     * @var string 计算组id
+     */
+    public $ComputerGroupId;
+
+    /**
      * @param string $Name 操作名称，例如“create_instance"、“scaleout_instance”等
      * @param string $Result 操作结果，“Success"表示成功，”Fail"表示失败
      * @param string $Desc 操作名称描述，例如“创建”，“修改集群名称”等
@@ -112,6 +119,7 @@ class InstanceOperation extends AbstractModel
      * @param string $OperateUin 操作用户ID
      * @param integer $JobId 操作对应的jobid
      * @param string $OperationDetail 操作明细
+     * @param string $ComputerGroupId 计算组id
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class InstanceOperation extends AbstractModel
 
         if (array_key_exists("OperationDetail",$param) and $param["OperationDetail"] !== null) {
             $this->OperationDetail = $param["OperationDetail"];
+        }
+
+        if (array_key_exists("ComputerGroupId",$param) and $param["ComputerGroupId"] !== null) {
+            $this->ComputerGroupId = $param["ComputerGroupId"];
         }
     }
 }

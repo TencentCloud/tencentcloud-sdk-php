@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 源集群主题配置
  *
  * @method string getTopicName() 获取主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicType() 获取主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -38,7 +36,6 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicType(string $TopicType) 设置主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -53,53 +50,35 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQueueNum() 获取队列数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueNum(integer $QueueNum) 设置队列数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getImported() 获取是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImported(boolean $Imported) 设置是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImportStatus() 获取导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImportStatus(string $ImportStatus) 设置导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceV4() 获取4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicNameV4() 获取4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNameV4(string $TopicNameV4) 设置4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFullNamespaceV4() 获取4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceClusterTopicConfig extends AbstractModel
 {
     /**
      * @var string 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
@@ -118,31 +97,26 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicType;
 
     /**
      * @var integer 队列数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueNum;
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var boolean 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Imported;
 
     /**
      * @var string 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
@@ -152,31 +126,26 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImportStatus;
 
     /**
      * @var string 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceV4;
 
     /**
      * @var string 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNameV4;
 
     /**
      * @var string 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullNamespaceV4;
 
     /**
      * @param string $TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicType 主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -191,27 +160,18 @@ PartitionedOrder 分区顺序消息
 Transaction 事务消息
 DelayScheduled 延时消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QueueNum 队列数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Imported 是否已导入，作为入参时无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间，仅4.x集群有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImportStatus 导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceV4 4.x的命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicNameV4 4.x的主题名，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FullNamespaceV4 4.x的完整命名空间，出参使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

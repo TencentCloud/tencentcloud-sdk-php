@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 自动续期资源info
  *
  * @method string getResourceId() 获取资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolatedTimestamp() 获取资源冻结时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedTimestamp(string $IsolatedTimestamp) 设置资源冻结时间
@@ -37,25 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRefund(boolean $Refund) 设置资源销毁状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductCode(string $SubProductCode) 设置子产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RenewResource extends AbstractModel
 {
     /**
      * @var string 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var integer 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
@@ -73,29 +63,23 @@ class RenewResource extends AbstractModel
 
     /**
      * @var string 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCode;
 
     /**
      * @var string 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param string $ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续期标记，0：默认，1：自动续期，2：不续期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedTimestamp 资源冻结时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Refund 资源销毁状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 资源到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

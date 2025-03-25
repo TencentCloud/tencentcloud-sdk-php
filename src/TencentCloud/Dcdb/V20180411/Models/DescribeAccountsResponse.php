@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例ID，透传入参。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，透传入参。
  * @method array getUsers() 获取实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(array $Users) 设置实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeAccountsResponse extends AbstractModel
 
     /**
      * @var array 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Users;
 
@@ -50,7 +47,6 @@ class DescribeAccountsResponse extends AbstractModel
     /**
      * @param string $InstanceId 实例ID，透传入参。
      * @param array $Users 实例用户列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTestXMagic请求参数结构体
  *
- * @method integer getApplicationId() 获取应用id
- * @method void setApplicationId(integer $ApplicationId) 设置应用id
+ * @method integer getApplicationId() 获取将腾讯特效创建到哪个应用下
+ * @method void setApplicationId(integer $ApplicationId) 设置将腾讯特效创建到哪个应用下
  * @method string getCompanyPermit() 获取营业执照
  * @method void setCompanyPermit(string $CompanyPermit) 设置营业执照
  * @method string getCompanyType() 获取公司类型
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTestXMagicRequest extends AbstractModel
 {
     /**
-     * @var integer 应用id
+     * @var integer 将腾讯特效创建到哪个应用下
      */
     public $ApplicationId;
 
@@ -59,7 +59,7 @@ class CreateTestXMagicRequest extends AbstractModel
     public $PlanList;
 
     /**
-     * @param integer $ApplicationId 应用id
+     * @param integer $ApplicationId 将腾讯特效创建到哪个应用下
      * @param string $CompanyPermit 营业执照
      * @param string $CompanyType 公司类型
      * @param string $CompanyName 公司名称

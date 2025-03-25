@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method RemoveWaterMarkTaskInput getInput() 获取智能去除水印任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(RemoveWaterMarkTaskInput $Input) 设置智能去除水印任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RemoveWaterMarkTaskOutput getOutput() 获取智能去除水印任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(RemoveWaterMarkTaskOutput $Output) 设置智能去除水印任务的输出。
@@ -87,7 +85,6 @@ class RemoveWatermarkTask extends AbstractModel
 
     /**
      * @var RemoveWaterMarkTaskInput 智能去除水印任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
@@ -119,7 +116,6 @@ class RemoveWatermarkTask extends AbstractModel
 <li>70000：内部服务错误，建议重试。</li>
      * @param string $Message 错误信息。
      * @param RemoveWaterMarkTaskInput $Input 智能去除水印任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveWaterMarkTaskOutput $Output 智能去除水印任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。

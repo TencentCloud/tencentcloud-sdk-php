@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数，分页步长，默认为10
  * @method array getSearchTags() 获取搜索标签列表，没匹配到则不过滤集群列表
  * @method void setSearchTags(array $SearchTags) 设置搜索标签列表，没匹配到则不过滤集群列表
+ * @method integer getInstanceType() 获取0 : 存算一体,1：存算分离,2:ALL
+ * @method void setInstanceType(integer $InstanceType) 设置0 : 存算一体,1：存算分离,2:ALL
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeInstancesRequest extends AbstractModel
     public $SearchTags;
 
     /**
+     * @var integer 0 : 存算一体,1：存算分离,2:ALL
+     */
+    public $InstanceType;
+
+    /**
      * @param string $SearchInstanceId 搜索的集群id名称
      * @param string $SearchInstanceName 搜索的集群name
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
      * @param array $SearchTags 搜索标签列表，没匹配到则不过滤集群列表
+     * @param integer $InstanceType 0 : 存算一体,1：存算分离,2:ALL
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SearchTags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

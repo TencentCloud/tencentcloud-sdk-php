@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getComputeGroupId() 获取计算组ID
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组ID
  */
 class DescribeInstanceOperationsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeInstanceOperationsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 计算组ID
+     */
+    public $ComputeGroupId;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param integer $Offset 分页参数，偏移量，从0开始
      * @param integer $Limit 分页参数，每页数目，默认为10
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
+     * @param string $ComputeGroupId 计算组ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeInstanceOperationsRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypt(integer $Encrypt) 设置Encryptid
  * @method boolean getMain() 获取是否为主力园区
  * @method void setMain(boolean $Main) 设置是否为主力园区
+ * @method integer getContainerEnabled() 获取0表示未开通容器化，1表示已开通容器化
+ * @method void setContainerEnabled(integer $ContainerEnabled) 设置0表示未开通容器化，1表示已开通容器化
  */
 class ZoneInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ZoneInfo extends AbstractModel
     public $Main;
 
     /**
+     * @var integer 0表示未开通容器化，1表示已开通容器化
+     */
+    public $ContainerEnabled;
+
+    /**
      * @param string $Name 可用区名称，例如"ap-guangzhou-1"
      * @param string $Desc 可用区描述信息，例如“广州一区”
      * @param integer $ZoneId 可用区唯一标记
      * @param integer $Encrypt Encryptid
      * @param boolean $Main 是否为主力园区
+     * @param integer $ContainerEnabled 0表示未开通容器化，1表示已开通容器化
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("Main",$param) and $param["Main"] !== null) {
             $this->Main = $param["Main"];
+        }
+
+        if (array_key_exists("ContainerEnabled",$param) and $param["ContainerEnabled"] !== null) {
+            $this->ContainerEnabled = $param["ContainerEnabled"];
         }
     }
 }

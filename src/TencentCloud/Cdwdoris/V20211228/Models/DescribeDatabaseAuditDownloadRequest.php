@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCatalogs(array $Catalogs) 设置catalog名称 （多选）
  * @method array getIsQuery() 获取是否是查询	
  * @method void setIsQuery(array $IsQuery) 设置是否是查询	
+ * @method array getComputeGroups() 获取计算组列表
+ * @method void setComputeGroups(array $ComputeGroups) 设置计算组列表
  */
 class DescribeDatabaseAuditDownloadRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class DescribeDatabaseAuditDownloadRequest extends AbstractModel
     public $IsQuery;
 
     /**
+     * @var array 计算组列表
+     */
+    public $ComputeGroups;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
@@ -144,6 +151,7 @@ class DescribeDatabaseAuditDownloadRequest extends AbstractModel
      * @param array $SqlTypes sql类型 多选
      * @param array $Catalogs catalog名称 （多选）
      * @param array $IsQuery 是否是查询	
+     * @param array $ComputeGroups 计算组列表
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DescribeDatabaseAuditDownloadRequest extends AbstractModel
 
         if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
             $this->IsQuery = $param["IsQuery"];
+        }
+
+        if (array_key_exists("ComputeGroups",$param) and $param["ComputeGroups"] !== null) {
+            $this->ComputeGroups = $param["ComputeGroups"];
         }
     }
 }

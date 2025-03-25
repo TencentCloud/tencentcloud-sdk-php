@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoom返回参数结构体
  *
- * @method string getName() 获取房间名称。
- * @method void setName(string $Name) 设置房间名称。
- * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳（秒）。
- * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳（秒）。
- * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳（秒）。
- * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳（秒）。
+ * @method string getName() 获取课堂名称。
+ * @method void setName(string $Name) 设置课堂名称。
+ * @method integer getStartTime() 获取预定的课堂开始时间，unix时间戳（秒）。
+ * @method void setStartTime(integer $StartTime) 设置预定的课堂开始时间，unix时间戳（秒）。
+ * @method integer getEndTime() 获取预定的课堂结束时间，unix时间戳（秒）。
+ * @method void setEndTime(integer $EndTime) 设置预定的课堂结束时间，unix时间戳（秒）。
  * @method string getTeacherId() 获取老师的UserId。
  * @method void setTeacherId(string $TeacherId) 设置老师的UserId。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 1 标清
 2 高清
 3 全高清
- * @method integer getMaxMicNumber() 获取设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+ * @method integer getMaxMicNumber() 获取设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
  * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
@@ -54,12 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioQuality(integer $AudioQuality) 设置高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
- * @method string getSubType() 获取房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
- * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+ * @method string getSubType() 获取课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
+ * @method void setSubType(string $SubType) 设置课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
  * @method integer getDisableRecord() 获取上课后是否禁止自动录制。可以有以下取值：
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
@@ -74,8 +70,8 @@ video 纯视频
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
  * @method integer getStatus() 获取课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
  * @method void setStatus(integer $Status) 设置课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
- * @method string getGroupId() 获取房间绑定的群组ID
- * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
+ * @method string getGroupId() 获取课堂绑定的群组ID
+ * @method void setGroupId(string $GroupId) 设置课堂绑定的群组ID
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
  * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
  * @method integer getInteractionMode() 获取开启专注模式。
@@ -86,12 +82,10 @@ video 纯视频
 1 只看老师和助教
  * @method integer getVideoOrientation() 获取横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
  * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
- * @method integer getIsGradingRequiredPostClass() 获取该房间是否开启了课后评分功能。0：未开启  1：开启
- * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置该房间是否开启了课后评分功能。0：未开启  1：开启
- * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-注：大班课的布局(layout)只有三分屏
- * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-注：大班课的布局(layout)只有三分屏
+ * @method integer getIsGradingRequiredPostClass() 获取该课堂是否开启了课后评分功能。0：未开启  1：开启
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置该课堂是否开启了课后评分功能。0：未开启  1：开启
+ * @method integer getRoomType() 获取课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
+ * @method void setRoomType(integer $RoomType) 设置课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
  * @method integer getVideoDuration() 获取录制时长
  * @method void setVideoDuration(integer $VideoDuration) 设置录制时长
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
@@ -122,17 +116,17 @@ video 纯视频
 class DescribeRoomResponse extends AbstractModel
 {
     /**
-     * @var string 房间名称。
+     * @var string 课堂名称。
      */
     public $Name;
 
     /**
-     * @var integer 预定的房间开始时间，unix时间戳（秒）。
+     * @var integer 预定的课堂开始时间，unix时间戳（秒）。
      */
     public $StartTime;
 
     /**
-     * @var integer 预定的房间结束时间，unix时间戳（秒）。
+     * @var integer 预定的课堂结束时间，unix时间戳（秒）。
      */
     public $EndTime;
 
@@ -160,7 +154,7 @@ class DescribeRoomResponse extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * @var integer 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public $MaxMicNumber;
 
@@ -179,9 +173,7 @@ class DescribeRoomResponse extends AbstractModel
     public $AudioQuality;
 
     /**
-     * @var string 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+     * @var string 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
      */
     public $SubType;
 
@@ -209,7 +201,7 @@ video 纯视频
     public $Status;
 
     /**
-     * @var string 房间绑定的群组ID
+     * @var string 课堂绑定的群组ID
      */
     public $GroupId;
 
@@ -231,13 +223,12 @@ video 纯视频
     public $VideoOrientation;
 
     /**
-     * @var integer 该房间是否开启了课后评分功能。0：未开启  1：开启
+     * @var integer 该课堂是否开启了课后评分功能。0：未开启  1：开启
      */
     public $IsGradingRequiredPostClass;
 
     /**
-     * @var integer 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-注：大班课的布局(layout)只有三分屏
+     * @var integer 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
      */
     public $RoomType;
 
@@ -307,9 +298,9 @@ video 纯视频
     public $RequestId;
 
     /**
-     * @param string $Name 房间名称。
-     * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
-     * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
+     * @param string $Name 课堂名称。
+     * @param integer $StartTime 预定的课堂开始时间，unix时间戳（秒）。
+     * @param integer $EndTime 预定的课堂结束时间，unix时间戳（秒）。
      * @param string $TeacherId 老师的UserId。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $AudienceType 观看类型。互动观看 （默认）	
@@ -317,16 +308,14 @@ video 纯视频
 1 标清
 2 高清
 3 全高清
-     * @param integer $MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * @param integer $MaxMicNumber 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      * @param integer $AudioQuality 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
-     * @param string $SubType 房间子类型，可以有以下取值：
-videodoc 文档+视频
-video 纯视频
+     * @param string $SubType 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
      * @param integer $DisableRecord 上课后是否禁止自动录制。可以有以下取值：
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
@@ -334,15 +323,14 @@ video 纯视频
      * @param array $Assistants 助教UserId列表。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
      * @param integer $Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
-     * @param string $GroupId 房间绑定的群组ID
+     * @param string $GroupId 课堂绑定的群组ID
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
      * @param integer $InteractionMode 开启专注模式。
 0 收看全部角色音视频(默认)
 1 只看老师和助教
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-     * @param integer $IsGradingRequiredPostClass 该房间是否开启了课后评分功能。0：未开启  1：开启
-     * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-注：大班课的布局(layout)只有三分屏
+     * @param integer $IsGradingRequiredPostClass 该课堂是否开启了课后评分功能。0：未开启  1：开启
+     * @param integer $RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
      * @param integer $VideoDuration 录制时长
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播

@@ -20,10 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceCertificates请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method array getFilters() 获取过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
- * @method void setFilters(array $Filters) 设置过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+ * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method array getFilters() 获取支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
+ * @method void setFilters(array $Filters) 设置支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
  * @method integer getLimit() 获取分页limit
  * @method void setLimit(integer $Limit) 设置分页limit
  * @method integer getOffset() 获取分页偏移量
@@ -40,12 +58,21 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDeviceCertificatesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var array 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+     * @var array 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
      */
     public $Filters;
 
@@ -68,8 +95,17 @@ class DescribeDeviceCertificatesRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param array $Filters 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param array $Filters 支持搜索参数
+ClientId：客户端id
+CaSn：所属的CA证书SN
+DeviceCertificateSn：设备证书SN
+DeviceCertificateCn：设备证书CN
+OrganizationalUnit：证书OU
+NotAfterEnd：过期时间小于等于指定时间的证书
+NotAfterStart：过期时间大于等于指定时间的证书
+Status：证书状态
+
      * @param integer $Limit 分页limit
      * @param integer $Offset 分页偏移量
      * @param string $OrderBy CREATE_TIME_DESC, 创建时间降序

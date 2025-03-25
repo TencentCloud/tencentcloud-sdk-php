@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 磁盘规格
  *
- * @method integer getDiskCount() 获取1
+ * @method integer getDiskCount() 获取磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskCount(integer $DiskCount) 设置1
+ * @method void setDiskCount(integer $DiskCount) 设置磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxDiskSize() 获取1
+ * @method integer getMaxDiskSize() 获取磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置1
+ * @method void setMaxDiskSize(integer $MaxDiskSize) 设置磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMinDiskSize() 获取1
+ * @method integer getMinDiskSize() 获取磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMinDiskSize(integer $MinDiskSize) 设置1
+ * @method void setMinDiskSize(integer $MinDiskSize) 设置磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskType() 获取1
+ * @method string getDiskType() 获取磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置1
+ * @method void setDiskType(string $DiskType) 设置磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskDesc() 获取1
+ * @method string getDiskDesc() 获取磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskDesc(string $DiskDesc) 设置1
+ * @method void setDiskDesc(string $DiskDesc) 设置磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCvmClass() 获取1
+ * @method string getCvmClass() 获取机型类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCvmClass(string $CvmClass) 设置1
+ * @method void setCvmClass(string $CvmClass) 设置机型类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiskSpecPlus extends AbstractModel
 {
     /**
-     * @var integer 1
+     * @var integer 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCount;
 
     /**
-     * @var integer 1
+     * @var integer 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer 1
+     * @var integer 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinDiskSize;
 
     /**
-     * @var string 1
+     * @var string 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
-     * @var string 1
+     * @var string 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskDesc;
 
     /**
-     * @var string 1
+     * @var string 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvmClass;
 
     /**
-     * @param integer $DiskCount 1
+     * @param integer $DiskCount 磁盘个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxDiskSize 1
+     * @param integer $MaxDiskSize 磁盘最大值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MinDiskSize 1
+     * @param integer $MinDiskSize 磁盘最小值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskType 1
+     * @param string $DiskType 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskDesc 1
+     * @param string $DiskDesc 磁盘类型详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CvmClass 1
+     * @param string $CvmClass 机型类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

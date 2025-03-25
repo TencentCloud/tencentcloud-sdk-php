@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于返回XML格式的配置文件和内容以及其他配置文件有关的信息
  *
+ * @method string getComputeGroupId() 获取计算组id
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组id
  * @method string getFileName() 获取配置文件名称
  * @method void setFileName(string $FileName) 设置配置文件名称
  * @method string getFileConf() 获取配置文件对应的相关属性信息
@@ -41,6 +43,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ClusterConfigsInfoFromEMR extends AbstractModel
 {
+    /**
+     * @var string 计算组id
+     */
+    public $ComputeGroupId;
+
     /**
      * @var string 配置文件名称
      */
@@ -84,6 +91,7 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
     public $FileKeyValuesNew;
 
     /**
+     * @param string $ComputeGroupId 计算组id
      * @param string $FileName 配置文件名称
      * @param string $FileConf 配置文件对应的相关属性信息
      * @param string $KeyConf 配置文件对应的其他属性信息
@@ -107,6 +115,10 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
+        }
+
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
         }

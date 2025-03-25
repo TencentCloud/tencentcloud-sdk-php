@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getUsername() 获取用户名
- * @method void setUsername(string $Username) 设置用户名
+ * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getUsername() 获取用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
+ * @method void setUsername(string $Username) 设置用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
  * @method string getPassword() 获取密码，该字段为空时候则后端会默认生成
  * @method void setPassword(string $Password) 设置密码，该字段为空时候则后端会默认生成
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getRemark() 获取备注，长度不超过128个字符。
+ * @method void setRemark(string $Remark) 设置备注，长度不超过128个字符。
  */
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名
+     * @var string 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      */
     public $Username;
 
@@ -47,15 +47,15 @@ class CreateUserRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var string 备注
+     * @var string 备注，长度不超过128个字符。
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Username 用户名
+     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Username 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      * @param string $Password 密码，该字段为空时候则后端会默认生成
-     * @param string $Remark 备注
+     * @param string $Remark 备注，长度不超过128个字符。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 安卓实例任务信息
  *
  * @method string getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAndroidInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AndroidInstanceTask extends AbstractModel
 {
     /**
      * @var string 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidInstanceId;
 
     /**
      * @param string $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AndroidInstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

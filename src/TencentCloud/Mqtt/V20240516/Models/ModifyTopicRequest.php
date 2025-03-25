@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题
- * @method void setTopic(string $Topic) 设置主题
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getTopic() 获取主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+ * @method void setTopic(string $Topic) 设置主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+ * @method string getRemark() 获取备注信息，最长 128 字符
+ * @method void setRemark(string $Remark) 设置备注信息，最长 128 字符
  */
 class ModifyTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题
+     * @var string 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
      */
     public $Topic;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息，最长 128 字符
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题
-     * @param string $Remark 备注信息
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Topic 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+     * @param string $Remark 备注信息，最长 128 字符
      */
     function __construct()
     {

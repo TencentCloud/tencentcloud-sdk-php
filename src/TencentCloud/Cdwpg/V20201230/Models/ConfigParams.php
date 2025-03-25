@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 参数
  *
  * @method string getParameterName() 获取名字
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置名字
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterValue() 获取值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterValue(string $ParameterValue) 设置值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterOldValue() 获取修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterOldValue(string $ParameterOldValue) 设置修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigParams extends AbstractModel
 {
     /**
      * @var string 名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
     /**
      * @var string 值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterValue;
 
     /**
      * @var string 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterOldValue;
 
     /**
      * @param string $ParameterName 名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterValue 值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterOldValue 修改前的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

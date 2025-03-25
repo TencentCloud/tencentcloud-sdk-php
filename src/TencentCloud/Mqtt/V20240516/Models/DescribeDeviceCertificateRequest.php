@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceCertificate请求参数结构体
  *
- * @method string getDeviceCertificateSn() 获取设备证书sn
- * @method void setDeviceCertificateSn(string $DeviceCertificateSn) 设置设备证书sn
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getDeviceCertificateSn() 获取设备证书的SN序列号，用于唯一标识一个设备证书。
+ * @method void setDeviceCertificateSn(string $DeviceCertificateSn) 设置设备证书的SN序列号，用于唯一标识一个设备证书。
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  */
 class DescribeDeviceCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 设备证书sn
+     * @var string 设备证书的SN序列号，用于唯一标识一个设备证书。
      */
     public $DeviceCertificateSn;
 
     /**
-     * @var string 集群id
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @param string $DeviceCertificateSn 设备证书sn
-     * @param string $InstanceId 集群id
+     * @param string $DeviceCertificateSn 设备证书的SN序列号，用于唯一标识一个设备证书。
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     function __construct()
     {

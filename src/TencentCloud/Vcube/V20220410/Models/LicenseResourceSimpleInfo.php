@@ -31,49 +31,33 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFeatureId() 获取功能Id
  * @method void setFeatureId(integer $FeatureId) 设置功能Id
  * @method string getStartTime() 获取此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getUpdatedAt() 获取更新时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
  * @method boolean getIsUse() 获取此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUse(boolean $IsUse) 设置此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolatedTimestamp() 获取销毁时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedTimestamp(string $IsolatedTimestamp) 设置销毁时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Package getPackage() 获取资源包信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackage(Package $Package) 设置资源包信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseResourceSimpleInfo extends AbstractModel
 {
@@ -100,13 +84,11 @@ class LicenseResourceSimpleInfo extends AbstractModel
 
     /**
      * @var string 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -122,13 +104,11 @@ class LicenseResourceSimpleInfo extends AbstractModel
 
     /**
      * @var boolean 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUse;
 
     /**
      * @var integer 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -140,13 +120,11 @@ class LicenseResourceSimpleInfo extends AbstractModel
 
     /**
      * @var string 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -158,13 +136,11 @@ class LicenseResourceSimpleInfo extends AbstractModel
 
     /**
      * @var string 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var integer 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
@@ -175,27 +151,19 @@ class LicenseResourceSimpleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeatureId 功能Id
      * @param string $StartTime 此license资源的开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 此license资源的生效结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
      * @param string $UpdatedAt 更新时间
      * @param boolean $IsUse 此资源是否可用于续期和更新有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 此资源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedTimestamp 销毁时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 功能模块类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Package $Package 资源包信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

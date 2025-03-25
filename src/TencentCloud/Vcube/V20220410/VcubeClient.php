@@ -28,7 +28,7 @@ use TencentCloud\Vcube\V20220410\Models as Models;
  * @method Models\CreateApplicationAndVideoResponse CreateApplicationAndVideo(Models\CreateApplicationAndVideoRequest $req) 创建应用和视频播放license 目前只有国际站可以用
  * @method Models\CreateApplicationAndWebPlayerLicenseResponse CreateApplicationAndWebPlayerLicense(Models\CreateApplicationAndWebPlayerLicenseRequest $req) 创建 web 播放器基础版
  * @method Models\CreateLicenseResponse CreateLicense(Models\CreateLicenseRequest $req) 绑定license
- * @method Models\CreateTestXMagicResponse CreateTestXMagic(Models\CreateTestXMagicRequest $req) 申请开通测试版优图
+ * @method Models\CreateTestXMagicResponse CreateTestXMagic(Models\CreateTestXMagicRequest $req) 申请开通测试版腾讯特效
  * @method Models\CreateTrialApplicationAndLicenseResponse CreateTrialApplicationAndLicense(Models\CreateTrialApplicationAndLicenseRequest $req) 创建测试应用并开通测试 license
  * @method Models\CreateTrialLicenseResponse CreateTrialLicense(Models\CreateTrialLicenseRequest $req) 开通测试license
  * @method Models\CreateXMagicResponse CreateXMagic(Models\CreateXMagicRequest $req) x08开通正式版优图美视功能，针对已经有Application的情况
@@ -45,7 +45,7 @@ use TencentCloud\Vcube\V20220410\Models as Models;
  * @method Models\DescribeVcubeResourcesListResponse DescribeVcubeResourcesList(Models\DescribeVcubeResourcesListRequest $req) 查询视立方 license 资源，包括资源包赠送和直接购买的资源
  * @method Models\DescribeXMagicResourceResponse DescribeXMagicResource(Models\DescribeXMagicResourceRequest $req) 用途美视资源包用于开通正式优图美视
  * @method Models\DescribeXMagicResourceListResponse DescribeXMagicResourceList(Models\DescribeXMagicResourceListRequest $req) 用于优图美视资源列表展示
- * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 编辑更改应用
+ * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 更改测试包名信息
  * @method Models\ModifyFormalApplicationResponse ModifyFormalApplication(Models\ModifyFormalApplicationRequest $req) 修改正式应用的包名称
  * @method Models\ModifyLicenseResponse ModifyLicense(Models\ModifyLicenseRequest $req) 正式license 升降配，点播精简版、基础版
  * @method Models\ModifyPresetApplicationResponse ModifyPresetApplication(Models\ModifyPresetApplicationRequest $req) 修改内置应用包名

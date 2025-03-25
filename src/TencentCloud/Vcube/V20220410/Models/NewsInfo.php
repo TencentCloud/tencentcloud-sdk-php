@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视立方产品概览页新闻动态
  *
-
+ * @method integer getId() 获取新闻Id
+ * @method void setId(integer $Id) 设置新闻Id
  */
 class NewsInfo extends AbstractModel
 {
-
+    /**
+     * @var integer 新闻Id
+     */
+    public $Id;
 
     /**
-
+     * @param integer $Id 新闻Id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class NewsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
     }
 }

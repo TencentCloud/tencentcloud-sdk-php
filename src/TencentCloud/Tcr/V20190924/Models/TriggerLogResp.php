@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 触发器日志
  *
  * @method string getRepoName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoName(string $RepoName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTagName() 获取Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagName(string $TagName) 设置Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerName() 获取触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvokeSource() 获取触发方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeSource(string $InvokeSource) 设置触发方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvokeAction() 获取触发动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeAction(string $InvokeAction) 设置触发动作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvokeTime() 获取触发时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeTime(string $InvokeTime) 设置触发时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TriggerInvokeCondition getInvokeCondition() 获取触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeCondition(TriggerInvokeCondition $InvokeCondition) 设置触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TriggerInvokePara getInvokePara() 获取触发参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokePara(TriggerInvokePara $InvokePara) 设置触发参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TriggerInvokeResult getInvokeResult() 获取触发结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeResult(TriggerInvokeResult $InvokeResult) 设置触发结果
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerLogResp extends AbstractModel
 {
     /**
      * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoName;
 
     /**
      * @var string Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagName;
 
     /**
      * @var string 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerName;
 
     /**
      * @var string 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeSource;
 
     /**
      * @var string 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeAction;
 
     /**
      * @var string 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeTime;
 
     /**
      * @var TriggerInvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeCondition;
 
     /**
      * @var TriggerInvokePara 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokePara;
 
     /**
      * @var TriggerInvokeResult 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeResult;
 
     /**
      * @param string $RepoName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagName Tag名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerName 触发器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvokeSource 触发方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvokeAction 触发动作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvokeTime 触发时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerInvokeCondition $InvokeCondition 触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerInvokePara $InvokePara 触发参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerInvokeResult $InvokeResult 触发结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRoomEvent请求参数结构体
  *
- * @method integer getRoomId() 获取房间Id。
- * @method void setRoomId(integer $RoomId) 设置房间Id。
+ * @method integer getRoomId() 获取课堂Id。
+ * @method void setRoomId(integer $RoomId) 设置课堂Id。
  * @method integer getSdkAppId() 获取应用Id。
  * @method void setSdkAppId(integer $SdkAppId) 设置应用Id。
  * @method integer getPage() 获取起始页，1开始。keyword为空时有效。
@@ -60,7 +60,7 @@ VisibleOff: 页面不可见
 class GetRoomEventRequest extends AbstractModel
 {
     /**
-     * @var integer 房间Id。
+     * @var integer 课堂Id。
      */
     public $RoomId;
 
@@ -98,7 +98,7 @@ VisibleOff: 页面不可见
     public $Keyword;
 
     /**
-     * @param integer $RoomId 房间Id。
+     * @param integer $RoomId 课堂Id。
      * @param integer $SdkAppId 应用Id。
      * @param integer $Page 起始页，1开始。keyword为空时有效。
      * @param integer $Limit 每页个数。keyword为空时有效。一次性最多100条。

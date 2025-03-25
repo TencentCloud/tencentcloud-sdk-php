@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotRepeat(NotRepeatStrategy $NotRepeat) 设置一次执行规则，当RepeatType为"NONE"时有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpire() 获取规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpire(string $Expire) 设置规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取周期性规则开始时间
  * @method void setStartTime(string $StartTime) 设置周期性规则开始时间
  */
@@ -78,7 +76,6 @@ class RepeatStrategy extends AbstractModel
 
     /**
      * @var string 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expire;
 
@@ -98,7 +95,6 @@ class RepeatStrategy extends AbstractModel
      * @param NotRepeatStrategy $NotRepeat 一次执行规则，当RepeatType为"NONE"时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 周期性规则开始时间
      */
     function __construct()

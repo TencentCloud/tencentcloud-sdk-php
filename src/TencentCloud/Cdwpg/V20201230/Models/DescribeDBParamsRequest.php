@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNodeTypes() 获取cn/dn
  * @method void setNodeTypes(array $NodeTypes) 设置cn/dn
- * @method integer getLimit() 获取range::(0,100]
- * @method void setLimit(integer $Limit) 设置range::(0,100]
- * @method integer getOffset() 获取range::[0,INF)
- * @method void setOffset(integer $Offset) 设置range::[0,INF)
+ * @method integer getLimit() 获取分页参数，分页步长，默认为10 示例值：10
+ * @method void setLimit(integer $Limit) 设置分页参数，分页步长，默认为10 示例值：10
+ * @method integer getOffset() 获取分页参数，第一页为0，第二页为10
+ * @method void setOffset(integer $Offset) 设置分页参数，第一页为0，第二页为10
  * @method string getInstanceId() 获取InstanceId名称
  * @method void setInstanceId(string $InstanceId) 设置InstanceId名称
  */
@@ -37,12 +37,12 @@ class DescribeDBParamsRequest extends AbstractModel
     public $NodeTypes;
 
     /**
-     * @var integer range::(0,100]
+     * @var integer 分页参数，分页步长，默认为10 示例值：10
      */
     public $Limit;
 
     /**
-     * @var integer range::[0,INF)
+     * @var integer 分页参数，第一页为0，第二页为10
      */
     public $Offset;
 
@@ -53,8 +53,8 @@ class DescribeDBParamsRequest extends AbstractModel
 
     /**
      * @param array $NodeTypes cn/dn
-     * @param integer $Limit range::(0,100]
-     * @param integer $Offset range::[0,INF)
+     * @param integer $Limit 分页参数，分页步长，默认为10 示例值：10
+     * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param string $InstanceId InstanceId名称
      */
     function __construct()

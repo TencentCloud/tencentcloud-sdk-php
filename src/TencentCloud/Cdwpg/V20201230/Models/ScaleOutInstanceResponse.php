@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleOutInstance返回参数结构体
  *
- * @method string getFlowId() 获取1
- * @method void setFlowId(string $FlowId) 设置1
- * @method string getErrorMsg() 获取1
+ * @method string getFlowId() 获取流程id
+ * @method void setFlowId(string $FlowId) 设置流程id
+ * @method string getErrorMsg() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorMsg(string $ErrorMsg) 设置1
+ * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 1
+     * @var string 流程id
      */
     public $FlowId;
 
     /**
-     * @var string 1
+     * @var string 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
@@ -48,8 +48,8 @@ class ScaleOutInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 1
-     * @param string $ErrorMsg 1
+     * @param string $FlowId 流程id
+     * @param string $ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

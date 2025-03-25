@@ -45,7 +45,7 @@ use TencentCloud\Common\AbstractModel;
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
  * @method void setHeight(string $Height) 设置水印的高度，支持 px，%，W%，H%，S%，L% 六种格式：
 <li>当字符串以 px 结尾，表示水印 Height 单位为像素，如 100px 表示 Height 为 100 像素；当填 0px 且
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
  * @method WatermarkCycleConfigForUpdate getCycleConfig() 获取水印周期配置，用于配置水印周期性地显示与隐藏。
 主要使用场景是：为了视频防遮标，在视频多个地方设置水印，这些水印按固定顺序周期性地显示与隐藏。
@@ -94,7 +94,7 @@ class SvgWatermarkInputForUpdate extends AbstractModel
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
      */
     public $Height;
@@ -107,6 +107,7 @@ class SvgWatermarkInputForUpdate extends AbstractModel
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $CycleConfig;
 
@@ -127,7 +128,7 @@ class SvgWatermarkInputForUpdate extends AbstractModel
 <li>当字符串以 H% 结尾，表示水印 Height 为视频高度的百分比大小，如 10H% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 S% 结尾，表示水印 Height 为视频短边的百分比大小，如 10S% 表示 Height 为视频短边的 10%；</li>
 <li>当字符串以 L% 结尾，表示水印 Height 为视频长边的百分比大小，如 10L% 表示 Height 为视频长边的 10%；</li>
-<li>当字符串以 % 结尾时，含义同 H%。
+<li>当字符串以 % 结尾时，含义同 H%。</li>
 默认值为 0px。
      * @param WatermarkCycleConfigForUpdate $CycleConfig 水印周期配置，用于配置水印周期性地显示与隐藏。
 主要使用场景是：为了视频防遮标，在视频多个地方设置水印，这些水印按固定顺序周期性地显示与隐藏。

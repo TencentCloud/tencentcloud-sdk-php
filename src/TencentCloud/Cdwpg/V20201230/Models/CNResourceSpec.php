@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生资源规格描述信息
  *
- * @method string getType() 获取无
- * @method void setType(string $Type) 设置无
- * @method string getSpecName() 获取无
- * @method void setSpecName(string $SpecName) 设置无
- * @method integer getCount() 获取无
- * @method void setCount(integer $Count) 设置无
- * @method CBSSpec getDiskSpec() 获取无
- * @method void setDiskSpec(CBSSpec $DiskSpec) 设置无
+ * @method string getType() 获取节点类型
+ * @method void setType(string $Type) 设置节点类型
+ * @method string getSpecName() 获取机型
+ * @method void setSpecName(string $SpecName) 设置机型
+ * @method integer getCount() 获取节点个数
+ * @method void setCount(integer $Count) 设置节点个数
+ * @method CBSSpec getDiskSpec() 获取磁盘信息
+ * @method void setDiskSpec(CBSSpec $DiskSpec) 设置磁盘信息
  */
 class CNResourceSpec extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 节点类型
      */
     public $Type;
 
     /**
-     * @var string 无
+     * @var string 机型
      */
     public $SpecName;
 
     /**
-     * @var integer 无
+     * @var integer 节点个数
      */
     public $Count;
 
     /**
-     * @var CBSSpec 无
+     * @var CBSSpec 磁盘信息
      */
     public $DiskSpec;
 
     /**
-     * @param string $Type 无
-     * @param string $SpecName 无
-     * @param integer $Count 无
-     * @param CBSSpec $DiskSpec 无
+     * @param string $Type 节点类型
+     * @param string $SpecName 机型
+     * @param integer $Count 节点个数
+     * @param CBSSpec $DiskSpec 磁盘信息
      */
     function __construct()
     {

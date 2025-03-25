@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getAppName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleId() 获取Ios 包名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBundleId(string $BundleId) 设置Ios 包名
@@ -69,7 +67,6 @@ class AppInfo extends AbstractModel
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
@@ -122,7 +119,6 @@ class AppInfo extends AbstractModel
      * @param integer $Id 应用Id
      * @param string $AppId 用户appid
      * @param string $AppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleId Ios 包名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName Andorid 包名

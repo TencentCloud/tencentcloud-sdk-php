@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupStatus(integer $BackupStatus) 设置集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取1
+ * @method string getRequestId() 获取请求id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestId(string $RequestId) 设置1
+ * @method void setRequestId(string $RequestId) 设置请求id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBackupOpenStatus() 获取1
+ * @method integer getBackupOpenStatus() 获取集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupOpenStatus(integer $BackupOpenStatus) 设置1
+ * @method void setBackupOpenStatus(integer $BackupOpenStatus) 设置集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceStateInfo extends AbstractModel
@@ -112,13 +112,13 @@ class InstanceStateInfo extends AbstractModel
     public $BackupStatus;
 
     /**
-     * @var string 1
+     * @var string 请求id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestId;
 
     /**
-     * @var integer 1
+     * @var integer 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupOpenStatus;
@@ -140,9 +140,9 @@ class InstanceStateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupStatus 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 1
+     * @param string $RequestId 请求id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BackupOpenStatus 1
+     * @param integer $BackupOpenStatus 集群是否有备份中任务，有为1,无为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

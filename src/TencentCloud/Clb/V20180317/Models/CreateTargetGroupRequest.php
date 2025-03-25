@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定50个字符
  * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
  * @method void setVpcId(string $VpcId) 设置目标组的vpcid属性，不填则使用默认vpc
- * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+ * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
- * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+ * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器，单次最多支持50个。
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器，单次最多支持50个。
@@ -47,6 +47,9 @@ use TencentCloud\Common\AbstractModel;
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
+
+ * @method boolean getFullListenSwitch() 获取全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -61,7 +64,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
      */
     public $Port;
@@ -97,9 +100,14 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Weight;
 
     /**
+     * @var boolean 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     */
+    public $FullListenSwitch;
+
+    /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
-     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
@@ -110,6 +118,8 @@ class CreateTargetGroupRequest extends AbstractModel
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
+
+     * @param boolean $FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
      */
     function __construct()
     {
@@ -164,6 +174,10 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("FullListenSwitch",$param) and $param["FullListenSwitch"] !== null) {
+            $this->FullListenSwitch = $param["FullListenSwitch"];
         }
     }
 }

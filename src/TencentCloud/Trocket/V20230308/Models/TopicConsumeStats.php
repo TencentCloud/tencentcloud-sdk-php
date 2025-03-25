@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubString() 获取订阅规则
  * @method void setSubString(string $SubString) 设置订阅规则
  * @method integer getLastUpdateTime() 获取最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicConsumeStats extends AbstractModel
 {
@@ -64,7 +62,6 @@ class TopicConsumeStats extends AbstractModel
 
     /**
      * @var integer 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
 
@@ -75,7 +72,6 @@ class TopicConsumeStats extends AbstractModel
      * @param integer $ConsumerLag 消费堆积
      * @param string $SubString 订阅规则
      * @param integer $LastUpdateTime 最后消费进度更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

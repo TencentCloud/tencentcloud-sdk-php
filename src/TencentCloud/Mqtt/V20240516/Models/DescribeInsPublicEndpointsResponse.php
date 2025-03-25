@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndpoints(array $Endpoints) 设置接入点
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getBandwidth() 获取带宽
- * @method void setBandwidth(integer $Bandwidth) 设置带宽
+ * @method integer getBandwidth() 获取带宽，单位Mbps
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽，单位Mbps
  * @method array getRules() 获取公网访问规则
  * @method void setRules(array $Rules) 设置公网访问规则
  * @method string getStatus() 获取公网状态：
@@ -56,7 +56,7 @@ class DescribeInsPublicEndpointsResponse extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 带宽
+     * @var integer 带宽，单位Mbps
      */
     public $Bandwidth;
 
@@ -83,7 +83,7 @@ class DescribeInsPublicEndpointsResponse extends AbstractModel
     /**
      * @param array $Endpoints 接入点
      * @param string $InstanceId 实例id
-     * @param integer $Bandwidth 带宽
+     * @param integer $Bandwidth 带宽，单位Mbps
      * @param array $Rules 公网访问规则
      * @param string $Status 公网状态：
     NORMAL-正常

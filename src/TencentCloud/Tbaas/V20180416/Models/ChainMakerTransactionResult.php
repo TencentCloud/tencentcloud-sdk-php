@@ -23,33 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCode() 获取交易结果码
  * @method void setCode(integer $Code) 设置交易结果码
  * @method string getCodeMessage() 获取交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeMessage(string $CodeMessage) 设置交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTxId() 获取交易ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxId(string $TxId) 设置交易ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGasUsed() 获取Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGasUsed(integer $GasUsed) 设置Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBlockHeight() 获取区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockHeight(integer $BlockHeight) 设置区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContractEvent() 获取合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContractEvent(string $ContractEvent) 设置合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChainMakerTransactionResult extends AbstractModel
 {
@@ -60,62 +46,48 @@ class ChainMakerTransactionResult extends AbstractModel
 
     /**
      * @var string 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeMessage;
 
     /**
      * @var string 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TxId;
 
     /**
      * @var integer Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GasUsed;
 
     /**
      * @var integer 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockHeight;
 
     /**
      * @var string 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContractEvent;
 
     /**
      * @var string 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var integer 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @param integer $Code 交易结果码
      * @param string $CodeMessage 交易结果码含义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GasUsed Gas使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BlockHeight 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContractEvent 合约执行结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 合约返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 交易时间，单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

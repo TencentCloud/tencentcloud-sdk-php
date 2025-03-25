@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * vpc私有域名解析状态
  *
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcPrivateDomainStatus extends AbstractModel
 {
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId unique vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status ENABLE代表已经开启，DISABLE代表未开启，ERROR代表查询出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

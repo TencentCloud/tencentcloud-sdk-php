@@ -37,37 +37,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setXMagic(boolean $XMagic) 设置资源是否已使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpired() 获取资源包是否过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpired(boolean $Expired) 设置资源包是否过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getXMagicType() 获取single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setXMagicType(string $XMagicType) 设置single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBizType() 获取xmagic:优图， avatar：虚拟人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizType(string $BizType) 设置xmagic:优图， avatar：虚拟人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUse() 获取资源是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUse(boolean $IsUse) 设置资源是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class XMagicResource extends AbstractModel
 {
@@ -109,49 +93,41 @@ class XMagicResource extends AbstractModel
 
     /**
      * @var string 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var boolean 资源包是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expired;
 
     /**
      * @var string 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $XMagicType;
 
     /**
      * @var string xmagic:优图， avatar：虚拟人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
     /**
      * @var string 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var boolean 资源是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUse;
 
@@ -165,21 +141,13 @@ class XMagicResource extends AbstractModel
      * @param boolean $XMagic 资源是否已使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 资源开始生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 资源结束生效时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Expired 资源包是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 功能模块名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $XMagicType single: 原子能力,combined:套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BizType xmagic:优图， avatar：虚拟人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUse 资源是否可以使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getKind() 获取制品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKind(string $Kind) 设置制品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKmsSignature() 获取KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKmsSignature(string $KmsSignature) 设置KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TcrImageInfo extends AbstractModel
 {
@@ -61,13 +57,11 @@ class TcrImageInfo extends AbstractModel
 
     /**
      * @var string 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
 
     /**
      * @var string KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KmsSignature;
 
@@ -77,9 +71,7 @@ class TcrImageInfo extends AbstractModel
      * @param string $ImageVersion Tag名称
      * @param string $UpdateTime 更新时间
      * @param string $Kind 制品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KmsSignature KMS 签名信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

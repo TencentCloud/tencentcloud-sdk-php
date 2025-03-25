@@ -278,6 +278,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfSupportCreateAndDDL(CreateAndDDLSupport $IfSupportCreateAndDDL) 设置是否支持select or ddl
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColumnCount() 获取字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumnCount(integer $ColumnCount) 设置字段数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -667,6 +671,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $IfSupportCreateAndDDL;
 
     /**
+     * @var integer 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColumnCount;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -795,6 +805,8 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateAndDDLSupport $IfSupportCreateAndDDL 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColumnCount 字段数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1082,6 +1094,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (array_key_exists("IfSupportCreateAndDDL",$param) and $param["IfSupportCreateAndDDL"] !== null) {
             $this->IfSupportCreateAndDDL = new CreateAndDDLSupport();
             $this->IfSupportCreateAndDDL->deserialize($param["IfSupportCreateAndDDL"]);
+        }
+
+        if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {
+            $this->ColumnCount = $param["ColumnCount"];
         }
     }
 }

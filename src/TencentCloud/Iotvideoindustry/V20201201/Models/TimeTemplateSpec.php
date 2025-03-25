@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 在操作时间模板时，用于描述各个时间片段
  *
  * @method integer getDayofWeek() 获取一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDayofWeek(integer $DayofWeek) 设置一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimeTemplateSpec extends AbstractModel
 {
     /**
      * @var integer 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DayofWeek;
 
     /**
      * @var string 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param integer $DayofWeek 一周中的周几
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 时间片段的开始时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 时间片段的结束时分。格式【HH:MM】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

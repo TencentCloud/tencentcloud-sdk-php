@@ -47,13 +47,9 @@ use TencentCloud\Common\AbstractModel;
 <li>0：保留；</li>
 <li>1：去除。</li>
  * @method VideoTemplateInfo getVideoTemplate() 获取视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
@@ -116,13 +112,11 @@ class TranscodeTemplate extends AbstractModel
 
     /**
      * @var VideoTemplateInfo 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoTemplate;
 
     /**
      * @var AudioTemplateInfo 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioTemplate;
 
@@ -169,9 +163,7 @@ class TranscodeTemplate extends AbstractModel
 <li>0：保留；</li>
 <li>1：去除。</li>
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerType 封装格式过滤条件，可选值：

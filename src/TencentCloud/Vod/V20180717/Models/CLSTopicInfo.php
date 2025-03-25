@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * CLS日志主题信息。
  *
  * @method string getTopicId() 获取日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogsetId() 获取日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CLSTopicInfo extends AbstractModel
 {
     /**
      * @var string 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
     /**
      * @param string $TopicId 日志主题 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 日志主题名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogsetId 日志集 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

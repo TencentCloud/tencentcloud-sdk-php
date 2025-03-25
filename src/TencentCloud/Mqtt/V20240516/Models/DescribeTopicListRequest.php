@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicList请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method array getFilters() 获取查询条件列表:
 支持TopicName模糊查询
  * @method void setFilters(array $Filters) 设置查询条件列表:
 支持TopicName模糊查询
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+ * @method integer getOffset() 获取查询起始位置，默认0。
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认0。
+ * @method integer getLimit() 获取查询结果限制数量，默认0，最大20
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认0，最大20
  */
 class DescribeTopicListRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
@@ -45,21 +45,21 @@ class DescribeTopicListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认0。
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认0，最大20
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param array $Filters 查询条件列表:
 支持TopicName模糊查询
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @param integer $Offset 查询起始位置，默认0。
+     * @param integer $Limit 查询结果限制数量，默认0，最大20
      */
     function __construct()
     {

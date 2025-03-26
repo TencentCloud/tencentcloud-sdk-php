@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigHistory1
  *
- * @method integer getId() 获取id1
- * @method void setId(integer $Id) 设置id1
+ * @method integer getId() 获取id
+ * @method void setId(integer $Id) 设置id
  * @method string getInstanceId() 获取实例名
  * @method void setInstanceId(string $InstanceId) 设置实例名
  * @method string getCreatedAt() 获取创建时间
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ConfigHistory extends AbstractModel
 {
     /**
-     * @var integer id1
+     * @var integer id
      */
     public $Id;
 
@@ -87,7 +87,7 @@ class ConfigHistory extends AbstractModel
     public $Status;
 
     /**
-     * @param integer $Id id1
+     * @param integer $Id id
      * @param string $InstanceId 实例名
      * @param string $CreatedAt 创建时间
      * @param string $UpdatedAt 更新时间

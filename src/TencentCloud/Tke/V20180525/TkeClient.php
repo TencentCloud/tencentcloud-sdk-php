@@ -146,6 +146,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
  * @method Models\DescribeLogConfigsResponse DescribeLogConfigs(Models\DescribeLogConfigsRequest $req) 查询日志采集规则
  * @method Models\DescribeLogSwitchesResponse DescribeLogSwitches(Models\DescribeLogSwitchesRequest $req) 查询集群日志（审计、事件、普通日志）开关列表
+ * @method Models\DescribeOSImagesResponse DescribeOSImages(Models\DescribeOSImagesRequest $req) 获取OS聚合信息
  * @method Models\DescribeOpenPolicyListResponse DescribeOpenPolicyList(Models\DescribeOpenPolicyListRequest $req) 查询opa策略列表
  * @method Models\DescribePodChargeInfoResponse DescribePodChargeInfo(Models\DescribePodChargeInfoRequest $req) 查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
  * @method Models\DescribePodDeductionRateResponse DescribePodDeductionRate(Models\DescribePodDeductionRateRequest $req) 查询各个规格的 Pod 的抵扣率

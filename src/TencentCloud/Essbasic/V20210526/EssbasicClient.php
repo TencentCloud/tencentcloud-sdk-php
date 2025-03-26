@@ -467,9 +467,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 对应控制台的操作如下图
 ![image](https://qcloudimg.tencent-cloud.cn/raw/5b41194d3cb3f2058ec0ba0fb5ebc6a6.png)
  * @method Models\ChannelDeleteSealPoliciesResponse ChannelDeleteSealPolicies(Models\ChannelDeleteSealPoliciesRequest $req) 此接口（ChannelDeleteSealPolicies）用于删除已指定员工印章授权信息，删除员工的印章授权后，该员工使用印章进行盖章时，将需要提交印章授权申请且通过审核后才能使用该印章进行签署。
- * @method Models\ChannelDescribeAccountBillDetailResponse ChannelDescribeAccountBillDetail(Models\ChannelDescribeAccountBillDetailRequest $req) 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号计费详情。
+ * @method Models\ChannelDescribeAccountBillDetailResponse ChannelDescribeAccountBillDetail(Models\ChannelDescribeAccountBillDetailRequest $req) 通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号绑定中、剩余可绑定账号等套餐使用情况。
 <ul>
-<li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询子客账号消耗详情</li>
+<li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询“子客账号”套餐消耗详情</li>
 </ul>
  * @method Models\ChannelDescribeBillUsageDetailResponse ChannelDescribeBillUsageDetail(Models\ChannelDescribeBillUsageDetailRequest $req) 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。可以支持单个子客和整个应用下所有子客的查询。
 <ul>

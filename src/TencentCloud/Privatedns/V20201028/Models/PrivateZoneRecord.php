@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTTL() 获取记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
  * @method void setTTL(integer $TTL) 设置记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
  * @method integer getMX() 获取MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(integer $MX) 设置MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取记录状态：ENABLED
  * @method void setStatus(string $Status) 设置记录状态：ENABLED
  * @method integer getWeight() 获取记录权重，值为1-100
@@ -51,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtra(string $Extra) 设置附加信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnabled() 获取0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(integer $Enabled) 设置0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateZoneRecord extends AbstractModel
 {
@@ -93,7 +87,6 @@ class PrivateZoneRecord extends AbstractModel
 
     /**
      * @var integer MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MX;
 
@@ -126,13 +119,11 @@ class PrivateZoneRecord extends AbstractModel
 
     /**
      * @var integer 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -144,7 +135,6 @@ class PrivateZoneRecord extends AbstractModel
      * @param string $RecordValue 记录值
      * @param integer $TTL 记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
      * @param integer $MX MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 记录状态：ENABLED
      * @param integer $Weight 记录权重，值为1-100
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,9 +143,7 @@ class PrivateZoneRecord extends AbstractModel
      * @param string $Extra 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Enabled 0暂停，1启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

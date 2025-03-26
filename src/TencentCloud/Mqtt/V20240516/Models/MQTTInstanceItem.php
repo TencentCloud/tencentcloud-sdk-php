@@ -72,10 +72,10 @@ DELETING，删除中
  * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数量
  * @method integer getClientNumLimit() 获取客户端连接数上线
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端连接数上线
- * @method integer getRenewFlag() 获取是否自动续费。仅包年包月就去那生效。
+ * @method integer getRenewFlag() 获取是否自动续费。仅包年包月集群生效。
 1:自动续费
 0:非自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费。仅包年包月就去那生效。
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费。仅包年包月集群生效。
 1:自动续费
 0:非自动续费
  * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
@@ -172,7 +172,7 @@ DELETING，删除中
     public $ClientNumLimit;
 
     /**
-     * @var integer 是否自动续费。仅包年包月就去那生效。
+     * @var integer 是否自动续费。仅包年包月集群生效。
 1:自动续费
 0:非自动续费
      */
@@ -235,7 +235,7 @@ DELETING，删除中
      * @param integer $CreateTime 创建时间，毫秒级时间戳
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数量
      * @param integer $ClientNumLimit 客户端连接数上线
-     * @param integer $RenewFlag 是否自动续费。仅包年包月就去那生效。
+     * @param integer $RenewFlag 是否自动续费。仅包年包月集群生效。
 1:自动续费
 0:非自动续费
      * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月

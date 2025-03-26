@@ -24,30 +24,14 @@ use TencentCloud\Common\AbstractModel;
 在画面最终渲染时，将按ID从小到大的顺序，由下至上渲染。
  * @method void setLayerId(integer $LayerId) 设置布局层ID。
 在画面最终渲染时，将按ID从小到大的顺序，由下至上渲染。
- * @method float getLayerWidth() 获取布局层宽度。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
- * @method void setLayerWidth(float $LayerWidth) 设置布局层宽度。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
- * @method float getLayerHeight() 获取布局层高度.
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
- * @method void setLayerHeight(float $LayerHeight) 设置布局层高度.
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
- * @method float getLayerLocationX() 获取布局层位置x坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上x坐标所占的比例值。
- * @method void setLayerLocationX(float $LayerLocationX) 设置布局层位置x坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上x坐标所占的比例值。
- * @method float getLayerLocationY() 获取布局层位置Y坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
- * @method void setLayerLocationY(float $LayerLocationY) 设置布局层位置Y坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
+ * @method float getLayerWidth() 获取布局层宽度。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上所占的比例值。
+ * @method void setLayerWidth(float $LayerWidth) 设置布局层宽度。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上所占的比例值。
+ * @method float getLayerHeight() 获取布局层高度。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面上所占的比例值。
+ * @method void setLayerHeight(float $LayerHeight) 设置布局层高度。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面上所占的比例值。
+ * @method float getLayerLocationX() 获取布局层位置x坐标。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上x坐标所占的比例值。
+ * @method void setLayerLocationX(float $LayerLocationX) 设置布局层位置x坐标。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上x坐标所占的比例值。
+ * @method float getLayerLocationY() 获取布局层位置Y坐标。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面Y坐标上所占的比例值。
+ * @method void setLayerLocationY(float $LayerLocationY) 设置布局层位置Y坐标。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面Y坐标上所占的比例值。
  * @method boolean getUsePortraitSegment() 获取是否启用抠图。
  * @method void setUsePortraitSegment(boolean $UsePortraitSegment) 设置是否启用抠图。
  */
@@ -60,30 +44,22 @@ class CasterLayoutParam extends AbstractModel
     public $LayerId;
 
     /**
-     * @var float 布局层宽度。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
+     * @var float 布局层宽度。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上所占的比例值。
      */
     public $LayerWidth;
 
     /**
-     * @var float 布局层高度.
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
+     * @var float 布局层高度。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面上所占的比例值。
      */
     public $LayerHeight;
 
     /**
-     * @var float 布局层位置x坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上x坐标所占的比例值。
+     * @var float 布局层位置x坐标。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上x坐标所占的比例值。
      */
     public $LayerLocationX;
 
     /**
-     * @var float 布局层位置Y坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
+     * @var float 布局层位置Y坐标。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面Y坐标上所占的比例值。
      */
     public $LayerLocationY;
 
@@ -95,18 +71,10 @@ class CasterLayoutParam extends AbstractModel
     /**
      * @param integer $LayerId 布局层ID。
 在画面最终渲染时，将按ID从小到大的顺序，由下至上渲染。
-     * @param float $LayerWidth 布局层宽度。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
-     * @param float $LayerHeight 布局层高度.
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上所占的比例值。
-     * @param float $LayerLocationX 布局层位置x坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面上x坐标所占的比例值。
-     * @param float $LayerLocationY 布局层位置Y坐标。
-当该值为大于1的整数值时，单位为像素，允许范围[1,1920]。
-当该值为小于1大于0的小数时，单位为百分比，表示该层在最终画面Y坐标上所占的比例值。
+     * @param float $LayerWidth 布局层宽度。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上所占的比例值。
+     * @param float $LayerHeight 布局层高度。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面上所占的比例值。
+     * @param float $LayerLocationX 布局层位置x坐标。单位为百分比，范围[0.0,1.0]，表示该层在最终画面上x坐标所占的比例值。
+     * @param float $LayerLocationY 布局层位置Y坐标。单位为百分比，范围[0.0,1.0]， 表示该层在最终画面Y坐标上所占的比例值。
      * @param boolean $UsePortraitSegment 是否启用抠图。
      */
     function __construct()

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartPlayTime() 获取启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method void setStartPlayTime(string $StartPlayTime) 设置启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method float getDuration() 获取播放时长，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(float $Duration) 设置播放时长，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取播放进度，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(float $Progress) 设置播放进度，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoundPlayFilePlayInfo extends AbstractModel
 {
@@ -54,13 +50,11 @@ class RoundPlayFilePlayInfo extends AbstractModel
 
     /**
      * @var float 播放时长，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var float 播放进度，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
@@ -69,9 +63,7 @@ class RoundPlayFilePlayInfo extends AbstractModel
      * @param string $FileId 媒体文件标识。
      * @param string $StartPlayTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param float $Duration 播放时长，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 播放进度，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

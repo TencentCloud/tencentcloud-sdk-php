@@ -49,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() 获取轮播播放地址。
  * @method void setUrl(string $Url) 设置轮播播放地址。
  * @method string getCreateTime() 获取创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredTime() 获取过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
  * @method void setExpiredTime(string $ExpiredTime) 设置过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
  */
@@ -109,13 +105,11 @@ class RoundPlayInfo extends AbstractModel
 
     /**
      * @var string 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -140,9 +134,7 @@ class RoundPlayInfo extends AbstractModel
 默认值：Loop。
      * @param string $Url 轮播播放地址。
      * @param string $CreateTime 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
      */
     function __construct()

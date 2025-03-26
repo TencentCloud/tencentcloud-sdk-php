@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUUI(string $UUI) 设置UUI
  * @method array getCalleeAttributes() 获取被叫属性
  * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
+ * @method string getTimeZone() 获取IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method void setTimeZone(string $TimeZone) 设置IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method array getAvailableTime() 获取可用时间段
+ * @method void setAvailableTime(array $AvailableTime) 设置可用时间段
  */
 class CreatePredictiveDialingCampaignRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
     public $CalleeAttributes;
 
     /**
+     * @var string IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public $TimeZone;
+
+    /**
+     * @var array 可用时间段
+     */
+    public $AvailableTime;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Name 任务名称
      * @param array $Callees 被叫列表，支持 E.164 或不带国家码形式的号码
@@ -152,6 +166,8 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
      * @param array $Variables 自定义变量
      * @param string $UUI UUI
      * @param array $CalleeAttributes 被叫属性
+     * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @param array $AvailableTime 可用时间段
      */
     function __construct()
     {
@@ -237,6 +253,19 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
                 $obj = new CalleeAttribute();
                 $obj->deserialize($value);
                 array_push($this->CalleeAttributes, $obj);
+            }
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("AvailableTime",$param) and $param["AvailableTime"] !== null) {
+            $this->AvailableTime = [];
+            foreach ($param["AvailableTime"] as $key => $value){
+                $obj = new TimeRange();
+                $obj->deserialize($value);
+                array_push($this->AvailableTime, $obj);
             }
         }
     }

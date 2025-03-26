@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveVideo(integer $RemoveVideo) 设置是否移除视频流，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
+ * @method array getAudioList() 获取音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioList(array $AudioList) 设置音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -64,6 +70,13 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveVideo;
 
     /**
+     * @var array 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioList;
+
+    /**
      * @param AudioTemplateInfo $Audio 音频参数信息。
      * @param VideoTemplateInfo $Video 视频参数信息。
      * @param integer $RemoveAudio 是否移除音频流，取值范围：
@@ -72,6 +85,9 @@ class AdaptiveStreamTemplate extends AbstractModel
      * @param integer $RemoveVideo 是否移除视频流，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
+     * @param array $AudioList 音频参数信息列表。
+注意：参数数组长度最大为64。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -102,6 +118,15 @@ class AdaptiveStreamTemplate extends AbstractModel
 
         if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
             $this->RemoveVideo = $param["RemoveVideo"];
+        }
+
+        if (array_key_exists("AudioList",$param) and $param["AudioList"] !== null) {
+            $this->AudioList = [];
+            foreach ($param["AudioList"] as $key => $value){
+                $obj = new AudioTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->AudioList, $obj);
+            }
         }
     }
 }

@@ -20,62 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaCertificate返回参数结构体
  *
- * @method integer getCreatedTime() 获取创建时间
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间
- * @method integer getUpdateTime() 获取上次更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置上次更新时间
- * @method integer getNotAfterTime() 获取失效日期
- * @method void setNotAfterTime(integer $NotAfterTime) 设置失效日期
- * @method integer getLastActivationTime() 获取上次激活时间
- * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间
- * @method integer getLastInactivationTime() 获取上次吊销时间
- * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次吊销时间
- * @method string getStatus() 获取证书状态
- * @method void setStatus(string $Status) 设置证书状态
+ * @method integer getCreatedTime() 获取创建时间，毫秒级时间戳 。
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，毫秒级时间戳 。
+ * @method integer getUpdateTime() 获取上次更新时间，毫秒级时间戳 。
+ * @method void setUpdateTime(integer $UpdateTime) 设置上次更新时间，毫秒级时间戳 。
+ * @method integer getNotAfterTime() 获取失效日期，毫秒级时间戳 。
+ * @method void setNotAfterTime(integer $NotAfterTime) 设置失效日期，毫秒级时间戳 。
+ * @method integer getLastActivationTime() 获取上次激活时间，毫秒级时间戳 。
+ * @method void setLastActivationTime(integer $LastActivationTime) 设置上次激活时间，毫秒级时间戳 。
+ * @method integer getLastInactivationTime() 获取上次吊销时间，毫秒级时间戳 。
+ * @method void setLastInactivationTime(integer $LastInactivationTime) 设置上次吊销时间，毫秒级时间戳 。
+ * @method string getStatus() 获取CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
+ * @method void setStatus(string $Status) 设置CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
  * @method string getCaSn() 获取证书序列号
  * @method void setCaSn(string $CaSn) 设置证书序列号
- * @method string getCaCn() 获取common name
- * @method void setCaCn(string $CaCn) 设置common name
+ * @method string getCaCn() 获取证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
+ * @method void setCaCn(string $CaCn) 设置证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
  * @method string getCaCertificate() 获取证书内容
  * @method void setCaCertificate(string $CaCertificate) 设置证书内容
- * @method string getFormat() 获取证书格式
- * @method void setFormat(string $Format) 设置证书格式
+ * @method string getFormat() 获取证书格式，当仅支持PEM格式
+ * @method void setFormat(string $Format) 设置证书格式，当仅支持PEM格式
  * @method string getCaIssuerCn() 获取Ca证书颁发者CN
  * @method void setCaIssuerCn(string $CaIssuerCn) 设置Ca证书颁发者CN
- * @method integer getNotBeforeTime() 获取生效开始时间
- * @method void setNotBeforeTime(integer $NotBeforeTime) 设置生效开始时间
+ * @method integer getNotBeforeTime() 获取生效开始时间，毫秒级时间戳 。
+ * @method void setNotBeforeTime(integer $NotBeforeTime) 设置生效开始时间，毫秒级时间戳 。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCaCertificateResponse extends AbstractModel
 {
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，毫秒级时间戳 。
      */
     public $CreatedTime;
 
     /**
-     * @var integer 上次更新时间
+     * @var integer 上次更新时间，毫秒级时间戳 。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 失效日期
+     * @var integer 失效日期，毫秒级时间戳 。
      */
     public $NotAfterTime;
 
     /**
-     * @var integer 上次激活时间
+     * @var integer 上次激活时间，毫秒级时间戳 。
      */
     public $LastActivationTime;
 
     /**
-     * @var integer 上次吊销时间
+     * @var integer 上次吊销时间，毫秒级时间戳 。
      */
     public $LastInactivationTime;
 
     /**
-     * @var string 证书状态
+     * @var string CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
      */
     public $Status;
 
@@ -85,7 +94,7 @@ class DescribeCaCertificateResponse extends AbstractModel
     public $CaSn;
 
     /**
-     * @var string common name
+     * @var string 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
      */
     public $CaCn;
 
@@ -95,7 +104,7 @@ class DescribeCaCertificateResponse extends AbstractModel
     public $CaCertificate;
 
     /**
-     * @var string 证书格式
+     * @var string 证书格式，当仅支持PEM格式
      */
     public $Format;
 
@@ -105,7 +114,7 @@ class DescribeCaCertificateResponse extends AbstractModel
     public $CaIssuerCn;
 
     /**
-     * @var integer 生效开始时间
+     * @var integer 生效开始时间，毫秒级时间戳 。
      */
     public $NotBeforeTime;
 
@@ -115,18 +124,21 @@ class DescribeCaCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CreatedTime 创建时间
-     * @param integer $UpdateTime 上次更新时间
-     * @param integer $NotAfterTime 失效日期
-     * @param integer $LastActivationTime 上次激活时间
-     * @param integer $LastInactivationTime 上次吊销时间
-     * @param string $Status 证书状态
+     * @param integer $CreatedTime 创建时间，毫秒级时间戳 。
+     * @param integer $UpdateTime 上次更新时间，毫秒级时间戳 。
+     * @param integer $NotAfterTime 失效日期，毫秒级时间戳 。
+     * @param integer $LastActivationTime 上次激活时间，毫秒级时间戳 。
+     * @param integer $LastInactivationTime 上次吊销时间，毫秒级时间戳 。
+     * @param string $Status CA证书状态
+ ACTIVE：激活
+INACTIVE：未激活
+
      * @param string $CaSn 证书序列号
-     * @param string $CaCn common name
+     * @param string $CaCn 证书的CN（Common Name），证书中用于标识主体的名称，通常是域名或组织名称
      * @param string $CaCertificate 证书内容
-     * @param string $Format 证书格式
+     * @param string $Format 证书格式，当仅支持PEM格式
      * @param string $CaIssuerCn Ca证书颁发者CN
-     * @param integer $NotBeforeTime 生效开始时间
+     * @param integer $NotBeforeTime 生效开始时间，毫秒级时间戳 。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallees(array $Callees) 设置被叫号码列表
  * @method array getCallers() 获取主叫号码列表
  * @method void setCallers(array $Callers) 设置主叫号码列表
- * @method integer getIvrId() 获取呼叫使用的Ivr
- * @method void setIvrId(integer $IvrId) 设置呼叫使用的Ivr
+ * @method integer getIvrId() 获取呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+ * @method void setIvrId(integer $IvrId) 设置呼叫使用的 IVR Id，不填时需要填写 AIAgentId
  * @method string getName() 获取任务名
  * @method void setName(string $Name) 设置任务名
  * @method string getDescription() 获取任务描述
@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUUI(string $UUI) 设置UUI
  * @method array getCalleeAttributes() 获取被叫属性
  * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
+ * @method string getTimeZone() 获取IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method void setTimeZone(string $TimeZone) 设置IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method array getAvailableTime() 获取可用时间段
+ * @method void setAvailableTime(array $AvailableTime) 设置可用时间段
+ * @method integer getAIAgentId() 获取智能体 ID，不填写时需要填写 IvrId
+ * @method void setAIAgentId(integer $AIAgentId) 设置智能体 ID，不填写时需要填写 IvrId
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -68,7 +74,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Callers;
 
     /**
-     * @var integer 呼叫使用的Ivr
+     * @var integer 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
      */
     public $IvrId;
 
@@ -108,11 +114,26 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $CalleeAttributes;
 
     /**
+     * @var string IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public $TimeZone;
+
+    /**
+     * @var array 可用时间段
+     */
+    public $AvailableTime;
+
+    /**
+     * @var integer 智能体 ID，不填写时需要填写 IvrId
+     */
+    public $AIAgentId;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
      * @param array $Callers 主叫号码列表
-     * @param integer $IvrId 呼叫使用的Ivr
+     * @param integer $IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
      * @param string $Name 任务名
      * @param string $Description 任务描述
      * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
@@ -120,6 +141,9 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param array $Variables 自定义变量（仅高级版支持）
      * @param string $UUI UUI
      * @param array $CalleeAttributes 被叫属性
+     * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @param array $AvailableTime 可用时间段
+     * @param integer $AIAgentId 智能体 ID，不填写时需要填写 IvrId
      */
     function __construct()
     {
@@ -190,6 +214,23 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CalleeAttributes, $obj);
             }
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("AvailableTime",$param) and $param["AvailableTime"] !== null) {
+            $this->AvailableTime = [];
+            foreach ($param["AvailableTime"] as $key => $value){
+                $obj = new TimeRange();
+                $obj->deserialize($value);
+                array_push($this->AvailableTime, $obj);
+            }
+        }
+
+        if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
+            $this->AIAgentId = $param["AIAgentId"];
         }
     }
 }

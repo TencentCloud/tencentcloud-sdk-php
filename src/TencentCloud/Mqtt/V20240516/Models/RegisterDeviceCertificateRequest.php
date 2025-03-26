@@ -20,28 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterDeviceCertificate请求参数结构体
  *
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
- * @method string getDeviceCertificate() 获取设备证书
- * @method void setDeviceCertificate(string $DeviceCertificate) 设置设备证书
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getDeviceCertificate() 获取设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
+ * @method void setDeviceCertificate(string $DeviceCertificate) 设置设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
  * @method string getCaSn() 获取关联的CA证书SN
  * @method void setCaSn(string $CaSn) 设置关联的CA证书SN
- * @method string getClientId() 获取客户端ID
- * @method void setClientId(string $ClientId) 设置客户端ID
- * @method string getFormat() 获取证书格式
- * @method void setFormat(string $Format) 设置证书格式
- * @method string getStatus() 获取    ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
- * @method void setStatus(string $Status) 设置    ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+ * @method string getClientId() 获取客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
+ * @method void setClientId(string $ClientId) 设置客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
+ * @method string getFormat() 获取证书格式，默认为PEM，当前仅支持PEM格式
+ * @method void setFormat(string $Format) 设置证书格式，默认为PEM，当前仅支持PEM格式
+ * @method string getStatus() 获取 客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
+ * @method void setStatus(string $Status) 设置 客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
  */
 class RegisterDeviceCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 设备证书
+     * @var string 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
      */
     public $DeviceCertificate;
 
@@ -51,27 +59,35 @@ class RegisterDeviceCertificateRequest extends AbstractModel
     public $CaSn;
 
     /**
-     * @var string 客户端ID
+     * @var string 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
      */
     public $ClientId;
 
     /**
-     * @var string 证书格式
+     * @var string 证书格式，默认为PEM，当前仅支持PEM格式
      */
     public $Format;
 
     /**
-     * @var string     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+     * @var string  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
      */
     public $Status;
 
     /**
-     * @param string $InstanceId 集群id
-     * @param string $DeviceCertificate 设备证书
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $DeviceCertificate 设备证书内容，可参考 [使用 CA 证书生成服务端/客户端证书](https://cloud.tencent.com/document/product/1778/114817#aab79cc8-a148-412e-beb8-9c9e158eb944) 生成
      * @param string $CaSn 关联的CA证书SN
-     * @param string $ClientId 客户端ID
-     * @param string $Format 证书格式
-     * @param string $Status     ACTIVE,//激活     INACTIVE,//未激活     REVOKED,//吊销     PENDING_ACTIVATION,//注册待激活
+     * @param string $ClientId 客户端ID，需要关联该证书的客户端ID。根据实际业务使用填写
+     * @param string $Format 证书格式，默认为PEM，当前仅支持PEM格式
+     * @param string $Status  客户端证书状态，默认激活状态（ACTIVE）
+ACTIVE：激活     
+INACTIVE：未激活     
+REVOKED：吊销 
+PENDING_ACTIVATION：注册待激活
      */
     function __construct()
     {

@@ -34,20 +34,8 @@ use TencentCloud\Common\AbstractModel;
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
  * @method void setNamespaces(array $Namespaces) 设置根据命名空间过滤，不同策略类型的值详见
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
- * @method string getDimensions() 获取告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
- * @method void setDimensions(string $Dimensions) 设置告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+ * @method string getDimensions() 获取告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+ * @method void setDimensions(string $Dimensions) 设置告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
  * @method array getReceiverUids() 获取根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
  * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
  * @method array getReceiverGroups() 获取根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
@@ -92,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) 设置根据排班表搜索
  * @method array getNoticeContentTmplIDs() 获取通知内容模板ID筛选
  * @method void setNoticeContentTmplIDs(array $NoticeContentTmplIDs) 设置通知内容模板ID筛选
+ * @method integer getIsPredefined() 获取是否为预设策略，1是，0否
+ * @method void setIsPredefined(integer $IsPredefined) 设置是否为预设策略，1是，0否
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -127,13 +117,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var string 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * @var string 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
      */
     public $Dimensions;
 
@@ -240,6 +224,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $NoticeContentTmplIDs;
 
     /**
+     * @var integer 是否为预设策略，1是，0否
+     */
+    public $IsPredefined;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -247,13 +236,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
      * @param array $Namespaces 根据命名空间过滤，不同策略类型的值详见
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
-     * @param string $Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
-`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
-具体也可以参考下方的示例 2。
-
-不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-
-注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * @param string $Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
      * @param array $ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      * @param array $PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
@@ -276,6 +259,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param string $PromInsId prom实例id，自定义指标策略时会用到
      * @param array $ReceiverOnCallFormIDs 根据排班表搜索
      * @param array $NoticeContentTmplIDs 通知内容模板ID筛选
+     * @param integer $IsPredefined 是否为预设策略，1是，0否
      */
     function __construct()
     {
@@ -406,6 +390,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("NoticeContentTmplIDs",$param) and $param["NoticeContentTmplIDs"] !== null) {
             $this->NoticeContentTmplIDs = $param["NoticeContentTmplIDs"];
+        }
+
+        if (array_key_exists("IsPredefined",$param) and $param["IsPredefined"] !== null) {
+            $this->IsPredefined = $param["IsPredefined"];
         }
     }
 }

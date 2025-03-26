@@ -33,43 +33,25 @@ use TencentCloud\Common\AbstractModel;
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
  * @method HeadTailConfigureInfo getHeadTailConfigure() 获取头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) 设置头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SegmentConfigureInfo getSegmentConfigure() 获取拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) 设置拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FaceConfigureInfo getFaceConfigure() 获取人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) 设置人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() 获取文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) 设置文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OcrWordsConfigureInfo getOcrWordsConfigure() 获取文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) 设置文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() 获取语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() 获取语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) 设置语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ObjectConfigureInfo getObjectConfigure() 获取物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) 设置物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getScreenshotInterval() 获取截图时间间隔，单位：秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截图时间间隔，单位：秒。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -103,56 +85,47 @@ class AIRecognitionTemplateItem extends AbstractModel
 
     /**
      * @var HeadTailConfigureInfo 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadTailConfigure;
 
     /**
      * @var SegmentConfigureInfo 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentConfigure;
 
     /**
      * @var FaceConfigureInfo 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceConfigure;
 
     /**
      * @var OcrFullTextConfigureInfo 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrFullTextConfigure;
 
     /**
      * @var OcrWordsConfigureInfo 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrWordsConfigure;
 
     /**
      * @var AsrFullTextConfigureInfo 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrFullTextConfigure;
 
     /**
      * @var AsrWordsConfigureInfo 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrWordsConfigure;
 
     /**
      * @var AsrTranslateConfigureInfo 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrTranslateConfigure;
 
     /**
      * @var ObjectConfigureInfo 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectConfigure;
 
@@ -179,24 +152,15 @@ class AIRecognitionTemplateItem extends AbstractModel
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param HeadTailConfigureInfo $HeadTailConfigure 头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentConfigureInfo $SegmentConfigure 拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
 <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrTranslateConfigureInfo $AsrTranslateConfigure 语音翻译识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectConfigureInfo $ObjectConfigure 物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ScreenshotInterval 截图时间间隔，单位：秒。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

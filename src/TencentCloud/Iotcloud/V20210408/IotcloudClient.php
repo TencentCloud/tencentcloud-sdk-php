@@ -42,8 +42,8 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 本接口（DeleteTopicRule）用于删除规则
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）用于查看设备信息
  * @method Models\DescribeDeviceClientKeyResponse DescribeDeviceClientKey(Models\DescribeDeviceClientKeyRequest $req) 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
- * @method Models\DescribeDeviceResourceResponse DescribeDeviceResource(Models\DescribeDeviceResourceRequest $req) 本接口（DescribeDeviceResource）用于查询设备资源详情。 
- * @method Models\DescribeDeviceResourcesResponse DescribeDeviceResources(Models\DescribeDeviceResourcesRequest $req) 本接口（DescribeDeviceResources）用于查询设备资源列表。 
+ * @method Models\DescribeDeviceResourceResponse DescribeDeviceResource(Models\DescribeDeviceResourceRequest $req) 本接口（DescribeDeviceResource）用于查询设备资源详情。
+ * @method Models\DescribeDeviceResourcesResponse DescribeDeviceResources(Models\DescribeDeviceResourcesRequest $req) 本接口（DescribeDeviceResources）用于查询设备资源列表。
  * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
@@ -58,7 +58,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribePrivateCAsResponse DescribePrivateCAs(Models\DescribePrivateCAsRequest $req) 查询私有CA证书列表
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 本接口（DescribeProduct）用于查看产品详情
  * @method Models\DescribeProductCAResponse DescribeProductCA(Models\DescribeProductCARequest $req) 查询产品绑定的CA证书
- * @method Models\DescribeProductResourceResponse DescribeProductResource(Models\DescribeProductResourceRequest $req) 本接口（DescribeProductResource）用于查询产品资源详情。 
+ * @method Models\DescribeProductResourceResponse DescribeProductResource(Models\DescribeProductResourceRequest $req) 本接口（DescribeProductResource）用于查询产品资源详情。
  * @method Models\DescribeProductResourcesResponse DescribeProductResources(Models\DescribeProductResourcesRequest $req) 本接口（DescribeProductResources）用于查询产品资源列表。
  * @method Models\DescribeProductTaskResponse DescribeProductTask(Models\DescribeProductTaskRequest $req) 本接口（DescribeProductTask）用于查看产品级别的任务信息
  * @method Models\DescribeProductTasksResponse DescribeProductTasks(Models\DescribeProductTasksRequest $req) 本接口（DescribeProductTasks）用于查看产品级别的任务列表

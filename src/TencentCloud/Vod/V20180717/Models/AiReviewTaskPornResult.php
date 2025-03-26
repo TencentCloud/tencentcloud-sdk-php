@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiReviewPornTaskInput getInput() 获取音视频审核涉及令人反感的信息的任务输入。
  * @method void setInput(AiReviewPornTaskInput $Input) 设置音视频审核涉及令人反感的信息的任务输入。
  * @method AiReviewPornTaskOutput getOutput() 获取音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiReviewPornTaskOutput $Output) 设置音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取音视频审核涉及令人反感的信息的任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置音视频审核涉及令人反感的信息的任务进度，取值范围 [0-100] 。
  */
@@ -66,7 +64,6 @@ class AiReviewTaskPornResult extends AbstractModel
 
     /**
      * @var AiReviewPornTaskOutput 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -82,7 +79,6 @@ class AiReviewTaskPornResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiReviewPornTaskInput $Input 音视频审核涉及令人反感的信息的任务输入。
      * @param AiReviewPornTaskOutput $Output 音视频审核涉及令人反感的信息的任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 音视频审核涉及令人反感的信息的任务进度，取值范围 [0-100] 。
      */
     function __construct()

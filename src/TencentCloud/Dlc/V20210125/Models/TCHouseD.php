@@ -21,67 +21,48 @@ use TencentCloud\Common\AbstractModel;
  * Doirs数据源详细信息
  *
  * @method string getInstanceId() 获取数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJdbcUrl() 获取数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJdbcUrl(string $JdbcUrl) 设置数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DatasourceConnectionLocation getLocation() 获取数据源的VPC和子网信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(DatasourceConnectionLocation $Location) 设置数据源的VPC和子网信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbName() 获取默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessInfo() 获取访问信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessInfo(string $AccessInfo) 设置访问信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCHouseD extends AbstractModel
 {
     /**
      * @var string 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JdbcUrl;
 
     /**
      * @var string 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
@@ -93,33 +74,24 @@ class TCHouseD extends AbstractModel
 
     /**
      * @var string 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var string 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessInfo;
 
     /**
      * @param string $InstanceId 数据源实例的唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JdbcUrl 数据源的JDBC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 用于访问数据源的用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password 数据源访问密码，需要base64编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceConnectionLocation $Location 数据源的VPC和子网信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbName 默认数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessInfo 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

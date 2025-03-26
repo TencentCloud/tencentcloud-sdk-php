@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取应用名称，长度限制：40个字符。
  * @method void setName(string $Name) 设置应用名称，长度限制：40个字符。
- * @method string getDescription() 获取应用简介，长度限制： 300个字符。
- * @method void setDescription(string $Description) 设置应用简介，长度限制： 300个字符。
+ * @method string getDescription() 获取应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+ * @method void setDescription(string $Description) 设置应用简介，长度限制： 300个字符。不填则应用简介默认为空。
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateSubAppIdRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 应用简介，长度限制： 300个字符。
+     * @var string 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
      */
     public $Description;
 
     /**
      * @param string $Name 应用名称，长度限制：40个字符。
-     * @param string $Description 应用简介，长度限制： 300个字符。
+     * @param string $Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
      */
     function __construct()
     {

@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取智能分析模板描述信息。
  * @method void setComment(string $Comment) 设置智能分析模板描述信息。
  * @method ClassificationConfigureInfo getClassificationConfigure() 获取智能分类任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) 设置智能分类任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TagConfigureInfo getTagConfigure() 获取智能标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagConfigure(TagConfigureInfo $TagConfigure) 设置智能标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CoverConfigureInfo getCoverConfigure() 获取智能封面任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) 设置智能封面任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FrameTagConfigureInfo getFrameTagConfigure() 获取智能按帧标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) 设置智能按帧标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HighlightsConfigureInfo getHighlightConfigure() 获取智能精彩集锦任务控制参数。
  * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) 设置智能精彩集锦任务控制参数。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -68,25 +60,21 @@ class AIAnalysisTemplateItem extends AbstractModel
 
     /**
      * @var ClassificationConfigureInfo 智能分类任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassificationConfigure;
 
     /**
      * @var TagConfigureInfo 智能标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagConfigure;
 
     /**
      * @var CoverConfigureInfo 智能封面任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverConfigure;
 
     /**
      * @var FrameTagConfigureInfo 智能按帧标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameTagConfigure;
 
@@ -110,13 +98,9 @@ class AIAnalysisTemplateItem extends AbstractModel
      * @param string $Name 智能分析模板名称。
      * @param string $Comment 智能分析模板描述信息。
      * @param ClassificationConfigureInfo $ClassificationConfigure 智能分类任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagConfigureInfo $TagConfigure 智能标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverConfigureInfo $CoverConfigure 智能封面任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FrameTagConfigureInfo $FrameTagConfigure 智能按帧标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighlightsConfigureInfo $HighlightConfigure 智能精彩集锦任务控制参数。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

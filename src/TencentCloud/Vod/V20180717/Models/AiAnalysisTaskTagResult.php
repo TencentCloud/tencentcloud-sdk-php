@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiAnalysisTaskTagInput getInput() 获取智能标签任务输入。
  * @method void setInput(AiAnalysisTaskTagInput $Input) 设置智能标签任务输入。
  * @method AiAnalysisTaskTagOutput getOutput() 获取智能标签任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiAnalysisTaskTagOutput $Output) 设置智能标签任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取智能标签任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置智能标签任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取智能标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -70,7 +68,6 @@ class AiAnalysisTaskTagResult extends AbstractModel
 
     /**
      * @var AiAnalysisTaskTagOutput 智能标签任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -96,7 +93,6 @@ class AiAnalysisTaskTagResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiAnalysisTaskTagInput $Input 智能标签任务输入。
      * @param AiAnalysisTaskTagOutput $Output 智能标签任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 智能标签任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 智能标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 智能标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li> true：自动接受。</li> <li> false：不自动接受。</li>
  * @method void setAcceptFlag(boolean $AcceptFlag) 设置是否接受终端节点连接请求。
 <li> true：自动接受。</li> <li> false：不自动接受。</li>
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class EnableVpcEndPointConnectRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
     public $AcceptFlag;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param string $EndPointServiceId 终端节点服务ID。
      * @param array $EndPointId 终端节点ID。
      * @param boolean $AcceptFlag 是否接受终端节点连接请求。
 <li> true：自动接受。</li> <li> false：不自动接受。</li>
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
 
         if (array_key_exists("AcceptFlag",$param) and $param["AcceptFlag"] !== null) {
             $this->AcceptFlag = $param["AcceptFlag"];
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

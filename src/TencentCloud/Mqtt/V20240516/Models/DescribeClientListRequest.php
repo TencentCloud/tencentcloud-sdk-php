@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getClientId() 获取客户端名
- * @method void setClientId(string $ClientId) 设置客户端名
+ * @method string getClientId() 获取客户端ID
+ * @method void setClientId(string $ClientId) 设置客户端ID
  * @method string getNumber() 获取客户端数量限制,最大1024，默认1024
  * @method void setNumber(string $Number) 设置客户端数量限制,最大1024，默认1024
  */
@@ -35,7 +35,7 @@ class DescribeClientListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 客户端名
+     * @var string 客户端ID
      */
     public $ClientId;
 
@@ -46,7 +46,7 @@ class DescribeClientListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $ClientId 客户端名
+     * @param string $ClientId 客户端ID
      * @param string $Number 客户端数量限制,最大1024，默认1024
      */
     function __construct()

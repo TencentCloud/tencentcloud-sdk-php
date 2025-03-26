@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method AiRecognitionTaskSegmentResultInput getInput() 获取视频拆条任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(AiRecognitionTaskSegmentResultInput $Input) 设置视频拆条任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskSegmentResultOutput getOutput() 获取视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskSegmentResultOutput $Output) 设置视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取视频拆条任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置视频拆条任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取视频拆条任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -67,13 +63,11 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
 
     /**
      * @var AiRecognitionTaskSegmentResultInput 视频拆条任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var AiRecognitionTaskSegmentResultOutput 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -98,9 +92,7 @@ class AiRecognitionTaskSegmentResult extends AbstractModel
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
      * @param AiRecognitionTaskSegmentResultInput $Input 视频拆条任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskSegmentResultOutput $Output 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 视频拆条任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 视频拆条任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 视频拆条任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

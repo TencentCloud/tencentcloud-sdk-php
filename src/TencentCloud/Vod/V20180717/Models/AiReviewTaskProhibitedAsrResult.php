@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiReviewProhibitedAsrTaskInput getInput() 获取音视频审核 Asr 文字鉴违禁任务输入。
  * @method void setInput(AiReviewProhibitedAsrTaskInput $Input) 设置音视频审核 Asr 文字鉴违禁任务输入。
  * @method AiReviewProhibitedAsrTaskOutput getOutput() 获取音视频审核 Asr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiReviewProhibitedAsrTaskOutput $Output) 设置音视频审核 Asr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取音视频审核 Asr 文字鉴违禁任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置音视频审核 Asr 文字鉴违禁任务进度，取值范围 [0-100] 。
  */
@@ -66,7 +64,6 @@ class AiReviewTaskProhibitedAsrResult extends AbstractModel
 
     /**
      * @var AiReviewProhibitedAsrTaskOutput 音视频审核 Asr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -82,7 +79,6 @@ class AiReviewTaskProhibitedAsrResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiReviewProhibitedAsrTaskInput $Input 音视频审核 Asr 文字鉴违禁任务输入。
      * @param AiReviewProhibitedAsrTaskOutput $Output 音视频审核 Asr 文字鉴违禁任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 音视频审核 Asr 文字鉴违禁任务进度，取值范围 [0-100] 。
      */
     function __construct()

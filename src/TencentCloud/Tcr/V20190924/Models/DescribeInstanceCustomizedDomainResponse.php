@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceCustomizedDomain返回参数结构体
  *
  * @method array getDomainInfoList() 获取域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainInfoList(array $DomainInfoList) 设置域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总个数
  * @method void setTotalCount(integer $TotalCount) 设置总个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeInstanceCustomizedDomainResponse extends AbstractModel
 {
     /**
      * @var array 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainInfoList;
 
@@ -49,7 +46,6 @@ class DescribeInstanceCustomizedDomainResponse extends AbstractModel
 
     /**
      * @param array $DomainInfoList 域名信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

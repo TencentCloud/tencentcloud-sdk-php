@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getExpiresAt() 获取过期时间
  * @method void setExpiresAt(integer $ExpiresAt) 设置过期时间
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method array getPermissions() 获取策略
@@ -61,7 +59,6 @@ class ServiceAccount extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -81,7 +78,6 @@ class ServiceAccount extends AbstractModel
      * @param boolean $Disable 是否禁用
      * @param integer $ExpiresAt 过期时间
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
      * @param array $Permissions 策略
      */

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4
  */
 class CreateVpcEndPointRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4
+     */
+    public $IpAddressType;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID。
      * @param string $EndPointName 终端节点名称。
@@ -80,6 +87,7 @@ class CreateVpcEndPointRequest extends AbstractModel
      * @param string $EndPointVip 终端节点VIP，可以指定IP申请。
      * @param string $SecurityGroupId 安全组ID。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateVpcEndPointRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

@@ -27,29 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取音视频审核模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置音视频审核模板描述信息，长度限制：256 个字符。
  * @method PornConfigureInfo getPornConfigure() 获取鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TerrorismConfigureInfo getTerrorismConfigure() 获取鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) 设置鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PoliticalConfigureInfo getPoliticalConfigure() 获取鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) 设置鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ProhibitedConfigureInfo getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReviewWallSwitch() 获取音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
@@ -82,19 +72,16 @@ class ContentReviewTemplateItem extends AbstractModel
 
     /**
      * @var PornConfigureInfo 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PornConfigure;
 
     /**
      * @var TerrorismConfigureInfo 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TerrorismConfigure;
 
     /**
      * @var PoliticalConfigureInfo 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalConfigure;
 
@@ -102,13 +89,11 @@ class ContentReviewTemplateItem extends AbstractModel
      * @var ProhibitedConfigureInfo 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProhibitedConfigure;
 
     /**
      * @var UserDefineConfigureInfo 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDefineConfigure;
 
@@ -139,17 +124,12 @@ class ContentReviewTemplateItem extends AbstractModel
      * @param string $Name 音视频审核模板名称，长度限制：64 个字符。
      * @param string $Comment 音视频审核模板描述信息，长度限制：256 个字符。
      * @param PornConfigureInfo $PornConfigure 鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismConfigureInfo $TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalConfigureInfo $PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义音视频审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReviewWallSwitch 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>

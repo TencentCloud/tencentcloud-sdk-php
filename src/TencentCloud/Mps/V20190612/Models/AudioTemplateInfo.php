@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
 <li>6：5.1声道</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 默认值：2。
+ * @method AudioTrackChannelInfo getTrackChannelInfo() 获取合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrackChannelInfo(AudioTrackChannelInfo $TrackChannelInfo) 设置合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioTemplateInfo extends AbstractModel
 {
@@ -130,6 +136,13 @@ class AudioTemplateInfo extends AbstractModel
     public $AudioChannel;
 
     /**
+     * @var AudioTrackChannelInfo 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrackChannelInfo;
+
+    /**
      * @param string $Codec 音频流的编码格式。
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
@@ -160,6 +173,9 @@ class AudioTemplateInfo extends AbstractModel
 <li>6：5.1声道</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 默认值：2。
+     * @param AudioTrackChannelInfo $TrackChannelInfo 合并音轨信息。
+注意：此字段只是自适应转码生效，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -188,6 +204,11 @@ class AudioTemplateInfo extends AbstractModel
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("TrackChannelInfo",$param) and $param["TrackChannelInfo"] !== null) {
+            $this->TrackChannelInfo = new AudioTrackChannelInfo();
+            $this->TrackChannelInfo->deserialize($param["TrackChannelInfo"]);
         }
     }
 }

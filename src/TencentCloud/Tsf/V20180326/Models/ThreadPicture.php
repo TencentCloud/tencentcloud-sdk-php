@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThreadCount(array $ThreadCount) 设置总线程数
  * @method array getThreadActive() 获取活跃线程数
  * @method void setThreadActive(array $ThreadActive) 设置活跃线程数
- * @method array getDeamonThreadCount() 获取守护线程数
- * @method void setDeamonThreadCount(array $DeamonThreadCount) 设置守护线程数
+ * @method array getDeamonThreadCount() 获取守护线程数 拼写错误，废弃
+ * @method void setDeamonThreadCount(array $DeamonThreadCount) 设置守护线程数 拼写错误，废弃
+ * @method array getDaemonThreadCount() 获取守护线程数
+ * @method void setDaemonThreadCount(array $DaemonThreadCount) 设置守护线程数
  */
 class ThreadPicture extends AbstractModel
 {
@@ -40,14 +42,20 @@ class ThreadPicture extends AbstractModel
     public $ThreadActive;
 
     /**
-     * @var array 守护线程数
+     * @var array 守护线程数 拼写错误，废弃
      */
     public $DeamonThreadCount;
 
     /**
+     * @var array 守护线程数
+     */
+    public $DaemonThreadCount;
+
+    /**
      * @param array $ThreadCount 总线程数
      * @param array $ThreadActive 活跃线程数
-     * @param array $DeamonThreadCount 守护线程数
+     * @param array $DeamonThreadCount 守护线程数 拼写错误，废弃
+     * @param array $DaemonThreadCount 守护线程数
      */
     function __construct()
     {
@@ -86,6 +94,15 @@ class ThreadPicture extends AbstractModel
                 $obj = new CurvePoint();
                 $obj->deserialize($value);
                 array_push($this->DeamonThreadCount, $obj);
+            }
+        }
+
+        if (array_key_exists("DaemonThreadCount",$param) and $param["DaemonThreadCount"] !== null) {
+            $this->DaemonThreadCount = [];
+            foreach ($param["DaemonThreadCount"] as $key => $value){
+                $obj = new CurvePoint();
+                $obj->deserialize($value);
+                array_push($this->DaemonThreadCount, $obj);
             }
         }
     }

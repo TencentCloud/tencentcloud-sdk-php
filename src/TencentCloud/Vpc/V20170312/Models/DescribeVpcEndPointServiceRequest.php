@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPointServiceIds(array $EndPointServiceIds) 设置终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
  * @method boolean getIsListAuthorizedEndPointService() 获取<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
  * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) 设置<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class DescribeVpcEndPointServiceRequest extends AbstractModel
 {
@@ -71,6 +73,11 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
     public $IsListAuthorizedEndPointService;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param array $Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
@@ -80,6 +87,7 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
      * @param boolean $IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
 
         if (array_key_exists("IsListAuthorizedEndPointService",$param) and $param["IsListAuthorizedEndPointService"] !== null) {
             $this->IsListAuthorizedEndPointService = $param["IsListAuthorizedEndPointService"];
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

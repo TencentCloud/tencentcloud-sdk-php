@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 描述购买云盘时的费用明细。
  *
  * @method string getPriceTitle() 获取描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceTitle(string $PriceTitle) 设置描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPriceName() 获取描述计费项目显示名称，用户控制台展示。
  * @method void setPriceName(string $PriceName) 设置描述计费项目显示名称，用户控制台展示。
  * @method float getOriginalPrice() 获取预付费云盘预支费用的原价，单位：元。
@@ -67,7 +65,6 @@ class DetailPrice extends AbstractModel
 {
     /**
      * @var string 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceTitle;
 
@@ -132,7 +129,6 @@ class DetailPrice extends AbstractModel
 
     /**
      * @param string $PriceTitle 描述计费项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PriceName 描述计费项目显示名称，用户控制台展示。
      * @param float $OriginalPrice 预付费云盘预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。

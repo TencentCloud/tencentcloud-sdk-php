@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Taf\V20200210\Models as Models;
 
 /**
+ * @method Models\ManageDeviceRiskResponse ManageDeviceRisk(Models\ManageDeviceRiskRequest $req) oaid 设备风险接口
  * @method Models\ManagePortraitRiskResponse ManagePortraitRisk(Models\ManagePortraitRiskRequest $req) 虚假流量识别
  */
 

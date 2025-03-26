@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfig() 获取镜像的配置信息
  * @method void setConfig(string $Config) 设置镜像的配置信息
  * @method array getLabels() 获取镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeImageManifestsResponse extends AbstractModel
 
     /**
      * @var array 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var integer 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
@@ -68,9 +62,7 @@ class DescribeImageManifestsResponse extends AbstractModel
      * @param string $Manifest 镜像的Manifest信息
      * @param string $Config 镜像的配置信息
      * @param array $Labels 镜像的Labels信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 镜像大小，单位：byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

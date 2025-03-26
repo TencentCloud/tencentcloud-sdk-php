@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method string getUsername() 获取用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
  * @method void setUsername(string $Username) 设置用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
- * @method string getPassword() 获取密码，该字段为空时候则后端会默认生成
- * @method void setPassword(string $Password) 设置密码，该字段为空时候则后端会默认生成
+ * @method string getPassword() 获取密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
+ * @method void setPassword(string $Password) 设置密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
  * @method string getRemark() 获取备注，长度不超过128个字符。
  * @method void setRemark(string $Remark) 设置备注，长度不超过128个字符。
  */
@@ -42,7 +42,7 @@ class CreateUserRequest extends AbstractModel
     public $Username;
 
     /**
-     * @var string 密码，该字段为空时候则后端会默认生成
+     * @var string 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
      */
     public $Password;
 
@@ -54,7 +54,7 @@ class CreateUserRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Username 用户名，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
-     * @param string $Password 密码，该字段为空时候则后端会默认生成
+     * @param string $Password 密码，该字段为空时候则后端会默认生成。用户自定义密码时，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 64 个字符。
      * @param string $Remark 备注，长度不超过128个字符。
      */
     function __construct()

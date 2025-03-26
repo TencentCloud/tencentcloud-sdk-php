@@ -82,8 +82,8 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改MQTT角色
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 发布 MQTT 消息到消息主题或客户端
- * @method Models\RegisterCaCertificateResponse RegisterCaCertificate(Models\RegisterCaCertificateRequest $req) 注册ca证书
- * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书
+ * @method Models\RegisterCaCertificateResponse RegisterCaCertificate(Models\RegisterCaCertificateRequest $req) 注册CA证书（仅一机一证场景支持），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817)
+ * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书（仅一机一证场景生效），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817#6cb39d46-efad-4220-8f11-2e7fab207bc8)
  * @method Models\RevokedDeviceCertificateResponse RevokedDeviceCertificate(Models\RevokedDeviceCertificateRequest $req) 吊销设备证书
  * @method Models\UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(Models\UpdateAuthorizationPolicyPriorityRequest $req) 修改策略规则优先级
  */

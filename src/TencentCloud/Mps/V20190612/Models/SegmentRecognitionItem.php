@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioEndTime(float $AudioEndTime) 设置直播拆条用，音频对应结束时间戳。
  * @method string getPersonPositionUrl() 获取直播拆条用，人物位置参考信息用于横转竖。
  * @method void setPersonPositionUrl(string $PersonPositionUrl) 设置直播拆条用，人物位置参考信息用于横转竖。
+ * @method string getPersonId() 获取指定人物ID。
+ * @method void setPersonId(string $PersonId) 设置指定人物ID。
  */
 class SegmentRecognitionItem extends AbstractModel
 {
@@ -140,6 +142,11 @@ class SegmentRecognitionItem extends AbstractModel
     public $PersonPositionUrl;
 
     /**
+     * @var string 指定人物ID。
+     */
+    public $PersonId;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
@@ -160,6 +167,7 @@ class SegmentRecognitionItem extends AbstractModel
      * @param float $AudioBeginTime 直播拆条用，音频对应起始时间戳；
      * @param float $AudioEndTime 直播拆条用，音频对应结束时间戳。
      * @param string $PersonPositionUrl 直播拆条用，人物位置参考信息用于横转竖。
+     * @param string $PersonId 指定人物ID。
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class SegmentRecognitionItem extends AbstractModel
 
         if (array_key_exists("PersonPositionUrl",$param) and $param["PersonPositionUrl"] !== null) {
             $this->PersonPositionUrl = $param["PersonPositionUrl"];
+        }
+
+        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
+            $this->PersonId = $param["PersonId"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaCertificate请求参数结构体
  *
- * @method string getCaSn() 获取ca证书sn
- * @method void setCaSn(string $CaSn) 设置ca证书sn
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getCaSn() 获取CA证书的SN序列号，可以从 [DescribeCaCertificates](https://cloud.tencent.com/document/api/1778/116206)接口、控制台、证书文件中获得。
+ * @method void setCaSn(string $CaSn) 设置CA证书的SN序列号，可以从 [DescribeCaCertificates](https://cloud.tencent.com/document/api/1778/116206)接口、控制台、证书文件中获得。
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  */
 class DescribeCaCertificateRequest extends AbstractModel
 {
     /**
-     * @var string ca证书sn
+     * @var string CA证书的SN序列号，可以从 [DescribeCaCertificates](https://cloud.tencent.com/document/api/1778/116206)接口、控制台、证书文件中获得。
      */
     public $CaSn;
 
     /**
-     * @var string 集群id
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @param string $CaSn ca证书sn
-     * @param string $InstanceId 集群id
+     * @param string $CaSn CA证书的SN序列号，可以从 [DescribeCaCertificates](https://cloud.tencent.com/document/api/1778/116206)接口、控制台、证书文件中获得。
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     function __construct()
     {

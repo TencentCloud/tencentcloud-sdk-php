@@ -31,7 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStaffNumber() 获取座席工号
  * @method void setStaffNumber(string $StaffNumber) 设置座席工号
  * @method integer getRoleId() 获取用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
  * @method void setRoleId(integer $RoleId) 设置用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
+ * @method integer getRoleIdList() 获取用户角色id列表
+ * @method void setRoleIdList(integer $RoleIdList) 设置用户角色id列表
  * @method array getSkillGroupList() 获取所属技能组列表
  * @method void setSkillGroupList(array $SkillGroupList) 设置所属技能组列表
  * @method integer getLastModifyTimestamp() 获取最后修改时间
@@ -68,8 +72,15 @@ class StaffInfo extends AbstractModel
 
     /**
      * @var integer 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
+     * @deprecated
      */
     public $RoleId;
+
+    /**
+     * @var integer 用户角色id列表
+     */
+    public $RoleIdList;
 
     /**
      * @var array 所属技能组列表
@@ -93,6 +104,8 @@ class StaffInfo extends AbstractModel
      * @param string $Nick 座席昵称
      * @param string $StaffNumber 座席工号
      * @param integer $RoleId 用户角色id
+一个用户绑定了多个角色时以RoleIdList为准
+     * @param integer $RoleIdList 用户角色id列表
      * @param array $SkillGroupList 所属技能组列表
      * @param integer $LastModifyTimestamp 最后修改时间
      * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
@@ -132,6 +145,10 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
             $this->RoleId = $param["RoleId"];
+        }
+
+        if (array_key_exists("RoleIdList",$param) and $param["RoleIdList"] !== null) {
+            $this->RoleIdList = $param["RoleIdList"];
         }
 
         if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {

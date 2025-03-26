@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 登录服务详情
  *
  * @method string getServiceName() 获取登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginService extends AbstractModel
 {
     /**
      * @var string 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @param string $ServiceName 登录方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

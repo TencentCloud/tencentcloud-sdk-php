@@ -57,9 +57,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetailPrices() 获取计费项目明细列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetailPrices(array $DetailPrices) 设置计费项目明细列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrepayPrice extends AbstractModel
 {
@@ -119,7 +117,6 @@ class PrepayPrice extends AbstractModel
 
     /**
      * @var array 计费项目明细列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailPrices;
 
@@ -143,7 +140,6 @@ class PrepayPrice extends AbstractModel
      * @param float $UnitPrice 后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DetailPrices 计费项目明细列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

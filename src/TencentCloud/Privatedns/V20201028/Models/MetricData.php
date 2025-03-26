@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDataSet() 获取表数据
  * @method void setDataSet(array $DataSet) 设置表数据
  * @method integer getMetricCount() 获取查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricCount(integer $MetricCount) 设置查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricData extends AbstractModel
 {
@@ -50,7 +48,6 @@ class MetricData extends AbstractModel
 
     /**
      * @var integer 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricCount;
 
@@ -59,7 +56,6 @@ class MetricData extends AbstractModel
      * @param string $Metric 表名
      * @param array $DataSet 表数据
      * @param integer $MetricCount 查询范围内的请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

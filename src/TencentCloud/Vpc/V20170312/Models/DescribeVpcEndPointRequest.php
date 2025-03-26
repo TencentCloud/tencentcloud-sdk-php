@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单页返回数量，默认为20，最大值为100。
  * @method array getEndPointId() 获取终端节点ID列表。
  * @method void setEndPointId(array $EndPointId) 设置终端节点ID列表。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class DescribeVpcEndPointRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class DescribeVpcEndPointRequest extends AbstractModel
     public $EndPointId;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param array $Filters 过滤条件。
 <li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
@@ -72,6 +79,7 @@ class DescribeVpcEndPointRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointId 终端节点ID列表。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class DescribeVpcEndPointRequest extends AbstractModel
 
         if (array_key_exists("EndPointId",$param) and $param["EndPointId"] !== null) {
             $this->EndPointId = $param["EndPointId"];
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) 设置是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
  * @method string getServiceInstanceId() 获取后端服务的ID，比如lb-xxx。
  * @method void setServiceInstanceId(string $ServiceInstanceId) 设置后端服务的ID，比如lb-xxx。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
     public $ServiceInstanceId;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param string $EndPointServiceId 终端节点服务ID。
      * @param string $VpcId VPCID。
      * @param string $EndPointServiceName 终端节点服务名称。
      * @param boolean $AutoAcceptFlag 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
      * @param string $ServiceInstanceId 后端服务的ID，比如lb-xxx。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
 
         if (array_key_exists("ServiceInstanceId",$param) and $param["ServiceInstanceId"] !== null) {
             $this->ServiceInstanceId = $param["ServiceInstanceId"];
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

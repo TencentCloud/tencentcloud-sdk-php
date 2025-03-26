@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EKS Instnace CBS volume
  *
- * @method string getName() 获取cbs volume 数据卷名称
- * @method void setName(string $Name) 设置cbs volume 数据卷名称
  * @method string getCbsDiskId() 获取腾讯云cbs盘Id
  * @method void setCbsDiskId(string $CbsDiskId) 设置腾讯云cbs盘Id
+ * @method string getName() 获取cbs volume 数据卷名称
+ * @method void setName(string $Name) 设置cbs volume 数据卷名称
  */
 class CbsVolume extends AbstractModel
 {
-    /**
-     * @var string cbs volume 数据卷名称
-     */
-    public $Name;
-
     /**
      * @var string 腾讯云cbs盘Id
      */
     public $CbsDiskId;
 
     /**
-     * @param string $Name cbs volume 数据卷名称
+     * @var string cbs volume 数据卷名称
+     */
+    public $Name;
+
+    /**
      * @param string $CbsDiskId 腾讯云cbs盘Id
+     * @param string $Name cbs volume 数据卷名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CbsVolume extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
         if (array_key_exists("CbsDiskId",$param) and $param["CbsDiskId"] !== null) {
             $this->CbsDiskId = $param["CbsDiskId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

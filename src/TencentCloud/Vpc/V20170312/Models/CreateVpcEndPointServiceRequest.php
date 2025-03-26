@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class CreateVpcEndPointServiceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $EndPointServiceName 终端节点服务名称。
      * @param boolean $AutoAcceptFlag 是否自动接受。
@@ -80,6 +87,7 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
      * @param boolean $IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

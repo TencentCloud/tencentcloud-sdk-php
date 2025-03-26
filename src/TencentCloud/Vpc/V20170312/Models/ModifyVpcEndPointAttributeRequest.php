@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPointName(string $EndPointName) 设置终端节点名称。
  * @method array getSecurityGroupIds() 获取安全组ID列表。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class ModifyVpcEndPointAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyVpcEndPointAttributeRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     */
+    public $IpAddressType;
+
+    /**
      * @param string $EndPointId 终端节点ID。
      * @param string $EndPointName 终端节点名称。
      * @param array $SecurityGroupIds 安全组ID列表。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyVpcEndPointAttributeRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
+            $this->IpAddressType = $param["IpAddressType"];
         }
     }
 }

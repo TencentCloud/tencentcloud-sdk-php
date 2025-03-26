@@ -53,9 +53,7 @@ sub：订阅mqtt消息
  * @method string getClientId() 获取条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method void setClientId(string $ClientId) 设置条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method string getUsername() 获取条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
  * @method void setUsername(string $Username) 设置条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
  * @method string getIp() 获取条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method void setIp(string $Ip) 设置条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method string getQos() 获取条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
@@ -131,7 +129,6 @@ sub：订阅mqtt消息
 
     /**
      * @var string 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
      */
     public $Username;
 
@@ -186,7 +183,6 @@ sub：订阅mqtt消息
      * @param string $Resources 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param string $ClientId 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param string $Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
      * @param string $Ip 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param string $Qos 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param integer $Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 支持TopicName模糊查询
  * @method integer getOffset() 获取查询起始位置，默认0。
  * @method void setOffset(integer $Offset) 设置查询起始位置，默认0。
- * @method integer getLimit() 获取查询结果限制数量，默认0，最大20
- * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认0，最大20
+ * @method integer getLimit() 获取查询结果限制数量，默认20，最大20
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20，最大20
  */
 class DescribeTopicListRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeTopicListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量，默认0，最大20
+     * @var integer 查询结果限制数量，默认20，最大20
      */
     public $Limit;
 
@@ -59,7 +59,7 @@ class DescribeTopicListRequest extends AbstractModel
      * @param array $Filters 查询条件列表:
 支持TopicName模糊查询
      * @param integer $Offset 查询起始位置，默认0。
-     * @param integer $Limit 查询结果限制数量，默认0，最大20
+     * @param integer $Limit 查询结果限制数量，默认20，最大20
      */
     function __construct()
     {

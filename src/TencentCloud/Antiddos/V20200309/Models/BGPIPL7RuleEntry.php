@@ -75,9 +75,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
  * @method void setErrCode(integer $ErrCode) 设置规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
  * @method integer getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPL7RuleEntry extends AbstractModel
 {
@@ -214,7 +212,6 @@ class BGPIPL7RuleEntry extends AbstractModel
 
     /**
      * @var integer 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
@@ -247,7 +244,6 @@ class BGPIPL7RuleEntry extends AbstractModel
      * @param integer $RewriteHttps http强制跳转https，1表示打开，0表示关闭
      * @param integer $ErrCode 规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
      * @param integer $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取跳过的表数量
  * @method void setTotalCount(integer $TotalCount) 设置跳过的表数量
  * @method array getItems() 获取跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SkippedDetail extends AbstractModel
 {
@@ -36,14 +34,12 @@ class SkippedDetail extends AbstractModel
 
     /**
      * @var array 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @param integer $TotalCount 跳过的表数量
      * @param array $Items 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

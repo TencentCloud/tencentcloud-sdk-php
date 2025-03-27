@@ -21,25 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * 剪辑固化任务信息。
  *
  * @method string getFileId() 获取固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPersistenceSource() 获取剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersistenceSource(string $PersistenceSource) 设置剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PersistenceCompleteTask extends AbstractModel
 {
     /**
      * @var string 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
@@ -48,18 +43,15 @@ class PersistenceCompleteTask extends AbstractModel
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersistenceSource;
 
     /**
      * @param string $FileId 固化生成的媒体 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PersistenceSource 剪辑固化的来源，有以下三种。
 <li>SimpleHlsClip：来自简单 HLS 剪辑；</li>
 <li>FastEditMedia：来自快速媒体编辑；</li>
 <li>LiveRealTimeClip:来自直播即时剪辑。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

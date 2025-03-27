@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置进程id
  * @method integer getRiskLevel() 获取威胁等级：0中危，1高危
  * @method void setRiskLevel(integer $RiskLevel) 设置威胁等级：0中危，1高危
+ * @method string getCmdLineQuote() 获取命令详情的转义后内容，供正则加白全字符串匹配使用	
+ * @method void setCmdLineQuote(string $CmdLineQuote) 设置命令详情的转义后内容，供正则加白全字符串匹配使用	
  */
 class ReverseShell extends AbstractModel
 {
@@ -185,6 +187,11 @@ class ReverseShell extends AbstractModel
     public $RiskLevel;
 
     /**
+     * @var string 命令详情的转义后内容，供正则加白全字符串匹配使用	
+     */
+    public $CmdLineQuote;
+
+    /**
      * @param integer $Id ID 主键
      * @param string $Uuid 主机安全UUID
      * @param string $Quuid 主机ID
@@ -208,6 +215,7 @@ class ReverseShell extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
      * @param integer $Pid 进程id
      * @param integer $RiskLevel 威胁等级：0中危，1高危
+     * @param string $CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用	
      */
     function __construct()
     {
@@ -313,6 +321,10 @@ class ReverseShell extends AbstractModel
 
         if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
             $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
+            $this->CmdLineQuote = $param["CmdLineQuote"];
         }
     }
 }

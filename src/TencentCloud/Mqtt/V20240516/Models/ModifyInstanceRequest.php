@@ -20,14 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getName() 获取要修改实例名称
- * @method void setName(string $Name) 设置要修改实例名称
- * @method string getRemark() 获取要修改的备注信息
- * @method void setRemark(string $Remark) 设置要修改的备注信息
- * @method string getSkuCode() 获取要变更的配置规格
- * @method void setSkuCode(string $SkuCode) 设置要变更的配置规格
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getName() 获取要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+ * @method void setName(string $Name) 设置要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+ * @method string getRemark() 获取要修改的备注信息，最多64个字符。
+ * @method void setRemark(string $Remark) 设置要修改的备注信息，最多64个字符。
+ * @method string getSkuCode() 获取需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+ * @method void setSkuCode(string $SkuCode) 设置需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
  * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
@@ -36,26 +38,29 @@ JITP：自动注册
 API：手动通过API注册
  * @method boolean getAutomaticActivation() 获取自动注册证书是否自动激活
  * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册证书是否自动激活
+ * @method boolean getAuthorizationPolicy() 获取授权策略开关
+ * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) 设置授权策略开关
  */
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 要修改实例名称
+     * @var string 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      */
     public $Name;
 
     /**
-     * @var string 要修改的备注信息
+     * @var string 要修改的备注信息，最多64个字符。
      */
     public $Remark;
 
     /**
-     * @var string 要变更的配置规格
+     * @var string 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      */
     public $SkuCode;
 
@@ -72,14 +77,21 @@ API：手动通过API注册
     public $AutomaticActivation;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Name 要修改实例名称
-     * @param string $Remark 要修改的备注信息
-     * @param string $SkuCode 要变更的配置规格
+     * @var boolean 授权策略开关
+     */
+    public $AuthorizationPolicy;
+
+    /**
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+     * @param string $Remark 要修改的备注信息，最多64个字符。
+     * @param string $SkuCode 需要变更的配置规格
+基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      * @param string $DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
      * @param boolean $AutomaticActivation 自动注册证书是否自动激活
+     * @param boolean $AuthorizationPolicy 授权策略开关
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ API：手动通过API注册
 
         if (array_key_exists("AutomaticActivation",$param) and $param["AutomaticActivation"] !== null) {
             $this->AutomaticActivation = $param["AutomaticActivation"];
+        }
+
+        if (array_key_exists("AuthorizationPolicy",$param) and $param["AuthorizationPolicy"] !== null) {
+            $this->AuthorizationPolicy = $param["AuthorizationPolicy"];
         }
     }
 }

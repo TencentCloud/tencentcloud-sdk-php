@@ -33,10 +33,14 @@ use TencentCloud\Common\AbstractModel;
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
  * @method void setServiceType(string $ServiceType) 设置要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
 <li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
@@ -46,10 +50,14 @@ use TencentCloud\Common\AbstractModel;
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
  * @method string getOperate() 获取操作类型
 <ul>
 <li>OPEN : 开通</li>
@@ -95,10 +103,14 @@ class ModifyExtendedServiceRequest extends AbstractModel
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
      */
     public $ServiceType;
 
@@ -139,10 +151,14 @@ class ModifyExtendedServiceRequest extends AbstractModel
 <li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
+<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
 <li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
 <li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
+<li>APP_LOGIN：限制企业员工小程序端登录</li>
+<li>PC_LOGIN：限制企业员工网页端登录</li>
+</ul>
      * @param string $Operate 操作类型
 <ul>
 <li>OPEN : 开通</li>

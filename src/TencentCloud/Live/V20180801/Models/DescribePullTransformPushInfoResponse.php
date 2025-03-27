@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataInfoList(array $DataInfoList) 设置时长统计数据列表
  * @method integer getTotalDuration() 获取拉流转推得总时长
  * @method void setTotalDuration(integer $TotalDuration) 设置拉流转推得总时长
+ * @method integer getTotalDurationSecond() 获取拉流转推得总时长（秒）
+ * @method void setTotalDurationSecond(integer $TotalDurationSecond) 设置拉流转推得总时长（秒）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribePullTransformPushInfoResponse extends AbstractModel
     public $TotalDuration;
 
     /**
+     * @var integer 拉流转推得总时长（秒）
+     */
+    public $TotalDurationSecond;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribePullTransformPushInfoResponse extends AbstractModel
     /**
      * @param array $DataInfoList 时长统计数据列表
      * @param integer $TotalDuration 拉流转推得总时长
+     * @param integer $TotalDurationSecond 拉流转推得总时长（秒）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribePullTransformPushInfoResponse extends AbstractModel
 
         if (array_key_exists("TotalDuration",$param) and $param["TotalDuration"] !== null) {
             $this->TotalDuration = $param["TotalDuration"];
+        }
+
+        if (array_key_exists("TotalDurationSecond",$param) and $param["TotalDurationSecond"] !== null) {
+            $this->TotalDurationSecond = $param["TotalDurationSecond"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

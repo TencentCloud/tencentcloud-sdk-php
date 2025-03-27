@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVideoEncodingPresets请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method array getIds() 获取要查询的配置 ID 列表。填写该参数则按照配置 ID 进行查询。
  * @method void setIds(array $Ids) 设置要查询的配置 ID 列表。填写该参数则按照配置 ID 进行查询。
  * @method integer getLimit() 获取分页大小，默认20。最大值50。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVideoEncodingPresetsRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -52,7 +52,7 @@ class DescribeVideoEncodingPresetsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param array $Ids 要查询的配置 ID 列表。填写该参数则按照配置 ID 进行查询。
      * @param integer $Limit 分页大小，默认20。最大值50。
      * @param integer $Offset 分页起始，默认0。

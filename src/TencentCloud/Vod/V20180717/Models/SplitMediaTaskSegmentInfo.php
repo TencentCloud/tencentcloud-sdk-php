@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method SplitMediaTaskInput getInput() 获取视频拆条任务输入信息。
  * @method void setInput(SplitMediaTaskInput $Input) 设置视频拆条任务输入信息。
  * @method TaskOutputMediaInfo getOutput() 获取视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(TaskOutputMediaInfo $Output) 设置视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcedureTaskId() 获取任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
  * @method void setProcedureTaskId(string $ProcedureTaskId) 设置任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
  * @method string getReviewAudioVideoTaskId() 获取任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
@@ -40,7 +38,6 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
 
     /**
      * @var TaskOutputMediaInfo 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -57,7 +54,6 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
     /**
      * @param SplitMediaTaskInput $Input 视频拆条任务输入信息。
      * @param TaskOutputMediaInfo $Output 视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcedureTaskId 任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      * @param string $ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
      */

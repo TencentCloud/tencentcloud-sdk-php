@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智慧表单上传文件信息
+ * DescribeClientSwitchTraTaskInfo请求参数结构体
  *
- * @method string getFileUrl() 获取文件url地址
- * @method void setFileUrl(string $FileUrl) 设置文件url地址
- * @method integer getFileOrderNumber() 获取文件的顺序，顺序从1开始
- * @method void setFileOrderNumber(integer $FileOrderNumber) 设置文件的顺序，顺序从1开始
+ * @method string getClientUin() 获取代客UIN
+ * @method void setClientUin(string $ClientUin) 设置代客UIN
+ * @method integer getSwitchType() 获取1：代理，2：代采
+ * @method void setSwitchType(integer $SwitchType) 设置1：代理，2：代采
  */
-class SmartFormFileUrl extends AbstractModel
+class DescribeClientSwitchTraTaskInfoRequest extends AbstractModel
 {
     /**
-     * @var string 文件url地址
+     * @var string 代客UIN
      */
-    public $FileUrl;
+    public $ClientUin;
 
     /**
-     * @var integer 文件的顺序，顺序从1开始
+     * @var integer 1：代理，2：代采
      */
-    public $FileOrderNumber;
+    public $SwitchType;
 
     /**
-     * @param string $FileUrl 文件url地址
-     * @param integer $FileOrderNumber 文件的顺序，顺序从1开始
+     * @param string $ClientUin 代客UIN
+     * @param integer $SwitchType 1：代理，2：代采
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SmartFormFileUrl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
+            $this->ClientUin = $param["ClientUin"];
         }
 
-        if (array_key_exists("FileOrderNumber",$param) and $param["FileOrderNumber"] !== null) {
-            $this->FileOrderNumber = $param["FileOrderNumber"];
+        if (array_key_exists("SwitchType",$param) and $param["SwitchType"] !== null) {
+            $this->SwitchType = $param["SwitchType"];
         }
     }
 }

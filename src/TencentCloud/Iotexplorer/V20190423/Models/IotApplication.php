@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatNotifyStatus(integer $WechatNotifyStatus) 设置第三方小程序强提醒开关 0：关闭；1：开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInterconnectionProducts() 获取互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInterconnectionProducts(string $InterconnectionProducts) 设置互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IotApplication extends AbstractModel
 {
@@ -235,6 +239,12 @@ class IotApplication extends AbstractModel
     public $WechatNotifyStatus;
 
     /**
+     * @var string 互联互通产品ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InterconnectionProducts;
+
+    /**
      * @param string $IotAppID 应用 ID
      * @param string $AppName 应用名称
      * @param string $Description 应用说明
@@ -267,6 +277,8 @@ class IotApplication extends AbstractModel
      * @param integer $SelfSmsTemplateId 自主短信配置模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WechatNotifyStatus 第三方小程序强提醒开关 0：关闭；1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InterconnectionProducts 互联互通产品ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -392,6 +404,10 @@ class IotApplication extends AbstractModel
 
         if (array_key_exists("WechatNotifyStatus",$param) and $param["WechatNotifyStatus"] !== null) {
             $this->WechatNotifyStatus = $param["WechatNotifyStatus"];
+        }
+
+        if (array_key_exists("InterconnectionProducts",$param) and $param["InterconnectionProducts"] !== null) {
+            $this->InterconnectionProducts = $param["InterconnectionProducts"];
         }
     }
 }

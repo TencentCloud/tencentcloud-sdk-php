@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIspCode() 获取运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
  * @method void setIspCode(integer $IspCode) 设置运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
  * @method string getDomain() 获取域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BoundIpInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class BoundIpInfo extends AbstractModel
 
     /**
      * @var string 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -75,7 +72,6 @@ class BoundIpInfo extends AbstractModel
      * @param string $DeviceType 产品分类下的子类型，绑定操作为必填项，解绑操作可不填。取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（弹性公网常规IP）]
      * @param integer $IspCode 运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
      * @param string $Domain 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

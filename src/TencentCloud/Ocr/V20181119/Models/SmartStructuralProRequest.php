@@ -42,6 +42,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -54,8 +57,13 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
  * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
  * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
+ * @method boolean getOutputParentKey() 获取是否开启父子key识别，默认是
+ * @method void setOutputParentKey(boolean $OutputParentKey) 设置是否开启父子key识别，默认是
  */
 class SmartStructuralProRequest extends AbstractModel
 {
@@ -97,6 +105,9 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
      */
     public $ConfigId;
 
@@ -104,6 +115,11 @@ BookingConfirmation -- 配舱通知书识别模板
      * @var boolean 是否开启全文字段坐标值的识别
      */
     public $EnableCoord;
+
+    /**
+     * @var boolean 是否开启父子key识别，默认是
+     */
+    public $OutputParentKey;
 
     /**
      * @param string $ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
@@ -123,7 +139,11 @@ EntrustmentBook -- 海运托书
 WordRecognize -- 手写英文作文模版
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
+AirWayBill -- 航空运单识别模板
+DispatchWeightNote -- 磅单发货单识别模板
+ReceiptWeightNote -- 磅单收货单识别模板
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
+     * @param boolean $OutputParentKey 是否开启父子key识别，默认是
      */
     function __construct()
     {
@@ -164,6 +184,10 @@ BookingConfirmation -- 配舱通知书识别模板
 
         if (array_key_exists("EnableCoord",$param) and $param["EnableCoord"] !== null) {
             $this->EnableCoord = $param["EnableCoord"];
+        }
+
+        if (array_key_exists("OutputParentKey",$param) and $param["OutputParentKey"] !== null) {
+            $this->OutputParentKey = $param["OutputParentKey"];
         }
     }
 }

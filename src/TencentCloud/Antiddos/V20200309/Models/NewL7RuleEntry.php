@@ -73,17 +73,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHttpsToHttpEnable() 获取是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
  * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) 设置是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
  * @method integer getVirtualPort() 获取接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualPort(integer $VirtualPort) 设置接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRewriteHttps() 获取http强制跳转https，1表示打开，0表示关闭
  * @method void setRewriteHttps(integer $RewriteHttps) 设置http强制跳转https，1表示打开，0表示关闭
  * @method integer getErrCode() 获取规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
  * @method void setErrCode(integer $ErrCode) 设置规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
  * @method integer getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NewL7RuleEntry extends AbstractModel
 {
@@ -211,7 +207,6 @@ class NewL7RuleEntry extends AbstractModel
 
     /**
      * @var integer 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualPort;
 
@@ -227,7 +222,6 @@ class NewL7RuleEntry extends AbstractModel
 
     /**
      * @var integer 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
@@ -259,11 +253,9 @@ class NewL7RuleEntry extends AbstractModel
      * @param string $ModifyTime 修改时间
      * @param integer $HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
      * @param integer $VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RewriteHttps http强制跳转https，1表示打开，0表示关闭
      * @param integer $ErrCode 规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
      * @param integer $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

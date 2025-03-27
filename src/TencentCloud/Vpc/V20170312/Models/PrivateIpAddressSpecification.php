@@ -42,8 +42,8 @@ PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
 AVAILABLE：可用的
- * @method string getQosLevel() 获取IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
- * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+ * @method string getQosLevel() 获取IP服务质量等级，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+ * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -87,7 +87,7 @@ AVAILABLE：可用的
     public $State;
 
     /**
-     * @var string IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * @var string IP服务质量等级，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public $QosLevel;
 
@@ -103,7 +103,7 @@ PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
 AVAILABLE：可用的
-     * @param string $QosLevel IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * @param string $QosLevel IP服务质量等级，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     function __construct()
     {

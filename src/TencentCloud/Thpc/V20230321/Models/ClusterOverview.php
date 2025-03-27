@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。
  * @method string getVpcId() 获取集群所属私有网络ID。
  * @method void setVpcId(string $VpcId) 设置集群所属私有网络ID。
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
  */
 class ClusterOverview extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ClusterOverview extends AbstractModel
     public $VpcId;
 
     /**
+     * @var string 集群类型
+     */
+    public $ClusterType;
+
+    /**
      * @param string $ClusterId 集群ID。
      * @param string $ClusterStatus 集群状态。取值范围：<li>PENDING：创建中</li><li>INITING：初始化中</li><li>INIT_FAILED：初始化失败</li><li>RUNNING：运行中</li><li>TERMINATING：销毁中</li>
      * @param string $ClusterName 集群名称。
@@ -144,6 +151,7 @@ class ClusterOverview extends AbstractModel
      * @param integer $LoginNodeCount 登录节点数量。
      * @param string $AutoScalingType 弹性伸缩类型。
      * @param string $VpcId 集群所属私有网络ID。
+     * @param string $ClusterType 集群类型
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class ClusterOverview extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

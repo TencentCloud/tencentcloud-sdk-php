@@ -77,41 +77,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVitalityVersion() 获取攻击封堵套餐标记
  * @method void setVitalityVersion(integer $VitalityVersion) 设置攻击封堵套餐标记
  * @method integer getLine() 获取网络线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLine(integer $Line) 设置网络线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFreeServiceBandwidth() 获取不计费的业务带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeServiceBandwidth(integer $FreeServiceBandwidth) 设置不计费的业务带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticServiceBandwidth() 获取弹性业务带宽开关
  * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) 设置弹性业务带宽开关
  * @method integer getGiftServiceBandWidth() 获取赠送的业务带宽
  * @method void setGiftServiceBandWidth(integer $GiftServiceBandWidth) 设置赠送的业务带宽
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBasicPlusFlag() 获取是否是基础防护加强版 0: 不是 1: 是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicPlusFlag(integer $BasicPlusFlag) 设置是否是基础防护加强版 0: 不是 1: 是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPlanCntFlag() 获取是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlanCntFlag(integer $PlanCntFlag) 设置是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTransRegionFlag() 获取是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransRegionFlag(integer $TransRegionFlag) 设置是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuperPackFlag() 获取是否为超级高防包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperPackFlag(integer $SuperPackFlag) 设置是否为超级高防包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取所属ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置所属ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstance extends AbstractModel
 {
@@ -209,13 +193,11 @@ class BGPInstance extends AbstractModel
 
     /**
      * @var integer 网络线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Line;
 
     /**
      * @var integer 不计费的业务带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeServiceBandwidth;
 
@@ -231,37 +213,31 @@ class BGPInstance extends AbstractModel
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var integer 是否是基础防护加强版 0: 不是 1: 是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicPlusFlag;
 
     /**
      * @var integer 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanCntFlag;
 
     /**
      * @var integer 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransRegionFlag;
 
     /**
      * @var integer 是否为超级高防包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuperPackFlag;
 
     /**
      * @var integer 所属ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
@@ -295,23 +271,15 @@ class BGPInstance extends AbstractModel
      * @param integer $IpCountNewFlag 新版本1ip高防包
      * @param integer $VitalityVersion 攻击封堵套餐标记
      * @param integer $Line 网络线路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FreeServiceBandwidth 不计费的业务带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticServiceBandwidth 弹性业务带宽开关
      * @param integer $GiftServiceBandWidth 赠送的业务带宽
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BasicPlusFlag 是否是基础防护加强版 0: 不是 1: 是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PlanCntFlag 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuperPackFlag 是否为超级高防包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 所属ZoneId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

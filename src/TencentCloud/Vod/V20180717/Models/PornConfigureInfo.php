@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 鉴别涉及令人反感的信息的任务控制参数
  *
  * @method PornImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PornAsrReviewTemplateInfo getAsrReviewInfo() 获取语音鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) 设置语音鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PornOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PornConfigureInfo extends AbstractModel
 {
     /**
      * @var PornImgReviewTemplateInfo 画面鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImgReviewInfo;
 
     /**
      * @var PornAsrReviewTemplateInfo 语音鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrReviewInfo;
 
     /**
      * @var PornOcrReviewTemplateInfo 文本鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
 
     /**
      * @param PornImgReviewTemplateInfo $ImgReviewInfo 画面鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornAsrReviewTemplateInfo $AsrReviewInfo 语音鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornOcrReviewTemplateInfo $OcrReviewInfo 文本鉴别涉及令人反感的信息的控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

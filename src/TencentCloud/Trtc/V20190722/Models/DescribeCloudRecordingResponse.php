@@ -32,6 +32,8 @@ InProgress：表示当前录制任务正在进行中。
 Exited：表示当前录制任务正在退出的过程中。
  * @method array getStorageFileList() 获取录制文件信息。
  * @method void setStorageFileList(array $StorageFileList) 设置录制文件信息。
+ * @method string getRecorderKey() 获取转推录制任务发起时所填，标识一次录制
+ * @method void setRecorderKey(string $RecorderKey) 设置转推录制任务发起时所填，标识一次录制
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +58,11 @@ Exited：表示当前录制任务正在退出的过程中。
     public $StorageFileList;
 
     /**
+     * @var string 转推录制任务发起时所填，标识一次录制
+     */
+    public $RecorderKey;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +74,7 @@ Idle：表示当前录制任务空闲中
 InProgress：表示当前录制任务正在进行中。
 Exited：表示当前录制任务正在退出的过程中。
      * @param array $StorageFileList 录制文件信息。
+     * @param string $RecorderKey 转推录制任务发起时所填，标识一次录制
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ Exited：表示当前录制任务正在退出的过程中。
                 $obj->deserialize($value);
                 array_push($this->StorageFileList, $obj);
             }
+        }
+
+        if (array_key_exists("RecorderKey",$param) and $param["RecorderKey"] !== null) {
+            $this->RecorderKey = $param["RecorderKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

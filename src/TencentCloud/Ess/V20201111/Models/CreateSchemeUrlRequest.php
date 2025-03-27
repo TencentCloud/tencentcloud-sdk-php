@@ -114,6 +114,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlUseEnv(string $UrlUseEnv) 设置<font color="red">仅公众号 H5 跳转电子签小程序时</font>，如需签署完成的“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。在用户点击“返回应用”按钮之后，会返回到公众号 H5。 
 
 参考 [公众号 H5 跳转电子签小程序](https://qian.tencent.com/developers/company/openwxminiprogram/#23-%E5%85%AC%E4%BC%97%E5%8F%B7-h5-%E4%B8%AD%E8%B7%B3%E8%BD%AC)。
+ * @method boolean getPickUpAfterJoined() 获取在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+ * @method void setPickUpAfterJoined(boolean $PickUpAfterJoined) 设置在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -229,6 +231,11 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $UrlUseEnv;
 
     /**
+     * @var boolean 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
+     */
+    public $PickUpAfterJoined;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $OrganizationName 合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
@@ -276,6 +283,7 @@ class CreateSchemeUrlRequest extends AbstractModel
      * @param string $UrlUseEnv <font color="red">仅公众号 H5 跳转电子签小程序时</font>，如需签署完成的“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。在用户点击“返回应用”按钮之后，会返回到公众号 H5。 
 
 参考 [公众号 H5 跳转电子签小程序](https://qian.tencent.com/developers/company/openwxminiprogram/#23-%E5%85%AC%E4%BC%97%E5%8F%B7-h5-%E4%B8%AD%E8%B7%B3%E8%BD%AC)。
+     * @param boolean $PickUpAfterJoined 在动态签署人场景预设了“企业名称”时，可通过该参数控制“已认证身份才可领取”，即在加入了预设的企业后才可领取。默认值：false，无须先加入企业。
      */
     function __construct()
     {
@@ -355,6 +363,10 @@ class CreateSchemeUrlRequest extends AbstractModel
 
         if (array_key_exists("UrlUseEnv",$param) and $param["UrlUseEnv"] !== null) {
             $this->UrlUseEnv = $param["UrlUseEnv"];
+        }
+
+        if (array_key_exists("PickUpAfterJoined",$param) and $param["PickUpAfterJoined"] !== null) {
+            $this->PickUpAfterJoined = $param["PickUpAfterJoined"];
         }
     }
 }

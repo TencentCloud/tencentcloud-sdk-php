@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceType() 获取实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
  * @method void setInstanceType(string $InstanceType) 设置实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -40,8 +42,8 @@ PRO  专业版
  * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method string getInstanceStatus() 获取实例状态
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
+ * @method string getInstanceStatus() 获取实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
  * @method string getSkuCode() 获取实例规格
  * @method void setSkuCode(string $SkuCode) 设置实例规格
  * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数
@@ -58,14 +60,14 @@ JITP：自动注册
 API：通过API手动注册
  * @method boolean getAutomaticActivation() 获取自动注册设备证书时是否自动激活
  * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册设备证书时是否自动激活
- * @method integer getRenewFlag() 获取是否自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
+ * @method integer getRenewFlag() 获取是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
  * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
  * @method void setPayMode(string $PayMode) 设置计费模式， POSTPAID，按量计费 PREPAID，包年包月
- * @method integer getExpiryTime() 获取到期时间，秒为单位
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
- * @method integer getDestroyTime() 获取预销毁时间
- * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
+ * @method integer getExpiryTime() 获取到期时间，毫秒级时间戳
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，毫秒级时间戳
+ * @method integer getDestroyTime() 获取预销毁时间，毫秒级时间戳
+ * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间，毫秒级时间戳
  * @method string getX509Mode() 获取TLS,单向认证    mTLS,双向认证    BYOC;一机一证
  * @method void setX509Mode(string $X509Mode) 设置TLS,单向认证    mTLS,双向认证    BYOC;一机一证
  * @method integer getMaxCaNum() 获取最大Ca配额
@@ -74,6 +76,8 @@ API：通过API手动注册
  * @method void setRegistrationCode(string $RegistrationCode) 设置证书注册码
  * @method integer getMaxSubscription() 获取集群最大订阅数
  * @method void setMaxSubscription(integer $MaxSubscription) 设置集群最大订阅数
+ * @method boolean getAuthorizationPolicy() 获取授权策略开关
+ * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) 设置授权策略开关
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -83,6 +87,7 @@ class DescribeInstanceResponse extends AbstractModel
      * @var string 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
      */
     public $InstanceType;
 
@@ -122,7 +127,7 @@ PRO  专业版
     public $Remark;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
      */
     public $InstanceStatus;
 
@@ -159,7 +164,7 @@ API：通过API手动注册
     public $AutomaticActivation;
 
     /**
-     * @var integer 是否自动续费
+     * @var integer 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
      */
     public $RenewFlag;
 
@@ -169,12 +174,12 @@ API：通过API手动注册
     public $PayMode;
 
     /**
-     * @var integer 到期时间，秒为单位
+     * @var integer 到期时间，毫秒级时间戳
      */
     public $ExpiryTime;
 
     /**
-     * @var integer 预销毁时间
+     * @var integer 预销毁时间，毫秒级时间戳
      */
     public $DestroyTime;
 
@@ -199,6 +204,11 @@ API：通过API手动注册
     public $MaxSubscription;
 
     /**
+     * @var boolean 授权策略开关
+     */
+    public $AuthorizationPolicy;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +217,7 @@ API：通过API手动注册
      * @param string $InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
+PLATINUM 铂金版
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $TopicNum 主题数量
@@ -214,7 +225,7 @@ PRO  专业版
      * @param integer $TpsLimit TPS限流值
      * @param integer $CreatedTime 创建时间，秒为单位
      * @param string $Remark 备注信息
-     * @param string $InstanceStatus 实例状态
+     * @param string $InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
      * @param string $SkuCode 实例规格
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
      * @param integer $AuthorizationPolicyLimit 授权规则条数
@@ -223,14 +234,15 @@ PRO  专业版
 JITP：自动注册
 API：通过API手动注册
      * @param boolean $AutomaticActivation 自动注册设备证书时是否自动激活
-     * @param integer $RenewFlag 是否自动续费
+     * @param integer $RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
      * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-     * @param integer $ExpiryTime 到期时间，秒为单位
-     * @param integer $DestroyTime 预销毁时间
+     * @param integer $ExpiryTime 到期时间，毫秒级时间戳
+     * @param integer $DestroyTime 预销毁时间，毫秒级时间戳
      * @param string $X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
      * @param integer $MaxCaNum 最大Ca配额
      * @param string $RegistrationCode 证书注册码
      * @param integer $MaxSubscription 集群最大订阅数
+     * @param boolean $AuthorizationPolicy 授权策略开关
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -336,6 +348,10 @@ API：通过API手动注册
 
         if (array_key_exists("MaxSubscription",$param) and $param["MaxSubscription"] !== null) {
             $this->MaxSubscription = $param["MaxSubscription"];
+        }
+
+        if (array_key_exists("AuthorizationPolicy",$param) and $param["AuthorizationPolicy"] !== null) {
+            $this->AuthorizationPolicy = $param["AuthorizationPolicy"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置音频操作类型，取值有：
 <li>Volume：音量调节。</li>
  * @method AudioVolumeParam getVolumeParam() 获取音量调节参数， 当 Type = Volume 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeParam(AudioVolumeParam $VolumeParam) 设置音量调节参数， 当 Type = Volume 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioTransform extends AbstractModel
 {
@@ -39,7 +37,6 @@ class AudioTransform extends AbstractModel
 
     /**
      * @var AudioVolumeParam 音量调节参数， 当 Type = Volume 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeParam;
 
@@ -47,7 +44,6 @@ class AudioTransform extends AbstractModel
      * @param string $Type 音频操作类型，取值有：
 <li>Volume：音量调节。</li>
      * @param AudioVolumeParam $VolumeParam 音量调节参数， 当 Type = Volume 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

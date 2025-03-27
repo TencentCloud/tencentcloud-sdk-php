@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自适应码流任务的输出结果。
  *
- * @method integer getDefinition() 获取自适应码流模版 ID。
- * @method void setDefinition(integer $Definition) 设置自适应码流模版 ID。
+ * @method integer getDefinition() 获取自适应码流模板 ID。
+ * @method void setDefinition(integer $Definition) 设置自适应码流模板 ID。
  * @method string getFormat() 获取自适应码流打包格式。可选值：
 <li>HLS；</li>
 <li>MPEG-DASH。</li>
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
 {
     /**
-     * @var integer 自适应码流模版 ID。
+     * @var integer 自适应码流模板 ID。
      */
     public $Definition;
 
@@ -70,7 +70,7 @@ class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel
     public $Url;
 
     /**
-     * @param integer $Definition 自适应码流模版 ID。
+     * @param integer $Definition 自适应码流模板 ID。
      * @param string $Format 自适应码流打包格式。可选值：
 <li>HLS；</li>
 <li>MPEG-DASH。</li>

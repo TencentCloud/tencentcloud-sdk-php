@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
+ * @method void setInstanceId(string $InstanceId) 设置实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
  */
 class DescribeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
      */
     function __construct()
     {

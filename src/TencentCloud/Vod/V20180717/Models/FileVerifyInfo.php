@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFileVerifyDomains() 获取文件校验域名列表。
  * @method void setFileVerifyDomains(array $FileVerifyDomains) 设置文件校验域名列表。
  * @method string getFileVerifyName() 获取文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileVerifyName(string $FileVerifyName) 设置文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileVerifyInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class FileVerifyInfo extends AbstractModel
 
     /**
      * @var string 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileVerifyName;
 
@@ -51,7 +48,6 @@ class FileVerifyInfo extends AbstractModel
      * @param string $FileVerifyUrl 文件验证 URL 指引。
      * @param array $FileVerifyDomains 文件校验域名列表。
      * @param string $FileVerifyName 文件校验文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

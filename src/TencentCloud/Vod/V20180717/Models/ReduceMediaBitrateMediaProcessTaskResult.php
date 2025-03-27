@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Transcode：转码</li>
 <li>AdaptiveDynamicStreaming：自适应码流</li>
  * @method ReduceMediaBitrateTranscodeResult getTranscodeTask() 获取降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeTask(ReduceMediaBitrateTranscodeResult $TranscodeTask) 设置降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() 获取降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) 设置降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel
 {
@@ -46,13 +42,11 @@ class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel
 
     /**
      * @var ReduceMediaBitrateTranscodeResult 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTask;
 
     /**
      * @var ReduceMediaBitrateAdaptiveDynamicStreamingResult 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingTask;
 
@@ -61,9 +55,7 @@ class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel
 <li>Transcode：转码</li>
 <li>AdaptiveDynamicStreaming：自适应码流</li>
      * @param ReduceMediaBitrateTranscodeResult $TranscodeTask 降码率任务中视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReduceMediaBitrateAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 降码率任务中对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

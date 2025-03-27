@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTablePattern() 获取表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
  * @method void setTablePattern(string $TablePattern) 设置表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
  * @method array getColumns() 获取列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumns(array $Columns) 设置列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DistributeRule extends AbstractModel
 {
@@ -50,7 +48,6 @@ class DistributeRule extends AbstractModel
 
     /**
      * @var array 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
 
@@ -59,7 +56,6 @@ class DistributeRule extends AbstractModel
      * @param string $DbPattern 库名匹配规则，请填写正则表达式
      * @param string $TablePattern 表名匹配规则，如果 DatabaseType 为 mongodb，则匹配集合名
      * @param array $Columns 列名。如果 RuleType 为 cols，此项必填。订阅任务会用该列的值计算分区。mongo没有按列分区，因此也不用传这个字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

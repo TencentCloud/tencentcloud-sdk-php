@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 高防弹性公网IP关联信息
  *
  * @method string getEipAddressRegion() 获取高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipAddressRegion(string $EipAddressRegion) 设置高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipBoundRscIns() 获取绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipBoundRscIns(string $EipBoundRscIns) 设置绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipBoundRscEni() 获取绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipBoundRscEni(string $EipBoundRscEni) 设置绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipBoundRscVip() 获取绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipBoundRscVip(string $EipBoundRscVip) 设置绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EipAddressRelation extends AbstractModel
 {
     /**
      * @var string 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipAddressRegion;
 
     /**
      * @var string 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipBoundRscIns;
 
     /**
      * @var string 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipBoundRscEni;
 
     /**
      * @var string 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipBoundRscVip;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @param string $EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipBoundRscIns 绑定的资源实例ID。可能是一个CVM。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipBoundRscEni 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipBoundRscVip 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

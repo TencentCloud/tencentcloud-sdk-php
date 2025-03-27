@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 2:生效
  * @method integer getChannelId() 获取通道id
  * @method void setChannelId(integer $ChannelId) 设置通道id
+ * @method integer getPrice() 获取订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrice(integer $Price) 设置订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAmount() 获取支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAmount(integer $Amount) 设置支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -79,6 +87,18 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var integer 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Price;
+
+    /**
+     * @var integer 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Amount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +115,10 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 1: 已过期
 2:生效
      * @param integer $ChannelId 通道id
+     * @param integer $Price 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Amount 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +152,14 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
+            $this->Amount = $param["Amount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

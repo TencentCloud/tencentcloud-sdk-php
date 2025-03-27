@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 自适应码流任务的输入参数。
  *
  * @method ComplexAdaptiveDynamicStreamingTaskStreamPara getStreamPara() 获取自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamPara(ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara) 设置自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplexAdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
      * @var ComplexAdaptiveDynamicStreamingTaskStreamPara 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamPara;
 
     /**
      * @param ComplexAdaptiveDynamicStreamingTaskStreamPara $StreamPara 自适应码流参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

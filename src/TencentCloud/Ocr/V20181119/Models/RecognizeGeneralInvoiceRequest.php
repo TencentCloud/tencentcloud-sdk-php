@@ -42,6 +42,7 @@ use TencentCloud\Common\AbstractModel;
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
 -1：其他发票
  * @method void setTypes(array $Types) 设置需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -61,6 +62,7 @@ use TencentCloud\Common\AbstractModel;
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
 -1：其他发票
  * @method boolean getEnableOther() 获取是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
  * @method void setEnableOther(boolean $EnableOther) 设置是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
@@ -106,6 +108,7 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
 -1：其他发票
      */
     public $Types;
@@ -161,6 +164,7 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
 -1：其他发票
      * @param boolean $EnableOther 是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
      * @param boolean $EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 点播转直播输入源信息。
  *
  * @method string getId() 获取输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
@@ -47,7 +45,6 @@ class MediaCastSourceInfo extends AbstractModel
 {
     /**
      * @var string 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
@@ -86,7 +83,6 @@ class MediaCastSourceInfo extends AbstractModel
 
     /**
      * @param string $Id 输入源 Id，由系统分配。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>

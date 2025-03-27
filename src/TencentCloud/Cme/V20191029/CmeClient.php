@@ -57,8 +57,6 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>支持获取指定的平台列表信息。</li>
 
 关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
-
-
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 支持根据多种条件过滤出项目列表。
  * @method Models\DescribeResourceAuthorizationResponse DescribeResourceAuthorization(Models\DescribeResourceAuthorizationRequest $req) 查询资源被授权的情况。
  * @method Models\DescribeSharedSpaceResponse DescribeSharedSpace(Models\DescribeSharedSpaceRequest $req) 获取共享空间。当个人或团队A对个人或团队B授权某资源以后，个人或团队B的共享空间就会增加个人或团队A。
@@ -131,7 +129,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>当 DestinationResource.Resource.Id 不存在时候且原始资源与目标资源归属相同，操作结果为重命名原始分类；</li>
 <li>当 DestinationResource.Resource.Id 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
  * @method Models\ParseEventResponse ParseEvent(Models\ParseEventRequest $req) 该接口接受多媒体创作引擎回调给业务的事件内容，将其转化为对应的 EventContent 结构。请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  结构即可使用。
- * @method Models\RevokeResourceAuthorizationResponse RevokeResourceAuthorization(Models\RevokeResourceAuthorizationRequest $req)  资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
+ * @method Models\RevokeResourceAuthorizationResponse RevokeResourceAuthorization(Models\RevokeResourceAuthorizationRequest $req) 资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
  * @method Models\SearchMaterialResponse SearchMaterial(Models\SearchMaterialRequest $req) 根据检索条件搜索媒体，返回媒体的基本信息。
  */
 

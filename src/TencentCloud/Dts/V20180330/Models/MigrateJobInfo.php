@@ -53,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getErrorInfo() 获取任务错误信息提示，当任务发生错误时，不为null或者空值
  * @method void setErrorInfo(array $ErrorInfo) 设置任务错误信息提示，当任务发生错误时，不为null或者空值
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSrcInfoMulti() 获取源实例为集群时且接入为非cdb时源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcInfoMulti(array $SrcInfoMulti) 设置源实例为集群时且接入为非cdb时源实例信息
@@ -145,7 +143,6 @@ class MigrateJobInfo extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -173,7 +170,6 @@ class MigrateJobInfo extends AbstractModel
      * @param MigrateDetailInfo $Detail 任务详情
      * @param array $ErrorInfo 任务错误信息提示，当任务发生错误时，不为null或者空值
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SrcInfoMulti 源实例为集群时且接入为非cdb时源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

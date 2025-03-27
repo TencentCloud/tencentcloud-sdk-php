@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileId() 获取删除的文件 ID 。
  * @method void setFileId(string $FileId) 设置删除的文件 ID 。
  * @method array getDeleteParts() 获取本次删除的文件部分。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteParts(array $DeleteParts) 设置本次删除的文件部分。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileDeleteResultItem extends AbstractModel
 {
@@ -36,14 +34,12 @@ class FileDeleteResultItem extends AbstractModel
 
     /**
      * @var array 本次删除的文件部分。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteParts;
 
     /**
      * @param string $FileId 删除的文件 ID 。
      * @param array $DeleteParts 本次删除的文件部分。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

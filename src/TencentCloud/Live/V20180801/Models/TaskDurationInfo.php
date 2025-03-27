@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置拉流转推任务的时间点
  * @method integer getDuration() 获取拉流转推任务的时长，单位为分钟
  * @method void setDuration(integer $Duration) 设置拉流转推任务的时长，单位为分钟
+ * @method integer getDurationSecond() 获取拉流转推任务的时长，单位为秒
+ * @method void setDurationSecond(integer $DurationSecond) 设置拉流转推任务的时长，单位为秒
  */
 class TaskDurationInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TaskDurationInfo extends AbstractModel
     public $Duration;
 
     /**
+     * @var integer 拉流转推任务的时长，单位为秒
+     */
+    public $DurationSecond;
+
+    /**
      * @param string $Time 拉流转推任务的时间点
      * @param integer $Duration 拉流转推任务的时长，单位为分钟
+     * @param integer $DurationSecond 拉流转推任务的时长，单位为秒
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class TaskDurationInfo extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("DurationSecond",$param) and $param["DurationSecond"] !== null) {
+            $this->DurationSecond = $param["DurationSecond"];
         }
     }
 }

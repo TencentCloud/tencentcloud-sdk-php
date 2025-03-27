@@ -14,36 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAIFormTask返回参数结构体
+ * DescribeClientSwitchTraTaskInfo返回参数结构体
  *
- * @method string getTaskId() 获取本次识别任务的唯一身份ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置本次识别任务的唯一身份ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateUrl() 获取本次识别任务的操作URL，有效期自生成之时起共24小时
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUrl(string $OperateUrl) 设置本次识别任务的操作URL，有效期自生成之时起共24小时
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientUin() 获取客户UIN
+ * @method void setClientUin(string $ClientUin) 设置客户UIN
+ * @method string getSwitchType() 获取切换类型：代理,代采
+ * @method void setSwitchType(string $SwitchType) 设置切换类型：代理,代采
+ * @method string getResult() 获取ok，符合，fail，不符合
+ * @method void setResult(string $Result) 设置ok，符合，fail，不符合
+ * @method string getSwitchUrl() 获取切换链接
+ * @method void setSwitchUrl(string $SwitchUrl) 设置切换链接
+ * @method string getResultMsg() 获取不符合的原因
+ * @method void setResultMsg(string $ResultMsg) 设置不符合的原因
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAIFormTaskResponse extends AbstractModel
+class DescribeClientSwitchTraTaskInfoResponse extends AbstractModel
 {
     /**
-     * @var string 本次识别任务的唯一身份ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 客户UIN
      */
-    public $TaskId;
+    public $ClientUin;
 
     /**
-     * @var string 本次识别任务的操作URL，有效期自生成之时起共24小时
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 切换类型：代理,代采
      */
-    public $OperateUrl;
+    public $SwitchType;
+
+    /**
+     * @var string ok，符合，fail，不符合
+     */
+    public $Result;
+
+    /**
+     * @var string 切换链接
+     */
+    public $SwitchUrl;
+
+    /**
+     * @var string 不符合的原因
+     */
+    public $ResultMsg;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +66,11 @@ class CreateAIFormTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 本次识别任务的唯一身份ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateUrl 本次识别任务的操作URL，有效期自生成之时起共24小时
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientUin 客户UIN
+     * @param string $SwitchType 切换类型：代理,代采
+     * @param string $Result ok，符合，fail，不符合
+     * @param string $SwitchUrl 切换链接
+     * @param string $ResultMsg 不符合的原因
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +86,24 @@ class CreateAIFormTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
+            $this->ClientUin = $param["ClientUin"];
         }
 
-        if (array_key_exists("OperateUrl",$param) and $param["OperateUrl"] !== null) {
-            $this->OperateUrl = $param["OperateUrl"];
+        if (array_key_exists("SwitchType",$param) and $param["SwitchType"] !== null) {
+            $this->SwitchType = $param["SwitchType"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("SwitchUrl",$param) and $param["SwitchUrl"] !== null) {
+            $this->SwitchUrl = $param["SwitchUrl"];
+        }
+
+        if (array_key_exists("ResultMsg",$param) and $param["ResultMsg"] !== null) {
+            $this->ResultMsg = $param["ResultMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

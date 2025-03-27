@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态 OFFLINE  ONLINE
  * @method string getModifyTime() 获取处理时间
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
+ * @method string getCmdLineQuote() 获取命令详情的转义后内容，供正则加白全字符串匹配使用
+ * @method void setCmdLineQuote(string $CmdLineQuote) 设置命令详情的转义后内容，供正则加白全字符串匹配使用
  */
 class ReverseShellEventInfo extends AbstractModel
 {
@@ -213,6 +215,11 @@ class ReverseShellEventInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 命令详情的转义后内容，供正则加白全字符串匹配使用
+     */
+    public $CmdLineQuote;
+
+    /**
      * @param integer $Id ID 主键
      * @param string $Uuid 主机安全uuid
      * @param string $Quuid 主机uuid
@@ -240,6 +247,7 @@ class ReverseShellEventInfo extends AbstractModel
      * @param string $MachineWanIp 主机外网ip
      * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
      * @param string $ModifyTime 处理时间
+     * @param string $CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用
      */
     function __construct()
     {
@@ -360,6 +368,10 @@ class ReverseShellEventInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
+            $this->CmdLineQuote = $param["CmdLineQuote"];
         }
     }
 }

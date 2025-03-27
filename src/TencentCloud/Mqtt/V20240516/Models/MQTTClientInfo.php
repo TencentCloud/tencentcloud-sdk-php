@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProtocolVersion() 获取MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
  * @method void setProtocolVersion(integer $ProtocolVersion) 设置MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
  * @method integer getKeepalive() 获取保持连接时间，单位：秒
  * @method void setKeepalive(integer $Keepalive) 设置保持连接时间，单位：秒
  * @method string getConnectionStatus() 获取连接状态，CONNECTED 已连接，DISCONNECTED 未连接
@@ -61,7 +61,7 @@ class MQTTClientInfo extends AbstractModel
      * @var integer MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
      */
     public $ProtocolVersion;
 
@@ -101,7 +101,7 @@ class MQTTClientInfo extends AbstractModel
      * @param integer $ProtocolVersion MQTT 协议版本
 3：表示MQTT 3.1版本
 4：表示 MQTT 3.1.1
-5:   标识MQTT 5.0协议
+5：表示MQTT 5.0协议
      * @param integer $Keepalive 保持连接时间，单位：秒
      * @param string $ConnectionStatus 连接状态，CONNECTED 已连接，DISCONNECTED 未连接
      * @param integer $CreateTime 客户端创建时间，毫秒级时间戳 。

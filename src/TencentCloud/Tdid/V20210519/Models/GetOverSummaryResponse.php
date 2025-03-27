@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * GetOverSummary返回参数结构体
  *
  * @method ResourceCounterData getAppCounter() 获取用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppCounter(ResourceCounterData $AppCounter) 设置用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceCounterData getUserCounter() 获取用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserCounter(ResourceCounterData $UserCounter) 设置用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppCnt() 获取用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppCnt(integer $AppCnt) 设置用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeployCnt() 获取用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployCnt(integer $DeployCnt) 设置用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChainCnt() 获取部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainCnt(integer $ChainCnt) 设置部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class GetOverSummaryResponse extends AbstractModel
 {
     /**
      * @var ResourceCounterData 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppCounter;
 
     /**
      * @var ResourceCounterData 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserCounter;
 
     /**
      * @var integer 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppCnt;
 
     /**
      * @var integer 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployCnt;
 
     /**
      * @var integer 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainCnt;
 
@@ -82,15 +67,10 @@ class GetOverSummaryResponse extends AbstractModel
 
     /**
      * @param ResourceCounterData $AppCounter 用户参与应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceCounterData $UserCounter 用户部署应用的统计指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppCnt 用户参与的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployCnt 用户部署的应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChainCnt 部署网络子链总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

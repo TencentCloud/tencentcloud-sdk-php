@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
 该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
  * @method array getTags() 获取扩容节点绑定标签列表。
  * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
- * @method string getHardwareSourceType() 获取扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
- * @method void setHardwareSourceType(string $HardwareSourceType) 设置扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+ * @method string getHardwareSourceType() 获取扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+ * @method void setHardwareSourceType(string $HardwareSourceType) 设置扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
  * @method PodSpecInfo getPodSpecInfo() 获取Pod相关资源信息
  * @method void setPodSpecInfo(PodSpecInfo $PodSpecInfo) 设置Pod相关资源信息
  * @method string getClickHouseClusterName() 获取使用clickhouse集群扩容时，选择的机器分组名称
@@ -130,7 +130,7 @@ class ScaleOutClusterRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+     * @var string 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
      */
     public $HardwareSourceType;
 
@@ -196,7 +196,7 @@ class ScaleOutClusterRequest extends AbstractModel
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
 该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
      * @param array $Tags 扩容节点绑定标签列表。
-     * @param string $HardwareSourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+     * @param string $HardwareSourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
      * @param PodSpecInfo $PodSpecInfo Pod相关资源信息
      * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
      * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组

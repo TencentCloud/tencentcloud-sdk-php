@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeys(string $Keys) 设置消息key
  * @method string getProducerAddr() 获取客户端地址	
  * @method void setProducerAddr(string $ProducerAddr) 设置客户端地址	
- * @method string getProduceTime() 获取消息发送时间	
- * @method void setProduceTime(string $ProduceTime) 设置消息发送时间	
+ * @method string getProduceTime() 获取消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
+ * @method void setProduceTime(string $ProduceTime) 设置消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
  * @method integer getDeadLetterResendTimes() 获取死信重发次数	
  * @method void setDeadLetterResendTimes(integer $DeadLetterResendTimes) 设置死信重发次数	
  * @method integer getDeadLetterResendSuccessTimes() 获取死信重发成功次数
@@ -37,7 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubTopic() 获取子topic
  * @method void setSubTopic(string $SubTopic) 设置子topic
  * @method string getQos() 获取消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
  * @method void setQos(string $Qos) 设置消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
  */
 class MQTTMessageItem extends AbstractModel
 {
@@ -62,7 +68,7 @@ class MQTTMessageItem extends AbstractModel
     public $ProducerAddr;
 
     /**
-     * @var string 消息发送时间	
+     * @var string 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
      */
     public $ProduceTime;
 
@@ -83,6 +89,9 @@ class MQTTMessageItem extends AbstractModel
 
     /**
      * @var string 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
      */
     public $Qos;
 
@@ -91,11 +100,14 @@ class MQTTMessageItem extends AbstractModel
      * @param string $Tags 消息tag
      * @param string $Keys 消息key
      * @param string $ProducerAddr 客户端地址	
-     * @param string $ProduceTime 消息发送时间	
+     * @param string $ProduceTime 消息发送时间，格式 日期时间：YYYY-MM-DD hh:mm:ss
      * @param integer $DeadLetterResendTimes 死信重发次数	
      * @param integer $DeadLetterResendSuccessTimes 死信重发成功次数
      * @param string $SubTopic 子topic
      * @param string $Qos 消息质量等级
+0：至多一次
+1：至少一次
+2：精确一次
      */
     function __construct()
     {

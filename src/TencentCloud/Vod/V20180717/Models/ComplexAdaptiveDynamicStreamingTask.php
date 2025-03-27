@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 
- * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() 获取自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
- * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) 设置自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+ * @method array getComplexAdaptiveDynamicStreamingTaskResultSet() 获取自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
+ * @method void setComplexAdaptiveDynamicStreamingTaskResultSet(array $ComplexAdaptiveDynamicStreamingTaskResultSet) 设置自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
  */
 class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 {
@@ -49,7 +49,7 @@ class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
     public $Status;
 
     /**
-     * @var array 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+     * @var array 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
      */
     public $ComplexAdaptiveDynamicStreamingTaskResultSet;
 
@@ -59,7 +59,7 @@ class ComplexAdaptiveDynamicStreamingTask extends AbstractModel
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 
-     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模版。
+     * @param array $ComplexAdaptiveDynamicStreamingTaskResultSet 自适应码流任务的执行状态与结果，每个元素对应一个自适应码流模板。
      */
     function __construct()
     {

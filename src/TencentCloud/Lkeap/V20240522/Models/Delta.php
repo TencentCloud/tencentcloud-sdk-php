@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置角色名称。
  * @method string getContent() 获取内容详情。
  * @method void setContent(string $Content) 设置内容详情。
+ * @method string getReasoningContent() 获取思维链内容。 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+ * @method void setReasoningContent(string $ReasoningContent) 设置思维链内容。 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
  */
 class Delta extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Delta extends AbstractModel
     public $Content;
 
     /**
+     * @var string 思维链内容。 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+     */
+    public $ReasoningContent;
+
+    /**
      * @param string $Role 角色名称。
      * @param string $Content 内容详情。
+     * @param string $ReasoningContent 思维链内容。 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Delta extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ReasoningContent",$param) and $param["ReasoningContent"] !== null) {
+            $this->ReasoningContent = $param["ReasoningContent"];
         }
     }
 }

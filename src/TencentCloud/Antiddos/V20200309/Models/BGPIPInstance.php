@@ -61,21 +61,13 @@ use TencentCloud\Common\AbstractModel;
 注意：当资产实例不是三网套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取区分高防IP境外线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置区分高防IP境外线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTgw() 获取区分集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTgw(integer $Tgw) 设置区分集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipAddressStatus() 获取高防弹性公网IP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)。只对高防弹性公网IP实例有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipAddressStatus(string $EipAddressStatus) 设置高防弹性公网IP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)。只对高防弹性公网IP实例有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEipFlag() 获取是否高防弹性公网IP实例，是为1，否为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipFlag(integer $EipFlag) 设置是否高防弹性公网IP实例，是为1，否为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EipAddressPackRelation getEipAddressPackRelation() 获取资产实例所属的高防弹性公网IP套餐包详情，
 注意：当资产实例不是高防弹性公网IP套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,23 +81,15 @@ use TencentCloud\Common\AbstractModel;
 注意：当资产实例不是高防弹性公网IP实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取建议客户接入的域名，客户可使用域名接入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置建议客户接入的域名，客户可使用域名接入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDamDDoSStatus() 获取是否开启安全加速，是为1，否为0。
  * @method void setDamDDoSStatus(integer $DamDDoSStatus) 设置是否开启安全加速，是为1，否为0。
  * @method integer getV6Flag() 获取是否Ipv6版本的IP, 是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setV6Flag(integer $V6Flag) 设置是否Ipv6版本的IP, 是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBGPIPChannelFlag() 获取是否渠道版高防IP，是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBGPIPChannelFlag(integer $BGPIPChannelFlag) 设置是否渠道版高防IP，是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagInfoList() 获取资源关联标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagInfoList(array $TagInfoList) 设置资源关联标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AnycastOutPackRelation getAnycastOutPackRelation() 获取资产实例所属的全力防护套餐包详情，
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
@@ -113,21 +97,13 @@ use TencentCloud\Common\AbstractModel;
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceVersion() 获取资源实例版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(integer $InstanceVersion) 设置资源实例版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConvoyId() 获取重保实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConvoyId(string $ConvoyId) 设置重保实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBandwidth() 获取带宽后付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置带宽后付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEOFlag() 获取是否为EO代播的ip: 1是，0不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEOFlag(integer $EOFlag) 设置是否为EO代播的ip: 1是，0不是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -193,25 +169,21 @@ class BGPIPInstance extends AbstractModel
 
     /**
      * @var integer 区分高防IP境外线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var integer 区分集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tgw;
 
     /**
      * @var string 高防弹性公网IP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)。只对高防弹性公网IP实例有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipAddressStatus;
 
     /**
      * @var integer 是否高防弹性公网IP实例，是为1，否为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipFlag;
 
@@ -231,7 +203,6 @@ class BGPIPInstance extends AbstractModel
 
     /**
      * @var string 建议客户接入的域名，客户可使用域名接入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -242,19 +213,16 @@ class BGPIPInstance extends AbstractModel
 
     /**
      * @var integer 是否Ipv6版本的IP, 是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $V6Flag;
 
     /**
      * @var integer 是否渠道版高防IP，是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BGPIPChannelFlag;
 
     /**
      * @var array 资源关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagInfoList;
 
@@ -267,25 +235,21 @@ class BGPIPInstance extends AbstractModel
 
     /**
      * @var integer 资源实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceVersion;
 
     /**
      * @var string 重保实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConvoyId;
 
     /**
      * @var integer 带宽后付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBandwidth;
 
     /**
      * @var integer 是否为EO代播的ip: 1是，0不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EOFlag;
 
@@ -311,13 +275,9 @@ class BGPIPInstance extends AbstractModel
 注意：当资产实例不是三网套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 区分高防IP境外线路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Tgw 区分集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipAddressStatus 高防弹性公网IP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)。只对高防弹性公网IP实例有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EipFlag 是否高防弹性公网IP实例，是为1，否为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EipAddressPackRelation $EipAddressPackRelation 资产实例所属的高防弹性公网IP套餐包详情，
 注意：当资产实例不是高防弹性公网IP套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
@@ -325,25 +285,17 @@ class BGPIPInstance extends AbstractModel
 注意：当资产实例不是高防弹性公网IP实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 建议客户接入的域名，客户可使用域名接入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DamDDoSStatus 是否开启安全加速，是为1，否为0。
      * @param integer $V6Flag 是否Ipv6版本的IP, 是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BGPIPChannelFlag 是否渠道版高防IP，是为1，否为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagInfoList 资源关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnycastOutPackRelation $AnycastOutPackRelation 资产实例所属的全力防护套餐包详情，
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceVersion 资源实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConvoyId 重保实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBandwidth 带宽后付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EOFlag 是否为EO代播的ip: 1是，0不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

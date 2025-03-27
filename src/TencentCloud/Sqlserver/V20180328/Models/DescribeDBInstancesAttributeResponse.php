@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setXEventStatus(string $XEventStatus) 设置操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
  * @method array getMultiDrReadableInfo() 获取多节点备机只读信息
  * @method void setMultiDrReadableInfo(array $MultiDrReadableInfo) 设置多节点备机只读信息
+ * @method integer getIsDiskEncryptFlag() 获取是否开启磁盘加密，1-开启，0-未开启
+ * @method void setIsDiskEncryptFlag(integer $IsDiskEncryptFlag) 设置是否开启磁盘加密，1-开启，0-未开启
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +126,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $MultiDrReadableInfo;
 
     /**
+     * @var integer 是否开启磁盘加密，1-开启，0-未开启
+     */
+    public $IsDiskEncryptFlag;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +150,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param array $OldVipList 等待回收的IP列表
      * @param string $XEventStatus 操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
      * @param array $MultiDrReadableInfo 多节点备机只读信息
+     * @param integer $IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -225,6 +233,10 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MultiDrReadableInfo, $obj);
             }
+        }
+
+        if (array_key_exists("IsDiskEncryptFlag",$param) and $param["IsDiskEncryptFlag"] !== null) {
+            $this->IsDiskEncryptFlag = $param["IsDiskEncryptFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

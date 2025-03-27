@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCCEnable() 获取HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
  * @method void setCCEnable(integer $CCEnable) 设置HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
  * @method integer getHttpsToHttpEnable() 获取是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) 设置是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCertType() 获取证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
  * @method void setCertType(integer $CertType) 设置证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
  * @method string getCert() 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
@@ -59,9 +57,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCCStatus() 获取cc防护状态，取值[0(关闭), 1(开启)]
  * @method void setCCStatus(integer $CCStatus) 设置cc防护状态，取值[0(关闭), 1(开启)]
  * @method integer getVirtualPort() 获取接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualPort(integer $VirtualPort) 设置接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSSLId() 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method string getId() 获取同ruleId
@@ -133,7 +129,6 @@ class L7RuleEntry extends AbstractModel
 
     /**
      * @var integer 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsToHttpEnable;
 
@@ -164,7 +159,6 @@ class L7RuleEntry extends AbstractModel
 
     /**
      * @var integer 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualPort;
 
@@ -197,14 +191,12 @@ class L7RuleEntry extends AbstractModel
      * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param integer $CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
      * @param integer $HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CertType 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      * @param string $Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param string $CCLevel HTTPS协议的CC防护等级
      * @param string $RuleName 规则描述
      * @param integer $CCStatus cc防护状态，取值[0(关闭), 1(开启)]
      * @param integer $VirtualPort 接入端口值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Id 同ruleId
      * @param integer $CCAIEnable 智能cc开关，取值[0(关闭), 1(开启)]

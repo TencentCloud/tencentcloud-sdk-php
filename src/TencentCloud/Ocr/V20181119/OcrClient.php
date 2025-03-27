@@ -54,11 +54,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：20次/秒。
  * @method Models\ClassifyStoreNameResponse ClassifyStoreName(Models\ClassifyStoreNameRequest $req) 本接口用于识别门头照分类标签信息
 默认接口请求频率限制：1次/秒
- * @method Models\CreateAIFormTaskResponse CreateAIFormTask(Models\CreateAIFormTaskRequest $req) 智慧表单产品已下线，需要下线相关API
-
-本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
-
-智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\DriverLicenseOCRResponse DriverLicenseOCR(Models\DriverLicenseOCRRequest $req) 本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -294,9 +289,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：10次/秒。
  * @method Models\GetOCRResultResponse GetOCRResult(Models\GetOCRResultRequest $req) 获取ocr结果
  * @method Models\GetOCRTokenResponse GetOCRToken(Models\GetOCRTokenRequest $req) 获取ocr的token值
- * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 智慧表单产品已下线，需要下线相关API
-
-支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) 本接口支持中国香港身份证人像面中关键字段的识别，包括中文姓名、英文姓名、姓名电码、出生日期、性别、证件符号、首次签发日期、最近领用日期、身份证号、是否是永久性居民身份证；具备人像照片裁剪等扩展功能。
 
 默认接口请求频率限制：5次/秒。
@@ -624,6 +616,11 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td> 19 </td>
         </tr>
         <tr>
+          <td> BankSlip </td>
+          <td> 银行回单 </td>
+          <td> 20 </td>
+        </tr>
+        <tr>
           <td> OtherInvoice </td>
           <td> 其他发票 </td>
           <td> -1 </td>
@@ -703,11 +700,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\VatInvoiceOCRResponse VatInvoiceOCR(Models\VatInvoiceOCRRequest $req) 本接口支持增值税专用发票、增值税普通发票、增值税电子专票、增值税电子普票、电子发票（普通发票）、电子发票（增值税专用发票）全字段的内容检测和识别，包括发票代码、发票号码、打印发票代码、打印发票号码、开票日期、合计金额、校验码、税率、合计税额、价税合计、购买方识别号、复核、销售方识别号、开票人、密码区1、密码区2、密码区3、密码区4、发票名称、购买方名称、销售方名称、服务名称、备注、规格型号、数量、单价、金额、税额、收款人等字段，点击[立即试用](https://cloud.tencent.com/product/ocr)。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\VatInvoiceVerifyResponse VatInvoiceVerify(Models\VatInvoiceVerifyRequest $req) 已上线VatInvoiceVerifyNew，VatInvoiceVerify需要下线，产品在官网已发通告
-
-本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\VatInvoiceVerifyNewResponse VatInvoiceVerifyNew(Models\VatInvoiceVerifyNewRequest $req) 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票、通用机打电子发票（广东和浙江）。
 
 默认接口请求频率限制：20次/秒。

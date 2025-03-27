@@ -33,21 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取音画质重生模板描述。
  * @method void setComment(string $Comment) 设置音画质重生模板描述。
  * @method RebuildVideoInfo getRebuildVideoInfo() 获取音画质重生视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) 设置音画质重生视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RebuildAudioInfo getRebuildAudioInfo() 获取音画质重生音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) 设置音画质重生音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RebuildMediaTargetVideoStream getTargetVideoInfo() 获取输出视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) 设置输出视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RebuildMediaTargetAudioStream getTargetAudioInfo() 获取输出音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetAudioInfo(RebuildMediaTargetAudioStream $TargetAudioInfo) 设置输出音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainer() 获取封装格式。可选值：mp4、hls。默认是 mp4。
  * @method void setContainer(string $Container) 设置封装格式。可选值：mp4、hls。默认是 mp4。
  * @method integer getRemoveVideo() 获取是否去除视频数据，可选值：
@@ -97,25 +89,21 @@ class RebuildMediaTemplate extends AbstractModel
 
     /**
      * @var RebuildVideoInfo 音画质重生视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RebuildVideoInfo;
 
     /**
      * @var RebuildAudioInfo 音画质重生音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RebuildAudioInfo;
 
     /**
      * @var RebuildMediaTargetVideoStream 输出视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetVideoInfo;
 
     /**
      * @var RebuildMediaTargetAudioStream 输出音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetAudioInfo;
 
@@ -158,13 +146,9 @@ class RebuildMediaTemplate extends AbstractModel
      * @param string $Name 音画质重生模板名称。
      * @param string $Comment 音画质重生模板描述。
      * @param RebuildVideoInfo $RebuildVideoInfo 音画质重生视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RebuildAudioInfo $RebuildAudioInfo 音画质重生音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo 输出视频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RebuildMediaTargetAudioStream $TargetAudioInfo 输出音频控制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Container 封装格式。可选值：mp4、hls。默认是 mp4。
      * @param integer $RemoveVideo 是否去除视频数据，可选值：
 <li>0：保留</li>

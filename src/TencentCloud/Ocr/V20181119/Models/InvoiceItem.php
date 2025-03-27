@@ -46,6 +46,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
  * @method void setType(integer $Type) 设置识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
@@ -64,6 +65,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
  * @method Polygon getPolygon() 获取该发票在原图片中的四点坐标。
  * @method void setPolygon(Polygon $Polygon) 设置该发票在原图片中的四点坐标。
  * @method float getAngle() 获取识别出的图片在混贴票据图片中的旋转角度。
@@ -112,6 +114,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
      */
     public $Type;
 
@@ -183,6 +186,7 @@ FailedOperation.UnKnowError：表示识别失败；
 17：医疗发票
 18：完税凭证
 19：海关缴款书
+20：银行回单
      * @param Polygon $Polygon 该发票在原图片中的四点坐标。
      * @param float $Angle 识别出的图片在混贴票据图片中的旋转角度。
      * @param SingleInvoiceItem $SingleInvoiceInfos 识别到的内容。

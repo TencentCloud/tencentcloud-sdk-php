@@ -70,17 +70,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getCreatedTime() 获取创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
  * @method array getIpv6AddressSet() 获取`IPv6`地址列表。
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method integer getEniType() 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
- * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
- * @method string getBusiness() 获取网卡绑定的子机类型：cvm，eks。
+ * @method integer getEniType() 获取网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+ * @method void setEniType(integer $EniType) 设置网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+ * @method string getBusiness() 获取网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusiness(string $Business) 设置网卡绑定的子机类型：cvm，eks。
+ * @method void setBusiness(string $Business) 设置网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取网卡所关联的CDC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,16 +95,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQosLevel() 获取服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQosLevel(string $QosLevel) 设置服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkInterface extends AbstractModel
@@ -187,7 +187,7 @@ class NetworkInterface extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      */
     public $CreatedTime;
 
@@ -202,12 +202,12 @@ class NetworkInterface extends AbstractModel
     public $TagSet;
 
     /**
-     * @var integer 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * @var integer 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
      */
     public $EniType;
 
     /**
-     * @var string 网卡绑定的子机类型：cvm，eks。
+     * @var string 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
@@ -232,10 +232,10 @@ class NetworkInterface extends AbstractModel
 
     /**
      * @var string 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QosLevel;
@@ -266,11 +266,11 @@ class NetworkInterface extends AbstractModel
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区。
-     * @param string $CreatedTime 创建时间。
+     * @param string $CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      * @param array $Ipv6AddressSet `IPv6`地址列表。
      * @param array $TagSet 标签键值对。
-     * @param integer $EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
-     * @param string $Business 网卡绑定的子机类型：cvm，eks。
+     * @param integer $EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+     * @param string $Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId 网卡所关联的CDC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,10 +279,10 @@ class NetworkInterface extends AbstractModel
      * @param string $ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QosLevel 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

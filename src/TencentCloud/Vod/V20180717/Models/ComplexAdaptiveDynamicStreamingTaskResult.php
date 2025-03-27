@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method ComplexAdaptiveDynamicStreamingTaskInput getInput() 获取自适应码流任务的输入。
  * @method void setInput(ComplexAdaptiveDynamicStreamingTaskInput $Input) 设置自适应码流任务的输入。
  * @method ComplexAdaptiveDynamicStreamingTaskOutput getOutput() 获取自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ComplexAdaptiveDynamicStreamingTaskOutput $Output) 设置自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel
 {
@@ -73,7 +71,6 @@ class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel
 
     /**
      * @var ComplexAdaptiveDynamicStreamingTaskOutput 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -87,7 +84,6 @@ class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel
      * @param integer $Progress 转码进度，取值范围 [0-100] 。
      * @param ComplexAdaptiveDynamicStreamingTaskInput $Input 自适应码流任务的输入。
      * @param ComplexAdaptiveDynamicStreamingTaskOutput $Output 自适应码流任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

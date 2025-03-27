@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置8000
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackup() 获取备份源站，1: 备份源站，0: 普通源站
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackup(integer $Backup) 设置备份源站，1: 备份源站，0: 普通源站
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class L4RuleSource extends AbstractModel
 {
@@ -53,7 +51,6 @@ class L4RuleSource extends AbstractModel
 
     /**
      * @var integer 备份源站，1: 备份源站，0: 普通源站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Backup;
 
@@ -63,7 +60,6 @@ class L4RuleSource extends AbstractModel
      * @param integer $Port 8000
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Backup 备份源站，1: 备份源站，0: 普通源站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

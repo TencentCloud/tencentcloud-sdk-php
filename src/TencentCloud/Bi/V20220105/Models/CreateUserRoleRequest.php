@@ -36,6 +36,7 @@ class CreateUserRoleRequest extends AbstractModel
 
     /**
      * @var array 用户列表（废弃）
+     * @deprecated
      */
     public $UserList;
 

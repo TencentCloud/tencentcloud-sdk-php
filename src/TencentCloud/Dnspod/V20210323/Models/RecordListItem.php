@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTTL() 获取记录缓存时间
  * @method void setTTL(integer $TTL) 设置记录缓存时间
  * @method integer getMX() 获取MX值，只有MX记录有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(integer $MX) 设置MX值，只有MX记录有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDefaultNS() 获取是否是默认的ns记录
  * @method void setDefaultNS(boolean $DefaultNS) 设置是否是默认的ns记录
  */
@@ -118,7 +116,6 @@ class RecordListItem extends AbstractModel
 
     /**
      * @var integer MX值，只有MX记录有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MX;
 
@@ -142,7 +139,6 @@ class RecordListItem extends AbstractModel
      * @param string $Remark 记录备注说明
      * @param integer $TTL 记录缓存时间
      * @param integer $MX MX值，只有MX记录有
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DefaultNS 是否是默认的ns记录
      */
     function __construct()

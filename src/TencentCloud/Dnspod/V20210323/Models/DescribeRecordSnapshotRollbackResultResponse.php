@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取回滚状态
  * @method void setStatus(string $Status) 设置回滚状态
  * @method array getFailedRecordList() 获取失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedRecordList(array $FailedRecordList) 设置失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取所属域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置所属域名
@@ -73,7 +71,6 @@ class DescribeRecordSnapshotRollbackResultResponse extends AbstractModel
 
     /**
      * @var array 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedRecordList;
 
@@ -128,7 +125,6 @@ class DescribeRecordSnapshotRollbackResultResponse extends AbstractModel
      * @param integer $JobId 回滚任务 ID
      * @param string $Status 回滚状态
      * @param array $FailedRecordList 失败的记录信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 所属域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 回滚进度

@@ -53,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
 "Down" : 服务器宕机。
 "" : 该记录未开启 D 监控。
  * @method string getRemark() 获取记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedOn() 获取记录最后更新时间。
  * @method void setUpdatedOn(string $UpdatedOn) 设置记录最后更新时间。
  * @method integer getDomainId() 获取域名 ID 。
@@ -125,7 +123,6 @@ class RecordInfo extends AbstractModel
 
     /**
      * @var string 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -157,7 +154,6 @@ class RecordInfo extends AbstractModel
 "Down" : 服务器宕机。
 "" : 该记录未开启 D 监控。
      * @param string $Remark 记录的备注。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedOn 记录最后更新时间。
      * @param integer $DomainId 域名 ID 。
      */

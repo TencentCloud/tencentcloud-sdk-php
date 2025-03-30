@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 规则模板内容
  *
  * @method string getRuleTemplateId() 获取规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateId(string $RuleTemplateId) 设置规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleTemplateName() 获取规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuleFilters() 获取规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleFilters(array $RuleFilters) 设置规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleTemplateInfo extends AbstractModel
 {
     /**
      * @var string 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateId;
 
     /**
      * @var string 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateName;
 
     /**
      * @var array 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleFilters;
 
     /**
      * @var integer 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
 
     /**
      * @var integer 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmPolicy;
 
     /**
      * @var string 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $RuleTemplateId 规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleTemplateName 规则模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleFilters 规则内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliverType(string $DeliverType) 设置投递类型，store（存储类），mq（消息通道）
  * @method string getDeliverSubType() 获取投递子类型：cls，ckafka。
  * @method void setDeliverSubType(string $DeliverSubType) 设置投递子类型：cls，ckafka。
+ * @method string getDeliverConsumer() 获取投递者
+ * @method void setDeliverConsumer(string $DeliverConsumer) 设置投递者
+ * @method string getDeliverConsumerName() 获取投递者名称
+ * @method void setDeliverConsumerName(string $DeliverConsumerName) 设置投递者名称
  */
 class DeliverSummary extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DeliverSummary extends AbstractModel
     public $DeliverSubType;
 
     /**
+     * @var string 投递者
+     */
+    public $DeliverConsumer;
+
+    /**
+     * @var string 投递者名称
+     */
+    public $DeliverConsumerName;
+
+    /**
      * @param string $DeliverType 投递类型，store（存储类），mq（消息通道）
      * @param string $DeliverSubType 投递子类型：cls，ckafka。
+     * @param string $DeliverConsumer 投递者
+     * @param string $DeliverConsumerName 投递者名称
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DeliverSummary extends AbstractModel
 
         if (array_key_exists("DeliverSubType",$param) and $param["DeliverSubType"] !== null) {
             $this->DeliverSubType = $param["DeliverSubType"];
+        }
+
+        if (array_key_exists("DeliverConsumer",$param) and $param["DeliverConsumer"] !== null) {
+            $this->DeliverConsumer = $param["DeliverConsumer"];
+        }
+
+        if (array_key_exists("DeliverConsumerName",$param) and $param["DeliverConsumerName"] !== null) {
+            $this->DeliverConsumerName = $param["DeliverConsumerName"];
         }
     }
 }

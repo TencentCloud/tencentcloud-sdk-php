@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCnameSpeedup() 获取cname加速启用状态
  * @method void setCnameSpeedup(string $CnameSpeedup) 设置cname加速启用状态
  * @method string getRemark() 获取域名备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置域名备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPunycode() 获取域名Punycode
  * @method void setPunycode(string $Punycode) 设置域名Punycode
  * @method string getDnsStatus() 获取域名DNS状态
@@ -63,23 +61,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUin() 获取腾讯云账户Uin
  * @method void setUin(string $Uin) 设置腾讯云账户Uin
  * @method array getActualNsList() 获取域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActualNsList(array $ActualNsList) 设置域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordCount() 获取域名的记录数量
  * @method void setRecordCount(integer $RecordCount) 设置域名的记录数量
  * @method string getOwnerNick() 获取域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerNick(string $OwnerNick) 设置域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsGracePeriod() 获取是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGracePeriod(string $IsGracePeriod) 设置是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVipBuffered() 获取是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVipBuffered(string $VipBuffered) 设置是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVipStartAt() 获取VIP套餐有效期开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVipStartAt(string $VipStartAt) 设置VIP套餐有效期开始时间
@@ -97,13 +87,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVipResourceId(string $VipResourceId) 设置VIP套餐资源ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSubDomain() 获取是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSubDomain(boolean $IsSubDomain) 设置是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSearchEnginePush() 获取是否启用搜索引擎推送
  * @method void setSearchEnginePush(string $SearchEnginePush) 设置是否启用搜索引擎推送
  * @method string getSlaveDNS() 获取是否开启辅助 DNS
@@ -148,7 +134,6 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var string 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -214,7 +199,6 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var array 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActualNsList;
 
@@ -225,19 +209,16 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var string 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerNick;
 
     /**
      * @var string 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGracePeriod;
 
     /**
      * @var string 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VipBuffered;
 
@@ -267,13 +248,11 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var boolean 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSubDomain;
 
     /**
      * @var array 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
@@ -296,7 +275,6 @@ class DomainInfo extends AbstractModel
      * @param integer $TTL TTL(DNS记录缓存时间)
      * @param string $CnameSpeedup cname加速启用状态
      * @param string $Remark 域名备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Punycode 域名Punycode
      * @param string $DnsStatus 域名DNS状态
      * @param array $DnspodNsList 域名的NS列表
@@ -310,14 +288,10 @@ class DomainInfo extends AbstractModel
      * @param string $UpdatedOn 最后操作时间
      * @param string $Uin 腾讯云账户Uin
      * @param array $ActualNsList 域名实际使用的NS列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordCount 域名的记录数量
      * @param string $OwnerNick 域名所有者的账户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsGracePeriod 是否在付费套餐宽限期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VipBuffered 是否在付费套餐缓冲期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VipStartAt VIP套餐有效期开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VipEndAt VIP套餐有效期结束时间
@@ -327,9 +301,7 @@ class DomainInfo extends AbstractModel
      * @param string $VipResourceId VIP套餐资源ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSubDomain 是否是子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 域名关联的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SearchEnginePush 是否启用搜索引擎推送
      * @param string $SlaveDNS 是否开启辅助 DNS
      */

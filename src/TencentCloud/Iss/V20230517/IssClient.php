@@ -39,6 +39,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\CallISAPIResponse CallISAPI(Models\CallISAPIRequest $req) 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
  * @method Models\ControlDevicePTZResponse ControlDevicePTZ(Models\ControlDevicePTZRequest $req) 用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
  * @method Models\ControlDevicePresetResponse ControlDevicePreset(Models\ControlDevicePresetRequest $req) 用于操作设备预置位，包括设置、删除、调用。
+ * @method Models\ControlDeviceSnapshotResponse ControlDeviceSnapshot(Models\ControlDeviceSnapshotRequest $req) 控制设备抓拍--单次，当前仅支持国标设备
  * @method Models\ControlDeviceStreamResponse ControlDeviceStream(Models\ControlDeviceStreamRequest $req) 用于获取设备的实时开流地址。
  * @method Models\ControlRecordResponse ControlRecord(Models\ControlRecordRequest $req) 用于录像回放过程中的倍速、跳转、播放/暂停/停止等控制。
  * @method Models\ControlRecordTimelineResponse ControlRecordTimeline(Models\ControlRecordTimelineRequest $req) 用于查询设备本地录像时间轴信息，为NVR/IPC本地存储的录像。
@@ -80,6 +81,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeVideoBitRateResponse DescribeVideoBitRate(Models\DescribeVideoBitRateRequest $req) 用于获取视频通道的码率信息
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表
+ * @method Models\ListDeviceSnapshotsResponse ListDeviceSnapshots(Models\ListDeviceSnapshotsRequest $req) 获取设备抓拍结果列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。
  * @method Models\ListGatewayDevicesResponse ListGatewayDevices(Models\ListGatewayDevicesRequest $req) 用于查询网关下挂载的设备列表。
  * @method Models\ListGatewaysResponse ListGateways(Models\ListGatewaysRequest $req) 用于获取网关列表。

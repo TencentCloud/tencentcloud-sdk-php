@@ -52,12 +52,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTokens(ModelParameter $MaxTokens) 设置最多能生成的token数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
- * @method void setSource(string $Source) 设置模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+ * @method string getSource() 获取模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+ * @method void setSource(string $Source) 设置模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
  * @method string getIcon() 获取模型图标
  * @method void setIcon(string $Icon) 设置模型图标
  * @method boolean getIsFree() 获取是否免费
  * @method void setIsFree(boolean $IsFree) 设置是否免费
+ * @method integer getInputLenLimit() 获取模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputLenLimit(integer $InputLenLimit) 设置模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSupportWorkflowStatus() 获取支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportWorkflowStatus(integer $SupportWorkflowStatus) 设置支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelCategory() 获取模型类别 generate：生成模型，thought：思考模型
+ * @method void setModelCategory(string $ModelCategory) 设置模型类别 generate：生成模型，thought：思考模型
  */
 class ModelInfo extends AbstractModel
 {
@@ -110,7 +120,7 @@ class ModelInfo extends AbstractModel
     public $MaxTokens;
 
     /**
-     * @var string 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * @var string 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
      */
     public $Source;
 
@@ -123,6 +133,23 @@ class ModelInfo extends AbstractModel
      * @var boolean 是否免费
      */
     public $IsFree;
+
+    /**
+     * @var integer 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InputLenLimit;
+
+    /**
+     * @var integer 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportWorkflowStatus;
+
+    /**
+     * @var string 模型类别 generate：生成模型，thought：思考模型
+     */
+    public $ModelCategory;
 
     /**
      * @param string $ModelName 模型名称
@@ -141,9 +168,14 @@ class ModelInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelParameter $MaxTokens 最多能生成的token数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+     * @param string $Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
      * @param string $Icon 模型图标
      * @param boolean $IsFree 是否免费
+     * @param integer $InputLenLimit 模型对话框可输入的上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelCategory 模型类别 generate：生成模型，thought：思考模型
      */
     function __construct()
     {
@@ -203,6 +235,18 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("IsFree",$param) and $param["IsFree"] !== null) {
             $this->IsFree = $param["IsFree"];
+        }
+
+        if (array_key_exists("InputLenLimit",$param) and $param["InputLenLimit"] !== null) {
+            $this->InputLenLimit = $param["InputLenLimit"];
+        }
+
+        if (array_key_exists("SupportWorkflowStatus",$param) and $param["SupportWorkflowStatus"] !== null) {
+            $this->SupportWorkflowStatus = $param["SupportWorkflowStatus"];
+        }
+
+        if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
+            $this->ModelCategory = $param["ModelCategory"];
         }
     }
 }

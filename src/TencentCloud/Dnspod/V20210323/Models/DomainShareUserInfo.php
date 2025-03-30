@@ -23,25 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDomainShareId() 获取共享记录ID
  * @method void setDomainShareId(integer $DomainShareId) 设置共享记录ID
  * @method string getMode() 获取共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickname() 获取共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickname(string $Nickname) 设置共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQCloudUIN() 获取共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQCloudUIN(string $QCloudUIN) 设置共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubDomain() 获取共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubDomain(string $SubDomain) 设置共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainShareUserInfo extends AbstractModel
 {
@@ -52,46 +42,36 @@ class DomainShareUserInfo extends AbstractModel
 
     /**
      * @var string 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @var string 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
      * @var string 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QCloudUIN;
 
     /**
      * @var string 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubDomain;
 
     /**
      * @param integer $DomainShareId 共享记录ID
      * @param string $Mode 共享模式。r-只读；w-可写；rw-可读写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nickname 共享到的用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QCloudUIN 共享到的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 共享状态。enabled-有效；pause-无效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubDomain 共享的子域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

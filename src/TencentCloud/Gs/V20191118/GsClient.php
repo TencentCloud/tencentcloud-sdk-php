@@ -34,6 +34,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSH(Models\CreateAndroidInstanceSSHRequest $req) 创建安卓实例 SSH 连接
  * @method Models\CreateAndroidInstanceWebShellResponse CreateAndroidInstanceWebShell(Models\CreateAndroidInstanceWebShellRequest $req) 创建安卓实例 WebShell 连接
  * @method Models\CreateAndroidInstancesResponse CreateAndroidInstances(Models\CreateAndroidInstancesRequest $req) 创建安卓实例
+ * @method Models\CreateAndroidInstancesScreenshotResponse CreateAndroidInstancesScreenshot(Models\CreateAndroidInstancesScreenshotRequest $req) 安卓实例截图
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
  * @method Models\DeleteAndroidInstanceImagesResponse DeleteAndroidInstanceImages(Models\DeleteAndroidInstanceImagesRequest $req) 删除安卓实例镜像
  * @method Models\DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabel(Models\DeleteAndroidInstanceLabelRequest $req) 创建安卓实例

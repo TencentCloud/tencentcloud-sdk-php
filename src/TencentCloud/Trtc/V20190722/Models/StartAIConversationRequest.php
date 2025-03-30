@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  <pre>{ <br> &emsp; "AppId": 您的应用ID, // Integer 必填<br> &emsp; "TTSType": "TTS类型", // String TTS类型, 固定为"tencent"<br> &emsp; "SecretId": "您的密钥ID", // String 必填<br> &emsp; "SecretKey":  "您的密钥Key", // String 必填<br> &emsp; "VoiceType": 101001, // Integer  必填，音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见<a href="https://cloud.tencent.com/document/product/1073/34112">语音合成计费概述</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668#55924b56-1a73-4663-a7a1-a8dd82d6e823">语音合成音色列表</a>。<br> &emsp; "Speed": 1.25, // Integer 非必填，语速，范围：[-2，6]，分别对应不同语速： -2: 代表0.6倍 -1: 代表0.8倍 0: 代表1.0倍（默认） 1: 代表1.2倍 2: 代表1.5倍  6: 代表2.5倍  如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。 参数值与实际语速转换，可参考 <a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">语速转换</a><br> &emsp; "Volume": 5, // Integer 非必填，音量大小，范围：[0，10]，分别对应11个等级的音量，默认值为0，代表正常音量。<br> &emsp;}</pre>
  * @method string getAvatarConfig() 获取数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
  * @method void setAvatarConfig(string $AvatarConfig) 设置数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+ * @method string getExperimentalParams() 获取实验性参数,联系后台使用
+ * @method void setExperimentalParams(string $ExperimentalParams) 设置实验性参数,联系后台使用
  */
 class StartAIConversationRequest extends AbstractModel
 {
@@ -96,6 +98,11 @@ class StartAIConversationRequest extends AbstractModel
     public $AvatarConfig;
 
     /**
+     * @var string 实验性参数,联系后台使用
+     */
+    public $ExperimentalParams;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，表示开启对话任务的房间号。
      * @param AgentConfig $AgentConfig 机器人参数
@@ -108,6 +115,7 @@ class StartAIConversationRequest extends AbstractModel
      * @param string $TTSConfig TTS配置，为JSON字符串，腾讯云TTS示例如下：
  <pre>{ <br> &emsp; "AppId": 您的应用ID, // Integer 必填<br> &emsp; "TTSType": "TTS类型", // String TTS类型, 固定为"tencent"<br> &emsp; "SecretId": "您的密钥ID", // String 必填<br> &emsp; "SecretKey":  "您的密钥Key", // String 必填<br> &emsp; "VoiceType": 101001, // Integer  必填，音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见<a href="https://cloud.tencent.com/document/product/1073/34112">语音合成计费概述</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668#55924b56-1a73-4663-a7a1-a8dd82d6e823">语音合成音色列表</a>。<br> &emsp; "Speed": 1.25, // Integer 非必填，语速，范围：[-2，6]，分别对应不同语速： -2: 代表0.6倍 -1: 代表0.8倍 0: 代表1.0倍（默认） 1: 代表1.2倍 2: 代表1.5倍  6: 代表2.5倍  如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。 参数值与实际语速转换，可参考 <a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">语速转换</a><br> &emsp; "Volume": 5, // Integer 非必填，音量大小，范围：[0，10]，分别对应11个等级的音量，默认值为0，代表正常音量。<br> &emsp;}</pre>
      * @param string $AvatarConfig 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+     * @param string $ExperimentalParams 实验性参数,联系后台使用
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class StartAIConversationRequest extends AbstractModel
 
         if (array_key_exists("AvatarConfig",$param) and $param["AvatarConfig"] !== null) {
             $this->AvatarConfig = $param["AvatarConfig"];
+        }
+
+        if (array_key_exists("ExperimentalParams",$param) and $param["ExperimentalParams"] !== null) {
+            $this->ExperimentalParams = $param["ExperimentalParams"];
         }
     }
 }

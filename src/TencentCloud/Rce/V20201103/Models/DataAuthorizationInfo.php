@@ -48,8 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizationTerm(integer $AuthorizationTerm) 设置客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
  * @method string getPrivacyPolicyLink() 获取客户获得用户授权所依赖的协议地址。
  * @method void setPrivacyPolicyLink(string $PrivacyPolicyLink) 设置客户获得用户授权所依赖的协议地址。
- * @method integer getIsPersonalData() 获取是否是用户个人敏感数据（不推荐使用）。固定填：1。
- * @method void setIsPersonalData(integer $IsPersonalData) 设置是否是用户个人敏感数据（不推荐使用）。固定填：1。
  */
 class DataAuthorizationInfo extends AbstractModel
 {
@@ -96,11 +94,6 @@ class DataAuthorizationInfo extends AbstractModel
     public $PrivacyPolicyLink;
 
     /**
-     * @var integer 是否是用户个人敏感数据（不推荐使用）。固定填：1。
-     */
-    public $IsPersonalData;
-
-    /**
      * @param string $DataProviderName 数据委托方、需求方：客户主体名称。
      * @param string $DataRecipientName 数据受托方、提供方：腾讯云主体名称。固定填：腾讯云计算（北京）有限责任公司
      * @param array $UserDataType 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
@@ -115,7 +108,6 @@ class DataAuthorizationInfo extends AbstractModel
 1-已授权；其它值为未授权。
      * @param integer $AuthorizationTerm 客户获得的用户授权期限时间戳（单位秒）。不填默认无固定期限。
      * @param string $PrivacyPolicyLink 客户获得用户授权所依赖的协议地址。
-     * @param integer $IsPersonalData 是否是用户个人敏感数据（不推荐使用）。固定填：1。
      */
     function __construct()
     {
@@ -156,10 +148,6 @@ class DataAuthorizationInfo extends AbstractModel
 
         if (array_key_exists("PrivacyPolicyLink",$param) and $param["PrivacyPolicyLink"] !== null) {
             $this->PrivacyPolicyLink = $param["PrivacyPolicyLink"];
-        }
-
-        if (array_key_exists("IsPersonalData",$param) and $param["IsPersonalData"] !== null) {
-            $this->IsPersonalData = $param["IsPersonalData"];
         }
     }
 }

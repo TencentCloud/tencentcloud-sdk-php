@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAllActions() 获取支持的所有操作
  * @method void setAllActions(array $AllActions) 设置支持的所有操作
  * @method array getActions() 获取当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActions(array $Actions) 设置当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
  * @method Options getOptions() 获取同步选项
  * @method void setOptions(Options $Options) 设置同步选项
  * @method Objects getObjects() 获取同步库表对象
@@ -127,6 +129,7 @@ class SyncJobInfo extends AbstractModel
 
     /**
      * @var array 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Actions;
 
@@ -283,6 +286,7 @@ class SyncJobInfo extends AbstractModel
      * @param string $ExpectRunTime 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param array $AllActions 支持的所有操作
      * @param array $Actions 当前状态能进行的操作
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Options $Options 同步选项
      * @param Objects $Objects 同步库表对象
      * @param string $Specification 任务规格

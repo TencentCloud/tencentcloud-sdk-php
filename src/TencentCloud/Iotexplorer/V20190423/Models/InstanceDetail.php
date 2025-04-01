@@ -79,9 +79,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCellNum(integer $CellNum) 设置实例单元数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingTag() 获取实例Tag
+ * @method string getBillingTag() 获取实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingTag(string $BillingTag) 设置实例Tag
+ * @method void setBillingTag(string $BillingTag) 设置实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEverydayFreeMessageCount() 获取每日消息数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ class InstanceDetail extends AbstractModel
     public $CellNum;
 
     /**
-     * @var string 实例Tag
+     * @var string 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingTag;
@@ -251,7 +251,7 @@ class InstanceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CellNum 实例单元数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingTag 实例Tag
+     * @param string $BillingTag 实例Tag，企业实例必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EverydayFreeMessageCount 每日消息数
 注意：此字段可能返回 null，表示取不到有效值。

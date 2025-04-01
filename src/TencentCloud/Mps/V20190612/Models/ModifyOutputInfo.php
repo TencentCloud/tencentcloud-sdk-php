@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出的名称。
  * @method string getDescription() 获取输出的描述。
  * @method void setDescription(string $Description) 设置输出的描述。
- * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
- * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+ * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+ * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
  * @method CreateOutputSRTSettings getSRTSettings() 获取转推SRT的配置。
  * @method void setSRTSettings(CreateOutputSRTSettings $SRTSettings) 设置转推SRT的配置。
  * @method CreateOutputInfoRTPSettings getRTPSettings() 获取转推RTP的配置。
@@ -69,7 +69,7 @@ class ModifyOutputInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public $Protocol;
 
@@ -128,7 +128,7 @@ class ModifyOutputInfo extends AbstractModel
      * @param string $OutputId 需要修改的Output的Id。
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出的描述。
-     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      * @param CreateOutputSRTSettings $SRTSettings 转推SRT的配置。
      * @param CreateOutputInfoRTPSettings $RTPSettings 转推RTP的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 转推RTMP的配置。

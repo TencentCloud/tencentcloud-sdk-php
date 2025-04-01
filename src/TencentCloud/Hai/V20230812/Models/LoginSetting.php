@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 某服务的登录配置
  *
  * @method string getServiceName() 获取服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginSetting extends AbstractModel
 {
     /**
      * @var string 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @param string $ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 服务登录url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

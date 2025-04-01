@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSalesName(string $SalesName) 设置业务员姓名
  * @method string getClientName() 获取客户名称，此字段和控制台返回一致。
  * @method void setClientName(string $ClientName) 设置客户名称，此字段和控制台返回一致。
+ * @method string getIncreaseGoal() 获取增量目标金额(分)
+ * @method void setIncreaseGoal(string $IncreaseGoal) 设置增量目标金额(分)
  */
 class AgentClientElem extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AgentClientElem extends AbstractModel
     public $ClientName;
 
     /**
+     * @var string 增量目标金额(分)
+     */
+    public $IncreaseGoal;
+
+    /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
      * @param integer $ApplyTime 代客申请时间戳
@@ -112,6 +119,7 @@ class AgentClientElem extends AbstractModel
      * @param string $SalesUin 业务员ID
      * @param string $SalesName 业务员姓名
      * @param string $ClientName 客户名称，此字段和控制台返回一致。
+     * @param string $IncreaseGoal 增量目标金额(分)
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class AgentClientElem extends AbstractModel
 
         if (array_key_exists("ClientName",$param) and $param["ClientName"] !== null) {
             $this->ClientName = $param["ClientName"];
+        }
+
+        if (array_key_exists("IncreaseGoal",$param) and $param["IncreaseGoal"] !== null) {
+            $this->IncreaseGoal = $param["IncreaseGoal"];
         }
     }
 }

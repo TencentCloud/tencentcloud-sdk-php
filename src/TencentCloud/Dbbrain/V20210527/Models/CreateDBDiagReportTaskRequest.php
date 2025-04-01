@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactPerson(array $ContactPerson) 设置接收邮件的联系人ID数组。
  * @method array getContactGroup() 获取接收邮件的联系组ID数组。
  * @method void setContactGroup(array $ContactGroup) 设置接收邮件的联系组ID数组。
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认值为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认值为"mysql"。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，默认值为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，默认值为"mysql"。
  */
 class CreateDBDiagReportTaskRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class CreateDBDiagReportTaskRequest extends AbstractModel
     public $ContactGroup;
 
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认值为"mysql"。
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，默认值为"mysql"。
      */
     public $Product;
 
@@ -79,7 +79,7 @@ class CreateDBDiagReportTaskRequest extends AbstractModel
      * @param integer $SendMailFlag 是否发送邮件: 0 - 否，1 - 是。
      * @param array $ContactPerson 接收邮件的联系人ID数组。
      * @param array $ContactGroup 接收邮件的联系组ID数组。
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认值为"mysql"。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，默认值为"mysql"。
      */
     function __construct()
     {

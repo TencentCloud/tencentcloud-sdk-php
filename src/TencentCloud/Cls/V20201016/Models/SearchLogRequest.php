@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog请求参数结构体
  *
- * @method integer getFrom() 获取要检索分析的日志的起始时间，Unix时间戳（毫秒）
- * @method void setFrom(integer $From) 设置要检索分析的日志的起始时间，Unix时间戳（毫秒）
- * @method integer getTo() 获取要检索分析的日志的结束时间，Unix时间戳（毫秒）
- * @method void setTo(integer $To) 设置要检索分析的日志的结束时间，Unix时间戳（毫秒）
+ * @method integer getFrom() 获取要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
+ * @method void setFrom(integer $From) 设置要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
+ * @method integer getTo() 获取要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
+ * @method void setTo(integer $To) 设置要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
  * @method string getQuery() 获取检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
@@ -31,17 +31,19 @@ use TencentCloud\Common\AbstractModel;
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
  * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
  * @method string getTopicId() 获取- 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
@@ -118,12 +120,12 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogRequest extends AbstractModel
 {
     /**
-     * @var integer 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+     * @var integer 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
      */
     public $From;
 
     /**
-     * @var integer 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * @var integer 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
      */
     public $To;
 
@@ -136,11 +138,12 @@ class SearchLogRequest extends AbstractModel
 
     /**
      * @var integer 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
      */
     public $SyntaxRule;
 
@@ -213,17 +216,18 @@ class SearchLogRequest extends AbstractModel
     public $UseNewAnalysis;
 
     /**
-     * @param integer $From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
-     * @param integer $To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * @param integer $From 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
+     * @param integer $To 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
      * @param string $Query 检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
      * @param integer $SyntaxRule 检索语法规则，默认值为0，推荐使用1 。
-
 - 0：Lucene语法
-- 1：CQL语法（日志服务专用检索语法，控制台默认也使用该语法规则）。
+- 1：CQL语法（CLS Query Language，日志服务专用检索语法）
 
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ ⚠️⚠️ **注意**
+ **该参数值建议设置为 1，使用 CQL 语法规则，控制台日志检索及仪表盘默认均使用该语法规则。**
+ 该参数值未指定或者为 0 时，将使用 Lucene 语法，语法容易报错且查询结果与控制台默认语法规则不一致。详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。
      * @param string $TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
 - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。

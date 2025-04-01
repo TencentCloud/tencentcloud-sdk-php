@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT输入源地址。
  *
- * @method string getIp() 获取对端IP。
- * @method void setIp(string $Ip) 设置对端IP。
+ * @method string getIp() 获取对端IP或域名。
+ * @method void setIp(string $Ip) 设置对端IP或域名。
  * @method integer getPort() 获取对端端口。
  * @method void setPort(integer $Port) 设置对端端口。
  */
 class SRTSourceAddressReq extends AbstractModel
 {
     /**
-     * @var string 对端IP。
+     * @var string 对端IP或域名。
      */
     public $Ip;
 
@@ -38,7 +38,7 @@ class SRTSourceAddressReq extends AbstractModel
     public $Port;
 
     /**
-     * @param string $Ip 对端IP。
+     * @param string $Ip 对端IP或域名。
      * @param integer $Port 对端端口。
      */
     function __construct()

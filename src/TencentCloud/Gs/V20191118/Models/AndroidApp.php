@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidAppVersionInfo(array $AndroidAppVersionInfo) 设置安卓应用版本列表
  * @method string getCreateTime() 获取安卓应用创建时间
  * @method void setCreateTime(string $CreateTime) 设置安卓应用创建时间
+ * @method string getUserId() 获取用户 Id
+ * @method void setUserId(string $UserId) 设置用户 Id
  */
 class AndroidApp extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AndroidApp extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 用户 Id
+     */
+    public $UserId;
+
+    /**
      * @param string $AndroidAppId 安卓应用 Id
      * @param string $Name 安卓应用名称
      * @param string $State 安卓应用状态（上架、下架）
      * @param array $AndroidAppVersionInfo 安卓应用版本列表
      * @param string $CreateTime 安卓应用创建时间
+     * @param string $UserId 用户 Id
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class AndroidApp extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

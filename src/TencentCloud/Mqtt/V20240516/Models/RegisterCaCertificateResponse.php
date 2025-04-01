@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterCaCertificate返回参数结构体
  *
+ * @method string getInstanceId() 获取mqtt实例ID
+ * @method void setInstanceId(string $InstanceId) 设置mqtt实例ID
+ * @method string getCaSn() 获取ca 证书的序列号
+ * @method void setCaSn(string $CaSn) 设置ca 证书的序列号
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RegisterCaCertificateResponse extends AbstractModel
 {
     /**
+     * @var string mqtt实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string ca 证书的序列号
+     */
+    public $CaSn;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $InstanceId mqtt实例ID
+     * @param string $CaSn ca 证书的序列号
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class RegisterCaCertificateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("CaSn",$param) and $param["CaSn"] !== null) {
+            $this->CaSn = $param["CaSn"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

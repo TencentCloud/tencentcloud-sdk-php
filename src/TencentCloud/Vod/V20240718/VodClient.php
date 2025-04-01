@@ -23,7 +23,21 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Vod\V20240718\Models as Models;
 
 /**
+ * @method Models\CreateIncrementalMigrationStrategyResponse CreateIncrementalMigrationStrategy(Models\CreateIncrementalMigrationStrategyRequest $req) 创建增量迁移策略。
+ * @method Models\CreateStorageResponse CreateStorage(Models\CreateStorageRequest $req) 该接口用于为专业版应用创建存储桶。
+
+注：
+- 本接口仅用于专业版应用；
+- 客户创建点播专业版应用时，系统默认为客户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通；
+- 通过 [DescribeStorageRegions](https://cloud.tencent.com/document/product/266/72480) 接口可以查询到所有存储地域及已经开通存储桶的地域。
  * @method Models\CreateStorageCredentialsResponse CreateStorageCredentials(Models\CreateStorageCredentialsRequest $req) 用于按指定策略，生成专业版应用的临时访问凭证，比如生成用于客户端上传的临时凭证。
+ * @method Models\DeleteIncrementalMigrationStrategyResponse DeleteIncrementalMigrationStrategy(Models\DeleteIncrementalMigrationStrategyRequest $req) 删除增量迁移策略。
+ * @method Models\DescribeIncrementalMigrationStrategyInfosResponse DescribeIncrementalMigrationStrategyInfos(Models\DescribeIncrementalMigrationStrategyInfosRequest $req) 查询增量迁移策略信息。
+ * @method Models\DescribeStorageResponse DescribeStorage(Models\DescribeStorageRequest $req) 该接口用于查询专业版应用中的存储桶信息，同时支持分页查询。
+
+注：
+- 本接口仅用于专业版应用。
+ * @method Models\ModifyIncrementalMigrationStrategyResponse ModifyIncrementalMigrationStrategy(Models\ModifyIncrementalMigrationStrategyRequest $req) 创建增量迁移策略。
  */
 
 class VodClient extends AbstractClient

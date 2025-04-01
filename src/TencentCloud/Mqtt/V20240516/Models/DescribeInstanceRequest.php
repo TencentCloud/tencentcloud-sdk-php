@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
- * @method void setInstanceId(string $InstanceId) 设置实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  */
 class DescribeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例ID [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     function __construct()
     {

@@ -80,7 +80,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于向某个主题发消息。 
  * @method Models\PublishRRPCMessageResponse PublishRRPCMessage(Models\PublishRRPCMessageRequest $req) 发布RRPC消息
- * @method Models\ReplaceTopicRuleResponse ReplaceTopicRule(Models\ReplaceTopicRuleRequest $req) 本接口（ReplaceTopicRule）用于修改替换规则 
+ * @method Models\ReplaceTopicRuleResponse ReplaceTopicRule(Models\ReplaceTopicRuleRequest $req) 本接口（ReplaceTopicRule）用于修改替换规则
  * @method Models\ResetDeviceStateResponse ResetDeviceState(Models\ResetDeviceStateRequest $req) 重置设备的连接状态
  * @method Models\RetryDeviceFirmwareTaskResponse RetryDeviceFirmwareTask(Models\RetryDeviceFirmwareTaskRequest $req) 重试设备升级任务
  * @method Models\SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(Models\SetProductsForbiddenStatusRequest $req) 批量设置产品禁用状态

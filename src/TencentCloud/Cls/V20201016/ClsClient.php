@@ -38,6 +38,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
 - NoticeRules
  * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) 该接口用于创建告警屏蔽规则。
+ * @method Models\CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(Models\CreateCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
  * @method Models\CreateConfigExtraResponse CreateConfigExtra(Models\CreateConfigExtraRequest $req) 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\CreateConsoleSharingResponse CreateConsoleSharing(Models\CreateConsoleSharingRequest $req) 创建控制台分享
@@ -59,6 +60,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
  * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) 该接口用于删除告警屏蔽规则。
+ * @method Models\DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(Models\DeleteCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
@@ -81,6 +83,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeAlarmShieldsResponse DescribeAlarmShields(Models\DescribeAlarmShieldsRequest $req) 获取告警屏蔽配置规则
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
  * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) 获取告警历史，例如今天未恢复的告警
+ * @method Models\DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(Models\DescribeCloudProductLogTasksRequest $req) 云产品接入使用相关接口
  * @method Models\DescribeConfigExtrasResponse DescribeConfigExtras(Models\DescribeConfigExtrasRequest $req) 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置
@@ -113,6 +116,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyAlarmShieldResponse ModifyAlarmShield(Models\ModifyAlarmShieldRequest $req) 该接口用于修改告警屏蔽规则。
+ * @method Models\ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(Models\ModifyCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
  * @method Models\ModifyConfigExtraResponse ModifyConfigExtra(Models\ModifyConfigExtraRequest $req) 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\ModifyConsoleSharingResponse ModifyConsoleSharing(Models\ModifyConsoleSharingRequest $req) 修改控制台分享，目前仅允许修改有效期

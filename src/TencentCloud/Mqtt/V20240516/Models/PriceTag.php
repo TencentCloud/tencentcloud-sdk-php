@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 价格标签信息
  *
- * @method string getName() 获取计价名称
- * @method void setName(string $Name) 设置计价名称
- * @method string getCategory() 获取计价类别
- * @method void setCategory(string $Category) 设置计价类别
- * @method string getCode() 获取计费项标签
- * @method void setCode(string $Code) 设置计费项标签
- * @method integer getStep() 获取步长
- * @method void setStep(integer $Step) 设置步长
+ * @method string getName() 获取计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+ * @method void setName(string $Name) 设置计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+ * @method string getCategory() 获取计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
+ * @method void setCategory(string $Category) 设置计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
+ * @method string getCode() 获取计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+ * @method void setCode(string $Code) 设置计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+ * @method integer getStep() 获取计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
+ * @method void setStep(integer $Step) 设置计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
  */
 class PriceTag extends AbstractModel
 {
     /**
-     * @var string 计价名称
+     * @var string 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public $Name;
 
     /**
-     * @var string 计价类别
+     * @var string 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
      */
     public $Category;
 
     /**
-     * @var string 计费项标签
+     * @var string 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
      */
     public $Code;
 
     /**
-     * @var integer 步长
+     * @var integer 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
      */
     public $Step;
 
     /**
-     * @param string $Name 计价名称
-     * @param string $Category 计价类别
-     * @param string $Code 计费项标签
-     * @param integer $Step 步长
+     * @param string $Name 计价名称，表示规格的计费项项目分类，具体规格的计价名称可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+     * @param string $Category 计价类别，计价名称子类，具体规格的计价类别可参考  [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 的返回结果。
+     * @param string $Code 计费项标签，为计价名称（Name）下计价类别（Category）的子项目，表示一个具体的收费项。规格的计费项标签可参考 
+ [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232) 接口的返回结果。
+     * @param integer $Step 计费步长，表示该规格在 计价名称（Name）下的计价类别（Category）的计费项标签（Code）计费数量。具体规格该字段取值参考 [获取MQTT产品售卖规格](https://cloud.tencent.com/document/product/1778/116232)
      */
     function __construct()
     {

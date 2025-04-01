@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置计费模式，0-后付费，1-预付费
  * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
+ * @method integer getIsolatedTime() 获取开始隔离时间
+ * @method void setIsolatedTime(integer $IsolatedTime) 设置开始隔离时间
+ * @method boolean getContainer() 获取是否为容器实例，默认 true
+ * @method void setContainer(boolean $Container) 设置是否为容器实例，默认 true
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -195,6 +199,16 @@ class RabbitMQClusterInfo extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var integer 开始隔离时间
+     */
+    public $IsolatedTime;
+
+    /**
+     * @var boolean 是否为容器实例，默认 true
+     */
+    public $Container;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -220,6 +234,8 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param string $ClusterVersion 集群版本信息
      * @param integer $PayMode 计费模式，0-后付费，1-预付费
      * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
+     * @param integer $IsolatedTime 开始隔离时间
+     * @param boolean $Container 是否为容器实例，默认 true
      */
     function __construct()
     {
@@ -333,6 +349,14 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
+            $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
+            $this->Container = $param["Container"];
         }
     }
 }

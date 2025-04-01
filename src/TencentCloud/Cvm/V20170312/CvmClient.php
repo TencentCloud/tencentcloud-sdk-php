@@ -156,7 +156,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ImportInstancesActionTimerResponse ImportInstancesActionTimer(Models\ImportInstancesActionTimerRequest $req) 导入定时任务
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) 本接口 (ImportKeyPair) 用于导入密钥对。
 
-* 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)接口。
+* 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociateInstancesKeyPairs](https://cloud.tencent.com/document/product/213/15698)接口。
 * 需指定密钥对名称以及该密钥对的公钥文本。
 * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
  * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。

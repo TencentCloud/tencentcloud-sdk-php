@@ -44,7 +44,9 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
  * @method Models\DescribeBuildingModelResponse DescribeBuildingModel(Models\DescribeBuildingModelRequest $req) 查询建筑三维模型
  * @method Models\DescribeBuildingProfileResponse DescribeBuildingProfile(Models\DescribeBuildingProfileRequest $req) 查询建筑信息
  * @method Models\DescribeCameraExtendInfoResponse DescribeCameraExtendInfo(Models\DescribeCameraExtendInfoRequest $req) 获取视频扩展信息
- * @method Models\DescribeCityWorkspaceListResponse DescribeCityWorkspaceList(Models\DescribeCityWorkspaceListRequest $req) 通过城市id查询工作空间列表
+ * @method Models\DescribeCityWorkspaceListResponse DescribeCityWorkspaceList(Models\DescribeCityWorkspaceListRequest $req) 老微瓴后续不继续更新
+
+通过城市id查询工作空间列表
  * @method Models\DescribeDeviceGroupListResponse DescribeDeviceGroupList(Models\DescribeDeviceGroupListRequest $req) 设备分组列表
  * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 设备列表查询/单个查询（支持通过筛选条件查询，设备类型、标签、PID、空间）
  * @method Models\DescribeDeviceShadowListResponse DescribeDeviceShadowList(Models\DescribeDeviceShadowListRequest $req) 获取设备影子数据

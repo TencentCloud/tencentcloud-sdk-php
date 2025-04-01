@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScoreLost(integer $ScoreLost) 设置总扣分分数。
  * @method array getScoreDetails() 获取扣分详情。
  * @method void setScoreDetails(array $ScoreDetails) 设置扣分详情。
+ * @method string getHealthLevelVersion() 获取健康等级版本，默认为"V1"
+ * @method void setHealthLevelVersion(string $HealthLevelVersion) 设置健康等级版本，默认为"V1"
  */
 class HealthStatus extends AbstractModel
 {
@@ -52,10 +54,16 @@ class HealthStatus extends AbstractModel
     public $ScoreDetails;
 
     /**
+     * @var string 健康等级版本，默认为"V1"
+     */
+    public $HealthLevelVersion;
+
+    /**
      * @param integer $HealthScore 健康分数，满分100。
      * @param string $HealthLevel 健康等级，取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK"- 危险；"HIGH_RISK" - 高危。
      * @param integer $ScoreLost 总扣分分数。
      * @param array $ScoreDetails 扣分详情。
+     * @param string $HealthLevelVersion 健康等级版本，默认为"V1"
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class HealthStatus extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ScoreDetails, $obj);
             }
+        }
+
+        if (array_key_exists("HealthLevelVersion",$param) and $param["HealthLevelVersion"] !== null) {
+            $this->HealthLevelVersion = $param["HealthLevelVersion"];
         }
     }
 }

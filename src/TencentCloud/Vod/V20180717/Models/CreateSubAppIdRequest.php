@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置应用名称，长度限制：40个字符。
  * @method string getDescription() 获取应用简介，长度限制： 300个字符。不填则应用简介默认为空。
  * @method void setDescription(string $Description) 设置应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+ * @method string getType() 获取应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+ * @method void setType(string $Type) 设置应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateSubAppIdRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+     */
+    public $Type;
+
+    /**
      * @param string $Name 应用名称，长度限制：40个字符。
      * @param string $Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+     * @param string $Type 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateSubAppIdRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMimeType(string $MimeType) 设置文件的 MIME Type
  * @method CloudStorageAIServiceTaskVideoMetaInfo getVideoMetaInfo() 获取视频文件元数据（仅当文件为视频类型时包含该字段）
  * @method void setVideoMetaInfo(CloudStorageAIServiceTaskVideoMetaInfo $VideoMetaInfo) 设置视频文件元数据（仅当文件为视频类型时包含该字段）
+ * @method array getLabels() 获取文件标签
+ * @method void setLabels(array $Labels) 设置文件标签
  */
 class CloudStorageAIServiceTaskFileInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CloudStorageAIServiceTaskFileInfo extends AbstractModel
     public $VideoMetaInfo;
 
     /**
+     * @var array 文件标签
+     */
+    public $Labels;
+
+    /**
      * @param string $FileName 文件名称（含扩展名）
      * @param integer $FileSize 文件大小（单位：bytes）
      * @param string $DownloadURL 文件下载 URL
      * @param string $MimeType 文件的 MIME Type
      * @param CloudStorageAIServiceTaskVideoMetaInfo $VideoMetaInfo 视频文件元数据（仅当文件为视频类型时包含该字段）
+     * @param array $Labels 文件标签
      */
     function __construct()
     {
@@ -97,6 +105,15 @@ class CloudStorageAIServiceTaskFileInfo extends AbstractModel
         if (array_key_exists("VideoMetaInfo",$param) and $param["VideoMetaInfo"] !== null) {
             $this->VideoMetaInfo = new CloudStorageAIServiceTaskVideoMetaInfo();
             $this->VideoMetaInfo->deserialize($param["VideoMetaInfo"]);
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new CloudStorageAIServiceTaskFileLabel();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
         }
     }
 }

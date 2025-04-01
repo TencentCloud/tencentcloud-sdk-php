@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了操作系统所在块设备即系统盘的信息
  *
- * @method string getDiskType() 获取系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiskType() 获取系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
+ * @method void setDiskType(string $DiskType) 设置系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
  * @method integer getDiskSize() 获取系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskName() 获取系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskName(string $DiskName) 设置系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
      */
     public $DiskType;
 
     /**
      * @var integer 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var string 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskName;
 
     /**
-     * @param string $DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiskType 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
      * @param integer $DiskSize 系统盘大小，单位：GB。默认值为 80
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskName 系统盘分区盘符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

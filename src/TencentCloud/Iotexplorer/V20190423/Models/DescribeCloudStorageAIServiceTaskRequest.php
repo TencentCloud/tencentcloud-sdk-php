@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务 ID
  * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method integer getFileURLExpireTime() 获取下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
  */
 class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel
 {
@@ -31,7 +37,17 @@ class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public $FileURLExpireTime;
+
+    /**
      * @param string $TaskId 任务 ID
+     * @param integer $FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
      */
     function __construct()
     {
@@ -48,6 +64,10 @@ class DescribeCloudStorageAIServiceTaskRequest extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
+            $this->FileURLExpireTime = $param["FileURLExpireTime"];
         }
     }
 }

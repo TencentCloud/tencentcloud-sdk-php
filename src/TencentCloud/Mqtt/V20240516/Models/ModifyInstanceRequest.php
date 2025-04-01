@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRemark() 获取要修改的备注信息，最多64个字符。
  * @method void setRemark(string $Remark) 设置要修改的备注信息，最多64个字符。
  * @method string getSkuCode() 获取需要变更的配置规格
-基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
  * @method void setSkuCode(string $SkuCode) 设置需要变更的配置规格
-基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
  * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
@@ -60,7 +60,7 @@ class ModifyInstanceRequest extends AbstractModel
 
     /**
      * @var string 需要变更的配置规格
-基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      */
     public $SkuCode;
 
@@ -86,7 +86,7 @@ API：手动通过API注册
      * @param string $Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      * @param string $Remark 要修改的备注信息，最多64个字符。
      * @param string $SkuCode 需要变更的配置规格
-基础版和增强版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
      * @param string $DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册

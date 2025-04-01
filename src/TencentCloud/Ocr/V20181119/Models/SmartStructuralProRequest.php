@@ -45,6 +45,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -60,10 +61,13 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
  * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
  * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
  * @method boolean getOutputParentKey() 获取是否开启父子key识别，默认是
  * @method void setOutputParentKey(boolean $OutputParentKey) 设置是否开启父子key识别，默认是
+ * @method ConfigAdvanced getConfigAdvanced() 获取模版的单个属性配置
+ * @method void setConfigAdvanced(ConfigAdvanced $ConfigAdvanced) 设置模版的单个属性配置
  */
 class SmartStructuralProRequest extends AbstractModel
 {
@@ -108,6 +112,7 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
      */
     public $ConfigId;
 
@@ -120,6 +125,11 @@ ReceiptWeightNote -- 磅单收货单识别模板
      * @var boolean 是否开启父子key识别，默认是
      */
     public $OutputParentKey;
+
+    /**
+     * @var ConfigAdvanced 模版的单个属性配置
+     */
+    public $ConfigAdvanced;
 
     /**
      * @param string $ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
@@ -142,8 +152,10 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
+ArticalRecognize -- 手写作文模版
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
      * @param boolean $OutputParentKey 是否开启父子key识别，默认是
+     * @param ConfigAdvanced $ConfigAdvanced 模版的单个属性配置
      */
     function __construct()
     {
@@ -188,6 +200,11 @@ ReceiptWeightNote -- 磅单收货单识别模板
 
         if (array_key_exists("OutputParentKey",$param) and $param["OutputParentKey"] !== null) {
             $this->OutputParentKey = $param["OutputParentKey"];
+        }
+
+        if (array_key_exists("ConfigAdvanced",$param) and $param["ConfigAdvanced"] !== null) {
+            $this->ConfigAdvanced = new ConfigAdvanced();
+            $this->ConfigAdvanced->deserialize($param["ConfigAdvanced"]);
         }
     }
 }

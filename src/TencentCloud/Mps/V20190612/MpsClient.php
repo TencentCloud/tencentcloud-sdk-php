@@ -122,11 +122,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(Models\DescribeStreamLinkFlowRequest $req) 查询媒体输入流的配置信息。
  * @method Models\DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(Models\DescribeStreamLinkFlowLogsRequest $req) 查询媒体传输流的日志信息。
  * @method Models\DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(Models\DescribeStreamLinkFlowMediaStatisticsRequest $req) 查询媒体传输流的媒体质量数据。
-
  * @method Models\DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(Models\DescribeStreamLinkFlowRealtimeStatusRequest $req) 实时查询流的当前状态
  * @method Models\DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(Models\DescribeStreamLinkFlowSRTStatisticsRequest $req) 查询媒体传输流的SRT质量数据。
  * @method Models\DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(Models\DescribeStreamLinkFlowStatisticsRequest $req) 查询媒体传输流的媒体质量数据。
-
  * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) 批量查询媒体输入流的配置信息。
  * @method Models\DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(Models\DescribeStreamLinkRegionsRequest $req) 查询媒体传输所有地区。
  * @method Models\DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(Models\DescribeStreamLinkSecurityGroupsRequest $req) 批量查询安全组信息。

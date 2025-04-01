@@ -54,22 +54,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 如果用户已经在控制台创建了自定义合同类型，可以将这里的类型名称传入。 如果没有创建，我们会自动给发起方公司创建此自定义合同类型。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
- * @method array getComponents() 获取模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+ * @method array getComponents() 获取发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 水印控件          </li>
-<li> 动态表格等填写控件</li></ul>
- * @method void setComponents(array $Components) 设置模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<li> 水印控件等          </li>
+</ul>
+ * @method void setComponents(array $Components) 设置发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 水印控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
 <b>注</b>
@@ -255,14 +255,14 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowType;
 
     /**
-     * @var array 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @var array 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 水印控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
      */
     public $Components;
 
@@ -418,14 +418,14 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 如果用户已经在控制台创建了自定义合同类型，可以将这里的类型名称传入。 如果没有创建，我们会自动给发起方公司创建此自定义合同类型。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
-     * @param array $Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @param array $Components 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 水印控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
 <b>注</b>

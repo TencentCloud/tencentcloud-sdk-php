@@ -155,6 +155,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情
  * @method Models\DescribeReportTaskListResponse DescribeReportTaskList(Models\DescribeReportTaskListRequest $req) 查询上报任务列表
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) 获取资源管理目录树
+ * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 获取角色列表信息
  * @method Models\DescribeRuleResponse DescribeRule(Models\DescribeRuleRequest $req) 查询规则详情
  * @method Models\DescribeRuleDimStatResponse DescribeRuleDimStat(Models\DescribeRuleDimStatRequest $req) 数据质量概览页面触发维度分布统计接口
  * @method Models\DescribeRuleExecDetailResponse DescribeRuleExecDetail(Models\DescribeRuleExecDetailRequest $req) 查询规则执行结果详情
@@ -282,6 +283,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\TriggerManualTasksResponse TriggerManualTasks(Models\TriggerManualTasksRequest $req) 手动任务触发运行
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
+ * @method Models\UpdateProjectUserRoleResponse UpdateProjectUserRole(Models\UpdateProjectUserRoleRequest $req) 修改项目用户角色
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
  * @method Models\UploadResourceResponse UploadResource(Models\UploadResourceRequest $req) 资源管理-上传资源

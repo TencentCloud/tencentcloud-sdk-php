@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
  * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
+ * @method integer getIsolatedTime() 获取隔离时间，毫秒为单位
+ * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间，毫秒为单位
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -173,6 +175,11 @@ class RabbitMQVipInstance extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var integer 隔离时间，毫秒为单位
+     */
+    public $IsolatedTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -196,6 +203,7 @@ class RabbitMQVipInstance extends AbstractModel
      * @param array $Vpcs VPC 接入点列表
      * @param integer $CreateTime 创建时间，毫秒为单位
      * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
+     * @param integer $IsolatedTime 隔离时间，毫秒为单位
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
+            $this->IsolatedTime = $param["IsolatedTime"];
         }
     }
 }

@@ -32,6 +32,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置实例产品。
  * @method string getEngineVersion() 获取实例引擎版本。
  * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本。
+ * @method integer getCpu() 获取CPU数量，对于Redis为0。
+ * @method void setCpu(integer $Cpu) 设置CPU数量，对于Redis为0。
+ * @method string getDeployMode() 获取实例部署模式。
+ * @method void setDeployMode(string $DeployMode) 设置实例部署模式。
+ * @method RedisInstanceConf getInstanceConf() 获取实例内存配置。
+ * @method void setInstanceConf(RedisInstanceConf $InstanceConf) 设置实例内存配置。
+ * @method boolean getIsSupported() 获取DBbrain是否支持该实例。
+ * @method void setIsSupported(boolean $IsSupported) 设置DBbrain是否支持该实例。
+ * @method integer getMemory() 获取实例内存，单位MB。
+ * @method void setMemory(integer $Memory) 设置实例内存，单位MB。
+ * @method string getRegion() 获取实例地域。
+ * @method void setRegion(string $Region) 设置实例地域。
+ * @method string getUniqSubnetId() 获取实例子网统一ID，对于redis为空字符串。	
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例子网统一ID，对于redis为空字符串。	
+ * @method string getUniqVpcId() 获取实例私有网络统一ID，对于redis为空字符串。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置实例私有网络统一ID，对于redis为空字符串。
+ * @method integer getVolume() 获取实例磁盘容量，对于Redis为0。
+ * @method void setVolume(integer $Volume) 设置实例磁盘容量，对于Redis为0。
  */
 class InstanceBasicInfo extends AbstractModel
 {
@@ -66,12 +84,66 @@ class InstanceBasicInfo extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var integer CPU数量，对于Redis为0。
+     */
+    public $Cpu;
+
+    /**
+     * @var string 实例部署模式。
+     */
+    public $DeployMode;
+
+    /**
+     * @var RedisInstanceConf 实例内存配置。
+     */
+    public $InstanceConf;
+
+    /**
+     * @var boolean DBbrain是否支持该实例。
+     */
+    public $IsSupported;
+
+    /**
+     * @var integer 实例内存，单位MB。
+     */
+    public $Memory;
+
+    /**
+     * @var string 实例地域。
+     */
+    public $Region;
+
+    /**
+     * @var string 实例子网统一ID，对于redis为空字符串。	
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var string 实例私有网络统一ID，对于redis为空字符串。
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var integer 实例磁盘容量，对于Redis为0。
+     */
+    public $Volume;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称。
      * @param string $Vip 实例内网IP。
      * @param integer $Vport 实例内网Port。
      * @param string $Product 实例产品。
      * @param string $EngineVersion 实例引擎版本。
+     * @param integer $Cpu CPU数量，对于Redis为0。
+     * @param string $DeployMode 实例部署模式。
+     * @param RedisInstanceConf $InstanceConf 实例内存配置。
+     * @param boolean $IsSupported DBbrain是否支持该实例。
+     * @param integer $Memory 实例内存，单位MB。
+     * @param string $Region 实例地域。
+     * @param string $UniqSubnetId 实例子网统一ID，对于redis为空字符串。	
+     * @param string $UniqVpcId 实例私有网络统一ID，对于redis为空字符串。
+     * @param integer $Volume 实例磁盘容量，对于Redis为0。
      */
     function __construct()
     {
@@ -108,6 +180,43 @@ class InstanceBasicInfo extends AbstractModel
 
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
+        }
+
+        if (array_key_exists("InstanceConf",$param) and $param["InstanceConf"] !== null) {
+            $this->InstanceConf = new RedisInstanceConf();
+            $this->InstanceConf->deserialize($param["InstanceConf"]);
+        }
+
+        if (array_key_exists("IsSupported",$param) and $param["IsSupported"] !== null) {
+            $this->IsSupported = $param["IsSupported"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }
